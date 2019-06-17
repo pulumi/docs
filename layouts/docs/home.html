@@ -1,5 +1,4 @@
 {{ define "main" }}
-
     <div class="text-center">
         <img class="inline max-w-xs" src="/images/logo/logo.svg" alt="Pulumi logo">
         <h2>
@@ -32,27 +31,6 @@
                 and it works the same way no matter which cloud you're targeting.
             </p>
         </div>
-        <div>
-            <h3>Alternatives</h3>
-            <p>
-                Other approaches use YAML, JSON, or bespoke DSLs that you need to
-                master -- and convince your team to use. These "languages" fall short of
-                general purpose languages, lacking abstractions and reuse, and reinvent
-                familiar concepts like package managers. Worse, these solutions are usually
-                unique to every given cloud that you need to target.
-            </p>
-        </div>
-        <div>
-            <h3>Community</h3>
-            <p>
-                Pulumi's SDK is fully open source and extensible, enabling you to
-                participate in a rich ecosystem of libraries that ease common tasks,
-                ranging from containers to serverless to infrastructure, and everything
-                in between. Languages and clouds are supported using an extensible
-                plugin model, enabling public, private, and even hybrid cloud support.
-            </p>
-        </div>
-    </div>
 
     <div class="my-4 bg-gray-100 border-t border-b border-gray-400 md:flex py-8 px-32">
         <div class="text-center">
@@ -91,19 +69,58 @@
                 START NOW
             </a>
         </div>
-        <div class="text-center">
-            <a href="{{ relref . "/docs/quickstart/kubernetes" }}">
-                <img class="inline h-32" src="/images/docs/icon-feature-kubernetes.svg">
-                <h3>Kubernetes</h3>
-            </a>
-            <p>
-                Deploy and orchestrate cloud native Kubernetes services in real code, no YAML needed.
-            </p>
-            <a class="btn" href="{{ relref . "/docs/quickstart/kubernetes" }}">
-                START NOW
-            </a>
-        </div>
-    </div>
 
-    {{ .Content }}
+        <div class="my-4 bg-gray-100 border-t border-b border-gray-400 md:flex py-8 px-32">
+            <div class="text-center">
+                <a href="{{ relref . "/docs/quickstart/aws/tutorial-service" }}">
+                    <img class="inline h-32" src="/images/docs/icon-feature-containers.svg">
+                    <h3>Containers</h3>
+                </a>
+                <p>
+                    Deploy a Docker container to production in 5 minutes using your favorite orchestrator.
+                </p>
+                <a class="btn" href="{{ relref . "/docs/quickstart/aws/tutorial-service" }}">
+                    START NOW
+                </a>
+            </div>
+            <div class="text-center">
+                <a href="{{ relref . "/docs/quickstart/aws/tutorial-rest-api" }}">
+                    <img class="inline h-32" src="/images/docs/icon-feature-serverless.svg">
+                    <h3>Serverless</h3>
+                </a>
+                <p>
+                    Stand up a serverless API or event handler in 5 minutes using a real lambda in code.
+                </p>
+                <a class="btn" href="{{ relref . "/docs/quickstart/aws/tutorial-rest-api" }}">
+                    START NOW
+                </a>
+            </div>
+            <div class="text-center">
+                <a href="{{ relref . "/docs/quickstart/aws/tutorial-ec2-webserver" }}">
+                    <img class="inline h-32" src="/images/docs/icon-feature-data.svg">
+                    <h3>Infrastructure</h3>
+                </a>
+                <p>
+                    Manage cloud infrastructure or hosted services using infrastructure as code.
+                </p>
+                <a class="btn" href="{{ relref . "/docs/quickstart/aws/tutorial-ec2-webserver" }}">
+                    START NOW
+                </a>
+            </div>
+            <div class="text-center">
+                <a href="{{ relref . "/docs/quickstart/kubernetes" }}">
+                    <img class="inline h-32" src="/images/docs/icon-feature-kubernetes.svg">
+                    <h3>Kubernetes</h3>
+                </a>
+                <p>
+                    Deploy and orchestrate cloud native Kubernetes services in real code, no YAML needed.
+                </p>
+                <a class="btn" href="{{ relref . "/docs/quickstart/kubernetes" }}">
+                    START NOW
+                </a>
+            </div>
+        </div>
+
+        {{ .Content }}
+    </div>
 {{ end }}

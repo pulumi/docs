@@ -1,17 +1,19 @@
 {{ define "main" }}
-    <div class="md:flex">
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
 
-        <div class="md:w-3/12 pr-8 mt-2">
-            {{ partial "docs/toc.html" . }}
-        </div>
+            <div class="md:w-3/12 pr-8 mt-2">
+                {{ partial "docs/toc.html" . }}
+            </div>
 
-        <div class="md:w-7/12">
-            <h1>{{ .Title }}</h1>
-            {{ .Content }}
-        </div>
+            <div class="md:w-7/12">
+                <h1>{{ .Title }}</h1>
+                {{ .Content }}
+            </div>
 
-        <div class="md:w-2/12 pl-8 mt-2">
-            {{ partial "docs/edit.html" . }}
+            <div class="md:w-2/12 pl-8 mt-2">
+                {{ partial "docs/edit.html" . }}
+            </div>
         </div>
     </div>
 {{ end }}

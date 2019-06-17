@@ -1,31 +1,32 @@
 {{ define "main" }}
-    <div class="md:flex">
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+            <div class="md:w-3/12 pr-8">
+                {{ partial "blog/sidebar.html" . }}
+            </div>
 
-        <div class="md:w-3/12 pr-8">
-            {{ partial "blog/sidebar.html" . }}
-        </div>
+            <div class="md:w-7/12">
+                <article class="mb-8 pb-8 border-b border-gray-200">
+                    <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+                    <div class="flex items-center">
+                        <span>
+                            {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors) }}
+                        </span>
+                        <span class="mr-2">∙</span>
+                        <time>
+                            {{ .Date.Format "Monday, Jan 2, 2006" }}
+                        </time>
+                    </div>
+                    <section>
+                        {{ partial "blog/poster" . }}
+                        {{ .Content }}
+                    </section>
+                </article>
+            </div>
 
-        <div class="md:w-7/12">
-            <article class="mb-8 pb-8 border-b border-gray-200">
-                <h1 class="no-anchor"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-                <div class="flex items-center">
-                    <span>
-                        {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors) }}
-                    </span>
-                    <span class="mr-2">∙</span>
-                    <time>
-                        {{ .Date.Format "Monday, Jan 2, 2006" }}
-                    </time>
-                </div>
-                <section>
-                    {{ partial "blog/poster" . }}
-                    {{ .Content }}
-                </section>
-            </article>
-        </div>
+            <div class="md:w-2/12 pl-8">
 
-        <div class="md:w-2/12 pl-8">
-
+            </div>
         </div>
     </div>
 {{ end }}
