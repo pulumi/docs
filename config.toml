@@ -173,6 +173,11 @@ sectionPagesMenu = "main"
 
 [[menu.reference]]
     parent = "node"
+    name = "gitlab"
+    url = "/reference/pkg/nodejs/pulumi/gitlab/"
+
+[[menu.reference]]
+    parent = "node"
     name = "kubernetes"
     url = "/reference/pkg/nodejs/pulumi/kubernetes/"
 
@@ -262,6 +267,11 @@ sectionPagesMenu = "main"
     parent = "python"
     name = "pulumi_gcp"
     url = "/reference/pkg/python/pulumi_gcp/"
+
+[[menu.reference]]
+    parent = "python"
+    name = "pulumi_gitlab"
+    url = "/reference/pkg/python/pulumi_gitlab/"
 
 [[menu.reference]]
     parent = "python"

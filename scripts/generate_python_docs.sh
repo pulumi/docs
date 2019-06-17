@@ -12,6 +12,7 @@ PACKAGES=(
   "pulumi_digitalocean"
   "pulumi_f5bigip"
   "pulumi_gcp"
+  "pulumi_gitlab"
   "pulumi_kubernetes"
   "pulumi_linode"
   "pulumi_mysql"

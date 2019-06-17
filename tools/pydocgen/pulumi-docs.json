@@ -36,6 +36,10 @@
       "package_name": "pulumi_gcp"
     },
     {
+      "name": "Pulumi GitLab",
+      "package_name": "pulumi_gitlab"
+    },
+    {
       "name": "Pulumi vSphere",
       "package_name": "pulumi_vsphere"
     },
