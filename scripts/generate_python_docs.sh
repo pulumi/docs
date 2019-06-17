@@ -18,6 +18,7 @@ PACKAGES=(
   "pulumi_newrelic"
   "pulumi_openstack"
   "pulumi_packet"
+  "pulumi_postgresql"
   "pulumi_random"
   "pulumi_vsphere"
 )

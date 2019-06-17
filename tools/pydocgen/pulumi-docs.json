@@ -60,6 +60,10 @@
       "package_name": "pulumi_packet"
     },
     {
+      "name": "Pulumi PostgreSQL",
+      "package_name": "pulumi_postgresql"
+    },
+    {
       "name": "Pulumi Kubernetes",
       "package_name": "pulumi_kubernetes"
     }

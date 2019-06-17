@@ -76,6 +76,7 @@ REPOS=(
     "newrelic,pulumi-newrelic,sdk/nodejs"
     "openstack,pulumi-openstack,sdk/nodejs"
     "packet,pulumi-packet,sdk/nodejs"
+    "postgresql,pulumi-postgresql,sdk/nodejs"
     "pulumi,pulumi/sdk/nodejs"
     "random,pulumi-random,sdk/nodejs"
     "vsphere,pulumi-vsphere,sdk/nodejs"
