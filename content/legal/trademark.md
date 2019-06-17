@@ -1,5 +1,6 @@
 ---
 title: "Trademark Usage"
+url: "/trademark"
 menu:
     legal:
         weight: 1
