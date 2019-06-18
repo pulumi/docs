@@ -90,7 +90,7 @@ So let's see what happens when we actually try to run this:
 
 ![ECR3](https://user-images.githubusercontent.com/4564579/59709843-8c958880-91bc-11e9-955c-56e772893577.gif)
 
-As you can see Pulumi is actually launching the real `docker` executable locally to use the `Dockerfile` to build the image.  As `docker` runs, the output is captured and automatically shown in the real-time Pulumi update display.  When the image is finished building, it is pushed by `docker` itself to the ECR repo.  Pulumi safely passes the repo information to the `docker` executable so it can login and push the image up.  Finally, once available in ECR, the task-definition and service are appropriate updated to now reference this new image.  ECS will then ensure that the old services are spun down and the new services are spun up.  In the end we see:
+As you can see Pulumi is actually launching the real `docker` executable locally to use the `Dockerfile` to build the image.  As `docker` runs, the output is captured and automatically shown in the real-time Pulumi update display.  When the image is finished building, it is pushed by `docker` itself to the ECR repo.  Pulumi safely passes the repo information to the `docker` executable so it can login and push the image up.  Finally, once available in ECR, the task-definition and service are appropriately updated to now reference this new image.  ECS will then ensure that the old services are spun down and the new services are spun up.  In the end we see:
 
 ![image](https://user-images.githubusercontent.com/4564579/59711938-fdd73a80-91c0-11e9-8fc2-1dee49a7173e.png)
 
