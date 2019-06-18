@@ -1,86 +1,117 @@
+{{ define "hero" }}
+    <header class="bg-purple-500 py-24 text-white">
+        <div class="container mx-auto text-white md:flex">
+            <div class="md:w-1/2">
+                <h1 class="text-white">Migrating to Pulumi from Terraform</h1>
+                <p>
+                    HashiCorp Terraform provides a custom DSL called Hashicorp
+                    Configuration Language (HCL) to describe and provision infrastructure
+                    resources on Terraform providers.
+                </p>
+                <p>
+                    Pulumi enables you to describe the same infrastructure resources as
+                    real code, providing huge productivity gains, and has deep support for
+                    cloud native technologies such as Kubernetes and serverless
+                    programming.
+                </p>
+            </div>
+            <div class="md:w-1/2 md:ml-8 text-white">
+                <div class="hs-form-white">
+                    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+                    <script>
+                        hbspt.forms.create({
+                            portalId: "4429525",
+                            formId: "123cfbdb-9ce4-4d33-a9b7-c30302463d7a"
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </header>
+{{ end }}
+
 {{ define "main" }}
-    {{ partial "hero.html" . }}
+    <nav class="bg-black sticky top-0">
+        <div class="container mx-auto">
+            <ul class="flex list-none justify-between">
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#benefits">Benefits</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#code">Code</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#how-it-works">How it Works</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#get-started">Get Started</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <section class="content-block content-block-anchors bg-black white-text">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12 anchor-container" id="anchor-point">
-                    <ul class="anchor-list">
-                        <li class="anchor-item"><a href="#benefits">Benefits</a></li>
-                        <li class="anchor-item"><a href="#code">Code</a></li>
-                        <li class="anchor-item"><a href="#get-started">Get Started</a></li>
-                        <li class="anchor-item"><a href="#contact">Contact Us</a></li>
+    <section id="benefits" class="container mx-auto py-16">
+        <h2>Benefits of Pulumi</h2>
+
+        <div class="md:flex my-8">
+            <div>
+                <img class="h-12 mb-6" src="{{ .Site.BaseURL }}/icons/realCode_icon.svg">
+                <h3>Real Code</h3>
+                <p>
+                    Pulumi is infrastructure as real code. This means you get all the benefits
+                    of your favorite language and tool for provisioning cloud infrastructure:
+                    code completion, error checking, versioning, IDE support, and general
+                    productivity gains &mdash; without the need to manage YAML and DSL syntax.
+                </p>
+            </div>
+            <div class="mx-8">
+                <img class="h-12 mb-6" src="{{ .Site.BaseURL }}/icons/reusable-component.svg">
+                <h3>Familiar Constructs</h3>
+                <p>
+                    Real languages means you get familiar constructs like for loops,
+                    functions, and classes - cutting boilerplate and enforcing best
+                    practices. Pulumi lets you leverage existing package management tools
+                    and techniques.
+                </p>
+            </div>
+             <div class="mx-8">
+                <img class="h-12 mb-6" src="{{ .Site.BaseURL }}/icons/immutable_infastrc_icon.svg">
+                <h3>Ephemeral Infrastructure</h3>
+                <p>
+                    Pulumi has deep support for cloud native technologies, like
+                    Kubernetes, and supports advanced deployment scenarios that cannot be
+                    expressed with Terraform. Pulumi is a proud member of the Cloud Native
+                    Computing Foundation (CNCF).
+                </p>
+            </div>
+            <div>
+                <img class="h-12 mb-6" src="{{ .Site.BaseURL }}/icons/icon-core3.svg">
+                <h3>TF Provider Integration</h3>
+                <p>
+                    Pulumi is able to adapt any Terraform Provider for use with Pulumi,
+                    enabling management of any infrastructure supported by the Terraform
+                    Providers ecosystem using Pulumi programs.
+                    <a href="https://github.com/pulumi/pulumi-terraform">Find out more here</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="code" class="bg-gray-200 py-16">
+        <div class="container mx-auto">
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Take advantage of real coding features with Pulumi</h2>
+                    <p>
+                        Pulumi provides a more expressive and efficient way to define cloud resources:
+                    </p>
+                    <ul>
+                        <li>Use variable loops, not copy/paste</li>
+                        <li>Use any Node libaries (or Python/Go)</li>
+                        <li>On-the-fly error checking</li>
+                        <li>Freeform code instead of complex interpolations</li>
                     </ul>
+                    <p>
+                        <a href="https://github.com/pulumi/examples">Find many other examples here</a>.
+                    </p>
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="md:w-1/2 md:ml:4">
+                    <div class="highlight">
 
-    <section class="content-block" id="benefits">
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h2 class="h4 text-purple">Benefits of Pulumi</h2>
-                            </div>
-                        </div>
-                        <div class="row cols-are-spaced-md">
-                            <div class="col col-md-3">
-                                <div class="content">
-                                    <img src="/icons/realCode_icon.svg" width="65" alt="" class="margin-bottom-30">
-                                    <h3 class="h6">Real Code</h3>
-                                    <p>Pulumi is infrastructure as real code. This means you get all the benefits of your favorite language and tool for provisioning infrastructure: code completion, error checking, versioning, IDE support, etc. - without the need to manage limited DSL syntax.</p>
-                                </div>
-                            </div>
-                            <div class="col col-md-3">
-                                <div class="content">
-                                    <img src="/icons/reusable-component.svg" width="88" alt="" class="margin-bottom-30">
-                                    <h3 class="h6">Familiar Constructs</h3>
-                                    <p>Real languages means you get familiar constructs like for loops, functions, and classes - cutting boilerplate and enforcing best practices. Pulumi lets you leverage existing package management tools and techniques. </p>
-                                </div>
-                            </div>
-                            <div class="col col-md-3">
-                                <div class="content">
-                                    <img src="/icons/immutable_infastrc_icon.svg" width="78" alt="" class="margin-bottom-30">
-                                    <h3 class="h6">Ephemeral Infrastructure</h3>
-                                    <p>Pulumi has deep support for cloud native technologies, like Kubernetes, and supports advanced deployment scenarios that cannot be expressed with Terraform. Pulumi is a proud member of the Cloud Native Computing Foundation (CNCF).</p>
-                                </div>
-                            </div>
-                            <div class="col col-md-3">
-                                <div class="content">
-                                    <img src="/icons/icon-core3.svg" width="45" alt="" class="margin-bottom-30">
-                                    <h3 class="h6">TF Provider Integration</h3>
-                                    <p>Pulumi is able to adapt any Terraform Provider for use with Pulumi, enabling management of any infrastructure supported by the Terraform Providers ecosystem using Pulumi programs. <a href="https://github.com/pulumi/pulumi-terraform">Find out more here.</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="content-block bg-grey" id="code">
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="row cols-are-spaced-md">
-                            <div class="col col-md-6">
-                                <div class="content">
-                                    <h2 class="h4 text-purple">Take advantage of real coding features with Pulumi</h2>
-                                    <p>Pulumi provides a more expressive and efficient way to define cloud resources:
-                                        <ul>
-                                            <li>Use variable loops, not copy/paste</li>
-                                            <li>Use any Node libaries (or Python/Go)</li>
-                                            <li>On-the-fly error checking </li>
-                                            <li>Freeform code instead of complex interpolations</li>
-                                        </ul>
-                                    </p>
-                                    <p><a href="https://github.com/pulumi/examples" target="_blank">Find many other examples here.</a></p>
-<pre><code class="javascript hljs">import * as aws from "@pulumi/aws";
+<pre><code>import * as aws from "@pulumi/aws";
 import { readFileSync, readdirSync } from "fs";
 import { join as pathjoin } from "path";
 
@@ -96,13 +127,9 @@ for (let file of files) {
 }
 
 export const bucketname = bucket.id;
-</code></pre>
+</pre></code>
 
-                                </div>
-                            </div>
-                            <div class="col col-md-6">
-                                <div class="content">
-<pre><code class="hcl hljs">resource "aws_s3_bucket" "mybucket" {
+<pre><code>resource "aws_s3_bucket" "mybucket" {
     bucket_prefix = "mybucket"
 }
 
@@ -135,41 +162,37 @@ resource "aws_s3_bucket_object" "favicon.ico" {
     bucket     = "${aws_s3_bucket.mybucket.id}"
     source     = "./files/favicon.ico"
 }
-
-output "bucketname" {
-    value = "${aws_s3_bucket.mybucket.id}"
-}
-</code></pre>
-                                </div>
-                            </div>
-                        </div>
+</pre></code>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="code" class="bg-gray-200 py-16">
+        <div class="container mx-auto">
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Productive cloud native programming</h2>
+                    <p>
+                        Pulumi is designed with cloud native computing in mind - from
+                        containers to serverless, providing a productive model for quickly
+                        building and deploying apps:
+                    </p>
+                    <ul>
+                        <li>Rich, built in support for event handlers</li>
+                        <li>Easy-to-use in-line Lambdas for simple functions</li>
+                        <li>Use JavaScript for both infrastructure and Lambda callbacks</li>
+                        <li>Avoid the need for significant boiler plate code</li>
+                    </ul>
+                    <p>
+                        <a href="https://github.com/pulumi/examples">Find many other examples here</a>.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    <div class="highlight">
 
-    <section class="content-block bg-grey" id="code">
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="row cols-are-spaced-md">
-                            <div class="col col-md-6">
-                                <div class="content">
-                                    <h2 class="h4 text-purple">Productive cloud native programming</h2>
-                                    <p>Pulumi is designed with cloud native computing in mind - from containers to serverless, providing a productive model for quickly building and deploying apps:
-                                        <ul>
-                                            <li>Rich, built in support for event handlers</li>
-                                            <li>Easy-to-use in-line Lambdas for simple functions</li>
-                                            <li>Use JavaScript for both infrastructure and Lambda callbacks</li>
-                                            <li>Avoid the need for significant boiler plate code</li>
-                                        </ul>
-                                    </p>
-                                    <p><a href="https://github.com/pulumi/examples" target="_blank">Find many other examples here.</a></p>
-<pre><code class="javascript hljs">import * as aws from "@pulumi/aws";
+<pre><code>import * as aws from "@pulumi/aws";
 
 // Create an S3 Bucket
 const bucket = new aws.s3.Bucket("mybucket");
@@ -182,13 +205,9 @@ bucket.onObjectCreated("newObj", async (ev, ctx) => {
 
 // Export the bucket name for easy scripting
 export const bucketName = bucket.id;
-</code></pre>
+</pre></code>
 
-                                </div>
-                            </div>
-                            <div class="col col-md-6">
-                                <div class="content">
-<pre><code class="hcl hljs">resource "aws_s3_bucket" "mybucket" {
+<pre><code>resource "aws_s3_bucket" "mybucket" {
     bucket_prefix = "mybucket"
 }
 
@@ -198,8 +217,7 @@ data "archive_file" "lambda_zip" {
 
     source {
     filename = "index.js"
-    content = <<EOF
-exports.handler = async(ev, ctx) => {
+    content = < {
     console.log(JSON.stringify(ev))
 }
 EOF
@@ -250,55 +268,122 @@ resource "aws_s3_bucket_notification" "bucket_notification" {
 output "bucket_name" {
     value = "${aws_s3_bucket.mybucket.id}"
 }
-</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
+</pre></code>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    {{ partial "how-pulumi-works.html" . }}
+    <section id="how-it-works" class="bg-purple-500 py-16">
+        <div class="container mx-auto">
+            <h2 class="text-white text-center">How Pulumi Works</h2>
+            <img class="max-w-5xl mx-auto mt-12" src="https://www.pulumi.com/assets/images/infographics@2x.jpg" alt="How Pulumi works">
+        </div>
+    </section>
 
-    {{ partial "get-started.html" . }}
-
-    <section class="content-block bg-purple white-text" id="contact">
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="row cols-are-spaced-md">
-                            <div class="col col-md-6">
-                                <div class="content">
-                                    <h2 class="h3">Let Pulumi assist with your cloud infrastructure</h2>
-                                    <p>Need help converting your Terraform templates into Pulumi code? Drop us a line.</p>
-                                </div>
-                            </div>
-                            <div class="col col-md-6">
-                                <div class="content">
-                                    <div class="hbspt-form-wrapper compact">
-                                        <!--[if lte IE 8]>
-                                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-                                        <![endif]-->
-                                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-                                        <script>
-                                        hbspt.forms.create({
-                                            portalId: "4429525",
-                                            formId: "123cfbdb-9ce4-4d33-a9b7-c30302463d7a"
-                                        });
-                                        </script>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <section id="get-started" class="bg-gray-200 py-16">
+        <div class="container mx-auto max-w-5xl">
+            <div class="md:flex my-8 md:max-w-32 align-top">
+                <div class="md:w3-/12 mr-4">
+                    <h2>Get Started with Pulumi</h2>
+                    <p>
+                        Pulumi works with your favorite language, and can be used with any cloud.
+                    </p>
+                </div>
+                <div class="md:w-3/12 align-middle">
+                    <div class="flex align-middle items-center">
+                        <h5 class="flex items-center whitespace-no-wrap">
+                            <span class="border-2 border-blue-500 rounded-full bg-white text-blue-600 w-8 h-8 text-center mr-2 text-green-500">1</span>
+                            Install Pulumi
+                        </h5>
                     </div>
-
+                    <ul class="list-inside pl-8 ml-2">
+                        <li><a class="text-blue-700 text-sm" href="{{ relref . "/docs/quickstart/install" }}">Setup</a></li>
+                    </ul>
+                </div>
+                <div class="md:w-3/12 align-middle md:mx-4">
+                    <div class="flex align-middle items-center">
+                        <h5 class="flex items-center whitespace-no-wrap">
+                            <span class="border-2 border-blue-500 rounded-full bg-white text-blue-600 w-8 h-8 text-center mr-2 text-green-500">2</span>
+                            Try Our Tutorials
+                        </h5>
+                    </div>
+                    <ul class="list-inside pl-8 ml-2">
+                        <li><a class="text-blue-700 text-sm" href="{{ relref . "/docs/quickstart" }}">QuickStarts</a></li>
+                        <li><a class="text-blue-700 text-sm" href="{{ relref . "/docs/tour" }}">Tour</a></li>
+                    </ul>
+                </div>
+                <div class="md:w-3/12 align-middle">
+                    <div class="flex align-middle items-center">
+                        <h5 class="flex items-center whitespace-no-wrap">
+                            <span class="border-2 border-blue-500 rounded-full bg-white text-blue-600 w-8 h-8 text-center mr-2 text-green-500">3</span>
+                            Read the Docs
+                        </h5>
+                    </div>
+                    <ul class="list-inside pl-8 ml-2">
+                        <li><a class="text-blue-700 text-sm" href="{{ relref . "/docs/reference" }}">Reference</a></li>
+                        <li><a class="text-blue-700 text-sm" href="https://github.com/pulumi/examples">Examples</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="contact-us" class="bg-purple-500 mb-0 py-16 text-white">
+        <div class="container mx-auto max-w-5xl">
+            <div class="md:flex my-8 md:max-w-32 align-top">
+                <div class="md:w-1/2">
+                    <h2 class="text-white">Let Pulumi assist with your cloud infrastructure.</h2>
+                    <p>
+                        Need help converting your Terraform templates into Pulumi code? Drop us a line.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml-8">
+                    <div class="hs-form-white">
+                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+                        <script>
+                            hbspt.forms.create({
+                                portalId: "4429525",
+                                formId: "123cfbdb-9ce4-4d33-a9b7-c30302463d7a"
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-900 py-16 text-white">
+        <div class="container mx-auto max-w-5xl">
+            <h3 class="text-white">More from Pulumi</h3>
+            <div class="md:flex items-start">
+                <div class="md:w-1/2">
+                    <a href="https://www.youtube.com/watch?v=R3OfgFHkj3o">
+                        <img class="rounded my-8 h-64" src="/images/screens/Migrating-to-Pulumi.png" alt="Migrating to Pulumi">
+                    </a>
+                    <h4 class="text-gray-100">Migrate to Pulumi</h4>
+                    <p class="text-gray-400">
+                        In this video, Pulumi CTO, Luke Hoban, discusses how to begin to
+                        migrate to Pulumi from existing tools such as CloudFormation and
+                        Terraform.
+                    </p>
+                    <a class="text-orange-500" href="https://www.youtube.com/watch?v=R3OfgFHkj3o">Learn more</a>
+                </div>
+                <div class="md:w-1/2 md:ml-8">
+                    <a href="/blog/build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws">
+                        <img class="rounded my-8 h-64" src="/images/screens/video-thumbnail-diagram.png" alt="Video thumbnail diagram">
+                    </a>
+                    <h4 class="text-gray-100">Serverless, Containers, and Infrastructure</h4>
+                    <p class="text-gray-400">
+                        In this blog post, we show how productive Pulumi can be at combining
+                        different aspects of cloud architecture for truly cloud native
+                        programming.
+                    </p>
+                    <a class="text-orange-500" href="/blog/build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
 {{ end }}
