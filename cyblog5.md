@@ -49,7 +49,7 @@ Resources:
 Duration: 3m19s
 ```
 
-With a simple program, pulumi helped build 36 actual resources, ensuring the right connections between everything and appropriate best practices for a cloud deployment.
+With a simple program, pulumi helped build 36 actual resources, ensuring the right connections between everything all with the appropriate best practices for a cloud deployment.
 
 Here, through the use of `image: "nginx"` we are letting ECS know that we want to use [this](https://hub.docker.com/_/nginx/) publicly available Docker image.  ECS supports pulling these images for you by default and making them available to your services.   If you're using a public image, this works great and no further work is necessary on your part.
 
