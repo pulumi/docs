@@ -175,6 +175,7 @@ var gitHubBaseURLs = map[string]string{
 	"@pulumi/eks":          "https://github.com/pulumi/pulumi-eks/blob/{githash}/nodejs/eks",
 	"@pulumi/f5bigip":      "https://github.com/pulumi/pulumi-f5bigip/blob/{githash}/sdk/nodejs",
 	"@pulumi/gcp":          "https://github.com/pulumi/pulumi-gcp/blob/{githash}/sdk/nodejs",
+	"@pulumi/gitlab":       "https://github.com/pulumi/pulumi-gitlab/blob/{githash}/sdk/nodejs",
 	"@pulumi/kubernetes":   "https://github.com/pulumi/pulumi-kubernetes/blob/{githash}/sdk/nodejs",
 	"@pulumi/linode":       "https://github.com/pulumi/pulumi-linode/blob/{githash}/sdk/nodejs",
 	"@pulumi/mysql":        "https://github.com/pulumi/pulumi-mysql/blob/{githash}/sdk/nodejs",
@@ -182,6 +183,7 @@ var gitHubBaseURLs = map[string]string{
 	"@pulumi/openstack":    "https://github.com/pulumi/pulumi-openstack/blob/{githash}/sdk/nodejs",
 	"@pulumi/packet":       "https://github.com/pulumi/pulumi-packet/blob/{githash}/sdk/nodejs",
 	"@pulumi/random":       "https://github.com/pulumi/pulumi-random/blob/{githash}/sdk/nodejs",
+	"@pulumi/terraform":    "https://github.com/pulumi/pulumi-terraform/blob/{githash}/sdk/nodejs",
 	"@pulumi/vsphere":      "https://github.com/pulumi/pulumi-vsphere/blob/{githash}/sdk/nodejs",
 }
 

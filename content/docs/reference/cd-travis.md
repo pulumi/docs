@@ -74,7 +74,7 @@ to run Pulumi to that.
 ```yaml
 language: generic
 before_install:
-  - curl -L https://get.pulumi.com/ | bash -s -- --version 0.14.3
+  - curl -fsSL https://get.pulumi.com/ | sh
   - export PATH=$PATH:$HOME/.pulumi/bin
 script:
   - ./scripts/travis_${TRAVIS_EVENT_TYPE}.sh
@@ -163,7 +163,7 @@ tool.
 `travisqueue` is a tool that you can add to your `.travis.yml` file to limit build concurrency on
 a per-branch basis. This allows you to limit the number of concurrent builds for any branches that
 are configured to perform a Pulumi update. So Travis will only have one build for the `master`
-branch at a time, but could be running any number of conrrent builds for other branches.
+branch at a time, but could be running any number of concurrent builds for other branches.
 
 See the [README.md](https://github.com/pulumi/travisqueue/blob/master/README.md) file for more
 information on how it works and how to add it to your Travis configuration file.

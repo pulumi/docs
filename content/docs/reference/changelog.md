@@ -5,7 +5,7 @@ aliases:
     - /install/changelog.html
 menu:
   reference:
-    weight: 11
+    weight: 14
 ---
 
 <!-- Common links -->
@@ -28,6 +28,16 @@ menu:
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01716-released-june-6-2019">0.17.16</a></th>
+            <td>2019/06/06</td>
+            <td>{{< sdk-links version="0.17.16" >}}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01715-released-june-5-2019">0.17.15</a></th>
+            <td>2019/06/05</td>
+            <td>{{< sdk-links version="0.17.15" >}}</td>
+        </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01714-released-may-28-2019">0.17.14</a></th>
             <td>2019/05/28</td>

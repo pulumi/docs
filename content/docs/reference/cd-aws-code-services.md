@@ -63,7 +63,7 @@ phases:
   install:
     commands:
       # pulumi
-      - curl -L https://get.pulumi.com/ | bash -s -- --version 0.16.2
+      - curl -fsSL https://get.pulumi.com/ | sh
       - export PATH=$PATH:$HOME/.pulumi/bin
   build:
     commands:

@@ -19,8 +19,8 @@ From that point onward, any edits to your program result in the minimal incremen
 
 > Before deploying, you will need to configure your machine to access your cloud provider of choice.  In general, Pulumi
 > just uses standard client configuration.  Please see the following instructions for details:
-> [AWS]({{< relref "/docs/quickstart/aws/setup.md" >}}), [Azure]({{< relref "/docs/quickstart/azure/setup.md" >}}), [Google Cloud]({{< relref "/docs/quickstart/gcp/setup.md" >}}),
-> [OpenStack]({{< relref "/docs/quickstart/openstack/setup.md" >}}), or [Kubernetes]({{< relref "/docs/quickstart/kubernetes/setup.md" >}}).
+> [AWS]({{< relref "/docs/reference/clouds/aws/setup.md" >}}), [Azure]({{< relref "/docs/reference/clouds/azure/setup.md" >}}), [Google Cloud]({{< relref "/docs/reference/clouds/gcp/setup.md" >}}),
+> [OpenStack]({{< relref "/docs/reference/clouds/openstack/setup.md" >}}), or [Kubernetes]({{< relref "/docs/reference/clouds/kubernetes/setup.md" >}}).
 
 ***
 

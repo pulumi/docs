@@ -70,16 +70,19 @@ REPOS=(
     "eks,pulumi-eks/nodejs/eks"
     "f5bigip,pulumi-f5bigip,sdk/nodejs"
     "gcp,pulumi-gcp,sdk/nodejs"
+    "gitlab,pulumi-gitlab,sdk/nodejs"
     "kubernetes,pulumi-kubernetes,sdk/nodejs"
     "linode,pulumi-linode,sdk/nodejs"
     "mysql,pulumi-mysql,sdk/nodejs"
     "newrelic,pulumi-newrelic,sdk/nodejs"
     "openstack,pulumi-openstack,sdk/nodejs"
     "packet,pulumi-packet,sdk/nodejs"
+    "postgresql,pulumi-postgresql,sdk/nodejs"
     "pulumi,pulumi/sdk/nodejs"
     "random,pulumi-random,sdk/nodejs"
     "vsphere,pulumi-vsphere,sdk/nodejs"
     "azuread,pulumi-azuread,sdk/nodejs"
+    "terraform,pulumi-terraform,sdk/nodejs"
 )
 
 PIDS=()

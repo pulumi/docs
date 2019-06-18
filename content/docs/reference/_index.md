@@ -18,7 +18,7 @@ please refer to the index below to help navigate around the content.
 
 * [Architecture & Concepts]({{< relref "concepts.md" >}}): an overview of the programming model and relevant concepts
 * [Command Line]({{< relref "commands.md" >}}): most commonly used commands, in addition to full command and flag documentation
-* [Clouds]({{< relref "clouds.md" >}}): learn what clouds are available and how to use them
+* [Clouds]({{< relref "clouds/_index.md" >}}): learn what clouds are available and how to use them
 * [Language]({{< relref "languages.md" >}}): learn what language runtimes are supported and how to use them
 
 ## Using Pulumi in Production or in a Team

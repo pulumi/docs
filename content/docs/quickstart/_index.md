@@ -5,25 +5,26 @@ menu:
     weight: 1
 ---
 
-Pulumi is a platform for building and deploying cloud infrastructure and applications in your favorite language on any
-cloud.
-
-Describe your resources in code -- VMs, networks, databases, containers, serverless functions --
-and the CLI safely and reliably manages your cloud resources using an infrastructure-as-code approach.
-Create, share, and reuse powerful cloud packages.
-
-Pulumi is [open source on GitHub](https://github.com/pulumi/pulumi) and is free to use.
-
-## Download and Install
-
-To get started, first download and install the CLI:
-
-<a class="btn" href="{{< relref "install.md" >}}">INSTALL PULUMI</a>
+Get started provisioning infrastructure with Pulumi.
 
 ## Choose Your Cloud
 
-If you've already installed Pulumi, simply choose your cloud provider:
+<div class="flex flex-col max-w-full md:max-w-lg">
+    <a class="btn bg-transparent border border-blue-300 p-5 mb-5 flex justify-center" href="{{< relref "aws" >}}">
+        <img class="h-12" src="/images/docs/quickstart/aws.svg" alt="AWS">
+    </a>
 
-{{< quickstart-clouds >}}
+    <a class="btn bg-transparent border border-blue-300 p-5 mb-5 flex justify-center" href="{{< relref "azure" >}}">
+        <img class="h-12" src="/images/docs/quickstart/azure.svg" alt="Azure">
+    </a>
 
-<!--TODO: use cases, competition -->
+    <a class="btn bg-transparent border border-blue-300 p-5 mb-5 flex justify-center" href="{{< relref "gcp" >}}">
+        <img class="h-12" src="/images/docs/quickstart/gcp.svg" alt="Google Cloud">
+    </a>
+
+    <a class="btn bg-transparent border border-blue-300 p-5 flex justify-center" href="{{< relref "kubernetes" >}}">
+        <img class="h-12" src="/images/docs/quickstart/k8s.svg" alt="Kubernetes">
+    </a>
+</div>
+
+See [Supported Clouds]({{< relref "/docs/reference/clouds" >}}) for other clouds.

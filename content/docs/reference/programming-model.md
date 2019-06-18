@@ -134,6 +134,9 @@ Specify that replacements of the resource will delete the existing resource befo
 ###### `ignoreChanges`
 Provides a list of properties which will be ignored as part of updates. The value of the property will be used for newly created resources, but will not be used as part of updates. This is typically used to avoid changes in properties leading to diffs or to change defaults for a property without forcing all existing deployed stacks to update or replace the affected resource.
 
+###### `additionalSecretOutputs`
+Provides a list of output properties which should be treated as secrets. This value aguments any values that Pulumi detects itself, based on what secret inputs to the resource has. This is typically used to express that for a specific instance of a resource, some of its output properties should be treated as secrets (when they would not normally be).
+
 ### Resource names {#names}
 
 Every resource managed by Pulumi has a name.  This name is used to track the identity of a resource across multiple deployments of the same program.  The name that is specified when a resource is created is used in three ways:
@@ -365,7 +368,7 @@ def split(input):
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-##### Working with Outputs and strings {#ouputs-and-strings}
+##### Working with Outputs and strings {#outputs-and-strings}
 
 It's very common to want to build a string out of the values contained in `Outputs`.  Common uses for this are to either provide a custom [stack output](#stack-outputs), or to provide a dynamically computed string as an [Input]({{< relref "pkg/nodejs/pulumi/pulumi#Input" >}}) to another Resource.  For example, say you had the following:
 
@@ -447,6 +450,89 @@ const url2: Output<string> = pulumi.interpolate `http://${hostname}:${port}/`;
 
 `concat` takes a list of arguments that can be `Inputs`, `Outputs`, `Promises` and simple JavaScript values, and creates an `Output` with all their underlying values concatenated together.  `interpolate` does the same, but allows you to use a JavaScript `template literal` if that's your preferred way of combining values into strings.
 
+## Secrets {#secrets}
+
+When constructing resources, Pulumi will record all inputs and outputs from a resource it is state file.  Some of these properties may contain sensitive data, which should be encrypted before being stored in the state file. For example, consider the following program which creates an AWS Parameter Store parameter.
+
+{{< langchoose >}}
+
+```javascript
+const cfg = new pulumi.Config()
+const param = new aws.ssm.Parameter("a-secret-param", {
+    type: "SecureString",
+    value: cfg.require("my-secret-value"),
+});
+```
+
+```typescript
+const cfg = new pulumi.Config()
+const param = new aws.ssm.Parameter("a-secret-param", {
+    type: "SecureString",
+    value: cfg.require("my-secret-value"),
+});
+```
+
+```python
+cfg = pulumi.Config()
+param = ssm.Parameter("a-secret-param",
+    type="SecureString",
+    value=cfg.require("my-secret-value"))
+```
+
+```go
+// Secrets are not yet avaiaible in Go.
+//
+// See https://github.com/pulumi/pulumi/issues/2820
+```
+
+As written, the state file for this program will show the plaintext value of the "my-secret-value" configuration variable as an input to the `Parameter` resource.  Pulumi provides a way to mark a value as "secret" such that if it stored in the state file, it will be encrypted in the same way secret configuration values are.  There are two ways to create secret values:
+
+1. By calling `requireSecret` or `getSecret` (JavaScript) or `require_secret` or `get_secret` (Python) when reading a value from config.
+2. Using `pulumi.secret` (JavaScript) or `Output.secret` (Python) to construct a secret from an existing value.
+
+We can change the above code to look like the following:
+
+{{< langchoose >}}
+
+```javascript
+const cfg = new pulumi.Config()
+const param = new aws.ssm.Parameter("a-secret-param", {
+    type: "SecureString",
+    value: cfg.requireSecret("my-secret-value"),
+});
+```
+
+```typescript
+const cfg = new pulumi.Config()
+const param = new aws.ssm.Parameter("a-secret-param", {
+    type: "SecureString",
+    value: cfg.requireSecret("my-secret-value"),
+});
+```
+
+```python
+cfg = pulumi.Config()
+param = ssm.Parameter("a-secret-param", 
+    type="SecureString",
+    value=cfg.require_secret("my-secret-value"))
+```
+
+```go
+// Secrets are not yet avaiaible in Go.
+//
+// See https://github.com/pulumi/pulumi/issues/2820
+```
+
+In which case the value property of the `Parameter` resource will now be encrypted in the state file.
+
+Secrets behave just like normal `Output`'s in Pulumi (in fact, their type is simply `Output`), except they are marked internally as needed to be encrypted before being persisted in the state file. When you combine an existing Output that is marked as a secret (either via `apply` or `all`) with out values, the resulting Output is also marked as a secret.
+
+> __Note__: During an `apply` you have access to the raw value of the underlying secret.  While Pulumi ensures that the value returned from an `apply` is marked as secret, it can not enforce that any work done inside the `apply` itself will not leak the secret value.  For example, inside an apply you could explicitly make a call to print the value to the console or save it to a file. Becasue of this, care must be taken inside the apply to ensure your code does not cause the value to be leaked.
+
+Unlike regular Outputs, secret outputs cannot be captured by Pulumi closure serialization system and attempting to do so will lead to an exception. We do plan to support this once we can ensure the values will be persisted securely (see [pulumi/pulumi#2718](https://github.com/pulumi/pulumi/issues/2718)).
+
+While Pulumi ensures that any outputs of a resource which have coresponding secret inputs are marked as secrets, there may be additional outputs that you wish to mark as secrets. In this case, you can pass the `additionalSecretOutputs` (JavaScript) or `additional_secret_outputs` (Python) option when creating a resource to ensure these extra output values are encrypted before being stored in the state file.
+
 ## Stack output {#stack-outputs}
 
 A [stack output]({{< relref "stack.md#outputs" >}}) is a value exported from a stack. A stack's outputs can be easily retrieved from the Pulumi CLI and is displayed on pulumi.com. To export values from a stack, use the following definition in the top-level of the entry point for your project:
@@ -518,6 +604,8 @@ $ pulumi stack output --json
 }
 ```
 
+If a stack contains any output values which are marked as secrets, their values will not be shown by default (instead they will be displayed as `[secret]` in the CLI). You may pass `--show-secrets` to `pulumi stack output` to see the plaintext value.
+
 ## Config {#config}
 
 To access configuration values that have been set with `pulumi config set`, use the following:
@@ -585,6 +673,8 @@ console.log(`Active: ${data.active}`);
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
+The `Config` object also provides functions to get the value from configuration and mark it as a secret. See [config.getSecret] or [config.requireSecret].  Unlike the [config.get] and [config.require], these methods return an `Output<T>` which holds the underlying value and ensures that it is encrypted when it is being persisted.
+
 ## Components {#components}
 
 A Pulumi **component** is a logical group of resources that contains other components and physical cloud resources. A Pulumi stack is itself a component that contains all top-level components and resources in a program.
@@ -612,9 +702,9 @@ class MyResource extends pulumi.ComponentResource {
 ```
 
 ```python
-class MyResource(ComponentResource):
+class MyResource(pulumi.ComponentResource):
     def __init__(self, name, opts = None):
-        super(MyResource, self).__init__('pkg:MyResource', name, None, opts)
+        super().__init__('pkg:MyResource', name, None, opts)
 ```
 
 ```go
@@ -640,7 +730,7 @@ let bucket = new aws.s3.Bucket(`${name}-bucket`, {}, { parent: this });
 ```
 
 ```python
-bucket = s3.Bucket(f"{name}-bucket", __opts__=ResourceOptions(parent=self))
+bucket = s3.Bucket(f"{name}-bucket", opts=pulumi.ResourceOptions(parent=self))
 ```
 
 ```go
@@ -962,9 +1052,93 @@ We can now create instances of the new `MyResource` resource kind in our program
 
 > _Note_: Dynamic Providers are a flexible and low-level mechanism to plug arbitrary code directly into the deployment process.  Whereas most code in a Pulumi program runs as part of constructing the desired state of resources (the "resource graph"), the code inside the dynamic provider resource provider interface implementations (`create`, `update`, etc.) runs instead during resource provisioning (while the resource graph is being turned into a set of CRUD operations scheduled against the cloud providers).  In fact, these two phases of execution actually run in completely seperate processes.  The construction of a `new MyResource` happens inside the JavaScript/Python/Go process that's running your Pulumi program.  But your implementations of `create` or `update` are executed by a special resource provider binary called `pulumi-resource-pulumi-nodejs`.  This binary is what actually implements the Pulumi resource provider gRPC interface and speaks directly to the Pulumi engine. Because your implementation of the resource provider interface must be used by a different process, potentialy at a different point in time, dynamic providers are built on top of the same [function serialization]({{< relref "serializing-functions.md" >}}) that is used for turning callbacks into AWS Lambdas or Google Cloud Functions.  Because of this serialization, there are some limits on what can be done inside the implementation of the resource provider interface, which you can read more about in the function serialization documentation.
 
+### Dynamic Resource Inputs
+
+A dynamic provider interfaces with other components via subclasses of `pulumi.dynamic.Resource`. The inputs to a dynamic provider's implementation are provided via a instantiation of such a subclass; this is the `props` parameter in the constructor in the example below. Any properties you set in the `props` object will be passed to your `pulumi.dynamic.ResourceProvider` functions as the `inputs` where appropriate.
+
+> For statically typed languages, you can get rich type information for the inputs declaring an input type to make it easy to use your custom resource.
+
+{{< langchoose >}}
+
+```javascript
+class MyResource extends pulumi.dynamic.Resource {
+    constructor(name, props, opts) {
+        super(myprovider, name, props, opts); 
+    }
+}
+```
+
+```typescript
+interface MyResourceInputs {
+    myStringProp: pulumi.Input<string>;
+    myBoolProp: pulumi.Input<boolean>;
+    ...
+}
+
+class MyResource extends pulumi.dynamic.Resource {
+    constructor(name: string, props: MyResourceInputs, opts?: pulumi.CustomResourceOptions) {
+        super(myprovider, name, props, opts); 
+    }
+}
+```
+
+```python
+# Dynamic Providers are not supported in Python currently.
+```
+
+```go
+// Dynamic Providers are not supported in Go currently.
+```
+
 ### Resource Provider Interface
 
-Implementing the `pulumi.dynamic.ResourceProvider` interface requires implementing a subset of the methods below.  Each of these methods is asynchronous, and most common implementations of these methods will do asynchronous network I/O to provision resources in a backing cloud provider or other resource model. There are several important contracts to be aware of as part of determining how the Pulumi engine will call each of these methods, and with what data.
+Implementing the `pulumi.dynamic.ResourceProvider` interface requires implementing a subset of the methods below. Each of these methods may be asynchronous, and most implementations of these methods will perform network I/O to provision resources in a backing cloud provider or other resource model. There are several important contracts between a dynamic provider and the Pulumi CLI that inform when these methods are called and with what data.
+
+Though the input properties passed to a `pulumi.dynamic.Resource` instance will usually be of type `pulumi.Input<T>` in order to compose well with other Pulumi resources, the dynamic provider's functions are invoked with the fully resolved input values. Strong typing for the inputs to your provider's functions can help clarify this; you can achieve this by creating a second interface with the same properties as your resource's inputs, but with fully unwrapped types.
+
+{{< langchoose >}}
+
+```typescript
+// Exported type.
+export interface MyResourceInputs {
+    myStringProp: pulumi.Input<string>;
+    myBoolProp: pulumi.Input<boolean>;
+    ...
+}
+
+// Non-exported type used by the provider functions.
+// This interface contains the same inputs, but as un-wrapped types.
+interface MyResourceProviderInputs {
+    myStringProp: string;
+    myBoolProp: boolean;
+    ...
+}
+
+class MyResourceProvider extends pulumi.dynamic.ResourceProvider {
+    async create(inputs: MyResourceProviderInputs): Promise<pulumi.dynamic.CreateResult> {
+        ...
+    }
+
+    async diff(id: string, oldOutputs: MyResourceProviderOutputs, newInputs: MyResourceProviderInputs): Promise<pulumi.dynamic.DiffResult> {
+        ...
+    }
+    ...
+}
+
+class MyResource extends pulumi.dynamic.Resource {
+    constructor(name: string, props: MyResourceInputs, opts?: pulumi.CustomResourceOptions) {
+        super(myprovider, name, props, opts); 
+    }
+}
+```
+
+```python
+# Dynamic Providers are not supported in Python currently.
+```
+
+```go
+// Dynamic Providers are not supported in Go currently.
+```
 
 ##### `check(olds, news)`
 Check is invoked before any other methods, and is passed the resolved input properties that were originally provided to the resource constructor by the user.  It is passed both the old input properties that were stored in the statefile after the previous update to the resource, as well as the new inputs from the current deployment.  It has two jobs: (1) to verify that the inputs (particularly the news) are valid and if not to return useful error messages and (2) to return a set of checked inputs.  The inputs returned from the call to `check` will be the inputs that the Pulumi engine uses for all further processing of the resource, including being the values that will be passed back in to `diff`, `create`, `update`, etc.  In many cases, the `news` can be returned dirctly as the checked inputs.  But in cases where the provider needs to populate defaults, or do some normalization on values, it may want to do that in the `check` method so that this data is complete and normalized prior to being passed into other methods.
@@ -989,6 +1163,57 @@ Delete is invoked if the resource name (URN) exists in the previous state but no
 
 ##### `read(id, props)`
 Read is invoked when the Pulumi engine needs to get data about a resource that it is not managed by Pulumi.  It is passed the the `id` of the resource as tracked in the backing cloud provider as well as an optional bag of additional properties to use to disambiguate the request if needed. The `read` method is execpted to lookup the requested resource, and if found return the canonical `id` and output properties of this resource.  If an error occurs, an exception can be thrown from the `create` method to return this error to the user.
+
+### Dynamic Resource Outputs
+
+Any outputs can be returned by your `create` function in the `outs` property of `pulumi.dynamic.CreateResult`.
+
+> The following only applies to **statically typed languages**.
+
+If you need to access the outputs of your custom resource outside it with strong typing support, then declare each output property returned in the `outs` property by your `create` function as a class member of the `pulumi.dynamic.Resource` itself. For example, in TypeScript, these must be declared as `public readonly` class members in your `pulumi.dynamic.Resource` class. These class members must also have the type `pulumi.Output<T>`.
+
+**Note** that the name of the class member must match the names of the output properties as returned by the `create` function.
+
+{{< langchoose >}}
+
+```typescript
+...
+
+interface MyResourceProviderOutputs {
+    myNumberOutput: number;
+    myStringOutput: string;
+}
+
+class MyResourceProvider extends pulumi.dynamic.ResourceProvider {
+    async create(inputs: MyResourceProviderInputs): Promise<pulumi.dynamic.CreateResult> {
+        ...
+        // Values are for an example only.
+        return { id: "...", outs: { myNumberOutput: 12, myStringOutput: "some value" }};
+    }
+
+    async diff(id: string, oldOutputs: MyResourceProviderOutputs, newInputs: MyResourceProviderInputs): Promise<pulumi.dynamic.DiffResult> {
+        ...
+    }
+    ...
+}
+
+export class MyResource extends pulumi.dynamic.Resource {
+    public readonly myStringOutput: pulumi.Output<string>;
+    public readonly myNumberOutput: pulumi.Output<number>;
+
+    constructor(name: string, props: MyResourceInputs, opts?: pulumi.CustomResourceOptions) {
+        super(myprovider, name, props, opts); 
+    }
+}
+```
+
+```python
+# Dynamic Providers are not yet supported in Python.
+```
+
+```go
+// Dynamic Providers are not yet supported in Go.
+```
 
 ### Dynamic Provider Examples
 
@@ -1091,6 +1316,14 @@ import * as Ocktokit from "@octokit/rest";
 let auth = "token invalid";
 export function setAuth(token: string) { auth = token; }
 
+export interface LabelResourceInputs {
+    owner: pulumi.Input<string>;
+    repo: pulumi.Input<string>;
+    name: pulumi.Input<string>;
+    color: pulumi.Input<string>;
+    description?: pulumi.Input<string>;
+}
+
 interface LabelInputs {
     owner: string;
     repo: string;
@@ -1117,7 +1350,7 @@ const githubLabelProvider: pulumi.dynamic.ResourceProvider = {
 }
 
 export class Label extends pulumi.dynamic.Resource {
-    constructor(name: string, args: LabelInputs, opts?: pulumi.CustomResourceOptions) {
+    constructor(name: string, args: LabelResourceInputs, opts?: pulumi.CustomResourceOptions) {
         super(githubLabelProvider, name, args, opts);
     }
 }

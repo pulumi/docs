@@ -1,10 +1,10 @@
 //basic form styles
 label{
-    @extend .p;
+    @extend p;
 }
 
 input[type="text"], input[type="email"], input[type="password"] {
-	@extend .p;
+	@extend p;
 	margin-bottom: 0;
     border: 1px solid #CECECE;
     padding: 16px 17px;
