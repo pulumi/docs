@@ -1,76 +1,87 @@
+{{ define "hero" }}
+    <header class="bg-purple-500 py-24">
+        <div class="container mx-auto text-white md:flex">
+            <div class="md:w-1/2">
+                <h1 class="text-white">Modern Infrastructure as Code for Azure</h1>
+                <p>
+                    Pulumi's infrastructure-as-code SDK helps create, deploy, and manage
+                    Azure containers, serverless functions, and infrastructure using real
+                    programming languages.
+                </p>
+                <p>
+                    Find out how to program the cloud with Pulumi and Azure.
+                </p>
+            </div>
+            <div class="md:w-1/2 md:ml-8">
+                <div class="highlight">
+<pre class="border-none bg-gray-900"><code>import * as helm from "@pulumi/kubernetes/helm";
+import * as k8s from "@pulumi/kubernetes";
+import { k8sCluster, k8sProvider } from "./cluster";
+
+const apache = new helm.v2.Chart("apache", {
+  repo: "bitnami",
+  chart: "apache",
+  version: "1.0.0",
+}, { providers: { kubernetes: k8sProvider } });
+
+export let cluster = k8sCluster.name;
+export let kubeConfig = k8sCluster.kubeConfigRaw;
+export let serviceIP =
+  (apache.resources["v1/Service::default/apache-apache"]
+      as k8s.core.v1.Service).
+      spec.apply(s => s.clusterIP);
+</pre></code>
+                </div>
+            </div>
+        </div>
+    </header>
+{{ end }}
+
 {{ define "main" }}
-    {{ partial "hero.html" . }}
-
-    <section class="content-block content-block-anchors bg-black white-text">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12 anchor-container" id="anchor-point">
-                    <ul class="anchor-list">
-                        <li class="anchor-item"><a href="#benefits">Benefits</a></li>
-                        <li class="anchor-item"><a href="#code1">Code</a></li>
-                        <li class="anchor-item"><a href="#how-it-works">How it Works</a></li>
-                        <li class="anchor-item"><a href="#case-study">Case Study</a></li>
-                        <li class="anchor-item"><a href="#get-started">Get Started</a></li>
-                        <li class="anchor-item"><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
+    <nav class="bg-black sticky top-0">
+        <div class="container mx-auto">
+            <ul class="flex list-none justify-between">
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#benefits">Benefits</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#code">Code</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#how-it-works">How it Works</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#case-study">Case Study</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#get-started">Get Started</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#contact-us">Contact Us</a></li>
+            </ul>
         </div>
-    </section>
+    </nav>
 
-    <section class="content-block" id="benefits">
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="row cols-are-spaced-md">
-                            <div class="col col-md-4">
-                                <div class="content">
-                                    <img src="/icons/realCode_icon.svg" width="65" alt="" class="margin-bottom-30">
-                                    <h3 class="h5">Real Code</h3>
-                                    <p>Pulumi is infrastructure as real code. This means you get all the benefits of your favorite language and tool for provisioning cloud infrastructure: code completion, error checking, versioning, IDE support, and general productivity gains - without the need to manage YAML and DSL syntax.</p>
-                                </div>
-                            </div>
-                            <div class="col col-md-4">
-                                <div class="content">
-                                    <img src="/icons/reusable-component.svg" width="88" alt="" class="margin-bottom-30">
-                                    <h3 class="h5">Reusable Components</h3>
-                                    <p>As Pulumi is code, you can build up a library of packages to further enhance efficiency. Build repeatable practices through versioned packages such as: standard policies, network best practices, architecture blueprints - and deploy them to your team. </p>
-                                </div>
-                            </div>
-                            <div class="col col-md-4">
-                                <div class="content">
-                                    <img src="/icons/immutable_infastrc_icon.svg" width="78" alt="" class="margin-bottom-30">
-                                    <h3 class="h5">Ephemeral Infrastructure</h3>
-                                    <p>Pulumi provides the computation of necessary cloud resources with a 'Cloud Resource DAG' ensuring successful deployment of cloud infrastructure - efficiently building, updating, and destroying cloud resources as required. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    {{ partial "benefits-v1.html" . }}
+
+    <section id="code" class="bg-gray-200 py-16">
+        <div class="container mx-auto">
+
+            <!-- Example 1 -->
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Creating a simple Azure Function</h2>
+                    <p>
+                        With Pulumi, you can combine infrastructure definitions and
+                        application code in one program. The <code>@pulumi/cloud-azure</code> library
+                        is a set of Pulumi components that provide a higher-level
+                        abstraction over Azure. You can use this library and define
+                        application code at the same time as the infrastructure it depends
+                        on.
+                    </p>
+                    <p>
+                        This example shows how to create a simple Azure Function that
+                        returns a message when invoked.
+                    </p>
+                    <p>
+                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
+                    </p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-<section class="content-block bg-grey" id="code1">
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="row cols-are-spaced-md">
-                            <div class="col col-md-5">
-                                <div class="content">
-                                    <sup>Serverless</sup>
-                                    <h2 class="h4 text-purple">Creating a simple Azure Function</h2>
-                                    <p>With Pulumi, you can combine infrastructure definitions and application code in one program. The <code>@pulumi/cloud-azure</code> library is a set of Pulumi components that provide a higher-level abstraction over Azure. You can use this library and define application code at the same time as the infrastructure it depends on.</p>
-                                    <p>This example shows how to create a simple Azure Function that returns a message when invoked.</p>
-                                    <p><br/><a href="https://pulumi.io/quickstart/azure/index.html" class="button">Get Started</a></p>
-                                    <p>Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.</p>
-                                </div>
-                            </div>
-                            <div class="col col-md-7">
-                                <div class="content">
-<pre><code class="javascript hljs">import * as azure from "@pulumi/azure";
+                <div class="md:w-1/2 md:ml:4">
+                    <div class="highlight">
+<pre><code>import * as azure from "@pulumi/azure";
 import * as azureFunction from "./azureFunction";
 
 // Create an Azure function that prints a message and the request headers.
@@ -94,37 +105,35 @@ function handler(context: azureFunction.Context, request: azureFunction.HttpRequ
 
 let fn = new azureFunction.HttpFunction("fn", handler);
 export let endpoint = fn.endpoint;
-</code></pre>
-                                </div>
-                            </div>
-                        </div>
+</pre></code>
                     </div>
-
                 </div>
             </div>
-        </div>
-    </section>
 
+            <!-- Example 2 -->
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Build and deploy containers to Azure</h2>
+                    <p>
+                        Pulumi supports programming against Azure's ACI container
+                        orchestrator. Pulumi is entirely unopinionated about how
+                        containers are built, published, and deployed to your
+                        orchestrator.
+                    </p>
+                    <p>
+                        This code runs a prebuilt container with a sidecar into ACI.
+                    </p>
+                    <p>
+                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    <div class="highlight">
 
-    <section class="content-block bg-grey" id="code2">
-            <div class="content-content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-10 col-lg-offset-1">
-                            <div class="row cols-are-spaced-md">
-                                <div class="col col-md-5">
-                                    <div class="content">
-                                        <sup>Containers</sup>
-                                        <h2 class="h4 text-purple">Build and deploy containers to Azure</h2>
-                                        <p>Pulumi supports programming against Azure's ACI container orchestrator. Pulumi is entirely unopinionated about how containers are built, published, and deployed to your orchestrator.</p>
-                                        <p>This code runs a prebuilt container with a sidecar into ACI.
-                                        <p><br/><a href="https://pulumi.io/quickstart/azure/index.html" class="button">Get Started</a></p>
-                                        <p>Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.</p>
-                                    </div>
-                                </div>
-                                <div class="col col-md-7">
-                                    <div class="content">
-    <pre><code class="javascript hljs">import * as azure from "@pulumi/azure";
+<pre><code>import * as azure from "@pulumi/azure";
 
 const resourceGroup = new azure.core.ResourceGroup("resourcegroup", {
     location: "West US",
@@ -154,37 +163,35 @@ const containerGroup = new azure.containerservice.Group("containergroup", {
         "environment": "testing",
     },
 });
-    </code></pre>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+</pre></code>
                     </div>
                 </div>
             </div>
-        </section>
 
+            <!-- Example 3 -->
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Build and deploy Kubernetes apps to Azure AKS</h2>
+                    <p>
+                        Pulumi supports programming against Kubernetes – Minikube, custom
+                        on-premises, or cloud-hosted custom clusters or in managed
+                        clusters such as Azure AKS.
+                    </p>
+                    <p>
+                        This code creates an AKS cluster, then deploys a Helm Chart into
+                        it, all in one Pulumi program.
+                    </p>
+                    <p>
+                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    <div class="highlight">
 
-<section class="content-block bg-grey" id="code3">
-                <div class="content-content">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-10 col-lg-offset-1">
-                                <div class="row cols-are-spaced-md">
-                                    <div class="col col-md-5">
-                                        <div class="content">
-                                            <sup>Kubernetes</sup>
-                                            <h2 class="h4 text-purple">Build and deploy Kubernetes apps to Azure AKS</h2>
-                                            <p>Pulumi supports programming against Kubernetes – Minikube, custom on-premises, or cloud-hosted custom clusters or in managed clusters such as Azure AKS. </p>
-                                            <p>This code creates an AKS cluster, then deploys a Helm Chart into it, all in one Pulumi program.</p>
-                                            <p><br/><a href="https://pulumi.io/quickstart/azure/index.html" class="button">Get Started</a></p>
-                                            <p>Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col col-md-7">
-                                        <div class="content">
-        <pre><code class="javascript hljs">import * as helm from "@pulumi/kubernetes/helm";
+<pre><code>import * as helm from "@pulumi/kubernetes/helm";
 import * as k8s from "@pulumi/kubernetes";
 import { k8sCluster, k8sProvider } from "./cluster";
 
@@ -199,37 +206,35 @@ export let kubeConfig = k8sCluster.kubeConfigRaw;
 export let serviceIP =
     (apache.resources["v1/Service::default/apache-apache"] as k8s.core.v1.Service).
         spec.apply(s => s.clusterIP);
-        </code></pre>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+</pre></code>
                     </div>
                 </div>
-            </section>
+            </div>
 
+            <!-- Example 4 -->
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Creating a Simple Web Server</h2>
+                    <p>
+                        Pulumi gives you a way to express infrastructure configuration
+                        using your favorite programming language.
+                    </p>
+                    <p>
+                        This code uses TypeScript on Node.js to define a webserver on an
+                        Azure VM, and defines a very simple web server, and then creates
+                        the instance, before exporting the IP and Hostname.
+                    </p>
+                    <p>
+                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    <div class="highlight">
 
-        <section class="content-block bg-grey" id="code4">
-                <div class="content-content">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-10 col-lg-offset-1">
-                                <div class="row cols-are-spaced-md">
-                                    <div class="col col-md-5">
-                                        <div class="content">
-                                            <sup>Infrastructure</sup>
-                                            <h2 class="h4 text-purple">Creating a Simple Web Server</h2>
-                                            <p>Pulumi gives you a way to express infrastructure configuration using your favorite programming language.</p>
-                                            <p>This code uses TypeScript on Node.js to define a webserver on an Azure VM, and defines a very simple web server, and then creates the instance, before exporting the IP and Hostname.</p>
-                                            <p><br/><a href="https://pulumi.io/quickstart/azure/index.html" class="button">Get Started</a></p>
-                                            <p>Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col col-md-7">
-                                        <div class="content">
-        <pre><code class="javascript hljs">const azure = require("@pulumi/azure");
+<pre><code>const azure = require("@pulumi/azure");
 
 let vm = new azure.compute.VirtualMachine("server-vm", {
     resourceGroupName: resourceGroup.name,
@@ -265,112 +270,34 @@ exports.publicIP = vm.id.apply(_ =>
         resourceGroupName: publicIP.resourceGroupName,
     }).then(ip => ip.ipAddress)
 );
-        </code></pre>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+</pre></code>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </section>
 
     {{ partial "how-pulumi-works.html" . }}
 
-    <section class="content-block" id="case-study">
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <div class="content">
-                        <p class="intro text-uppercase text-blue-dark">Featured Customer</p>
-                        <div class="row">
-                            <div class="col-md-3 col-md-push-9 text-center">
-                                <div style="height: 17px;"><!--custom spacer--></div>
-                                <img src="/logos/customers/learning-machine_logo.svg" alt="Learning Machine" width="208" class="margin-bottom-30">
-                            </div>
-                            <div class="col-md-9 col-md-pull-3 content">
-                                <h2>Learning Machine</h2>
-                                <p><a href="https://www.learningmachine.com/" target="_blank">Learning Machine</a>, a blockchain SaaS company faced two challenges with their cloud infrastructure:</p>
-                                <ol>
-                                    <li>Skills gaps between Dev and DevOps creating silos, and fragility.</li>
-                                    <li>The need to more rapidly provision their expanding roster of new customers.</li>
-                                </ol>
-                            </div>
-                        </div>
-
-                        <hr>
-                        <p class="margin-bottom-50">By moving to Pulumi, Learning Machine were able to solve both challenges with significant increases in capability:</p>
-                        <div class="row cols-are-spaced-md">
-                            <div class="col col-sm-6 col-md-4 col-md-offset-2">
-                                <figure>
-                                    <img src="/images/customers/learning_machine_info-1.svg" width="210">
-                                    <figcaption> 25,000 Lines of CloudFormation reduced to 500 Lines of JavaScript </figcaption>
-                                </figure>
-                            </div>
-                            <div class="col col-sm-6 col-md-4">
-                                <figure>
-                                    <img src="/images/customers/learning_machine_info-2.svg" width="234">
-                                    <figcaption> New customer provisioning time reduced from 3 weeks to 1 hour </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        <hr>
-                        <blockquote>
-                            <div class="content">
-                                <p>Pulumi has given our team the tools and framework to achieve a unified development and DevOps model, boosting productivity and taking our business to any cloud environment that our customers need. We retired 25,000 lines of complex code that few team members understood and replaced it with 100s of lines in a real programming language.</p>
-                            </div>
-                            <footer>
-                                <p class="attr-name">Kim Hamilton, CTO</p>
-                                <p class="attr-title"><a href="https://www.learningmachine.com/" target="_blank">Learning Machine</a></p>
-                            </footer>
-
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {{ partial "learning-machine.html" . }}
 
     {{ partial "get-started.html" . }}
 
-    <section class="content-block bg-purple white-text" id="contact">
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="row cols-are-spaced-md">
-                            <div class="col col-md-6">
-                                <div class="content">
-                                    <h2 class="h3">Let Pulumi assist with your cloud infrastructure</h2>
-                                    <p>Need help delivering Cloud Native Infrastructure as Code on Azure? Drop us a line.</p>
-                                </div>
-                            </div>
-                            <div class="col col-md-6">
-                                <div class="content">
-                                    <div class="hbspt-form-wrapper compact">
-                                        <!--[if lte IE 8]>
-                                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-                                        <![endif]-->
-                                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-                                        <script>
-                                          hbspt.forms.create({
-                                            portalId: "4429525",
-                                            formId: "826f708b-53a9-4abc-9cb9-950f47362b72"
-                                        });
-                                        </script>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <section id="contact-us" class="bg-purple-500 mb-0 py-16 text-white">
+        <div class="container mx-auto max-w-5xl">
+            <div class="md:flex my-8 md:max-w-32 align-top">
+                <div class="md:w-1/2">
+                    <h2 class="text-white">Let Pulumi assist with your cloud infrastructure.</h2>
+                    <p>
+                        Need help with cloud-native infrastructure as code on Azure? Drop us a line.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml-8">
+                    <div class="hs-form-white">
+                        {{ partial "hubspot-contact.html" (dict "hubspotFormID" "826f708b-53a9-4abc-9cb9-950f47362b72") }}
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
-
-    {{ partial "more-on-pulumi.html" . }}
-
 {{ end }}
