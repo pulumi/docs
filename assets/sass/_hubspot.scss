@@ -9,6 +9,10 @@
 
         .hs-richtext p {
             @apply text-white opacity-50 text-xs font-normal my-0;
+
+            a {
+                @apply text-white underline;
+            }
         }
 
         label {

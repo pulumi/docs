@@ -1,41 +1,47 @@
-<section class="content-block bg-grey" id="get-started">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <div class="content">
-                        <div class="row">
-                            <div class="col-lg-12 col-xlg-4">
-                                <h2 class="h4 text-purple">Get started with Pulumi</h2>
-                                <p class="margin-bottom-20">Pulumi works with your favorite language, and can be used with any cloud.</p>
-                            </div>
-                            <div class="col-lg-12 col-xlg-8">
-                                <div class="row reset-row cols-are-spaced-md cols-with-dividers-md divider-grey col-no-top-padding col-no-bottom-padding divider-on-start divider-on-end">
-                                    <div class="col col-md-4" data-mh="col">
-                                        <div class="numbered-block" data-num="1">
-                                            <p class="h6">Install Pulumi</p>
-                                            <p><a href="https://pulumi.io/install/">Setup</a></p>
-                                            <p><a href="https://pulumi.io/install/#cloud-configuration">Configure</a></p>
-                                        </div>
-                                    </div>
-                                    <div class="col col-md-4" data-mh="col">
-                                        <div class="numbered-block" data-num="2">
-                                            <p class="h6">Try our tutorials</p>
-                                            <p><a href="https://pulumi.io/quickstart/">Quickstarts</a></p>
-                                            <p><a href="https://pulumi.io/tour/">Tour</a></p>
-                                        </div>
-                                    </div>
-                                    <div class="col col-md-4" data-mh="col">
-                                        <div class="numbered-block" data-num="3">
-                                            <p class="h6">Read the docs</p>
-                                            <p><a href="https://pulumi.io/reference/" target="_blank">Reference</a></p>
-                                            <p><a href="https://github.com/pulumi/examples" target="_blank">Examples</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<section id="get-started" class="bg-gray-200 py-16 px-4">
+    <div class="container mx-auto max-w-5xl">
+        <div class="md:flex my-8 md:max-w-32 align-top">
+            <div class="md:w3-/12 mr-4">
+                <h2>Get Started with Pulumi</h2>
+                <p>
+                    Pulumi works with your favorite language, and can be used with any cloud.
+                </p>
+            </div>
+            <div class="md:w-3/12 align-middle">
+                <div class="flex align-middle items-center">
+                    <h5 class="flex items-center whitespace-no-wrap">
+                        <span class="border-2 border-blue-500 rounded-full bg-white text-blue-600 w-8 h-8 text-center mr-2 text-green-500">1</span>
+                        Install Pulumi
+                    </h5>
                 </div>
+                <ul class="list-inside pl-8 ml-2">
+                    <li><a class="text-blue-700 text-sm" href="{{ relref . "/docs/quickstart/install" }}">Setup</a></li>
+                </ul>
+            </div>
+            <div class="md:w-3/12 align-middle md:mx-4">
+                <div class="flex align-middle items-center">
+                    <h5 class="flex items-center whitespace-no-wrap">
+                        <span class="border-2 border-blue-500 rounded-full bg-white text-blue-600 w-8 h-8 text-center mr-2 text-green-500">2</span>
+                        Try Our Tutorials
+                    </h5>
+                </div>
+                <ul class="list-inside pl-8 ml-2">
+                    <li><a class="text-blue-700 text-sm" href="{{ relref . "/docs/quickstart" }}">QuickStarts</a></li>
+                    <li><a class="text-blue-700 text-sm" href="{{ relref . "/docs/tour" }}">Tour</a></li>
+                </ul>
+            </div>
+            <div class="md:w-3/12 align-middle">
+                <div class="flex align-middle items-center">
+                    <h5 class="flex items-center whitespace-no-wrap">
+                        <span class="border-2 border-blue-500 rounded-full bg-white text-blue-600 w-8 h-8 text-center mr-2 text-green-500">3</span>
+                        Read the Docs
+                    </h5>
+                </div>
+                <ul class="list-inside pl-8 ml-2">
+                    <li><a class="text-blue-700 text-sm" href="{{ relref . "/docs/reference" }}">Reference</a></li>
+                    <li><a class="text-blue-700 text-sm" href="https://github.com/pulumi/examples">Examples</a></li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
+</section>

@@ -276,60 +276,9 @@ output "bucket_name" {
         </div>
     </section>
 
-    <section id="how-it-works" class="bg-purple-500 py-16">
-        <div class="container mx-auto">
-            <h2 class="text-white text-center">How Pulumi Works</h2>
-            <img class="max-w-5xl mx-auto mt-12" src="https://www.pulumi.com/assets/images/infographics@2x.jpg" alt="How Pulumi works">
-        </div>
-    </section>
+    {{ partial "how-pulumi-works.html" . }}
 
-    <section id="get-started" class="bg-gray-200 py-16">
-        <div class="container mx-auto max-w-5xl">
-            <div class="md:flex my-8 md:max-w-32 align-top">
-                <div class="md:w3-/12 mr-4">
-                    <h2>Get Started with Pulumi</h2>
-                    <p>
-                        Pulumi works with your favorite language, and can be used with any cloud.
-                    </p>
-                </div>
-                <div class="md:w-3/12 align-middle">
-                    <div class="flex align-middle items-center">
-                        <h5 class="flex items-center whitespace-no-wrap">
-                            <span class="border-2 border-blue-500 rounded-full bg-white text-blue-600 w-8 h-8 text-center mr-2 text-green-500">1</span>
-                            Install Pulumi
-                        </h5>
-                    </div>
-                    <ul class="list-inside pl-8 ml-2">
-                        <li><a class="text-blue-700 text-sm" href="{{ relref . "/docs/quickstart/install" }}">Setup</a></li>
-                    </ul>
-                </div>
-                <div class="md:w-3/12 align-middle md:mx-4">
-                    <div class="flex align-middle items-center">
-                        <h5 class="flex items-center whitespace-no-wrap">
-                            <span class="border-2 border-blue-500 rounded-full bg-white text-blue-600 w-8 h-8 text-center mr-2 text-green-500">2</span>
-                            Try Our Tutorials
-                        </h5>
-                    </div>
-                    <ul class="list-inside pl-8 ml-2">
-                        <li><a class="text-blue-700 text-sm" href="{{ relref . "/docs/quickstart" }}">QuickStarts</a></li>
-                        <li><a class="text-blue-700 text-sm" href="{{ relref . "/docs/tour" }}">Tour</a></li>
-                    </ul>
-                </div>
-                <div class="md:w-3/12 align-middle">
-                    <div class="flex align-middle items-center">
-                        <h5 class="flex items-center whitespace-no-wrap">
-                            <span class="border-2 border-blue-500 rounded-full bg-white text-blue-600 w-8 h-8 text-center mr-2 text-green-500">3</span>
-                            Read the Docs
-                        </h5>
-                    </div>
-                    <ul class="list-inside pl-8 ml-2">
-                        <li><a class="text-blue-700 text-sm" href="{{ relref . "/docs/reference" }}">Reference</a></li>
-                        <li><a class="text-blue-700 text-sm" href="https://github.com/pulumi/examples">Examples</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    {{ partial "get-started.html" . }}
 
     <section id="contact-us" class="bg-purple-500 mb-0 py-16 text-white">
         <div class="container mx-auto max-w-5xl">
@@ -355,35 +304,5 @@ output "bucket_name" {
         </div>
     </section>
 
-    <section class="bg-gray-900 py-16 text-white">
-        <div class="container mx-auto max-w-5xl">
-            <h3 class="text-white">More from Pulumi</h3>
-            <div class="md:flex items-start">
-                <div class="md:w-1/2">
-                    <a href="https://www.youtube.com/watch?v=R3OfgFHkj3o">
-                        <img class="rounded my-8 h-64" src="/images/screens/Migrating-to-Pulumi.png" alt="Migrating to Pulumi">
-                    </a>
-                    <h4 class="text-gray-100">Migrate to Pulumi</h4>
-                    <p class="text-gray-400">
-                        In this video, Pulumi CTO, Luke Hoban, discusses how to begin to
-                        migrate to Pulumi from existing tools such as CloudFormation and
-                        Terraform.
-                    </p>
-                    <a class="text-orange-500" href="https://www.youtube.com/watch?v=R3OfgFHkj3o">Learn more</a>
-                </div>
-                <div class="md:w-1/2 md:ml-8">
-                    <a href="/blog/build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws">
-                        <img class="rounded my-8 h-64" src="/images/screens/video-thumbnail-diagram.png" alt="Video thumbnail diagram">
-                    </a>
-                    <h4 class="text-gray-100">Serverless, Containers, and Infrastructure</h4>
-                    <p class="text-gray-400">
-                        In this blog post, we show how productive Pulumi can be at combining
-                        different aspects of cloud architecture for truly cloud native
-                        programming.
-                    </p>
-                    <a class="text-orange-500" href="/blog/build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws">Learn more</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    {{ partial "more-from-pulumi.html" . }}
 {{ end }}
