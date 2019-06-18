@@ -8,9 +8,6 @@ Let's take a look at this in action.  First, let's just start with a simple Pulu
 
 ```ts
 // A simple NGINX service, scaled out over two containers.
-const listener = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer("nginx")
-                         .createListener("nginx", { port: 80 });
-
 const nginx = new awsx.ecs.FargateService("nginx", {
     cluster,
     desiredCount: 2,
@@ -19,7 +16,7 @@ const nginx = new awsx.ecs.FargateService("nginx", {
             nginx: {
                 image: "nginx",
                 memory: 128,
-                portMappings: [listener],
+                portMappings: [new awsx.elasticloadbalancingv2.ApplicationListener("nginx", { port: 80 })],
             },
         },
     },
