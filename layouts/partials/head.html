@@ -33,7 +33,8 @@
 
     {{ if isset .Params "meta_image" }}
     <meta property="og:image" content="{{ strings.TrimSuffix "/" .Site.BaseURL }}{{ .Params.meta_image }}">
-    <meta name="twitter:image" content="{{ strings.TrimSuffix "/" .Site.BaseURL }}{{ .Params.meta_image }}">
+    {{ else }}
+    <meta property="og:image" content="{{ strings.TrimSuffix "/" .Site.BaseURL }}/social/pulumi.png">
     {{ end }}
 
     <meta property="og:locale" content="en-US">
