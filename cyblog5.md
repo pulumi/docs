@@ -95,7 +95,7 @@ So let's see what happens when we actually try to run this:
 
 As you can see Pulumi is actually launching the real `docker` executable locally to use the `Dockerfile` to build the image.  As `docker` runs, the output is captured and automatically shown in the real-time Pulumi update display.  When the image is finished building, it is pushed by `docker` itself to the ECR repo.  Pulumi safely passes the repo information to the `docker` executable so it can login and push the image up.  Finally, once available in ECR, the task-definition and service are appropriate updated to now reference this new image.  ECS will then ensure that the old services are spun down and the new services are spun up.  In the end we see:
 
-![image](https://user-images.githubusercontent.com/4564579/59710665-3e818480-91be-11e9-9d98-aef8b1950b67.png)
+![image](https://user-images.githubusercontent.com/4564579/59711938-fdd73a80-91c0-11e9-8fc2-1dee49a7173e.png)
 
 In less than 30 seconds, Pulumi and Docker built the private image, made it available on ECR, and properly moved the Service over to using it.  This was all done with a single command, with Pulumi smartly figuring out at the end of the day exactly what changes needed to be made.  From the above we can see just the creation of the Repository components, and the updates of the Service to now use it.  A nice minimal change that exactly matches our intuition around what would happen.  If necessary, the `.buildAndPushImage` operation can also take many more options to control what's happening with `docker`.  Options around tagging and caching can be configured, and the `docker` command line can also just be augmented if necessary to handle advanced scenarios.
 
