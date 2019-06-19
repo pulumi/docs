@@ -89,7 +89,7 @@ tbody tr td:first-child {
 | [Amazon Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/) | Private container registries | [User Guide]({{< relref "ecr.md" >}}) | [ecr]({{< relref "/reference/pkg/nodejs/pulumi/aws/ecr/_index.md" >}}) |
 | [Amazon Elastic Container Service (ECS)](https://aws.amazon.com/ecs/) | Run containerized apps | [User Guide]({{< relref "ecs.md" >}}) | [ecs]({{< relref "/reference/pkg/nodejs/pulumi/aws/ecs/_index.md" >}}) |
 | [Amazon Elastic File System (EFS)](https://aws.amazon.com/efs/) | Scalable, elastic file system | | [efs]({{< relref "/reference/pkg/nodejs/pulumi/aws/efs/_index.md" >}}) |
-| [Amazon Elastic Container Service for Kubernetes (EKS)](https://aws.amazon.com/eks/) | Managed Kubernetes service | [User Guide]({{< relref "eks.md" >}}) | [eks]({{< relref "/reference/pkg/nodejs/pulumi/aws/eks/_index.md" >}}) |
+| [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/) | Managed Kubernetes service | [User Guide]({{< relref "eks.md" >}}) | [eks]({{< relref "/reference/pkg/nodejs/pulumi/aws/eks/_index.md" >}}) |
 | [Amazon ElastiCache](https://aws.amazon.com/elasticache/) | Managed Redis or Memcached service | | [elasticache]({{< relref "/reference/pkg/nodejs/pulumi/aws/elasticache/_index.md" >}}) |
 | [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/) | Deploy and scale web apps | | [elasticbeanstalk]({{< relref "/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/_index.md" >}}) |
 | [AWS Elastic Load Balancing (ELB)](https://aws.amazon.com/elasticloadbalancing/) | Scale across many instances | [User Guide]({{< relref "elb.md" >}}) | [elasticloadbalancingv2]({{< relref "/reference/pkg/nodejs/pulumi/aws/elasticloadbalancingv2/_index.md" >}}) |

@@ -1,5 +1,5 @@
 ---
-title: "AWS Elastic Container Service for Kubernetes (EKS)"
+title: "AWS Elastic Kubernetes Service (EKS)"
 menu:
   reference:
     parent: crosswalk-aws
@@ -11,7 +11,7 @@ menu:
     <img src="/images/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
-[Amazon Elastic Container Service for Kubernetes (Amazon EKS)](https://aws.amazon.com/eks) makes it easy to deploy,
+[Amazon Elastic Kubernetes Service (Amazon EKS)](https://aws.amazon.com/eks) makes it easy to deploy,
 manage, and scale containerized applications using Kubernetes on AWS. Amazon EKS runs the Kubernetes management
 infrastructure for you across multiple AWS availability zones to eliminate a single point of failure. Amazon EKS is
 certified Kubernetes conformant so you can use existing tooling and plugins from partners and the Kubernetes
@@ -731,5 +731,5 @@ For more information about Kubernetes and EKS, please see the following:
 
 * [Pulumi Kubernetes API Documentation]({{< relref "/reference/pkg/nodejs/pulumi/kubernetes" >}})
 * [Pulumi EKS API Documentation]({{< relref "/reference/pkg/nodejs/pulumi/eks/_index.md" >}})
-* [Amazon Elastic Container Service for Kubernetes homepage](https://aws.amazon.com/eks/)
+* [Amazon Elastic Kubernetes Service (EKS) homepage](https://aws.amazon.com/eks/)
 * [Kubernetes Documentation](https://kubernetes.io)
