@@ -1,0 +1,9 @@
+<nav class="bg-black sticky top-0">
+    <div class="container mx-auto">
+        <ul class="flex list-none justify-between">
+            {{ range .sections }}
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#{{ .id }}">{{ .label }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+</nav>
