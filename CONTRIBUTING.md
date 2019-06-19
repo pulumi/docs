@@ -16,15 +16,15 @@
 We generally use Hugo's [`relref` shortcode](https://gohugo.io/content-management/shortcodes/#ref-and-relref) when linking to other pages. Examples:
 
 ```markdown
-[Install]({{< relref "/quickstart/install.md" >}})
-[Outputs]({{< relref "programming-model.md#stack-outputs" >}})
+[Install]({{< relref "/docs/reference/install.md" >}})
+[Outputs]({{< relref "/docs/reference/programming-model.md#stack-outputs" >}})
 ```
 
 Which, on a page inside the `./content/reference` directory, will generate:
 
 ```html
-<a href="/quickstart/install/">Install</a>
-<a href="/reference/programming-model/#stack-outputs">Outputs</a>
+<a href="/docs/reference/install/">Install</a>
+<a href="/docs/reference/programming-model/#stack-outputs">Outputs</a>
 ```
 
 
@@ -48,7 +48,7 @@ Which, on a page inside the `./content/reference` directory, will generate:
     {{ partial "head.html" . }}
     ```
 
-- **Front-matter variables.** You can define a front-matter variable in the YAML section at the top of a file. For instance, the installer page defines `installer_version: "0.10.0"`. You  can then reference the variable in either markdown with the syntax `{{< param installer_version >}}`.
+- **Front-matter variables.** You can define a front-matter variable in the YAML section at the top of a file. For instance, the you could add the following front matter `foo: "bar"`, and then reference the variable in markdown with the syntax `{{< param foo >}}`.
 
 ## Style guide
 

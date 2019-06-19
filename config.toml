@@ -181,6 +181,11 @@ pygmentsUseClasses = true
 
 [[menu.reference]]
     parent = "node"
+    name = "gitlab"
+    url = "/docs/reference/pkg/nodejs/pulumi/gitlab/"
+
+[[menu.reference]]
+    parent = "node"
     name = "kubernetes"
     url = "/docs/reference/pkg/nodejs/pulumi/kubernetes/"
 
@@ -211,8 +216,18 @@ pygmentsUseClasses = true
 
 [[menu.reference]]
     parent = "node"
+    name = "postgresql"
+    url = "/docs/reference/pkg/nodejs/pulumi/postgresql/"
+
+[[menu.reference]]
+    parent = "node"
     name = "random"
     url = "/docs/reference/pkg/nodejs/pulumi/random/"
+
+[[menu.reference]]
+    parent = "node"
+    name = "terraform"
+    url = "/docs/reference/pkg/nodejs/pulumi/terraform/"
 
 [[menu.reference]]
     parent = "node"
@@ -263,6 +278,11 @@ pygmentsUseClasses = true
 
 [[menu.reference]]
     parent = "python"
+    name = "pulumi_gitlab"
+    url = "/docs/reference/pkg/python/pulumi_gitlab/"
+
+[[menu.reference]]
+    parent = "python"
     name = "pulumi_kubernetes"
     url = "/docs/reference/pkg/python/pulumi_kubernetes/"
 
@@ -280,6 +300,11 @@ pygmentsUseClasses = true
     parent = "python"
     name = "pulumi_openstack"
     url = "/docs/reference/pkg/python/pulumi_openstack/"
+
+[[menu.reference]]
+    parent = "python"
+    name = "pulumi_postgresql"
+    url = "/docs/reference/pkg/python/pulumi_postgresql/"
 
 [[menu.reference]]
     parent = "python"

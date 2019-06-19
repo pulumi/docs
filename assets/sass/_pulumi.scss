@@ -1,22 +1,14 @@
 @import "pulumi-constants";
 @import "pulumi-toc";
 
-// Drop the rounded corners for code snippets. Ideally we would just do this
-// for the code associated with our language chooser. However, there isn't a
-// way to associate the two. (Since the N language code blocks are siblings
-// to the lang chooser tabs.)
-pre.highlight {
-    border-radius: 0 !important;
-}
-
 // Force code snippets to scroll horizontally rather than word wrapping.
-pre.highlight code {
+pre.chroma code {
     white-space: pre;
 }
 
 // On MacOS the scrollbar is hidden by default. But without it there
 // isn't any clear indication that you can/should scroll.
-pre.highlight {
+pre.chroma {
     &::-webkit-scrollbar {
         -webkit-appearance: none;
         height: 7px;
@@ -187,12 +179,16 @@ $code-font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
         margin-bottom: 10px;
     }
 
+    &.large {
+        font-size: 18px;
+    }
+
     &.primary {
         color: #fff;
         background-color: $primary2;
         border: none;
 
-        :hover {
+        &:hover {
             background-color: #66deff;
         }
     }
@@ -215,7 +211,7 @@ svg {
 
 .get-to-the-cloud-sub {
     color: #4a5960;
-    font-size: 28px;
+    font-size: 24px;
     margin: 32px 0 48px 0 !important;
 }
 
@@ -322,10 +318,6 @@ pre {
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 24px;
-}
-
-pre.highlight {
-    border-radius: 2px !important;
 }
 
 h2, h3, h4 {
@@ -952,6 +944,16 @@ table.clouds-table td {
     -ms-user-select: none;
     user-select: none;
 }
+
+// Hide adjacent siblings of .language-prologue-* classes from the outset, so they don't all initially
+// show as visible before all but the selected language are hidden.
+.language-prologue-javascript + *,
+.language-prologue-typescript + *,
+.language-prologue-python + *,
+.language-prologue-go + * {
+    display: none;
+}
+
 
 //
 // Styling for Python documentation

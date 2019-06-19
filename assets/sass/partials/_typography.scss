@@ -12,7 +12,7 @@ h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
-h6, .h6,{
+h6, .h6 {
     margin: 0;
 
     & > a {
@@ -108,7 +108,7 @@ h5, .h5 {
     }
 }
 
-h6, .h6, {
+h6, .h6 {
     @include ubuntu(400);
     font-size: 16px;
     line-height: 1.2;
@@ -124,7 +124,7 @@ h6, .h6, {
     }
 }
 
-p, .p {
+p {
     @include base-type();
     margin-bottom: 10px;
 
@@ -140,7 +140,7 @@ ul, ol {
     margin-bottom: 28px;
 
     li {
-        @extend .p;
+        @extend p;
     }
 
     &.list-indent {

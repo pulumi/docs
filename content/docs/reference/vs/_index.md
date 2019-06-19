@@ -4,7 +4,7 @@ menu:
   reference:
     identifier: vs
     name: Compared to Others
-    weight: 8
+    weight: 9
 ---
 
 Pulumi is a cloud native infrastructure as code project. It lets you provision and manage resources, across many clouds

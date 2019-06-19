@@ -20,7 +20,7 @@ altered to fit into any existing type of deployment setup.
 - An account on https://app.pulumi.com and that you have created a new project.
   - This just means you will sign-in using your GitLab credentials.
   - However, pulumi can be run from anywhere and your infrastrucutre code itself can be hosted anywhere.
-- The latest CLI. Installation instructions are [here]({{< relref "/docs/quickstart/install.md" >}}).
+- The latest CLI. Installation instructions are [here]({{< relref "/docs/reference/install.md" >}}).
 - A bare repo and set the remote URL to be your GitLab project.
 
 ## Stack and Branch Mappings
@@ -153,7 +153,7 @@ It also installs `yarn` and `nodejs` since that's the runtime for this sample pr
 set -e -x
 # Download and install required tools.
 # pulumi
-curl -L https://get.pulumi.com/ | bash
+curl -fsSL https://get.pulumi.com/ | bash
 export PATH=$PATH:$HOME/.pulumi/bin
 # Login into pulumi. This will require the PULUMI_ACCESS_TOKEN environment variable
 pulumi login
