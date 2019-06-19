@@ -3,6 +3,8 @@ name = "Aydrian Howard"
 title = "Staff Developer Advocate"
 weight = 1
 
+status = "active"
+
 [social]
 github = "aydrian"
 linkedin = "aydrian"

@@ -3,6 +3,8 @@ name = "Paul Stack"
 title = "Software Engineer"
 weight = 1
 
+status = "active"
+
 [social]
 github = "stack72"
 twitter = "stack72"

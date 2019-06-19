@@ -8,6 +8,8 @@ bio = """
 <p>Chris is on a quest to make it easier to write software and looks for any opportunity he can to expand his collection of lawn gnomes.</p>
 """
 
+status = "active"
+
 [social]
 github   = "chrsmith"
 linkedin = "chris-smith-0b213386"

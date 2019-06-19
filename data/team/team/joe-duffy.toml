@@ -7,6 +7,8 @@ bio = """
 <p>Joe has over 20 years of professional software experience, has written two books, and still loves to code every day.</p>
 """
 
+status = "active"
+
 [social]
 github = "joeduffy"
 linkedin = "joejduffy"

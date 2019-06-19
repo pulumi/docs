@@ -3,5 +3,7 @@ name = "Cyrus Najmabadi"
 title = "Software Engineer"
 weight = 1
 
+status = "active"
+
 [social]
 github = "CyrusNajmabadi"

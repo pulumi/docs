@@ -3,6 +3,8 @@ name = "Justin Van Patten"
 title = "Software Engineer"
 weight = 1
 
+status = "active"
+
 [social]
 github = "justinvp"
 twitter = "justinvp"
