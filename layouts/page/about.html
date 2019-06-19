@@ -1,211 +1,85 @@
+{{ define "hero" }}
+    <header class="bg-purple-500 py-24 text-white">
+        <div class="container mx-auto text-white text-center">
+            <h1 class="text-white">Program the cloud.</h1>
+        </div>
+    </header>
+{{ end }}
+
 {{ define "main" }}
-    {{ partial "hero.html" . }}
+    <nav class="bg-black sticky top-0">
+        <div class="container mx-auto">
+            <ul class="flex list-none justify-between">
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#team">Team</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#board">Board</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#newsroom">Newsroom</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <section class="content-block content-block-anchors bg-black white-text" >
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12 anchor-container" id="anchor-point">
-                    <ul class="anchor-list">
-                        <li class="anchor-item"><a href="#pulumi-team">Team</a></li>
-                        <li class="anchor-item"><a href="#pulumi-board">Board</a></li>
-                        <li class="anchor-item"><a href="#newsroom">Newsroom</a></li>
-                        <li class="anchor-item"><a href="#contact-us">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
+    <section class="max-w-4xl container mx-auto py-8">
+        <p>
+            Pulumi is a venture backed startup in Seattle making it easier than ever to
+            build cloud software. Our team is a diverse and talented group from all
+            corners of our industry, and our products sit uniquely at the intersection of
+            developer tools and cloud operations.
+        </p>
+        <p>
+            Get your code to the cloud. Faster. Together.
+        </p>
+        <p>
+            <a href="{{ relref . "/careers" }}">We are hiring</a>!
+        </p>
+    </section>
+
+    <section id="team">
+        <div class="container md:mx-auto max-w-5xl">
+            <ul class="flex flex-wrap list-none">
+                {{ range $.Site.Data.team.team }}
+                    <li class="w-1/4 text-center mb-8 p-8">
+                        <img class="rounded mb-4 shadow-md mx-auto" src="{{ $.Site.BaseURL }}/images/team/{{ .id }}.jpg" alt="{{ .name }}" >
+                        <h4 class="{{if .bio }}cursor-pointer{{ end }} mb-0 text-gray-900" {{ if .bio }}data-toggle="modal" data-target="#{{ .id }}"{{ end }}>{{ .name }}</h4>
+                        <div>{{ .title }}</div>
+                        <div class="text-center">
+                            {{ partial "widgets/social-icons.html" (dict "social" .social)}}
+                        </div>
+                    </li>
+                {{ end }}
+            </ul>
         </div>
     </section>
 
-    <section class="content-block text-center">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-                    <div class="content">
-                        <p class="intro">
-                            Pulumi is a venture backed startup in Seattle making it easier than ever to build cloud
-                            software. Our team is a diverse and talented group from all corners of our industry, and
-                            our products sit uniquely at the intersection of developer tools and cloud operations.
-                        </p>
-
-                        <h5 class="margin-bottom-40">Get your code to the cloud. Faster. Together.</h5>
-
-                        <h5><a href="/careers" class="text-blue">We are hiring!</a></h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pulumi-team" class="content-block text-center">
-        <div class="content-header mb-2x">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-                        <div class="content">
-                            <h2>Pulumi Team</h2>
+    <section id="board" class="bg-gray-200 py-16 shadow-inner">
+        <div class="container md:mx-auto max-w-5xl">
+            <h3 class="text-center">Board of Directors</h3>
+            <ul class="flex flex-wrap list-none">
+                {{ range sort $.Site.Data.team.board "weight" }}
+                    <li class="w-1/4 text-center mb-8 p-8">
+                        <img class="rounded mb-4 shadow-md mx-auto" src="{{ $.Site.BaseURL }}/images/team/{{ .id }}.jpg" alt="{{ .name }}" >
+                        <h4 class="{{if .bio }}cursor-pointer{{ end }} mb-0 text-gray-900" {{ if .bio }}data-toggle="modal" data-target="#{{ .id }}"{{ end }}>{{ .name }}</h4>
+                        <div>{{ .title }}</div>
+                        <div class="text-center">
+                            {{ partial "widgets/social-icons.html" (dict "social" .social)}}
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-                        <div id="pulumi-team-container" class="row row-centered cols-are-spaced-vert-md vert-top">
-                            {{/* The "Team" data folder contains data from guest posters too. So filter on status. */}}
-                            {{ range $.Site.Data.team.team }}
-                                {{ if eq .status "active" }}
-                                <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-centered col">
-                                    <div class="content">
-                                        <img style="height: 180px; padding-bottom: 16px;" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" >
-                                        <h3 class="h6 {{if .bio }}cursor-pointer{{ end }}" {{ if .bio }}data-toggle="modal" data-target="#{{ .id }}"{{ end }}>{{ .name }}</h3>
-                                        <p>{{ .title }}</p>
-                                        {{ partial "widgets/social-icons.html" (dict "social" .social)}}
-                                        {{ if .bio }}
-                                            {{ partial "modal-team.html" (dict "id" .id  "name" .name  "title" .title  "bio" .bio  "social" .social )}}
-                                        {{ end }}
-                                    </div>
-                                </div>
-                                {{ end }}
-                            {{ end }}
-                        </div>
-                        <p>&nbsp;</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="content-footer text-center">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1">
-                        <div class="content">
-                            <h5 class="margin-bottom-20">Join the Team</h5>
-                            <a href="/careers" class="p intro">Check out our open roles here.</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pulumi-board" class="content-block bg-grey border-top">
-        <div class="content-header text-center">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-                        <div class="content">
-                            <h2>Board of Directors</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-                        <div class="row row-centered cols-are-spaced-vert-md vert-top">
-                            {{ range sort $.Site.Data.team.board "weight" }}
-                                <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-centered col">
-                                    <div class="content">
-                                        <img style="height: 180px; padding-bottom: 16px;" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" >
-                                        <h3 class="h6 cursor-pointer" data-toggle="modal" data-target="#{{ .id }}">{{ .name }}</h3>
-                                        <p>{{ .title }}<br><strong>{{ .investor }}</strong></p>
-                                        {{ partial "widgets/social-icons.html" (dict "social" .social)}}
-                                        {{ if .bio }}
-                                            {{ partial "modal-team.html" (dict "id" .id  "name" .name  "title" .title  "bio" .bio  "social" .social )}}
-                                        {{ end }}
-                                    </div>
-                                </div>
-                            {{ end }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pulumi-investors" class="content-block border-top text-center">
-        <div class="content-header">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-                        <div class="content">
-                            <h2>Pulumi Investors</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-                        <div class="row row-centered cols-are-spaced-vert-md">
-                            <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-6 col-lg-6 col-centered col">
-                                <div class="content">
-                                    <a href="https://www.madrona.com/" target="_blank"><img src="/logos/investors/madrona.png" alt="" width="100"></a>
-                                </div>
-                            </div>
-                            <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-6 col-lg-6 col-centered col">
-                                <div class="content">
-                                    <a href="https://www.tolacapital.com/" target="_blank"><img src="/logos/investors/tola.png" alt="" width="100"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    </li>
+                {{ end }}
+            </ul>
         </div>
     </section>
 
     {{ partial "newsroom.html" . }}
 
-    <section class="content-block bg-purple white-text text-center">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="content">
-                        <img src="/images/cloud.png" alt="">
-                        <h2>Why Pulumi?</h2>
-                        <p class="intro">Find out how Pulumi provides a programming model for the cloud, designed to unlock the full power of serverless, container, and data service architectures with Cloud Native Infrastructure as Code. </p>
-                        <p><a href="/why-pulumi/" class="button">Learn more</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="bg-purple-500 py-24 text-white text-center">
+        <img class="block md:mx-auto" src="/images/cloud.png" alt="">
+        <h2 class="text-white text-4xl">Why Pulumi?</h2>
+        <p class="mb-8 md:max-w-3xl md:mx-auto text-xl leading-loose">
+            Find out how Pulumi provides a programming model for the cloud, designed to
+            unlock the full power of serverless, container, and data service architectures
+            with Cloud Native Infrastructure as Code.
+        </p>
+        <a class="btn" href="{{ relref . "/why-pulumi" }}">Learn More</a>
     </section>
 
-    {{ partial "contact-us.html" . }}
-
-    <section class="content-block">
-
-        <div class="content-header text-center">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1">
-                        <div class="content">
-                            <h2>Find Pulumi at</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="content">
-                            {{ partial "social.html" (dict "classes" "expanded" ) }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{ partial "learnmore-contactus.html" . }}
-
+    {{ partial "contact-us.html"  . }}
 {{ end }}

@@ -1,170 +1,37 @@
-<section id="newsroom" class="content-block border-top bg-grey">
-    <div class="container-fluid">
-        <div class="row  cols-are-spaced-md">
-            <div class="col col-md-6" data-mh="col">
-                <div class="row row-centered">
-                    <h2 class="h3">Press releases</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-2">
-                        <div class="content">
-                            <p><small>22nd October 2018</small></p>
-                            <p><b>Pulumi Announces $15M in Series A Funding to Accelerate Development and Adoption of its Cloud Native Development Platform</b>
-                            <br><i><small>Commercial offering of common language cloud programming platform enables deployment of any application to any cloud by any team. <a href="https://info.pulumi.com/press-release/pulumi-announces-15m-in-series-a-funding-to-accelerate-development-and-adoption-of-its-cloud-native-development-platform">Read more...</a></small></i></p><br>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-2">
-                        <div class="content">
-                            <p><small>12th September 2018</small></p>
-                            <p><b>Pulumi’s Cloud Native SDK Lets Teams Easily Define and Deliver Cloud Native Infrastructure as Code for Kubernetes in Any Cloud Using Real Languages</b>
-                            <br><i><small>Company joins CNCF to accelerate cloud native programming models for Kubernetes. <a href="https://info.pulumi.com/press-release/pulumi-cloud-native-sdk-delivers-cloud-native-infrastructure-as-code-for-kubernetes/">Read more...</a></small></i></p><br>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-2">
-                        <div class="content">
-                            <p><small>18th June 2018</small></p>
-                            <p><b>Pulumi Launches Cloud Development Platform to Help Teams Get Code to the Cloud Faster</b>
-                            <br><i><small>Company funded by Madrona Venture Group and Tola Capital to help companies accelerate cloud application development and infrastructure delivery. <a href="https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster/">Read more...</a></small></i></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-md-6 overflow-hidden" data-mh="col">
-                <div class="row row-centered col-md-10">
-                    <h2 class="h3">Recent news</h2>
-                </div>
+<section id="newsroom" class="py-16">
+    <div class="container md:mx-auto md:flex md:max-w-5xl">
+        <div class="md:w-1/2">
+            <h3 class="text-center mb-8">Press Releases</h3>
+            <ul class="list-none">
+                {{ range $.Site.Data.newsroom.releases }}
+                    <li class="text-sm mb-8 pb-8 border-b border-gray-200">
+                        <h6>{{ .date }}</h6>
+                        <h5>{{ .title }}</h5>
+                        <p>
+                            {{ .summary }}
+                        </p>
+                        <a href="{{ .url }}">Read more</a> &raquo;
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
 
-                <!--Start News-->
-                <div class="row">
-                        <div class="col-md-10">
-                            <div class="content">
-                                    <div class="row">
-                                            <p><small>22nd October 2018</small></p>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-2"><img src="/logos/press/techcrunch.png" alt="geekwire" style="width:50px;"></div>
-                                        <div class="col-md-10">
-                                            <p><b><small>
-                                                    Pulumi raises $15M for its infrastructure as code platform <br><a href="https://techcrunch.com/2018/10/22/pulumi-raises-15m-for-its-infrastructure-as-code-platform/">Read more...</a></small></b></p>
-                                        </div>
-                                    </div>
-                                </div>
+        <div class="md:w-1/2 md:ml-8">
+            <h3 class="text-center mb-8">Recent News</h3>
+            <ul class="list-none">
+                {{ range $.Site.Data.newsroom.coverage }}
+                    <li class="text-sm mb-8 pb-8 border-b border-gray-200">
+                        <h6>{{ .date }}</h6>
+                        <div class="md:flex items-start">
+                            <img class="w-12 mr-4 mt-2" src="{{ .img }}" alt="Source">
+                            <div>
+                                <h5>{{ .title }}</h5>
+                                <a href="{{ .url }}">Read more</a> &raquo;
                             </div>
                         </div>
-                    <!--End News-->
-
-                <!--Start News-->
-               <div class="row">
-                    <div class="col-md-10">
-                        <div class="content">
-                                <div class="row">
-                                        <p><small>22nd October 2018</small></p>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-2"><img src="/logos/press/eweek.jpg" alt="geekwire" style="width:50px;"></div>
-                                    <div class="col-md-10">
-                                        <p><b><small>Pulumi Launches Team Edition of Infrastructure as Code Platform <br><a href="http://www.eweek.com/cloud/pulumi-launches-team-edition-of-infrastructure-as-code-platform">Read more...</a></small></b></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <!--End News-->
-
-
-
-                <!--Start News-->
-               <div class="row">
-                <div class="col-md-10">
-                    <div class="content">
-                            <div class="row">
-                                    <p><small>22nd October 2018</small></p>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2"><img src="/logos/press/forbes.png" alt="geekwire" style="width:50px;"></div>
-                                <div class="col-md-10">
-                                    <p><b><small>Pulumi Bridges The Gap Between Cloud-Native Development And Infrastructure As Code <br><a href="https://www.forbes.com/sites/janakirammsv/2018/10/16/pulumi-bridges-the-gap-between-cloud-native-development-and-infrastructure-as-code/">Read more...</a></small></b></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <!--End News-->
-                <!--Start News-->
-               <div class="row">
-                <div class="col-md-10">
-                    <div class="content">
-                            <div class="row">
-                                    <p><small>12th September 2018</small></p>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2"><img src="/logos/press/geekwire.png" alt="geekwire" style="width:50px;"></div>
-                                <div class="col-md-10">
-                                    <p><b><small>Pulumi releases software-development kit to unlock the multicloud potential of Kubernetes <br><a href="https://www.geekwire.com/2018/pulumi-releases-software-development-kit-unlock-multicloud-potential-kubernetes/">Read more...</a></small></b></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <!--End News-->
-               <!--Start News-->
-               <div class="row">
-                    <div class="col-md-10">
-                        <div class="content">
-                                <div class="row">
-                                        <p><small>19th June 2018</small></p>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-2"><img src="/logos/press/newstack.png" alt="newstack" style="width:50px;"></div>
-                                    <div class="col-md-10">
-                                        <p><b><small>Pulumi: Using Languages to Program Across Clouds. <br><a href="https://thenewstack.io/pulumi-using-languages-to-program-across-clouds/">Read more...</a></small></b></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <!--End News-->
-                <!--Start News-->
-                <div class="row">
-                    <div class="col-md-10">
-                        <div class="content">
-                                <div class="row">
-                                        <p><small>18th June 2018</small></p>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-2"><img src="/logos/press/geekwire.png" alt="geekwire" style="width:50px"></div>
-                                    <div class="col-md-10">
-                                        <p><b><small>Meet Pulumi, a Seattle-grown cloud startup that wants to be the development platform for the multicloud era. <br><a href="https://www.geekwire.com/2018/meet-pulumi-seattle-grown-cloud-startup-wants-development-platform-multicloud-era/">Read more...</a></small></b></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <!--End News-->
-                <!--Start News-->
-                <div class="row">
-                        <div class="col-md-10">
-                            <div class="content">
-                                    <div class="row">
-                                            <p><small>18th June 2018</small></p>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-2"><img src="/logos/press/techcrunch.png" alt="techcrunch" style="width:50px;padding-top: 10px"></div>
-                                        <div class="col-md-10">
-                                            <p><b><small>Pulumi wants to let you manage your infrastructure with code. <br><a href="https://techcrunch.com/2018/06/18/pulumi-wants-to-let-you-manage-your-infrastructure-with-code/">Read more...</a></small></b></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <!--End News-->
-
-                </div>
-            </div>
+                    </li>
+                {{ end }}
+            </ul>
         </div>
     </div>
 </section>

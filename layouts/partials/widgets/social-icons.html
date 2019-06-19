@@ -7,10 +7,10 @@
     {{ $platforms := slice "github" "linkedin" "twitter" }}
     {{ $platformUrlPrefixes := slice "https://github.com" "https://www.linkedin.com/in" "https://twitter.com" }}
 
-    <ul class="list-none p-0 flex items-center">
+    <ul class="list-none p-0 inline-flex items-center">
         {{ range $idx, $platform := $platforms }}
             {{ if (index $socialIdentities $platform) }}
-                <li class="mr-4">
+                <li class="mx-2">
                     <a href="{{ index $platformUrlPrefixes $idx }}/{{ index $socialIdentities $platform }}">
                         <i class="fab fa-{{ $platform }}"></i>
                     </a>

@@ -1,52 +1,61 @@
-// Hubspot form overrides. It feels bad to have to do this; we should probably consider
-// removing all of the styling happening at the HubSpot level, and just expect these forms
-// to be styled localy in all cases, rather than force us to do this to ourselves.
-.hs-form-white {
+.hs-form {
+    @apply text-sm;
+
     fieldset {
+        @apply block;
+        margin: 1rem 0 !important;
+
+        &:not(.form-columns-1) > .field:first-child {
+            @apply pr-2;
+        }
+
+        label {
+            @apply block mb-2 font-bold;
+        }
+
+        .hs-input {
+            @apply block;
+            width: 100% !important;
+        }
+
         .hs-form-required {
             @apply ml-1 text-red-500;
         }
 
         .hs-richtext p {
-            @apply text-white opacity-50 text-xs font-normal my-0;
+            @apply opacity-50 text-xs font-normal my-0;
 
             a {
-                @apply text-white underline;
+                @apply underline;
             }
         }
 
-        label {
-            span {
-                @apply text-white font-normal;
-            }
-
-            &.hs-error-msg {
-                @apply mt-1;
-            }
-        }
-
-        input[type="text"], input[type="email"], textarea {
-            @apply border-none p-2;
+        input, textarea {
+            @apply border border-gray-300 rounded p-2 bg-white;
         }
     }
 
-    .hs-submit > .actions {
-        @apply mt-0;
+    input[type="submit"] {
+        @apply btn btn-cta py-4 px-8 shadow-none cursor-pointer shadow-none border-none tracking-wide font-normal;
+    }
 
-        > input[type="submit"] {
-            @apply btn btn-cta py-4 px-8 shadow-none cursor-pointer shadow-none border-none tracking-wide font-normal;
+    .hs-error-msgs {
+        @apply list-none mt-2 p-0 text-red-500 text-xs;
 
-            // These don't seem to have direct TailWind equivalents.
-            background-image: none;
-            text-shadow: none;
+        label {
+            @apply mb-0;
         }
     }
 
-    .hs-error-msgs.inputs-list {
-        padding-left: 0;
+    .hs_error_rollup {
+        @apply hidden;
+    }
 
-        label {
-            @apply text-red-500;
-        }
+    &-fg-light {
+        @apply text-gray-600;
+    }
+
+    &-fg-dark {
+        @apply text-gray-700;
     }
 }
