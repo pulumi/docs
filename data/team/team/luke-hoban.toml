@@ -8,6 +8,8 @@ bio = """
 <p>Luke is passionate about building tools and platforms to enable and empower developers, and is a deep believer in the transformative potential of the cloud.</p>
 """
 
+status = "active"
+
 [social]
 github = "lukehoban"
 twitter = "lukehoban"

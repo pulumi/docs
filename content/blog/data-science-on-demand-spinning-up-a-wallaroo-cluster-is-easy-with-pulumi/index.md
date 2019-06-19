@@ -1,7 +1,7 @@
 ---
 title: "Data science on demand: spinning up a Wallaroo cluster is easy with Pulumi"
 authors: ["marc-holmes", "simon-zelazny"]
-tags: ["infrastructure", "TODO"]
+tags: ["infrastructure", "TODO", "test-guest-bio"]
 date: "2018-11-02"
 
 description: "Spinning up Wallaroo labs infrastructure on-demand"

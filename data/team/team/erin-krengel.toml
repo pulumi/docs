@@ -3,6 +3,8 @@ name = "Erin Krengel"
 title = "Software Engineer"
 weight = 1
 
+status = "active"
+
 [social]
 github = "ekrengel"
 linkedin = "ekrengel"

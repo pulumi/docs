@@ -3,6 +3,8 @@ name = "Mike Metral"
 title = "Software Architect & Engineer"
 weight = 1
 
+status = "active"
+
 [social]
 github = "metral"
 linkedin = "mmetral"

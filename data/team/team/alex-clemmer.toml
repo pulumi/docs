@@ -3,6 +3,8 @@ name = "Alex Clemmer"
 title = "Software Engineer"
 weight = 1
 
+status = "active"
+
 [social]
 github = "hausdorff"
 twitter = "hausdorff_space"

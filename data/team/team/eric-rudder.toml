@@ -8,6 +8,8 @@ bio = """
 <p>Eric graduated with honors from Brown University in 1988.</p>
 """
 
+status = "active"
+
 [social]
 github = "ericrudder"
 linkedin = "ericrudder"
