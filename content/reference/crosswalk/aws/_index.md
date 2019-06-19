@@ -70,7 +70,7 @@ relevant User Guides to get started:
 ### Containers
 
 * [Elastic Container Service (ECS)]({{< relref "ecs.md" >}})
-* [Elastic Container Service for Kubernetes (EKS)]({{< relref "eks.md" >}})
+* [Elastic Kubernetes Service (EKS)]({{< relref "eks.md" >}})
 * [Elastic Container Registry (ECR)]({{< relref "ecr.md" >}})
 
 ### Serverless
