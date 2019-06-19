@@ -1,4 +1,4 @@
 ---
-title: "Contact Us"
+title: Contact Us
 layout: contact
 ---
