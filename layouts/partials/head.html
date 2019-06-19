@@ -87,9 +87,20 @@
 
     {{/* Tests to enforce required frontmatter for certain content types. */}}
     {{ if eq .Type "blog" }}
-        {{ if not (isset .Params "authors") }}{{ errorf "Blog posts require authors: %s" .File.Path }}{{ end }}
-            {{ if not (or (isset .Params "description") (isset .Params "summary")) }}
-                {{ errorf "Blog posts require a description: %s" .File.Path }}
+        {{ if not (isset .Page.Params "authors") }}
+            {{ errorf "Blog posts require authors: %s" .File.Path }}
+        {{ else }}
+            {{ range $authorID := .Page.Params.authors }}
+                {{ if not (index $.Site.Data.team.team $authorID) }}
+                    {{ errorf "Blog posts author (%s) not found: %s" $authorID $.Page.File.Path }}
+                {{ end }}
             {{ end }}
+        {{ end }}
+        {{ if not (isset .Page.Params "tags") }}
+            {{ errorf "Blog posts require tags: %s" .File.Path }}
+        {{ end }}
+        {{ if not (or (isset .Params "summary")) }}
+            {{ errorf "Blog posts require a summary: %s" .File.Path }}
+        {{ end }}
     {{ end }}
 </head>
