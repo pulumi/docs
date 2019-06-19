@@ -11,15 +11,19 @@ menu:
 ---
 
 Pulumi is like Terraform, in that you create, deploy, and manage infrastructure as code on any cloud. Unlike
-Terraform, however, you will use familiar general purpose languages and tools to do.
+Terraform, however, you will use familiar general purpose languages and tools to do. Like Terraform, Pulumi is
+[open source on GitHub](https://github.com/pulumi/pulumi) and is [free to use](/quickstart).
 
-In Terraform, you write programs in a custom domain-specific-language (DSL) called Hashicorp Configuration Language
-(HCL), and the Terraform engine takes care of provisioning and updating resources. Pulumi's engine similarly gives
-you diffs and a way to robustly update your infrastructure. Both Terraform and Pulumi support many cloud providers,
-including AWS, Azure, and Google Cloud, plus other services like CloudFlare, Digital Ocean, and more. Thanks to
-integration with Terraform, Pulumi supports a superset of the providers that Terraform currently offers.
+## Summary
 
-Like Terraform, Pulumi is [open source on GitHub](https://github.com/pulumi/pulumi) [free to use](/quickstart).
+In Terraform, you write programs in a custom domain-specific-language (DSL) called HashiCorp Configuration Language
+(HCL), and the Terraform engine takes care of provisioning and updating resources. With Pulumi, you use general
+purpose languages to express desired state, and Pulumi's engine similarly gives you diffs and a way to robustly update
+your infrastructure. Both Terraform and Pulumi support many cloud providers, including AWS, Azure, and Google Cloud,
+plus other services like CloudFlare, Digital Ocean, and more. Thanks to integration with Terraform providers, Pulumi
+is able to support a superset of the providers that Terraform currently offers.
+
+## Major Differences
 
 The major differences between Terraform and Pulumi are as follows:
 
