@@ -1,10 +1,10 @@
 ---
 title: "2018 Year at a Glance"
 authors: ["joe-duffy"]
-tags: []
+tags: ["Pulumi"]
 date: "2018-12-31"
 
-description: "It’s been an incredible year and as we close out 2018, I was reflecting on our progress here at Pulumi this past year."
+summary: "It’s been an incredible year and as we close out 2018, I was reflecting on our progress here at Pulumi."
 ---
 
 As we close out 2018, and enter into
@@ -26,9 +26,9 @@ sizes spread across the globe. The community is now a warm, welcoming, and colla
 open source contributions and passionate community leaders emerging who are helping one another while also
 helping us to make Pulumi even better.
 
-**Support for major public, private, and hybrid clouds.** We launched with support for the three major public clouds,
-[AWS](https://pulumi.io/quickstart/aws/), [Azure](https://pulumi.io/quickstart/azure/), and [Google Cloud](https://pulumi.io/quickstart/gcp/),
-and have since added capabilities across all
+**Support for major public, private, and hybrid clouds.** We launched with support for the three major public
+clouds, [AWS](https://pulumi.io/quickstart/aws/), [Azure](https://pulumi.io/quickstart/azure/), and
+[Google Cloud](https://pulumi.io/quickstart/gcp/), and have since added capabilities across all
 of them, including adding [serverless](https://pulumi.io/quickstart/aws/tutorial-rest-api.html),
 [containers](https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/aws-infra/examples/fargate/index.ts), and
 [infrastructure](https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/aws-infra/examples/ec2/index.ts)
@@ -69,4 +69,4 @@ easier, more secure, and more collaborative.
 We are just getting started and we can’t wait to continue on the journey of
 reimagining cloud engineering together. Thank you for your passionate support -- and here’s to a wonderful 2019!
 
-Joe
+— Joe

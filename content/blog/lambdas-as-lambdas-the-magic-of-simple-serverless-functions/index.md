@@ -1,12 +1,12 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
----
+title: "Lambdas as Lambdas: The magic of simple serverless Functions"
+authors: ["cyrus-najmabadi"]
+tags: ["AWS/Lambda/Fargate", "Infrastructure-as-Code"]
+date: "2018-10-10"
 
+summary: "In this post, we look at how we enable Pulumi to build and deploy serverless functions in AWS, Azure, or GCP using lambda functions in JavaScript and TypeScript."
+meta_image: "RELATIVE_TO_PAGE/closure.png"
+---
 
 Pulumi's approach to infrastructure as code uses real languages instead
 of YAML or DSLs. One major advantage of this approach is that AWS
@@ -31,8 +31,8 @@ code, and have it work.
 
 For [AWS Lambda](https://aws.amazon.com/lambda/), for example, the code
 itself needs to written and packaged up with all its dependencies into a
-single zip-file, stored as a blob that is then placed in [AWS
-S3](https://aws.amazon.com/s3/). This blob is then referenced by Lambda
+single zip-file, stored as a blob that is then placed in
+[AWS S3](https://aws.amazon.com/s3/). This blob is then referenced by Lambda
 so that it can be loaded on-demand when necessary. Updating just a
 single character of this code, like fixing a bug, then requires fully
 repackaging and re-uploading everything. Compounding all of that, this
@@ -52,8 +52,7 @@ simply, we wanted developers to write event-driven code, in their
 favorite language and in their favorite IDE, and simply hit "deploy"
 when done.
 
-Magic Functions
----------------
+## Magic Functions
 
 From a desire to do better here, the "closure serialized function" was
 born. However, "closure serialized function" is a geeky mouthful, so I
@@ -103,9 +102,8 @@ application code that runs as a function.
 First, we're just defining two simple resources: 1) an `s3.Bucket`,
 where we expect new video files to be uploaded to, and 2) a
 `cloud.Topic` that will inform interested parties when new videos are
-uploaded. (The full surface area of AWS is available in [the aws
-package](https://pulumi.io/quickstart/aws/index.html), and [the cloud
-package](https://pulumi.io/quickstart/cloudfx/index.html) offers
+uploaded. (The full surface area of AWS is available in [the aws package]({{< ref "/docs/quickstart/aws" >}}), and
+[the cloud package]({{< ref "/docs/quickstart/cloudfx" >}}) offers
 multi-cloud abstractions that work at a higher level of abstraction.)
 Right after defining the resources, we start creating our first FaaS
 resources. `videoBucket` has an `onObjectCreated` event subscription
@@ -114,8 +112,7 @@ function that will fire when new objects appear, and we invoke it with a
 [arrow-function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 defining the code that will execute in an AWS Lambda at *runtime*.
 
-Not So Fast...
----------------
+## Not So Fast...
 
 This code is pretty magical in a few ways. To see how it's magic, let's
 consider a fairly naive way to create a Lambda for
@@ -141,9 +138,7 @@ wouldn't work unless the `sharp` module was properly imported for it.
 Third, even if the module was imported in the code, the actual NPM
 package would have to be available along with the code in the cloud.
 Fourth, if that module was
-properly [[require]{style="font-size: 14px;"}]{color="#ff0000"
-face="Menlo, Monaco, Consolas, Courier New, monospace"
-style="color: #ff0000; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;"}d,
+properly `require`d,
 and the package was properly included, the code is both referencing
 `videoTopic` (a resource defined when the application originally ran),
 *and* it is invoking a helper method on it. Remember, this code is going
@@ -158,8 +153,7 @@ entire transitive closure must be considered -- a task usually left up
 to FaaS developers to perform manually! This coupled with the manual
 configuration using YAML can lead to plenty a headache.
 
-Compilers to the Rescue
------------------------
+## Compilers to the Rescue
 
 Despite all those issues, Pulumi is able to make that original
 application code work and it is able to magically effectively translate
@@ -234,8 +228,7 @@ it depends on) is properly tracked and understood by Pulumi, allowing an
 easy development model where FaaS code can be easily modified and
 republished without jumping through extra hoops. 
 
-The Result? Simple serverless Functions
----------------------------------------
+## The Result? Simple serverless Functions
 
 With this approach, serverless programming becomes dramatically simpler,
 whether it's an AWS Lambda, Azure Function, or GCP Cloud Function.
@@ -251,15 +244,11 @@ On top of all of that, because this is just code itself, and because
 these are normal APIs, other tooling (like your editor) knows exactly
 what is going on and can guide you through this. For example:
 
-![closure](https://blog.pulumi.com/hs-fs/hubfs/Blog/closure.png?width=600&name=closure.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/closure.png?width=300&name=closure.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/closure.png?width=600&name=closure.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/closure.png?width=900&name=closure.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/closure.png?width=1200&name=closure.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/closure.png?width=1500&name=closure.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/closure.png?width=1800&name=closure.png 1800w"}
+![closure](./closure.png)
 
 While there's a lot of really cool tech going on under the covers here,
 we really hope that this ends up just feeling super-awesome to use for
 you. Now that we have this functionality, we wouldn't want to ever write
 an AWS Lambda any other way!
 
-Get started building serverless functions and apps over at
-<https://pulumi.io> 
-
+Get started building serverless functions on Pulumi today!

@@ -1,33 +1,28 @@
 ---
 title: "Data science on demand: spinning up a Wallaroo cluster is easy with Pulumi"
 authors: ["marc-holmes", "simon-zelazny"]
-tags: ["infrastructure", "TODO", "test-guest-bio"]
+tags: ["Infrastructure-as-Code"]
 date: "2018-11-02"
 
-description: "Spinning up Wallaroo labs infrastructure on-demand"
+summary: "This guest post is from Simon Zelazny of Wallaroo Labs. Find out how Wallaroo powered their analytics cluster provisioning with Pulumi, for data science on demand."
+meta_image: "RELATIVE_TO_PAGE/tty-fast.gif"
 ---
 
-TODO: Need to hook up author information bio for guest posts.
-
-*This guest post is from Simon Zelazny of [Wallaroo
-Labs](https://www.wallaroolabs.com/), and previously appeared on the
-[Wallaroo Labs
-blog](https://blog.wallaroolabs.com/2018/10/spinning-up-a-wallaroo-cluster-is-easy/).
+*This guest post is from Simon Zelazny of
+[Wallaroo Labs](https://www.wallaroolabs.com/), and previously appeared on the
+[Wallaroo Labs blog](https://blog.wallaroolabs.com/2018/10/spinning-up-a-wallaroo-cluster-is-easy/).
 Find out how Wallaroo powered their cluster provisioning with Pulumi,
-for data science on demand. *
+for data science on demand.*
 
-Oh no, more data!
------------------
+## Oh no, more data!
 
-Last month, we took a [long-running pandas
-classifier](https://blog.wallaroolabs.com/2018/09/make-python-pandas-go-fast/) and
-made it run faster by leveraging Wallaroo's parallelization
+Last month, we took a
+[long-running pandas classifier](https://blog.wallaroolabs.com/2018/09/make-python-pandas-go-fast/)
+and made it run faster by leveraging Wallaroo's parallelization
 capabilities. This time around, we'd like to kick it up a notch and see
 if we can keep scaling out to meet higher demand. We'd also like to be
 as economical as possible: provision infrastructure as needed and
 de-provision it when we're done processing.
-
-------------------------------------------------------------------------
 
 If you don't feel like reading the post linked above, here's a short
 summary of the situation: there's a batch job that you're running every
@@ -43,8 +38,6 @@ cluster, running on one physical machine. Parallelizing the work in this
 manner buys us a lot of time, and the batch job can continue processing
 increasing amounts of data.
 
-------------------------------------------------------------------------
-
 Sure, we can handle a million rows in reasonable time, but what if the
 data set grows by orders of magnitude? By running our classifier on a
 local Wallaroo cluster, we were able to cut the processing time of a
@@ -56,8 +49,7 @@ Let's see how we can keep up with the data growth by launching a
 cloud-based Wallaroo cluster on-demand, running the job, collecting the
 data, and shutting down the cluster, all in a fully automated fashion.
 
-Tools of the trade
-------------------
+## Tools of the trade
 
 Wallaroo's big idea is that your application doesn't have to know
 whether it's running on one process, several local processes, or a
@@ -66,8 +58,8 @@ there's no extra work involved in 'migrating' our classifier application
 from the previous blog post.
 
 We will need some tools to help us set up and manage our cluster in the
-cloud. Wallaroo can work with a lot of different tools. [Our friends at
-Pulumi](https://pulumi.io/) provide an excellent tool that removes the
+cloud. Wallaroo can work with a lot of different tools. Our friends at
+Pulumi provide an excellent tool that removes the
 headaches involved in provisioning infrastructure. We'll use Pulumi to
 define, set up, and finally tear down our processing cluster in this
 example.
@@ -78,15 +70,13 @@ an [AWS](https://aws.amazon.com/) account where our machines will live.
 
 Let's jump into it!
 
-A sample run
-------------
+## A sample run
 
 First of all, if you'd like to follow along (and spend some money
-provisioning EC2 servers), please [download and set up
-Pulumi](https://pulumi.io/quickstart/install.html).
+provisioning EC2 servers), please
+[download and set up Pulumi]({{< ref "/docs/reference/install" >}}).
 
-Next, [clone the wallaroo blog examples
-repo](https://github.com/WallarooLabs/wallaroo_blog_examples) and
+Next, [clone the wallaroo blog examples repo](https://github.com/WallarooLabs/wallaroo_blog_examples) and
 navigate to `provisioned-classifier`. If you followed along with the
 previous Pandas blog post, you'll find our old application nested away
 here, under`classifier`. What's more interesting are the two new
@@ -95,11 +85,11 @@ directories: `pulumi` and `ansible`.
 Without delving into details, let's see how to run our application on a
 freshly-provisioned cluster in the EC2 cloud:
 
-    make up run-cluster get-results down INPUT_LINES=1000000 CLUSTER_SIZE=3
+```bash
+make up run-cluster get-results down INPUT_LINES=1000000 CLUSTER_SIZE=3
+```
 
-![tty-fast](https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/tty-fast.gif?width=600&name=tty-fast.gif){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/tty-fast.gif?width=300&name=tty-fast.gif 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/tty-fast.gif?width=600&name=tty-fast.gif 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/tty-fast.gif?width=900&name=tty-fast.gif 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/tty-fast.gif?width=1200&name=tty-fast.gif 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/tty-fast.gif?width=1500&name=tty-fast.gif 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/tty-fast.gif?width=1800&name=tty-fast.gif 1800w"}
+![tty-fast](./tty-fast.gif)
 
 Let's break that down and see what's really going on here.
 
@@ -116,8 +106,8 @@ upload application code from `classifier/*` to all 3 machines
 provisioned above, and then start up a Wallaroo cluster with 7 worker
 processes per machine.
 
-Next, Ansible starts sending 1 million lines of our [synthetic CSV
-data](https://github.com/WallarooLabs/wallaroo_blog_examples/blob/master/provisioned-classifier/bin/send.py),
+Next, Ansible starts sending 1 million lines of our
+[synthetic CSV data](https://github.com/WallarooLabs/wallaroo_blog_examples/blob/master/provisioned-classifier/bin/send.py),
 and waits for 1 million lines to arrive at the `data_receiver` process.
 When those lines arrive, they are compressed, and the cluster is shut
 down.
@@ -128,13 +118,13 @@ to `output/results.tgz`,
 4) And finally, `make down` destroys the cloud infrastructure that was
 used to power our computation.
 
-The Pulumi cluster definition
------------------------------
+## The Pulumi cluster definition
 
 Let's take a look at how our infrastructure is defined. This is the core
-of
-the [definition](https://github.com/WallarooLabs/wallaroo_blog_examples/blob/master/provisioned-classifier/pulumi/index.js):
+of the
+[definition](https://github.com/WallarooLabs/wallaroo_blog_examples/blob/master/provisioned-classifier/pulumi/index.js):
 
+```javascript
     function instance(name) {
       return new aws.ec2.Instance(
         name,
@@ -152,6 +142,7 @@ the [definition](https://github.com/WallarooLabs/wallaroo_blog_examples/blob/ma
     for(var i=0; i<clusterSize-1; i++){
       workers.push(instance("classifier-"+(i+1).toString()));
     }
+```
 
 As you can see from the above, our little `instance()` function
 encapsulates the common settings for every machine that we want to
@@ -168,8 +159,10 @@ access the instances via SSH. Our Makefile ensures that an ssh key is
 generated on-the-fly for our cluster, and Pulumi knows how to use it to
 set up SSH access for newly-provisioned nodes:
 
-    let pubKey = fs.readFileSync("../ssh_pubkey_in_ec2_format.pub").toString();
-    let keyPair = new aws.ec2.KeyPair("ClassifierKey", {publicKey: pubKey});
+```
+let pubKey = fs.readFileSync("../ssh_pubkey_in_ec2_format.pub").toString();
+let keyPair = new aws.ec2.KeyPair("ClassifierKey", {publicKey: pubKey});
+```
 
 With the relevant bits of our computing infrastructure thus defined, we
 can tell Pulumi to take action in the real world and make it conform to
@@ -220,8 +213,7 @@ pre-loaded. For now, it only exists in the `us-west-2` AWS region, but
 we hope to make Wallaroo AMIs available for experimentation in all
 regions starting with the next Wallaroo release.
 
-Running the computation
------------------------
+## Running the computation
 
 Now that we know what magic powers conjured up our AWS infrastructure,
 let's take a look at how we use it to run our task. Fundamentally, the
@@ -239,27 +231,24 @@ distinction between the two is only relevant at cluster startup.
 output of our computation. This is the `data_receiver`, provided as part
 of a Wallaroo installation.
 
-4) The metrics UI -- Our [Elixir-powered realtime
-dashboard](https://blog.wallaroolabs.com/2018/04/choosing-elixirs-phoenix-to-power-a-real-time-web-ui/).
+4) The metrics UI -- Our [Elixir-powered realtime dashboard](https://blog.wallaroolabs.com/2018/04/choosing-elixirs-phoenix-to-power-a-real-time-web-ui/).
 
 Our Ansible playbook takes care of coordinating the launch of the
 various components and making sure that their input, output and control
 ports match up. In particular, that the cluster initializer starts up
 knowing the total number of workers in the cluster, and every other
-worker connects to the initializer's internal IP and control port. [See
-here](https://docs.wallaroolabs.com/book/running-wallaroo/running-wallaroo.html) if
-you're interested in a detailed discussion of clustering.
+worker connects to the initializer's internal IP and control port.
+[See here](https://docs.wallaroolabs.com/book/running-wallaroo/running-wallaroo.html)
+if you're interested in a detailed discussion of clustering.
 
 This is what ends up running on the servers when we launch our Ansible
 playbooks:
 
-![wallaroo-1](https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-1.png?width=600&name=wallaroo-1.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-1.png?width=300&name=wallaroo-1.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-1.png?width=600&name=wallaroo-1.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-1.png?width=900&name=wallaroo-1.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-1.png?width=1200&name=wallaroo-1.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-1.png?width=1500&name=wallaroo-1.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-1.png?width=1800&name=wallaroo-1.png 1800w"}
+![wallaroo](./wallaroo.png)
 
-Once the cluster is up and running, and the initializer node's [tcp
-source](https://github.com/WallarooLabs/wallaroo_blog_examples/blob/master/provisioned-classifier/classifier/classifier.py#L17) is
-listening for connections, we start up the `sender` and instruct it to
+Once the cluster is up and running, and the initializer node's
+[tcp source](https://github.com/WallarooLabs/wallaroo_blog_examples/blob/master/provisioned-classifier/classifier/classifier.py#L17)
+is listening for connections, we start up the `sender` and instruct it to
 send a stream of data to the TCP Source. In a realistic batch scenario,
 this sender could be implemented as
 a [Connector](https://docs.wallaroolabs.com/book/python/using-connectors.html) that
@@ -270,20 +259,17 @@ on-demand, and then shutting down.
 While the work is being performed, we can take a look at the metrics URL
 printed out on the screen to find out how the work is being distributed.
 
-    To see the cluster's real-time metrics, please visit
-    http://ec2-54-200-198-6.us-west-2.compute.amazonaws.com:4000
+> To see the cluster's real-time metrics, please visit
+> http://ec2-54-200-198-6.us-west-2.compute.amazonaws.com:4000
 
-![wallaroo-2](https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-2.png?width=600&name=wallaroo-2.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-2.png?width=300&name=wallaroo-2.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-2.png?width=600&name=wallaroo-2.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-2.png?width=900&name=wallaroo-2.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-2.png?width=1200&name=wallaroo-2.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-2.png?width=1500&name=wallaroo-2.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-2.png?width=1800&name=wallaroo-2.png 1800w"}
+![wallaroo-2](./wallaroo-2.png)
 
 In the screenshot above, you can see that
 the `Initializer` and `B03a909b23`nodes are processing about 4k messages
 per second each, and all the other workers have the classification work
 split evenly among them. Don't be surprised that two of the workers are
-processing orders of magnitude more messages! Remember our [pandas
-application
-pipeline](https://github.com/WallarooLabs/wallaroo_blog_examples/blob/master/provisioned-classifier/classifier/classifier.py#L11-L21)?
+processing orders of magnitude more messages! Remember our
+[pandas application pipeline](https://github.com/WallarooLabs/wallaroo_blog_examples/blob/master/provisioned-classifier/classifier/classifier.py#L11-L21)?
 
         ab.new_pipeline("Classifier",
                         wallaroo.TCPSourceConfig(in_host, in_port, decode))
@@ -298,40 +284,38 @@ more than one row at a time. Worker `B03a909b23` just happens to be the
 worker where our state named "CSV rows + global header state" lives.
 Let's take a look at its metrics:
 
-![wallaroo3](https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo3.png?width=600&name=wallaroo3.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo3.png?width=300&name=wallaroo3.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo3.png?width=600&name=wallaroo3.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo3.png?width=900&name=wallaroo3.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo3.png?width=1200&name=wallaroo3.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo3.png?width=1500&name=wallaroo3.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo3.png?width=1800&name=wallaroo3.png 1800w"}
+![wallaroo3](./wallaroo-3.png)
 
 Indeed, we can see that this worker is processing about 4k/sec messages
 in the "Batch Rows Of Csv, Emit Dataframes" step. Every other worker is
 busy classifying! Let's see the breakdown for a different, random
 worker:
 
-![wallaroo-4](https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-4.png?width=600&name=wallaroo-4.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-4.png?width=300&name=wallaroo-4.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-4.png?width=600&name=wallaroo-4.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-4.png?width=900&name=wallaroo-4.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-4.png?width=1200&name=wallaroo-4.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-4.png?width=1500&name=wallaroo-4.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/wallaroo/wallaroo-4.png?width=1800&name=wallaroo-4.png 1800w"}
+![wallaroo-4](./wallaroo-4.png)
 
 Looking good. All that's left for us to do is wait until the job
 completes and we receive our zipped data onto our disk.
 
-The numbers!
-------------
+## The numbers!
 
 As a reminder, let's take a look at the numbers we obtained by running
 our classifier on a single `c5.4xlarge` instance in AWS:
 
-#### SINGLE-MACHINE RUNNING TIMES (NO PROVISIONING)
+```
+# SINGLE-MACHINE RUNNING TIMES (NO PROVISIONING)
 
   CSV rows     1 worker   4 workers   8 workers
   ----------- ---------- ----------- -----------
   10 000         39s         20s         11s
   100 000       6m28s       3m16s       1m41s
   1 000 000    1h03m46s    32m12s      16m33s
+```
 
 Now, let's see how much speedup we can achieve from scaling out with our
 provisioned-on-demand infrastructure.
 
-#### MULTI-MACHINE RUNNING TIMES (PROVISIONING + COMPUTATION)
+```
+# MULTI-MACHINE RUNNING TIMES (PROVISIONING + COMPUTATION)
 
   ----------------------------------------------------------
   CSV rows      4 machines/   8 machines/   16 machines/
@@ -347,6 +331,7 @@ provisioned-on-demand infrastructure.
 
   30 000 000       > 2h          1h45m           1h12m
   ----------------------------------------------------------
+```
 
 Even though there is some constant overhead involved in spinning up the
 required infrastructure (clearly too much overhead to justify spinning
@@ -362,8 +347,7 @@ performance -- we can process the data and still fit in the hour-long
 window allotted for our batch process, but not have to incur unnecessary
 infrastructure costs if we don't need the extra speed.
 
-Conclusion
-----------
+## Conclusion
 
 The above figures illustrate how Wallaroo can be used as an ad-hoc
 compute cloud, using Pulumi and Ansible to provision, run workloads
@@ -378,6 +362,4 @@ we can focus on the business logic and flow of our data.
 
 If you're hitting limits when running your hourly, daily or nightly
 batch jobs and are looking into scaling out horizontally, don't hesitate
-to reach out to [Sean](../../../com/pulumi/blog/index.html) or drop in
-to our IRC channel. We'd love to chat!
-
+to reach out or drop in to our IRC channel. We'd love to chat!

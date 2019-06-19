@@ -1,10 +1,11 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Managing GitHub Webhooks with Pulumi"
+authors: ["matt-ellis"]
+tags: ["Infrastructure-as-Code"]
+date: "2018-07-08"
+
+summary: "At Pulumi, we use GitHub for a lot of our development workflow, which can be
+streamlined using Pulumi! This post takes a detailed look at automating GitHub using webhooks and serverless functions with Pulumi."
 ---
 
 
@@ -26,8 +27,7 @@ simple framework that hides much of the ceremony behind defining a hook
 and lets us focus on the core logic of our hook, without worrying about
 how it is deployed and managed.
 
-A simple hook
----------------------------------
+## A simple hook
 
 When you register a webhook with GitHub, you provide an HTTP endpoint
 and a set of events you'd like to listen for. When one of the events
@@ -82,22 +82,22 @@ case, I have a little throwaway GitHub repository I use for testing this
 sort of stuff. In that repository, I go to Settings -> Webhooks -> Add
 webhook and fill in my information:
 
--   Payload URL: The value of the `url` output of my Pulumi program (in
-    this case it is
-    <https://t1vyz1x203.execute-api.us-west-1.amazonaws.com/stage/>).
--   Content Type: `application-json`. I know we'll be inspecting this
-    content as we develop the hook and since we're writing the
-    implementation in TypeScript, it will be easier to interact with
-    JSON encoded data.
--   Secret: Generate a random string and put it here. I used
-    [random.org](https://www.random.org/) to do so, but any random
-    string will suffice. We'll use this string to validate that the
-    request came from GitHub.
--   Events: I only care about `pull_request` events, so I picked "Let me
-    select individual events" and then checked "Pull requests" and
-    unchecked the other event types.
--   Active: Since we want GitHub to deliver events, we'll keep this
-    checked.
+- Payload URL: The value of the `url` output of my Pulumi program (in
+  this case it is
+  <https://t1vyz1x203.execute-api.us-west-1.amazonaws.com/stage/>).
+- Content Type: `application-json`. I know we'll be inspecting this
+  content as we develop the hook and since we're writing the
+  implementation in TypeScript, it will be easier to interact with
+  JSON encoded data.
+- Secret: Generate a random string and put it here. I used
+  [random.org](https://www.random.org/) to do so, but any random
+  string will suffice. We'll use this string to validate that the
+  request came from GitHub.
+- Events: I only care about `pull_request` events, so I picked "Let me
+  select individual events" and then checked "Pull requests" and
+  unchecked the other event types.
+- Active: Since we want GitHub to deliver events, we'll keep this
+  checked.
 
 Once that's done, we can test our hook by opening a pull request,
 waiting a few moments and then use `pulumi logs` to ensure our hook was
@@ -198,8 +198,7 @@ that our validation is working as intended:
      2018-07-09T13:43:00.731-07:00[          hook980655da-d0462d4] END RequestId: ab363ec7-83b8-11e8-a7ae-93a25d68b5a9
      2018-07-09T13:43:00.731-07:00[          hook980655da-d0462d4] REPORT RequestId: ab363ec7-83b8-11e8-a7ae-93a25d68b5a9   Duration: 128.75 ms Billed Duration: 200 ms     Memory Size: 128 MB Max Memory Used: 20 MB
 
-Building an abstraction
--------------------------------------------------------
+## Building an abstraction
 
 We now have a nice little skeleton that we can use when writing a
 webhook on GitHub. Let's start to leverage some other Pulumi features to
@@ -274,8 +273,7 @@ something about the state of the pull request. For our bot, we only care
 about PRs where the `action` is `closed` and the `merged` key is set to
 `true`. When this holds, we'll want to delete the branch the pull
 request came from, if it was a topic branch (instead of a PR opened from
-a fork). We'll leverage the existing [`@octokit/rest` NPM
-package](https://www.npmjs.com/package/@octokit/rest) to do this. We can
+a fork). We'll leverage the existing [`@octokit/rest` NPM package](https://www.npmjs.com/package/@octokit/rest) to do this. We can
 generate a [personal access token](https://github.com/settings/tokens),
 and give it `repo` level scope, so it can act as us and delete branches.
 We'll then add this key to our configuration:
@@ -340,26 +338,22 @@ In itself, that's pretty cool, but we can do some more cool stuff with
 Pulumi. As is, while we can create the Webhook using Pulumi, we have to
 register it using the GitHub console, which is a little tedious. What if
 we could manage the registration of the hook with Pulumi itself? We'd
-really like to model the hook's assoication with GitHub as a resource
+really like to model the hook's association with GitHub as a resource
 that can be created, updated and deleted. Is there a way we can do that?
 Yes, there is!
 
-Managing all the things with Pulumi
--------------------------------------------------------------------------------
+## Managing all the things with Pulumi
 
-Pulumi [uses
-gRPC](https://github.com/pulumi/pulumi/blob/master/sdk/proto/provider.proto)
+Pulumi [uses gRPC](https://github.com/pulumi/pulumi/blob/master/sdk/proto/provider.proto)
 to define a contract between resource providers and the rest of Pulumi.
 So, we could go implement that contract in a language like go, like we
 do in our [Kubernetes](https://github.com/pulumi/pulumi-kubernetes)
-provider. Another option would be to take the existing [Terraform GitHub
-Provider](https://github.com/terraform-providers/terraform-provider-github)
-and use [Pulumi's terraform
-bridge](https://github.com/pulumi/pulumi-terraform/) wrap it into a
+provider. Another option would be to take the existing
+[Terraform GitHub Provider](https://github.com/terraform-providers/terraform-provider-github)
+and use [Pulumi's terraform bridge](https://github.com/pulumi/pulumi-terraform/) wrap it into a
 Pulumi resource provider, like we do with our
 [pulumi-aws](https://github.com/pulumi/pulumi-aws) provider. There's one
-final option, which is to use the "[dynamic
-provider](https://github.com/pulumi/pulumi/blob/ad3b5e7ee88346bc7e960de9f953957a72f84516/sdk/nodejs/dynamic/index.ts#L109)",
+final option, which is to use the "[dynamic provider](https://github.com/pulumi/pulumi/blob/ad3b5e7ee88346bc7e960de9f953957a72f84516/sdk/nodejs/dynamic/index.ts#L109)",
 which allows us to implement a resource provider in JavaScript itself.
 We wrote this provider to help us with testing, so we could mock out
 resources and control their lifecycle, but we can also use it to create
@@ -520,8 +514,7 @@ stack, the hook registration will be updated accordingly. Since our
 little program is getting large (~200 lines at this point), let's do a
 little more work on our abstraction.
 
-Building a Component
--------------------------------------------------
+## Building a Component
 
 Pulumi has the concept of a `ComponentResource` which is a resource that
 aggregates other resources. Many resources that we interact with day to
@@ -605,7 +598,7 @@ The interesting new code looks like this:
 Here, we've transformed our `createWebhook` method into an actual
 `GitHubWebhook` component that manages both the API of the hook as the
 hook's registration with GitHub. With this abstraction (and all of this
-complexity hidden off in a seperate `github.ts` file), the code we focus
+complexity hidden off in a separate `github.ts` file), the code we focus
 on when actually writing our bot is quite small:
 
     import * as pulumi from "@pulumi/pulumi";
@@ -641,8 +634,7 @@ on when actually writing our bot is quite small:
 
     export const url = hook.url;
 
-Going Further
------------------------------------
+## Going Further
 
 From here, there's a lot of ways we could extend this code. For example,
 while we require the configuration value `hookSecret` to be set before
@@ -651,9 +643,9 @@ do so, we could use the dynamic provider to create a special "random"
 resource, this resource would generate a new random string when created,
 but update calls would not impact the resource. Since Pulumi stores the
 state of every resource across invocations in the checkpoint, our random
-resource would not need to be backed by any cloud infrastrcture. We
+resource would not need to be backed by any cloud infrastructure. We
 could change the shape of the `GitHubWebhook` component to allow
-multiple owner/repostiory pairs to be provided and it would generate a
+multiple owner/repository pairs to be provided and it would generate a
 single AWS API and then multiple `GitHubWebhookResource`'s to register
 the same hook across multiple repositories. We could even extend this to
 allow registration of both repository and organization level webhooks.
@@ -667,4 +659,3 @@ Pulumi. You can find the source on
 [GitHub](https://github.com/ellismg/github-webhooks-serverless) and I've
 published it as an NPM package at
 [`@ellismg/pulumi-github-webhooks`](https://www.npmjs.com/package/@ellismg/pulumi-github-webhooks).
-

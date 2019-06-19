@@ -1,14 +1,15 @@
 ---
 title: "Code, Deploy, and Manage a Serverless REST API on AWS with Pulumi"
 authors: ["donna-malayeri"]
-tags: ["JavaScript", "serverless", "AWS"]
+tags: ["AWS/Lambda/Fargate"]
 date: "2018-06-18"
 
-description: "We'll create a REST API using Pulumi to define the infrastructure."
+summary: "In this blog post, we'll use Pulumi to create a simple serverless REST API that counts the number of times a route has been hit, using JavaScript to define both the infrastructure and application code."
+meta_image: "RELATIVE_TO_PAGE/counter-arch.png"
 ---
 
 
-[Pulumi](https://pulumi.io/) makes it easy to build serverless
+Pulumi makes it easy to build serverless
 applications and connect to other cloud resources. In this blog post,
 we'll create a simple REST API that counts the number of times a route
 has been hit, using JavaScript to define both the infrastructure and
@@ -21,8 +22,7 @@ declarative plan, following the best practices of immutable
 infrastructure. You can write your app code in any language supported by
 your serverless platform.
 
-Example app: serverless route counter
--------------------------------------
+## Example app: serverless route counter
 
 In this tutorial, we'll build a simple REST API that counts the number
 of times a route has been hit. For example:
@@ -38,14 +38,11 @@ of times a route has been hit. For example:
 
 We'll implement this using API Gateway, Lambda, and Dynamo DB:
 
-![counter-arch](https://blog.pulumi.com/hs-fs/hubfs/counter-arch.png?width=500&name=counter-arch.png){width="500"
-sizes="(max-width: 500px) 100vw, 500px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/counter-arch.png?width=250&name=counter-arch.png 250w, https://blog.pulumi.com/hs-fs/hubfs/counter-arch.png?width=500&name=counter-arch.png 500w, https://blog.pulumi.com/hs-fs/hubfs/counter-arch.png?width=750&name=counter-arch.png 750w, https://blog.pulumi.com/hs-fs/hubfs/counter-arch.png?width=1000&name=counter-arch.png 1000w, https://blog.pulumi.com/hs-fs/hubfs/counter-arch.png?width=1250&name=counter-arch.png 1250w, https://blog.pulumi.com/hs-fs/hubfs/counter-arch.png?width=1500&name=counter-arch.png 1500w"}
+![counter-arch](./counter-arch.png)
 
-[Setup]{style="font-family: Ubuntu, sans-serif; font-size: 30px;"}
+## Setup
 
-If this is your first time using Pulumi, go to
-[https://app.pulumi.com](https://app.pulumi.com/) and sign in with
+If this is your first time using Pulumi, go to <https://app.pulumi.com> and sign in with
 GitHub.
 
 Then, run the following command to install the Pulumi CLI:
@@ -58,13 +55,12 @@ If you're on Windows, run this:
     SET "PATH=%PATH%;%USERPROFILE%.pulumiin"
 
 You'll deploy this app to your own AWS account, so follow the steps to
-[configure your AWS account](https://pulumi.io/install/aws.html).
+[configure your AWS account]({{< ref "/docs/quickstart/aws" >}}).
 
 Make sure you have [Node.js](https://nodejs.org/en/download/) installed,
 with a version of 6.10.x or later.
 
-Create the app
---------------
+## Create the App
 
 First we'll create a Pulumi project and add code for both the
 infrastructure definitions and application code.
@@ -124,34 +120,26 @@ name in an environment variable.
 
     $ npm install --save @pulumi/cloud @pulumi/cloud-aws
 
-Deploy the app
---------------
+## Deploy the App
 
 To deploy both the infrastructure and app code, we'll run
 `pulumi update`. This command first shows a preview of all the resources
 that will be created and prompts for confirmation.
 
-![pulumi-update-preview](https://blog.pulumi.com/hs-fs/hubfs/pulumi-update-preview.png?width=800&name=pulumi-update-preview.png){width="800"
-sizes="(max-width: 800px) 100vw, 800px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/pulumi-update-preview.png?width=400&name=pulumi-update-preview.png 400w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-update-preview.png?width=800&name=pulumi-update-preview.png 800w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-update-preview.png?width=1200&name=pulumi-update-preview.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-update-preview.png?width=1600&name=pulumi-update-preview.png 1600w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-update-preview.png?width=2000&name=pulumi-update-preview.png 2000w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-update-preview.png?width=2400&name=pulumi-update-preview.png 2400w"}
+![pulumi-update-preview](./pulumi-update-preview.png)
 
 Choose the "yes" option to deploy to AWS. At the end of the update,
 you'll see a link to the Pulumi Console that shows the details of the
 deployment.
 
-![pulumi-update-complete](https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-complete.png?width=700&name=pulumi-update-complete.png){width="700"
-sizes="(max-width: 700px) 100vw, 700px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-complete.png?width=350&name=pulumi-update-complete.png 350w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-complete.png?width=700&name=pulumi-update-complete.png 700w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-complete.png?width=1050&name=pulumi-update-complete.png 1050w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-complete.png?width=1400&name=pulumi-update-complete.png 1400w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-complete.png?width=1750&name=pulumi-update-complete.png 1750w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-complete.png?width=2100&name=pulumi-update-complete.png 2100w"}
+![pulumi-update-complete](./pulumi-update-complete.png)
 
 Go to this link and click the **Resources** tab. You'll see all the
 resources you've created, including links to the AWS Console.
 
-![console-resources-tab](https://blog.pulumi.com/hs-fs/hubfs/Blog/console-resources-tab.png?width=700&name=console-resources-tab.png){width="700"
-sizes="(max-width: 700px) 100vw, 700px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/console-resources-tab.png?width=350&name=console-resources-tab.png 350w, https://blog.pulumi.com/hs-fs/hubfs/Blog/console-resources-tab.png?width=700&name=console-resources-tab.png 700w, https://blog.pulumi.com/hs-fs/hubfs/Blog/console-resources-tab.png?width=1050&name=console-resources-tab.png 1050w, https://blog.pulumi.com/hs-fs/hubfs/Blog/console-resources-tab.png?width=1400&name=console-resources-tab.png 1400w, https://blog.pulumi.com/hs-fs/hubfs/Blog/console-resources-tab.png?width=1750&name=console-resources-tab.png 1750w, https://blog.pulumi.com/hs-fs/hubfs/Blog/console-resources-tab.png?width=2100&name=console-resources-tab.png 2100w"}
+![console-resources-tab](./console-resources-tab.png)
 
-Test the app
-------------
+## Test the App
 
 Now that the app is deployed, let's try it out! With the Pulumi CLI,
 you can easily view output properties for your stack. This line in the
@@ -191,17 +179,14 @@ tail, use the `--follow` or `-f` flag:
      2018-06-15T13:52:42.189-07:00[           hello-world4fcc7b60] Getting count for 'wow'
      2018-06-15T13:52:42.325-07:00[           hello-world4fcc7b60] Got count 2 for 'wow'
 
-Clean up
---------
+## Clean up
 
 To clean up the resources, run `pulumi destroy`.
 
-Next steps
-----------
+## Next steps
 
-The [sample code for this
-application](https://github.com/pulumi/examples/tree/master/cloud-js-httpendpoint)
+The
+[sample code for this application](https://github.com/pulumi/examples/tree/master/cloud-js-httpendpoint)
 is available in the Pulumi examples repo on GitHub. For an end-to-end
-TypeScript application with a frontend, see the [URL shortener
-sample](https://github.com/pulumi/examples/tree/master/cloud-ts-url-shortener).
-
+TypeScript application with a frontend, see the
+[URL shortener sample](https://github.com/pulumi/examples/tree/master/cloud-ts-url-shortener).

@@ -1,12 +1,12 @@
 ---
 title: "Simple, Reproducible Kubernetes Deployments"
 authors: ["alex-clemmer"]
-tags: ["kubernetes", "infrastructure"]
+tags: ["Kubernetes", "Infrastructure-as-Code"]
 date: "2018-08-24"
 
-description: "In this post, we’ll see how Pulumi, an open source cloud native development platform, lets you express Kubernetes programs in real programming languages, like TypeScript, instead of endless YAML templates, in addition to delivering simple and reproducible, yet powerful Kubernetes, deployment workflows."
+summary: "In this post, we’ll see how Pulumi, an open source cloud native development platform, lets you express Kubernetes programs in real programming languages, like TypeScript, instead of endless YAML templates, in addition to delivering simple and reproducible, yet powerful Kubernetes, deployment workflows."
+meta_image: "RELATIVE_TO_PAGE/diff.gif"
 ---
-
 
 Kubernetes is a powerful container orchestrator for cloud native
 applications that can run on any cloud -- AWS, Azure, GCP -- in
@@ -24,7 +24,7 @@ powerful, Kubernetes deployment workflows.
 
 ## Less YAML, More Robustness
 
-[Pulumi 0.15](https://blog.pulumi.com/announcing-pulumi-0.15-kubernetes-cicd-openstack-and-more)
+[Pulumi 0.15]({{< relref "announcing-pulumi-0.15-kubernetes-cicd-openstack-and-more" >}})
 introduced Kubernetes support to Pulumi. When we started working on
 this, we already loved being able to write in our favorite languages --
 with the benefits of IDEs, classes and functions, and reuse through
@@ -89,8 +89,8 @@ Kubernetes ships out of the box with useful APIs for deploying
 applications, managing incremental rollouts of changes, and specifying
 how traffic is directed, all of which we will use in this example.
 
-The code below as a slightly modified version of [the "Hello World"
-Deployment example](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#creating-a-deployment)
+The code below as a slightly modified version of
+[the "Hello World" Deployment example](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#creating-a-deployment)
 from the Kubernetes docs. We have chosen to write this Pulumi program in
 [TypeScript](https://www.typescriptlang.org/), an excellent choice for a
 mix of dynamic productivity, static typing (meaning we will find errors
@@ -158,15 +158,15 @@ Right away, we notice:
     [Deployment](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/#deployment-v1-apps)
     and
     [Service](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/#service-v1-core)
-    APIs. In fact, it is generated from the [Kubernetes OpenAPI
-    specification](https://github.com/kubernetes/kubernetes/tree/master/api/openapi-spec),
+    APIs. In fact, it is generated from the
+    [Kubernetes OpenAPI specification](https://github.com/kubernetes/kubernetes/tree/master/api/openapi-spec),
     so it is always up-to-date and complete.
 -   By using TypeScript, we have the ability to eliminate repetition and
     boilerplate with familiar programming language constructs, like we
     did with our `appLabels` variable that is reused multiple times.
     Another example is the use of a function to capture common patterns,
-    [as can be seen in our port of the ever-familiar guestbook
-    application](https://github.com/pulumi/examples/blob/56ab0ab0c16f7cb1d09d748e93ef1b031a94c1c1/kubernetes-ts-guestbook/index.ts#L16).
+    as can be seen in our port of the
+    [ever-familiar guestbook application](https://github.com/pulumi/examples/blob/56ab0ab0c16f7cb1d09d748e93ef1b031a94c1c1/kubernetes-ts-guestbook/index.ts#L16).
 
 ## Deploying the Application
 
@@ -288,8 +288,8 @@ you a preview first and confirm that you'd like to proceed before
 actually making any changes. And because Pulumi is always tracking old
 states, rollback afterwards is easy also.
 
-This CLI workflow is great for the dev inner loop, however [the Pulumi
-GitHub App](https://pulumi.io/reference/cd-github.html) also integrates
+This CLI workflow is great for the dev inner loop, however
+[the Pulumi GitHub App]({{< ref "/docs/reference/cd-github" >}}) also integrates
 these previews and diffs with your CI/CD system, by enlightening your
 GitHub Pull Requests with potential update impacts, while your team
 still has a chance to discuss changes inside the usual PR workflow,
@@ -301,8 +301,8 @@ In this article, you've seen that you can express Kubernetes apps in
 real code, instead of YAML, and you've gotten a taste of the `pulumi up`
 deployment workflow, especially compared to `kubectl`.
 
-**Try it out now** by heading over to our [Getting Started
-page](https://pulumi.io/quickstart/).
+**Try it out now** by heading over to our
+[Getting Started page]({{< ref "/docs/quickstart" >}}).
 
 We are just getting started. In the coming weeks we will be sharing more
 around other deployment scenarios, including A/B traffic splitting,
@@ -311,7 +311,6 @@ living alongside AWS infrastructure, triggering of cascading rollouts
 based on ConfigMap changes... And much, much, more.
 
 If you have specific use cases you'd like to see us tackle, don't
-hesitate to reach out, either [on
-GitHub](https://github.com/pulumi/pulumi) or [in our Community
-Slack](https://slack.pulumi.io/). We'd love to hear from you!
-
+hesitate to reach out, either
+[on GitHub](https://github.com/pulumi/pulumi) or in our
+[Pulumi Community Slack](https://slack.pulumi.io/). We'd love to hear from you!

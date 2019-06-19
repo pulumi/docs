@@ -1,37 +1,33 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Programming the Cloud with Python"
+authors: ["sean-gillespie"]
+tags: ["Infrastructure-as-Code"]
+date: "2019-04-04"
+
+summary: "Python is awesome for automating manual tasks. So let's use it for cloud infrastructure as code!"
 ---
 
-[Across the industry, the popularity of Python is exploding. Amongst our
+Across the industry, the popularity of Python is exploding. Amongst our
 own customers at Pulumi, who automate their infrastructure using Python,
 we've seen the same. Stack Overflow wrote about the astounding growth
 of Python in 2017:
 
-]{#hs_cos_wrapper_post_body .hs_cos_wrapper .hs_cos_wrapper_meta_field
-
 > The term "fastest-growing" can be [hard to define
 > precisely](https://xkcd.com/1102/), but we make the case that **Python
 > has a solid claim to being the fastest-growing major programming
-> language.
->  ** -  [David Robinson, Stack
-> Overflow](https://stackoverflow.blog/2017/09/06/incredible-growth-python/)
+> language**.
+>
+> -- [David Robinson, Stack Overflow](https://stackoverflow.blog/2017/09/06/incredible-growth-python/)
 
 
 TIOBE, the maintainers of a popular index of programming language
-popularity, crowned Python as "[Programming Language of the
-Year](https://www.tiobe.com/tiobe-index/)" for 2018, based on its
+popularity, crowned Python as "[Programming Language of the Year](https://www.tiobe.com/tiobe-index/)" for 2018, based on its
 meteoric rise in its index. Since Python is not a new language, what
 could be driving this incredible adoption curve?
 
 Python is, and always has been, particularly amenable to the automation
 of previously-manual tasks. So much so, in fact, that books have been
-written on how to [automate common tasks with
-Python](https://automatetheboringstuff.com/). In recent years, Python's
+written on how to [automate common tasks with Python](https://automatetheboringstuff.com/). In recent years, Python's
 penchant for task automation have led to its use at the foundation of
 tools now ubiquitous in the DevOps space: tools like
 [Ansible](https://www.ansible.com/),
@@ -57,18 +53,17 @@ infrastructure and delivery of our applications?
 > core skills to our own work. Now is the time to *engineer* our
 > delivery. We divide our work between ourselves and computers: humans
 > for decisions, and automation for tasks.
->   - [The Software Defined Delivery
-> Manifesto](https://sdd-manifesto.org/)
+>
+>  -- [The Software Defined Delivery Manifesto](https://sdd-manifesto.org/)
 
-That sounds great, but what is this "Pulumi" thing? {#OHTACAuKhcq}
----------------------------------------------------
+## That sounds great, but what is this "Pulumi" thing?
 
 Pulumi is an infrastructure as code tool for provisioning cloud
 infrastructure and deploying applications. The key difference between
 Pulumi and other tools in this space (such as Ansible, Terraform, and
 AWS CloudFormation) is that Pulumi aggressively reclaims the word
-"code": users of Pulumi write programs in *general purpose programing
-languages* that, when run, deploy and run applications in cloud
+"code": users of Pulumi write programs in *general purpose programing languages*
+that, when run, deploy and run applications in cloud
 environments, while still retaining all the known benefits of
 infrastructure as code that our industry has grown accustomed to
 (repeatability, resilience to failure, history and auditing, and so
@@ -111,13 +106,37 @@ deploys a static website to S3:
 There are only 18 lines of Python code here, but this program does a
 ton!
 
-::: {section-style="6"}
--   [First, we create an AWS S3 Bucket that we'll use to host our
-    website from, setting the index document to
-    be "index.html",]{#OHTACAaQy4o}
--   [Next, we iterate over all files in the "www" directory (using the
-    standard Python for loop!),]{#OHTACAhbokU}
--   [Finally, for every file in the "www" directory, we guess its MIME
-    type using the Python standard library and then create an S3
-    BucketObject inside the website bucket, which uploads the file to
-    S3.]{#OHTACAXfWXe}
+- First, we create an AWS S3 Bucket that we'll use to host our
+  website from, setting the index document to
+  be "index.html".
+- Next, we iterate over all files in the "www" directory (using the
+  standard Python for loop!
+- Finally, for every file in the "www" directory, we guess its MIME
+  type using the Python standard library and then create an S3
+  BucketObject inside the website bucket, which uploads the file to
+  S3.
+
+This is a simple example, but it's hard to overstate how awesome it is to be able to reach into
+Python's deep standard library whenever we need to. In this example we're using both the “os” and
+“mimetypes” packages in the Python standard library: the first to list the files in a particular
+directory and the second to guess a particular file's MIME type based on its extension and contents,
+which we eventually pass directly to S3.
+
+Remember, this code isn't performing imperative commands — like, say, your cloud provider's Python
+SDK or Boto would — and instead creates a declarative resource graph that the Pulumi engine understands
+how to act upon. This works for the first deployment, but more importantly, for all subsequent
+incremental updates too. If we were to change the contents of one of the files on disk, Pulumi would
+recognize that one of the files has changed and re-upload it, without changing the bucket or any of
+the other already existing bucket objects!
+
+## Where can I learn more?
+
+If you'd like to try the above example out for yourself, we've put the [full code on GitHub](https://github.com/pulumi/examples/tree/master/aws-py-s3-folder).
+Full instructions for installing Pulumi and deploying your own static website on S3 are in the `README`.
+Don't take our word for it, though! We'd love for you to check it out and see for yourself how
+great it is to reclaim the “code” in “infrastructure as code”. If you want to know more about
+Pulumi and the things it can do for you, check out our [Getting Started]({{< ref "/docs/quickstart" >}}) page and our Documentation for more information.
+
+Python is the language of automation today and the future. Pulumi is the infrastructure as
+code automation tool of the future. Using them both together is an incredible way to automate a
+crucial job while staying entirely within a language you already know and love!

@@ -1,10 +1,12 @@
 ---
 title: "Simple Serverless programming with Google Cloud Functions and Pulumi"
 authors: ["cyrus-najmabadi"]
-tags: ["serverless", "GCP"]
+tags: ["GCP/Knative/Cloud Functions", "GCP"]
 date: "2019-04-10"
 
-description: "Serverless has never been simpler than it is with Pulumi + Google Cloud Functions. In just a few lines of code, you can serve a simple HTTP API, respond to a pubsub topic or uploads of new objects to a storage bucket, and more. Learn how to fit these together to make a real-world cloud application."
+summary: "Serverless has never been simpler than it is with Pulumi + Google Cloud Functions. In just
+a few lines of code, you can serve a simple HTTP API, respond to a pubsub topic or uploads of new
+objects to a storage bucket, and more. Learn how to fit these together to make a real-world cloud application."
 ---
 
 Pulumi lets you create, deploy, and manage Google Cloud applications and
@@ -67,8 +69,8 @@ objects to your [storage](https://cloud.google.com/storage/) bucket:
 ## A Complete Google Functions Slack Bot
 
 For an idea of how you might fit these together to make a real-world
-cloud application, let's look a simple skeleton structure for a [Slack
-Bot](https://api.slack.com/bot-users) using Pulumi and Google Cloud
+cloud application, let's look a simple skeleton structure for a
+[Slack Bot](https://api.slack.com/bot-users) using Pulumi and Google Cloud
 Functions:
 
     // secure config tokens to use to validate incoming messages as well as authenticate ourself to slack
@@ -117,8 +119,8 @@ GCP, from the cloud resources to the serverless code, all within a
 unified Pulumi application! Customizing this for your own use case is as
 simple as changing the code in the two JavaScript arrow-functions.
 
-To see the complete project, take a look at our [@mentionbot
-example](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot).
+To see the complete project, take a look at our
+[@mentionbot example](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot).
 That example will listen for mentions of your name and will notify you
 of them in a channel of your choosing, giving you you a persistent
 timeline you can go back to look at to make sure you can find all these
@@ -165,13 +167,12 @@ takes care of that you would normally be responsible for. This includes:
     all works, and that the data you use is available in that Cloud
     Function when it finally is triggered.
 8.  Figuring out a safe and secure way to encode and access secrets for
-    your Cloud Function. Here, we can use Pulumi's [Config
-    Secrets](https://pulumi.io/reference/config.html#secrets) to safely
+    your Cloud Function. Here, we can use Pulumi's
+    [Config Secrets]({{< ref "/docs/reference/config#secrets" >}}) to safely
     encrypt and manage secrets for your Cloud Function code.
 
-Not to mention that by doing all of that, you can [achieve continuous
-deployment using GitOps and Cloud
-Build](https://pulumi.io/reference/cd-google-cloud-build.html).
+Not to mention that by doing all of that, you can achieve continuous deployment
+[Pulumi and Google Cloud Build]({{< ref "/docs/reference/cd-google-cloud-build" >}}).
 
 ## Updating Your Google Functions Code
 
@@ -218,14 +219,13 @@ create, update, and maintain.
 
 To check things out, get started today:
 
--   [Get Started with Pulumi on GCP](https://pulumi.io/quickstart/)
--   [Deploy a Minimal Google Cloud Function
-    Application](https://github.com/pulumi/examples/tree/master/gcp-ts-functions)
+- [Get Started with Pulumi on GCP]({{< ref "/docs/quickstart/gcp" >}})
+- [Deploy a Minimal Google Cloud Function Application](https://github.com/pulumi/examples/tree/master/gcp-ts-functions)
 
 PS: If you're interested in how Pulumi manages to take a
 JavaScript/TypeScript `=>` function and somehow analyze and transform it
 into a form that Cloud Functions can use, please see our deep dive on
-this topic here: [Lambdas as Lambdas: The magic of simple serverless
-Functions](../../../com/pulumi/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions.html).
+this topic in:
+[**Lambdas as Lambdas: The magic of simple serverless Functions**]({{< relref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}}).
 We're leveraging the same great programming language and analysis
 framework to power our GCP solution here.

@@ -1,15 +1,14 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Serverless as Simple Callbacks with Pulumi and Azure Functions"
+authors: ["mikhail-shilkov"]
+tags: [Azure/ACS, "Azure"]
+date: "2019-05-07"
+
+summary: "The simplest way to take a Node.js function and deploy it to Azure cloud as an HTTP endpoint using Pulumi."
 ---
 
-
-*Today's guest post is from [Mikhail Shilkov](https://mikhail.io/), a
-Microsoft Azure MVP and early Pulumi user and contributor - enjoy!*
+_Today's guest post is from [Mikhail Shilkov](https://mikhail.io/), a
+Microsoft Azure MVP and early Pulumi user and contributor - enjoy!_
 
 Serverless compute services, like Azure Functions, offer an amazing
 power to application developers to leverage: highly available,
@@ -19,11 +18,11 @@ several lines of code.
 So, what's **the simplest** way to take a Node.js function and deploy it
 to Azure cloud as an HTTP endpoint? How about this little tutorial:
 
-#### 1. Create a new Pulumi program:
+## 1. Create a new Pulumi program:
 
     $ pulumi new azure-typescript
 
-#### 2. Define an HTTP endpoint in `index.ts`:
+## 2. Define an HTTP endpoint in `index.ts`:
 
     import * as azure from '@pulumi/azure';
      
@@ -41,7 +40,7 @@ to Azure cloud as an HTTP endpoint? How about this little tutorial:
      
     export const url = greeting.url;
 
-#### 3. Deploy:
+## 3. Deploy:
 
     $ pulumi up
      
@@ -78,8 +77,7 @@ Storage, and configured a Consumption Plan and a Function App to run my
 function. An automated and reproducible deployment in less than two
 minutes.
 
-Beyond Hello-World
--------------------------------------------
+## Beyond Hello-World
 
 The power of Node.js comes from the richness of its library ecosystem.
 There's an NPM package for everything, so you definitely want to use
@@ -110,8 +108,7 @@ Stay tuned for another blog post with a full implementation of a
 serverless URL shortener application deployed into multiple Azure
 regions for fast response time and improved resiliency.
 
-Not Only HTTP
-----------------------------------
+## Not Only HTTP
 
 Your application might not be a bunch of HTTP functions. You probably
 want to leverage queues for asynchronous message passing. How about
@@ -184,8 +181,7 @@ behind the scenes, but the code still looks like "normal code".
 Composition of cloud resources should be as straightforward as hooking
 up components in any traditional application.
 
-Looking Ahead
------------------------------------
+## Looking Ahead
 
 Pulumi serverless programming model for Azure Functions is just ramping
 up. There is only a handful of trigger types supported right now, and
@@ -194,16 +190,15 @@ some configuration parameters are not exposed yet.
 So, today is the perfect time to chime in and join the discussion! Help
 us answer the questions:
 
--   Is this programming model beneficial to your scenarios?
--   Which trigger types do you want to be supported?
--   How should we package multiple functions into Function App(s)?
--   Do you need input and output bindings to be supported, and if yes,
-    in which shape?
+- Is this programming model beneficial to your scenarios?
+- Which trigger types do you want to be supported?
+- How should we package multiple functions into Function App(s)?
+- Do you need input and output bindings to be supported, and if yes,
+  in which shape?
 
 Feel free to create an issue on
 [GitHub](https://github.com/pulumi/pulumi-azure/), tag us on
-[Twitter](https://twitter.com/PulumiCorp), or join our [community Slack
-channel](https://slack.pulumi.io/).
+[Twitter](https://twitter.com/PulumiCorp), or join our
+[community Slack channel](https://slack.pulumi.io/).
 
 Happy serverless programming!
-

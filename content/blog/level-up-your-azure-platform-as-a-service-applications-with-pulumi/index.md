@@ -1,17 +1,15 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
----
+title: "Level up your Azure Platform as a Service applications with Pulumi"
+authors: ["mikhail-shilkov"]
+tags: ["Infrastructure-as-Code", "Azure"]
+date: "2019-05-06"
 
+summary: "Leverage Pulumi for continuous delivery of code and infrastructure to Azure PaaS. An ASP.NET Core application running on App Service and DevOps pipelines."
+meta_image: "RELATIVE_TO_PAGE/app-insights.png"
+---
 
 *Today's guest post is from [Mikhail Shilkov](https://mikhail.io/), a
 Microsoft Azure MVP and early Pulumi user and contributor - enjoy!*
-
-------------------------------------------------------------------------
 
 Today I want to guide you through the process of developing Pulumi
 programs to leverage Azure
@@ -19,8 +17,7 @@ programs to leverage Azure
 (PaaS) services. My language of choice is TypeScript---a powerful and
 expressive typed language, which is very familiar to many Azure users.
 
-Azure Platform as a Service
--------------------------------------------------------------
+## Azure Platform as a Service
 
 Azure consists of dozens of cloud services, from VMs to Kubernetes to
 Serverless. In my experience, a lot of customers choose Azure for its
@@ -46,25 +43,21 @@ Azure:
 > Azure infrastructure, which services are your primary target? Vote &
 > RT!
 >
-> --- Mikhail Shilkov (@MikhailShilkov) [April 23,
-> 2019](https://twitter.com/MikhailShilkov/status/1120592994351099904?ref_src=twsrc%5Etfw)
+> -- Mikhail Shilkov (@MikhailShilkov) [April 23, 2019](https://twitter.com/MikhailShilkov/status/1120592994351099904)
 
 Nonetheless, PaaS services pose different challenges to application
 developers. In particular, the usage of multiple cloud services demands
 an investment in infrastructure automation. That's where Pulumi comes to
 the rescue.
 
-A Sample Application
-------------------------------------------------
+## A Sample Application
 
 For this walkthrough, I took an existing application from Azure Samples
-GitHub: [.NET Core MVC sample for Azure App
-Service](https://github.com/azure-samples/dotnetcore-sqldb-tutorial).
+GitHub: [.NET Core MVC sample for Azure App Service](https://github.com/azure-samples/dotnetcore-sqldb-tutorial).
 Predictably enough, it's a Todo List application, and this time it is a
 web app built with [ASP.NET](http://ASP.NET) Core, Entity Framework Core
-and a SQL database. [Build an ASP.NET Core and SQL Database app in Azure
-App
-Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-dotnetcore-sqldb)
+and a SQL database.
+[Build an ASP.NET Core and SQL Database app in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-dotnetcore-sqldb)
 describes how to deploy such application to Azure App Service by means
 of clicking buttons in the Azure portal.
 
@@ -76,15 +69,11 @@ pipeline in Azure DevOps.
 
 Here is a sketch of the solution:
 
-![Pulumi and Azure PaaS - Application
-Diagram](https://blog.pulumi.com/hs-fs/hubfs/pulumi-app-service.png?width=2100&name=pulumi-app-service.png){width="2100"
-sizes="(max-width: 2100px) 100vw, 2100px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/pulumi-app-service.png?width=1050&name=pulumi-app-service.png 1050w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-app-service.png?width=2100&name=pulumi-app-service.png 2100w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-app-service.png?width=3150&name=pulumi-app-service.png 3150w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-app-service.png?width=4200&name=pulumi-app-service.png 4200w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-app-service.png?width=5250&name=pulumi-app-service.png 5250w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-app-service.png?width=6300&name=pulumi-app-service.png 6300w"}
+![Pulumi and Azure PaaS - Application Diagram](./pulumi-app-service.png)
 
 Let's get started building together!
 
-Solution Structure
---------------------------------------------
+## Solution Structure
 
 The following snippet shows the essential elements of the solution:
 
@@ -105,15 +94,13 @@ the `src` folder. There's nothing specific to Pulumi here: it's just an
 instead.
 
 *Note: You can find the full code of the application, infrastructure
-definition, and deployment pipeline in [Pulumi Examples
-repository](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-devops/).*
+definition, and deployment pipeline in [Pulumi Examples repository](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-devops/).*
 
-Bootstrapping a Pulumi Program
---------------------------------------------------------------------
+## Bootstrapping a Pulumi Program
 
-The Pulumi development experience is powered by the [Pulumi
-CLI](https://pulumi.io/reference/commands.html). After [installing the
-CLI](https://pulumi.io/quickstart/install.html), I jump into an empty
+The Pulumi development experience is powered by the
+[Pulumi CLI]({{< relref "/docs/reference/commands" >}}). After
+[installing the CLI]({{< ref "/docs/reference/install" >}}), I jump into an empty
 `infra` folder and run `pulumi new azure-typescript` accepting all the
 default answers. The CLI bootstraps a skeleton of a TypeScript NodeJS
 application. The code looks like this:
@@ -140,8 +127,7 @@ application. The code looks like this:
 The infrastructure pieces are defined by instantiating objects of
 appropriate types: `ResourceGroup` and `Account` in this example.
 
-Stacks
---------------------
+## Stacks
 
 If an application is developed to run and evolve for months and years,
 it's smart to invest in practices like Continuous Integration and
@@ -150,7 +136,7 @@ that such an application will run in multiple environments: production,
 staging, development, and so on.
 
 Pulumi comes with a handy concept of
-[stacks](https://pulumi.io/reference/stack.html)--- isolated,
+[stacks]({{< ref "/docs/reference/stack" >}})--- isolated,
 independently configurable instances of a Pulumi program. A separate
 stack can be designated for each deployment environment.
 
@@ -181,19 +167,18 @@ name to definitions of infrastructure resources:
 
 Note how I use the power of the general purpose programming language to
 
--   Interact with the environment by reading the stack name
--   Encode custom rules for resource naming
--   Work around the shortcomings of the cloud, namely, the restricted
-    set of characters to use in Storage Accounts
--   Extract the value `resourceGroupArgs` to reuse the same definition
-    for upcoming resources.
+- Interact with the environment by reading the stack name
+- Encode custom rules for resource naming
+- Work around the shortcomings of the cloud, namely, the restricted
+  set of characters to use in Storage Accounts
+- Extract the value `resourceGroupArgs` to reuse the same definition
+  for upcoming resources.
 
 As a result, the stacks `production` and `dev` will be deployed to
 separate resource groups with clean and consistent naming throughout the
 resources.
 
-Deploying the Application to App Service
------------------------------------------------------------------------------------------
+## Deploying the Application to App Service
 
 Now, it's time to define the infrastructure to host my
 [ASP.NET](http://ASP.NET) Core app. There are three pieces of the puzzle
@@ -222,8 +207,8 @@ tiers based on the target environment identified by the stack name.
 ### 2. Deployment Artifact
 
 App Service is a mature Azure service with a long history, so it has
-numerous options for deployment methods. Arguably, the newest [Run from
-Package](https://github.com/Azure/app-service-announcements/issues/110)
+numerous options for deployment methods. Arguably, the newest
+[Run from Package](https://github.com/Azure/app-service-announcements/issues/110)
 is the most friendly way to practice Infrastructure as Code automation.
 
 Essentially, I prepare a zip file with the published .NET Core
@@ -264,8 +249,7 @@ shared access signature of the blob:
 At startup, App Service downloads the zip and mounts it as a local
 read-only disk to store the application binaries.
 
-Adding a SQL Database
----------------------------------------------------
+## Adding a SQL Database
 
 The application host is now defined, but I also need a relational
 database to store and query Todo Items. Staying true to the PaaS path,
@@ -275,8 +259,8 @@ I'm using Azure SQL Database service.
 
 Setting up a SQL Server requires a couple of parameter values that might
 change between execution environments, for instance, a username and a
-password for the connection string. Pulumi provides [a way to
-configure](https://pulumi.io/reference/config.html) the program's
+password for the connection string. Pulumi provides
+[a way to configure]({{< ref "/docs/reference/config" >}}) the program's
 parameters per stack.
 
 The configuration itself will happen in my CI/CD pipeline. For now, I
@@ -351,8 +335,7 @@ and add it to the App Service configuration:
         }]
     });
 
-Collecting Metrics with Application Insights
--------------------------------------------------------------------------------------------------
+## Collecting Metrics with Application Insights
 
 Application Insights is an Application Performance Management (APM)
 service to be used for collecting metrics from cloud applications.
@@ -377,19 +360,18 @@ key:
         },
     });
 
-Continuous Deployment with Azure DevOps
----------------------------------------------------------------------------------------
+## Continuous Deployment with Azure DevOps
 
 While Pulumi CLI works great during development; a production deployment
 should rather be executed in a CI/CD pipeline. This time I'm using Azure
-DevOps---a managed CI/CD service to build, test, and deploy cloud
+DevOps -- a managed CI/CD service to build, test, and deploy cloud
 applications.
 
 In particular, I defined an Azure Pipeline consisting of three steps:
 
--   Build & Publish the .NET Core application;
--   Restore NPM packages for the infrastructure program;
--   Provision the cloud infrastructure with Pulumi.
+- Build & Publish the .NET Core application;
+- Restore NPM packages for the infrastructure program;
+- Provision the cloud infrastructure with Pulumi.
 
 ### Build & Publish the .NET Application
 
@@ -417,9 +399,8 @@ dependencies:
 
 ### Install Pulumi and Run Infrastructure Code
 
-There is a Pulumi task available in Azure Marketplace: [Pulumi Azure
-Pipelines
-Task](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task).
+There is a Pulumi task available in Azure Marketplace:
+[Pulumi Azure Pipelines Task](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task).
 After installing it to your organization, you should be able to utilize
 a simple task like this:
 
@@ -435,43 +416,29 @@ a simple task like this:
 
 Alternatively, if you can't install third-party tasks from Azure
 Marketplace, you can call the Pulumi CLI from a custom shell script, see
-[this pipeline
-definition](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-devops/alternative-pipeline/).
+[this pipeline definition](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-devops/alternative-pipeline/).
 
 When everything is wired correctly, I see this screen in Azure DevOps:
 
-![Green Build of a Pulumi Program in
-DevOps](https://blog.pulumi.com/hs-fs/hubfs/pulumi-devops-build.png?width=860&name=pulumi-devops-build.png){width="860"
-sizes="(max-width: 860px) 100vw, 860px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/pulumi-devops-build.png?width=430&name=pulumi-devops-build.png 430w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-devops-build.png?width=860&name=pulumi-devops-build.png 860w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-devops-build.png?width=1290&name=pulumi-devops-build.png 1290w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-devops-build.png?width=1720&name=pulumi-devops-build.png 1720w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-devops-build.png?width=2150&name=pulumi-devops-build.png 2150w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-devops-build.png?width=2580&name=pulumi-devops-build.png 2580w"}
+![Green Build of a Pulumi Program in DevOps](./pulumi-devops-build.png)
 
 The newly created resource group contains six resources:
 
-![Azure Resource created by
-Pulumi](https://blog.pulumi.com/hs-fs/hubfs/pulumi-resource-group.png?width=1248&name=pulumi-resource-group.png){width="1248"
-sizes="(max-width: 1248px) 100vw, 1248px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/pulumi-resource-group.png?width=624&name=pulumi-resource-group.png 624w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-resource-group.png?width=1248&name=pulumi-resource-group.png 1248w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-resource-group.png?width=1872&name=pulumi-resource-group.png 1872w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-resource-group.png?width=2496&name=pulumi-resource-group.png 2496w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-resource-group.png?width=3120&name=pulumi-resource-group.png 3120w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-resource-group.png?width=3744&name=pulumi-resource-group.png 3744w"}
+![Azure Resource created by Pulumi](./pulumi-resource-graph.png)
 
 The application is up and running:
 
-![Todo List App deployed to Azure with
-Pulumi](https://blog.pulumi.com/hs-fs/hubfs/pulumi-todo-app.png?width=1169&name=pulumi-todo-app.png){width="1169"
-sizes="(max-width: 1169px) 100vw, 1169px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/pulumi-todo-app.png?width=585&name=pulumi-todo-app.png 585w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-todo-app.png?width=1169&name=pulumi-todo-app.png 1169w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-todo-app.png?width=1754&name=pulumi-todo-app.png 1754w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-todo-app.png?width=2338&name=pulumi-todo-app.png 2338w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-todo-app.png?width=2923&name=pulumi-todo-app.png 2923w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-todo-app.png?width=3507&name=pulumi-todo-app.png 3507w"}
+![Todo List App deployed to Azure with Pulumi](./pulumi-todo-app.png)
 
 The telemetry is flowing into Application Insights:
 
-![Application Map from App
-Insights](https://blog.pulumi.com/hs-fs/hubfs/pulumi-application-map.png?width=767&name=pulumi-application-map.png){width="767"
-sizes="(max-width: 767px) 100vw, 767px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/pulumi-application-map.png?width=384&name=pulumi-application-map.png 384w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-application-map.png?width=767&name=pulumi-application-map.png 767w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-application-map.png?width=1151&name=pulumi-application-map.png 1151w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-application-map.png?width=1534&name=pulumi-application-map.png 1534w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-application-map.png?width=1918&name=pulumi-application-map.png 1918w, https://blog.pulumi.com/hs-fs/hubfs/pulumi-application-map.png?width=2301&name=pulumi-application-map.png 2301w"}
+![Application Map from App Insights](./app-insights.png)
 
 You can find the full code of the application, infrastructure
-definition, and deployment pipeline in [Pulumi Examples
-repository](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-devops/).
+definition, and deployment pipeline in
+[Pulumi Examples repository](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-devops/).
 
-Pulumi ❤️ Azure PaaS
------------------------------------------------
+## Pulumi ❤️ Azure PaaS
 
 Azure App Service and friends are a great way to deploy web applications
 and APIs without worrying about the nitty-gritty details of the
@@ -484,14 +451,11 @@ language.
 
 You can get going with these resources:
 
--   [Getting Started with Pulumi](https://pulumi.io/quickstart/)
--   [Setup Pulumi to work with
-    Azure](https://pulumi.io/quickstart/azure/setup.html)
--   [Walkthroughs and
-    Examples](https://pulumi.io/quickstart/azure/index.html)
+- [Getting Started with Pulumi]({{< ref "/docs/quickstart" >}})
+- [Setup Pulumi to work with Azure]({{< ref "/docs/quickstart/azure" >}})
+- [Walkthroughs and Examples]({{< ref "/docs/quickstart/azure" >}})
 
 Pulumi enables developers to define cloud infrastructure using general
 purpose programming languages. Pulumi works with multiple cloud
 providers and has first-class support for all services in Microsoft
 Azure.
-

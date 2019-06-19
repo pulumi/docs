@@ -1,20 +1,19 @@
 ---
 title: "How to deploy Jenkins to Kubernetes with Pulumi"
 authors: ["sean-gillespie"]
-tags: ["todo"]
+tags: ["Infrastructure-as-Code", "CI/CD"]
 date: "2018-06-27"
 
-description: "TODO: Put in a reasonable summary"
+summary: "Making a reusable component with Pulumi to run a Jenkins cluster on Kubernetes."
 ---
 
-In this blog post, we'll see how to run [Jenkins on Kubernetes with
-Pulumi](https://github.com/pulumi/examples/tree/master/kubernetes-ts-jenkins).
+In this blog post, we'll see how to run
+[Jenkins on Kubernetes with Pulumi](https://github.com/pulumi/examples/tree/master/kubernetes-ts-jenkins).
 We abstract away the complexity of the configuration into a reusable
 component to enable it to be reused by team mates. Our example is based
 on adapting a Helm template.
 
-Reusing the Jenkins component
------------------------------
+## Reusing the Jenkins component
 
 Once the component is created, it can be reused with just a few lines of
 implementation code.
@@ -39,22 +38,19 @@ We could take the component code and prepare a fully reusable NPM
 package, but as this is just an example, we've simply maintained the
 code as an included class. 
 
-Running the App
----------------
+## Running the App
 
-Follow the steps in [Pulumi Installation and
-Setup](https://pulumi.io/install/) and [Configuring Pulumi
-Kubernetes](https://pulumi.io/reference/kubernetes.html#configuration)
+Follow the steps in
+[Pulumi Installation and Setup]({{< ref "/docs/reference/install" >}}) and
+[Configuring Pulumi Kubernetes]({{< ref "/docs/quickstart/kubernetes" >}})
 to get setup with Pulumi and Kubernetes.
 
 > *Note*: The code in this repo assumes you are deploying to a cluster
 > that supports the `LoadBalancer` service type. This includes most
-> cloud providers as well as [Docker for Mac Edge w/
-> Kubernetes](https://docs.docker.com/docker-for-mac/kubernetes/). If
+> cloud providers as well as [Docker for Mac Edge w/ Kubernetes](https://docs.docker.com/docker-for-mac/kubernetes/). If
 > not (for example if you are targeting `minikube` or your own custom
 > Kubernetes cluster), replace `type: "LoadBalancer"` with
-> `type: "ClusterIP"` in `jenkins.ts`. See the Kubernetes [Services
-> docs](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services---service-types)
+> `type: "ClusterIP"` in `jenkins.ts`. See the Kubernetes [Services docs](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services---service-types)
 > for more details.
 
 Clone the repo and navigate to the Jenkins example:
@@ -158,8 +154,7 @@ instance:
         - 6 resources deleted
     Update duration: 18.202009282s
 
-Next Steps
-----------
+## Next Steps
 
 This example showed just a little of the potential of reusing components
 and code, instead of copy and pasting config, to improve productivity
@@ -167,10 +162,8 @@ and comprehension for building cloud stacks. 
 
 Find out more:
 
--   Get the [example code on
-    GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-jenkins)
+-   Get the [example code on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-jenkins)
 -   Read the docs on
-    [Kubernetes](https://pulumi.io/reference/pkg/nodejs/@pulumi/kubernetes/index.html)
--   See the tutorial on [building components on
-    Pulumi.io](https://pulumi.io/reference/component-tutorial.html)
-
+    [Kubernetes]({{< ref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
+-   See the tutorial on
+    [building components on Pulumi.io]({{< ref "/docs/reference/component-tutorial" >}})

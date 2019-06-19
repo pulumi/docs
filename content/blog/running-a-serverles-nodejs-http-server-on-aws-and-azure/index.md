@@ -1,10 +1,10 @@
 ---
 title: "Running a Serverless Node.js HTTP Server on AWS and Azure"
 authors: ["cyrus-najmabadi"]
-tags: ["serverless"]
+tags: ["AWS/Lambda/Fargate", "Infrastructure-as-Code"]
 date: "2018-10-02"
 
-description: "The newly introduced cloud.HttpServer in Pulumi makes it easy to serve a standard Node.js HTTP server as a serverless API on any cloud platform. In this post, we walk through some of the background on why we introduced this new API and how it fits into the Node.js HTTP ecosystem."
+summary: "The newly introduced `cloud.HttpServer` in Pulumi makes it easy to serve a standard Node.js HTTP server as a serverless API on any cloud platform. In this post, we walk through some of the background on why we introduced this new API and how it fits into the Node.js HTTP ecosystem."
 ---
 
 The newly
@@ -24,10 +24,8 @@ server and to start listening and responding to requests in an
 environment that felt natural to people already comfortable working with
 JavaScript. From the earliest commits this was a core focus, and from
 early on Node.js exposed the initial JavaScript API for creating an
-[HTTP
-Server](https://github.com/nodejs/node/commit/a80591aff6704bd71ac5b136e23ddd7b52cf0299#diff-31b367d1856df8608494b65123d57acd).
-That API evolved over time to become the well known [HTTP
-module](https://nodejs.org/api/http.html) that is the backbone of so
+[HTTP Server](https://github.com/nodejs/node/commit/a80591aff6704bd71ac5b136e23ddd7b52cf0299#diff-31b367d1856df8608494b65123d57acd).
+That API evolved over time to become the well known [HTTP module](https://nodejs.org/api/http.html) that is the backbone of so
 many projects.
 
 The approach taken by Node.js was to provide an
@@ -94,8 +92,7 @@ working with
 [IncomingMessage](https://nodejs.org/api/http.html#http_class_http_incomingmessage)
 and
 [ServerResponse](https://nodejs.org/api/http.html#http_class_http_serverresponse)
-like one normally would with Node.js, AWS specific messages [like
-so](https://docs.aws.amazon.com/lambda/latest/dg/eventsources.html#eventsources-api-gateway-request)
+like one normally would with Node.js, AWS specific messages [like so](https://docs.aws.amazon.com/lambda/latest/dg/eventsources.html#eventsources-api-gateway-request)
 are the required. Responding to messages with your own data uses a very
 different form as well. Code has to be written like so:
 
@@ -114,14 +111,12 @@ different form as well. Code has to be written like so:
         callback(null, response);
     }
 
-Azure follows its own [distinct
-style](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook)
+Azure follows its own [distinct style](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook)
 as well for processing http messages. These approaches end up working,
 but often feel decidedly un-Node.js-like. They're full of cloud-provider
 specific values and behaviors, and they end up making it more difficult
 to work with the existing ecosystem of middleware components out there. 
-(Note that Google Cloud [HTTP
-Functions](https://cloud.google.com/functions/docs/writing/http)
+(Note that Google Cloud [HTTP Functions](https://cloud.google.com/functions/docs/writing/http)
 actually do natively support the Node.js request/response pattern!).
 
 We thought this was a place we could definitely help Pulumi applications
@@ -129,7 +124,7 @@ with a simpler approach for these cloud ecosystems. To further this
 goal, we've created a new API called
 [cloud.HttpServer](https://github.com/pulumi/pulumi-cloud/blob/master/api/httpServer.ts).
 `HttpServer` is a Pulumi
-[Resource](https://pulumi.io/reference/programming-model.html#resources),
+[Resource]({{< ref "/docs/reference/programming-model#resources" >}}),
 but is designed to work well with the existing large middleware
 ecosystem out there. And critically, the same HttpServer API can be
 implemented consistently on AWS, Azure and GCP - so you can write once
@@ -228,7 +223,7 @@ endpoint, but then call into this library to translate to the Node.js
 http form that will allow you to then code things up as simply as if
 this was just an Express.js app!
 
-[^**^ One thing glossed over was how Pulumi knows how to convert a
+`^**^` One thing glossed over was how Pulumi knows how to convert a
 JavaScript callback into an AWS Lambda or an Azure FunctionApp. Stay
 tuned for more on this subject! It's an incredibly cool part of Pulumi,
 and we can't wait to dive deeper into that functionality and how it can
@@ -236,10 +231,8 @@ make it simple and clear to create an entire Cloud App in one single
 package, even including the code in-line that will end up executing in
 the cloud at runtime! That magic, along with powerful components like
 the new HttpServer API can help make cloud applications dramatically
-simpler to write and maintain. Happy coding!]{style="font-size: 14px;"}
+simpler to write and maintain. Happy coding!
 
-You can dig in to [serverless coding with Pulumi
-here](https://pulumi.io/quickstart/cloudfx/tutorial-rest-api.html), and
-join us on Wednesday 3rd October at 11am PDT to hear more about
-[serverless programming with Pulumi on our YouTube live
-stream](https://www.youtube.com/watch?v=k8ceyQuJiVM). 
+You can dig in to [serverless coding with Pulumi here]({{< ref "/docs/quickstart/cloudfx/tutorial-rest-api" >}}),
+and join us on Wednesday 3rd October at 11am PDT to hear more about
+[serverless programming with Pulumi on our YouTube live stream](https://www.youtube.com/watch?v=k8ceyQuJiVM). 

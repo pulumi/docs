@@ -1,14 +1,13 @@
 ---
 title: "Using Pulumi with AWS SQS and Lambdas"
 authors: ["cyrus-najmabadi"]
-tags: ["JavaScript", "serverless", "AWS"]
+tags: ["Infrastructure-as-Code", "AWS"]
 date: "2018-07-10"
 
 summary: "With Amazon's recent announcement to support Simple Queue Service (SQS) as an event source for Lambda, this post details how to use that from Pulumi!"
 ---
 
-[Two weeks
-ago](https://aws.amazon.com/blogs/aws/aws-lambda-adds-amazon-simple-queue-service-to-supported-event-sources/)
+[Two weeks ago](https://aws.amazon.com/blogs/aws/aws-lambda-adds-amazon-simple-queue-service-to-supported-event-sources/)
 Amazon added [Simple Queue Service](https://aws.amazon.com/sqs/) (SQS)
 as a supported event source for
 [Lambda](https://aws.amazon.com/lambda/). SQS is one of AWS's oldest
@@ -19,8 +18,8 @@ Adding SQS as a supported event source for Lambda means that now it's
 possible to use SQS in a serverless computing infrastructure, where
 Lambdas are triggered in response to messages added to your SQS queue.
 Now, instead of needing some sort of Service dedicated to polling your
-SQS queue, or creating [Simple Notification
-Service](https://aws.amazon.com/sns/) (SNS) notifications from your
+SQS queue, or creating [Simple Notification Service](https://aws.amazon.com/sns/) (SNS)
+notifications from your
 messages, you can instead just directly trigger whatever Lambda you
 want.
 
@@ -28,11 +27,11 @@ want.
 
 Here's a simple example of using SQS as an event source with Pulumi:
 upon receipt of a message via SQS we post a new message into Slack. The
-full project is [available on Github in our examples
-repo](https://github.com/pulumi/examples/tree/master/aws-js-sqs-slack),
+full project is available on Github in our
+[examples repo](https://github.com/pulumi/examples/tree/master/aws-js-sqs-slack),
 and includes the instructions to get this up and running.
 
-{{< highlight javascript >}}
+```javascript
 let aws = require("@pulumi/aws");
 let serverless = require("@pulumi/aws-serverless");
 let config = require("./config");
@@ -45,9 +44,7 @@ serverless.queue.subscribe("mySlackPoster", queue, async (e) => {
     for (let rec of e.Records) {
         await client.chat.postMessage({
             channel: config.slackChannel,
-            text: `*SQS message ${rec.messageId}*:
-${rec.body}
-`+
+            text: `*SQS message ${rec.messageId}*: ${rec.body}`+
                 `(with :love_letter: from Pulumi)`,
             as_user: true,
         });
@@ -58,7 +55,7 @@ ${rec.body}
 module.exports = {
     queueURL: queue.id,
 };
-{{< /highlight >}}
+```
 
 ## Implementing SQS in Pulumi
 
@@ -68,8 +65,7 @@ applications. Based on Amazon's documentation on this new capability we
 felt it would likely be very easy to provide. Amazon introduced this
 functionality by reusing existing systems and APIs. Specifically, to
 create a Lambda trigger off an SQS message you only need to create a new
-[Event Source
-Mapping](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateEventSourceMapping.html)
+[Event Source Mapping](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateEventSourceMapping.html)
 mapping between the two. This seemed like it would be very simple, and
 we set off to expose the right Pulumi API to make this possible.
 
@@ -82,7 +78,7 @@ simple Pulumi programming model
 With this new API you would now be able to write code in your Pulumi
 application like so:
 
-{{< highlight javascript >}}
+```javascript
 import * as aws from "@pulumi/aws";
 import * as serverless from "@pulumi/aws-serverless";
 
@@ -97,7 +93,7 @@ serverless.queue.subscribe("subscription", sqsQueue, async (event) => {
     // Add whatever code you want here to run in the AWS lambda. 'event' will contain the
     // all the necessary data about the message added to the queue.
 }, { batchSize: 1 });
-{{< /highlight >}}
+```
 
 This example also demonstrates several of the great capabilities of a
 Pulumi application. First, the ability to define your infrastructure
@@ -134,20 +130,17 @@ that constraint.
 At Pulumi we think that Terraform is fantastic, and we love using it. So
 we thought the best thing we could do in this position was to help out
 that project to support this new functionality as well. We did this
-around two weeks ago by contributing [this
-PR](https://github.com/terraform-providers/terraform-provider-aws/pull/5024)
+around two weeks ago by contributing [this PR](https://github.com/terraform-providers/terraform-provider-aws/pull/5024)
 to their project. We worked with Terraform over a couple over a few days
 to get the PR up to snuff, and eventually got it in. With this, now both
 Terraform and Pulumi customers will be able to benefit from these
 changes in the upcoming releases for both projects!
 
 After getting the change in we went back and tested our example and saw
-that now everything worked as expected. We also expanded things out [in
-an
-example](https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/aws-serverless/examples/queue/index.ts)
+that now everything worked as expected. We also expanded things out
+[in an example](https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/aws-serverless/examples/queue/index.ts)
 to show how you might use this in practice. In this example, we receive
-the event, and then just write the data of it into an [S3
-Bucket](https://aws.amazon.com/s3/). Running this example we now
+the event, and then just write the data of it into an [S3 Bucket](https://aws.amazon.com/s3/). Running this example we now
 successfully see:
 
 ```
@@ -175,8 +168,7 @@ Update duration: 28s
 
 Once created, we could then see this Stack at <https://app.pulumi.com>,
 and we could easily use the functionality there to even navigate to
-those resources over at our [AWS
-Console](https://console.aws.amazon.com). Over there were were able to
+those resources over at our [AWS Console](https://console.aws.amazon.com). Over there were were able to
 use the console to both send a message to the Queue, verify our Lambda
 got triggered, and even check our Bucket to see the data written into
 it. In only around a dozen lines of code, we were able to provision 11

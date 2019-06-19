@@ -1,0 +1,259 @@
+                                                                    <div class="section post-body">
+                                                                        <p><a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+                                                                                class="twitter-share-button"
+                                                                                data-via="pulumicorp"
+                                                                                data-show-count="false">Tweet</a>
+                                                                            <script async
+                                                                                src="https://platform.twitter.com/widgets.js"
+                                                                                charset="utf-8"></script>
+                                                                        </p>
+                                                                        <span id="hs_cos_wrapper_post_body"
+                                                                            class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_rich_text"
+                                                                            style=""
+                                                                            data-hs-cos-general-type="meta_field"
+                                                                            data-hs-cos-type="rich_text">
+                                                                            <p style="text-align: justify;">Pulumi
+                                                                                Crosswalk for AWS modules can be used to
+                                                                                get first class insights and
+                                                                                visualizations directly inside your
+                                                                                Pulumi application.</p>
+                                                                            <!--more-->
+                                                                            <p style="text-align: justify;">As cloud
+                                                                                applications tend to be long-lived, we
+                                                                                think it’s vital that it be possible to
+                                                                                get regular insights on the performance
+                                                                                of the application at all times. Using
+                                                                                <a
+                                                                                    href="https://pulumi.io/reference/crosswalk/aws/">Crosswalk
+                                                                                    for AWS</a> Pulumi applications
+                                                                                allow you to easily define and visualize
+                                                                                the appropriate <a
+                                                                                    href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/working_with_metrics.html"
+                                                                                    rel=" noopener">metrics</a> that
+                                                                                show the health of your services, create
+                                                                                <a
+                                                                                    href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html">alarms</a>
+                                                                                to let you know when something is wrong,
+                                                                                and easily create <a
+                                                                                    href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html"
+                                                                                    rel=" noopener">dashboards</a> to
+                                                                                get live visualization of what is
+                                                                                happening in the cloud. Because this is
+                                                                                vital to the health of the application,
+                                                                                we think this should be something built
+                                                                                in from the start, and not something
+                                                                                added after the fact as an out of band
+                                                                                artifact.</p>
+                                                                            <p style="text-align: justify;">Let’s see
+                                                                                what that means in practice! I’m going
+                                                                                to use a recent hackathon project I
+                                                                                created where I built a <a
+                                                                                    href="https://api.slack.com/bot-users"
+                                                                                    rel=" noopener">Slack bot</a> to
+                                                                                notify me about all the
+                                                                                <code>@mentions</code> I’d received.
+                                                                                Using this, I’d have a place I could go
+                                                                                back to to look at, to find messages I
+                                                                                knew had come in, but maybe I wanted to
+                                                                                take a second glance at. The bot just
+                                                                                sends me messages in a private channel
+                                                                                we share like so:</p>
+                                                                            <p><img src="https://user-images.githubusercontent.com/4564579/59464639-dc033f80-8ddd-11e9-9219-b3c3ee0b4020.png"
+                                                                                    alt="image"></p>
+                                                                            <p style="text-align: justify;">I intend to
+                                                                                add more functionality to this bot over
+                                                                                time to help me out. If you’d like to
+                                                                                create something similar, the code and
+                                                                                instructions are <a
+                                                                                    href="https://github.com/pulumi/examples/tree/master/aws-ts-slackbot"
+                                                                                    rel=" noopener">here</a>. The bot
+                                                                                works by hearing about incoming events
+                                                                                (pushed to<br>it from Slack’s servers),
+                                                                                looking for mentions of my name, then
+                                                                                pushing requests back to Slack’s server
+                                                                                to update our private channel.</p>
+                                                                            <p style="text-align: justify;">Now the bot
+                                                                                I wrote has to do something interesting
+                                                                                due to restrictions in the Slack
+                                                                                messaging system. Slack will only give
+                                                                                you a few seconds to deal with a message
+                                                                                they send you. If you don’t complete the
+                                                                                request in a timely fashion then they’ll
+                                                                                assume something has gone wrong, and
+                                                                                they’ll resend. This will happen a few
+                                                                                times before they just give up. This
+                                                                                means that we don’t really want to try
+                                                                                to process a message, and then also make
+                                                                                an outgoing network call to Slack all in
+                                                                                the same request. That outgoing call
+                                                                                could take far too long, causing Slack
+                                                                                to think there was a problem. So,
+                                                                                instead, we simply receive the request,
+                                                                                and push it right away to an <a
+                                                                                    href="https://aws.amazon.com/sns/">SNS</a>
+                                                                                topic. We can then process that topic
+                                                                                message later with another Lambda.</p>
+                                                                            <p style="text-align: justify;">The skeleton
+                                                                                of the code basically looks like this:
+                                                                            </p>
+                                                                            <pre><code class="language-ts"><span class="hljs-comment">// Location to store the incoming slack messages to.</span>
+<span class="hljs-keyword">const</span> messageTopic = <span class="hljs-keyword">new</span> aws.sns.Topic(<span class="hljs-string">"messages"</span>);
+<span class="hljs-comment">// Create an API endpoint that slack will use to push events to us with.</span>
+<span class="hljs-keyword">const</span> endpoint = <span class="hljs-keyword">new</span> awsx.apigateway.API(<span class="hljs-string">"mentionbot"</span>, {
+    routes: [{
+        path: <span class="hljs-string">"/events"</span>,
+        method: <span class="hljs-string">"POST"</span>,
+        eventHandler: async (event) =&gt; {
+            <span class="hljs-comment">// process the different types of messages. Push normal messages to 'messageTopic'</span>
+            <span class="hljs-comment">// ...</span>
+            <span class="hljs-comment">// Return success quickly so that Slack doesn't just immediately resend this message to us.</span>
+            <span class="hljs-keyword">return</span> { statusCode: <span class="hljs-number">200</span>, body: <span class="hljs-string">""</span> };
+        },
+    }],
+});
+<span class="hljs-comment">// Hook up a lambda that will then process the topic when possible.</span>
+<span class="hljs-keyword">const</span> subscription = messageTopic.onEvent(<span class="hljs-string">"processTopicMessage"</span>, async ev =&gt; {
+     <span class="hljs-comment">// process the messages in here. Look for mentions, then notify slack to post a message in</span>
+     <span class="hljs-comment">// right channel if we find one.</span>
+});
+</code></pre>
+                                                                            <p>Overall, this is a very simple app. But
+                                                                                how do we know if the app is actually
+                                                                                doing well? What if something starts to
+                                                                                go wrong and the <code>endpoint</code>
+                                                                                is no longer responding in a timely
+                                                                                fashion. How would we find out? It turns
+                                                                                out to be pretty simple to add this
+                                                                                functionality here! Let’s see how that
+                                                                                would look.</p>
+                                                                            <p>First, we want to be profiling the <a
+                                                                                    href="https://aws.amazon.com/lambda/">Lambda
+                                                                                    Functions</a> that were created by
+                                                                                those two resources. That’s very simple
+                                                                                to do:</p>
+                                                                            <pre><code class="language-ts"><span class="hljs-keyword">const</span> endpointFunc = endpoint.getFunction(<span class="hljs-string">"/events"</span>);
+<span class="hljs-keyword">const</span> topicFunc = subscription.func;
+</code></pre>
+                                                                            <p>Then, we want to get information about
+                                                                                how long these functions are taking.
+                                                                                With Pulumi’s <a
+                                                                                    href="https://pulumi.io/reference/crosswalk/aws/"
+                                                                                    rel=" noopener">Crosswalk</a> APIs
+                                                                                it’s simple to get at this information.
+                                                                                Inside all the main "Crosswalk for AWS"
+                                                                                modules are exposed <a
+                                                                                    href="https://pulumi.io/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#Metric">Metrics</a>
+                                                                                for almost anything you might ever need.
+                                                                                In this case, we want to know how long
+                                                                                those Functions are taking so we can get
+                                                                                that information as follows:</p>
+                                                                            <pre><code class="language-ts"><span class="hljs-keyword">const</span> endpointFuncDuration = awsx.lambda.metrics.duration({ <span class="hljs-function"><span class="hljs-keyword">function</span>: <span class="hljs-title">endpointFunc</span> })</span>;
+<span class="hljs-keyword">const</span> topicProcessDuration = awsx.lambda.metrics.duration({ <span class="hljs-function"><span class="hljs-keyword">function</span>: <span class="hljs-title">topicFunc</span> })</span>;
+</code></pre>
+                                                                            <p>Metrics are very customizable. But for
+                                                                                now we’ll just use the defaults returned
+                                                                                for those functions by AWS. Now that we
+                                                                                have the metrics, it’s simple to create
+                                                                                an Cloudwatch alarm that will alert us
+                                                                                when things take too long:</p>
+                                                                            <pre><code class="language-ts"><span class="hljs-comment">// Notify us if takes us longer than 5 seconds to process a Slack message. But only notify if this</span>
+<span class="hljs-comment">// happened at least once every 5 minutes in a 15 minute period. We're ok with the occasional</span>
+<span class="hljs-comment">// random network hiccup causing delays.</span>
+<span class="hljs-keyword">const</span> alarm = endpointFuncDuration.withUnit(<span class="hljs-string">"Seconds"</span>)
+                                  .withPeriod(<span class="hljs-number">300</span>)
+                                  .createAlarm(<span class="hljs-string">"TooLong"</span>, {
+    threshold: <span class="hljs-number">5</span>,
+    evaluationPeriods: <span class="hljs-number">3</span>,
+});
+</code></pre>
+                                                                            <p>Finally, we can use both those metrics
+                                                                                <em>and</em> the alarm we just created
+                                                                                to make a great looking dashboard that
+                                                                                we can use to get an overall view of the
+                                                                                health of this app:</p>
+                                                                            <pre><code class="language-ts"><span class="hljs-keyword">const</span> dashboard = <span class="hljs-keyword">new</span> awsx.cloudwatch.Dashboard(<span class="hljs-string">"mentionbot"</span>, {
+    widgets: [
+        <span class="hljs-keyword">new</span> awsx.cloudwatch.LineGraphMetricWidget({
+            width: <span class="hljs-number">12</span>,
+            title: <span class="hljs-string">"Receiving duration"</span>,
+            metrics: [ endpointFuncDuration.with({ extendedStatistic: <span class="hljs-number">99</span>, label: <span class="hljs-string">"Duration p99"</span> }) ],
+            annotations: <span class="hljs-keyword">new</span> awsx.cloudwatch.HorizontalAnnotation(alarm),
+        }),
+        <span class="hljs-keyword">new</span> awsx.cloudwatch.LineGraphMetricWidget({
+            width: <span class="hljs-number">12</span>,
+            title: <span class="hljs-string">"Processing duration"</span>,
+            metrics: [ topicProcessDuration.with({ extendedStatistic: <span class="hljs-number">99</span>, label: <span class="hljs-string">"Duration p99"</span> }) ],
+        }),
+    ],
+});
+</code></pre>
+                                                                            <p>The <a
+                                                                                    href="https://github.com/pulumi/pulumi-awsx/tree/master/nodejs/awsx/cloudwatch#dashboards"
+                                                                                    rel=" noopener">Crosswalk for AWS
+                                                                                    API for dashboards</a> gives a lot
+                                                                                of options for building up a dashboard
+                                                                                programmatically. There are a wealth of
+                                                                                Widgets and Annotations to expose the
+                                                                                full power of Cloudwatch’s dashboards to
+                                                                                your app in a simple to use manner.</p>
+                                                                            <p>With the above Dashboard code we get this
+                                                                                useful chart:</p>
+                                                                            <p><img src="https://user-images.githubusercontent.com/4564579/59466375-0d7e0a00-8de2-11e9-9942-4e54da70b251.png"
+                                                                                    alt="image"></p>
+                                                                            <p style="text-align: justify;">We can see
+                                                                                that things look healthy, and the chart
+                                                                                shows us both the information about our
+                                                                                p99 latencies, as well as the threshold
+                                                                                point that would cause our alarm to
+                                                                                trigger.</p>
+                                                                            <p style="text-align: justify;">With these
+                                                                                facilities I now have an app that does
+                                                                                what I need, but also directly exposes
+                                                                                mechanisms to track and get insights to
+                                                                                its health. What’s great is that if I
+                                                                                now change my app (for example, in a way
+                                                                                that causes new Lambda Functions to be
+                                                                                created), I don’t need to do anything to
+                                                                                keep these alarms and dashboards
+                                                                                working. Because they’re directly
+                                                                                referencing the real Cloud resources
+                                                                                they will be kept up to date
+                                                                                automatically as my app grows and
+                                                                                changes over time. That’s really
+                                                                                powerful, and much simpler than having
+                                                                                to manage all these different parts
+                                                                                independently!</p>
+                                                                            <p style="text-align: justify;">We hope
+                                                                                these new Crosswalk for AWS APIs will be
+                                                                                just as useful for you! For more
+                                                                                information on Pulumi Crosswalk for AWS
+                                                                                checkout other related content:</p>
+                                                                            <ol>
+                                                                                <li><a href="../../../com/pulumi/blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws.html"
+                                                                                        rel=" noopener">Product
+                                                                                        Announcement</a></li>
+                                                                                <li><a>Mapbox IOT-as-Code with Pulumi
+                                                                                        Crosswalk for AWS</a></li>
+                                                                                <li><a href="https://pulumi.io/reference/crosswalk/aws/"
+                                                                                        rel=" noopener">Product
+                                                                                        Documentation</a></li>
+                                                                            </ol>
+                                                                        </span>
+                                                                        <p><a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+                                                                                class="twitter-share-button"
+                                                                                data-via="pulumicorp"
+                                                                                data-show-count="false">Tweet</a>
+                                                                            <script async
+                                                                                src="https://platform.twitter.com/widgets.js"
+                                                                                charset="utf-8"></script>
+                                                                        </p>
+                                                                    </div>
+                                                                    <p id="hubspot-topic_data"> Topics: <a
+                                                                            class="topic-link"
+                                                                            href="https://blog.pulumi.com/tag/aws">AWS</a>,
+                                                                        <a class="topic-link"
+                                                                            href="https://blog.pulumi.com/tag/logging">Logging</a>
+                                                                    </p>
+                                                                    <p>Posted on Jun 14, 2019 12:05:55 PM</p>
+                                                                </div>
+                                                            </div>

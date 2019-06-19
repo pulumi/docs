@@ -1,12 +1,12 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
----
+title: "Improving Kubernetes Management with Pulumi's Await Logic"
+authors: ["levi-blackstone"]
+tags: ["Kubernetes", "Infrastructure-as-Code"]
+date: "2019-03-06"
 
+summary: "In this blog post, we discuss await logic, which allows users to have better visibility into the state of Kubernetes resources as they are being deployed or created. We added the ability to customize await logic for user-selected Kubernetes resources."
+meta_image: "RELATIVE_TO_PAGE/status-rich.gif"
+---
 
 Pulumi enables customers to create, deploy, and manage modern
 applications and infrastructure in their preferred cloud environment
@@ -24,14 +24,12 @@ blog post, we discuss "await logic", which allows users to have better
 visibility into the state of Kubernetes resources as they are being
 deployed or created.
 
-We've [**previously talked
-about**](../../../com/pulumi/blog/kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images.html)
-how Pulumi [**tracks the
-status**](../../../com/pulumi/blog/kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service.html)
+We've
+[**previously talked about**]({{< relref "kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images" >}})
+how Pulumi [**tracks the status**]({{< relref "kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service" >}})
 of Kubernetes resources to provide fine-grained status messages for both
-your [**infrastructure and
-applications**](../../../com/pulumi/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective.html).
-Pulumi [**uses a resource graph**](https://pulumi.io/reference/how.html)
+your [**infrastructure and applications**]({{< relref "how-do-kubernetes-deployments-work-an-adversarial-perspective" >}}).
+Pulumi [**uses a resource graph**]({{< ref "/docs/reference/how" >}})
 for orchestration, dependency management, differential updates, and
 cascading rollouts.
 
@@ -44,7 +42,7 @@ the resource status has been verified by the await logic.
 You can see an example of what this looks like in practice in the
 screencast below:
 
-![status-rich](https://blog.pulumi.com/hs-fs/hubfs/Blog/status-rich.gif?width=600&name=status-rich.gif)
+![status-rich](./status-rich.gif)
 
 Pulumi's sophisticated await logic helps customers with a couple use
 cases:
@@ -63,23 +61,21 @@ stacks of cloud resources, simplifying the process of adding new
 applications, or sharing responsibilities between teams.
 
 
-2) Reliably integrate with [**CI/CD
-systems**](https://pulumi.io/reference/cd.html) for infrastructure and
+2) Reliably integrate with
+[**CI/CD systems**]({{ ref "/docs/reference/cd" >}}) for infrastructure and
 application deployments without requiring hardcoded timeouts, or
 scripting kubectl and parsing the resulting JSON/YAML to detect errors.
 If errors are encountered, Pulumi automatically surfaces the relevant
 messages, making it easy to understand why your deployment failed.
 
-New Annotations to Customize Kubernetes Await Logic
----------------------------------------------------
+## New Annotations to Customize Kubernetes Await Logic
 
 Although this await logic works great for most workloads, the
 fast-moving Kubernetes ecosystem is vast and complex, and edge cases are
 inevitable. We have recently added two annotations that can be used to
 configure the behavior of the await logic.
 
-In the [0.20.4
-release](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v0.20.4),
+In the [`0.20.4` release](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v0.20.4),
 we added the "timeoutSeconds" parameter to allow users to override the
 default timeout values for resource creation. This is useful for special
 cases where a resource is expected to take a long time to be ready, but
@@ -88,8 +84,7 @@ selected resource, choose a timeout value, and add the following
 annotation to the resource's metadata:
 `pulumi.com/timeoutSeconds: "600"`.
 
-In the [0.20.2
-release](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v0.20.2),
+In the [`0.20.2` release](https://github.com/pulumi/pulumi-kubernetes/releases/tag/v0.20.2),
 we added the ability to completely disable await logic for user-selected
 Kubernetes resources. Since the default await logic is so useful, we
 only recommend using this feature to work around currently unhandled
@@ -99,58 +94,38 @@ resource's metadata: `pulumi.com/skipAwait: "true"`.
 
 Here's a TypeScript example that demonstrates both annotations:
 
-![Screen Shot 2019-03-05 at 11.11.09
-AM](https://blog.pulumi.com/hs-fs/hubfs/Screen%20Shot%202019-03-05%20at%2011.11.09%20AM.png?width=1218&name=Screen%20Shot%202019-03-05%20at%2011.11.09%20AM.png){width="1218"
-sizes="(max-width: 1218px) 100vw, 1218px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Screen%20Shot%202019-03-05%20at%2011.11.09%20AM.png?width=609&name=Screen%20Shot%202019-03-05%20at%2011.11.09%20AM.png 609w, https://blog.pulumi.com/hs-fs/hubfs/Screen%20Shot%202019-03-05%20at%2011.11.09%20AM.png?width=1218&name=Screen%20Shot%202019-03-05%20at%2011.11.09%20AM.png 1218w, https://blog.pulumi.com/hs-fs/hubfs/Screen%20Shot%202019-03-05%20at%2011.11.09%20AM.png?width=1827&name=Screen%20Shot%202019-03-05%20at%2011.11.09%20AM.png 1827w, https://blog.pulumi.com/hs-fs/hubfs/Screen%20Shot%202019-03-05%20at%2011.11.09%20AM.png?width=2436&name=Screen%20Shot%202019-03-05%20at%2011.11.09%20AM.png 2436w, https://blog.pulumi.com/hs-fs/hubfs/Screen%20Shot%202019-03-05%20at%2011.11.09%20AM.png?width=3045&name=Screen%20Shot%202019-03-05%20at%2011.11.09%20AM.png 3045w, https://blog.pulumi.com/hs-fs/hubfs/Screen%20Shot%202019-03-05%20at%2011.11.09%20AM.png?width=3654&name=Screen%20Shot%202019-03-05%20at%2011.11.09%20AM.png 3654w"}
+![TypeScript annotations](./typescript-annotations.png)
 
 If you do encounter an edge case and have to use this feature to work
 around it, it may be an oversight in the Pulumi Kubernetes provider - we
-would love to hear from you - please [**open a GitHub
-issue**](https://github.com/pulumi/pulumi-kubernetes/issues/new)!
+would love to hear from you - please
+[**open a GitHub issue**](https://github.com/pulumi/pulumi-kubernetes/issues/new)!
 
-Special thanks to our awesome community, including [Piotrek
-Bzdyl](https://github.com/pulumi/pulumi-kubernetes/issues/248) and
+Special thanks to our awesome community, including
+[Piotrek Bzdyl](https://github.com/pulumi/pulumi-kubernetes/issues/248) and
 [Jamie Neil](https://github.com/pulumi/pulumi-kubernetes/issues/317),
 who have helped us track down and improve the await logic for several
 interesting edge cases!
 
-Learn More
-----------
+## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [click here to get started
-today](https://pulumi.io/quickstart). Pulumi is open source and free to
+infrastructure and Kubernetes through code,
+[click here to get started today]({{< ref "/docs/quickstart" >}}). Pulumi is open source and free to
 use.
 
 If you'd like to go deeper on certain topics, here are some additional
 resources to check out:
 
--   [Overview of Pulumi Kubernetes
-    Scenarios](https://www.pulumi.com/kubernetes/)
-
-<!-- -->
-
--   Tutorial: Create a Kubernetes cluster on a cloud provider ([Amazon
-    EKS](https://pulumi.io/quickstart/aws/tutorial-eks.html), [Google
-    GKE](https://pulumi.io/quickstart/gcp/tutorial-gke.html), or [Azure
-    AKS](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean))
-
-<!-- -->
-
--   Tutorial: [Operate and deploy to a Kubernetes
-    cluster](https://pulumi.io/quickstart/kubernetes/tutorial-exposed-deployment.html)
-
-<!-- -->
-
--   Docs: [Pulumi docs](https://pulumi.io/reference/), including an
-    [overview of the programming
-    model](https://pulumi.io/reference/programming-model.html)
-
-<!-- -->
-
--   Video: [Watch Joe Beda take Pulumi for a spin in this episode of
-    TGIK](https://www.youtube.com/watch?v=ILMK65YVSKw)
+- [Overview of Pulumi Kubernetes Scenarios]({{< ref "/kubernetes" >}})
+- Tutorial: Create a Kubernetes cluster on a cloud provider
+  [Amazon EKS]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-eks" >}}),
+  [Google GKE]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-gke" >}}), or
+  [Azure AKS](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean)
+- Tutorial: [Operate and deploy to a Kubernetes cluster]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment" >}})
+- Docs: [Pulumi docs]({{< ref "/docs/reference" >}}), including an
+  [overview of the programming model]({{< ref "/docs/reference/programming-model" >}})
+- Video: [Watch Joe Beda take Pulumi for a spin in last week's TGIK](https://www.youtube.com/watch?v=ILMK65YVSKw)
 
 As always, you can check out our code
 on [GitHub](https://github.com/pulumi), follow us
@@ -161,6 +136,5 @@ any questions, need support, or just want to say hello.
 
 If you'd like to chat with our team, or get hands-on assistance with
 migrating your existing configuration code (including ksonnet programs)
-to Pulumi, [please don't hesitate to drop us a
-line](https://www.pulumi.com/contact/).
+to Pulumi, please don't hesitate [to drop us a line]({{< ref "/contact" >}}).
 

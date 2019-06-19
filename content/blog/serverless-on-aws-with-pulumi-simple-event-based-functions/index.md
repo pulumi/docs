@@ -1,10 +1,10 @@
 ---
 title: "Serverless on AWS with Pulumi: simple, event-based functions"
 authors: ["cyrus-najmabadi"]
-tags: ["todo"]
+tags: ["AWS/Lambda/Fargate"]
 date: "2019-01-14"
 
-description: "TODO: Put in a reasonable summary"
+summary: "How to make serverless programming on AWS simple with Pulumi using the regular programming languages."
 ---
 
 One of Pulumi's goals is to provide the simplest way possible to do
@@ -15,11 +15,10 @@ these languages, like flow control, inheritance, composition, and so on,
 provide the right abstractions to effectively build up infrastructure in
 a simple and familiar way.
 
-In a [previous post](../lambdas-as-lambdas-the-magic-of-simple-serverless-functions/)
+In a [previous post]({{< relref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}})
 we focused on how Pulumi could allow you to simply create an AWS Lambda
 out of your own JavaScript function. While this was much easier than
-having to manually create a [Lambda Deployment
-Package](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-create-deployment-pkg.html)
+having to manually create a [Lambda Deployment Package](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-create-deployment-pkg.html)
 yourself, it could still be overly complex to integrate these Lambdas
 into complete serverless application. To get a sense of that complexity,
 let's look at how one would normally have to work with AWS's resource
@@ -36,8 +35,8 @@ system to create a simple Serverless application:
     });
 
     // Create a lambda that will post a message to slack when the bucket changes.
-    // We can pass a simple JavaScript/TypeScript lambda here thanks to the magic of Lambdas as Lambdas:
-    // https://blog.pulumi.com/lambdas-as-lambdas-the-magic-of-simple-serverless-functions
+    // We can pass a simple JavaScript/TypeScript lambda here thanks to the magic of "Lambdas as Lambdas"
+    // See: www.pulumi.com{{< relref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}}
     const lambda = new aws.lambda.CallbackFunction("postToSlack", { 
         callback: async (e) => {
           const client = new slack.WebClient(...);
@@ -63,7 +62,7 @@ system to create a simple Serverless application:
         }],
     })
 
-Phew... that's a lot of code :-/ So what happened above? Well, in the
+Phew... that's a lot of code `:-/` So what happened above? Well, in the
 AWS resource-oriented view of the world, most things are nouns (i.e
 objects). Your bucket is an object. The lambda is an object. The
 permission is an explicit object. And even the connection between the

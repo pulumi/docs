@@ -1,31 +1,30 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Pulumi and Docker: Development to Production"
+authors: ["sean-gillespie"]
+tags: ["Infrastructure-as-Code"]
+date: "2019-05-15"
+
+summary: "Pulumi makes it easy to deploy your Docker containers to production. Learn how to re-use your infrastructure code for both development and production."
 ---
 
-[Here at Pulumi, we're big fans of Docker: at this point there is little
+Here at Pulumi, we're big fans of Docker: at this point there is little
 doubt that Docker has completely revolutionized the way that we think
 about deploying software. However, even in 2019, it's quite difficult to
 get Docker containers to production. `docker run` is great, and we all
 love it, but unfortunately it's quite a big leap from `docker run` to
-running your container in a production-ready environment. We recently
-wrote a blog post [about using AWS Fargate to run your docker containers
-with our open source
-packages](../../../com/pulumi/blog/get-started-with-docker-on-aws-fargate-using-pulumi.html).
+running your container in a production-ready environment.
+
+We recently wrote a blog post about
+[using AWS Fargate to run your docker containers with our open source packages]({{< relref "get-started-with-docker-on-aws-fargate-using-pulumi" >}}).
 In this blog post we're going to focus on another interesting aspect of
 Pulumi: being able to re-use your infrastructure code for both
-development and production! ]{#hs_cos_wrapper_post_body .hs_cos_wrapper
+development and production!
 
-It's All Code: Composing Docker Containers
------------------------------------------------------------------------------------------
+## It's All Code: Composing Docker Containers
 
 In addition to the number of cloud and infrastructure providers that
-Pulumi supports, Pulumi also supports [defining Docker
-resources](https://pulumi.io/reference/pkg/nodejs/@pulumi/docker/index.html)
+Pulumi supports, Pulumi also supports
+[defining Docker resources]({{< ref "/docs/reference/pkg/nodejs/pulumi/docker" >}})
 in code. Let's look at this code snippet of Pulumi TypeScript code:
 
     // This program encodes a complete application: a container running Redis Commander,
@@ -81,15 +80,15 @@ in code. Let's look at this code snippet of Pulumi TypeScript code:
 Here we are looking at a complete Pulumi program that does a *bunch* of
 things with Docker:
 
-1.  We create a Docker network named `net`, which we'll use to connect
-    two containers together
-2.  We pull the `redis:latest` image from Docker Hub and create a
-    container using it, named `redis`, which we attach to the network we
-    just created
-3.  We pull the `rediscommander/redis-commander:latest` image from
-    Docker Hub and also create a container using it, named
-    `redis-commander`, which likewise is attached to the network and
-    exposes some ports on the host machine.
+1. We create a Docker network named `net`, which we'll use to connect
+   two containers together
+2. We pull the `redis:latest` image from Docker Hub and create a
+   container using it, named `redis`, which we attach to the network we
+   just created
+3. We pull the `rediscommander/redis-commander:latest` image from
+   Docker Hub and also create a container using it, named
+   `redis-commander`, which likewise is attached to the network and
+   exposes some ports on the host machine.
 
 This is fairly nontrivial, but we've done it in code right here. Using
 code we've replicated many of the features offered by tools like
@@ -97,8 +96,7 @@ code we've replicated many of the features offered by tools like
 `pulumi up` with this code results in a working instance of Redis
 Commander listening on port 3000 on your machine. Nice and simple!
 
-Moving to Production
-------------------------------------------------
+## Moving to Production
 
 Orchestrating Docker containers on your local machine while developing
 is great, but when it comes time to pushing containers to production,
@@ -165,8 +163,7 @@ switch this out for "amazon" and "kubernetes", and suddenly our Redis
 workload is transparently deployed in different ways, all without
 disrupting our development environment!
 
-Pulumi: Infrastructure as Software
-----------------------------------------------------------------------------
+## Pulumi: Infrastructure as Software
 
 We often say on this blog that Pulumi is "infrastructure as code", and
 that sentence is definitely true, but I prefer calling it
@@ -174,18 +171,17 @@ that sentence is definitely true, but I prefer calling it
 my mind Pulumi brings to the realm of infrastructure the variety of
 tools we already use for software engineering:
 
-1.  Abstraction, encapsulation, and code reuse for infrastructure and
-    applications
-2.  [Testing](../../../com/pulumi/blog/testing-your-infrastructure-as-code-with-pulumi.html),
-    both unit and integration
-3.  IDEs and tools for detecting errors extremely early in a developer's
-    inner loop, instead of at deployment time
+1. Abstraction, encapsulation, and code reuse for infrastructure and
+   applications
+2. [Testing](../../../com/pulumi/blog/testing-your-infrastructure-as-code-with-pulumi.html),
+   both unit and integration
+3. IDEs and tools for detecting errors extremely early in a developer's
+   inner loop, instead of at deployment time
 
-Pulumi is open source, free to use, and works today with a variety of
-clouds - [check it out](https://pulumi.io/) and bring a little more
+Pulumi is open source, free to use, and works today with
+[a variety of clouds]({{< ref "/docs/reference/clouds" >}}) and bring a little more
 software and less code into your infrastructure! If you'd like to see
-more about this particular code demo, [check out my DockerCon EU 2018
-talk](https://www.youtube.com/watch?v=EbsE4p3uCu0) where I dive into
-this in detail. The code for this post and the talk are in [this
-repository](https://github.com/swgillespie/dockercon18).
-
+more about this particular code demo,
+[check out my DockerCon EU 2018 talk](https://www.youtube.com/watch?v=EbsE4p3uCu0)
+where I dive into this in detail. The code for this post and the talk are in
+[this repository](https://github.com/swgillespie/dockercon18).

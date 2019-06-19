@@ -1,12 +1,11 @@
 ---
 title: "Create Secure Jupyter Notebooks on Kubernetes using Pulumi"
 authors: ["nishi-davidson"]
-tags: ["kubernetes", "gcp", "jupyter", "applications"]
+tags: ["Kubernetes", "GCP"]
 date: "2019-05-30"
 
 summary: "In this post, we will work through an example that shows how to use Pulumi to create
-Jupyter Notebooks on Kubernetes. Having worked on Kubernetes since 2015, a couple of critical benefits
-jump out that may resonate with you as well."
+Jupyter Notebooks on Kubernetes."
 meta_image: "RELATIVE_TO_PAGE/post-image-jupyter.png"
 ---
 
@@ -49,7 +48,8 @@ $ npm install --save @pulumi/kubernetes @pulumi/gcp
 
 To create a GKE cluster, simply update the following code in `index.ts` file and run `pulumi up`.
 
-{{< highlight typescript >}}import * as k8s from "@pulumi/kubernetes";
+```typescript
+import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 import { readFileSync, fstat } from "fs";
@@ -111,7 +111,7 @@ users:
 
 // Create a Kubernetes provider instance that uses our cluster from above.
 const clusterProvider = new k8s.Provider(name, { kubeconfig: kubeconfig });
-{{< /highlight >}}
+```
 
 ## Step 3: Create a NGINX-Ingress-Controller to Generate Ingresses
 
@@ -182,14 +182,17 @@ const jupyterService = new k8s.core.v1.Service(appName, {
 ## Step 5: Create a Secret that is used with your Jupyter Notebook Domain Name
 
 We first create a local auth.txt file with the password using the following command:
-`htpasswd -c auth.txt jupyter`
+
+```bash
+htpasswd -c auth.txt jupyter
+```
 
 We then read this file synchronously, convert it to base64 and add it as a secret in the GKE
 cluster. We use this secret as the TLS password to access the Jupyter notebook ingress endpoint
 accessible from the domain name defined in the host section of the ingress declaration. The
 annotations in the ingress declarations are required to enable this behavior on the ingress object.
 
-{{< highlight typescript >}}/*
+```javascript
  * STEP 5: Create a secret to enable "basic-auth" for your Jupyter
  * notebook ingress and add it to the ingress declaration in the
  * GKE cluster
@@ -239,7 +242,7 @@ export const jupyternotebookingress = new k8s.extensions.v1beta1.Ingress(appName
         }],
     }
 }, { provider: clusterProvider });
-{{< /highlight >}}
+```
 
 Once complete, you will see the GKE cluster components show up as follows:
 

@@ -1,12 +1,12 @@
 ---
-title: "Easy Serverless Apps and Infrastructure -- Real Events, Real Code"
+title: "Easy Serverless Apps and Infrastructure — Real Events, Real Code"
 authors: ["joe-duffy"]
-tags: ["todo"]
-date: "2019-31-11"
+tags: ["AWS", "Infrastructure-as-Code"]
+date: "2019-03-11"
 
-description: "TODO: Put in a reasonable summary"
+summary: "Program the cloud by creating a serverless app and its infrastructure, using real event handlers, and real code. The way serverless should be!"
+meta_image: "RELATIVE_TO_PAGE/hero.png"
 ---
-
 
 With Pulumi, you can create, deploy, and manage any cloud resource using
 your favorite language. This includes application- *and* infrastructure-
@@ -22,12 +22,7 @@ depending on what you want to do, and how your team likes to operate.
 We'll be using AWS and TypeScript, but other clouds and languages are
 available.
 
-![tpsBanner](https://blog.pulumi.com/hs-fs/hubfs/tpsBanner.png?width=1800&name=tpsBanner.png){width="1800"
-sizes="(max-width: 1800px) 100vw, 1800px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/tpsBanner.png?width=900&name=tpsBanner.png 900w, https://blog.pulumi.com/hs-fs/hubfs/tpsBanner.png?width=1800&name=tpsBanner.png 1800w, https://blog.pulumi.com/hs-fs/hubfs/tpsBanner.png?width=2700&name=tpsBanner.png 2700w, https://blog.pulumi.com/hs-fs/hubfs/tpsBanner.png?width=3600&name=tpsBanner.png 3600w, https://blog.pulumi.com/hs-fs/hubfs/tpsBanner.png?width=4500&name=tpsBanner.png 4500w, https://blog.pulumi.com/hs-fs/hubfs/tpsBanner.png?width=5400&name=tpsBanner.png 5400w"}
-
-A Simple Serverless App {#the-application .code-line line="11"}
------------------------
+## A Simple Serverless App
 
 In this article, we'll use a very simple serverless app. We have two S3
 buckets: one for TPS reports, and the other to store archived zipfiles
@@ -36,15 +31,12 @@ archive it.
 
 Simple enough. This can be visualized as follows:
 
-![](https://blog.pulumi.com/hs-fs/hubfs/tpsReportsArchitecture.png?width=600&name=tpsReportsArchitecture.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/tpsReportsArchitecture.png?width=300&name=tpsReportsArchitecture.png 300w, https://blog.pulumi.com/hs-fs/hubfs/tpsReportsArchitecture.png?width=600&name=tpsReportsArchitecture.png 600w, https://blog.pulumi.com/hs-fs/hubfs/tpsReportsArchitecture.png?width=900&name=tpsReportsArchitecture.png 900w, https://blog.pulumi.com/hs-fs/hubfs/tpsReportsArchitecture.png?width=1200&name=tpsReportsArchitecture.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/tpsReportsArchitecture.png?width=1500&name=tpsReportsArchitecture.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/tpsReportsArchitecture.png?width=1800&name=tpsReportsArchitecture.png 1800w"}
+![Serverless app architecture](./architecture.png)
 
-All source code for this example is [available on
-GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-s3-lambda-copyzip).
+All source code for this example is
+[available on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-s3-lambda-copyzip).
 
-Event Sources and Event Handlers {#event-sources-and-event-handlers .code-line line="18"}
---------------------------------
+## Event Sources and Event Handlers
 
 Serverless app models today make you think of the event sources -- the
 S3 buckets -- and event handlers -- the Lambdas and associated code
@@ -65,13 +57,12 @@ changes it can make to upgrade your code -- no downtime required.
 We'll see this in action shortly. But first let's create our initial
 app.
 
-Creating an Event Handler {#creating-an-event-handler .code-line line="32"}
--------------------------
+## Creating an Event Handler
 
 There are multiple approaches to creating a function. Let's start with
 the easiest.
 
-### Approach 1: Magic Functions {#style-1-magic-functions .code-line line="36"}
+### Approach 1: Magic Functions
 
 Our favorite way to create functions is to write them inline. This blurs
 the line between infrastructure and application logic in a way that
@@ -88,9 +79,7 @@ The bucket objects have many properties, including obvious ones like the
 ARN, domain name, CORS rules, and so on. But if we look closely, we'll
 see there are some `onX` methods. These register event handlers:
 
-![](https://blog.pulumi.com/hs-fs/hubfs/tpsIntellisense.png?width=800&name=tpsIntellisense.png){width="800"
-sizes="(max-width: 800px) 100vw, 800px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/tpsIntellisense.png?width=400&name=tpsIntellisense.png 400w, https://blog.pulumi.com/hs-fs/hubfs/tpsIntellisense.png?width=800&name=tpsIntellisense.png 800w, https://blog.pulumi.com/hs-fs/hubfs/tpsIntellisense.png?width=1200&name=tpsIntellisense.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/tpsIntellisense.png?width=1600&name=tpsIntellisense.png 1600w, https://blog.pulumi.com/hs-fs/hubfs/tpsIntellisense.png?width=2000&name=tpsIntellisense.png 2000w, https://blog.pulumi.com/hs-fs/hubfs/tpsIntellisense.png?width=2400&name=tpsIntellisense.png 2400w"}
+![Intellisense](./intellisense.png)
 
 Let's use `onObjectCreated` to create a Lambda that will zip up any new
 reports:
@@ -130,16 +119,12 @@ we call these *magic* functions.
 
 Now, let's deploy the resources to AWS:
 
-![](https://blog.pulumi.com/hs-fs/hubfs/tpsUp.png?width=800&name=tpsUp.png){width="800"
-sizes="(max-width: 800px) 100vw, 800px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/tpsUp.png?width=400&name=tpsUp.png 400w, https://blog.pulumi.com/hs-fs/hubfs/tpsUp.png?width=800&name=tpsUp.png 800w, https://blog.pulumi.com/hs-fs/hubfs/tpsUp.png?width=1200&name=tpsUp.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/tpsUp.png?width=1600&name=tpsUp.png 1600w, https://blog.pulumi.com/hs-fs/hubfs/tpsUp.png?width=2000&name=tpsUp.png 2000w, https://blog.pulumi.com/hs-fs/hubfs/tpsUp.png?width=2400&name=tpsUp.png 2400w"}
+![UP UP AND AWAY!](./up.png)
 
 After confirming, `yes`, everything is up and running after just a few
 seconds:
 
-![](https://blog.pulumi.com/hs-fs/hubfs/tpsUpDone.png?width=800&name=tpsUpDone.png){width="800"
-sizes="(max-width: 800px) 100vw, 800px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/tpsUpDone.png?width=400&name=tpsUpDone.png 400w, https://blog.pulumi.com/hs-fs/hubfs/tpsUpDone.png?width=800&name=tpsUpDone.png 800w, https://blog.pulumi.com/hs-fs/hubfs/tpsUpDone.png?width=1200&name=tpsUpDone.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/tpsUpDone.png?width=1600&name=tpsUpDone.png 1600w, https://blog.pulumi.com/hs-fs/hubfs/tpsUpDone.png?width=2000&name=tpsUpDone.png 2000w, https://blog.pulumi.com/hs-fs/hubfs/tpsUpDone.png?width=2400&name=tpsUpDone.png 2400w"}
+![done](./done.png)
 
 Note the resource graph. Pulumi uses real languages, which allows
 encapsulation and hiding of unnecessary complexity. So underneath that
@@ -176,12 +161,11 @@ our newly added file:
 Voila! A fully functioning serverless application.
 
 Note also that the `CallbackFunction` class -- the powerful abstraction
-behind all of this -- [is exported, and offers some
-knobs](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/lambda/#CallbackFunction),
+behind all of this -- is exported, and offers some knobs,
 in case you want to do things like reuse existing IAM roles rather than
-creating new ones. For instance,
-say we want to increase the RAM available to our function from 128MB to
-256MB:
+creating new ones.
+See the [`pulumi/aws/lambda` documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/lambda" >}}) for details.
+For instance, say we want to increase the RAM available to our function from 128MB to 256MB:
 
     tpsReports.onObjectCreated(
        "zipTpsReports",
@@ -194,7 +178,7 @@ say we want to increase the RAM available to our function from 128MB to
 Soon we'll see how to manage and update our functions, but first let's
 see some alternative coding styles.
 
-### Approach 2: Manual Function Resources {#style-2-manual-functions .code-line line="151"}
+### Approach 2: Manual Function Resources
 
 We just saw that we can write our application logic inside of our Pulumi
 program, alongside our infrastructure resource definitions. This can
@@ -255,8 +239,8 @@ IAM machinery ourselves. We also need a way to communicate the zip
 bucket name, so we use an environment variable. This highlights both the
 benefits and drawbacks to programming at this level -- we need to know
 how to configure all of these ancillary resources, but as a result,
-the [entire power of Lambda is at our
-fingertips](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/lambda/#Function "https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/lambda/#Function").
+the
+[entire power of Lambda is at our fingertips]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/lambda#Function" >}}).
 
 Notice that we've pointed to our application logic inside of `./app`.
 Pulumi will create the zipfile for you. If we instead wanted to use a
@@ -266,15 +250,15 @@ zipfile we've already packaged, just change `code` as follows:
        code: new pulumi.asset.FileArchive("./app.zip"),
     // ...
 
-Using
-Pulumi's [`Asset` and `Archive` classes](https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/asset/ "https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/asset/"),
+Using Pulumi's
+[`Asset` and `Archive` classes]({{< ref "/docs/reference/pkg/nodejs/pulumi/pulumi/asset" >}}),
 we can fetch code from anywhere -- even the network.
 
 Although managing your functions manually isn't quite as magical, it is
 practically useful, and still delivers all the usual infrastructure as
 code benefits, enabling robust infrastructure management and versioning.
 
-### Approach 3: Wire Up an Existing Function {#style-3-wiring-up-an-existing-function .code-line line="222"}
+### Approach 3: Wire Up an Existing Function
 
 This post is mainly about using serverless functions with Pulumi. But
 what if you're using Pulumi mainly for infrastructure, and another
@@ -294,11 +278,10 @@ an event handler:
 We've given the function's ID, `zipTpsReports-19d51dc`, which allows
 Pulumi to locate it in your account and reuse it. This can make it easy
 to incrementally adopt Pulumi one piece at a time, collaborate between
-teams, or stitch together resources [managed by different
-stacks](https://pulumi.io/reference/organizing-stacks-projects.html "https://pulumi.io/reference/organizing-stacks-projects.html").
+teams, or stitch together resources
+[managed by different stacks]({{< ref "/docs/reference/organizing-stacks-projects" >}}).
 
-More About Functions {#more-about-functions .code-line line="242"}
---------------------
+## More About Functions
 
 Now that we've seen the basics, let's look at a few associated
 function management topics.
@@ -318,22 +301,18 @@ its resulting zipfile. Just add the relevant line:
 
 And run `pulumi up` -- it will show us what changed:
 
-![](https://blog.pulumi.com/hs-fs/hubfs/tpsUpdate.png?width=800&name=tpsUpdate.png){width="800"
-sizes="(max-width: 800px) 100vw, 800px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/tpsUpdate.png?width=400&name=tpsUpdate.png 400w, https://blog.pulumi.com/hs-fs/hubfs/tpsUpdate.png?width=800&name=tpsUpdate.png 800w, https://blog.pulumi.com/hs-fs/hubfs/tpsUpdate.png?width=1200&name=tpsUpdate.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/tpsUpdate.png?width=1600&name=tpsUpdate.png 1600w, https://blog.pulumi.com/hs-fs/hubfs/tpsUpdate.png?width=2000&name=tpsUpdate.png 2000w, https://blog.pulumi.com/hs-fs/hubfs/tpsUpdate.png?width=2400&name=tpsUpdate.png 2400w"}
+![`pulumi up`](./update.png)
 
 We can view the full diff, by choosing `details`, including a Git-like
 diff of the code changes themselves!
 
-![](https://blog.pulumi.com/hs-fs/hubfs/tpsDiff.png?width=800&name=tpsDiff.png){width="800"
-sizes="(max-width: 800px) 100vw, 800px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/tpsDiff.png?width=400&name=tpsDiff.png 400w, https://blog.pulumi.com/hs-fs/hubfs/tpsDiff.png?width=800&name=tpsDiff.png 800w, https://blog.pulumi.com/hs-fs/hubfs/tpsDiff.png?width=1200&name=tpsDiff.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/tpsDiff.png?width=1600&name=tpsDiff.png 1600w, https://blog.pulumi.com/hs-fs/hubfs/tpsDiff.png?width=2000&name=tpsDiff.png 2000w, https://blog.pulumi.com/hs-fs/hubfs/tpsDiff.png?width=2400&name=tpsDiff.png 2400w"}
+![Diffs](./diffs.png)
 
 After selecting `yes`, the function is updated in just a couple of
 seconds. Similarly, we can update any of the resource definitions, and
 Pulumi will figure out how to incrementally update them.
 
-### Splitting Up your Codebase {#splitting-up-your-codebase .code-line line="271"}
+## Splitting Up your Codebase
 
 A nice middle ground between magic and manual functions is to use your
 language's module system to structure code differently. This is similar
@@ -364,25 +343,25 @@ pace.
 Lastly, it's possible to use Pulumi stacks to actually break apart your
 cloud resources and functions into independently deployable pieces. This
 allows teams to leverage features
-like [RBAC](https://pulumi.io/reference/service/roles-and-access-controls.html "https://pulumi.io/reference/service/roles-and-access-controls.html").
+like [RBAC]({{< ref "/docs/reference/service/roles-and-access-controls" >}}).
 For instance, it's common for the DevOps team to manage the physical
 cloud resources like queues, topics, and buckets, while the development
 team authors and manages the serverless functions attached to them. Read
 more about
-this [here](https://pulumi.io/reference/organizing-stacks-projects.html "https://pulumi.io/reference/organizing-stacks-projects.html").
+this [here]({{< ref "/docs/reference/organizing-stacks-projects" >}}).
 
-More About Event Sources {#more-about-event-sources .code-line line="305"}
-------------------------
+## More About Event Sources
 
 We glossed over one of the more interesting points: what resources have
 event handlers associated with them, and how to get our hands on them.
 
-### Provision a New Resource {#provision-a-new-resource .code-line line="310"}
+## Provision a New Resource
 
 The simplest answer here is to create a new resource in your Pulumi
 program using `new`, as we saw above. Because Pulumi is an
 infrastructure as code platform, any resources in any cloud are
-available -- [AWS](https://pulumi.io/quickstart/aws),
+available --
+[AWS](https://pulumi.io/quickstart/aws),
 [Azure](https://pulumi.io/quickstart/azure),
 [GCP](https://pulumi.io/quickstart/gcp),
 [Kubernetes](https://pulumi.io/quickstart/kubernetes), etc. When
@@ -405,7 +384,7 @@ TPS archive bucket:
 Just as with functions, subsequent updates will be diffed and updated in
 the minimally impactful way.
 
-### Connect to an Existing Resource {#connect-to-an-existing-resource .code-line line="335"}
+## Connect to an Existing Resource
 
 Although it's nice we can provision the event sources and targets in a
 single program, sometimes different members of the team manage different
@@ -432,41 +411,40 @@ actually provisioned by Pulumi!
     const zipFunc = aws.lambda.Function.get("zipTpsReportsFunc", "zipTpsReports-19d51dc");
     tpsReports.onObjectCreated("zipTpsReports", zipFunc);
 
-### Other Notable Event Sources {#other-notable-event-sources .code-line line="360"}
+## Other Notable Event Sources
 
 Finally, it's worth noting there are many event handler functions
 exposed in the AWS package:
 
--   [`apigateway.x.API`](https://github.com/pulumi/examples/tree/master/aws-ts-apigateway "https://github.com/pulumi/examples/tree/master/aws-ts-apigateway"):
+-   [`apigateway.x.API`](https://github.com/pulumi/examples/tree/master/aws-ts-apigateway):
     create serverless APIs using an Express.js style
--   [`cloudwatch.onSchedule`](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/cloudwatch/#onSchedule "https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/cloudwatch/#onSchedule"):
+-   [`cloudwatch.onSchedule`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#onSchedule" >}}):
     fire a CloudWatch event on a particular schedule, e.g. a cron
     expression
--   [`cloudwatch.Event.onEvent`](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/cloudwatch/#EventRule-onEvent "https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/cloudwatch/#EventRule-onEvent"):
+-   [`cloudwatch.Event.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#EventRule-onEvent" >}}):
     fire an event when a particular CloudWatch event occurs
--   [`cloudwatch.LogGroup.onEvent`](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/cloudwatch/#LogGroup-onEvent "https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/cloudwatch/#LogGroup-onEvent"):
+-   [`cloudwatch.LogGroup.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#LogGroup-onEvent" >}}):
     fire an event when a CloudWatch logs event occurs
--   [`dynamodb.Table.onEvent`](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/dynamodb/#Table-onEvent "https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/dynamodb/#Table-onEvent"):
+-   [`dynamodb.Table.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/dynamodb#Table-onEvent" >}}):
     fire events for DynamoDB insert, modify, or remove operations
--   [`kinesis.Stream.onEvent`](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/kinesis/#Stream-onEvent "https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/kinesis/#Stream-onEvent"):
+-   [`kinesis.Stream.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/kinesis#Stream-onEvent" >}}):
     fire Kinesis Stream events at particular times or batch sizes
--   [`s3.Bucket.onObjectCreated`](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/s3/#Bucket-onObjectCreated "https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/s3/#Bucket-onObjectCreated"):
+-   [`s3.Bucket.onObjectCreated`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectCreated" >}}):
     trigger a function anytime an object is created in an S3 Bucket
--   [`s3.Bucket.onObjectRemoved`](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/s3/#Bucket-onObjectRemoved "https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/s3/#Bucket-onObjectRemoved"):
+-   [`s3.Bucket.onObjectRemoved`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectRemoved" >}}):
     trigger a function anytime an object is removed from an S3 Bucket
--   [`s3.Bucket.onEvent`](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/s3/#Bucket-onEvent "https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/s3/#Bucket-onEvent"):
+-   [`s3.Bucket.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onEvent" >}}):
     trigger a function for a wide range of S3 Bucket events
--   [`sns.Topic.onEvent`](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/sns/#Topic-onEvent "https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/sns/#Topic-onEvent"):
+-   [`sns.Topic.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/sns#Topic-onEvent" >}}):
     fire SNS Topic events when new messages arrive
--   [`sqs.Queue.onEvent`](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/sqs/#Queue-onEvent "https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/sqs/#Queue-onEvent"):
+-   [`sqs.Queue.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/sqs#Queue-onEvent" >}}):
     fire SQS Queue events when new messages are enqueued (or on DLQ
     events, etc)
 
 All of these handlers can be programmed using the spectrum of techniques
 outlined above.
 
-In Conclusion {#in-conclusion .code-line line="389"}
--------------
+## In Conclusion
 
 In this post, we saw many different options for serverless programming
 with Pulumi, from magic functions that make serverless feel like true
@@ -477,7 +455,6 @@ We also saw that all of these options can be combined in any way,
 depending on you and your team's needs. This is the magic of
 programming languages in action!
 
-If you'd like to try it out, [check out the example for this blog on
-GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-s3-lambda-copyzip).
+If you'd like to try it out,
+[check out the code for this post on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-s3-lambda-copyzip).
 Happy serverless hacking!
-

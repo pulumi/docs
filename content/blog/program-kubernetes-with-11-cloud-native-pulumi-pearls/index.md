@@ -1,70 +1,58 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
----
+title: "Program Kubernetes with 11 Pulumi Pearls"
+authors: ["joe-duffy"]
+tags: ["Infrastructure-as-Code", "Kubernetes", "Pulumi"]
+date: "2018-09-12"
 
+summary: "In this post, we’ll take a look at 11 “pearls” – bite-sized code snippets – that demonstrate using Pulumi to build and deploy Kubernetes
+applications using cloud native infrastructure as code."
+meta_image: "RELATIVE_TO_PAGE/health-checks.gif"
+---
 
 In this post, we'll take a look at 11 "pearls" -- bite-sized code
 snippets -- that demonstrate using Pulumi to build and deploy Kubernetes
 applications using cloud native infrastructure as code. These pearls are
 organized into three categories, each demonstrating a unique scenario:
 
--   **Config as Real Code:** Use your favorite language for authoring
-    applications and configuration, eliminating toil and YAML.
--   **Multi-Cloud Infrastructure:** Mix cloud services alongside
-    Kubernetes resources and manage them using one set of tools and
-    workflows.
--   **Software Delivery as Code:** Perform sophisticated continuous
-    delivery of your Kubernetes deployments -- including canaries,
-    staged rollouts, leveraging cloud native projects like Envoy and
-    Prometheus -- authored in real code.
+- **Config as Real Code:** Use your favorite language for authoring
+  applications and configuration, eliminating toil and YAML.
+- **Multi-Cloud Infrastructure:** Mix cloud services alongside
+  Kubernetes resources and manage them using one set of tools and
+  workflows.
+- **Software Delivery as Code:** Perform sophisticated continuous
+  delivery of your Kubernetes deployments -- including canaries,
+  staged rollouts, leveraging cloud native projects like Envoy and
+  Prometheus -- authored in real code.
 
 Here is a complete index of the pearls below, in case you want to jump
 around a little:
 
--   **[Config as Real Code](../../../com/pulumi/blog/index.html)**
+<!-- just links to this same post -->
+**[Config as Real Code](#config-as-real-code)**
 
-    -   [Define Kubernetes Applications in a Real
-        Language](../../../com/pulumi/blog/index.html)
-    -   [More Expressiveness, Less
-        Boilerplate](../../../com/pulumi/blog/index.html)
-    -   [Inject Envoy Sidecars Using
-        Abstraction](../../../com/pulumi/blog/index.html)
-    -   [Adopt Existing Kubernetes
-        YAML](../../../com/pulumi/blog/index.html)
-    -   [Programmatically Deploy Helm Charts as
-        Code](../../../com/pulumi/blog/index.html)
+- [Define Kubernetes Applications in a Real Language](#1-define-kubernetes-applications-in-a-real-language)
+- [More Expressiveness, Less Boilerplate](#2-more-expressiveness-less-boilerplate)
+- [Inject Envoy Sidecars Using Abstraction](#3-inject-envoy-sidecars-using-abstraction)
+- [Adopt Existing Kubernetes YAML](#4-adopt-existing-kubernetes-yaml)
+- [Programmatically Deploy Helm Charts as Code](#5-programmatically-deploy-helm-charts-as-code)
 
--   [**Multi-Cloud
-    Infrastructure**](../../../com/pulumi/blog/index.html)
+**[Multi-Cloud Infrastructure](#multi-cloud-infrastructure)**
 
-    -   [Declare Cloud Resources Alongside Kubernetes
-        Ones](../../../com/pulumi/blog/index.html)
-    -   [Provision and Use Kubernetes Clusters in Any
-        Cloud](../../../com/pulumi/blog/index.html)
-    -   [Build and Deploy Container Images Alongside Configuration
-        Updates](../../../com/pulumi/blog/index.html)
+- [Declare Cloud Resources Alongside Kubernetes Ones](#6-declare-cloud-resources-alongside-kubernetes-ones)
+- [Provision and Use Kubernetes Clusters in Any Cloud](#7-provision-and-use-kubernetes-clusters-in-any-cloud)
+- [Build and Deploy Container Images Alongside Configuration Updates](#8-build-and-deploy-container-images-alongside-configuration-updates)
 
--   [**Software Delivery as Code**](../../../com/pulumi/blog/index.html)
+**[Software Delivery as Code](#software-delivery-as-code)**
 
-    -   [Robust and Repeatable Deployments, with a Notion of
-        "Done"](../../../com/pulumi/blog/index.html)
-    -   [Trigger Cascading Rollouts from Dependent
-        Updates](../../../com/pulumi/blog/index.html)
-    -   [Staged Application Rollouts Gated by Prometheus
-        Checks](../../../com/pulumi/blog/index.html)
+- [Robust and Repeatable Deployments, with a Notion of "Done"](#9-robust-and-repeatable-deployments-with-a-notion-of-done)
+- [Trigger Cascading Rollouts from Dependent Updates](#10-trigger-cascading-rollouts-from-dependent-updates)
+- [Staged Application Rollouts Gated by Prometheus Checks](#11-staged-application-rollouts-gated-by-prometheus-checks)
 
-Config as Real Code
-==============================================
+## Config as Real Code
 
 The default authoring experience for Kubernetes applications is in YAML,
 similar to other infrastructure as code solutions. These configuration
-files can [quickly grow out of
-hand](https://twitter.com/jbeda/status/1023294262740365312) due to the
+files can [quickly grow out of hand](https://twitter.com/jbeda/status/1023294262740365312) due to the
 lack of basic facilities like for loops, functions, and classes, leading
 to copy-and-paste, lots of boilerplate, and plenty of frustration.
 
@@ -82,8 +70,7 @@ community. This is something that simply isn't possible with YAML.
 Pulumi supports the full Kubernetes API and lets you author and deploy
 resources in code.
 
-1. Define Kubernetes Applications in a Real Language
-----------------------------------------------------------------------------------------------------------------
+## 1. Define Kubernetes Applications in a Real Language
 
 [
 [Code](https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx) |
@@ -118,9 +105,7 @@ as code; despite us using an imperative language, the code declares a
 goal state that Pulumi understands and converges towards, in a reliable
 way:
 
-![1](https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/1.png?width=600&name=1.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/1.png?width=300&name=1.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/1.png?width=600&name=1.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/1.png?width=900&name=1.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/1.png?width=1200&name=1.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/1.png?width=1500&name=1.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/1.png?width=1800&name=1.png 1800w"} 
+![1](./1.png)
 
 Notice we are using TypeScript. This gives us great IDE support and
 compile-time checking for common mistakes. (Pulumi is multi-language and
@@ -128,40 +113,31 @@ doesn't mind what language runs at runtime.) For example, if I
 accidentally enter a string for the replica count, I get instant IDE
 feedback:
 
-![2](https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/2.png?width=600&name=2.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/2.png?width=300&name=2.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/2.png?width=600&name=2.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/2.png?width=900&name=2.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/2.png?width=1200&name=2.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/2.png?width=1500&name=2.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/2.png?width=1800&name=2.png 1800w"}
+![2](./2.png)
 
 From here, we can make changes to our program -- like changing Nginx
 from 1.7.9 to 1.8 -- and then rerun `pulumi up` . It will compute the
 minimal set of changes to bring the running application in line with our
 new desired state, show us a diff, and ask if we'd like to proceed:
 
-![3](https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/3.png?width=600&name=3.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/3.png?width=300&name=3.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/3.png?width=600&name=3.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/3.png?width=900&name=3.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/3.png?width=1200&name=3.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/3.png?width=1500&name=3.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/3.png?width=1800&name=3.png 1800w"}
+![3](./3.png)
 
 Selecting yes will carry out the update:
 
-![4](https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/4.png?width=600&name=4.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/4.png?width=300&name=4.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/4.png?width=600&name=4.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/4.png?width=900&name=4.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/4.png?width=1200&name=4.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/4.png?width=1500&name=4.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/4.png?width=1800&name=4.png 1800w"}
+![4](./4.png)
 
 At this point, we've seen that we can gain some advantages from
 infrastructure as real code (like good IDE support and the use of a
 variable to avoid repeating ourselves for appLabels ). But let's now see
 some more compelling reasons why this is so great.
 
-2. More Expressiveness, Less Boilerplate
---------------------------------------------------------------------------------------
+## 2. More Expressiveness, Less Boilerplate
 
-[
-[Code](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/components) ]
+[ [Code](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/components) ]
 
-We've all seen [the canonical Kubernetes guestbook
-application](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/)
-that uses PHP, Nginx, and Redis. We have [the same tutorial written in
-Pulumi](https://pulumi.io/quickstart/kubernetes/tutorial-guestbook.html).
+We've all seen [the canonical Kubernetes guestbook application](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/)
+that uses PHP, Nginx, and Redis. We have
+[the same tutorial written in Pulumi](https://pulumi.io/quickstart/kubernetes/tutorial-guestbook.html).
 But the basic conversion from YAML to TypeScript leaves something to be
 desired; namely, it's equally as verbose, feels a little too "low level"
 for an application definition, and misses opportunities to reduce
@@ -170,14 +146,13 @@ repetition.
 This is where languages can rescue us. We can recognize the common
 pattern of a Deployment for a container followed by a Service to expose
 that container, optionally behind a load balancer with a stable IP
-address. This has led us to define [the simple ServiceDeployment
-class](https://github.com/pulumi/examples/blob/master/kubernetes-ts-guestbook/components/k8sjs.ts).
+address. This has led us to define
+[the simple ServiceDeployment class](https://github.com/pulumi/examples/blob/master/kubernetes-ts-guestbook/components/k8sjs.ts).
 
 The definition of this class is interesting to ponder -- particularly
 because, being a language, we can define arbitrary functions and classes
-to encode our own best practices and common patterns -- however, [the
-vast simplification to the guestbook
-itself](https://github.com/pulumi/examples/blob/master/kubernetes-ts-guestbook/components/index.ts)
+to encode our own best practices and common patterns -- however,
+[the vast simplification to the guestbook itself](https://github.com/pulumi/examples/blob/master/kubernetes-ts-guestbook/components/index.ts)
 is the best part:
 
     import * as k8sjs from "./k8sjs";
@@ -210,9 +185,7 @@ The deployment workflow is similar to using the raw resources, with a
 simple `pulumi up`, and we can see the underlying resources expanded in
 a tree view during our update:
 
-![5](https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/5.png?width=600&name=5.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/5.png?width=300&name=5.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/5.png?width=600&name=5.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/5.png?width=900&name=5.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/5.png?width=1200&name=5.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/5.png?width=1500&name=5.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/5.png?width=1800&name=5.png 1800w"}
+![5](./5.png)
 
 Notice that the frontend's allocated IP is printed here thanks to the
 `export` line:
@@ -223,8 +196,7 @@ Notice that the frontend's allocated IP is printed here thanks to the
         <title>Guestbook</title>
     ...
 
-3. Inject Envoy Sidecars Using Abstraction
---------------------------------------------------------------------------------------------
+## 3. Inject Envoy Sidecars Using Abstraction
 
 Before moving on, let's see another powerful example of how abstraction
 can help us to do useful things. In this pearl, we'll see how to inject
@@ -298,8 +270,7 @@ define a base class that our entire organization uses with certain
 sidecars baked in, updated easily in one place and rolled out using
 package managers.
 
-4. Adopt existing Kubernetes YAML
---------------------------------------------------------------------------
+## 4. Adopt existing Kubernetes YAML
 
 It's wonderful that we can use real languages, but there's already lots
 of YAML in the world. Pulumi lets us process that YAML dynamically, and
@@ -308,9 +279,8 @@ needing to change it. This enables multi-cloud and advanced delivery
 scenarios, in addition to being a great way to incrementally convert
 your existing code.
 
-For instance, let's imagine we want to deploy the standard [Kubernetes
-Guestbook
-example](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/)
+For instance, let's imagine we want to deploy the standard
+[Kubernetes Guestbook example](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/)
 directly from the official YAML files, and make its public IP easily
 accessible:
 
@@ -329,8 +299,7 @@ This slurps up all the YAML files underneath the `guestbook` directory,
 creates the desired goal state out of them, and gives the same CLI
 experience shown earlier with diffs and deployments.
 
-5. Programmatically Deploy Helm Charts as Code
-----------------------------------------------------------------------------------------------------
+## 5. Programmatically Deploy Helm Charts as Code
 
 The same is true of Helm Charts, an increasingly popular way to
 distribute entire Kubernetes applications. Let's say we want to deploy
@@ -354,13 +323,10 @@ so that it's easily accessible to us after deployment:
 The resulting Pulumi program can be deployed using `pulumi up` in the
 usual way:
 
-![deploy-1](https://blog.pulumi.com/hs-fs/hubfs/deploy-1.gif?width=600&name=deploy-1.gif){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/deploy-1.gif?width=300&name=deploy-1.gif 300w, https://blog.pulumi.com/hs-fs/hubfs/deploy-1.gif?width=600&name=deploy-1.gif 600w, https://blog.pulumi.com/hs-fs/hubfs/deploy-1.gif?width=900&name=deploy-1.gif 900w, https://blog.pulumi.com/hs-fs/hubfs/deploy-1.gif?width=1200&name=deploy-1.gif 1200w, https://blog.pulumi.com/hs-fs/hubfs/deploy-1.gif?width=1500&name=deploy-1.gif 1500w, https://blog.pulumi.com/hs-fs/hubfs/deploy-1.gif?width=1800&name=deploy-1.gif 1800w"}
+![deploy-1](./deploy-1.gif)
 
 An even more exciting example that highlights mixing cloud resources
-alongside a Helm Chart, check out [our
-example](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean)
+alongside a Helm Chart, check out [our example](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean)
 that creates a MEAN stack that uses Azure CosmosDB as the storage layer
 for an otherwise ordinary Helm Chart, alleviating the burden of needing
 to worry about persistent volumes, stateful services, and the associated
@@ -371,21 +337,20 @@ graph on the fly, using the `transforms` parameter, for both YAML
 configuration and Helm Charts. This lets us validate conforming
 configuration, inject sidecars automatically, and more.
 
-Multi-Cloud Infrastructure
-============================================================
+## Multi-Cloud Infrastructure
 
 Kubernetes applications seldom live on an island by themselves. They
 typically rely on other cloud infrastructure, as we've just seen. This
-spans a long list of possibilities, for instance
+spans a long list of possibilities, for instance:
 
--   **Data services**: AWS S3, Google BigTable, Azure CosmosDB
--   **AI services**: speech recognition, image classification, training
-    algorithms
--   **Hosted services**: MySQL, Redis, Map/Reduce
--   **Container registries**: ECR, ACR, GCR, Docker Hub, JFrog
-    Artifactory
+- **Data services**: AWS S3, Google BigTable, Azure CosmosDB
+- **AI services**: speech recognition, image classification, training
+  algorithms
+- **Hosted services**: MySQL, Redis, Map/Reduce
+- **Container registries**: ECR, ACR, GCR, Docker Hub, JFrog
+  Artifactory
 
-in addition to the very infrastructure hosting the underlying Kubernetes
+In addition to the very infrastructure hosting the underlying Kubernetes
 cluster itself, such as the underlying networking and cluster resources
 (AKS, EKS, GKE), or compute resources for on-premise clusters (VMWare,
 OpenStack, etc).
@@ -399,8 +364,7 @@ Pulumi, on the other hand, can provision and manage the full set of
 resources mentioned in the above examples, using the same programming
 model, language, and tools and workflow.
 
-6. Declare Cloud Resources Alongside Kubernetes Ones
-----------------------------------------------------------------------------------------------------------------
+## 6. Declare Cloud Resources Alongside Kubernetes Ones
 
 Let's say that we want an AWS S3 Bucket for our Kubernetes application
 to use. This sounds basic -- and indeed happens all the time -- but is
@@ -449,8 +413,7 @@ update alters the bucket -- for instance, perhaps a new domain name is
 assigned -- Pulumi will know how to cascade those changes to Kubernetes
 automatically.
 
-7. Provision and Use Kubernetes Clusters in Any Cloud
-------------------------------------------------------------------------------------------------------------------
+## 7. Provision and Use Kubernetes Clusters in Any Cloud
 
 [ [Code](https://github.com/pulumi/examples/tree/master/gcp-ts-gke) ]
 
@@ -522,22 +485,17 @@ The incredible thing about this example is that, with it, we simply run
 pulumi up, and a little over two minutes later, we have a fully
 functioning GKE cluster with a canary deployment up and running:
 
-![6](https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/6.png?width=600&name=6.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/6.png?width=300&name=6.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/6.png?width=600&name=6.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/6.png?width=900&name=6.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/6.png?width=1200&name=6.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/6.png?width=1500&name=6.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/6.png?width=1800&name=6.png 1800w"}
+![6](./6.png)
 
 In addition to the GKE example, our examples repo also has fully
-functioning examples for doing the same thing with [Azure's
-AKS](https://github.com/pulumi/examples/tree/master/azure-ts-aks-helm)
-and [AWS's
-EKS](https://github.com/pulumi/examples/tree/master/aws-ts-eks). A
+functioning examples for doing the same thing with
+[Azure's AKS](https://github.com/pulumi/examples/tree/master/azure-ts-aks-helm)
+and [AWS's EKS](https://github.com/pulumi/examples/tree/master/aws-ts-eks). A
 Kubernetes cluster for everybody!
 
-8 . Build and Deploy Container Images Alongside Configuration Updates
----------------------------------------------------------------------------------------------------------------------------------------------------
+## 8. Build and Deploy Container Images Alongside Configuration Updates
 
-[
-[Code](https://github.com/pulumi/pulumi-docker/tree/master/docker/tests/image) ]
+[ [Code](https://github.com/pulumi/pulumi-docker/tree/master/docker/tests/image) ]
 
 One scenario we often encounter in practice is the need to coordinate
 Docker registry provisioning and management (using one set of tools),
@@ -593,8 +551,7 @@ for all of the major cloud providers' container registries: Amazon ECR,
 Azure ACR, and Google GCR. Keep an eye out on our examples repo for
 examples of these soon, or let us know what you'd like to see.
 
-Software Delivery as Code
-===========================================================
+## Software Delivery as Code
 
 In this final section, we'll turn our attention away from authoring, and
 towards operating. Namely, how to achieve robust continuous deployment
@@ -606,7 +563,7 @@ pipeline is too. In fact, each Pulumi program really is a deployment
 workflow expressed in code. The Pulumi CLI is responsible for evaluating
 programs, producing goal states, diffing states to produce plans, and
 carrying them out. The Pulumi hosted service at
-[app.pulumi.com](http://app.pulumi.com) is used for robust concurrency
+<app.pulumi.com> is used for robust concurrency
 and state management so that deployments can be done continuously in a
 team environment, with perfect auditability of who changed what and
 when, and so that deployments are repeatable and failures recoverable.
@@ -614,8 +571,7 @@ when, and so that deployments are repeatable and failures recoverable.
 Let's look at a few particularly useful scenarios when using Pulumi for
 Kubernetes deployments.
 
-9. Robust and Repeatable Deployments, with a Notion of "Done"
--------------------------------------------------------------------------------------------------------------------------------
+## 9. Robust and Repeatable Deployments, with a Notion of "Done"
 
 [ [Code](https://github.com/pulumi/examples/tree/master/kubernetes-ts-exposed-deployment) ]
 
@@ -687,18 +643,14 @@ events.
 For instance, if we specify an invalid image, we'll see fine-grained
 status errors as they arise:
 
-![2](https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/2.gif?width=600&name=2.gif){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/2.gif?width=300&name=2.gif 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/2.gif?width=600&name=2.gif 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/2.gif?width=900&name=2.gif 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/2.gif?width=1200&name=2.gif 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/2.gif?width=1500&name=2.gif 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/2.gif?width=1800&name=2.gif 1800w"}
+![2](./status-errors.gif)
 
 This allows us to "export" values from the completed resources, which
 gives a way to elevate the most important output values. In the last
 line, we see that we're exporting the public IP address allocated to the
 Nginx Pod. This allows us to use this IP address as a value:
 
-![3](https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/3.gif?width=600&name=3.gif){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/3.gif?width=300&name=3.gif 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/3.gif?width=600&name=3.gif 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/3.gif?width=900&name=3.gif 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/3.gif?width=1200&name=3.gif 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/3.gif?width=1500&name=3.gif 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/3.gif?width=1800&name=3.gif 1800w"}
+![3](./export.gif)
 
 Finally, in true infrastructure as code fashion, Pulumi works on the
 notion of goal states. This means it can always diff the desired goal
@@ -708,20 +660,16 @@ part of the typical `pulumi up` sequence, but the
 resource graph. In this example, we've changed our container image from
 `nginx:15-alpine` to `nginx:16-alpine`:
 
-![4](https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/4.gif?width=600&name=4.gif){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/4.gif?width=300&name=4.gif 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/4.gif?width=600&name=4.gif 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/4.gif?width=900&name=4.gif 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/4.gif?width=1200&name=4.gif 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/4.gif?width=1500&name=4.gif 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/4.gif?width=1800&name=4.gif 1800w"}
+![4](./container.gif)
 
 The ability to look at previews before making an update ensures mistakes
 don't get made and that deployments don't have unanticipated impacts.
-There is even a [Pulumi GitHub
-App](https://pulumi.io/reference/cd-github.html) that will show such
+There is even a [Pulumi GitHub App]({{< ref "/docs/reference/cd-github" >}}) that will show such
 diffs inside of pull requests before they've been deployed, so you know
 the impact of configuration changes before code even makes its way to
 master.
 
-10. Trigger Cascading Rollouts from Dependent Updates
-------------------------------------------------------------------------------------------------------------------
+## 10. Trigger Cascading Rollouts from Dependent Updates
 
 [ [Code](https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout) ]
 
@@ -789,15 +737,11 @@ detect that the ConfigMap changed, perform those changes, and then
 cascade the updates to the Deployment such that it ingests those
 changes:
 
-![5](https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/5.gif?width=600&name=5.gif){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/5.gif?width=300&name=5.gif 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/5.gif?width=600&name=5.gif 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/5.gif?width=900&name=5.gif 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/5.gif?width=1200&name=5.gif 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/5.gif?width=1500&name=5.gif 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/5.gif?width=1800&name=5.gif 1800w"}
+![5](./ingest-changes.gif)
 
-11 . Staged Application Rollouts Gated by Prometheus Checks
-------------------------------------------------------------------------------------------------------------------------------
+## 11. Staged Application Rollouts Gated by Prometheus Checks
 
-[
-[Code](https://github.com/pulumi/examples/tree/master/kubernetes-ts-staged-rollout-with-prometheus) ]
+[ [Code](https://github.com/pulumi/examples/tree/master/kubernetes-ts-staged-rollout-with-prometheus) ]
 
 As we start to go deeper into these scenarios, we're beginning to see
 that Pulumi is useful not only for expression of application
@@ -847,12 +791,9 @@ deployment is at any given time. Most of the time will be spent waiting
 on Prometheus, but then we'll see the final deployment scale out --
 assuming our canary passed the health checks, of course!
 
-![6](https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/6.gif?width=600&name=6.gif){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/6.gif?width=300&name=6.gif 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/6.gif?width=600&name=6.gif 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/6.gif?width=900&name=6.gif 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/6.gif?width=1200&name=6.gif 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/6.gif?width=1500&name=6.gif 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/k8s-pearls/6.gif?width=1800&name=6.gif 1800w"}
+![6](./health-checks.gif)
 
-Wrapping Up
-===============================
+## Wrapping Up
 
 In this post, we've seen some of the exciting things you can do with
 Pulumi's Cloud Native SDK for Kubernetes. We've been having a great time
@@ -861,9 +802,8 @@ these goodies ready to go, are thrilled to ship, and we look forward to
 hearing about your ideas and scenarios about where to take things from
 here.
 
-To get started, download and try out Pulumi for free over at
-<https://pulumi.io>, meet us over on GitHub where all the goodies are
-open source <https://github.com/pulumi/pulumi>, and/or join our
-Community Slack over at <https://slack.pulumi.io>. We can't wait to hear
+To get started, head over to the [Pulumi Quickstart]({{< ref "/docs/quickstart" >}}),
+meet us over on GitHub where all the goodies are open source <https://github.com/pulumi/pulumi>, and/or join our
+[Pulumi Community Slack](https://slack.pulumi.io). We can't wait to hear
 from you. Happy hacking!
 

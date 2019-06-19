@@ -1,29 +1,26 @@
 ---
 title: "Reusable CI/CD components with CircleCI Orbs for Pulumi"
 authors: ["chris-smith"]
-tags: ["CI/CD"]
+tags: ["CI/CD", "New-Feature"]
 date: "2018-11-07"
 
-description: "How to use Circle CI Orbs for Pulumi as reusable CI/CD components for easy deployment."
+summary: "CircleCI's Orbs provide a way to create reusable components for your CI/CD workflows. And with
+CircleCI Orbs for Pulumi, that extends to your cloud resources too."
 meta_image: "RELATIVE_TO_PAGE/circleci-ui.png"
 ---
 
 
-This morning [CircleCI announced the
-launch](https://circleci.com/blog/announcing-orbs-technology-partner-program/)
+This morning [CircleCI announced the launch](https://circleci.com/blog/announcing-orbs-technology-partner-program/)
 of [CircleCI Orbs](https://circleci.com/orbs/) which enable you to
 create reusable components for CircleCI workflows. Orbs enable you to
 simplify your CI/CD configuration by reusing existing orb jobs or
 commands, in much the same way Pulumi enables you to simplify the
 delivery of your cloud native infrastructure by sharing and reusing
-[existing
-components](../../../com/pulumi/blog/creating-and-reusing-cloud-components-using-package-managers.html).
+[existing components]({{< relref "creating-and-reusing-cloud-components-using-package-managers" >}}).
 
-Pulumi is proud to be a [CircleCI technology
-partner](https://circleci.com/partners/), and we were excited to get a
+Pulumi is proud to be a [CircleCI technology partner](https://circleci.com/partners/), and we were excited to get a
 head start on seeing how orbs could make it easier to take Pulumi into
-production within CircleCI. The [Pulumi Orbs for
-CircleCI](https://circleci.com/orbs/registry/orb/pulumi/pulumi) are
+production within CircleCI. The [Pulumi Orbs for CircleCI](https://circleci.com/orbs/registry/orb/pulumi/pulumi) are
 available *today* for you to start using.
 
 ## Pulumi Orbs
@@ -56,19 +53,17 @@ First, the Pulumi orbs (and fixed version) are referenced by the name
 
 CircleCI orbs can be parameterized, so you can set the version of the
 Pulumi client to download, whether the update should skip its preview,
-and so on. ([Full orb
-reference](https://github.com/pulumi/circleci#orb-reference))
+and so on. ([Full orb reference](https://github.com/pulumi/circleci#orb-reference))
 
-![circleci ui](./circleci-ui.png?width=600&name=circleciui.png)
+![circleci ui](./circleci-ui.png)
 
 With other CI/CD systems, you'd typically need to write one-off Bash
 scripts to download the client from <https://get.pulumi.com>, add it to
 the current `$PATH` and so on. Orbs allow for simpler, more declarative
 CI/CD workflows.
 
-The source code for the Pulumi orbs is available [on
-GitHub](https://github.com/pulumi/circleci), if you have any suggestions
-or feedback.
+The source code for the Pulumi orbs is available [on GitHub](https://github.com/pulumi/circleci),
+if you have any suggestions or feedback.
 
 ## Other Integrations
 
@@ -80,8 +75,7 @@ links from <https://app.pulumi.com> to any stack updates or previews
 that happened during a CircleCI workflow.
 
 Also, if you are using CircleCI with GitHub, you can consider installing
-the [Pulumi GitHub
-application](https://pulumi.io/reference/cd-github.html). The Pulumi
+the [Pulumi GitHub application]({{< ref "/docs/reference/cd-github" >}}). The Pulumi
 GitHub app will surface the results of any previews or updates from your
 CI/CD on the source GitHub pull request. It's always good to know if a
 pull request is going to lead to changes to your cloud infrastructure!
@@ -90,7 +84,11 @@ We are continuing to make Pulumi the best tool for the "Continuous
 Deployment" part of CI/CD workflows, and with the release of CircleCIs
 Orbs, it's just that much easier.
 
+
+Having trouble? Questions? Join our [community Slack](https://slack.pulumi.io/)
+or [drop us a line]({{< ref "/contact" >}}).
+
 Links:
 
 -   [Get Started with Circle CI Orbs](https://circleci.com/orbs/)
--   [Get Started with Pulumi](https://pulumi.io)
+

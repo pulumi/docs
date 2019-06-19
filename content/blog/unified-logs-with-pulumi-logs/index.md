@@ -1,24 +1,23 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Unified Logs with pulumi logs"
+authors: ["luke-hoban"]
+tags: ["AWS", "New-Features"]
+date: "2019-04-02"
+
+summary: "The Pulumi CLI provides a way to do logging, without requiring any additional solutions and seamlessly integrates into your Pulumi development workflow. Let’s take a quick look at `pulumi logs` and some of the ways it can be used as part of the inner loop of your Pulumi development."
+meta_image: "RELATIVE_TO_PAGE/terminal-logs.png"
 ---
 
-[Pulumi makes [developing and deploying rich serverless and
-container-based
-applications](../../../com/pulumi/blog/easy-serverless-apps-and-infrastructure-real-events-real-code.html)
+Pulumi makes developing and deploying
+[rich serverless and container-based applications]({{< relref "easy-serverless-apps-and-infrastructure-real-events-real-code" >}})
 a breeze. But how do you monitor and observe those applications while
 they are being developed and once they are deployed? There are many
 great answers: from the built-in capabilities of the underlying cloud
 services (Lambda, ECS, Kubernetes, and more), to great 3rd party
 solutions like [IOpipe](https://github.com/pulumi/pulumi-iopipe) and
-[Epsagon](https://github.com/pulumi/pulumi-epsagon) which [we
-highlighted
-recently](../../../com/pulumi/blog/pulumi-and-epsagon-define-deploy-and-monitor-serverless-applications.html)
-on this blog. ]{#hs_cos_wrapper_post_body .hs_cos_wrapper
+[Epsagon](https://github.com/pulumi/pulumi-epsagon) which
+[we highlighted recently]({{< relref "pulumi-and-epsagon-define-deploy-and-monitor-serverless-applications" >}})
+on this blog.
 
 The Pulumi CLI provides another way to do logging, without requiring the
 additional setup of these existing solutions and seamlessly integrated
@@ -36,7 +35,7 @@ used as part of the inner loop of your Pulumi development.
 > running in AWS. In the near future it will be expanded to Kuberentes,
 > Azure, GCP and additional cloud platforms.*
 
-### Logging for Inner-Loop Development
+## Logging for Inner-Loop Development
 
 When developing locally, it is common to use logging as an interactive
 part of the development process. With `pulumi logs`, we can bring some
@@ -82,28 +81,23 @@ Results in:
      
      2019-03-28T21:17:01.269-07:00[                     newObject] {"errorMessage":"oops","errorType":"Error","stackTrace":["/var/task/__index.js:26:11","Generator.next (<anonymous>)","/var/task/__index.js:12:71","new Promise (<anonymous>)","Object.<anonymous> (/var/task/__index.js:8:12)","Object.__f1 [as __awaiter] (/var/task/__index.js:17:34)","/var/task/__index.js:24:21","__f0 (/var/task/__index.js:30:34)"]}
 
-### Aggregating Logs
+## Aggregating Logs
 
 As applications grow to span multiple forms of compute -- such as micro
 services, lambdas, containers, and VMs -- it becomes important to be
 able to correlate logs across services.
 
-One great example of this is the [video
-thumbnailer](https://github.com/pulumi/examples/tree/master/aws-ts-thumbnailer)
+One great example of this is the [video thumbnailer](https://github.com/pulumi/examples/tree/master/aws-ts-thumbnailer)
 example which implements this simple architecture involving two buckets,
 a lambda event, and a long-running Fargate container task.
 
-![unnamed](https://blog.pulumi.com/hs-fs/hubfs/unnamed.png?width=512&name=unnamed.png){width="512"
-sizes="(max-width: 512px) 100vw, 512px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/unnamed.png?width=256&name=unnamed.png 256w, https://blog.pulumi.com/hs-fs/hubfs/unnamed.png?width=512&name=unnamed.png 512w, https://blog.pulumi.com/hs-fs/hubfs/unnamed.png?width=768&name=unnamed.png 768w, https://blog.pulumi.com/hs-fs/hubfs/unnamed.png?width=1024&name=unnamed.png 1024w, https://blog.pulumi.com/hs-fs/hubfs/unnamed.png?width=1280&name=unnamed.png 1280w, https://blog.pulumi.com/hs-fs/hubfs/unnamed.png?width=1536&name=unnamed.png 1536w"}
+![unnamed](./unnamed.png)
 
 The Pulumi program deploys several components, using different types of
 cloud resources. But using `Pulumi logs` we can see all logs in a
 single, unified view.
 
-![terminal-logs](https://blog.pulumi.com/hs-fs/hubfs/terminal-logs.png?width=1600&name=terminal-logs.png){width="1600"
-sizes="(max-width: 1600px) 100vw, 1600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/terminal-logs.png?width=800&name=terminal-logs.png 800w, https://blog.pulumi.com/hs-fs/hubfs/terminal-logs.png?width=1600&name=terminal-logs.png 1600w, https://blog.pulumi.com/hs-fs/hubfs/terminal-logs.png?width=2400&name=terminal-logs.png 2400w, https://blog.pulumi.com/hs-fs/hubfs/terminal-logs.png?width=3200&name=terminal-logs.png 3200w, https://blog.pulumi.com/hs-fs/hubfs/terminal-logs.png?width=4000&name=terminal-logs.png 4000w, https://blog.pulumi.com/hs-fs/hubfs/terminal-logs.png?width=4800&name=terminal-logs.png 4800w"}
+![terminal-logs](./terminal-logs.png)
 
 From the image above, you can see the `onNewVideo` Lambda function, then
 triggering the `ffmpegThumbTask` Fargate container, and then copying a
@@ -117,7 +111,7 @@ CloudWatch LogGroups, spread across an AWS account. But with
 `pulumi logs` we can get the application-centric view we need to
 understand the overall behaviour of our application architecture.
 
-### Controlling Log Rendering
+## Controlling Log Rendering
 
 The `pulumi logs` command supports a few options for controlling what
 gets logged.
@@ -139,7 +133,7 @@ results down to one or more specific resources, which can be done with
 the `--resource` flag. For example, logs for just the Fargate task above
 could be retrieved with `pulumi logs --resource ffmpegThumbTask`.
 
-### Working Seamlessly with Your Cloud Provider
+## Working Seamlessly with Your Cloud Provider
 
 Like many other Pulumi features, `pulumi logs` works by building on top
 of the great building blocks provided by the underlying cloud provider
@@ -158,7 +152,7 @@ finding the resources with supported logs, collecting those logs based
 on the requested filters, and then presenting them in unified logical
 view.
 
-### What's Next?
+## What's Next?
 
 We've seen Pulumi users working with Lambda, ECS and other AWS compute
 offerings become heavy users of `pulumi logs` during development. But
@@ -178,11 +172,10 @@ Users of the Pulumi Console at <https://app.pulumi.com> also would love
 to have access to these logs at the click of a button - and this is
 something we're also excited to enable in the near future.
 
-You can take `pulumi` for a spin today by checking out the [Getting
-Started](https://pulumi.io/quickstart/) guide or some of the [Pulumi
-Examples](https://github.com/pulumi/examples). Then join us in the
+You can take `pulumi` for a spin today by checking out the
+[Getting Started Guide]({{< ref "/docs/quickstart" >}}) guide or some of the
+[Pulumi Examples](https://github.com/pulumi/examples) on GitHub. Then join us in the
 [Pulumi Community Slack](https://slack.pulumi.io) to chat about where
 you want to see us go (and where you'd like to help out!) with
 `pulumi logs` and other features of the Pulumi open source project in
 the coming weeks and months.
-

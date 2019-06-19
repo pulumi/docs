@@ -1,7 +1,7 @@
 ---
 title: "Continuous Delivery with GitLab and Pulumi on Amazon EKS"
 authors: ["nishi-davidson"]
-tags: ["aws", "kubernetes", "CI/CD"]
+tags: ["AWS", "Kubernetes", "CI/CD"]
 date: "2019-05-22"
 
 summary: "we will work through an example that shows how to use
@@ -9,7 +9,6 @@ Pulumi to enable GitLab-based continuous delivery with your Kubernetes
 workloads on Amazon EKS"
 meta_image: "RELATIVE_TO_PAGE/post-image.png"
 ---
-
 
 In this blog, we will work through an example that shows how to use Pulumi to enable GitLab-based
 continuous delivery with your Kubernetes workloads on Amazon EKS. This integration will work just
@@ -33,21 +32,22 @@ organization. This can be a specific GitHub, GitLab or Atlassian
 organization or your solo organization. Inside each organization, users
 create Pulumi projects and stacks.
 
-Pulumi [projects](https://pulumi.io/reference/project.html) and [stacks](https://pulumi.io/reference/stack.html)
+Pulumi [projects]({{< ref "/docs/reference/project" >}})
+and [stacks]({{< ref "/docs/reference/stack" >}})
 are flexible to accommodate the diverse needs across teams, applications,
 and infrastructure scenarios. Just like Git repos that work with varying
 approaches Pulumi projects and stacks allow you to organize your code
 within them. Immediate options include:
 
--   **Monolithic project/stack structure:** A single project defines the
-    infrastructure and application resources for an entire vertical
-    service as represented in the image below:
+- **Monolithic project/stack structure:** A single project defines the
+  infrastructure and application resources for an entire vertical
+  service as represented in the image below:
 
 ![Monolithic structure](./image-2.webp)
 
--   **Micro-stacks project/stack structure:** A project broken into
-    separately managed smaller projects, often across different
-    dimensions as represented in the image below:
+- **Micro-stacks project/stack structure:** A project broken into
+  separately managed smaller projects, often across different
+  dimensions as represented in the image below:
 
 ![Micro-stack structure structure](./image-3.webp)
 
@@ -55,16 +55,16 @@ Working with Inter-Stack Dependencies with the latter option is more
 suited in a production setup giving users more flexibility and
 boundaries between their teams. We will use this structure in our
 example below. For more information on Pulumi projects and stacks,
-please refer to our documentation [here](https://pulumi.io/reference/organizing-stacks-projects.html).
+please refer to our documentation
+[here]({{< ref "/docs/reference/organizing-stacks-projects" >}}).
 
 ### Use Tags to group Pulumi Stacks as Environments:
 
 - Pulumi Stacks have associated metadata in the form of key/value
     tags.
-- You can assign custom tags to stacks (when logged into the [web
-  backend](https://pulumi.io/reference/state.html)) to customize how
-  stacks are listed in the [Pulumi Cloud
-  Console](https://app.pulumi.com/).
+- You can assign custom tags to stacks (when logged into the
+  [web backend]({{< ref "/docs/reference/state" >}}) to customize how
+  stacks are listed in the [Pulumi Cloud Console](https://app.pulumi.com/).
   - In our example below we have two environments _prod_ and _dev_.
     - To group stacks by environment we assign custom tags
       `environment: prod` and `environment: dev` to the respective
@@ -72,8 +72,7 @@ please refer to our documentation [here](https://pulumi.io/reference/organizing-
     - In the Pulumi Cloud Console, you'll be able to group stacks by
       tag: `environment:dev` and tag: `environment:prod`.
 
-Please read more about [how to manage stack tags
-here](https://pulumi.io/reference/stack.html#stack-tags).
+Please read more about managing [stack tags in Pulumi]({{< ref "/docs/reference/stack#stack-tags" >}}).
 
 ![Stack tags](./image-4.webp)
 
@@ -104,15 +103,15 @@ the downstream stack `<org-name-in-pulumi>/sample-k8sapp/dev`
 provided the cycle of `pulumi preview` and `pulumi deploy` completes
 without any failure.
 
-![](./image-4.webp)
+![No failures](./image-4.webp)
 
 4.  To use Pulumi within GitLab CI, there are a few environment
     variables you'll need to set for each build.
     -   The first is `PULUMI_ACCESS_TOKEN`, which is required to
-        authenticate with **[pulumi.com](http://pulumi.com)** in order
+        authenticate with [**pulumi.com**](http://pulumi.com) in order
         to perform the preview or update. You can create a new Pulumi
-        access token specifically for your CI/CD job on your [Pulumi
-        Account page](https://app.pulumi.com/account/tokens).
+        access token specifically for your CI/CD job on your
+        [Pulumi Account page](https://app.pulumi.com/account/tokens).
     -   Next, you will also need to set environment variables specific
         to your cloud resource provider. For example, if your stack is
         managing resources on AWS, `AWS_ACCESS_KEY_ID` and
@@ -426,8 +425,7 @@ that the dependent tiers receive new copies of the outputs exported from
 the IAM stack, so the deployment flows naturally through the pipeline!
 
 This brings us to the end of our CD solution with Pulumi and GitLab on
-Amazon EKS. For more examples, refer to our open source repository
-[here](https://github.com/pulumi/examples). Refer to my previous post on
-Amazon EKS and k8s RBAC
-[here](../simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages/).
+Amazon EKS. For more examples, refer to the [Pulumi examples](https://github.com/pulumi/examples)
+repository. Refer to my previous post on
+[Amazon EKS and k8s RBAC in Pulumi]({{< relref "simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages" >}}).
 

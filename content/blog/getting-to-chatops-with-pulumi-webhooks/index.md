@@ -1,12 +1,12 @@
 ---
 title: "Getting to ChatOps with Pulumi Webhooks"
 authors: ["chris-smith"]
-tags: ["todo"]
+tags: ["New-Features", "CI/CD"]
 date: "2019-01-23"
 
-description: "TODO: Put in a reasonable summary"
+summary: "Announcing the availability of Webhooks on Pulumi. Get notified as stacks and teams are updated and connect Pulumi to your own notifications systems."
+meta_image: "RELATIVE_TO_PAGE/pulumi-webhooks.png"
 ---
-
 
 Today we are delighted to announce the availability of Webhooks on
 [Pulumi](https://app.pulumi.com). Webhooks are a very common mechanism
@@ -17,8 +17,8 @@ part of 'ChatOps'; or other build pipelines, to improve the delivery of
 cloud native infrastructure.
 
 Pulumi Webhooks are available for the Team and Enterprise editions of
-Pulumi. If you're keen to try them out, start a trial of [Team Edition
-here](https://app.pulumi.com/site/organizations/add).
+Pulumi. If you're keen to try them out, start a trial of
+[Team Edition here](https://app.pulumi.com/site/organizations/add).
 
 ChatOps --- the idea of conversation-driven collaboration --- is an
 increasingly common pattern, and as such we've gotten a lot of requests
@@ -29,8 +29,7 @@ infrastructure or wanting to build extensions to automate continuous
 delivery pipelines. Pulumi Webhooks offer the flexibility to design
 these notification and response systems as required for your team.
 
-Using Pulumi Webhooks
-=================================================
+## Using Pulumi Webhooks
 
 You can attach webhooks directly to stacks or organizations. Stack
 webhooks will send notifications whenever changes to a stack are made
@@ -38,9 +37,7 @@ webhooks will send notifications whenever changes to a stack are made
 to an organization will be sent the events for every stack within the
 organization.
 
-![webhooks1](https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks1.png?width=600&name=webhooks1.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks1.png?width=300&name=webhooks1.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks1.png?width=600&name=webhooks1.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks1.png?width=900&name=webhooks1.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks1.png?width=1200&name=webhooks1.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks1.png?width=1500&name=webhooks1.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks1.png?width=1800&name=webhooks1.png 1800w"}
+![Pulumi webhooks](./pulumi-webhooks.png)
 
 When events occur, we'll send a HTTP `POST` request to any registered
 listeners. Webhooks can then be used to send notifications to Slack or
@@ -50,54 +47,60 @@ We've been using Pulumi webhooks internally for raising awareness when
 our test and production environments get updated. A common sight after
 submitting some code is:
 
-![webhooks2](https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks2.png?width=511&name=webhooks2.png){width="511"
-sizes="(max-width: 511px) 100vw, 511px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks2.png?width=256&name=webhooks2.png 256w, https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks2.png?width=511&name=webhooks2.png 511w, https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks2.png?width=767&name=webhooks2.png 767w, https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks2.png?width=1022&name=webhooks2.png 1022w, https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks2.png?width=1278&name=webhooks2.png 1278w, https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks2.png?width=1533&name=webhooks2.png 1533w"}
+![webhooks2](./pulumi-webhooks-2.png)
 
-Building a Pulumi Webhook handler using... Pulumi!
-========================================================================================================
+## Building a Pulumi Webhook handler using... Pulumi!
 
 Pulumi is perfect for setting up cloud infrastructure, and so what
 better tool to use for handling notifications from Pulumi than Pulumi!
 
 In this example, we'll create a simple Pulumi program that stands up a
 webhook handler that will receive webhook requests and echo them to
-Slack. You can find the full code in the [examples
-repo](https://github.com/pulumi/examples/), under
+Slack. You can find the full code in the
+[examples repo](https://github.com/pulumi/examples/), under
 [aws-ts-pulumi-webhooks](https://github.com/pulumi/examples/tree/master/aws-ts-pulumi-webhooks).
 
 The code is very straight forward, thanks to the the
 [@pulumi/cloud](https://github.com/pulumi/pulumi-cloud) package.
 
-    import * as pulumi from "@pulumi/pulumi";
-    import * as cloud from "@pulumi/cloud";
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloud from "@pulumi/cloud";
 
-    import * as slack from "@slack/client";
+import * as slack from "@slack/client";
 
-    const config = new pulumi.Config();
+const config = new pulumi.Config();
 
-    const stackConfig = {
-       slackToken: config.require("slackToken"),
-       slackChannel: config.require("slackChannel"),
-    };
+const stackConfig = {
+   slackToken: config.require("slackToken"),
+   slackChannel: config.require("slackChannel"),
+};
 
-    const webhookHandler = new cloud.HttpEndpoint("pulumi-webhook-handler");
+const webhookHandler = new cloud.HttpEndpoint("pulumi-webhook-handler");
 
-    webhookHandler.get("/", async (_, res) => {
-       res.status(200).end("🍹 Pulumi Webhook Responder🍹
-");
-    });
+webhookHandler.get("/", async (_, res) => {
+   res.status(200).end("🍹 Pulumi Webhook Responder🍹");
+});
 
-    webhookHandler.post("/", async (req, res) => {
-       const webhookID = req.headers["pulumi-webhook-id"];
-       const webhookKind = req.headers["pulumi-webhook-kind"];
-       console.log(`Received webhook from Pulumi ${webhookID} [${webhookKind}]`);
+webhookHandler.post("/", async (req, res) => {
+   const webhookID = req.headers["pulumi-webhook-id"];
+   const webhookKind = req.headers["pulumi-webhook-kind"];
+   console.log(`Received webhook from Pulumi ${webhookID} [${webhookKind}]`);
 
-       const payload = <string>req.body.toString(); const prettyPrintedPayload = JSON.stringify(JSON.parse(payload), null, 2); const client = new slack.WebClient(stackConfig.slackToken); await client.chat.postMessage( { channel: stackConfig.slackChannel, text: `Pulumi Service Webhook (`${webhookKind}`)
-` + "```
-" + prettyPrintedPayload + "```
-", as_user: true, }); res.status(200).end(`posted to Slack channel ${stackConfig.slackChannel}
-`); }); export const url = webhookHandler.publish().url; 
+   const payload = <string>req.body.toString();
+   const prettyPrintedPayload = JSON.stringify(JSON.parse(payload), null, 2);
+   const client = new slack.WebClient(stackConfig.slackToken);
+   await client.chat.postMessage({
+      channel: stackConfig.slackChannel,
+      text: `Pulumi Service Webhook (`${webhookKind}`)` + "```" + prettyPrintedPayload + "```",
+      as_user: true,
+   });
+
+   res.status(200).end(`posted to Slack channel ${stackConfig.slackChannel}`);
+});
+   
+export const url = webhookHandler.publish().url; 
+```
 
 But to stand up the cloud application, we'll need to create the stack
 and set some configuration. And finally deploy it using `pulumi up`.
@@ -133,9 +136,7 @@ With the infrastructure in-place, we just need to register the webhook
 on the Pulumi Cloud Console. Organization administrators can do so under
 the organization's **SETTINGS** tab.
 
-![webhooks3](https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks3.png?width=512&name=webhooks3.png){width="512"
-sizes="(max-width: 512px) 100vw, 512px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks3.png?width=256&name=webhooks3.png 256w, https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks3.png?width=512&name=webhooks3.png 512w, https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks3.png?width=768&name=webhooks3.png 768w, https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks3.png?width=1024&name=webhooks3.png 1024w, https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks3.png?width=1280&name=webhooks3.png 1280w, https://blog.pulumi.com/hs-fs/hubfs/Blog/webhooks3.png?width=1536&name=webhooks3.png 1536w"}
+![webhooks3](./pulumi-webhooks-3.png)
 
 That's it! As stacks are created, updated, and so on, the webhook
 handler will be notified and you can start building any custom actions
@@ -144,35 +145,21 @@ you can think of.
 For our initial release, there are four kinds of webhook events. But
 we'll quickly be expanding coverage in the coming weeks.
 
-+-----------------------------------+-----------------------------------+
-| **Event Type**                    | **Trigger**                       |
-+-----------------------------------+-----------------------------------+
-| `stack`                           | Fired whenever a stack is created |
-|                                   | or deleted within an              |
-|                                   | organization.                     |
-+-----------------------------------+-----------------------------------+
-| `team`                            | Fired when a team is created,     |
-|                                   | updated, or deleted within an     |
-|                                   | organization.                     |
-+-----------------------------------+-----------------------------------+
-| `stack_update`                    | Fired when a stack is updated.    |
-|                                   | (Be it from                       |
-|                                   | `pulumi up`, `pulumi refresh`, or |
-|                                   | `pulumi destroy`.)                |
-+-----------------------------------+-----------------------------------+
-| `stack_preview`                   | Fired whenever changes to a stack |
-|                                   | are previewed.                    |
-+-----------------------------------+-----------------------------------+
+| **Event Type**                    | **Trigger**
+| --------------------------------- | ----------------------------------
+| `stack`                           | Fired whenever a stack is created or deleted within an organization.
+| `team`                            | Fired when a team is created, updated, or deleted within an organization.
+| `stack_update`                    | Fired when a stack is updated. (Be it from `pulumi up`, `pulumi refresh`, or `pulumi destroy`.)
+| `stack_preview`                   | Fired whenever changes to a stack  are previewed.                    
 
 You can also find more detailed documentation about the types of webhook
 events and their payloads on [pulumi.io](http://pulumi.io).
 
-Tell us what you think
------------------------------------------------------
+## Tell us what you think
 
 Get started with Pulumi Webhooks on the [Pulumi
 app](https://app.pulumi.com), and let us know how you're using them so
 we can continue to extend their capabilities. We'd love to hear your
-ideas, as well as any feedback you have on the [Pulumi Community
-Slack](https://slack.pulumi.io).
+ideas, as well as any feedback you have on the
+[Pulumi Community Slack](https://slack.pulumi.io).
 

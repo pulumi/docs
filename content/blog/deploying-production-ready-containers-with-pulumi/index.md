@@ -1,10 +1,11 @@
 ---
 title: "Deploying production-ready containers with Pulumi"
 authors: ["donna-malayeri"]
-tags: ["todo"]
+tags: ["AWS/Lambda/Fargate"]
 date: "2018-06-18"
 
-description: "TODO: Put in a reasonable summary"
+summary: "In this blog post we will use Pulumi to deploy a simple Docker container running NGINX onto AWS Fargate handling details such as creating a container registry instance in ECR, creating task definitions in ECS, and configuring a load balancer."
+meta_image: "RELATIVE_TO_PAGE/hello-world-page.png"
 ---
 
 Containers are a great way to deploy applications to the cloud,
@@ -18,8 +19,7 @@ production is almost as easy as running it locally!
 In this blog post, we'll deploy a simple Docker container running
 NGINX.
 
-Setup
------
+## Setup
 
 If this is your first time using Pulumi, go to
 [https://app.pulumi.com](https://app.pulumi.com/) and sign in with
@@ -43,35 +43,36 @@ with a version of 6.10.x or later.
 Finally, make sure [Docker](https://docs.docker.com/install/) is
 installed and running.
 
-Create the app
---------------
+## Create the app
 
 We'll create a Pulumi project, define the infrastructure in JavaScript,
 and create a Dockerfile.
 
-1. To create a new Pulumi project, run the following commands:
+To create a new Pulumi project, run the following commands:
 
-    mkdir hello-containers && cd hello-containers
-    pulumi new aws-javascript
+```bash
+mkdir hello-containers && cd hello-containers
+pulumi new aws-javascript
+```
 
-This creates a new project in the directory `hello-containers`.
+This creates a new project in the directory `hello-containers`. Next, replace the contents of `index.js` with the following:
 
-2. Replace the contents of `index.js` with the following:
-
-    const cloud = require("@pulumi/cloud-aws"); 
-    let service = new cloud.Service("pulumi-nginx", { 
-        containers: { 
-            nginx: { 
-                build: "./app", 
-                memory: 128, 
-                ports: [{ port: 80 }], 
-            }, 
+```javascript
+const cloud = require("@pulumi/cloud-aws"); 
+let service = new cloud.Service("pulumi-nginx", { 
+    containers: { 
+        nginx: { 
+            build: "./app", 
+            memory: 128, 
+            ports: [{ port: 80 }], 
         }, 
-        replicas: 2, 
-    }); 
+    }, 
+    replicas: 2, 
+}); 
 
-    /* export just the hostname property of the container frontend */
-    exports.url = service.defaultEndpoint.apply(e => `http://${e.hostname}`);
+/* export just the hostname property of the container frontend */
+exports.url = service.defaultEndpoint.apply(e => `http://${e.hostname}`);
+```
 
 
 These 15 lines of code are everything you need to deploy a custom
@@ -80,35 +81,35 @@ convenient interface for building containers and provisioning an AWS
 container service. Using the `build `property, we point to a folder
 containing a `Dockerfile`, which is `app` in this case.
 
-3. Now, let's create a `Dockerfile` and a static page. Create a
+Now, let's create a `Dockerfile` and a static page. Create a
 subfolder `app` with the following files.
 
 Add the following as `Dockerfile`:
 
-    FROM nginx
+```
+FROM nginx
 
-    COPY index.html /usr/share/nginx/html
+COPY index.html /usr/share/nginx/html
+```
 
 Add the following as `index.html`:
 
-    <html>
-      <head>
-        <title>Hello World</title>
-        <meta charset="UTF-8">
-      </head>
-      <body>
-        <p>Hello containers!</p>
-        <p>Made with ❤️ with <a href="https://pulumi.com">Pulumi</a></p>
-      </body>
-    </html>
+```html
+<html>
+    <head>
+    <title>Hello World</title>
+    <meta charset="UTF-8">
+    </head>
+    <body>
+    <p>Hello containers!</p>
+    <p>Made with ❤️ with <a href="https://pulumi.com">Pulumi</a></p>
+    </body>
+</html>
+```
 
 You should have the following directory structure:
 
-<div>
-
-![](https://github.com/lindydonna/blog-stuff/raw/master/containers/file-layout.png){width="400"}
-
-</div>
+![file layout](./file-layout.png)
 
 4. Install the `@pulumi/cloud-aws` NPM package:
 
@@ -120,21 +121,16 @@ available only in `us-east-1`, `us-east-2`, `us-west-2`, and
 
     pulumi config set cloud-aws:useFargate true
 
-Deploy the app
---------------
+## Deploy the app
 
 To deploy both the infrastructure and app code, we'll run
 `pulumi update`. This command first shows a preview of all the resources
 that will be created and prompts for confirmation. During the preview
 phase, Pulumi invokes `docker build`. 
 
-<div>
+![Pulumi preview](./pulumi-update-preview.png)
 
-![](https://github.com/lindydonna/blog-stuff/raw/master/containers/pulumi-update-preview.png){width="700"}
-
-</div>
-
- Choose the `yes` option to deploy to AWS. This will take about 5
+Choose the `yes` option to deploy to AWS. This will take about 5
 minutes. Pulumi automatically builds and provisions an AWS container
 repository in ECR, builds the Docker container, and places the image in
 the repository. This all happens automatically and does not require
@@ -143,63 +139,24 @@ manual configuration on your part.
 At the end of the update, you'll see a link to the Pulumi Console that
 shows the details of the deployment.
 
-<div>
-
-![](https://github.com/lindydonna/blog-stuff/raw/master/containers/pulumi-update-complete.png){width="700"} 
-
-</div>
-
-<div>
+![update complete](./update-complete.png)
 
 Go to this link and click the **Resources** tab. You'll see all the
 resources you've created. Notice that Pulumi has created an ECR
 repository, a load balancer, an ECS service and task definition, and IAM
 roles.
 
-</div>
-
-<div>
-
- 
-
-</div>
-
-<div>
-
-![](https://github.com/lindydonna/blog-stuff/raw/master/containers/console-resources.png){width="700"}
-
-</div>
-
-You can also filter to just container resources using the filter
-dropdown. 
-
-<div>
-
-![](https://github.com/lindydonna/blog-stuff/raw/master/containers/containers-filtered.png){width="700"}
-
-</div>
-
- Now, go back to the stack details page, which shows the stack
+Now, go back to the stack details page, which shows the stack
 configuration, as well as the stack output property. The following line
 creates the stack output `url`:
 
 `` exports.url = service.defaultEndpoint.apply(e => `http://${e.hostname}`); ``
 
-<div>
+If you navigate to the link for `url` you'll see the following page: 
 
-![](https://github.com/lindydonna/blog-stuff/raw/master/containers/stack-details.png){width="700"}
+!["Hello, World!"](./hello-world-page.png)
 
-</div>
-
- If you navigate to the link for `url` you'll see the following page: 
-
-<div>
-
-![](https://github.com/lindydonna/blog-stuff/raw/master/containers/hello-world-page.png){width="700"}
-
-</div>
-
-[View logs]{style="font-family: Ubuntu, sans-serif; font-size: 30px;"}
+## View logs
 
 You can view container frontend and compute logs via the `pulumi logs`
 command. You can see here that most of the traffic is hitting routes
@@ -218,19 +175,13 @@ site traffic.
      2018-06-15T15:32:02.128-07:00[                  pulumi-nginx] 2018/06/15 22:32:02 [error] 5#5: *382 "/usr/share/nginx/html/phpmyadmin/index.html" is not found (2: No such file or directory), client: 178.239.177.212, server: localhost, request: "HEAD http://34.201.27.186:80/phpmyadmin/ HTTP/1.1", host: "34.201.27.186"
      2018-06-15T16:07:05.874-07:00[                  pulumi-nginx] 172.31.44.144 - - [15/Jun/2018:23:07:05 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36" "-" 
 
-Clean up
---------
+## Clean up
 
 To clean up the resources we've provisioned, run `pulumi destroy`.
 
-Next steps
-----------
+## Next steps
 
-The [sample code for this
-post](https://github.com/pulumi/examples/tree/master/cloud-js-containers)
-is available in the [Pulumi examples repo on
-GitHub](https://github.com/pulumi/examples). For an example application
-that connects two containers, see the [Voting
-App](https://github.com/pulumi/examples/tree/master/cloud-ts-voting-app)
+The [sample code for this post](https://github.com/pulumi/examples/tree/master/cloud-js-containers)
+is available in the [Pulumi examples repo on GitHub](https://github.com/pulumi/examples). For an example application
+that connects two containers, see the [Voting App](https://github.com/pulumi/examples/tree/master/cloud-ts-voting-app)
 TypeScript sample.
-

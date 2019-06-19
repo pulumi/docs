@@ -1,17 +1,19 @@
 ---
 title: "Advanced TypeScript type FTW!"
 authors: ["cyrus-najmabadi"]
-tags: ["TypeScript"]
+tags: ["Infrastructure as Code"]
 date: "2018-09-19"
 
-description: "Exploring advanced types in TypeScript to simplify the Pulumi codebase, and making those types consumable."
+summary: "Exploring advanced types in TypeScript to simplify the Pulumi codebase, and making those types consumable. The typesystem magic behind
+how this works for infrastructure as code can be fascinating!"
+meta_image: "RELATIVE_TO_PAGE/completion-list.png"
 ---
 
 We at Pulumi love TypeScript for cloud apps and infrastructure, because of its rich type system and great ahead-of-time
 typechecking – making for a more productive inner loop and helping to find errors sooner. The typesystem magic behind
 how this works for infrastructure as code can be fascinating!
 
-As core part of the Pulumi [programming model](https://pulumi.io/reference/) is that we allow people to express complex
+A core part of the Pulumi [programming model](https://pulumi.io/reference/) is that we allow people to express complex
 [dependency data](https://pulumi.io/reference/programming-model.html#outputs) that may _eventually_ be available.
 Traditional JavaScript programming might expose that as a Promise<T>, but we’ve taken that one step further by introducing
     a type we call:
@@ -46,7 +48,7 @@ make it conform to some very narrow type.
 However, while easy to produce, this can sometimes be difficult to consume. For example, if you wanted to take in that
 `Input<Input<string>[]>` and then check if there was a very specific value in it, you might have to go through and do a bunch of
 work. You’d have to first deal with potentially getting a `Input<string>[]` or a `Promise<Input<string>[]>` or even an `Output<Input<string>[]>`.
-Then, once you even got to the underlying array, you’d have to deal with each potential element in it being a `string`… or a `Promise<string>`… or a… well… you get the idea. It’s not fun 😃
+Then, once you even got to the underlying array, you’d have to deal with each potential element in it being a `string`… or a `Promise<string>`… or a… well… you get the idea. It’s not fun 😃.
 
 Up until now, we’d supplied some simple helpers to make this more managable. Our helpers would effectively ‘unwrap’ one
 layer of this sort of structure allowing you take the external value and deal with an internal value of a known shape.
@@ -119,7 +121,7 @@ pattern-matching type, without it having any trouble understanding it or applyin
 It amazes us how well this works and how expressive TypeScript is here. As you can see here, TypeScript completely
 understands what’s going on and will give you all the great type-checking support and tooling that we know and love:
 
-![blog-ts-1](https://blog.pulumi.com/hs-fs/hubfs/blog-ts-1.png?width=600&name=blog-ts-1.png)
+![TypeScript completion list](./completion-list.png)
 
 Since adding support for this, we’ve been able to start using this new function across our own codebase and we’ve seen
 things get dramatically simpler. The pyramid-of-doom goes away and code becomes much cleaner and easier to read and

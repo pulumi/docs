@@ -1,10 +1,12 @@
 ---
 title: "How we use Pulumi to build Pulumi"
 authors: ["luke-hoban"]
-tags: ["todo"]
+tags: ["Infrastructure-as-Code"]
 date: "2018-06-26"
 
-description: "TODO: Put in a reasonable summary"
+summary: "Here at Pulumi we are (perhaps unsurprisingly!) huge fans of using
+Pulumi to manage our cloud infrastructure and services. In this post, we describe how we use Pulumi to build and run Pulumi."
+meta_image: "RELATIVE_TO_PAGE/image-4.png"
 ---
 
 
@@ -18,17 +20,13 @@ abstractions which accelerate our ability to deliver new features and
 services, and our ability to standardize and refactor infrastructure
 patterns across our services with relative ease. 
 
-Join us on our [YouTube live stream this
-week](https://www.youtube.com/watch?v=xL3okV6NI20) to hear more about
-all of this. Wednesday 27th June, 11am PDT - see you there!
 
 Like other users, we use Pulumi at a variety of levels of abstraction.
 We use Pulumi for raw infrastructure provisioning, defining the core
 networking layer for our AWS-based backend infrastructure. And we use
 Pulumi to define how our application services are deployed into ECS
 using just a few lines of code. Pulumi hosts and manages static content
-for [www.pulumi.com](http://www.pulumi.com/),
-[pulumi.io](http://pulumi.io/) and
+for [www.pulumi.com](http://www.pulumi.com/), [pulumi.io](http://pulumi.io/) and
 [get.pulumi.com](../../../com/pulumi/blog/index.html). We use Pulumi to
 define the CloudWatch dashboards connected to our infrastructure. And
 for monitoring, Pulumi defines metrics and notifications/alarms in
@@ -45,11 +43,10 @@ highlighting unique aspects of how we use Pulumi itself, and some of our
 engineering processes around how we integrate Pulumi into the rest of
 our toolchain.
 
-Infrastructure
---------------
+## Infrastructure
 
 Our backend infrastructure that supports
-[app.pulumi.com](http://app.pulumi.com/) and the Pulumi CLI is fairly
+<https://app.pulumi.com> and the Pulumi CLI is fairly
 typical of a cloud service/application building on AWS. Those who have
 done this before will be familiar with the combination of AWS VPC, EC2,
 ASG, ALB, ECS, S3, Aurora, CloudFront and Route53 that powers the core
@@ -73,10 +70,7 @@ that are commonly needed, but can be configured with a much smaller
 space of configuration values in the common case, so we factored out
 `new awsinfra.Cluster`.
 
-[![carbon
-(6)](https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(6).png?width=800&name=carbon%20(6).png){width="800"
-sizes="(max-width: 800px) 100vw, 800px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(6).png?width=400&name=carbon%20(6).png 400w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(6).png?width=800&name=carbon%20(6).png 800w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(6).png?width=1200&name=carbon%20(6).png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(6).png?width=1600&name=carbon%20(6).png 1600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(6).png?width=2000&name=carbon%20(6).png 2000w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(6).png?width=2400&name=carbon%20(6).png 2400w"}](https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/aws-infra/examples/cluster/index.ts#L23)
+![carbon](./carbon.png)
 
 Defining infrastructure in Pulumi made it easy to stand up many
 instances of our service, including per-developer stacks, with just
@@ -89,10 +83,7 @@ quickly iterate on changes. This includes not just the basic
 infrastructure, but also provisioning of DNS entries in Route53 and
 creation of custom CloudWatch dashboards (see more on this below).
 
-![Screen Shot 2018-06-25 at 9.38.42
-PM](https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.38.42%20PM.png?width=600&name=Screen%20Shot%202018-06-25%20at%209.38.42%20PM.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.38.42%20PM.png?width=300&name=Screen%20Shot%202018-06-25%20at%209.38.42%20PM.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.38.42%20PM.png?width=600&name=Screen%20Shot%202018-06-25%20at%209.38.42%20PM.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.38.42%20PM.png?width=900&name=Screen%20Shot%202018-06-25%20at%209.38.42%20PM.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.38.42%20PM.png?width=1200&name=Screen%20Shot%202018-06-25%20at%209.38.42%20PM.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.38.42%20PM.png?width=1500&name=Screen%20Shot%202018-06-25%20at%209.38.42%20PM.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.38.42%20PM.png?width=1800&name=Screen%20Shot%202018-06-25%20at%209.38.42%20PM.png 1800w"}
+![image-2](./image-2.png)
 
 We have three shared environments - **development**, **staging** and
 **production** - each an isolated environment with separate
@@ -104,8 +95,7 @@ part of build and deployment stages. This allows us to reliably deliver
 a known desired state for each target environment, and to promote
 changes between environments with just a `git merge`.
 
-API and App Services
---------------------
+## API and App Services
 
 Most of our backend application services are developed in Go, and we
 deploy them onto our production infrastructure as container images.
@@ -135,13 +125,9 @@ it to the private repository, and turn-over each service task to use the
 new image. All of that workflow complexity is abstracted away behind a
 simple API and a single CLI command.
 
-[![carbon
-(7)](https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(7).png?width=600&name=carbon%20(7).png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(7).png?width=300&name=carbon%20(7).png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(7).png?width=600&name=carbon%20(7).png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(7).png?width=900&name=carbon%20(7).png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(7).png?width=1200&name=carbon%20(7).png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(7).png?width=1500&name=carbon%20(7).png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(7).png?width=1800&name=carbon%20(7).png 1800w"}](https://github.com/pulumi/examples/blob/master/aws-ts-airflow/index.ts)
+![image-3](./image-3.png)
 
-Metrics, Alarms and Dashboards
-------------------------------
+## Metrics, Alarms and Dashboards
 
 We also use Pulumi to define a few less traditional parts of our
 infrastructure - including our metrics, dashboards and alarming
@@ -156,10 +142,7 @@ just physical infrastructure, but also that alarms and dashboards are
 behaving as expected prior to pushing code to production. Here's a
 sample of our CloudWatch dashboards:
 
-![Screen Shot 2018-06-25 at 9.01.51
-PM](https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.01.51%20PM.png?width=1594&name=Screen%20Shot%202018-06-25%20at%209.01.51%20PM.png){width="1594"
-sizes="(max-width: 1594px) 100vw, 1594px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.01.51%20PM.png?width=797&name=Screen%20Shot%202018-06-25%20at%209.01.51%20PM.png 797w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.01.51%20PM.png?width=1594&name=Screen%20Shot%202018-06-25%20at%209.01.51%20PM.png 1594w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.01.51%20PM.png?width=2391&name=Screen%20Shot%202018-06-25%20at%209.01.51%20PM.png 2391w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.01.51%20PM.png?width=3188&name=Screen%20Shot%202018-06-25%20at%209.01.51%20PM.png 3188w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.01.51%20PM.png?width=3985&name=Screen%20Shot%202018-06-25%20at%209.01.51%20PM.png 3985w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.01.51%20PM.png?width=4782&name=Screen%20Shot%202018-06-25%20at%209.01.51%20PM.png 4782w"}
+![image-4](./image-4.png)
 
 We build up AWS resources representing CloudWatch dashboards using a
 compositional framework shown below. As this example shows, bringing
@@ -168,10 +151,7 @@ new approaches to how code is authored and factored - and ultimately to
 the creation of higher level frameworks for building domain-specific
 cloud infrastructure - in this case, CloudWatch dashboards.
 
-![carbon
-(4)](https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(4).png?width=800&name=carbon%20(4).png){width="800"
-sizes="(max-width: 800px) 100vw, 800px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(4).png?width=400&name=carbon%20(4).png 400w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(4).png?width=800&name=carbon%20(4).png 800w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(4).png?width=1200&name=carbon%20(4).png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(4).png?width=1600&name=carbon%20(4).png 1600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(4).png?width=2000&name=carbon%20(4).png 2000w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(4).png?width=2400&name=carbon%20(4).png 2400w"}
+![carbon](./image-5.png)
 
 The same metrics that power these dashboards are also used to power
 notifications and alarms. In these cases, we want to define both the
@@ -189,13 +169,9 @@ program. This code can even reach out and reference configuration used
 to provision our Pulumi deployment - key to enabling this to be deployed
 seamlessly into a variety of different development environments.
 
-![carbon
-(10)](https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(10).png?width=800&name=carbon%20(10).png){width="800"
-sizes="(max-width: 800px) 100vw, 800px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(10).png?width=400&name=carbon%20(10).png 400w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(10).png?width=800&name=carbon%20(10).png 800w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(10).png?width=1200&name=carbon%20(10).png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(10).png?width=1600&name=carbon%20(10).png 1600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(10).png?width=2000&name=carbon%20(10).png 2000w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(10).png?width=2400&name=carbon%20(10).png 2400w"}
+![image-6](./image-6.png)
 
-Static Content
---------------
+## Static Content
 
 We serve three properties as static content from S3, each described
 using Pulumi. One of these is
@@ -204,23 +180,16 @@ of our `pulumi` CLI installer. It's a very simple program, and even
 better - it's open source at <http://github.com/pulumi/get.pulumi.com>.
 It combines AWS S3, CloudFront and Route53.
 
-[![carbon
-(3)](https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(3).png?width=800&name=carbon%20(3).png){width="800"
-sizes="(max-width: 800px) 100vw, 800px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(3).png?width=400&name=carbon%20(3).png 400w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(3).png?width=800&name=carbon%20(3).png 800w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(3).png?width=1200&name=carbon%20(3).png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(3).png?width=1600&name=carbon%20(3).png 1600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(3).png?width=2000&name=carbon%20(3).png 2000w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/carbon%20(3).png?width=2400&name=carbon%20(3).png 2400w"}](https://github.com/pulumi/get.pulumi.com/blob/master/infrastructure/index.ts)
+![image-7](./image-7.png)
 
 This infrastructure is deployed and managed using the Pulumi console at
 [app.pulumi.com](https://app.pulumi.com/), allowing us to track the
 history of deployments and changes to the infrastructure and quickly
 jump in to the resources defined by this stack in the AWS console.
 
-![Screen Shot 2018-06-25 at 9.25.02
-PM](https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.25.02%20PM.png?width=600&name=Screen%20Shot%202018-06-25%20at%209.25.02%20PM.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.25.02%20PM.png?width=300&name=Screen%20Shot%202018-06-25%20at%209.25.02%20PM.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.25.02%20PM.png?width=600&name=Screen%20Shot%202018-06-25%20at%209.25.02%20PM.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.25.02%20PM.png?width=900&name=Screen%20Shot%202018-06-25%20at%209.25.02%20PM.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.25.02%20PM.png?width=1200&name=Screen%20Shot%202018-06-25%20at%209.25.02%20PM.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.25.02%20PM.png?width=1500&name=Screen%20Shot%202018-06-25%20at%209.25.02%20PM.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/p-on-p/Screen%20Shot%202018-06-25%20at%209.25.02%20PM.png?width=1800&name=Screen%20Shot%202018-06-25%20at%209.25.02%20PM.png 1800w"}
+![image-8](./image-8.png)
 
-Conclusion
-----------
+## Conclusion
 
 Treating cloud infrastructure as software has changed how we think about
 infrastructure engineering. Using Pulumi for both traditional cloud
@@ -229,8 +198,4 @@ infrastructure into production provides a simple workflow and the
 ability to create simple high-level APIs to make new services easy to
 define and deploy.
 
-Try out Pulumi yourself at [https://pulumi.io](https://pulumi.io/)
-today!
-
- 
-
+Try out Pulumi yourself today!
