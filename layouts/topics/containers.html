@@ -1,5 +1,5 @@
 {{ define "hero" }}
-    <header class="bg-purple-500 py-24 text-white">
+    <header class="bg-purple-500 py-24 text-white px-4 md:px-0">
         <div class="container mx-auto text-white md:flex">
             <div class="md:w-1/2">
                 <h1 class="text-white">{{ .Params.hero.title }}</h1>
@@ -15,7 +15,7 @@
 {{ define "main" }}
     {{ partial "section-nav" (dict "sections" .Params.sections) }}
 
-    <section id="what-is-container-management" class="py-16 bg-gray-200">
+    <section id="what-is-container-management" class="py-16 bg-gray-200 px-4 md:px-0">
         <div class="container md:mx-auto md:max-w-4xl">
             <h2>What is Container Management?</h2>
             <p>
@@ -34,7 +34,7 @@
             </p>
         </div>
     </section>
-    <section id="deploying-containers" class="py-16">
+    <section id="deploying-containers" class="py-16 px-4 md:px-0">
         <div class="container md:mx-auto md:max-w-4xl">
             <h2>Deploying containers with Pulumi</h2>
             <p>
@@ -70,7 +70,7 @@
             </p>
         </div>
     </section>
-    <section id="code" class="py-16 bg-gray-200">
+    <section id="code" class="py-16 bg-gray-200 px-4 md:px-0">
         {{ range .Params.examples }}
             <div class="container md:mx-auto md:flex">
                 <div class="md:w-1/2">
@@ -93,7 +93,7 @@
 
     {{ partial "get-started.html" . }}
 
-    <section id="contact" class="bg-purple-500 mb-0 py-16 text-white">
+    <section id="contact" class="bg-purple-500 mb-0 py-16 text-white px-4 md:px-0">
         <div class="container mx-auto max-w-5xl">
             <div class="md:flex my-8 md:max-w-32 align-top">
                 <div class="md:w-1/2">

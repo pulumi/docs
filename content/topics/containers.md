@@ -4,7 +4,7 @@ layout: containers
 url: /containers
 
 hero:
-    title:
+    title: Container Management with Pulumi
     body: >
         Pulumi provides a cloud native programming model for container
         management: deploy Docker to AWS Fargate, Microsoft ACI, and
