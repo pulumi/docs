@@ -1,6 +1,6 @@
 ---
-title: "Professional Services Agreement"
-url: "/professional-services-agreement"
+title: Professional Services Agreement
+url: /professional-services-agreement
 menu:
     legal:
         weight: 5

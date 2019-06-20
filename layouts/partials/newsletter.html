@@ -1,26 +1,8 @@
-<!--<div class="newsletter-bar white-text hidden-xs hidden-sm">-->
-<section class="content-block content-block-bar newsletter-bar {{ .classes }}">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-10 col-lg-offset-1 col-xlg-8 col-xlg-offset-2">
-                <div class="content newsletter-signup">
-                    <h2 class="h5 text-center-xs text-center-sm">Sign up to our newsletter</h2>
-                    <div class="form-wrapper">
-                        <!--[if lte IE 8]>
-                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-                        <![endif]-->
-                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-                        <script>
-                         hbspt.forms.create({
-                           portalId: "4429525",
-                           formId: "027b4c6d-9b73-4ad8-b149-3c8b07fff608",
-                           css: ""
-                        });
-                        </script>
-                    </div>
-                    
-                </div>
-            </div>
+<section class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto">
+        <div class="md:flex justify-center">
+            <h3 class="text-gray-100 md:mr-8 mt-1">Sign up for our newsletter</h3>
+            {{ partial "hubspot-form.html" (dict "hubspotFormID" "027b4c6d-9b73-4ad8-b149-3c8b07fff608" "classNames" "newsletter") }}
         </div>
     </div>
 </section>

@@ -1,5 +1,5 @@
 ---
-title: "Pulumi Blog"
+title: Blog
 authors: []
 tags: []
 summary: ""

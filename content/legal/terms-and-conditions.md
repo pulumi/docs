@@ -1,7 +1,6 @@
 ---
-title: "Terms & Conditions"
-date: 2018-06-07T16:46:34-07:00
-url: "/terms-and-conditions"
+title: Terms & Conditions
+url: /terms-and-conditions
 menu:
     legal:
         weight: 3

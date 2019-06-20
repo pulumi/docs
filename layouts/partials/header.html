@@ -33,10 +33,9 @@
             </div>
 
             <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white uppercase pt-4 md:pt-0">
-                <li><a class="block py-2 md:py-0 md:px-4 md:py-2 md:mx-4 border border-purple-700 hover:border-purple rounded" href="{{ relref . "/product/_index.md" }}">Products</a></li>
-                <li><a class="block py-2 md:py-0 md:px-4 md:py-2 md:mx-4 border border-purple-700 hover:border-purple rounded" href="{{ relref . "/pricing/_index.md" }}">Pricing</a></li>
-                <li><a class="block py-2 md:py-0 md:px-4 md:py-2 md:mx-4 border border-purple-700 hover:border-purple rounded" href="{{ relref . "/docs/_index.md" }}">Docs</a></li>
-                <li><a class="block py-2 md:py-0 md:px-4 md:py-2 md:mx-4 border border-purple-700 hover:border-purple rounded" href="{{ relref . "/blog/_index.md" }}">Blog</a></li>
+                {{ range $.Site.Menus.header }}
+                    <li><a class="block py-2 md:py-0 md:px-4 md:py-2 md:mx-4 border border-purple-700 hover:border-purple rounded" href="{{ .URL }}">{{ .Title }}</a></li>
+                {{ end }}
             </ul>
         </header>
     </div>

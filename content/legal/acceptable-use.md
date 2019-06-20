@@ -1,6 +1,6 @@
 ---
-title: "Acceptable Use Policy"
-url: "/acceptable-use"
+title: Acceptable Use Policy
+url: /acceptable-use
 menu:
     legal:
         weight: 2

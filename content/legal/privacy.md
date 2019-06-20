@@ -1,6 +1,6 @@
 ---
-title: "Privacy Policy"
-url: "/privacy"
+title: Privacy Policy
+url: /privacy
 menu:
     legal:
         weight: 4

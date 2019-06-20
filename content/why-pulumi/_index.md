@@ -1,12 +1,7 @@
 ---
-title: "Why Pulumi"
+title: "Why Oh Why Pulumi"
 date: 2018-06-01T15:10:06-07:00
 type: "page"
-# menu:
-#     main:
-#         identifier: "why-pulumi"
-#         weight: 2
-
 meta_title: "Cloud Apps and Infrastructure"
 meta_desc: "The Pulumi Platform includes an open source SDK and SaaS to create, deploy, and manage cloud apps and infrastructure, across any clouds."
 meta_image: "/images/pulumi.png"

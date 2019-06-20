@@ -1,723 +1,657 @@
+{{ define "hero" }}
+    <header class="bg-purple-500 py-24 text-white px-4 md:px-0">
+        <div class="container mx-auto text-white text-center">
+            <h1 class="text-white">Plans for teams of all sizes.</h1>
+            <p>
+                Enable your developers and operators to create, deploy, and manage
+                applications and infrastructure on AWS, Azure, Google Cloud, and
+                Kubernetes. Whether you are a growing startup, or established Enterprise,
+                Pulumi has a solution for you.
+            </p>
+            <p>
+                <a class="text-orange-500 underline" href="{{ relref . "/docs" }}">Pulumi Community Edition</a>
+                is free forever for unlimited individual use.
+            </p>
+        </div>
+    </header>
+{{ end }}
+
 {{ define "main" }}
-
-    <section class="hero white-text">
-        <div class="container-fluid">
-            <div class="row valign-center cols-are-spaced-md">
-                <div class="col-md-12 col-md-offset-0 col-xlg-10 col-xlg-offset-1">
-                    <div class="content text-center">
-                        <h1>Plans for teams of all sizes.</h1>
-                        <p class="intro">
-                            Enable your developers and operators to create, deploy, and manage
-                            applications and infrastructure on AWS, Azure, Google Cloud, and Kubernetes. Whether
-                            you are a growing startup, or established Enterprise, Pulumi has a solution for you.
-                        </p>
-                        <p class="price-ce-cta">
-                            <a class="text-orange text-bold" href="https://pulumi.io">Pulumi Community Edition</a>
-                            is free forever for unlimited individual use.
-                        </p>
-                    </div>
+    <section class="bg-purple-800 text-gray-900 py-24 text-white px-4 md:px-0">
+        <div class="container md:mx-auto md:flex justify-center">
+            <div class="bg-white rounded py-10 px-8 md:w-1/3 relative">
+                <div class="text-center">
+                    <div class="text-lg text-purple-500">TEAM STARTER</div>
+                    <div class="text-black font-display font-bold text-4xl">$50</div>
+                    <div class="text-sm text-gray-700">per month</div>
+                    <p class="text-sm text-gray-700">For teams just getting started deploying cloud applications and infrastructure.</p>
+                    <ul class="list-none mt-8 mb-12 text-left text-sm text-gray-700 px-8">
+                        <li><i class="fas fa-check-square text-orange-500 mr-4"></i>Any cloud</li>
+                        <li><i class="fas fa-check-square text-orange-500 mr-4"></i>Includes 3 users</li>
+                        <li><i class="fas fa-check-square text-orange-500 mr-4"></i>Up to 20 project stacks</li>
+                        <li><i class="fas fa-check-square text-orange-500 mr-4"></i>Unlimited deployments</li>
+                        <li><i class="fas fa-check-square text-orange-500 mr-4"></i>CI/CD integrations</li>
+                    </ul>
+                    <a class="text-center btn btn-cta mx-auto py-4 px-6" href="https://app.pulumi.com/organizations/add">Start Your Free Trial</a>
+                </div>
+            </div>
+            <div class="bg-white rounded py-10 px-8 md:mx-5 md:w-1/3 relative">
+                <div class="text-center">
+                    <div class="text-lg text-purple-500">TEAM PRO</div>
+                    <div class="text-black font-display font-bold text-4xl">$75</div>
+                    <div class="text-sm text-gray-700">per user/month</div>
+                    <p class="text-sm text-gray-700">For medium to large teams using Pulumi for multiple projects or clouds.</p>
+                    <ul class="list-none mt-8 mb-12 text-left text-sm text-gray-700 px-8">
+                        <li><i class="fas fa-arrow-left text-blue-500 mr-4"></i> Everything in Team Starter, plus...</li>
+                        <li><i class="fas fa-check-square text-blue-500 mr-4"></i>Up to 25 users (minimum of 3)</li>
+                        <li><i class="fas fa-check-square text-blue-500 mr-4"></i>Unlimited projects and stacks</li>
+                        <li><i class="fas fa-check-square text-blue-500 mr-4"></i> APIs and webhooks</li>
+                        <li><i class="fas fa-check-square text-blue-500 mr-4"></i>Advanced secrets management</li>
+                        <li><i class="fas fa-check-square text-blue-500 mr-4"></i>12×5 support available</li>
+                    </ul>
+                    <a class="text-center btn btn-cta bg-blue-500 mx-auto py-4 px-6" href="https://app.pulumi.com/organizations/add">Start Your Free Trial</a>
+                </div>
+            </div>
+            <div class="bg-white rounded py-10 px-8 md:w-1/3 relative">
+                <div class="text-center">
+                    <div class="text-lg text-purple-500">ENTERPRISE</div>
+                    <div class="text-black font-display font-bold text-4xl">Custom</div>
+                    <p class="text-sm text-gray-700">For large organizations running cloud software at scale, with advanced or custom needs.</p>
+                    <ul class="list-none mt-8 mb-12 text-left text-sm text-gray-700 px-8">
+                        <li><i class="fas fa-arrow-left text-purple-500 mr-4"></i>Everything in Team Pro, plus...</li>
+                        <li><i class="fas fa-check-square text-purple-500 mr-4"></i>Unlimited users (minimum of 10)</li>
+                        <li><i class="fas fa-check-square text-purple-500 mr-4"></i>Teams, roles, and policies</li>
+                        <li><i class="fas fa-check-square text-purple-500 mr-4"></i>SAML/SSO</li>
+                        <li><i class="fas fa-check-square text-purple-500 mr-4"></i>On-premises/self-host available</li>
+                        <li><i class="fas fa-check-square text-purple-500 mr-4"></i>24×7 support available</li>
+                    </ul>
+                    <a class="text-center btn btn-cta bg-purple-500 mx-auto py-4 px-6" href="https://app.pulumi.com/organizations/add">Contact Us</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="content-block content-block-bar bg-purple-dark has-footer-waves">
-        <div class="container-fluid">
-            <div class="row margin-bottom-20">
-                <div class="col col-md-6 col-lg-4" data-mh="col">
-                    <div class="shadow-boxed bg-white price-header-box">
-                        <div class="content text-center">
-                            <div class="eqh margin-bottom-20" data-mh="copy">
-                                <h2 class="h6 text-uppercase price-title">Team Starter</h2>
-                                <p class="h2 price">$50</p>
-                                <p class="price-note">per month</p>
-                                <p class="price-description">
-                                    For teams just getting started deploying
-                                    cloud applications and infrastructure.
-                                </p>
-                                <ul class="price-summary-bullets fa-ul">
-                                    <li><i class="fa-li fa fa-check-square text-orange"></i>Any cloud</li>
-                                    <li><i class="fa-li fa fa-check-square text-orange"></i>Includes 3 users</li>
-                                    <li><i class="fa-li fa fa-check-square text-orange"></i>Up to 20 project stacks</li>
-                                    <li><i class="fa-li fa fa-infinity text-orange"></i>Unlimited deployments</li>
-                                    <li><i class="fa-li fa fa-check-square text-orange"></i>Basic secrets management</li>
-                                    <li><i class="fa-li fa fa-check-square text-orange"></i>CI/CD integrations</li>
-                                </ul>
-                                <a href="https://app.pulumi.com/site/organizations/add" class="button orange
-                                    inverted">Start Your Free Trial</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-md-6 col-lg-4" data-mh="col">
-                    <div class="shadow-boxed bg-white price-header-box">
-                        <div class="content text-center">
-                            <div class="eqh margin-bottom-20" data-mh="copy">
-                                <h2 class="h6 text-uppercase price-title">Team Pro</h2>
-                                <p class="h2 price">$75</p>
-                                <p class="price-note">per user/month</p>
-                                <p class="price-description">
-                                    For medium to large teams using Pulumi
-                                    for multiple projects or clouds.
-                                </p>
-                                <ul class="price-summary-bullets fa-ul">
-                                    <li><i class="fa-li fa fa-arrow-left text-blue"></i>Everything in Team Starter, plus...</li>
-                                    <li><i class="fa-li fa fa-check-square text-blue"></i>Up to 25 users (minimum of 3)</li>
-                                    <li><i class="fa-li fa fa-infinity text-blue"></i>Unlimited projects and stacks</li>
-                                    <li><i class="fa-li fa fa-check-square text-blue"></i>APIs and webhooks</li>
-                                    <li><i class="fa-li fa fa-check-square text-blue"></i>Advanced secrets management</li>
-                                    <li><i class="fa-li fa fa-check-square text-blue"></i>12×5 support available</li>
-                                </ul>
-                                <a href="https://app.pulumi.com/site/organizations/add" class="button blue
-                                    inverted">Start Your Free Trial</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-md-6 col-lg-4" data-mh="col">
-                    <div class="shadow-boxed bg-white price-header-box">
-                        <div class="content text-center">
-                            <div class="eqh margin-bottom-20" data-mh="copy">
-                                <h2 class="h6 text-uppercase price-title">Enterprise</h2>
-                                <p class="h2 price">Custom</p>
-                                <p class="price-note">&nbsp;</p>
-                                <p class="price-description">
-                                    For large organizations running cloud
-                                    software at scale, with advanced or custom needs.
-                                </p>
-                                <ul class="price-summary-bullets fa-ul">
-                                    <li><i class="fa-li fa fa-arrow-left text-purple"></i>Everything in Team Pro, plus...</li>
-                                    <li><i class="fa-li fa fa-infinity text-purple"></i>Unlimited users (minimum of 10)</li>
-                                    <li><i class="fa-li fa fa-check-square text-purple"></i>Teams, roles, and policies</li>
-                                    <li><i class="fa-li fa fa-check-square text-purple"></i>SAML/SSO</li>
-                                    <li><i class="fa-li fa fa-check-square text-purple"></i>On-premises/self-host available</li>
-                                    <li><i class="fa-li fa fa-check-square text-purple"></i>24×7 support available</li>
-                                </ul>
-                                <a href="#contact" class="button purple inverted">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section id="grid" class="py-16">
+        <div class="container mx-auto">
+            <div class="mx-auto  max-w-4xl">
+                <h2>Plan details</h2>
+                <p>
+                    From teams just getting started, to established organizations running Pulumi at scale, we have an option for you.
+                </p>
+                <p>
+                    And remember, <a href="{{ relref . "/docs" }}">Pulumi Community Edition</a> is free forever for unlimited individual use.
+                </p>
             </div>
-            <div class="row price-suffix-row">
-                <div class="content text-center">
-                    <a href="#plan-details" class="cta-noanimation price-plan-details">See plan details</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-waves"></div>
-    </section>
-
-    <section class="content-block">
-        <div class="content-header">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12 col-md-offset-0 col-xlg-10 col-xlg-offset-1">
-                        <div class="content text-center">
-                            <h1 class="h3" id="plan-details">Plan details</h1>
-                            <p>
-                                From teams just getting started, to established organizations running Pulumi at
-                                scale, we have an option for you.
+            <table id="pricing" class="my-16 border-white">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th class="bg-purple-700 text-base font-display text-center md:w-1/4 text-gray-200 uppercase py-4">
+                            <span class=text-white>Team Starter</span>
+                        </th>
+                        <th class="bg-purple-700 text-base font-display text-center md:w-1/4 text-gray-200 uppercase py-4">
+                            <span class=text-white>Team Pro</span>
+                        </th>
+                        <th class="bg-purple-700 text-base font-display text-center md:w-1/4 text-gray-200 uppercase py-4">
+                            <span class=text-white>Enterprise</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="text-purple-700 text-base font-display md:w-1/4 uppercase font-bold py-4" colspan="4">
+                            Fundamentals
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Monthly Price
+                                <button type="button" data-toggle="tooltip" data-placement="left" title=""
+                                    data-original-title="Each edition starts at a certain number of team members, for a base monthly price.">
+                                </button>
                             </p>
-                            <p>
-                                And remember, <a href="https://pulumi.io">Pulumi Community Edition</a> is free
-                                forever for unlimited individual use.
+                        </th>
+                        <td class="text-center text-sm">$50/mo</td>
+                        <td class="text-center text-sm">Starting at $225/mo</td>
+                        <td class="text-center text-sm">Custom (<a class="link" href="#contact">Contact Us</a>)</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Team Members
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="Each
+                                edition offers a different minimum and maximum number of team members."></button>
                             </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </th>
+                        <td class="text-center text-sm">3 Included</td>
+                        <td class="text-center text-sm">Up to 25 (Minimum 3)</td>
+                        <td class="text-center text-sm">Unlimited (Minimum 10)</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Extra Team Members
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="Team
+                                Pro and Enterprise offer per user pricing for additional team members, while
+                                Team Starter is capped at a maximum of 3 users."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm">$75/user/mo</td>
+                        <td class="text-center text-sm">Custom (<a class="link" href="#contact">Contact Us</a>)</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Organizations
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="All
+                                editions offer organizations for a shared workspace of projects and stacks
+                                that members may collaborate on. Members, projects, and stacks are part of an
+                                organization. An Team organization is typically backed by
+                                GitHub/GitLab/Atlassian, but Enterprise offers SAML/SSO, which may be
+                                used with any SAML identity provider, such as Okta or Active Directory."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm">1 included</td>
+                        <td class="text-center text-sm">1 included</td>
+                        <td class="text-center text-sm">Unlimited</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Infrastructure as Code
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="All
+                                editions feature the core capability to create, deploy, and manage your
+                                cloud applications and infrastructure in your favorite language, and
+                                continuously deploy them, across many clouds."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Any Cloud
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="All
+                                editions support many public, private, and hybrid cloud configurations,
+                                including AWS, Azure, Google Cloud, Kubernetes, VMWare vSphere, and many
+                                others."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Any Language
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="All
+                                editions support many languages, including JavaScript, Python, TypeScript,
+                                and Go. Different parts of your organization may elect to use different
+                                languages -- such as operators choosing Python, and developers choosing
+                                JavaScript, for example."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Self-Hosting Available
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="All
+                                editions are provided as SaaS by Pulumi. Enterprise customers may elect
+                                to instead self-host the Pulumi Service as an easy-to-administer appliance
+                                in their own data center, or in their own private cloud account."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th class="text-purple-700 text-base font-display md:w-1/4 uppercase font-bold py-4" colspan="4">
+                            Continuous Delivery
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Unlimited Deployments
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="For all
+                                editions, perform unlimited deployments, either triggered by hand on a
+                                developer desktop, or in a continuous CI/CD setting."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Cloud Console
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="For
+                                all editions, the Pulumi Service enables management of organizations,
+                                projects, and stacks, and provides features such as audit history,
+                                webhooks, etc. depending on your product edition."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Audit History
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="All
+                                editions provide unlimited deployment history describing who deployed what
+                                and when, for full auditing of changes, including the Git commit and branch
+                                that triggered a deployment when using in a CI/CD setting."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>CI/CD Integrations
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="All
+                                editions offer integrated CI/CD support by way of integrations with
+                                an array of CI systems. If you don't see yours listed, just ask, it's
+                                likely we already support it."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm">
+                            AWS Code Services, Azure DevOps, Codeship, CircleCI,
+                            GitHub, GitLab, Google Cloud Build, Jenkins, Travis
+                        </td>
+                        <td class="text-center text-sm">
+                            AWS Code Services, Azure DevOps, Codeship, CircleCI,
+                            GitHub, GitLab, Google Cloud Build, Jenkins, Travis
+                        </td>
+                        <td class="text-center text-sm">Custom</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Timeline
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="In all
+                                editions, Pulumi maintains a detailed timeline of events for deployments
+                                across stacks, enhancing CI/CD and GitOps workflows."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>GitOps Workflows
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="In all
+                                editions, Pulumi turns delivery into a workflow, enabling team collaboration
+                                and gated deployments with approval processes, seamlessly enabling
+                                GitOps-style workflows including Pull Request integration."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm" class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm" class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm" class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>APIs and Webhooks
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="For
+                                Team Pro and Enterprise, Pulumi offers APIs and webhooks to assist with
+                                custom CI/CD workflows: from lifecycle event hooks, to other operational
+                                notifications (such as PagerDuty and Slack integration)."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Gated Deployments
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="For
+                                Enterprise, Pulumi offers gated deployments with customizable policy that
+                                determines whether a deployment may proceed or not."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Advanced Policy Engine
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="For
+                                Enterprise, Pulumi's advanced policy engine enables suites of checks for
+                                enforcing security, compliance, and best practices."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th class="text-purple-700 text-base font-display md:w-1/4 uppercase font-bold py-4" colspan="4">
+                            Security
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Identity Providers
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="For all
+                                editions, Pulumi supports GitHub, GitLab, Atlassian, and email-based
+                                identity. For Enterprise, you may use any SAML/SSO identity provider,
+                                including Okta and Active Directory."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm">
+                            <ul class="inline-flex list-none p-0 justify-center">
+                                <li class="mx-2">
+                                    <img class="w-8" src="/logos/tech/logo-github2.png" alt="github" title="GitHub">
+                                </li>
+                                <li class="mx-2">
+                                    <img class="w-8" src="/logos/tech/logo-GitLab.png" alt="gitlab" title="GitLab">
+                                </li>
+                                <li class="mx-2">
+                                    <img class="w-8" src="/logos/tech/logo-atlassian.png" alt="atlassian identity" title="Atlassian Identity">
+                                </li>
+                                <li class="mx-2">
+                                    <i class="w-8 fa fa-2x fa-envelope"></i>
+                                </li>
+                            </ul>
+                        </td>
+                        <td class="text-center text-sm">
+                            <ul class="inline-flex list-none p-0 justify-center">
+                                <li class="mx-2">
+                                    <img class="w-8" src="/logos/tech/logo-github2.png" alt="github" title="GitHub">
+                                </li>
+                                <li class="mx-2">
+                                    <img class="w-8" src="/logos/tech/logo-GitLab.png" alt="gitlab" title="GitLab">
+                                </li>
+                                <li class="mx-2">
+                                    <img class="w-8" src="/logos/tech/logo-atlassian.png" alt="atlassian identity" title="Atlassian Identity">
+                                </li>
+                                <li class="mx-2">
+                                    <i class="w-8 fa fa-2x fa-envelope"></i>
+                                </li>
+                            </ul>
+                        </td>
+                        <td class="text-center text-sm">
+                            <ul class="inline-flex list-none p-0 justify-center">
+                                <li class="mx-2">
+                                    <img class="w-8" src="/logos/tech/logo-github2.png" alt="github" title="GitHub">
+                                </li>
+                                <li class="mx-2">
+                                    <img class="w-8" src="/logos/tech/logo-GitLab.png" alt="gitlab" title="GitLab">
+                                </li>
+                                <li class="mx-2">
+                                    <img class="w-8" src="/logos/tech/logo-atlassian.png" alt="atlassian identity" title="Atlassian Identity">
+                                </li>
+                                <li class="mx-2">
+                                    <i class="w-8 fa fa-2x fa-envelope"></i>
+                                </li>
+                                <li class="mx-2">
+                                    <img class="h-8" src="/logos/tech/logo-saml.svg" alt="SAML/SSO identity" title="SAML/SSO Identity">
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Secrets and Encryption
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="All
+                                Pulumi editions offer encryption and secrets management, including
+                                pluggability for integration with existing systems such as AWS KMS,
+                                Azure KeyVault, Google Cloud KMS, and Vault."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Team Management
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="For
+                                Team Pro and Enterprise editions, Pulumi supports fine-grained team
+                                management, for individual access controls to stacks and projects."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Multiple Admins
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="For
+                                Team Pro and Enterprise, Pulumi enables multiple organization admins."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Role Based Access Control
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="For
+                                Enterprise, Pulumi supports advanced RBAC for controlling which
+                                member in an organization can perform what actions, beyond the basic
+                                Team Management available in Team Pro."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>SAML/SSO
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="For
+                                Enterprise, Pulumi supports SAML/SSO, including native support for
+                                Okta and Microsoft Active Directory. This includes leveraging SAML/SSO
+                                for organization identity, membership, and fine-grained groups/teams
+                                managment."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                </tbody>
+                <tbody class="section">
+                    <tr>
+                        <th class="text-purple-700 text-base font-display md:w-1/4 uppercase font-bold py-4" colspan="4">
+                            Support
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Community Slack
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="For all
+                                editions, Pulumi's documentation and open source libraries are always
+                                available online, along with Community Slack and Forums for best-efforts,
+                                community support."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Onboarding and Training
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="For
+                                Enterprise customers, initial onboarding and training services are included
+                                with your subscription. For Team Pro, or for additional services beyond what
+                                is included in your Enterprise subscription, including consultation and
+                                professional services, are available at additional cost."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm">Available</td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>12×5 Support Available
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="For
+                                Team Pro and Enterprise, Pulumi offers dedicated 12×5 support Mon-Fri
+                                7am-7pm PDT at additional cost. Please contact your Pulumi salesperson
+                                for details."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>24×7 Support Available
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="For
+                                Enterprise, Pulumi offers dedicated 24×7 support at additional cost. Please
+                                contact your Pulumi salesperson for details."></button>
+                            </p>
+                        </th>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-white text-gray-600 font-bold pl-8">
+                            <p>Enterprise Invoicing
+                            <button type="button" data-toggle="tooltip" data-placement="left" title="" data-original-title="All
+                                subscriptions may be paid online with a credit card (we use Stripe). For
+                                Enterprise customers, additional invoicing options are available."></button>
+                        </p></th>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-times text-grey"></i></td>
+                        <td class="text-center text-sm"><i class="fas fa-check-square text-green"></i></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <table id="pricing" class="pricing-table">
-                            <thead>
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <h2 class="h6 text-uppercase price-title">
-                                            <span class="white-text">Team Starter</span>
-                                        </h2>
-                                    </td>
-                                    <td>
-                                        <h2 class="h6 text-uppercase price-title">
-                                            <span class="white-text">Team Pro</span>
-                                        </h2>
-                                    </td>
-                                    <td>
-                                        <h2 class="h6 text-uppercase price-title">
-                                            <span class="white-text">Enterprise</span>
-                                        </h2>
-                                    </td>
-                                </tr>
-                            </thead>
-                            <tbody class="section">
-                                <tr><th colspan="2">Fundamentals</th><td></td><td></td></tr>
-                                <tr>
-                                    <th>
-                                        <p>Monthly Price
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="Each
-                                            edition starts at a certain number of team members, for a base monthly
-                                            price."></button>
-                                        </p>
-                                    </th>
-                                    <td>$50/mo</td>
-                                    <td>Starting at $225/mo</td>
-                                    <td>Custom (<a href="#contact">Contact Us</a>)</td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Team Members
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="Each
-                                            edition offers a different minimum and maximum number of team members."></button>
-                                        </p>
-                                    </th>
-                                    <td>3 Included</td>
-                                    <td>Up to 25 (Minimum 3)</td>
-                                    <td>Unlimited (Minimum 10)</td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Extra Team Members
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="Team
-                                            Pro and Enterprise offer per user pricing for additional team members, while
-                                            Team Starter is capped at a maximum of 3 users."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td>$75/user/mo</td>
-                                    <td>Custom (<a href="#custom">Contact Us</a>)</td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Organizations
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="All
-                                            editions offer organizations for a shared workspace of projects and stacks
-                                            that members may collaborate on. Members, projects, and stacks are part of an
-                                            organization. An Team organization is typically backed by
-                                            GitHub/GitLab/Atlassian, but Enterprise offers SAML/SSO, which may be
-                                            used with any SAML identity provider, such as Okta or Active Directory."></button>
-                                        </p>
-                                    </th>
-                                    <td>1 included</td>
-                                    <td>1 included</td>
-                                    <td>Unlimited</td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Infrastructure as Code
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="All
-                                            editions feature the core capability to create, deploy, and manage your
-                                            cloud applications and infrastructure in your favorite language, and
-                                            continuously deploy them, across many clouds."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Any Cloud
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="All
-                                            editions support many public, private, and hybrid cloud configurations,
-                                            including AWS, Azure, Google Cloud, Kubernetes, VMWare vSphere, and many
-                                            others."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Any Language
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="All
-                                            editions support many languages, including JavaScript, Python, TypeScript,
-                                            and Go. Different parts of your organization may elect to use different
-                                            languages -- such as operators choosing Python, and developers choosing
-                                            JavaScript, for example."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Self-Hosting Available
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="All
-                                            editions are provided as SaaS by Pulumi. Enterprise customers may elect
-                                            to instead self-host the Pulumi Service as an easy-to-administer appliance
-                                            in their own data center, or in their own private cloud account."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                            </tbody>
-                            <tbody class="section">
-                                <tr><th colspan="2">Continuous Delivery</th><td></td><td></td></tr>
-                                <tr>
-                                    <th>
-                                        <p>Unlimited Deployments
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="For all
-                                            editions, perform unlimited deployments, either triggered by hand on a
-                                            developer desktop, or in a continuous CI/CD setting."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Cloud Console
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="For
-                                            all editions, the Pulumi Service enables management of organizations,
-                                            projects, and stacks, and provides features such as audit history,
-                                            webhooks, etc. depending on your product edition."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Audit History
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="All
-                                            editions provide unlimited deployment history describing who deployed what
-                                            and when, for full auditing of changes, including the Git commit and branch
-                                            that triggered a deployment when using in a CI/CD setting."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>CI/CD Integrations
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="All
-                                            editions offer integrated CI/CD support by way of integrations with
-                                            an array of CI systems. If you don't see yours listed, just ask, it's
-                                            likely we already support it."></button>
-                                        </p>
-                                    </th>
-                                    <td>
-                                        AWS Code Services, Azure DevOps, Codeship, CircleCI,
-                                        GitHub, GitLab, Google Cloud Build, Jenkins, Travis
-                                    </td>
-                                    <td>
-                                        AWS Code Services, Azure DevOps, Codeship, CircleCI,
-                                        GitHub, GitLab, Google Cloud Build, Jenkins, Travis
-                                    </td>
-                                    <td>Custom</td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Timeline
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="In all
-                                            editions, Pulumi maintains a detailed timeline of events for deployments
-                                            across stacks, enhancing CI/CD and GitOps workflows."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>GitOps Workflows
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="In all
-                                            editions, Pulumi turns delivery into a workflow, enabling team collaboration
-                                            and gated deployments with approval processes, seamlessly enabling
-                                            GitOps-style workflows including Pull Request integration."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>APIs and Webhooks
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="For
-                                            Team Pro and Enterprise, Pulumi offers APIs and webhooks to assist with
-                                            custom CI/CD workflows: from lifecycle event hooks, to other operational
-                                            notifications (such as PagerDuty and Slack integration)."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Gated Deployments
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="For
-                                            Enterprise, Pulumi offers gated deployments with customizable policy that
-                                            determines whether a deployment may proceed or not."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Advanced Policy Engine
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="For
-                                            Enterprise, Pulumi's advanced policy engine enables suites of checks for
-                                            enforcing security, compliance, and best practices."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                            </tbody>
-                            <tbody class="section">
-                                <tr><th colspan="2">Security</th><td></td><td></td></tr>
-                                <tr>
-                                    <th>
-                                        <p>Identity Providers
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="For all
-                                            editions, Pulumi supports GitHub, GitLab, Atlassian, and email-based
-                                            identity. For Enterprise, you may use any SAML/SSO identity provider,
-                                            including Okta and Active Directory."></button>
-                                        </p>
-                                    </th>
-                                    <td>
-                                        <ul class="logo-roll text-center-md inline-block">
-                                            <li><img src="/logos/tech/logo-github2.png" alt="github" title="GitHub" width="30"></li>
-                                            <li><img src="/logos/tech/logo-GitLab.png" alt="gitlab" title="GitLab" width="32"></li>
-                                            <li><img src="/logos/tech/logo-atlassian.png" alt="atlassian identity" title="Atlassian Identity" width="33"></li>
-                                            <li><i class="fa fa-2x fa-envelope"></i></li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        <ul class="logo-roll text-center-md inline-block">
-                                            <li><img src="/logos/tech/logo-github2.png" alt="github" title="GitHub" width="30"></li>
-                                            <li><img src="/logos/tech/logo-GitLab.png" alt="gitlab" title="GitLab" width="32"></li>
-                                            <li><img src="/logos/tech/logo-atlassian.png" alt="atlassian identity" title="Atlassian Identity" width="33"></li>
-                                            <li><i class="fa fa-2x fa-envelope"></i></li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        <ul class="logo-roll text-center-md inline-block">
-                                            <li><img src="/logos/tech/logo-github2.png" alt="github" title="GitHub" width="30"></li>
-                                            <li><img src="/logos/tech/logo-GitLab.png" alt="gitlab" title="GitLab" width="32"></li>
-                                            <li><img src="/logos/tech/logo-atlassian.png" alt="atlassian identity" title="Atlassian Identity" width="33"></li>
-                                            <li><i class="fa fa-2x fa-envelope"></i></li>
-                                            <li><img src="/logos/tech/logo-saml.svg" alt="SAML/SSO identity" title="SAML/SSO Identity" width="20"></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Secrets and Encryption
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="All
-                                            Pulumi editions offer encryption and secrets management, including
-                                            pluggability for integration with existing systems such as AWS KMS,
-                                            Azure KeyVault, Google Cloud KMS, and Vault."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Team Management
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="For
-                                            Team Pro and Enterprise editions, Pulumi supports fine-grained team
-                                            management, for individual access controls to stacks and projects."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Multiple Admins
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="For
-                                            Team Pro and Enterprise, Pulumi enables multiple organization admins."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Role Based Access Control
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="For
-                                            Enterprise, Pulumi supports advanced RBAC for controlling which
-                                            member in an organization can perform what actions, beyond the basic
-                                            Team Management available in Team Pro."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>SAML/SSO
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="For
-                                            Enterprise, Pulumi supports SAML/SSO, including native support for
-                                            Okta and Microsoft Active Directory. This includes leveraging SAML/SSO
-                                            for organization identity, membership, and fine-grained groups/teams
-                                            managment."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                            </tbody>
-                            <tbody class="section">
-                                <tr><th colspan="2">Support</th><td></td><td></td></tr>
-                                <tr>
-                                    <th>
-                                        <p>Community Slack
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="For all
-                                            editions, Pulumi's documentation and open source libraries are always
-                                            available online, along with Community Slack and Forums for best-efforts,
-                                            community support."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Onboarding and Training
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="For
-                                            Enterprise customers, initial onboarding and training services are included
-                                            with your subscription. For Team Pro, or for additional services beyond what
-                                            is included in your Enterprise subscription, including consultation and
-                                            professional services, are available at additional cost."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td>Available</td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>12×5 Support Available
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="For
-                                            Team Pro and Enterprise, Pulumi offers dedicated 12×5 support Mon-Fri
-                                            7am-7pm PDT at additional cost. Please contact your Pulumi salesperson
-                                            for details."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>24×7 Support Available
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="For
-                                            Enterprise, Pulumi offers dedicated 24×7 support at additional cost. Please
-                                            contact your Pulumi salesperson for details."></button>
-                                        </p>
-                                    </th>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <p>Enterprise Invoicing
-                                        <button type="button" data-toggle="tooltip" data-placement="left" title="All
-                                            subscriptions may be paid online with a credit card (we use Stripe). For
-                                            Enterprise customers, additional invoicing options are available."></button>
-                                    </th>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-times text-grey"></i></td>
-                                    <td><i class="fas fa-check-square text-green"></i></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table id="pricing-mobile" class="pricing-table"></table>
-                    </div>
-                </div>
-            </div>
+
+    </section>
+
+    <section id="faq" class="py-16">
+        <div class="container mx-auto max-w-4xl">
+            <h2>FAQ</h2>
+            <h3>How do I get started? </h3>
+            <p>
+                To get started, simply <a href="https://app.pulumi.com/signup">sign up for free</a> using your identity
+                provider of choice (ideally the same one your organization will be backed by).
+                From there, <a href="https://app.pulumi.com/site/organizations/add">create an organization</a> that your team members will use.
+            </p>
+            <h3>Can I use Pulumi for free? </h3>
+            <p>
+                Yes! <a href="{{ relref . "/docs" }}">Pulumi Community Edition</a> is free to use, now and
+                forever, for individuals. All paid editions offer a 14 day free trial. If this
+                isn't sufficient, please contact your Pulumi salesperson, and we are happy to work
+                out a custom trial period for you that makes sense given your proof-of-concept
+                timeline. After your trial expires, no data will be lost, and there is a grace
+                period with soft enforcement.
+            </p>
+            <h3>What is an organization? </h3>
+            <p>
+                An organization is a shared workspace for your business
+                to collaborate across multiple projects at once. Organizations may be backed by
+                your existing source control system (GitHub, GitLab, Atlassian), identity provider
+                (any SAML/SSO provider, including Okta and Active Directory), or managed manually.
+                Organization owners and administrators can manage access to the organization’s
+                projects with security and administrative features.
+            </p>
+            <p>
+                The key distinction between Pulumi's free Community Edition and its paid offerings
+                -- Team Starter, Team Pro, and Enterprise -- is the presence of an organization.
+                The Community Edition is meant for individuals using Pulumi for their private
+                projects, but this tends not to work in a team setting. Most teams want multiple
+                engineers to have access to their projects. This is precisely what organizations
+                deliver to you. The advanced tiers offer even more sophisticated organization
+                management facilities, including RBAC for advanced policy controls.
+            </p>
+            <h3>What are projects and stacks? </h3>
+            <p>
+                Pulumi <a href="{{ relref . "/docs/reference/project" }}">projects</a> and <a href="{{ relref . "/docs/reference/stack" }}">stacks</a> are a way to organize
+                Pulumi code. You can consider a Pulumi Project to be analogous to a GitHub repo: a
+                single place for code -- and a Stack to be an instance of that code which has
+                separate configuration. For instance, Project Foo may have multiple stacks for
+                Dev, Test, Prod, or perhaps for different cloud configurations (e.g. geographic
+                region). Please <a href="{{ relref . "/docs/reference/organizing-stacks-projects" }}"></a> for some best practices on organizing your Pulumi
+                projects and stacks.
+            </p>
+            <h3>How much will Pulumi cost?</h3>
+            <p>
+                The Team Starter edition of Pulumi has a single price
+                that includes 3 users. You cannot extend your account beyond these 3 users.
+            </p>
+            <p>
+                The Team Pro and Enterprise editions are priced per user, with a minimum number of
+                users per organization. Team Pro offers up to 25 team members, while Enterprise
+                offers unlimited number of seats in your organization.
+            </p>
+            <p>
+                All editions are available as annual subscriptions. You may purchase monthly
+                subscriptions for an additional 20% per month.
+            </p>
+
+            <p>
+                For large numbers of users and custom pricing, support options, on-premises, or to
+                discuss training and services options, please <a href="#contact"><a href="#contact">contact us</a></a>.
+            </p>
+            <h3>Can I start small and upgrade later?</h3>
+            <p>
+                Yes! We designed the editions to make it easy
+                to get started with Team Starter, and once you’ve outgrown it, upgrading to Team
+                Pro is a single click away. To upgrade to Enterprise, please <a href="#contact">contact us</a>.
+            </p>
+            <h3>What payment options do you accept? </h3>
+            <p>
+                Monthly subscriptions are payable by credit
+                card (we use Stripe for processing). Annual subscriptions may be paid via credit
+                card, bank transfer, or check. Please <a href="#contact">contact us</a> for those options.
+            </p>
+            <h3>What if I have billing or account issues? </h3>
+            <p>
+                For any billing or related issues,
+                please <a href="#contact">contact us</a>.
+            </p>
+            <h3>What if I am not satisfied with my Pulumi purchase? </h3>
+            <p>
+                If you're not satisfied with
+                Pulumi, we offer a 30-day money-back guarantee. No questions asked. <a href="#contact">Contact us</a>
+                here.
+            </p>
+            <h3>How do I get support for Pulumi? </h3>
+            <p>
+                We support Pulumi via online means (our Slack
+                community, or via email, or web).
+            </p>
+            <p>
+                If you’re using our Team and Enterprise editions, then you can also purchase
+                support - either 12×5 7am-7pm PDT, or 24×7×365 - with a private Slack channel, and
+                dedicated support for your team. If you’d like to purchase support for the
+                SDK/Framework only, talk with us and we’ll help you out.
+            </p>
+            <p>
+                For all of these options, <a href="#contact">contact us</a>.
+            </p>
         </div>
     </section>
-    <section class="content-block no-padding-top">
-        <div class="content-header">
-            <div class="container-fluid">
-                <div class="row">
-                <div class="col-md-12 col-md-offset-0 col-xlg-10 col-xlg-offset-1">
-                    <div class="content">
-                        <h2>FAQ</h2>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12 col-md-offset-0 col-xlg-10 col-xlg-offset-1">
-                        <div class="content">
-                            <div class="margin-bottom-40">
-                                <h3 class="h6 margin-bottom-10">How do I get started?</h3>
-                                <p>
-                                    To get started, simply <a href="https://app.pulumi.com/signup">sign up for free</a>
-                                    using your identity provider of choice (ideally the same one your organization will
-                                    be backed by). From there, <a href="https://app.pulumi.com/site/organizations/add">
-                                        create an organization</a> that your team members will use.
-                                </p>
-                            </div>
-                            <div class="margin-bottom-40">
-                                <h3 class="h6 margin-bottom-10">Can I use Pulumi for free?</h3>
-                                <p>
-                                    Yes! <a href="https://pulumi.io">Pulumi Community Edition</a> is free to use,
-                                    now and forever, for individuals. All paid editions offer a 14 day free trial. If
-                                    this isn't sufficient, please contact your Pulumi salesperson, and we are happy to
-                                    work out a custom trial period for you that makes sense given your proof-of-concept
-                                    timeline. After your trial expires, no data will be lost, and there is a grace
-                                    period with soft enforcement.
-                                </p>
-                            </div>
-                            <div class="margin-bottom-40">
-                                <h3 class="h6 margin-bottom-10">What is an organization?</h3>
-                                <p>
-                                    An organization is a shared workspace for your business to collaborate across
-                                    multiple projects at once. Organizations may be backed by your existing source
-                                    control system (GitHub, GitLab, Atlassian), identity provider (any SAML/SSO
-                                    provider, including Okta and Active Directory), or managed manually. Organization
-                                    owners and administrators can manage access to the organization’s projects with
-                                    security and administrative features.
-                                </p>
-                                <p>
-                                    The key distinction between Pulumi's free Community Edition and its paid offerings
-                                    -- Team Starter, Team Pro, and Enterprise -- is the presence of an organization.
-                                    The Community Edition is meant for individuals using Pulumi for their private
-                                    projects, but this tends not to work in a team setting. Most teams want multiple
-                                    engineers to have access to their projects. This is precisely what organizations
-                                    deliver to you. The advanced tiers offer even more sophisticated organization
-                                    management facilities, including RBAC for advanced policy controls.
-                                </p>
-                            </div>
-                            <div class="margin-bottom-40">
-                                <h3 class="h6 margin-bottom-10">What are projects and stacks?</h3>
-                                <p>
-                                    Pulumi <a href="https://pulumi.io/reference/project.html">projects</a> and
-                                    <a href="https://pulumi.io/reference/stack.html">stacks</a> are a way to organize
-                                    Pulumi code. You can consider a Pulumi Project to be analogous to a GitHub repo: a
-                                    single place for code -- and a Stack to be an instance of that code which has
-                                    separate configuration. For instance, Project Foo may have multiple stacks for
-                                    Dev, Test, Prod, or perhaps for different cloud configurations (e.g. geographic
-                                    region). Please
-                                    <a href="https://pulumi.io/reference/organizing-stacks-projects.html">see this
-                                        guide</a> for some best practices on organizing your Pulumi
-                                    projects and stacks.
-                                </p>
-                            </div>
-                            <div class="margin-bottom-40">
-                                <h3 class="h6 margin-bottom-10">How much will Pulumi cost?</h3>
-                                <p>
-                                    The Team Starter edition of Pulumi has a single price that includes 3 users. You
-                                    cannot extend your account beyond these 3 users.
-                                </p>
-                                <p>
-                                    The Team Pro and Enterprise editions are priced per user, with a minimum number
-                                    of users per organization. Team Pro offers up to 25 team members, while Enterprise
-                                    offers unlimited number of seats in your organization.
-                                </p>
-                                <p>
-                                    All editions are available as annual subscriptions. You may purchase monthly
-                                    subscriptions for an additional 20% per month.
-                                </p>
-                                <p>
-                                    For large numbers of users and custom pricing, support options, on-premises,
-                                    or to discuss training and services options, please <a href="#contact">contact
-                                        us</a>.
-                                </p>
-                            </div>
-                            <div class="margin-bottom-40">
-                                <h3 class="h6 margin-bottom-10">Can I start small and upgrade later</h3>
-                                <p>
-                                    Yes! We designed the editions to make it easy to get started with Team Starter,
-                                    and once you’ve outgrown it, upgrading to Team Pro is a single click away. To
-                                    upgrade to Enterprise, please <a href="#contact">contact us</a>.
-                                </p>
-                            </div>
-                            <div class="margin-bottom-40">
-                                <h3 class="h6 margin-bottom-10">What payment options do you accept?</h3>
-                                <p>
-                                    Monthly subscriptions are payable by credit card (we use Stripe for processing).
-                                    Annual subscriptions may be paid via credit card, bank transfer, or check. Please
-                                    <a href="https://www.pulumi.com/support">contact us</a> for those options.
-                            </p>
-                            </div>
-                            <div class="margin-bottom-40">
-                                <h3 class="h6 margin-bottom-10">What if I have billing or account issues?</h3>
-                                <p>For any billing or related issues, please <a href="https://www.pulumi.com/support">contact us</a>.</p>
-                            </div>
-                            <div class="margin-bottom-40">
-                                <h3 class="h6 margin-bottom-10">What if I am not satisfied with my Pulumi purchase?</h3>
-                                <p>If you're not satisfied with Pulumi, we offer a 30-day money-back guarantee. No questions asked. <a href="https://www.pulumi.com/support">Contact us here</a>.</p>
-                            </div>
-                            <div class="margin-bottom-40">
-                                <h3 class="h6 margin-bottom-10">How do I get support for Pulumi?</h3>
-                                <p>We support Pulumi via online means (our <a href="https://slack.pulumi.io">Slack community</a>, or via <a href="mailto:support@pulumi.com">email</a>, or <a href="https://www.pulumi.com/support">web</a>).</p>
-                                <p>If you’re using our Team and Enterprise editions, then you can also purchase support - either 12×5 7am-7pm PDT, or 24×7×365 - with a private Slack channel, and dedicated support for your team. If you’d like to purchase support for the SDK/Framework only, talk with us and we’ll help you out.</p>
-                                <p>For all of these options, <a href="#contact">contact us</a>.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="content-block bg-grey" id="contact">
-        <div class="content-header text-center">
-            <div class="container-fluid">
-                <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <div class="content">
-                    <h2>Need help with plans and pricing?</h2>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xlg-6 col-xlg-offset-3">
-                        <div class="hbspt-form-wrapper">
-                            <!--[if lte IE 8]>
-                            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-                            <![endif]-->
-                            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-                            <script>
-                              hbspt.forms.create({
-                                portalId: "4429525",
-                                formId: "75e5573c-f1fc-4669-8c0a-3815a43f3d83",
-                                css: ""
-                            });
-                            </script>
-                        </div>
-                    </div>
-                </div>
+
+    <section id="contact" class="py-16 bg-gray-200">
+        <h2 class="text-center">Need help with plans and pricing?</h2>
+        <div class="mx-auto flex justify-center">
+            <div class="hs-form hs-form-fg-dark font-normal">
+                {{ partial "hubspot-form.html" (dict "hubspotFormID" "75e5573c-f1fc-4669-8c0a-3815a43f3d83" "classNames" "pricing") }}
             </div>
         </div>
     </section>
 
-    {{ partial "newsletter.html" (dict "classes" "bg-black white-text" )}}
+    {{ partial "newsletter.html" . }}
 {{ end }}

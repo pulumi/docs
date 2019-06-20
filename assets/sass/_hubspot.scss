@@ -58,4 +58,26 @@
     &-fg-dark {
         @apply text-gray-700;
     }
+
+    &.newsletter {
+        @apply flex items-start;
+
+        label:not(.hs-error-msg) {
+            @apply hidden;
+        }
+
+        input {
+            @apply block py-3 px-4 rounded-l rounded-r-none text-gray-600 w-56;
+
+            &.hs-button {
+                @apply block btn btn-cta py-3 px-4 rounded-r rounded-l-none w-auto;
+            }
+        }
+    }
+
+    &.pricing {
+        label {
+            @apply font-normal;
+        }
+    }
 }
