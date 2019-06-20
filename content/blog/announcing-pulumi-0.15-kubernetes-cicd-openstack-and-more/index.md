@@ -191,8 +191,7 @@ For example, a VM can be deployed to OVH with just the following:
 
     exports.instanceIP = instance.accessIpV4;
 
-Check out the [API
-documentation](https://pulumi.io/reference/pkg/nodejs/@pulumi/openstack/index.html)
+Check out the [API documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/openstack" >}})
 and the [pulumi-openstack](https://github.com/pulumi/pulumi-openstack)
 GitHub project for additional details. Huge thanks to Fraser for his
 work on this!

@@ -19,11 +19,11 @@ package](https://github.com/pulumi/pulumi-eks). Let's see how.
 ![Pulumi making EKS Easy](./easy-eks.png)
 
 To get started, download the free and open source
-[Pulumi SDK]({{< ref "/docs/quickstart" >}}). The SDK includes
+[Pulumi SDK]({{< ref "/docs/reference/install.md" >}}). The SDK includes
 the CLI we'll be using below, and requires AWS credentials to access
 your AWS account and provision resources. If you already have the AWS
 CLI installed and configured, you're already all set to go. Otherwise,
-[check out the docs here]({{< ref "/docs/quickstart/aws" >}})
+[check out the docs here]({{< ref "/docs/reference/clouds/aws/setup.md" >}})
 to set things up.
 
 From here, there are two ways to proceed:

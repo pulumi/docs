@@ -152,13 +152,9 @@ we'll quickly be expanding coverage in the coming weeks.
 | `stack_update`                    | Fired when a stack is updated. (Be it from `pulumi up`, `pulumi refresh`, or `pulumi destroy`.)
 | `stack_preview`                   | Fired whenever changes to a stack  are previewed.                    
 
-You can also find more detailed documentation about the types of webhook
-events and their payloads on [pulumi.io](http://pulumi.io).
-
 ## Tell us what you think
 
-Get started with Pulumi Webhooks on the [Pulumi
-app](https://app.pulumi.com), and let us know how you're using them so
+Get started with Pulumi Webhooks on the [Pulumi app](https://app.pulumi.com), and let us know how you're using them so
 we can continue to extend their capabilities. We'd love to hear your
 ideas, as well as any feedback you have on the
 [Pulumi Community Slack](https://slack.pulumi.io).

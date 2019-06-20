@@ -5,7 +5,7 @@ tags: ["AWS", "Infrastructure-as-Code"]
 date: "2019-06-14"
 
 summary: "AWS CloudWatch made easy with Pulumi Infrastructure-as-Code."
-meta_image: "RELATIVE_TO_PAGE/dashboard."
+meta_image: "RELATIVE_TO_PAGE/dashboard.png"
 ---
 
 Pulumi Crosswalk for AWS modules can be used to get first class insights

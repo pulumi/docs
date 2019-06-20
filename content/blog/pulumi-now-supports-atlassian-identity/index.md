@@ -1,7 +1,7 @@
 ---
 title: "Pulumi now supports Atlassian Identity"
 authors: ["praneet-loke"]
-tags: ["New-Feature"]
+tags: ["New-Features"]
 date: "2019-01-30"
 
 summary: "Pulumi now supports Atlassian Identity for authentication and team collaboration. Find out more in this post."

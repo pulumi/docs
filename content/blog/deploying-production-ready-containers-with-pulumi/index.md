@@ -2,7 +2,7 @@
 title: "Deploying production-ready containers with Pulumi"
 authors: ["donna-malayeri"]
 tags: ["AWS/Lambda/Fargate"]
-date: "2018-06-18"
+date: "2018-06-20"
 
 summary: "In this blog post we will use Pulumi to deploy a simple Docker container running NGINX onto AWS Fargate handling details such as creating a container registry instance in ECR, creating task definitions in ECS, and configuring a load balancer."
 meta_image: "RELATIVE_TO_PAGE/hello-world-page.png"
@@ -35,7 +35,7 @@ If you're on Windows, run this:
     SET "PATH=%PATH%;%USERPROFILE%.pulumiin"
 
 You'll deploy this app to your own AWS account, so follow the steps to
-[configure your AWS account](https://pulumi.io/install/aws.html).
+[configure your AWS account]({{< ref "/docs/reference/clouds/aws/setup.md" >}}).
 
 Make sure you have [Node.js](https://nodejs.org/en/download/) installed,
 with a version of 6.10.x or later.

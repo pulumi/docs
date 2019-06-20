@@ -149,8 +149,8 @@ system for easy parameterization:
         },
     )
 
-Learn more about using Pulumi with Kubernetes and GKE in this [Hello
-GKE](https://pulumi.io/quickstart/gcp/tutorial-gke.html) tutorial.
+Learn more about using Pulumi with Kubernetes and GKE in this
+[Hello GKE]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-gke" >}}) tutorial.
 
 ## Super Simple Serverless with Google Cloud Functions
 
@@ -244,8 +244,7 @@ Here at Pulumi, we love working with GCP and Kubernetes, and we are
 constantly working on ways to make Pulumi the most productive (and most
 fun!) way to program the Google Cloud Platform.
 
-Pulumi is free and open source. You can get started with Pulumi today at
-<https://pulumi.io>.
+Pulumi is free and open source. You can get started with Pulumi today.
 
 Here are a few resources to learn more about working with Pulumi and
 GCP:

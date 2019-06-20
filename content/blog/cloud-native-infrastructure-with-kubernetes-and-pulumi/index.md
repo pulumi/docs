@@ -119,8 +119,7 @@ GitHub App that you can install to get previews of changes inside your
 Pull Requests. This enables a true GitOps workflow -- for both
 Kubernetes config updates, and your cloud infrastructure.
 
-What's Next
-===========
+## What's Next
 
 Today is just the beginning of an exciting journey, with Pulumi's
 support for Kubernetes and cloud native architectures. We are excited to
@@ -131,18 +130,14 @@ entry for using Kubernetes with real components and reuse.
 We can't wait to hear what you think. To learn more or give it a try,
 please check out these resources:
 
-[Instal Pulumi]({{< ref "install" >}})
+[Instal Pulumi]({{< ref "/docs/reference/install.md" >}})
 
-These two tutorials will walk you through your first [Pulumi for
-Kubernetes](https://pulumi.io/quickstart/kubernetes/index.html) project:
+These two tutorials will walk you through your first [Pulumi for Kubernetes]({{< ref "/docs/quickstart/kubernetes" >}}) project:
 
--   [Tutorial: Deploy a Stateless Nginx
-    Application](https://pulumi.io/quickstart/kubernetes/tutorial-stateless-app.html)
--   [Tutorial: Deploy a Load-Balanced Guestbook App with Redis and
-    Nginx](https://pulumi.io/quickstart/kubernetes/tutorial-guestbook.html)
+-   [Tutorial: Deploy a Stateless Nginx Application]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-stateless-app" >}})
+-   [Tutorial: Deploy a Load-Balanced Guestbook App with Redis and Nginx]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-guestbook" >}})
 
-[Program Kubernetes with 11
-Pearls](../../../com/pulumi/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls.html):
+[Program Kubernetes with 11 Pearls]({{< relref "program-kubernetes-with-11-cloud-native-pulumi-pearls" >}}):
 a companion blog post, also launched today, with 11 exciting examples.
 
 If you have any questions or comments, we'd love to hear from you in our
@@ -150,4 +145,3 @@ If you have any questions or comments, we'd love to hear from you in our
 [GitHub](https://github.com/pulumi).
 
 Happy cloud native hacking! 
-

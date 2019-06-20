@@ -48,8 +48,7 @@ Pulumi's sophisticated await logic helps customers with a couple use
 cases:
 
 1) Visualize fine-grained, live, single-view status updates for all of
-the Kubernetes cluster resources belonging to a [**Pulumi
-stack**](https://pulumi.io/reference/stack.html). Most applications
+the Kubernetes cluster resources belonging to a [**Pulumi stack**]({{< ref "/docs/reference/stack" >}}). Most applications
 deployed to Kubernetes have a variety of interacting components,
 including Pods, Deployments, Secrets, Persistent Volumes, Config Maps,
 Ingress and more. Rather than requiring multiple commands like

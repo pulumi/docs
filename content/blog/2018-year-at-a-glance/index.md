@@ -27,15 +27,15 @@ open source contributions and passionate community leaders emerging who are help
 helping us to make Pulumi even better.
 
 **Support for major public, private, and hybrid clouds.** We launched with support for the three major public
-clouds, [AWS](https://pulumi.io/quickstart/aws/), [Azure](https://pulumi.io/quickstart/azure/), and
-[Google Cloud](https://pulumi.io/quickstart/gcp/), and have since added capabilities across all
-of them, including adding [serverless](https://pulumi.io/quickstart/aws/tutorial-rest-api.html),
+clouds, [AWS]({{< ref "/docs/quickstart/aws" >}}), [Azure]({{ ref "/docs/quickstart/azure" >}}), and
+[Google Cloud]({{< ref "/docs/quickstart/gcp" >}}), and have since added capabilities across all
+of them, including adding [serverless]({{< ref "/docs/reference/tutorials/aws/tutorial-rest-api.md" >}}),
 [containers](https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/aws-infra/examples/fargate/index.ts), and
 [infrastructure](https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/aws-infra/examples/ec2/index.ts)
 productivity libraries -- it is here where we believe Pulumi’s unique approach of using general purpose languages truly
 shines. We immediately had a wave of inbound interest in applying the Pulumi approach to infrastructure as code in other
 areas, and quickly added other providers including OpenStack, VMWare vSphere, Alibaba Cloud, F5 BigIP, and more. In
-September, we unveiled [a native Kubernetes provider](https://pulumi.io/quickstart/kubernetes/) with support for the
+September, we unveiled [a native Kubernetes provider]({{< ref "/docs/quickstart/kubernetes" >}}) with support for the
 entire API surface area across all versions, plus an operations tool, [KubeSpy](https://github.com/pulumi/kubespy) --
 both of which continue to lead to significant community growth. Many customers are loving that they can achieve a
 consistent engineering workflow across multi-cloud environments -- often spanning public, private, and/or hybrid clouds.

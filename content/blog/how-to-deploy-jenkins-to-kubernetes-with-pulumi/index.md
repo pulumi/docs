@@ -163,7 +163,5 @@ and comprehension for building cloud stacks. 
 Find out more:
 
 -   Get the [example code on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-jenkins)
--   Read the docs on
-    [Kubernetes]({{< ref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
--   See the tutorial on
-    [building components on Pulumi.io]({{< ref "/docs/reference/component-tutorial" >}})
+-   Read the docs on [Kubernetes]({{< ref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
+-   See the tutorial on [building components]({{< ref "/docs/reference/component-tutorial" >}})

@@ -2,7 +2,7 @@
 title: "Build a Video Thumbnailer with Pulumi using Lambdas, Containers, and Infrastructure on AWS"
 authors: ["donna-malayeri"]
 tags: ["AWS", "AWS/Lambda/Fargate"]
-date: "2018-06-18"
+date: "2018-06-21"
 
 summary: "Code a 'Colada' app using Containers, Lambdas, and Data Infrastructure using Pulumi in just 38 lines of code with Pulumi. Then deploy to AWS."
 meta_image: "RELATIVE_TO_PAGE/video-thumbnail-diagram.png"
@@ -46,7 +46,7 @@ If you're on Windows, run this:
     SET "PATH=%PATH%;%USERPROFILE%.pulumiin"
 
 You'll deploy this app to your own AWS account, so follow the steps
-to [configure your AWS account]({{< ref "/docs/quickstart/aws" >}}).
+to [configure your AWS account]({{< ref "/docs/reference/clouds/aws/setup.md" >}}).
 
 Make sure you have [Node.js](https://nodejs.org/en/download/) installed,
 with a version of 6.10.x or later.
