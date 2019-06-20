@@ -22,6 +22,7 @@ const purple = {
     300: "#83549c",
     500: brand.purple,
     700: "#371a47",
+    800: "#2a1337",
     900: "#180b1f",
 }
 
@@ -56,6 +57,7 @@ module.exports = {
                     500: purple["500"],
                     default: purple["500"],
                     700: purple["700"],
+                    800: purple["800"],
                     900: purple["900"],
                 },
                 blue: {
