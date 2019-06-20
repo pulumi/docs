@@ -1,5 +1,5 @@
 {{ define "hero" }}
-    <header class="bg-purple-800 py-16 text-white">
+    <header class="bg-purple-800 py-16 text-white px-4 md:px-0">
         {{ with .Params.hero }}
             <div class="container mx-auto text-white md:flex justify-around items-center">
                 <div class="md:w-1/2">
@@ -13,7 +13,7 @@
             </div>
         {{ end }}
     </header>
-    <div class="bg-gray-200 py-2">
+    <div class="bg-gray-200 py-2 px-4 md:px-0">
         <ul class="container mx-auto flex list-none">
             {{ range .Params.logos }}
                 <li class="mr-8">
@@ -25,7 +25,7 @@
 {{ end }}
 
 {{ define "main" }}
-    <section>
+    <section class=" px-4 md:px-0">
         <div class="container mx-auto max-w-6xl py-16 md:flex">
             <div class="md:w-1/2 md:mx-8">
                 {{ with .Params.main }}
@@ -72,7 +72,7 @@
         </div>
     </section>
 
-    <section>
+    <section class="px-4 md:px-0">
         <div class="container mx-auto max-w-5xl mb-16">
             <div class="flex mb-16">
                 <div class="mr-8 flex-shrink-0">
