@@ -10,7 +10,7 @@
         }
 
         label {
-            @apply block mb-2 font-bold;
+            @apply block mb-2 font-normal;
         }
 
         .hs-input {
@@ -52,7 +52,11 @@
     }
 
     &-fg-light {
-        @apply text-gray-600;
+        @apply text-gray-100;
+
+        a {
+            @apply text-gray-100;
+        }
     }
 
     &-fg-dark {
