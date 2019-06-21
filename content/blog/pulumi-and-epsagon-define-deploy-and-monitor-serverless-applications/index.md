@@ -1,14 +1,15 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Pulumi + Epsagon: Define, Deploy and Monitor Serverless Applications"
+authors: ["luke-hoban"]
+tags: ["Infrastructure-as-Code"]
+date: "2018-11-28"
+
+summary: "Once you have deployed an application to the cloud, the next step is to
+monitor and track its health. In this post, we see how we can integrate Pulumi and Epsagon to define, deploy, and monitor serverless applications."
+meta_image: "RELATIVE_TO_PAGE/espagon-console-2.png"
 ---
 
-
-[Pulumi](https://pulumi.io/) makes it incredibly easy to use serverless
+[Pulumi](/) makes it incredibly easy to use serverless
 functions within your cloud infrastructure and applications - an AWS
 Lambda is as simple as writing a JavaScript lambda!
 
@@ -32,31 +33,29 @@ package to automatically get the benefits of Epsagon monitoring for all
 of the serverless functions defined in their Pulumi applications. By
 just adding two lines of code - every AWS Lambda created from a
 JavaScript callback (like in the example above) will automatically get
-instrumented with [Epsagon's monitoring
-library.](https://www.npmjs.com/package/epsagon)
+instrumented with
+[Epsagon's monitoring library](https://www.npmjs.com/package/epsagon).
 
     const epsagon = require("@pulumi/epsagon");
     epsagon.install(pulumi, { appName: "my-example" });
 
-Monitoring a Serverless Pulumi Application
-------------------------------------------
+## Monitoring a Serverless Pulumi Application
 
-I have a [small Pulumi
-application](https://github.com/lukehoban/lambdaperf) I used to compare
+I have a [small Pulumi application](https://github.com/lukehoban/lambdaperf) I used to compare
 the latency of various Lambda event sources. In about 200 lines of code,
 it does the following:
 
--   Provisions required infrastructure for various AWS event sources
--   Hooks up Lambda event handlers to this infrastructure
--   Describes the code to run in those event handlers (using JavaScript
-    callbacks)
--   Creates shared infrastructure for storing test results, and uses it
-    inside the event handlers (via a generic test harness)
--   Creates and exposes a REST API for kicking off tests and viewing
-    graphs of test results
+- Provisions required infrastructure for various AWS event sources
+- Hooks up Lambda event handlers to this infrastructure
+- Describes the code to run in those event handlers (using JavaScript
+  callbacks)
+- Creates shared infrastructure for storing test results, and uses it
+  inside the event handlers (via a generic test harness)
+- Creates and exposes a REST API for kicking off tests and viewing
+  graphs of test results
 
-Each test case looks like this (you can see more details in [the
-README](https://github.com/lukehoban/lambdaperf)):
+Each test case looks like this (you can see more details in
+[the README](https://github.com/lukehoban/lambdaperf)):
 
     // Test for SNS Topic
     const topic = new aws.sns.Topic("my-topic");
@@ -70,9 +69,7 @@ README](https://github.com/lukehoban/lambdaperf)):
         return harness("sns", Number(ev.Records[0].Sns.Message), sendTopicValue);
     });
 
-![pulumi-console](https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-console.png?width=512&name=pulumi-console.png){width="512"
-sizes="(max-width: 512px) 100vw, 512px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-console.png?width=256&name=pulumi-console.png 256w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-console.png?width=512&name=pulumi-console.png 512w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-console.png?width=768&name=pulumi-console.png 768w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-console.png?width=1024&name=pulumi-console.png 1024w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-console.png?width=1280&name=pulumi-console.png 1280w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-console.png?width=1536&name=pulumi-console.png 1536w"}
+![pulumi-console](./pulumi-console.png)
 
 All up, it creates 6 Lambda functions connected to a variety of event
 sources.
@@ -90,27 +87,20 @@ runtime. Each event source triggers a lambda attached to it, which both
 triggers that same event source again, and also logs to a central
 datastore that keeps track of statistics.
 
-![Epsagon-console](https://blog.pulumi.com/hs-fs/hubfs/Blog/Epsagon-console.png?width=512&name=Epsagon-console.png){width="512"
-sizes="(max-width: 512px) 100vw, 512px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/Epsagon-console.png?width=256&name=Epsagon-console.png 256w, https://blog.pulumi.com/hs-fs/hubfs/Blog/Epsagon-console.png?width=512&name=Epsagon-console.png 512w, https://blog.pulumi.com/hs-fs/hubfs/Blog/Epsagon-console.png?width=768&name=Epsagon-console.png 768w, https://blog.pulumi.com/hs-fs/hubfs/Blog/Epsagon-console.png?width=1024&name=Epsagon-console.png 1024w, https://blog.pulumi.com/hs-fs/hubfs/Blog/Epsagon-console.png?width=1280&name=Epsagon-console.png 1280w, https://blog.pulumi.com/hs-fs/hubfs/Blog/Epsagon-console.png?width=1536&name=Epsagon-console.png 1536w"}
+![Epsagon-console](./espagon-console.png)
 
 I can also drill in and see details about each piece of this, and what
 performance looked like across all of these.
 
-![epsagon-console-2](https://blog.pulumi.com/hs-fs/hubfs/Blog/epsagon-console-2.png?width=512&name=epsagon-console-2.png){width="512"
-sizes="(max-width: 512px) 100vw, 512px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/epsagon-console-2.png?width=256&name=epsagon-console-2.png 256w, https://blog.pulumi.com/hs-fs/hubfs/Blog/epsagon-console-2.png?width=512&name=epsagon-console-2.png 512w, https://blog.pulumi.com/hs-fs/hubfs/Blog/epsagon-console-2.png?width=768&name=epsagon-console-2.png 768w, https://blog.pulumi.com/hs-fs/hubfs/Blog/epsagon-console-2.png?width=1024&name=epsagon-console-2.png 1024w, https://blog.pulumi.com/hs-fs/hubfs/Blog/epsagon-console-2.png?width=1280&name=epsagon-console-2.png 1280w, https://blog.pulumi.com/hs-fs/hubfs/Blog/epsagon-console-2.png?width=1536&name=epsagon-console-2.png 1536w"}
+![epsagon-console-2](./espagon-console-2.png)
 
 And finally, I can see what chain of events in my infrastructure led to
 an operation occurring in DynamoDB - in this case, a REST API was
 handled by a Lambda, which invoked a Table scan.
 
-![epsagon-console-3](https://blog.pulumi.com/hs-fs/hubfs/Blog/epsagon-console-3.png?width=512&name=epsagon-console-3.png){width="512"
-sizes="(max-width: 512px) 100vw, 512px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/epsagon-console-3.png?width=256&name=epsagon-console-3.png 256w, https://blog.pulumi.com/hs-fs/hubfs/Blog/epsagon-console-3.png?width=512&name=epsagon-console-3.png 512w, https://blog.pulumi.com/hs-fs/hubfs/Blog/epsagon-console-3.png?width=768&name=epsagon-console-3.png 768w, https://blog.pulumi.com/hs-fs/hubfs/Blog/epsagon-console-3.png?width=1024&name=epsagon-console-3.png 1024w, https://blog.pulumi.com/hs-fs/hubfs/Blog/epsagon-console-3.png?width=1280&name=epsagon-console-3.png 1280w, https://blog.pulumi.com/hs-fs/hubfs/Blog/epsagon-console-3.png?width=1536&name=epsagon-console-3.png 1536w"}
+![epsagon-console-3](./espagon-console-3.png)
 
-Conclusion
-----------
+## Conclusion
 
 Together, Pulumi and Epsagon make it easy to build truly serverless
 applications -- not just a single Lambda, but a whole application made
@@ -119,6 +109,5 @@ it easy to author and deploy these kinds of architectures, and Epsagon
 makes it easy to monitor them. Users get an application-centric view
 across their full serverless application infrastructure.
 
-Download and get started with [Pulumi](https://pulumi.io/quickstart/)
+Checkout the quickstart guides for [Pulumi]({{< ref "/docs/quickstart" >}})
 and [Epsagon](https://docs.epsagon.com/#/quick-start-guide) now!
-

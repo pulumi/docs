@@ -1,31 +1,28 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Meet the Pulumi team at AWS re:Invent"
+authors: ["marc-holmes"]
+tags: ["Pulumi"]
+date: "2018-11-15"
+
+summary: "Pulumi will be at AWS re:Invent this year, at Booth 316, Startup Central, Aria Quad. Come talk to us about serverless, containers, kubernetes, and any other cloud native infrastructure as code."
 ---
 
 
 Heading to AWS re:Invent? Concerned about how you'll manage to get
-[that much YAML](https://www.pulumi.com/cloudformation) into your carry
+[that much YAML]({{< ref "/cloudformation" >}}) into your carry
 on bag? Or maybe you just like purple.
 
 Whatever the reason, the Pulumi team will be there all week at **Booth
 316, Startup Central, Aria Quad, **and we'd love to chat with you about
-[AWS and Pulumi](https://www.pulumi.com/aws).
+[AWS and Pulumi]({{< ref "/crosswalk/aws" >}}).
 
-Catch up with us on [serverless](https://www.pulumi.com/serverless)
-functions, [containers](https://www.pulumi.com/containers) and
-[Kubernetes](https://www.pulumi.com/kubernetes), managed services and
+Catch up with us on serverless functions, [containers]({{< ref "/containers" >}}) and
+[Kubernetes]({{< ref "/kubernetes" >}}), managed services and
 any other cloud native infrastructure as code, and see how you can more
 productively manage your AWS cloud resources with general purpose
-programming languages. We can even help you [migrate your CloudFormation
-to Pulumi](https://www.pulumi.com/cloudformation). 
+programming languages. We can even help you
+[migrate your CloudFormation to Pulumi]({{< ref "/cloudformation" >}}). 
 
-If you want to grab a specific time to talk through your needs, [then
-use this
-link](https://info.pulumi.com/meetings/team-pulumi/aws-reinvent-catchup),
-otherwise we'll just see you at the booth. 
-
+If you want to grab a specific time to talk through your needs,
+[then use this link](https://info.pulumi.com/meetings/team-pulumi/aws-reinvent-catchup),
+otherwise we'll just see you at the booth!

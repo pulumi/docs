@@ -1,18 +1,17 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Managing F5 BIG-IP Systems with Pulumi"
+authors: ["cameron-stokes"]
+tags: ["New-Features", "Pulumi"]
+date: "2019-02-07"
+
+summary: "The Pulumi ecosystem is continuously growing and today we're excited to announce the F5 BIG-IP Pulumi provider."
 ---
 
 
-The [Pulumi](https://www.pulumi.com/) ecosystem is continuously growing
+The [Pulumi](/) ecosystem is continuously growing
 and today we're excited to announce the F5 BIG-IP provider for Pulumi.
 
-F5's [BIG-IP Local Traffic Managment (LTM)
-services](https://www.f5.com/products/big-ip-services/local-traffic-manager)
+F5's [BIG-IP Local Traffic Managment (LTM) services](https://www.f5.com/products/big-ip-services/local-traffic-manager)
 provides advanced traffic management, acceleration, security, and
 analytics features to your applications. With the addition of our F5
 BIG-IP Pulumi provider we are bringing *Cloud Native Infrastructure as
@@ -24,8 +23,7 @@ Let's look at some examples to demonstrate what's capable with this
 provider and the power and flexibility that Pulumi brings to working
 with your F5 BIG-IP systems.
 
-Simple Load Balancing
--------------------------------------------------
+## Simple Load Balancing
 
 In the code below we create a handful of resources that allow us to use
 our BIG-IP to load balance to two backend HTTP servers. It's omitted for
@@ -74,10 +72,9 @@ side in the same Pulumi application.
         sourceAddressTranslation: "automap",
     });
 
-Managing iRules
---------------------------------------
+## Managing iRules
 
-iRules are one of the more powerful features within the BIG-IP Local
+*iRules* are one of the more powerful features within the BIG-IP Local
 Traffic Management (LTM) system. iRules allow you to validate and
 manipulate request and response data passing through your BIG-IP as well
 as make decisions on such traffic such as directing traffic to different
@@ -136,8 +133,7 @@ omitting some of the resources to keep the example short.
         irules: [iRule.name],
     });
 
-Dynamically Creating iRules
----------------------------------------------------------------
+## Dynamically Creating iRules
 
 So far the BIG-IP resources we've created have been relatively static.
 Let's leverage the full power of Pulumi by dynamically creating
@@ -194,16 +190,12 @@ language.
         irules: iRules.map(irule => irule.name),
     });
 
-Wrap Up
------------------------
+## Wrap Up
 
 With the F5 BIG-IP Pulumi provider you can manage BIG-IP systems whether
-they're in the cloud, as available on [Amazon Web
-Services](https://aws.amazon.com/marketplace/seller-profile?id=74d946f0-fa54-4d9f-99e8-ff3bd8eb2745),
-[Microsoft
-Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=f5&page=1),
-and [Google Cloud
-Platform](https://console.cloud.google.com/marketplace/partners/f5-7626-networks-public),
+they're in the cloud, as available on [Amazon Web Services](https://aws.amazon.com/marketplace/seller-profile?id=74d946f0-fa54-4d9f-99e8-ff3bd8eb2745),
+[Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=f5&page=1),
+and [Google Cloud Platform](https://console.cloud.google.com/marketplace/partners/f5-7626-networks-public),
 or in your on-premises data centers. In a matter of minutes you can
 bring modern code and development practices to your BIG-IP-powered
 applications.
@@ -211,10 +203,7 @@ applications.
 To start managing your F5 BIG-IP systems with real programming
 languages, please check out the following links:
 
--   Node.js documentation is
-    [here](https://pulumi.io/reference/pkg/nodejs/@pulumi/f5bigip/index.html).
--   Python documentation is
-    [here](https://pulumi.io/reference/pkg/python/pulumi_f5bigip/index.html).
--   A full working example is
-    [here](https://github.com/pulumi/examples/tree/master/f5bigip-ts-ltm-pool).
+- [Node.js documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/f5bigip" >}})
+- [Python documentation]({{< ref "/docs/reference/pkg/python/pulumi_f5bigip" >}})
+- [F5 BIG-IP Example using Pulumi](https://github.com/pulumi/examples/tree/master/f5bigip-ts-ltm-pool)
 

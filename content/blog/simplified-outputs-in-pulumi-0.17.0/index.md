@@ -1,17 +1,17 @@
 ---
 title: "Simplified Outputs in Pulumi 0.17"
 authors: ["cyrus-najmabadi"]
-tags: ["features"]
+tags: ["New-Features"]
 date: "2019-03-17"
 
-description: "Based on much feedback from cloud developers, Pulumi Outputs have been simplified for JavaScript and TypeScript making the user experience simpler while maintaining the rich dependency tracking and type checking that Pulumi has always provided for cloud infrastructure."
+summary: "Based on much feedback from cloud developers, Pulumi Outputs have been simplified for JavaScript and TypeScript making the user experience simpler while maintaining the rich dependency tracking and type checking that Pulumi has always provided for cloud infrastructure."
 meta_image: "RELATIVE_TO_PAGE/comp-list.png"
 ---
 
 Pulumi allows cloud developers to use programming languages like
 JavaScript, TypeScript and Python to define and deploy cloud
 infrastructure and applications. To do this, Pulumi exposes a notion of
-[Outputs](https://pulumi.io/reference/programming-model.html#outputs)
+[Outputs]({{< ref "/docs/reference/programming-model#outputs" >}})
 that track how the outputs of one cloud resource are used and
 transformed as part of creating another cloud resource.
 
@@ -90,11 +90,11 @@ const certValidation = new aws.route53.Record("cert_validation", {
 
 That's a lot nicer than before! The following improvements happened:
 
-1.  There's no more callbacks!
-2.  There's no need for a repetitive lambda parameter (which might
-    conflict with some other name in scope).
-3.  The code is just pure simple idiomatic JavaScript/TypeScript that
-    clearly conveys its intent.
+1. There's no more callbacks!
+2. There's no need for a repetitive lambda parameter (which might
+   conflict with some other name in scope).
+3. The code is just pure simple idiomatic JavaScript/TypeScript that
+   clearly conveys its intent.
 
 Importantly, no information has been lost here. The exact same
 dependency information flows along here like it did before. And, thanks
@@ -134,11 +134,11 @@ JavaScript perspective, it was a little more challenging to figure out
 how to make this work in TypeScript's typing system. For example, if you
 had a value like so:
 
-{{< highlight JavaScript >}}
+```javascript
 const cert: Output<{ domainValidationOptions: pulumi.Output<{ domainName: string, resourceRecordName: string, resourceRecordType: string, resourceRecordValue: string }[]> }>;
 const firstOption: Output<{ domainName: string, resourceRecordName: string, resourceRecordType: string, resourceRecordValue: string }> = cert[0];
 const domainName = firstOption.domainName;
-{{< /highlight >}}
+```
 
 Then how does TypeScript know that `cert` should have a property on it
 called `domainValidationOptions`? And how can it know that

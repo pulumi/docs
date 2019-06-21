@@ -1,23 +1,23 @@
 ---
 title: "How do Kubernetes Deployments work? An adversarial perspective"
 authors: ["alex-clemmer"]
-tags: ["todo"]
+tags: ["Kubernetes", "Infrastructure-as-Code"]
 date: "2018-10-03"
 
-description: "TODO: Put in a reasonable summary"
+summary: "What is happening when a Deployment rolls out a change to your app? Deployment is probably the most complex resource type in Kubernetes core. In this post we continue our exploration of the Kubernetes API, cracking Deployment open using kubespy to observe Kubernetes resources in real-time."
+meta_image: "RELATIVE_TO_PAGE/deployment-rollout.gif"
 ---
 
+*This post is part 3 in a series on the Kubernetes API. Earlier,
+[Part 1]({{< relref "kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images" >}})
+focused on the lifecycle of a `Pod` and
+[Part 2]({{< relref "kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service" >}})
+focused on the lifecycle of a `Service`.*
 
-**This post is part 3 in a series on the Kubernetes API. [Part
-1](../../../com/pulumi/blog/kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images.html)
-focused on the lifecycle of a `Pod`, [part
-2](../../../com/pulumi/blog/kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service.html)
-focused on the lifecycle of a `Service`.**
-
-*What is happening when a `Deployment` rolls out a change to your app?
+What is happening when a `Deployment` rolls out a change to your app?
 What does it actually do when a `Pod` crashes or is killed? What happens
 when a `Pod` is re-labled so that it's not targeted by the
-`Deployment`?*
+`Deployment`?
 
 `Deployment` is probably the most complex resource type in Kubernetes
 core. `Deployment` specifies how changes should be rolled out over
@@ -31,9 +31,7 @@ Kubernetes resources in real-time.
 Using `kubespy trace`, for example, we can observe at a high level what
 happens when `Deployment` rolls out a new version of an application:
 
-![trace-deployment-rollout](https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/trace-deployment-rollout.gif?width=600&name=trace-deployment-rollout.gif){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/trace-deployment-rollout.gif?width=300&name=trace-deployment-rollout.gif 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/trace-deployment-rollout.gif?width=600&name=trace-deployment-rollout.gif 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/trace-deployment-rollout.gif?width=900&name=trace-deployment-rollout.gif 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/trace-deployment-rollout.gif?width=1200&name=trace-deployment-rollout.gif 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/trace-deployment-rollout.gif?width=1500&name=trace-deployment-rollout.gif 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/trace-deployment-rollout.gif?width=1800&name=trace-deployment-rollout.gif 1800w"}
+![trace-deployment-rollout](./deployment-rollout.gif)
 
 But this post also comes with a twist, because in addition to being
 complex, `Deployment` is also the most *dynamic* resource in Kubernetes
@@ -47,8 +45,7 @@ understanding how it *does* this coping. We therefore will also use
 `kubespy trace` to observe what happens when we kill and otherwise
 bother our `Pod`s.
 
-Following along
----------------
+## Following along
 
 The `kubespy` repository comes with a simple [example Kubernetes
 app](https://github.com/pulumi/kubespy/tree/master/examples/trivial-service-trace-example),
@@ -60,12 +57,10 @@ the same code that underlies the core (OSS) [Pulumi
 engine](https://www.pulumi.com/kubernetes/). If you like this, and would
 like to see information like it in CI/CD, we hope you'll give it a
 shot! To get a flavor of what this looks like in practice, you might
-also check out [my
-tweetstorm](https://twitter.com/hausdorff_space/status/1039940379301179392)
+also check out [my tweetstorm](https://twitter.com/hausdorff_space/status/1039940379301179392)
 on the subject.
 
-What happens during a rollout?
-------------------------------
+## What happens during a rollout?
 
 The gif in the introduction shows what happens when:
 
@@ -87,9 +82,7 @@ from `Deployment`'s status that the application is on **revision 2**,
 which means the application has been deployed twice --- one initial
 deployment, and one update.
 
-![1-deployment-found](https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/1-deployment-found.gif?width=600&name=1-deployment-found.gif){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/1-deployment-found.gif?width=300&name=1-deployment-found.gif 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/1-deployment-found.gif?width=600&name=1-deployment-found.gif 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/1-deployment-found.gif?width=900&name=1-deployment-found.gif 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/1-deployment-found.gif?width=1200&name=1-deployment-found.gif 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/1-deployment-found.gif?width=1500&name=1-deployment-found.gif 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/1-deployment-found.gif?width=1800&name=1-deployment-found.gif 1800w"}
+![1-deployment-found](./deployment-found.gif)
 
 **Second: the user submits a change to the `Deployment`, which triggers
 a rollout.** The `Deployment` creates a new revision, **revision 3.** It
@@ -99,9 +92,7 @@ start `Pod`s with the new app version on it.
 This gif is slowed down to show each of these individual changes --- in
 the gif above, you can see these happen in very quick succession.
 
-![2-replicaset-created](https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/2-replicaset-created.gif?width=600&name=2-replicaset-created.gif){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/2-replicaset-created.gif?width=300&name=2-replicaset-created.gif 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/2-replicaset-created.gif?width=600&name=2-replicaset-created.gif 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/2-replicaset-created.gif?width=900&name=2-replicaset-created.gif 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/2-replicaset-created.gif?width=1200&name=2-replicaset-created.gif 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/2-replicaset-created.gif?width=1500&name=2-replicaset-created.gif 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/2-replicaset-created.gif?width=1800&name=2-replicaset-created.gif 1800w"}
+![2-replicaset-created](2-replicas-created.gif)
 
 **Third: the new version of the app comes online; the old `ReplicaSet`
 is killed.** As the new `Pod`s in **revision 3** come online and are
@@ -109,20 +100,15 @@ marked available, the `Deployment` controller begins killing off
 replicas from **revision 2.** Eventually it succeeds and the rollout is
 complete.
 
-![3-rollout-succeeds](https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/3-rollout-succeeds.gif?width=600&name=3-rollout-succeeds.gif){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/3-rollout-succeeds.gif?width=300&name=3-rollout-succeeds.gif 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/3-rollout-succeeds.gif?width=600&name=3-rollout-succeeds.gif 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/3-rollout-succeeds.gif?width=900&name=3-rollout-succeeds.gif 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/3-rollout-succeeds.gif?width=1200&name=3-rollout-succeeds.gif 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/3-rollout-succeeds.gif?width=1500&name=3-rollout-succeeds.gif 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/3-rollout-succeeds.gif?width=1800&name=3-rollout-succeeds.gif 1800w"}
+![3-rollout-succeeds](./3-rollout-succeeds.gif)
 
-What happens if we kill a Pod?
-------------------------------
+## What happens if we kill a Pod?
 
 Now that we understand the semantics of `Deployment`'s rollout, we can
 see what happens when we use `kubectl delete pod <name>` on one of the
 `Pod`s that is controlled by our `Deployment`.
 
-![pod-killed](https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/pod-killed.gif?width=600&name=pod-killed.gif){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/pod-killed.gif?width=300&name=pod-killed.gif 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/pod-killed.gif?width=600&name=pod-killed.gif 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/pod-killed.gif?width=900&name=pod-killed.gif 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/pod-killed.gif?width=1200&name=pod-killed.gif 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/pod-killed.gif?width=1500&name=pod-killed.gif 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/pod-killed.gif?width=1800&name=pod-killed.gif 1800w"}
+![pod-killed](./pod-killed.gif)
 
 As expected, we can see that the `ReplicaSet` controller notices the
 `Pod` goes missing and spins up a new one. Note that it does *not*
@@ -132,15 +118,12 @@ Notice also that the `Pod` that was destroyed hangs around for a few
 seconds, even though the new one has been booted up and the `ReplicaSet`
 has been marked available.
 
-What happens if we add or remove labels from a Pod?
----------------------------------------------------
+## What happens if we add or remove labels from a Pod?
 
 Try using `kubectl edit` to delete the labels on one of your `Pods`.
 `kubespy trace` will show you something the following:
 
-![pod-relabeled](https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/pod-relabeled.gif?width=600&name=pod-relabeled.gif){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/pod-relabeled.gif?width=300&name=pod-relabeled.gif 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/pod-relabeled.gif?width=600&name=pod-relabeled.gif 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/pod-relabeled.gif?width=900&name=pod-relabeled.gif 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/pod-relabeled.gif?width=1200&name=pod-relabeled.gif 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/pod-relabeled.gif?width=1500&name=pod-relabeled.gif 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/kubespy/pod-relabeled.gif?width=1800&name=pod-relabeled.gif 1800w"}
+![pod-relabeled](./pod-relabeled.gif)
 
 Unlike the "killing a `Pod`" example above, the old `Pod` seems to
 *disappear*, replaced by a new `Pod` that, when booted up, causes the
@@ -155,8 +138,7 @@ This is useful: if you notice one of your `Pod`s is behaving strangely,
 you can simply take it out of rotation by removing those labels, so that
 you can pull it aside and test it.
 
-Conclusion
-----------
+## Conclusion
 
 The Kubernetes API is rich, packed with useful information about the
 state of your cluster. It's remarkable how little it is directly used
@@ -164,8 +146,6 @@ to make tools. Combine a little knowledge of `Deployment`'s `.status`
 field with the Kubernetes `Watch` API and a bit of terminal UI
 programming, you're most of your way to `kubespy trace deployment`.
 
-**If you enjoyed this post, or are curious to see how this lifecycle is
-baked into the Pulumi CLI, please [give us a
-shot](https://www.pulumi.com/kubernetes/)! We'd love to have your
-feedback.**
-
+If you enjoyed this post, or are curious to see how this lifecycle is
+baked into the Pulumi CLI, please [give us a shot]({{< ref "/kubernetes" >}})!
+We'd love to hear your feedback.

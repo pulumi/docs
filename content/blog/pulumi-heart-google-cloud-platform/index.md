@@ -1,11 +1,12 @@
 ---
 title: "Pulumi ❤️ Google Cloud Platform"
 authors: ["luke-hoban"]
-tags: ["GCP", "CI/CD", "Kubernetes", "Serverless"]
+tags: ["GCP", "CI/CD", "Kubernetes"]
 date: "2019-04-09"
 
-description: "Pulumi helps you to take maximum advantage of Google Cloud Platform's full breadth of infrastructure and applications capabilities, in your language of choice. In this article, see how."
-meta_image: "RELATIVE_TO_PAGE/exposed-deploy.gif"
+summary: "Pulumi helps you to take maximum advantage of Google Cloud Platform's full breadth of
+infrastructure and applications capabilities, in your language of choice. In this article, see how."
+meta_image: "RELATIVE_TO_PAGE/pulumi_console.png"
 ---
 
 Google Cloud is one of the most exciting cloud platforms available
@@ -13,7 +14,7 @@ today, with a breadth of powerful infrastructure services from Google
 Container Engine (GKE) and Google Cloud Functions to Cloud Firestore and
 Cloud Spanner.
 
-[Pulumi](https://pulumi.io/) is the most productive tooling available
+[Pulumi](/) is the most productive tooling available
 today for teams building cloud applications and infrastructure, in your
 favorite languages. Add them together, and teams can easily take maximum
 advantage of Google Cloud Platform's rich features, productively, with
@@ -87,8 +88,7 @@ will it proceed (with a full audit history):
     ...
 
 Learn more about working with Pulumi and Google Cloud infrastructure in
-this [GCE Web
-Server](https://pulumi.io/quickstart/gcp/tutorial-gce-webserver.html)
+this [GCE Web Server]({{ ref "/docs/reference/tutorials/gcp/tutorial-gce-webserver" >}})
 tutorial.
 
 ## Working with Kubernetes and Google Container Engine (GKE)
@@ -149,14 +149,14 @@ system for easy parameterization:
         },
     )
 
-Learn more about using Pulumi with Kubernetes and GKE in this [Hello
-GKE](https://pulumi.io/quickstart/gcp/tutorial-gke.html) tutorial.
+Learn more about using Pulumi with Kubernetes and GKE in this
+[Hello GKE]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-gke" >}}) tutorial.
 
 ## Super Simple Serverless with Google Cloud Functions
 
 Serverless has never been simpler than it is with Pulumi + Google Cloud
-Functions. Thanks to Pulumi's ["magic
-functions"](../../../com/pulumi/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions.html),
+Functions. Thanks to Pulumi's
+["magic functions"]({{< relref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}}),
 we can write callbacks in our language of choice, using a natural
 event-driven style, and Pulumi will handle the rest.
 
@@ -182,7 +182,7 @@ received:
     });
 
 And for quick inner loop development, the
-[`pulumi logs`](../../../com/pulumi/blog/unified-logs-with-pulumi-logs.html)
+[`pulumi logs`]({{< relref "unified-logs-with-pulumi-logs" >}})
 command supports pulling logs for your Google Cloud Functions from
 StackDriver, aggregating all compute logs in your program into one
 unified stream:
@@ -195,8 +195,7 @@ unified stream:
      2019-04-08T12:37:34.000-07:00[            newMessage-9d41c7a] Function execution took 70 ms, finished with status: 'ok'
 
 Learn more about Pulumi support for Google Cloud Functions in this
-[Simple Serverless
-Slackbot](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot)
+[Simple Serverless Slackbot](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot)
 example.
 
 ## Continuous Delivery with Google Cloud Build
@@ -208,23 +207,21 @@ from commits and pull requests to your code is as easy as adding a few
 lines to your CI/CD system.
 
 For teams working with Google Cloud Build, Pulumi deployments can be
-integrated into your continuous delivery with just [a few
-steps](https://pulumi.io/reference/cd-google-cloud-build.html). And
+integrated into your continuous delivery with just
+[a few steps]({{< relref "/docs/reference/cd-google-cloud-build" >}}). And
 for teams working with GitHub, Pulumi's GitHub App gives you rich
 feedback on what changes will be deployed as part of a Pull Request, so
 you can see and approve infrastructure changes before they happen:
 
 ![Pulumi in a Pull Request](./pulumi_pr.png)
 
-Learn more about integrating Pulumi with CI/CD in the [continuous
-delivery](https://pulumi.io/reference/cd.html) documentation on
-<https://pulumi.io>.
+Learn more about integrating Pulumi with CI/CD in our
+[continuous delivery]({{< ref "/docs/reference/cd" >}}) documentation.
 
 ## Managing Deployment with the Pulumi Console
 
 In addition to the `pulumi` CLI for deploying and updating GCP
-infrastructure, Pulumi is always connected to the [Pulumi
-Console](https://app.pulumi.com), which provides a rich interface for
+infrastructure, Pulumi is always connected to the [Pulumi Console](https://app.pulumi.com), which provides a rich interface for
 viewing the history of your stacks and deployments, management of access
 controls for teams, and details of all resources under management.
 
@@ -247,19 +244,14 @@ Here at Pulumi, we love working with GCP and Kubernetes, and we are
 constantly working on ways to make Pulumi the most productive (and most
 fun!) way to program the Google Cloud Platform.
 
-Pulumi is free and open source. You can get started with Pulumi today at
-<https://pulumi.io>.
+Pulumi is free and open source. You can get started with Pulumi today.
 
 Here are a few resources to learn more about working with Pulumi and
 GCP:
 
--   [Google Cloud Platform Getting Started
-    Guide](https://pulumi.io/quickstart/gcp/index.html)
--   [GKE Tutorial](https://pulumi.io/quickstart/gcp/tutorial-gke.html)
--   [GCE
-    Tutorial](https://pulumi.io/quickstart/gcp/tutorial-gce-webserver.html)
--   Example: [Serverless Slackbot with Cloud Functions in
-    JavaScript](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot)
--   Example: [GKE + Kubernetes Pod Deployment in
-    Python](https://github.com/pulumi/examples/tree/master/gcp-py-gke)
--   [Pulumi Community Slack](https://slack.pulumi.io/)
+- [Google Cloud Platform Getting Started Guide]({{< ref "/docs/quickstart/gcp" >}})
+- [GKE Tutorial]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-gke" >}})
+- [GCE Tutorial]({{< ref "/docs/reference/tutorials/gcp/tutorial-gce-webserver" >}})
+- Example: [Serverless Slackbot with Cloud Functions in JavaScript](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot)
+- Example: [GKE + Kubernetes Pod Deployment in Python](https://github.com/pulumi/examples/tree/master/gcp-py-gke)
+- [Pulumi Community Slack](https://slack.pulumi.io/)

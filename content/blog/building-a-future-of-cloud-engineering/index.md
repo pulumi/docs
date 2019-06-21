@@ -1,10 +1,10 @@
 ---
 title: "Building a future of cloud engineering"
 authors: ["joe-duffy"]
-tags: ["news"]
+tags: ["Pulumi"]
 date: "2018-10-22"
 
-description: "Today we are thrilled to announce that we've raised $15M in additional funding from our partners, Madrona Venture Group and Tola Capital"
+summary: "We founded Pulumi because of a deeply held belief that the cloud has changed all aspects of software development.  Today we are announcing that we’ve raised $15M in additional funding from our partners, Madrona Venture Group and Tola Capital, furthering our ability to reimagine cloud engineering."
 ---
 
 
@@ -42,8 +42,7 @@ Venture Group and Tola Capital, both here in Seattle. We are honored by
 their shared belief in our vision and our team. [Read more in our press
 release.](https://info.pulumi.com/press-release/pulumi-announces-15m-in-series-a-funding-to-accelerate-development-and-adoption-of-its-cloud-native-development-platform)
 
-How We Got Here, a Tale of Cloud Evolution
-------------------------------------------
+## How We Got Here, a Tale of Cloud Evolution
 
 We have seen stunning advancement in cloud platform capabilities. It's
 hard to believe that Docker was launched just five years, and AWS Lambda
@@ -79,8 +78,7 @@ and empower their teams to collaborate.
 It's safe to conclude: we have hit the limits of the "afterthought"
 approach.
 
-Towards Cloud Engineering
--------------------------
+## Towards Cloud Engineering
 
 We believe in a future where developers and operators alike can meet on
 common ground to work together. We like to call this combined discipline
@@ -123,8 +121,7 @@ to a level of productivity that these teams previously hadn't imagined
 was possible. Developers, operators, and managers alike are loving
 living in this future of cloud engineering.
 
-Pulumi's Next Chapter
----------------------
+## Pulumi's Next Chapter
 
 We've only just begun. Pulumi supports AWS, Azure, Google Cloud
 Platform, and Kubernetes in a big way, with early support for VMWare
@@ -132,7 +129,7 @@ vSphere and OpenStack. Our delivery platform works great with your
 favorite CI systems. Expect to see continued growth in all of these
 areas, in addition to new clouds, languages, and integrations.
 
-Today we launched [the Team Edition](http://pulumi.com/pricing) for our
+Today we launched [the Team Edition]({{< ref "/pricing" >}}) for our
 SaaS delivery platform. This includes many features that you, the
 community, told us you need to better operationalize Pulumi within your
 teams. We already have many happy customers using these features
@@ -140,17 +137,17 @@ successfully for organizations big and small. Expect to see a steady
 stream of improvements, in addition to Enterprise Edition capabilities
 for the largest of organizations needing on-premises, advanced security,
 and custom identity. Please always [let us
-know](https://www.pulumi.com/contact/) how we can better meet your
+know]({{< ref "/contact" >}}) how we can better meet your
 needs.
 
 This new round of funding will allow us to strengthen our commitment to
 open source and community, increase our R&D velocity, and also scale our
 business to enable organizations of all sizes to successfully achieve
 cloud engineering within their teams. We are [hiring in all areas of the
-company](https://www.pulumi.com/careers) as we enter this next exciting
+company]({{< ref "/careers" >}}) as we enter this next exciting
 chapter of the company.
 
-[Download Pulumi for free over at pulumi.io](https://pulumi.io/) -- we
+[Download Pulumi]({{< ref "install" >}}) -- we
 can't wait to see all the great things you build next with Pulumi!
 
 Joe & Eric

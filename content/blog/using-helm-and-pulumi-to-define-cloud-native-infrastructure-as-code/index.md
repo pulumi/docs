@@ -17,7 +17,7 @@ Kubernetes, and the community is just starting to develop answers to
 questions like: what happens when a Helm Chart needs to interface with,
 for example, a managed database like AWS RDS or Azure CosmosDB?
 
- Pulumi is a cloud native development platform designed to be able to
+Pulumi is a cloud native development platform designed to be able to
 express any cloud native infrastructure as code in a natural,
 intentional manner using real languages. The most natural way to solve
 this challenge would be to stand up an instance of AWS RDS, populate a
@@ -38,8 +38,7 @@ Specifically, we:
   CosmosDB
 - Deploy a Node.js Helm Chart that references it.
 
-If you have the Azure command line, try [running the
-example](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean)
+If you have the Azure command line, try [running the example](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean)
 with `pulumi up`!
 
 {{< highlight javascript >}}
@@ -116,8 +115,6 @@ can make the best use of existing tools such as Helm, and also reduce
 the friction caused by multiple deployment tools and models across
 complex architectures.
 
-- Find out more about our [Azure](https://www.pulumi.com/azure) and
-  [Kubernetes](https://www.pulumi.com/kubernetes) support
-- Try Pulumi at <https://pulumi.io> 
+- Find out more about our [Azure]({{< ref "/azure" >}}) and
+  [Kubernetes]({{< ref "/kubernetes" >}}) support
 - Join the Slack community at <https://slack.pulumi.io> 
-

@@ -10,12 +10,12 @@
             {{ $paginator := .Paginate .Data.Pages.Reverse }}
 
             <header>
-                <h1>Posts Tagged {{ .Data.Term }}</h1>
+                <h1 class="no-anchor">Posts Tagged {{ .Data.Term }}</h1>
             </header>
 
             {{ range $paginator.Pages }}
                 <article class="my-8 pb-8 border-b border-gray-200">
-                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                    <h2 class="no-anchor"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
                     <div class="flex items-center">
                         <time>
                             {{ .Date.Format "Monday, Jan 2, 2006" }}

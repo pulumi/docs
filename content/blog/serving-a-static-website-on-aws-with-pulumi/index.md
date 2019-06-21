@@ -1,16 +1,16 @@
 ---
 title: "Serving a Static Website on AWS with Pulumi"
 authors: ["chris-smith"]
-tags: ["todo"]
+tags: ["AWS"]
 date: "2018-07-17"
 
-description: "This post covers using Pulumi to create the infrastructure for serving a static website on AWS including the fun parts such as HTTPS certificates, content distribution networks, and attaching it to a custom domain."
+summary: "This post covers using Pulumi to create the infrastructure for serving a static website on
+AWS including the fun parts such as HTTPS certificates, content distribution networks, and attaching it to a custom domain."
 ---
 
-Hello! This post covers using [Pulumi](https://pulumi.io) to create the
+Hello! This post covers using [Pulumi](/) to create the
 infrastructure for serving a static website on AWS. The full source code
-for this example is [available on
-GitHub](https://github.com/pulumi/examples/blob/master/aws-ts-static-website/index.ts).
+for this example is [available on GitHub](https://github.com/pulumi/examples/blob/master/aws-ts-static-website/index.ts).
 
 Setting up the infrastructure to serve a static website doesn't sound
 like it would be all that difficult, but when you consider HTTPS
@@ -25,14 +25,12 @@ multiple products together.
 This isn't a hypothetical benefit of using the Pulumi programming model.
 We use a setup similar to the one described in this post for powering
 our own static websites, like [www.pulumi.com](http://www.pulumi.com/)
-and [pulumi.io](http://pulumi.io/).
+and [get.pulumi.com](http://get.pulumi.com).
 
 ## Overview
 
-The architecture we will use for the website is to follow AWS "[Web
-Application Hosting](https://aws.amazon.com/architecture/)" reference
-architecture
-([pdf](https://media.amazonwebservices.com/architecturecenter/AWS_ac_ra_web_01.pdf)).
+The architecture we will use for the website is to follow AWS "[Web Application Hosting](https://aws.amazon.com/architecture/)"
+reference architecture ([pdf](https://media.amazonwebservices.com/architecturecenter/AWS_ac_ra_web_01.pdf)).
 This integrates several AWS products: 
 
 -   [Amazon S3](https://aws.amazon.com/s3/), used to store the
@@ -47,8 +45,7 @@ This integrates several AWS products: 
 ## How it Works
 
 If you are already familiar with static hosting on AWS, feel free to go
-directly to our [examples
-repository](https://github.com/pulumi/examples) on GitHub, in the
+directly to our [examples repository](https://github.com/pulumi/examples) on GitHub, in the
 aws-ts-static-website folder. 
 
 If you are new to AWS, we'll break down how to configure each component
@@ -68,8 +65,7 @@ that files are interpreted the right way. (e.g. images are rendered as
 images.) The process for inferring the MIME type based on file extension
 is done by the [mime NPM package](https://www.npmjs.com/package/mime).
 No need to write the code on your own, rather we can just reuse an
-existing library - written in a different programming language, no less!
-- from our TypeScript application.
+existing library - written in a different programming language, no less! - from our TypeScript application.
 
     const contentBucket = new aws.s3.Bucket("contentBucket",
         {
@@ -187,8 +183,7 @@ CDN, and attach it to Route53 all within the same Pulumi program.
 
 ## Wrapping Up
 
-With around [200 lines of
-code](https://github.com/pulumi/examples/blob/master/aws-ts-static-website/index.ts)
+With around [200 lines of code](https://github.com/pulumi/examples/blob/master/aws-ts-static-website/index.ts)
 we were able to integrate four different AWS products using Pulumi to
 host a static website, served over HTTPS and from a world-wide CDN. Of
 course there are other ways to host static websites too, and some
@@ -206,6 +201,3 @@ sorts of things people build using it. If you are interested in using
 Pulumi for more sophisticated website hosting, or just have questions
 about serving static files like described here, feel free to ask away on
 our [Pulumi Community Slack](http://slack.pulumi.io/).
-
- 
-

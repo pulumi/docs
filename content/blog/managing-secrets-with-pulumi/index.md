@@ -1,12 +1,11 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
----
+title: "Managing Secrets with Pulumi"
+authors: ["matt-ellis"]
+tags: ["Infrastructure-as-Code", "New-Features"]
+date: "2019-05-17"
 
+summary: "We recently added two new features that provide you with complete control over how secrets are managed within Pulumi deployments."
+---
 
 We've had a 1st class concept of encrypted secrets configuration ever
 since first releasing Pulumi. Customers have told us they love having
@@ -19,12 +18,12 @@ within their Pulumi deployments.
 To support this, we've added two new features to Pulumi in our latest
 0.17.12 release:
 
--   Automatic tracking of secret values throughout a Pulumi program to
-    ensure that all such values are always encrypted in the resulting
-    state, no matter how they are used.
--   A new option to use custom client-side encryption, instead of the
-    default of using the Pulumi backend for encryption, to have full
-    control over the secrets encryption and decryption.
+- Automatic tracking of secret values throughout a Pulumi program to
+  ensure that all such values are always encrypted in the resulting
+  state, no matter how they are used.
+- A new option to use custom client-side encryption, instead of the
+  default of using the Pulumi backend for encryption, to have full
+  control over the secrets encryption and decryption.
 
 Together, these features provide you with complete control over how
 secrets are managed within Pulumi deployments. We have worked with
@@ -32,8 +31,7 @@ customers with advanced security and compliance needs while developing
 this feature, enabling them to use our online hosted SaaS with even
 greater confidence.
 
-Secrets and State
-------------------------------------------
+## Secrets and State
 
 Like many infrastructure as code systems, Pulumi uses a state file to
 describe the current state of your infrastructure. When you run
@@ -58,8 +56,7 @@ ensure that secret values are encrypted in the state file. This means
 you can use secrets confidently without worrying about accidentally
 leaking plain text values. Let's take a look at how it works!
 
-`Output` and Secrets
-----------------------------------------------
+## `Output` and Secrets
 
 To start, let's talk a bit about `Output`, one of the centerpieces of
 the Pulumi programming model. `Output<T>` ties together a value (which
@@ -200,14 +197,12 @@ of other property names you want treated as secrets including computed
 output properties of a resource which might be sensitive, like generated
 passwords or access credentials.
 
-Configuring your secrets provider
----------------------------------------------------------------------------
+## Configuring your secrets provider
 
 You might be wondering how these values are actually encrypted. We use
 the same encryption that we have always used for our configuration
 system. This means when storing state with
-[pulumi.com](http://pulumi.com), we use a key managed by the
-[pulumi.com](http://pulumi.com) service, specific to your stack, to
+<app.pulumi.com>, we use a key managed by the <app.pulumi.com> service, specific to your stack, to
 encrypt everything. Some users have asked for more control over what key
 is used (and the ability to use a key not managed by Pulumi at all!)
 
@@ -263,16 +258,15 @@ see that the structure of the ciphertext has changed:
 The change is because we are no longer using the Pulumi service to
 encrypt or decrypt this data, instead the encryption and decryption
 happens locally, the data never leaves your machine. So while I get to
-continue to use [pulumi.com](http://pulumi.com) to store state for my
+continue to use <app.pulumi.com> to store state for my
 stack, I don't have to worry about my secrets being encrypted with a key
 managed by a third party.
 
 Support for changing the secrets provider for an existing stack is on
 its way. To track progress on this feature, please see GitHub issue
-[#481](https://github.com/pulumi/pulumi/issues/481).
+[pulumi/pulumi#481](https://github.com/pulumi/pulumi/issues/481).
 
-What's Next
------------
+## What's Next
 
 In addition to passphrase based encryption, we plan to add support for
 encrypting using AWS KMS, Azure KeyVault and GCP KMS in the coming
@@ -284,5 +278,4 @@ With these two new features, Pulumi users gain full control over how
 their secrets are managed, but without sacrificing usability and
 productivity. We're excited for you all to start playing around with it!
 Pulumi is open source, free to use, and works today with variety of
-clouds - [check it out](https://pulumi.io/).
-
+clouds. Try it today!

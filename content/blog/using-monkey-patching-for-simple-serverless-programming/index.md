@@ -1,13 +1,13 @@
 ---
 title: "Serverless on AWS with Pulumi: simple, event-based functions"
 authors: ["cyrus-najmabadi"]
-tags: ["JavaScript", "serverless", "AWS"]
+tags: ["AWS/Lambda/Fargate", "Infrastructure-as-Code"]
 date: "2019-01-14"
 
-summary: "How to make serverless programming on AWS simple with Pulumi using the regular programming languages. "
+summary: "How to make serverless programming on AWS simple with Pulumi using the regular programming languages."
 ---
 
-One of [Pulumi's](https://pulumi.io) goals from the very beginning was
+One of [Pulumi's](/) goals from the very beginning was
 to be able to deliver a way to create cloud infrastructure with the real
 programming languages that you are already using today. We believe that
 the existing constructs already present in these langauges, like flow
@@ -20,7 +20,7 @@ api surface area into classes corresponding to resources you could
 create. Using the earliest version of the "@pulumi/aws" api, you could
 then create those resources using normal program flow logic like so:
 
-{{< highlight javascript >}}
+```javascript
 // simplified for brevity
 
 import * as aws from "@pulumi/aws";
@@ -59,22 +59,21 @@ const notification = new aws.s3.BucketNotification("onAnyObjectCreated", {
         lambdaFunctionArn: lambda.arn,
     }],
 })
-{{< /highlight >}}
+```
 
-Phew... that's a lot of code :-/ But it accurately conveys all the real
+Phew... that's a lot of code `:-/` But it accurately conveys all the real
 AWS resources that need to be created in order to get this all working.
 While this was feasible for people to do (and is what you often have to
 do when manually creating infrastructure yourself), we thought this was
 too much for someone to have to do all the time. It just didn't feel
 very idiomatic or appropriate for how people would expect things to work
 in their programming language of choice. So, to help address this
-problem, we turned to [Monkey
-Patching](https://en.wikipedia.org/wiki/Monkey_patch) to dynamically add
+problem, we turned to [Monkey Patching](https://en.wikipedia.org/wiki/Monkey_patch) to dynamically add
 intuitive functionality to these Resource classes to make them easier to
 use. Before discussing how that was done, let's first see what the
 result of that patching now allows you to write instead:
 
-{{< highlight javascript >}}
+```javascript
 import * as aws from "@pulumi/aws";
 import * as slack from "@slack/client";
 
@@ -91,9 +90,9 @@ bucket.onObjectCreated("postToSlack", async (e) => {
     await client.chat.postMessage({ ... });
     }
 });
-{{< /highlight >}}
+```
 
-That's it! :-) No need to manually create Lamdbas or Permissions or
+That's it! `:-)` No need to manually create Lamdbas or Permissions or
 BucketNotification. No need to explicitly configure settings for common
 types of operations (like explicitly specifying `events`, or having to
 pass along `arns`). `bucket.onObjectCreated` now feels like a natural,
@@ -106,13 +105,12 @@ configure the AWS Lambda that is created for you in some way, that
 capability is still available to you.
 
 So, how does this work? Well, it turns out that both JavaScript and
-TypeScript have great built-in support for [Monkey
-Patching](https://en.wikipedia.org/wiki/Monkey_patch). At the JavaScript
+TypeScript have great built-in support for [Monkey Patching](https://en.wikipedia.org/wiki/Monkey_patch). At the JavaScript
 level, adding more functionality to a type is trivial, just by
 augmenting the `prototype` chain. We do that simply just with code like
 so:
 
-{{< highlight javascript >}}
+```javascript
 Bucket.prototype.onObjectCreated = function (this: Bucket, name, handler, args, opts) {
     args = args || {};
     args.event = args.event || "*";
@@ -125,7 +123,7 @@ Bucket.prototype.onObjectCreated = function (this: Bucket, name, handler, args, 
 
     return this.onEvent(name, handler, argsCopy, opts);
 }
-{{< /highlight >}}
+```
 
 Here you can see how we've added the `onObjectCreated` method to
 `Bucket`'s `prototype` so that it will be available on all instances of
@@ -137,7 +135,7 @@ available at runtime. We also need to update the type-definition for
 function is now available. This fortunately also simple, and all we have
 to do is the following:
 
-{{< highlight typescript >}}
+```javascript
 declare module "./bucket" {
     interface Bucket {
         /** * Creates a new subscription to events fired from this Bucket to the handler provided, * along with options to control the behavior of the subscription. The handler will be * called whenever a matching [s3.Object] is created. */
@@ -146,23 +144,21 @@ declare module "./bucket" {
             args?: ObjectCreatedSubscriptionArgs,
             opts?: pulumi.ComponentResourceOptions): BucketEventSubscription;
         // ...
-{{< /highlight >}}
+```
 
-You can see the [full patching
-here](https://github.com/pulumi/pulumi-aws/blob/71f11fdea5c7224dd93b774c450d6fc7f0d44b88/sdk/nodejs/s3/s3Mixins.ts#L210-L253).
+You can see the [full patching here](https://github.com/pulumi/pulumi-aws/blob/71f11fdea5c7224dd93b774c450d6fc7f0d44b88/sdk/nodejs/s3/s3Mixins.ts#L210-L253).
 
 This is a way to tell TypeScript that you intend to add a function to a
 type later on yourself. This information will be merged into the type
 information TypeScript has already built for the `Bucket` type.
 Downstream consumers will then see the type with all its normal members
 along with these additional members we've added after the fact. You can
-read more about this in the [Declaration
-Merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html)
+read more about this in the [Declaration Merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html)
 documentation for TypeScript.
 
 And there you have it. A simple way to take a complex set of steps and
 more cleanly expose it in a programming language in a way that will feel
-more natural and intuitive. Hopefully this gives a good taste of [what's
-possible with Pulumi](https://pulumi.io) and why we feel like this is
+more natural and intuitive. Hopefully this gives a good taste of what's possible with Pulumi
+and why we feel like this is
 the best way for people to create and update their cloud infrastructure
 using real programming languages!

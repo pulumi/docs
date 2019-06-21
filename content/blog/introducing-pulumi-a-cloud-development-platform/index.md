@@ -1,18 +1,16 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
----
+title: "Introducing Pulumi, a Cloud Development Platform"
+authors: ["joe-duffy"]
+tags: ["Pulumi"]
+date: "2018-06-18"
 
+summary: "Ahoy! Today we are thrilled to be announcing the launch of Pulumi, the Cloud Development Platform."
+---
 
 Ahoy!
 
-Today [we
-launched](https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster)
-[Pulumi](https://pulumi.io), an open source cloud development platform,
+Today [we launched](https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster)
+[Pulumi](/), an open source cloud development platform,
 providing the cloud's first true programming model using real
 programming languages.
 
@@ -34,12 +32,8 @@ best practices within teams and the community.
 
 We started on Pulumi a little over a year ago, have built an incredible
 team, and I'm thrilled to announce its availability.  Download or learn
-more at **<https://pulumi.io/>**, or read more background on Pulumi's
-motivation and world-view **[over on my personal
-blog](http://joeduffyblog.com/2018/06/18/hello-pulumi)**.
+more [here]({{< ref "/docs" >}}), or read more background on Pulumi's
+motivation and world-view **[over on my personal blog](http://joeduffyblog.com/2018/06/18/hello-pulumi)**.
 
-[The team can't wait to see all the incredible things you will build
-using Pulumi.]{style="font-weight: 400;"}
-
- 
-
+The team can't wait to see all the incredible things you will build
+using Pulumi.

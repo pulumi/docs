@@ -1,15 +1,14 @@
 ---
 title: "Get Started with Docker on AWS Fargate using Pulumi"
 authors: ["joe-duffy"]
-tags: ["todo"]
+tags: ["AWS", "Infrastructure-as-Code", "AWS/Lambda/Fargate"]
 date: "2019-04-30"
 
-description: "TODO: Put in a reasonable summary"
+summary: "Build and publish a Docker image to a private registry and spin up an AWS Fargate service, with just 28 lines of Node.js and a single `pulumi up` command."
+meta_image: "RELATIVE_TO_PAGE/docker-fargate-history.png"
 ---
 
-
-The [Docker Getting Started
-tutorial](https://docs.docker.com/get-started/) shows how to develop,
+The [Docker Getting Started tutorial](https://docs.docker.com/get-started/) shows how to develop,
 build, and run a modern containerized application, from a single custom
 Docker container published to the Docker Hub, to a scaled out service
 with load balancing. But there are challenges: it requires you to
@@ -22,8 +21,7 @@ code and a single `pulumi up` command. The result leverages the best of
 what AWS has to offer, with the entire platform at your fingertips, with
 a single approach. In this article, we'll see how.
 
-Defining Everything in Code
----------------------------
+## Defining Everything in Code
 
 The Docker Getting Started tutorial goes from a simple developer desktop
 scenario to a fully scaled out service in production. There is a lot of
@@ -38,13 +36,13 @@ in the AWS platform, natively?
 In fact, we can. This article will show you how Pulumi's infrastructure
 as code solution enables exactly this.
 
-> [***Note: **Everything we're about to define will be in a single
+> ***Note:** Everything we're about to define will be in a single
 > TypeScript file, `index.ts`. Other languages are available, including
 > using plain Node.js JavaScript. Pulumi also supports other clouds,
 > including Azure and GCP, however to fully exploit the power of the
 > underlying AWS platform, these examples will leverage native
 > capabilities like VPCs, ALBs, and
-> Fargate.*]{style="background-color: #fefefe; color: #444444;"}
+> Fargate.
 
 To cut to the chase, here is the entire program. We'll spend the rest of
 the post walking through it line by line:
@@ -79,29 +77,25 @@ the post walking through it line by line:
     // Step 5: Export the Internet address for the service.
     export const url = web.endpoint.hostname;
 
-Step 1. Create a Cluster
-------------------------
+## Step 1. Create a Cluster
 
-The opening stanza imports Pulumi's [open source AWSX NPM
-package](https://github.com/pulumi/pulumi-awsx), `@pulumi/awsx`. It
+The opening stanza imports Pulumi's
+[open source AWSX NPM package]({{< ref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}), `@pulumi/awsx`. It
 contains high level AWS best practices and patterns, and leverages real
 languages to eliminate boilerplate YAML templating:
 
     import * as awsx from "@pulumi/awsx";
 
-To provision an entire [Elastic Container Service
-(ECS)](https://aws.amazon.com/ecs/) cluster, AWS's native container
+To provision an entire [Elastic Container Service (ECS)](https://aws.amazon.com/ecs/) cluster, AWS's native container
 orchestration technology, we just new one up in a single line of code:
 
     const cluster = new awsx.ecs.Cluster("cluster");
 
-This will use the default [Virtual Private Cloud
-(VPC)](https://aws.amazon.com/vpc/) in our account. If we want to
+This will use the default [Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/) in our account. If we want to
 customize this aspect along with the auto-scaling policies, we can
 easily override the defaults by passing the appropriate arguments.
 
-Step 2. Define the Networking
------------------------------
+## Step 2. Define the Networking
 
 Next we need to think about the networking for our desired application.
 First, we will need a load balancer, as we're going to create a
@@ -113,18 +107,15 @@ these two lines:
         "net-lb", { external: true, securityGroups: cluster.securityGroups });
     const web = lb.createListener("web", { port: 80, external: true });
 
-An [Elastic Application Load Balancer
-(ALB)](https://aws.amazon.com/elasticloadbalancing/) in AWS is a [fully
-featured Layer 7 load
-balancer](https://aws.amazon.com/blogs/aws/new-aws-application-load-balancer/),
+An [Elastic Application Load Balancer (ALB)](https://aws.amazon.com/elasticloadbalancing/) in AWS is a
+[fully featured Layer 7 load balancer](https://aws.amazon.com/blogs/aws/new-aws-application-load-balancer/),
 with advanced features around SSL termination, content based routing,
 and HTTP/2. The AWSX package enables you to whip together simple routing
 when appropriate, while still having the ability to dig deeper into the
 advanced capabilities as you scale your workload to handle more
 sophisticated scenarios. Simple things simple, hard things possible!
 
-Step 3. Build and Publish the Container Image
----------------------------------------------
+## Step 3. Build and Publish the Container Image
 
 The next line declares a Docker image:
 
@@ -133,8 +124,7 @@ The next line declares a Docker image:
 This single line is quite the work horse, and does a lot. Let's unpack
 it a bit.
 
-First and foremost, this allocates a private [Elastic Container
-Registry](https://aws.amazon.com/ecr/) (ECR) repository for your Docker
+First and foremost, this allocates a private [Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/) repository for your Docker
 image. This is AWS's hosted Docker registry solution, privately
 encapsulated inside your AWS account.
 
@@ -144,16 +134,13 @@ and publishes the result to said registry, each time you run
 command line to both provision and update your infrastructure, in
 addition to publishing and rolling out your images.
 
-Step 4. Create a Scale-Out Service
-----------------------------------
+## Step 4. Create a Scale-Out Service
 
 Next up, let's deploy our published image as a containerized service,
-behind our load balanced network on port 80, using our [ECS
-Fargate](https://aws.amazon.com/fargate/) cluster. Fargate is a managed
+behind our load balanced network on port 80, using our [ECS Fargate](https://aws.amazon.com/fargate/) cluster. Fargate is a managed
 container orchestrator that lets us skip the messy details of installing
-and managing Swarm on our own. This effectively replaces [the
-**docker-compose.yml** from the Docker Getting Started
-tutorial](https://docs.docker.com/get-started/part3/), with a similarly
+and managing Swarm on our own. This effectively replaces
+[the **docker-compose.yml** from the Docker Getting Started tutorial](https://docs.docker.com/get-started/part3/), with a similarly
 simple sequence of code, and which gives us full access to the AWS
 platform:
 
@@ -174,11 +161,10 @@ Notice that `img` just refers to the Docker image built in Step 3, and
 the `portMappings` structure references our load balancer's listener
 defined in Step 2. Pulumi tracks all the dependencies so that it knows
 how to perform deployment activities in the right order. The task
-definition structure here exposes [all of the underlying AWS ECS
-capabilities](https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-task-defs.html).
+definition structure here exposes
+[all of the underlying AWS ECS capabilities](https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-task-defs.html).
 
-Step 5. Deploy the App and Kick the Tires!
-------------------------------------------
+## Step 5. Deploy the App and Kick the Tires!
 
 On to the final step! Let's deploy our infrastructure and application,
 and kick the tires.
@@ -193,9 +179,7 @@ code above, we can simply run `pulumi up`; this command will show us a
 preview of the changes it will make and then, once confirmed, deploy
 everything to our AWS account, and hand back our service's hostname:
 
-![DockerFargateCLI](https://blog.pulumi.com/hs-fs/hubfs/DockerFargateCLI.png?width=800&name=DockerFargateCLI.png){width="800"
-sizes="(max-width: 800px) 100vw, 800px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/DockerFargateCLI.png?width=400&name=DockerFargateCLI.png 400w, https://blog.pulumi.com/hs-fs/hubfs/DockerFargateCLI.png?width=800&name=DockerFargateCLI.png 800w, https://blog.pulumi.com/hs-fs/hubfs/DockerFargateCLI.png?width=1200&name=DockerFargateCLI.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/DockerFargateCLI.png?width=1600&name=DockerFargateCLI.png 1600w, https://blog.pulumi.com/hs-fs/hubfs/DockerFargateCLI.png?width=2000&name=DockerFargateCLI.png 2000w, https://blog.pulumi.com/hs-fs/hubfs/DockerFargateCLI.png?width=2400&name=DockerFargateCLI.png 2400w"}
+![DockerFargateCLI](./docker-fargate-cli.png)
 
 After deploying everything, you've got a fully functioning application.
 To give it a try, let's grab the URL exported by our program from the
@@ -210,24 +194,20 @@ Or open it in our web browser:
 
     $ open http://$(pulumi stack output url)
 
-![DockerFargateBrowser](https://blog.pulumi.com/hs-fs/hubfs/DockerFargateBrowser.png?width=600&name=DockerFargateBrowser.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/DockerFargateBrowser.png?width=300&name=DockerFargateBrowser.png 300w, https://blog.pulumi.com/hs-fs/hubfs/DockerFargateBrowser.png?width=600&name=DockerFargateBrowser.png 600w, https://blog.pulumi.com/hs-fs/hubfs/DockerFargateBrowser.png?width=900&name=DockerFargateBrowser.png 900w, https://blog.pulumi.com/hs-fs/hubfs/DockerFargateBrowser.png?width=1200&name=DockerFargateBrowser.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/DockerFargateBrowser.png?width=1500&name=DockerFargateBrowser.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/DockerFargateBrowser.png?width=1800&name=DockerFargateBrowser.png 1800w"}For
-more details on how to enable Redis and other advanced options for this
-sample application, please [see the instructions on the Docker Getting
-Started guide](https://docs.docker.com/get-started/part6/).
+![DockerFargateBrowser](./docker-fargate-browser.png)
+
+For more details on how to enable Redis and other advanced options for this
+sample application, please
+[see the instructions on the Docker Getting Started guide](https://docs.docker.com/get-started/part6/).
 
 As an added bonus, the entire time we are doing these deployments, the
 Pulumi Service is keeping track of deployment state, to ensure
 everything works reliably and in a team setting, similar to how Git
 works with GitHub. For example, I can see a history of my deployments:
 
-![DockerFargateHistory](https://blog.pulumi.com/hs-fs/hubfs/DockerFargateHistory.png?width=800&name=DockerFargateHistory.png){width="800"
-sizes="(max-width: 800px) 100vw, 800px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/DockerFargateHistory.png?width=400&name=DockerFargateHistory.png 400w, https://blog.pulumi.com/hs-fs/hubfs/DockerFargateHistory.png?width=800&name=DockerFargateHistory.png 800w, https://blog.pulumi.com/hs-fs/hubfs/DockerFargateHistory.png?width=1200&name=DockerFargateHistory.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/DockerFargateHistory.png?width=1600&name=DockerFargateHistory.png 1600w, https://blog.pulumi.com/hs-fs/hubfs/DockerFargateHistory.png?width=2000&name=DockerFargateHistory.png 2000w, https://blog.pulumi.com/hs-fs/hubfs/DockerFargateHistory.png?width=2400&name=DockerFargateHistory.png 2400w"}
+![DockerFargateHistory](./docker-fargate-history.png)
 
-Congratulations!
-----------------
+## Congratulations!
 
 In this article, you've seen how to take 28 lines of code, and turn
 them, plus a Dockerfile, into a fully functioning AWS microservice,
@@ -238,10 +218,9 @@ installation.
 Pulumi's "everything is code" approach means deploying everything can be
 done with a CLI command, unlocking the power of the entire Docker
 platform with a great inner development loop, that works from the
-desktop all the way to production. This entire flow can be [easily
-integrated into your favorite CI/CD
-pipeline](https://pulumi.io/reference/cd.html), including GitOps
-workflows.
+desktop all the way to production. This entire flow can be
+[easily integrated into your favorite CI/CD pipeline]({{< ref "/docs/reference/cd" >}}),
+including GitOps workflows.
 
 If we want to augment our service with other AWS resources -- like S3
 buckets, Aurora or RDS databases, Lambda functions, CloudWatch
@@ -253,8 +232,5 @@ but also Azure and GCP cloud providers, in addition to Kubernetes!
 
 Want to go deeper?
 
--   [Check our this example on
-    GitHub.](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate)
--   [Get Started with your favorite cloud and scenario
-    now.](https://pulumi.io/quickstart)
-
+- [Check out this example on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate)
+- [Get Started with your favorite cloud and scenario now]({{< ref "/docs/quickstart" >}})

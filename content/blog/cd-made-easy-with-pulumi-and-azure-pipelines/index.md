@@ -1,13 +1,15 @@
 ---
 title: "CI/CD Made Easy with Pulumi and Azure Pipelines"
 authors: ["praneet-loke"]
-tags: ["Azure", "CI/CD"]
+tags: ["Azure", "CI/CD", "New-Features"]
 date: "2019-05-06"
 
-description: "Announcing a new open-source extension to Azure Pipelines. You can now use Pulumi in your Azure Pipelines workflows."
+summary: "Announcing a new open-source extension to Azure Pipelines!
+Use the Pulumi task in your Azure Pipelines build/release definitions without the need for custom scripts."
+meta_image: "RELATIVE_TO_PAGE/add-pulumi.png"
 ---
 
-[Azure DevOps is very popular among teams that want a single place to
+Azure DevOps is very popular among teams that want a single place to
 manage their development pipelines, Git repositories, builds, releases,
 and test plans. Pulumi's open-source tools are a great choice for
 developers and operators deploying infrastructure as code on Azure. With
@@ -17,7 +19,7 @@ infrastructure is just a few steps away for you and your teams. 
 To make it easy to use Pulumi with Azure, we are announcing an
 open-source task extension for Azure Pipelines! The task extension will
 manage the installation of the Pulumi CLI, and run the [Pulumi
-commands](https://pulumi.io/reference/commands.html) you specify against
+commands]({{ ref "/docs/reference/commands" >}}) you specify against
 your stack.
 
 You can install the task extension directly from the [Visual Studio
@@ -33,12 +35,10 @@ To use the Pulumi task extension in Azure Pipelines, there are two
 options. The
 full [example](https://github.com/pulumi/pulumi-az-pipelines-task/tree/master/examples) is
 in the source repo. For contrast, without this task extension,
-[here's](https://pulumi.io/reference/cd-azure-devops.html#using-scripts-manual-approach) how
+[here's]({{< ref "/docs/reference/cd-azure-devops#using-scripts-manual-approach" >}}) how
 you would achieve the same, but with scripts.
-]{#hs_cos_wrapper_post_body .hs_cos_wrapper .hs_cos_wrapper_meta_field
 
-OPTION 1: Using the Classic Editor Console {#aNIACA1C00o}
-------------------------------------------
+## OPTION 1: Using the Classic Editor Console
 
 Pasted below is a typical view of the Editor User Interface. Click on
 the **"+"** button next to the job. As visible in the screenshot, the
@@ -46,6 +46,46 @@ job is called **"Agent job 1"**. The agent pool you choose does not
 matter. The Pulumi task can run on both Linux as well as Windows
 images.
 
+![classic editor console](./classic-editor-console.png)
 
-::: {section-style="11" style="max-width: 100%;"}
-![](https://quip.com/blob/aNIAAAb1O8e/xOwBXoso6iLooC1l5K5AaQ?a=vzdcNmORxglaR1DXB06AH8abt22mViudVkPg67D2zdYa){#aNIACAfCLLX}
+Search for the **Pulumi** task by typing in the filter input on the right. Click the **Add** button.
+
+![add Pulumi](./add-pulumi.png)
+
+Fill in the required information. You can learn about creating service connections for Azure
+[here](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops).
+
+![configuration](./configuration.png)
+
+If you want to understand all the commands available with the Pulumi CLI, click on the information icon (**i**)
+next to **Pulumi Command**, and click on the help link to go to our quick reference page.
+
+![output](./output.png)
+
+## Option 2: Using a YAML File
+
+Here's an example of the Pulumi task extension defined in YAML configuration.
+
+```yaml
+- task: Pulumi@0
+    inputs:
+      azureSubscription: '<your-service-connection-name>'
+      command: "up"
+      args: "--yes --skip-preview"
+      cwd: "./"
+      # Replace this with your org's name.
+      stack: "<org-name>/pulumi-az-pipelines-task-example/dev"
+```
+
+## Moving to Production 
+
+Once you've configured your Pulumi task extensions for your Azure Pipelines, you can now more
+easily integrate Pulumi into your CI/CD pipeline, and take advantage of previews to infrastructure
+changes in pull requests, push-to-deploy, and ultimately removing the friction for your DevOps. 
+
+As always, we'd love to hear what you think. Say 👋 in the [Pulumi Community Slack](https://slack.pulumi.io)
+or [drop us a line]({{< ref "/contact" >}}).
+
+Want to learn more? Check out [this post from Mikhail Shilkov]({{< relref "level-up-your-azure-platform-as-a-service-applications-with-pulumi" >}})
+for a detailed look at deploying applications on Azure with Pulumi.
+Also, keep an eye on our blog posts this week for more posts about Azure.

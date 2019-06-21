@@ -1,12 +1,13 @@
 ---
 title: "From Terraform to Infrastructure as Software"
 authors: ["pat-gavlin"]
-tags: ["todo"]
+tags: ["Terraform-Migration"]
 date: "2018-11-02"
 
-description: "TODO: Put in a reasonable summary"
+summary: "Learn how general purpose languages enable simpler, more flexible infrastructure as code.
+In this article we will convert existing Terraform configuration to Pulumi TypeScript."
+meta_image: "RELATIVE_TO_PAGE/tf-to-pulumi.png"
 ---
-
 
 Here at Pulumi, we love programming the cloud using infrastructure as
 code. From the project's outset, we've been inspired by technologies
@@ -29,12 +30,7 @@ server hosted by an AWS EC2 instance per availability zone with an
 option to allow SSH access. Of course, these same benefits would also
 accrue were we to target Azure, Google Cloud, or Kubernetes instead.
 
-![Tf12ToPulumi](https://blog.pulumi.com/hs-fs/hubfs/Tf12ToPulumi.png?width=1800&name=Tf12ToPulumi.png){width="1800"
-sizes="(max-width: 1800px) 100vw, 1800px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Tf12ToPulumi.png?width=900&name=Tf12ToPulumi.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Tf12ToPulumi.png?width=1800&name=Tf12ToPulumi.png 1800w, https://blog.pulumi.com/hs-fs/hubfs/Tf12ToPulumi.png?width=2700&name=Tf12ToPulumi.png 2700w, https://blog.pulumi.com/hs-fs/hubfs/Tf12ToPulumi.png?width=3600&name=Tf12ToPulumi.png 3600w, https://blog.pulumi.com/hs-fs/hubfs/Tf12ToPulumi.png?width=4500&name=Tf12ToPulumi.png 4500w, https://blog.pulumi.com/hs-fs/hubfs/Tf12ToPulumi.png?width=5400&name=Tf12ToPulumi.png 5400w"}
-
-Starting from Terraform Configuration
-=====================================
+## Starting from Terraform Configuration
 
 The Terraform configuration we'll be starting with is below. This
 configuration accepts a list of AZs and an optional public key as inputs
@@ -205,12 +201,10 @@ enabled) and the ELB URL:
 
 And that's it. This program provisions an EC2 VM per AZ in your region
 of choice, behind a load balancer, with conditional SSH enablement.The
-full code is [available
-here](https://gist.github.com/pgavlin/c09972d6e04e452250c86d10bd7ccd31#file-main-tf) if
+full code is [available here](https://gist.github.com/pgavlin/c09972d6e04e452250c86d10bd7ccd31#file-main-tf) if
 you'd like to see it in one place.
 
-Migrating to a General Purpose Language
-=======================================
+## Migrating to a General Purpose Language
 
 Now let's see how to migrate this program to using a general purpose
 language. There are several opportunities to simplify the program --
@@ -224,8 +218,8 @@ translation automatically for you. This is a great place to get started
 -- and from there we can then refactor the resulting program gradually
 to leverage languages better. 
 
-The first step is to create a Pulumi project. [Download Pulumi
-here](https://pulumi.io/quickstart/install.html), and then run:
+The first step is to create a Pulumi project.
+[Download Pulumi here]({{< ref "/docs/reference/install" >}}), and then run:
 
     $ pulumi new aws-typescript 
      -n webservers -d "Pulumi Web Servers" -g --dir pulumi
@@ -234,14 +228,13 @@ Run this from wherever your Terraform program resides. This will
 initialize and scaffold a minimal Pulumi TypeScript program targeting
 AWS in the pulumi subdirectory.
 
-We'll then
-[install `tf2pulumi`](https://github.com/pulumi/tf2pulumi#building-and-installation),
+We'll then [install `tf2pulumi`](https://github.com/pulumi/tf2pulumi#building-and-installation),
 and run it, to generate the Pulumi TypeScript program:
 
     $ tf2pulumi >pulumi/index.ts
 
-The full program created by this command can be [found
-here](https://gist.github.com/pgavlin/c09972d6e04e452250c86d10bd7ccd31#file-index-generated-ts).
+The full program created by this command can be
+[found here](https://gist.github.com/pgavlin/c09972d6e04e452250c86d10bd7ccd31#file-index-generated-ts).
 Notice that it looks structurally very similar to the Terraform HCL
 program above, except that it's written in TypeScript instead. Even this
 rote translation has benefits -- for example, open it in your favorite
@@ -269,18 +262,14 @@ the `us-west-2a`, `us-west-2b`, and `us-west-2c` availability zones in
 AWS's `us-west-2` region. `pulumi up `will then show you a plan and then
 let you confirm it to deploy your resources:
 
-![tf-pulumi-preview](https://blog.pulumi.com/hs-fs/hubfs/tf-pulumi-preview.png?width=906&name=tf-pulumi-preview.png){width="906"
-sizes="(max-width: 906px) 100vw, 906px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/tf-pulumi-preview.png?width=453&name=tf-pulumi-preview.png 453w, https://blog.pulumi.com/hs-fs/hubfs/tf-pulumi-preview.png?width=906&name=tf-pulumi-preview.png 906w, https://blog.pulumi.com/hs-fs/hubfs/tf-pulumi-preview.png?width=1359&name=tf-pulumi-preview.png 1359w, https://blog.pulumi.com/hs-fs/hubfs/tf-pulumi-preview.png?width=1812&name=tf-pulumi-preview.png 1812w, https://blog.pulumi.com/hs-fs/hubfs/tf-pulumi-preview.png?width=2265&name=tf-pulumi-preview.png 2265w, https://blog.pulumi.com/hs-fs/hubfs/tf-pulumi-preview.png?width=2718&name=tf-pulumi-preview.png 2718w"}
+![tf-pulumi-preview](./tf-pulumi-preview.png)
 
 After selecting "yes", the update will proceed with interactive status
 updates:
 
-![tf-pulumi-update](https://blog.pulumi.com/hs-fs/hubfs/tf-pulumi-update.png?width=919&name=tf-pulumi-update.png){width="919" sizes="(max-width: 919px) 100vw, 919px" srcset="https://blog.pulumi.com/hs-fs/hubfs/tf-pulumi-update.png?width=460&name=tf-pulumi-update.png 460w, https://blog.pulumi.com/hs-fs/hubfs/tf-pulumi-update.png?width=919&name=tf-pulumi-update.png 919w, https://blog.pulumi.com/hs-fs/hubfs/tf-pulumi-update.png?width=1379&name=tf-pulumi-update.png 1379w, https://blog.pulumi.com/hs-fs/hubfs/tf-pulumi-update.png?width=1838&name=tf-pulumi-update.png 1838w, https://blog.pulumi.com/hs-fs/hubfs/tf-pulumi-update.png?width=2298&name=tf-pulumi-update.png 2298w, https://blog.pulumi.com/hs-fs/hubfs/tf-pulumi-update.png?width=2757&name=tf-pulumi-update.png 2757w"}
-========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+![tf-pulumi-update](./tf-pulumi-update.png)
 
-Leveraging Programming Languages
-================================
+## Leveraging Programming Languages
 
 This is great -- we now have a working Pulumi program. Let's now go
 about simplifying the generated code so that it is easier to read,
@@ -452,16 +441,13 @@ module exports:
 And that's it. After doing this refactoring, you can simply
 run `pulumi up`, and it will show you any diffs compared to your
 previous deployment, which you can choose to accept and deploy. The full
-code is [available
-here](https://gist.github.com/pgavlin/c09972d6e04e452250c86d10bd7ccd31#file-index-ts).
+code is [available here](https://gist.github.com/pgavlin/c09972d6e04e452250c86d10bd7ccd31#file-index-ts).
 
-Next Steps
-==========
+## Next Steps
 
 In this post, we've applied general purpose programming languages to
 infrastructure as code to achieve more expressive and reusable programs,
 simplify our infrastructure's readability and maintainability, and
-deliver a heightened level of productivity. Pulumi is [open
-source](https://github.com/pulumi/pulumi) and free to use -- [give it a
-try today](https://pulumi.io)!
-
+deliver a heightened level of productivity. Pulumi is
+[open source](https://github.com/pulumi/pulumi) and free to use --
+give it a try today!

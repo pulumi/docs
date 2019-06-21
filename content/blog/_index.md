@@ -1,7 +1,8 @@
 ---
 title: "Pulumi Blog"
 authors: []
-description: ""
+tags: []
+summary: ""
 ---
 
 <!--

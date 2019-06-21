@@ -1,30 +1,30 @@
 ---
 title: "Creating and Reusing Cloud Components using Package Managers"
 authors: ["chris-smith"]
-tags: ["infrastructure"]
+tags: ["CI/CD"]
 date: "2018-08-09"
 
-description: "Walkthrough for creating reusable components using Pulumi and Package Managers."
+summary: "This post walks through how to create reusable components, so you can
+package Pulumi infrastructure as code as reusable packages with NPM, PyPi etc."
+meta_image: "RELATIVE_TO_PAGE/pulumi-resource-visualization.png"
 ---
 
 
-Hello! A few weeks back I [wrote a
-post](https://www.google.com/url?q=https://blog.pulumi.com/serving-a-static-website-on-aws-with-pulumi&sa=D&ust=1533859326035000) detailing
-how to host a static website on AWS. Pulumi allowed me to wire four
+Hello! A few weeks back I wrote
+a post on [serving static websites on AWS with Pulumi]{{< relref "serving-a-static-website-on-aws-with-pulumi" >}})
+detailing how to host a static website on AWS. Pulumi allowed me to wire four
 different AWS products together in only 200 lines of code. It would be a
 shame, however if I needed to copy and paste that code every time I
 wanted to to stand up a new website. Instead, we can package up, share,
 and reuse our code just like any other Node.js library. It just so
 happens that this one can be used to create cloud infrastructure.
 
-Creating a Package
--------------------------------------------
+## Creating a Package
 
 To create a reusable package for the static website example, I simply
-put the code into a new [GitHub
-repo](https://www.google.com/url?q=https://github.com/chrsmith/static-website-aws&sa=D&ust=1533859326036000) and
-[publish it to
-NPM](https://www.google.com/url?q=https://www.npmjs.com/package/static-website-aws&sa=D&ust=1533859326036000).
+put the code into a new
+[GitHub repo](https://github.com/chrsmith/static-website-aws) and
+[publish it to NPM](https://www.npmjs.com/package/static-website-aws).
 We'll walk through exactly how to do that below, but afterwards anyone
 who wants to stand up a static website on AWS can just reuse that
 package.
@@ -61,11 +61,12 @@ properties:
 This class is placed into an NPM package as usual, including a
 [package.json](https://github.com/chrsmith/static-website-aws/blob/master/package.json)
 file that gives it a name and a version. After doing this, we can
-[publish it to
-NPM](https://docs.npmjs.com/getting-started/publishing-npm-packages)
+[publish it to NPM](https://docs.npmjs.com/getting-started/publishing-npm-packages)
 simply by running
 
-`$ npm publish`
+```bash
+$ npm publish
+```
 
 All the complexities of creating, configuring, and wiring up the
 necessary AWS resources -- admittedly only 200 lines of code, but still
@@ -77,25 +78,31 @@ however, is that you define them once and then use them a lot. So now
 let's turn to see see how standing up a new CDN-backed website can now
 become just a few lines of very simple, understandable code.
 
-Reusing Infrastructure as Code
---------------------------------------------------------------------
+## Reusing Infrastructure as Code
 
-To use this new package, head on over to a Pulumi program, or [create a
-new one](https://pulumi.io/quickstart/) (for instance, with pulumi new
-aws-typescript ). Then just add a reference like any other dependency:
+To use this new package, head on over to a Pulumi program, or
+[create a new one]({{< ref "/docs/quickstart" >}})
+(for instance, with `pulumi new aws-typescript`).
+Then just add a reference like any other dependency:
 
-`$ npm install static-website-aws`
+```
+$ npm install static-website-aws
+```
 
 At that point, we can import our `StaticWebsite` class from the
 `static-website-aws` package like usual in Node.js programs, either
 using require
 
-`let swa = require("static-website-aws");`
+```
+let swa = require("static-website-aws");
+```
 
 or using the new ES6 module import syntax, supported by TypeScript and
 modern JavaScript
 
-`import { StaticWebsite } from "static-website-aws";`
+```
+import { StaticWebsite } from "static-website-aws";
+```
 
 Afterwards, we'll just `new` up a `StaticWebsite` object, which
 internally creates everything for us. Of course, to create a useful
@@ -116,20 +123,20 @@ addition to a path to a custom 404 HTML page:
 As soon as we have our program, we can stand it up with a single
 `pulumi up`  command:
 
-`$ pulumi up`
+```bash
+$ pulumi up
+```
 
 This will show us the entire resource graph so that we can see what it's
 creating internally and once it's done the resulting domain name will be
 printed out:
 
-![pulumi cli
-output](https://blog.pulumi.com/hs-fs/hubfs/image1.png?width=600&name=image1.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/image1.png?width=300&name=image1.png 300w, https://blog.pulumi.com/hs-fs/hubfs/image1.png?width=600&name=image1.png 600w, https://blog.pulumi.com/hs-fs/hubfs/image1.png?width=900&name=image1.png 900w, https://blog.pulumi.com/hs-fs/hubfs/image1.png?width=1200&name=image1.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/image1.png?width=1500&name=image1.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/image1.png?width=1800&name=image1.png 1800w"}
+![pulumi cli output](./pulumi-cli-output.png)
 
 Let's then curl it to see whether it worked:
 
-`$ curl $(pulumi stack output cloudfrontDomain)`[<!doctype html>
+```
+$ curl $(pulumi stack output cloudfrontDomain)`[<!doctype html>
 ]{style="color: red; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px;"}[<!--
 vim: set sw=2 ts=2 et : -->
 ]{style="color: red; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px;"}[<html>
@@ -138,24 +145,22 @@ vim: set sw=2 ts=2 et : -->
 ]{style="color: red; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px;"}[...
 etc, etc, etc
 ...]{style="color: red; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13px;"}
+```
 
-It worked! (Note that new CloudFront Domains can take a while to spin
+Huzzah! (Note that new CloudFront Domains can take a while to spin
 up; if you get an error "Could not resolve host: xxx.cloudfront.net",
 just wait a little bit and try again.)
 
 The full source code for this example is available at
 [chrsmith/browserhack-demo](https://github.com/chrsmith/browserhack-demo).
-This program deploys an instance of
-[BrowserHack](http://coolwanglu.github.io/BrowserHack/) (a web-based
-port of the seminal console game [NetHack](https://www.nethack.org/)).
+This program deploys an instance of [BrowserHack](http://coolwanglu.github.io/BrowserHack/)
+(a web-based port of the seminal console game [NetHack](https://www.nethack.org/)).
 The repo also includes an example of assigning a custom domain name and
-[ACM-managed SSL
-certificate](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html),
+[ACM-managed SSL certificate](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html),
 useful capabilities supported by `StaticWebsite` but omitted here for
 brevity .
 
-Resource Components
-----------------------------------------------
+## Resource Components
 
 We glossed over what components are earlier on. This is an advanced
 concept, so feel free to skip this section; but if you want to
@@ -196,16 +201,12 @@ first class resources out of smaller ones. There are other benefits,
 including seeing resource attribution in the CLI tree view, and the
 richer visualization in the [pulumi.com](http://pulumi.com) console:
 
-![pulumi app
-graph](https://blog.pulumi.com/hs-fs/hubfs/image2.png?width=600&name=image2.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/image2.png?width=300&name=image2.png 300w, https://blog.pulumi.com/hs-fs/hubfs/image2.png?width=600&name=image2.png 600w, https://blog.pulumi.com/hs-fs/hubfs/image2.png?width=900&name=image2.png 900w, https://blog.pulumi.com/hs-fs/hubfs/image2.png?width=1200&name=image2.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/image2.png?width=1500&name=image2.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/image2.png?width=1800&name=image2.png 1800w"}
+![pulumi app graph](./pulumi-resource-visualization.png)
 
 If you want to learn more about components, see the
-[documentation](https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/index.html%23ComponentResource).
+[documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/pulumi" >}}).
 
-Package Everything!
-----------------------------------------------
+## Package Everything!
 
 In this blog, you've seen how Pulumi's code-centric approach to
 infrastructure can make you more productive programming the cloud.
@@ -222,9 +223,8 @@ PyPI for Python, and traditional library techniques for Go.
 But don't just take our words for it. Recently Mikhail Shilkov
 [blogged](https://mikhail.io/2018/08/aws-lambda-warmer-as-pulumi-component/)
 about creating a Pulumi component to keep AWS Lambda functions warm. And
-James Nugent [open sourced a
-component](https://github.com/jen20/pulumi-aws-vpc) that creates a
-properly subnetted AWS VPC. This is a great way to encode and share best
+James Nugent [open sourced a component](https://github.com/jen20/pulumi-aws-vpc)
+that creates a properly subnetted AWS VPC. This is a great way to encode and share best
 practices broadly. Over time, we look forward to seeing the many other
 battle-tested components the community creates for common cloud
 applications and infrastructure needs.
@@ -232,4 +232,3 @@ applications and infrastructure needs.
 If you've created a Pulumi component that is useful or want some design
 advice, come and join us in the [Pulumi Community
 Slack](https://slack.pulumi.io/) -- we'd love to hear from you!
-

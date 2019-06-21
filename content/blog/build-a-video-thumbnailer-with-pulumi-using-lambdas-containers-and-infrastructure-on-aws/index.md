@@ -1,12 +1,12 @@
 ---
 title: "Build a Video Thumbnailer with Pulumi using Lambdas, Containers, and Infrastructure on AWS"
 authors: ["donna-malayeri"]
-tags: ["serverless", "AWS"]
-date: "2018-06-18"
+tags: ["AWS", "AWS/Lambda/Fargate"]
+date: "2018-06-21"
 
-description: "TODO: Put in a reasonable summary"
+summary: "Code a 'Colada' app using Containers, Lambdas, and Data Infrastructure using Pulumi in just 38 lines of code with Pulumi. Then deploy to AWS."
+meta_image: "RELATIVE_TO_PAGE/video-thumbnail-diagram.png"
 ---
-
 
 Pulumi makes it easy to build cloud applications that use a combination
 of containers, lambdas, and connected data services and infrastructure:
@@ -28,15 +28,9 @@ process](https://serverless.com/blog/serverless-application-for-long-running-pro
 Let's see how a similar app would be implemented in Pulumi entirely in
 code. 
 
- 
+![video-thumbnail-diagram](./video-thumbnail-diagram.png)
 
-![video-thumbnail-diagram](https://blog.pulumi.com/hs-fs/hubfs/Blog/video-thumbnail-diagram.png?width=600&name=video-thumbnail-diagram.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/video-thumbnail-diagram.png?width=300&name=video-thumbnail-diagram.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/video-thumbnail-diagram.png?width=600&name=video-thumbnail-diagram.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/video-thumbnail-diagram.png?width=900&name=video-thumbnail-diagram.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/video-thumbnail-diagram.png?width=1200&name=video-thumbnail-diagram.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/video-thumbnail-diagram.png?width=1500&name=video-thumbnail-diagram.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/video-thumbnail-diagram.png?width=1800&name=video-thumbnail-diagram.png 1800w"}
-
- 
-
-[Setup]{style="font-family: Ubuntu, sans-serif; font-size: 30px;"}
+## Setup
 
 If this is your first time using Pulumi, go
 to [https://app.pulumi.com](https://app.pulumi.com/) and sign in with
@@ -52,7 +46,7 @@ If you're on Windows, run this:
     SET "PATH=%PATH%;%USERPROFILE%.pulumiin"
 
 You'll deploy this app to your own AWS account, so follow the steps
-to [configure your AWS account](https://pulumi.io/install/aws.html).
+to [configure your AWS account]({{< ref "/docs/reference/clouds/aws/setup.md" >}}).
 
 Make sure you have [Node.js](https://nodejs.org/en/download/) installed,
 with a version of 6.10.x or later.
@@ -60,23 +54,19 @@ with a version of 6.10.x or later.
 Finally, make sure [Docker](https://docs.docker.com/install/) is
 installed and running.
 
-[Create the
-app]{style="font-family: Ubuntu, sans-serif; font-size: 30px;"}
+## Create the App
 
 We'll create a Pulumi project, define the infrastructure and app code
 in JavaScript, and create a Dockerfile for the Fargate task.
 
-1. To create a new Pulumi project, run the following commands:
+First, to create a new Pulumi project, run the following commands:
 
     mkdir hello-colada && cd hello-colada
     pulumi new aws-javascript
 
 This creates a new project in the `hello-colada` directory.
 
-2. Replace the contents
-of[ ]{style="font-family: 'Open Sans', sans-serif; font-size: 16px;"}`index.js`[ ]{style="font-family: 'Open Sans', sans-serif; font-size: 16px;"}[with
-the
-following:]{style="font-family: 'Open Sans', sans-serif; font-size: 16px;"}
+ Second, replace the contents of `index.js` with the following:
 
         const cloud = require("@pulumi/cloud-aws");
 
@@ -125,7 +115,7 @@ Docker image to the provisioned ECR instance. It also defines an ECS
 task and configures it to use the built image. All this in just 4 lines
 of code!
 
-3. In the same directory, create a `Dockerfile` with the following
+Next, in the same directory, create a `Dockerfile` with the following
 contents. We'll use an existing FFmpeg container and install the AWS
 CLI. When the container is started, it copies the video file from S3,
 runs `ffmpeg`, and copies the output back to S3.
@@ -148,12 +138,11 @@ runs `ffmpeg`, and copies the output back to S3.
           echo "Copying thumbnail to S3" && 
           aws s3 cp ./${OUTPUT_FILE} s3://${S3_BUCKET}/${OUTPUT_FILE}
 
-4. Install the `@pulumi/cloud-aws` [NPM
-package:]{style="font-family: 'Open Sans', sans-serif; font-size: 16px;"}
+Install the `@pulumi/cloud-aws` NPM package:
 
     $ npm install --save @pulumi/cloud-aws @pulumi/cloud
 
-5. Finally, configure Pulumi to use AWS Fargate. Note that, currently,
+Finally, configure Pulumi to use AWS Fargate. Note that, currently,
 Fargate is available only in `us-east-1`, `us-east-2`, `us-west-2`,
 and `eu-west-1`.
 
@@ -161,8 +150,7 @@ and `eu-west-1`.
 
 That's it! Now, let's deploy the app.
 
-[Deploy the
-app]{style="font-family: Ubuntu, sans-serif; font-size: 30px;"}
+## Deploy the App
 
 To deploy both the infrastructure and app code, we'll
 run `pulumi update`. This command first shows a preview of all the
@@ -175,32 +163,19 @@ repository in ECR, builds the Docker container, and places the image in
 the repository. This all happens automatically and does not require
 manual configuration on your part.
 
-![pulumi-update-output](https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-output.png?width=700&name=pulumi-update-output.png){width="700"
-sizes="(max-width: 700px) 100vw, 700px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-output.png?width=350&name=pulumi-update-output.png 350w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-output.png?width=700&name=pulumi-update-output.png 700w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-output.png?width=1050&name=pulumi-update-output.png 1050w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-output.png?width=1400&name=pulumi-update-output.png 1400w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-output.png?width=1750&name=pulumi-update-output.png 1750w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-output.png?width=2100&name=pulumi-update-output.png 2100w"}
-
- 
+![pulumi-update-output](./pulumi-update-output.png)
 
 At the end of the update, you'll see a link to the Pulumi Console that
 shows the details of the deployment.
 
-![pulumi-update-complete-1](https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-complete-1.png?width=700&name=pulumi-update-complete-1.png){width="700"
-sizes="(max-width: 700px) 100vw, 700px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-complete-1.png?width=350&name=pulumi-update-complete-1.png 350w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-complete-1.png?width=700&name=pulumi-update-complete-1.png 700w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-complete-1.png?width=1050&name=pulumi-update-complete-1.png 1050w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-complete-1.png?width=1400&name=pulumi-update-complete-1.png 1400w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-complete-1.png?width=1750&name=pulumi-update-complete-1.png 1750w, https://blog.pulumi.com/hs-fs/hubfs/Blog/pulumi-update-complete-1.png?width=2100&name=pulumi-update-complete-1.png 2100w"}
-
- 
+![pulumi-update-complete-1](./pulumi-update-complete-1.png)
 
 Go to the **Resources** tab and filter to S3 resources. Then, on the S3
 bucket, click the link to go to the AWS Console.
 
-![console-s3-filtered](https://blog.pulumi.com/hs-fs/hubfs/Blog/console-s3-filtered.png?width=600&name=console-s3-filtered.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/console-s3-filtered.png?width=300&name=console-s3-filtered.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/console-s3-filtered.png?width=600&name=console-s3-filtered.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/console-s3-filtered.png?width=900&name=console-s3-filtered.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/console-s3-filtered.png?width=1200&name=console-s3-filtered.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/console-s3-filtered.png?width=1500&name=console-s3-filtered.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/console-s3-filtered.png?width=1800&name=console-s3-filtered.png 1800w"}
+![console-s3-filtered](./console-s3-filtered.png)
 
- 
-
-[Upload a
-video]{style="font-family: Ubuntu, sans-serif; font-size: 30px;"}
+## Upload a Video
 
 Upload an .mp4 video to your S3 bucket, making sure to encode the
 desired time index in the filename. For instance,
@@ -221,36 +196,28 @@ the `--follow` or `-f` parameter. This command aggregates all the logs
 for your compute, so the logs for the Lambda function **and** the
 Fargate task are all in one place!
 
-![terminal-logs](https://blog.pulumi.com/hs-fs/hubfs/Blog/terminal-logs.png?width=900&name=terminal-logs.png){width="900"
-sizes="(max-width: 900px) 100vw, 900px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/terminal-logs.png?width=450&name=terminal-logs.png 450w, https://blog.pulumi.com/hs-fs/hubfs/Blog/terminal-logs.png?width=900&name=terminal-logs.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/terminal-logs.png?width=1350&name=terminal-logs.png 1350w, https://blog.pulumi.com/hs-fs/hubfs/Blog/terminal-logs.png?width=1800&name=terminal-logs.png 1800w, https://blog.pulumi.com/hs-fs/hubfs/Blog/terminal-logs.png?width=2250&name=terminal-logs.png 2250w, https://blog.pulumi.com/hs-fs/hubfs/Blog/terminal-logs.png?width=2700&name=terminal-logs.png 2700w"}
-
+![terminal-logs](./terminal-logs.png)
  
-
 Once the thumbnail has been generated, either view it in the S3 console,
 or download it with the AWS CLI:
 
     $ aws s3 cp s3://$(pulumi stack output bucketName)/cat.jpg . 
     download: s3://bucket-0c91106/cat.jpg to ./cat.jpg
 
-Clean up
---------
+## Clean Up
 
 To clean up the resources we've provisioned, run `pulumi destroy`.
 
-[Next steps]{style="font-family: Ubuntu, sans-serif; font-size: 30px;"}
+### Next Steps
 
 In this post, we saw how easy it is to use containers and serverless
 functions in one application. With Pulumi, you get the best of both
 worlds, and don't have to choose one or the other.
 
-The [sample code for this
-post](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer) is
+The [sample code for this post](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer) is
 available in the [Pulumi examples repo on
 GitHub](https://github.com/pulumi/examples).
 
 For a version of this sample that includes AWS Rekognition, see
-the [Video Thumbnailer with Machine
-Learning](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer-machine-learning) JavaScript
+the [Video Thumbnailer with Machine Learning](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer-machine-learning) JavaScript
 example.
-

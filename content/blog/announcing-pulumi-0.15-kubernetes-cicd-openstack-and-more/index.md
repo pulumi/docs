@@ -1,39 +1,37 @@
 ---
 title: "Announcing Pulumi 0.15: Kubernetes, CI/CD, OpenStack, and more"
 authors: ["luke-hoban"]
-tags: ["serverless", "news", "Kubernetes"]
+tags: ["Pulumi", "New-Features", "CI/CD"]
 date: "2018-08-05"
 
-description: "Pulumi can now deploy and manage Kubernetes resources using the same
+summary: "Pulumi can now deploy and manage Kubernetes resources using the same
 familiar programming model supported for AWS, Azure, and Google Cloud
-Platform."
+Platform. In this post, we'll take a quick tour of these new features."
 ---
 
 
 Just over a month ago we publicly launched
-[Pulumi](https://www.pulumi.com/), a new cloud native development
+Pulumi, a new cloud native development
 platform.  The response has been overwhelming and we've been hard at
 work responding to your feedback ever since. 
 
-Today, we are excited to release [Pulumi
-0.15](https://pulumi.io/install/changelog.html#v150) and make
-it [available to download](https://pulumi.io/install/).  This release
+Today, we are excited to release [Pulumi 0.15]({{< ref "/changelog#v150" >}}) and make
+it [available to download]({{< ref "/install" >}}).  This release
 includes improvements across the entire Pulumi development experience.
 Pulumi supports more platforms
-([Kubernetes](../../../com/pulumi/blog/index.html) and
-[OpenStack](../../../com/pulumi/blog/index.html)), is faster
-([Parallelism](../../../com/pulumi/blog/index.html)), simpler ([native
-TypeScript support](../../../com/pulumi/blog/index.html)), richer
-([serverless frameworks for Azure and
-GCP](../../../com/pulumi/blog/index.html)),  and is more deeply
+([Kubernetes]({{< ref "/docs/quickstart/kubernetes" >}}) and
+[OpenStack]({{< ref "/docs/reference/clouds/openstack" >}})), is faster
+(Parallelism, simpler (native
+TypeScript support), richer
+(serverless frameworks for Azure and
+GCP),  and is more deeply
 integrated into the application lifecycle ([GitHub App for CI/CD
-integration](../../../com/pulumi/blog/index.html)).
+integration]({{< ref "/docs/reference/cd-github.md" >}})).
 
 In this post, we'll take a quick tour of these new features. Stay tuned
 for follow up blog posts to dive deeper into individual topics.
 
-[](CICD_Integration_137)Kubernetes
----------------------------------------------------
+## Kubernetes
 
 Pulumi can now deploy and manage Kubernetes resources using the same
 familiar programming model supported for AWS, Azure, and Google Cloud
@@ -89,13 +87,12 @@ installed into the cluster.
     }, { providers: { kubernetes: azk8s } });
 
 Check out the [Kubernetes
-overview](https://pulumi.io/reference/kubernetes.html) docs, the [API
-documentation](https://pulumi.io/reference/pkg/nodejs/@pulumi/kubernetes/index.html)
+overview]({{< ref "/docs/quickstart/kubernetes" >}}) docs, the [API
+documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
 and the [pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes)
 GitHub project for additional details. 
 
-Parallelism
-------------------------------
+## Parallelism
 
 Pulumi now runs deployments in parallel by default. To accomplish this,
 the Pulumi engine tracks all dependencies across cloud resources in your
@@ -107,8 +104,7 @@ In some extreme cases, this new parallelism support can improve
 performance by 2-10x, but even more importantly, parallelism provides a
 performance boost for practically every Pulumi deployment.
 
-First Class Providers
---------------------------------------------------
+## First Class Providers
 
 Pulumi programs can now create multiple instances of a resource
 provider, and can initialize an instance of a resources provider using
@@ -130,8 +126,7 @@ cluster, and use the Pulumi OpenFaaS provider to deploy functions.
 You might have already noticed, however we already used this feature in
 the Kubernetes example earlier!
 
-Native TypeScript Support
-----------------------------------------------------------
+## Native TypeScript Support
 
 Pulumi has supported JavaScript since inception, and as a result, it's
 been possible to use Pulumi via TypeScript to get the benefits of
@@ -149,8 +144,7 @@ the fly before running it.
 New templates are now available via `pulumi new` which use the new,
 simpler, TypeScript support.
 
-Using Imports from Runtime Functions
--------------------------------------------------------
+## Using Imports from Runtime Functions
 
 Pulumi supports creating cloud functions (Lambdas, Azure Functions,
 Google Cloud Functions) using JavaScript callbacks in your Pulumi
@@ -179,8 +173,7 @@ few lines of code!).
 
     export const url = api.publish().url;
 
-OpenStack
---------------------------
+## OpenStack
 
 Thanks to a contribution by Fraser Waters
 ([@Frassle](https://github.com/Frassle)), Pulumi now also supports
@@ -198,14 +191,12 @@ For example, a VM can be deployed to OVH with just the following:
 
     exports.instanceIP = instance.accessIpV4;
 
-Check out the [API
-documentation](https://pulumi.io/reference/pkg/nodejs/@pulumi/openstack/index.html)
+Check out the [API documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/openstack" >}})
 and the [pulumi-openstack](https://github.com/pulumi/pulumi-openstack)
 GitHub project for additional details. Huge thanks to Fraser for his
 work on this!
 
-Serverless Functions in GCP and Azure
--------------------------------------------------------
+## Serverless Functions in GCP and Azure
 
 Particularly with serverless functions being real functions, we had a
 lot of interest in broadening our existing support beyond [just AWS
@@ -241,15 +232,13 @@ this feature!
 
     export let url = f.function.httpsTriggerUrl;
 
-GitHub App for CI/CD Integration
----------------------------------------------------------
+## GitHub App for CI/CD Integration
 
-Pulumi already [works with your
-favorite](https://pulumi.io/reference/cd.html) [CI/CD
-systems](https://pulumi.io/reference/cd.html) to accomplish automated
+Pulumi already works with [your favorite CI/CD systems]({{< ref "/docs/reference/cd" >}})
+to accomplish automated
 and continuous deployments of cloud infrastructure and applications.
 This is how Pulumi deploys and manages our own infrastructure that runs
-[pulumi.com](http://pulumi.com), and is how our most engaged users adopt
+<pulumi.com>, and is how our most engaged users adopt
 Pulumi in their own teams.
 
 Our mission is to make Pulumi the easiest way to get code to the cloud. 
@@ -267,32 +256,29 @@ infrastructure changes.
 The Pulumi GitHub App is still in preview as we work to support more CI
 systems and extend its capabilities. For information on how to install
 it and configure it with your CI system, please [read the
-documentation](https://pulumi.io/reference/cd-github.html).
+documentation]({{< ref "/docs/reference/cd-github" >}}).
 
-Summary
------------------------
+## Summary
 
 We're excited about all the new features in this release and the new
 scenarios they enable for the Pulumi community . If you are new to
 Pulumi, [download the tools and get started
-today](https://pulumi.io/quickstart/), or [join us in
+today]({{ ref "/docs/quickstart" >}}), or [join us in
 Slack](https://slack.pulumi.io). A big thanks to all the users and
 contributors who have helped shape this release -- we can't wait to see
 what you build next !
 
-Special thanks:
---------------------------------------
+### Special Thanks
 
--   Fraser Waters
-    ([@Frassle](https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3AFrassle+archived%3Afalse+user%3Apulumi+is%3Aclosed+))
--   Mikhail Shilkov
-    ([@mikhailshilkov](https://github.com/pulls?q=is%3Apr+author%3Amikhailshilkov+archived%3Afalse+user%3Apulumi+is%3Aclosed))
--   James Nugent
-    ([@jen20](https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Ajen20+archived%3Afalse+user%3Apulumi+is%3Aclosed+))
--   Thomas Schersach
-    ([@Tirke](https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Atirke+archived%3Afalse+user%3Apulumi+is%3Aclosed+))
--   JT
-    ([@Jtango18](https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Ajtango18+archived%3Afalse+user%3Apulumi+is%3Aclosed+))
--   Itay Maman
-    ([@imaman](https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Aimaman+archived%3Afalse+user%3Apulumi+is%3Aclosed+))
-
+- Fraser Waters
+  ([@Frassle](https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3AFrassle+archived%3Afalse+user%3Apulumi+is%3Aclosed+))
+- Mikhail Shilkov
+  ([@mikhailshilkov](https://github.com/pulls?q=is%3Apr+author%3Amikhailshilkov+archived%3Afalse+user%3Apulumi+is%3Aclosed))
+- James Nugent
+  ([@jen20](https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Ajen20+archived%3Afalse+user%3Apulumi+is%3Aclosed+))
+- Thomas Schersach
+  ([@Tirke](https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Atirke+archived%3Afalse+user%3Apulumi+is%3Aclosed+))
+- JT
+  ([@Jtango18](https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Ajtango18+archived%3Afalse+user%3Apulumi+is%3Aclosed+))
+- Itay Maman
+  ([@imaman](https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Aimaman+archived%3Afalse+user%3Apulumi+is%3Aclosed+))

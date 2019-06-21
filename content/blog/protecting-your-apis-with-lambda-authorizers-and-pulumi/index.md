@@ -1,24 +1,23 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Protecting Your APIs with Lambda Authorizers and Pulumi"
+authors: ["erin-krengel"]
+tags: ["Infrastructure-as-Code", "AWS/Lambda/Fargate", "New-Features"]
+date: "2019-04-04"
+
+summary: "Pulumi’s new AWSX package allows you to quickly define a Lambda and an AWS Lambda authorizer to protect it.
+In this post, we will use Auth0 to authorize users making requests to AWS Lambda."
+meta_image: "RELATIVE_TO_PAGE/lambda-authorizer.jpg"
 ---
 
-[Creating serverless applications just got even easier! You can now
+Creating serverless applications just got even easier! You can now
 protect your application APIs in just three easy steps. We've already
-[talked](../../../com/pulumi/blog/easy-serverless-apps-and-infrastructure-real-events-real-code.html)
-a bit about how Pulumi allows you to effortlessly create serverless
-apps. Now, we're helping you simplify protecting those apps with API
-Gateway and Lambda authorizers. ]{#hs_cos_wrapper_post_body
-.hs_cos_wrapper .hs_cos_wrapper_meta_field
+posted about how [easy it is to create serverless apps in Pulumi]({{< relref "easy-serverless-apps-and-infrastructure-real-events-real-code" >}}).
+Now, we're helping you simplify protecting those apps with API
+Gateway and Lambda authorizers.
 
-With Pulumi's [AWSX](https://github.com/pulumi/pulumi-awsx) package, you
+With Pulumi's new [AWSX](https://github.com/pulumi/pulumi-awsx) package, you
 can quickly define a Lambda and an AWS Lambda authorizer to protect it.
-We're once again harnessing the power of [Lambdas as
-Lambdas](../../../com/pulumi/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions.html)
+We're once again harnessing the power of [Lambdas as Lambdas]({{< relref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}})
 to allow developers to focus on writing code.
 
 Today, we will walkthrough creating a simple serverless app using AWS
@@ -28,8 +27,7 @@ users. Auth0 provides a universal authentication and authorization
 platform for applications. It has become an extremely popular platform
 for user management because Auth0 makes OAuth easy.
 
-Concepts
------------------------
+## Concepts
 
 Before we get started, let's go over some concepts we'll be using.
 
@@ -57,8 +55,7 @@ using OAuth.
 
 ### Lambda Authorizers
 
-An [AWS Lambda
-authorizer](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html)
+An [AWS Lambda authorizer](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html)
 is a Lambda that provides access control to an API. It contains custom
 logic for authorizing requests to an endpoint. If a Lambda authorizer is
 configured, API Gateway routes a client's call to the Lambda first. The
@@ -66,8 +63,7 @@ Lambda authorizer runs its custom logic and returns a Policy and
 principal ID, which are used by API Gateway to determine if the call to
 the backend is allowed.
 
-Step-by-Step Guide To Creating a Lambda Authorizer
-----------------------------------------------------------------------------------------------------------
+## Step-by-Step Guide To Creating a Lambda Authorizer
 
 Using a Lambda authorizer, we can implement the authorization flow using
 Auth0 to handle our Access Tokens.
@@ -78,17 +74,14 @@ Auth0 and then use the token they've obtained to make a request to our
 Lambda via our API Gateway, which authorizes the request by validating
 the token with Auth0. Some of the code examples have been stubbed or
 shortened for this blog post. The full code example can be found in our
-examples
-[repo](https://github.com/pulumi/examples/blob/master/aws-ts-apigateway-auth0/index.ts).
+[Pulumi examples repo](https://github.com/pulumi/examples/blob/master/aws-ts-apigateway-auth0/index.ts).
 
 Below is a diagram of the architecture we will set up. In Step 1, we
 will create our API Gateway and Hello World Lambda. In Step 2, we will
 set up the logic for our Lambda authorizer. And finally in Step 3, we
 will bring it all together by telling API Gateway to use our authorizer.
 
-![lambda_authorizer](https://blog.pulumi.com/hs-fs/hubfs/lambda_authorizer.jpg?width=569&name=lambda_authorizer.jpg){width="569"
-sizes="(max-width: 569px) 100vw, 569px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/lambda_authorizer.jpg?width=285&name=lambda_authorizer.jpg 285w, https://blog.pulumi.com/hs-fs/hubfs/lambda_authorizer.jpg?width=569&name=lambda_authorizer.jpg 569w, https://blog.pulumi.com/hs-fs/hubfs/lambda_authorizer.jpg?width=854&name=lambda_authorizer.jpg 854w, https://blog.pulumi.com/hs-fs/hubfs/lambda_authorizer.jpg?width=1138&name=lambda_authorizer.jpg 1138w, https://blog.pulumi.com/hs-fs/hubfs/lambda_authorizer.jpg?width=1423&name=lambda_authorizer.jpg 1423w, https://blog.pulumi.com/hs-fs/hubfs/lambda_authorizer.jpg?width=1707&name=lambda_authorizer.jpg 1707w"}
+![lambda_authorizer](./lambda-authorizer.jpg)
 
 ### 1 - Define Your Routes
 
@@ -145,7 +138,11 @@ an AWS Lambda for us.
         }
     }
      
-    /**  * Below is all code that gets added to the Authorizer Lambda. The code was copied and  * converted to TypeScript from [Auth0's GitHub  * Example](https://github.com/auth0-samples/jwt-rsa-aws-custom-authorizer)  */
+    /**
+      * Below is all code that gets added to the Authorizer Lambda. The code was copied and
+      * converted to TypeScript from
+      * [Auth0's GitHub Example](https://github.com/auth0-samples/jwt-rsa-aws-custom-authorizer)
+      */
      
     function getToken(event: awsx.apigateway.AuthorizerEvent): string {
         // Stubbed function to extract and return the Bearer Token from the Lambda event parameter
@@ -258,8 +255,7 @@ page for our API and clicking the Test tab. This provides us with a
 valid token for testing purposes only. The way tokens are acquired by
 users or client apps will depend on the type of application (i.e. native
 mobile app, single-page app, web app, etc.) being developed. For more
-information on authenticating users, visit [Auth0's
-documentation](https://auth0.com/docs).
+information on authenticating users, visit [Auth0's documentation](https://auth0.com/docs).
 
 Using the test access token, the API will return a 200 response: Hello
 world!
@@ -267,11 +263,9 @@ world!
     $ curl $(pulumi stack output url)hello -H "Authorization: Bearer <VALID_TOKEN>"
     <h1>Hello world!</h1>
 
-For the complete code example, visit our [examples
-repo](https://github.com/pulumi/examples/tree/master/aws-ts-apigateway-auth0).
+For the complete code example, visit our [examples repo](https://github.com/pulumi/examples/tree/master/aws-ts-apigateway-auth0).
 
-Keep It Going
------------------------------------
+## Keep It Going
 
 While we used OAuth and Auth0 in this blog post, AWS Lambda authorizers
 are an extremely flexible tool that allow you to implement whatever
@@ -286,10 +280,8 @@ enable developers to get their code production ready faster.
 
 Get going with these resources:
 
--   [Getting Started](https://pulumi.io/quickstart/)
--   [Serverless REST API on
-    AWS](https://github.com/pulumi/examples/tree/master/aws-ts-apigateway)
+- [Getting Started]({{< ref "/docs/quickstart" >}})
+- [Serverless REST API on AWS](https://github.com/pulumi/examples/tree/master/aws-ts-apigateway)
 
 To learn more about using Pulumi and Lambda authorizers
 [here](https://github.com/pulumi/pulumi-awsx/tree/master/nodejs/awsx/apigateway#lambda-authorizers).
-
