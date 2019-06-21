@@ -14,6 +14,7 @@ hero_img: "/images/whitepaper/cloud-native-infrastructure/deliveringCloudNative_
 exec_sum_title: "Executive Summary"
 exec_sum: "To a first approximation, all developers are cloud developers, all applications are cloud native, and all operations are cloud-first. Yet, there is a lack of a consistent approach to delivering cloud native applications and infrastructure. The tools and processes differ by technology generation, and even by cloud vendor, and so deny the full potential of cloud native application delivery."
 ---
+
 In this paper, we make the case for a consistent programming model for the cloud and examine:
 
 * How the cloud has already evolved three times as it increasingly moves toward stateless compute to deliver on the opportunities afforded by unprecedented economies of scope and scale.

@@ -1,16 +1,16 @@
 {{ define "main" }}
-    {{ partial "hero.html" . }}
-    
-    <section class="content-block border-top">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-                    <div class="content">
-                        {{ .Content }}
-                    </div>
-                </div>
-            </div>
-        </div>
+    <header class="container mx-auto py-8 border-b border-gray-300 text-center max-w-2xl">
+        <h1>{{ .Title }}</h1>
+
+        {{ if .Params.description }}
+            <p class="text-xl text-gray-600">
+                {{ .Params.description }}
+            </p>
+        {{ end }}
+    </header>
+    <section class="container mx-auto max-w-3xl py-8">
+        {{ .Content }}
     </section>
+
     {{ partial "learnmore-contactus.html" . }}
 {{ end }}
