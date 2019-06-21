@@ -9,7 +9,7 @@ menu:
 
 ## Choose Your Language
 
-{{< langchoose nogo >}}
+{{< langchoose nogo nocode >}}
 
 {{% lang nodejs %}}
 {{< install-node >}}

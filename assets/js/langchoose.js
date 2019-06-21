@@ -84,6 +84,45 @@ function selectLanguage(lang) {
     });
 }
 
+// copyNextCodeBlock copies the contents of the currently active code block following the element,
+// elem, which is the "copy" icon being clicked.
+function copyNextCodeBlock(elem) {
+    // Select the next visible code block.
+    var codes = $(elem).closest(".mdl-tabs").siblings(".highlight:visible");
+    if (codes.length) {
+        // Create an invisible text block containing the text from the code block, copy it to the
+        // clipboard, and then delete the invisible textarea.
+        var code = codes[0];
+        var text = document.createElement("textarea");
+        text.style.position = "fixed";
+        text.style.top = text.style.left = 0;
+        text.style.width = "2em";
+        text.style.height = "2em";
+        text.style.padding = 0;
+        text.style.border = "none";
+        text.style.outline = "none";
+        text.style.boxShadow = "none";
+        text.style.background = "transparent";
+        text.value = code.innerText;
+        document.body.appendChild(text);
+
+        // Copy the text.
+        text.focus();
+        text.select();
+        try {
+            document.execCommand("copy");
+        } catch (e) {
+            // Ignore errors for extremely old browsers.
+        } finally {
+            document.body.removeChild(text);
+        }
+
+        // Hide the element and fade it back in, so it's more evident it has been clicked.
+        $(code).hide();
+        $(code).fadeIn(500);
+    }
+}
+
 // The first time the DOM is finished loading, select the right language.  If no language is set as the preferred
 // language yet, then JavaScript is chosen as the preferred language as a default.
 $(function() {

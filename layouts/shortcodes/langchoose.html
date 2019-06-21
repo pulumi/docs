@@ -2,9 +2,14 @@
     <div class="mdl-tabs__tab-dir langtab-tabstrip">
         <a class="mdl-tabs__tab langtab is-active">JavaScript</a>
         <a class="mdl-tabs__tab langtab">TypeScript</a>
-        {{ if not (eq (.Get 0) "nodeonly") }}
+        {{ if not (in .Params "nodeonly") }}
         <a class="mdl-tabs__tab langtab">Python</a>
-        {{ if not (eq (.Get 0) "nogo") }}<a class="mdl-tabs__tab langtab">Go</a>{{ end }}
+        {{ if not (in .Params "nogo") }}<a class="mdl-tabs__tab langtab">Go</a>{{ end }}
+        {{ end }}
+        {{ if not (in .Params "nocode") }}
+            <span class="langtab-copycode">
+                <i class="far fa-copy langtab-copybutton" onclick="copyNextCodeBlock(this)"></i>
+            </span>
         {{ end }}
     </div>
 </div>

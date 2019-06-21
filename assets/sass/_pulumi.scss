@@ -717,6 +717,23 @@ h4 { font-size: 22px; font-weight: 500; }
     cursor: pointer;
 }
 
+.langtab-copycode {
+    float: right;
+    position: relative;
+    top: 50%;
+    cursor: pointer;
+}
+
+.langtab-copybutton {
+}
+.langtab-copybutton:hover {
+    color: $blue;
+}
+.langtab-copybutton:active {
+    color: $blue-hover;
+    transform: translateY(1px);
+}
+
 .pdoc-module-header {
     border-radius: 4px;
     background-color: #f5e0f5;
