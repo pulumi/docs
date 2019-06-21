@@ -1,7 +1,7 @@
 {{ define "hero" }}
-    <header class="bg-blue-700 text-white pt-24 px-4">
+    <header class="bg-blue-700 text-white px-4 bg-glow">
         <div class="container mx-auto text-white md:flex">
-            <div class="md:w-1/2 md:mr-8">
+            <div class="md:w-1/2 md:mr-8 py-16">
                 <h1 class="text-white font-bold">
                     {{ .Title }}
                 </h1>
@@ -15,8 +15,8 @@
                     </a>
                 </div>
             </div>
-            <div class="md:w-1/2 md:ml-8 text-white text-center">
-                <img class="inline-block w-64 shadow-xl" src="{{ .Params.hero_image }}" alt="Whitepaper image">
+            <div class="md:w-1/2 md:ml-8 pt-16 text-white text-center">
+                <img class="inline-block w-64" src="{{ .Params.hero_image }}" alt="Whitepaper image">
             </div>
         </div>
     </header>
