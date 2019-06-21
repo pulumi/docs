@@ -4,5 +4,5 @@ type: page
 layout: pricing
 menu:
     header:
-        weight: 2
+        weight: 3
 ---

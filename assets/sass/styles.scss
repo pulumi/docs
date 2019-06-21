@@ -18,7 +18,11 @@ h1, h2, h3, h4, h5, h6 {
     @apply font-display text-gray-700 mb-2;
 
     &:not(:first-child) {
-        @apply mt-8;
+
+        // Don't apply top margin when one's being specified.
+        &:not([class*="mt-"]):not([class*="m-"]) {
+            @apply mt-8;
+        }
     }
 }
 

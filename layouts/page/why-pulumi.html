@@ -1,0 +1,227 @@
+{{ define "hero" }}
+    <header class="bg-purple-500 text-white py-24 px-4">
+        <div class="container mx-auto text-white md:flex">
+            <div class="md:w-1/2 md:mr-8">
+                <h1 class="text-white">Cloud Apps and Infrastructure</h1>
+                <p class="text-xl leading-relaxed text-purple-100">
+                    The Pulumi Platform includes an open source SDK and freemium SaaS to
+                    help developers, DevOps, and IT teams alike create, deploy, and manage
+                    cloud apps and infrastructure, across any clouds, with one consistent
+                    workflow.
+                </p>
+                <div class="mt-4">
+                    <a class="inline-block btn btn-cta bg-blue-500 mr-2" href="{{ relref . "/docs/quickstart" }}">Try Pulumi for Free</a>
+                    <a class="inline-block btn btn-cta mt-4" href="{{ relref . "/why-pulumi/delivering-cloud-native-infrastructure-as-code" }}">Download the Whitepaper</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 md:ml-8 text-white text-center">
+                <img class="inline-block h-64" src="/images/logo-neon.png" alt="Pulumi logo">
+            </div>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    <nav class="bg-black text-white px-4 sticky top-0">
+        <div class="container mx-auto">
+            <ul class="flex list-none justify-between">
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#for-developers">For Developers</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#for-operators">For Operators</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#for-business-leaders">For Business Leaders</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="py-16">
+        <div class="container mx-auto text-center">
+            <div class="mx-auto max-w-2xl">
+                <h2 class="mb-4 text-black">Any Code. Any Cloud. Any Team.</h2>
+                <p class="text-xl leading-loose text-gray-600">
+                    The Pulumi Platform is the easiest way for teams and individuals to
+                    create, deploy, and manage multi-cloud software, using familiar languages
+                    and tools you already know and love.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="for-operators" class="bg-gray-200 py-16 px-4 md:px-0">
+        <div class="container mx-auto">
+            <div class="md:flex mx-auto max-w-5xl pb-8 mb-8 border-b border-gray-300">
+                <div class="flex-shrink-0 md:mr-8 mb-8">
+                    <img class="w-48" src="/icons/icon-for-devs.png">
+                </div>
+                <div>
+                    <h2>For Developers</h2>
+                    <p>
+                        Pulumi enables developers to write code in their favorite language
+                        (e.g., JavaScript, Python, Go), deploying cloud apps and
+                        infrastructure easily, without the need to learn specialized DSLs
+                        or YAML templating solutions. The use of first class languages
+                        enables abstractions and reuse, in addition to software
+                        engineering practices like great IDEs, refactoring, and testing.
+                        Pulumi provides high-level cloud packages in addition to low-level
+                        resource definitions across all the major clouds -- AWS, Azure,
+                        GCP, and Kubernetes -- so that you can master one system to
+                        deliver to them all.
+                    </p>
+                </div>
+            </div>
+            <div class="md:flex mx-auto max-w-5xl mb-8">
+                <div class="md:w/13 p-4">
+                    <img class="inline-block w-32" src="/icons/icon-why-dev-lang.svg">
+                    <h3 class="mt-2">Familiar Languages</h3>
+                    <p class="text-sm text-gray-600">
+                        Maximize productivity by defining cloud apps and services as code
+                        using familiar languages and IDEs: JavaScript, Python, or Go.
+                    </p>
+                </div>
+                <div class="md:w/13 p-4 md:mx-8">
+                    <img class="inline-block w-32" src="/icons/icon-why-dev-model.svg">
+                    <h3 class="mt-2">Programming Model</h3>
+                    <p class="text-sm text-gray-600">
+                        Use a programming model designed to make you maximally productive
+                        across any clouds, AWS, Azure, GCP, or Kubernetes.
+                    </p>
+                </div>
+                <div class="md:w/13 p-4">
+                    <img class="inline-block w-32" src="/icons/icon-why-dev-packages.svg">
+                    <h3 class="mt-2">Real Abstractions</h3>
+                    <p class="text-sm text-gray-600">
+                        Build true cloud abstractions, reducing copy-and-paste, and share and reuse them in your
+                        favorite package manager.
+                    </p>
+                </div>
+            </div>
+            <div class="mx-auto text-center">
+                <a class="btn btn-cta bg-blue-500" href="{{ relref . "/docs/quickstart" }}">
+                    TRY PULUMI FOR FREE
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="for-operators" class="py-16 px-4 md:px-0">
+        <div class="container mx-auto">
+            <div class="md:flex mx-auto max-w-5xl pb-8 mb-8 border-b border-gray-300">
+                <div class="flex-shrink-0 md:mr-8 mb-8">
+                    <img class="w-48" src="/icons/icon-for-devops.png">
+                </div>
+                <div>
+                    <h2>For Operators</h2>
+                    <p>
+                        Pulumi enables operators to achieve continuous delivery of cloud
+                        apps and infrastructure to any cloud environment -- AWS, Azure,
+                        GCP, Kubernetes, and even hybrid and on-premises envioronments. By
+                        leveraging infrastructure as code, combined with first class
+                        languages, engineers can achieve greater productivity, while also
+                        enabling their development teams to be more "self-serve" with
+                        appropriate policies and guardrails in place.
+                    </p>
+                </div>
+            </div>
+            <div class="md:flex mx-auto max-w-5xl mb-8">
+                <div class="md:w/13 p-4">
+                    <img class="inline-block w-32" src="/icons/icon-why-devops-workflow.svg">
+                    <h3 class="mt-2">Infrastructure as Code</h3>
+                    <p class="text-sm text-gray-600">
+                        Use robust infrastructure as code practices to plan and version
+                        deployments, and perform them with perfect auditability.
+                    </p>
+                </div>
+                <div class="md:w/13 p-4 md:mx-8">
+                    <img class="inline-block w-32" src="/icons/icon-why-devops-multicloud.svg">
+                    <h3 class="mt-2">Multi-Cloud DevOps</h3>
+                    <p class="text-sm text-gray-600">
+                        Empower your team to go multi-cloud by leveraging a single model,
+                        tool, and service -- eliminating YAML and DSL explosion.
+                    </p>
+                </div>
+                <div class="md:w/13 p-4">
+                    <img class="inline-block w-32" src="/icons/icon-why-devops-deploy.svg">
+                    <h3 class="mt-2">Deploy Continuously</h3>
+                    <p class="text-sm text-gray-600">
+                        Integrate with existing SCM and ALM systems to continuously
+                        deliver to many clouds with a single consistent workflow.
+                    </p>
+                </div>
+            </div>
+            <div class="mx-auto text-center">
+                <a class="btn btn-cta bg-blue-500" href="{{ relref . "/docs/quickstart" }}">
+                    TRY PULUMI FOR FREE
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="for-business-leaders" class="bg-gray-200 py-16 px-4 md:px-0">
+        <div class="container mx-auto">
+            <div class="md:flex mx-auto max-w-5xl pb-8 mb-8 border-b border-gray-300">
+                <div class="flex-shrink-0 md:mr-8 mb-8">
+                    <img class="w-48" src="/icons/icon-for-enterprises.png">
+                </div>
+                <div>
+                    <h2>For Business Leaders</h2>
+                    <p>
+                        Pulumi has thousands of happy users across companies of all sizes,
+                        from startups who want to get a new cloud infrastructure up in an
+                        afternoon, to Fortune 500 companies managing complex, multi-cloud
+                        environments with thousands of applications. Pulumi's unique
+                        approach allows organizations to achieve unified Cloud Engineering
+                        organizations, with developers, DevOps, and IT engineers who can
+                        collaborate for greater efficiency, and its unique cloud object
+                        model unlocks advanced approaches to security and compliance
+                        insights and enforcement.
+                    </p>
+                </div>
+            </div>
+            <div class="md:flex mx-auto max-w-5xl mb-8">
+                <div class="md:w/13 p-4">
+                    <img class="inline-block w-32" src="/icons/icon-why-ent-architecture.svg">
+                    <h3 class="mt-2">Modernize</h3>
+                    <p class="text-sm text-gray-600">
+                        Deliver on modern container and serverless architectures across
+                        applications and infrastructure, and Dev and DevOps.
+                    </p>
+                </div>
+                <div class="md:w/13 p-4 md:mx-8">
+                    <img class="inline-block w-32" src="/icons/icon-why-ent-multicloud.svg">
+                    <h3 class="mt-2">Go Multi-Cloud</h3>
+                    <p class="text-sm text-gray-600">
+                        A single workflow across all clouds -- AWS, Azure, GCP,
+                        Kubernetes, and hybrid/on-prem -- to achieve true multi-cloud
+                        delivery.
+                    </p>
+                </div>
+                <div class="md:w/13 p-4">
+                    <img class="inline-block w-32" src="/icons/icon-why-ent-grade.svg">
+                    <h3 class="mt-2">Enterprise Grade</h3>
+                    <p class="text-sm text-gray-600">
+                        Robust security, compliance, and auditing tools with an extensible
+                        policy engine for enforcing your organization's practices.
+                    </p>
+                </div>
+            </div>
+            <div class="mx-auto text-center">
+                <a class="btn btn-cta bg-blue-500" href="{{ relref . "/docs/quickstart" }}">
+                    TRY PULUMI FOR FREE
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-purple-500 py-24 text-white text-center px-4 md:px-0">
+        <img class="inline-block md:mx-auto" src="/images/cloud.png" alt="">
+        <h2 class="text-white text-4xl">Toward a Cloud Native Programming Model</h2>
+        <p class="mb-8 md:max-w-3xl md:mx-auto text-purple-100 text-xl leading-loose">
+            See how Pulumi delivers a Cloud Development Platform for the cloud to deliver
+            on the full potential of Container-, Lambda-, and Data-based cloud
+            architectures.
+        </p>
+        <a class="btn" href="{{ relref . "/why-pulumi/point-of-view" }}">Learn More</a>
+    </section>
+
+    {{ partial "learnmore-contactus.html" . }}
+
+    {{ partial "newsletter.html" . }}
+{{ end }}
