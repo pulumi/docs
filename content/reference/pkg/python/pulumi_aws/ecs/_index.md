@@ -285,7 +285,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <blockquote>
 <div><strong>Note:</strong> As a result of an AWS limitation, a single <code class="docutils literal notranslate"><span class="pre">load_balancer</span></code> can be attached to the ECS service at most. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html#load-balancing-concepts">related docs</a>.</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">ordered_placement_strategy</span></code> supports the following:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ordered_placement_strategies</span></code> supports the following:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Required) The type of placement strategy. Must be one of: <code class="docutils literal notranslate"><span class="pre">binpack</span></code>, <code class="docutils literal notranslate"><span class="pre">random</span></code>, or <code class="docutils literal notranslate"><span class="pre">spread</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">field</span></code> - (Optional) For the <code class="docutils literal notranslate"><span class="pre">spread</span></code> placement strategy, valid values are <code class="docutils literal notranslate"><span class="pre">instanceId</span></code> (or <code class="docutils literal notranslate"><span class="pre">host</span></code>,
