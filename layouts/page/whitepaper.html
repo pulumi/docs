@@ -1,0 +1,52 @@
+{{ define "hero" }}
+    <header class="bg-blue-700 text-white pt-24 px-4">
+        <div class="container mx-auto text-white md:flex">
+            <div class="md:w-1/2 md:mr-8">
+                <h1 class="text-white font-bold">
+                    {{ .Title }}
+                </h1>
+                <p class="text-xl leading-relaxed text-blue-100">
+                    {{ .Params.description }}
+                </p>
+                <div class="mt-4">
+                    <a class="inline-block btn bg-blue-500 text-sm mt-4" href="{{ relref . "/why-pulumi/delivering-cloud-native-infrastructure-as-code" }}">
+                        <i class="far fa-file-pdf mr-1"></i>
+                        Download the Whitepaper
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 md:ml-8 text-white text-center">
+                <img class="inline-block w-64 shadow-xl" src="{{ .Params.hero_image }}" alt="Whitepaper image">
+            </div>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    <nav class="bg-black text-white px-4 sticky top-0">
+        <div class="container mx-auto">
+            <ul class="flex list-none justify-between">
+                {{ range .Params.sections }}
+                    <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#{{ .anchor }}">{{ .label }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+    </nav>
+
+    <section id="executive-summary" class="mt-8 py-8 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl py-8 border-b border-gray-300">
+            <h2>Executive Summary</h2>
+            <p>
+                {{ .Params.summary }}
+            </p>
+        </div>
+    </section>
+
+    <section class="pb-16 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            {{ .Content }}
+        </div>
+    </section>
+
+    {{ partial "learnmore-contactus.html" . }}
+{{ end }}

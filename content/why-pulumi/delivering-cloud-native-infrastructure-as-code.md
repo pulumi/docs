@@ -1,8 +1,28 @@
 ---
 title: Delivering Cloud Native Infrastructure as Code
+description: Enabling the future of cloud engineering with Pulumi
+type: page
+layout: whitepaper
+
+hero_image: /images/whitepaper/cloud-native-infrastructure/deliveringCloudNative_pdf_large.png
+
+summary: To a first approximation, all developers are cloud developers, all applications are cloud native, and all operations are cloud-first. Yet, there is a lack of a consistent approach to delivering cloud native applications and infrastructure. The tools and processes differ by technology generation, and even by cloud vendor, and so deny the full potential of cloud native application delivery.
+
+sections:
+    - label: Exec Summary
+      anchor: executive-summary
+    - label: Challenges
+      anchor: the-challenges-of-cloud-development-and-devops
+    - label: Solutions
+      anchor: pulumi-provides-a-cloud-native-programming-model
+    - label: Use Cases
+      anchor: use-cases
+    - label: Conclusion
+      anchor: conclusion
+
 meta_title: Delivering Cloud Native Infrastructure as Code
-meta_desc: "In this paper, we make the case for a consistent cloud programming model using general purpose programming languages for infrastructure, managed services, containers, Kubernetes, and serverless."
 meta_image: /images/pulumi.png
+meta_desc: In this paper, we make the case for a consistent cloud programming model using general purpose programming languages for infrastructure, managed services, containers, Kubernetes, and serverless.
 ---
 
 In this paper, we make the case for a consistent programming model for the cloud and examine:
@@ -29,8 +49,6 @@ In doing so, cloud computing has been continuously driving towards event-driven 
 > Enterprise software has undergone a slow shift from containerless servers to serverless containers.
 
 As usual, the future is unevenly distributed. A quick look at Google Trends over five years provides a reasonably clear picture of how embedded these evolutions are in the market at large. In this view, we use the presumed category incumbents to represent the market.
-
-&nbsp;
 
 #### Interest Over Time, 5 Years to Current Date
 
