@@ -1,18 +1,8 @@
 ---
-title: "Delivering Cloud Native Infrastructure as Code"
-date: 2018-11-23T14:14:08-08:00
-
-meta_title: "Delivering Cloud Native Infrastructure as Code"
+title: Delivering Cloud Native Infrastructure as Code
+meta_title: Delivering Cloud Native Infrastructure as Code
 meta_desc: "In this paper, we make the case for a consistent cloud programming model using general purpose programming languages for infrastructure, managed services, containers, Kubernetes, and serverless."
-meta_image: "/images/pulumi.png"
-
-type: "whitepaper"
-hero_title: "Delivering Cloud Native Infrastructure as Code"
-hero_classes: "bg-blue-dark white-text smaller-smaller-padding no-padding-bottom hero-whitepaper"
-hero_description: "Enabling the future of cloud engineering with Pulumi</p><p><a href='https://cdn2.hubspot.net/hubfs/4429525/Content/Pulumi-Delivering-CNI-as-Code.pdf' class='button with-icon margin-bottom-0' target='_blank'><i class='far fa-file-pdf'></i>Download the whitepaper</a>"
-hero_img: "/images/whitepaper/cloud-native-infrastructure/deliveringCloudNative_pdf_large.png"
-exec_sum_title: "Executive Summary"
-exec_sum: "To a first approximation, all developers are cloud developers, all applications are cloud native, and all operations are cloud-first. Yet, there is a lack of a consistent approach to delivering cloud native applications and infrastructure. The tools and processes differ by technology generation, and even by cloud vendor, and so deny the full potential of cloud native application delivery."
+meta_image: /images/pulumi.png
 ---
 
 In this paper, we make the case for a consistent programming model for the cloud and examine:
@@ -42,13 +32,13 @@ As usual, the future is unevenly distributed. A quick look at Google Trends over
 
 &nbsp;
 
-<p class="text-black"><strong>INTEREST OVER TIME, 5 Years to Current Date</strong></p>
+#### Interest Over Time, 5 Years to Current Date
 
-<img src="/images/whitepaper/cloud-native-infrastructure/graph1.png" alt="">
+<img class="block mx-auto my-6" src="/images/whitepaper/cloud-native-infrastructure/graph1.png">
 
 We can redraw this picture as an adoption curve across these evolutions approximately as follows:
 
-<img src="/images/whitepaper/cloud-native-infrastructure/graph2.png" alt="" width="500">
+<img class="block max-w-lg mx-auto my-6" src="/images/whitepaper/cloud-native-infrastructure/graph2.png">
 
 Each of these evolutions has opportunity, but also embedded cost: cost to switch, cost of skills, and cost of workflows and tools. Each also carries risk through isolated stovepipes: limited numbers of experts to attend to a given paradigm.
 
@@ -88,7 +78,7 @@ Using real languages changes everything. [The Pulumi Cloud Development Platform]
 
 At the center of Pulumi is an open source cloud object model, coupled with an evaluation runtime that understands how to take programs written in any language, understand the cloud resources necessary to execute them, and then plan and manage those resources in a robust way. This cloud runtime and object model is inherently language- and cloud-neutral, enabling Pulumi to support many languages and clouds rapidly.
 
-<img src="/images/whitepaper/cloud-native-infrastructure/graph3.png" alt="" width="700">
+<img class="block max-w-xl mx-auto my-6" src="/images/whitepaper/cloud-native-infrastructure/graph3.png">
 
 Pulumi aims to provide a solution to the challenges of cloud application development and delivery by providing a consistent programming model for cloud native development:
 
@@ -118,32 +108,33 @@ As the Pulumi runtime can support many languages, development and devops teams g
 
 Real languages also means gaining access to powerful - but obvious - benefits: capture references to variables such as constants, configuration settings or encrypted secrets, or even references to other resources so that all resources can be connected in an expressive and logical manner to achieve the desired output.
 
-<pre>
-<code>import * as aws from "@pulumi/aws";
+```javascript
+import * as aws from "@pulumi/aws";
 import * as serverless from "@pulumi/aws-serverless";
+
 let topic = new aws.sns.Topic("topic");
+
 serverless.cloudwatch.onEvent("hourly", "rate(60 minutes)", event => {
-         const sns = new (await import "aws-sdk").SNS();
-         return sns.publish({
-         Message: JSON.stringify({ event: event }),
-         TopicArn: topic.id.get(),
-         }).promise();
+    const sns = new (await import "aws-sdk").SNS();
+    return sns.publish({
+        Message: JSON.stringify({ event: event }),
+        TopicArn: topic.id.get(),
+    }).promise();
 });
-</code>
-</pre>
+```
 
 **Abstraction and reuse.** Real development languages o er abstraction, and as a result, reuse of code. Pulumi supports the appropriate package managers for the chosen development language (e.g. NPM for JS/TS, PyPi for Python). This allows the elimination of significant LoC from a typical DSL- based configuration, and removes the practice of copy-and-paste development with its inherent drift and error replication risks.
 
 This example code shows the refactoring of a typical AWS Best Practice for setting up a VPC, and how it can be reused and instantiated as needed in new Pulumi programs.
 
-<pre>
-<code>import * as awsinfra from "@pulumi/aws-infra";
+```javascript
+import * as awsinfra from "@pulumi/aws-infra";
+
 let network = new awsinfra.Network(`${prefix}-net`, {
-         numberOfAvailabilityZones: 3, // Create subnets in many AZs
-         usePrivateSubnets: true,   // Run inside private per-AZ subnets
+    numberOfAvailabilityZones: 3,   // Create subnets in many AZs.
+    usePrivateSubnets: true,        // Run inside private per-AZ subnets.
 });
-</code>
-</pre>
+```
 
 **Tooling and workflows.** By using real languages, development and devops teams instantly gain access to IDEs, refactoring, testing, static analysis and linters, and so much more. This both improves the productivity and quality of team efforts, and throws into harsh relief the lack of tooling for DSL- based approaches, which is often hard to debug and remediate.
 
@@ -157,7 +148,7 @@ Because infrastructure is now linked to application code, and because of the eph
 
 Previously there was very limited tooling at the very point of collaboration needed by development and devops teams. Pulumi connects those teams and improves the required workflows.
 
-<img src="/images/whitepaper/cloud-native-infrastructure/graph4.png" alt="">
+<img src="/images/whitepaper/cloud-native-infrastructure/graph4.png">
 
 **Delivering Cloud 'Stacks'.** A core concept in Pulumi is the idea of a "stack." A stack is an isolated instance of a cloud program whose resources and configuration are distinct from all other stacks. A team might have a stack each for production, staging, and testing, or perhaps for each single- tenanted environment. Pulumi's CLI makes it trivial to spin up and tear down lots of stacks. This opens up workflows that might not have previously even attempted, such as each developer having her own stack, spinning up (and tearing down) a fresh stack to test out each Pull Request, or even splitting tiers of your service into many stacks that are linked together - all of which is applicable and useful in cloud application deliver scenarios.
 
@@ -167,92 +158,99 @@ Previously there was very limited tooling at the very point of collaboration nee
 
 ## Use Cases
 
-
 Pulumi provides a consistent programming model across the cloud, from VMs through containers and Kubernetes, to serverless and managed services.
 
-<div class="col-sm-6 code-col" data-mh="col">
-<div class="desc" data-mh="desc">
-<p><strong>Infrastructure.</strong> Managed cloud services and infrastructure, continuously deployed and con gured in a robust and compliant manner.</p>
-</div>
-<pre>
-<code class="javascript hljs">// Create a simple web server
+### Infrastructure
+Managed cloud services and infrastructure, continuously deployed and con gured in a robust and compliant manner.
+
+```javascript
+// Create a simple web server.
 const aws = require("@pulumi/aws");
+
 let size = "t2.micro";
 let ami = "ami-7172b611"
-let server = new aws.ec2.Instance("web-
-server-www", {
-    tags: { "Name":"web-server-www" },
+
+let server = new aws.ec2.Instance("web-server-www", {
+    tags: { "Name": "web-server-www" },
     instanceType: size,
     securityGroups: [ group.name ],
     ami: ami,
     userData: userData
 });
+
 exports.publicIp = server.publicIp;
 exports.publicHostName = server.publicDns;
-</code>
-</pre>
-</div>
+```
 
-<div class="col-sm-6 code-col" data-mh="col">
-<div class="desc" data-mh="desc">
-<p><strong>Kubernetes.</strong> Target on-premises or cloud-based Kubernetes services to provision clusters, and create, deploy, and manage apps.</p>
-</div>
-<pre>
-<code>// Deploy 3 replicas of an nginx pod
+### Kubernetes
+Target on-premises or cloud-based Kubernetes services to provision clusters, and create, deploy, and manage apps.
+
+```javascript
+// Deploy 3 replicas of an Nginx pod.
 import * as k8s from "@pulumi/kubernetes";
+
 function deploy(name, replicas, pod) {
     return new k8s.apps.v1beta1.Deployment(name, {
        spec: {
-           selector: { matchLabels: pod.metadata
-labels },
-           replicas: replicas,
-           template: pod
-       }
-}); }
-const nginxServer = deploy("nginx", 3, {
-    metadata: { labels: { app: "nginx" } },
-    spec: {
-       containers: [{ name: "nginx",
-              image: "nginx:1.15-alpine" }]
-} });
-</code>
-</pre>
-</div>
+            selector: {
+                matchLabels: pod.metadata.labels
+            },
+            replicas: replicas,
+            template: pod
+        }
+    });
+}
 
-<div class="col-sm-6 code-col" data-mh="col">
-<div class="desc" data-mh="desc">
-<p><strong>Serverless.</strong> Deploy and scale websites easily, handle event-streaming, and processing with multi-cloud microservices.</p>
-</div>
-<pre>
-<code>// Create a serverless REST API
+const nginxServer = deploy("nginx", 3, {
+    metadata: {
+        labels: {
+            app: "nginx"
+        }
+    },
+    spec: {
+       containers: [
+            {
+                name: "nginx",
+                image: "nginx:1.15-alpine"
+            }
+        ]
+    }
+});
+```
+
+### Serverless
+Deploy and scale websites easily, handle event-streaming, and processing with multi-cloud microservices.
+
+```javascript
+// Create a serverless REST API.
 import * as cloud from "@pulumi/cloud";
+
 let app = new cloud.API("my-app");
 app.static("/", "www");
 
-// Serve a simple REST API on `GET /hello`:
-app.get("/hello", (req, res) =>
-       res.json({ hello: "World!" }));
-export let url = app.publish().url;
-</code>
-</pre>
-</div>
+// Serve a simple REST API on `GET /hello`.
+app.get("/hello", (req, res) => {
+    res.json({ hello: "World!" }));
+}
 
-<div class="col-sm-6 code-col" data-mh="col">
-<div class="desc" data-mh="desc">
-<p><strong>Containers.</strong> Deploy container-based apps into any cloud native infrastructure, from VMs to Kubernetes, to custom orchestrators.</p>
-</div>
-<pre>
-<code>// Deploy a custom container image based on nginx
+export let url = app.publish().url;
+```
+
+### Containers
+Deploy container-based apps into any cloud native infrastructure, from VMs to Kubernetes, to custom orchestrators.
+
+```javascript
+// Deploy a custom container image based on nginx.
 import * as cloud from "@pulumi/cloud";
+
 let nginx = new cloud.Service("nginx", {
     build: ".",
     ports: [{ port: 80 }],
     replicas: 2,
 });
+
 export let url = nginx.defaultEndpoint;
-</code>
-</pre>
-</div>
+```
 
 ### Delivering Cloud Native Infrastructure for Learning Machine
 
@@ -265,12 +263,11 @@ Learning Machine suffered from a loss of productivity and an inability to meet b
 
 By using Pulumi, Learning Machine were able to reduce 25,000 LoC of ad-hoc scripts to 500 LoC of JavaScript that could be understood across all teams, enabling the development team to take accountability for service delivery to meet business needs. Additionally, moving to Pulumi removes lock-in to a specific cloud, and has enabled Learning Machine to begin work on their on-premises private cloud service.
 
-<img src="/images/whitepaper/cloud-native-infrastructure/graph5.png" alt="" width="600">
+<img class="block max-w-lg mx-auto my-6" src="/images/whitepaper/cloud-native-infrastructure/graph5.png">
 
-<blockquote class="small">
-<p>"Pulumi has given our team the tools and framework to achieve a unified development and DevOps model, boosting productivity and taking our business to any cloud environment that our customers need. We retired 25,000 lines of complex code that few team members understood and replaced it with 100s of lines in a real programming language."</p>
-<footer><p>Kim Hamilton, CTO, Learning Machine</p></footer>
-</blockquote>
+> Pulumi has given our team the tools and framework to achieve a unified development and DevOps model, boosting productivity and taking our business to any cloud environment that our customers need. We retired 25,000 lines of complex code that few team members understood and replaced it with 100s of lines in a real programming language.
+
+&mdash; Kim Hamilton, CTO, Learning Machine
 
 ## Conclusion
 
@@ -286,4 +283,8 @@ Cloud Native development represents a step change in opportunity, and capabiliti
 
 > The rapid pace of evolution of the cloud, combined with the shift to ephemeral infrastructure, and the connection of application code and infrastructure code, demands a different view of cloud development and devops.
 
-<p class="text-center"><a href="https://cdn2.hubspot.net/hubfs/4429525/Content/Pulumi-Delivering-CNI-as-Code.pdf" class="button purple inverted" target="_blank">Download Delivering Cloud Native Infrastructure as Code PDF</a></p>
+<p class="text-center">
+    <a class="btn bg-purple-700 font-bold text-sm" href="https://cdn2.hubspot.net/hubfs/4429525/Content/Pulumi-Delivering-CNI-as-Code.pdf" target="_blank">
+        Download Delivering Cloud Native Infrastructure as Code PDF
+    </a>
+</p>
