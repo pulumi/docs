@@ -495,8 +495,6 @@ Kubernetes cluster for everybody!
 
 ## 8. Build and Deploy Container Images Alongside Configuration Updates
 
-[ [Code](https://github.com/pulumi/pulumi-docker/tree/master/docker/tests/image) ]
-
 One scenario we often encounter in practice is the need to coordinate
 Docker registry provisioning and management (using one set of tools),
 with building and pushing new Docker images (using another set of
@@ -563,7 +561,7 @@ pipeline is too. In fact, each Pulumi program really is a deployment
 workflow expressed in code. The Pulumi CLI is responsible for evaluating
 programs, producing goal states, diffing states to produce plans, and
 carrying them out. The Pulumi hosted service at
-<app.pulumi.com> is used for robust concurrency
+[https://app.pulumi.com](https://app.pulumi.com) is used for robust concurrency
 and state management so that deployments can be done continuously in a
 team environment, with perfect auditability of who changed what and
 when, and so that deployments are repeatable and failures recoverable.

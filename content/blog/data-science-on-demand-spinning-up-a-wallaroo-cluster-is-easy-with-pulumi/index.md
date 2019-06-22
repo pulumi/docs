@@ -260,7 +260,7 @@ While the work is being performed, we can take a look at the metrics URL
 printed out on the screen to find out how the work is being distributed.
 
 > To see the cluster's real-time metrics, please visit
-> http://ec2-54-200-198-6.us-west-2.compute.amazonaws.com:4000
+> `http://ec2-54-200-198-6.us-west-2.compute.amazonaws.com:4000`
 
 ![wallaroo-2](./wallaroo-2.png)
 

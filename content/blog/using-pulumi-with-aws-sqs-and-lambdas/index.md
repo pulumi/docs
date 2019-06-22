@@ -138,7 +138,7 @@ changes in the upcoming releases for both projects!
 
 After getting the change in we went back and tested our example and saw
 that now everything worked as expected. We also expanded things out
-[in an example](https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/aws-serverless/examples/queue/index.ts)
+[in an example](https://github.com/pulumi/pulumi-aws/blob/master/examples/queue/index.ts)
 to show how you might use this in practice. In this example, we receive
 the event, and then just write the data of it into an [S3 Bucket](https://aws.amazon.com/s3/). Running this example we now
 successfully see:

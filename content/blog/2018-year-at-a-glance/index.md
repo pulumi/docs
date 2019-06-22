@@ -16,7 +16,7 @@ Here are some of the exciting things that happened:
 
 **Launching our open source
 community.** After being hard at work for a little over a year,
-[we launched our open source project](../introducing-pulumi-a-cloud-development-platform/),
+[we launched our open source project]({{< ref "/blog/introducing-pulumi-a-cloud-development-platform" >}}),
 with the aim of making it considerably easier and more enjoyable to create and operate
 cloud software. This was a major moment for us. We had previously only shown Pulumi to a few select friends,
 family, and private beta users, and the reception was beyond our wildest expectations. We got passionate +1’s
@@ -27,11 +27,11 @@ open source contributions and passionate community leaders emerging who are help
 helping us to make Pulumi even better.
 
 **Support for major public, private, and hybrid clouds.** We launched with support for the three major public
-clouds, [AWS]({{< ref "/docs/quickstart/aws" >}}), [Azure]({{ ref "/docs/quickstart/azure" >}}), and
+clouds, [AWS]({{< ref "/docs/quickstart/aws" >}}), [Azure]({{< ref "/docs/quickstart/azure" >}}), and
 [Google Cloud]({{< ref "/docs/quickstart/gcp" >}}), and have since added capabilities across all
 of them, including adding [serverless]({{< ref "/docs/reference/tutorials/aws/tutorial-rest-api.md" >}}),
-[containers](https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/aws-infra/examples/fargate/index.ts), and
-[infrastructure](https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/aws-infra/examples/ec2/index.ts)
+[containers](https://github.com/pulumi/examples/blob/master/aws-ts-containers/index.ts), and
+[infrastructure](https://github.com/pulumi/examples/blob/master/aws-js-webserver/index.js)
 productivity libraries -- it is here where we believe Pulumi’s unique approach of using general purpose languages truly
 shines. We immediately had a wave of inbound interest in applying the Pulumi approach to infrastructure as code in other
 areas, and quickly added other providers including OpenStack, VMWare vSphere, Alibaba Cloud, F5 BigIP, and more. In
@@ -41,7 +41,7 @@ both of which continue to lead to significant community growth. Many customers a
 consistent engineering workflow across multi-cloud environments -- often spanning public, private, and/or hybrid clouds.
 
 **Launching our commercial SaaS product.** In October, [we launched our commercial SaaS
-product](../../../com/pulumi/blog/building-a-future-of-cloud-engineering.html), with reasonable
+product]({{< ref "/blog/building-a-future-of-cloud-engineering" >}}), with reasonable
 [pricing](https://www.pulumi.com/pricing/) so that teams of all sizes are able to get their code to the cloud
 productively, securely, and collaboratively. If Pulumi is like Git -- a local CLI and SDK -- then the Pulumi SaaS is
 like GitHub -- a hosted service to ensure you can use Pulumi in a team setting. In addition to the Team Edition, which
