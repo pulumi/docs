@@ -1,133 +1,163 @@
+{{ define "hero" }}
+    <header class="bg-purple-500 text-white py-24 px-4">
+        <div class="container mx-auto text-white md:flex">
+            <div class="md:w-1/2 md:mr-8 mb-8 md:mb-0">
+                <h1 class="text-white">GitHub Actions with Pulumi</h1>
+                <p class="text-xl leading-relaxed text-purple-100">
+                    Pulumi and GitHub Actions combine to provide the easiest, most
+                    capable, and friction-free way to achieve continuous delivery of cloud
+                    applications and infrastructure.
+                </p>
+                <div class="mt-4">
+                    <a class="inline-block btn btn-cta bg-blue-500 mr-2" href="{{ relref . "/docs/reference/cd-github-actions" }}">
+                        Get Started
+                    </a>
+                    <a class="inline-block btn btn-cta mt-4" href="{{ relref . "/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi" }}">
+                        Read the Blog
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 md:ml-8">
+                <iframe class="rounded shadow-md max-w-full"
+                    width="560" height="315"
+                    src="https://www.youtube.com/embed/59SxB2uY9E0?rel=0&amp;showinfo=0"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </header>
+{{ end }}
+
 {{ define "main" }}
+    <nav class="bg-black text-white px-4 sticky top-0">
+        <div class="container mx-auto">
+            <ul class="flex list-none justify-around">
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300 ml-auto" href="#continuous-delivery">Continuous Delivery </a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300 mr-auto" href="#gitops">GitOps</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<section class="hero white-text">
-	<div class="container-fluid">
-		<div class="row cols-are-spaced-md">
-			<div class="col col-md-7 col-lg-7 col-left col-text before-glare">
-				<div class="content">
-					{{ with .Params.topic }}<sup>{{ . | safeHTML }}</sup>{{ end }}
-					<h1>{{ .Params.hero_title | safeHTML }}</h1>
-					{{ with .Params.hero_description }}<p class="intro">{{ . | safeHTML }}</p>{{ end }}
-					{{ if .Params.hero_buttons }}<a href="https://pulumi.io/reference/cd-github-actions.html" target="_blank" class="button">Get Started</a>{{ end }}
-					{{ with .Params.hero_buttons }}{{ . | safeHTML }}{{ end }}
-				</div>
-				
-			</div>
-			<div class="col col-md-5 col-lg-5 col-right">
-				<div class="content">
-					{{ .Params.hero_right_content | safeHTML }}
-				</div>
-			</div>
-		</div>
-	</div>
-</section> 
-  
-    <section class="content-block content-block-anchors bg-black white-text">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12 anchor-container" id="anchor-point">
-                    <ul class="anchor-list">
-                        <li class="anchor-item"><a href="#continuous-delivery">Continuous Delivery</a></li>
-                        <li class="anchor-item"><a href="#gitops">GitOps</a></li>
-                    </ul>
+    <section id="continuous-delivery" class="py-16 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <div class="mx-auto md:flex items-center justify-between max-w-4xl mb-8">
+                <div class="md:pr-8">
+                    <h2 class="mb-4 text-black">Continuous Delivery</h2>
+                    <p class="text-xl leading-loose text-gray-600">
+                        In this end-to-end example, see how we use Pulumi and GitHub actions
+                        to continuously deploy a Ruby on Rails application, packaged with
+                        Docker, to a Kubernetes cluster.
+                    </p>
+                </div>
+                <div class="flex-shrink-0">
+                    <a class="inline-block btn btn-cta bg-blue-500" href="{{ relref . "/docs/reference/cd-github-actions" }}">
+                        Get Started
+                    </a>
                 </div>
             </div>
-        </div> 
-    </section>
 
-    
-    <section id="continuous-delivery" class="content-block border-top"> 
-        
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="content">
-                            <div class="row valign-center-md cols-are-spaced-md">
-                                <div class="col col-md-9 content">
-                                    <h2>Continuous Delivery</h2>
-                                    <p class="intro">In this end-to-end example, see how we use Pulumi and GitHub actions to continuously deploy a Ruby on Rails application, packaged with Docker, to a Kubernetes cluster.</p>
-                                </div>
-                                <div class="col col-md-3 content">
-                                    <a href="https://pulumi.io/reference/cd-github-actions.html" class="button width-100-md width-100-lg width-100-xlg">Get Started</a>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row margin-bottom-45">
-                                <div class="col-md-10 col-md-offset-1">
-                                    <iframe width="840" height="441" src="https://www.youtube.com/embed/1Et2TkuxqJg?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                            <div class="row cols-are-spaced-md">
-                                <div class="col-md-4 col">
-                                    <h3 class="h6">Build Apps</h3>
-                                    <p>Pulumi uses an existing Dockerfile to build and package the Ruby on Rails app.</p>
-                                </div>
-                                <div class="col-md-4 col">
-                                    <h3 class="h6">Deploy Infrastructure</h3>
-                                    <p>Pulumi provisions a Kubernetes cluster and a hosted PostgreSQL database.</p>
-                                </div>
-                                <div class="col-md-4 col">
-                                    <h3 class="h6">Deploy on Commit</h3>
-                                    <p>On a commit, Pulumi can provide a preview, and then automatically deploy the complete environment.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="mb-12">
+                <iframe class="mx-auto rounded shadow-md max-w-full"
+                    width="840" height="441"
+                    src="https://www.youtube.com/embed/1Et2TkuxqJg?rel=0&amp;showinfo=0"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="md:flex md:max-w-4xl text-sm">
+                <div class="md:w-1/2">
+                    <h5 class="md:mt-0">Build Apps</h5>
+                    <p>
+                        Pulumi uses an existing Dockerfile to build and package the Ruby on
+                        Rails app.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:mx-8">
+                    <h5 class="md:mt-0">Deploy Infrastructure</h5>
+                    <p>
+                        Pulumi provisions a Kubernetes cluster and a hosted PostgreSQL
+                        database.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <h5 class="md:mt-0">Deploy on Commit</h5>
+                    <p>
+                        On a commit, Pulumi can provide a preview, and then automatically
+                        deploy the complete environment.
+                    </p>
                 </div>
             </div>
         </div>
-        
     </section>
-    
-    <section id="gitops" class="content-block bg-grey">
-        
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="content">
-                            <div class="row valign-center-md cols-are-spaced-md">
-                                <div class="col col-md-9 content">
-                                    <h2>GitOps with Pulumi</h2>
-                                    <p class="intro">Commit a code change, and see how Pulumi and GitHub Actions can then deploy your apps and infrastructure to any cloud or cloud-native environment.</p>
-                                </div>
-                                <div class="col col-md-3 content">
-                                    <a href="https://pulumi.io/reference/cd-github-actions.html" class="button width-100-md width-100-lg width-100-xlg">Get Started</a>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row margin-bottom-45">
-                                <div class="col-lg-5 col-xlg-3">
-                                    <div class="content margin-bottom-30">
-                                        <h3 class="h6">Commit Code</h3>
-                                        <p>Pulumi code sits alongside application code and so a change to either can trigger a deployment of the full stack.</p>
-                                    </div>
-                                    <div class="content margin-bottom-30">
-                                        <h3 class="h6">Preview Changes</h3>
-                                        <p>Pulumi provides a preview of changes that will be made as part of a Pull Request.</p>
-                                    </div>
-                                    <div class="content margin-bottom-30">
-                                        <h3 class="h6">Merge Pull Request</h3>
-                                        <p>Once a merge is performed, GitHub Actions and Pulumi will deploy the full application and infrastructure stack.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-lg-offset-1 col-xlg-8">
-                                    <iframe width="672" height="378" src="https://www.youtube.com/embed/MKbDVDBuKUA?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+    <section id="gitops" class="bg-gray-200 py-16 px-4 md:px-0">
+        <div class="container mx-auto max-w-4xl">
+            <div class="mx-auto md:flex items-center justify-between mb-8">
+                <div class="md:pr-8">
+                    <h2 class="mb-4 text-black">GitOps with Pulumi</h2>
+                    <p class="text-xl leading-loose text-gray-600">
+                        Commit a code change, and see how Pulumi and GitHub Actions can
+                        then deploy your apps and infrastructure to any cloud or
+                        cloud-native environment.
+                    </p>
+                </div>
+                <div class="flex-shrink-0">
+                    <a class="inline-block btn btn-cta bg-blue-500" href="{{ relref . "/docs/reference/cd-github-actions" }}">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <iframe class="mx-auto rounded shadow-md max-w-full"
+                    width="840" height="441"
+                    src="https://www.youtube.com/embed/MKbDVDBuKUA?rel=0&amp;showinfo=0"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="md:flex md:max-w-4xl text-sm">
+                <div class="md:w-1/2">
+                    <h5 class="md:mt-0">Commit Code</h5>
+                    <p>
+                        Pulumi code sits alongside application code and so a change to
+                        either can trigger a deployment of the full stack.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:mx-8">
+                    <h5 class="md:mt-0">Preview Changes</h5>
+                    <p>
+                        Pulumi provides a preview of changes that will be made as part of
+                        a Pull Request.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <h5 class="md:mt-0">Merge Pull Request</h5>
+                    <p>
+                        Once a merge is performed, GitHub Actions and Pulumi will deploy
+                        the full application and infrastructure stack.
+                    </p>
                 </div>
             </div>
         </div>
-	    
-        
     </section>
-    
-    
-    
-    {{ partial "learnmore-contactus.html" . }}
-    {{ partial "newsletter.html" (dict "classes" "bg-purple-dark white-text" )}}
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {{ end }}
