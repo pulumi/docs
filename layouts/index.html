@@ -145,28 +145,17 @@
         <div class="container mx-auto px-4 md:px-0">
             <h2 class="text-black text-center mb-8">What They're Saying About Pulumi</h2>
             <div class="md:flex max-w-3xl mx-auto">
-                <div class="md:w-1/2 mx-4">
-                    <blockquote class="border-orange-500 italic text-gray-800 mb-4">
-                        We're excited to see Pulumi deliver a pure code multi-cloud cloud
-                        programming model. Combined with IOpipe, teams can deploy, test,
-                        and debug their code faster.
-                    </blockquote>
-                    <div class="text-sm">
-                        <div class="text-black">Erica Windisch, Co-founder and CTO</div>
-                        <a class="link" href="https://www.iopipe.com" target="_blank">IOpipe</a>
+                {{ range $.Site.Data.testimonials.testimonial }}
+                    <div class="md:mx-4">
+                        <blockquote class="border-orange-500 italic text-gray-800 mb-4">
+                            {{ .content }}
+                        </blockquote>
+                        <div class="text-sm">
+                            <div class="text-black">{{ .attr }}</div>
+                            <a class="link" href="{{ .link }}" target="_blank">{{ .company }}</a>
+                        </div>
                     </div>
-                </div>
-                <div class="md:w-1/2 mx-4">
-                    <blockquote class="border-orange-500 italic text-gray-800 mb-4">
-                        With Pulumi, we have the tools to achieve a unified DevOps model.
-                        We retired 25,000 lines of complex config and replaced it with
-                        100s of lines of real code with Pulumi.
-                    </blockquote>
-                    <div class="text-sm">
-                        <div class="text-black">Kim Hamilton, CTO</div>
-                        <a class="link" href="https://www.learningmachine.com" target="_blank">Learning Machine</a>
-                    </div>
-                </div>
+                {{ end }}
             </div>
         </div>
     </section>
