@@ -88,7 +88,7 @@ will it proceed (with a full audit history):
     ...
 
 Learn more about working with Pulumi and Google Cloud infrastructure in
-this [GCE Web Server]({{ ref "/docs/reference/tutorials/gcp/tutorial-gce-webserver" >}})
+this [GCE Web Server]({{< ref "/docs/reference/tutorials/gcp/tutorial-gce-webserver" >}})
 tutorial.
 
 ## Working with Kubernetes and Google Container Engine (GKE)

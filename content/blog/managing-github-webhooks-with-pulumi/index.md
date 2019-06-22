@@ -84,7 +84,7 @@ webhook and fill in my information:
 
 - Payload URL: The value of the `url` output of my Pulumi program (in
   this case it is
-  <https://t1vyz1x203.execute-api.us-west-1.amazonaws.com/stage/>).
+  `https://t1vyz1x203.execute-api.us-west-1.amazonaws.com/stage/`).
 - Content Type: `application-json`. I know we'll be inspecting this
   content as we develop the hook and since we're writing the
   implementation in TypeScript, it will be easier to interact with

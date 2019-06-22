@@ -131,5 +131,5 @@ your organization's Settings page.
 
 For annual subscriptions, we also offer invoicing that is payable with
 bank transfer or check. To discuss those options in more detail, please
-[contact us]({{ ref "/contact" }}).
+[contact us]({{< ref "/contact" >}}).
 

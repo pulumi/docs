@@ -173,7 +173,7 @@ tools we already use for software engineering:
 
 1. Abstraction, encapsulation, and code reuse for infrastructure and
    applications
-2. [Testing](../../../com/pulumi/blog/testing-your-infrastructure-as-code-with-pulumi.html),
+2. [Testing]({{< ref "/blog/testing-your-infrastructure-as-code-with-pulumi" >}}),
    both unit and integration
 3. IDEs and tools for detecting errors extremely early in a developer's
    inner loop, instead of at deployment time

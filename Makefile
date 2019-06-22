@@ -47,8 +47,10 @@ test:
 		--exclude "/docs/reference/pkg" \
 		--exclude "/docs/reference/changelog" \
 		--exclude "https://github.com/pulumi/docs/edit/master" \
-		--exclude "https://www.linkedin.com/company/pulumi/" \
-		--exclude "https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task"
+		--exclude "https://www.linkedin.com/" \
+		--exclude "https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task" \
+		--exclude "https://blog.mapbox.com/" \
+		--exclude "https://github.com/pulls?"
 
 .PHONY: validate
 validate:

@@ -58,8 +58,8 @@ not remember what you deployed as your cloud environments scale:
 
 Lets now work through the solution flow with some sample snippets of
 code. To get access to the complete piece of code, please connect with
-Mapbox solution team [here](chris.toomey@mapbox.com) and
-Pulumi team [here](sales@pulumi.com). We will be happy to help you sample test this
+Mapbox solution team [here](mailto:chris.toomey@mapbox.com) and
+Pulumi team [here](mailto:sales@pulumi.com). We will be happy to help you sample test this
 solution on AWS!
 
 **STEP 1: Create a Pulumi project using an AWS JavaScript template**
@@ -144,8 +144,8 @@ used by Mapbox streamprocessor and Firehose all created with Pulumi AWS
 and AWSX libraries.
 
 To get this piece of code, please connect with Mapbox solution team
-[here](chris.toomey@mapbox.com) and Pulumi team
-[here](sales@pulumi.com).
+[here](mailto:chris.toomey@mapbox.com) and Pulumi team
+[here](mailto:sales@pulumi.com).
 
 **STEP 3: Create a consumption API for the map client to consume from a
 data source**
@@ -157,8 +157,8 @@ query this data out of DynamoDB. The sample code in `index.js` will look
 like this:
 
 To get this piece of code, please connect with Mapbox solution team
-[here](chris.toomey@mapbox.com) and Pulumi team
-[here](sales@pulumi.com).
+[here](mailto:chris.toomey@mapbox.com) and Pulumi team
+[here](mailto:sales@pulumi.com).
 
     //* Create DynamoDB Table
     const assetTable = new aws.dynamodb.Table("assetTable", {
