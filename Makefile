@@ -66,6 +66,9 @@ endif
 ifeq ($(TRAVIS_BRANCH),production)
 	./scripts/preview.sh production
 endif
+ifeq ($(TRAVIS_BRANCH),fusion)
+	./scripts/preview.sh fusion
+endif
 
 .PHONY: deploy
 deploy:
@@ -76,6 +79,9 @@ endif
 ifeq ($(TRAVIS_BRANCH),production)
 	./scripts/update.sh production
 endif
+ifeq ($(TRAVIS_BRANCH),fusion)
+	./scripts/update.sh fusion
+endif
 
 .PHONY: travis_push
 travis_push::
@@ -83,6 +89,8 @@ travis_push::
 	$(MAKE) ensure
 ifeq ($(TRAVIS_BRANCH),master)
 	HUGO_BASEURL=https://staging.pulumi.io/ $(MAKE) build
+else ifeq ($(TRAVIS_BRANCH),fusion)
+	HUGO_BASEURL=https://fusion.pulumi.io/ $(MAKE) build
 else
 	$(MAKE) build
 endif
@@ -94,6 +102,8 @@ travis_pull_request::
 	$(MAKE) ensure
 ifeq ($(TRAVIS_BRANCH),master)
 	HUGO_BASEURL=https://staging.pulumi.io/ $(MAKE) build
+else ifeq ($(TRAVIS_BRANCH),fusion)
+	HUGO_BASEURL=https://fusion.pulumi.io/ $(MAKE) build
 else
 	$(MAKE) build
 endif
@@ -106,6 +116,8 @@ travis_cron::
 	$(MAKE) ensure
 ifeq ($(TRAVIS_BRANCH),master)
 	HUGO_BASEURL=https://staging.pulumi.io/ $(MAKE) build
+else ifeq ($(TRAVIS_BRANCH),fusion)
+	HUGO_BASEURL=https://fusion.pulumi.io/ $(MAKE) build
 else
 	$(MAKE) build
 endif
@@ -116,6 +128,8 @@ travis_api::
 	$(MAKE) ensure
 ifeq ($(TRAVIS_BRANCH),master)
 	HUGO_BASEURL=https://staging.pulumi.io/ $(MAKE) build
+else ifeq ($(TRAVIS_BRANCH),fusion)
+	HUGO_BASEURL=https://fusion.pulumi.io/ $(MAKE) build
 else
 	$(MAKE) build
 endif

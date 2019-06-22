@@ -4,6 +4,7 @@ branches:
   only:
   - master
   - production
+  - fusion
 before_install:
 # Use travisqueue to manage build concurrency.
 - ./scripts/travisqueue.sh install
