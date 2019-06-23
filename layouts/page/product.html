@@ -10,33 +10,34 @@
                     DevOps alike.
                 </p>
                 <div class="mt-4">
-                    <a class="inline-block btn btn-cta bg-blue-500 mr-2" href="{{ relref . "/docs/quickstart" }}">Try Pulumi for Free</a>
-                    <a class="inline-block btn btn-cta mt-4" href="{{ relref . "/docs/quickstart" }}">Read the Docs</a>
+                    <a class="inline-block btn btn-lg mr-2" href="{{ relref . "/docs/quickstart" }}">Try Pulumi for Free</a>
+                    <a class="inline-block btn btn-lg btn-orange-translucent mt-4" href="{{ relref . "/docs/quickstart" }}">Read the Docs</a>
                 </div>
             </div>
             <div class="md:w-1/2 md:ml-8 text-white">
-<pre class="bg-gray-900 border-none rounded-lg shadow-md"><code>$ pulumi up
-
+                <pre class="bg-gray-900 whitespace-normal shadow-md rounded border-none px-6 pb-6">
+<code class="whitespace-pre text-white">
 Previewing update of stack `mystack-dev`
 
-     Type
- +   pulumi:pulumi:Stack
- +   ├─ aws-infra:network:Network
- +   ├─ cloud:global:infrastructure
- +   │  ├─ aws:iam:Role
- +   │  ├─ aws:iam:RolePolicyAttachment
- +   ├─ cloud:bucket:Bucket
- +   │  ├─ cloud:function:Function
- +   │  │  └─ aws:serverless:Function
- +   │  │     ├─ aws:iam:Role
- +   │  │     ├─ aws:iam:RolePolicyAttachment
- +   │  │     └─ aws:lambda:Function
- +   │  ├─ aws:s3:Bucket
- +   ...
+    Type
++   pulumi:pulumi:Stack
++   ├─ aws-infra:network:Network
++   ├─ cloud:global:infrastructure
++   │  ├─ aws:iam:Role
++   │  ├─ aws:iam:RolePolicyAttachment
++   ├─ cloud:bucket:Bucket
++   │  ├─ cloud:function:Function
++   │  │  └─ aws:serverless:Function
++   │  │     ├─ aws:iam:Role
++   │  │     ├─ aws:iam:RolePolicyAttachment
++   │  │     └─ aws:lambda:Function
++   │  ├─ aws:s3:Bucket
++   ...
 
 info: 33 changes previewed:
     + 33 resources to create
-</code></pre>
+</code>
+                </pre>
             </div>
         </div>
     </header>
@@ -138,7 +139,7 @@ info: 33 changes previewed:
                     The SDK is an open source tool and framework for defining and
                     deploying cloud apps and infrastructure in code.
                 </p>
-                <a class="inline-block btn btn-cta bg-blue-500 my-4" href="{{ relref . "/docs/quickstart" }}">
+                <a class="inline-block btn btn-lg my-4" href="{{ relref . "/docs/quickstart" }}">
                     Try Pulumi for Free
                 </a>
             </div>
@@ -203,7 +204,7 @@ info: 33 changes previewed:
                     Pulumi Crosswalk, now available for AWS, is a framework for productive
                     infrastructure as code using built-in best practices.
                 </p>
-                <a class="inline-block btn btn-cta bg-blue-500 my-4" href="{{ relref . "/crosswalk/aws" }}">
+                <a class="inline-block btn btn-lg my-4" href="{{ relref . "/crosswalk/aws" }}">
                     Learn More
                 </a>
             </div>
@@ -268,7 +269,7 @@ info: 33 changes previewed:
                     The SaaS helps teams of all sizes a reliable way to continuously
                     deliver and manage cloud apps and infrastructure.
                 </p>
-                <a class="inline-block btn btn-cta bg-blue-500 my-4" href="{{ relref . "/docs/quickstart" }}">
+                <a class="inline-block btn btn-lg my-4" href="{{ relref . "/docs/quickstart" }}">
                     Try Pulumi for Free
                 </a>
             </div>
@@ -333,7 +334,7 @@ info: 33 changes previewed:
                     An end-to-end solution for running Kubernetes in production on
                     multiple clouds, public or private.
                 </p>
-                <a class="inline-block btn btn-cta bg-blue-500 my-4" href="{{ relref . "/pricing#contact" }}">
+                <a class="inline-block btn btn-lg my-4" href="{{ relref . "/pricing#contact" }}">
                     Contact Us
                 </a>
             </div>

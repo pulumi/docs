@@ -58,13 +58,19 @@ body {
     @apply font-body text-gray-900;
 }
 
+.nav-main {
+    a {
+        @include transition;
+    }
+}
+
 main {
     @apply text-gray-700;
 
     p, li {
 
         a {
-            @apply text-blue-700;
+            @apply text-blue-600;
 
             &:hover {
                 @apply text-blue-700;
@@ -95,16 +101,6 @@ main {
 
 .link {
     @apply text-blue-700;
-}
-
-.bg-glow {
-    @apply relative;
-
-    &:before {
-        content: "";
-        background-image: url(/images/glare-white.png);
-        @apply block absolute top-0 right-0 bottom-0 left-0 bg-cover;
-    }
 }
 
 @tailwind utilities;

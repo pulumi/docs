@@ -36,7 +36,7 @@
     }
 
     input[type="submit"] {
-        @apply btn btn-cta py-4 px-8 shadow-none cursor-pointer shadow-none border-none tracking-wide font-normal;
+        @apply btn btn-orange-translucent;
     }
 
     .hs-error-msgs {
@@ -61,6 +61,12 @@
 
     &-fg-dark {
         @apply text-gray-700;
+
+        input {
+            &.hs-button {
+                @apply btn;
+            }
+        }
     }
 
     &.newsletter {
@@ -74,7 +80,7 @@
             @apply block py-3 px-4 rounded-l rounded-r-none text-gray-600 w-56;
 
             &.hs-button {
-                @apply block btn btn-cta py-3 px-4 rounded-r rounded-l-none w-auto;
+                @apply block btn btn-lg btn border-none py-3 px-4 rounded-r rounded-l-none w-auto;
             }
         }
     }

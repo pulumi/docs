@@ -110,29 +110,30 @@
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <div class="highlight">
-<pre><code>// Create a load balanced ECS "Fargate" service.
-import * as awsx from "@pulumi/awsx";
+                    <pre class="bg-gray-900 whitespace-normal shadow-md rounded border-none px-6 pb-6">
+                        <code class="whitespace-pre text-white sm">
+                            // Create a load balanced ECS "Fargate" service.
+                            import * as awsx from "@pulumi/awsx";
 
-// Spin up two instances of NGINX on port 80.
-const lb = new awsx.elasticloadbalancingv2.ApplicationListener("nginx", { port: 80 });
-const nginx = new awsx.ecs.FargateService("nginx", {
-    taskDefinitionArgs: {
-        containers: {
-            nginx: {
-                image: "nginx",
-                memory: 128,
-                portMappings: [ lb ],
-            },
-        },
-    },
-    desiredCount: 2,
-});
+                            // Spin up two instances of NGINX on port 80.
+                            const lb = new awsx.elasticloadbalancingv2.ApplicationListener("nginx", { port: 80 });
+                            const nginx = new awsx.ecs.FargateService("nginx", {
+                                taskDefinitionArgs: {
+                                    containers: {
+                                        nginx: {
+                                            image: "nginx",
+                                            memory: 128,
+                                            portMappings: [ lb ],
+                                        },
+                                    },
+                                },
+                                desiredCount: 2,
+                            });
 
-// Export the service's URL so that it's easy to access.
-export const url = lb.endpoint.hostname;
-</pre></code>
-                    </div>
+                            // Export the service's URL so that it's easy to access.
+                            export const url = lb.endpoint.hostname;
+                        </code>
+                    </pre>
                 </div>
             </div>
         </div>

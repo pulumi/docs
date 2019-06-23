@@ -8,6 +8,8 @@ hero_image: /images/whitepaper/cloud-native-infrastructure/deliveringCloudNative
 
 summary: To a first approximation, all developers are cloud developers, all applications are cloud native, and all operations are cloud-first. Yet, there is a lack of a consistent approach to delivering cloud native applications and infrastructure. The tools and processes differ by technology generation, and even by cloud vendor, and so deny the full potential of cloud native application delivery.
 
+download_url: "https://cdn2.hubspot.net/hubfs/4429525/Content/Pulumi-Delivering-CNI-as-Code.pdf"
+
 sections:
     - label: Exec Summary
       anchor: executive-summary
@@ -300,9 +302,3 @@ Pulumi provides a platform to deliver cloud native infrastructure as code for an
 Cloud Native development represents a step change in opportunity, and capabilities, for development and devops teams. Pulumi brings together those teams to ensure their success through huge productivity and quality gains with a Cloud Native Development Platform designed for every cloud evolution.
 
 > The rapid pace of evolution of the cloud, combined with the shift to ephemeral infrastructure, and the connection of application code and infrastructure code, demands a different view of cloud development and devops.
-
-<p class="text-center">
-    <a class="btn bg-purple-700 font-bold text-sm" href="https://cdn2.hubspot.net/hubfs/4429525/Content/Pulumi-Delivering-CNI-as-Code.pdf" target="_blank">
-        Download Delivering Cloud Native Infrastructure as Code PDF
-    </a>
-</p>

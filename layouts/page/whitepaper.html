@@ -1,5 +1,5 @@
 {{ define "hero" }}
-    <header class="bg-blue-700 text-white px-4 bg-glow">
+    <header class="bg-blue-600 text-white px-4">
         <div class="container mx-auto text-white md:flex">
             <div class="md:w-1/2 md:mr-8 py-16">
                 <h1 class="text-white font-bold">
@@ -9,7 +9,7 @@
                     {{ .Params.description }}
                 </p>
                 <div class="mt-4">
-                    <a class="inline-block btn bg-blue-500 text-sm mt-4" href="{{ relref . "/why-pulumi/delivering-cloud-native-infrastructure-as-code" }}">
+                    <a class="inline-block btn btn-lg btn-translucent text-sm mt-4" href="{{ .Params.download_url }}">
                         <i class="far fa-file-pdf mr-1"></i>
                         Download the Whitepaper
                     </a>
@@ -43,8 +43,15 @@
     </section>
 
     <section class="pb-16 px-4 md:px-0">
-        <div class="container mx-auto max-w-4xl">
+        <div class="container mx-auto max-w-4xl mb-4">
             {{ .Content }}
+
+            <div class="text-center mt-8">
+                <a class="btn btn-lg btn-purple" href="{{ .Params.download_url }}" target="_blank">
+                    <i class="far fa-file-pdf mr-1"></i>
+                    Download the Whitepaper
+                </a>
+            </div>
         </div>
     </section>
 
