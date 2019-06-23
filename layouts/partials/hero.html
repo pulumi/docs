@@ -4,7 +4,7 @@
 		<div class="row valign-center cols-are-spaced-md">
 			<div class="col col-md-5 col-md-push-7 col-lg-5 col-lg-push-7 col-right col-img hidden-xs hidden-sm">
 				<div class="content">
-					<img src="{{ .Site.BaseURL }}{{ .Params.hero_img }}" alt="{{ .Params.hero_img_alt }}" width="{{ .Params.hero_img_width }}">
+					<img src="{{ .Params.hero_img }}" alt="{{ .Params.hero_img_alt }}" width="{{ .Params.hero_img_width }}">
 				</div>
 			</div>
 			<div class="col col-md-7 col-md-pull-5 col-lg-7 col-lg-pull-5 col-left col-text">
@@ -106,7 +106,7 @@
 
 {{ else if and (isset .Params "hero_title") (isset .Params "hero_bg_video") }}
 <section class="hero white-text bg-video text-center valign-center-md {{ with .Params.hero_classes }}{{ . }}{{ end }} {{ if .Params.hero_footer_waves }}has-footer-waves{{ end }}">
-	<div class="vbwrapper {{ if .Params.hero_bg_video_classes }}{{ .Params.hero_bg_video_classes }}{{ end }}"><div id="video-background" video="{{ .Params.hero_bg_video }}" class="video-background bg-cover" {{ if .Params.hero_bg_video_fb_img }} style="background-image: url({{ .Site.BaseURL }}{{ .Params.hero_bg_video_fb_img }});" {{ end }}><div class="video-overlay"></div></div></div>
+	<div class="vbwrapper {{ if .Params.hero_bg_video_classes }}{{ .Params.hero_bg_video_classes }}{{ end }}"><div id="video-background" video="{{ .Params.hero_bg_video }}" class="video-background bg-cover" {{ if .Params.hero_bg_video_fb_img }} style="background-image: url({{ .Params.hero_bg_video_fb_img }});" {{ end }}><div class="video-overlay"></div></div></div>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col col-sm-12">

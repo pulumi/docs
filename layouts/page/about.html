@@ -58,7 +58,7 @@
                                 {{ if eq .status "active" }}
                                 <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-centered col">
                                     <div class="content">
-                                        <img style="height: 180px; padding-bottom: 16px;" src="{{ $.Site.BaseURL }}/images/team/{{ .id }}.jpg" alt="{{ .name }}" >
+                                        <img style="height: 180px; padding-bottom: 16px;" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" >
                                         <h3 class="h6 {{if .bio }}cursor-pointer{{ end }}" {{ if .bio }}data-toggle="modal" data-target="#{{ .id }}"{{ end }}>{{ .name }}</h3>
                                         <p>{{ .title }}</p>
                                         {{ partial "widgets/social-icons.html" (dict "social" .social)}}
@@ -109,7 +109,7 @@
                             {{ range sort $.Site.Data.team.board "weight" }}
                                 <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-centered col">
                                     <div class="content">
-                                        <img style="height: 180px; padding-bottom: 16px;" src="{{ $.Site.BaseURL }}/images/team/{{ .id }}.jpg" alt="{{ .name }}" >
+                                        <img style="height: 180px; padding-bottom: 16px;" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" >
                                         <h3 class="h6 cursor-pointer" data-toggle="modal" data-target="#{{ .id }}">{{ .name }}</h3>
                                         <p>{{ .title }}<br><strong>{{ .investor }}</strong></p>
                                         {{ partial "widgets/social-icons.html" (dict "social" .social)}}
@@ -145,12 +145,12 @@
                         <div class="row row-centered cols-are-spaced-vert-md">
                             <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-6 col-lg-6 col-centered col">
                                 <div class="content">
-                                    <a href="https://www.madrona.com/" target="_blank"><img src="{{ .Site.BaseURL }}/logos/investors/madrona.png" alt="" width="100"></a>
+                                    <a href="https://www.madrona.com/" target="_blank"><img src="/logos/investors/madrona.png" alt="" width="100"></a>
                                 </div>
                             </div>
                             <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-6 col-lg-6 col-centered col">
                                 <div class="content">
-                                    <a href="https://www.tolacapital.com/" target="_blank"><img src="{{ .Site.BaseURL }}/logos/investors/tola.png" alt="" width="100"></a>
+                                    <a href="https://www.tolacapital.com/" target="_blank"><img src="/logos/investors/tola.png" alt="" width="100"></a>
                                 </div>
                             </div>
                         </div>
@@ -167,7 +167,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="content">
-                        <img src="{{ .Site.BaseURL }}/images/cloud.png" alt="">
+                        <img src="/images/cloud.png" alt="">
                         <h2>Why Pulumi?</h2>
                         <p class="intro">Find out how Pulumi provides a programming model for the cloud, designed to unlock the full power of serverless, container, and data service architectures with Cloud Native Infrastructure as Code. </p>
                         <p><a href="/why-pulumi/" class="button">Learn more</a></p>

@@ -7,6 +7,6 @@
         {{ $imagePath := replace .Params.meta_image "RELATIVE_TO_PAGE/" "" }}
         <img class="rounded-lg my-8 border-2 border-gray-100" src="{{ .Page.Permalink }}{{ $imagePath }}" alt="{{ .Title }}">
     {{ else }}
-        <img class="rounded-lg my-8 border-2 border-gray-100" src="{{ .Site.BaseURL }}{{ .Params.meta_image }}" alt="{{ .Title }}">
+        <img class="rounded-lg my-8 border-2 border-gray-100" src="{{ .Params.meta_image }}" alt="{{ .Title }}">
     {{ end }}
 {{ end }}
