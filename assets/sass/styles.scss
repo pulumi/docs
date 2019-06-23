@@ -103,4 +103,8 @@ main {
     @apply text-blue-700;
 }
 
+.transition-all {
+    @include transition(all);
+}
+
 @tailwind utilities;
