@@ -55,17 +55,17 @@
             {{ $imagePath := replace .Params.meta_image "RELATIVE_TO_PAGE/" "" }}
             <meta property="og:image" content="{{ .Page.Permalink }}{{ $imagePath }}">
         {{ else }}
-            <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.meta_image }}">
+            <meta property="og:image" content="{{ .Params.meta_image | absURL }}">
         {{ end }}
     {{ else }}
-        <meta property="og:image" content="{{ .Site.BaseURL }}/social/pulumi.png">
+        <meta property="og:image" content="{{ "/social/pulumi.png" | absURL }}">
     {{ end }}
 
     <title>{{ .Title }}{{if not .IsHome}} - {{ end }}{{ .Site.Title }}</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
 
     <!-- RSS link for the blog. -->
-    <link rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}blog/rss.xml" title="Pulumi Blog" />
+    <link rel="alternate" type="application/rss+xml" href="{{ "/blog/rss.xml" | absURL }}" title="Pulumi Blog" />
 
     <!--
         Build Sass. Generated file will contain content hash in filename,
