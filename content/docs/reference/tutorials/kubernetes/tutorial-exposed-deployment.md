@@ -1,8 +1,5 @@
 ---
 title: "#1: Hello, World!"
-aliases:
-  - /quickstart/kubernetes/tutorial-exposed-deployment/
-  - /quickstart/kubernetes/tutorial-exposed-deployment.html
 menu:
   reference:
     parent: tutorials-kubernetes

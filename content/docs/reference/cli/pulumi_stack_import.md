@@ -1,6 +1,5 @@
 ---
 title: "pulumi stack import"
-aliases: ["pulumi_stack_import.html"]
 expanded_url: /docs/reference/commands/
 ---
 

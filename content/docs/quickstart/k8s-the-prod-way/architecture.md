@@ -1,6 +1,5 @@
 ---
 title: A Prod-First Architecture for Teams
-aliases: ["architecture.html"]
 ---
 
 Infrastructure mis-configuration probably accounts for the most significant subset of serious

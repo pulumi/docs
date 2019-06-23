@@ -1,6 +1,5 @@
 ---
 title: Spinning up
-aliases: ["basics-up.html"]
 menu:
   tour:
     parent: tour

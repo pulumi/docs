@@ -1,6 +1,5 @@
 ---
 title: Resource properties
-aliases: ["programs-properties.html"]
 expanded_url: /tour/programs/
 menu:
   tour:

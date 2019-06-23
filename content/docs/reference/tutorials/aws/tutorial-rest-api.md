@@ -1,9 +1,5 @@
 ---
 title: "API Gateways and Lambda"
-aliases:
-    - /quickstart/aws/tutorial-rest-api/
-    - /quickstart/aws/tutorial-rest-api.html
-    - /quickstart/aws-hello-world.html
 menu:
   reference:
     parent: tutorials-aws

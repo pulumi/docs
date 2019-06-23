@@ -1,9 +1,5 @@
 ---
 title: Setup
-aliases:
-  - /quickstart/azure/setup/
-  - /quickstart/azure/setup.html
-  - /install/azure.html
 menu:
   reference:
     parent: clouds-azure

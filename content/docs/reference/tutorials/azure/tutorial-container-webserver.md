@@ -1,8 +1,5 @@
 ---
 title: "Web Server Container Instance"
-aliases:
-  - /quickstart/azure/tutorial-container-webserver/
-  - /quickstart/azure/tutorial-container-webserver.html
 menu:
   reference:
     parent: tutorials-azure

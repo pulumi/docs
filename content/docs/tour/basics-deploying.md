@@ -1,6 +1,5 @@
 ---
 title: Deploying code
-aliases: ["basics-deploying.html"]
 menu:
   tour:
     parent: tour

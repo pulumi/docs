@@ -1,6 +1,5 @@
 ---
 title: "Command Line"
-aliases: ["commands.html"]
 menu:
   reference:
     identifier: cli

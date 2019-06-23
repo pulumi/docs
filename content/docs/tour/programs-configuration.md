@@ -1,6 +1,5 @@
 ---
 title: Custom configuration
-aliases: ["programs-configuration.html"]
 expanded_url: /tour/programs/
 menu:
   tour:

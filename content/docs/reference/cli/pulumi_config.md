@@ -1,6 +1,5 @@
 ---
 title: "pulumi config"
-aliases: ["pulumi_config.html"]
 expanded_url: /docs/reference/commands/
 ---
 

@@ -1,9 +1,5 @@
 ---
 title: "Download and Install"
-aliases:
-    - /quickstart/install/
-    - /quickstart/install.html
-    - /install/
 menu:
   reference:
     weight: 13

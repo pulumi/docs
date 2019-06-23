@@ -1,8 +1,5 @@
 ---
 title: "Web Server Virtual Machine Instance"
-aliases:
-  - /quickstart/gcp/tutorial-gce-webserver/
-  - /quickstart/gcp/tutorial-gce-webserver.html
 menu:
   reference:
     parent: tutorials-gcp

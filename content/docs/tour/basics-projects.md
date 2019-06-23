@@ -1,8 +1,5 @@
 ---
 title: Creating a project
-aliases:
-    - basics-projects.html
-    - /tour/basics-templates.html
 menu:
   tour:
     parent: tour

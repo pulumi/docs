@@ -1,6 +1,5 @@
 ---
 title: Stack exports
-aliases: ["programs-exports.html"]
 expanded_url: /tour/programs/
 menu:
   tour:

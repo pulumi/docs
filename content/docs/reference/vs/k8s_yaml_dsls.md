@@ -1,6 +1,5 @@
 ---
 title: Pulumi vs. Kubernetes YAML and DSLs
-aliases: ["k8s_yaml_dsls.html"]
 menu:
   reference:
     parent: vs

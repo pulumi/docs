@@ -1,6 +1,5 @@
 ---
 title: "pulumi cancel"
-aliases: ["pulumi_cancel.html"]
 expanded_url: /docs/reference/commands/
 ---
 

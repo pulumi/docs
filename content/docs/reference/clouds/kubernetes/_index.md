@@ -1,6 +1,5 @@
 ---
 title: Kubernetes
-aliases: ["/reference/kubernetes.html"]
 menu:
   reference:
     parent: clouds

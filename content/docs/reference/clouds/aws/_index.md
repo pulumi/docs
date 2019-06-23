@@ -1,6 +1,5 @@
 ---
 title: AWS
-aliases: ["/reference/aws.html"]
 menu:
   reference:
     parent: clouds

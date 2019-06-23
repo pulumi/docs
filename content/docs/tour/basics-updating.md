@@ -1,6 +1,5 @@
 ---
 title: Performing updates
-aliases: ["basics-updating.html"]
 menu:
   tour:
     parent: tour
