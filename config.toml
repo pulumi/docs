@@ -148,6 +148,11 @@ sectionPagesMenu = "main"
 
 [[menu.reference]]
     parent = "node"
+    name = "datadog"
+    url = "/reference/pkg/nodejs/pulumi/datadog/"
+
+[[menu.reference]]
+    parent = "node"
     name = "digitalocean"
     url = "/reference/pkg/nodejs/pulumi/digitalocean/"
 
@@ -252,6 +257,11 @@ sectionPagesMenu = "main"
     parent = "python"
     name = "pulumi_cloudflare"
     url = "/reference/pkg/python/pulumi_cloudflare/"
+
+[[menu.reference]]
+    parent = "python"
+    name = "pulumi_datadog"
+    url = "/reference/pkg/python/pulumi_datadog/"
 
 [[menu.reference]]
     parent = "python"
