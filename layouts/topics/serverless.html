@@ -1,525 +1,154 @@
+{{ define "hero" }}
+    <header class="bg-purple-500 py-24 text-white">
+        <div class="container mx-auto text-white md:flex px-4 md:px-0">
+            <div class="md:w-1/2">
+                <h1 class="text-white">{{ .Params.hero.title }}</h1>
+                {{ .Params.hero.body | markdownify }}
+            </div>
+            <div class="md:w-1/2 md:ml-8 text-white">
+                <pre class="bg-gray-900 border-none"><code>{{ .Params.hero.code | }}</code></pre>
+            </div>
+        </div>
+    </header>
+{{ end }}
+
 {{ define "main" }}
-    {{ partial "hero.html" . }}
-    
-    <section class="content-block content-block-anchors bg-black white-text">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12 anchor-container" id="anchor-point">
-                    <ul class="anchor-list">
-                        <li class="anchor-item"><a href="#what-is-serverless">What is Serverless?</a></li>
-                        <li class="anchor-item"><a href="#serverless-building-blocks">Serverless Building Blocks</a></li>
-                        <li class="anchor-item"><a href="#code-api">Code</a></li>
-                        <li class="anchor-item"><a href="#get-started">Get Started</a></li>
-                        <li class="anchor-item"><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
+    {{ partial "section-nav" (dict "sections" .Params.sections) }}
+
+    <section id="what-is-serverless" class="py-16 bg-gray-200 px-4 md:px-0">
+        <div class="container md:mx-auto md:max-w-4xl">
+            <h2>What is Serverless?</h2>
+            <p>
+                Serverless, or function-based, computing enables you to build and run
+                applications and services without thinking about the server infrastructure
+                on which the functions depend. 'Serverless' applications of course require
+                servers (typically cloud infrastructure, or kubernetes clusters), but
+                don't require you to provision, scale, and manage any servers.
+            </p>
+            <p>
+                The reduced operational overhead of serverless computing means teams can
+                focus on the business and application logic they need: the development of
+                products vs the management of the infrastructure for them.
+            </p>
         </div>
     </section>
-    
-    <section class="content-block bg-grey" id="what-is-serverless">
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h2 class="h4 text-purple">What is Serverless?</h2>
-                                <p>Serverless, or function-based, computing enables you to build and run applications and services without thinking about the server infrastructure on which the functions depend. 'Serverless' applications of course require servers (typically cloud infrastructure, or kubernetes clusters), but don't require you to provision, scale, and manage any servers.</p>
-                                <p>The reduced operational overhead of serverless computing means teams can focus on the business and application logic they need: the development of products vs the management of the infrastructure for them. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="serverless-building-blocks" class="py-16 px-4 md:px-0">
+        <div class="container md:mx-auto md:max-w-4xl">
+            <h2>Building Blocks of Serverless Programming</h2>
+            <p>
+                Building serverless applications can be considered to be a composition of
+                a series of standardized building blocks. For instance, serverless
+                services can provide compute, storage, data storage, messaging/queues and
+                orchestration. With just those blocks, extremely powerful applications can
+                be composed and delivered with minimal infrastructure concerns.
+            </p>
+
+            <table>
+                <thead>
+                    <th>Building Block</th>
+                    <th>AWS</th>
+                    <th>Azure</th>
+                    <th>GCP</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#code-api" class="link">API</a></td>
+                        <td>Lambda</td>
+                        <td>Functions</td>
+                        <td>Cloud Functions</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#code-bucket" class="link">Storage</a></td>
+                        <td>S3</td>
+                        <td>Blob Storage</td>
+                        <td>Cloud Storage</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#code-table" class="link">Data Storage</a></td>
+                        <td>DynamoDB</td>
+                        <td>Cosmos DB</td>
+                        <td>Cloud Datatable</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#code-timer" class="link">Timer</a></td>
+                        <td>CloudWatch</td>
+                        <td>Monitor</td>
+                        <td>Stackdriver Monitoring</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#code-queue" class="link">Queue</a></td>
+                        <td>SQS</td>
+                        <td>Queue Storage</td>
+                        <td>Cloud Pub/Sub</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#code-topic" class="link">Topic</a></td>
+                        <td>SNS</td>
+                        <td>Queue Storage</td>
+                        <td>Cloud Pub/Sub</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#code-state-machine" class="link">State Machine</a></td>
+                        <td>Step Functions</td>
+                        <td>Azure Logic Apps</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                Pulumi makes it simple to interact with serverless services available from
+                the major cloud vendors, and with Kubernetes.
+            </p>
+            <p>
+                The <code>@pulumi/cloud</code> library provides very high level, multi
+                cloud access to building blocks of serverless applications, while the
+                specialized <code>@pulumi/cloud-aws</code>,
+                <code>@pulumi/cloud-azure</code>, <code>@pulumi/cloud-gcp</code>, and
+                <code>@pulumi/kubernetes</code> libraries offer fine grained control of
+                the individual cloud vendor services.
+            </p>
         </div>
     </section>
-
-
-    <section class="content-block" id="serverless-building-blocks">
-            <div class="content-content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-10 col-lg-offset-1">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <h2 class="h4 text-purple">Building Blocks of Serverless Programming</h2>
-                                    <p>Building serverless applications can be considered to be a composition of a series of standardized building blocks. For instance, serverless services can provide compute, storage, data storage, messaging/queues and orchestration. With just those blocks, extremely powerful applications can be composed and delivered with minimal infrastructure concerns. </p>
-                                    <br/>
-                                    <table>
-                                        <thead>
-                                            <th><h6>Building Block</h6></th>
-                                            <th><h6>AWS</h6></th>
-                                            <th><h6>Azure</h6></th>
-                                            <th><h6>GCP</h6></th>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><a href="#code-api">API</a></td>
-                                                <td>Lambda</td>
-                                                <td>Functions</td>
-                                                <td>Cloud Functions</td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#code-bucket">Storage</a></td>
-                                                <td>S3</td>
-                                                <td>Blob Storage</td>
-                                                <td>Cloud Storage</td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#code-table">Data Storage</a></td>
-                                                <td>DynamoDB</td>
-                                                <td>Cosmos DB</td>
-                                                <td>Cloud Datatable</td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#code-timer">Timer</a></td>
-                                                <td>CloudWatch</td>
-                                                <td>Monitor</td>
-                                                <td>Stackdriver Monitoring</td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#code-queue">Queue</a></td>
-                                                <td>SQS</td>
-                                                <td>Queue Storage</td>
-                                                <td>Cloud Pub/Sub</td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#code-topic">Topic</a></td>
-                                                <td>SNS</td>
-                                                <td>Queue Storage</td>
-                                                <td>Cloud Pub/Sub</td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#code-state-machine">State Machine</a></td>
-                                                <td>Step Functions</td>
-                                                <td>Azure Logic Apps</td>
-                                                <td></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    
-                                    <br/>
-                                    <p>Pulumi makes it simple to interact with serverless services available from the major cloud vendors, and with Kubernetes.</p>
-
-                                    <p>The <code><a href="https://github.com/pulumi/pulumi-cloud">@pulumi/cloud</a></code> library provides very high level, multi cloud access to building blocks of serverless applications, while the specialized <code><a href="https://github.com/pulumi/pulumi-aws">@pulumi/cloud-aws</a></code>, <code><a href="https://github.com/pulumi/pulumi-azure">@pulumi/cloud-azure</a></code>, <code><a href="https://github.com/pulumi/pulumi-gcp">@pulumi/cloud-gcp</a></code>, and <code><a href="https://github.com/pulumi/pulumi-kubernetes">@pulumi/kubernetes</a></code> libraries offer fine grained control of the individual cloud vendor services. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <section id="code" class="py-16 bg-gray-200 px-4 md:px-0">
+        {{ range .Params.examples }}
+            <div id="{{ .id }}" class="container md:mx-auto md:flex">
+                <div class="md:w-1/2">
+                    <h2>{{ .title }}</h2>
+                    <p>
+                        {{ .body | markdownify | safeHTML }}
+                    </p>
+                    <a class="btn" href="{{ .cta.url }}">
+                        {{ .cta.label }}
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <pre class="bg-gray-900 text-gray-200"><code>{{ .code }}</code></pre>
                 </div>
             </div>
-        </section>
-    
-    <section class="content-block bg-grey" id="code-api">
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="row cols-are-spaced-md">
-                            <div class="col col-md-5">
-                                <div class="content">
-                                    <sup>API</sup>
-                                    <h2 class="h4 text-purple">Creating a Serverless REST API</h2>
-                                    <p>This example shows how to create a simple REST API that counts the number of times a route has been hit. To implement this API, we need a DynamoDB table, an API endpoint, and a Lambda function.</p>
-                                    <p><br/><a href="https://pulumi.io/quickstart/" class="button">Get Started</a></p>
-                                </div>
-                            </div>
-                            <div class="col col-md-7">
-                                <div class="content">
-<pre><code class="javascript hljs">const cloud = require("@pulumi/cloud-aws");
-
-// Create a mapping from 'route' to a count
-let counterTable = new cloud.Table("counterTable", "route");
-        
-// Create an API endpoint
-let endpoint = new cloud.API("hello-world");
-        
-endpoint.get("/{route+}", (req, res) => {
-    let route = req.params["route"];
-    console.log(`Getting count for '${route}'`);
-        
-    // get previous value and increment
-    // reference outer `counterTable` object
-    counterTable.get({ route }).then(value => {
-        let count = (value && value.count) || 0;
-        counterTable.insert({ route, count: ++count }).then(() 
-        => {
-            res.status(200).json({ route, count });
-            console.log(`Got count ${count} for '${route}'`);
-        });
-    });
-});
-        
-exports.endpoint = endpoint.publish().url;
-</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
+        {{ end }}
     </section>
-
-    <section class="content-block bg-grey" id="code-bucket">
-            <div class="content-content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-10 col-lg-offset-1">
-                            <div class="row cols-are-spaced-md">
-
-                                <div class="col col-md-5">
-
-                                    <div class="content">
-                                        <sup>STORAGE</sup>
-                                        <h2 class="h4 text-purple">Using storage buckets easily</h2>
-                                        <p>Pulumi makes it easy to setup storage in the cloud. Events raised by the storage object can be handled by Lambda functions as actual lambdas in code. </p>
-                                        <p>This example sets up a storage bucket (using S3 on AWS) and a simple Lambda function to respond to new items being added to the bucket.</p>
-                                        <p><br/><a href="https://pulumi.io/quickstart/" class="button">Get Started</a></p>
-                                    </div>
-                                </div>
-
-                                <div class="col col-md-7">
-
-                                    <div class="content">
-    <pre><code class="javascript hljs">const cloud = require("@pulumi/cloud-aws");
-
-// A storage bucket
-const bucket = new cloud.Bucket("bucket");
-const bucketName = bucket.bucket.id;
-
-
-// Trigger a Lamda function when something is added
-bucket.onPut("onNewVideo", bucketArgs => {
-    console.log(`*** New Item in Bucket`);}
-
-// Export the bucket name.
-exports.bucketName = bucketName;
-    </code></pre>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <section class="content-block bg-grey" id="code-table">
-            <div class="content-content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-10 col-lg-offset-1">
-                            <div class="row cols-are-spaced-md">
-
-                                <div class="col col-md-5">
-
-                                    <div class="content">
-                                        <sup>DATA STORAGE</sup>
-                                        <h2 class="h4 text-purple">Stash info into a document database</h2>
-                                        <p>This example uses a serverless timer that fetches the Hacker News homepage every hour and stashes it into a document database, making use of Pulumi's ability to reference the <code>cloud.table</code> object.</p>
-                                        <p><br/><a href="https://pulumi.io/quickstart/" class="button">Get Started</a></p>
-                                    </div>
-                                </div>
-
-                                <div class="col col-md-7">
-
-                                    <div class="content">
-    <pre><code class="javascript hljs">import * as cloud from "@pulumi/cloud";
-
-let snapshots = new cloud.Table("snapshots");
-
-cloud.timer.daily("daily-yc-snapshot", 
-    { hourUTC: 0, minuteUTC: 0 }, () => {
-        let req = require("https")
-            .get("https://news.ycombinator.com", (res) => {
-        let content = "";
-        res.setEncoding("utf8");
-        res.on("data", (chunk) => { content += chunk });
-        res.on("end", () => {
-            snapshots.insert({ date: Date.now(),
-                content: content });
-        });
-    });
-    req.end();
-});
-    </code></pre>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <section class="content-block bg-grey" id="code-timer">
-            <div class="content-content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-10 col-lg-offset-1">
-                            <div class="row cols-are-spaced-md">
-
-                                <div class="col col-md-5">
-
-                                    <div class="content">
-                                        <sup>TIMER</sup>
-                                        <h2 class="h4 text-purple">Super simple serverless cron jobs</h2>
-                                        <p>Pulumi’s Cloud Framework has a timer module that lets you schedule cron jobs that run serverless functions. This is the easiest way to get up and running with serverless functions, because you don’t even need any other resources to trigger events from.</p>
-
-                                        <p>There are several ways to schedule a timer, depending on your stylistic preferences. These examples simply print the current time to the console on a given interval:</p>
-                                        <p><br/><a href="https://pulumi.io/quickstart/" class="button">Get Started</a></p>
-                                    </div>
-                                </div>
-
-                                <div class="col col-md-7">
-
-                                    <div class="content">
-    <pre><code class="javascript hljs">import * as cloud from "@pulumi/cloud";
-
-// Run a timer every minute:
-cloud.timer.interval("interval-timer", { minutes: 0 }, () => {
-    console.log(`interval-timer: ${Date.now()}`);
-});
-
-// Run a timer every minute (cron-style expression):
-cloud.timer.cron("cron-timer", "0 * * * * *", () => {
-    console.log(`cron-timer: ${Date.now()}`);
-});
-
-// Run a timer every day at 7:30 UTC:
-cloud.timer.daily("daily-timer", { hourUTC: 7, minuteUTC: 30 }, () => {
-    console.log(`daily-timer: ${Date.now()}`);
-});
-
-// Run a timer at the 45th minute UTC of every hour:
-cloud.timer.hourly("hourly-timer", { minuteUTC: 45 }, () => {
-    console.log(`hourly-timer: ${Date.now()}`);
-});
-    </code></pre>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <section class="content-block bg-grey" id="code-queue">
-            <div class="content-content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-10 col-lg-offset-1">
-                            <div class="row cols-are-spaced-md">
-
-                                <div class="col col-md-5">
-
-                                    <div class="content">
-                                        <sup>MESSAGE</sup>
-                                        <h2 class="h4 text-purple">Post AWS SQS Messages to Slack</h2>
-                                        <p>This example wires up a serverless AWS Lambda to an AWS SQS queue and demonstrates posting a message to Slack. This program provisions resources using Pulumi's deployment system, but lets you write serverless code as ordinary JavaScript functions.</p>
-                                        <p><br/><a href="https://pulumi.io/quickstart/" class="button">Get Started</a></p>
-                                    </div>
-                                </div>
-
-                                <div class="col col-md-7">
-
-                                    <div class="content">
-    <pre><code class="javascript hljs">let aws = require("@pulumi/aws");
-let serverless = require("@pulumi/aws-serverless");
-let config = require("./config");
-
-let queue = new aws.sqs.Queue("mySlackQueue", { visibilityTimeoutSeconds: 180 });
-
-serverless.queue.subscribe("mySlackPoster", 
-    queue, async (e) => {
-    let slack = require("@slack/client");
-    let client = new slack.WebClient(config.slackToken);
-    for (let rec of e.Records) {
-        await client.chat.postMessage({
-            channel: config.slackChannel,
-            text: `*Msg ${rec.messageId}*:\n${rec.body}\n`+
-                `(with :love_letter: from Pulumi)`,
-            as_user: true,
-        });
-        console.log(`Posted SQS message ${rec.messageId} to ${config.slackChannel}`);
-    }
-}, { batchSize: 1 });
-
-module.exports = {
-    queueURL: queue.id,
-};
-    </code></pre>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <section class="content-block bg-grey" id="code-topic">
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="row cols-are-spaced-md">
-
-                            <div class="col col-md-5">
-
-                                <div class="content">
-                                    <sup>TOPIC</sup>
-                                    <h2 class="h4 text-purple">Subscribe to a SNS endpoint</h2>
-                                    <p>This example users a timer to trigger a notification which then recursively triggers itself to countdown from 25..0 every five minutes.</p>
-                                    <p><br/><a href="https://pulumi.io/quickstart/" class="button">Get Started</a></p>
-                                </div>
-                            </div>
-
-                            <div class="col col-md-7">
-
-                                <div class="content">
-<pre><code class="javascript hljs">import * as pulumi from "@pulumi/cloud";
-
-let countDown = new pulumi.Topic<number>("examples-countDown");
-
-countDown.subscribe("watcher", async (num) => {
-    console.log(num);
-    if (num > 0) {
-        await countDown.publish(num - 1);
-    }
-});
-
-pulumi.timer.interval("examples-heartbeat", {minutes: 5}, async () => {
-    await countDown.publish(25);
-});
-</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-</section>
-
-    <section class="content-block bg-grey" id="code-state-machine">
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="row cols-are-spaced-md">
-
-                            <div class="col col-md-5">
-
-                                <div class="content">
-                                    <sup>STATE MACHINE</sup>
-                                    <h2 class="h4 text-purple">Create state machines of functions</h2>
-                                    <p>This example shows a very simple state machine using AWS Step Functions. When executed the state machine steps will execute the 'Hello' and then 'World', steps in order before exiting.</p>
-                                    <p><br/><a href="https://pulumi.io/quickstart/" class="button">Get Started</a></p>
-                                </div>
-                            </div>
-
-                            <div class="col col-md-7">
-
-                                <div class="content">
-<pre><code class="javascript hljs">import * as aws from "@pulumi/aws";
-import * as pulumi from "@pulumi/pulumi";
-
-const helloFunction = new aws.serverless.Function(
-"helloFunction",
-    { role: lambdaRole },
-        (event, context, callback) => {
-        callback(null, "Hello");
-    }
-);
-
-const worldFunction = new aws.serverless.Function(
-"worldFunction",
-    {role: lambdaRole},
-        (event, context, callback) => {
-        callback(null, `${event} World!`);
-    }
-);
-
-const stateMachine = new aws.sfn.StateMachine("stateMachine", {
-roleArn: sfnRole.arn,
-definition: pulumi.all([helloFunction.lambda.arn, worldFunction.lambda.arn])
-    .apply(([helloArn, worldArn]) => {
-    return JSON.stringify({
-    "Comment": "A Hello World of the Amazon States Language",
-    "StartAt": "Hello",
-    "States": {
-        "Hello": {"Type": "Task", "Resource": helloArn,
-        "Next": "World"
-        },
-        "World": {"Type": "Task", "Resource": worldArn,
-        "End": true
-        }
-    }
-    });
-})
-});
-
-exports.stateMachineArn = stateMachine.id;
-</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-</section>
 
     {{ partial "how-pulumi-works.html" . }}
 
     {{ partial "get-started.html" . }}
-    
-    <section class="content-block bg-purple white-text" id="contact">
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="row cols-are-spaced-md">
-                            <div class="col col-md-6">
-                                <div class="content">
-                                    <h4>Need help with serverless application delivery? Drop us a line.</h4>
-                                </div>
-                            </div>
-                            <div class="col col-md-6">
-                                <div class="content">
-                                    <div class="hbspt-form-wrapper compact">
-                                        <!--[if lte IE 8]>
-                                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-                                        <![endif]-->
-                                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-                                        <script>
-                                        hbspt.forms.create({
-                                            portalId: "4429525",
-                                            formId: "c086198d-0e76-4ec3-9304-7f2c60788447"
-                                        });
-                                        </script>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+    <section id="contact" class="bg-purple-500 mb-0 py-16 text-white px-4 md:px-0">
+        <div class="container mx-auto max-w-5xl">
+            <div class="md:flex my-8 md:max-w-32 align-top">
+                <div class="md:w-1/2">
+                    <h2 class="text-white">Need help with container management?</h2>
+                    <p>
+                        Drop us a line.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml-8">
+                    <div class="hs-form hs-form-fg-light">
+                        {{ partial "hubspot-form.html" (dict "hubspotFormID" "c086198d-0e76-4ec3-9304-7f2c60788447") }}
                     </div>
-                    
                 </div>
             </div>
         </div>
     </section>
-    
-    {{ partial "more-on-pulumi.html" . }}
-    
+
+    {{ partial "more-from-pulumi.html" . }}
 {{ end }}

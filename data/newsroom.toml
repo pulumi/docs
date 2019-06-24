@@ -1,0 +1,65 @@
+[[releases]]
+date = "11th June 2019"
+title = "Pulumi Announces $15M in Series A Funding to Accelerate Development and Adoption of its Cloud Native Development Platform"
+summary = "Commercial offering of common language cloud programming platform enables deployment of any application to any cloud by any team."
+url = "https://info.pulumi.com/press-release/pulumi-announces-15m-in-series-a-funding-to-accelerate-development-and-adoption-of-its-cloud-native-development-platform"
+
+[[releases]]
+date = "22nd October 2018"
+title = "Pulumi Announces $15M in Series A Funding to Accelerate Development and Adoption of its Cloud Native Development Platform"
+summary = "Commercial offering of common language cloud programming platform enables deployment of any application to any cloud by any team."
+url = "https://info.pulumi.com/press-release/pulumi-announces-15m-in-series-a-funding-to-accelerate-development-and-adoption-of-its-cloud-native-development-platform"
+
+[[releases]]
+date = "12th September 2018"
+title = "Pulumi’s Cloud Native SDK Lets Teams Easily Define and Deliver Cloud Native Infrastructure as Code for Kubernetes in Any Cloud Using Real Languages"
+summary = "Company joins CNCF to accelerate cloud native programming models for Kubernetes."
+url = "https://info.pulumi.com/press-release/pulumi-cloud-native-sdk-delivers-cloud-native-infrastructure-as-code-for-kubernetes/"
+
+[[releases]]
+date = "18th June 2018"
+title = "Pulumi Launches Cloud Development Platform to Help Teams Get Code to the Cloud Faster"
+summary = "Company funded by Madrona Venture Group and Tola Capital to help companies accelerate cloud application development and infrastructure delivery. "
+url = "https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster/"
+
+[[coverage]]
+date = "22nd October 2018"
+title = "Pulumi raises $15M for its infrastructure as code platform"
+img = "/logos/press/techcrunch.png"
+url = "https://techcrunch.com/2018/10/22/pulumi-raises-15m-for-its-infrastructure-as-code-platform/"
+
+[[coverage]]
+date = "22nd October 2018"
+title = "Pulumi Launches Team Edition of Infrastructure as Code Platform"
+img = "/logos/press/eweek.jpg"
+url = "http://www.eweek.com/cloud/pulumi-launches-team-edition-of-infrastructure-as-code-platform/"
+
+[[coverage]]
+date = "22nd October 2018"
+title = "Pulumi Bridges The Gap Between Cloud-Native Development And Infrastructure As Code"
+img = "/logos/press/forbes.png"
+url = "https://www.forbes.com/sites/janakirammsv/2018/10/16/pulumi-bridges-the-gap-between-cloud-native-development-and-infrastructure-as-code/"
+
+[[coverage]]
+date = "12th September 2018"
+title = "Pulumi releases software-development kit to unlock the multicloud potential of Kubernetes"
+img = "/logos/press/geekwire.png"
+url = "https://www.geekwire.com/2018/pulumi-releases-software-development-kit-unlock-multicloud-potential-kubernetes/"
+
+[[coverage]]
+date = "19th June 2018"
+title = "Pulumi: Using Languages to Program Across Clouds."
+img = "/logos/press/newstack.png"
+url = "https://thenewstack.io/pulumi-using-languages-to-program-across-clouds/"
+
+[[coverage]]
+date = "18th June 2018"
+title = "Meet Pulumi, a Seattle-grown cloud startup that wants to be the development platform for the multicloud era."
+img = "/logos/press/geekwire.png"
+url = "https://www.geekwire.com/2018/meet-pulumi-seattle-grown-cloud-startup-wants-development-platform-multicloud-era/"
+
+[[coverage]]
+date = "18th June 2018"
+title = "Pulumi wants to let you manage your infrastructure with code."
+img = "/logos/press/techcrunch.png"
+url = "https://techcrunch.com/2018/06/18/pulumi-wants-to-let-you-manage-your-infrastructure-with-code/"

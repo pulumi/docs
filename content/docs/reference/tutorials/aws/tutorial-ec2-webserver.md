@@ -10,7 +10,7 @@ menu:
     parent: tutorials-aws
 ---
 
-In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance in AWS. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/aws-js-webserver) is available on GitHub. 
+In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance in AWS. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/aws-js-webserver) is available on GitHub.
 
 {{< aws-js-prereqs >}}
 
@@ -22,7 +22,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance
     $ mkdir webserver && cd webserver
     $ pulumi new aws-javascript
     ...
-    aws:region: (us-east-1) 
+    aws:region: (us-east-1)
     ```
 
 1.  Open `index.js` and replace the contents with the following:
@@ -33,7 +33,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance
     let size = "t2.micro";     // t2.micro is available in the AWS free tier
     let ami  = "ami-0ff8a91507f77f867"; // AMI for Amazon Linux in us-east-1 (Virginia)
 
-    let group = new aws.ec2.SecurityGroup("webserver-secgrp", { 
+    let group = new aws.ec2.SecurityGroup("webserver-secgrp", {
         ingress: [
             { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
         ],
@@ -121,10 +121,10 @@ Pulumi program to define the new state we want our infrastructure to be in, then
     ```javascript
     ...
 
-    let group = new aws.ec2.SecurityGroup("webserver-secgrp", { 
+    let group = new aws.ec2.SecurityGroup("webserver-secgrp", {
         ingress: [
             { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
-            { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] }, 
+            { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
             // ^-- ADD THIS LINE
         ],
     });
@@ -159,7 +159,7 @@ Pulumi program to define the new state we want our infrastructure to be in, then
         Performing changes:
 
             Type                      Name                               Status       Info
-        *   pulumi:pulumi:Stack       ec2-quickstart-ec2-quickstart-dev  done         
+        *   pulumi:pulumi:Stack       ec2-quickstart-ec2-quickstart-dev  done
         ~   ├─ aws:ec2:SecurityGroup  webserver-secgrp                   updated      changes: ~ ingress
         +-  └─ aws:ec2:Instance       webserver-www                      replaced     changes: + userData
 

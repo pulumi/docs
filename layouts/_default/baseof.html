@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     {{ partial "head.html" . }}
-    <body>
+    <body class="section-{{ .Section }}">
         {{ partial "header.html" . }}
 
         {{ block "hero" . }}
         {{ end }}
 
-        <main class="container mx-auto py-8 px-8 md:px-0 min-h-screen">
+        <main>
             {{ block "main" . }}
             {{ end }}
         </main>

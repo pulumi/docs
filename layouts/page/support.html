@@ -1,69 +1,27 @@
 {{ define "main" }}
-<section id="contact-us" class="content-block bg-grey">
-    <div class="container-fluid">
-        <div class="row cols-are-spaced-md">
-            <div class="col col-lg-5 col-md-6 col-sm-12 col-lg-offset-1">
-                <div class="row">
-                    <div class="content">
-                        <h2>Need support with an account issue?</h2>
-                        <p>Let us know here and we will respond as quickly as we can.</p>
-                        <address>
-                            1525 4th Avenue, Suite 800<br>
-                            Seattle<br>
-                            WA<br>
-                            98101<br>
-                        </address>
-                        <img src="/images/pricing.png" class="padding-top-30">
-                    </div>
+    <section id="contact" class="bg-gray-200 py-16 shadow-inner">
+        <div class="container md:mx-auto md:flex">
+            <div class="w-1/2 md:mr-8">
+                <h1>Need help with an account issue?</h1>
+                <p>
+                    Let us know here, and we'll respond as quickly as we can.
+                </p>
+                <div>
+                    <h3>Our Address</h3>
+                    <p class="m-0">
+                        Pulumi Corporation<br>
+                        1525 4th Avenue, Suite 800<br>
+                        Seattle, WA 98101
+                    </p>
                 </div>
             </div>
-            <div class="col col-lg-6 col-md-6 col-sm-12">
-                <div class="row">
-                    <div class="content hbspt-form-wrapper">
-                        <!--[if lte IE 8]>
-                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-                        <![endif]-->
-                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-                        <script>
-                        hbspt.forms.create({
-                          portalId: "4429525",
-                          formId: "30a5fc96-1b95-477a-8992-d46f6585b2ef",
-                          css: ""
-                        });
-                        </script>
-                    </div>
+            <div class="w-1/2">
+                <div class="hs-form hs-form-fg-dark">
+                    {{ partial "hubspot-form.html" (dict "hubspotFormID" "30a5fc96-1b95-477a-8992-d46f6585b2ef") }}
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="content-block">
-
-    <div class="content-header text-center">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-10 col-sm-offset-1">
-                    <div class="content">
-                        <h2>Find Pulumi at</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="content-content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="content">
-                        {{ partial "social.html" (dict "classes" "expanded" ) }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section>
-
+    {{ partial "social.html" . }}
 {{ end }}

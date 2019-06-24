@@ -13,25 +13,38 @@ const brand = {
     purple: "#512668",
     orange: "#ee975c",
     green: "#2fc89f",
-    blue: "#3ec2f8",
-    gray: "#f1f1f1",
+    blue: "#52a6da",
 }
 
 const purple = {
     100: "#ddcae8",
+    200: "#9c76b3",
     300: "#83549c",
+    400: "#6c348a",
     500: brand.purple,
+    600: "#421d57",
     700: "#371a47",
+    800: "#2a1337",
     900: "#180b1f",
 }
 
+// TBD: Orange and green scales. (Using defaults for now.)
+
 const blue = {
-    100: "#C4EEFF",
-    300: "#94E1FF",
+    100: "#c4eeff",
+    200: "#abe7ff",
+    300: "#94e1ff",
+    400: "#63d0ff",
     500: brand.blue,
-    700: "#238FBA",
-    900: "#0F2E3B",
+    600: "#3182ce",
+    700: "#1873bd",
+    800: "#0a4970",
+    900: "#0f2e3b",
 }
+
+const orange = defaultTheme.colors.orange;
+const green = defaultTheme.colors.green;
+const gray = defaultTheme.colors.gray;
 
 module.exports = {
     theme: {
@@ -50,34 +63,11 @@ module.exports = {
             },
 
             colors: {
-                purple: {
-                    100: purple["100"],
-                    300: purple["300"],
-                    500: purple["500"],
-                    default: purple["500"],
-                    700: purple["700"],
-                    900: purple["900"],
-                },
-                blue: {
-                    100: blue["100"],
-                    300: blue["300"],
-                    500: blue["500"],
-                    default: blue["500"],
-                    700: blue["700"],
-                    900: blue["900"],
-                },
-                green: {
-                    default: brand.green,
-                    ...defaultTheme.colors.green,
-                },
-                orange: {
-                    default: brand.orange,
-                    ...defaultTheme.colors.orange,
-                },
-                gray: {
-                    default: brand.gray,
-                    ...defaultTheme.colors.gray,
-                },
+                purple,
+                blue,
+                orange,
+                green,
+                gray,
             },
         },
     },

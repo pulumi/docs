@@ -1,11 +1,9 @@
 ---
-title: "Pulumi Blog"
+title: Blog
 authors: []
 tags: []
 summary: ""
+menu:
+    header:
+        weight: 5
 ---
-
-<!--
-    This page doesn't have any actual content, as the base blog template will
-    show recent posts and things.
--->

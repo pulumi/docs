@@ -1,7 +1,4 @@
 ---
-title: "Placeholder"
-meta_description: "Placeholder page since some blog posts link to this."
+title: Modern Infrastructure as Code for AWS with Pulumi
+layout: aws
 ---
-
-Christian should totally clober this file when he integrates the latest changes from
-www.pulumi.com.

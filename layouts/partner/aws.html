@@ -1,76 +1,91 @@
+{{ define "hero" }}
+    <header class="bg-purple-500 py-24">
+        <div class="container mx-auto text-white md:flex">
+            <div class="md:w-1/2">
+                <h1 class="text-white">Modern Infrastructure as Code for AWS</h1>
+                <div class="flex">
+                    <img class="w-1/4 mr-4" src="/images/partners/aws-apn.png" alt="AWS Technology Partner">
+                    <p class="w-3/4">
+                        Pulumi's infrastructure-as-code SDK helps create, deploy, and manage AWS containers, serverless functions, and infrastructure using real programming languages.
+                    </p>
+                </div>
+                <p>
+                    <strong>Now Available</strong>:
+                    <a href="/crosswalk/aws">
+                        Pulumi Crosswalk for AWS: Accelerate Delivery of Well-Architected Infrastructure as Code
+                    </a>
+                </p>
+            </div>
+            <div class="md:w-1/2 md:ml-8">
+                <div class="highlight">
+<pre class="border-none bg-gray-900"><code>const aws = require("@pulumi/aws");
+
+let size = "t2.micro";
+let ami  = "ami-7172b611"
+
+let group = new aws.ec2.SecurityGroup("web-secgrp", {
+  ingress: [
+    { protocol: "tcp", fromPort: 22,
+      toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
+    { protocol: "tcp", fromPort: 80,
+      toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
+  ],
+});
+
+let server = new aws.ec2.Instance("web-server-www", {
+  tags: { "Name": "web-server-www" },
+  instanceType: size,
+  securityGroups: [ group.name ],
+  ami: ami,
+  userData: userData
+});
+</pre></code>
+                </div>
+            </div>
+        </div>
+    </header>
+{{ end }}
+
 {{ define "main" }}
-    {{ partial "hero.html" . }}
-
-    <section class="content-block content-block-anchors bg-black white-text">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12 anchor-container" id="anchor-point">
-                    <ul class="anchor-list">
-                        <li class="anchor-item"><a href="#benefits">Benefits</a></li>
-                        <li class="anchor-item"><a href="#code1">Code</a></li>
-                        <li class="anchor-item"><a href="#how-it-works">How it Works</a></li>
-                        <li class="anchor-item"><a href="#case-study">Case Study</a></li>
-                        <li class="anchor-item"><a href="#get-started">Get Started</a></li>
-                        <li class="anchor-item"><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
+    <nav class="bg-black sticky top-0">
+        <div class="container mx-auto">
+            <ul class="flex list-none justify-between">
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#benefits">Benefits</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#code">Code</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#how-it-works">How it Works</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#case-study">Case Study</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#get-started">Get Started</a></li>
+                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#contact-us">Contact Us</a></li>
+            </ul>
         </div>
-    </section>
+    </nav>
 
-    <section class="content-block" id="benefits">
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="row cols-are-spaced-md">
-                            <div class="col col-md-4">
-                                <div class="content">
-                                    <img src="/icons/realCode_icon.svg" width="65" alt="" class="margin-bottom-30">
-                                    <h3 class="h5">Real Code</h3>
-                                    <p>Pulumi is infrastructure as real code. This means you get all the benefits of your favorite language and tool for provisioning cloud infrastructure: code completion, error checking, versioning, IDE support, and general productivity gains - without the need to manage YAML and DSL syntax.</p>
-                                </div>
-                            </div>
-                            <div class="col col-md-4">
-                                <div class="content">
-                                    <img src="/icons/reusable-component.svg" width="88" alt="" class="margin-bottom-30">
-                                    <h3 class="h5">Reusable Components</h3>
-                                    <p>As Pulumi is code, you can build up a library of packages to further enhance efficiency. Build repeatable practices through versioned packages such as: standard policies, network best practices, architecture blueprints - and deploy them to your team. </p>
-                                </div>
-                            </div>
-                            <div class="col col-md-4">
-                                <div class="content">
-                                    <img src="/icons/immutable_infastrc_icon.svg" width="78" alt="" class="margin-bottom-30">
-                                    <h3 class="h5">Ephemeral Infrastructure</h3>
-                                    <p>Pulumi provides the computation of necessary cloud resources with a 'Cloud Resource DAG' ensuring successful deployment of cloud infrastructure - efficiently building, updating, and destroying cloud resources as required. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    {{ partial "benefits-v1.html" . }}
+
+    <section id="code" class="bg-gray-200 py-16">
+        <div class="container mx-auto">
+
+            <!-- Example 1 -->
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Creating a Serverless REST API</h2>
+                    <p>
+                        With Pulumi, you can combine infrastructure definitions and application code in one program. The <code>@pulumi/cloud-aws</code> library is a set of Pulumi components that provide a higher-level abstraction over AWS. So, instead of provisioning an API Gateway instance, Lambda functions, and setting up IAM roles, you can use this library and define application code at the same time as the infrastructure it depends on.
+                    </p>
+                    <p>
+                        This example shows how to create a simple REST API that counts the number of times a route has been hit. To implement this API, we need a DynamoDB table, an API endpoint, and a Lambda function.
+                    </p>
+                    <p>
+                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
+                    </p>
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="md:w-1/2 md:ml:4">
+                    <div class="highlight">
 
-    <section class="content-block bg-grey" id="code1">
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="row cols-are-spaced-md">
-                            <div class="col col-md-5">
-                                <div class="content">
-                                    <sup>Serverless</sup>
-                                    <h2 class="h4 text-purple">Creating a Serverless REST API</h2>
-                                    <p>With Pulumi, you can combine infrastructure definitions and application code in one program. The <code>@pulumi/cloud-aws</code> library is a set of Pulumi components that provide a higher-level abstraction over AWS. So, instead of provisioning an API Gateway instance, Lambda functions, and setting up IAM roles, you can use this library and define application code at the same time as the infrastructure it depends on.</p>
-                                    <p>This example shows how to create a simple REST API that counts the number of times a route has been hit. To implement this API, we need a DynamoDB table, an API endpoint, and a Lambda function.</p>
-                                    <p><br/><a href="https://pulumi.io/quickstart/aws/index.html" class="button">Get Started</a></p>
-                                    <p>Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.</p>
-                                </div>
-                            </div>
-                            <div class="col col-md-7">
-                                <div class="content">
-<pre><code class="javascript hljs">const cloud = require("@pulumi/cloud-aws");
+<pre><code>const cloud = require("@pulumi/cloud-aws");
 
 // Create a mapping from 'route' to a count
 let counterTable = new cloud.Table("counterTable", "route");
@@ -95,37 +110,32 @@ endpoint.get("/{route+}", (req, res) => {
 });
 
 exports.endpoint = endpoint.publish().url;
-</code></pre>
-                                </div>
-                            </div>
-                        </div>
+</pre></code>
                     </div>
-
                 </div>
             </div>
-        </div>
-    </section>
 
+            <!-- Example 2 -->
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Build and deploy containers to AWS</h2>
+                    <p>
+                        Pulumi supports programming against container orchestrators – Amazon’s ECS, EKS, and AWS Fargate. Pulumi is entirely unopinionated about how containers are built, published, and deployed to your orchestrator.
+                    </p>
+                    <p>
+                        This code runs Nginx with 2 load balanced replicas listening on port 80. By default, this will run in Fargate when targeting AWS, which means you can skip the complications of configuring an orchestrator. After running <code>pulumi up</code>, the auto-assigned URL will be printed.
+                    </p>
+                    <p>
+                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    <div class="highlight">
 
-    <section class="content-block bg-grey" id="code2">
-            <div class="content-content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-10 col-lg-offset-1">
-                            <div class="row cols-are-spaced-md">
-                                <div class="col col-md-5">
-                                    <div class="content">
-                                        <sup>Containers</sup>
-                                        <h2 class="h4 text-purple">Build and deploy containers to AWS</h2>
-                                        <p>Pulumi supports programming against container orchestrators – Amazon’s ECS, EKS, and AWS Fargate. Pulumi is entirely unopinionated about how containers are built, published, and deployed to your orchestrator.</p>
-                                        <p>This code runs Nginx with 2 load balanced replicas listening on port 80. By default, this will run in Fargate when targeting AWS, which means you can skip the complications of configuring an orchestrator. After running <code>pulumi up</code>, the auto-assigned URL will be printed.</p>
-                                        <p><br/><a href="https://pulumi.io/quickstart/aws/index.html" class="button">Get Started</a></p>
-                                        <p>Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.</p>
-                                    </div>
-                                </div>
-                                <div class="col col-md-7">
-                                    <div class="content">
-    <pre><code class="javascript hljs">// Deploy a pre-built container image
+<pre><code>// Deploy a pre-built container image
 // to AWS Fargate
 
 import * as cloud from "@pulumi/cloud";
@@ -150,37 +160,32 @@ let nginx = new cloud.Service("nginx", {
 });
 
 export let url = nginx.defaultEndpoint;
-    </code></pre>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+</pre></code>
                     </div>
                 </div>
             </div>
-        </section>
 
+            <!-- Example 3 -->
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Build and deploy Kubernetes apps to AWS EKS</h2>
+                    <p>
+                        Pulumi supports programming against Kubernetes – Minikube, custom on-premises, or cloud-hosted custom clusters or in managed clusters such as Amazon EKS.
+                    </p>
+                    <p>
+                        This code runs a simple Kubernetes deployment using the Guestbook sample application composed of Redis and a web frontent onto Kubernetes. Pulumi supports sophisticated use cases such as advanced deployment scenarios, sidecar patterns, etc.
+                    </p>
+                    <p>
+                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    <div class="highlight">
 
-<section class="content-block bg-grey" id="code3">
-                <div class="content-content">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-10 col-lg-offset-1">
-                                <div class="row cols-are-spaced-md">
-                                    <div class="col col-md-5">
-                                        <div class="content">
-                                            <sup>Kubernetes</sup>
-                                            <h2 class="h4 text-purple">Build and deploy Kubernetes apps to AWS EKS</h2>
-                                            <p>Pulumi supports programming against Kubernetes – Minikube, custom on-premises, or cloud-hosted custom clusters or in managed clusters such as Amazon EKS. </p>
-                                            <p>This code runs a simple Kubernetes deployment using the Guestbook sample application composed of Redis and a web frontent onto Kubernetes. Pulumi supports sophisticated use cases such as advanced deployment scenarios, sidecar patterns, etc.</p>
-                                            <p><br/><a href="https://pulumi.io/quickstart/aws/index.html" class="button">Get Started</a></p>
-                                            <p>Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col col-md-7">
-                                        <div class="content">
-        <pre><code class="javascript hljs">// Deploy a simple app to Kubernetes
+<pre><code>// Deploy a simple app to Kubernetes
 import * as k8sjs from "./k8sjs";
 
 let redisMaster = new k8sjs.ServiceDeployment("redis-master", {
@@ -201,37 +206,32 @@ let frontend = new k8sjs.ServiceDeployment("frontend", {
 });
 
 export let frontendIp = frontend.ipAddress;
-        </code></pre>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+</pre></code>
                     </div>
                 </div>
-            </section>
+            </div>
 
+            <!-- Example 4 -->
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Creating a Simple Web Server</h2>
+                    <p>
+                        Pulumi gives you a way to express infrastructure configuration using your favorite programming language.
+                    </p>
+                    <p>
+                        This code uses TypeScript on Node.js to define the necessary security group, and defines a very simple web server, and then creates the instance, before exporting the IP and Hostname.
+                    </p>
+                    <p>
+                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    <div class="highlight">
 
-        <section class="content-block bg-grey" id="code4">
-                <div class="content-content">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-10 col-lg-offset-1">
-                                <div class="row cols-are-spaced-md">
-                                    <div class="col col-md-5">
-                                        <div class="content">
-                                            <sup>Infrastructure</sup>
-                                            <h2 class="h4 text-purple">Creating a Simple Web Server</h2>
-                                            <p>Pulumi gives you a way to express infrastructure configuration using your favorite programming language.</p>
-                                            <p>This code uses TypeScript on Node.js to define the necessary security group, and defines a very simple web server, and then creates the instance, before exporting the IP and Hostname.</p>
-                                            <p><br/><a href="https://pulumi.io/quickstart/aws/index.html" class="button">Get Started</a></p>
-                                            <p>Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col col-md-7">
-                                        <div class="content">
-        <pre><code class="javascript hljs">const aws = require("@pulumi/aws");
+<pre><code>const aws = require("@pulumi/aws");
 
 let size = "t2.micro";
 let ami  = "ami-7172b611"
@@ -262,112 +262,34 @@ let server = new aws.ec2.Instance("web-server-www", {
 
 exports.publicIp = server.publicIp;
 exports.publicHostName = server.publicDns;
-        </code></pre>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+</pre></code>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </section>
 
     {{ partial "how-pulumi-works.html" . }}
 
-    <section class="content-block" id="case-study">
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <div class="content">
-                        <p class="intro text-uppercase text-blue-dark">Featured Customer</p>
-                        <div class="row">
-                            <div class="col-md-3 col-md-push-9 text-center">
-                                <div style="height: 17px;"><!--custom spacer--></div>
-                                <img src="/logos/customers/learning-machine_logo.svg" alt="Learning Machine" width="208" class="margin-bottom-30">
-                            </div>
-                            <div class="col-md-9 col-md-pull-3 content">
-                                <h2>Learning Machine</h2>
-                                <p><a href="https://www.learningmachine.com/" target="_blank">Learning Machine</a>, a blockchain SaaS company faced two challenges with their cloud infrastructure:</p>
-                                <ol>
-                                    <li>Skills gaps between Dev and DevOps creating silos, and fragility.</li>
-                                    <li>The need to more rapidly provision their expanding roster of new customers.</li>
-                                </ol>
-                            </div>
-                        </div>
-
-                        <hr>
-                        <p class="margin-bottom-50">By moving to Pulumi, Learning Machine were able to solve both challenges with significant increases in capability:</p>
-                        <div class="row cols-are-spaced-md">
-                            <div class="col col-sm-6 col-md-4 col-md-offset-2">
-                                <figure>
-                                    <img src="/images/customers/learning_machine_info-1.svg" width="210">
-                                    <figcaption> 25,000 Lines of CloudFormation reduced to 500 Lines of JavaScript </figcaption>
-                                </figure>
-                            </div>
-                            <div class="col col-sm-6 col-md-4">
-                                <figure>
-                                    <img src="/images/customers/learning_machine_info-2.svg" width="234">
-                                    <figcaption> New customer provisioning time reduced from 3 weeks to 1 hour </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        <hr>
-                        <blockquote>
-                            <div class="content">
-                                <p>Pulumi has given our team the tools and framework to achieve a unified development and DevOps model, boosting productivity and taking our business to any cloud environment that our customers need. We retired 25,000 lines of complex code that few team members understood and replaced it with 100s of lines in a real programming language.</p>
-                            </div>
-                            <footer>
-                                <p class="attr-name">Kim Hamilton, CTO</p>
-                                <p class="attr-title"><a href="https://www.learningmachine.com/" target="_blank">Learning Machine</a></p>
-                            </footer>
-
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {{ partial "learning-machine.html" . }}
 
     {{ partial "get-started.html" . }}
 
-    <section class="content-block bg-purple white-text" id="contact">
-        <div class="content-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="row cols-are-spaced-md">
-                            <div class="col col-md-6">
-                                <div class="content">
-                                    <h2 class="h3">Let Pulumi assist with your cloud infrastructure</h2>
-                                    <p>Need help with Cloud Native Infrastructure as Code on AWS? Drop us a line.</p>
-                                </div>
-                            </div>
-                            <div class="col col-md-6">
-                                <div class="content">
-                                    <div class="hbspt-form-wrapper compact">
-                                        <!--[if lte IE 8]>
-                                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-                                        <![endif]-->
-                                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-                                        <script>
-                                          hbspt.forms.create({
-                                            portalId: "4429525",
-                                            formId: "8a0e0f30-b43e-468e-98cc-6b5d481e8660"
-                                        });
-                                        </script>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <section id="contact-us" class="bg-purple-500 mb-0 py-16 text-white">
+        <div class="container mx-auto max-w-5xl">
+            <div class="md:flex my-8 md:max-w-32 align-top">
+                <div class="md:w-1/2">
+                    <h2 class="text-white">Let Pulumi assist with your cloud infrastructure.</h2>
+                    <p>
+                        Need help with cloud-native infrastructure as code on AWS? Drop us a line.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml-8">
+                    <div class="hs-form hs-form-fg-light">
+                        {{ partial "hubspot-form.html" (dict "hubspotFormID" "8a0e0f30-b43e-468e-98cc-6b5d481e8660") }}
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
-
-    {{ partial "more-on-pulumi.html" . }}
-
 {{ end }}

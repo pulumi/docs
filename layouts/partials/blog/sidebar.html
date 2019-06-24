@@ -1,21 +1,30 @@
 <!--
     Blog sidebar, showing a list of tags, and a quick intro for context.
 -->
-<aside>
-    <h3 class="no-anchor">🍹 Pulumi Blog</h3>
-    <h4>Program the Cloud</h4>
-    <p>Create, deploy, and manage cloud infrastructure using your favorite language.</p>
-    <h5 class="no-anchor">Tags</h5>
-    <ul class="list-none p-0">
-        {{ $title := .Title }}
+<aside class="md:pr-8">
+    <h3 class="no-anchor">
+        <a href="{{relref . "/blog" }}">🍹 Pulumi Blog</a>
+    </h3>
+
+    <div class="bg-gray-100 rounded p-4 my-8 text-gray-700">
+        <h5 class="no-anchor text-gray-700">Program the Cloud</h5>
+        <p class="text-sm my-0">
+            Create, deploy, and manage cloud infrastructure using your favorite language.
+        </p>
+    </div>
+
+    <ul class="list-none p-0 md:mr-8">
+        {{ $title := .Title | lower }}
         {{ range $tag, $_ := .Site.Taxonomies.tags }}
             {{ if $tag }}
-                <li class="inline-flex mr-1 my-1 ">
-                    {{ $classes := "bg-gray-100 text-blue-700 hover:bg-blue-300 hover:text-white" }}
+                <li class="inline-flex">
+                    {{ $classes := "bg-white border border-gray-200 text-blue-600 hover:border-blue-600" }}
                     {{ if eq $tag $title }}
-                        {{ $classes = "bg-blue-300 text-white hover:text-white" }}
+                        {{ $classes = "border-blue-600 bg-blue-600 text-white" }}
                     {{ end }}
-                    <a class="py-1 px-2 text-sm rounded {{ $classes }}" href="{{ .Page.Permalink }}">{{ $tag }}</a>
+                    <a class="py-1 px-2 text-sm rounded transition-all {{ $classes }}" href="{{ .Page.Permalink }}">
+                        {{ $tag }}
+                    </a>
                 </li>
             {{ end }}
         {{ end }}

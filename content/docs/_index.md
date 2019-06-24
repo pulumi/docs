@@ -1,6 +1,10 @@
 ---
-layout: "home"
+title: Docs
+layout: home
 noindex: true
+menu:
+    header:
+        weight: 4
 ---
 
 For questions or feedback, reach us in our [community Slack channel](https://slack.pulumi.io),
