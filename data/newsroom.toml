@@ -61,5 +61,5 @@ url = "https://www.geekwire.com/2018/meet-pulumi-seattle-grown-cloud-startup-wan
 [[coverage]]
 date = "18th June 2018"
 title = "Pulumi wants to let you manage your infrastructure with code."
-img = "https://www.pulumi.com/assets/logos/press/techcrunch.png"
+img = "/logos/press/techcrunch.png"
 url = "https://techcrunch.com/2018/06/18/pulumi-wants-to-let-you-manage-your-infrastructure-with-code/"
