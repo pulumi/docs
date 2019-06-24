@@ -49,7 +49,7 @@ url = "https://www.geekwire.com/2018/pulumi-releases-software-development-kit-un
 [[coverage]]
 date = "19th June 2018"
 title = "Pulumi: Using Languages to Program Across Clouds."
-img = "https://www.pulumi.com/assets/logos/press/newstack.png"
+img = "/logos/press/newstack.png"
 url = "https://thenewstack.io/pulumi-using-languages-to-program-across-clouds/"
 
 [[coverage]]
