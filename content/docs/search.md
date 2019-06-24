@@ -1,5 +1,5 @@
 ---
-layout: "search"
-aliases: ["search.html"]
+title: Search Results
+layout: search
 noindex: true
 ---

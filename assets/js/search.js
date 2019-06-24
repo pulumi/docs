@@ -1,9 +1,9 @@
 "use strict";
 
 (function () {
-    var searchBox = document.getElementById("search-box");
-    var spinner = document.getElementById("spinner");
-    var searchResultsContainer = document.getElementById("search-results-container");
+    var searchBox = document.getElementById("search-query");
+    var spinner = document.getElementById("search-spinner");
+    var searchResultsContainer = document.getElementById("search-results");
 
     // Use a worker to download and setup the index in the background.
     var worker = new Worker("/js/search-worker.js");
@@ -139,7 +139,7 @@
     }
 
     function buildCategoryString(categoryName, category) {
-        var appendString = "<div class='search-results'><h3>" + categoryName + " (" + category.length + ")</h3>";
+        var appendString = "<div class='search-results-category'><h2>" + categoryName + " (" + category.length + ")</h2>";
 
         // Display the top 5 results first.
         appendString += "<ul>";
@@ -147,7 +147,7 @@
         for (var i = 0; i < topResults.length; i++) {
             var item = topResults[i];
             var prefix = getPrefix(item, categoryName);
-            appendString += "<li class='top'><a href='" + item.url + "'>" + prefix + item.display + "</a>";
+            appendString += "<li><a href='" + item.url + "' title='" + item.display + "'>" + prefix + item.display + "</a>";
         }
         appendString += "</ul>";
 
@@ -173,9 +173,9 @@
         if (result.type) {
             switch (result.type) {
                 case "module":
-                    return "<span class='symbol module'></span>";
+                    return "<span class='symbol module' title='Module'></span>";
                 case "package":
-                    return "<span class='symbol package'></span>"
+                    return "<span class='symbol package' title='Package'></span>"
             }
         }
 
