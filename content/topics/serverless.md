@@ -3,7 +3,6 @@ title: Serverless Programming with Pulumi
 layout: serverless
 url: /serverless
 
-meta_title: Serverless Programming with Pulumi
 meta_desc: Pulumi provides a cloud native programming model for serverless applications. Any code, any cloud, any app.
 meta_image: /images/pulumi.png
 

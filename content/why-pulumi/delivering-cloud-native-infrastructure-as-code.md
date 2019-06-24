@@ -4,7 +4,6 @@ description: Enabling the future of cloud engineering with Pulumi
 type: page
 layout: whitepaper
 
-meta_title: Delivering Cloud Native Infrastructure as Code
 meta_image: /images/pulumi.png
 meta_desc: In this paper, we make the case for a consistent cloud programming model using general purpose programming languages for infrastructure, managed services, containers, Kubernetes, and serverless.
 

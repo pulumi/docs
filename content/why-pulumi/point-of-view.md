@@ -2,7 +2,6 @@
 title: Toward a Cloud Native Programming Model
 description: Cloud innovation has delivered limitless capabilities that promise to transform all aspects of software development.
 
-meta_title: Toward a Cloud Native Programming Model
 meta_desc: Pulumi provides a cloud native programming model for containers, Lambdas, and infrastructure, to get code to the cloud faster than ever before.
 meta_image: /images/pulumi.png
 ---
