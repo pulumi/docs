@@ -3,6 +3,10 @@ title: Kubernetes with Pulumi
 layout: kubernetes
 url: /kubernetes
 
+meta_title: Kubernetes deployments with Pulumi
+meta_desc: Pulumi provides a cloud native programming model for Kubernetes deployments and orchestration. Any code, any cloud, any app.
+meta_image: /images/pulumi.png
+
 hero:
     title: Kubernetes with Pulumi
     body: >

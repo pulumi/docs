@@ -1,5 +1,9 @@
 ---
-title: "Migrate to Pulumi from CloudFormation"
+title: Migrate to Pulumi from CloudFormation
 layout: cloudformation
 url: /cloudformation
+
+meta_title: Migrate to Pulumi from CloudFormation
+meta_desc: How to migrate to Pulumi from CloudFormation for huge productivity gains, and a unified programming model for Devs and DevOps.
+meta_image: /images/pulumi.png
 ---

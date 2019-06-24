@@ -4,6 +4,10 @@ description: Enabling the future of cloud engineering with Pulumi
 type: page
 layout: whitepaper
 
+meta_title: Delivering Cloud Native Infrastructure as Code
+meta_image: /images/pulumi.png
+meta_desc: In this paper, we make the case for a consistent cloud programming model using general purpose programming languages for infrastructure, managed services, containers, Kubernetes, and serverless.
+
 hero_image: /images/whitepaper/cloud-native-infrastructure/deliveringCloudNative_pdf_large.png
 
 summary: To a first approximation, all developers are cloud developers, all applications are cloud native, and all operations are cloud-first. Yet, there is a lack of a consistent approach to delivering cloud native applications and infrastructure. The tools and processes differ by technology generation, and even by cloud vendor, and so deny the full potential of cloud native application delivery.
@@ -21,10 +25,6 @@ sections:
       anchor: use-cases
     - label: Conclusion
       anchor: conclusion
-
-meta_title: Delivering Cloud Native Infrastructure as Code
-meta_image: /images/pulumi.png
-meta_desc: In this paper, we make the case for a consistent cloud programming model using general purpose programming languages for infrastructure, managed services, containers, Kubernetes, and serverless.
 ---
 
 In this paper, we make the case for a consistent programming model for the cloud and examine:

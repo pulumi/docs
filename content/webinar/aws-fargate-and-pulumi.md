@@ -1,6 +1,10 @@
 ---
-title: "Pulumi in IoT Webinar: AWS, Mapbox and Pulumi"
+title: AWS Fargate and Pulumi
 layout: webinar
+
+meta_title: Delivering Cloud Native Infrastructure as Code with Pulumi and AWS
+meta_desc: Join the upcoming webinar to learn how to unify your development and DevOps teams by using the power of general purpose programming languages to create modern, cloud-native applications.
+meta_image: /images/pulumi.png
 
 hero:
     title: Delivering Cloud Native Infrastructure as Code with Pulumi and AWS
