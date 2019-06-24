@@ -170,6 +170,7 @@ var gitHubBaseURLs = map[string]string{
 	"@pulumi/azuread":      "https://github.com/pulumi/pulumi-azuread/blob/{githash}/sdk/nodejs",
 	"@pulumi/cloud":        "https://github.com/pulumi/pulumi-cloud/blob/{githash}/api",
 	"@pulumi/cloudflare":   "https://github.com/pulumi/pulumi-cloudflare/blob/{githash}/sdk/nodejs",
+	"@pulumi/datadog":		"https://github.com/pulumi/pulumi-datadog/blob/{githash}/sdk/nodejs",
 	"@pulumi/digitalocean": "https://github.com/pulumi/pulumi-digitalocean/blob/{githash}/sdk/nodejs",
 	"@pulumi/docker":       "https://github.com/pulumi/pulumi-docker/blob/{githash}/sdk/nodejs",
 	"@pulumi/eks":          "https://github.com/pulumi/pulumi-eks/blob/{githash}/nodejs/eks",
