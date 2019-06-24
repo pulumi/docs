@@ -93,7 +93,7 @@ containers run in. That includes control over the precise numbers of
 servers, AMIs they are running, and their auto-scaling policies.
 
 To use an EC2 backed cluster, you will need to
-[create a cluster and configure the EC2 launch and autoscaling configurations]({{< ref "/docs/reference/crosswalk/aws/ecs/#creating-an-auto-scaling-group-for-ecs-cluster-instances" >}}),
+[create a cluster and configure the EC2 launch and autoscaling configurations]({{< ref "/docs/reference/crosswalk/aws/ecs#creating-an-auto-scaling-group-for-ecs-cluster-instances" >}}),
 and then simply use the awsx.ecs.EC2Service class to create your service
 instead. Other than these differences, the resulting code would look
 very similar to Option 1 - ECS Fargate above.
@@ -121,9 +121,9 @@ compute, and storage.
 [Kubernetes](https://kubernetes.io) is an open standard for running
 containers across a variety of public and private cloud environments.
 Most public cloud vendors now offer an EKS-like managed offering,
-including [Azure (AKS)]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-aks/" >}}),
-[Google Cloud (GKE)]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-gke/" >}}),
-and [Digital Ocean]({{< ref "/docs/reference/pkg/nodejs/pulumi/digitalocean/#KubernetesCluster" >}}),
+including [Azure (AKS)]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-aks" >}}),
+[Google Cloud (GKE)]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-gke" >}}),
+and [Digital Ocean]({{< ref "/docs/reference/pkg/nodejs/pulumi/digitalocean#KubernetesCluster" >}}),
 and the availability of on-premises private cloud configurations enables
 hybrid cloud for large organizations. Kubernetes in inherently more
 complicated to operate than the equivalent ECS solutions mentioned
@@ -191,7 +191,7 @@ more about Pulumi's support for Kubernetes, [go here]({{< relref "pulumi-a-bette
 
 ## Private ECR Container Registries
 
-In all of these cases, [Amazon Elastic Container Registry (ECR)]({{< ref "/docs/reference/crosswalk/aws/ecr/" >}})
+In all of these cases, [Amazon Elastic Container Registry (ECR)]({{< ref "/docs/reference/crosswalk/aws/ecr" >}})
 lets you publish
 Docker container images to a privately hosted repository inside your AWS
 account. The benefit of this is that images are stored within your AWS
@@ -210,14 +210,14 @@ and CloudWatch. It's possible to use any of these services without
 Pulumi, but there are [many benefits to Pulumi's infrastructure as code](https://www.pulumi.com/why-pulumi/).
 
 In short, to get your containers up on AWS, in an easy yet
-production-ready way, [get started for free with Pulumi for AWS today]({{< ref "/docs/quickstart/aws/" >}})!
+production-ready way, [get started for free with Pulumi for AWS today]({{< ref "/docs/quickstart/aws" >}})!
 
 After getting started, here are some additional resources to go deeper
 on specific topics:
 
--   [Getting Started with ECS]({{< ref "/docs/reference/crosswalk/aws/ecs/" >}})
--   [Getting Started with EKS]({{< ref "/docs/reference/crosswalk/aws/eks/" >}})
--   [Getting Started with ECR]({{< ref "/docs/reference/crosswalk/aws/ecr/" >}})
-    -   [Using ECR from ECS Fargate or EC2]({{< ref "/docs/reference/crosswalk/aws/ecs/#building-and-publishing-docker-images-automatically" >}})
-    -   [Using ECR from EKS]({{< ref "/docs/reference/crosswalk/aws/eks/#using-an-ecr-container-image-from-an-eks-kubernetes-deployment" >}})
+-   [Getting Started with ECS]({{< ref "/docs/reference/crosswalk/aws/ecs" >}})
+-   [Getting Started with EKS]({{< ref "/docs/reference/crosswalk/aws/eks" >}})
+-   [Getting Started with ECR]({{< ref "/docs/reference/crosswalk/aws/ecr" >}})
+    -   [Using ECR from ECS Fargate or EC2]({{< ref "/docs/reference/crosswalk/aws/ecs#building-and-publishing-docker-images-automatically" >}})
+    -   [Using ECR from EKS]({{< ref "/docs/reference/crosswalk/aws/eks#using-an-ecr-container-image-from-an-eks-kubernetes-deployment" >}})
     -   [Building and Publishing Docker Images to a Private Amazon ECR Repository]({{< relref "building-and-publishing-docker-images-to-a-private-amazon-ecr-repository" >}})
