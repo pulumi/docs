@@ -187,47 +187,6 @@ var gitHubBaseURLs = map[string]string{
 	"@pulumi/vsphere":      "https://github.com/pulumi/pulumi-vsphere/blob/{githash}/sdk/nodejs",
 }
 
-const atAliasPrefix = "/reference/pkg/nodejs/"
-
-// atAliases is a hard-coded list of packages that require aliases because we used to host the docs at
-// `/reference/pkg/nodejs/@pulumi/*` and Jekyll allowed the `@` in the path when it generated the site.
-// However, Hugo elides the `@` from the generated site, so we must provide aliases so that older links
-// to these packages continue to work.
-// Note: These were the only set of packages that existed at the time of the Hugo migration, so there's no
-// need to add new packages to this map.
-var atAliases = map[string]bool{
-	"@pulumi/pulumi":     true,
-	"@pulumi/aws":        true,
-	"@pulumi/awsx":       true,
-	"@pulumi/azure":      true,
-	"@pulumi/azuread":    true,
-	"@pulumi/cloud":      true,
-	"@pulumi/cloudflare": true,
-	"@pulumi/docker":     true,
-	"@pulumi/eks":        true,
-	"@pulumi/f5bigip":    true,
-	"@pulumi/gcp":        true,
-	"@pulumi/kubernetes": true,
-	"@pulumi/linode":     true,
-	"@pulumi/mysql":      true,
-	"@pulumi/newrelic":   true,
-	"@pulumi/openstack":  true,
-	"@pulumi/packet":     true,
-	"@pulumi/random":     true,
-	"@pulumi/vsphere":    true,
-}
-
-// rootAliases is a hard-coded list of packages that need an alias to an older URL.
-// Note: These were the only set of packages that were at these old URLs, so there's no need to add
-// additional packages to this map.
-var rootAliases = map[string]string{
-	"@pulumi/pulumi":     "/packages/pulumi",
-	"@pulumi/aws":        "/packages/pulumi-aws",
-	"@pulumi/azure":      "/packages/pulumi-azure",
-	"@pulumi/cloud":      "/packages/pulumi-cloud",
-	"@pulumi/kubernetes": "/packages/pulumi-kubernetes",
-}
-
 // emitMarkdownDocs takes as input a full Typedoc AST, transforms it into Markdown suitable for our documentation
 // website, and emits those files into the target directory.  If the target doesn't exist, it will be created.
 func emitMarkdownDocs(doc *typeDocNode, outdir string, githash string) error {
@@ -356,22 +315,13 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 	var pkg string
 	var pkgvar string
 	var breadcrumbs []string
-	var aliases []string
+
 	if root {
 		title = fmt.Sprintf("Package %s", e.pkg)
 		pkg = e.pkg
 		pkgvar = camelCase(e.pkg[strings.IndexRune(e.pkg, '/')+1:])
-		if _, ok := atAliases[e.pkg]; ok {
-			aliases = append(aliases, fmt.Sprintf("%s%s/", atAliasPrefix, e.pkg))
-		}
-		if rootAlias, ok := rootAliases[e.pkg]; ok {
-			aliases = append(aliases, rootAlias)
-		}
 	} else {
 		title = fmt.Sprintf("Module %s", name)
-		if _, ok := atAliases[e.pkg]; ok {
-			aliases = append(aliases, fmt.Sprintf("%s%s/%s/", atAliasPrefix, e.pkg, name))
-		}
 
 		// Create the breadcrumb links (in LIFO order).  First, add the current module name.
 		var simplename string
@@ -465,8 +415,6 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		"HasModules":  len(modules) > 0,
 		"Members":     members,
 		"HasMembers":  len(members) > 0,
-		"Aliases":     aliases,
-		"HasAliases":  len(aliases) > 0,
 	}); err != nil {
 		return err
 	}
