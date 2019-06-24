@@ -16,8 +16,13 @@
                             <img class="rounded-full h-32 p-1" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}">
                         </span>
                         <div>
-                            <h1>{{ $authorData.name }}</h1>
-                            <div>{{ $authorData.title }}</div>
+                            <h1 class="no-anchor">{{ $authorData.name }}</h1>
+                            <div>
+                                {{ if eq $authorData.status "guest" }}
+                                    <span class="rounded-full bg-indigo-300 px-2 py-1 text-xs font-bold mr-3">Guest</span>
+                                {{ end }}
+                                {{ $authorData.title }}
+                            </div>
                             <span>
                                 {{ if $authorData.social }}
                                     {{ partial "widgets/social-icons.html" (dict "social" $authorData.social) }}
@@ -29,7 +34,7 @@
 
                 {{ range $paginator.Pages }}
                     <article class="my-8 pb-8 border-b border-gray-200">
-                        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                        <h2 class="no-anchor"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
                         <div class="flex items-center">
                             <time>
                                 {{ .Date.Format "Monday, Jan 2, 2006" }}
