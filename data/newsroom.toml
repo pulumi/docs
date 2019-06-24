@@ -43,7 +43,7 @@ url = "https://www.forbes.com/sites/janakirammsv/2018/10/16/pulumi-bridges-the-g
 [[coverage]]
 date = "12th September 2018"
 title = "Pulumi releases software-development kit to unlock the multicloud potential of Kubernetes"
-img = "https://www.pulumi.com/assets/logos/press/geekwire.png"
+img = "/logos/press/geekwire.png"
 url = "https://www.geekwire.com/2018/pulumi-releases-software-development-kit-unlock-multicloud-potential-kubernetes/"
 
 [[coverage]]
