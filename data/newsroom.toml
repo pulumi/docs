@@ -55,7 +55,7 @@ url = "https://thenewstack.io/pulumi-using-languages-to-program-across-clouds/"
 [[coverage]]
 date = "18th June 2018"
 title = "Meet Pulumi, a Seattle-grown cloud startup that wants to be the development platform for the multicloud era."
-img = "https://www.pulumi.com/assets/logos/press/geekwire.png"
+img = "/logos/press/geekwire.png"
 url = "https://www.geekwire.com/2018/meet-pulumi-seattle-grown-cloud-startup-wants-development-platform-multicloud-era/"
 
 [[coverage]]
