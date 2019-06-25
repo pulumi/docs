@@ -1,9 +1,5 @@
 ---
 title: Setup
-aliases:
-    - /quickstart/gcp/setup/
-    - /quickstart/gcp/setup.html
-    - /install/gcp.html
 menu:
   reference:
     parent: clouds-gcp

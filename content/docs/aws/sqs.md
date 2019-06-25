@@ -3,8 +3,6 @@ title: "How to create an AWS Simple Queue Service (SQS) with Pulumi"
 meta_desc: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
 meta_image: "/images/docs/service/aws-sqs.png"
 
-aliases: ["sqs.html"]
-
 service: "SQS"
 description: "is a fully managed message queuing service that makes it easy to decouple and scale microservices, distributed systems, and serverless applications"
 aws_here: "https://aws.amazon.com/sqs/"

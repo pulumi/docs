@@ -1,6 +1,5 @@
 ---
 title: "pulumi history"
-aliases: ["pulumi_history.html"]
 expanded_url: /docs/reference/commands/
 ---
 

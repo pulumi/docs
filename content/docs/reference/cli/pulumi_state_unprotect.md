@@ -1,6 +1,5 @@
 ---
 title: "pulumi state unprotect"
-aliases: ["pulumi_state_unprotect.html"]
 expanded_url: /docs/reference/commands/
 ---
 

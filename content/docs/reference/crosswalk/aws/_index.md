@@ -1,6 +1,5 @@
 ---
 title: "Pulumi Crosswalk for AWS"
-aliases: ["/reference/crosswalk/"]
 menu:
   reference:
     identifier: crosswalk-aws

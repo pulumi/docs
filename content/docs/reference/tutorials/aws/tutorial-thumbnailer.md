@@ -1,9 +1,5 @@
 ---
 title: "Video Thumbnailer"
-aliases:
-    - /quickstart/aws/tutorial-thumbnailer/
-    - /quickstart/aws/tutorial-thumbnailer.html
-    - /quickstart/aws-extract-thumbnail.html
 menu:
   reference:
     parent: tutorials-aws

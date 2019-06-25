@@ -1,6 +1,5 @@
 ---
 title: "pulumi stack select"
-aliases: ["pulumi_stack_select.html"]
 expanded_url: /docs/reference/commands/
 ---
 

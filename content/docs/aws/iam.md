@@ -3,8 +3,6 @@ title: "How to create an AWS Identity and Access Management (IAM) service with P
 meta_desc: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
 meta_image: "/images/docs/service/aws-iam.png"
 
-aliases: ["iam.html"]
-
 service: "IAM"
 description: "enables you to manage access to AWS services and resources securely"
 aws_here: "https://aws.amazon.com/iam/"

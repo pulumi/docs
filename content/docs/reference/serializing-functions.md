@@ -1,6 +1,5 @@
 ---
 title: Serializing JavaScript Functions
-aliases: ["serializing-functions.html"]
 ---
 
 The Pulumi Node.js SDK provides a core API for converting a JavaScript function into all the code and files necessary to then have that function be used at runtime within some Cloud, for example in an [AWS Lambda](https://aws.amazon.com/lambda/).

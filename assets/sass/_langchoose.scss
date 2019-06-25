@@ -117,6 +117,13 @@ $tab-font-size: 14px !default;
     cursor: pointer;
 }
 
+.langtab-tabs {
+    // Remove the top margin from code snippets under lang chooser tabs so the tabs sit directly on top.
+    ~ .highlight > .chroma {
+        margin-top: 0;
+    }
+}
+
 // Hide adjacent siblings of .language-prologue-* classes from the outset, so they don't all initially
 // show as visible before all but the selected language are hidden.
 .language-prologue-javascript + *,

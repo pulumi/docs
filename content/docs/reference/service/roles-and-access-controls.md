@@ -1,6 +1,5 @@
 ---
 title: Roles and Access Controls
-aliases: ["roles-and-access-controls.html"]
 menu:
   reference:
     parent: teams

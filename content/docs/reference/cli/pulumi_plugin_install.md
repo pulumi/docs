@@ -1,6 +1,5 @@
 ---
 title: "pulumi plugin install"
-aliases: ["pulumi_plugin_install.html"]
 expanded_url: /docs/reference/commands/
 ---
 

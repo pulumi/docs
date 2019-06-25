@@ -1,8 +1,5 @@
 ---
 title: OpenStack
-aliases:
-  - /quickstart/openstack/
-  - /reference/openstack.html
 menu:
   reference:
     parent: clouds

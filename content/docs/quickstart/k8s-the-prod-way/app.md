@@ -1,6 +1,5 @@
 ---
 title: Provisioning a Kubernetes Application
-aliases: ["app.html"]
 ---
 
 This lab assumes you have successfully completed [lab 1]({{< relref "identity.md" >}}), and [lab

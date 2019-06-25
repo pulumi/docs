@@ -1,6 +1,5 @@
 ---
 title: Beyond the Basics
-aliases: ["programs.html"]
 expanded_url: /tour/programs/
 menu:
   tour:

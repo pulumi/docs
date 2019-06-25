@@ -1,6 +1,5 @@
 ---
 title: Pulumi vs. Cloud Templates (AWS CloudFormation, etc.)
-aliases: ["cloud_templates.html"]
 menu:
   reference:
     parent: vs

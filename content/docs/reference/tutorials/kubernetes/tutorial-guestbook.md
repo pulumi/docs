@@ -1,9 +1,5 @@
 ---
 title: "#3: Guestbook App with Redis and Nginx"
-aliases:
-    - /quickstart/kubernetes/tutorial-guestbook/
-    - /quickstart/kubernetes/tutorial-guestbook.html
-    - /quickstart/kubernetes-guestbook.html
 menu:
   reference:
     parent: tutorials-kubernetes

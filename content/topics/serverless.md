@@ -74,7 +74,7 @@ examples:
 
           exports.endpoint = endpoint.publish().url;
       cta:
-          url: /quickstart
+          url: /docs/quickstart
           label: GET STARTED
 
     - id: code-bucket
@@ -99,7 +99,7 @@ examples:
           // Export the bucket name.
           exports.bucketName = bucketName;
       cta:
-          url: /quickstart
+          url: /docs/quickstart
           label: GET STARTED
 
     - id: code-table
@@ -128,7 +128,7 @@ examples:
               req.end();
           });
       cta:
-          url: /quickstart
+          url: /docs/quickstart
           label: GET STARTED
 
     - id: code-timer
@@ -164,7 +164,7 @@ examples:
               console.log(`hourly-timer: ${Date.now()}`);
           });
       cta:
-          url: /quickstart
+          url: /docs/quickstart
           label: GET STARTED
 
     - id: code-queue
@@ -199,7 +199,7 @@ examples:
               queueURL: queue.id,
           };
       cta:
-          url: /quickstart
+          url: /docs/quickstart
           label: GET STARTED
 
     - id: code-topic
@@ -223,7 +223,7 @@ examples:
               await countDown.publish(25);
           });
       cta:
-          url: /quickstart
+          url: /docs/quickstart
           label: GET STARTED
 
     - id: code-state-machine
@@ -252,6 +252,6 @@ examples:
               }
           );
       cta:
-          url: /quickstart
+          url: /docs/quickstart
           label: GET STARTED
 ---

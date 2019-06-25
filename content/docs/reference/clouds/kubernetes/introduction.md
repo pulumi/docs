@@ -1,7 +1,5 @@
 ---
 title: Introduction
-aliases:
-  - /quickstart/kubernetes/introduction/
 menu:
   reference:
     parent: clouds-kubernetes

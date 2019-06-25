@@ -1,8 +1,5 @@
 ---
 title: FAQ
-aliases:
-  - /quickstart/kubernetes/faq/
-  - /quickstart/kubernetes/faq.html
 menu:
   reference:
     parent: clouds-kubernetes

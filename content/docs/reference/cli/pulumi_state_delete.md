@@ -1,6 +1,5 @@
 ---
 title: "pulumi state delete"
-aliases: ["pulumi_state_delete.html"]
 expanded_url: /docs/reference/commands/
 ---
 

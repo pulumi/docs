@@ -1,6 +1,5 @@
 ---
 title: Pulumi Cloud Framework
-aliases: ["/reference/cloud.html"]
 ---
 
 <img src="/images/docs/quickstart/cloudfx-purple.png" align="right">

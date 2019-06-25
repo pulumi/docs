@@ -1,6 +1,5 @@
 ---
 title: "Python"
-aliases: ["python.html"]
 expanded_url: /docs/reference/languages/
 menu:
   reference:

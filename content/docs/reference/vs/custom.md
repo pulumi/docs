@@ -1,6 +1,5 @@
 ---
 title: Pulumi vs. Custom Solutions
-aliases: ["custom.html"]
 menu:
   reference:
     parent: vs

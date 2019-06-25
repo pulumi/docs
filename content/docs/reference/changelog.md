@@ -1,8 +1,5 @@
 ---
 title: "Changelog"
-aliases:
-    - changelog.html
-    - /install/changelog.html
 menu:
   reference:
     weight: 14

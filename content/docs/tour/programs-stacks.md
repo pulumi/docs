@@ -1,6 +1,5 @@
 ---
 title: Stacks
-aliases: ["programs-stacks.html"]
 expanded_url: /tour/programs/
 menu:
   tour:
