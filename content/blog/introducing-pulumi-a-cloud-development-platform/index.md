@@ -1,7 +1,7 @@
 ---
 title: "Introducing Pulumi, a Cloud Development Platform"
 authors: ["joe-duffy"]
-tags: ["PulumiNews"]
+tags: ["Pulumi-News"]
 date: "2018-06-18"
 
 summary: "Ahoy! Today we are thrilled to be announcing the launch of Pulumi, the Cloud Development Platform."

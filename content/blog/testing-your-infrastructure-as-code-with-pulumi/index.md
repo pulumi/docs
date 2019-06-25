@@ -1,7 +1,7 @@
 ---
 title: "Testing Your Infrastructure as Code with Pulumi"
 authors: ["joe-duffy"]
-tags: ["JavaScript","TypeScript","CICD","CloudNativeInfrastructure","Python"]
+tags: ["JavaScript","TypeScript","CI/CD","Cloud-Native","Python"]
 date: "2019-04-17"
 
 summary: "Using JavaScript and Python for infrastructure as code delivers great productivity. Did you know that it also lets you test your infrastructure too?"

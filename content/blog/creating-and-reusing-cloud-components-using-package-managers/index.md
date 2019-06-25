@@ -1,7 +1,7 @@
 ---
 title: "Creating and Reusing Cloud Components using Package Managers"
 authors: ["chris-smith"]
-tags: ["Infrastructure", "CICD"]
+tags: ["Infrastructure", "CI/CD"]
 date: "2018-08-09"
 
 summary: "This post walks through how to create reusable components, so you can

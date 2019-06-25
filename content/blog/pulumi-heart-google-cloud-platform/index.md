@@ -1,7 +1,7 @@
 ---
 title: "Pulumi ❤️ Google Cloud Platform"
 authors: ["luke-hoban"]
-tags: ["Serverless","Kubernetes","Features","CICD","GCP"]
+tags: ["Serverless","Kubernetes","Features","CI/CD","GCP"]
 date: "2019-04-09"
 
 summary: "Pulumi helps you to take maximum advantage of Google Cloud Platform's full breadth of

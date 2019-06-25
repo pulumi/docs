@@ -1,7 +1,7 @@
 ---
 title: "Reusable CI/CD components with CircleCI Orbs for Pulumi"
 authors: ["chris-smith"]
-tags: ["CICD"]
+tags: ["CI/CD"]
 date: "2018-11-07"
 
 summary: "CircleCI's Orbs provide a way to create reusable components for your CI/CD workflows. And with

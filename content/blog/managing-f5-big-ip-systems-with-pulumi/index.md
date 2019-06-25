@@ -1,7 +1,7 @@
 ---
 title: "Managing F5 BIG-IP Systems with Pulumi"
 authors: ["cameron-stokes"]
-tags: ["Infrastructure","CloudNativeInfrastructure"]
+tags: ["Infrastructure","Cloud-Native"]
 date: "2019-02-07"
 
 summary: "The Pulumi ecosystem is continuously growing and today we're excited to announce the F5 BIG-IP Pulumi provider."

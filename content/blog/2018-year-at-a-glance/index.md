@@ -1,7 +1,7 @@
 ---
 title: "2018 Year at a Glance"
 authors: ["joe-duffy"]
-tags: ["PulumiNews"]
+tags: ["Pulumi-News"]
 date: "2018-12-31"
 
 summary: "It’s been an incredible year and as we close out 2018, I was reflecting on our progress here at Pulumi."

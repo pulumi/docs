@@ -1,7 +1,7 @@
 ---
 title: "CI/CD Made Easy with Pulumi and Azure Pipelines"
 authors: ["praneet-loke"]
-tags: ["Azure", "CICD", "NewFeatures"]
+tags: ["Azure", "CI/CD", "New-Features"]
 date: "2019-05-06"
 
 summary: "Announcing a new open-source extension to Azure Pipelines!

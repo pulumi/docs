@@ -1,7 +1,7 @@
 ---
 title: "Happy Birthday to Pulumi open source!"
 authors: ["joe-duffy"]
-tags: ["PulumiNews"]
+tags: ["Pulumi-News"]
 date: "2019-06-18"
 
 summary: "One year ago today we open sourced Pulumi, a new approach to multi-cloud infrastructure as code. And what a year it has been! Let's review it at a glance."
