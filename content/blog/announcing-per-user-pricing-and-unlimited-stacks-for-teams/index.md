@@ -1,7 +1,7 @@
 ---
 title: "Announcing Per User Pricing and Unlimited Stacks for Teams"
 authors: ["joe-duffy"]
-tags: ["Pulumi"]
+tags: ["Customer"]
 date: "2019-04-19"
 
 summary: "Today we are announcing important changes

@@ -1,7 +1,7 @@
 ---
 title: "Welcoming GitLab users to Pulumi"
 authors: ["praneet-loke"]
-tags: ["New-Features"]
+tags: ["CICD"]
 date: "2018-12-03"
 
 summary: "We are very pleased to announce support for signing-in with GitLab accounts."

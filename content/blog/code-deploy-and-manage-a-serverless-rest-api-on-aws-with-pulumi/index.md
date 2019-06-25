@@ -1,7 +1,7 @@
 ---
 title: "Code, Deploy, and Manage a Serverless REST API on AWS with Pulumi"
 authors: ["donna-malayeri"]
-tags: ["AWS/Lambda/Fargate"]
+tags: ["JavaScript","Serverless","AWS"]
 date: "2018-06-22"
 
 summary: "In this blog post, we'll use Pulumi to create a simple serverless REST API that counts the number of times a route has been hit, using JavaScript to define both the infrastructure and application code."

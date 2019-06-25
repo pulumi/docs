@@ -1,7 +1,7 @@
 ---
 title: "Building new Pulumi projects and stacks from templates"
 authors: ["marc-holmes"]
-tags: ["New-Features"]
+tags: ["Features"]
 date: "2018-10-01"
 
 summary: "We've made it a whole lot easier to get started with Pulumi with a New Project wizard to initialize new projects and stacks for JavaScript, TypeScript, Python and Go, on AWS, Azure, GCP, Kubernetes, and OpenStack."

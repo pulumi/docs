@@ -1,7 +1,7 @@
 ---
 title: "Using Terraform Remote State with Pulumi"
 authors: ["paul-stack"]
-tags: ["Terraform-Migration", "Infrastructure-as-Code"]
+tags: ["Infrastructure","Features"]
 date: "2019-06-07"
 
 summary: "Pulumi can co-exist with other infra tools, including consuming Terraform remote and local state outputs!"

@@ -1,7 +1,7 @@
 ---
 title: "Running Containers in AWS, the Lowdown: ECS, Fargate, and EKS"
 authors: ["joe-duffy"]
-tags: ["AWS", "Kubernetes"]
+tags: ["AWS","Containers","Kubernetes","EKS"]
 date: "2019-06-20"
 
 summary: "We often help customers deploy containers to AWS. Choosing between ECS, Fargate, and EKS isn't always easy -- let's explore the options."

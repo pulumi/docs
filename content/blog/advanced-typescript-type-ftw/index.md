@@ -1,7 +1,7 @@
 ---
 title: "Advanced TypeScript type FTW!"
 authors: ["cyrus-najmabadi"]
-tags: ["Infrastructure-as-Code"]
+tags: ["TypeScript"]
 date: "2018-09-19"
 
 summary: "Exploring advanced types in TypeScript to simplify the Pulumi codebase, and making those types consumable. The typesystem magic behind

@@ -1,7 +1,7 @@
 ---
 title: "Simple Serverless programming with Google Cloud Functions and Pulumi"
 authors: ["cyrus-najmabadi"]
-tags: ["GCP/Knative/Cloud Functions", "GCP"]
+tags: ["Serverless","GCP"]
 date: "2019-04-10"
 
 summary: "Serverless has never been simpler than it is with Pulumi + Google Cloud Functions. In just

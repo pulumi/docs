@@ -1,7 +1,7 @@
 ---
 title: "Get Started with Docker on AWS Fargate using Pulumi"
 authors: ["joe-duffy"]
-tags: ["AWS", "Infrastructure-as-Code", "AWS/Lambda/Fargate"]
+tags: ["JavaScript","AWS","Containers","Infrastructure","TypeScript"]
 date: "2019-04-30"
 
 summary: "Build and publish a Docker image to a private registry and spin up an AWS Fargate service, with just 28 lines of Node.js and a single `pulumi up` command."

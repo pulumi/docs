@@ -1,7 +1,7 @@
 ---
 title: "Upcoming AWS + Pulumi Webinar on Feb 5"
 authors: ["erin-xue"]
-tags: ["AWS", "CI/CD", "Pulumi"]
+tags: ["AWS","CICD","CloudNativeInfrastructure"]
 date: "2019-01-09"
 
 summary: "Join our February 5th webinar to learn how to implement cloud native infrastructure across your organization."

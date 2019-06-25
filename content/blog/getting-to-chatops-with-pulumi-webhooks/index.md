@@ -1,7 +1,7 @@
 ---
 title: "Getting to ChatOps with Pulumi Webhooks"
 authors: ["chris-smith"]
-tags: ["New-Features", "CI/CD"]
+tags: ["CICD", "NewFeatures"]
 date: "2019-01-23"
 
 summary: "Announcing the availability of Webhooks on Pulumi. Get notified as stacks and teams are updated and connect Pulumi to your own notifications systems."

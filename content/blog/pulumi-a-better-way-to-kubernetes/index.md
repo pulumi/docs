@@ -1,7 +1,7 @@
 ---
 title: "Pulumi: A Better Way to Kubernetes"
 authors: ["levi-blackstone"]
-tags: ["Kubernetes", "Infrastructure-as-Code"]
+tags: ["Kubernetes"]
 date: "2019-05-21"
 
 summary: "See how Pulumi can help you tame common Kubernetes challenges and make it more accessible, using familiar languages and your favorite tools. It’s simply a better way to work with Kubernetes!"

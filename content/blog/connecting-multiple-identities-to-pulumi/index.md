@@ -1,7 +1,7 @@
 ---
 title: "Connecting multiple identities to Pulumi"
 authors: ["praneet-loke"]
-tags: ["New-Features"]
+tags: ["CICD"]
 date: "2018-12-14"
 
 summary: "Pulumi now supports connecting multiple identities. For example, a single Pulumi ID can be connected to GitHub and GitLab."

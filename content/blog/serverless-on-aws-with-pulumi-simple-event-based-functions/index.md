@@ -1,7 +1,7 @@
 ---
 title: "Serverless on AWS with Pulumi: simple, event-based functions"
 authors: ["cyrus-najmabadi"]
-tags: ["AWS/Lambda/Fargate"]
+tags: ["JavaScript","Serverless","AWS"]
 date: "2019-01-14"
 
 summary: "How to make serverless programming on AWS simple with Pulumi using the regular programming languages."

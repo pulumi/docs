@@ -1,7 +1,7 @@
 ---
 title: "Deploying production-ready containers with Pulumi"
 authors: ["donna-malayeri"]
-tags: ["AWS/Lambda/Fargate"]
+tags: ["JavaScript","AWS","Containers"]
 date: "2018-06-20"
 
 summary: "In this blog post we will use Pulumi to deploy a simple Docker container running NGINX onto AWS Fargate handling details such as creating a container registry instance in ECR, creating task definitions in ECS, and configuring a load balancer."

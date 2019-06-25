@@ -1,7 +1,7 @@
 ---
 title: "From Terraform to Infrastructure as Software"
 authors: ["pat-gavlin"]
-tags: ["Terraform-Migration"]
+tags: ["JavaScript","Infrastructure","TypeScript"]
 date: "2018-11-02"
 
 summary: "Learn how general purpose languages enable simpler, more flexible infrastructure as code.

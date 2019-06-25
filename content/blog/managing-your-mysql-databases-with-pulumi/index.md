@@ -1,7 +1,7 @@
 ---
 title: "Managing your MySQL databases with Pulumi"
 authors: ["linio-engineering"]
-tags: ["Infrastructure-as-Code", "New-Features"]
+tags: ["Applications","MySQL"]
 date: "2019-05-28"
 
 summary: "Pulumi has a new MySQL resource provider, and in this post we'll walk through

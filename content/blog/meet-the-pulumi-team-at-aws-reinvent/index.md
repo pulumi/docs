@@ -1,7 +1,7 @@
 ---
 title: "Meet the Pulumi team at AWS re:Invent"
 authors: ["marc-holmes"]
-tags: ["Pulumi"]
+tags: ["PulumiNews"]
 date: "2018-11-15"
 
 summary: "Pulumi will be at AWS re:Invent this year, at Booth 316, Startup Central, Aria Quad. Come talk to us about serverless, containers, kubernetes, and any other cloud native infrastructure as code."

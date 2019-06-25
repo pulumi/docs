@@ -1,7 +1,7 @@
 ---
 title: "AWS CloudWatch made easy with Pulumi Infrastructure-as-Code"
 authors: ["cyrus-najmabadi"]
-tags: ["AWS", "Infrastructure-as-Code"]
+tags: ["AWS","Logging"]
 date: "2019-06-14"
 
 summary: "AWS CloudWatch made easy with Pulumi Infrastructure-as-Code."

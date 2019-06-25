@@ -1,7 +1,7 @@
 ---
 title: "Using Helm and Pulumi to define cloud native infrastructure as code"
 authors: ["alex-clemmer"]
-tags: ["Kubernetes", "Azure"]
+tags: ["Kubernetes","Azure"]
 date: "2018-10-31"
 
 summary: "In this post we look at how to connect a Kubernetes cluster to a Database with Pulumi, using Microsoft AKS, CosmosDB and Helm."

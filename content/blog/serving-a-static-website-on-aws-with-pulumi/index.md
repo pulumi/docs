@@ -1,7 +1,7 @@
 ---
 title: "Serving a Static Website on AWS with Pulumi"
 authors: ["chris-smith"]
-tags: ["AWS"]
+tags: ["AWS","Infrastructure","TypeScript"]
 date: "2018-07-17"
 
 summary: "This post covers using Pulumi to create the infrastructure for serving a static website on

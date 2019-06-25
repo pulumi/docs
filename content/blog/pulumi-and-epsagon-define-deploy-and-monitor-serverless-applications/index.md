@@ -1,7 +1,7 @@
 ---
 title: "Pulumi + Epsagon: Define, Deploy and Monitor Serverless Applications"
 authors: ["luke-hoban"]
-tags: ["Infrastructure-as-Code"]
+tags: ["Serverless"]
 date: "2018-11-29"
 
 summary: "Once you have deployed an application to the cloud, the next step is to

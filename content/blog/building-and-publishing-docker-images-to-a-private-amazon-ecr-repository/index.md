@@ -1,7 +1,7 @@
 ---
 title: "Building and Publishing Docker Images to a Private Amazon ECR Repository"
 authors: ["cyrus-najmabadi"]
-tags: ["Kubernetes", "Infrastructure-as-Code"]
+tags: ["Kubernetes"]
 date: "2019-06-18"
 
 summary: "See how easy it is to build and publish Docker images to a private ECR repository on AWS, and consume them from ECS, Fargate, and EKS services."

@@ -1,7 +1,7 @@
 ---
 title: "Program Kubernetes with 11 Pulumi Pearls"
 authors: ["joe-duffy"]
-tags: ["Infrastructure-as-Code", "Kubernetes", "Pulumi"]
+tags: ["Kubernetes"]
 date: "2018-09-12"
 
 summary: "In this post, we’ll take a look at 11 “pearls” – bite-sized code snippets – that demonstrate using Pulumi to build and deploy Kubernetes

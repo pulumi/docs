@@ -1,7 +1,7 @@
 ---
 title: "Create AKS Clusters with monitoring and logging using Pulumi-Azure open source SDKs"
 authors: ["nishi-davidson"]
-tags: ["Kubernetes", "Azure"]
+tags: ["Kubernetes","Azure"]
 date: "2019-05-08"
 
 summary: "In this post, we walk you through creating an AKS cluster, and a Log Analytics workspace for the cluster using Pulumi."

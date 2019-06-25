@@ -1,7 +1,7 @@
 ---
 title: "How we use Pulumi to build Pulumi"
 authors: ["luke-hoban"]
-tags: ["Infrastructure-as-Code"]
+tags: ["Serverless","AWS","Containers","Infrastructure"]
 date: "2018-06-26"
 
 summary: "Here at Pulumi we are (perhaps unsurprisingly!) huge fans of using

@@ -1,7 +1,7 @@
 ---
 title: "Easily Create and Manage AWS EKS Kubernetes Clusters with Pulumi"
 authors: ["luke-hoban"]
-tags: ["Kubernetes", "AWS", "Infrastructure-as-Code"]
+tags: ["AWS","Kubernetes"]
 date: "2019-01-24"
 
 summary: "Provisioning, managing, and monitoring a Kubernetes cluster is no easy task. AWS EKS and Pulumi to the rescue!"

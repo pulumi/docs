@@ -1,7 +1,7 @@
 ---
 title: "Managing Secrets with Pulumi"
 authors: ["matt-ellis"]
-tags: ["Infrastructure-as-Code", "New-Features"]
+tags: ["Features","Security"]
 date: "2019-05-17"
 
 summary: "We recently added two new features that provide you with complete control over how secrets are managed within Pulumi deployments."

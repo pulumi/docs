@@ -1,7 +1,7 @@
 ---
 title: "Provisioning and managing cloud infrastructure with Pulumi"
 authors: ["donna-malayeri"]
-tags: ["Infrastructure-as-Code"]
+tags: ["JavaScript","AWS","Infrastructure"]
 date: "2018-07-20"
 
 summary: "Pulumi provides a powerful too to create, update, and manage resources on any cloud provider.

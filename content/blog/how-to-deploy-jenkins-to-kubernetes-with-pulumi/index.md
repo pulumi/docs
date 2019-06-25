@@ -1,7 +1,7 @@
 ---
 title: "How to deploy Jenkins to Kubernetes with Pulumi"
 authors: ["sean-gillespie"]
-tags: ["Infrastructure-as-Code", "CI/CD"]
+tags: ["Kubernetes"]
 date: "2018-06-27"
 
 summary: "Making a reusable component with Pulumi to run a Jenkins cluster on Kubernetes."

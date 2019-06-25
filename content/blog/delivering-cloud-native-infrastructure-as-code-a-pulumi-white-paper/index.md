@@ -1,7 +1,7 @@
 ---
 title: "Delivering Cloud Native Infrastructure as Code, a Pulumi white paper"
 authors: ["marc-holmes"]
-tags: ["Infrastructure-as-Code"]
+tags: ["CloudNativeInfrastructure"]
 date: "2018-12-05"
 
 summary: "In our latest white paper, Delivering Cloud Native Infrastructure as Code, we we make the case for a consistent programming model for the cloud."

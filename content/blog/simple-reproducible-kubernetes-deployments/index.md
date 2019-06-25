@@ -1,7 +1,7 @@
 ---
 title: "Simple, Reproducible Kubernetes Deployments"
 authors: ["alex-clemmer"]
-tags: ["Kubernetes", "Infrastructure-as-Code"]
+tags: ["Infrastructure","Kubernetes","TypeScript"]
 date: "2018-08-24"
 
 summary: "In this post, we’ll see how Pulumi, an open source cloud native development platform, lets you express Kubernetes programs in real programming languages, like TypeScript, instead of endless YAML templates, in addition to delivering simple and reproducible, yet powerful Kubernetes, deployment workflows."

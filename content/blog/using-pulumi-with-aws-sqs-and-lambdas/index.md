@@ -1,7 +1,7 @@
 ---
 title: "Using Pulumi with AWS SQS and Lambdas"
 authors: ["cyrus-najmabadi"]
-tags: ["Infrastructure-as-Code", "AWS"]
+tags: ["JavaScript","Serverless","AWS"]
 date: "2018-07-10"
 
 summary: "With Amazon's recent announcement to support Simple Queue Service (SQS) as an event source for Lambda, this post details how to use that from Pulumi!"

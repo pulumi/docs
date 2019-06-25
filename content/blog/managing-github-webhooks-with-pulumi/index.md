@@ -1,7 +1,7 @@
 ---
 title: "Managing GitHub Webhooks with Pulumi"
 authors: ["matt-ellis"]
-tags: ["Infrastructure-as-Code"]
+tags: ["Serverless"]
 date: "2018-07-13"
 
 summary: "At Pulumi, we use GitHub for a lot of our development workflow, which can be

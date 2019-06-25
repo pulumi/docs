@@ -1,7 +1,7 @@
 ---
 title: "Mapbox IOT-as-code with Pulumi Crosswalk for AWS"
 authors: ["chris-toomey"]
-tags: ["Infrastructure-as-Code", "AWS"]
+tags: ["JavaScript","Serverless","AWS","Infrastructure","Customer"]
 date: "2019-06-12"
 
 summary: "Mapbox IOT-as-Code Solution with Pulumi Crosswalk for AWS"

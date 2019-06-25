@@ -1,7 +1,7 @@
 ---
 title: "Continuous Delivery with GitLab and Pulumi on Amazon EKS"
 authors: ["nishi-davidson"]
-tags: ["AWS", "Kubernetes", "CI/CD"]
+tags: ["AWS","Kubernetes","CICD"]
 date: "2019-05-22"
 
 summary: "we will work through an example that shows how to use

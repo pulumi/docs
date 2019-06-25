@@ -1,7 +1,7 @@
 ---
 title: "Easy Serverless Apps and Infrastructure — Real Events, Real Code"
 authors: ["joe-duffy"]
-tags: ["AWS", "Infrastructure-as-Code"]
+tags: ["JavaScript","Serverless","AWS"]
 date: "2019-03-11"
 
 summary: "Program the cloud by creating a serverless app and its infrastructure, using real event handlers, and real code. The way serverless should be!"

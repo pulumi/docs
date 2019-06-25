@@ -1,7 +1,7 @@
 ---
 title: "Build a Video Thumbnailer with Pulumi using Lambdas, Containers, and Infrastructure on AWS"
 authors: ["donna-malayeri"]
-tags: ["AWS", "AWS/Lambda/Fargate"]
+tags: ["JavaScript","Serverless","AWS","Containers","Infrastructure"]
 date: "2018-06-21"
 
 summary: "Code a 'Colada' app using Containers, Lambdas, and Data Infrastructure using Pulumi in just 38 lines of code with Pulumi. Then deploy to AWS."

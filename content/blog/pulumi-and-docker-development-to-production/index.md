@@ -1,7 +1,7 @@
 ---
 title: "Pulumi and Docker: Development to Production"
 authors: ["sean-gillespie"]
-tags: ["Infrastructure-as-Code"]
+tags: ["Containers","Kubernetes","Docker"]
 date: "2019-05-15"
 
 summary: "Pulumi makes it easy to deploy your Docker containers to production. Learn how to re-use your infrastructure code for both development and production."

@@ -1,7 +1,7 @@
 ---
 title: "Programming the Cloud with Python"
 authors: ["sean-gillespie"]
-tags: ["Infrastructure-as-Code"]
+tags: ["Serverless","AWS","Python"]
 date: "2019-04-04"
 
 summary: "Python is awesome for automating manual tasks. So let's use it for cloud infrastructure as code!"

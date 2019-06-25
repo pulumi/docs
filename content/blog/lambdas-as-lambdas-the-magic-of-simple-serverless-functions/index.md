@@ -1,7 +1,7 @@
 ---
 title: "Lambdas as Lambdas: The magic of simple serverless Functions"
 authors: ["cyrus-najmabadi"]
-tags: ["AWS/Lambda/Fargate", "Infrastructure-as-Code"]
+tags: ["Serverless","TypeScript"]
 date: "2018-10-10"
 
 summary: "In this post, we look at how we enable Pulumi to build and deploy serverless functions in AWS, Azure, or GCP using lambda functions in JavaScript and TypeScript."
