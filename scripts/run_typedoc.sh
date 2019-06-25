@@ -65,6 +65,7 @@ REPOS=(
     "azure,pulumi-azure,sdk/nodejs"
     "cloud,pulumi-cloud/api"
     "cloudflare,pulumi-cloudflare,sdk/nodejs"
+    "datadog,pulumi-datadog,sdk/nodejs"
     "digitalocean,pulumi-digitalocean,sdk/nodejs"
     "docker,pulumi-docker,sdk/nodejs"
     "eks,pulumi-eks/nodejs/eks"
