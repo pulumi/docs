@@ -1,18 +1,23 @@
 {{ define "hero" }}
-    <header class="bg-purple-800 py-16 text-white px-4 md:px-0">
-        {{ with .Params.hero }}
-            <div class="container mx-auto text-white md:flex justify-around items-center">
-                <div class="md:w-1/2">
-                    <h1 class="text-white">{{ .title }}</h1>
-                </div>
-                <div class="md:w-1/2 md:ml-8">
-                    <div class="text-center">
-                        <img class="inline-block w-56" src="{{ .image }}">
+    <div class="bg-gray-200">
+        <header class="bg-purple-800 pt-16 text-white px-4 md:px-0">
+            {{ with .Params.hero }}
+                <div class="container mx-auto text-white md:flex justify-around items-center">
+                    <div class="md:w-1/2">
+                        <h1 class="text-white">{{ .title }}</h1>
+                    </div>
+                    <div class="md:w-1/2 md:ml-8">
+                        <div class="text-center">
+                            <img class="inline-block w-56" src="{{ .image }}">
+                        </div>
                     </div>
                 </div>
-            </div>
-        {{ end }}
-    </header>
+            {{ end }}
+        </header>
+
+        <img class="w-full h-20" src="/images/waves.svg">
+    </div>
+
     <div class="bg-gray-200 py-2 px-4 md:px-0">
         <ul class="container mx-auto flex list-none">
             {{ range .Params.logos }}
@@ -25,7 +30,7 @@
 {{ end }}
 
 {{ define "main" }}
-    <section class=" px-4 md:px-0">
+    <section class="px-4 md:px-0">
         <div class="container mx-auto max-w-6xl py-16 md:flex">
             <div class="md:w-1/2 md:mx-8">
                 {{ with .Params.main }}

@@ -1,6 +1,6 @@
 {{ define "hero" }}
-    <header class="bg-purple-500 py-24 text-white px-4 md:px-0">
-        <div class="container mx-auto text-white text-center md:max-w-4xl">
+    <header class="bg-purple-500 py-24 text-white px-4 lg:px-0">
+        <div class="container mx-auto text-white text-center lg:max-w-4xl">
             <h1 class="text-white">Plans for teams of all sizes.</h1>
             <p class="text-xl leading-relaxed text-purple-100">
                 Enable your developers and operators to create, deploy, and manage
@@ -17,63 +17,125 @@
 {{ end }}
 
 {{ define "main" }}
-    <section class="bg-purple-800 text-gray-900 py-24 text-white px-4 md:px-0">
-        <div class="container md:mx-auto md:flex justify-center">
-            <div class="bg-white rounded py-10 px-8 md:w-1/3 relative">
-                <div class="text-center">
+    <section class="bg-purple-800 text-gray-900 pt-24 text-white px-4 lg:px-0">
+        <div class="container mx-auto lg:flex justify-center">
+            <div class="bg-white rounded py-8 px-8 lg:w-1/3 mb-4 lg:mb-0">
+                <div class="text-center flex flex-col justify-between h-full">
                     <div class="text-lg text-purple-500">TEAM STARTER</div>
                     <div class="text-black font-display font-bold text-4xl">$50</div>
-                    <div class="text-sm text-gray-700">per month</div>
+                    <div class="text-xs text-gray-700">per month</div>
                     <p class="text-sm text-gray-700">For teams just getting started deploying cloud applications and infrastructure.</p>
-                    <ul class="list-none mt-8 mb-12 text-left text-sm text-gray-700 px-8">
-                        <li><i class="fas fa-check-square text-orange-500 mr-4"></i>Any cloud</li>
-                        <li><i class="fas fa-check-square text-orange-500 mr-4"></i>Includes 3 users</li>
-                        <li><i class="fas fa-check-square text-orange-500 mr-4"></i>Up to 20 project stacks</li>
-                        <li><i class="fas fa-check-square text-orange-500 mr-4"></i>Unlimited deployments</li>
-                        <li><i class="fas fa-check-square text-orange-500 mr-4"></i>CI/CD integrations</li>
+                    <ul class="list-none mt-0 mb-auto mx-auto justify-center text-left text-sm text-gray-700 px-8">
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
+                            <span class="flex-1">Any cloud</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
+                            <span class="flex-1">Includes 3 users</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
+                            <span class="flex-1">Up to 20 project stack</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-infinity text-orange-500"></i>
+                            <span class="flex-1">Unlimited deployment</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
+                            <span class="flex-1">Basic secrets management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
+                            <span class="flex-1">CI/CD integration</span>
+                        </li>
                     </ul>
-                    <a class="text-center btn btn-lg mx-auto py-4 px-6" href="https://app.pulumi.com/organizations/add">Start Your Free Trial</a>
+                    <a class="text-center btn btn-lg btn-orange mx-auto mt-8 py-4 px-6" href="https://app.pulumi.com/organizations/add">Start Your Free Trial</a>
                 </div>
             </div>
-            <div class="bg-white rounded py-10 px-8 md:mx-5 md:w-1/3 relative">
-                <div class="text-center">
+            <div class="bg-white rounded py-8 px-8 lg:mx-5 lg:w-1/3 mb-4 lg:mb-0">
+                <div class="text-center flex flex-col justify-between h-full">
                     <div class="text-lg text-purple-500">TEAM PRO</div>
                     <div class="text-black font-display font-bold text-4xl">$75</div>
-                    <div class="text-sm text-gray-700">per user/month</div>
+                    <div class="text-xs text-gray-700">per user/month</div>
                     <p class="text-sm text-gray-700">For medium to large teams using Pulumi for multiple projects or clouds.</p>
-                    <ul class="list-none mt-8 mb-12 text-left text-sm text-gray-700 px-8">
-                        <li><i class="fas fa-arrow-left text-blue-500 mr-4"></i> Everything in Team Starter, plus...</li>
-                        <li><i class="fas fa-check-square text-blue-500 mr-4"></i>Up to 25 users (minimum of 3)</li>
-                        <li><i class="fas fa-check-square text-blue-500 mr-4"></i>Unlimited projects and stacks</li>
-                        <li><i class="fas fa-check-square text-blue-500 mr-4"></i> APIs and webhooks</li>
-                        <li><i class="fas fa-check-square text-blue-500 mr-4"></i>Advanced secrets management</li>
-                        <li><i class="fas fa-check-square text-blue-500 mr-4"></i>12×5 support available</li>
+                    <ul class="list-none mt-0 mb-auto mx-auto justify-center text-left text-sm text-gray-700 px-8">
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-arrow-left text-blue-500"></i>
+                            <span class="flex-1">Everything in Team Starter, plus...</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-blue-500"></i>
+                            <span class="flex-1">Up to 25 users (minimum of 3)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-infinity text-blue-500"></i>
+                            <span class="flex-1">Unlimited projects and stacks</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-blue-500"></i>
+                            <span class="flex-1">APIs and webhooks</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-blue-500"></i>
+                            <span class="flex-1">Advanced secrets management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-blue-500"></i>
+                            <span class="flex-1">12×5 support available</span>
+                        </li>
                     </ul>
-                    <a class="text-center btn btn-lg mx-auto py-4 px-6" href="https://app.pulumi.com/organizations/add">Start Your Free Trial</a>
+                    <a class="text-center btn btn-lg mx-auto mt-8 py-4 px-6" href="https://app.pulumi.com/organizations/add">Start Your Free Trial</a>
                 </div>
             </div>
-            <div class="bg-white rounded py-10 px-8 md:w-1/3 relative">
-                <div class="text-center">
+            <div class="bg-white rounded py-8 px-8 lg:w-1/3 mb-4 lg:mb-0">
+                <div class="text-center flex flex-col justify-between h-full">
                     <div class="text-lg text-purple-500">ENTERPRISE</div>
                     <div class="text-black font-display font-bold text-4xl">Custom</div>
+                    <div class="text-xs">&nbsp;</div>
                     <p class="text-sm text-gray-700">For large organizations running cloud software at scale, with advanced or custom needs.</p>
-                    <ul class="list-none mt-8 mb-12 text-left text-sm text-gray-700 px-8">
-                        <li><i class="fas fa-arrow-left text-purple-500 mr-4"></i>Everything in Team Pro, plus...</li>
-                        <li><i class="fas fa-check-square text-purple-500 mr-4"></i>Unlimited users (minimum of 10)</li>
-                        <li><i class="fas fa-check-square text-purple-500 mr-4"></i>Teams, roles, and policies</li>
-                        <li><i class="fas fa-check-square text-purple-500 mr-4"></i>SAML/SSO</li>
-                        <li><i class="fas fa-check-square text-purple-500 mr-4"></i>On-premises/self-host available</li>
-                        <li><i class="fas fa-check-square text-purple-500 mr-4"></i>24×7 support available</li>
+                    <ul class="list-none mt-0 mb-auto mx-auto justify-center text-left text-sm text-gray-700 px-8">
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-arrow-left text-purple-500"></i>
+                            <span class="flex-1">Everything in Team Pro, plus...</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-infinity text-purple-500"></i>
+                            <span class="flex-1">Unlimited users (minimum of 10)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-purple-500"></i>
+                            <span class="flex-1">Teams, roles, and policies</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-purple-500"></i>
+                            <span class="flex-1">SAML/SSO</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-purple-500"></i>
+                            <span class="flex-1">On-premises/self-host available</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-purple-500"></i>
+                            <span class="flex-1">24×7 support available</span>
+                        </li>
                     </ul>
-                    <a class="text-center btn btn-lg btn-purple mx-auto py-4 px-6" href="https://app.pulumi.com/organizations/add">Contact Us</a>
+                    <a class="text-center btn btn-lg btn-purple mx-auto mt-8 py-4 px-6" href="#contact">Contact Us</a>
                 </div>
             </div>
         </div>
+        <div class="text-center mt-12">
+            <a class="mt-8 text-orange-500 hover:text-orange-400 text-lg font-bold" href="#grid">See plan details</a>
+            <span class="text-purple-200">&rarr;</span>;
+        </div>
     </section>
 
-    <section id="grid" class="py-16">
+    <img class="w-full" src="/images/waves.svg">
+
+    <section id="grid" class="py-16 px-4 lg:px-0">
         <div class="container mx-auto">
-            <div class="mx-auto  max-w-4xl">
+            <div class="mx-auto text-center max-w-4xl">
                 <h2>Plan details</h2>
                 <p>
                     From teams just getting started, to established organizations running Pulumi at scale, we have an option for you.
@@ -82,24 +144,24 @@
                     And remember, <a href="{{ relref . "/docs" }}">Pulumi Community Edition</a> is free forever for unlimited individual use.
                 </p>
             </div>
-            <table id="pricing" class="my-16 border-white">
+            <table id="pricing" class="mt-16 border-white">
                 <thead>
                     <tr>
-                        <th></th>
-                        <th class="bg-purple-700 text-base font-display text-center md:w-1/4 text-gray-200 uppercase py-4">
+                        <th class="w-1/4"></th>
+                        <th class="w-1/4 bg-purple-700 text-base font-display text-center text-gray-200 uppercase py-4">
                             <span class=text-white>Team Starter</span>
                         </th>
-                        <th class="bg-purple-700 text-base font-display text-center md:w-1/4 text-gray-200 uppercase py-4">
+                        <th class="w-1/4 bg-purple-700 text-base font-display text-center text-gray-200 uppercase py-4">
                             <span class=text-white>Team Pro</span>
                         </th>
-                        <th class="bg-purple-700 text-base font-display text-center md:w-1/4 text-gray-200 uppercase py-4">
+                        <th class="w-1/4 bg-purple-700 text-base font-display text-center text-gray-200 uppercase py-4">
                             <span class=text-white>Enterprise</span>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th class="text-purple-700 text-base font-display md:w-1/4 uppercase font-bold py-4" colspan="4">
+                        <th class="text-purple-700 text-base font-displayuppercase font-bold py-4" colspan="4">
                             Fundamentals
                         </th>
                     </tr>
@@ -209,7 +271,7 @@
                 </tbody>
                 <tbody>
                     <tr>
-                        <th class="text-purple-700 text-base font-display md:w-1/4 uppercase font-bold py-4" colspan="4">
+                        <th class="text-purple-700 text-base font-displayuppercase font-bold py-4" colspan="4">
                             Continuous Delivery
                         </th>
                     </tr>
@@ -335,7 +397,7 @@
                 </tbody>
                 <tbody>
                     <tr>
-                        <th class="text-purple-700 text-base font-display md:w-1/4 uppercase font-bold py-4" colspan="4">
+                        <th class="text-purple-700 text-base font-displayuppercase font-bold py-4" colspan="4">
                             Security
                         </th>
                     </tr>
@@ -348,54 +410,54 @@
                                 including Okta and Active Directory."></button>
                             </p>
                         </th>
-                        <td class="text-center text-sm">
-                            <ul class="inline-flex list-none p-0 justify-center">
+                        <td class="text-center">
+                            <ul class="inline-flex flex-wrap items-center list-none p-0 justify-center">
                                 <li class="mx-2">
-                                    <img class="w-8" src="/logos/tech/logo-github2.png" alt="github" title="GitHub">
+                                    <img class="w-6" src="/logos/tech/github.svg" alt="github" title="GitHub">
                                 </li>
                                 <li class="mx-2">
-                                    <img class="w-8" src="/logos/tech/logo-GitLab.png" alt="gitlab" title="GitLab">
+                                    <img class="w-6" src="/logos/tech/gitlab.svg" alt="gitlab" title="GitLab">
                                 </li>
                                 <li class="mx-2">
-                                    <img class="w-8" src="/logos/tech/logo-atlassian.png" alt="atlassian identity" title="Atlassian Identity">
+                                    <img class="w-6" src="/logos/tech/atlassian.svg" alt="atlassian identity" title="Atlassian Identity">
                                 </li>
                                 <li class="mx-2">
-                                    <i class="w-8 fa fa-2x fa-envelope"></i>
-                                </li>
-                            </ul>
-                        </td>
-                        <td class="text-center text-sm">
-                            <ul class="inline-flex list-none p-0 justify-center">
-                                <li class="mx-2">
-                                    <img class="w-8" src="/logos/tech/logo-github2.png" alt="github" title="GitHub">
-                                </li>
-                                <li class="mx-2">
-                                    <img class="w-8" src="/logos/tech/logo-GitLab.png" alt="gitlab" title="GitLab">
-                                </li>
-                                <li class="mx-2">
-                                    <img class="w-8" src="/logos/tech/logo-atlassian.png" alt="atlassian identity" title="Atlassian Identity">
-                                </li>
-                                <li class="mx-2">
-                                    <i class="w-8 fa fa-2x fa-envelope"></i>
+                                    <img class="w-6" src="/logos/tech/email.svg" alt="Email" title="Email">
                                 </li>
                             </ul>
                         </td>
-                        <td class="text-center text-sm">
-                            <ul class="inline-flex list-none p-0 justify-center">
+                        <td class="text-center">
+                            <ul class="inline-flex flex-wrap items-center list-none p-0 justify-center">
                                 <li class="mx-2">
-                                    <img class="w-8" src="/logos/tech/logo-github2.png" alt="github" title="GitHub">
+                                    <img class="w-6" src="/logos/tech/github.svg" alt="github" title="GitHub">
                                 </li>
                                 <li class="mx-2">
-                                    <img class="w-8" src="/logos/tech/logo-GitLab.png" alt="gitlab" title="GitLab">
+                                    <img class="w-6" src="/logos/tech/gitlab.svg" alt="gitlab" title="GitLab">
                                 </li>
                                 <li class="mx-2">
-                                    <img class="w-8" src="/logos/tech/logo-atlassian.png" alt="atlassian identity" title="Atlassian Identity">
+                                    <img class="w-6" src="/logos/tech/atlassian.svg" alt="atlassian identity" title="Atlassian Identity">
                                 </li>
                                 <li class="mx-2">
-                                    <i class="w-8 fa fa-2x fa-envelope"></i>
+                                    <img class="w-6" src="/logos/tech/email.svg" alt="Email" title="Email">
+                                </li>
+                            </ul>
+                        </td>
+                        <td class="text-center">
+                            <ul class="inline-flex flex-wrap items-center list-none p-0 justify-center">
+                                <li class="mx-2">
+                                    <img class="w-6" src="/logos/tech/github.svg" alt="github" title="GitHub">
                                 </li>
                                 <li class="mx-2">
-                                    <img class="h-8" src="/logos/tech/logo-saml.svg" alt="SAML/SSO identity" title="SAML/SSO Identity">
+                                    <img class="w-6" src="/logos/tech/gitlab.svg" alt="gitlab" title="GitLab">
+                                </li>
+                                <li class="mx-2">
+                                    <img class="w-6" src="/logos/tech/atlassian.svg" alt="atlassian identity" title="Atlassian Identity">
+                                </li>
+                                <li class="mx-2">
+                                    <img class="w-6" src="/logos/tech/email.svg" alt="Email" title="Email">
+                                </li>
+                                <li class="mx-2">
+                                    <img class="w-4" src="/logos/tech/saml.svg" alt="SAML/SSO identity" title="SAML/SSO Identity">
                                 </li>
                             </ul>
                         </td>
@@ -466,7 +528,7 @@
                 </tbody>
                 <tbody class="section">
                     <tr>
-                        <th class="text-purple-700 text-base font-display md:w-1/4 uppercase font-bold py-4" colspan="4">
+                        <th class="text-purple-700 text-base font-displayuppercase font-bold py-4" colspan="4">
                             Support
                         </th>
                     </tr>
@@ -536,10 +598,9 @@
                 </tbody>
             </table>
         </div>
-
     </section>
 
-    <section id="faq" class="py-16">
+    <section id="faq" class="bg-gray-100 py-16 px-4 lg:px-0">
         <div class="container mx-auto max-w-4xl">
             <h2>FAQ</h2>
             <h3>How do I get started? </h3>
@@ -644,7 +705,7 @@
         </div>
     </section>
 
-    <section id="contact" class="py-16 bg-gray-200">
+    <section id="contact" class="py-16 bg-gray-200 px-4 lg:px-0">
         <h2 class="text-center">Need help with plans and pricing?</h2>
         <div class="mx-auto flex justify-center">
             <div class="hs-form hs-form-fg-dark font-normal">
