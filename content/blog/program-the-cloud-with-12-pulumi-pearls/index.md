@@ -2,7 +2,7 @@
 title: "Program the Cloud with 12 Pulumi Pearls"
 authors: ["joe-duffy"]
 tags: ["Pulumi", "Infrastructure-as-Code"]
-date: "2019-06-01"
+date: "2018-07-25"
 
 summary: "Program the cloud using Pulumi with multi-cloud and cloud-specific containers, serverless, and infrastructure. See why  using real languages is great for infrastructure-as-code in addition to building modern cloud applications."
 ---

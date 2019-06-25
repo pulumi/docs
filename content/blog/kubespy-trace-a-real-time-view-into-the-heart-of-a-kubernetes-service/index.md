@@ -2,7 +2,7 @@
 title: "kubespy trace: a real-time view into the heart of a Kubernetes Service"
 authors: ["alex-clemmer"]
 tags: ["Kubernetes", "Infrastructure-as-Code"]
-date: "2018-08-26"
+date: "2018-09-26"
 
 summary: "In this post we'll look at the new kubespy trace command, to answer questions on whether pods and services in a kubernetes cluster are alive, running, and configured to receive traffic. kubespy provides introspection capabilities for Kubernetes."
 meta_image: "RELATIVE_TO_PAGE/trace-success-create-svc.gif"

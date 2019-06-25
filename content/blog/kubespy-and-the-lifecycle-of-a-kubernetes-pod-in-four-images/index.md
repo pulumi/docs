@@ -2,7 +2,7 @@
 title: "Kubespy, and the lifecycle of a Pod, in 4 images"
 authors: ["alex-clemmer"]
 tags: ["Kubernetes", "Infrastructure-as-Code"]
-date: "2018-08-18"
+date: "2018-09-18"
 
 summary: "Introducing a small tool, kubespy, that is purpose-built to help you answer questions about the lifecycle of a Pod in Kubernetes by displaying the changes made to a Kubernetes object in real time."
 meta_image: "RELATIVE_TO_PAGE/1-created.png"
