@@ -9,7 +9,7 @@
                 </p>
                 <div class="mt-4">
                     <a class="inline-block btn btn-lg mr-2" href="{{ relref . "/docs/quickstart" }}">Try Pulumi for Free</a>
-                    <a class="inline-block btn btn-lg btn-orange-translucent mt-4" href="{{ relref . "/docs/quickstart" }}">Why Pulumi</a>
+                    <a class="inline-block btn btn-lg btn-orange-translucent mt-4" href="{{ relref . "/why-pulumi" }}">Why Pulumi</a>
                 </div>
             </div>
             <div class="md:w-1/2 md:ml-8 text-white">
@@ -99,48 +99,58 @@
             </p>
             <div class="md:flex mt-8 mb-4">
                 <div class="md:w-1/4 mb-8 bg-purple-800 text-white text-sm p-8 mx-4 shadow-lg">
-                    <img class="inline-block w-24 mx-auto" src="/icons/icon-feature-containers.svg">
-                    <h3 class="text-white">Containers</h3>
-                    <p class="mb-12">
-                        Rapidly deploy container-based apps into any cloud or cloud-native
-                        infrastructure from AWS Fargate to Kubernetes
-                    </p>
-                    <a class="btn btn-sm btn-orange-translucent" href="{{ relref . "/topics/containers.md" }}">More Containers</a>
+                    <div class="flex flex-col justify-between h-full">
+                        <img class="inline-block w-24 mx-auto" src="/icons/icon-feature-containers.svg">
+                        <h3 class="text-white">Containers</h3>
+                        <p class="mb-auto">
+                            Rapidly deploy container-based apps into any cloud or cloud-native
+                            infrastructure from AWS Fargate to Kubernetes.
+                        </p>
+                        <a class="btn btn-sm btn-orange-translucent mt-8" href="{{ relref . "/topics/containers.md" }}">More Containers</a>
+                    </div>
                 </div>
                 <div class="md:w-1/4 mb-8 bg-purple-800 text-white text-sm p-8 mx-4 shadow-lg">
-                    <img class="inline-block w-24 mx-auto" src="/icons/icon-feature-serverless.svg">
-                    <h3 class="text-white">Serverless</h3>
-                    <p class="mb-12">
-                        Flexibly solve a wide variety of tasks including scalable websites
-                        and APIs, event streaming and processing, all through multi-cloud
-                        and multi-language microservices.
-                    </p>
-                    <a class="btn btn-sm btn-orange-translucent" href="{{ relref . "/topics/serverless.md" }}">More Serverless</a>
+                    <div class="flex flex-col justify-between h-full">
+                        <img class="inline-block w-24 mx-auto" src="/icons/icon-feature-serverless.svg">
+                        <h3 class="text-white">Serverless</h3>
+                        <p class="mb-auto">
+                            Flexibly solve a wide variety of tasks including scalable websites
+                            and APIs, event streaming and processing, all through multi-cloud
+                            and multi-language microservices.
+                        </p>
+                        <a class="btn btn-sm btn-orange-translucent mt-8" href="{{ relref . "/topics/serverless.md" }}">More Serverless</a>
+                    </div>
                 </div>
                 <div class="md:w-1/4 mb-8 bg-purple-800 text-white text-sm p-8 mx-4 shadow-lg">
-                    <img class="inline-block w-24 mx-auto" src="/icons/icon-feature-data.svg">
-                    <h3 class="text-white">Infrastructure</h3>
-                    <p class="mb-12">
-                        Define cloud services and infrastructure in code, then
-                        continuously deploy. Correct issues in infrastructure
-                        automatically to return to the desired state.
-                    </p>
-                    <a class="btn btn-sm btn-orange-translucent" href="{{ relref . "/docs/reference/tutorials/aws/tutorial-ec2-webserver" }}">More Infrastructure</a>
+                    <div class="flex flex-col justify-between h-full">
+                        <img class="inline-block w-24 mx-auto" src="/icons/icon-feature-data.svg">
+                        <h3 class="text-white">Infrastructure</h3>
+                        <p class="mb-auto">
+                            Define cloud services and infrastructure in code, then
+                            continuously deploy. Correct issues in infrastructure
+                            automatically to return to the desired state.
+                        </p>
+                        <a class="btn btn-sm btn-orange-translucent mt-8" href="{{ relref . "/docs/reference/tutorials/aws/tutorial-ec2-webserver" }}">More Infrastructure</a>
+                    </div>
                 </div>
                 <div class="md:w-1/4 mb-8 bg-purple-800 text-white text-sm p-8 mx-4 shadow-lg">
-                    <img class="inline-block w-24 mx-auto" src="/icons/icon-feature-kubernetes.svg">
-                    <h3 class="text-white">Kubernetes</h3>
-                    <p class="mb-12">
-                        Deploy and orchestrate cloud native container-based apps on
-                        Kubernetes, either on-premises or in the cloud. Use real code to
-                        define and deploy Kubernetes services.
-                    </p>
-                    <a class="btn btn-sm btn-orange-translucent" href="{{ relref . "/topics/kubernetes.md" }}">More Kubernetes</a>
+                    <div class="flex flex-col justify-between h-full">
+                        <img class="inline-block w-24 mx-auto" src="/icons/icon-feature-kubernetes.svg">
+                        <h3 class="text-white">Kubernetes</h3>
+                        <p class="mb-auto">
+                            Deploy and orchestrate cloud native container-based apps on
+                            Kubernetes, either on-premises or in the cloud. Use real code to
+                            define and deploy Kubernetes services.
+                        </p>
+                        <a class="btn btn-sm btn-orange-translucent mt-8" href="{{ relref . "/topics/kubernetes.md" }}">More Kubernetes</a>
+                    </div>
                 </div>
             </div>
             <a class="btn btn-lg btn-blue" href="{{ relref . "/docs/quickstart" }}">TRY PULUMI FOR FREE</a>
         </div>
     </section>
+
+    <img class="w-full" src="/images/waves.svg">
 
     <section class="py-16">
         <div class="container mx-auto px-4 md:px-0">
