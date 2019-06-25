@@ -117,17 +117,9 @@ $tab-font-size: 14px !default;
     cursor: pointer;
 }
 
-// Remove the top margin from code snippets under lang chooser tabs so the tabs sit directly on top.
-.langtab-tabs + .clearfix + .highlight,
-.langtab-tabs + .clearfix + .highlight + .highlight,
-.langtab-tabs + .clearfix + .highlight + .highlight + .highlight,
-.langtab-tabs + .clearfix + .highlight + .highlight + .highlight + .highlight,
-.language-prologue-javascript + .highlight,
-.language-prologue-typescript + .highlight,
-.language-prologue-python + .highlight,
-.language-prologue-go + .highlight
-{
-    .chroma {
+.langtab-tabs {
+    // Remove the top margin from code snippets under lang chooser tabs so the tabs sit directly on top.
+    ~ .highlight > .chroma {
         margin-top: 0;
     }
 }
