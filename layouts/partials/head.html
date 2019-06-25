@@ -61,7 +61,7 @@
         <meta property="og:image" content="{{ "/social/pulumi.png" | absURL }}">
     {{ end }}
 
-    <title>{{ .Title }}{{if not .IsHome}} - {{ end }}{{ .Site.Title }}</title>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - Pulumi{{ end }}</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
 
     <!-- RSS link for the blog. -->
