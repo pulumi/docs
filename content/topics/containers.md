@@ -3,6 +3,9 @@ title: Container Management with Pulumi
 layout: containers
 url: /containers
 
+meta_desc: Pulumi provides a cloud native programming model for container management. Any code, any cloud, any app.
+meta_image: /images/pulumi.png
+
 hero:
     title: Container Management with Pulumi
     body: >

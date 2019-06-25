@@ -37,14 +37,16 @@
         <div class="container md:mx-auto max-w-5xl">
             <ul class="inline-flex flex-wrap list-none justify-center">
                 {{ range $.Site.Data.team.team }}
-                    <li class="text-center w-48 mx-4 mb-8">
-                        <img class="rounded mb-4 shadow-md mx-auto" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" >
-                        <h4 class="{{if .bio }}cursor-pointer{{ end }} mb-0 text-gray-900" {{ if .bio }}data-toggle="modal" data-target="#{{ .id }}"{{ end }}>{{ .name }}</h4>
-                        <div>{{ .title }}</div>
-                        <div class="text-center">
-                            {{ partial "widgets/social-icons.html" (dict "social" .social)}}
-                        </div>
-                    </li>
+                    {{ if eq .status "active" }}
+                        <li class="text-center w-48 mx-4 mb-8">
+                            <img class="rounded mb-4 shadow-md mx-auto" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" >
+                            <h4 class="{{if .bio }}cursor-pointer{{ end }} mb-0 text-gray-900" {{ if .bio }}data-toggle="modal" data-target="#{{ .id }}"{{ end }}>{{ .name }}</h4>
+                            <div>{{ .title }}</div>
+                            <div class="text-center">
+                                {{ partial "widgets/social-icons.html" (dict "social" .social)}}
+                            </div>
+                        </li>
+                    {{ end }}
                 {{ end }}
             </ul>
 

@@ -116,3 +116,12 @@ $tab-font-size: 14px !default;
 .mdl-tabs__tab.langtab {
     cursor: pointer;
 }
+
+// Hide adjacent siblings of .language-prologue-* classes from the outset, so they don't all initially
+// show as visible before all but the selected language are hidden.
+.language-prologue-javascript + *,
+.language-prologue-typescript + *,
+.language-prologue-python + *,
+.language-prologue-go + * {
+    display: none;
+}
