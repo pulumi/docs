@@ -75,7 +75,7 @@ To get started, we will create a project, initialize it, then run `pulumi up`:
     });
 
     // Export the URL so we can easily access it.
-    export const url = listener.endpoint.hostname;
+    export const url = lb.endpoint.hostname;
     ```
 
     This example creates an automatic cluster in the default AWS VPC to run our "Fargate" service.

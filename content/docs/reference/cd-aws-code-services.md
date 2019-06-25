@@ -27,8 +27,8 @@ named `PULUMI_ACCESS_TOKEN`. This is required to authenticate with pulumi.com in
 an update. You can create a new Pulumi access token specifically for your CloudBuild project on
 your [Pulumi Account page](https://app.pulumi.com/account/tokens).
 
-Because of the sensitive nature of the access token, it is recommended that the the Pulumi access
-token in Amazon's Systems Manager Parameter Store. This allows you to keep the value secret, while
+Because of the sensitive nature of the access token, it is recommended that the Pulumi access
+token be stored in Amazon's Systems Manager (SSM) Parameter Store. This allows you to keep the value secret, while
 providing auditable access to CodeBuild.
 
 ### Service Role
