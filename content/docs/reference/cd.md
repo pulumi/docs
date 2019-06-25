@@ -1,6 +1,5 @@
 ---
 title: Continuous Delivery
-aliases: ["cd.html"]
 menu:
   reference:
     identifier: cd

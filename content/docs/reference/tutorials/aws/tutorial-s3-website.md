@@ -1,10 +1,5 @@
 ---
 title: "Serve a Static Website from S3"
-aliases:
-    - /quickstart/aws/tutorial-s3-website/
-    - /quickstart/aws/tutorial-s3-website.html
-    - /quickstart/part2.html
-    - /quickstart/aws-s3-website.html
 menu:
   reference:
     parent: tutorials-aws

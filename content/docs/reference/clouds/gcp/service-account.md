@@ -1,8 +1,5 @@
 ---
 title: Setup Service Account
-aliases:
-    - /quickstart/gcp/service-account/
-    - /quickstart/gcp/service-account.html
 ---
 
 [Google Cloud Platform Credentials]: https://console.cloud.google.com/apis/credentials

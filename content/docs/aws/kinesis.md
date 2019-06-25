@@ -3,8 +3,6 @@ title: "How to create an AWS Kinesis data service with Pulumi"
 meta_desc: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
 meta_image: "/images/docs/service/aws-kinesis.png"
 
-aliases: ["kinesis.html"]
-
 service: "Kinesis"
 description: "makes it easy to collect, process, and analyze real-time, streaming data so you can get timely insights and react quickly to new information"
 aws_here: "https://aws.amazon.com/kinesis/"

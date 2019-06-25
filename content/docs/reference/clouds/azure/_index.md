@@ -1,6 +1,5 @@
 ---
 title: Azure
-aliases: ["/reference/azure.html"]
 menu:
   reference:
     parent: clouds

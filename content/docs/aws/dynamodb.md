@@ -3,8 +3,6 @@ title: "How to create an AWS DynamoDB data service with Pulumi"
 meta_desc: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
 meta_image: "/images/docs/service/aws-dynamodb.png"
 
-aliases: ["dynamodb.html"]
-
 service: "DynamoDB"
 description: "is a fast and flexible nonrelational database service for all applications that need consistent, single-digit millisecond latency at any scale"
 aws_here: "https://aws.amazon.com/dynamodb/"

@@ -4,8 +4,6 @@ layout: "aws-single"
 meta_desc: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
 meta_image: "/images/docs/service/aws-athena.png"
 
-aliases: ["athena.html"]
-
 service: "Athena"
 description: "is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL"
 aws_here: "https://aws.amazon.com/athena/"

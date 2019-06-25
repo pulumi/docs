@@ -1,8 +1,5 @@
 ---
 title: Teams
-aliases:
-    - teams.html
-    - /reference/service/collaboration.html
 menu:
   reference:
     parent: teams

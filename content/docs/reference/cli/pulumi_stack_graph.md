@@ -1,6 +1,5 @@
 ---
 title: "pulumi stack graph"
-aliases: ["pulumi_stack_graph.html"]
 expanded_url: /docs/reference/commands/
 ---
 

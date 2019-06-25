@@ -1,6 +1,5 @@
 ---
 title: "pulumi logout"
-aliases: ["pulumi_logout.html"]
 expanded_url: /docs/reference/commands/
 ---
 

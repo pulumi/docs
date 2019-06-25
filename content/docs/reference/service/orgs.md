@@ -1,8 +1,5 @@
 ---
 title: Organizations
-aliases:
-    - orgs.html
-    - /reference/service/editions.html
 menu:
   reference:
     parent: teams

@@ -1,6 +1,5 @@
 ---
 title: State and Backends
-aliases: ["state.html"]
 expanded_url: /docs/reference/concepts/
 menu:
   reference:

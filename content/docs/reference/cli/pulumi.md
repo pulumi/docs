@@ -1,6 +1,5 @@
 ---
 title: "pulumi"
-aliases: ["pulumi.html"]
 expanded_url: /docs/reference/commands/
 ---
 

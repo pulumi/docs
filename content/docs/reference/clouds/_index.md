@@ -1,8 +1,5 @@
 ---
 title: Supported Clouds
-aliases:
-    - /reference/clouds.html
-    - /quickstart/clouds.html
 menu:
   reference:
     identifier: clouds

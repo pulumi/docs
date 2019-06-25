@@ -1,6 +1,5 @@
 ---
 title: Google Cloud
-aliases: ["/reference/gcp.html"]
 menu:
   reference:
     parent: clouds

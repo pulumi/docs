@@ -3,8 +3,6 @@ title: "How to create an AWS Elastic Container Registry (ECR) service with Pulum
 meta_desc: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
 meta_image: "/images/docs/service/aws-ecr.png"
 
-aliases: ["ecr.html"]
-
 service: "ECR"
 description: "is a fully-managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images"
 aws_here: "https://aws.amazon.com/ecr/"

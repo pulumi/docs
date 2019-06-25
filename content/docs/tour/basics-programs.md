@@ -1,6 +1,5 @@
 ---
 title: Programs
-aliases: ["basics-programs.html"]
 menu:
   tour:
     parent: tour

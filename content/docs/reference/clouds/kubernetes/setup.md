@@ -1,9 +1,5 @@
 ---
 title: Setup
-aliases:
-    - /quickstart/kubernetes/setup/
-    - /quickstart/kubernetes/setup.html
-    - /install/kubernetes.html
 menu:
   reference:
     parent: clouds-kubernetes

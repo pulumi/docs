@@ -3,8 +3,6 @@ title: "How to create AWS EC2 instances with Pulumi"
 meta_desc: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
 meta_image: "/images/docs/service/aws-ec2.png"
 
-aliases: ["ec2.html"]
-
 service: "EC2"
 description: "is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers"
 aws_here: "https://aws.amazon.com/ec2/"

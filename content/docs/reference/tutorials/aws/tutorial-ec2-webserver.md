@@ -1,10 +1,5 @@
 ---
 title: "EC2 Linux WebServer Instance"
-aliases:
-  - /quickstart/aws/tutorial-ec2-webserver/
-  - /quickstart/aws/tutorial-ec2-webserver.html
-  - /quickstart/part1.html
-  - /quickstart/aws-ec2.html
 menu:
   reference:
     parent: tutorials-aws

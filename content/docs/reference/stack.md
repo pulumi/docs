@@ -1,6 +1,5 @@
 ---
 title: "Stacks"
-aliases: ["stack.html"]
 expanded_url: /docs/reference/concepts/
 menu:
   reference:

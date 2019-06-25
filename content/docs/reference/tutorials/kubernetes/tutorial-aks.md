@@ -1,9 +1,5 @@
 ---
 title: "Clusters: AKS - Hello World!"
-aliases:
-    - /quickstart/kubernetes/tutorial-azure-kubernetes-service/
-    - /quickstart/azure/tutorial-azure-kubernetes-service.html
-    - /quickstart/azure/tutorial-azure-kubernetes-service/
 menu:
   reference:
     parent: tutorials-kubernetes

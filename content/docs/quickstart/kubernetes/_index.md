@@ -1,6 +1,5 @@
 ---
 title: Get Started with Kubernetes
-aliases: ["/reference/kubernetes.html"]
 weight: 1
 menu:
   quickstart:
