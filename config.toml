@@ -1,4 +1,4 @@
-baseURL = "https://pulumi.io/"
+baseURL = "https://pulumi.com/"
 languageCode = "en-us"
 title = "Pulumi"
 
@@ -6,6 +6,7 @@ disableKinds = ["category", "taxonomyTerm"]
 sectionPagesMenu = "main"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
+enableRobotsTXT = true
 
 [outputFormats.RSS]
     baseName = "rss"
