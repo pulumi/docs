@@ -157,7 +157,7 @@ pygmentsUseClasses = true
 [[menu.reference]]
     parent = "node"
     name = "datadog"
-    url = "/reference/pkg/nodejs/pulumi/datadog/"
+    url = "/docs/reference/pkg/nodejs/pulumi/datadog/"
 
 [[menu.reference]]
     parent = "node"
@@ -269,7 +269,7 @@ pygmentsUseClasses = true
 [[menu.reference]]
     parent = "python"
     name = "pulumi_datadog"
-    url = "/reference/pkg/python/pulumi_datadog/"
+    url = "/docs/reference/pkg/python/pulumi_datadog/"
 
 [[menu.reference]]
     parent = "python"
