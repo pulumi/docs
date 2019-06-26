@@ -13,27 +13,25 @@
                 </p>
             </div>
             <div class="md:w-1/2 md:ml-8">
-                <div class="highlight">
-<pre class="border-none bg-gray-900"><code>import * as k8s from "@pulumi/kubernetes";
+                {{ $code := `import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";
 import { k8sProvider, k8sConfig } from "./cluster";
 
-const name = `${pulumi.getProject()}-${pulumi.getStack()}`;
-const canaryLabels = { app: `canary-${name}` };
+const name = pulumi.getProject() + "-" + pulumi.getStack();
+const canaryLabels = { app: "canary-" + name };
 const canary = new k8s.apps.v1beta1.Deployment("canary", {
-  spec: {
-    selector: { matchLabels: canaryLabels },
-    replicas: 1,
-    template: {
-      metadata: { labels: canaryLabels },
-      spec: { containers: [{ name, image: "nginx" }] },
+    spec: {
+        selector: { matchLabels: canaryLabels },
+        replicas: 1,
+        template: {
+            metadata: { labels: canaryLabels },
+            spec: { containers: [{ name, image: "nginx" }] },
+        },
     },
-  },
 }, { provider: k8sProvider });
 
-export let kubeConfig = k8sConfig;
-</pre></code>
-                </div>
+export let kubeConfig = k8sConfig;` }}
+                {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark" "chrome" true) }}
             </div>
         </div>
     </header>
@@ -82,8 +80,7 @@ export let kubeConfig = k8sConfig;
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <div class="highlight">
-<pre><code>// Define a GKE cluster with configurable settings
+                    {{ $code := `// Define a GKE cluster with configurable settings
 import * as gcp from "@pulumi/gcp";
 import { nodeCount, nodeMachineType, password, username } from "./config";
 
@@ -101,9 +98,8 @@ export const k8sCluster = new gcp.container.Cluster("gke-cluster", {
             "https://www.googleapis.com/auth/monitoring"
         ],
     },
-});
-</pre></code>
-                    </div>
+});` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
 
@@ -131,16 +127,14 @@ export const k8sCluster = new gcp.container.Cluster("gke-cluster", {
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <div class="highlight">
-
-<pre><code>// Deploy an nginx canary to GKE
+                    {{ $code := `// Deploy an nginx canary to GKE
 import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";
 import { k8sProvider, k8sConfig } from "./cluster";
 
 // Create a canary deployment to test that this cluster works.
-const name = `${pulumi.getProject()}-${pulumi.getStack()}`;
-const canaryLabels = { app: `canary-${name}` };
+const name = pulumi.getProject() + "-" + pulumi.getStack();
+const canaryLabels = { app: "canary-" + name };
 const canary = new k8s.apps.v1beta1.Deployment("canary", {
     spec: {
         selector: { matchLabels: canaryLabels },
@@ -153,9 +147,8 @@ const canary = new k8s.apps.v1beta1.Deployment("canary", {
 }, { provider: k8sProvider });
 
 // Export the Kubeconfig so that clients can easily access our cluster.
-export let kubeConfig = k8sConfig;
-</pre></code>
-                    </div>
+export let kubeConfig = k8sConfig;` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
 
@@ -182,9 +175,7 @@ export let kubeConfig = k8sConfig;
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <div class="highlight">
-
-<pre><code>const gcp = require("@pulumi/gcp");
+                    {{ $code := `const gcp = require("@pulumi/gcp");
 
 const computeNetwork = new gcp.compute.Network("network", {
     autoCreateSubnetworks: true,
@@ -198,10 +189,11 @@ const computeFirewall = new gcp.compute.Firewall("firewall", {
     }],
 });
 
-// Create a simple web server
-const startupScript = `#!/bin/bash
-echo "Hello, World!" > index.html
-nohup python -m SimpleHTTPServer 80 &`;
+// Create a simple web server.
+const startupScript =
+    "#!/bin/bash \n" +
+    "echo 'Hello, World!' > index.html \n" +
+    "nohup python -m SimpleHTTPServer 80 &";
 
 const computeInstance = new gcp.compute.Instance("instance", {
     machineType: "f1-micro",
@@ -221,9 +213,8 @@ const computeInstance = new gcp.compute.Instance("instance", {
 }, { dependsOn: [computeFirewall] });
 
 exports.instanceName = computeInstance.name;
-exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessConfigs[0].natIp);
-</pre></code>
-                    </div>
+exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessConfigs[0].natIp);` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
 
@@ -249,18 +240,15 @@ exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessC
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <div class="highlight">
-
-<pre><code>// Create a simple Function
+                    {{ $code := `// Create a simple Function
 import * as gcpFunction from "./gcpFunction";
 
 let greetingFunction = new gcpFunction.HttpFunction("greeting", (req, res) => {
-    res.send(`Greetings from ${req.body.name || 'Google Cloud Functions'}!`);
+    res.send("Greetings from " + (req.body.name || "Google Cloud Functions") + "!");
 });
 
-export let url = greetingFunction.httpsTriggerUrl;
-</pre></code>
-                    </div>
+export let url = greetingFunction.httpsTriggerUrl;` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
         </div>

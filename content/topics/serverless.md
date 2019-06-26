@@ -22,9 +22,8 @@ hero:
         let app = new cloud.API("my-app");
         app.static("/", "www");
 
-        // Serve a simple REST API on `GET /hello`:
-        app.get("/hello", (req, res) =>
-            res.json({ hello: "World!" }));
+        // Serve a simple REST API at `GET /hello`.
+        app.get("/hello", (req, res) => res.json({ hello: "World!" }));
 
         export let url = app.publish().url;
 
@@ -50,22 +49,21 @@ examples:
       code: |
           const cloud = require("@pulumi/cloud-aws");
 
-          // Create a mapping from 'route' to a count
+          // Create a mapping from 'route' to a count.
           let counterTable = new cloud.Table("counterTable", "route");
 
-          // Create an API endpoint
+          // Create an API endpoint.
           let endpoint = new cloud.API("hello-world");
 
           endpoint.get("/{route+}", (req, res) => {
               let route = req.params["route"];
               console.log(`Getting count for '${route}'`);
 
-              // get previous value and increment
-              // reference outer `counterTable` object
+              // Get previous value and increment
+              // reference outer `counterTable` object.
               counterTable.get({ route }).then(value => {
                   let count = (value && value.count) || 0;
-                  counterTable.insert({ route, count: ++count }).then(()
-                  => {
+                  counterTable.insert({ route, count: ++count }).then(() => {
                       res.status(200).json({ route, count });
                       console.log(`Got count ${count} for '${route}'`);
                   });
@@ -87,14 +85,14 @@ examples:
       code: |
           const cloud = require("@pulumi/cloud-aws");
 
-          // A storage bucket
+          // A storage bucket.
           const bucket = new cloud.Bucket("bucket");
           const bucketName = bucket.bucket.id;
 
-
-          // Trigger a Lamda function when something is added
+          // Trigger a Lambda function when something is added.
           bucket.onPut("onNewVideo", bucketArgs => {
-              console.log(`*** New Item in Bucket`);}
+              console.log(`*** New Item in Bucket`);
+          }
 
           // Export the bucket name.
           exports.bucketName = bucketName;
@@ -121,8 +119,9 @@ examples:
                   res.setEncoding("utf8");
                   res.on("data", (chunk) => { content += chunk });
                   res.on("end", () => {
-                      snapshots.insert({ date: Date.now(),
-                          content: content });
+                      snapshots.insert({
+                          date: Date.now(), content: content
+                      });
                   });
               });
               req.end();
@@ -237,17 +236,17 @@ examples:
           import * as pulumi from "@pulumi/pulumi";
 
           const helloFunction = new aws.serverless.Function(
-          "helloFunction",
+              "helloFunction",
               { role: lambdaRole },
-                  (event, context, callback) => {
+              (event, context, callback) => {
                   callback(null, "Hello");
               }
           );
 
           const worldFunction = new aws.serverless.Function(
-          "worldFunction",
+              "worldFunction",
               {role: lambdaRole},
-                  (event, context, callback) => {
+              (event, context, callback) => {
                   callback(null, `${event} World!`);
               }
           );

@@ -13,25 +13,23 @@
                 </p>
             </div>
             <div class="md:w-1/2 md:ml-8">
-                <div class="highlight">
-<pre class="border-none bg-gray-900"><code>import * as helm from "@pulumi/kubernetes/helm";
+                {{ $code := `import * as helm from "@pulumi/kubernetes/helm";
 import * as k8s from "@pulumi/kubernetes";
 import { k8sCluster, k8sProvider } from "./cluster";
 
 const apache = new helm.v2.Chart("apache", {
-  repo: "bitnami",
-  chart: "apache",
-  version: "1.0.0",
+    repo: "bitnami",
+    chart: "apache",
+    version: "1.0.0",
 }, { providers: { kubernetes: k8sProvider } });
 
 export let cluster = k8sCluster.name;
 export let kubeConfig = k8sCluster.kubeConfigRaw;
 export let serviceIP =
-  (apache.resources["v1/Service::default/apache-apache"]
-      as k8s.core.v1.Service).
-      spec.apply(s => s.clusterIP);
-</pre></code>
-                </div>
+    (apache.resources["v1/Service::default/apache-apache"]
+            as k8s.core.v1.Service)
+        .spec.apply(s => s.clusterIP);` }}
+                {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark" "chrome" true) }}
             </div>
         </div>
     </header>
@@ -73,15 +71,14 @@ export let serviceIP =
                         returns a message when invoked.
                     </p>
                     <p>
-                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
                     </p>
                     <p>
                         Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <div class="highlight">
-<pre><code>import * as azure from "@pulumi/azure";
+                    {{ $code := `import * as azure from "@pulumi/azure";
 import * as azureFunction from "./azureFunction";
 
 // Create an Azure function that prints a message and the request headers.
@@ -89,7 +86,7 @@ function handler(context: azureFunction.Context, request: azureFunction.HttpRequ
     let body = "";
     let headers = context.req!.headers!;
     for (let h in headers) {
-        body = body + `${h} = ${headers[h]}\n`;
+        body = body + h + "=" + headers[h] + "\n";
     }
 
     let res: azureFunction.HttpResponse = {
@@ -97,16 +94,15 @@ function handler(context: azureFunction.Context, request: azureFunction.HttpRequ
         headers: {
             "content-type": "text/plain",
         },
-        body: `Greetings from Azure Functions!\n\n===\n\n${body}`,
+        body: "Greetings from Azure Functions!\n\n===\n\n" + body,
     };
 
     context.done(undefined, res);
 }
 
 let fn = new azureFunction.HttpFunction("fn", handler);
-export let endpoint = fn.endpoint;
-</pre></code>
-                    </div>
+export let endpoint = fn.endpoint;` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
 
@@ -124,16 +120,14 @@ export let endpoint = fn.endpoint;
                         This code runs a prebuilt container with a sidecar into ACI.
                     </p>
                     <p>
-                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
                     </p>
                     <p>
                         Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <div class="highlight">
-
-<pre><code>import * as azure from "@pulumi/azure";
+                    {{ $code := `import * as azure from "@pulumi/azure";
 
 const resourceGroup = new azure.core.ResourceGroup("resourcegroup", {
     location: "West US",
@@ -162,9 +156,8 @@ const containerGroup = new azure.containerservice.Group("containergroup", {
     tags: {
         "environment": "testing",
     },
-});
-</pre></code>
-                    </div>
+});` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
 
@@ -182,16 +175,14 @@ const containerGroup = new azure.containerservice.Group("containergroup", {
                         it, all in one Pulumi program.
                     </p>
                     <p>
-                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
                     </p>
                     <p>
                         Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <div class="highlight">
-
-<pre><code>import * as helm from "@pulumi/kubernetes/helm";
+                    {{ $code := `import * as helm from "@pulumi/kubernetes/helm";
 import * as k8s from "@pulumi/kubernetes";
 import { k8sCluster, k8sProvider } from "./cluster";
 
@@ -204,10 +195,10 @@ const apache = new helm.v2.Chart("apache", {
 export let cluster = k8sCluster.name;
 export let kubeConfig = k8sCluster.kubeConfigRaw;
 export let serviceIP =
-    (apache.resources["v1/Service::default/apache-apache"] as k8s.core.v1.Service).
-        spec.apply(s => s.clusterIP);
-</pre></code>
-                    </div>
+    (apache.resources["v1/Service::default/apache-apache"]
+            as k8s.core.v1.Service)
+        .spec.apply(s => s.clusterIP);` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
 
@@ -225,16 +216,14 @@ export let serviceIP =
                         the instance, before exporting the IP and Hostname.
                     </p>
                     <p>
-                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
                     </p>
                     <p>
                         Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <div class="highlight">
-
-<pre><code>const azure = require("@pulumi/azure");
+                    {{ $code := `const azure = require("@pulumi/azure");
 
 let vm = new azure.compute.VirtualMachine("server-vm", {
     resourceGroupName: resourceGroup.name,
@@ -269,9 +258,8 @@ exports.publicIP = vm.id.apply(_ =>
         name: publicIP.name,
         resourceGroupName: publicIP.resourceGroupName,
     }).then(ip => ip.ipAddress)
-);
-</pre></code>
-                    </div>
+);` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
         </div>

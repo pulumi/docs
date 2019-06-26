@@ -110,30 +110,28 @@
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <pre class="bg-gray-900 whitespace-normal shadow-md rounded border-none px-6 pb-6">
-                        <code class="whitespace-pre text-white sm">
-                            // Create a load balanced ECS "Fargate" service.
-                            import * as awsx from "@pulumi/awsx";
+                    {{ $code := `// Create a load balanced ECS "Fargate" service.
+import * as awsx from "@pulumi/awsx";
 
-                            // Spin up two instances of NGINX on port 80.
-                            const lb = new awsx.elasticloadbalancingv2.ApplicationListener("nginx", { port: 80 });
-                            const nginx = new awsx.ecs.FargateService("nginx", {
-                                taskDefinitionArgs: {
-                                    containers: {
-                                        nginx: {
-                                            image: "nginx",
-                                            memory: 128,
-                                            portMappings: [ lb ],
-                                        },
-                                    },
-                                },
-                                desiredCount: 2,
-                            });
+// Spin up two instances of NGINX on port 80.
+const lb = new awsx.elasticloadbalancingv2.ApplicationListener("nginx", { port: 80 });
+const nginx = new awsx.ecs.FargateService("nginx", {
+    taskDefinitionArgs: {
+        containers: {
+            nginx: {
+                image: "nginx",
+                memory: 128,
+                portMappings: [ lb ],
+            },
+        },
+    },
+    desiredCount: 2,
+});
 
-                            // Export the service's URL so that it's easy to access.
-                            export const url = lb.endpoint.hostname;
-                        </code>
-                    </pre>
+// Export the service's URL so that it's easy to access.
+export const url = lb.endpoint.hostname;` }}
+
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
         </div>
@@ -161,8 +159,7 @@
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <div class="highlight">
-<pre><code>// Create a new VPC with public, private, and isolated subnets.
+                    {{ $code := `// Create a new VPC with public, private, and isolated subnets.
 import * as awsx from "@pulumi/awsx";
 
 // Allocate a new VPC with a public and private subnet per AZ,
@@ -180,9 +177,9 @@ const vpc = new awsx.ec2.Vpc("custom", {
 // Export the VPC ID and subnet IDs for easy consumption:
 export const vpcId = vpc.id;
 export const vpcPrivateSubnetIds = vpc.privateSubnetIds;
-export const vpcPublicSubnetIds = vpc.publicSubnetIds;
-</pre></code>
-                    </div>
+export const vpcPublicSubnetIds = vpc.publicSubnetIds;` }}
+
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
         </div>

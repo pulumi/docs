@@ -6,7 +6,7 @@
                 {{ .Params.hero.body | markdownify }}
             </div>
             <div class="md:w-1/2 md:ml-8 text-white">
-                <pre class="bg-gray-900 border-none"><code>{{ .Params.hero.code | }}</code></pre>
+                {{ partial "code" (dict "code" .Params.hero.code "lang" "js" "mode" "dark" "chrome" true) }}
             </div>
         </div>
     </header>
@@ -117,12 +117,12 @@
                     <p>
                         {{ .body | markdownify | safeHTML }}
                     </p>
-                    <a class="btn" href="{{ .cta.url }}">
+                    <a class="btn inline-block my-2" href="{{ .cta.url }}">
                         {{ .cta.label }}
                     </a>
                 </div>
                 <div class="md:w-1/2">
-                    <pre class="bg-gray-900 text-gray-200"><code>{{ .code }}</code></pre>
+                    {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
         {{ end }}
