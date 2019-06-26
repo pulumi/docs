@@ -107,45 +107,45 @@ ecosystem.
 
 This application has two major pieces:
 
--   The
-    [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/),
-    which takes a template for an application, and then instantiates
-    some user-specified number of copies (or replicas) of that template
-    in the cluster.
--   The
-    [Service](https://kubernetes.io/docs/concepts/services-networking/service/),
-    which we will use to allocate a publicly-reachable IP address, and
-    to direct traffic.
+- The [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/),
+  which takes a template for an application, and then instantiates
+  some user-specified number of copies (or replicas) of that template
+  in the cluster.
+- The [Service](https://kubernetes.io/docs/concepts/services-networking/service/),
+  which we will use to allocate a publicly-reachable IP address, and
+  to direct traffic.
 
 The code below from
 [index.ts](https://github.com/pulumi/examples/blob/master/kubernetes-ts-exposed-deployment/index.ts)
 defines our application using these two APIs:
 
-    // nginx container, replicated 3 time.
-    const appName = "nginx";
-    const appLabels = { app: appName };
-    const nginx = new k8s.apps.v1beta1.Deployment(appName, {
-       spec: {
-           selector: { matchLabels: appLabels },
-           replicas: 3,
-           // The application template to replicate -- just the nginx container.
-           template: {
-               metadata: { labels: appLabels },
-               spec: { containers: [{ name: appName, image: "nginx:1.15-alpine" }] }
-           }
-       }
-    });
+```javascript
+// nginx container, replicated 3 time.
+const appName = "nginx";
+const appLabels = { app: appName };
+const nginx = new k8s.apps.v1beta1.Deployment(appName, {
+    spec: {
+        selector: { matchLabels: appLabels },
+        replicas: 3,
+        // The application template to replicate -- just the nginx container.
+        template: {
+            metadata: { labels: appLabels },
+            spec: { containers: [{ name: appName, image: "nginx:1.15-alpine" }] }
+        }
+    }
+});
 
-    // Allocate an IP to the nginx Deployment.
-    const frontend = new k8s.core.v1.Service(appName, {
-       metadata: { labels: nginx.spec.apply(spec => spec.template.metadata.labels) },
-       spec: {
-           // Type `LoadBalancer` causes us to allocate a public IP address.
-           type: "LoadBalancer",
-           ports: [{ port: 80, targetPort: 80, protocol: "TCP" }],
-           selector: appLabels
-       }
-    });
+// Allocate an IP to the nginx Deployment.
+const frontend = new k8s.core.v1.Service(appName, {
+    metadata: { labels: nginx.spec.apply(spec => spec.template.metadata.labels) },
+    spec: {
+        // Type `LoadBalancer` causes us to allocate a public IP address.
+        type: "LoadBalancer",
+        ports: [{ port: 80, targetPort: 80, protocol: "TCP" }],
+        selector: appLabels
+    }
+});
+```
 
 This code creates 3 replicas of the nginx container, puts them behind a
 load balancer listening on port 80, and exposes it publicly to the
@@ -239,8 +239,10 @@ variable -- in this case, we just happen to have exported the IP address
 using a variable `frontendIp`. The code to do this export looks like
 this (at the bottom of index.ts):
 
-    export let frontendIp = frontend.status.apply(
-        status => status.loadBalancer.ingress[0].ip); 
+```javascript
+export let frontendIp = frontend.status.apply(
+    status => status.loadBalancer.ingress[0].ip);
+```
 
 Obtaining this value from the CLI is trivial using the
 `pulumi stack output` command. Here we use `curl` to get find the title
@@ -274,10 +276,10 @@ and then run `pulumi preview --diff`. You will see something like this:
 
 You can see several things happening here:
 
--   The diff captures the change in the nginx image.
--   It reports that the nginx Deployment resource will be updated
-    in-place. Replaces may also be replaced or deleted,
-    which would be evident from the diff also.
+- The diff captures the change in the nginx image.
+- It reports that the nginx Deployment resource will be updated
+  in-place. Replaces may also be replaced or deleted,
+  which would be evident from the diff also.
 
 The intention here is to give users an intuition for the blast radius of
 the changes to a Kubernetes application.

@@ -184,7 +184,9 @@ and kick the tires.
 The last line of code exposes the load balancer address so it's easy to
 access:
 
-    export const url = web.endpoint.hostname;
+```typescript
+export const url = web.endpoint.hostname;
+```
 
 The net result is that, with this project defined with the 28 lines of
 code above, we can simply run `pulumi up`; this command will show us a

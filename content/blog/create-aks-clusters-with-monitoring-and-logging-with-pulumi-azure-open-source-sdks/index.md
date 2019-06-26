@@ -67,53 +67,57 @@ the successful creation of the AKS cluster. If you see that the Service
 Principal Id was not found: "Service principal clientID: xxxxx not
 found", simply re-run `pulumi update`to proceed.
 
-    // Step 2: Create the AD service principal for the k8s cluster.
-    let adApp = new azuread.Application("aks");
-    let adSp = new azuread.ServicePrincipal("aksSp", { applicationId: adApp.applicationId });
-    let adSpPassword = new azuread.ServicePrincipalPassword("aksSpPassword", {
-        servicePrincipalId: adSp.id,
-        value: password,
-        endDate: "2099-01-01T00:00:00Z",
-    });
+```javascript
+// Step 2: Create the AD service principal for the k8s cluster.
+let adApp = new azuread.Application("aks");
+let adSp = new azuread.ServicePrincipal("aksSp", { applicationId: adApp.applicationId });
+let adSpPassword = new azuread.ServicePrincipalPassword("aksSpPassword", {
+    servicePrincipalId: adSp.id,
+    value: password,
+    endDate: "2099-01-01T00:00:00Z",
+});
+```
 
 ## Step 3: Create the AKS cluster
 
 Now let's add the logic to create the AKS cluster with the Service
 principal.
 
-    // Step 3: This step creates an AKS cluster.
-    export const k8sCluster = new azure.containerservice.KubernetesCluster("aksCluster", {
-            resourceGroupName: resourceGroup.name,
-            location: location,
-            agentPoolProfile: {
-                name: "aksagentpool",
-                count: nodeCount,
-                vmSize: nodeSize,
+```javascript
+// Step 3: This step creates an AKS cluster.
+export const k8sCluster = new azure.containerservice.KubernetesCluster("aksCluster", {
+        resourceGroupName: resourceGroup.name,
+        location: location,
+        agentPoolProfile: {
+            name: "aksagentpool",
+            count: nodeCount,
+            vmSize: nodeSize,
+        },
+        dnsPrefix: `${pulumi.getStack()}-kube`,
+        linuxProfile: {
+            adminUsername: "aksuser", 
+            sshKey: { keyData: sshPublicKey, }
+        },
+        servicePrincipal: {
+            clientId: applicationId,
+            clientSecret: adSpPassword.value,
+        },
+        addonProfile: {
+            omsAgent: {
+                enabled: true,
+                logAnalyticsWorkspaceId: loganalytics.id,
             },
-            dnsPrefix: `${pulumi.getStack()}-kube`,
-            linuxProfile: {
-                adminUsername: "aksuser", 
-                sshKey: { keyData: sshPublicKey, }
-            },
-            servicePrincipal: {
-                clientId: applicationId,
-                clientSecret: adSpPassword.value,
-            },
-            addonProfile: {
-                omsAgent: {
-                    enabled: true,
-                    logAnalyticsWorkspaceId: loganalytics.id,
-                },
-            },
-        }); 
+        },
+    }); 
 
-    // Expose a k8s provider instance using our custom cluster instance.
-    export const k8sProvider = new k8s.Provider("aksK8s", {
-            kubeconfig: k8sCluster.kubeConfigRaw,
-        });
+// Expose a k8s provider instance using our custom cluster instance.
+export const k8sProvider = new k8s.Provider("aksK8s", {
+        kubeconfig: k8sCluster.kubeConfigRaw,
+    });
 
-    // Export the kubeconfig
-    export const kubeconfig = k8sCluster.kubeConfigRaw
+// Export the kubeconfig
+export const kubeconfig = k8sCluster.kubeConfigRaw
+```
 
 ## Step 4: Enable default monitoring and logging for the AKS cluster
 
@@ -128,27 +132,29 @@ query to specify the data you want.
 We will now enable monitoring and logging by default for the cluster and
 run `pulumi up`
 
-    // Step 4: Enables the Monitoring Diagonostic control plane component logs and AllMetrics   
-    export const azMonitoringDiagnostic = new azure.monitoring.DiagnosticSetting("aks", {
-           logAnalyticsWorkspaceId: loganalytics.id,
-           targetResourceId: k8sCluster.id,
-            logs:  [{
-               category: "kube-apiserver",
-               enabled : true,
-            
-               retentionPolicy: {
-               enabled: true,
-                }
-            },
-           ],
-           metrics: [{
-               category: "AllMetrics",
-            
-               retentionPolicy: {
-               enabled: true,
-               }
-            }],
-       })
+```javascript
+// Step 4: Enables the Monitoring Diagonostic control plane component logs and AllMetrics   
+export const azMonitoringDiagnostic = new azure.monitoring.DiagnosticSetting("aks", {
+    logAnalyticsWorkspaceId: loganalytics.id,
+    targetResourceId: k8sCluster.id,
+    logs:  [{
+        category: "kube-apiserver",
+        enabled : true,
+    
+        retentionPolicy: {
+        enabled: true,
+        }
+    },
+    ],
+    metrics: [{
+        category: "AllMetrics",
+    
+        retentionPolicy: {
+        enabled: true,
+        }
+    }],
+})
+```
        
 
 If you run `pulumi up` with the entire `index.ts` file as defined

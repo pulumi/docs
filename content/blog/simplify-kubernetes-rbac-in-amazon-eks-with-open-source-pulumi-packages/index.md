@@ -126,7 +126,9 @@ import * as awsx from "@pulumi/awsx";
 import * as eks from "@pulumi/eks";
 import * as k8s from "@pulumi/kubernetes";
  
-/*  * 1) Single step deployment of three IAM Roles  */
+/*
+ * 1) Single step deployment of three IAM Roles
+ */
  
 function createIAMRole(name: string): aws.iam.Role {
     // Create an IAM Role...
@@ -149,16 +151,17 @@ function createIAMRole(name: string): aws.iam.Role {
               "clusterAccess": `${name}-usr`,
           },
         });
-    }
+    };
+}
  
-    // Administrator AWS IAM clusterAdminRole with full access to all AWS resources
-    const clusterAdminRole = createIAMRole("clusterAdminRole");
+// Administrator AWS IAM clusterAdminRole with full access to all AWS resources
+const clusterAdminRole = createIAMRole("clusterAdminRole");
  
-    // Administer Automation role for use in pipelines, e.g. gitlab CI, Teamcity, etc.
-    const AutomationRole = createIAMRole("AutomationRole");
+// Administer Automation role for use in pipelines, e.g. gitlab CI, Teamcity, etc.
+const AutomationRole = createIAMRole("AutomationRole");
  
-    // Administer Prod role for use in Prod environment
-    const EnvProdRole = createIAMRole("EnvProdRole");
+// Administer Prod role for use in Prod environment
+const EnvProdRole = createIAMRole("EnvProdRole");
 ```
 
 ## Step 2: Create one EKS cluster. Validate cluster creation. Add the namespaces you need.
@@ -235,11 +238,11 @@ const cluster = new eks.Cluster("eks-cluster", {
 export const clusterName = cluster.eksCluster.name;
  
 function createNewNamespace(name: string): k8s.core.v1.Namespace {
-  //Create new namespace
+  // Create new namespace
   return new k8s.core.v1.Namespace(name, { metadata: { name: name } }, { provider: cluster.provider });
 }
  
-//declare namespaces automation and prod
+// Declare namespaces automation and prod.
 const automation = createNewNamespace("automation");
 const prod = createNewNamespace("prod");
 ```
@@ -360,8 +363,8 @@ Update your `index.ts` file with more code as follows:
 
 ```typescript
 /*
-    * 3) Single Step deployment of k8s RBAC configuration for user1, user2 and user3 per our example
-    */
+ * 3) Single Step deployment of k8s RBAC configuration for user1, user2 and user3 per our example
+ */
  
 // Grant cluster admin access to all admins with k8s ClusterRole and ClusterRoleBinding
 new k8s.rbac.v1.ClusterRole("clusterAdminRole", {

@@ -40,22 +40,24 @@ simple Pulumi program that creates a load balanced Fargate Service that
 accessible to the internet, but uses the *public* `nginx` container
 image from the Docker Hub:
 
-    // A simple NGINX service, scaled out over two containers.
-    const nginx = new awsx.ecs.FargateService("nginx", {
-        cluster,
-        desiredCount: 2,
-        taskDefinitionArgs: {
-            containers: {
-                nginx: {
-                    image: "nginx",
-                    memory: 128,
-                    portMappings: [new awsx.elasticloadbalancingv2.ApplicationListener("nginx", { port: 80 })],
-                },
+```typescript
+// A simple NGINX service, scaled out over two containers.
+const nginx = new awsx.ecs.FargateService("nginx", {
+    cluster,
+    desiredCount: 2,
+    taskDefinitionArgs: {
+        containers: {
+            nginx: {
+                image: "nginx",
+                memory: 128,
+                portMappings: [new awsx.elasticloadbalancingv2.ApplicationListener("nginx", { port: 80 })],
             },
         },
-    });
+    },
+});
 
-    export const nginxEndpoint = nginxListener.endpoint;
+export const nginxEndpoint = nginxListener.endpoint;
+```
 
 Running this give us:
 
@@ -116,19 +118,22 @@ Docker image, push it to ECR, get the resulting image name, and
 reference it from our ECS service (it works the same in both ECS and
 EKS):
 
-    // common code from before trimmed out
-    const repository = new awsx.ecr.Repository("repo");
+```typescript
+// common code from before trimmed out
+const repository = new awsx.ecr.Repository("repo");
 
-    // Invoke 'docker' to actually build the DockerFile that is in the 'app' folder relative to
-    // this program. Once built, push that image up to our personal ECR repo.
-    const image = repository.buildAndPushImage("./app")
+// Invoke 'docker' to actually build the DockerFile that is in the 'app' folder relative to
+// this program. Once built, push that image up to our personal ECR repo.
+const image = repository.buildAndPushImage("./app")
 
-    const service = new awsx.ecs.FargateService("service", {
-        // ... common code from before trimmed out
-        taskDefinitionArgs: {
-            containers: {
-                service: {
-                    image: image,
+const service = new awsx.ecs.FargateService("service", {
+    // ... common code from before trimmed out
+    taskDefinitionArgs: {
+        containers: {
+            service: {
+                image: image,
+    ...
+```
 
 So let's see what happens when we actually try to run this:
 
@@ -174,15 +179,17 @@ images based on flexible criteria to meet your needs.
 As a simple example, here's a way to just remove any untagged images
 that are older than one week old:
 
-    // common code from before trimmed out
-    const repository = new awsx.ecr.Repository("repo", {
-        lifeCyclePolicyArgs: {
-            rules: [{
-                selection: "untagged",
-                maximumAgeLimit: 7,
-            }],
-        },
-    });
+```typescript
+// common code from before trimmed out
+const repository = new awsx.ecr.Repository("repo", {
+    lifeCyclePolicyArgs: {
+        rules: [{
+            selection: "untagged",
+            maximumAgeLimit: 7,
+        }],
+    },
+});
+```
 
 Now, you can keep your last two weeks of images around if you want them
 with all tagged images (like `'latest'`) being preserved. You can

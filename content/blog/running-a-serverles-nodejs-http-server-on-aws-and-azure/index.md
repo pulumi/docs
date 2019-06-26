@@ -96,20 +96,22 @@ like one normally would with Node.js, AWS specific messages [like so](https://do
 are the required. Responding to messages with your own data uses a very
 different form as well. Code has to be written like so:
 
-    exports.handler = function(event, context, callback) {
-        // process AWS 'event' using information from AWS 'context'
-        // ...
-        // build response
-        var response = {
-            statusCode: responseCode,
-            headers: {
-                "x-custom-header" : "my custom header value"
-            },
-            body: JSON.stringify(responseBody)
-        };
+```typescript
+exports.handler = function(event, context, callback) {
+    // process AWS 'event' using information from AWS 'context'
+    // ...
+    // build response
+    var response = {
+        statusCode: responseCode,
+        headers: {
+            "x-custom-header" : "my custom header value"
+        },
+        body: JSON.stringify(responseBody)
+    };
 
-        callback(null, response);
-    }
+    callback(null, response);
+}
+```
 
 Azure follows its own [distinct style](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook)
 as well for processing http messages. These approaches end up working,
@@ -130,35 +132,39 @@ ecosystem out there. And critically, the same HttpServer API can be
 implemented consistently on AWS, Azure and GCP - so you can write once
 and deploy to any cloud. The core API shape that accomplishes this is:
 
-    // Factory function for creating a requestListener function. The returned function is the same
-    // callback function that would be passed to http.createServer. See:
-    // https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener for more details.
-    export type RequestListenerFactory = () => (req: http.IncomingMessage, res: http.ServerResponse) => void;
+```typescript
+// Factory function for creating a requestListener function. The returned function is the same
+// callback function that would be passed to http.createServer. See:
+// https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener for more details.
+export type RequestListenerFactory = () => (req: http.IncomingMessage, res: http.ServerResponse) => void;
 
-    export interface HttpServerConstructor {
-        /** * @param createRequestListener Function that, when called, will produce the [[requestListener]] * function that will be called for each http request to the server. The function will be * called once when the module is loaded. As such, it is a suitable place for expensive * computation (like setting up a set of routes). The function returned can then utilize the * results of that computation. */
-        new (name: string, createRequestListener: RequestListenerFactory, opts?: pulumi.ResourceOptions): HttpServer;
-    }
+export interface HttpServerConstructor {
+    /** * @param createRequestListener Function that, when called, will produce the [[requestListener]] * function that will be called for each http request to the server. The function will be * called once when the module is loaded. As such, it is a suitable place for expensive * computation (like setting up a set of routes). The function returned can then utilize the * results of that computation. */
+    new (name: string, createRequestListener: RequestListenerFactory, opts?: pulumi.ResourceOptions): HttpServer;
+}
+```
 
 The idea here is that a Pulumi app can now simply take the previous
 Express.js example and rewrite it as:
 
-    // The `() => { ... }` callback will actually become the code inside an AWS Lambda!**
-    const server = new cloud.HttpServer("myserver", () => {
-        const app = express();
+```typescript
+// The `() => { ... }` callback will actually become the code inside an AWS Lambda!**
+const server = new cloud.HttpServer("myserver", () => {
+    const app = express();
 
-        // GET method route
-        app.get('/', function (req, res) {
-            res.send('GET request to the homepage')
-        })
+    // GET method route
+    app.get('/', function (req, res) {
+        res.send('GET request to the homepage')
+    })
 
-        // POST method route
-        app.post('/', function (req, res) {
-            res.send('POST request to the homepage')
-        })
+    // POST method route
+    app.post('/', function (req, res) {
+        res.send('POST request to the homepage')
+    })
 
-        return app;
-    });
+    return app;
+});
+```
 
 The majority of this code is identical to the original Node.js form. The
 only small difference is the creation of the cloud.HttpServer resource
@@ -177,22 +183,24 @@ library expectations.
 Effectively, the above callback will get translated into the following
 code that is uploaded to AWS Lambda.
 
-    // index.js
-    module.exports = WrapAwsEventAndContextAndCallBackAndForwardTo((() => {
-        const app = express();
+```javascript
+// index.js
+module.exports = WrapAwsEventAndContextAndCallBackAndForwardTo((() => {
+    const app = express();
 
-        // GET method route
-        app.get('/', function (req, res) {
-            res.send('GET request to the homepage')
-        })
+    // GET method route
+    app.get('/', function (req, res) {
+        res.send('GET request to the homepage')
+    })
 
-        // POST method route
-        app.post('/', function (req, res) {
-            res.send('POST request to the homepage')
-        })
+    // POST method route
+    app.post('/', function (req, res) {
+        res.send('POST request to the homepage')
+    })
 
-        return app;
-    })())
+    return app;
+})())
+```
 
 In other words, that factory function will get called, returning the
 expected

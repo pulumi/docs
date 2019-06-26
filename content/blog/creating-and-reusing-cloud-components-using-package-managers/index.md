@@ -36,26 +36,28 @@ Bucket and objects per piece of static content, CloudFront Distribution,
 and Route53 DNS A-Record -- and exposes them afterwards as readonly
 properties:
 
+```typescript
+/**
+ * Static website using Amazon S3, CloudFront, and Route53.
+ */
+export declare class StaticWebsite extends pulumi.ComponentResource  {
+    readonly contentBucket: aws.s3.Bucket;
+    readonly logsBucket: aws.s3.Bucket;
+    readonly cdn: aws.cloudfront.Distribution;
+    readonly aRecord?: aws.route53.Record;
+
     /**
-     * Static website using Amazon S3, CloudFront, and Route53.
-     */
-    export declare class StaticWebsite extends pulumi.ComponentResource  {
-        readonly contentBucket: aws.s3.Bucket;
-        readonly logsBucket: aws.s3.Bucket;
-        readonly cdn: aws.cloudfront.Distribution;
-        readonly aRecord?: aws.route53.Record;
+    * Creates a new static website hosted on AWS.
+    * @param name  The _unique_ name of the resource.
+    * @param contentArgs  The arguments to configure the content being served.
+    * @param domainArgs  The arguments to configure the domain and DNS settings.
+    * @param opts  A bag of options that control this resource's behavior.
+    */
 
-      /**
-        * Creates a new static website hosted on AWS.
-        * @param name  The _unique_ name of the resource.
-        * @param contentArgs  The arguments to configure the content being served.
-        * @param domainArgs  The arguments to configure the domain and DNS settings.
-        * @param opts  A bag of options that control this resource's behavior.
-        */
-
-      constructor(name: string , contentArgs: ContentArgs,
-                  domainArgs?: DomainArgs, opts?: pulumi.ResourceOptions);
-    }
+    constructor(name: string , contentArgs: ContentArgs,
+                domainArgs?: DomainArgs, opts?: pulumi.ResourceOptions);
+}
+```
 
 This class is placed into an NPM package as usual, including a
 [package.json](https://github.com/chrsmith/static-website-aws/blob/master/package.json)
