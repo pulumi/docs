@@ -47,35 +47,37 @@ as code solution enables exactly this.
 To cut to the chase, here is the entire program. We'll spend the rest of
 the post walking through it line by line:
 
-    import * as awsx from "@pulumi/awsx";
-     
-    // Step 1: Create an ECS Fargate cluster.
-    const cluster = new awsx.ecs.Cluster("cluster");
-     
-    // Step 2: Define the Networking for our service.
-    const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer(
-        "net-lb", { external: true, securityGroup: cluster.securityGroup });
-    const web = alb.createListener("web", { port: 80, external: true });
-     
-    // Step 3: Build and publish a Docker image to a private ECR registry.
-    const img = awsx.ecs.Image.fromPath("app-img", "./app");
-     
-    // Step 4: Create a Fargate service task that can scale out.
-    const appService = new awsx.ecs.FargateService("app-svc", {
-        cluster,
-        taskDefinitionArgs: {
-            container: {
-                image: img,
-                cpu: 102 /*10% of 1024*/,
-                memory: 50 /*MB*/,
-                portMappings: [ web ],
-            },
-        },
-        desiredCount: 5,
-    });
-     
-    // Step 5: Export the Internet address for the service.
-    export const url = web.endpoint.hostname;
+```typescript
+import * as awsx from "@pulumi/awsx";
+ 
+// Step 1: Create an ECS Fargate cluster.
+const cluster = new awsx.ecs.Cluster("cluster");
+ 
+// Step 2: Define the Networking for our service.
+const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer(
+    "net-lb", { external: true, securityGroup: cluster.securityGroup });
+const web = alb.createListener("web", { port: 80, external: true });
+ 
+// Step 3: Build and publish a Docker image to a private ECR registry.
+const img = awsx.ecs.Image.fromPath("app-img", "./app");
+ 
+// Step 4: Create a Fargate service task that can scale out.
+const appService = new awsx.ecs.FargateService("app-svc", {
+    cluster,
+    taskDefinitionArgs: {
+        container: {
+            image: img,
+            cpu: 102 /*10% of 1024*/,
+            memory: 50 /*MB*/,
+            portMappings: [ web ],
+        },
+    },
+    desiredCount: 5,
+});
+ 
+// Step 5: Export the Internet address for the service.
+export const url = web.endpoint.hostname;
+```
 
 ## Step 1. Create a Cluster
 
@@ -84,12 +86,16 @@ The opening stanza imports Pulumi's
 contains high level AWS best practices and patterns, and leverages real
 languages to eliminate boilerplate YAML templating:
 
-    import * as awsx from "@pulumi/awsx";
+```typescript
+import * as awsx from "@pulumi/awsx";
+```
 
 To provision an entire [Elastic Container Service (ECS)](https://aws.amazon.com/ecs/) cluster, AWS's native container
 orchestration technology, we just new one up in a single line of code:
 
-    const cluster = new awsx.ecs.Cluster("cluster");
+```typescript
+const cluster = new awsx.ecs.Cluster("cluster");
+```
 
 This will use the default [Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/) in our account. If we want to
 customize this aspect along with the auto-scaling policies, we can
@@ -103,9 +109,11 @@ scaled-out application and want a fixed address. Second, we will want to
 expose port 80 to the Internet, for incoming traffic. This leads to
 these two lines:
 
-    const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer(
-        "net-lb", { external: true, securityGroups: cluster.securityGroups });
-    const web = lb.createListener("web", { port: 80, external: true });
+```typescript
+const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer(
+    "net-lb", { external: true, securityGroups: cluster.securityGroups });
+const web = lb.createListener("web", { port: 80, external: true });
+```
 
 An [Elastic Application Load Balancer (ALB)](https://aws.amazon.com/elasticloadbalancing/) in AWS is a
 [fully featured Layer 7 load balancer](https://aws.amazon.com/blogs/aws/new-aws-application-load-balancer/),
@@ -119,7 +127,9 @@ sophisticated scenarios. Simple things simple, hard things possible!
 
 The next line declares a Docker image:
 
-    const img = awsx.ecs.Image.fromPath("app-img", "./app");
+```typescript
+const img = awsx.ecs.Image.fromPath("app-img", "./app");
+```
 
 This single line is quite the work horse, and does a lot. Let's unpack
 it a bit.
@@ -144,18 +154,20 @@ and managing Swarm on our own. This effectively replaces
 simple sequence of code, and which gives us full access to the AWS
 platform:
 
-    const appService = new awsx.ecs.FargateService("app-svc", {
-        cluster,
-        taskDefinitionArgs: {
-            container: {
-                image: img,
-                cpu: 128 /*~10%*/,
-                memory: 50 /*MB*/,
-                portMappings: [ web ],
-            },
-        },
-        desiredCount: 5,
-    });
+```typescript
+const appService = new awsx.ecs.FargateService("app-svc", {
+    cluster,
+    taskDefinitionArgs: {
+        container: {
+            image: img,
+            cpu: 128 /*~10%*/,
+            memory: 50 /*MB*/,
+            portMappings: [ web ],
+        },
+    },
+    desiredCount: 5,
+});
+```
 
 Notice that `img` just refers to the Docker image built in Step 3, and
 the `portMappings` structure references our load balancer's listener

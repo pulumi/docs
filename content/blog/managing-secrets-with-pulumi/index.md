@@ -102,19 +102,21 @@ Manager parameter, based on a secret configuration value.
 
 Here's the program we'll be using:
 
-    import * as pulumi from "@pulumi/pulumi";
-    import * as aws from "@pulumi/aws";
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
 
-    const cfg = new pulumi.Config();
-    const secretMessage = cfg.requireSecret("secretMessage");
+const cfg = new pulumi.Config();
+const secretMessage = cfg.requireSecret("secretMessage");
 
-    const param = new aws.ssm.Parameter("secretParameter", {
-        type: "SecureString",
-        value: secretMessage.apply(s => s.toUpperCase())
-    });
+const param = new aws.ssm.Parameter("secretParameter", {
+    type: "SecureString",
+    value: secretMessage.apply(s => s.toUpperCase())
+});
 
-    export const paramId = param.id;
-    export const paramValue = param.value;
+export const paramId = param.id;
+export const paramValue = param.value;
+```
 
 In the above code sample, we're using the new `requireSecret` method to
 pull out a configuration value as a secret. In addition, we use an

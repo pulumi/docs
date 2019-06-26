@@ -63,28 +63,30 @@ combined with, for example, the Pulumi Azure provider to deploy and
 manage both the cluster and Kubernetes resources that should be
 installed into the cluster.
 
-    import * as azure from "@pulumi/azure";
-    import * as k8s from "@pulumi/kubernetes";
-    import * as helm from "@pulumi/kubernetes/helm";
+```typescript
+import * as azure from "@pulumi/azure";
+import * as k8s from "@pulumi/kubernetes";
+import * as helm from "@pulumi/kubernetes/helm";
 
-    // Create an Azure Kubernetes Service cluster
-    const resourceGroup = new azure.core.ResourceGroup("aks", { location: "West US" });
-    const kubernetesService = new azure.containerservice.KubernetesCluster("kubernetes", {
-    /* ... */
-    });
+// Create an Azure Kubernetes Service cluster
+const resourceGroup = new azure.core.ResourceGroup("aks", { location: "West US" });
+const kubernetesService = new azure.containerservice.KubernetesCluster("kubernetes", {
+/* ... */
+});
 
-    // Create a Pulumi Kubernetes provider configured to deploy to the AKS cluster above
-    export const azk8s = new k8s.Provider("azk8s", {
-        kubeconfig: kubernetesService.kubeConfigRaw,
-    });
+// Create a Pulumi Kubernetes provider configured to deploy to the AKS cluster above
+export const azk8s = new k8s.Provider("azk8s", {
+    kubeconfig: kubernetesService.kubeConfigRaw,
+});
 
-    // Deploy a Helm chart into the cluster
-    const kibana = new helm.v2.Chart("kibana", {
-        repo: "stable",
-        chart: "kibana",
-        version: "0.8.0",
-        values: { service: { type: "LoadBalancer" } },
-    }, { providers: { kubernetes: azk8s } });
+// Deploy a Helm chart into the cluster
+const kibana = new helm.v2.Chart("kibana", {
+    repo: "stable",
+    chart: "kibana",
+    version: "0.8.0",
+    values: { service: { type: "LoadBalancer" } },
+}, { providers: { kubernetes: azk8s } });
+```
 
 Check out the [Kubernetes
 overview]({{< ref "/docs/quickstart/kubernetes" >}}) docs, the [API
@@ -162,16 +164,18 @@ For example, the code below uses the `axios` NPM package to make an HTTP
 request inside an AWS Lambda invoked by an AWS API Gateway (in just a
 few lines of code!).
 
-    import * as axios from "axios";
-    import * as cloud from "@pulumi/cloud-aws";
+```typescript
+import * as axios from "axios";
+import * as cloud from "@pulumi/cloud-aws";
 
-    const api = new cloud.API("api");
-    api.get("/", async (req, res) => {
-        const statusText = (await axios.default.get("https://pulumi.io")).statusText;
-        res.write(`GET https://pulumi.io/ == ${statusText}`).end();
-    });
+const api = new cloud.API("api");
+api.get("/", async (req, res) => {
+    const statusText = (await axios.default.get("https://pulumi.io")).statusText;
+    res.write(`GET https://pulumi.io/ == ${statusText}`).end();
+});
 
-    export const url = api.publish().url;
+export const url = api.publish().url;
+```
 
 ## OpenStack
 
@@ -183,13 +187,15 @@ infrastructure deployments.
 
 For example, a VM can be deployed to OVH with just the following:
 
-    const os = require("@pulumi/openstack");
-    const instance = new os.compute.Instance("test", {
-        flavorName: "s1-2",
-        imageName: "Ubuntu 16.04",
-    });
+```typescript
+const os = require("@pulumi/openstack");
+const instance = new os.compute.Instance("test", {
+    flavorName: "s1-2",
+    imageName: "Ubuntu 16.04",
+});
 
-    exports.instanceIP = instance.accessIpV4;
+exports.instanceIP = instance.accessIpV4;
+```
 
 Check out the [API documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/openstack" >}})
 and the [pulumi-openstack](https://github.com/pulumi/pulumi-openstack)
@@ -207,17 +213,19 @@ On Azure, the new `@pulumi/azure-serverless` package makes it easy to
 work with serverless functions, and has initial support for hooking up
 to Blob storage event sources:
 
-    import * as azure from "@pulumi/azure";
-    import * as serverless from "@pulumi/azure-serverless";
+```typescript
+import * as azure from "@pulumi/azure";
+import * as serverless from "@pulumi/azure-serverless";
 
-    const storageAccount = new azure.storage.Account("images-container", { /* ... */ });
-    serverless.storage.onBlobEvent("newImage", storageAccount, (context, blob) => {
-        context.log(context);
-        context.log(blob);
-        context.done();
-    }, { containerName: "folder", filterSuffix: ".png" });
+const storageAccount = new azure.storage.Account("images-container", { /* ... */ });
+serverless.storage.onBlobEvent("newImage", storageAccount, (context, blob) => {
+    context.log(context);
+    context.log(blob);
+    context.done();
+}, { containerName: "folder", filterSuffix: ".png" });
 
-    export let storageAccountName = storageAccount.name;
+export let storageAccountName = storageAccount.name;
+```
 
 On Google Cloud, the new `gcp.serverless.Function` provides an easy way
 to create a Google Cloud Function from a JavaScript callback in a Pulumi
@@ -225,12 +233,14 @@ program. Thanks to Mikhail Shilkov
 ([@mikhailshilkov](https://github.com/mikhailshilkov)) for contributing
 this feature!
 
-    import * as gcp from "@pulumi/gcp";
-    let f = new gcp.serverless.Function("f", {}, (req, res) => {
-        res.send(`Hello ${req.body.name || 'World'}!`);
-    });
+```typescript
+import * as gcp from "@pulumi/gcp";
+let f = new gcp.serverless.Function("f", {}, (req, res) => {
+    res.send(`Hello ${req.body.name || 'World'}!`);
+});
 
-    export let url = f.function.httpsTriggerUrl;
+export let url = f.function.httpsTriggerUrl;
+```
 
 ## GitHub App for CI/CD Integration
 

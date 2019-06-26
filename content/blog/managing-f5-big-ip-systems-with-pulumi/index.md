@@ -29,46 +29,47 @@ the sake of brevity, but we could easily create these HTTP servers
 inline in the same code as our BIG-IP resources - managing them side by
 side in the same Pulumi application.
 
-    import * as pulumi from "@pulumi/pulumi";
-    import * as f5bigip from "@pulumi/f5bigip";
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
 
-    // The backend IP:Port we want to load balance to.
-    const backendInstance = "172.31.47.29:80";
+// The backend IP:Port we want to load balance to.
+const backendInstance = "172.31.47.29:80";
 
-    // Create our health check monitor
-    const httpMonitor = new f5bigip.ltm.Monitor("www", {
-        name: "/Common/www",
-        parent: "/Common/http",
-        send: "GET /
-",
-        timeout: 5,
-        interval: 10,
-    });
+// Create our health check monitor
+const httpMonitor = new f5bigip.ltm.Monitor("www", {
+    name: "/Common/www",
+    parent: "/Common/http",
+    send: "GET /",
+    timeout: 5,
+    interval: 10,
+});
 
-    // Create our pool that we'll attach our HTTP servers to
-    const wwwPool = new f5bigip.ltm.Pool("www", {
-        name: "/Common/www",
-        monitors: [httpMonitor.name],
-        allowNat: "yes",
-        allowSnat: "yes",
-    });
+// Create our pool that we'll attach our HTTP servers to
+const wwwPool = new f5bigip.ltm.Pool("www", {
+    name: "/Common/www",
+    monitors: [httpMonitor.name],
+    allowNat: "yes",
+    allowSnat: "yes",
+});
 
-    // Create a pool attachment for our HTTP server
-    const wwwPoolAttachment = new f5bigip.ltm.PoolAttachment(`www`, {
-        pool: wwwPool.name,
-        node: pulumi.interpolate`/Common/${backendInstance}`,
-    });
+// Create a pool attachment for our HTTP server
+const wwwPoolAttachment = new f5bigip.ltm.PoolAttachment(`www`, {
+    pool: wwwPool.name,
+    node: pulumi.interpolate`/Common/${backendInstance}`,
+});
 
-    // Create our LTM Virtual Server
-    const wwwVirtualServer = new f5bigip.ltm.VirtualServer("www", {
-        pool: wwwPool.name,
-        name: "/Common/www",
-        destination: new pulumi.Config().require("f5PrivateIp"),
-        port: 80,
-        ipProtocol: "tcp",
-        profiles: ["/Common/http"],
-        sourceAddressTranslation: "automap",
-    });
+// Create our LTM Virtual Server
+const wwwVirtualServer = new f5bigip.ltm.VirtualServer("www", {
+    pool: wwwPool.name,
+    name: "/Common/www",
+    destination: new pulumi.Config().require("f5PrivateIp"),
+    port: 80,
+    ipProtocol: "tcp",
+    profiles: ["/Common/http"],
+    sourceAddressTranslation: "automap",
+});
+```
 
 ## Managing iRules
 
@@ -84,52 +85,54 @@ information within the BIG-IP system based on the presence of a query
 parameter on the HTTP request - e.g. `?_debug=true`. Again we're
 omitting some of the resources to keep the example short.
 
-    import * as pulumi from "@pulumi/pulumi";
-    import * as f5bigip from "@pulumi/f5bigip";
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
 
-    // ...
+// ...
 
-    const iRuleTcl = `
-    when HTTP_REQUEST {
-        # initialize our connection-scoped variable
-        set client_debug 0
+const iRuleTcl = `
+when HTTP_REQUEST {
+    # initialize our connection-scoped variable
+    set client_debug 0
 
-        # if request query string contains _debug=true
-        if {[URI::query [HTTP::uri] _debug] eq "true"} {
-            set client_debug 1
-        }
+    # if request query string contains _debug=true
+    if {[URI::query [HTTP::uri] _debug] eq "true"} {
+        set client_debug 1
     }
-    when SERVER_CONNECTED {
-        # if our connection-scoped variable is true, log connection info
-        if {$client_debug} {
-            log local0. "Client debug info requested... [IP::client_addr]:[TCP::client_port] -> [clientside {IP::local_addr}]:[clientside {TCP::local_port}] -> [IP::remote_addr]:[TCP::remote_port]"
-        }
+}
+when SERVER_CONNECTED {
+    # if our connection-scoped variable is true, log connection info
+    if {$client_debug} {
+        log local0. "Client debug info requested... [IP::client_addr]:[TCP::client_port] -> [clientside {IP::local_addr}]:[clientside {TCP::local_port}] -> [IP::remote_addr]:[TCP::remote_port]"
     }
-    when HTTP_RESPONSE {
-        # add a response header so clients know their connection info was logged
-        if {$client_debug} {
-            HTTP::header insert "X-Client-Debug" "true"
-        }
+}
+when HTTP_RESPONSE {
+    # add a response header so clients know their connection info was logged
+    if {$client_debug} {
+        HTTP::header insert "X-Client-Debug" "true"
     }
-    `;
+}
+`;
 
-    // Create our iRule
-    const iRule = new f5bigip.ltm.IRule("www", {
-        name: "/Common/www",
-        irule: iRuleTcl,
-    });
+// Create our iRule
+const iRule = new f5bigip.ltm.IRule("www", {
+    name: "/Common/www",
+    irule: iRuleTcl,
+});
 
-    // Create our LTM Virtual Server
-    const wwwVirtualServer = new f5bigip.ltm.VirtualServer("www", {
-        pool: wwwPool.name,
-        name: "/Common/www",
-        destination: new pulumi.Config().require("f5PrivateIp"),
-        port: 80,
-        ipProtocol: "tcp",
-        profiles: ["/Common/http"],
-        sourceAddressTranslation: "automap",
-        irules: [iRule.name],
-    });
+// Create our LTM Virtual Server
+const wwwVirtualServer = new f5bigip.ltm.VirtualServer("www", {
+    pool: wwwPool.name,
+    name: "/Common/www",
+    destination: new pulumi.Config().require("f5PrivateIp"),
+    port: 80,
+    ipProtocol: "tcp",
+    profiles: ["/Common/http"],
+    sourceAddressTranslation: "automap",
+    irules: [iRule.name],
+});
+```
 
 ## Dynamically Creating iRules
 
@@ -145,48 +148,50 @@ We define the languages we currently support in an array called
 supportedLanguages and then use this array to create an iRule for each
 language.
 
-    import * as pulumi from "@pulumi/pulumi";
-    import * as f5bigip from "@pulumi/f5bigip";
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
 
-    // ...
+// ...
 
-    // The languages we currently support.
-    const supportedLanguages = [
-        "es",
-        "fr",
-    ]
+// The languages we currently support.
+const supportedLanguages = [
+    "es",
+    "fr",
+]
 
-    const iRules = supportedLanguages.map(languageCode => {
-        const iRuleTcl = `
-        when HTTP_REQUEST {
-            # if request path equals '/'
-            if {[HTTP::uri] eq "/"} {
-                if { [HTTP::header "Accept-Language"] starts_with "${languageCode}" } {
-                    HTTP::respond 301 Location "/${languageCode}/"
-                }
+const iRules = supportedLanguages.map(languageCode => {
+    const iRuleTcl = `
+    when HTTP_REQUEST {
+        # if request path equals '/'
+        if {[HTTP::uri] eq "/"} {
+            if { [HTTP::header "Accept-Language"] starts_with "${languageCode}" } {
+                HTTP::respond 301 Location "/${languageCode}/"
             }
         }
-        `;
+    }
+    `;
 
-        // Create our iRule
-        const iRule = new f5bigip.ltm.IRule(`www-${languageCode}`, {
-            name: `/Common/www-${languageCode}`,
-            irule: iRuleTcl,
-        });
-        return iRule;
+    // Create our iRule
+    const iRule = new f5bigip.ltm.IRule(`www-${languageCode}`, {
+        name: `/Common/www-${languageCode}`,
+        irule: iRuleTcl,
     });
+    return iRule;
+});
 
-    // Create our LTM Virtual Server
-    const wwwVirtualServer = new f5bigip.ltm.VirtualServer("www", {
-        pool: wwwPool.name,
-        name: "/Common/www",
-        destination: new pulumi.Config().require("f5PrivateIp"),
-        port: 80,
-        ipProtocol: "tcp",
-        profiles: ["/Common/http"],
-        sourceAddressTranslation: "automap",
-        irules: iRules.map(irule => irule.name),
-    });
+// Create our LTM Virtual Server
+const wwwVirtualServer = new f5bigip.ltm.VirtualServer("www", {
+    pool: wwwPool.name,
+    name: "/Common/www",
+    destination: new pulumi.Config().require("f5PrivateIp"),
+    port: 80,
+    ipProtocol: "tcp",
+    profiles: ["/Common/http"],
+    sourceAddressTranslation: "automap",
+    irules: iRules.map(irule => irule.name),
+});
+```
 
 ## Wrap Up
 

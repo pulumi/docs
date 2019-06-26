@@ -79,19 +79,21 @@ Let's begin by seeing what defining Kubernetes applications in a real
 language looks like. The full Kubernetes API is available, just in code
 instead of YAML. A simple program looks like so:
 
-    import * as k8s from "@pulumi/kubernetes";
+```typescript
+import * as k8s from "@pulumi/kubernetes";
 
-    const appLabels = { app: "nginx" };
-    const deployment = new k8s.apps.v1.Deployment("nginx-deployment", {
-        spec: {
-            replicas: 1,
-            selector: { matchLabels: appLabels },
-            template: {
-                metadata: { labels: appLabels },
-                spec: { containers: [{ name: "nginx", image: "nginx:1.7.9" }] }
-            }
+const appLabels = { app: "nginx" };
+const deployment = new k8s.apps.v1.Deployment("nginx-deployment", {
+    spec: {
+        replicas: 1,
+        selector: { matchLabels: appLabels },
+        template: {
+            metadata: { labels: appLabels },
+            spec: { containers: [{ name: "nginx", image: "nginx:1.7.9" }] }
         }
-    });
+    }
+});
+```
 
 Indeed, if you run the `pulumi new kubernetes-typescript` command to
 create a basic project from the Kubernetes TypeScript template, this is
@@ -154,26 +156,28 @@ to encode our own best practices and common patterns -- however,
 [the vast simplification to the guestbook itself](https://github.com/pulumi/examples/blob/master/kubernetes-ts-guestbook/components/index.ts)
 is the best part:
 
-    import * as k8sjs from "./k8sjs";
+```typescript
+import * as k8sjs from "./k8sjs";
 
-    let redisMaster = new k8sjs.ServiceDeployment("redis-master", {
-        image: "k8s.gcr.io/redis:e2e",
-        ports: [ 6379 ]
+let redisMaster = new k8sjs.ServiceDeployment("redis-master", {
+    image: "k8s.gcr.io/redis:e2e",
+    ports: [ 6379 ]
+});
+
+let redisSlave = new k8sjs.ServiceDeployment("redis-slave", {
+    image: "gcr.io/google_samples/gb-redisslave:v1",
+    ports: [ 6379 ]
     });
 
-    let redisSlave = new k8sjs.ServiceDeployment("redis-slave", {
-        image: "gcr.io/google_samples/gb-redisslave:v1",
-        ports: [ 6379 ]
-     });
+let frontend = new k8sjs.ServiceDeployment("frontend", {
+    replicas: 3,
+    image: "gcr.io/google-samples/gb-frontend:v4",
+    ports: [ 80 ],
+    loadBalancer: true,
+});
 
-    let frontend = new k8sjs.ServiceDeployment("frontend", {
-        replicas: 3,
-        image: "gcr.io/google-samples/gb-frontend:v4",
-        ports: [ 80 ],
-        loadBalancer: true,
-    });
-
-    export let frontendIp = frontend.ipAddress;
+export let frontendIp = frontend.ipAddress;
+```
 
 The end result of having three Deployments, three Services, the frontend
 being load balanced, is the same. But we have gone from the original
@@ -212,55 +216,59 @@ can use abstraction to hide complex details.
 To see this in action, let's define a simple `EnvoyDeployment` class
 that adds a sidecar to any Kubernetes Deployment object:
 
-    export class EnvoyDeployment extends k8s.apps.v1.Deployment {
-        constructor(name: string,
-                    args: k8stypes.apps.v1.Deployment,
-                    opts?: pulumi.CustomResourceOptions) {
-            const pod = args.spec.template.spec;
+```typescript
+export class EnvoyDeployment extends k8s.apps.v1.Deployment {
+    constructor(name: string,
+                args: k8stypes.apps.v1.Deployment,
+                opts?: pulumi.CustomResourceOptions) {
+        const pod = args.spec.template.spec;
 
-            // Add an Envoy sidecar container.
-            pod.containers = pod.containers || [];
-            pod.containers.push({
-                name: "envoy",
-                image: "lyft/envoy:latest",
-                command: ["/usr/local/bin/envoy"],
-                args: [
-                    "--concurrency 4",
-                    "--config-path /etc/envoy/envoy.json",
-                    "--mode serve"
-                ],
-                ports: [{ containerPort: 80, protocol: "TCP" }],
-                resources: {
-                    limits: { cpu: "1000m", memory: "512Mi" },
-                    requests: { cpu: "100m", memory: "64Mi" }
-                },
-                volumeMounts: [{ name: "envoy-conf", mountPath: "/etc/envoy" }]
-            });
+        // Add an Envoy sidecar container.
+        pod.containers = pod.containers || [];
+        pod.containers.push({
+            name: "envoy",
+            image: "lyft/envoy:latest",
+            command: ["/usr/local/bin/envoy"],
+            args: [
+                "--concurrency 4",
+                "--config-path /etc/envoy/envoy.json",
+                "--mode serve"
+            ],
+            ports: [{ containerPort: 80, protocol: "TCP" }],
+            resources: {
+                limits: { cpu: "1000m", memory: "512Mi" },
+                requests: { cpu: "100m", memory: "64Mi" }
+            },
+            volumeMounts: [{ name: "envoy-conf", mountPath: "/etc/envoy" }]
+        });
 
-            // Add an associated Volume for Envoy's config, mounted as a ConfigMap.
-            pod.volumes = pod.volumes || [];
-            pod.volumes.push({
-                name: "envoy-conf", configMap: { name: "envoy" },
-            });
+        // Add an associated Volume for Envoy's config, mounted as a ConfigMap.
+        pod.volumes = pod.volumes || [];
+        pod.volumes.push({
+            name: "envoy-conf", configMap: { name: "envoy" },
+        });
 
-            super(name, args, opts);
-        }
+        super(name, args, opts);
     }
+}
+```
 
 Now, anytime we create an EnvoyDeployment , we will automatically get an
 Envoy sidecar attached to it, and we don't need to remember every time
 how to properly configure it:
 
-    const appLabels = { app: "nginx" };
-    const deployment = new EnvoyDeployment("nginx", {
-        spec: {
-            selector: { matchLabels: appLabels },
-            template: {
-                metadata: { labels: appLabels },
-                spec: { containers: [{ name: "nginx", image: "nginx" }] }
-            }
+```typescript
+const appLabels = { app: "nginx" };
+const deployment = new EnvoyDeployment("nginx", {
+    spec: {
+        selector: { matchLabels: appLabels },
+        template: {
+            metadata: { labels: appLabels },
+            spec: { containers: [{ name: "nginx", image: "nginx" }] }
         }
-    });
+    }
+});
+```
 
 Of course, we can do the same with Prometheus or any other project
 requiring sidecars, and we envision possibly having a more general
@@ -283,16 +291,18 @@ For instance, let's imagine we want to deploy the standard
 directly from the official YAML files, and make its public IP easily
 accessible:
 
-    import * as k8s from "@pulumi/kubernetes";
+```typescript
+import * as k8s from "@pulumi/kubernetes";
 
-    // Create resources from standard Kubernetes Guestbook YAML example.
-    const guestbook = new k8s.yaml.ConfigGroup(
-        "guestbook", { files: "guestbook/*.yaml" });
+// Create resources from standard Kubernetes Guestbook YAML example.
+const guestbook = new k8s.yaml.ConfigGroup(
+    "guestbook", { files: "guestbook/*.yaml" });
 
-    // Export the (cluster-private) IP address of the Guestbook frontend.
-    export const frontendIp =
-        guestbook.getResource("v1/Service", "frontend").
-        spec.apply(spec => spec.clusterIP);
+// Export the (cluster-private) IP address of the Guestbook frontend.
+export const frontendIp =
+    guestbook.getResource("v1/Service", "frontend").
+    spec.apply(spec => spec.clusterIP);
+```
 
 This slurps up all the YAML files underneath the `guestbook` directory,
 creates the desired goal state out of them, and gives the same CLI
@@ -305,19 +315,21 @@ distribute entire Kubernetes applications. Let's say we want to deploy
 the latest stable Wordpress Helm Chart, and, again, expose its public IP
 so that it's easily accessible to us after deployment:
 
-    import * as k8s from "@pulumi/kubernetes";
+```typescript
+import * as k8s from "@pulumi/kubernetes";
 
-    // Deploy the latest version of the stable/wordpress chart.
-    const wordpress = new k8s.helm.v2.Chart("wordpress", {
-        repo: "stable",
-        version: "2.1.3",
-        chart: "wordpress"
-    });
+// Deploy the latest version of the stable/wordpress chart.
+const wordpress = new k8s.helm.v2.Chart("wordpress", {
+    repo: "stable",
+    version: "2.1.3",
+    chart: "wordpress"
+});
 
-    // Export the public IP for Wordpress.
-    export const frontendIp =
-        wordpress.getResource("v1/Service", "wpdev-wordpress").
-        status.apply(status => status.loadBalancer.ingress[0].ip);
+// Export the public IP for Wordpress.
+export const frontendIp =
+    wordpress.getResource("v1/Service", "wpdev-wordpress").
+    status.apply(status => status.loadBalancer.ingress[0].ip);
+```
 
 The resulting Pulumi program can be deployed using `pulumi up` in the
 usual way:
@@ -381,29 +393,31 @@ that does it all in one go. Pulumi offers packages for AWS, Azure,
 Google Cloud, and other clouds. We can then use a single CLI invocation,
 `pulumi up`, to provision and update all of it:
 
-    import * as aws from "@pulumi/aws";
-    import * as k8s from "@pulumi/kubernetes";
+```typescript
+import * as aws from "@pulumi/aws";
+import * as k8s from "@pulumi/kubernetes";
 
-    const appName = "nginx";
+const appName = "nginx";
 
-    // nginx config stored in an S3 bucket.
-    const config = new aws.s3.Bucket(`${appName}-config`);
+// nginx config stored in an S3 bucket.
+const config = new aws.s3.Bucket(`${appName}-config`);
 
-    // nginx container, replicated 1 time.
-    const appLabels = { app: appName };
-    const nginx = new k8s.apps.v1beta1.Deployment(appName, {
-       spec: {
-           selector: { matchLabels: appLabels },
-           replicas: 1,
-           template: {
-               metadata: { labels: appLabels },
-               spec: {
-                   initContainers: [nginxConfigPuller(config.bucketDomainName)],
-                   containers: [{ name: appName, image: "nginx:1.15-alpine" }]
-               }
-           }
-       }
-    });
+// nginx container, replicated 1 time.
+const appLabels = { app: appName };
+const nginx = new k8s.apps.v1beta1.Deployment(appName, {
+    spec: {
+        selector: { matchLabels: appLabels },
+        replicas: 1,
+        template: {
+            metadata: { labels: appLabels },
+            spec: {
+                initContainers: [nginxConfigPuller(config.bucketDomainName)],
+                containers: [{ name: appName, image: "nginx:1.15-alpine" }]
+            }
+        }
+    }
+});
+```
 
 Pulumi understands the full dependency graph between resources, and so
 the deployment of the AWS bucket will be orchestrated properly with
@@ -437,48 +451,52 @@ infrastructure.
 For example, here is a program that deploys a GKE cluster with
 configurable settings:
 
-    import * as gcp from "@pulumi/gcp";
-    import { nodeCount, nodeMachineType, password, username } from "./config";
+```typescript
+import * as gcp from "@pulumi/gcp";
+import { nodeCount, nodeMachineType, password, username } from "./config";
 
-    export const k8sCluster = new gcp.container.Cluster("gke-cluster", {
-        initialNodeCount: nodeCount,
-        nodeVersion: "latest",
-        minMasterVersion: "latest",
-        masterAuth: { username, password },
-        nodeConfig: {
-            machineType: nodeMachineType,
-            oauthScopes: [
-                "https://www.googleapis.com/auth/compute",
-                "https://www.googleapis.com/auth/devstorage.read_only",
-                "https://www.googleapis.com/auth/logging.write",
-                "https://www.googleapis.com/auth/monitoring"
-            ],
-        },
-    });
+export const k8sCluster = new gcp.container.Cluster("gke-cluster", {
+    initialNodeCount: nodeCount,
+    nodeVersion: "latest",
+    minMasterVersion: "latest",
+    masterAuth: { username, password },
+    nodeConfig: {
+        machineType: nodeMachineType,
+        oauthScopes: [
+            "https://www.googleapis.com/auth/compute",
+            "https://www.googleapis.com/auth/devstorage.read_only",
+            "https://www.googleapis.com/auth/logging.write",
+            "https://www.googleapis.com/auth/monitoring"
+        ],
+    },
+});
+```
 
 Imagining that this was defined in a `cluster.ts` module, we can deploy
 a canary deployment on top of that cluster using the same program:
 
-    import * as k8s from "@pulumi/kubernetes";
-    import * as pulumi from "@pulumi/pulumi";
-    import { k8sProvider, k8sConfig } from "./cluster";
+```typescript
+import * as k8s from "@pulumi/kubernetes";
+import * as pulumi from "@pulumi/pulumi";
+import { k8sProvider, k8sConfig } from "./cluster";
 
-    // Create a canary deployment to test that this cluster works.
-    const name = `${pulumi.getProject()}-${pulumi.getStack()}`;
-    const canaryLabels = { app: `canary-${name}` };
-    const canary = new k8s.apps.v1beta1.Deployment("canary", {
-        spec: {
-            selector: { matchLabels: canaryLabels },
-            replicas: 1,
-            template: {
-                metadata: { labels: canaryLabels },
-                spec: { containers: [{ name, image: "nginx" }] },
-            },
+// Create a canary deployment to test that this cluster works.
+const name = `${pulumi.getProject()}-${pulumi.getStack()}`;
+const canaryLabels = { app: `canary-${name}` };
+const canary = new k8s.apps.v1beta1.Deployment("canary", {
+    spec: {
+        selector: { matchLabels: canaryLabels },
+        replicas: 1,
+        template: {
+            metadata: { labels: canaryLabels },
+            spec: { containers: [{ name, image: "nginx" }] },
         },
-    }, { provider: k8sProvider });
+    },
+}, { provider: k8sProvider });
 
-    // Export the Kubeconfig so that clients can easily access our cluster.
-    export let kubeConfig = k8sConfig;
+// Export the Kubeconfig so that clients can easily access our cluster.
+export let kubeConfig = k8sConfig;
+```
 
 The incredible thing about this example is that, with it, we simply run
 pulumi up, and a little over two minutes later, we have a fully
@@ -506,42 +524,44 @@ your Kubernetes objects to consume those freshly published images.
 This example builds and pushes a custom Nginx image to the Docker Hub
 and then consumes it from a Kubernetes Deployment:
 
-    import * as docker from "@pulumi/docker";
-    import * as k8s from "@pulumi/kubernetes";
-    import * as pulumi from "@pulumi/pulumi";
+```typescript
+import * as docker from "@pulumi/docker";
+import * as k8s from "@pulumi/kubernetes";
+import * as pulumi from "@pulumi/pulumi";
 
-    const config = new pulumi.Config();
+const config = new pulumi.Config();
 
-    // Build a Dockerfile located at ./mynginx in my project.
-    // Publish it to the Docker Hub using the configured username/password.
-    const mynginx = new docker.Image("mynginx", {
-        build: "./mynginx",
-        imageName: "hekul/mynginx:v1",
-        registry: {
-            server: "docker.io",
-            username: config.require("dockerUsername"),
-            password: config.require("dockerPassword"),
-        },
-    });
+// Build a Dockerfile located at ./mynginx in my project.
+// Publish it to the Docker Hub using the configured username/password.
+const mynginx = new docker.Image("mynginx", {
+    build: "./mynginx",
+    imageName: "hekul/mynginx:v1",
+    registry: {
+        server: "docker.io",
+        username: config.require("dockerUsername"),
+        password: config.require("dockerPassword"),
+    },
+});
 
-    // Deploy an app container that consumes the resulting image name.
-    const appLabels = { app: appName };
-    const nginx = new k8s.apps.v1beta1.Deployment(appName, {
-       spec: {
-           selector: { matchLabels: appLabels },
-           replicas: 1,
-           template: {
-               metadata: { labels: appLabels },
-               spec: {
-                   // Use the app container at the specific SHA pushed.
-                   containers: [{
-                       name: appName,
-                       image: mynginx.imageName,
-                   }],
-               }
-           }
-       }
-    });
+// Deploy an app container that consumes the resulting image name.
+const appLabels = { app: appName };
+const nginx = new k8s.apps.v1beta1.Deployment(appName, {
+    spec: {
+        selector: { matchLabels: appLabels },
+        replicas: 1,
+        template: {
+            metadata: { labels: appLabels },
+            spec: {
+                // Use the app container at the specific SHA pushed.
+                containers: [{
+                    name: appName,
+                    image: mynginx.imageName,
+                }],
+            }
+        }
+    }
+});
+```
 
 Although this example uses the Docker Hub, this technique works great
 for all of the major cloud providers' container registries: Amazon ECR,
@@ -594,35 +614,37 @@ Let's consider the following program, which deploys Nginx to a
 Kubernetes cluster using the standard Kubernetes object model, and
 allocates a public IP address to it:
 
-    import * as k8s from "@pulumi/kubernetes";
+```typescript
+import * as k8s from "@pulumi/kubernetes";
 
-    // nginx container, replicated 1 time.
-    const appName = "nginx";
-    const appLabels = { app: appName };
-    const nginx = new k8s.apps.v1beta1.Deployment(appName, {
-       spec: {
-           selector: { matchLabels: appLabels },
-           replicas: 1,
-           template: {
-               metadata: { labels: appLabels },
-               spec: { containers: [{ name: appName, image: "nginx:1.15-alpine" }] }
-           }
-       }
-    });
+// nginx container, replicated 1 time.
+const appName = "nginx";
+const appLabels = { app: appName };
+const nginx = new k8s.apps.v1beta1.Deployment(appName, {
+    spec: {
+        selector: { matchLabels: appLabels },
+        replicas: 1,
+        template: {
+            metadata: { labels: appLabels },
+            spec: { containers: [{ name: appName, image: "nginx:1.15-alpine" }] }
+        }
+    }
+});
 
-    // Allocate a public IP to the nginx Deployment.
-    const frontend = new k8s.core.v1.Service(appName, {
-       metadata: { labels: nginx.spec.apply(spec => spec.template.metadata.labels) },
-       spec: {
-           type: "LoadBalancer",
-           ports: [{ port: 80, targetPort: 80, protocol: "TCP" }],
-           selector: appLabels
-       }
-    });
+// Allocate a public IP to the nginx Deployment.
+const frontend = new k8s.core.v1.Service(appName, {
+    metadata: { labels: nginx.spec.apply(spec => spec.template.metadata.labels) },
+    spec: {
+        type: "LoadBalancer",
+        ports: [{ port: 80, targetPort: 80, protocol: "TCP" }],
+        selector: appLabels
+    }
+});
 
-    // When "done", this will print the public IP.
-    export const frontendIp = frontend.status.apply(
-        status => status.loadBalancer.ingress[0].ip);
+// When "done", this will print the public IP.
+export const frontendIp = frontend.status.apply(
+    status => status.loadBalancer.ingress[0].ip);
+```
 
 This code looks a lot like the prior examples, but let's double click
 into the CLI experience when deploying it. Out of the box, Pulumi
@@ -688,44 +710,46 @@ want to do the simpler thing of triggering a deployment anytime that
 config changes. Pulumi can handle this automatically, simply based on
 the dependencies between resources:
 
-    import * as fs from "fs";
-    import * as k8s from "@pulumi/kubernetes";
+```typescript
+import * as fs from "fs";
+import * as k8s from "@pulumi/kubernetes";
 
-    const appName = "nginx";
-    const appLabels = { app: appName };
+const appName = "nginx";
+const appLabels = { app: appName };
 
-    // nginx Configuration data to proxy traffic to `pulumi.github.io`.
-    // Read from `default.conf` file.
-    const nginxConfig = new k8s.core.v1.ConfigMap(appName, {
-       metadata: { labels: appLabels },
-       data: { "default.conf": fs.readFileSync("default.conf").toString() }
-    });
-    const nginxConfigName = nginxConfig.metadata.apply(m => m.name);
+// nginx Configuration data to proxy traffic to `pulumi.github.io`.
+// Read from `default.conf` file.
+const nginxConfig = new k8s.core.v1.ConfigMap(appName, {
+    metadata: { labels: appLabels },
+    data: { "default.conf": fs.readFileSync("default.conf").toString() }
+});
+const nginxConfigName = nginxConfig.metadata.apply(m => m.name);
 
-    // Deploy 1 nginx replica, mounting the configuration data into the container.
-    const nginx = new k8s.apps.v1beta1.Deployment(appName, {
-       metadata: { labels: appLabels },
-       spec: {
-           replicas: 1,
-           template: {
-               metadata: { labels: appLabels },
-               spec: {
-                   containers: [{
-                       name: "nginx",
-                       image: "nginx:1.13.6-alpine",
-                       volumeMounts: [{
-                           name: "nginx-configs",
-                           mountPath: "/etc/nginx/conf.d",
-                       }].
-                   }],
-                   volumes: [{
-                       name: "nginx-configs",
-                       configMap: { name: nginxConfigName },
-                   }],
-               },
-           },
-        }
-    });
+// Deploy 1 nginx replica, mounting the configuration data into the container.
+const nginx = new k8s.apps.v1beta1.Deployment(appName, {
+    metadata: { labels: appLabels },
+    spec: {
+        replicas: 1,
+        template: {
+            metadata: { labels: appLabels },
+            spec: {
+                containers: [{
+                    name: "nginx",
+                    image: "nginx:1.13.6-alpine",
+                    volumeMounts: [{
+                        name: "nginx-configs",
+                        mountPath: "/etc/nginx/conf.d",
+                    }].
+                }],
+                volumes: [{
+                    name: "nginx-configs",
+                    configMap: { name: nginxConfigName },
+                }],
+            },
+        },
+    }
+});
+```
 
 Notice here that we're just reading a file from our local project
 workspace to supply as the default.conf data. The end result is that all
@@ -757,30 +781,32 @@ that we use a promise from the Prometheus health checks as input to the
 staging ring deployment, which has the effect of making it dependent on
 the resolution of said health checks:
 
-    // Canary ring. Replicate instrumented Pod 3 times.
-    const canary = new k8s.apps.v1beta1.Deployment(
-        "canary-example-app",
-        { spec: { replicas: 1, template: instrumentedPod } },
-        { dependsOn: p8sDeployment }
-    );
+```typescript
+// Canary ring. Replicate instrumented Pod 3 times.
+const canary = new k8s.apps.v1beta1.Deployment(
+    "canary-example-app",
+    { spec: { replicas: 1, template: instrumentedPod } },
+    { dependsOn: p8sDeployment }
+);
 
-    // Staging ring. Replicate instrumented Pod 10 times.
-    const staging = new k8s.apps.v1beta1.Deployment("staging-example-app", {
-        metadata: {
-            annotations: {
-                // Check P90 latency is < 20,000 microseconds. Returns a `Promise<string>` with the P90
-                // response time. It must resolve correctly before this deployment rolls out. In
-                // general any `Promise<T>` could go here.
-                "example.com/p90ResponseTime": util.checkHttpLatency(canary, containerName, {
-                    durationSeconds: 30,
-                    quantile: 0.9,
-                    thresholdMicroseconds: 20000,
-                    prometheusEndpoint: `localhost:${localPort}`,
-                })
-            }
-        },
-        spec: { replicas: 1, template: instrumentedPod }
-    });
+// Staging ring. Replicate instrumented Pod 10 times.
+const staging = new k8s.apps.v1beta1.Deployment("staging-example-app", {
+    metadata: {
+        annotations: {
+            // Check P90 latency is < 20,000 microseconds. Returns a `Promise<string>` with the P90
+            // response time. It must resolve correctly before this deployment rolls out. In
+            // general any `Promise<T>` could go here.
+            "example.com/p90ResponseTime": util.checkHttpLatency(canary, containerName, {
+                durationSeconds: 30,
+                quantile: 0.9,
+                thresholdMicroseconds: 20000,
+                prometheusEndpoint: `localhost:${localPort}`,
+            })
+        }
+    },
+    spec: { replicas: 1, template: instrumentedPod }
+});
+```
 
 If we run this with a `pulumi up`, the deployment will proceed as usual,
 but we will see intermediate output telling us at what stage our
@@ -803,4 +829,3 @@ To get started, head over to the [Pulumi Quickstart]({{< ref "/docs/quickstart" 
 meet us over on GitHub where all the goodies are open source <https://github.com/pulumi/pulumi>, and/or join our
 [Pulumi Community Slack](https://slack.pulumi.io). We can't wait to hear
 from you. Happy hacking!
-

@@ -110,14 +110,16 @@ case, let's just pass a path to the content on disk (which will
 automatically get uploaded into S3 objects during a `pulumi up`) in
 addition to a path to a custom 404 HTML page:
 
-    import  { StaticWebsite } from "static-website-aws";
+```javascript
+import  { StaticWebsite } from "static-website-aws";
 
-    const website  = new StaticWebsite ("browserhack", {
-        pathToContent:"./browserhack",
-        custom404Path:"/404.html",
-    });
+const website  = new StaticWebsite ("browserhack", {
+    pathToContent:"./browserhack",
+    custom404Path:"/404.html",
+});
 
-    export let cloudfrontDomain  = website .cdn .domainName ;
+export let cloudfrontDomain  = website .cdn .domainName ;
+```
 
 As soon as we have our program, we can stand it up with a single
 `pulumi up`  command:
@@ -183,17 +185,19 @@ specify its logical parent resource. Every child resource created is
 passed `defaultResourceOptions`, which sets the parent property to this
 (the instance of StaticWebsite ).
 
-    // Default resource options for this component's child resources.
-    const defaultResourceOptions: pulumi.ResourceOptions = { parent:this };
+```javascript
+// Default resource options for this component's child resources.
+const defaultResourceOptions: pulumi.ResourceOptions = { parent:this };
 
-    ...
+...
 
-    // Create the logs bucket to store CloudFront request logs.
+// Create the logs bucket to store CloudFront request logs.
 
-    this.logsBucket = new aws.s3.Bucket(`${name }-logs`,
-        { acl:"private" },
-        defaultResourceOptions,
-    );
+this.logsBucket = new aws.s3.Bucket(`${name }-logs`,
+    { acl:"private" },
+    defaultResourceOptions,
+);
+```
 
 Components are a powerful construct in Pulumi, and let you build larger
 first class resources out of smaller ones. There are other benefits,

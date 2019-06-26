@@ -24,15 +24,14 @@ type from the Pulumi SDK. Integration with the most popular
 cloud-specific tools have been supported by Pulumi since the earliest
 days:
 
--   The [`aws.cloudformation.getStack()`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/cloudformation#getStack" >}})
-    function can be used to obtain the outputs from a CloudFormation
-    Stack.
+- The [`aws.cloudformation.getStack()`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/cloudformation#getStack" >}})
+  function can be used to obtain the outputs from a CloudFormation
+  Stack.
 
--   The [`get`]({{< ref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment-get" >}})
-    method of the
-    [`azure.core.TemplateDeployment`]({{< ref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment" >}})
-    class can be used to obtain the outputs of an ARM Template
-    Deployment.
+- The [`get`]({{< ref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment-get" >}})
+  method of the
+  [`azure.core.TemplateDeployment`]({{< ref "/docs/reference/pkg/nodejs/pulumi/azure/core#TemplateDeployment" >}})
+  class can be used to obtain the outputs of an ARM Template Deployment.
 
 We recently added similar support for reading the outputs of a Terraform
 state file - both from local `.tfstate` files, and from all of the
@@ -49,70 +48,72 @@ we want to use the IDs of subnets in a simple AWS VPC was defined by
 another team using Terraform 0.12, with remote state stored in Terraform
 Enterprise, using the following HCL:
 
-    terraform {
-      required_version = ">= 0.12"
+```
+  terraform {
+    required_version = ">= 0.12"
 
-      backend "remote" {
-        organization = "acme"
+    backend "remote" {
+      organization = "acme"
 
-        workspaces {
-          name = "production"
-        }
+      workspaces {
+        name = "production"
       }
     }
+  }
 
-    provider "aws" {
-      region = "us-west-2"
+  provider "aws" {
+    region = "us-west-2"
+  }
+
+  resource "aws_vpc" "vpc" {
+    cidr_block = "172.21.0.0/16"
+
+    tags = {
+      Name = "VPC"
+    }
+  }
+
+  resource "aws_internet_gateway" "gw" {
+    vpc_id = aws_vpc.vpc.id
+
+    tags = {
+      Name = "VPC IG"
+    }
+  }
+
+  resource "aws_subnet" "public" {
+    count = 2
+
+    cidr_block = "172.21.${count.index}.0/24"
+    vpc_id = aws_vpc.vpc.id
+    map_public_ip_on_launch = true
+
+    tags = {
+      Name = "Public Subnet ${count.index +1}"
+    }
+  }
+
+  resource "aws_route_table" "rt_public" {
+    vpc_id = aws_vpc.vpc.id
+
+    route {
+      cidr_block = "0.0.0.0/0"
+      gateway_id = aws_internet_gateway.gw.id
     }
 
-    resource "aws_vpc" "vpc" {
-      cidr_block = "172.21.0.0/16"
-
-      tags = {
-        Name = "VPC"
-      }
+    tags = {
+      Name = "VPC Public"
     }
+  }
 
-    resource "aws_internet_gateway" "gw" {
-      vpc_id = aws_vpc.vpc.id
+  output "vpc_id" {
+    value = aws_vpc.vpc.id
+  }
 
-      tags = {
-        Name = "VPC IG"
-      }
-    }
-
-    resource "aws_subnet" "public" {
-      count = 2
-
-      cidr_block = "172.21.${count.index}.0/24"
-      vpc_id = aws_vpc.vpc.id
-      map_public_ip_on_launch = true
-
-      tags = {
-        Name = "Public Subnet ${count.index +1}"
-      }
-    }
-
-    resource "aws_route_table" "rt_public" {
-      vpc_id = aws_vpc.vpc.id
-
-      route {
-        cidr_block = "0.0.0.0/0"
-        gateway_id = aws_internet_gateway.gw.id
-      }
-
-      tags = {
-        Name = "VPC Public"
-      }
-    }
-
-    output "vpc_id" {
-      value = aws_vpc.vpc.id
-    }
-
-    output "public_subnet_ids" {
-      value = aws_subnet.public.*.id
-    }
+  output "public_subnet_ids" {
+    value = aws_subnet.public.*.id
+  }
+```
 
 To consume the outputs of this Terraform state in our Pulumi program we
 can do the following:
@@ -132,35 +133,39 @@ can do the following:
     to ensure that our Terraform Enterprise token is encrypted and never
     stored in plaintext by Pulumi:
 
-        import * as pulumi from "@pulumi/pulumi";
-        import * as terraform from "@pulumi/terraform";
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as terraform from "@pulumi/terraform";
 
-        const config = new pulumi.Config();
-        const tfeToken = config.requireSecret("tfeToken");
+const config = new pulumi.Config();
+const tfeToken = config.requireSecret("tfeToken");
 
-        const networkState = new terraform.state.RemoteStateReference("network", {
-            backendType: "remote",
-            token: tfeToken,
-            organization: "acme",
-            workspaces: {
-                name: "production-network"
-            },
-        });
+const networkState = new terraform.state.RemoteStateReference("network", {
+    backendType: "remote",
+    token: tfeToken,
+    organization: "acme",
+    workspaces: {
+        name: "production-network"
+    },
+});
+```
 
 4.  We can now use either the `outputs` property or the `getOutput()`
     function on `networkState` to obtain individual outputs:
 
-        const vpcId = networkState.getOutput("vpc_id");
-        const publicSubnetIds = networkState.outputs["public_subnet_ids"] as pulumi.Output<string[]>;
+```typescript
+const vpcId = networkState.getOutput("vpc_id");
+const publicSubnetIds = networkState.outputs["public_subnet_ids"] as pulumi.Output<string[]>;
 
-        // Create our webservers in each subnet
-        for (let i = 0; i < 2; i++) {
-            new aws.ec2.Instance(`instance${i}`, {
-                ami: nginxAmi,
-                instanceType: "t2.medium",
-                subnetId: publicSubnetIds[i],
-            })
-        }
+// Create our webservers in each subnet
+for (let i = 0; i < 2; i++) {
+    new aws.ec2.Instance(`instance${i}`, {
+        ami: nginxAmi,
+        instanceType: "t2.medium",
+        subnetId: publicSubnetIds[i],
+    })
+}
+```
 
 Using Pulumi to read the outputs of other deployment tools provides a
 great deal of flexibility for adopting Pulumi into existing

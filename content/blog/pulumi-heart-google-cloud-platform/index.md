@@ -35,34 +35,36 @@ repeatable deployments of infrastructure as code.
 In this example, we define a new network, firewall, and compute
 instance, using Python:
 
-    import pulumi
-    from pulumi_gcp import compute
-     
-    disk = {
-        'initializeParams': {
-            'image': "centos-cloud/centos-7-v20190116"
-        }
-    }
-     
-    addr = compute.address.Address(resource_name='poc')
-     
-    network = compute.Network("network")
-    network_interface = [
-        {
-            'network': network.id,
-            'accessConfigs': [{'nat_ip': addr.address}],
-        }
-    ]
-     
-    firewall = compute.Firewall("firewall", network=network.self_link, allows=[{
-        'protocol': "tcp",
-        'ports': ["22", "80"]
-    }])
-     
-    instance = compute.Instance('poc', name='poc', boot_disk=disk, machine_type="f1-micro",
-                                network_interfaces=network_interface)
-     
-    pulumi.export('external_ip', addr.address)
+```typescript
+import pulumi
+from pulumi_gcp import compute
+ 
+disk = {
+    'initializeParams': {
+        'image': "centos-cloud/centos-7-v20190116"
+    }
+}
+ 
+addr = compute.address.Address(resource_name='poc')
+ 
+network = compute.Network("network")
+network_interface = [
+    {
+        'network': network.id,
+        'accessConfigs': [{'nat_ip': addr.address}],
+    }
+]
+ 
+firewall = compute.Firewall("firewall", network=network.self_link, allows=[{
+    'protocol': "tcp",
+    'ports': ["22", "80"]
+}])
+ 
+instance = compute.Instance('poc', name='poc', boot_disk=disk, machine_type="f1-micro",
+                            network_interfaces=network_interface)
+ 
+pulumi.export('external_ip', addr.address)
+```
 
 Infrastructure can be deployed and updated using the `pulumi` CLI, with
 each update driving toward the desired state declared by the Pulumi
@@ -115,38 +117,40 @@ Kubernetes compute environment.
 This example spins up a GKE cluster and uses Pulumi's configuration
 system for easy parameterization:
 
-    from pulumi import Config
-    from pulumi_gcp.container import Cluster
-     
-    # Read in some configurable settings for our cluster:
-    config = Config(None)
-     
-    # nodeCount is the number of cluster nodes to provision. Defaults to 3 if unspecified.
-    NODE_COUNT = config.get('node_count') or 3
-    # nodeMachineType is the machine type to use for cluster nodes. Defaults to n1-standard-1 if unspecified.
-    # See https://cloud.google.com/compute/docs/machine-types for more details on available machine types.
-    NODE_MACHINE_TYPE = config.get('node_machine_type') or 'n1-standard-1'
-    # username is the admin username for the cluster.
-    USERNAME = config.get('username') or 'admin'
-    # password is the password for the admin user in the cluster.
-    PASSWORD = config.require('password')
-     
-    # Now, actually create the GKE cluster.
-    k8s_cluster = Cluster('gke-cluster',
-        initial_node_count=NODE_COUNT,
-        node_version='latest',
-        min_master_version='latest',
-        master_auth={ 'username': USERNAME, 'password': PASSWORD },
-        node_config={
-            'machine_type': NODE_MACHINE_TYPE,
-            'oauth_scopes': [
-                'https://www.googleapis.com/auth/compute',
-                'https://www.googleapis.com/auth/devstorage.read_only',
-                'https://www.googleapis.com/auth/logging.write',
-                'https://www.googleapis.com/auth/monitoring'
-            ],
-        },
-    )
+```python
+from pulumi import Config
+from pulumi_gcp.container import Cluster
+ 
+# Read in some configurable settings for our cluster:
+config = Config(None)
+ 
+# nodeCount is the number of cluster nodes to provision. Defaults to 3 if unspecified.
+NODE_COUNT = config.get('node_count') or 3
+# nodeMachineType is the machine type to use for cluster nodes. Defaults to n1-standard-1 if unspecified.
+# See https://cloud.google.com/compute/docs/machine-types for more details on available machine types.
+NODE_MACHINE_TYPE = config.get('node_machine_type') or 'n1-standard-1'
+# username is the admin username for the cluster.
+USERNAME = config.get('username') or 'admin'
+# password is the password for the admin user in the cluster.
+PASSWORD = config.require('password')
+ 
+# Now, actually create the GKE cluster.
+k8s_cluster = Cluster('gke-cluster',
+    initial_node_count=NODE_COUNT,
+    node_version='latest',
+    min_master_version='latest',
+    master_auth={ 'username': USERNAME, 'password': PASSWORD },
+    node_config={
+        'machine_type': NODE_MACHINE_TYPE,
+        'oauth_scopes': [
+            'https://www.googleapis.com/auth/compute',
+            'https://www.googleapis.com/auth/devstorage.read_only',
+            'https://www.googleapis.com/auth/logging.write',
+            'https://www.googleapis.com/auth/monitoring'
+        ],
+    },
+)
+```
 
 Learn more about using Pulumi with Kubernetes and GKE in this
 [Hello GKE]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-gke" >}}) tutorial.
@@ -162,23 +166,27 @@ event-driven style, and Pulumi will handle the rest.
 For example, want to serve a simple HTTP API with no fixed costs? It's
 just a few lines of code:
 
-    import * as gcp from "@pulumi/gcp";
-     
-    let greeting = new gcp.cloudfunctions.HttpCallbackFunction("greeting", (req, res) => {
-        res.send(`Greetings from ${req.body.name || 'Google Cloud Functions'}!`);
-    });
-     
-    export let url = greeting.httpsTriggerUrl;
+```typescript
+import * as gcp from "@pulumi/gcp";
+ 
+let greeting = new gcp.cloudfunctions.HttpCallbackFunction("greeting", (req, res) => {
+    res.send(`Greetings from ${req.body.name || 'Google Cloud Functions'}!`);
+});
+ 
+export let url = greeting.httpsTriggerUrl;
+```
 
 Or perhaps a pubsub topic that runs some custom code on every message
 received:
 
-    // Create a PubSub Topic
-    let requests = new gcp.pubsub.Topic("requests");
-    // Print out a log message for every message on the Topic
-    requests.onMessagePublished("newMessage", (data) => {
-        console.log(Buffer.from(data.data, "base64").toString());
-    });
+```typescript
+// Create a PubSub Topic
+let requests = new gcp.pubsub.Topic("requests");
+// Print out a log message for every message on the Topic
+requests.onMessagePublished("newMessage", (data) => {
+    console.log(Buffer.from(data.data, "base64").toString());
+});
+```
 
 And for quick inner loop development, the
 [`pulumi logs`]({{< relref "unified-logs-with-pulumi-logs" >}})

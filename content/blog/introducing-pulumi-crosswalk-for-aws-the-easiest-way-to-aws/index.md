@@ -72,22 +72,24 @@ often just serving a simple API on the internet. With just a few lines
 of code and tens of seconds to deploy, Crosswalk for AWS gives us our
 API.
 
-    import * as awsx from "@pulumi/awsx";
+```typescript
+import * as awsx from "@pulumi/awsx";
 
-    const api = new awsx.apigateway.API("api", {
-       routes: [{
-           method: "GET",
-           path: "/",
-           eventHandler: async (ev, ctx) => {
-               return {
-                   statusCode: 200,
-                   body: JSON.stringify(ev),
-               };
-           }
-       }],
-    })
+const api = new awsx.apigateway.API("api", {
+    routes: [{
+        method: "GET",
+        path: "/",
+        eventHandler: async (ev, ctx) => {
+            return {
+                statusCode: 200,
+                body: JSON.stringify(ev),
+            };
+        }
+    }],
+})
 
-    export const endpoint = api.url;
+export const endpoint = api.url;
+```
 
 By building on top of great AWS building blocks like Lambda, API
 Gateway, IAM and more, we avoid needing to worry about infrastructure,
@@ -104,30 +106,32 @@ As our needs grow, we might find we need to deploy containers - either
 custom applications or existing Docker images. Again, just a few lines
 of code gets our container running in production in AWS.
 
-    import * as awsx from "@pulumi/awsx";
+```typescript
+import * as awsx from "@pulumi/awsx";
 
-    // Create the cluster
-    const cluster = new awsx.ecs.Cluster("cluster");
+// Create the cluster
+const cluster = new awsx.ecs.Cluster("cluster");
 
-    // Configure a Load Balancer
-    const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer("lb", {
-        securityGroups: cluster.securityGroups,
-    });
-    const web = alb.createListener("web", { port: 80, external: true });
+// Configure a Load Balancer
+const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer("lb", {
+    securityGroups: cluster.securityGroups,
+});
+const web = alb.createListener("web", { port: 80, external: true });
 
-    // Define the scaled-out Fargate service
-    const appService = new awsx.ecs.FargateService("app-svc", {
-       cluster,
-       taskDefinitionArgs: {
-           container: {
-               image: awsx.ecs.Image.fromPath("app", "./app"),
-               portMappings: [ web ],
-           },
-       },
-       desiredCount: 5,
-    });
+// Define the scaled-out Fargate service
+const appService = new awsx.ecs.FargateService("app-svc", {
+    cluster,
+    taskDefinitionArgs: {
+        container: {
+            image: awsx.ecs.Image.fromPath("app", "./app"),
+            portMappings: [ web ],
+        },
+    },
+    desiredCount: 5,
+});
 
-    export const url = web.endpoint.hostname;
+export const url = web.endpoint.hostname;
+```
 
 Using ECS, Fargate, ECR and ELB, we get a robust production-ready
 container deployment - horizontally scaled out, load-balanced, and
@@ -144,17 +148,19 @@ cluster into a custom VPC, and run our containers in private subnets. We
 can define and configure our VPC, and then redeploy our containers into
 this new VPC with ease:
 
-    import * as awsx from "@pulumi/awsx";
+```typescript
+import * as awsx from "@pulumi/awsx";
 
-    const vpc = new awsx.ec2.Vpc("vpc", {
-       numberOfAvailabilityZones: 3,
-    });
+const vpc = new awsx.ec2.Vpc("vpc", {
+    numberOfAvailabilityZones: 3,
+});
 
-    const cluster = new awsx.ecs.Cluster("cluster", {
-       vpc: vpc,
-    });
+const cluster = new awsx.ecs.Cluster("cluster", {
+    vpc: vpc,
+});
 
-    // ... same as before ...
+// ... same as before ...
+```
 
 The `Vpc` component builds on best-practices Virtual Private Cloud
 design patterns based on [AWS guidance and documentation](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html).
@@ -172,25 +178,27 @@ workloads into Kubernetes using EKS. We can stand up an EKS cluster with
 just a few lines of code, then customize our cluster and deploy
 Kubernetes workloads into our cluster.
 
-    import * as awsx from "@pulumi/awsx";
-    import * as eks from "@pulumi/eks";
+```typescript
+import * as awsx from "@pulumi/awsx";
+import * as eks from "@pulumi/eks";
 
-    // Create a VPC for our cluster.
-    const vpc = new awsx.ec2.Vpc("vpc");
+// Create a VPC for our cluster.
+const vpc = new awsx.ec2.Vpc("vpc");
 
-    // Create the EKS cluster itself.
-    const cluster = new eks.Cluster("cluster", {
-       vpcId: vpc.id,
-       subnetIds: vpc.privateSubnetIds,
-       instanceType: "m5.large",
-       desiredCapacity: 2,
-       minSize: 1,
-       maxSize: 2,
-       deployDashboard: true,
-    });
+// Create the EKS cluster itself.
+const cluster = new eks.Cluster("cluster", {
+    vpcId: vpc.id,
+    subnetIds: vpc.privateSubnetIds,
+    instanceType: "m5.large",
+    desiredCapacity: 2,
+    minSize: 1,
+    maxSize: 2,
+    deployDashboard: true,
+});
 
-    // Export the cluster's kubeconfig.
-    export const kubeconfig = cluster.kubeconfig;
+// Export the cluster's kubeconfig.
+export const kubeconfig = cluster.kubeconfig;
+```
 
 Building on EKS we get all the benefits of managed Kubernetes paired
 with the platform capabilities of AWS. With Crosswalk for AWS, we can
@@ -207,29 +215,31 @@ want to be able to monitor it. We can add a few lines to any of the
 solutions above to define metrics, dashboards, alerting and more to
 monitor our AWS infrastructure.
 
-    import * as aws from "@pulumi/aws";
-    import * as awsx from "@pulumi/awsx";
+```typescript
+import * as aws from "@pulumi/aws";
+import * as awsx from "@pulumi/awsx";
 
-    // Create a bucket and a function to log all new object created events
-    const bucket = new aws.s3.Bucket("b");
-    const subscription = bucket.onObjectCreated("newObject", async (ev) => {
-     console.log(JSON.stringify(ev));
-    });
+// Create a bucket and a function to log all new object created events
+const bucket = new aws.s3.Bucket("b");
+const subscription = bucket.onObjectCreated("newObject", async (ev) => {
+    console.log(JSON.stringify(ev));
+});
 
-    // Create a CloudWatch Dashobard for our functions invocations
-    const dashboardName = "funcDashboard";
-    const dashboard = new awsx.cloudwatch.Dashboard(dashboardName, {
-       widgets: [
-           new awsx.cloudwatch.LineGraphMetricWidget({
-               title: "Lambda invocations",
-               width: 14,
-               metrics: awsx.lambda.metrics.invocations({
-                   function: subscription.func, statistic: "Sum", period: 60, }), }), ], });
+// Create a CloudWatch Dashobard for our functions invocations
+const dashboardName = "funcDashboard";
+const dashboard = new awsx.cloudwatch.Dashboard(dashboardName, {
+    widgets: [
+        new awsx.cloudwatch.LineGraphMetricWidget({
+            title: "Lambda invocations",
+            width: 14,
+            metrics: awsx.lambda.metrics.invocations({
+                function: subscription.func, statistic: "Sum", period: 60, }), }), ], });
 
-    // Export the URL of the dashboard in the AWS console
-    export const dashboardUrl =
-       `https://${aws.config.region}.console.aws.amazon.com/cloudwatch/home?` +
-           `region=${aws.config.region}#dashboards:name=${dashboardName}`;
+// Export the URL of the dashboard in the AWS console
+export const dashboardUrl =
+    `https://${aws.config.region}.console.aws.amazon.com/cloudwatch/home?` +
+        `region=${aws.config.region}#dashboards:name=${dashboardName}`;
+```
 
 With CloudWatch being deeply integrated into all AWS services, we can
 easily build up robust logging, alerting and dashboarding solutions

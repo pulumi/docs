@@ -23,43 +23,45 @@ into complete serverless application. <!--more-->To get a sense of that complexi
 let's look at how one would normally have to work with AWS's resource
 system to create a simple Serverless application:
 
-    // Simplified for brevity
-    import * as aws from "@pulumi/aws";
-    import * as slack from "@slack/client";
+```typescript
+// Simplified for brevity
+import * as aws from "@pulumi/aws";
+import * as slack from "@slack/client";
 
-    // Create a simple bucket.
-    const bucket = new aws.s3.Bucket("testbucket", {
-        serverSideEncryptionConfiguration: ...,
-        forceDestroy: true,
-    });
+// Create a simple bucket.
+const bucket = new aws.s3.Bucket("testbucket", {
+    serverSideEncryptionConfiguration: ...,
+    forceDestroy: true,
+});
 
-    // Create a lambda that will post a message to slack when the bucket changes.
-    // We can pass a simple JavaScript/TypeScript lambda here thanks to the magic of "Lambdas as Lambdas"
-    // See: www.pulumi.com{{< relref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}}
-    const lambda = new aws.lambda.CallbackFunction("postToSlack", { 
-        callback: async (e) => {
-          const client = new slack.WebClient(...);
-          for (const rec of e.Records) {
-            await client.chat.postMessage({ ... });
-          }
-        },
-        ...
-    });
+// Create a lambda that will post a message to slack when the bucket changes.
+// We can pass a simple JavaScript/TypeScript lambda here thanks to the magic of "Lambdas as Lambdas"
+// See: www.pulumi.com{{< relref "lambdas-as-lambdas-the-magic-of-simple-serverless-functions" >}}
+const lambda = new aws.lambda.CallbackFunction("postToSlack", { 
+    callback: async (e) => {
+      const client = new slack.WebClient(...);
+      for (const rec of e.Records) {
+        await client.chat.postMessage({ ... });
+      }
+    },
+    ...
+});
 
-    // Give the bucket permission to invoke the lambda.
-    const permission = new aws.lambda.Permission("invokelambda", {
-        function: lambda, 
-     action: "lambda:InvokeFunction", 
-     principal: "s3.amazonaws.com", sourceArn: bucket.id.apply(bucketName => `arn:aws:s3:::${bucketName}`), }));
+// Give the bucket permission to invoke the lambda.
+const permission = new aws.lambda.Permission("invokelambda", {
+    function: lambda, 
+  action: "lambda:InvokeFunction", 
+  principal: "s3.amazonaws.com", sourceArn: bucket.id.apply(bucketName => `arn:aws:s3:::${bucketName}`), }));
 
-    // Now hookup a notification that will trigger the lambda when any object is created in the bucket.
-    const notification = new aws.s3.BucketNotification("onAnyObjectCreated", {
-        bucket: bucket.id,
-        lambdaFunctions: [{
-            events: ["s3:ObjectCreated:*"],
-            lambdaFunctionArn: lambda.arn,
-        }],
-    })
+// Now hookup a notification that will trigger the lambda when any object is created in the bucket.
+const notification = new aws.s3.BucketNotification("onAnyObjectCreated", {
+    bucket: bucket.id,
+    lambdaFunctions: [{
+        events: ["s3:ObjectCreated:*"],
+        lambdaFunctionArn: lambda.arn,
+    }],
+})
+```
 
 Phew... that's a lot of code `:-/` So what happened above? Well, in the
 AWS resource-oriented view of the world, most things are nouns (i.e
@@ -83,22 +85,24 @@ simply compose and connect these resources in a more natural fashion. By
 just adding our own components, and leveraging what programing languages
 can already do, we can make it possible to simplify the above down to:
 
-    import * as aws from "@pulumi/aws";
-    import * as slack from "@slack/client";
+```typescript
+import * as aws from "@pulumi/aws";
+import * as slack from "@slack/client";
 
-    // Create a simple bucket.
-    const bucket = new aws.s3.Bucket("testbucket", {
-        serverSideEncryptionConfiguration: ...,
-        forceDestroy: true,
-    });
+// Create a simple bucket.
+const bucket = new aws.s3.Bucket("testbucket", {
+    serverSideEncryptionConfiguration: ...,
+    forceDestroy: true,
+});
 
-    // Create a lambda that will post a message to slack when the bucket changes.
-    bucket.onObjectCreated("postToSlack", async (e) => {
-      const client = new slack.WebClient(...);
-      for (const rec of e.Records) {
+// Create a lambda that will post a message to slack when the bucket changes.
+bucket.onObjectCreated("postToSlack", async (e) => {
+    const client = new slack.WebClient(...);
+    for (const rec of e.Records) {
         await client.chat.postMessage({ ... });
-      }
-    });
+    }
+});
+```
 
 This now feels far more like how one might expect to express this
 concept with a normal application. A simple conceptual idea now maps to
@@ -122,20 +126,22 @@ Or, you can get a reference to an existing AWS Lambda created outside of
 Pulumi and have that be the receiver of your serverless event. Here's
 how that would look:
 
-    import * as aws from "@pulumi/aws";
-    import * as slack from "@slack/client";
+```typescript
+import * as aws from "@pulumi/aws";
+import * as slack from "@slack/client";
 
-    // Create a simple bucket.
-    const bucket = new aws.s3.Bucket("testbucket", {
-        serverSideEncryptionConfiguration: ...,
-        forceDestroy: true,
-    });
+// Create a simple bucket.
+const bucket = new aws.s3.Bucket("testbucket", {
+    serverSideEncryptionConfiguration: ...,
+    forceDestroy: true,
+});
 
-    // Retrieve an existing Lambda Function already created in your AWS infrastructure.
-    const func = aws.lambda.Function.get("postToSlack", "... existing lambda arn ...");
+// Retrieve an existing Lambda Function already created in your AWS infrastructure.
+const func = aws.lambda.Function.get("postToSlack", "... existing lambda arn ...");
 
-    // Call that Lambda Function when an object is created in the bucket.
-    bucket.onObjectCreated("postToSlack", func);
+// Call that Lambda Function when an object is created in the bucket.
+bucket.onObjectCreated("postToSlack", func);
+```
 
 We've tried to make it this simple to hook up many interesting AWS
 serverless events. For example, you can register to hear about events on
@@ -158,16 +164,18 @@ we've provided a quick and simple way to get to a fully initialized
 instance of that API without needing any additional `requires` or
 `imports` in your code. Here's how that would look:
 
-    // The only module you need to import.
-    import * as aws from "@pulumi/aws";
+```typescript
+// The only module you need to import.
+import * as aws from "@pulumi/aws";
 
-    // ...
+// ...
 
-    bucket.onObjectCreated("postToSlack", async (e) => {
-      // direct access to the aws-sdk through `aws.sdk`.
-      const sqs = new aws.sdk.SQS();
-      sqs.sendMessage(/*...*/);
-    });
+bucket.onObjectCreated("postToSlack", async (e) => {
+    // direct access to the aws-sdk through `aws.sdk`.
+    const sqs = new aws.sdk.SQS();
+    sqs.sendMessage(/*...*/);
+});
+```
 
 This allows you to use `@pulumi/aws` as both the deployment-time API to
 define your AWS infrastructure, as well as being the run-time API that

@@ -84,24 +84,26 @@ code with a full general-purpose programming language at your disposal.
 Below is a code snippet of a Pulumi program, written in Python, that
 deploys a static website to S3:
 
-    import mimetypes
-    import os
-     
-    from pulumi import export, FileAsset
-    from pulumi_aws import s3
-     
-    web_bucket = s3.Bucket('s3-website-bucket', website={
-        "index_document": "index.html"
-    })
-     
-    content_dir = "www"
-    for file in os.listdir(content_dir):
-        filepath = os.path.join(content_dir, file)
-        mime_type, _ = mimetypes.guess_type(filepath)
-        obj = s3.BucketObject(file,
-            bucket=web_bucket.id,
-            source=FileAsset(filepath),
-            content_type=mime_type)
+```typescript
+import mimetypes
+import os
+ 
+from pulumi import export, FileAsset
+from pulumi_aws import s3
+ 
+web_bucket = s3.Bucket('s3-website-bucket', website={
+    "index_document": "index.html"
+})
+ 
+content_dir = "www"
+for file in os.listdir(content_dir):
+    filepath = os.path.join(content_dir, file)
+    mime_type, _ = mimetypes.guess_type(filepath)
+    obj = s3.BucketObject(file,
+        bucket=web_bucket.id,
+        source=FileAsset(filepath),
+        content_type=mime_type)
+```
 
 There are only 18 lines of Python code here, but this program does a
 ton!

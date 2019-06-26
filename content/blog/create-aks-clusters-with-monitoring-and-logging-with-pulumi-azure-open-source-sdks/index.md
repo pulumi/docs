@@ -24,28 +24,30 @@ write this as a simple example using Pulumi SDKs.
 
 ## Step 1: Export required configurations for the AKS stack
 
-    import * as azure from "@pulumi/azure";
-    import * as pulumi from "@pulumi/pulumi";
-    import * as k8s from "@pulumi/kubernetes";
-    import * as azuread from "@pulumi/azuread";
+```typescript
+import * as azure from "@pulumi/azure";
+import * as pulumi from "@pulumi/pulumi";
+import * as k8s from "@pulumi/kubernetes";
+import * as azuread from "@pulumi/azuread";
 
-    // Step 1: Parse and export configuration variables for the AKS stack.
+// Step 1: Parse and export configuration variables for the AKS stack.
 
-    const config = new pulumi.Config();
-    export const password = config.require("password");
-    export const location = config.get("location") || "East US";
-    export const failoverLocation = config.get("failoverLocation") || "East US 2";
-    export const nodeCount = config.getNumber("nodeCount") || 2;
-    export const nodeSize = config.get("nodeSize") || "Standard_D2_v2";
-    export const sshPublicKey = config.require("sshPublicKey");
+const config = new pulumi.Config();
+export const password = config.require("password");
+export const location = config.get("location") || "East US";
+export const failoverLocation = config.get("failoverLocation") || "East US 2";
+export const nodeCount = config.getNumber("nodeCount") || 2;
+export const nodeSize = config.get("nodeSize") || "Standard_D2_v2";
+export const sshPublicKey = config.require("sshPublicKey");
 
-    export const resourceGroup = new azure.core.ResourceGroup("aks", { location });
-    export const loganalytics = new azure.operationalinsights.AnalyticsWorkspace("aksloganalytics", {
-        resourceGroupName: resourceGroup.name,
-        location: resourceGroup.location,
-        sku: "PerGB2018",
-        retentionInDays: 30,
-    })
+export const resourceGroup = new azure.core.ResourceGroup("aks", { location });
+export const loganalytics = new azure.operationalinsights.AnalyticsWorkspace("aksloganalytics", {
+    resourceGroupName: resourceGroup.name,
+    location: resourceGroup.location,
+    sku: "PerGB2018",
+    retentionInDays: 30,
+})
+```
 
 ## Step 2: Create the AD Service principal for the AKS cluster
 
