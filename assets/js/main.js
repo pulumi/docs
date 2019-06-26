@@ -43,9 +43,11 @@ function generateMiniToc() {
     // Create a mini TOC if desired.
     generateMiniToc();
 
-    // Mobile menu toggle.
+    // Mobile menu toggles.
     $(".nav-header-toggle").click(function() {
         $(".nav-header-items").toggleClass("hidden");
     });
-
+    $(".blog-sidebar-toggle").click(function () {
+        $(".blog-sidebar-content").toggleClass("hidden");
+    });
 }(jQuery));
