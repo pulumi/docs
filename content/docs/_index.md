@@ -15,7 +15,7 @@ functions -- and the CLI safely and reliably manages your cloud resources using 
 
 <div class="flex justify-center py-6">
     <a class="btn btn-lg mx-1 my-1" href="{{< relref "/docs/quickstart" >}}">GET STARTED</a>
-    <a class="btn btn-lg mx-1 my-1" href="{{< relref "/docs/reference" >}}">LEARN</a>
+    <a class="btn btn-lg btn-secondary mx-1 my-1" href="{{< relref "/docs/reference" >}}">LEARN</a>
 </div>
 
 <div class="my-4 bg-gray-100 border-t border-b border-gray-300 md:flex justify-center py-8 max-w-6xl">
@@ -70,7 +70,7 @@ functions -- and the CLI safely and reliably manages your cloud resources using 
         <p class="mb-8 text-sm text-gray-600">
             Deploy a Docker container to production in 5 minutes using your favorite orchestrator.
         </p>
-        <a class="btn btn-sm" href="{{< relref "/docs/reference/tutorials/aws/tutorial-service" >}}">
+        <a class="btn btn-sm btn-secondary" href="{{< relref "/docs/reference/tutorials/aws/tutorial-service" >}}">
             Start Now
         </a>
     </div>
@@ -82,7 +82,7 @@ functions -- and the CLI safely and reliably manages your cloud resources using 
         <p class="mb-8 text-sm text-gray-600">
             Stand up a serverless API or event handler in 5 minutes using a real lambda in code.
         </p>
-        <a class="btn btn-sm" href="{{< relref "/docs/reference/tutorials/aws/tutorial-rest-api" >}}">
+        <a class="btn btn-sm btn-secondary" href="{{< relref "/docs/reference/tutorials/aws/tutorial-rest-api" >}}">
             Start Now
         </a>
     </div>
@@ -94,7 +94,7 @@ functions -- and the CLI safely and reliably manages your cloud resources using 
         <p class="mb-8 text-sm text-gray-600">
             Manage cloud infrastructure or hosted services using infrastructure as code.
         </p>
-        <a class="btn btn-sm" href="{{< relref "/docs/reference/tutorials/aws/tutorial-ec2-webserver" >}}">
+        <a class="btn btn-sm btn-secondary" href="{{< relref "/docs/reference/tutorials/aws/tutorial-ec2-webserver" >}}">
             Start Now
         </a>
     </div>
@@ -106,7 +106,7 @@ functions -- and the CLI safely and reliably manages your cloud resources using 
         <p class="mb-8 text-sm text-gray-600">
             Deploy and orchestrate cloud native Kubernetes services in real code, no YAML needed.
         </p>
-        <a class="btn btn-sm" href="{{< relref "/docs/quickstart/kubernetes" >}}">
+        <a class="btn btn-sm btn-secondary" href="{{< relref "/docs/quickstart/kubernetes" >}}">
             Start Now
         </a>
     </div>
