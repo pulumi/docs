@@ -51,14 +51,14 @@ import * as random from "@pulumi/random";
 <li><a href="#RandomUuidState">interface RandomUuidState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts">randomId.ts</a> <a href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts">randomInteger.ts</a> <a href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts">randomPet.ts</a> <a href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts">randomShuffle.ts</a> <a href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts">randomString.ts</a> <a href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomUuid.ts">randomUuid.ts</a> <a href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/utilities.ts">utilities.ts</a> 
+<a href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts">randomId.ts</a> <a href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts">randomInteger.ts</a> <a href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts">randomPet.ts</a> <a href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts">randomShuffle.ts</a> <a href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts">randomString.ts</a> <a href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomUuid.ts">randomUuid.ts</a> <a href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/utilities.ts">utilities.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Provider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/provider.ts#L13">class <b>Provider</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/provider.ts#L13">class <b>Provider</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
@@ -71,12 +71,12 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/provider.ts#L13"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Provider(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#ProviderArgs'>ProviderArgs</a>, opts?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#ResourceOptions'>pulumi.ResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Provider(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#ProviderArgs'>ProviderArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ResourceOptions'>pulumi.ResourceOptions</a>)</pre>
 
 
 Create a Provider resource with the given unique name, arguments, and options.
@@ -88,7 +88,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -98,24 +98,24 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
 
-Returns true if the given object is an instance of CustomResource.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
+Returns true if the given object is an instance of Provider.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -124,10 +124,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -137,10 +137,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L48">class <b>RandomId</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L48">class <b>RandomId</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 {{% md %}}
 
 The resource `random_id` generates random numbers that are intended to be
@@ -185,12 +185,12 @@ const serverInstance = new aws.ec2.Instance("server", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomId-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L108"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RandomId(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RandomIdArgs'>RandomIdArgs</a>, opts?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RandomId(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RandomIdArgs'>RandomIdArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a RandomId resource with the given unique name, arguments, and options.
@@ -202,12 +202,12 @@ Create a RandomId resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L57">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L57">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RandomIdState'>RandomIdState</a>, opts?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RandomId'>RandomId</a></pre>
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RandomIdState'>RandomIdState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RandomId'>RandomId</a></pre>
 
 
 Get an existing RandomId resource's state with the given name, ID, and optional extra
@@ -216,7 +216,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -226,32 +226,32 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L68">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
 
-Returns true if the given object is an instance of CustomResource.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
+Returns true if the given object is an instance of RandomId.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-b64">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L61">property <b>b64</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L75">property <b>b64</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>b64: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>b64: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-b64Std">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L65">property <b>b64Std</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L79">property <b>b64Std</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>b64Std: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>b64Std: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The generated id presented in base64 without additional transformations.
@@ -259,10 +259,10 @@ The generated id presented in base64 without additional transformations.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-b64Url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L69">property <b>b64Url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L83">property <b>b64Url</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>b64Url: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>b64Url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
@@ -270,10 +270,10 @@ The generated id presented in base64, using the URL-friendly character set: case
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-byteLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L74">property <b>byteLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L88">property <b>byteLength</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>byteLength: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>byteLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The number of random bytes to produce. The
@@ -282,10 +282,10 @@ minimum value is 1, which produces eight bits of randomness.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-dec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L78">property <b>dec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L92">property <b>dec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>dec: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>dec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The generated id presented in non-padded decimal digits.
@@ -293,10 +293,10 @@ The generated id presented in non-padded decimal digits.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-hex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L82">property <b>hex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L96">property <b>hex</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>hex: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>hex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
@@ -304,10 +304,10 @@ The generated id presented in padded hexadecimal digits. This result will always
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -316,10 +316,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L88">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L102">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>keepers: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>keepers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -329,10 +329,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-prefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L94">property <b>prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L108">property <b>prefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>prefix: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Arbitrary string to prefix the output value with. This
@@ -342,10 +342,10 @@ base64 encoded.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -355,10 +355,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomInteger">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L45">class <b>RandomInteger</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L45">class <b>RandomInteger</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 {{% md %}}
 
 The resource `random_integer` generates random values from a given range, described by the `min` and `max` attributes of a given resource.
@@ -400,12 +400,12 @@ The result of the above will set a random priority.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomInteger-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L93"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RandomInteger(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RandomIntegerArgs'>RandomIntegerArgs</a>, opts?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RandomInteger(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RandomIntegerArgs'>RandomIntegerArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a RandomInteger resource with the given unique name, arguments, and options.
@@ -417,12 +417,12 @@ Create a RandomInteger resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomInteger-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L54">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RandomIntegerState'>RandomIntegerState</a>, opts?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RandomInteger'>RandomInteger</a></pre>
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RandomIntegerState'>RandomIntegerState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RandomInteger'>RandomInteger</a></pre>
 
 
 Get an existing RandomInteger resource's state with the given name, ID, and optional extra
@@ -431,7 +431,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomInteger-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -441,24 +441,24 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomInteger-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L65">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
 
-Returns true if the given object is an instance of CustomResource.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
+Returns true if the given object is an instance of RandomInteger.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomInteger-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -467,10 +467,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomInteger-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L63">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L77">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>keepers: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>keepers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -480,10 +480,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomInteger-max">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L67">property <b>max</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L81">property <b>max</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>max: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>max: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The maximum inclusive value of the range.
@@ -491,10 +491,10 @@ The maximum inclusive value of the range.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomInteger-min">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L71">property <b>min</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L85">property <b>min</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>min: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>min: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The minimum inclusive value of the range.
@@ -502,10 +502,10 @@ The minimum inclusive value of the range.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomInteger-result">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L75">property <b>result</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L89">property <b>result</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>result: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>result: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 (int) The random Integer result.
@@ -513,10 +513,10 @@ The minimum inclusive value of the range.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomInteger-seed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L79">property <b>seed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L93">property <b>seed</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>seed: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>seed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A custom seed to always produce the same value.
@@ -524,10 +524,10 @@ A custom seed to always produce the same value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomInteger-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -537,10 +537,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomPet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L45">class <b>RandomPet</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L45">class <b>RandomPet</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 {{% md %}}
 
 The resource `random_pet` generates random pet names that are intended to be
@@ -582,12 +582,12 @@ The result of the above will set the Name of the AWS Instance to
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomPet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L89"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RandomPet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#RandomPetArgs'>RandomPetArgs</a>, opts?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RandomPet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#RandomPetArgs'>RandomPetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a RandomPet resource with the given unique name, arguments, and options.
@@ -599,12 +599,12 @@ Create a RandomPet resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L54">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RandomPetState'>RandomPetState</a>, opts?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RandomPet'>RandomPet</a></pre>
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RandomPetState'>RandomPetState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RandomPet'>RandomPet</a></pre>
 
 
 Get an existing RandomPet resource's state with the given name, ID, and optional extra
@@ -613,7 +613,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -623,24 +623,24 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L65">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
 
-Returns true if the given object is an instance of CustomResource.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
+Returns true if the given object is an instance of RandomPet.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -649,10 +649,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPet-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L63">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L77">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>keepers: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>keepers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -662,10 +662,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPet-length">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L67">property <b>length</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L81">property <b>length</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>length: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>length: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 The length (in words) of the pet name.
@@ -673,10 +673,10 @@ The length (in words) of the pet name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPet-prefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L71">property <b>prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L85">property <b>prefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>prefix: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A string to prefix the name with.
@@ -684,10 +684,10 @@ A string to prefix the name with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPet-separator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L75">property <b>separator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L89">property <b>separator</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>separator: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>separator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 The character to separate words in the pet name.
@@ -695,10 +695,10 @@ The character to separate words in the pet name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -708,10 +708,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomShuffle">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L34">class <b>RandomShuffle</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L34">class <b>RandomShuffle</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 {{% md %}}
 
 The resource `random_shuffle` generates a random permutation of a list
@@ -742,12 +742,12 @@ const example = new aws.elasticloadbalancing.LoadBalancer("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomShuffle-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L77"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L91"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RandomShuffle(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RandomShuffleArgs'>RandomShuffleArgs</a>, opts?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RandomShuffle(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RandomShuffleArgs'>RandomShuffleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a RandomShuffle resource with the given unique name, arguments, and options.
@@ -759,12 +759,12 @@ Create a RandomShuffle resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffle-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L43">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RandomShuffleState'>RandomShuffleState</a>, opts?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RandomShuffle'>RandomShuffle</a></pre>
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RandomShuffleState'>RandomShuffleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RandomShuffle'>RandomShuffle</a></pre>
 
 
 Get an existing RandomShuffle resource's state with the given name, ID, and optional extra
@@ -773,7 +773,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffle-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -783,24 +783,24 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffle-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L54">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
 
-Returns true if the given object is an instance of CustomResource.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
+Returns true if the given object is an instance of RandomShuffle.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffle-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -809,10 +809,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffle-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L50">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L64">property <b>inputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>inputs: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>inputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
 {{% md %}}
 
 The list of strings to shuffle.
@@ -820,10 +820,10 @@ The list of strings to shuffle.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffle-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L56">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L70">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>keepers: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>keepers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -833,10 +833,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffle-resultCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L68">property <b>resultCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L82">property <b>resultCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>resultCount: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>resultCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 The number of results to return. Defaults to
@@ -848,10 +848,10 @@ of items in the input list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffle-results">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L60">property <b>results</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L74">property <b>results</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>results: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>results: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
 {{% md %}}
 
 Random permutation of the list of strings given in `input`.
@@ -859,10 +859,10 @@ Random permutation of the list of strings given in `input`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffle-seed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L77">property <b>seed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L91">property <b>seed</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>seed: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>seed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Arbitrary string with which to seed the random number
@@ -875,10 +875,10 @@ all time.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffle-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -888,10 +888,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomString">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L30">class <b>RandomString</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L30">class <b>RandomString</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 {{% md %}}
 
 The resource `random_string` generates a random permutation of alphanumeric
@@ -918,12 +918,12 @@ const example = new aws.rds.Instance("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomString-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L117"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RandomString(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RandomStringArgs'>RandomStringArgs</a>, opts?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RandomString(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RandomStringArgs'>RandomStringArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a RandomString resource with the given unique name, arguments, and options.
@@ -935,12 +935,12 @@ Create a RandomString resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L39">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RandomStringState'>RandomStringState</a>, opts?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RandomString'>RandomString</a></pre>
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RandomStringState'>RandomStringState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RandomString'>RandomString</a></pre>
 
 
 Get an existing RandomString resource's state with the given name, ID, and optional extra
@@ -949,7 +949,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -959,24 +959,24 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L50">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
 
-Returns true if the given object is an instance of CustomResource.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
+Returns true if the given object is an instance of RandomString.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -985,10 +985,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L48">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L62">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>keepers: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>keepers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -998,10 +998,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-length">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L52">property <b>length</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L66">property <b>length</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>length: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>length: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The length of the string desired
@@ -1009,10 +1009,10 @@ The length of the string desired
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-lower">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L57">property <b>lower</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L71">property <b>lower</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>lower: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>lower: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 (default true) Include lowercase alphabet characters
@@ -1021,10 +1021,10 @@ in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-minLower">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L62">property <b>minLower</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L76">property <b>minLower</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>minLower: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>minLower: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 (default 0) Minimum number of lowercase alphabet
@@ -1033,10 +1033,10 @@ characters in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-minNumeric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L67">property <b>minNumeric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L81">property <b>minNumeric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>minNumeric: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>minNumeric: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 (default 0) Minimum number of numeric characters
@@ -1045,10 +1045,10 @@ in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-minSpecial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L72">property <b>minSpecial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L86">property <b>minSpecial</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>minSpecial: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>minSpecial: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 (default 0) Minimum number of special characters
@@ -1057,10 +1057,10 @@ in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-minUpper">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L77">property <b>minUpper</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L91">property <b>minUpper</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>minUpper: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>minUpper: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 (default 0) Minimum number of uppercase alphabet
@@ -1069,10 +1069,10 @@ characters in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-number">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L82">property <b>number</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L96">property <b>number</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>number: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>number: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 (default true) Include numeric characters in random
@@ -1081,10 +1081,10 @@ string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-overrideSpecial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L89">property <b>overrideSpecial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L103">property <b>overrideSpecial</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>overrideSpecial: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>overrideSpecial: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Supply your own list of special characters to
@@ -1095,10 +1095,10 @@ characters to be used in generation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-result">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L93">property <b>result</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L107">property <b>result</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>result: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>result: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 Random string generated.
@@ -1106,10 +1106,10 @@ Random string generated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-special">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L98">property <b>special</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L112">property <b>special</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>special: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>special: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 (default true) Include special characters in random
@@ -1118,10 +1118,10 @@ string. These are '!@#$%&*()-_=+[]{}<>:?'
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-upper">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L103">property <b>upper</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L117">property <b>upper</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>upper: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>upper: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 (default true) Include uppercase alphabet characters
@@ -1130,10 +1130,10 @@ in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1143,10 +1143,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomUuid">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomUuid.ts#L31">class <b>RandomUuid</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomUuid.ts#L31">class <b>RandomUuid</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 {{% md %}}
 
 The resource `random_uuid` generates random uuid string that is intended to be
@@ -1174,12 +1174,12 @@ const testResourceGroup = new azure.core.ResourceGroup("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomUuid-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomUuid.ts#L53"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomUuid.ts#L67"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RandomUuid(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#RandomUuidArgs'>RandomUuidArgs</a>, opts?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RandomUuid(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#RandomUuidArgs'>RandomUuidArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
 Create a RandomUuid resource with the given unique name, arguments, and options.
@@ -1191,12 +1191,12 @@ Create a RandomUuid resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomUuid-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomUuid.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomUuid.ts#L40">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RandomUuidState'>RandomUuidState</a>, opts?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RandomUuid'>RandomUuid</a></pre>
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RandomUuidState'>RandomUuidState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RandomUuid'>RandomUuid</a></pre>
 
 
 Get an existing RandomUuid resource's state with the given name, ID, and optional extra
@@ -1205,7 +1205,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomUuid-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1215,24 +1215,24 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomUuid-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomUuid.ts#L51">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
 
-Returns true if the given object is an instance of CustomResource.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
+Returns true if the given object is an instance of RandomUuid.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomUuid-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1241,10 +1241,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomUuid-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomUuid.ts#L49">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomUuid.ts#L63">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>keepers: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>keepers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -1254,10 +1254,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomUuid-result">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomUuid.ts#L53">property <b>result</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomUuid.ts#L67">property <b>result</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>result: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>result: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The generated uuid presented in string format.
@@ -1265,10 +1265,10 @@ The generated uuid presented in string format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomUuid-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1278,7 +1278,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getEnv">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/utilities.ts#L5">function <b>getEnv</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/utilities.ts#L5">function <b>getEnv</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1288,7 +1288,7 @@ deployments.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvBoolean">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/utilities.ts#L15">function <b>getEnvBoolean</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/utilities.ts#L15">function <b>getEnvBoolean</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1298,7 +1298,7 @@ deployments.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvNumber">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/utilities.ts#L30">function <b>getEnvNumber</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/utilities.ts#L30">function <b>getEnvNumber</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1308,7 +1308,7 @@ deployments.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getVersion">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/utilities.ts#L41">function <b>getVersion</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/utilities.ts#L41">function <b>getVersion</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1318,7 +1318,7 @@ deployments.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/provider.ts#L33">interface <b>ProviderArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/provider.ts#L47">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1328,7 +1328,7 @@ The set of arguments for constructing a Provider resource.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="RandomIdArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L177">interface <b>RandomIdArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L191">interface <b>RandomIdArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1337,10 +1337,10 @@ The set of arguments for constructing a RandomId resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomIdArgs-byteLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L182">property <b>byteLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L196">property <b>byteLength</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>byteLength: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>byteLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The number of random bytes to produce. The
@@ -1349,10 +1349,10 @@ minimum value is 1, which produces eight bits of randomness.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomIdArgs-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L188">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L202">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>keepers?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>keepers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -1362,10 +1362,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomIdArgs-prefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L194">property <b>prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L208">property <b>prefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>prefix?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>prefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 Arbitrary string to prefix the output value with. This
@@ -1376,7 +1376,7 @@ base64 encoded.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomIdState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L137">interface <b>RandomIdState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L151">interface <b>RandomIdState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1385,18 +1385,18 @@ Input properties used for looking up and filtering RandomId resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomIdState-b64">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L138">property <b>b64</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L152">property <b>b64</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>b64?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>b64?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomIdState-b64Std">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L142">property <b>b64Std</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L156">property <b>b64Std</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>b64Std?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>b64Std?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The generated id presented in base64 without additional transformations.
@@ -1404,10 +1404,10 @@ The generated id presented in base64 without additional transformations.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomIdState-b64Url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L146">property <b>b64Url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L160">property <b>b64Url</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>b64Url?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>b64Url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
@@ -1415,10 +1415,10 @@ The generated id presented in base64, using the URL-friendly character set: case
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomIdState-byteLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L151">property <b>byteLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L165">property <b>byteLength</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>byteLength?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>byteLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The number of random bytes to produce. The
@@ -1427,10 +1427,10 @@ minimum value is 1, which produces eight bits of randomness.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomIdState-dec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L155">property <b>dec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L169">property <b>dec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>dec?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>dec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The generated id presented in non-padded decimal digits.
@@ -1438,10 +1438,10 @@ The generated id presented in non-padded decimal digits.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomIdState-hex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L159">property <b>hex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L173">property <b>hex</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>hex?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>hex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
@@ -1449,10 +1449,10 @@ The generated id presented in padded hexadecimal digits. This result will always
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomIdState-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L165">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L179">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>keepers?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>keepers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -1462,10 +1462,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomIdState-prefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomId.ts#L171">property <b>prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomId.ts#L185">property <b>prefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>prefix?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>prefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 Arbitrary string to prefix the output value with. This
@@ -1476,7 +1476,7 @@ base64 encoded.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomIntegerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L147">interface <b>RandomIntegerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L161">interface <b>RandomIntegerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1485,10 +1485,10 @@ The set of arguments for constructing a RandomInteger resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomIntegerArgs-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L153">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L167">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>keepers?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>keepers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -1498,10 +1498,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomIntegerArgs-max">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L157">property <b>max</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L171">property <b>max</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>max: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>max: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The maximum inclusive value of the range.
@@ -1509,10 +1509,10 @@ The maximum inclusive value of the range.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomIntegerArgs-min">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L161">property <b>min</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L175">property <b>min</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>min: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>min: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The minimum inclusive value of the range.
@@ -1520,10 +1520,10 @@ The minimum inclusive value of the range.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomIntegerArgs-seed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L165">property <b>seed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L179">property <b>seed</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>seed?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>seed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 A custom seed to always produce the same value.
@@ -1532,7 +1532,7 @@ A custom seed to always produce the same value.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomIntegerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L119">interface <b>RandomIntegerState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L133">interface <b>RandomIntegerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1541,10 +1541,10 @@ Input properties used for looking up and filtering RandomInteger resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomIntegerState-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L125">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L139">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>keepers?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>keepers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -1554,10 +1554,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomIntegerState-max">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L129">property <b>max</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L143">property <b>max</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>max?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>max?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The maximum inclusive value of the range.
@@ -1565,10 +1565,10 @@ The maximum inclusive value of the range.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomIntegerState-min">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L133">property <b>min</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L147">property <b>min</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>min?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>min?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The minimum inclusive value of the range.
@@ -1576,10 +1576,10 @@ The minimum inclusive value of the range.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomIntegerState-result">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L137">property <b>result</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L151">property <b>result</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>result?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>result?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 (int) The random Integer result.
@@ -1587,10 +1587,10 @@ The minimum inclusive value of the range.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomIntegerState-seed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomInteger.ts#L141">property <b>seed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomInteger.ts#L155">property <b>seed</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>seed?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>seed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 A custom seed to always produce the same value.
@@ -1599,7 +1599,7 @@ A custom seed to always produce the same value.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomPetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L131">interface <b>RandomPetArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L145">interface <b>RandomPetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1608,10 +1608,10 @@ The set of arguments for constructing a RandomPet resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomPetArgs-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L137">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L151">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>keepers?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>keepers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -1621,10 +1621,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPetArgs-length">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L141">property <b>length</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L155">property <b>length</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>length?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>length?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The length (in words) of the pet name.
@@ -1632,10 +1632,10 @@ The length (in words) of the pet name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPetArgs-prefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L145">property <b>prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L159">property <b>prefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>prefix?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>prefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 A string to prefix the name with.
@@ -1643,10 +1643,10 @@ A string to prefix the name with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPetArgs-separator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L149">property <b>separator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L163">property <b>separator</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>separator?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>separator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The character to separate words in the pet name.
@@ -1655,7 +1655,7 @@ The character to separate words in the pet name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomPetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L107">interface <b>RandomPetState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L121">interface <b>RandomPetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1664,10 +1664,10 @@ Input properties used for looking up and filtering RandomPet resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomPetState-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L113">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L127">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>keepers?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>keepers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -1677,10 +1677,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPetState-length">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L117">property <b>length</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L131">property <b>length</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>length?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>length?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The length (in words) of the pet name.
@@ -1688,10 +1688,10 @@ The length (in words) of the pet name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPetState-prefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L121">property <b>prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L135">property <b>prefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>prefix?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>prefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 A string to prefix the name with.
@@ -1699,10 +1699,10 @@ A string to prefix the name with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPetState-separator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomPet.ts#L125">property <b>separator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomPet.ts#L139">property <b>separator</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>separator?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>separator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The character to separate words in the pet name.
@@ -1711,7 +1711,7 @@ The character to separate words in the pet name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomShuffleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L151">interface <b>RandomShuffleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L165">interface <b>RandomShuffleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1720,10 +1720,10 @@ The set of arguments for constructing a RandomShuffle resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomShuffleArgs-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L155">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L169">property <b>inputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>inputs: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>inputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The list of strings to shuffle.
@@ -1731,10 +1731,10 @@ The list of strings to shuffle.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffleArgs-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L161">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L175">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>keepers?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>keepers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -1744,10 +1744,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffleArgs-resultCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L169">property <b>resultCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L183">property <b>resultCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resultCount?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>resultCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The number of results to return. Defaults to
@@ -1759,10 +1759,10 @@ of items in the input list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffleArgs-seed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L178">property <b>seed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L192">property <b>seed</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>seed?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>seed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 Arbitrary string with which to seed the random number
@@ -1776,7 +1776,7 @@ all time.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomShuffleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L114">interface <b>RandomShuffleState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L128">interface <b>RandomShuffleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1785,10 +1785,10 @@ Input properties used for looking up and filtering RandomShuffle resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomShuffleState-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L118">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L132">property <b>inputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>inputs?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
 {{% md %}}
 
 The list of strings to shuffle.
@@ -1796,10 +1796,10 @@ The list of strings to shuffle.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffleState-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L124">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L138">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>keepers?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>keepers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -1809,10 +1809,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffleState-resultCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L136">property <b>resultCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L150">property <b>resultCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resultCount?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>resultCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The number of results to return. Defaults to
@@ -1824,10 +1824,10 @@ of items in the input list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffleState-results">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L128">property <b>results</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L142">property <b>results</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>results?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>results?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
 {{% md %}}
 
 Random permutation of the list of strings given in `input`.
@@ -1835,10 +1835,10 @@ Random permutation of the list of strings given in `input`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffleState-seed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomShuffle.ts#L145">property <b>seed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomShuffle.ts#L159">property <b>seed</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>seed?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>seed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 Arbitrary string with which to seed the random number
@@ -1852,7 +1852,7 @@ all time.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomStringArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L221">interface <b>RandomStringArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L235">interface <b>RandomStringArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1861,10 +1861,10 @@ The set of arguments for constructing a RandomString resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomStringArgs-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L227">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L241">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>keepers?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>keepers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -1874,10 +1874,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringArgs-length">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L231">property <b>length</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L245">property <b>length</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>length: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>length: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The length of the string desired
@@ -1885,10 +1885,10 @@ The length of the string desired
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringArgs-lower">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L236">property <b>lower</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L250">property <b>lower</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>lower?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>lower?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 {{% md %}}
 
 (default true) Include lowercase alphabet characters
@@ -1897,10 +1897,10 @@ in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringArgs-minLower">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L241">property <b>minLower</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L255">property <b>minLower</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>minLower?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>minLower?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 (default 0) Minimum number of lowercase alphabet
@@ -1909,10 +1909,10 @@ characters in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringArgs-minNumeric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L246">property <b>minNumeric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L260">property <b>minNumeric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>minNumeric?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>minNumeric?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 (default 0) Minimum number of numeric characters
@@ -1921,10 +1921,10 @@ in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringArgs-minSpecial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L251">property <b>minSpecial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L265">property <b>minSpecial</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>minSpecial?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>minSpecial?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 (default 0) Minimum number of special characters
@@ -1933,10 +1933,10 @@ in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringArgs-minUpper">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L256">property <b>minUpper</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L270">property <b>minUpper</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>minUpper?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>minUpper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 (default 0) Minimum number of uppercase alphabet
@@ -1945,10 +1945,10 @@ characters in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringArgs-number">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L261">property <b>number</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L275">property <b>number</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>number?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>number?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 {{% md %}}
 
 (default true) Include numeric characters in random
@@ -1957,10 +1957,10 @@ string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringArgs-overrideSpecial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L268">property <b>overrideSpecial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L282">property <b>overrideSpecial</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>overrideSpecial?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>overrideSpecial?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 Supply your own list of special characters to
@@ -1971,10 +1971,10 @@ characters to be used in generation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringArgs-special">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L273">property <b>special</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L287">property <b>special</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>special?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>special?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 {{% md %}}
 
 (default true) Include special characters in random
@@ -1983,10 +1983,10 @@ string. These are '!@#$%&*()-_=+[]{}<>:?'
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringArgs-upper">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L278">property <b>upper</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L292">property <b>upper</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>upper?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>upper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 {{% md %}}
 
 (default true) Include uppercase alphabet characters
@@ -1996,7 +1996,7 @@ in random string.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomStringState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L154">interface <b>RandomStringState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L168">interface <b>RandomStringState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2005,10 +2005,10 @@ Input properties used for looking up and filtering RandomString resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomStringState-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L160">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L174">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>keepers?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>keepers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -2018,10 +2018,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringState-length">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L164">property <b>length</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L178">property <b>length</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>length?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>length?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 The length of the string desired
@@ -2029,10 +2029,10 @@ The length of the string desired
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringState-lower">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L169">property <b>lower</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L183">property <b>lower</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>lower?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>lower?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 {{% md %}}
 
 (default true) Include lowercase alphabet characters
@@ -2041,10 +2041,10 @@ in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringState-minLower">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L174">property <b>minLower</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L188">property <b>minLower</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>minLower?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>minLower?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 (default 0) Minimum number of lowercase alphabet
@@ -2053,10 +2053,10 @@ characters in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringState-minNumeric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L179">property <b>minNumeric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L193">property <b>minNumeric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>minNumeric?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>minNumeric?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 (default 0) Minimum number of numeric characters
@@ -2065,10 +2065,10 @@ in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringState-minSpecial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L184">property <b>minSpecial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L198">property <b>minSpecial</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>minSpecial?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>minSpecial?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 (default 0) Minimum number of special characters
@@ -2077,10 +2077,10 @@ in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringState-minUpper">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L189">property <b>minUpper</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L203">property <b>minUpper</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>minUpper?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>minUpper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
 
 (default 0) Minimum number of uppercase alphabet
@@ -2089,10 +2089,10 @@ characters in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringState-number">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L194">property <b>number</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L208">property <b>number</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>number?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>number?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 {{% md %}}
 
 (default true) Include numeric characters in random
@@ -2101,10 +2101,10 @@ string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringState-overrideSpecial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L201">property <b>overrideSpecial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L215">property <b>overrideSpecial</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>overrideSpecial?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>overrideSpecial?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 Supply your own list of special characters to
@@ -2115,10 +2115,10 @@ characters to be used in generation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringState-result">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L205">property <b>result</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L219">property <b>result</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>result?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>result?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 Random string generated.
@@ -2126,10 +2126,10 @@ Random string generated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringState-special">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L210">property <b>special</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L224">property <b>special</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>special?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>special?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 {{% md %}}
 
 (default true) Include special characters in random
@@ -2138,10 +2138,10 @@ string. These are '!@#$%&*()-_=+[]{}<>:?'
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomStringState-upper">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomString.ts#L215">property <b>upper</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomString.ts#L229">property <b>upper</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>upper?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>upper?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 {{% md %}}
 
 (default true) Include uppercase alphabet characters
@@ -2151,7 +2151,7 @@ in random string.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomUuidArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomUuid.ts#L97">interface <b>RandomUuidArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomUuid.ts#L111">interface <b>RandomUuidArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2160,10 +2160,10 @@ The set of arguments for constructing a RandomUuid resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomUuidArgs-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomUuid.ts#L103">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomUuid.ts#L117">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>keepers?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>keepers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -2174,7 +2174,7 @@ the main provider documentation for more information.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomUuidState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomUuid.ts#L81">interface <b>RandomUuidState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomUuid.ts#L95">interface <b>RandomUuidState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2183,10 +2183,10 @@ Input properties used for looking up and filtering RandomUuid resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RandomUuidState-keepers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomUuid.ts#L87">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomUuid.ts#L101">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>keepers?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>keepers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
 {{% md %}}
 
 Arbitrary map of values that, when changed, will
@@ -2196,10 +2196,10 @@ the main provider documentation for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomUuidState-result">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/randomUuid.ts#L91">property <b>result</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/f9c2b42720218d9b34a78bc4e43468162d60d749/sdk/nodejs/randomUuid.ts#L105">property <b>result</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>result?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>result?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 The generated uuid presented in string format.

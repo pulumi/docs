@@ -521,7 +521,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.TaskDefinition">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ecs.</code><code class="descname">TaskDefinition</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_definitions=None</em>, <em>cpu=None</em>, <em>execution_role_arn=None</em>, <em>family=None</em>, <em>ipc_mode=None</em>, <em>memory=None</em>, <em>network_mode=None</em>, <em>pid_mode=None</em>, <em>placement_constraints=None</em>, <em>requires_compatibilities=None</em>, <em>tags=None</em>, <em>task_role_arn=None</em>, <em>volumes=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ecs.</code><code class="descname">TaskDefinition</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_definitions=None</em>, <em>cpu=None</em>, <em>execution_role_arn=None</em>, <em>family=None</em>, <em>ipc_mode=None</em>, <em>memory=None</em>, <em>network_mode=None</em>, <em>pid_mode=None</em>, <em>placement_constraints=None</em>, <em>proxy_configuration=None</em>, <em>requires_compatibilities=None</em>, <em>tags=None</em>, <em>task_role_arn=None</em>, <em>volumes=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a revision of an ECS task definition to be used in <code class="docutils literal notranslate"><span class="pre">aws_ecs_service</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -544,6 +544,7 @@ official <a class="reference external" href="https://docs.aws.amazon.com/AmazonE
 <li><strong>network_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Docker networking mode to use for the containers in the task. The valid values are <code class="docutils literal notranslate"><span class="pre">none</span></code>, <code class="docutils literal notranslate"><span class="pre">bridge</span></code>, <code class="docutils literal notranslate"><span class="pre">awsvpc</span></code>, and <code class="docutils literal notranslate"><span class="pre">host</span></code>.</li>
 <li><strong>pid_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The process namespace to use for the containers in the task. The valid values are <code class="docutils literal notranslate"><span class="pre">host</span></code> and <code class="docutils literal notranslate"><span class="pre">task</span></code>.</li>
 <li><strong>placement_constraints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of placement constraints rules that are taken into consideration during task placement. Maximum number of <code class="docutils literal notranslate"><span class="pre">placement_constraints</span></code> is <code class="docutils literal notranslate"><span class="pre">10</span></code>.</li>
+<li><strong>proxy_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The proxy configuration details for the App Mesh proxy.</li>
 <li><strong>requires_compatibilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of launch types required by the task. The valid values are <code class="docutils literal notranslate"><span class="pre">EC2</span></code> and <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</li>
 <li><strong>task_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.</li>
@@ -616,6 +617,12 @@ official <a class="reference external" href="https://docs.aws.amazon.com/AmazonE
 <dt id="pulumi_aws.ecs.TaskDefinition.placement_constraints">
 <code class="descname">placement_constraints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition.placement_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>A set of placement constraints rules that are taken into consideration during task placement. Maximum number of <code class="docutils literal notranslate"><span class="pre">placement_constraints</span></code> is <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ecs.TaskDefinition.proxy_configuration">
+<code class="descname">proxy_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition.proxy_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>The proxy configuration details for the App Mesh proxy.</p>
 </dd></dl>
 
 <dl class="attribute">

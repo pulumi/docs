@@ -5,7 +5,7 @@
 <span id="v1"></span><h1>v1<a class="headerlink" href="#module-pulumi_kubernetes.scheduling.v1" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_kubernetes.scheduling.v1.PriorityClass">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.scheduling.v1.</code><code class="descname">PriorityClass</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>global_default=None</em>, <em>metadata=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.scheduling.v1.PriorityClass" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.scheduling.v1.</code><code class="descname">PriorityClass</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>global_default=None</em>, <em>metadata=None</em>, <em>preemption_policy=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.scheduling.v1.PriorityClass" title="Permalink to this definition">¶</a></dt>
 <dd><p>PriorityClass defines mapping from a priority class name to the priority integer value. The
 value can be any valid integer.</p>
 <dl class="method">

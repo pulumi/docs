@@ -19,20 +19,20 @@ title: Module cmd/run
 <li><a href="#run">function run</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi/blob/fdc4c64789dc6e293f3404433908a702131d37ed/sdk/nodejs/cmd/run/index.ts">cmd/run/index.ts</a> <a href="https://github.com/pulumi/pulumi/blob/fdc4c64789dc6e293f3404433908a702131d37ed/sdk/nodejs/cmd/run/run.ts">cmd/run/run.ts</a> 
+<a href="https://github.com/pulumi/pulumi/blob/f59a9340442b6c2b6390728ff7de60cf6bbc96ac/sdk/nodejs/cmd/run/index.ts">cmd/run/index.ts</a> <a href="https://github.com/pulumi/pulumi/blob/f59a9340442b6c2b6390728ff7de60cf6bbc96ac/sdk/nodejs/cmd/run/run.ts">cmd/run/run.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="nodeJSProcessExitedAfterLoggingUserActionableMessage">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/fdc4c64789dc6e293f3404433908a702131d37ed/sdk/nodejs/cmd/run/index.ts#L47">const <b>nodeJSProcessExitedAfterLoggingUserActionableMessage</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f59a9340442b6c2b6390728ff7de60cf6bbc96ac/sdk/nodejs/cmd/run/index.ts#L47">const <b>nodeJSProcessExitedAfterLoggingUserActionableMessage</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> nodeJSProcessExitedAfterLoggingUserActionableMessage: 32 = <span class='s2'>32</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="run">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/fdc4c64789dc6e293f3404433908a702131d37ed/sdk/nodejs/cmd/run/run.ts#L134">function <b>run</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f59a9340442b6c2b6390728ff7de60cf6bbc96ac/sdk/nodejs/cmd/run/run.ts#L134">function <b>run</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}

@@ -21,14 +21,14 @@ title: Module config
 <li><a href="#token">let token</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-gitlab/blob/97436b825d9f41b0b720dc0768762d8bdbdde729/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gitlab/blob/b685aa9a569c53a41689fdf1614c0d1a9ba5c3d0/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="baseUrl">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/97436b825d9f41b0b720dc0768762d8bdbdde729/sdk/nodejs/config/vars.ts#L12">let <b>baseUrl</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/b685aa9a569c53a41689fdf1614c0d1a9ba5c3d0/sdk/nodejs/config/vars.ts#L12">let <b>baseUrl</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> baseUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;baseUrl&#34;) || utilities.getEnv(&#34;GITLAB_BASE_URL&#34;)</span>;</pre>
@@ -39,7 +39,7 @@ The GitLab Base API URL
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="cacertFile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/97436b825d9f41b0b720dc0768762d8bdbdde729/sdk/nodejs/config/vars.ts#L16">let <b>cacertFile</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/b685aa9a569c53a41689fdf1614c0d1a9ba5c3d0/sdk/nodejs/config/vars.ts#L16">let <b>cacertFile</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> cacertFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;cacertFile&#34;)</span>;</pre>
@@ -50,7 +50,7 @@ A file containing the ca certificate to use in case ssl certificate is not from 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="insecure">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/97436b825d9f41b0b720dc0768762d8bdbdde729/sdk/nodejs/config/vars.ts#L20">let <b>insecure</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/b685aa9a569c53a41689fdf1614c0d1a9ba5c3d0/sdk/nodejs/config/vars.ts#L20">let <b>insecure</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> insecure: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;insecure&#34;)</span>;</pre>
@@ -61,7 +61,7 @@ Disable SSL verification of API calls
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="token">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/97436b825d9f41b0b720dc0768762d8bdbdde729/sdk/nodejs/config/vars.ts#L24">let <b>token</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/b685aa9a569c53a41689fdf1614c0d1a9ba5c3d0/sdk/nodejs/config/vars.ts#L24">let <b>token</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> token: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;token&#34;) || utilities.getEnv(&#34;GITLAB_TOKEN&#34;)</span>;</pre>

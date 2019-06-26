@@ -70,6 +70,12 @@ Format: ddd:hh24:mi-ddd:hh24:mi</li>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.redshift.Cluster.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.Cluster.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of cluster</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.redshift.Cluster.automated_snapshot_retention_period">
 <code class="descname">automated_snapshot_retention_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.Cluster.automated_snapshot_retention_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1.</p>
@@ -326,6 +332,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Redshift event subscription resource.</p>
 <p>The following additional atttributes are provided:</p>
 <ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">arn</span></code> - Amazon Resource Name (ARN) of the Redshift event notification subscription</li>
 <li><code class="docutils literal notranslate"><span class="pre">id</span></code> - The name of the Redshift event notification subscription</li>
 <li><code class="docutils literal notranslate"><span class="pre">customer_aws_id</span></code> - The AWS customer account associated with the Redshift event notification subscription</li>
 </ul>
@@ -643,7 +650,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.redshift.ParameterGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">ParameterGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>family=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.ParameterGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">ParameterGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>family=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.ParameterGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Redshift Cluster parameter group resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -656,11 +663,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the Redshift parameter group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redshift parameter.</li>
 <li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Redshift parameters to apply.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<dl class="attribute">
+<dt id="pulumi_aws.redshift.ParameterGroup.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.ParameterGroup.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of parameter group</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.redshift.ParameterGroup.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.ParameterGroup.description" title="Permalink to this definition">¶</a></dt>
@@ -683,6 +697,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.ParameterGroup.parameters">
 <code class="descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.ParameterGroup.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Redshift parameters to apply.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.redshift.ParameterGroup.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.ParameterGroup.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="method">
@@ -823,6 +843,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tbody>
 </table>
 <dl class="attribute">
+<dt id="pulumi_aws.redshift.SnapshotCopyGrant.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.SnapshotCopyGrant.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of snapshot copy grant</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.redshift.SnapshotCopyGrant.kms_key_id">
 <code class="descname">kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.SnapshotCopyGrant.kms_key_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN. If not specified, the default key is used.</p>
@@ -900,6 +926,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<dl class="attribute">
+<dt id="pulumi_aws.redshift.SubnetGroup.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.SubnetGroup.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of the Redshift Subnet group name</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.redshift.SubnetGroup.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.SubnetGroup.description" title="Permalink to this definition">¶</a></dt>
