@@ -25,7 +25,7 @@ since launching:
     [AWS]({{< ref "/docs/quickstart/aws" >}}),
     [Azure]({{< ref "/docs/quickstart/azure" >}}), and
     [Google Cloud]({{< ref "/docs/quickstart/gcp" >}}) providers.
--   [Pulumi Crosswalk for AWS, a framework with built-in AWS infrastructure best practices.]({{< relref "crosswalk/aws" >}})
+-   [Pulumi Crosswalk for AWS, a framework with built-in AWS infrastructure best practices.]({{< relref "/crosswalk/aws" >}})
 -   Over 20 additional providers, including
     [CloudFlare](https://github.com/pulumi/pulumi-cloudflare),
     [Digital Ocean](https://github.com/pulumi/pulumi-digitalocean), and
