@@ -1,6 +1,6 @@
 ---
 title: Custom configuration
-expanded_url: /tour/programs/
+expanded_url: /docs/tour/programs/
 menu:
   tour:
     parent: programs
