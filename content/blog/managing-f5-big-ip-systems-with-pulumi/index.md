@@ -1,12 +1,9 @@
 ---
 title: "Managing F5 BIG-IP Systems with Pulumi"
 authors: ["cameron-stokes"]
-tags: ["New-Features", "Pulumi"]
+tags: ["Infrastructure","Cloud-Native"]
 date: "2019-02-07"
-
-summary: "The Pulumi ecosystem is continuously growing and today we're excited to announce the F5 BIG-IP Pulumi provider."
 ---
-
 
 The [Pulumi](/) ecosystem is continuously growing
 and today we're excited to announce the F5 BIG-IP provider for Pulumi.
@@ -22,6 +19,7 @@ heard from our customers for both on-premises and Cloud workloads.
 Let's look at some examples to demonstrate what's capable with this
 provider and the power and flexibility that Pulumi brings to working
 with your F5 BIG-IP systems.
+<!--more-->
 
 ## Simple Load Balancing
 

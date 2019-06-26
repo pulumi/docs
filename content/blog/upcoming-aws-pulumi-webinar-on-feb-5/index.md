@@ -1,10 +1,9 @@
 ---
 title: "Upcoming AWS + Pulumi Webinar on Feb 5"
 authors: ["erin-xue"]
-tags: ["AWS", "CI/CD", "Pulumi"]
+tags: ["AWS","CI/CD","Cloud-Native"]
 date: "2019-01-09"
 
-summary: "Join our February 5th webinar to learn how to implement cloud native infrastructure across your organization."
 meta_image: RELATIVE_TO_PAGE/code-comparison.png
 ---
 
@@ -14,6 +13,7 @@ February 5th, 10AM PST** (register
 We'll be chatting about how to implement cloud native infrastructure
 across your organization using [AWS and Pulumi]({{< ref "/crosswalk/aws" >}}): general purpose programming
 languages to deliver everything from VMs to Kubernetes to Serverless.
+<!--more-->
 
 ## Register Now
 

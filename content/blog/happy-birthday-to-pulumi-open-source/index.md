@@ -1,10 +1,9 @@
 ---
 title: "Happy Birthday to Pulumi open source!"
 authors: ["joe-duffy"]
-tags: ["Pulumi"]
+tags: ["Pulumi-News"]
 date: "2019-06-18"
 
-summary: "One year ago today we open sourced Pulumi, a new approach to multi-cloud infrastructure as code. And what a year it has been! Let's review it at a glance."
 meta_image: "RELATIVE_TO_PAGE/pulumi-birthday.png"
 ---
 
@@ -13,6 +12,7 @@ One year ago today -- on June 18, 2018 --
 [we open sourced Pulumi]({{< relref "introducing-pulumi-a-cloud-development-platform" >}}),
 a new approach to multi-cloud infrastructure as code using your favorite
 languages. And what a year it has been!
+<!--more-->
 
 Here are some highlights we've added in partnership with the community
 since launching:

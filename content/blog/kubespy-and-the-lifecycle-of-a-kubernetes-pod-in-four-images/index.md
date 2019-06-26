@@ -1,10 +1,9 @@
 ---
 title: "Kubespy, and the lifecycle of a Pod, in 4 images"
 authors: ["alex-clemmer"]
-tags: ["Kubernetes", "Infrastructure-as-Code"]
-date: "2018-08-18"
+tags: ["Kubernetes"]
+date: "2018-09-18"
 
-summary: "Introducing a small tool, kubespy, that is purpose-built to help you answer questions about the lifecycle of a Pod in Kubernetes by displaying the changes made to a Kubernetes object in real time."
 meta_image: "RELATIVE_TO_PAGE/1-created.png"
 ---
 
@@ -34,6 +33,7 @@ purpose-built to help you answer questions like this, by displaying the
 changes made to a Kubernetes object in real time. For example, in the
 following gif, we're running `kubespy status v1 Pod nginx` to watch the
 changes to a `Pod`'s status as it is booted up.
+<!--more-->
 
 We will spend the rest of this short post using `kubespy` to take a
 closer look at what happens to a `Pod` when it's deployed to the

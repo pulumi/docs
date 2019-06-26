@@ -1,10 +1,9 @@
 ---
 title: "How to deploy Jenkins to Kubernetes with Pulumi"
 authors: ["sean-gillespie"]
-tags: ["Infrastructure-as-Code", "CI/CD"]
+tags: ["Kubernetes"]
 date: "2018-06-27"
 
-summary: "Making a reusable component with Pulumi to run a Jenkins cluster on Kubernetes."
 ---
 
 In this blog post, we'll see how to run
@@ -12,6 +11,7 @@ In this blog post, we'll see how to run
 We abstract away the complexity of the configuration into a reusable
 component to enable it to be reused by team mates. Our example is based
 on adapting a Helm template.
+<!--more-->
 
 ## Reusing the Jenkins component
 

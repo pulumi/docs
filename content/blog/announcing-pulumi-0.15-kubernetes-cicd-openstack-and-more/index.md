@@ -2,7 +2,7 @@
 title: "Announcing Pulumi 0.15: Kubernetes, CI/CD, OpenStack, and more"
 authors: ["luke-hoban"]
 tags: ["Pulumi", "New-Features", "CI/CD"]
-date: "2018-08-05"
+date: "2018-08-15"
 
 summary: "Pulumi can now deploy and manage Kubernetes resources using the same
 familiar programming model supported for AWS, Azure, and Google Cloud

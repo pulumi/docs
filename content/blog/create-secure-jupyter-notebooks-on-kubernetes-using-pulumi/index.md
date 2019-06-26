@@ -1,11 +1,9 @@
 ---
 title: "Create Secure Jupyter Notebooks on Kubernetes using Pulumi"
 authors: ["nishi-davidson"]
-tags: ["Kubernetes", "GCP"]
+tags: ["Kubernetes","Applications","GKE","Jupyter"]
 date: "2019-05-30"
 
-summary: "In this post, we will work through an example that shows how to use Pulumi to create
-Jupyter Notebooks on Kubernetes."
 meta_image: "RELATIVE_TO_PAGE/post-image-jupyter.png"
 ---
 
@@ -19,6 +17,7 @@ jump out that may resonate with you as well:
 - The security patterns in Helm and Tiller are no longer concerns, rather you get to focus on the
   RBAC of the actual service which is Jupyter-notebook in this example.
 - You accomplish more with less YAML and iteratively work towards your use cases.
+<!--more-->
 
 ## Prerequisites
 

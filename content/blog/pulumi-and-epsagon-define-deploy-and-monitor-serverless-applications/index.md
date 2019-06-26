@@ -1,11 +1,9 @@
 ---
 title: "Pulumi + Epsagon: Define, Deploy and Monitor Serverless Applications"
 authors: ["luke-hoban"]
-tags: ["Infrastructure-as-Code"]
-date: "2018-11-28"
+tags: ["Serverless"]
+date: "2018-11-29"
 
-summary: "Once you have deployed an application to the cloud, the next step is to
-monitor and track its health. In this post, we see how we can integrate Pulumi and Epsagon to define, deploy, and monitor serverless applications."
 meta_image: "RELATIVE_TO_PAGE/espagon-console-2.png"
 ---
 
@@ -20,6 +18,7 @@ By making it so easy to introduce serverless functions into cloud
 infrastructure, Pulumi programs often incorporate many Lambdas, all
 wired together as part of a larger set of infrastructure and application
 code.
+<!--more-->
 
 [Epsagon is a serverless monitoring solution](https://epsagon.com/) that
 lets users observe entire serverless applications composed of many

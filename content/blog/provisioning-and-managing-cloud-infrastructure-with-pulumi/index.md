@@ -1,11 +1,9 @@
 ---
 title: "Provisioning and managing cloud infrastructure with Pulumi"
 authors: ["donna-malayeri"]
-tags: ["Infrastructure-as-Code"]
+tags: ["JavaScript","AWS","Infrastructure"]
 date: "2018-07-20"
 
-summary: "Pulumi provides a powerful too to create, update, and manage resources on any cloud provider.
-This post will detail how to provision and manage any cloud infrastructure resource with Pulumi and AWS, Azure, and GCP."
 ---
 
 If you've been following the blog, you know that Pulumi is great for
@@ -13,6 +11,7 @@ building [serverless applications]({{< relref "code-deploy-and-manage-a-serverle
 [container-based applications]({{< relref "deploying-production-ready-containers-with-pulumi" >}}),
 and a [combination of the two]({{< relref "build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws" >}}).
 But, did you know that you can manage any cloud resource in AWS, Azure, or Google Cloud Platform?
+<!--more-->
 
 You can use the
 [@pulumi/aws]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws" >}}),

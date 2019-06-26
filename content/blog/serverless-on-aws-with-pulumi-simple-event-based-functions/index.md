@@ -1,10 +1,9 @@
 ---
 title: "Serverless on AWS with Pulumi: simple, event-based functions"
 authors: ["cyrus-najmabadi"]
-tags: ["AWS/Lambda/Fargate"]
+tags: ["JavaScript","Serverless","AWS"]
 date: "2019-01-14"
 
-summary: "How to make serverless programming on AWS simple with Pulumi using the regular programming languages."
 ---
 
 One of Pulumi's goals is to provide the simplest way possible to do
@@ -20,7 +19,7 @@ we focused on how Pulumi could allow you to simply create an AWS Lambda
 out of your own JavaScript function. While this was much easier than
 having to manually create a [Lambda Deployment Package](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-create-deployment-pkg.html)
 yourself, it could still be overly complex to integrate these Lambdas
-into complete serverless application. To get a sense of that complexity,
+into complete serverless application. <!--more-->To get a sense of that complexity,
 let's look at how one would normally have to work with AWS's resource
 system to create a simple Serverless application:
 

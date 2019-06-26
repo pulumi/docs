@@ -1,12 +1,9 @@
 ---
 title: "Continuous Delivery with GitLab and Pulumi on Amazon EKS"
 authors: ["nishi-davidson"]
-tags: ["AWS", "Kubernetes", "CI/CD"]
+tags: ["AWS","Kubernetes","CI/CD"]
 date: "2019-05-22"
 
-summary: "we will work through an example that shows how to use
-Pulumi to enable GitLab-based continuous delivery with your Kubernetes
-workloads on Amazon EKS"
 meta_image: "RELATIVE_TO_PAGE/post-image.png"
 ---
 
@@ -15,6 +12,7 @@ continuous delivery with your Kubernetes workloads on Amazon EKS. This integrati
 as seamlessly for any Kubernetes cluster, including Azure AKS or Google GKE, using the relevant
 Pulumi libraries for [Azure](https://github.com/pulumi/pulumi-azure) and
 [GCP](https://github.com/pulumi/pulumi-gcp).
+<!--more-->
 
 ## Prerequisites
 

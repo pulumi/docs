@@ -1,17 +1,16 @@
 ---
 title: "Advanced TypeScript type FTW!"
 authors: ["cyrus-najmabadi"]
-tags: ["Infrastructure-as-Code"]
+tags: ["TypeScript"]
 date: "2018-09-19"
 
-summary: "Exploring advanced types in TypeScript to simplify the Pulumi codebase, and making those types consumable. The typesystem magic behind
-how this works for infrastructure as code can be fascinating!"
 meta_image: "RELATIVE_TO_PAGE/completion-list.png"
 ---
 
 We at Pulumi love TypeScript for cloud apps and infrastructure, because of its rich type system and great ahead-of-time
 typechecking – making for a more productive inner loop and helping to find errors sooner. The typesystem magic behind
 how this works for infrastructure as code can be fascinating!
+<!--more-->
 
 A core part of the Pulumi [programming model]({{< ref "/docs/reference" >}}) is that we allow people to express complex
 [dependency data]({{< ref "/docs/reference/programming-model#outputs" >}}) that may _eventually_ be available.

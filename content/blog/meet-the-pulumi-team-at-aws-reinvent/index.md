@@ -1,12 +1,9 @@
 ---
 title: "Meet the Pulumi team at AWS re:Invent"
 authors: ["marc-holmes"]
-tags: ["Pulumi"]
+tags: ["Pulumi-News"]
 date: "2018-11-15"
-
-summary: "Pulumi will be at AWS re:Invent this year, at Booth 316, Startup Central, Aria Quad. Come talk to us about serverless, containers, kubernetes, and any other cloud native infrastructure as code."
 ---
-
 
 Heading to AWS re:Invent? Concerned about how you'll manage to get
 [that much YAML]({{< ref "/cloudformation" >}}) into your carry
@@ -26,3 +23,4 @@ programming languages. We can even help you
 If you want to grab a specific time to talk through your needs,
 [then use this link](https://info.pulumi.com/meetings/team-pulumi/aws-reinvent-catchup),
 otherwise we'll just see you at the booth!
+<!--more-->

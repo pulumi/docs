@@ -1,11 +1,9 @@
 ---
 title: "Managing your MySQL databases with Pulumi"
 authors: ["linio-engineering"]
-tags: ["Infrastructure-as-Code", "New-Features"]
+tags: ["Applications","MySQL"]
 date: "2019-05-28"
 
-summary: "Pulumi has a new MySQL resource provider, and in this post we'll walk through
-a quick tutorial on how to use it to manage existing or create new MySQL dDatabases."
 meta_image: "RELATIVE_TO_PAGE/hero.png"
 ---
 
@@ -20,6 +18,7 @@ instances themselves to manage permissions, create databases, and other common t
 In this post, we’ll walk through a quick tutorial of how to use this new
 [Pulumi MySQL provider]({{< ref "/docs/reference/pkg/nodejs/pulumi/mysql" >}}) to manage existing
 and new MySQL databases.
+<!--more-->
 
 ##Setup
 

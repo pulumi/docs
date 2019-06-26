@@ -44,6 +44,9 @@
     {{ else if isset .Params "summary" }}
         <meta name="description" content="{{ .Params.summary }}">
         <meta property="og:description" content="{{ .Params.summary }}">
+    {{ else if ne .Summary "" }}
+        <meta name="description" content="{{ .Summary }}">
+        <meta property="og:description" content="{{ .Summary }}">
     {{ else }}
         {{ $defaultDescription := "Pulumi provides a cloud development model for serverless functions, container apps, and data infrastructure for any cloud." }}
         <meta name="description" content="{{ $defaultDescription }}">
@@ -102,9 +105,6 @@
         {{ end }}
         {{ if not (isset .Page.Params "tags") }}
             {{ errorf "Blog posts require tags: %s" .File.Path }}
-        {{ end }}
-        {{ if not (or (isset .Params "summary")) }}
-            {{ errorf "Blog posts require a summary: %s" .File.Path }}
         {{ end }}
     {{ end }}
 </head>

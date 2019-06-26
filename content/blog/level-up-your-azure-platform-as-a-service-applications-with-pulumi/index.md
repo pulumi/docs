@@ -1,10 +1,9 @@
 ---
 title: "Level up your Azure Platform as a Service applications with Pulumi"
 authors: ["mikhail-shilkov"]
-tags: ["Infrastructure-as-Code", "Azure"]
+tags: ["Infrastructure","Azure"]
 date: "2019-05-06"
 
-summary: "Leverage Pulumi for continuous delivery of code and infrastructure to Azure PaaS. An ASP.NET Core application running on App Service and DevOps pipelines."
 meta_image: "RELATIVE_TO_PAGE/app-insights.png"
 ---
 
@@ -49,6 +48,7 @@ Nonetheless, PaaS services pose different challenges to application
 developers. In particular, the usage of multiple cloud services demands
 an investment in infrastructure automation. That's where Pulumi comes to
 the rescue.
+<!--more-->
 
 ## A Sample Application
 

@@ -1,10 +1,9 @@
 ---
 title: "Getting to ChatOps with Pulumi Webhooks"
 authors: ["chris-smith"]
-tags: ["New-Features", "CI/CD"]
+tags: ["CI/CD", "New-Features"]
 date: "2019-01-23"
 
-summary: "Announcing the availability of Webhooks on Pulumi. Get notified as stacks and teams are updated and connect Pulumi to your own notifications systems."
 meta_image: "RELATIVE_TO_PAGE/pulumi-webhooks.png"
 ---
 
@@ -19,6 +18,7 @@ cloud native infrastructure.
 Pulumi Webhooks are available for the Team and Enterprise editions of
 Pulumi. If you're keen to try them out, start a trial of
 [Team Edition here](https://app.pulumi.com/site/organizations/add).
+<!--more-->
 
 ChatOps --- the idea of conversation-driven collaboration --- is an
 increasingly common pattern, and as such we've gotten a lot of requests

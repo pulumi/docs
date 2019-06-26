@@ -1,10 +1,9 @@
 ---
 title: "Pulumi and Docker: Development to Production"
 authors: ["sean-gillespie"]
-tags: ["Infrastructure-as-Code"]
+tags: ["Containers","Kubernetes","Docker"]
 date: "2019-05-15"
 
-summary: "Pulumi makes it easy to deploy your Docker containers to production. Learn how to re-use your infrastructure code for both development and production."
 ---
 
 Here at Pulumi, we're big fans of Docker: at this point there is little
@@ -19,6 +18,7 @@ We recently wrote a blog post about
 In this blog post we're going to focus on another interesting aspect of
 Pulumi: being able to re-use your infrastructure code for both
 development and production!
+<!--more-->
 
 ## It's All Code: Composing Docker Containers
 

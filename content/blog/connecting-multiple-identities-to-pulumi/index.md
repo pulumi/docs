@@ -1,10 +1,9 @@
 ---
 title: "Connecting multiple identities to Pulumi"
 authors: ["praneet-loke"]
-tags: ["New-Features"]
+tags: ["CI/CD"]
 date: "2018-12-14"
 
-summary: "Pulumi now supports connecting multiple identities. For example, a single Pulumi ID can be connected to GitHub and GitLab."
 meta_image: "RELATIVE_TO_PAGE/multi-id.gif"
 ---
 
@@ -16,6 +15,7 @@ account in the Pulumi Cloud Console. Previously, you could only sign-up
 for a new Pulumi account using a GitHub or GitLab identity. Starting
 today, you can connect your Pulumi account with additional identities,
 beyond what you first signed-up with.
+<!--more-->
 
 For example, if you signed-in to Pulumi with your GitHub account, you
 could only add GitHub organizations to the Pulumi Service, or

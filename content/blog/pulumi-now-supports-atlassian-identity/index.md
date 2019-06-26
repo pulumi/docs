@@ -1,10 +1,9 @@
 ---
 title: "Pulumi now supports Atlassian Identity"
 authors: ["praneet-loke"]
-tags: ["New-Features"]
+tags: ["Features","CI/CD"]
 date: "2019-01-30"
 
-summary: "Pulumi now supports Atlassian Identity for authentication and team collaboration. Find out more in this post."
 meta_image: "RELATIVE_TO_PAGE/atlassian-1.png"
 ---
 
@@ -24,6 +23,7 @@ seamlessly import their GitHub Organizations and GitLab Groups - and now
 Atlassian Bitbucket Teams - into a single Pulumi account. Of course, you
 don't *need* to connect identities. You can always create separate
 account for each of your identities, if that's what you want to do.
+<!--more-->
 
 ## Creating a new Pulumi account using your Atlassian identity
 

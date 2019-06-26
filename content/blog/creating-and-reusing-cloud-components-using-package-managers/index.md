@@ -1,11 +1,9 @@
 ---
 title: "Creating and Reusing Cloud Components using Package Managers"
 authors: ["chris-smith"]
-tags: ["CI/CD"]
+tags: ["Infrastructure", "CI/CD"]
 date: "2018-08-09"
 
-summary: "This post walks through how to create reusable components, so you can
-package Pulumi infrastructure as code as reusable packages with NPM, PyPi etc."
 meta_image: "RELATIVE_TO_PAGE/pulumi-resource-visualization.png"
 ---
 
@@ -18,6 +16,7 @@ shame, however if I needed to copy and paste that code every time I
 wanted to to stand up a new website. Instead, we can package up, share,
 and reuse our code just like any other Node.js library. It just so
 happens that this one can be used to create cloud infrastructure.
+<!--more-->
 
 ## Creating a Package
 

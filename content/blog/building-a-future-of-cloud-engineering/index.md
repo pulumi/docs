@@ -1,10 +1,8 @@
 ---
 title: "Building a future of cloud engineering"
 authors: ["joe-duffy"]
-tags: ["Pulumi"]
+tags: ["Pulumi-News"]
 date: "2018-10-22"
-
-summary: "We founded Pulumi because of a deeply held belief that the cloud has changed all aspects of software development.  Today we are announcing that we’ve raised $15M in additional funding from our partners, Madrona Venture Group and Tola Capital, furthering our ability to reimagine cloud engineering."
 ---
 
 
@@ -13,6 +11,7 @@ promises to change all aspects of software development and that there
 remains an incredible opportunity to reimagine the entire experience,
 from idea to creation to delivery to management, with one person in
 mind: you, the engineer.
+<!--more-->
 
 Too often, we still think of the cloud as an afterthought, as though it
 were still 1998 with virtual machines and XML configuration. At Pulumi,

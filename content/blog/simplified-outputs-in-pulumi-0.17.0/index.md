@@ -2,7 +2,7 @@
 title: "Simplified Outputs in Pulumi 0.17"
 authors: ["cyrus-najmabadi"]
 tags: ["New-Features"]
-date: "2019-03-17"
+date: "2019-03-19"
 
 summary: "Based on much feedback from cloud developers, Pulumi Outputs have been simplified for JavaScript and TypeScript making the user experience simpler while maintaining the rich dependency tracking and type checking that Pulumi has always provided for cloud infrastructure."
 meta_image: "RELATIVE_TO_PAGE/comp-list.png"

@@ -1,7 +1,7 @@
 ---
 title: "Build your first serverless app using only JavaScript"
 authors: ["marc-holmes"]
-tags: ["AWS", "AWS/Lambda/Fargate"]
+tags: ["Serverless"]
 date: "2018-07-05"
 
 summary: "In this tutorial, we'll use Pulumi to build a complete serverless application using JavaScript."

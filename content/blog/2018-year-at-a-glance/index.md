@@ -1,16 +1,15 @@
 ---
 title: "2018 Year at a Glance"
 authors: ["joe-duffy"]
-tags: ["Pulumi"]
+tags: ["Pulumi-News"]
 date: "2018-12-31"
-
-summary: "It’s been an incredible year and as we close out 2018, I was reflecting on our progress here at Pulumi."
 ---
 
 As we close out 2018, and enter into
 a New Year, I was reflecting on our progress here at Pulumi this past year and wanted to share some thoughts.
 It’s been an incredible year and we are hugely thankful to our passionate community, customers, and
 partners.
+<!--more-->
 
 Here are some of the exciting things that happened:
 

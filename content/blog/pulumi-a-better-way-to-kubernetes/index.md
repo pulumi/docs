@@ -1,10 +1,9 @@
 ---
 title: "Pulumi: A Better Way to Kubernetes"
 authors: ["levi-blackstone"]
-tags: ["Kubernetes", "Infrastructure-as-Code"]
+tags: ["Kubernetes"]
 date: "2019-05-21"
 
-summary: "See how Pulumi can help you tame common Kubernetes challenges and make it more accessible, using familiar languages and your favorite tools. It’s simply a better way to work with Kubernetes!"
 meta_image: "RELATIVE_TO_PAGE/helm-deploy-using-pulumi.gif"
 ---
 
@@ -21,6 +20,7 @@ In this post, we will see how [Pulumi](/) can help you
 tame these issues and make Kubernetes more accessible, using familiar
 languages and your favorite tools. It's simply
 [Kubernetes made easy]({{< relref "/kubernetes" >}})!
+<!--more-->
 
 ## Clusters as code
 

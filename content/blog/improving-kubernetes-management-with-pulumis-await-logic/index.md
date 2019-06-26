@@ -1,10 +1,9 @@
 ---
 title: "Improving Kubernetes Management with Pulumi's Await Logic"
 authors: ["levi-blackstone"]
-tags: ["Kubernetes", "Infrastructure-as-Code"]
-date: "2019-03-06"
+tags: ["Kubernetes"]
+date: "2019-03-05"
 
-summary: "In this blog post, we discuss await logic, which allows users to have better visibility into the state of Kubernetes resources as they are being deployed or created. We added the ability to customize await logic for user-selected Kubernetes resources."
 meta_image: "RELATIVE_TO_PAGE/status-rich.gif"
 ---
 
@@ -23,6 +22,7 @@ for the full expressive power of a general purpose language. In this
 blog post, we discuss "await logic", which allows users to have better
 visibility into the state of Kubernetes resources as they are being
 deployed or created.
+<!--more-->
 
 We've
 [**previously talked about**]({{< relref "kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images" >}})

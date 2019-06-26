@@ -1,12 +1,10 @@
 ---
 title: "Using Terraform Remote State with Pulumi"
 authors: ["paul-stack"]
-tags: ["Terraform-Migration", "Infrastructure-as-Code"]
+tags: ["Infrastructure","Features"]
 date: "2019-06-07"
 
-summary: "Pulumi can co-exist with other infra tools, including consuming Terraform remote and local state outputs!"
 ---
-
 
 While some people coming to Pulumi are entirely new to Infrastructure as
 Code, increasingly teams are moving from other tools - whether
@@ -42,6 +40,7 @@ remote state backends supported by Terraform. This is exposed via the
 [`terraform.state.RemoteStateReference`](http://replace.me) type in the
 [`@pulumi/terraform`](https://www.npmjs.com/package/@pulumi/terraform)
 NPM package.
+<!--more-->
 
 ## Example - Terraform Enterprise Backend
 

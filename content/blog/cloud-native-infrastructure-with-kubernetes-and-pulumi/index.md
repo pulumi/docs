@@ -4,7 +4,6 @@ authors: ["joe-duffy"]
 tags: ["Kubernetes"]
 date: "2018-09-12"
 
-summary: "Announcing Pulumi for Kubernetes, a way to create, deploy, and manage Kubernetes applications using your favorite programming languages, bringing the same lovable experience that works across AWS, Azure, Google Cloud, OpenStack, and other clouds, now to Kubernetes and cloud native architectures."
 meta_image: "RELATIVE_TO_PAGE/diff.gif"
 ---
 
@@ -19,6 +18,7 @@ scenarios, and are excited to share what we've been up to. You can
 [dive right in here]({{< ref "/docs/quickstart/kubernetes" >}}) and
 look at some
 [powerful things Pulumi enables here]({{< relref "program-kubernetes-with-11-cloud-native-pulumi-pearls" >}}).
+<!--more-->
 
 ## Why Pulumi?
 

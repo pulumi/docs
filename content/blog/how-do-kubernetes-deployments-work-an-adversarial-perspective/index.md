@@ -1,10 +1,9 @@
 ---
 title: "How do Kubernetes Deployments work? An adversarial perspective"
 authors: ["alex-clemmer"]
-tags: ["Kubernetes", "Infrastructure-as-Code"]
+tags: ["Kubernetes"]
 date: "2018-10-03"
 
-summary: "What is happening when a Deployment rolls out a change to your app? Deployment is probably the most complex resource type in Kubernetes core. In this post we continue our exploration of the Kubernetes API, cracking Deployment open using kubespy to observe Kubernetes resources in real-time."
 meta_image: "RELATIVE_TO_PAGE/deployment-rollout.gif"
 ---
 
@@ -27,6 +26,7 @@ in a cluster.
 In this post we continue our exploration of the Kubernetes API, cracking
 `Deployment` open using `kubespy`, a small tool we developed to observe
 Kubernetes resources in real-time.
+<!--more-->
 
 Using `kubespy trace`, for example, we can observe at a high level what
 happens when `Deployment` rolls out a new version of an application:

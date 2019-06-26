@@ -1,10 +1,9 @@
 ---
 title: "Simplify Kubernetes RBAC in Amazon EKS with open source Pulumi packages"
 authors: ["nishi-davidson"]
-tags: ["Kubernetes", "AWS", "Infrastructure-as-Code"]
+tags: ["AWS","Kubernetes","TypeScript","EKS"]
 date: "2019-04-24"
 
-summary: "RBAC on Kubernetes is hard! In this post, we explore how Pulumi simplifies RBAC on Amazon EKS."
 ---
 
 One of the most common areas Kubernetes operators struggle with in
@@ -14,6 +13,7 @@ implemented halfway, or the configuration becomes impossible to
 maintain. In this post, we will contrast the traditional way of working
 with RBAC on EKS with using Pulumi --- Pulumi makes RBAC on Kubernetes
 so easy that you'll never create an insecure cluster again!
+<!--more-->
 
 - **NO MORE YAMLs!** Configuring YAMLs, operators or custom resources
   is now a thing in the past! You use TypeScript or JavaScript to

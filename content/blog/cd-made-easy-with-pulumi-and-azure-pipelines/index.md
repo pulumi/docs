@@ -4,8 +4,6 @@ authors: ["praneet-loke"]
 tags: ["Azure", "CI/CD", "New-Features"]
 date: "2019-05-06"
 
-summary: "Announcing a new open-source extension to Azure Pipelines!
-Use the Pulumi task in your Azure Pipelines build/release definitions without the need for custom scripts."
 meta_image: "RELATIVE_TO_PAGE/add-pulumi.png"
 ---
 

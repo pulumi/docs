@@ -1,10 +1,8 @@
 ---
 title: "Building and Publishing Docker Images to a Private Amazon ECR Repository"
 authors: ["cyrus-najmabadi"]
-tags: ["Kubernetes", "Infrastructure-as-Code"]
+tags: ["Kubernetes"]
 date: "2019-06-18"
-
-summary: "See how easy it is to build and publish Docker images to a private ECR repository on AWS, and consume them from ECS, Fargate, and EKS services."
 meta_image: "RELATIVE_TO_PAGE/pulumi-crosswalk-for-aws.webp"
 ---
 
@@ -23,6 +21,7 @@ containers for your applications. In this article, we'll see how
 [Pulumi Crosswalk for AWS]({{< ref "/crosswalk/aws" >}}) lets you use
 infrastructure as code to easily build, publish, and pull from private
 ECR repositories.
+<!--more-->
 
 ## A Simple ECS Fargate Service
 

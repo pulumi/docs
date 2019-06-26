@@ -1,10 +1,9 @@
 ---
 title: "Build a Video Thumbnailer with Pulumi using Lambdas, Containers, and Infrastructure on AWS"
 authors: ["donna-malayeri"]
-tags: ["AWS", "AWS/Lambda/Fargate"]
+tags: ["JavaScript","Serverless","AWS","Containers","Infrastructure"]
 date: "2018-06-21"
 
-summary: "Code a 'Colada' app using Containers, Lambdas, and Data Infrastructure using Pulumi in just 38 lines of code with Pulumi. Then deploy to AWS."
 meta_image: "RELATIVE_TO_PAGE/video-thumbnail-diagram.png"
 ---
 
@@ -21,6 +20,7 @@ uploaded to S3. This function launches a task in Fargate that
 uses [FFmpeg](https://www.ffmpeg.org/) to extract a video thumbnail. A
 second Lambda function is triggered when a new thumbnail has been
 created. 
+<!--more-->
 
 This post was inspired by a blog post from Serverless, Inc that shows
 how to combine [AWS Fargate and Lambda for a long-running

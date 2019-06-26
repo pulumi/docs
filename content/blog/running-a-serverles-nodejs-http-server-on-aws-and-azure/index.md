@@ -1,10 +1,9 @@
 ---
 title: "Running a Serverless Node.js HTTP Server on AWS and Azure"
 authors: ["cyrus-najmabadi"]
-tags: ["AWS/Lambda/Fargate", "Infrastructure-as-Code"]
+tags: ["Serverless"]
 date: "2018-10-02"
 
-summary: "The newly introduced `cloud.HttpServer` in Pulumi makes it easy to serve a standard Node.js HTTP server as a serverless API on any cloud platform. In this post, we walk through some of the background on why we introduced this new API and how it fits into the Node.js HTTP ecosystem."
 ---
 
 The newly
@@ -16,6 +15,7 @@ operational simplicity of serverless APIs, and the multi-cloud authoring
 and deployment of Pulumi.  In this post, we walk through some of the
 background on why we introduced this new API and how it fits into the
 Node.js HTTP ecosystem.
+<!--more-->
 
 Almost 10 years ago, [Node.js](https://nodejs.org) was introduced,
 helping to usher in an era of server-side JavaScript development. From

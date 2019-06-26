@@ -1,13 +1,11 @@
 ---
-title: "Pulumi Crosswalk for AWS is the easiest way to AWS. Infrastructure as code with built-in productivity and best practices."
+title: "Introducing Pulumi Crosswalk for AWS: The Easiest Way to AWS"
 authors: ["luke-hoban"]
-tags: ["New-Features", "Pulumi", "Kubernetes", "AWS", "AWS/Lambda/Fargate"]
+tags: ["Serverless","AWS","Containers","Pulumi-News","Kubernetes","EKS","Lambda","APIGateway","Docker"]
 date: "2019-06-10"
 
-summary: "Pulumi Crosswalk for AWS is the easiest way to AWS. Infrastructure as code with built-in productivity and best practices."
 meta_image: "RELATIVE_TO_PAGE/crosswalk-for-aws.png"
 ---
-
 
 Amazon Web Services provides an incredible platform for developers to
 build cloud-native applications, and is used by millions of customers of
@@ -26,6 +24,7 @@ new open source library of infrastructure-as-code components that make
 it easier to get from zero to production on AWS, easier to adopt AWS
 best practices by default, and easier to evolve your AWS infrastructure
 as your application needs mature.
+<!--more-->
 
 ![Pulumi Crosswalk for AWS](./crosswalk-for-aws.png)
 

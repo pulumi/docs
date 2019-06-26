@@ -1,11 +1,9 @@
 ---
 title: "How we use Pulumi to build Pulumi"
 authors: ["luke-hoban"]
-tags: ["Infrastructure-as-Code"]
+tags: ["Serverless","AWS","Containers","Infrastructure"]
 date: "2018-06-26"
 
-summary: "Here at Pulumi we are (perhaps unsurprisingly!) huge fans of using
-Pulumi to manage our cloud infrastructure and services. In this post, we describe how we use Pulumi to build and run Pulumi."
 meta_image: "RELATIVE_TO_PAGE/image-4.png"
 ---
 
@@ -42,6 +40,7 @@ In this post, we'll do a deeper dive into each of these use cases,
 highlighting unique aspects of how we use Pulumi itself, and some of our
 engineering processes around how we integrate Pulumi into the rest of
 our toolchain.
+<!--more-->
 
 ## Infrastructure
 

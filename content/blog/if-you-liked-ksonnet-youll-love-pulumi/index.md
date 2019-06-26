@@ -1,13 +1,11 @@
 ---
 title: "If you liked ksonnet, you'll love Pulumi!"
 authors: ["mike-metral"]
-tags: ["Kubernetes", "Infrastructure-as-Code"]
+tags: ["Kubernetes","Cloud-Native"]
 date: "2019-02-13"
 
-summary: "We’re sad to see ksonnet winding down, but are thankful for the collaborative exchange of ideas between projects, and are excited to see continued investment in VMWare/Heptio’s other projects. The good news is that, if you liked ksonnet, we’re confident that you’ll love Pulumi. In this post, we'll tell you why."
 meta_image: "RELATIVE_TO_PAGE/kube-update.gif"
 ---
-
 
 The Kubernetes landscape is constantly evolving as end users and
 developers search for the right tools, approaches, and abstractions to
@@ -27,6 +25,7 @@ ideas between projects, and are excited to see continued investment in
 VMWare/Heptio's other projects. The good news is that, if you liked
 ksonnet, we're confident that you'll love Pulumi. In this post, we'll
 tell you why.
+<!--more-->
 
 ![Kubernetes + Pulumi](./hero.png)
 

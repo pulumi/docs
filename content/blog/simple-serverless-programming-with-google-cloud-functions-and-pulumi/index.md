@@ -1,12 +1,9 @@
 ---
 title: "Simple Serverless programming with Google Cloud Functions and Pulumi"
 authors: ["cyrus-najmabadi"]
-tags: ["GCP/Knative/Cloud Functions", "GCP"]
+tags: ["Serverless","GCP"]
 date: "2019-04-10"
 
-summary: "Serverless has never been simpler than it is with Pulumi + Google Cloud Functions. In just
-a few lines of code, you can serve a simple HTTP API, respond to a pubsub topic or uploads of new
-objects to a storage bucket, and more. Learn how to fit these together to make a real-world cloud application."
 ---
 
 Pulumi lets you create, deploy, and manage Google Cloud applications and
@@ -16,6 +13,7 @@ solutions. This means great productivity and getting to use tools you
 already know and love. Since serverless is all about focusing more on
 your application code, and less on infrastructure and configuration
 toil, we absolutely love Google Functions.
+<!--more-->
 
 ## The Simplest Way to Serverlesss
 
