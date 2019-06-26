@@ -10,7 +10,6 @@ aws_here: "https://aws.amazon.com/dynamodb/"
 layout: aws-single
 menu:
   aws:
-    parent: aws
     name: DynamoDB
 ---
 

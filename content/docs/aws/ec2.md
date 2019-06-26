@@ -10,7 +10,6 @@ aws_here: "https://aws.amazon.com/ec2/"
 layout: aws-single
 menu:
   aws:
-    parent: aws
     name: EC2
 ---
 
