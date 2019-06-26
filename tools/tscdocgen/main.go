@@ -170,7 +170,7 @@ var gitHubBaseURLs = map[string]string{
 	"@pulumi/azuread":      "https://github.com/pulumi/pulumi-azuread/blob/{githash}/sdk/nodejs",
 	"@pulumi/cloud":        "https://github.com/pulumi/pulumi-cloud/blob/{githash}/api",
 	"@pulumi/cloudflare":   "https://github.com/pulumi/pulumi-cloudflare/blob/{githash}/sdk/nodejs",
-	"@pulumi/datadog":    "https://github.com/pulumi/pulumi-datadog/blob/{githash}/sdk/nodejs",
+	"@pulumi/datadog":      "https://github.com/pulumi/pulumi-datadog/blob/{githash}/sdk/nodejs",
 	"@pulumi/digitalocean": "https://github.com/pulumi/pulumi-digitalocean/blob/{githash}/sdk/nodejs",
 	"@pulumi/docker":       "https://github.com/pulumi/pulumi-docker/blob/{githash}/sdk/nodejs",
 	"@pulumi/eks":          "https://github.com/pulumi/pulumi-eks/blob/{githash}/nodejs/eks",
@@ -937,17 +937,17 @@ func typeHyperlink(t *typeDocType) string {
 			case "Archive", "Asset", "AssetMap", "AssetArchive",
 				"FileArchive", "FileAsset", "RemoteArchive", "RemoteAsset", "StringAsset":
 				return fmt.Sprintf(
-					"/reference/pkg/nodejs/pulumi/pulumi/asset/#%s", t.Name)
+					"/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#%s", t.Name)
 			case "ComponentResource", "ComponentResourceOptions", "CustomResource", "CustomResourceOptions",
 				"ID", "Input", "Inputs", "InvokeOptions", "Output", "Outputs", "Resource", "ResourceOptions", "URN":
 				return fmt.Sprintf(
-					"/reference/pkg/nodejs/pulumi/pulumi/#%s", t.Name)
+					"/docs/reference/pkg/nodejs/pulumi/pulumi/#%s", t.Name)
 			}
 
 			// If this is a qualified name, see if it refers to the Pulumi SDK. If so, generate a link.
 			elements := strings.Split(t.Name, ".")
 			if len(elements) > 1 && elements[0] == "pulumi" {
-				link := "/reference/pkg/nodejs/pulumi/pulumi/"
+				link := "/docs/reference/pkg/nodejs/pulumi/pulumi/"
 				for i := 1; i < len(elements)-1; i++ {
 					link += fmt.Sprintf("%s/", elements[i])
 				}
