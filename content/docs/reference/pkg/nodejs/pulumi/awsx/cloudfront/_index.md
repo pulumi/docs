@@ -18,18 +18,18 @@ title: Module cloudfront
 <li><a href="#metrics">module metrics</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-awsx/blob/e8cca2e4512b8cefb43218161b27cfa1d2e77782/nodejs/awsx/cloudfront/metrics.ts">cloudfront/metrics.ts</a> 
+<a href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/cloudfront/metrics.ts">cloudfront/metrics.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/e8cca2e4512b8cefb43218161b27cfa1d2e77782/nodejs/awsx/cloudfront/metrics.ts#L20">module <b>metrics</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/cloudfront/metrics.ts#L20">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="bytesDownloaded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e8cca2e4512b8cefb43218161b27cfa1d2e77782/nodejs/awsx/cloudfront/metrics.ts#L87">function <b>bytesDownloaded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/cloudfront/metrics.ts#L87">function <b>bytesDownloaded</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -45,7 +45,7 @@ Units: None
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="bytesUploaded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e8cca2e4512b8cefb43218161b27cfa1d2e77782/nodejs/awsx/cloudfront/metrics.ts#L97">function <b>bytesUploaded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/cloudfront/metrics.ts#L97">function <b>bytesUploaded</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -61,7 +61,7 @@ Units: None
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="errorRate4xx">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e8cca2e4512b8cefb43218161b27cfa1d2e77782/nodejs/awsx/cloudfront/metrics.ts#L117">function <b>errorRate4xx</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/cloudfront/metrics.ts#L117">function <b>errorRate4xx</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -77,7 +77,7 @@ Units: Percent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="errorRate5xx">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e8cca2e4512b8cefb43218161b27cfa1d2e77782/nodejs/awsx/cloudfront/metrics.ts#L127">function <b>errorRate5xx</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/cloudfront/metrics.ts#L127">function <b>errorRate5xx</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -93,7 +93,7 @@ Units: Percent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e8cca2e4512b8cefb43218161b27cfa1d2e77782/nodejs/awsx/cloudfront/metrics.ts#L54">function <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/cloudfront/metrics.ts#L54">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -118,7 +118,7 @@ CloudFront metrics use the CloudFront namespace and provide metrics for two dime
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="requests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e8cca2e4512b8cefb43218161b27cfa1d2e77782/nodejs/awsx/cloudfront/metrics.ts#L77">function <b>requests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/cloudfront/metrics.ts#L77">function <b>requests</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -134,7 +134,7 @@ Units: None
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="totalErrorRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e8cca2e4512b8cefb43218161b27cfa1d2e77782/nodejs/awsx/cloudfront/metrics.ts#L107">function <b>totalErrorRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/cloudfront/metrics.ts#L107">function <b>totalErrorRate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -150,14 +150,14 @@ Units: Percent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudfrontMetricChange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e8cca2e4512b8cefb43218161b27cfa1d2e77782/nodejs/awsx/cloudfront/metrics.ts#L25">interface <b>CloudfrontMetricChange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/cloudfront/metrics.ts#L25">interface <b>CloudfrontMetricChange</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CloudfrontMetricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e8cca2e4512b8cefb43218161b27cfa1d2e77782/nodejs/awsx/cloudfront/metrics.ts#L21">type <b>CloudfrontMetricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/cloudfront/metrics.ts#L21">type <b>CloudfrontMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>type</span> CloudfrontMetricName = <span class='s2'>"Requests"</span> | <span class='s2'>"BytesDownloaded"</span> | <span class='s2'>"BytesUploaded"</span> | <span class='s2'>"TotalErrorRate"</span> | <span class='s2'>"4xxErrorRate"</span> | <span class='s2'>"5xxErrorRate"</span>;</pre>

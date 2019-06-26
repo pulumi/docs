@@ -193,11 +193,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a set of DNS records within Google Cloud DNS. For more information see <a class="reference external" href="https://cloud.google.com/dns/records/">the official documentation</a> and
 <a class="reference external" href="https://cloud.google.com/dns/api/v1/resourceRecordSets">API</a>.</p>
 <blockquote>
-<div><strong>Note:</strong> The Google Cloud DNS API requires NS records be present at all
-times. To accommodate this, when creating NS records, the default records
-Google automatically creates will be silently overwritten.  Also, when
-destroying NS records, Terraform will not actually remove NS records, but will
-report that it did.</div></blockquote>
+<div><strong>Note:</strong> The provider treats this resource as an authoritative record set. This means existing records (including the default records) for the given type will be overwritten when you create this resource in Terraform. In addition, the Google Cloud DNS API requires NS records to be present at all times, so Terraform will not actually remove NS records during destroy but will report that it did.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

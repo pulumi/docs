@@ -21,7 +21,7 @@
 <li><strong>iam_user_access_to_billing</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, the new account enables IAM users to access account billing information if they have the required permissions. If set to <code class="docutils literal notranslate"><span class="pre">DENY</span></code>, then only the root user of the new account can access account billing information.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for the member account.</li>
 <li><strong>parent_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Parent Organizational Unit ID or Root ID for the account. Defaults to the Organization default Root ID. A configuration must be present for this argument to perform drift detection.</li>
-<li><strong>role_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account.</li>
+<li><strong>role_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account. The Organizations API provides no method for reading this information after account creation, so Terraform cannot perform drift detection on its value and will always show a difference for a configured value after import unless <cite>``ignore_changes`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#ignore_changes">https://www.terraform.io/docs/configuration/resources.html#ignore_changes</a>&gt;`_ is used.</li>
 </ul>
 </td>
 </tr>
@@ -60,7 +60,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.organizations.Account.role_name">
 <code class="descname">role_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.Account.role_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account.</p>
+<dd><p>The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account. The Organizations API provides no method for reading this information after account creation, so Terraform cannot perform drift detection on its value and will always show a difference for a configured value after import unless <cite>``ignore_changes`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#ignore_changes">https://www.terraform.io/docs/configuration/resources.html#ignore_changes</a>&gt;`_ is used.</p>
 </dd></dl>
 
 <dl class="method">
@@ -125,7 +125,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.organizations.Organization.accounts">
 <code class="descname">accounts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.Organization.accounts" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of organization accounts (including the master account). All elements have these attributes:</p>
+<dd><p>List of organization accounts including the master account. For a list excluding the master account, see the <code class="docutils literal notranslate"><span class="pre">non_master_accounts</span></code> attribute. All elements have these attributes:</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -168,6 +168,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.organizations.Organization.master_account_id">
 <code class="descname">master_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.Organization.master_account_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identifier of the master account</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.Organization.non_master_accounts">
+<code class="descname">non_master_accounts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.Organization.non_master_accounts" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of organization accounts excluding the master account. For a list including the master account, see the <code class="docutils literal notranslate"><span class="pre">accounts</span></code> attribute. All elements have these attributes:</p>
 </dd></dl>
 
 <dl class="attribute">
