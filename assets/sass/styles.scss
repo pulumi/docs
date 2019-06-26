@@ -110,4 +110,10 @@ main {
     @include transition(all);
 }
 
+.github-widget {
+    > span {
+        @apply flex;
+    }
+}
+
 @tailwind utilities;
