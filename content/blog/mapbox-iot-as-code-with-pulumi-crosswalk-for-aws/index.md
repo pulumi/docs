@@ -77,61 +77,63 @@ multiple sources into the rest of the system. Mapbox uses Pulumi's AWS &
 AWSX libraries to build an IOT ingestion rule and forwards it to Kinesis
 streams. A sample `index.js` looks like this:
 
-    "use strict";
-    const pulumi = require("@pulumi/pulumi");
-    const aws = require("@pulumi/aws");
-    const awsx = require("@pulumi/awsx");
+```javascript
+"use strict";
+const pulumi = require("@pulumi/pulumi");
+const aws = require("@pulumi/aws");
+const awsx = require("@pulumi/awsx");
 
-    //* Create Kinesis stream for ingestion
-    const ingestStream = new aws.kinesis.Stream("ingestAssets", {
-     shardCount: 1,
-     retentionPeriod: 72
-    });
+// Create Kinesis stream for ingestion
+const ingestStream = new aws.kinesis.Stream("ingestAssets", {
+  shardCount: 1,
+  retentionPeriod: 72
+});
 
-    //* Create IoT Rule to push into Kinesis stream
-    const iotRole = new aws.iam.Role("iotRole", {
-     assumeRolePolicy: JSON.stringify({
-       Version: "2012-10-17",
-       Statement: [
-         {
-           Effect: "Allow",
-           Principal: {
-             Service: "iot.amazonaws.com"
-           },
-           Action: "sts:AssumeRole"
-         }
-       ]
-     })
-    });
+// Create IoT Rule to push into Kinesis stream
+const iotRole = new aws.iam.Role("iotRole", {
+  assumeRolePolicy: JSON.stringify({
+    Version: "2012-10-17",
+    Statement: [
+      {
+        Effect: "Allow",
+        Principal: {
+          Service: "iot.amazonaws.com"
+        },
+        Action: "sts:AssumeRole"
+      }
+    ]
+  })
+});
 
-    const iotRolePolicy = new aws.iam.RolePolicy("iotRolePolicy", {
-     policy: pulumi.interpolate`{
-       "Version": "2012-10-17",
-       "Statement": [
-         {
-             "Effect": "Allow",
-             "Action": [
-                 "kinesis:*"
-             ],
-             "Resource": "${ingestStream.arn}"
-         }
-       ]
-     }`,
-     role: iotRole.id
-    });
+const iotRolePolicy = new aws.iam.RolePolicy("iotRolePolicy", {
+  policy: pulumi.interpolate`{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+          "Effect": "Allow",
+          "Action": [
+              "kinesis:*"
+          ],
+          "Resource": "${ingestStream.arn}"
+      }
+    ]
+  }`,
+  role: iotRole.id
+});
 
-    const iotRule = new aws.iot.TopicRule("iotTrigger", {
-     description: "Pass from IoT Core to Asset Tracking",
-     name: "iotAssetIngest",
-     enabled: true,
-     kinesis: {
-       partitionKey: "id",
-       roleArn: iotRole.arn,
-       streamName: ingestStream.name
-     },
-     sql: "SELECT * FROM 'topic'",
-     sqlVersion: "2015-10-08"
-    });
+const iotRule = new aws.iot.TopicRule("iotTrigger", {
+  description: "Pass from IoT Core to Asset Tracking",
+  name: "iotAssetIngest",
+  enabled: true,
+  kinesis: {
+    partitionKey: "id",
+    roleArn: iotRole.arn,
+    streamName: ingestStream.name
+  },
+  sql: "SELECT * FROM 'topic'",
+  sqlVersion: "2015-10-08"
+});
+```
 
 Kinesis streams are used to ingest data into multiple AWS services
 defined as IOT rules, Firehose and Lambda functions. Each ingest stream
@@ -159,66 +161,68 @@ To get this piece of code, please connect with Mapbox solution team
 [here](mailto:chris.toomey@mapbox.com) and Pulumi team
 [here](mailto:sales@pulumi.com).
 
-    //* Create DynamoDB Table
-    const assetTable = new aws.dynamodb.Table("assetTable", {
-     attributes: [
-       {
-         name: "id",
-         type: "S"
-       },
-       {
-         name: "ts",
-         type: "N"
-       }
-     ],
-     hashKey: "id",
-     rangeKey: "ts",
-     ttl: {
-       attributeName: "expiration",
-       enabled: true
-     },
-       billingMode: "PAY_PER_REQUEST" 
-     });
+```javascript
+// Create DynamoDB Table
+const assetTable = new aws.dynamodb.Table("assetTable", {
+  attributes: [
+    {
+      name: "id",
+      type: "S"
+    },
+    {
+      name: "ts",
+      type: "N"
+    }
+  ],
+  hashKey: "id",
+  rangeKey: "ts",
+  ttl: {
+    attributeName: "expiration",
+    enabled: true
+  },
+    billingMode: "PAY_PER_REQUEST" 
+  });
 
-    //* Create API to read DynamoDB
-    const endpoint = new awsx.apigateway.API("assetQuery", {
-     routes: [
-       {
-         path: "/",
-         method: "GET",
-         eventHandler: (request, ctx, cb) => {
-           const AWS = require("aws-sdk");
-           const ddb = new AWS.DynamoDB.DocumentClient({
-             apiVersion: "2012-10-08"
-           });
-           const tableName = assetTable.name.value;
-           const params = {
-             TableName: tableName
-           };
-           ddb.scan(params, (err, data) => {
-             const features = data.Items.map(item => {
-               const point = turf.point([item.longitude, item.latitude], {
-                 id: item.id,
-                 speed: item.speed
-               });
-               return point;
-             });
-             const featureCollection = turf.featureCollection(features);
-             cb(undefined, {
-               statusCode: 200,
-               body: Buffer.from(
-                 JSON.stringify(featureCollection),
-                 "utf8"
-               ).toString("base64"),
-               isBase64Encoded: true,
-               headers: { "content-type": "application/json" }
-             });
-           });
-         }
-       }
-     ],
-     stageName: "dev"
-    });
+// Create API to read DynamoDB
+const endpoint = new awsx.apigateway.API("assetQuery", {
+  routes: [
+    {
+      path: "/",
+      method: "GET",
+      eventHandler: (request, ctx, cb) => {
+        const AWS = require("aws-sdk");
+        const ddb = new AWS.DynamoDB.DocumentClient({
+          apiVersion: "2012-10-08"
+        });
+        const tableName = assetTable.name.value;
+        const params = {
+          TableName: tableName
+        };
+        ddb.scan(params, (err, data) => {
+          const features = data.Items.map(item => {
+            const point = turf.point([item.longitude, item.latitude], {
+              id: item.id,
+              speed: item.speed
+            });
+            return point;
+          });
+          const featureCollection = turf.featureCollection(features);
+          cb(undefined, {
+            statusCode: 200,
+            body: Buffer.from(
+              JSON.stringify(featureCollection),
+              "utf8"
+            ).toString("base64"),
+            isBase64Encoded: true,
+            headers: { "content-type": "application/json" }
+          });
+        });
+      }
+    }
+  ],
+  stageName: "dev"
+});
+```
 
 Once we've created the API, we start defining our routes and then
 in-line we can define a Lambda function. It can use NPM modules and

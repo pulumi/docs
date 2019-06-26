@@ -12,19 +12,30 @@
                         <span>
                             {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors) }}
                         </span>
-                        <span class="mr-2">∙</span>
-                        <time>
-                            {{ .Date.Format "Monday, Jan 2, 2006" }}
-                        </time>
                     </div>
                     <section>
                         {{ .Content }}
                     </section>
+                    <div>
+                        <p class="text-gray-500">Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time>
+                        {{ if .Params.tags }}
+                        <ul class="m-0 p-0">
+                            {{ range $tag := .Params.tags }}
+                            <li class="inline-flex">
+                                {{ $classes := "bg-white border border-gray-200 text-blue-600 hover:border-blue-600" }}
+                                <a class="px-2 text-s rounded transition-all {{ $classes }}" href="/blog/tag/{{ $tag | urlize }}/">
+                                    {{ $tag }}
+                                </a>
+                            </li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+                    </div>
                 </article>
             </div>
 
             <div class="md:w-2/12 pl-8">
-
+                <!-- Right sidebar, unused. -->
             </div>
         </div>
     </div>
