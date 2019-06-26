@@ -45,11 +45,12 @@
             <h5 class="no-anchor">Recent Posts</h5>
             <ul>
                 {{ range $post := first 10 (where .Site.Pages "Type" "blog").ByDate.Reverse }}
-                    {{ if in $post.Filename "_index.md" }}
+                    {{ if in $post.File.Filename "_index.md" }}
+                        {{/* The /blog/_index.md file unfortunately shows up in the list, so we skip it. */}}
                     {{ else }}
-                    <li>
-                        <a class="text-sm" href="{{ $post.Permalink }}">{{ $post.Title }}</a>
-                    </li>
+                        <li>
+                            <a class="text-sm" href="{{ $post.Permalink }}">{{ $post.Title }}</a>
+                        </li>
                     {{ end }}
                 {{ end }}
             </ul>
