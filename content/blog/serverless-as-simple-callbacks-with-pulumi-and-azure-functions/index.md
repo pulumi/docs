@@ -4,7 +4,6 @@ authors: ["mikhail-shilkov"]
 tags: ["Serverless","Azure"]
 date: "2019-05-07"
 
-summary: "The simplest way to take a Node.js function and deploy it to Azure cloud as an HTTP endpoint using Pulumi."
 ---
 
 _Today's guest post is from [Mikhail Shilkov](https://mikhail.io/), a
@@ -14,6 +13,7 @@ Serverless compute services, like Azure Functions, offer an amazing
 power to application developers to leverage: highly available,
 automatically scaled, low-ceremony, pay-per-value functions created in
 several lines of code.
+<!--more-->
 
 So, what's **the simplest** way to take a Node.js function and deploy it
 to Azure cloud as an HTTP endpoint? How about this little tutorial:

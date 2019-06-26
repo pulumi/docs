@@ -4,7 +4,6 @@ authors: ["cyrus-najmabadi"]
 tags: ["AWS","Logging"]
 date: "2019-06-14"
 
-summary: "AWS CloudWatch made easy with Pulumi Infrastructure-as-Code."
 meta_image: "RELATIVE_TO_PAGE/dashboard.png"
 ---
 
@@ -25,6 +24,7 @@ to get live visualization of what is happening in the cloud. Because
 this is vital to the health of the application, we think this should be
 something built in from the start, and not something added after the
 fact as an out of band artifact.
+<!--more-->
 
 Let's see what that means in practice! I'm going to use a recent
 hackathon project I created where I built a [Slack bot](https://api.slack.com/bot-users) to notify me about all the

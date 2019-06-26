@@ -4,7 +4,6 @@ authors: ["matt-ellis"]
 tags: ["Features","Security"]
 date: "2019-05-17"
 
-summary: "We recently added two new features that provide you with complete control over how secrets are managed within Pulumi deployments."
 ---
 
 We've had a 1st class concept of encrypted secrets configuration ever
@@ -30,6 +29,7 @@ secrets are managed within Pulumi deployments. We have worked with
 customers with advanced security and compliance needs while developing
 this feature, enabling them to use our online hosted SaaS with even
 greater confidence.
+<!--more-->
 
 ## Secrets and State
 

@@ -3,11 +3,7 @@ title: "Managing GitHub Webhooks with Pulumi"
 authors: ["matt-ellis"]
 tags: ["Serverless"]
 date: "2018-07-13"
-
-summary: "At Pulumi, we use GitHub for a lot of our development workflow, which can be
-streamlined using Pulumi! This post takes a detailed look at automating GitHub using webhooks and serverless functions with Pulumi."
 ---
-
 
 At Pulumi, we do all of our development on GitHub, with a workflow built
 around topic branches. When a developer wants to make a change, they
@@ -26,6 +22,7 @@ programming languages to build abstractions, which means we can build a
 simple framework that hides much of the ceremony behind defining a hook
 and lets us focus on the core logic of our hook, without worrying about
 how it is deployed and managed.
+<!--more-->
 
 ## A simple hook
 

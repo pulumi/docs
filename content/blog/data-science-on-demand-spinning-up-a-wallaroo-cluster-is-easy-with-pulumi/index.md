@@ -4,7 +4,6 @@ authors: ["marc-holmes", "simon-zelazny"]
 tags: ["Infrastructure","Customer"]
 date: "2018-11-02"
 
-summary: "This guest post is from Simon Zelazny of Wallaroo Labs. Find out how Wallaroo powered their analytics cluster provisioning with Pulumi, for data science on demand."
 meta_image: "RELATIVE_TO_PAGE/tty-fast.gif"
 ---
 
@@ -37,6 +36,7 @@ dataframes, and distribute them among workers in an ad-hoc Wallaroo
 cluster, running on one physical machine. Parallelizing the work in this
 manner buys us a lot of time, and the batch job can continue processing
 increasing amounts of data.
+<!--more-->
 
 Sure, we can handle a million rows in reasonable time, but what if the
 data set grows by orders of magnitude? By running our classifier on a

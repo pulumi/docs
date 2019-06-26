@@ -4,7 +4,6 @@ authors: ["marc-holmes"]
 tags: ["Features"]
 date: "2018-10-01"
 
-summary: "We've made it a whole lot easier to get started with Pulumi with a New Project wizard to initialize new projects and stacks for JavaScript, TypeScript, Python and Go, on AWS, Azure, GCP, Kubernetes, and OpenStack."
 meta_image: "RELATIVE_TO_PAGE/new-project-ui-1.gif"
 ---
 
@@ -15,7 +14,7 @@ cloud even faster than before.
 
 In this post, we'll look at how to use `pulumi new` and our [selection
 of templates](https://github.com/pulumi/templates) to build your Pulumi
-app. There is template support for:
+app. <!--more--> There is template support for:
 
 - AWS, Microsoft Azure, Google Cloud, Kubernetes, and OpenStack in
   each of...

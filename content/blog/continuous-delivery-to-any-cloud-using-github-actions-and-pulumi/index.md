@@ -4,10 +4,8 @@ authors: ["joe-duffy"]
 tags: ["Pulumi-News", "New-Features", "CI/CD"]
 date: "2018-10-17"
 
-summary: "Pulumi has partnered with GitHub on the new GitHub Actions feature.  In this post we'll see how Pulumi plus GitHub Actions delivers the easiest way to achieve continuous delivery of cloud applications and infrastructure, no matter your cloud – AWS, Azure, Google Cloud, Kubernetes, or on-premises."
 meta_image: "RELATIVE_TO_PAGE/gh-actions-prs.png"
 ---
-
 
 Today we announced our partnership with GitHub on the [new GitHub
 Actions feature](https://github.com/features/actions). We are super
@@ -18,6 +16,7 @@ friction-free way to achieve continuous delivery of cloud applications
 and infrastructure, no matter your cloud -- AWS, Azure, Google Cloud,
 Kubernetes, or even on-premises. In this post, we'll dig deeper to see
 why, and how to get up and running. It's refreshingly easy!
+<!--more-->
 
 ## GitHub Actions + Pulumi == ❤️
 

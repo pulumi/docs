@@ -4,8 +4,6 @@ authors: ["pat-gavlin"]
 tags: ["JavaScript","Infrastructure","TypeScript"]
 date: "2018-11-02"
 
-summary: "Learn how general purpose languages enable simpler, more flexible infrastructure as code.
-In this article we will convert existing Terraform configuration to Pulumi TypeScript."
 meta_image: "RELATIVE_TO_PAGE/tf-to-pulumi.png"
 ---
 
@@ -29,6 +27,7 @@ The infrastructure we'll be working with describes a load-balanced web
 server hosted by an AWS EC2 instance per availability zone with an
 option to allow SSH access. Of course, these same benefits would also
 accrue were we to target Azure, Google Cloud, or Kubernetes instead.
+<!--more-->
 
 ## Starting from Terraform Configuration
 

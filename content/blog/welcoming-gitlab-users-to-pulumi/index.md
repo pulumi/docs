@@ -4,7 +4,6 @@ authors: ["praneet-loke"]
 tags: ["CI/CD"]
 date: "2018-12-03"
 
-summary: "We are very pleased to announce support for signing-in with GitLab accounts."
 meta_image: "RELATIVE_TO_PAGE/gl-2.gif"
 ---
 
@@ -12,6 +11,7 @@ We are very pleased to announce that [Pulumi](/) now
 supports signing-in with your GitLab account. Don't have an account on
 GitLab yet? Head on over to <https://gitlab.com> and sign-up for an
 account.
+<!--more-->
 
 ## Why GitLab?
 

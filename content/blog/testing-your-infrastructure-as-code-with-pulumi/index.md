@@ -4,7 +4,6 @@ authors: ["joe-duffy"]
 tags: ["JavaScript","TypeScript","CI/CD","Cloud-Native","Python"]
 date: "2019-04-17"
 
-summary: "Using JavaScript and Python for infrastructure as code delivers great productivity. Did you know that it also lets you test your infrastructure too?"
 meta_image: "RELATIVE_TO_PAGE/InfraTesting.png"
 ---
 
@@ -20,6 +19,7 @@ languages unlocks another important software engineering practice:
 
 In this article, we will see the many ways in which Pulumi lets us test
 our infrastructure as code.
+<!--more-->
 
 ![Testing Infrastructure](./InfraTesting.png)
 

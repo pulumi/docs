@@ -4,7 +4,6 @@ authors: ["alex-clemmer"]
 tags: ["Kubernetes","Azure"]
 date: "2018-10-31"
 
-summary: "In this post we look at how to connect a Kubernetes cluster to a Database with Pulumi, using Microsoft AKS, CosmosDB and Helm."
 meta_image: "RELATIVE_TO_PAGE/helm-pulumi-deploy.gif"
 ---
 
@@ -25,6 +24,7 @@ Kubernetes Secret with the connection details, and then simply let my
 application use these newly available resources. Pulumi gives users the
 primitives they need in order to achieve tasks like this most
 effectively.
+<!--more-->
 
 ## How to connect a Kubernetes app with CosmosDB
 

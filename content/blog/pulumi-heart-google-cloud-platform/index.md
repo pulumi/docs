@@ -4,8 +4,6 @@ authors: ["luke-hoban"]
 tags: ["Serverless","Kubernetes","Features","CI/CD","GCP"]
 date: "2019-04-09"
 
-summary: "Pulumi helps you to take maximum advantage of Google Cloud Platform's full breadth of
-infrastructure and applications capabilities, in your language of choice. In this article, see how."
 meta_image: "RELATIVE_TO_PAGE/pulumi_console.png"
 ---
 
@@ -22,6 +20,7 @@ a combined platform that makes it easy to collaborate, share, and reuse.
 
 In this post, we'll highlight some of the top features of Pulumi that
 make it a joy to work with Pulumi + Google Cloud.
+<!--more-->
 
 ## Infrastructure as Code for the Full Google Cloud Platform
 

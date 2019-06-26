@@ -4,7 +4,6 @@ authors: ["luke-hoban"]
 tags: ["AWS","Features","Logging"]
 date: "2019-04-02"
 
-summary: "The Pulumi CLI provides a way to do logging, without requiring any additional solutions and seamlessly integrates into your Pulumi development workflow. Let’s take a quick look at `pulumi logs` and some of the ways it can be used as part of the inner loop of your Pulumi development."
 meta_image: "RELATIVE_TO_PAGE/terminal-logs.png"
 ---
 
@@ -30,6 +29,7 @@ together logs across all of the different forms of compute you are using
 
 Let's take a quick look at `pulumi logs` and some of the ways it can be
 used as part of the inner loop of your Pulumi development.
+<!--more-->
 
 > *Note: Currently `pulumi logs` supports only logs for applications
 > running in AWS. In the near future it will be expanded to Kuberentes,

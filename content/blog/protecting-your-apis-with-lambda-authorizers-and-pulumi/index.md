@@ -4,8 +4,6 @@ authors: ["erin-krengel"]
 tags: ["Serverless","AWS","Lambda","Auth","APIGateway"]
 date: "2019-04-24"
 
-summary: "Pulumi’s new AWSX package allows you to quickly define a Lambda and an AWS Lambda authorizer to protect it.
-In this post, we will use Auth0 to authorize users making requests to AWS Lambda."
 meta_image: "RELATIVE_TO_PAGE/lambda-authorizer.jpg"
 ---
 
@@ -26,6 +24,7 @@ and Pulumi. We will simplify implementing the OAuth protocol by using
 users. Auth0 provides a universal authentication and authorization
 platform for applications. It has become an extremely popular platform
 for user management because Auth0 makes OAuth easy.
+<!--more-->
 
 ## Concepts
 

@@ -4,7 +4,6 @@ authors: ["cyrus-najmabadi"]
 tags: ["JavaScript","Serverless","AWS"]
 date: "2018-07-10"
 
-summary: "With Amazon's recent announcement to support Simple Queue Service (SQS) as an event source for Lambda, this post details how to use that from Pulumi!"
 ---
 
 [Two weeks ago](https://aws.amazon.com/blogs/aws/aws-lambda-adds-amazon-simple-queue-service-to-supported-event-sources/)
@@ -22,6 +21,7 @@ SQS queue, or creating [Simple Notification Service](https://aws.amazon.com/sns/
 notifications from your
 messages, you can instead just directly trigger whatever Lambda you
 want.
+<!--more-->
 
 ## Example: Using AWS SQS and Lambda to post messages to Slack
 

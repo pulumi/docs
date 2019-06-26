@@ -4,7 +4,6 @@ authors: ["luke-hoban"]
 tags: ["AWS","Kubernetes"]
 date: "2019-01-24"
 
-summary: "Provisioning, managing, and monitoring a Kubernetes cluster is no easy task. AWS EKS and Pulumi to the rescue!"
 meta_image: "RELATIVE_TO_PAGE/easy-eks.png"
 ---
 
@@ -30,6 +29,7 @@ From here, there are two ways to proceed:
 
 - Provision a new cluster with a single CLI command
 - Use infrastructure as code to manage clusters ... including Kubernetes resources themselves!
+<!--more-->
 
 ## Installing Amazon EKS with Pulumi
 

@@ -4,7 +4,6 @@ authors: ["alex-clemmer"]
 tags: ["Infrastructure","Kubernetes","TypeScript"]
 date: "2018-08-24"
 
-summary: "In this post, we’ll see how Pulumi, an open source cloud native development platform, lets you express Kubernetes programs in real programming languages, like TypeScript, instead of endless YAML templates, in addition to delivering simple and reproducible, yet powerful Kubernetes, deployment workflows."
 meta_image: "RELATIVE_TO_PAGE/diff.gif"
 ---
 
@@ -21,6 +20,7 @@ development platform, can not only let you express Kubernetes programs
 in real programming languages, like TypeScript, instead of endless YAML
 templates, but also how Pulumi delivers simple and reproducible, yet
 powerful, Kubernetes deployment workflows.
+<!--more-->
 
 ## Less YAML, More Robustness
 

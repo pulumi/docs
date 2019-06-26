@@ -4,8 +4,6 @@ authors: ["joe-duffy"]
 tags: ["Kubernetes"]
 date: "2018-09-12"
 
-summary: "In this post, we’ll take a look at 11 “pearls” – bite-sized code snippets – that demonstrate using Pulumi to build and deploy Kubernetes
-applications using cloud native infrastructure as code."
 meta_image: "RELATIVE_TO_PAGE/health-checks.gif"
 ---
 
@@ -23,6 +21,7 @@ organized into three categories, each demonstrating a unique scenario:
   delivery of your Kubernetes deployments -- including canaries,
   staged rollouts, leveraging cloud native projects like Envoy and
   Prometheus -- authored in real code.
+<!--more-->
 
 Here is a complete index of the pearls below, in case you want to jump
 around a little:

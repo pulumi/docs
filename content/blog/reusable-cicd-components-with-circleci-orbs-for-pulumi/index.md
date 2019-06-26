@@ -4,8 +4,6 @@ authors: ["chris-smith"]
 tags: ["CI/CD"]
 date: "2018-11-07"
 
-summary: "CircleCI's Orbs provide a way to create reusable components for your CI/CD workflows. And with
-CircleCI Orbs for Pulumi, that extends to your cloud resources too."
 meta_image: "RELATIVE_TO_PAGE/circleci-ui.png"
 ---
 
@@ -22,6 +20,7 @@ Pulumi is proud to be a [CircleCI technology partner](https://circleci.com/partn
 head start on seeing how orbs could make it easier to take Pulumi into
 production within CircleCI. The [Pulumi Orbs for CircleCI](https://circleci.com/orbs/registry/orb/pulumi/pulumi) are
 available *today* for you to start using.
+<!--more-->
 
 ## Pulumi Orbs
 

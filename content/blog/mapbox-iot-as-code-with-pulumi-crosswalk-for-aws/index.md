@@ -4,10 +4,8 @@ authors: ["chris-toomey"]
 tags: ["JavaScript","Serverless","AWS","Infrastructure","Customer"]
 date: "2019-06-12"
 
-summary: "Mapbox IOT-as-Code Solution with Pulumi Crosswalk for AWS"
 meta_image: "RELATIVE_TO_PAGE/aws-architecture-iot.png"
 ---
-
 
 **Guest Author: Chris Toomey, Solution Architect Lead @ Mapbox**
 
@@ -35,6 +33,7 @@ recorded on June 13th 2019 and the Mapbox
 [whitepaper](https://www.mapbox.com/use-cases/asset-tracking/solutions-white-paper/).
 Also refer to this blog of the [Race across America](https://blog.mapbox.com/team-haase-partners-with-mapbox-for-2019-race-across-america-bid-7803a3bdbe49)
 showcased live during the webinar tomorrow.
+<!--more-->
 
 **Prerequisites:** [Install Pulumi]({{< ref "/install" >}});
 [Install Node.js version 8 or later](https://nodejs.org/en/download/) and

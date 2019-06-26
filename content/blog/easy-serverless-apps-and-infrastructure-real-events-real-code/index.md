@@ -4,7 +4,6 @@ authors: ["joe-duffy"]
 tags: ["JavaScript","Serverless","AWS"]
 date: "2019-03-11"
 
-summary: "Program the cloud by creating a serverless app and its infrastructure, using real event handlers, and real code. The way serverless should be!"
 meta_image: "RELATIVE_TO_PAGE/hero.png"
 ---
 
@@ -21,6 +20,7 @@ In this article, we'll see how. There's a broad range of options
 depending on what you want to do, and how your team likes to operate.
 We'll be using AWS and TypeScript, but other clouds and languages are
 available.
+<!--more-->
 
 ## A Simple Serverless App
 

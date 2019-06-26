@@ -4,7 +4,6 @@ authors: ["joe-duffy"]
 tags: ["Serverless","AWS","Containers","Infrastructure","TypeScript"]
 date: "2018-07-25"
 
-summary: "Program the cloud using Pulumi with multi-cloud and cloud-specific containers, serverless, and infrastructure. See why  using real languages is great for infrastructure-as-code in addition to building modern cloud applications."
 ---
 
 In this post, we'll look at 12 "pearls" -- bite-sized code snippets --

@@ -4,7 +4,6 @@ authors: ["joe-duffy"]
 tags: ["AWS","Containers","Kubernetes","EKS"]
 date: "2019-06-20"
 
-summary: "We often help customers deploy containers to AWS. Choosing between ECS, Fargate, and EKS isn't always easy -- let's explore the options."
 meta_image: "RELATIVE_TO_PAGE/pulumi-crosswalk-for-aws.webp"
 ---
 
@@ -16,6 +15,7 @@ instances, and Elastic Kubernetes Service (EKS), delivering the full
 power of Kubernetes. It's not always easy to choose between these, so in
 this article we provide some basic guidance on the tradeoffs you'll
 encounter when choosing.
+<!--more-->
 
 ## The Options
 

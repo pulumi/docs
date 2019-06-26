@@ -4,8 +4,6 @@ authors: ["chris-smith"]
 tags: ["AWS","Infrastructure","TypeScript"]
 date: "2018-07-17"
 
-summary: "This post covers using Pulumi to create the infrastructure for serving a static website on
-AWS including the fun parts such as HTTPS certificates, content distribution networks, and attaching it to a custom domain."
 ---
 
 Hello! This post covers using [Pulumi](/) to create the
@@ -26,6 +24,7 @@ This isn't a hypothetical benefit of using the Pulumi programming model.
 We use a setup similar to the one described in this post for powering
 our own static websites, like [www.pulumi.com](http://www.pulumi.com/)
 and [get.pulumi.com](http://get.pulumi.com).
+<!--more-->
 
 ## Overview
 

@@ -4,7 +4,6 @@ authors: ["cyrus-najmabadi"]
 tags: ["Serverless","TypeScript"]
 date: "2018-10-10"
 
-summary: "In this post, we look at how we enable Pulumi to build and deploy serverless functions in AWS, Azure, or GCP using lambda functions in JavaScript and TypeScript."
 meta_image: "RELATIVE_TO_PAGE/closure.png"
 ---
 
@@ -28,6 +27,7 @@ environment variables should be present, etc.) -- and writing and
 maintaining the code that will execute *in* the function itself when
 triggered. Most developers just want to focus on the latter, write some
 code, and have it work.
+<!--more-->
 
 For [AWS Lambda](https://aws.amazon.com/lambda/), for example, the code
 itself needs to written and packaged up with all its dependencies into a

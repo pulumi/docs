@@ -4,7 +4,6 @@ authors: ["joe-duffy"]
 tags: ["JavaScript","AWS","Containers","Infrastructure","TypeScript"]
 date: "2019-04-30"
 
-summary: "Build and publish a Docker image to a private registry and spin up an AWS Fargate service, with just 28 lines of Node.js and a single `pulumi up` command."
 meta_image: "RELATIVE_TO_PAGE/docker-fargate-history.png"
 ---
 
@@ -20,6 +19,7 @@ balanced service running that container, all in 28 lines of TypeScript
 code and a single `pulumi up` command. The result leverages the best of
 what AWS has to offer, with the entire platform at your fingertips, with
 a single approach. In this article, we'll see how.
+<!--more-->
 
 ## Defining Everything in Code
 

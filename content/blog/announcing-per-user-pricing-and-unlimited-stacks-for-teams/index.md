@@ -3,12 +3,6 @@ title: "Announcing Per User Pricing and Unlimited Stacks for Teams"
 authors: ["joe-duffy"]
 tags: ["Customer"]
 date: "2019-04-19"
-
-summary: "Today we are announcing important changes
-to better align our product and pricing with how we've heard you want to
-use Pulumi in production. We're optimistic that these changes will help
-companies of all sizes choose Pulumi, enabling their teams to deliver
-cloud applications and infrastructure faster and more reliably."
 ---
 
 Since launching last year, thousands of users and hundreds of
@@ -19,6 +13,7 @@ to better align our product and pricing with how we've heard you want to
 use Pulumi in production. We're optimistic that these changes will help
 companies of all sizes choose Pulumi, enabling their teams to deliver
 cloud applications and infrastructure faster and more reliably.
+<!--more-->
 
 The net result is three paid editions:
 
