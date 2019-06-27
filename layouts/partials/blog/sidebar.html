@@ -33,7 +33,7 @@
                         {{ if eq $tag $title }}
                             {{ $classes = "border-blue-600 bg-blue-600 text-white hover:text-white" }}
                         {{ end }}
-                        <a class="px-2 py-1 mr-1 cursor-auto rounded transition-all {{ $classes }}" href="{{ .Page.Permalink }}">
+                        <a class="px-2 py-1 mr-1 rounded transition-all {{ $classes }}" href="{{ .Page.Permalink }}">
                             {{ $tag }}
                         </a>
                     </li>
