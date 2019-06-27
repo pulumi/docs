@@ -29,6 +29,31 @@ menu:
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01721-2019-06-26">0.17.21</a></th>
+            <td>2019/06/26</td>
+            <td>{{< sdk-links version="0.17.21" >}}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01720-2019-06-23">0.17.20</a></th>
+            <td>2019/06/23</td>
+            <td>{{< sdk-links version="0.17.20" >}}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01719-2019-06-23">0.17.19</a></th>
+            <td>2019/06/23</td>
+            <td>{{< sdk-links version="0.17.19" >}}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01718-2019-06-20">0.17.18</a></th>
+            <td>2019/06/20</td>
+            <td>{{< sdk-links version="0.17.18" >}}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01717-2019-06-12">0.17.17</a></th>
+            <td>2019/06/12</td>
+            <td>{{< sdk-links version="0.17.17" >}}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01716-released-june-6-2019">0.17.16</a></th>
             <td>2019/06/06</td>
             <td>{{< sdk-links version="0.17.16" >}}</td>
