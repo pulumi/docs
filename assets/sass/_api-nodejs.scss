@@ -1,0 +1,50 @@
+// Add some styling to the Index/Module sections.
+.pdoc-module-header.toggleButton + .pdoc-module-contents {
+    // Add some margin at the bottom, so it's not so close to the list of .ts files.
+    ul {
+        @apply mb-8;
+    }
+
+    // We want these links to look like normal content links.
+    a {
+        @apply text-blue-600;
+
+        &:hover {
+            @apply text-blue-700;
+        }
+    }
+}
+
+.pdoc-module-header {
+    @apply text-xl;
+
+    // Make the module header match the same as code blocks.
+    @apply bg-gray-100 py-4 px-5 rounded border border-gray-200 my-4 leading-normal;
+
+    // Remove the left margin and color used for toggle buttons in the TOC.
+    &.toggleButton {
+        @apply ml-0;
+        color: inherit;
+    }
+}
+
+.pdoc-member-header {
+    @apply text-lg;
+}
+
+.pdoc-module-contents,
+.pdoc-member-contents {
+    // Add some indentation to make it easier to visually see the hierarchy of the content.
+    @apply ml-4;
+
+    // We want visually recognizable links here.
+    .highlight {
+        a {
+            @apply text-blue-600;
+
+            &:hover {
+                @apply text-blue-700;
+            }
+        }
+    }
+}
