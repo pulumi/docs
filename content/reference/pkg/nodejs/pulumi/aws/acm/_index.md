@@ -309,7 +309,7 @@ const zone = pulumi.output(aws.route53.getZone({
 const certValidation = new aws.route53.Record("cert_validation", {
     records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
     ttl: 60,
-    type: certCertificate.domainValidationOptions[0].resourceRecordType,
+    type: certCertificate.domainValidationOptions[0].resourceRecordType.apply(resourceRecordType => aws.route53.RecordTypes[resourceRecordType]),
     zoneId: zone.id,
 });
 const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
@@ -347,19 +347,19 @@ const zoneAlt = pulumi.output(aws.route53.getZone({
 const certValidation = new aws.route53.Record("cert_validation", {
     records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
     ttl: 60,
-    type: certCertificate.domainValidationOptions[0].resourceRecordType,
+    type: certCertificate.domainValidationOptions[0].resourceRecordType.apply(resourceRecordType => aws.route53.RecordTypes[resourceRecordType]),
     zoneId: zone.id,
 });
 const certValidationAlt1 = new aws.route53.Record("cert_validation_alt1", {
     records: [certCertificate.domainValidationOptions[1].resourceRecordValue],
     ttl: 60,
-    type: certCertificate.domainValidationOptions[1].resourceRecordType,
+    type: certCertificate.domainValidationOptions[1].resourceRecordType.apply(resourceRecordType => aws.route53.RecordTypes[resourceRecordType]),
     zoneId: zone.id,
 });
 const certValidationAlt2 = new aws.route53.Record("cert_validation_alt2", {
     records: [certCertificate.domainValidationOptions[2].resourceRecordValue],
     ttl: 60,
-    type: certCertificate.domainValidationOptions[2].resourceRecordType,
+    type: certCertificate.domainValidationOptions[2].resourceRecordType.apply(resourceRecordType => aws.route53.RecordTypes[resourceRecordType]),
     zoneId: zoneAlt.id,
 });
 const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
