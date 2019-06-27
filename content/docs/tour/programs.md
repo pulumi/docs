@@ -1,6 +1,6 @@
 ---
 title: Beyond the Basics
-expanded_url: /tour/programs/
+expanded_url: /docs/tour/programs/
 menu:
   tour:
     identifier: programs
