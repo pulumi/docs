@@ -1,21 +1,21 @@
 {{ define "hero" }}
-    <header class="bg-blue-600 text-white px-4">
-        <div class="container mx-auto text-white md:flex">
-            <div class="md:w-1/2 md:mr-8 py-16">
-                <h1 class="text-white font-bold">
+    <header class="header-hero">
+        <div class="header-hero-items container mx-auto">
+            <div class="header-hero-item">
+                <h1>
                     {{ .Title }}
                 </h1>
-                <p class="text-xl leading-relaxed text-blue-100">
+                <p>
                     {{ .Params.description }}
                 </p>
-                <div class="mt-4">
-                    <a class="inline-block btn btn-lg btn-translucent text-sm mt-4" href="{{ .Params.download_url }}">
+                <div class="header-hero-actions">
+                    <a class="btn btn-lg btn-translucent" href="{{ .Params.download_url }}">
                         <i class="far fa-file-pdf mr-1"></i>
                         Download the Whitepaper
                     </a>
                 </div>
             </div>
-            <div class="md:w-1/2 md:ml-8 pt-16 text-white text-center">
+            <div class="header-hero-item text-center">
                 <img class="inline-block w-64" src="{{ .Params.hero_image }}" alt="Whitepaper image">
             </div>
         </div>
@@ -23,11 +23,11 @@
 {{ end }}
 
 {{ define "main" }}
-    <nav class="bg-black text-white px-4 sticky top-0">
+    <nav class="nav-section-sticky">
         <div class="container mx-auto">
-            <ul class="flex list-none justify-between">
+            <ul>
                 {{ range .Params.sections }}
-                    <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#{{ .anchor }}">{{ .label }}</a></li>
+                    <li><a href="#{{ .anchor }}">{{ .label }}</a></li>
                 {{ end }}
             </ul>
         </div>

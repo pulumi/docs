@@ -1,26 +1,27 @@
 {{ define "hero" }}
-    <header class="bg-purple-500 py-24 text-white px-4 md:px-0">
-        <div class="container mx-auto text-white text-center">
+    <header class="header-hero">
+        <div class="container mx-auto text-center flex-col">
             <img class="block mx-auto max-w-md mb-12" src="/images/product/PulumiCrosswalkWhite.png">
-            <h1 class="text-white">Well-Architected Infrastructure as Code for AWS</h1>
-            <p class="text-purple-100 text-xl max-w-xl mx-auto mb-12">
+            <h1>Well-Architected Infrastructure as Code for AWS</h1>
+            <p>
                 The easiest way to AWS &mdash; from development to production.
             </p>
-            <a class="mx-auto font-bold text-xl" href="/blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws">
-                Read the blog</a>.
+            <span>
+                <a class="mx-auto font-bold text-xl" href="/blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws">Read the blog</a>.
+            </span>
         </div>
     </header>
 {{ end }}
 
 {{ define "main" }}
-    <nav class="bg-black text-white px-4 sticky top-0">
+    <nav class="nav-section-sticky">
         <div class="container mx-auto">
-            <ul class="flex list-none justify-between">
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#benefits">Benefits </a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#case-study">Case Study </a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#architecture">Architecture </a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#applications">Applications </a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#infrastructure">Infrastructure</a></li>
+            <ul>
+                <li><a href="#benefits">Benefits </a></li>
+                <li><a href="#case-study">Case Study </a></li>
+                <li><a href="#architecture">Architecture </a></li>
+                <li><a href="#applications">Applications </a></li>
+                <li><a href="#infrastructure">Infrastructure</a></li>
             </ul>
         </div>
     </nav>

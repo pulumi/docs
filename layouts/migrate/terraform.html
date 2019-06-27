@@ -1,8 +1,8 @@
 {{ define "hero" }}
-    <header class="bg-purple-500 py-24 text-white">
-        <div class="container mx-auto text-white md:flex">
-            <div class="md:w-1/2">
-                <h1 class="text-white">Migrating to Pulumi from Terraform</h1>
+    <header class="header-hero">
+        <div class="header-hero-items container mx-auto">
+            <div class="header-hero-item">
+                <h1>Migrating to Pulumi from Terraform</h1>
                 <p>
                     HashiCorp Terraform provides a custom DSL called Hashicorp
                     Configuration Language (HCL) to describe and provision infrastructure
@@ -15,7 +15,7 @@
                     programming.
                 </p>
             </div>
-            <div class="md:w-1/2 md:ml-8 text-white">
+            <div class="header-hero-item">
                 {{ partial "hubspot-form.html" (dict "hubspotFormID" "123cfbdb-9ce4-4d33-a9b7-c30302463d7a") }}
             </div>
         </div>
@@ -23,22 +23,22 @@
 {{ end }}
 
 {{ define "main" }}
-    <nav class="bg-black sticky top-0">
+    <nav class="nav-section-sticky">
         <div class="container mx-auto">
-            <ul class="flex list-none justify-between">
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#benefits">Benefits</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#code">Code</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#how-it-works">How it Works</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#case-study">Case Study</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#get-started">Get Started</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#contact-us">Contact Us</a></li>
+            <ul>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#case-study">Case Study</a></li>
+                <li><a href="#get-started">Get Started</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
     {{ partial "benefits-v2.html" . }}
 
-    <section id="code" class="bg-gray-200 py-16">
+    <section id="code" class="bg-gray-200 py-16 px-4 md:px-0">
         <div class="container mx-auto">
             <div class="md:flex my-8">
                 <div class="md:w-1/2 md:mr-4">

@@ -1,19 +1,21 @@
 {{ define "hero" }}
-    <header class="bg-purple-500 py-24 text-white px-4 md:px-0">
-        <div class="container mx-auto text-white text-center">
-            <h1 class="text-white">Program the cloud.</h1>
+    <header class="header-hero">
+        <div class="container mx-auto">
+            <div class="mx-auto text-center">
+                <h1>Program the cloud.</h1>
+            </div>
         </div>
     </header>
 {{ end }}
 
 {{ define "main" }}
-    <nav class="bg-black sticky top-0">
+    <nav class="nav-section-sticky">
         <div class="container mx-auto">
-            <ul class="flex list-none justify-between">
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#team">Team</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#board">Board</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#newsroom">Newsroom</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#contact">Contact Us</a></li>
+            <ul>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#board">Board</a></li>
+                <li><a href="#newsroom">Newsroom</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </div>
     </nav>
@@ -34,8 +36,8 @@
     </section>
 
     <section id="team" class="px-4 md:px-0">
-        <div class="container md:mx-auto max-w-5xl">
-            <ul class="inline-flex flex-wrap list-none justify-center">
+        <div class="container md:mx-auto max-w-5xl text-center">
+            <ul class="inline-flex flex-wrap list-none justify-center p-0">
                 {{ range $.Site.Data.team.team }}
                     {{ if eq .status "active" }}
                         <li class="text-center w-48 mx-4 mb-8">
@@ -49,8 +51,7 @@
                     {{ end }}
                 {{ end }}
             </ul>
-
-            <div class="text-center ml-4 mb-16 mt-8">
+            <div class="text-center mb-16 mt-8">
                 <h3>Join the Team</h3>
                 <p>
                     <a href="{{ relref . "/careers" }}">Browse our open positions</a>.
@@ -60,9 +61,9 @@
     </section>
 
     <section id="board" class="bg-gray-200 py-16 px-4 md:px-0">
-        <div class="container md:mx-auto max-w-5xl">
+        <div class="container md:mx-auto max-w-5xl text-center">
             <h2 class="mb-8 text-center">Board of Directors</h2>
-            <ul class="inline-flex flex-wrap list-none justify-center">
+            <ul class="inline-flex flex-wrap list-none justify-center p-0">
                 {{ range $.Site.Data.team.board }}
                     <li class="text-center w-48 mx-4 mb-8">
                         <img class="rounded mb-4 shadow-md mx-auto" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" >
