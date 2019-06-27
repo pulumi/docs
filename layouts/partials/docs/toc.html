@@ -1,21 +1,50 @@
 {{ $menu := .Site.Menus.main }}
 {{ $has_toc := false }}
+
+{{ $isDocsHome := eq .RelPermalink "/docs/" }}
+{{ $isGetStarted := false }}
+{{ $isReference := false }}
+{{ $isAWS := false }}
+
 {{ if hasPrefix .RelPermalink "/docs/quickstart/" }}
     {{ $menu = .Site.Menus.quickstart }}
     {{ $has_toc = true }}
+    {{ $isGetStarted = true }}
 {{ else if hasPrefix .RelPermalink "/docs/reference/"}}
     {{ $menu = .Site.Menus.reference }}
     {{ $has_toc = true }}
+    {{ $isReference = true }}
 {{ else if hasPrefix .RelPermalink "/docs/tour/" }}
     {{ $menu = .Site.Menus.tour }}
     {{ $has_toc = true }}
 {{ else if hasPrefix .RelPermalink "/docs/aws/" }}
     {{ $menu = .Site.Menus.aws }}
     {{ $has_toc = true }}
+    {{ $isAWS = true }}
 {{ end }}
 
-{{ if $has_toc }}
-    <aside class="toc">
+<aside class="toc">
+    <h3 class="no-anchor">
+        <a href="{{ relref . "/docs" }}">Docs</a>
+    </h3>
+
+    {{ if or $isDocsHome (or $isGetStarted $isReference) }}
+        <h4 class="no-anchor">
+            <a href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+        </h4>
+    {{ end }}
+    {{ if or $isDocsHome $isReference }}
+        <h4 class="no-anchor">
+            <a href="{{ relref . "/docs/reference" }}">Reference</a>
+        </h4>
+    {{ end }}
+    {{ if $isAWS }}
+        <h4 class="no-anchor">
+            <a href="{{ relref . "/docs/aws" }}">AWS</a>
+        </h4>
+    {{ end }}
+
+    {{ if $has_toc }}
         {{ $page := . }}
         {{ $lastindex := (sub (len $menu) 1) }}
 
@@ -65,8 +94,15 @@
                 </div>
             </div>
         {{ end }}
-    </aside>
-{{ end }}
+
+    {{ end }}
+
+    {{ if $isGetStarted }}
+        <h4 class="no-anchor">
+            <a href="{{ relref . "/docs/reference" }}">Reference</a>
+        </h4>
+    {{ end }}
+</aside>
 
 {{ define "tocsub" }}
     {{ $page := .page }}

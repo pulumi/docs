@@ -11,7 +11,6 @@ aws_here: "https://aws.amazon.com/athena/"
 layout: aws-single
 menu:
   aws:
-    parent: aws
     name: Athena
 ---
 

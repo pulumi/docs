@@ -10,7 +10,6 @@ aws_here: "https://aws.amazon.com/sqs/"
 layout: aws-single
 menu:
   aws:
-    parent: aws
     name: SQS
 ---
 

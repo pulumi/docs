@@ -16,12 +16,20 @@
     }
 }
 
+.btn-secondary {
+    @apply bg-white border-2 border-blue-500 text-blue-600;
+
+    &:hover {
+        @apply bg-blue-500 text-white;
+    }
+}
+
 .btn-sm {
     @apply text-xs;
 }
 
 .btn-lg {
-    @apply btn py-3 px-5;
+    @apply py-3 px-5;
 }
 
 .btn-orange {

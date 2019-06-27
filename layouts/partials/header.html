@@ -37,7 +37,7 @@
                     <li>
                         {{ $active := hasPrefix $.RelPermalink .URL }}
                         <a href="{{ .URL }}" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 md:mx-4 border text-sm hover:border-purple-500 hover:bg-purple-600 rounded {{ if $active }}border-purple-500 bg-purple-600{{ else }}border-purple-700{{ end }}">
-                            {{ .Title }}
+                            {{ .Name }}
                         </a>
                     </li>
                 {{ end }}

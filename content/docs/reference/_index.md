@@ -1,9 +1,5 @@
 ---
 title: Reference
-menu:
-  reference:
-    identifier: reference
-    weight: 1
 ---
 
 This section provides all published technical documentation for the Pulumi platform.

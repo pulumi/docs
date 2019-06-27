@@ -1,8 +1,5 @@
 ---
 title: Get Started
-menu:
-  quickstart:
-    weight: 1
 ---
 
 Get started provisioning infrastructure with Pulumi.
