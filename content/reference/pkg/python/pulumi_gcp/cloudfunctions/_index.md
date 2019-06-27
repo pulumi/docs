@@ -28,7 +28,10 @@ and
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-defined name of the function. Function names must be unique globally.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Project of the function. If it is not provided, the provider project is used.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region of function. Currently can be only “us-central1”. If it is not provided, the provider region is used.</li>
-<li><strong>runtime</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The runtime in which the function is going to run. If empty, defaults to <code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code>.</li>
+<li><strong>runtime</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The runtime in which the function is going to run. One
+of <code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;nodejs8&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;nodejs10&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;python37&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;go111&quot;</span></code>. If empty,
+defaults to <code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code>. It’s recommended that you override the default, as
+<code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code> is deprecated.</li>
 <li><strong>service_account_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If provided, the self-provided service account to run the function with.</li>
 <li><strong>source_archive_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCS bucket containing the zip archive which contains the function.</li>
 <li><strong>source_archive_object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source archive object (file) in archive bucket.</li>
@@ -110,7 +113,10 @@ Cannot be set alongside <code class="docutils literal notranslate"><span class="
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudfunctions.Function.runtime">
 <code class="descname">runtime</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.runtime" title="Permalink to this definition">¶</a></dt>
-<dd><p>The runtime in which the function is going to run. If empty, defaults to <code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code>.</p>
+<dd><p>The runtime in which the function is going to run. One
+of <code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;nodejs8&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;nodejs10&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;python37&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;go111&quot;</span></code>. If empty,
+defaults to <code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code>. It’s recommended that you override the default, as
+<code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code> is deprecated.</p>
 </dd></dl>
 
 <dl class="attribute">

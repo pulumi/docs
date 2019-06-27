@@ -152,11 +152,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 when a policy violation is detected. Examples of channels include email, SMS,
 and third-party messaging applications. Fields containing sensitive information
 like authentication tokens or contact info are only partially populated on retrieval.</p>
+<p>Notification Channels are designed to be flexible and are made up of a supported <code class="docutils literal notranslate"><span class="pre">type</span></code>
+and labels to configure that channel. Each <code class="docutils literal notranslate"><span class="pre">type</span></code> has specific labels that need to be
+present for that channel to be correctly configured. The labels that are required to be
+present for one channel <code class="docutils literal notranslate"><span class="pre">type</span></code> are often different than those requried for another.
+Due to these loose constraints it’s often best to set up a channel through the UI
+and import to Terraform when setting up a brand new channel type to determine which
+labels are required.</p>
+<p>A list of supported channels per project the <code class="docutils literal notranslate"><span class="pre">list</span></code> endpoint can be
+accessed programatically or through the api explorer at  <a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list">https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list</a> .
+This provides the channel type and all of the required labels that must be passed.</p>
 <p>To get more information about NotificationChannel, see:</p>
 <ul class="simple">
 <li><a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannels">API documentation</a></li>
 <li>How-to Guides<ul>
-<li><a class="reference external" href="https://cloud.google.com/monitoring/api/v3/">Official Documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/monitoring/support/notification-options">Notification Options</a></li>
+<li><a class="reference external" href="https://cloud.google.com/monitoring/api/v3/">Monitoring API Documentation</a></li>
 </ul>
 </li>
 </ul>

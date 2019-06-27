@@ -5,7 +5,7 @@
 <span id="container"></span><h1>container<a class="headerlink" href="#module-pulumi_gcp.container" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.container.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.container.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>additional_zones=None</em>, <em>addons_config=None</em>, <em>cluster_autoscaling=None</em>, <em>cluster_ipv4_cidr=None</em>, <em>database_encryption=None</em>, <em>default_max_pods_per_node=None</em>, <em>description=None</em>, <em>enable_binary_authorization=None</em>, <em>enable_kubernetes_alpha=None</em>, <em>enable_legacy_abac=None</em>, <em>enable_tpu=None</em>, <em>initial_node_count=None</em>, <em>ip_allocation_policy=None</em>, <em>location=None</em>, <em>logging_service=None</em>, <em>maintenance_policy=None</em>, <em>master_auth=None</em>, <em>master_authorized_networks_config=None</em>, <em>min_master_version=None</em>, <em>monitoring_service=None</em>, <em>name=None</em>, <em>network=None</em>, <em>network_policy=None</em>, <em>node_config=None</em>, <em>node_locations=None</em>, <em>node_pools=None</em>, <em>node_version=None</em>, <em>pod_security_policy_config=None</em>, <em>private_cluster_config=None</em>, <em>project=None</em>, <em>region=None</em>, <em>remove_default_node_pool=None</em>, <em>resource_labels=None</em>, <em>subnetwork=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.container.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>additional_zones=None</em>, <em>addons_config=None</em>, <em>authenticator_groups_config=None</em>, <em>cluster_autoscaling=None</em>, <em>cluster_ipv4_cidr=None</em>, <em>database_encryption=None</em>, <em>default_max_pods_per_node=None</em>, <em>description=None</em>, <em>enable_binary_authorization=None</em>, <em>enable_intranode_visibility=None</em>, <em>enable_kubernetes_alpha=None</em>, <em>enable_legacy_abac=None</em>, <em>enable_tpu=None</em>, <em>initial_node_count=None</em>, <em>ip_allocation_policy=None</em>, <em>location=None</em>, <em>logging_service=None</em>, <em>maintenance_policy=None</em>, <em>master_auth=None</em>, <em>master_authorized_networks_config=None</em>, <em>min_master_version=None</em>, <em>monitoring_service=None</em>, <em>name=None</em>, <em>network=None</em>, <em>network_policy=None</em>, <em>node_config=None</em>, <em>node_locations=None</em>, <em>node_pools=None</em>, <em>node_version=None</em>, <em>pod_security_policy_config=None</em>, <em>private_cluster_config=None</em>, <em>project=None</em>, <em>region=None</em>, <em>remove_default_node_pool=None</em>, <em>resource_labels=None</em>, <em>subnetwork=None</em>, <em>vertical_pod_autoscaling=None</em>, <em>workload_identity_config=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Google Kubernetes Engine (GKE) cluster. For more information see
 <a class="reference external" href="https://cloud.google.com/container-engine/docs/clusters">the official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters">the API reference</a>.</p>
@@ -29,6 +29,9 @@ cluster, nodes will only be created in these zones. <code class="docutils litera
 deprecated in favour of <code class="docutils literal notranslate"><span class="pre">node_locations</span></code>.</li>
 <li><strong>addons_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The configuration for addons supported by GKE.
 Structure is documented below.</li>
+<li><strong>authenticator_groups_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) Configuration for the
+<a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite">Google Groups for GKE</a> feature.
+Structure is documented below.</li>
 <li><strong>cluster_autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>)
 Configuration for per-cluster autoscaling features, including node autoprovisioning. See <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">guide in Google docs</a>. Structure is documented below.</p>
 </li>
@@ -44,6 +47,9 @@ for more information.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the cluster.</li>
 <li><strong>enable_binary_authorization</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – ) Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.</li>
+<li><strong>enable_intranode_visibility</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>)
+Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.</p>
+</li>
 <li><strong>enable_kubernetes_alpha</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
 and will be automatically deleted after 30 days.</li>
@@ -144,6 +150,14 @@ setting <code class="docutils literal notranslate"><span class="pre">initial_nod
 <li><strong>resource_labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The GCE resource labels (a map of key/value pairs) to be applied to the cluster.</li>
 <li><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or self_link of the Google Compute Engine subnetwork in
 which the cluster’s instances are launched.</li>
+<li><strong>vertical_pod_autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>)
+Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+Structure is documented below.</p>
+</li>
+<li><strong>workload_identity_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>)
+Workload Identity allows Kubernetes service accounts to act as a user-managed
+<a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts">Google IAM Service Account</a>.</p>
+</li>
 <li><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone that the cluster master and nodes
 should be created in. If specified, this cluster will be a zonal cluster. <code class="docutils literal notranslate"><span class="pre">zone</span></code>
 has been deprecated in favour of <code class="docutils literal notranslate"><span class="pre">location</span></code>.</li>
@@ -168,6 +182,14 @@ deprecated in favour of <code class="docutils literal notranslate"><span class="
 <dt id="pulumi_gcp.container.Cluster.addons_config">
 <code class="descname">addons_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.addons_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration for addons supported by GKE.
+Structure is documented below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.container.Cluster.authenticator_groups_config">
+<code class="descname">authenticator_groups_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.authenticator_groups_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>) Configuration for the
+<a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite">Google Groups for GKE</a> feature.
 Structure is documented below.</p>
 </dd></dl>
 
@@ -213,6 +235,13 @@ for more information.</p>
 <code class="descname">enable_binary_authorization</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_binary_authorization" title="Permalink to this definition">¶</a></dt>
 <dd><p>) Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.container.Cluster.enable_intranode_visibility">
+<code class="descname">enable_intranode_visibility</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_intranode_visibility" title="Permalink to this definition">¶</a></dt>
+<dd><p>)
+Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -453,6 +482,15 @@ setting <code class="docutils literal notranslate"><span class="pre">initial_nod
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.container.Cluster.services_ipv4_cidr">
+<code class="descname">services_ipv4_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.services_ipv4_cidr" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IP address range of the Kubernetes services in this
+cluster, in <a class="reference external" href="http:en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a>
+notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.3.4/29</span></code>). Service addresses are typically put in the last
+<code class="docutils literal notranslate"><span class="pre">/16</span></code> from the container CIDR.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.subnetwork">
 <code class="descname">subnetwork</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.subnetwork" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name or self_link of the Google Compute Engine subnetwork in
@@ -465,6 +503,22 @@ which the cluster’s instances are launched.</p>
 <dd><p>(<a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Beta</a>) The IP address range of the Cloud TPUs in this cluster, in
 <a class="reference external" href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a>
 notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.3.4/29</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.container.Cluster.vertical_pod_autoscaling">
+<code class="descname">vertical_pod_autoscaling</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.vertical_pod_autoscaling" title="Permalink to this definition">¶</a></dt>
+<dd><p>)
+Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+Structure is documented below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.container.Cluster.workload_identity_config">
+<code class="descname">workload_identity_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.workload_identity_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>)
+Workload Identity allows Kubernetes service accounts to act as a user-managed
+<a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts">Google IAM Service Account</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -517,7 +571,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.container.GetClusterResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.container.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>additional_zones=None</em>, <em>addons_configs=None</em>, <em>cluster_autoscalings=None</em>, <em>cluster_ipv4_cidr=None</em>, <em>database_encryptions=None</em>, <em>default_max_pods_per_node=None</em>, <em>description=None</em>, <em>enable_binary_authorization=None</em>, <em>enable_kubernetes_alpha=None</em>, <em>enable_legacy_abac=None</em>, <em>enable_tpu=None</em>, <em>endpoint=None</em>, <em>initial_node_count=None</em>, <em>instance_group_urls=None</em>, <em>ip_allocation_policies=None</em>, <em>location=None</em>, <em>logging_service=None</em>, <em>maintenance_policies=None</em>, <em>master_auths=None</em>, <em>master_authorized_networks_configs=None</em>, <em>master_version=None</em>, <em>min_master_version=None</em>, <em>monitoring_service=None</em>, <em>name=None</em>, <em>network=None</em>, <em>network_policies=None</em>, <em>node_configs=None</em>, <em>node_locations=None</em>, <em>node_pools=None</em>, <em>node_version=None</em>, <em>pod_security_policy_configs=None</em>, <em>private_cluster_configs=None</em>, <em>project=None</em>, <em>region=None</em>, <em>remove_default_node_pool=None</em>, <em>resource_labels=None</em>, <em>subnetwork=None</em>, <em>tpu_ipv4_cidr_block=None</em>, <em>zone=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.container.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>additional_zones=None</em>, <em>addons_configs=None</em>, <em>authenticator_groups_configs=None</em>, <em>cluster_autoscalings=None</em>, <em>cluster_ipv4_cidr=None</em>, <em>database_encryptions=None</em>, <em>default_max_pods_per_node=None</em>, <em>description=None</em>, <em>enable_binary_authorization=None</em>, <em>enable_intranode_visibility=None</em>, <em>enable_kubernetes_alpha=None</em>, <em>enable_legacy_abac=None</em>, <em>enable_tpu=None</em>, <em>endpoint=None</em>, <em>initial_node_count=None</em>, <em>instance_group_urls=None</em>, <em>ip_allocation_policies=None</em>, <em>location=None</em>, <em>logging_service=None</em>, <em>maintenance_policies=None</em>, <em>master_auths=None</em>, <em>master_authorized_networks_configs=None</em>, <em>master_version=None</em>, <em>min_master_version=None</em>, <em>monitoring_service=None</em>, <em>name=None</em>, <em>network=None</em>, <em>network_policies=None</em>, <em>node_configs=None</em>, <em>node_locations=None</em>, <em>node_pools=None</em>, <em>node_version=None</em>, <em>pod_security_policy_configs=None</em>, <em>private_cluster_configs=None</em>, <em>project=None</em>, <em>region=None</em>, <em>remove_default_node_pool=None</em>, <em>resource_labels=None</em>, <em>services_ipv4_cidr=None</em>, <em>subnetwork=None</em>, <em>tpu_ipv4_cidr_block=None</em>, <em>vertical_pod_autoscalings=None</em>, <em>workload_identity_configs=None</em>, <em>zone=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.GetClusterResult.id">

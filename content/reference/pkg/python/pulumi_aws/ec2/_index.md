@@ -2123,6 +2123,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.ec2.GetCustomerGatewayResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetCustomerGatewayResult</code><span class="sig-paren">(</span><em>bgp_asn=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>ip_address=None</em>, <em>tags=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetCustomerGatewayResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getCustomerGateway.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetCustomerGatewayResult.bgp_asn">
+<code class="descname">bgp_asn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetCustomerGatewayResult.bgp_asn" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Optional) The gateway’s Border Gateway Protocol (BGP) Autonomous System Number (ASN).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetCustomerGatewayResult.ip_address">
+<code class="descname">ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetCustomerGatewayResult.ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Optional) The IP address of the gateway’s Internet-routable external interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetCustomerGatewayResult.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetCustomerGatewayResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Map of key-value pairs assigned to the gateway.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetCustomerGatewayResult.type">
+<code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetCustomerGatewayResult.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Optional) The type of customer gateway. The only type AWS supports at this time is “ipsec.1”.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.ec2.GetInstanceResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetInstanceResult</code><span class="sig-paren">(</span><em>ami=None</em>, <em>arn=None</em>, <em>associate_public_ip_address=None</em>, <em>availability_zone=None</em>, <em>credit_specifications=None</em>, <em>disable_api_termination=None</em>, <em>ebs_block_devices=None</em>, <em>ebs_optimized=None</em>, <em>ephemeral_block_devices=None</em>, <em>filters=None</em>, <em>get_password_data=None</em>, <em>get_user_data=None</em>, <em>host_id=None</em>, <em>iam_instance_profile=None</em>, <em>instance_id=None</em>, <em>instance_state=None</em>, <em>instance_tags=None</em>, <em>instance_type=None</em>, <em>key_name=None</em>, <em>monitoring=None</em>, <em>network_interface_id=None</em>, <em>password_data=None</em>, <em>placement_group=None</em>, <em>private_dns=None</em>, <em>private_ip=None</em>, <em>public_dns=None</em>, <em>public_ip=None</em>, <em>root_block_devices=None</em>, <em>security_groups=None</em>, <em>source_dest_check=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>tenancy=None</em>, <em>user_data=None</em>, <em>user_data_base64=None</em>, <em>vpc_security_group_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstance.</p>
@@ -3009,7 +3039,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetVpcEndpointResult</code><span class="sig-paren">(</span><em>cidr_blocks=None</em>, <em>dns_entries=None</em>, <em>id=None</em>, <em>network_interface_ids=None</em>, <em>policy=None</em>, <em>prefix_list_id=None</em>, <em>private_dns_enabled=None</em>, <em>route_table_ids=None</em>, <em>security_group_ids=None</em>, <em>service_name=None</em>, <em>state=None</em>, <em>subnet_ids=None</em>, <em>vpc_endpoint_type=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetVpcEndpointResult</code><span class="sig-paren">(</span><em>cidr_blocks=None</em>, <em>dns_entries=None</em>, <em>id=None</em>, <em>network_interface_ids=None</em>, <em>owner_id=None</em>, <em>policy=None</em>, <em>prefix_list_id=None</em>, <em>private_dns_enabled=None</em>, <em>requester_managed=None</em>, <em>route_table_ids=None</em>, <em>security_group_ids=None</em>, <em>service_name=None</em>, <em>state=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>vpc_endpoint_type=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpcEndpoint.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult.cidr_blocks">
@@ -3027,6 +3057,12 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult.network_interface_ids">
 <code class="descname">network_interface_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.network_interface_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetVpcEndpointResult.owner_id">
+<code class="descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.owner_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the AWS account that owns the VPC endpoint.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3048,6 +3084,12 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ec2.GetVpcEndpointResult.requester_managed">
+<code class="descname">requester_managed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.requester_managed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not the VPC Endpoint is being managed by its service - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult.route_table_ids">
 <code class="descname">route_table_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.route_table_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more route tables associated with the VPC Endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</p>
@@ -3066,6 +3108,12 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ec2.GetVpcEndpointResult.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult.vpc_endpoint_type">
 <code class="descname">vpc_endpoint_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.vpc_endpoint_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Endpoint type, <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> or <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p>
@@ -3075,7 +3123,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetVpcEndpointServiceResult</code><span class="sig-paren">(</span><em>acceptance_required=None</em>, <em>availability_zones=None</em>, <em>base_endpoint_dns_names=None</em>, <em>owner=None</em>, <em>private_dns_name=None</em>, <em>service=None</em>, <em>service_name=None</em>, <em>service_type=None</em>, <em>vpc_endpoint_policy_supported=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetVpcEndpointServiceResult</code><span class="sig-paren">(</span><em>acceptance_required=None</em>, <em>availability_zones=None</em>, <em>base_endpoint_dns_names=None</em>, <em>manages_vpc_endpoints=None</em>, <em>owner=None</em>, <em>private_dns_name=None</em>, <em>service=None</em>, <em>service_id=None</em>, <em>service_name=None</em>, <em>service_type=None</em>, <em>tags=None</em>, <em>vpc_endpoint_policy_supported=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpcEndpointService.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.acceptance_required">
@@ -3096,6 +3144,12 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.manages_vpc_endpoints">
+<code class="descname">manages_vpc_endpoints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult.manages_vpc_endpoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not the service manages its VPC endpoints - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.owner">
 <code class="descname">owner</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult.owner" title="Permalink to this definition">¶</a></dt>
 <dd><p>The AWS account ID of the service owner or <code class="docutils literal notranslate"><span class="pre">amazon</span></code>.</p>
@@ -3108,9 +3162,21 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.service_id">
+<code class="descname">service_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult.service_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the endpoint service.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.service_type">
 <code class="descname">service_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult.service_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The service type, <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> or <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7304,7 +7370,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcEndpoint">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpoint</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_accept=None</em>, <em>policy=None</em>, <em>private_dns_enabled=None</em>, <em>route_table_ids=None</em>, <em>security_group_ids=None</em>, <em>service_name=None</em>, <em>subnet_ids=None</em>, <em>vpc_endpoint_type=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpoint</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_accept=None</em>, <em>policy=None</em>, <em>private_dns_enabled=None</em>, <em>route_table_ids=None</em>, <em>security_group_ids=None</em>, <em>service_name=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>vpc_endpoint_type=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VPC Endpoint resource.</p>
 <blockquote>
 <div><strong>NOTE on VPC Endpoints and VPC Endpoint Associations:</strong> Terraform provides both standalone VPC Endpoint Associations for
@@ -7328,6 +7394,7 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 <li><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ID of one or more security groups to associate with the network interface. Required for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</li>
 <li><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service name, in the form <code class="docutils literal notranslate"><span class="pre">com.amazonaws.region.service</span></code> for AWS services.</li>
 <li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>vpc_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC endpoint type, <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> or <code class="docutils literal notranslate"><span class="pre">Interface</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC in which the endpoint will be used.</li>
 </ul>
@@ -7360,6 +7427,12 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ec2.VpcEndpoint.owner_id">
+<code class="descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.owner_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the AWS account that owns the VPC endpoint.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpoint.policy">
 <code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A policy to attach to the endpoint that controls access to the service. Defaults to full access. All <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> and some <code class="docutils literal notranslate"><span class="pre">Interface</span></code> endpoints support policies - see the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html">relevant AWS documentation</a> for more details. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</p>
@@ -7376,6 +7449,12 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 <code class="descname">private_dns_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.private_dns_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether or not to associate a private hosted zone with the specified VPC. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.VpcEndpoint.requester_managed">
+<code class="descname">requester_managed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.requester_managed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not the VPC Endpoint is being managed by its service - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7406,6 +7485,12 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 <dt id="pulumi_aws.ec2.VpcEndpoint.subnet_ids">
 <code class="descname">subnet_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.subnet_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.VpcEndpoint.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7629,7 +7714,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcEndpointService">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpointService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>acceptance_required=None</em>, <em>allowed_principals=None</em>, <em>network_load_balancer_arns=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointService" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpointService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>acceptance_required=None</em>, <em>allowed_principals=None</em>, <em>network_load_balancer_arns=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VPC Endpoint Service resource.
 Service consumers can create an <em>Interface</em> VPC Endpoint to connect to the service.</p>
 <blockquote>
@@ -7648,6 +7733,7 @@ and will overwrite the association.</div></blockquote>
 <li><strong>acceptance_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>allowed_principals</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ARNs of one or more principals allowed to discover the endpoint service.</li>
 <li><strong>network_load_balancer_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ARNs of one or more Network Load Balancers for the endpoint service.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
 </tr>
@@ -7678,6 +7764,12 @@ and will overwrite the association.</div></blockquote>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ec2.VpcEndpointService.manages_vpc_endpoints">
+<code class="descname">manages_vpc_endpoints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointService.manages_vpc_endpoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not the service manages its VPC endpoints - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpointService.network_load_balancer_arns">
 <code class="descname">network_load_balancer_arns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointService.network_load_balancer_arns" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARNs of one or more Network Load Balancers for the endpoint service.</p>
@@ -7705,6 +7797,12 @@ and will overwrite the association.</div></blockquote>
 <dt id="pulumi_aws.ec2.VpcEndpointService.state">
 <code class="descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointService.state" title="Permalink to this definition">¶</a></dt>
 <dd><p>The state of the VPC endpoint service.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.VpcEndpointService.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointService.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="method">
@@ -8755,6 +8853,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_aws.ec2.get_customer_gateway">
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_customer_gateway</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_customer_gateway" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AWS Customer Gateway.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_aws.ec2.get_instance">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_instance</code><span class="sig-paren">(</span><em>filters=None</em>, <em>get_password_data=None</em>, <em>get_user_data=None</em>, <em>instance_id=None</em>, <em>instance_tags=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an Amazon EC2 Instance for use in other
@@ -8881,14 +8985,14 @@ VPC.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_vpc_endpoint">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc_endpoint</code><span class="sig-paren">(</span><em>id=None</em>, <em>service_name=None</em>, <em>state=None</em>, <em>vpc_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc_endpoint</code><span class="sig-paren">(</span><em>id=None</em>, <em>service_name=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Endpoint data source provides details about
 a specific VPC endpoint.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_vpc_endpoint_service">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc_endpoint_service</code><span class="sig-paren">(</span><em>service=None</em>, <em>service_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint_service" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc_endpoint_service</code><span class="sig-paren">(</span><em>service=None</em>, <em>service_name=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Endpoint Service data source details about a specific service that
 can be specified when creating a VPC endpoint within the region configured in the provider.</p>
 </dd></dl>

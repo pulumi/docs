@@ -12,14 +12,17 @@
 :param pulumi.ResourceOptions <strong>opts</strong>: An optional bag of options that controls this resource’s behavior.
 :param pulumi.Input[str] cluster: If present, the name of the kubeconfig cluster to use.
 :param pulumi.Input[str] context: If present, the name of the kubeconfig context to use.
-:param pulumi.Input[str] kubeconfig: The contents of a kubeconfig file. If this is set, this config will be used instead</p>
+:param pulumi.Input[str] kubeconfig: The contents of a kubeconfig file.</p>
 <blockquote>
-<div>of $KUBECONFIG.</div></blockquote>
+<div>If this is set, this config will be used instead of $KUBECONFIG.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If present, the namespace scope to use.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If present, the default namespace to use.
+This flag is ignored for cluster-scoped resources.
+Note: if .metadata.namespace is set on a resource, that value takes
+precedence over the provider default.</td>
 </tr>
 </tbody>
 </table>

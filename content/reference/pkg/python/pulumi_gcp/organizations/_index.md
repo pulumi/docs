@@ -149,7 +149,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetClientConfigResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">GetClientConfigResult</code><span class="sig-paren">(</span><em>access_token=None</em>, <em>project=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">GetClientConfigResult</code><span class="sig-paren">(</span><em>access_token=None</em>, <em>project=None</em>, <em>region=None</em>, <em>zone=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClientConfig.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetClientConfigResult.access_token">
@@ -167,6 +167,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.organizations.GetClientConfigResult.region">
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region to operate under.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.organizations.GetClientConfigResult.zone">
+<code class="descname">zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.GetClientConfigResult.zone" title="Permalink to this definition">¶</a></dt>
+<dd><p>The zone to operate under.</p>
 </dd></dl>
 
 <dl class="attribute">

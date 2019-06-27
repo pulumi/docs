@@ -535,7 +535,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ses.IdentityNotificationTopic">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ses.</code><code class="descname">IdentityNotificationTopic</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>identity=None</em>, <em>notification_type=None</em>, <em>topic_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.IdentityNotificationTopic" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ses.</code><code class="descname">IdentityNotificationTopic</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>identity=None</em>, <em>include_original_headers=None</em>, <em>notification_type=None</em>, <em>topic_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.IdentityNotificationTopic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resource for managing SES Identity Notification Topics</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -545,6 +545,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN).</li>
+<li><strong>include_original_headers</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether SES should include original email headers in SNS notifications of this type. <em>false</em> by default.</li>
 <li><strong>notification_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: <em>Bounce</em>, <em>Complaint</em> or <em>Delivery</em>.</li>
 <li><strong>topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to “” (an empty string) to disable publishing.</li>
 </ul>
@@ -556,6 +557,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.IdentityNotificationTopic.identity">
 <code class="descname">identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ses.IdentityNotificationTopic.identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ses.IdentityNotificationTopic.include_original_headers">
+<code class="descname">include_original_headers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ses.IdentityNotificationTopic.include_original_headers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether SES should include original email headers in SNS notifications of this type. <em>false</em> by default.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -592,6 +599,83 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_aws.ses.IdentityNotificationTopic.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.IdentityNotificationTopic.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ses.IdentityPolicy">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ses.</code><code class="descname">IdentityPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>identity=None</em>, <em>name=None</em>, <em>policy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.IdentityPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a SES Identity Policy. More information about SES Sending Authorization Policies can be found in the <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization-policies.html">SES Developer Guide</a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name or Amazon Resource Name (ARN) of the SES Identity.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the policy.</li>
+<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON string of the policy. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.ses.IdentityPolicy.identity">
+<code class="descname">identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ses.IdentityPolicy.identity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name or Amazon Resource Name (ARN) of the SES Identity.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ses.IdentityPolicy.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ses.IdentityPolicy.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ses.IdentityPolicy.policy">
+<code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ses.IdentityPolicy.policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>JSON string of the policy. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ses.IdentityPolicy.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.IdentityPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ses.IdentityPolicy.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.IdentityPolicy.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">

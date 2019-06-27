@@ -21,20 +21,20 @@ aliases:
 <li><a href="#run">function run</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/cmd/run/index.ts">cmd/run/index.ts</a> <a href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/cmd/run/run.ts">cmd/run/run.ts</a> 
+<a href="https://github.com/pulumi/pulumi/blob/29320af68beed0cf48cff5ad72c9e541c86b252d/sdk/nodejs/cmd/run/index.ts">cmd/run/index.ts</a> <a href="https://github.com/pulumi/pulumi/blob/29320af68beed0cf48cff5ad72c9e541c86b252d/sdk/nodejs/cmd/run/run.ts">cmd/run/run.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="nodeJSProcessExitedAfterLoggingUserActionableMessage">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/cmd/run/index.ts#L47">const <b>nodeJSProcessExitedAfterLoggingUserActionableMessage</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/29320af68beed0cf48cff5ad72c9e541c86b252d/sdk/nodejs/cmd/run/index.ts#L47">const <b>nodeJSProcessExitedAfterLoggingUserActionableMessage</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> nodeJSProcessExitedAfterLoggingUserActionableMessage: 32 = <span class='s2'>32</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="run">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/cmd/run/run.ts#L134">function <b>run</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/29320af68beed0cf48cff5ad72c9e541c86b252d/sdk/nodejs/cmd/run/run.ts#L134">function <b>run</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}

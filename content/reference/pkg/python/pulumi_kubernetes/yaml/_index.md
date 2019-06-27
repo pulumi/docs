@@ -5,7 +5,7 @@
 <span id="yaml"></span><h1>yaml<a class="headerlink" href="#module-pulumi_kubernetes.yaml" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_kubernetes.yaml.ConfigFile">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.yaml.</code><code class="descname">ConfigFile</code><span class="sig-paren">(</span><em>name: str</em>, <em>file_id: str</em>, <em>opts: Optional[pulumi.resource.ResourceOptions] = None</em>, <em>transformations: Optional[List[Callable]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.ConfigFile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.yaml.</code><code class="descname">ConfigFile</code><span class="sig-paren">(</span><em>name: str</em>, <em>file_id: str</em>, <em>opts: Optional[pulumi.resource.ResourceOptions] = None</em>, <em>transformations: Optional[List[Callable]] = None</em>, <em>resource_prefix: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.ConfigFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>ConfigFile creates a set of Kubernetes resources from a Kubernetes YAML file. If <code class="docutils literal notranslate"><span class="pre">config.name</span></code>
 is not specified, <code class="docutils literal notranslate"><span class="pre">ConfigFile</span></code> assumes the argument <code class="docutils literal notranslate"><span class="pre">name</span></code> is the filename.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -18,6 +18,8 @@ is not specified, <code class="docutils literal notranslate"><span class="pre">C
 <li><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>ResourceOptions</em></a><em>]</em>) – A bag of optional settings that control a resource’s behavior.</li>
 <li><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Callable</em><em>]</em><em>]</em>) – A set of transformations to apply to Kubernetes
 resource definitions before registering with engine.</li>
+<li><strong>resource_prefix</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional prefix for the auto-generated resource names.
+Example: A resource created with resource_prefix=”foo” would produce a resource named “foo-resourceName”.</li>
 </ul>
 </td>
 </tr>
@@ -3077,7 +3079,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.yaml.PriorityClass">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.yaml.</code><code class="descname">PriorityClass</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>global_default=None</em>, <em>metadata=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.PriorityClass" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.yaml.</code><code class="descname">PriorityClass</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>global_default=None</em>, <em>metadata=None</em>, <em>preemption_policy=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.PriorityClass" title="Permalink to this definition">¶</a></dt>
 <dd><p>DEPRECATED - This group version of PriorityClass is deprecated by
 scheduling.k8s.io/v1/PriorityClass. PriorityClass defines mapping from a priority class name to
 the priority integer value. The value can be any valid integer.</p>
@@ -4568,10 +4570,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_kubernetes.yaml.copy">
+<code class="descclassname">pulumi_kubernetes.yaml.</code><code class="descname">copy</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shallow copy operation on arbitrary Python objects.</p>
+<p>See the module’s <strong>doc</strong> string for more info.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_kubernetes.yaml.deepcopy">
 <code class="descclassname">pulumi_kubernetes.yaml.</code><code class="descname">deepcopy</code><span class="sig-paren">(</span><em>x</em>, <em>memo=None</em>, <em>_nil=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.deepcopy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deep copy operation on arbitrary Python objects.</p>
 <p>See the module’s <strong>doc</strong> string for more info.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_kubernetes.yaml.getargspec">
+<code class="descclassname">pulumi_kubernetes.yaml.</code><code class="descname">getargspec</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.getargspec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the names and default values of a function’s parameters.</p>
+<p>A tuple of four things is returned: (args, varargs, keywords, defaults).
+‘args’ is a list of the argument names, including keyword-only argument names.
+‘varargs’ and ‘keywords’ are the names of the * and ** parameters or None.
+‘defaults’ is an n-tuple of the default values of the last n parameters.</p>
+<p>This function is deprecated, as it does not support annotations or
+keyword-only parameters and will raise ValueError if either is present
+on the supplied callable.</p>
+<p>For a more structured introspection API, use inspect.signature() instead.</p>
+<p>Alternatively, use getfullargspec() for an API with a similar namedtuple
+based interface, but full support for annotations and keyword-only
+parameters.</p>
+<p>Deprecated since Python 3.5, use <code class="docutils literal notranslate"><span class="pre">inspect.getfullargspec()</span></code>.</p>
 </dd></dl>
 
 </div>

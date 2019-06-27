@@ -303,7 +303,7 @@ during scale in events.</li>
 Note that if you suspend either the <code class="docutils literal notranslate"><span class="pre">Launch</span></code> or <code class="docutils literal notranslate"><span class="pre">Terminate</span></code> process types, it can prevent your autoscaling group from functioning properly.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tag blocks. Tags documented below.</li>
 <li><strong>tags_collection</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tag blocks (maps). Tags documented below.</li>
-<li><strong>target_group_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of <code class="docutils literal notranslate"><span class="pre">aws_alb_target_group</span></code> ARNs, for use with Application Load Balancing.</li>
+<li><strong>target_group_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of <code class="docutils literal notranslate"><span class="pre">aws_alb_target_group</span></code> ARNs, for use with Application or Network Load Balancing.</li>
 <li><strong>termination_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are <code class="docutils literal notranslate"><span class="pre">OldestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchConfiguration</span></code>, <code class="docutils literal notranslate"><span class="pre">ClosestToNextInstanceHour</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchTemplate</span></code>, <code class="docutils literal notranslate"><span class="pre">AllocationStrategy</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</li>
 <li><strong>vpc_zone_identifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of subnet IDs to launch resources in.</li>
 <li><strong>wait_for_elb_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Setting this will cause Terraform to wait
@@ -497,7 +497,7 @@ Note that if you suspend either the <code class="docutils literal notranslate"><
 <dl class="attribute">
 <dt id="pulumi_aws.autoscaling.Group.target_group_arns">
 <code class="descname">target_group_arns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.target_group_arns" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of <code class="docutils literal notranslate"><span class="pre">aws_alb_target_group</span></code> ARNs, for use with Application Load Balancing.</p>
+<dd><p>A list of <code class="docutils literal notranslate"><span class="pre">aws_alb_target_group</span></code> ARNs, for use with Application or Network Load Balancing.</p>
 </dd></dl>
 
 <dl class="attribute">

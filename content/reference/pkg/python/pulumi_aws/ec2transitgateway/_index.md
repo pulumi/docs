@@ -4,6 +4,24 @@
 <div class="section" id="module-pulumi_aws.ec2transitgateway">
 <span id="ec2transitgateway"></span><h1>ec2transitgateway<a class="headerlink" href="#module-pulumi_aws.ec2transitgateway" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
+<dt id="pulumi_aws.ec2transitgateway.GetDirectConnectGatewayAttachmentResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">GetDirectConnectGatewayAttachmentResult</code><span class="sig-paren">(</span><em>dx_gateway_id=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetDirectConnectGatewayAttachmentResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDirectConnectGatewayAttachment.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.GetDirectConnectGatewayAttachmentResult.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetDirectConnectGatewayAttachmentResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value tags for the EC2 Transit Gateway Attachment</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.GetDirectConnectGatewayAttachmentResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetDirectConnectGatewayAttachmentResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.GetRouteTableResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">GetRouteTableResult</code><span class="sig-paren">(</span><em>default_association_route_table=None</em>, <em>default_propagation_route_table=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetRouteTableResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRouteTable.</p>
@@ -770,6 +788,137 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ec2transitgateway.VpcAttachmentAccepter">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">VpcAttachmentAccepter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>tags=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_default_route_table_association=None</em>, <em>transit_gateway_default_route_table_propagation=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages the accepter’s side of an EC2 Transit Gateway VPC Attachment.</p>
+<p>When a cross-account (requester’s AWS account differs from the accepter’s AWS account) EC2 Transit Gateway VPC Attachment
+is created, an EC2 Transit Gateway VPC Attachment resource is automatically created in the accepter’s account.
+The requester can use the <code class="docutils literal notranslate"><span class="pre">aws_ec2_transit_gateway_vpc_attachment</span></code> resource to manage its side of the connection
+and the accepter can use the <code class="docutils literal notranslate"><span class="pre">aws_ec2_transit_gateway_vpc_attachment_accepter</span></code> resource to “adopt” its side of the
+connection into management.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value tags for the EC2 Transit Gateway VPC Attachment.</li>
+<li><strong>transit_gateway_attachment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the EC2 Transit Gateway Attachment to manage.</li>
+<li><strong>transit_gateway_default_route_table_association</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
+<li><strong>transit_gateway_default_route_table_propagation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.dns_support">
+<code class="descname">dns_support</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.dns_support" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether DNS support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.ipv6_support">
+<code class="descname">ipv6_support</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.ipv6_support" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether IPv6 support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.subnet_ids">
+<code class="descname">subnet_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.subnet_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifiers of EC2 Subnets.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value tags for the EC2 Transit Gateway VPC Attachment.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.transit_gateway_attachment_id">
+<code class="descname">transit_gateway_attachment_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.transit_gateway_attachment_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the EC2 Transit Gateway Attachment to manage.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.transit_gateway_default_route_table_association">
+<code class="descname">transit_gateway_default_route_table_association</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.transit_gateway_default_route_table_association" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.transit_gateway_default_route_table_propagation">
+<code class="descname">transit_gateway_default_route_table_propagation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.transit_gateway_default_route_table_propagation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.transit_gateway_id">
+<code class="descname">transit_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.transit_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of EC2 Transit Gateway.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.vpc_id">
+<code class="descname">vpc_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.vpc_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of EC2 VPC.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.vpc_owner_id">
+<code class="descname">vpc_owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.vpc_owner_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the AWS account that owns the EC2 VPC.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachmentAccepter.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.ec2transitgateway.get_direct_connect_gateway_attachment">
+<code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">get_direct_connect_gateway_attachment</code><span class="sig-paren">(</span><em>dx_gateway_id=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.get_direct_connect_gateway_attachment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get information on an EC2 Transit Gateway’s attachment to a Direct Connect Gateway.</p>
 </dd></dl>
 
 <dl class="function">

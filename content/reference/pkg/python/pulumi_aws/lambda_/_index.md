@@ -282,7 +282,7 @@ large files efficiently.</p>
 <li><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id14"><span class="problematic" id="id15">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</li>
 <li><strong>s3_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 key of an object containing the function’s deployment package. Conflicts with``filename<a href="#id16"><span class="problematic" id="id17">``</span></a>.</li>
 <li><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename<a href="#id18"><span class="problematic" id="id19">``</span></a>.</li>
-<li><strong>source_code_hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either``filename<code class="docutils literal notranslate"><span class="pre">or</span></code>s3_key<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">The</span> <span class="pre">usual</span> <span class="pre">way</span> <span class="pre">to</span> <span class="pre">set</span> <span class="pre">this</span> <span class="pre">is</span></code>${base64sha256(file(“file.zip”))}<a href="#id20"><span class="problematic" id="id21">``</span></a>, where “file.zip” is the local filename of the lambda function source archive.</li>
+<li><strong>source_code_hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either``filename<code class="docutils literal notranslate"><span class="pre">or</span></code>s3_key<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">The</span> <span class="pre">usual</span> <span class="pre">way</span> <span class="pre">to</span> <span class="pre">set</span> <span class="pre">this</span> <span class="pre">is</span></code>filebase64sha256(“file.zip”)<code class="docutils literal notranslate"><span class="pre">(Terraform</span> <span class="pre">0.11.12</span> <span class="pre">and</span> <span class="pre">later)</span> <span class="pre">or</span></code>base64sha256(file(“file.zip”))<a href="#id20"><span class="problematic" id="id21">``</span></a>(Terraform 0.11.11 and earlier), where “file.zip” is the local filename of the lambda function source archive.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</li>
 <li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time your Lambda Function has to run in seconds. Defaults to``3`. See [Limits][5]</li>
 <li><strong>vpc_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]</li>
@@ -415,7 +415,7 @@ large files efficiently.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.lambda_.Function.source_code_hash">
 <code class="descname">source_code_hash</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.Function.source_code_hash" title="Permalink to this definition">¶</a></dt>
-<dd><p>Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either <code class="docutils literal notranslate"><span class="pre">filename</span></code> or <code class="docutils literal notranslate"><span class="pre">s3_key</span></code>. The usual way to set this is <code class="docutils literal notranslate"><span class="pre">${base64sha256(file(&quot;file.zip&quot;))}</span></code>, where “file.zip” is the local filename of the lambda function source archive.</p>
+<dd><p>Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either <code class="docutils literal notranslate"><span class="pre">filename</span></code> or <code class="docutils literal notranslate"><span class="pre">s3_key</span></code>. The usual way to set this is <code class="docutils literal notranslate"><span class="pre">filebase64sha256(&quot;file.zip&quot;)</span></code> (Terraform 0.11.12 and later) or <code class="docutils literal notranslate"><span class="pre">base64sha256(file(&quot;file.zip&quot;))</span></code> (Terraform 0.11.11 and earlier), where “file.zip” is the local filename of the lambda function source archive.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -712,7 +712,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lambda_.LayerVersion">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">LayerVersion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compatible_runtimes=None</em>, <em>description=None</em>, <em>filename=None</em>, <em>layer_name=None</em>, <em>license_info=None</em>, <em>s3_bucket=None</em>, <em>s3_key=None</em>, <em>s3_object_version=None</em>, <em>source_code_hash=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.LayerVersion" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">LayerVersion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compatible_runtimes=None</em>, <em>description=None</em>, <em>code=None</em>, <em>layer_name=None</em>, <em>license_info=None</em>, <em>s3_bucket=None</em>, <em>s3_key=None</em>, <em>s3_object_version=None</em>, <em>source_code_hash=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.LayerVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Lambda Layer Version resource. Lambda Layers allow you to reuse shared bits of code across multiple lambda functions.</p>
 <p>For information about Lambda Layers and how to use them, see [AWS Lambda Layers][1]</p>
 <p>AWS Lambda Layers expect source code to be provided as a deployment package whose structure varies depending on which <code class="docutils literal notranslate"><span class="pre">compatible_runtimes</span></code> this layer specifies.
@@ -732,7 +732,7 @@ large files efficiently.</p>
 <li><strong>compatible*runtimes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.</p>
 </li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of what your Lambda Layer does.</li>
-<li><strong>filename</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to the function’s deployment package within the local filesystem. If defined, The <cite>s3*`</cite>-prefixed options cannot be used.</li>
+<li><strong>code</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.Archive</em><em>]</em>) – The path to the function’s deployment package within the local filesystem. If defined, The <cite>s3*`</cite>-prefixed options cannot be used.</li>
 <li><strong>layer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for your Lambda Layer</li>
 <li><strong>license_info</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – License info for your Lambda Layer. See [License Info][3].</li>
 <li><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id24"><span class="problematic" id="id25">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</li>
@@ -769,8 +769,8 @@ large files efficiently.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_aws.lambda_.LayerVersion.filename">
-<code class="descname">filename</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.LayerVersion.filename" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_aws.lambda_.LayerVersion.code">
+<code class="descname">code</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.LayerVersion.code" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path to the function’s deployment package within the local filesystem. If defined, The <code class="docutils literal notranslate"><span class="pre">s3_</span></code>-prefixed options cannot be used.</p>
 </dd></dl>
 
