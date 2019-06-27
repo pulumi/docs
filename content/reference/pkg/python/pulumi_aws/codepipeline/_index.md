@@ -5,7 +5,7 @@
 <span id="codepipeline"></span><h1>codepipeline<a class="headerlink" href="#module-pulumi_aws.codepipeline" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.codepipeline.Pipeline">
-<em class="property">class </em><code class="descclassname">pulumi_aws.codepipeline.</code><code class="descname">Pipeline</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>artifact_store=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>stages=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codepipeline.Pipeline" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.codepipeline.</code><code class="descname">Pipeline</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>artifact_store=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>stages=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codepipeline.Pipeline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodePipeline.</p>
 <blockquote>
 <div><strong>NOTE on ``aws_codepipeline``:</strong> - the <code class="docutils literal notranslate"><span class="pre">GITHUB_TOKEN</span></code> environment variable must be set if the GitHub provider is specified.</div></blockquote>
@@ -29,6 +29,7 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the pipeline.</li>
 <li><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
 </tr>
@@ -59,6 +60,12 @@
 <dt id="pulumi_aws.codepipeline.Pipeline.role_arn">
 <code class="descname">role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codepipeline.Pipeline.role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.codepipeline.Pipeline.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codepipeline.Pipeline.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="method">
@@ -103,7 +110,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.codepipeline.Webhook">
-<em class="property">class </em><code class="descclassname">pulumi_aws.codepipeline.</code><code class="descname">Webhook</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication=None</em>, <em>authentication_configuration=None</em>, <em>filters=None</em>, <em>name=None</em>, <em>target_action=None</em>, <em>target_pipeline=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codepipeline.Webhook" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.codepipeline.</code><code class="descname">Webhook</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication=None</em>, <em>authentication_configuration=None</em>, <em>filters=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>target_action=None</em>, <em>target_pipeline=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codepipeline.Webhook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodePipeline Webhook.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -116,6 +123,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>authentication_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">auth</span></code> block. Required for <code class="docutils literal notranslate"><span class="pre">IP</span></code> and <code class="docutils literal notranslate"><span class="pre">GITHUB_HMAC</span></code>. Auth blocks are documented below.</li>
 <li><strong>filters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">filter</span></code> blocks. Filter blocks are documented below.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the webhook.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>target_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.</li>
 <li><strong>target_pipeline</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the pipeline.</li>
 </ul>
@@ -145,6 +153,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.codepipeline.Webhook.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codepipeline.Webhook.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the webhook.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.codepipeline.Webhook.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codepipeline.Webhook.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="attribute">

@@ -232,7 +232,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description for the Amazon CloudWatch metric of this rule.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the rule.</li>
-<li><strong>predicates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One of ByteMatchSet, IPSet, SizeConstraintSet, SqlInjectionMatchSet, or XssMatchSet objects to include in a rule.</li>
+<li><strong>predicates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The objects to include in a rule (documented below).</li>
 <li><strong>rate_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid value is IP.</li>
 <li><strong>rate_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of requests, which have an identical value in the field specified by the RateKey, allowed in a five-minute period. Minimum value is 2000.</li>
 </ul>
@@ -255,7 +255,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.RateBasedRule.predicates">
 <code class="descname">predicates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.RateBasedRule.predicates" title="Permalink to this definition">¶</a></dt>
-<dd><p>One of ByteMatchSet, IPSet, SizeConstraintSet, SqlInjectionMatchSet, or XssMatchSet objects to include in a rule.</p>
+<dd><p>The objects to include in a rule (documented below).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -471,7 +471,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description for the Amazon CloudWatch metric of this rule.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the rule.</li>
-<li><strong>predicates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The objects to include in a rule.</li>
+<li><strong>predicates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The objects to include in a rule (documented below).</li>
 </ul>
 </td>
 </tr>
@@ -492,7 +492,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.Rule.predicates">
 <code class="descname">predicates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.Rule.predicates" title="Permalink to this definition">¶</a></dt>
-<dd><p>The objects to include in a rule.</p>
+<dd><p>The objects to include in a rule (documented below).</p>
 </dd></dl>
 
 <dl class="method">

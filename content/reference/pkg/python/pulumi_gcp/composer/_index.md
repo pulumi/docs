@@ -95,4 +95,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pulumi_gcp.composer.GetImageVersionsResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.composer.</code><code class="descname">GetImageVersionsResult</code><span class="sig-paren">(</span><em>image_versions=None</em>, <em>project=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.composer.GetImageVersionsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getImageVersions.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.composer.GetImageVersionsResult.image_versions">
+<code class="descname">image_versions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.composer.GetImageVersionsResult.image_versions" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of composer image versions available in the given project and location. Each <code class="docutils literal notranslate"><span class="pre">image_version</span></code> contains:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.composer.GetImageVersionsResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.composer.GetImageVersionsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_gcp.composer.get_image_versions">
+<code class="descclassname">pulumi_gcp.composer.</code><code class="descname">get_image_versions</code><span class="sig-paren">(</span><em>project=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.composer.get_image_versions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides access to available Cloud Composer versions in a region for a given project.</p>
+</dd></dl>
+
 </div>

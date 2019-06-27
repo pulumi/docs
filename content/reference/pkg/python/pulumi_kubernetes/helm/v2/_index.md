@@ -35,7 +35,7 @@ resource’s behavior.</li>
 
 <dl class="class">
 <dt id="pulumi_kubernetes.helm.v2.ChartOpts">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">ChartOpts</code><span class="sig-paren">(</span><em>chart: Union[str, Awaitable[str], Output[T]], namespace: Union[str, Awaitable[str], Output[T], None] = None, values: Optional[Mapping[str, Union[Any, Awaitable[Any], Output[T]]]] = None, transformations: Optional[List[Callable]] = None, repo: Union[str, Awaitable[str], Output[T], None] = None, version: Union[str, Awaitable[str], Output[T], None] = None, fetch_opts: Union[pulumi_kubernetes.helm.v2.helm.FetchOpts, Awaitable[pulumi_kubernetes.helm.v2.helm.FetchOpts], Output[T], None] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.ChartOpts" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">ChartOpts</code><span class="sig-paren">(</span><em>chart: Union[str, Awaitable[str], Output[T]], namespace: Union[str, Awaitable[str], Output[T], None] = None, values: Optional[Mapping[str, Union[Any, Awaitable[Any], Output[T]]]] = None, transformations: Optional[List[Callable]] = None, resource_prefix: Optional[str] = None, repo: Union[str, Awaitable[str], Output[T], None] = None, version: Union[str, Awaitable[str], Output[T], None] = None, fetch_opts: Union[pulumi_kubernetes.helm.v2.helm.FetchOpts, Awaitable[pulumi_kubernetes.helm.v2.helm.FetchOpts], Output[T], None] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.ChartOpts" title="Permalink to this definition">¶</a></dt>
 <dd><p>ChartOpts is a bag of configuration options for a remote Helm chart.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -50,6 +50,8 @@ chart URL or <code class="docutils literal notranslate"><span class="pre">repo/c
 <li><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Callable</em><em>]</em>) – Optional list of transformations to apply to
 resources that will be created by this chart prior to creation. Allows customization of the
 chart behaviour without directly modifying the chart itself.</li>
+<li><strong>resource_prefix</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional prefix for the auto-generated resource names.
+Example: A resource created with resource_prefix=”foo” would produce a resource named “foo-resourceName”.</li>
 <li><strong>repo</strong> (<em>Optional</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – The repository containing the desired chart.  If not
 provided, [chart] must be a fully qualified chart URL or repo/chartname.</li>
 <li><strong>version</strong> (<em>Optional</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – The version of the chart to deploy. If not provided,
@@ -66,25 +68,6 @@ fetching of the Helm chart.</li>
 <code class="descname">chart</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.helm.v2.ChartOpts.chart" title="Permalink to this definition">¶</a></dt>
 <dd><p>The chart to deploy.  If [repo] is provided, this chart name is looked up in the given repository.
 Otherwise, this chart name must be a fully qualified chart URL or <code class="docutils literal notranslate"><span class="pre">repo/chartname</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_kubernetes.helm.v2.ChartOpts.namespace">
-<code class="descname">namespace</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.helm.v2.ChartOpts.namespace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Optional namespace to install chart resources into.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_kubernetes.helm.v2.ChartOpts.values">
-<code class="descname">values</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.helm.v2.ChartOpts.values" title="Permalink to this definition">¶</a></dt>
-<dd><p>Optional overrides for chart values.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_kubernetes.helm.v2.ChartOpts.transformations">
-<code class="descname">transformations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.helm.v2.ChartOpts.transformations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Optional list of transformations to apply to resources that will be created by this chart prior to
-creation. Allows customization of the chart behaviour without directly modifying the chart itself.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -247,7 +230,7 @@ this is ignored.</p>
 
 <dl class="class">
 <dt id="pulumi_kubernetes.helm.v2.LocalChartOpts">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">LocalChartOpts</code><span class="sig-paren">(</span><em>path: Union[str, Awaitable[str], Output[T]], namespace: Union[str, Awaitable[str], Output[T], None] = None, values: Optional[Mapping[str, Union[Any, Awaitable[Any], Output[T]]]] = None, transformations: Optional[List[Callable]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.LocalChartOpts" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">LocalChartOpts</code><span class="sig-paren">(</span><em>path: Union[str, Awaitable[str], Output[T]], namespace: Union[str, Awaitable[str], Output[T], None] = None, values: Optional[Mapping[str, Union[Any, Awaitable[Any], Output[T]]]] = None, transformations: Optional[List[Callable]] = None, resource_prefix: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.LocalChartOpts" title="Permalink to this definition">¶</a></dt>
 <dd><p>LocalChartOpts is a bag of configuration options for a local Helm chart.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -261,6 +244,8 @@ this is ignored.</p>
 <li><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Callable</em><em>]</em><em>]</em>) – Optional list of transformations to apply to
 resources that will be created by this chart prior to creation. Allows customization of the
 chart behaviour without directly modifying the chart itself.</li>
+<li><strong>resource_prefix</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional prefix for the auto-generated resource names.
+Example: A resource created with resource_prefix=”foo” would produce a resource named “foo-resourceName”.</li>
 </ul>
 </td>
 </tr>
@@ -270,25 +255,6 @@ chart behaviour without directly modifying the chart itself.</li>
 <dt id="pulumi_kubernetes.helm.v2.LocalChartOpts.path">
 <code class="descname">path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.helm.v2.LocalChartOpts.path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path to the chart directory which contains the <code class="docutils literal notranslate"><span class="pre">Chart.yaml</span></code> file.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_kubernetes.helm.v2.LocalChartOpts.namespace">
-<code class="descname">namespace</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.helm.v2.LocalChartOpts.namespace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Optional namespace to install chart resources into.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_kubernetes.helm.v2.LocalChartOpts.values">
-<code class="descname">values</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.helm.v2.LocalChartOpts.values" title="Permalink to this definition">¶</a></dt>
-<dd><p>Optional overrides for chart values.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_kubernetes.helm.v2.LocalChartOpts.transformations">
-<code class="descname">transformations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.helm.v2.LocalChartOpts.transformations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Optional list of transformations to apply to resources that will be created by this chart prior to
-creation. Allows customization of the chart behaviour without directly modifying the chart itself.</p>
 </dd></dl>
 
 </dd></dl>

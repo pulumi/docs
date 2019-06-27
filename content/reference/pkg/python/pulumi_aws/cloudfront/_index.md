@@ -64,7 +64,9 @@ the distribution status to change from <code class="docutils literal notranslate
 this to<code class="docutils literal notranslate"><span class="pre">false</span></code> will skip the process. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
 <li><strong>web_acl_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If you’re using AWS WAF to filter CloudFront
 requests, the Id of the AWS WAF web ACL that is associated with the
-distribution.</li>
+distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
+region and the credentials configuring this argument must have
+<code class="docutils literal notranslate"><span class="pre">waf:GetWebACL</span></code> permissions assigned.</li>
 </ul>
 </td>
 </tr>
@@ -268,7 +270,9 @@ this to<code class="docutils literal notranslate"><span class="pre">false</span>
 <code class="descname">web_acl_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.web_acl_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>If you’re using AWS WAF to filter CloudFront
 requests, the Id of the AWS WAF web ACL that is associated with the
-distribution.</p>
+distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
+region and the credentials configuring this argument must have
+<code class="docutils literal notranslate"><span class="pre">waf:GetWebACL</span></code> permissions assigned.</p>
 </dd></dl>
 
 <dl class="method">

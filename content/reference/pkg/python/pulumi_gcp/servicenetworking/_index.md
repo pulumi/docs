@@ -6,10 +6,7 @@
 <dl class="class">
 <dt id="pulumi_gcp.servicenetworking.Connection">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.servicenetworking.</code><code class="descname">Connection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>network=None</em>, <em>reserved_peering_ranges=None</em>, <em>service=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
-<p>Manages a private VPC connection with a GCP service provider. For more information see
+<dd><p>Manages a private VPC connection with a GCP service provider. For more information see
 <a class="reference external" href="https://cloud.google.com/vpc/docs/configure-private-services-access#creating-connection">the official documentation</a>
 and
 <a class="reference external" href="https://cloud.google.com/service-infrastructure/docs/service-networking/reference/rest/v1/services.connections">API</a>.</p>

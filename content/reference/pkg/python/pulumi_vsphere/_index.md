@@ -4581,7 +4581,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.Provider">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_unverified_ssl=None</em>, <em>client_debug=None</em>, <em>client_debug_path=None</em>, <em>client_debug_path_run=None</em>, <em>password=None</em>, <em>persist_session=None</em>, <em>rest_session_path=None</em>, <em>user=None</em>, <em>vcenter_server=None</em>, <em>vim_session_path=None</em>, <em>vsphere_server=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_unverified_ssl=None</em>, <em>client_debug=None</em>, <em>client_debug_path=None</em>, <em>client_debug_path_run=None</em>, <em>password=None</em>, <em>persist_session=None</em>, <em>rest_session_path=None</em>, <em>user=None</em>, <em>vcenter_server=None</em>, <em>vim_keep_alive=None</em>, <em>vim_session_path=None</em>, <em>vsphere_server=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the vsphere package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
@@ -5892,7 +5892,7 @@ setting for this virtual machine. Can be one of <code class="docutils literal no
 Default: <code class="docutils literal notranslate"><span class="pre">automatic</span></code>.</li>
 <li><strong>extra_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Extra configuration data for this virtual
 machine. Can be used to supply advanced parameters not normally in
-configuration, such as data for cloud-config (under the guestinfo namespace).</li>
+configuration, such as instance metadata.</li>
 <li><strong>firmware</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The firmware interface to use on the virtual machine.
 Can be one of <code class="docutils literal notranslate"><span class="pre">bios</span></code> or <code class="docutils literal notranslate"><span class="pre">EFI</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">bios</span></code>.</li>
 <li><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to the folder to put this virtual machine in,
@@ -6202,7 +6202,7 @@ Default: <code class="docutils literal notranslate"><span class="pre">automatic<
 <code class="descname">extra_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.extra_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extra configuration data for this virtual
 machine. Can be used to supply advanced parameters not normally in
-configuration, such as data for cloud-config (under the guestinfo namespace).</p>
+configuration, such as instance metadata.</p>
 </dd></dl>
 
 <dl class="attribute">

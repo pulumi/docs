@@ -1382,6 +1382,108 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.network.GetGatewayConnectionResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">GetGatewayConnectionResult</code><span class="sig-paren">(</span><em>authorization_key=None</em>, <em>connection_protocol=None</em>, <em>egress_bytes_transferred=None</em>, <em>enable_bgp=None</em>, <em>express_route_circuit_id=None</em>, <em>express_route_gateway_bypass=None</em>, <em>ingress_bytes_transferred=None</em>, <em>ipsec_policies=None</em>, <em>local_network_gateway_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>peer_virtual_network_gateway_id=None</em>, <em>resource_group_name=None</em>, <em>resource_guid=None</em>, <em>routing_weight=None</em>, <em>shared_key=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>use_policy_based_traffic_selectors=None</em>, <em>virtual_network_gateway_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetGatewayConnectionResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getGatewayConnection.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetGatewayConnectionResult.authorization_key">
+<code class="descname">authorization_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetGatewayConnectionResult.authorization_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The authorization key associated with the
+Express Route Circuit. This field is present only if the type is an
+ExpressRoute connection.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetGatewayConnectionResult.enable_bgp">
+<code class="descname">enable_bgp</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetGatewayConnectionResult.enable_bgp" title="Permalink to this definition">¶</a></dt>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, BGP (Border Gateway Protocol) is enabled
+for this connection.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetGatewayConnectionResult.express_route_circuit_id">
+<code class="descname">express_route_circuit_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetGatewayConnectionResult.express_route_circuit_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Express Route Circuit
+(i.e. when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">ExpressRoute</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetGatewayConnectionResult.express_route_gateway_bypass">
+<code class="descname">express_route_gateway_bypass</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetGatewayConnectionResult.express_route_gateway_bypass" title="Permalink to this definition">¶</a></dt>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, data packets will bypass ExpressRoute Gateway for data forwarding. This is only valid for ExpressRoute connections.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetGatewayConnectionResult.local_network_gateway_id">
+<code class="descname">local_network_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetGatewayConnectionResult.local_network_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the local network gateway
+when a Site-to-Site connection (i.e. when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">IPsec</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetGatewayConnectionResult.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetGatewayConnectionResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location/region where the connection is
+located.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetGatewayConnectionResult.peer_virtual_network_gateway_id">
+<code class="descname">peer_virtual_network_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetGatewayConnectionResult.peer_virtual_network_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the peer virtual
+network gateway when a VNet-to-VNet connection (i.e. when <code class="docutils literal notranslate"><span class="pre">type</span></code>
+is <code class="docutils literal notranslate"><span class="pre">Vnet2Vnet</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetGatewayConnectionResult.routing_weight">
+<code class="descname">routing_weight</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetGatewayConnectionResult.routing_weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>The routing weight.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetGatewayConnectionResult.shared_key">
+<code class="descname">shared_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetGatewayConnectionResult.shared_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The shared IPSec key.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetGatewayConnectionResult.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetGatewayConnectionResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Optional) A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetGatewayConnectionResult.type">
+<code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetGatewayConnectionResult.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of connection. Valid options are <code class="docutils literal notranslate"><span class="pre">IPsec</span></code>
+(Site-to-Site), <code class="docutils literal notranslate"><span class="pre">ExpressRoute</span></code> (ExpressRoute), and <code class="docutils literal notranslate"><span class="pre">Vnet2Vnet</span></code> (VNet-to-VNet).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetGatewayConnectionResult.use_policy_based_traffic_selectors">
+<code class="descname">use_policy_based_traffic_selectors</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetGatewayConnectionResult.use_policy_based_traffic_selectors" title="Permalink to this definition">¶</a></dt>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, policy-based traffic
+selectors are enabled for this connection. Enabling policy-based traffic
+selectors requires an <code class="docutils literal notranslate"><span class="pre">ipsec_policy</span></code> block.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetGatewayConnectionResult.virtual_network_gateway_id">
+<code class="descname">virtual_network_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetGatewayConnectionResult.virtual_network_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Virtual Network Gateway
+in which the connection is created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetGatewayConnectionResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetGatewayConnectionResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.network.GetNetworkInterfaceResult">
 <em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">GetNetworkInterfaceResult</code><span class="sig-paren">(</span><em>applied_dns_servers=None</em>, <em>dns_servers=None</em>, <em>enable_accelerated_networking=None</em>, <em>enable_ip_forwarding=None</em>, <em>internal_dns_name_label=None</em>, <em>internal_fqdn=None</em>, <em>ip_configurations=None</em>, <em>location=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_security_group_id=None</em>, <em>private_ip_address=None</em>, <em>private_ip_addresses=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>virtual_machine_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetNetworkInterfaceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNetworkInterface.</p>
@@ -4634,6 +4736,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.network.get_firewall">
 <code class="descclassname">pulumi_azure.network.</code><code class="descname">get_firewall</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_firewall" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Azure Firewall.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.network.get_gateway_connection">
+<code class="descclassname">pulumi_azure.network.</code><code class="descname">get_gateway_connection</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_gateway_connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Virtual Network Gateway Connection.</p>
 </dd></dl>
 
 <dl class="function">

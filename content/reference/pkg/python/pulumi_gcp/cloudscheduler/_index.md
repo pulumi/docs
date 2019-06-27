@@ -7,7 +7,10 @@
 <dt id="pulumi_gcp.cloudscheduler.Job">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.cloudscheduler.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_engine_http_target=None</em>, <em>description=None</em>, <em>http_target=None</em>, <em>name=None</em>, <em>project=None</em>, <em>pubsub_target=None</em>, <em>region=None</em>, <em>retry_config=None</em>, <em>schedule=None</em>, <em>time_zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>A scheduled job that can publish a pubsub message or a http request
-every X interval of time, using crontab format string</p>
+every X interval of time, using crontab format string.</p>
+<p>To use Cloud Scheduler your project must contain an App Engine app
+that is located in one of the supported regions. If your project
+does not have an App Engine app, you must create one.</p>
 <p>To get more information about Job, see:</p>
 <ul class="simple">
 <li><a class="reference external" href="https://cloud.google.com/scheduler/docs/reference/rest/">API documentation</a></li>

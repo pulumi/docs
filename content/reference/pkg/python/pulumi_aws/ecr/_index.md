@@ -164,11 +164,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ecr.Repository">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ecr.</code><code class="descname">Repository</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.Repository" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an EC2 Container Registry Repository.</p>
-<blockquote>
-<div><strong>NOTE on ECR Availability</strong>: The EC2 Container Registry is not yet rolled out
-in all regions - available regions are listed
-<a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#ecr_region">the AWS Docs</a>.</div></blockquote>
+<dd><p>Provides an Elastic Container Registry Repository.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -256,12 +252,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ecr.RepositoryPolicy">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ecr.</code><code class="descname">RepositoryPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>policy=None</em>, <em>repository=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.RepositoryPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an ECR repository policy.</p>
+<dd><p>Provides an Elastic Container Registry Repository Policy.</p>
 <p>Note that currently only one policy may be applied to a repository.</p>
-<blockquote>
-<div><strong>NOTE on ECR Availability</strong>: The EC2 Container Registry is not yet rolled out
-in all regions - available regions are listed
-<a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#ecr_region">the AWS Docs</a>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

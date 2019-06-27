@@ -344,4 +344,100 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pulumi_azure.redis.GetCacheResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.redis.</code><code class="descname">GetCacheResult</code><span class="sig-paren">(</span><em>capacity=None</em>, <em>enable_non_ssl_port=None</em>, <em>family=None</em>, <em>hostname=None</em>, <em>location=None</em>, <em>minimum_tls_version=None</em>, <em>name=None</em>, <em>patch_schedules=None</em>, <em>port=None</em>, <em>primary_access_key=None</em>, <em>private_static_ip_address=None</em>, <em>redis_configurations=None</em>, <em>resource_group_name=None</em>, <em>secondary_access_key=None</em>, <em>shard_count=None</em>, <em>sku_name=None</em>, <em>ssl_port=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>zones=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getCache.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.capacity">
+<code class="descname">capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The size of the Redis Cache deployed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.enable_non_ssl_port">
+<code class="descname">enable_non_ssl_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.enable_non_ssl_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the SSL port is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.family">
+<code class="descname">family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.family" title="Permalink to this definition">¶</a></dt>
+<dd><p>The SKU family/pricing group used. Possible values are <code class="docutils literal notranslate"><span class="pre">C</span></code> (for Basic/Standard SKU family) and <code class="docutils literal notranslate"><span class="pre">P</span></code> (for <code class="docutils literal notranslate"><span class="pre">Premium</span></code>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.hostname">
+<code class="descname">hostname</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.hostname" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Hostname of the Redis Instance</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location of the Redis Cache.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.minimum_tls_version">
+<code class="descname">minimum_tls_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.minimum_tls_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The minimum TLS version.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.patch_schedules">
+<code class="descname">patch_schedules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.patch_schedules" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of <code class="docutils literal notranslate"><span class="pre">patch_schedule</span></code> blocks as defined below - only available for Premium SKU’s.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.port">
+<code class="descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>The non-SSL Port of the Redis Instance</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.primary_access_key">
+<code class="descname">primary_access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.primary_access_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Primary Access Key for the Redis Instance</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.redis_configurations">
+<code class="descname">redis_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.redis_configurations" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">redis_configuration</span></code> block as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.secondary_access_key">
+<code class="descname">secondary_access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.secondary_access_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Secondary Access Key for the Redis Instance</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.sku_name">
+<code class="descname">sku_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.sku_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The SKU of Redis used. Possible values are <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.ssl_port">
+<code class="descname">ssl_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.ssl_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>The SSL Port of the Redis Instance</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.redis.GetCacheResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.GetCacheResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.redis.get_cache">
+<code class="descclassname">pulumi_azure.redis.</code><code class="descname">get_cache</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>zones=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.get_cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Redis Cache</p>
+</dd></dl>
+
 </div>

@@ -5,10 +5,8 @@
 <span id="msk"></span><h1>msk<a class="headerlink" href="#module-pulumi_aws.msk" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.msk.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_aws.msk.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>broker_node_group_info=None</em>, <em>cluster_name=None</em>, <em>encryption_info=None</em>, <em>enhanced_monitoring=None</em>, <em>kafka_version=None</em>, <em>number_of_broker_nodes=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.msk.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>broker_node_group_info=None</em>, <em>client_authentication=None</em>, <em>cluster_name=None</em>, <em>configuration_info=None</em>, <em>encryption_info=None</em>, <em>enhanced_monitoring=None</em>, <em>kafka_version=None</em>, <em>number_of_broker_nodes=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages AWS Managed Streaming for Kafka cluster</p>
-<blockquote>
-<div><strong>NOTE:</strong> This AWS service is in Preview and may change before General Availability release. Backwards compatibility is not guaranteed between Terraform AWS Provider releases.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -16,9 +14,11 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>broker_node_group_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested data for configuring the broker nodes of the Kafka cluster.</li>
+<li><strong>broker_node_group_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for the broker nodes of the Kafka cluster.</li>
+<li><strong>client_authentication</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for specifying a client authentication. See below.</li>
 <li><strong>cluster_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the MSK cluster.</li>
-<li><strong>encryption_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested data for specifying encryption at rest info.  See below.</li>
+<li><strong>configuration_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.</li>
+<li><strong>encryption_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for specifying encryption. See below.</li>
 <li><strong>enhanced_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the desired enhanced MSK CloudWatch monitoring level.  See <a class="reference external" href="https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html">Monitoring Amazon MSK with Amazon CloudWatch</a></li>
 <li><strong>kafka_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the desired Kafka software version.</li>
 <li><strong>number_of_broker_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.</li>
@@ -31,22 +31,31 @@
 <dl class="attribute">
 <dt id="pulumi_aws.msk.Cluster.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>Amazon Resource Name (ARN) of the MSK cluster.</p>
+<dd><p>Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.msk.Cluster.bootstrap_brokers">
 <code class="descname">bootstrap_brokers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.bootstrap_brokers" title="Permalink to this definition">¶</a></dt>
-<dd><p>A comma separated list of one or more hostname:port pairs of kafka brokers suitable to boostrap connectivity to the kafka cluster.</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">encryption_info.0.encryption_at_rest_kms_key_arn</span></code> - The ARN of the KMS key used for encryption at rest of the broker data volumes.</li>
-</ul>
+<dd><p>A comma separated list of one or more hostname:port pairs of kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if <code class="docutils literal notranslate"><span class="pre">client_broker</span></code> encryption in transit is set to <code class="docutils literal notranslate"><span class="pre">PLAINTEXT</span></code> or <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.msk.Cluster.bootstrap_brokers_tls">
+<code class="descname">bootstrap_brokers_tls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.bootstrap_brokers_tls" title="Permalink to this definition">¶</a></dt>
+<dd><p>A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if <code class="docutils literal notranslate"><span class="pre">client_broker</span></code> encryption in transit is set to <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code> or <code class="docutils literal notranslate"><span class="pre">TLS</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.msk.Cluster.broker_node_group_info">
 <code class="descname">broker_node_group_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.broker_node_group_info" title="Permalink to this definition">¶</a></dt>
-<dd><p>Nested data for configuring the broker nodes of the Kafka cluster.</p>
+<dd><p>Configuration block for the broker nodes of the Kafka cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.msk.Cluster.client_authentication">
+<code class="descname">client_authentication</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.client_authentication" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block for specifying a client authentication. See below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -56,9 +65,24 @@
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.msk.Cluster.configuration_info">
+<code class="descname">configuration_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.configuration_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.msk.Cluster.current_version">
+<code class="descname">current_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.current_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current version of the MSK Cluster used for updates, e.g. <code class="docutils literal notranslate"><span class="pre">K13V1IB3VIYZZH</span></code></p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">encryption_info.0.encryption_at_rest_kms_key_arn</span></code> - The ARN of the KMS key used for encryption at rest of the broker data volumes.</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.msk.Cluster.encryption_info">
 <code class="descname">encryption_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.encryption_info" title="Permalink to this definition">¶</a></dt>
-<dd><p>Nested data for specifying encryption at rest info.  See below.</p>
+<dd><p>Configuration block for specifying encryption. See below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -136,9 +160,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="descclassname">pulumi_aws.msk.</code><code class="descname">Configuration</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>kafka_versions=None</em>, <em>name=None</em>, <em>server_properties=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Amazon Managed Streaming for Kafka configuration. More information can be found on the <a class="reference external" href="https://docs.aws.amazon.com/msk/latest/developerguide/msk-configuration.html">MSK Developer Guide</a>.</p>
 <blockquote>
-<div><p><strong>NOTE:</strong> The API does not support deleting MSK configurations. Removing this Terraform resource will only remove the Terraform state for it.</p>
-<p><strong>NOTE:</strong> This AWS service is in Preview and may change before General Availability release. Backwards compatibility is not guaranteed between Terraform AWS Provider releases.</p>
-</div></blockquote>
+<div><strong>NOTE:</strong> The API does not support deleting MSK configurations. Removing this Terraform resource will only remove the Terraform state for it.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -234,7 +256,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.msk.GetClusterResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.msk.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>bootstrap_brokers=None</em>, <em>cluster_name=None</em>, <em>kafka_version=None</em>, <em>number_of_broker_nodes=None</em>, <em>tags=None</em>, <em>zookeeper_connect_string=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.msk.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>bootstrap_brokers=None</em>, <em>bootstrap_brokers_tls=None</em>, <em>cluster_name=None</em>, <em>kafka_version=None</em>, <em>number_of_broker_nodes=None</em>, <em>tags=None</em>, <em>zookeeper_connect_string=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.msk.GetClusterResult.arn">
@@ -246,6 +268,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.msk.GetClusterResult.bootstrap_brokers">
 <code class="descname">bootstrap_brokers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetClusterResult.bootstrap_brokers" title="Permalink to this definition">¶</a></dt>
 <dd><p>A comma separated list of one or more hostname:port pairs of Kafka brokers suitable to boostrap connectivity to the Kafka cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.msk.GetClusterResult.bootstrap_brokers_tls">
+<code class="descname">bootstrap_brokers_tls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetClusterResult.bootstrap_brokers_tls" title="Permalink to this definition">¶</a></dt>
+<dd><p>A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity to the kafka cluster.</p>
 </dd></dl>
 
 <dl class="attribute">

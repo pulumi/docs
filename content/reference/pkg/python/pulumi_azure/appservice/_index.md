@@ -97,6 +97,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>app_service_plan_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the App Service Plan within which to create this App Service.</li>
 <li><strong>app_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A key-value pair of App Settings.</li>
+<li><strong>auth_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">auth_settings</span></code> block as defined below.</li>
 <li><strong>client_affinity_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the App Service send session affinity cookies, which route client requests in the same session to the same instance?</li>
 <li><strong>client_cert_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Does the App Service require client certificates for incoming requests? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>connection_strings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> blocks as defined below.</li>
@@ -123,6 +124,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.AppService.app_settings">
 <code class="descname">app_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.AppService.app_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>A key-value pair of App Settings.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.AppService.auth_settings">
+<code class="descname">auth_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.AppService.auth_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">auth_settings</span></code> block as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -531,8 +538,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appservice.GetAppServicePlanResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">GetAppServicePlanResult</code><span class="sig-paren">(</span><em>kind=None</em>, <em>location=None</em>, <em>maximum_number_of_workers=None</em>, <em>name=None</em>, <em>properties=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.GetAppServicePlanResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">GetAppServicePlanResult</code><span class="sig-paren">(</span><em>is_xenon=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>maximum_elastic_worker_count=None</em>, <em>maximum_number_of_workers=None</em>, <em>name=None</em>, <em>properties=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.GetAppServicePlanResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAppServicePlan.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetAppServicePlanResult.is_xenon">
+<code class="descname">is_xenon</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetAppServicePlanResult.is_xenon" title="Permalink to this definition">¶</a></dt>
+<dd><p>A flag that indicates if it’s a xenon plan (support for Windows Container)</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.GetAppServicePlanResult.kind">
 <code class="descname">kind</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetAppServicePlanResult.kind" title="Permalink to this definition">¶</a></dt>
@@ -543,6 +556,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.GetAppServicePlanResult.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetAppServicePlanResult.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Azure location where the App Service Plan exists</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetAppServicePlanResult.maximum_elastic_worker_count">
+<code class="descname">maximum_elastic_worker_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetAppServicePlanResult.maximum_elastic_worker_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -669,7 +688,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appservice.Plan">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">Plan</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_environment_id=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>name=None</em>, <em>per_site_scaling=None</em>, <em>properties=None</em>, <em>reserved=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Plan" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">Plan</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_environment_id=None</em>, <em>is_xenon=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>maximum_elastic_worker_count=None</em>, <em>name=None</em>, <em>per_site_scaling=None</em>, <em>properties=None</em>, <em>reserved=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an App Service Plan component.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -681,6 +700,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>app_service_environment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the App Service Environment where the App Service Plan should be located. Changing forces a new resource to be created.</li>
 <li><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kind of the App Service Plan to create. Possible values are <code class="docutils literal notranslate"><span class="pre">Windows</span></code> (also available as <code class="docutils literal notranslate"><span class="pre">App</span></code>), <code class="docutils literal notranslate"><span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">elastic</span></code> (for Premium Consumption) and <code class="docutils literal notranslate"><span class="pre">FunctionApp</span></code> (for a Consumption Plan). Defaults to <code class="docutils literal notranslate"><span class="pre">Windows</span></code>. Changing this forces a new resource to be created.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
+<li><strong>maximum_elastic_worker_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the App Service Plan component. Changing this forces a new resource to be created.</li>
 <li><strong>per_site_scaling</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Can Apps assigned to this App Service Plan be scaled independently? If set to <code class="docutils literal notranslate"><span class="pre">false</span></code> apps assigned to this plan will scale to all instances of the plan.  Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>reserved</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is this App Service Plan <code class="docutils literal notranslate"><span class="pre">Reserved</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
@@ -708,6 +728,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.Plan.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Plan.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.Plan.maximum_elastic_worker_count">
+<code class="descname">maximum_elastic_worker_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Plan.maximum_elastic_worker_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan.</p>
 </dd></dl>
 
 <dl class="attribute">

@@ -5,21 +5,24 @@
 <span id="kms"></span><h1>kms<a class="headerlink" href="#module-pulumi_gcp.kms" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.kms.CryptoKey">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.kms.</code><code class="descname">CryptoKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>key_ring=None</em>, <em>name=None</em>, <em>rotation_period=None</em>, <em>version_template=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows creation of a Google Cloud Platform KMS CryptoKey. For more information see
-<a class="reference external" href="https://cloud.google.com/kms/docs/object-hierarchy#key">the official documentation</a>
-and
-<a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys">API</a>.</p>
-<p>A CryptoKey is an interface to key material which can be used to encrypt and decrypt data. A CryptoKey belongs to a
-Google Cloud KMS KeyRing.</p>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.kms.</code><code class="descname">CryptoKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>key_ring=None</em>, <em>name=None</em>, <em>purpose=None</em>, <em>rotation_period=None</em>, <em>version_template=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">CryptoKey</span></code> represents a logical key that can be used for cryptographic operations.</p>
 <blockquote>
-<div>Note: CryptoKeys cannot be deleted from Google Cloud Platform. Destroying a
-Terraform-managed CryptoKey will remove it from state and delete all
-CryptoKeyVersions, rendering the key unusable, but <strong>will not delete the
-resource on the server</strong>. When Terraform destroys these keys, any data
-previously encrypted with these keys will be irrecoverable. For this reason, it
-is strongly recommended that you add lifecycle hooks to the resource to prevent
-accidental destruction.</div></blockquote>
+<div><strong>Note:</strong> CryptoKeys cannot be deleted from Google Cloud Platform.
+Destroying a Terraform-managed CryptoKey will remove it from state
+and delete all CryptoKeyVersions, rendering the key unusable, but <em>will
+not delete the resource on the server.</em> When Terraform destroys these keys,
+any data previously encrypted with these keys will be irrecoverable.
+For this reason, it is strongly recommended that you add lifecycle hooks
+to the resource to prevent accidental destruction.</div></blockquote>
+<p>To get more information about CryptoKey, see:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/kms/docs/creating-keys#create_a_key">Creating a key</a></li>
+</ul>
+</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -27,54 +30,11 @@ accidental destruction.</div></blockquote>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>key*ring</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The id of the Google Cloud Platform KeyRing to which the key shall belong.</p>
-</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CryptoKey’s name.
-A CryptoKey’s name must be unique within a location and match the regular expression <cite>[a-zA-Z0-9*-]{1,63}</cite></li>
-<li><strong>rotation_period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Every time this period passes, generate a new CryptoKeyVersion and set it as
-the primary. The first rotation will take place after the specified period. The rotation period has the format
-of a decimal number with up to 9 fractional digits, followed by the letter s (seconds). It must be greater than
-a day (ie, 86400).</li>
-<li><strong>version_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A template describing settings for new crypto key versions. Structure is documented below.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<dl class="attribute">
-<dt id="pulumi_gcp.kms.CryptoKey.key_ring">
-<code class="descname">key_ring</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.key_ring" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the Google Cloud Platform KeyRing to which the key shall belong.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.kms.CryptoKey.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The CryptoKey’s name.
-A CryptoKey’s name must be unique within a location and match the regular expression <code class="docutils literal notranslate"><span class="pre">[a-zA-Z0-9_-]{1,63}</span></code></p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.kms.CryptoKey.rotation_period">
-<code class="descname">rotation_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.rotation_period" title="Permalink to this definition">¶</a></dt>
-<dd><p>Every time this period passes, generate a new CryptoKeyVersion and set it as
-the primary. The first rotation will take place after the specified period. The rotation period has the format
-of a decimal number with up to 9 fractional digits, followed by the letter s (seconds). It must be greater than
-a day (ie, 86400).</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.kms.CryptoKey.self_link">
-<code class="descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.self_link" title="Permalink to this definition">¶</a></dt>
-<dd><p>The self link of the created CryptoKey. Its format is <code class="docutils literal notranslate"><span class="pre">projects/{projectId}/locations/{location}/keyRings/{keyRingName}/cryptoKeys/{cryptoKeyName}</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.kms.CryptoKey.version_template">
-<code class="descname">version_template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.version_template" title="Permalink to this definition">¶</a></dt>
-<dd><p>A template describing settings for new crypto key versions. Structure is documented below.</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_gcp.kms.CryptoKey.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.CryptoKey.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -318,8 +278,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.kms.GetKMSCryptoKeyResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.kms.</code><code class="descname">GetKMSCryptoKeyResult</code><span class="sig-paren">(</span><em>key_ring=None</em>, <em>name=None</em>, <em>rotation_period=None</em>, <em>self_link=None</em>, <em>version_templates=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.kms.</code><code class="descname">GetKMSCryptoKeyResult</code><span class="sig-paren">(</span><em>key_ring=None</em>, <em>name=None</em>, <em>purpose=None</em>, <em>rotation_period=None</em>, <em>self_link=None</em>, <em>version_templates=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKMSCryptoKey.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.kms.GetKMSCryptoKeyResult.purpose">
+<code class="descname">purpose</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyResult.purpose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the cryptographic capabilities of the key.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.GetKMSCryptoKeyResult.rotation_period">
 <code class="descname">rotation_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyResult.rotation_period" title="Permalink to this definition">¶</a></dt>
@@ -381,59 +347,38 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 <dl class="class">
 <dt id="pulumi_gcp.kms.KeyRing">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.kms.</code><code class="descname">KeyRing</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.KeyRing" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows creation of a Google Cloud Platform KMS KeyRing. For more information see
-<a class="reference external" href="https://cloud.google.com/kms/docs/object-hierarchy#key_ring">the official documentation</a>
-and
-<a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings">API</a>.</p>
-<p>A KeyRing is a grouping of CryptoKeys for organizational purposes. A KeyRing belongs to a Google Cloud Platform Project
-and resides in a specific location.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">KeyRing</span></code> is a toplevel logical grouping of <code class="docutils literal notranslate"><span class="pre">CryptoKeys</span></code>.</p>
 <blockquote>
-<div>Note: KeyRings cannot be deleted from Google Cloud Platform. Destroying a Terraform-managed KeyRing will remove it
-from state but <strong>will not delete the resource on the server</strong>.</div></blockquote>
+<div><strong>Note:</strong> KeyRings cannot be deleted from Google Cloud Platform.
+Destroying a Terraform-managed KeyRing will remove it from state but
+<em>will not delete the resource on the server.</em></div></blockquote>
+<p>To get more information about KeyRing, see:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/kms/docs/creating-keys#create_a_key_ring">Creating a key ring</a></li>
+</ul>
+</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>resource*name</strong> (<em>str</em>) – <p>The name of the resource.</p>
-</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Google Cloud Platform location for the KeyRing.
-A full list of valid locations can be found by running <code class="docutils literal notranslate"><span class="pre">gcloud</span> <span class="pre">kms</span> <span class="pre">locations</span> <span class="pre">list</span></code>.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The KeyRing’s name.
-A KeyRing’s name must be unique within a location and match the regular expression <cite>[a-zA-Z0-9*-]{1,63}</cite></li>
-<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project in which the resource belongs. If it
-is not provided, the provider project is used.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 <dl class="attribute">
-<dt id="pulumi_gcp.kms.KeyRing.location">
-<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.KeyRing.location" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Google Cloud Platform location for the KeyRing.
-A full list of valid locations can be found by running <code class="docutils literal notranslate"><span class="pre">gcloud</span> <span class="pre">kms</span> <span class="pre">locations</span> <span class="pre">list</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.kms.KeyRing.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.KeyRing.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The KeyRing’s name.
-A KeyRing’s name must be unique within a location and match the regular expression <code class="docutils literal notranslate"><span class="pre">[a-zA-Z0-9_-]{1,63}</span></code></p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.kms.KeyRing.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.KeyRing.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The project in which the resource belongs. If it
-is not provided, the provider project is used.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.kms.KeyRing.self_link">
-<code class="descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.KeyRing.self_link" title="Permalink to this definition">¶</a></dt>
-<dd><p>The self link of the created KeyRing. Its format is <code class="docutils literal notranslate"><span class="pre">projects/{projectId}/locations/{location}/keyRings/{keyRingName}</span></code>.</p>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="method">

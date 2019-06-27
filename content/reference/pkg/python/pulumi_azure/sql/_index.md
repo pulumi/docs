@@ -106,7 +106,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>collation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the collation. Applies only if <code class="docutils literal notranslate"><span class="pre">create_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Default</span></code>.  Azure default is <code class="docutils literal notranslate"><span class="pre">SQL_LATIN1_GENERAL_CP1_CI_AS</span></code>. Changing this forces a new resource to be created.</li>
-<li><strong>create_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of database to create. Defaults to <code class="docutils literal notranslate"><span class="pre">Default</span></code>. See below for the accepted values/</li>
+<li><strong>create_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies how to create the database. Must be either <code class="docutils literal notranslate"><span class="pre">Default</span></code> to create a new database or <code class="docutils literal notranslate"><span class="pre">PointInTimeRestore</span></code> to restore from a snapshot. Defaults to <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</li>
 <li><strong>edition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The edition of the database to be created. Applies only if <code class="docutils literal notranslate"><span class="pre">create_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Default</span></code>. Valid values are: <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">Premium</span></code>, or <code class="docutils literal notranslate"><span class="pre">DataWarehouse</span></code>. Please see <a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">Azure SQL Database Service Tiers</a>.</li>
 <li><strong>elastic_pool*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the elastic database pool.</p>
 </li>
@@ -151,7 +151,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.sql.Database.create_mode">
 <code class="descname">create_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.Database.create_mode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the type of database to create. Defaults to <code class="docutils literal notranslate"><span class="pre">Default</span></code>. See below for the accepted values/</p>
+<dd><p>Specifies how to create the database. Must be either <code class="docutils literal notranslate"><span class="pre">Default</span></code> to create a new database or <code class="docutils literal notranslate"><span class="pre">PointInTimeRestore</span></code> to restore from a snapshot. Defaults to <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -534,6 +534,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.sql.GetServerResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">GetServerResult</code><span class="sig-paren">(</span><em>administrator_login=None</em>, <em>fqdn=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.GetServerResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getServer.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetServerResult.administrator_login">
+<code class="descname">administrator_login</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetServerResult.administrator_login" title="Permalink to this definition">¶</a></dt>
+<dd><p>The administrator username of the SQL Server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetServerResult.fqdn">
+<code class="descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetServerResult.fqdn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fully qualified domain name of the SQL Server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetServerResult.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetServerResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location of the Resource Group in which the SQL Server exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetServerResult.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetServerResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetServerResult.version">
+<code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetServerResult.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version of the SQL Server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetServerResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetServerResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.sql.SqlServer">
 <em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">SqlServer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>administrator_login=None</em>, <em>administrator_login_password=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>version=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.SqlServer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a SQL Azure Database Server.</p>
@@ -736,6 +778,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.sql.get_server">
+<code class="descclassname">pulumi_azure.sql.</code><code class="descname">get_server</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.get_server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing SQL Azure Database Server.</p>
 </dd></dl>
 
 </div>
