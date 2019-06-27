@@ -1,3 +1,16 @@
+/*
+    Generated using Hugo's syntax-highlighing generator:
+    https://gohugo.io/content-management/syntax-highlighting/#generate-syntax-highlighter-css
+
+    For a reference of available styles, see:
+    https://help.farbox.com/pygments.html
+
+ */
+
+/*
+    Light mode (the default) uses the "friendly" theme.
+ */
+
 /* Error */ .chroma .err {  }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
@@ -65,3 +78,141 @@
 /* GenericTraceback */ .chroma .gt { color: #0044dd }
 /* GenericUnderline */ .chroma .gl { text-decoration: underline }
 /* TextWhitespace */ .chroma .w { color: #bbbbbb }
+
+/*
+    Dark mode customizes the "monokai" theme.
+*/
+
+.code-mode-dark {
+
+    /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+    /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
+    /* LineHighlight */ .chroma .hl { display: block; width: 100%;background-color: #ffffcc }
+    /* LineNumbersTable */ .chroma .lnt { margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
+    /* LineNumbers */ .chroma .ln { margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
+    /* KeywordNamespace */ .chroma .kn { color: #f92672 }
+    /* NameTag */ .chroma .nt { color: #f92672 }
+    /* OperatorWord */ .chroma .ow { color: #f92672 }
+    /* GenericDeleted */ .chroma .gd { color: #f92672 }
+    /* GenericEmph */ .chroma .ge { font-style: italic }
+    /* GenericStrong */ .chroma .gs { font-weight: bold }
+
+    .chroma {
+
+        /* NameBuiltin */ .nb
+        {
+            @apply text-green-300;
+        }
+
+        /* Error */ .err
+        {
+            @apply text-red-300;
+        }
+
+        /* Separators */ .p
+        {
+            @apply text-gray-500;
+        }
+
+        /* NameLabel */ .nl
+        {
+            @apply text-gray-400 font-normal;
+        }
+
+        /* LiteralDate */ .ld,
+        {
+            @apply text-orange-300;
+        }
+
+        /* LiteralString */ .s,
+        /* LiteralStringAffix */ .sa,
+        /* LiteralStringBacktick */ .sb,
+        /* LiteralStringChar */ .sc,
+        /* LiteralStringDelimiter */ .dl,
+        /* LiteralStringDoc */ .sd,
+        /* LiteralStringDouble */ .s2,
+        /* LiteralStringHeredoc */ .sh,
+        /* LiteralStringInterpol */ .si,
+        /* LiteralStringOther */ .sx,
+        /* LiteralStringRegex */ .sr,
+        /* LiteralStringSingle */ .s1,
+        /* LiteralStringSymbol */ .ss,
+        {
+            @apply text-orange-300;
+        }
+
+        /* Literal */ .l,
+        /* LiteralStringEscape */ .se,
+        /* LiteralNumber */ .m,
+        /* LiteralNumberBin */ .mb,
+        /* LiteralNumberFloat */ .mf,
+        /* LiteralNumberHex */ .mh,
+        /* LiteralNumberInteger */ .mi,
+        /* LiteralNumberIntegerLong */ .il,
+        /* LiteralNumberOct */ .mo,
+        {
+            @apply text-green-300;
+        }
+
+        /* Keyword */ .k,
+        /* KeywordConstant */ .kc,
+        /* KeywordDeclaration */ .kd,
+        /* KeywordPseudo */ .kp,
+        /* KeywordReserved */ .kr,
+        /* KeywordType */ .kt,
+        {
+            @apply text-purple-200 font-normal;
+        }
+
+        /* NameAttribute */ .na,
+        /* NameClass */ .nc,
+        /* NameConstant */ .no,
+        /* NameDecorator */ .nd,
+        /* NameException */ .ne,
+        /* NameFunction */ .nf,
+        /* NameOther */ .nx,
+        /* GenericInserted */ .gi,
+        {
+            @apply text-blue-200;
+        }
+
+        /* Comment */ .c,
+        /* CommentHashbang */ .ch,
+        /* CommentSingle */ .c1,
+        /* CommentSpecial */ .cs,
+        /* CommentPreproc */ .cp,
+        /* CommentPreprocFile */ .cpf,
+        /* GenericSubheading */ .gu,
+        /* CommentMultiline */ .cm,
+        {
+            @apply text-gray-500;
+        }
+
+        /* Operator */ .o,
+        {
+            @apply text-gray-500;
+        }
+    }
+
+    &.code-pulumi {
+
+        .chroma {
+
+            /* Name */ .n,
+            /* Keyword */ .k,
+            {
+                @apply text-gray-300;
+            }
+
+            /* NameVariable */ .nv
+            {
+                @apply text-blue-200;
+            }
+
+            /* Error */ .err,
+            {
+                @apply text-gray-600;
+            }
+        }
+    }
+}
