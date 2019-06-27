@@ -14,30 +14,31 @@
                     <a class="inline-block btn btn-lg btn-orange-translucent mt-4" href="{{ relref . "/docs" }}">Read the Docs</a>
                 </div>
             </div>
-            <div class="md:w-1/2 md:ml-8 text-white">
-                <pre class="bg-gray-900 whitespace-normal shadow-md rounded border-none px-6 pb-6">
-<code class="whitespace-pre text-white">
-Previewing update of stack `mystack-dev`
+            <div class="md:w-1/2 md:ml-8">
+                {{ $code := `$ pulumi up
 
-    Type
-+   pulumi:pulumi:Stack
-+   ├─ aws-infra:network:Network
-+   ├─ cloud:global:infrastructure
-+   │  ├─ aws:iam:Role
-+   │  ├─ aws:iam:RolePolicyAttachment
-+   ├─ cloud:bucket:Bucket
-+   │  ├─ cloud:function:Function
-+   │  │  └─ aws:serverless:Function
-+   │  │     ├─ aws:iam:Role
-+   │  │     ├─ aws:iam:RolePolicyAttachment
-+   │  │     └─ aws:lambda:Function
-+   │  ├─ aws:s3:Bucket
-+   ...
+Previewing update of stack 'mystack-dev'
+
+     Type
+ +   pulumi:pulumi:Stack
+ +   ├─ aws-infra:network:Network
+ +   ├─ cloud:global:infrastructure
+ +   │  ├─ aws:iam:Role
+ +   │  ├─ aws:iam:RolePolicyAttachment
+ +   ├─ cloud:bucket:Bucket
+ +   │  ├─ cloud:function:Function
+ +   │  │  └─ aws:serverless:Function
+ +   │  │     ├─ aws:iam:Role
+ +   │  │     ├─ aws:iam:RolePolicyAttachment
+ +   │  │     └─ aws:lambda:Function
+ +   │  ├─ aws:s3:Bucket
+ +   ...
 
 info: 33 changes previewed:
     + 33 resources to create
-</code>
-                </pre>
+` }}
+
+                {{ partial "code" (dict "code" $code "lang" "pulumi" "mode" "dark" "chrome" true) }}
             </div>
         </div>
     </header>

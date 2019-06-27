@@ -62,14 +62,12 @@
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <div class="highlight">
-
-<pre><code>const aws = require("@pulumi/aws");
+                    {{ $code := `const aws = require("@pulumi/aws");
 
 let size = "t2.micro";
 let ami  = "ami-7172b611"
 
- // create a new security group for port 80
+// Create a new security group for port 80.
 let group = new aws.ec2.SecurityGroup("web-secgrp", {
     ingress: [
         { protocol: "tcp", fromPort: 22,
@@ -79,11 +77,11 @@ let group = new aws.ec2.SecurityGroup("web-secgrp", {
     ],
 });
 
-// create a simple web server
+// Create a simple web server.
 let userData =
-    `#!/bin/bash
-    echo "Hello, World!" > index.html
-    nohup python -m SimpleHTTPServer 80 &`;
+    "#!/bin/bash \n" +
+    "echo 'Hello, World!' > index.html \n" +
+    "nohup python -m SimpleHTTPServer 80 &";
 
 let server = new aws.ec2.Instance("web-server-www", {
     tags: { "Name": "web-server-www" },
@@ -94,10 +92,9 @@ let server = new aws.ec2.Instance("web-server-www", {
 });
 
 exports.publicIp = server.publicIp;
-exports.publicHostName = server.publicDns;
-</pre></code>
+exports.publicHostName = server.publicDns;` }}
 
-                    </div>
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
         </div>

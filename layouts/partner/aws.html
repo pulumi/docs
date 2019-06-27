@@ -1,10 +1,10 @@
 {{ define "hero" }}
     <header class="bg-purple-500 py-24">
-        <div class="container mx-auto text-white md:flex">
+        <div class="container mx-auto text-white md:flex px-4 md:px-0">
             <div class="md:w-1/2">
                 <h1 class="text-white">Modern Infrastructure as Code for AWS</h1>
                 <div class="flex">
-                    <img class="w-1/4 mr-4" src="/images/partners/aws-apn.png" alt="AWS Technology Partner">
+                    <img class="md:w-48 h-48 mr-4" src="/images/partners/aws-apn.png" alt="AWS Technology Partner">
                     <p class="w-3/4">
                         Pulumi's infrastructure-as-code SDK helps create, deploy, and manage AWS containers, serverless functions, and infrastructure using real programming languages.
                     </p>
@@ -17,30 +17,29 @@
                 </p>
             </div>
             <div class="md:w-1/2 md:ml-8">
-                <div class="highlight">
-<pre class="border-none bg-gray-900"><code>const aws = require("@pulumi/aws");
+                {{ $code := `const aws = require("@pulumi/aws");
 
 let size = "t2.micro";
 let ami  = "ami-7172b611"
 
 let group = new aws.ec2.SecurityGroup("web-secgrp", {
-  ingress: [
-    { protocol: "tcp", fromPort: 22,
-      toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
-    { protocol: "tcp", fromPort: 80,
-      toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
-  ],
+    ingress: [
+        { protocol: "tcp", fromPort: 22,
+          toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
+        { protocol: "tcp", fromPort: 80,
+          toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
+    ],
 });
 
 let server = new aws.ec2.Instance("web-server-www", {
-  tags: { "Name": "web-server-www" },
-  instanceType: size,
-  securityGroups: [ group.name ],
-  ami: ami,
-  userData: userData
-});
-</pre></code>
-                </div>
+    tags: { "Name": "web-server-www" },
+    instanceType: size,
+    securityGroups: [ group.name ],
+    ami: ami,
+    userData: userData
+});` }}
+                {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark" "chrome" true) }}
+
             </div>
         </div>
     </header>
@@ -76,42 +75,38 @@ let server = new aws.ec2.Instance("web-server-www", {
                         This example shows how to create a simple REST API that counts the number of times a route has been hit. To implement this API, we need a DynamoDB table, an API endpoint, and a Lambda function.
                     </p>
                     <p>
-                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
                     </p>
                     <p>
                         Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <div class="highlight">
+                    {{ $code := `const cloud = require("@pulumi/cloud-aws");
 
-<pre><code>const cloud = require("@pulumi/cloud-aws");
-
-// Create a mapping from 'route' to a count
+// Create a mapping from 'route' to a count.
 let counterTable = new cloud.Table("counterTable", "route");
 
-// Create an API endpoint
+// Create an API endpoint.
 let endpoint = new cloud.API("hello-world");
 
 endpoint.get("/{route+}", (req, res) => {
     let route = req.params["route"];
-    console.log(`Getting count for '${route}'`);
+    console.log("Getting count for " + route);
 
-    // get previous value and increment
-    // reference outer `counterTable` object
+    // Get previous value and increment
+    // reference outer 'counterTable' object.
     counterTable.get({ route }).then(value => {
         let count = (value && value.count) || 0;
-        counterTable.insert({ route, count: ++count }).then(()
-        => {
+        counterTable.insert({ route, count: ++count }).then(() => {
             res.status(200).json({ route, count });
-            console.log(`Got count ${count} for '${route}'`);
+            console.log("Got count " + count + " for " + route);
         });
     });
 });
 
-exports.endpoint = endpoint.publish().url;
-</pre></code>
-                    </div>
+exports.endpoint = endpoint.publish().url;` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
 
@@ -126,17 +121,15 @@ exports.endpoint = endpoint.publish().url;
                         This code runs Nginx with 2 load balanced replicas listening on port 80. By default, this will run in Fargate when targeting AWS, which means you can skip the complications of configuring an orchestrator. After running <code>pulumi up</code>, the auto-assigned URL will be printed.
                     </p>
                     <p>
-                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
                     </p>
                     <p>
                         Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <div class="highlight">
-
-<pre><code>// Deploy a pre-built container image
-// to AWS Fargate
+                    {{ $code := `// Deploy a pre-built container image
+// to AWS Fargate.
 
 import * as cloud from "@pulumi/cloud";
 
@@ -149,7 +142,7 @@ let nginx = new cloud.Service("nginx", {
 export let url = nginx.defaultEndpoint;
 
 // Deploy a custom container image based on nginx
-// to AWS Fargate
+// to AWS Fargate.
 
 import * as cloud from "@pulumi/cloud";
 
@@ -159,9 +152,8 @@ let nginx = new cloud.Service("nginx", {
     replicas: 2,
 });
 
-export let url = nginx.defaultEndpoint;
-</pre></code>
-                    </div>
+export let url = nginx.defaultEndpoint;` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
 
@@ -176,16 +168,15 @@ export let url = nginx.defaultEndpoint;
                         This code runs a simple Kubernetes deployment using the Guestbook sample application composed of Redis and a web frontent onto Kubernetes. Pulumi supports sophisticated use cases such as advanced deployment scenarios, sidecar patterns, etc.
                     </p>
                     <p>
-                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
                     </p>
                     <p>
                         Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <div class="highlight">
+                    {{ $code := `// Deploy a simple app to Kubernetes.
 
-<pre><code>// Deploy a simple app to Kubernetes
 import * as k8sjs from "./k8sjs";
 
 let redisMaster = new k8sjs.ServiceDeployment("redis-master", {
@@ -196,7 +187,7 @@ let redisMaster = new k8sjs.ServiceDeployment("redis-master", {
 let redisSlave = new k8sjs.ServiceDeployment("redis-slave", {
     image: "gcr.io/google_samples/gb-redisslave:v1",
     ports: [ 6379 ]
-    });
+});
 
 let frontend = new k8sjs.ServiceDeployment("frontend", {
     replicas: 3,
@@ -205,9 +196,8 @@ let frontend = new k8sjs.ServiceDeployment("frontend", {
     loadBalancer: true,
 });
 
-export let frontendIp = frontend.ipAddress;
-</pre></code>
-                    </div>
+export let frontendIp = frontend.ipAddress;` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
 
@@ -222,35 +212,33 @@ export let frontendIp = frontend.ipAddress;
                         This code uses TypeScript on Node.js to define the necessary security group, and defines a very simple web server, and then creates the instance, before exporting the IP and Hostname.
                     </p>
                     <p>
-                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
                     </p>
                     <p>
                         Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    <div class="highlight">
-
-<pre><code>const aws = require("@pulumi/aws");
+                    {{ $code := `const aws = require("@pulumi/aws");
 
 let size = "t2.micro";
 let ami  = "ami-7172b611"
 
-    // create a new security group for port 80
+// Create a new security group for port 80.
 let group = new aws.ec2.SecurityGroup("web-secgrp", {
     ingress: [
         { protocol: "tcp", fromPort: 22,
-            toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
+          toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
         { protocol: "tcp", fromPort: 80,
-            toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
+          toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
     ],
 });
 
-// create a simple web server
+// Create a simple web server.
 let userData =
-    `#!/bin/bash
-    echo "Hello, World!" > index.html
-    nohup python -m SimpleHTTPServer 80 &`;
+    "#!/bin/bash \n" +
+    "echo 'Hello, World!' > index.html \n" +
+    "nohup python -m SimpleHTTPServer 80 &";
 
 let server = new aws.ec2.Instance("web-server-www", {
     tags: { "Name": "web-server-www" },
@@ -261,9 +249,8 @@ let server = new aws.ec2.Instance("web-server-www", {
 });
 
 exports.publicIp = server.publicIp;
-exports.publicHostName = server.publicDns;
-</pre></code>
-                    </div>
+exports.publicHostName = server.publicDns;` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
                 </div>
             </div>
         </div>

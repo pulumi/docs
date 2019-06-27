@@ -61,8 +61,11 @@ examples:
                   selector: { matchLabels: appLabels },
                   template: {
                       metadata: { labels: appLabels },
-                      spec: { containers:
-                          [{ name: "nginx", image: "nginx" }] }
+                      spec: {
+                          containers: [{
+                              name: "nginx", image: "nginx"
+                          }]
+                      }
                   }
               }
           });
@@ -88,7 +91,7 @@ examples:
           let redisSlave = new k8sjs.ServiceDeployment("redis-slave", {
               image: "gcr.io/google_samples/gb-redisslave:v1",
               ports: [ 6379 ]
-              });
+          });
 
           let frontend = new k8sjs.ServiceDeployment("frontend", {
               replicas: 3,
@@ -111,38 +114,39 @@ examples:
           In this case we define a simple EnvoyDeployment class that adds an Envoy sidecar to our Kubernetes app.
       code: |
           export class EnvoyDeployment extends k8s.apps.v1.Deployment {
-          constructor(name: string, args: k8stypes.apps.v1.Deployment, opts?: pulumi.CustomResourceOptions) {
-              const pod = args.spec.template.spec;
+              constructor(name: string, args: k8stypes.apps.v1.Deployment, opts?: pulumi.CustomResourceOptions) {
+                  const pod = args.spec.template.spec;
 
-              // Add an Envoy sidecar container.
-              pod.containers = pod.containers || [];
-              pod.containers.push({
-                  name: "envoy",
-                  // `lyft/envoy` does not tag releases. Use a SHA.
-                  image: "lyft/envoy:4640fc028d65a6e2ee18858ebefcaeed24dffa81",
-                  command: ["/usr/local/bin/envoy"],
-                  args: [
-                      "--concurrency 4",
-                      "--config-path /etc/envoy/envoy.json",
-                      "--mode serve"
-                  ],
-                  ports: [{ containerPort: 80, protocol: "TCP" }],
-                  resources: {
-                      limits: { cpu: "1000m", memory: "512Mi" },
-                      requests: { cpu: "100m", memory: "64Mi" }
-                  },
-                  volumeMounts:
-                      [{ name: "envoy-conf", mountPath: "/etc/envoy" }]
-              });
+                  // Add an Envoy sidecar container.
+                  pod.containers = pod.containers || [];
+                  pod.containers.push({
+                      name: "envoy",
+                      // `lyft/envoy` does not tag releases. Use a SHA.
+                      image: "lyft/envoy:4640fc028d65a6e2ee18858ebefcaeed24dffa81",
+                      command: ["/usr/local/bin/envoy"],
+                      args: [
+                          "--concurrency 4",
+                          "--config-path /etc/envoy/envoy.json",
+                          "--mode serve"
+                      ],
+                      ports: [{ containerPort: 80, protocol: "TCP" }],
+                      resources: {
+                          limits: { cpu: "1000m", memory: "512Mi" },
+                          requests: { cpu: "100m", memory: "64Mi" }
+                      },
+                      volumeMounts: [{
+                          name: "envoy-conf", mountPath: "/etc/envoy"
+                      }]
+                  });
 
+                  // Add a Volume for Envoy's config, as a ConfigMap.
+                  pod.volumes = pod.volumes || [];
+                  pod.volumes.push({
+                      name: "envoy-conf", configMap: { name: "envoy" },
+                  });
 
-              // Add a Volume for Envoy's config, as a ConfigMap.
-              pod.volumes = pod.volumes || [];
-              pod.volumes.push({
-                  name: "envoy-conf", configMap: { name: "envoy" },
-              });
-
-              super(name, args, opts);
+                  super(name, args, opts);
+              }
           }
       cta:
           url: /docs/quickstart
@@ -154,7 +158,7 @@ examples:
 
           These examples use YAML and Helm to deploy the Kubernetes Guestbook app and Wordpress.
       code: |
-          // Use YAML
+          // Use YAML.
           import * as k8s from "@pulumi/kubernetes";
 
           const guestbook = new k8s.yaml.ConfigGroup(
@@ -164,7 +168,7 @@ examples:
               guestbook.getResource("v1/Service", "frontend").
               spec.apply(spec => spec.clusterIP);
 
-          //Use Helm
+          // Use Helm.
           import * as k8s from "@pulumi/kubernetes";
 
           const wordpress = new k8s.helm.v2.Chart("wordpress", {
@@ -173,9 +177,9 @@ examples:
               chart: "wordpress"
           });
 
-          export const frontendIp =
-              wordpress.getResource("v1/Service", "wpdev-wordpress").
-              status.apply(status => status.loadBalancer.ingress[0].ip);
+          export const frontendIp = wordpress
+              .getResource("v1/Service", "wpdev-wordpress")
+              .status.apply(status => status.loadBalancer.ingress[0].ip);
       cta:
           url: /docs/quickstart
           label: GET STARTED
@@ -203,11 +207,12 @@ examples:
                   template: {
                       metadata: { labels: appLabels },
                       spec: {
-                          initContainers:
-                            [nginxConfigPuller(config.bucketDomainName)],
-                          containers:
-                            [{ name: appName,
-                               image: "nginx:1.15-alpine" }]
+                          initContainers: [
+                              nginxConfigPuller(config.bucketDomainName)
+                          ],
+                          containers: [{
+                              name: appName, image: "nginx:1.15-alpine"
+                          }]
                       }
                   }
               }
@@ -233,13 +238,13 @@ examples:
               minMasterVersion: "latest",
               masterAuth: { username, password },
               nodeConfig: {
-                machineType: nodeMachineType,
-                oauthScopes: [
-                  "https://www.googleapis.com/auth/compute",
-                  "https://www.googleapis.com/auth/devstorage.read_only",
-                  "https://www.googleapis.com/auth/logging.write",
-                  "https://www.googleapis.com/auth/monitoring"
-                ],
+                  machineType: nodeMachineType,
+                  oauthScopes: [
+                      "https://www.googleapis.com/auth/compute",
+                      "https://www.googleapis.com/auth/devstorage.read_only",
+                      "https://www.googleapis.com/auth/logging.write",
+                      "https://www.googleapis.com/auth/monitoring"
+                  ],
               },
           });
 
