@@ -17,7 +17,10 @@
             </div>
 
             <div class="md:w-7/12">
-                <h1>{{ .Title }}</h1>
+                {{ if ne .Title "" }}
+                    <h1>{{ .Title }}</h1>
+                {{ end }}
+
                 {{ .Content }}
             </div>
         </div>
