@@ -20,7 +20,7 @@ In this post, we’ll walk through a quick tutorial of how to use this new
 and new MySQL databases.
 <!--more-->
 
-##Setup
+## Setup
 
 Create a new Pulumi program:
 

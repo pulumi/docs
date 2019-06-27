@@ -144,7 +144,9 @@ Now that the app is deployed, let's try it out! With the Pulumi CLI,
 you can easily view output properties for your stack. This line in the
 JavaScript code creates a **stack output**.
 
-    exports.endpoint = endpoint.publish().url;
+```javascript
+exports.endpoint = endpoint.publish().url;
+```
 
 You can view stack outputs in the Pulumi Console, or via
 `pulumi stack output`:

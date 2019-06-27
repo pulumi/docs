@@ -44,12 +44,14 @@ even for applications being actively developed/deployed in the cloud.
 
 Let's take a simple example:
 
-    import * as aws from '@pulumi/aws'
-    const bucket = new aws.s3.Bucket("mybucket");
-    bucket.onObjectCreated("newObject", async (ev) => {
-        console.log(JSON.stringify(ev));
-    });
-    export const bucketName = bucket.id;
+```typescript
+import * as aws from '@pulumi/aws'
+const bucket = new aws.s3.Bucket("mybucket");
+bucket.onObjectCreated("newObject", async (ev) => {
+    console.log(JSON.stringify(ev));
+});
+export const bucketName = bucket.id;
+```
 
 We can deploy this app, copy an object into the newly provisioned
 bucket, and then see the logs with the following:
@@ -70,9 +72,11 @@ This lets me iterate on my application live in the cloud with ease.
 
 If there are errors in my code, I find out about them immediately:
 
-    bucket.onObjectCreated("newObject", async (ev, ctx) => {
-        throw new Error("oops");
-    });
+```typescript
+bucket.onObjectCreated("newObject", async (ev, ctx) => {
+    throw new Error("oops");
+});
+```
 
 Results in:
 

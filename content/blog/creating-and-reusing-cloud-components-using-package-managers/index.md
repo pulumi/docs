@@ -36,26 +36,28 @@ Bucket and objects per piece of static content, CloudFront Distribution,
 and Route53 DNS A-Record -- and exposes them afterwards as readonly
 properties:
 
+```typescript
+/**
+ * Static website using Amazon S3, CloudFront, and Route53.
+ */
+export declare class StaticWebsite extends pulumi.ComponentResource  {
+    readonly contentBucket: aws.s3.Bucket;
+    readonly logsBucket: aws.s3.Bucket;
+    readonly cdn: aws.cloudfront.Distribution;
+    readonly aRecord?: aws.route53.Record;
+
     /**
-     * Static website using Amazon S3, CloudFront, and Route53.
-     */
-    export declare class StaticWebsite extends pulumi.ComponentResource  {
-        readonly contentBucket: aws.s3.Bucket;
-        readonly logsBucket: aws.s3.Bucket;
-        readonly cdn: aws.cloudfront.Distribution;
-        readonly aRecord?: aws.route53.Record;
+    * Creates a new static website hosted on AWS.
+    * @param name  The _unique_ name of the resource.
+    * @param contentArgs  The arguments to configure the content being served.
+    * @param domainArgs  The arguments to configure the domain and DNS settings.
+    * @param opts  A bag of options that control this resource's behavior.
+    */
 
-      /**
-        * Creates a new static website hosted on AWS.
-        * @param name  The _unique_ name of the resource.
-        * @param contentArgs  The arguments to configure the content being served.
-        * @param domainArgs  The arguments to configure the domain and DNS settings.
-        * @param opts  A bag of options that control this resource's behavior.
-        */
-
-      constructor(name: string , contentArgs: ContentArgs,
-                  domainArgs?: DomainArgs, opts?: pulumi.ResourceOptions);
-    }
+    constructor(name: string , contentArgs: ContentArgs,
+                domainArgs?: DomainArgs, opts?: pulumi.ResourceOptions);
+}
+```
 
 This class is placed into an NPM package as usual, including a
 [package.json](https://github.com/chrsmith/static-website-aws/blob/master/package.json)
@@ -110,14 +112,16 @@ case, let's just pass a path to the content on disk (which will
 automatically get uploaded into S3 objects during a `pulumi up`) in
 addition to a path to a custom 404 HTML page:
 
-    import  { StaticWebsite } from "static-website-aws";
+```javascript
+import  { StaticWebsite } from "static-website-aws";
 
-    const website  = new StaticWebsite ("browserhack", {
-        pathToContent:"./browserhack",
-        custom404Path:"/404.html",
-    });
+const website  = new StaticWebsite ("browserhack", {
+    pathToContent:"./browserhack",
+    custom404Path:"/404.html",
+});
 
-    export let cloudfrontDomain  = website .cdn .domainName ;
+export let cloudfrontDomain  = website .cdn .domainName ;
+```
 
 As soon as we have our program, we can stand it up with a single
 `pulumi up`  command:
@@ -183,17 +187,19 @@ specify its logical parent resource. Every child resource created is
 passed `defaultResourceOptions`, which sets the parent property to this
 (the instance of StaticWebsite ).
 
-    // Default resource options for this component's child resources.
-    const defaultResourceOptions: pulumi.ResourceOptions = { parent:this };
+```javascript
+// Default resource options for this component's child resources.
+const defaultResourceOptions: pulumi.ResourceOptions = { parent:this };
 
-    ...
+...
 
-    // Create the logs bucket to store CloudFront request logs.
+// Create the logs bucket to store CloudFront request logs.
 
-    this.logsBucket = new aws.s3.Bucket(`${name }-logs`,
-        { acl:"private" },
-        defaultResourceOptions,
-    );
+this.logsBucket = new aws.s3.Bucket(`${name }-logs`,
+    { acl:"private" },
+    defaultResourceOptions,
+);
+```
 
 Components are a powerful construct in Pulumi, and let you build larger
 first class resources out of smaller ones. There are other benefits,

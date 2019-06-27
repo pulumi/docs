@@ -76,27 +76,29 @@ command above simply created this component with sane defaults. But you
 can do it by hand and programmatically. For example, here it is in
 TypeScript:
 
-    import * as aws from "@pulumi/aws";
-    import * as awsinfra from "@pulumi/aws-infra";
-    import * as eks from "@pulumi/eks";
-     
-    // Create a VPC for our cluster.
-    const network = new awsinfra.Network("eksNetwork");
-     
-    // Create the EKS cluster
-    const cluster = new eks.Cluster("eksCluster", {
-        vpcId: network.vpcId,
-        subnetIds: network.subnetIds,
-        instanceType: "t2.micro",
-        desiredCapacity: 2,
-        minSize: 1,
-        maxSize: 2,
-        storageClasses: "gp2",
-        deployDashboard: true,
-    });
-     
-    // Export the cluster's kubeconfig.
-    export const kubeconfig = cluster.kubeconfig;
+```typescript
+import * as aws from "@pulumi/aws";
+import * as awsinfra from "@pulumi/aws-infra";
+import * as eks from "@pulumi/eks";
+ 
+// Create a VPC for our cluster.
+const network = new awsinfra.Network("eksNetwork");
+ 
+// Create the EKS cluster
+const cluster = new eks.Cluster("eksCluster", {
+    vpcId: network.vpcId,
+    subnetIds: network.subnetIds,
+    instanceType: "t2.micro",
+    desiredCapacity: 2,
+    minSize: 1,
+    maxSize: 2,
+    storageClasses: "gp2",
+    deployDashboard: true,
+});
+ 
+// Export the cluster's kubeconfig.
+export const kubeconfig = cluster.kubeconfig;
+```
 
 ## Adding resources, and deploying Helm charts
 
@@ -106,21 +108,25 @@ to associate with the cluster. For example, if applications running in
 the cluster need access to an Amazon S3 bucket, simply create a new
 `Bucket` resource, just like you do the cluster object:
 
-    const bucket = new aws.s3.Bucket("assets");
+```typescript
+const bucket = new aws.s3.Bucket("assets");
+```
 
 Or, to install some Kubernetes applications automatically into the
 Amazon EKS cluster (such as WordPress), just add them using the Pulumi
 Kubernetes provider pointing at the newly provisioned EKS cluster:
 
-    import * as k8s from "@pulumi/kubernetes";
+```typescript
+import * as k8s from "@pulumi/kubernetes";
 
-    // ...
+// ...
 
-    const wordpress = new k8s.helm.v2.Chart("wpdev", {
-        repo: "stable",
-        version: "2.1.3",
-        chart: "wordpress",
-    }, { providers: { kubernetes: cluster.provider }});
+const wordpress = new k8s.helm.v2.Chart("wpdev", {
+    repo: "stable",
+    version: "2.1.3",
+    chart: "wordpress",
+}, { providers: { kubernetes: cluster.provider }});
+```
 
 Pulumi makes it possible to define the cluster, AWS resources, and
 Kubernetes objects needed to bootstrap your entire Kubernetes

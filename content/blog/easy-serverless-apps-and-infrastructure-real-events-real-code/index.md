@@ -71,9 +71,11 @@ makes Pulumi programs feel like real, first class distributed apps.
 First, we have our TPS reports and zips buckets (for now
 we'll `new` them up, more on that later):
 
-    import * as aws from "@pulumi/aws";
-    const tpsReports = new aws.s3.Bucket("tpsReports");
-    const tpsZips = new aws.s3.Bucket("tpsZips");
+```typescript
+import * as aws from "@pulumi/aws";
+const tpsReports = new aws.s3.Bucket("tpsReports");
+const tpsZips = new aws.s3.Bucket("tpsZips");
+```
 
 The bucket objects have many properties, including obvious ones like the
 ARN, domain name, CORS rules, and so on. But if we look closely, we'll
@@ -84,24 +86,24 @@ see there are some `onX` methods. These register event handlers:
 Let's use `onObjectCreated` to create a Lambda that will zip up any new
 reports:
 
-    tpsReports.onObjectCreated("zipTpsReports", (e) => {
-       const AdmZip = require("adm-zip");
-       const s3 = new aws.sdk.S3();
-       for (const rec of e.Records || []) {
-          const zip = new AdmZip();
-          const [ buck, key ] = [ rec.s3.bucket.name, rec.s3.object.key ];
-          console.log(`Zipping ${buck}/${key} into ${tpsZips.bucket.get()}/${key}.zip`);
-          const data = await s3.getObject({ Bucket: buck, Key: key }).promise);
-          zip.addFile(key, data.Body);
-          await s3.putObject({
-             Bucket: tpsZips.bucket.get(),
-             Key: `${key}.zip`,
-             Body: zip.toBuffer(),
-          }).promise();
-       }
-    });
-
- 
+```typescript
+tpsReports.onObjectCreated("zipTpsReports", (e) => {
+   const AdmZip = require("adm-zip");
+   const s3 = new aws.sdk.S3();
+   for (const rec of e.Records || []) {
+      const zip = new AdmZip();
+      const [ buck, key ] = [ rec.s3.bucket.name, rec.s3.object.key ];
+      console.log(`Zipping ${buck}/${key} into ${tpsZips.bucket.get()}/${key}.zip`);
+      const data = await s3.getObject({ Bucket: buck, Key: key }).promise);
+      zip.addFile(key, data.Body);
+      await s3.putObject({
+         Bucket: tpsZips.bucket.get(),
+         Key: `${key}.zip`,
+         Body: zip.toBuffer(),
+      }).promise();
+   }
+});
+```
 
 Most of the code here is the application logic -- precisely what we
 want to be focusing on! In fact, this code looks just like any ordinary
@@ -136,27 +138,27 @@ Pulumi has many convenience functions built-in, and one of them
 is `pulumi logs`, which will let us tail the logs associated with all
 compute in our stack (including serverless functions):
 
-    $ pulumi logs -f
-    Collecting logs for stack dev since 2019-03-10T10:09:56.000-07:00...
+  $ pulumi logs -f
+  Collecting logs for stack dev since 2019-03-10T10:09:56.000-07:00...
 
 Now that we're tailing the logs, let's copy a file over using the AWS
 CLI:
 
-    $ aws s3 cp ./tps001.txt s3://$(pulumi stack output tpsReportsBucket)
-    upload: ../tps001.txt to s3://tpsreports-96458ef/tps001.txt
+  $ aws s3 cp ./tps001.txt s3://$(pulumi stack output tpsReportsBucket)
+  upload: ../tps001.txt to s3://tpsreports-96458ef/tps001.txt
 
 We have used the `pulumi stack output` command to conveniently fetch the
 bucket name. After the upload completes, we'll see that our function
 comes alive in the `pulumi logs` command:
 
-     2019-03-10T11:10:48.617-07:00[zipTpsReports] Zipping
-        tpsreports-96458ef/tps001.txt into tpszips-edfde11/tps001.txt.zip
+   2019-03-10T11:10:48.617-07:00[zipTpsReports] Zipping
+      tpsreports-96458ef/tps001.txt into tpszips-edfde11/tps001.txt.zip
 
 And, sure enough, if we list the contents of the zip bucket, we will see
 our newly added file:
 
-    $ aws s3 ls s3://$(pulumi stack output tpsZipsBucket)
-    2019-03-10 11:10:50       6206 tps001.txt.zip
+  $ aws s3 ls s3://$(pulumi stack output tpsZipsBucket)
+  2019-03-10 11:10:50     6206 tps001.txt.zip
 
 Voila! A fully functioning serverless application.
 
@@ -167,13 +169,15 @@ creating new ones.
 See the [`pulumi/aws/lambda` documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/lambda" >}}) for details.
 For instance, say we want to increase the RAM available to our function from 128MB to 256MB:
 
-    tpsReports.onObjectCreated(
-       "zipTpsReports",
-       new aws.lambda.CallbackFunction("zipTpsReportsFunc", {
-          memorySize: 256 /*MB*/,
-          callback: (e) => { /* same code as before */ },
-       },
-    );
+```typescript
+tpsReports.onObjectCreated(
+   "zipTpsReports",
+   new aws.lambda.CallbackFunction("zipTpsReportsFunc", {
+      memorySize: 256 /*MB*/,
+      callback: (e) => { /* same code as before */ },
+   },
+);
+```
 
 Soon we'll see how to manage and update our functions, but first let's
 see some alternative coding styles.
@@ -196,43 +200,43 @@ Python).
 Pulumi supports this, by simply defining your Lambda function like any
 other infrastructure resource:
 
-    // First, create some IAM machinery:
-    const zipFuncRole = new aws.iam.Role("zipTpsReportsFuncRole", {
-       assumeRolePolicy: {
-          Version: "2012-10-17",
-          Statement: [{
-             Action: "sts:AssumeRole",
-             Principal: {
-                Service: "lambda.amazonaws.com",
-             },
-             Effect: "Allow",
-             Sid: "",
-          }],
-       },
-    });
-    new aws.iam.RolePolicyAttachment("zipTpsReportsFuncRoleAttach", {
-       role: zipFuncRole,
-       policyArn: aws.iam.AWSLambdaFullAccess,
-    });
+```typescript
+// First, create some IAM machinery:
+const zipFuncRole = new aws.iam.Role("zipTpsReportsFuncRole", {
+   assumeRolePolicy: {
+      Version: "2012-10-17",
+      Statement: [{
+         Action: "sts:AssumeRole",
+         Principal: {
+            Service: "lambda.amazonaws.com",
+         },
+         Effect: "Allow",
+         Sid: "",
+      }],
+   },
+});
+new aws.iam.RolePolicyAttachment("zipTpsReportsFuncRoleAttach", {
+   role: zipFuncRole,
+   policyArn: aws.iam.AWSLambdaFullAccess,
+});
 
+// Next, create the Lambda function itself:
+const zipFunc = new aws.lambda.Function("zipTpsReportsFunc", {
+   environment: {
+      variables: {
+         "TPS_ZIP_BUCKET": tpsZips.bucket,
+      },
+   },
+   code: new pulumi.asset.AssetArchive({
+      ".": new pulumi.asset.FileArchive("./app"),
+   }),
+   runtime: "nodejs8.10",
+   role: zipFuncRole.arn,
+});
 
-    // Next, create the Lambda function itself:
-    const zipFunc = new aws.lambda.Function("zipTpsReportsFunc", {
-       environment: {
-          variables: {
-             "TPS_ZIP_BUCKET": tpsZips.bucket,
-          },
-       },
-       code: new pulumi.asset.AssetArchive({
-          ".": new pulumi.asset.FileArchive("./app"),
-       }),
-       runtime: "nodejs8.10",
-       role: zipFuncRole.arn,
-    });
-
-
-    // Finally, register the Lambda to fire when a new TPS report arrives:
-    tpsReports.onObjectCreated("zipTpsReports", zipFunc);
+// Finally, register the Lambda to fire when a new TPS report arrives:
+tpsReports.onObjectCreated("zipTpsReports", zipFunc);
+```
 
 Because we're taking matters into our own hands, we have to create the
 IAM machinery ourselves. We also need a way to communicate the zip
@@ -246,9 +250,11 @@ Notice that we've pointed to our application logic inside of `./app`.
 Pulumi will create the zipfile for you. If we instead wanted to use a
 zipfile we've already packaged, just change `code` as follows:
 
-    // ...
-       code: new pulumi.asset.FileArchive("./app.zip"),
-    // ...
+```typescript
+// ...
+   code: new pulumi.asset.FileArchive("./app.zip"),
+// ...
+```
 
 Using Pulumi's
 [`Asset` and `Archive` classes]({{< ref "/docs/reference/pkg/nodejs/pulumi/pulumi/asset" >}}),
@@ -272,8 +278,10 @@ can still access their properties and use them. In this case, we'll
 just look up an existing Lambda, `zipTpsReportsFunc`, and register it as
 an event handler:
 
-    const zipFunc = aws.lambda.Function.get("zipTpsReportsFunc", "zipTpsReports-19d51dc");
-    tpsReports.onObjectCreated("zipTpsReports", zipFunc);
+```typescript
+const zipFunc = aws.lambda.Function.get("zipTpsReportsFunc", "zipTpsReports-19d51dc");
+tpsReports.onObjectCreated("zipTpsReports", zipFunc);
+```
 
 We've given the function's ID, `zipTpsReports-19d51dc`, which allows
 Pulumi to locate it in your account and reuse it. This can make it easy
@@ -293,11 +301,13 @@ a problem and want to do some good old fashioned `printf` debugging
 inside of our lambda. Maybe we want to log the size of the report and
 its resulting zipfile. Just add the relevant line:
 
-    // ...
-    zip.addFile(key, data.Body);
-    console.log(`Report: ${data.ContentLength}, Zip: ${zip.toBuffer().length}`);
-    s3.putObject(
-    // ...
+```typescript
+// ...
+zip.addFile(key, data.Body);
+console.log(`Report: ${data.ContentLength}, Zip: ${zip.toBuffer().length}`);
+s3.putObject(
+// ...
+```
 
 And run `pulumi up` -- it will show us what changed:
 
@@ -323,16 +333,20 @@ updates are always based only on what's changed.
 
 For example, maybe we've defined our callback function in `./app`:
 
-    export async function zipReport(e: aws.s3.BucketEvent): Promise<void> {
-       // app code, as shown above, goes here
-    }
+```typescript
+export async function zipReport(e: aws.s3.BucketEvent): Promise<void> {
+   // app code, as shown above, goes here
+}
+```
 
 And now we can go back to our infrastructure code, and eliminate the
 application logic entirely:
 
-    import { zipReport } from "./app";
-    ...
-    tpsReports.onObjectCreated("zipTpsReports", zipReport);
+```typescript
+import { zipReport } from "./app";
+...
+tpsReports.onObjectCreated("zipTpsReports", zipReport);
+```
 
 We can take this further and use dynamic package management to split up
 the code, possibly even spreading pieces of infrastructure and
@@ -369,17 +383,21 @@ you `new` one up, Pulumi understands how to provision and manage it.
 
 We saw simple examples of this earlier:
 
-    const tpsReports = new aws.s3.Bucket("tpsReports");
+```typescript
+const tpsReports = new aws.s3.Bucket("tpsReports");
+```
 
 Note that the full set of configuration options are available on each
 resource. Let's say we want to turn on server-side encryption of our
 TPS archive bucket:
 
-    const tpsReports = new aws.s3.Bucket("tpsReports", {
-       serverSideEncryptionConfiguration: {
-          sseAlgorithm: "AES256",
-       },
-    });
+```typescript
+const tpsReports = new aws.s3.Bucket("tpsReports", {
+   serverSideEncryptionConfiguration: {
+      sseAlgorithm: "AES256",
+   },
+});
+```
 
 Just as with functions, subsequent updates will be diffed and updated in
 the minimally impactful way.
@@ -395,7 +413,9 @@ wire up the functions.
 Not to worry, you can import an existing resource and program against it
 in the same way:
 
-    const tpsReports = aws.s3.Bucket.get("tpsReports", "arn:aws:s3:::tpsReports-4f64efc");
+```typescript
+const tpsReports = aws.s3.Bucket.get("tpsReports", "arn:aws:s3:::tpsReports-4f64efc");
+```
 
 This time, when you run your Pulumi program, you'll still see this
 resource but notice it says `read` instead of `create` or `update`. This
@@ -407,39 +427,41 @@ This, of course, can be combined with the earlier similar functionality
 for functions, to glue together a bucket and a Lambda, where neither was
 actually provisioned by Pulumi!
 
-    const tpsReports = aws.s3.Bucket.get("tpsReports", "arn:aws:s3:::tpsReports-4f64efc");
-    const zipFunc = aws.lambda.Function.get("zipTpsReportsFunc", "zipTpsReports-19d51dc");
-    tpsReports.onObjectCreated("zipTpsReports", zipFunc);
+```typescript
+const tpsReports = aws.s3.Bucket.get("tpsReports", "arn:aws:s3:::tpsReports-4f64efc");
+const zipFunc = aws.lambda.Function.get("zipTpsReportsFunc", "zipTpsReports-19d51dc");
+tpsReports.onObjectCreated("zipTpsReports", zipFunc);
+```
 
 ## Other Notable Event Sources
 
 Finally, it's worth noting there are many event handler functions
 exposed in the AWS package:
 
--   [`apigateway.x.API`](https://github.com/pulumi/examples/tree/master/aws-ts-apigateway):
-    create serverless APIs using an Express.js style
--   [`cloudwatch.onSchedule`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#onSchedule" >}}):
-    fire a CloudWatch event on a particular schedule, e.g. a cron
-    expression
--   [`cloudwatch.Event.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#EventRule-onEvent" >}}):
-    fire an event when a particular CloudWatch event occurs
--   [`cloudwatch.LogGroup.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#LogGroup-onEvent" >}}):
-    fire an event when a CloudWatch logs event occurs
--   [`dynamodb.Table.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/dynamodb#Table-onEvent" >}}):
-    fire events for DynamoDB insert, modify, or remove operations
--   [`kinesis.Stream.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/kinesis#Stream-onEvent" >}}):
-    fire Kinesis Stream events at particular times or batch sizes
--   [`s3.Bucket.onObjectCreated`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectCreated" >}}):
-    trigger a function anytime an object is created in an S3 Bucket
--   [`s3.Bucket.onObjectRemoved`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectRemoved" >}}):
-    trigger a function anytime an object is removed from an S3 Bucket
--   [`s3.Bucket.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onEvent" >}}):
-    trigger a function for a wide range of S3 Bucket events
--   [`sns.Topic.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/sns#Topic-onEvent" >}}):
-    fire SNS Topic events when new messages arrive
--   [`sqs.Queue.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/sqs#Queue-onEvent" >}}):
-    fire SQS Queue events when new messages are enqueued (or on DLQ
-    events, etc)
+- [`apigateway.x.API`](https://github.com/pulumi/examples/tree/master/aws-ts-apigateway):
+  create serverless APIs using an Express.js style
+- [`cloudwatch.onSchedule`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#onSchedule" >}}):
+  fire a CloudWatch event on a particular schedule, e.g. a cron
+  expression
+- [`cloudwatch.Event.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#EventRule-onEvent" >}}):
+  fire an event when a particular CloudWatch event occurs
+- [`cloudwatch.LogGroup.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#LogGroup-onEvent" >}}):
+  fire an event when a CloudWatch logs event occurs
+- [`dynamodb.Table.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/dynamodb#Table-onEvent" >}}):
+  fire events for DynamoDB insert, modify, or remove operations
+- [`kinesis.Stream.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/kinesis#Stream-onEvent" >}}):
+  fire Kinesis Stream events at particular times or batch sizes
+- [`s3.Bucket.onObjectCreated`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectCreated" >}}):
+  trigger a function anytime an object is created in an S3 Bucket
+- [`s3.Bucket.onObjectRemoved`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectRemoved" >}}):
+  trigger a function anytime an object is removed from an S3 Bucket
+- [`s3.Bucket.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onEvent" >}}):
+  trigger a function for a wide range of S3 Bucket events
+- [`sns.Topic.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/sns#Topic-onEvent" >}}):
+  fire SNS Topic events when new messages arrive
+- [`sqs.Queue.onEvent`]({{< ref "/docs/reference/pkg/nodejs/pulumi/aws/sqs#Queue-onEvent" >}}):
+  fire SQS Queue events when new messages are enqueued (or on DLQ
+  events, etc)
 
 All of these handlers can be programmed using the spectrum of techniques
 outlined above.

@@ -90,21 +90,23 @@ static resources. We will create a very simple `Hello world!` backend
 Lambda, but in practice you can have this do much more interesting
 things.
 
-    import * as awsx from "@pulumi/awsx";
+```typescript
+import * as awsx from "@pulumi/awsx";
 
-    // Create our API and reference the Lambda authorizer
-    const api = new awsx.apigateway.API("myapi", {
-        routes: [{
-            path: "/hello",
-            method: "GET",
-            eventHandler: async () => {
-                return {
-                    statusCode: 200,
-                    body: "<h1>Hello world!</h1>",
-                };
-            },
-        }],
-    });
+// Create our API and reference the Lambda authorizer
+const api = new awsx.apigateway.API("myapi", {
+    routes: [{
+        path: "/hello",
+        method: "GET",
+        eventHandler: async () => {
+            return {
+                statusCode: 200,
+                body: "<h1>Hello world!</h1>",
+            };
+        },
+    }],
+});
+```
 
 ### 2 - Write Your Custom Auth Logic
 
@@ -114,120 +116,126 @@ custom logic and write the rest of the code as a function called
 `authenticate`. Pulumi will package up all our *runtime* code and create
 an AWS Lambda for us.
 
-    import * as awsx from "@pulumi/awsx";
-    import * as pulumi from '@pulumi/pulumi';
-     
-    import * as jwksClient from 'jwks-rsa';
-    import * as jwt from 'jsonwebtoken';
-    import * as util from 'util';
-     
-    const config = new pulumi.Config();
-    const jwksUri = config.require("jwksUri");
-    const audience = config.require("audience");
-    const issuer = config.require("issuer");
-     
-    const authorizerLambda = async (event: awsx.apigateway.AuthorizerEvent) => {
-        try {
-            return await authenticate(event);
-        }
-        catch (err) {
-            console.log(err);
-            // Tells API Gateway to return a 401 Unauthorized response
-            throw new Error("Unauthorized");
-        }
-    }
-     
-    /**
-      * Below is all code that gets added to the Authorizer Lambda. The code was copied and
-      * converted to TypeScript from
-      * [Auth0's GitHub Example](https://github.com/auth0-samples/jwt-rsa-aws-custom-authorizer)
-      */
-     
-    function getToken(event: awsx.apigateway.AuthorizerEvent): string {
-        // Stubbed function to extract and return the Bearer Token from the Lambda event parameter
-    }
-     
-    // Check if the Token is valid with Auth0
-    async function authenticate(event: awsx.apigateway.AuthorizerEvent): Promise<awsx.apigateway.AuthorizerResponse> {
-        const token = getToken(event);
-     
-        const decoded = jwt.decode(token, { complete: true });
-        if (!decoded || typeof decoded === "string" || !decoded.header || !decoded.header.kid) {
-            throw new Error('invalid token');
-        }
-     
-        const client = jwksClient({
-            cache: true,
-            rateLimit: true,
-            jwksRequestsPerMinute: 10, // Default value
-            jwksUri: jwksUri
-        });
-     
-        const key = await util.promisify(client.getSigningKey)(decoded.header.kid);
-        const signingKey = key.publicKey || key.rsaPublicKey;
-        if (!signingKey) {
-            throw new Error('could not get signing key');
-        }
-     
-        const verifiedJWT = await jwt.verify(token, signingKey, { audience, issuer });
-        if (!verifiedJWT || typeof verifiedJWT === "string" || !isVerifiedJWT(verifiedJWT)) {
-            throw new Error('could not verify JWT');
-        }
-        return awsx.apigateway.authorizerResponse(verifiedJWT.sub, 'Allow', event.methodArn);
-    }
+```typescript
+import * as awsx from "@pulumi/awsx";
+import * as pulumi from '@pulumi/pulumi';
+ 
+import * as jwksClient from 'jwks-rsa';
+import * as jwt from 'jsonwebtoken';
+import * as util from 'util';
+ 
+const config = new pulumi.Config();
+const jwksUri = config.require("jwksUri");
+const audience = config.require("audience");
+const issuer = config.require("issuer");
+ 
+const authorizerLambda = async (event: awsx.apigateway.AuthorizerEvent) => {
+    try {
+        return await authenticate(event);
+    }
+    catch (err) {
+        console.log(err);
+        // Tells API Gateway to return a 401 Unauthorized response
+        throw new Error("Unauthorized");
+    }
+}
+ 
+/**
+     * Below is all code that gets added to the Authorizer Lambda. The code was copied and
+     * converted to TypeScript from
+     * [Auth0's GitHub Example](https://github.com/auth0-samples/jwt-rsa-aws-custom-authorizer)
+     */
+ 
+function getToken(event: awsx.apigateway.AuthorizerEvent): string {
+    // Stubbed function to extract and return the Bearer Token from the Lambda event parameter
+}
+ 
+// Check if the Token is valid with Auth0
+async function authenticate(event: awsx.apigateway.AuthorizerEvent): Promise<awsx.apigateway.AuthorizerResponse> {
+    const token = getToken(event);
+ 
+    const decoded = jwt.decode(token, { complete: true });
+    if (!decoded || typeof decoded === "string" || !decoded.header || !decoded.header.kid) {
+        throw new Error('invalid token');
+    }
+ 
+    const client = jwksClient({
+        cache: true,
+        rateLimit: true,
+        jwksRequestsPerMinute: 10, // Default value
+        jwksUri: jwksUri
+    });
+ 
+    const key = await util.promisify(client.getSigningKey)(decoded.header.kid);
+    const signingKey = key.publicKey || key.rsaPublicKey;
+    if (!signingKey) {
+        throw new Error('could not get signing key');
+    }
+ 
+    const verifiedJWT = await jwt.verify(token, signingKey, { audience, issuer });
+    if (!verifiedJWT || typeof verifiedJWT === "string" || !isVerifiedJWT(verifiedJWT)) {
+        throw new Error('could not verify JWT');
+    }
+    return awsx.apigateway.authorizerResponse(verifiedJWT.sub, 'Allow', event.methodArn);
+}
+```
 
 ### 3 - All Together Now
 
 Now let's tie it all together! We will modify the route we created in
 Step 1 to include our authorizer.
 
-    import * as awsx from "@pulumi/awsx";
-     
-    // Create our API and reference the Lambda authorizer
-    const api = new awsx.apigateway.API("myapi", {
-        routes: [{
-            path: "/hello",
-            ...
-            authorizers: awsx.apigateway.getTokenLambdaAuthorizer({
-                authorizerName: "jwt-rsa-custom-authorizer",
-                header: "Authorization",
-                handler: authorizerLambda,
-                identityValidationExpression: "^Bearer [-0-9a-zA-Z._]*$",
-                authorizerResultTtlInSeconds: 3600,
-            }),
-        }],
-    });
+```typescript
+import * as awsx from "@pulumi/awsx";
+ 
+// Create our API and reference the Lambda authorizer
+const api = new awsx.apigateway.API("myapi", {
+    routes: [{
+        path: "/hello",
+        ...
+        authorizers: awsx.apigateway.getTokenLambdaAuthorizer({
+            authorizerName: "jwt-rsa-custom-authorizer",
+            header: "Authorization",
+            handler: authorizerLambda,
+            identityValidationExpression: "^Bearer [-0-9a-zA-Z._]*$",
+            authorizerResultTtlInSeconds: 3600,
+        }),
+    }],
+});
+```
 
 ### The Finished Product
 
 When we run `pulumi up`, Pulumi will create our resources and provide us
 with our protected endpoint.
 
-    $ pulumi up
-    ...
-         Type                                Name                                         Status      Info
-     +   pulumi:pulumi:Stack                 lambda-authorizer-dev                        created     1 message
-     +   ├─ aws:apigateway:x:API             myapi                                        created
-     +   │  ├─ aws:iam:Role                  myapifc45ff03                                created
-     +   │  ├─ aws:iam:RolePolicyAttachment  myapifc45ff03-32be53a2                       created
-     +   │  ├─ aws:lambda:Function           myapifc45ff03                                created
-     +   │  ├─ aws:apigateway:RestApi        myapi                                        created
-     +   │  ├─ aws:apigateway:Deployment     myapi                                        created
-     +   │  ├─ aws:lambda:Permission         myapi-62a1b306                               created
-     +   │  └─ aws:apigateway:Stage          myapi                                        created
-     +   ├─ aws:iam:Role                     jwt-rsa-custom-authorizer-authorizer-role    created
-     +   ├─ aws:iam:Role                     jwt-rsa-custom-authorizer                    created
-     +   ├─ aws:iam:RolePolicyAttachment     jwt-rsa-custom-authorizer-32be53a2           created
-     +   ├─ aws:lambda:Function              jwt-rsa-custom-authorizer                    created
-     +   └─ aws:iam:RolePolicy               jwt-rsa-custom-authorizer-invocation-policy  created
-     
-    Outputs:
-        url: "https://XXXXX.execute-api.us-west-2.amazonaws.com/stage/"
-     
-    Resources:
-        + 14 created
-     
-    Duration: 28s
+```
+$ pulumi up
+...
+     Type                                Name                                         Status      Info
+ +   pulumi:pulumi:Stack                 lambda-authorizer-dev                        created     1 message
+ +   ├─ aws:apigateway:x:API             myapi                                        created
+ +   │  ├─ aws:iam:Role                  myapifc45ff03                                created
+ +   │  ├─ aws:iam:RolePolicyAttachment  myapifc45ff03-32be53a2                       created
+ +   │  ├─ aws:lambda:Function           myapifc45ff03                                created
+ +   │  ├─ aws:apigateway:RestApi        myapi                                        created
+ +   │  ├─ aws:apigateway:Deployment     myapi                                        created
+ +   │  ├─ aws:lambda:Permission         myapi-62a1b306                               created
+ +   │  └─ aws:apigateway:Stage          myapi                                        created
+ +   ├─ aws:iam:Role                     jwt-rsa-custom-authorizer-authorizer-role    created
+ +   ├─ aws:iam:Role                     jwt-rsa-custom-authorizer                    created
+ +   ├─ aws:iam:RolePolicyAttachment     jwt-rsa-custom-authorizer-32be53a2           created
+ +   ├─ aws:lambda:Function              jwt-rsa-custom-authorizer                    created
+ +   └─ aws:iam:RolePolicy               jwt-rsa-custom-authorizer-invocation-policy  created
+ 
+Outputs:
+    url: "https://XXXXX.execute-api.us-west-2.amazonaws.com/stage/"
+ 
+Resources:
+    + 14 created
+ 
+Duration: 28s
+```
 
 You'll notice there's a ton of resources we didn't explicitly define.
 AWSX provisions the appropriate Lambdas, roles, and more for you. If

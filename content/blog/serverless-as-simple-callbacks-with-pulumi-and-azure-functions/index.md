@@ -24,21 +24,23 @@ to Azure cloud as an HTTP endpoint? How about this little tutorial:
 
 ## 2. Define an HTTP endpoint in `index.ts`:
 
-    import * as azure from '@pulumi/azure';
-     
-    const resourceGroup = new azure.core.ResourceGroup('example', { location: 'West US' });
-     
-    const greeting = new azure.appservice.HttpEventSubscription('greeting', {
-     resourceGroup,
-     callback: async (context, req) => {
-       return {
-         status: 200,
-         body: `Hello ${req.query['name'] || 'World'}!`
-       };
-     }
-    });
-     
-    export const url = greeting.url;
+```typescript
+import * as azure from '@pulumi/azure';
+ 
+const resourceGroup = new azure.core.ResourceGroup('example', { location: 'West US' });
+ 
+const greeting = new azure.appservice.HttpEventSubscription('greeting', {
+    resourceGroup,
+    callback: async (context, req) => {
+        return {
+            status: 200,
+            body: `Hello ${req.query['name'] || 'World'}!`
+        };
+    }
+});
+ 
+export const url = greeting.url;
+```
 
 ## 3. Deploy:
 
@@ -87,17 +89,19 @@ Serverless-function-as-callback imports dependencies in a transparent
 way. Install the NPM packages of your choice and use them inside the
 callback:
 
-    import * as moment from 'moment';
-     
-    const greeting = new azure.appservice.HttpEventSubscription('greeting', {
-     resourceGroup,
-     callback: async (context, req) => {
-       return {
-         status: 200,
-         body: `Hello ${req.query['name'] || 'World'} at ${moment().format('LLLL')}!`
-       };
-     }
-    });
+```typescript
+import * as moment from 'moment';
+
+const greeting = new azure.appservice.HttpEventSubscription('greeting', {
+    resourceGroup,
+    callback: async (context, req) => {
+        return {
+            status: 200,
+            body: `Hello ${req.query['name'] || 'World'} at ${moment().format('LLLL')}!`
+        };
+    }
+});
+```
 
 The packages get zipped up inside the deployment artifact automatically
 so that the Function App can find them at the startup. So there's no
@@ -114,57 +118,63 @@ Your application might not be a bunch of HTTP functions. You probably
 want to leverage queues for asynchronous message passing. How about
 defining a callback on the queue object itself:
 
-    const storageAccount = new azure.storage.Account("storage", {
-       resourceGroupName: resourceGroup.name,
-       location: resourceGroup.location,
-       accountReplicationType: "LRS",
-       accountTier: "Standard",
-    });
-     
-    const queue = new azure.storage.Queue("myqueue", {
-      resourceGroupName: resourceGroup.name,
-      storageAccountName: storageAccount.name
-    });
-     
-    queue.onEvent("newMessage",  async (context, msg) => {
-       // code to process 'msg' however you want here
-       console.log("Message received: " + msg.toString());
-    });
+```typescript
+const storageAccount = new azure.storage.Account("storage", {
+   resourceGroupName: resourceGroup.name,
+   location: resourceGroup.location,
+   accountReplicationType: "LRS",
+   accountTier: "Standard",
+});
+ 
+const queue = new azure.storage.Queue("myqueue", {
+  resourceGroupName: resourceGroup.name,
+  storageAccountName: storageAccount.name
+});
+ 
+queue.onEvent("newMessage",  async (context, msg) => {
+   // code to process 'msg' however you want here
+   console.log("Message received: " + msg.toString());
+});
+```
 
 Alternatively, define a ServiceBus topic and immediately subscribe to
 the messages:
 
-    import * as servicebus from "@pulumi/azure/eventhub";
-     
-    const namespace = new servicebus.Namespace("test", {
-       resourceGroupName: resourceGroup.name,
-       sku: "standard",
-    });
-     
-    const topic = new servicebus.Topic("mytopic", {
-       resourceGroupName: resourceGroup.name,
-       namespaceName: namespace.name,
-    });
-     
-    export const subscription = topic.onEvent("mysubscription", async (context, msg) => {
-       console.log("Received: " + msg.toString());
-    });
+```typescript
+import * as servicebus from "@pulumi/azure/eventhub";
+ 
+const namespace = new servicebus.Namespace("test", {
+   resourceGroupName: resourceGroup.name,
+   sku: "standard",
+});
+ 
+const topic = new servicebus.Topic("mytopic", {
+   resourceGroupName: resourceGroup.name,
+   namespaceName: namespace.name,
+});
+ 
+export const subscription = topic.onEvent("mysubscription", async (context, msg) => {
+   console.log("Received: " + msg.toString());
+});
+```
 
 In addition, get notified when a new PNG image is uploaded to a Blob
 Container:
 
-    const storageContainer = new azure.storage.Container("images-container", {
-      resourceGroupName: resourceGroup.name,
-      storageAccountName: storageAccount.name,
-      name: "images",
-    });
-     
-    storageContainer.onBlobEvent("newImage", {
-       callback: async (context, blob) => {
-           console.log("File size: " + context.bindingData.properties.length);
-       },
-       filterSuffix: ".png",
-    });
+```typescript
+const storageContainer = new azure.storage.Container("images-container", {
+  resourceGroupName: resourceGroup.name,
+  storageAccountName: storageAccount.name,
+  name: "images",
+});
+ 
+storageContainer.onBlobEvent("newImage", {
+   callback: async (context, blob) => {
+       console.log("File size: " + context.bindingData.properties.length);
+   },
+   filterSuffix: ".png",
+});
+```
 
 In all these examples, you get a fully configured Function App on
 Consumption Plan ramped up and bound to the trigger of choice. Your

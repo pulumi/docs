@@ -8,10 +8,10 @@
 
             <div class="md:w-7/12">
                 {{ $authorData := index $.Site.Data.team.team .Data.Term }}
-                {{ $paginator := .Paginate .Data.Pages.Reverse }}
+                {{ $paginator := .Paginate .Data.Pages.ByDate.Reverse }}
 
                 <header>
-                    <h1>Posts Tagged {{ .Data.Term }}</h1>
+                    <h3 class="no-anchor">Posts Tagged {{ .Data.Term }}</h3>
                 </header>
 
                 {{ range $paginator.Pages }}

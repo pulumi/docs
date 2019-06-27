@@ -4,13 +4,11 @@ authors: ["marc-holmes"]
 tags: ["Serverless"]
 date: "2018-07-05"
 
-summary: "In this tutorial, we'll use Pulumi to build a complete serverless application using JavaScript."
 meta_image: "RELATIVE_TO_PAGE/code-completion.gif"
 ---
 
-
 In this tutorial, we'll use Pulumi, to build a
-complete serverless application using JavaScript.  When we say 'using
+complete serverless application using JavaScript. When we say 'using
 only JavaScript', we're not kidding:
 
 - write code just like an Express app... but end up with a fully
@@ -25,6 +23,7 @@ Pulumi also supports containers (including Kubernetes), managed
 services, infrastructure and everything else in between that you might
 need for building cloud applications. Better than that, you can even
 [combine them all in the same program]({{< relref "build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws" >}}).
+<!--more-->
 
 ## Our first serverless app in 5 lines of JavaScript
 
@@ -37,20 +36,22 @@ the following to create a new app:
 This template creates a small `index.js` file (the main Pulumi code)
 that is a simple but complete serverless application:
 
-    // Add the required package
-    const cloud = require("@pulumi/cloud-aws");
+```javascript
+// Add the required package
+const cloud = require("@pulumi/cloud-aws");
 
-    // Declare an HTTP endpoint
-    const endpoint = new cloud.API("hello");
+// Declare an HTTP endpoint
+const endpoint = new cloud.API("hello");
 
-    // Serve up some static content on that endpoint
-    endpoint.static("/", "www");
+// Serve up some static content on that endpoint
+endpoint.static("/", "www");
 
-    // Create a simple serverless function responding to GET
-    endpoint.get("/source", (req, res) => res.json({name: "AWS"}));
+// Create a simple serverless function responding to GET
+endpoint.get("/source", (req, res) => res.json({name: "AWS"}));
 
-    // Publish the URL so we can easily access our app
-    exports.url = endpoint.publish().url;
+// Publish the URL so we can easily access our app
+exports.url = endpoint.publish().url;
+```
 
 So what's happening here? This code creates a `cloud.API` which exposes
 an HTTP endpoint to the internet. It serves static content at the root

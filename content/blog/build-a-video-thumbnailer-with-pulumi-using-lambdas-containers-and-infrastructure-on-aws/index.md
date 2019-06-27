@@ -68,45 +68,47 @@ This creates a new project in the `hello-colada` directory.
 
  Second, replace the contents of `index.js` with the following:
 
-        const cloud = require("@pulumi/cloud-aws");
+```javascript
+const cloud = require("@pulumi/cloud-aws");
 
-        // A bucket to store videos and thumbnails.
-        const bucket = new cloud.Bucket("bucket");
-        const bucketName = bucket.bucket.id;
+// A bucket to store videos and thumbnails.
+const bucket = new cloud.Bucket("bucket");
+const bucketName = bucket.bucket.id;
 
-        // A task which runs a containerized FFMPEG job to extract a thumbnail image.
-        const ffmpegThumbnailTask = new cloud.Task("ffmpegThumbTask", {
-            build: "./",  // folder containing the Dockerfile
-            memoryReservation: 128,
-        });
+// A task which runs a containerized FFMPEG job to extract a thumbnail image.
+const ffmpegThumbnailTask = new cloud.Task("ffmpegThumbTask", {
+    build: "./",  // folder containing the Dockerfile
+    memoryReservation: 128,
+});
 
-        // When a new video is uploaded, run the FFMPEG task on the video file.
-        // Use the time index specified in the filename (e.g. cat_00-01.mp4 uses timestamp 00:01)
-        bucket.onPut("onNewVideo", async (bucketArgs) => {
-            console.log(`*** New video: file ${bucketArgs.key} was uploaded at ${bucketArgs.eventTime}.`);
-            const file = bucketArgs.key;
-            
-            const thumbnailFile = file.substring(0, file.indexOf('_')) + '.jpg';
-            const framePos = file.substring(file.indexOf('_')+1, file.indexOf('.')).replace('-',':');
+// When a new video is uploaded, run the FFMPEG task on the video file.
+// Use the time index specified in the filename (e.g. cat_00-01.mp4 uses timestamp 00:01)
+bucket.onPut("onNewVideo", async (bucketArgs) => {
+    console.log(`*** New video: file ${bucketArgs.key} was uploaded at ${bucketArgs.eventTime}.`);
+    const file = bucketArgs.key;
+    
+    const thumbnailFile = file.substring(0, file.indexOf('_')) + '.jpg';
+    const framePos = file.substring(file.indexOf('_')+1, file.indexOf('.')).replace('-',':');
 
-            await ffmpegThumbnailTask.run({
-                environment: {
-                    "S3_BUCKET":   bucketName.get(),
-                    "INPUT_VIDEO": file,
-                    "TIME_OFFSET": framePos,
-                    "OUTPUT_FILE": thumbnailFile,
-                },
-            });
-            console.log(`Running thumbnailer task.`);
-        }, { keySuffix: ".mp4" });
+    await ffmpegThumbnailTask.run({
+        environment: {
+            "S3_BUCKET":   bucketName.get(),
+            "INPUT_VIDEO": file,
+            "TIME_OFFSET": framePos,
+            "OUTPUT_FILE": thumbnailFile,
+        },
+    });
+    console.log(`Running thumbnailer task.`);
+}, { keySuffix: ".mp4" });
 
-        // When a new thumbnail is created, log a message.
-        bucket.onPut("onNewThumbnail", async (bucketArgs) => {
-            console.log(`*** New thumbnail: file ${bucketArgs.key} was saved at ${bucketArgs.eventTime}.`);
-        }, { keySuffix: ".jpg" });
+// When a new thumbnail is created, log a message.
+bucket.onPut("onNewThumbnail", async (bucketArgs) => {
+    console.log(`*** New thumbnail: file ${bucketArgs.key} was saved at ${bucketArgs.eventTime}.`);
+}, { keySuffix: ".jpg" });
 
-        // Export the bucket name.
-        exports.bucketName = bucketName;
+// Export the bucket name.
+exports.bucketName = bucketName;
+```
 
 This code uses `cloud.Task`, a high-level, convenient component for
 working with containers. The component automatically provisions a

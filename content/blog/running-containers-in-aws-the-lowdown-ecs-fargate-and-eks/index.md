@@ -51,25 +51,27 @@ memory, networking, and disk requirements your workload has.
 Using Pulumi, these definitions can be easily expressed declaratively in
 code, like so:
 
-    import * as awsx from "@pulumi/awsx";
+```typescript
+import * as awsx from "@pulumi/awsx";
 
-    // Create a load balancer on port 80 and spin up two instances of Nginx.
-    const lb = new awsx.elasticloadbalancingv2.ApplicationListener("nginx", { port: 80 });
-    const nginx = new awsx.ecs.FargateService("nginx", {
-        taskDefinitionArgs: {
-            containers: {
-                nginx: {
-                    image: "nginx",
-                    memory: 128,
-                    portMappings: [ lb ],
-                },
+// Create a load balancer on port 80 and spin up two instances of Nginx.
+const lb = new awsx.elasticloadbalancingv2.ApplicationListener("nginx", { port: 80 });
+const nginx = new awsx.ecs.FargateService("nginx", {
+    taskDefinitionArgs: {
+        containers: {
+            nginx: {
+                image: "nginx",
+                memory: 128,
+                portMappings: [ lb ],
             },
         },
-        desiredCount: 2,
-    });
+    },
+    desiredCount: 2,
+});
 
-    // Export the load balancer's address so that it's easy to access.
-    export const url = lb.endpoint.hostname;
+// Export the load balancer's address so that it's easy to access.
+export const url = lb.endpoint.hostname;
+```
 
 This example runs 2 load balanced instances of an NGINX web server using
 ECS Fargate.
@@ -139,46 +141,48 @@ workloads. Instead of task definitions, you use
 [Kubernetes objects like Namespaces, Pods, Deployments, and Services](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/).
 This full API is available to specify in code using Pulumi, like so:
 
-    import * as eks from "@pulumi/eks";
-    import * as k8s from "@pulumi/kubernetes";
+```typescript
+import * as eks from "@pulumi/eks";
+import * as k8s from "@pulumi/kubernetes";
 
-    // Create an EKS cluster with the default configuration.
-    const cluster = new eks.Cluster("my-cluster");
+// Create an EKS cluster with the default configuration.
+const cluster = new eks.Cluster("my-cluster");
 
-    // Deploy a small canary service (NGINX), to test that the cluster is working.
-    const appName = "my-app";
-    const appLabels = { appClass: appName };
-    const deployment = new k8s.apps.v1.Deployment(`${appName}-dep`, {
-        metadata: { labels: appLabels },
-        spec: {
-            replicas: 2,
-            selector: { matchLabels: appLabels },
-            template: {
-                metadata: { labels: appLabels },
-                spec: {
-                    containers: [{
-                        name: appName,
-                        image: "nginx",
-                        ports: [{ name: "http", containerPort: 80 }]
-                    }],
-                }
+// Deploy a small canary service (NGINX), to test that the cluster is working.
+const appName = "my-app";
+const appLabels = { appClass: appName };
+const deployment = new k8s.apps.v1.Deployment(`${appName}-dep`, {
+    metadata: { labels: appLabels },
+    spec: {
+        replicas: 2,
+        selector: { matchLabels: appLabels },
+        template: {
+            metadata: { labels: appLabels },
+            spec: {
+                containers: [{
+                    name: appName,
+                    image: "nginx",
+                    ports: [{ name: "http", containerPort: 80 }]
+                }],
             }
-        },
-    }, { provider: cluster.provider });
-    const service = new k8s.core.v1.Service(`${appName}-svc`, {
-        metadata: { labels: appLabels },
-        spec: {
-            type: "LoadBalancer",
-            ports: [{ port: 80, targetPort: "http" }],
-            selector: appLabels,
-        },
-    }, { provider: cluster.provider });
+        }
+    },
+}, { provider: cluster.provider });
+const service = new k8s.core.v1.Service(`${appName}-svc`, {
+    metadata: { labels: appLabels },
+    spec: {
+        type: "LoadBalancer",
+        ports: [{ port: 80, targetPort: "http" }],
+        selector: appLabels,
+    },
+}, { provider: cluster.provider });
 
-    // Export the URL for the load balanced service.
-    export const url = service.status.loadBalancer.ingress[0].hostname;
+// Export the URL for the load balanced service.
+export const url = service.status.loadBalancer.ingress[0].hostname;
 
-    // Export the cluster's kubeconfig.
-    export const kubeconfig = cluster.kubeconfig;
+// Export the cluster's kubeconfig.
+export const kubeconfig = cluster.kubeconfig;
+```
 
 Like the ECS example earlier, this spins up 2 load balanced instances of
 the NGINX web server.

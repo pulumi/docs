@@ -111,32 +111,34 @@ With Pulumi, we're just writing code. Since we're just writing code, we
 can do exactly what we would do if we were writing application code:
 **abstract!**
 
-    // Since we're using a general-purpose programming language, we can now use that language to provide multiple
-    // implementations of the same abstraction. In this case, we define an abstract "Redis" component whose only property is
-    // that it has some network identity (host) that consumers can connect to and talk to a Redis connection.
-    export abstract class Redis extends pulumi.ComponentResource {
-        public abstract readonly host: pulumi.Output<string>;
+```typescript
+// Since we're using a general-purpose programming language, we can now use that language to provide multiple
+// implementations of the same abstraction. In this case, we define an abstract "Redis" component whose only property is
+// that it has some network identity (host) that consumers can connect to and talk to a Redis connection.
+export abstract class Redis extends pulumi.ComponentResource {
+    public abstract readonly host: pulumi.Output<string>;
 
-        public static create(name: string, args: RedisArgs, opts?: pulumi.ComponentResourceOptions): Redis {
-            // Since we are using TypeScript and RedisArgs is the union of argument types for each resource. Since args.type
-            // has type "amazon" | "docker" | "kubernetes", the compiler assists us in making sure that we don't
-            // accidentally mix up argument types.
-            switch (args.type) {
-            case "amazon":
-                return new AmazonRedis(name, args, opts);
-            case "docker":
-                return new DockerRedis(name, args, opts);
-            case "kubernetes":
-                return new KubernetesRedis(name, args, opts);
-            }
-        }
-
-        constructor(ty: string, name: string, args: RedisArgs, opts?: pulumi.ComponentResourceOptions) {
-            super(ty, name, args, opts);
+    public static create(name: string, args: RedisArgs, opts?: pulumi.ComponentResourceOptions): Redis {
+        // Since we are using TypeScript and RedisArgs is the union of argument types for each resource. Since args.type
+        // has type "amazon" | "docker" | "kubernetes", the compiler assists us in making sure that we don't
+        // accidentally mix up argument types.
+        switch (args.type) {
+        case "amazon":
+            return new AmazonRedis(name, args, opts);
+        case "docker":
+            return new DockerRedis(name, args, opts);
+        case "kubernetes":
+            return new KubernetesRedis(name, args, opts);
         }
     }
 
-    export type RedisArgs = DockerRedisArgs | KubernetesRedisArgs | AmazonRedisArgs;
+    constructor(ty: string, name: string, args: RedisArgs, opts?: pulumi.ComponentResourceOptions) {
+        super(ty, name, args, opts);
+    }
+}
+
+export type RedisArgs = DockerRedisArgs | KubernetesRedisArgs | AmazonRedisArgs;
+```
 
 We've departed a bit from our previous example, but we're still writing
 code. In particular, what we're doing here is defining a new,
@@ -153,10 +155,12 @@ of three different configurations:
 Now, you can use this Redis component completely in the abstract, like
 this:
 
-    const redis = Redis.create("redis", {
-        type: "docker",
-        network: network,
-    });
+```typescript
+const redis = Redis.create("redis", {
+    type: "docker",
+    network: network,
+});
+```
 
 We're requesting a "docker" container, but we could just as easily
 switch this out for "amazon" and "kubernetes", and suddenly our Redis

@@ -22,14 +22,16 @@ Pulumi with Google Cloud Functions. Want to serve a simple HTTP API with
 no fixed costs? It's just a few lines of code -- and no, we're not
 hiding any YAML here:
 
-    import * as gcp from "@pulumi/gcp";
-     
-    let greeting = new gcp.cloudfunctions.HttpCallbackFunction("greeting", (req, res) => {
-        // Change this code to fit your needs!
-        res.send(`Greetings from ${req.body.name || 'Google Cloud Functions'}!`);
-    });
-     
-    export let url = greeting.httpsTriggerUrl;
+```typescript
+import * as gcp from "@pulumi/gcp";
+ 
+let greeting = new gcp.cloudfunctions.HttpCallbackFunction("greeting", (req, res) => {
+    // Change this code to fit your needs!
+    res.send(`Greetings from ${req.body.name || 'Google Cloud Functions'}!`);
+});
+ 
+export let url = greeting.httpsTriggerUrl;
+```
 
 Thanks to Pulumi's language heritage, we know how to take that
 function, serialize it, and publish it to a Google Bucket and Object,
@@ -41,13 +43,15 @@ some custom code on every message received. This sounds like a perfect
 use case for an event-driven style of programming, so why don't we
 write it that way!
 
-    // Create a PubSub Topic
-    let requests = new gcp.pubsub.Topic("requests");
-    requests.onMessagePublished("newMessage", (data) => {
-        // Print out a log message for every message on the Topic.
-        // Change this code to fit your needs!
-        console.log(Buffer.from(data.data, "base64").toString());
-    });
+```typescript
+// Create a PubSub Topic
+let requests = new gcp.pubsub.Topic("requests");
+requests.onMessagePublished("newMessage", (data) => {
+    // Print out a log message for every message on the Topic.
+    // Change this code to fit your needs!
+    console.log(Buffer.from(data.data, "base64").toString());
+});
+```
 
 Because Pulumi knows how to manage infrastructure as code, it can
 provision and manage not only the Google Cloud Function, but also the
@@ -56,13 +60,15 @@ pubsub topic resource itself, for each creation and management.
 Or perhaps, we'd like a function that respond to any uploads of new
 objects to your [storage](https://cloud.google.com/storage/) bucket:
 
-    // Create a Storage Bucket
-    let bucket = new gcp.storage.Bucket("data");
-    bucket.onObjectFinalized("newobject", (data) => {
-        // Print out a log message for every upload to the Bucket.
-        // Change this code to fit your needs!
-        console.log(`New file uploaded: ${data.name}`);
-    });
+```typescript
+// Create a Storage Bucket
+let bucket = new gcp.storage.Bucket("data");
+bucket.onObjectFinalized("newobject", (data) => {
+    // Print out a log message for every upload to the Bucket.
+    // Change this code to fit your needs!
+    console.log(`New file uploaded: ${data.name}`);
+});
+```
 
 ## A Complete Google Functions Slack Bot
 
@@ -71,46 +77,48 @@ cloud application, let's look a simple skeleton structure for a
 [Slack Bot](https://api.slack.com/bot-users) using Pulumi and Google Cloud
 Functions:
 
-    // secure config tokens to use to validate incoming messages as well as authenticate ourself to slack
-    const config = new pulumi.Config("mentionbot");
-    const slackToken = config.get("slackToken");
-    const verificationToken = config.get("verificationToken");
-     
-    // A topic that we can enqueue slack events to so they can be processed in batch later on
-    const messageTopic = new gcp.pubsub.Topic("messages");
-     
-    // Create an http endpoint that slack will use to push events to us.
-    const endpoint = new gcp.cloudfunctions.HttpCallbackFunction("bot", {
-        callbackFactory: () => {
-            const app = express();
-            app.use(bodyParser.json());
-            app.post("/events", (req, res) => {
-                // Importantly: This is the code that will run in your serverless GCP cloud function!
-     
-                const body = req.body;
-     
-                // Process the body as appropriate. If it's something we need to respond to immediately
-                // (like a verification request), then do so. Otherwise, add the message to our pubsub
-                // topic to be processed later:
-                const pubSub = new PubSub();
-                const topic = pubSub.topic(messageTopic.name.get());
-                topic.publish(Buffer.from(JSON.stringify(body)));
-     
-                // Quickly respond with success so that slack doesn't retry.
-                res.status(200).end();
-            });
-     
-            return app;
-        }
-    });
-     
-    messageTopic.onMessagePublished("processTopicMessage", async (data) => {
-        // Actually handle the 'data' in the pubsub message.
-        // Importantly: This is the code that will run in your serverless GCP cloud function!
-    });
-     
-    // Give this url to slack to let them know where to post their events to.
-    export const url = endpoint.httpsTriggerUrl;
+```typescript
+// secure config tokens to use to validate incoming messages as well as authenticate ourself to slack
+const config = new pulumi.Config("mentionbot");
+const slackToken = config.get("slackToken");
+const verificationToken = config.get("verificationToken");
+ 
+// A topic that we can enqueue slack events to so they can be processed in batch later on
+const messageTopic = new gcp.pubsub.Topic("messages");
+ 
+// Create an http endpoint that slack will use to push events to us.
+const endpoint = new gcp.cloudfunctions.HttpCallbackFunction("bot", {
+    callbackFactory: () => {
+        const app = express();
+        app.use(bodyParser.json());
+        app.post("/events", (req, res) => {
+            // Importantly: This is the code that will run in your serverless GCP cloud function!
+ 
+            const body = req.body;
+ 
+            // Process the body as appropriate. If it's something we need to respond to immediately
+            // (like a verification request), then do so. Otherwise, add the message to our pubsub
+            // topic to be processed later:
+            const pubSub = new PubSub();
+            const topic = pubSub.topic(messageTopic.name.get());
+            topic.publish(Buffer.from(JSON.stringify(body)));
+ 
+            // Quickly respond with success so that slack doesn't retry.
+            res.status(200).end();
+        });
+ 
+        return app;
+    }
+});
+ 
+messageTopic.onMessagePublished("processTopicMessage", async (data) => {
+    // Actually handle the 'data' in the pubsub message.
+    // Importantly: This is the code that will run in your serverless GCP cloud function!
+});
+ 
+// Give this url to slack to let them know where to post their events to.
+export const url = endpoint.httpsTriggerUrl;
+```
 
 This is the real code for a complete SlackBot application running on
 GCP, from the cloud resources to the serverless code, all within a

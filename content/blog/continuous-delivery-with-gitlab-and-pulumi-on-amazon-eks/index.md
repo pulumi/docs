@@ -209,25 +209,25 @@ const automationRoleArn = iamstack.getOutput("automationRoleArn")
 
 const vpc = new awsx.Network("vpc");
 const cluster = new eks.Cluster("eks-cluster", {
-  vpcId             : vpc.vpcId,
-  subnetIds         : vpc.subnetIds,
-  instanceType      : "t2.medium",
-  nodeRootVolumeSize: 200,
-  desiredCapacity   : 1,
-  maxSize           : 2,
-  minSize           : 1,
-  deployDashboard   : false,
-  vpcCniOptions     : {
-    warmIpTarget    : 4,
-  },
-  roleMappings      : [
-    // Map IAM role arn "automationRoleArn" to the k8s user with name "automation-usr", e.g. gitlab CI
-    {
-      groups    : ["pulumi:automation-grp"],
-      roleArn   : automationRoleArn,
-      username  : "pulumi:automation-usr",
+    vpcId             : vpc.vpcId,
+    subnetIds         : vpc.subnetIds,
+    instanceType      : "t2.medium",
+    nodeRootVolumeSize: 200,
+    desiredCapacity   : 1,
+    maxSize           : 2,
+    minSize           : 1,
+    deployDashboard   : false,
+    vpcCniOptions     : {
+        warmIpTarget    : 4,
     },
-  ],
+    roleMappings      : [
+        // Map IAM role arn "automationRoleArn" to the k8s user with name "automation-usr", e.g. gitlab CI
+        {
+            groups    : ["pulumi:automation-grp"],
+            roleArn   : automationRoleArn,
+            username  : "pulumi:automation-usr",
+        },
+    ],
 });
 
 export const clusterName = cluster.eksCluster.name;
@@ -235,32 +235,32 @@ export const clusterName = cluster.eksCluster.name;
 /* * Single Step deployment of k8s RBAC configuration */
 
 new k8s.rbac.v1.Role("automationRole", {
-  metadata: {
-    name: "automationRole",
-    namespace: "automation",
-  },
-  rules: [{
-    apiGroups: ["*"],
-    resources: ["*"],
-    verbs: ["*"],
-  }]
+    metadata: {
+        name: "automationRole",
+        namespace: "automation",
+    },
+    rules: [{
+        apiGroups: ["*"],
+        resources: ["*"],
+        verbs: ["*"],
+    }]
 }, {provider: cluster.provider});
 
 new k8s.rbac.v1.RoleBinding("automation-binding", {
-  metadata: {
-    name: "automation-binding",
-    namespace: "automation",
-  },
-  subjects: [{
-      kind: "User",
-      name: "pulumi:automation-usr",
-      apiGroup: "rbac.authorization.k8s.io",
-  }],
-  roleRef: {
-    kind: "Role",
-    name: "automationRole",
-    apiGroup: "rbac.authorization.k8s.io",
-  },
+    metadata: {
+        name: "automation-binding",
+        namespace: "automation",
+    },
+    subjects: [{
+        kind: "User",
+        name: "pulumi:automation-usr",
+        apiGroup: "rbac.authorization.k8s.io",
+    }],
+    roleRef: {
+        kind: "Role",
+        name: "automationRole",
+        apiGroup: "rbac.authorization.k8s.io",
+    },
 }, {provider: cluster.provider});
 
 export const kubeconfig = cluster.kubeconfig.apply(JSON.stringify)
@@ -286,66 +286,70 @@ $ pulumi up
 We will then update the `index.ts` file with the relevant code block as
 shown below:
 
-    $ pulumi new aws-typescript --dir <org-name-in-pulumi>/sample-k8sapp/dev
-    $ cd <org-name-in-pulumi>/sample-k8sapp/dev
+```bash
+$ pulumi new aws-typescript --dir <org-name-in-pulumi>/sample-k8sapp/dev
+$ cd <org-name-in-pulumi>/sample-k8sapp/dev
+```
 
-    import * as aws from "@pulumi/aws";
-    import * as docker from "@pulumi/docker";
-    import * as k8s from "@pulumi/kubernetes";
-    import * as pulumi from "@pulumi/pulumi";
+```typescript
+import * as aws from "@pulumi/aws";
+import * as docker from "@pulumi/docker";
+import * as k8s from "@pulumi/kubernetes";
+import * as pulumi from "@pulumi/pulumi";
 
-    const env = pulumi.getStack();
-    const eksCluster = new pulumi.StackReference(`<org-name-in-pulumi>/sample-eks/${env}`);
+const env = pulumi.getStack();
+const eksCluster = new pulumi.StackReference(`<org-name-in-pulumi>/sample-eks/${env}`);
 
-    const kubeconfig = eksCluster.getOutput("kubeconfig");
+const kubeconfig = eksCluster.getOutput("kubeconfig");
 
-    const k8sProvider = new k8s.Provider("eks-cluster", {
-        kubeconfig: kubeconfig,
-     });
+const k8sProvider = new k8s.Provider("eks-cluster", {
+    kubeconfig: kubeconfig,
+  });
 
-    /* * Single step deployment of one docker container in ECR */
+/* * Single step deployment of one docker container in ECR */
 
-    function getImageRegistry(repo: aws.ecr.Repository) {
-        return repo.registryId.apply(async registryId => {
-            if (!registryId) {
-                throw new Error("Expected registry ID to be defined during push");
-            }
-            const credentials = await aws.ecr.getCredentials({ registryId: registryId });
-            const decodedCredentials = Buffer.from(credentials.authorizationToken, "base64").toString();
-            const [username, password] = decodedCredentials.split(":");
-            if (!password || !username) {
-                throw new Error("Invalid credentials");
-            }
-            return {
-                server: credentials.proxyEndpoint,
-                username: username,
-                password: password,
-            };
-        });
-    }
-
-    const ecr1 = new aws.ecr.Repository("breathe");
-    const image1 = new docker.Image("breathe", {
-        imageName: ecr1.repositoryUrl,
-        build: {
-            context: "./app",
-            cacheFrom: true,
-        },
-        registry: getImageRegistry(ecr1),
+function getImageRegistry(repo: aws.ecr.Repository) {
+    return repo.registryId.apply(async registryId => {
+        if (!registryId) {
+            throw new Error("Expected registry ID to be defined during push");
+        }
+        const credentials = await aws.ecr.getCredentials({ registryId: registryId });
+        const decodedCredentials = Buffer.from(credentials.authorizationToken, "base64").toString();
+        const [username, password] = decodedCredentials.split(":");
+        if (!password || !username) {
+            throw new Error("Invalid credentials");
+        }
+        return {
+            server: credentials.proxyEndpoint,
+            username: username,
+            password: password,
+        };
     });
+}
 
-    // Declare the docker container based deployment
-      const appLabels = { app: appName };
-      const breathecontainer = new k8s.apps.v1beta1.Deployment(appName, {
-          spec: {
-              selector: { matchLabels: appLabels },
-              replicas: 1,
-              template: {
-                  metadata: { labels: appLabels },
-                  spec: { containers: [{ name: appName, image: image1.imageName }] }
-              }
-          },
-        }, { provider: k8sProvider });
+const ecr1 = new aws.ecr.Repository("breathe");
+const image1 = new docker.Image("breathe", {
+    imageName: ecr1.repositoryUrl,
+    build: {
+        context: "./app",
+        cacheFrom: true,
+    },
+    registry: getImageRegistry(ecr1),
+});
+
+// Declare the docker container based deployment
+const appLabels = { app: appName };
+const breathecontainer = new k8s.apps.v1beta1.Deployment(appName, {
+    spec: {
+        selector: { matchLabels: appLabels },
+        replicas: 1,
+        template: {
+            metadata: { labels: appLabels },
+            spec: { containers: [{ name: appName, image: image1.imageName }] }
+        }
+    },
+  }, { provider: k8sProvider });
+```
 
 We download the additional npm packages for EKS and Kubernetes and run
 `pulumi up` and group a new stack by initializing it with a new stack
@@ -373,34 +377,36 @@ so we will be using that to construct our pipeline.
 All three `.gitlab-ci.yml` files that we use are very similar in
 structure. The base one,`sample-iam`, looks like this:
 
-    image:
-      name: pulumi/pulumi:v0.17.10
-      entrypoint:
-        - '/usr/bin/env'
-        - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+```yaml
+image:
+  name: pulumi/pulumi:v0.17.10
+  entrypoint:
+    - '/usr/bin/env'
+    - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
-    stages:
-      - preview
-      - update
-      - downstream
+stages:
+  - preview
+  - update
+  - downstream
 
-    Pulumi Preview:
-      stage: preview
-      script:
-        - npm ci
-        - pulumi stack select pulumi/sample-iam/$DEPLOY_ENVIRONMENT
-        - pulumi preview
+Pulumi Preview:
+  stage: preview
+  script:
+    - npm ci
+    - pulumi stack select pulumi/sample-iam/$DEPLOY_ENVIRONMENT
+    - pulumi preview
 
-    Pulumi Update:
-      stage: update
-      script:
-        - npm ci
-        - pulumi stack select pulumi/sample-iam/$DEPLOY_ENVIRONMENT
-        - pulumi update --skip-preview
+Pulumi Update:
+  stage: update
+  script:
+    - npm ci
+    - pulumi stack select pulumi/sample-iam/$DEPLOY_ENVIRONMENT
+    - pulumi update --skip-preview
 
-    Update EKS:
-      stage: downstream
-      trigger: pulumi-gitlab/sample-eks
+Update EKS:
+  stage: downstream
+  trigger: pulumi-gitlab/sample-eks
+```
 
 This file describes a three-stage pipeline for the `sample-iam` project:
 

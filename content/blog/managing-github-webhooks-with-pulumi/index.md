@@ -35,23 +35,25 @@ endpoint that just logs when an event happens. We'll start by using the
 package to define an API that just calls `console.log` to write the
 `X-GitHub-Event` header that is sent with the request:
 
-    import * as serverless from "@pulumi/aws-serverless";
+```typescript
+import * as serverless from "@pulumi/aws-serverless";
 
-    const api = new serverless.apigateway.API("hook", {
-        routes: [{
-            path: "/",
-            method: "POST",
-            handler: async (req, ctx) => {
-                console.log(`Got event ${req.headers['X-GitHub-Event']}`);
-                return {
-                    statusCode: 200,
-                    body: ""
-                }
+const api = new serverless.apigateway.API("hook", {
+    routes: [{
+        path: "/",
+        method: "POST",
+        handler: async (req, ctx) => {
+            console.log(`Got event ${req.headers['X-GitHub-Event']}`);
+            return {
+                statusCode: 200,
+                body: ""
             }
-        },],
-    });
+        }
+    },],
+});
 
-    export const url = api.url;
+export const url = api.url;
+```
 
 After running `pulumi update`, we'll have a HTTP endpoint we can give to
 GitHub:
@@ -134,13 +136,89 @@ this. If the signature we computed doesn't match what was provided with
 the request, we'll return error code 400. Our program now looks like
 this:
 
-    import * as pulumi from "@pulumi/pulumi";
-    import * as serverless from "@pulumi/aws-serverless";
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as serverless from "@pulumi/aws-serverless";
 
-    const cfg = new pulumi.Config(pulumi.getProject());
-    const hookSecret = cfg.require("hookSecret");
+const cfg = new pulumi.Config(pulumi.getProject());
+const hookSecret = cfg.require("hookSecret");
 
-    const api = new serverless.apigateway.API("hook", {
+const api = new serverless.apigateway.API("hook", {
+    routes: [{
+        path: "/",
+        method: "POST",
+        handler: async (req, ctx) => {
+            // Compute the HMAC of the body, using `hookSecret` as the key and `sha1` as the algorithm
+
+            // First, grab the body. It may be base64 encoded, depending on if `req.isBase64Encoded` is set. If so, we
+            // should decode it.
+            let body = req.body;
+            if (req.isBase64Encoded) {
+                body = Buffer.from(body, 'base64').toString();
+            }
+
+            // Now compute the HMAC.
+            const crypto = await import("crypto");
+            const hmac = crypto.createHmac("sha1", hookSecret);
+            hmac.update(body);
+
+            const computedSignature = `sha1=${hmac.digest("hex")}`;
+
+            // Compare the signature that came in with the request to what we computed.
+            if (req.headers['X-Hub-Signature'] === undefined ||
+                !crypto.timingSafeEqual(Buffer.from(req.headers['X-Hub-Signature']), Buffer.from(computedSignature)))
+            {
+                console.log(`error: bad signature ${req.headers['X-Hub-Signature']} !== ${computedSignature}`);
+                return {
+                    statusCode: 400,
+                    body: "bad signature"
+                }
+            }
+
+            console.log(`Got event ${req.headers['X-GitHub-Event']} and signature ${computedSignature} matched`);
+            return {
+                statusCode: 200,
+                body: ""
+            }
+        }
+    },],
+});
+
+export const url = api.url;
+```
+
+After deploying, we can trigger another event by closing an existing
+pull request or opening a new one, and then use `pulumi logs` to confirm
+that our validation is working as intended:
+
+    $ pulumi logs
+    Collecting logs for stack github-hook-blog-dev since 2018-07-09T12:43:05.000-07:00.
+
+     2018-07-09T13:43:00.630-07:00[          hook980655da-d0462d4] START RequestId: ab363ec7-83b8-11e8-a7ae-93a25d68b5a9 Version: $LATEST
+     2018-07-09T13:43:00.693-07:00[          hook980655da-d0462d4] 2018-07-09T20:43:00.693Z ab363ec7-83b8-11e8-a7ae-93a25d68b5a9    Got event pull_request and signature sha1=b83320205edc7cb9aeea1a845b85de0c83092e1d matched
+     2018-07-09T13:43:00.731-07:00[          hook980655da-d0462d4] END RequestId: ab363ec7-83b8-11e8-a7ae-93a25d68b5a9
+     2018-07-09T13:43:00.731-07:00[          hook980655da-d0462d4] REPORT RequestId: ab363ec7-83b8-11e8-a7ae-93a25d68b5a9   Duration: 128.75 ms Billed Duration: 200 ms     Memory Size: 128 MB Max Memory Used: 20 MB
+
+## Building an abstraction
+
+We now have a nice little skeleton that we can use when writing a
+webhook on GitHub. Let's start to leverage some other Pulumi features to
+make things simpler and provide a nicer interface for writing hooks.
+Let's start by abstracting away the code that handles validating the
+request and returning a response behind a helper method. We'll pass a
+function to this helper which will be called after the validation has
+completed. We'll also parse the body into a JSON object that our handler
+can use.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as serverless from "@pulumi/aws-serverless";
+
+const cfg = new pulumi.Config(pulumi.getProject());
+const hookSecret = cfg.require("hookSecret");
+
+function createWebhook(name: string, handler: ((req: serverless.apigateway.Request, body: any) => Promise<void>)) {
+    return new serverless.apigateway.API(name, {
         routes: [{
             path: "/",
             method: "POST",
@@ -172,7 +250,9 @@ this:
                     }
                 }
 
-                console.log(`Got event ${req.headers['X-GitHub-Event']} and signature ${computedSignature} matched`);
+                // Call the handler after parsing the body as JSON
+                await handler(req, JSON.parse(body));
+
                 return {
                     statusCode: 200,
                     body: ""
@@ -180,88 +260,14 @@ this:
             }
         },],
     });
+}
 
-    export const url = api.url;
+const api = createWebhook("hook", async (req, body) => {
+    console.log(`Got event ${req.headers['X-GitHub-Event']} with action ${body.action}`);
+});
 
-After deploying, we can trigger another event by closing an existing
-pull request or opening a new one, and then use `pulumi logs` to confirm
-that our validation is working as intended:
-
-    $ pulumi logs
-    Collecting logs for stack github-hook-blog-dev since 2018-07-09T12:43:05.000-07:00.
-
-     2018-07-09T13:43:00.630-07:00[          hook980655da-d0462d4] START RequestId: ab363ec7-83b8-11e8-a7ae-93a25d68b5a9 Version: $LATEST
-     2018-07-09T13:43:00.693-07:00[          hook980655da-d0462d4] 2018-07-09T20:43:00.693Z ab363ec7-83b8-11e8-a7ae-93a25d68b5a9    Got event pull_request and signature sha1=b83320205edc7cb9aeea1a845b85de0c83092e1d matched
-     2018-07-09T13:43:00.731-07:00[          hook980655da-d0462d4] END RequestId: ab363ec7-83b8-11e8-a7ae-93a25d68b5a9
-     2018-07-09T13:43:00.731-07:00[          hook980655da-d0462d4] REPORT RequestId: ab363ec7-83b8-11e8-a7ae-93a25d68b5a9   Duration: 128.75 ms Billed Duration: 200 ms     Memory Size: 128 MB Max Memory Used: 20 MB
-
-## Building an abstraction
-
-We now have a nice little skeleton that we can use when writing a
-webhook on GitHub. Let's start to leverage some other Pulumi features to
-make things simpler and provide a nicer interface for writing hooks.
-Let's start by abstracting away the code that handles validating the
-request and returning a response behind a helper method. We'll pass a
-function to this helper which will be called after the validation has
-completed. We'll also parse the body into a JSON object that our handler
-can use.
-
-    import * as pulumi from "@pulumi/pulumi";
-    import * as serverless from "@pulumi/aws-serverless";
-
-    const cfg = new pulumi.Config(pulumi.getProject());
-    const hookSecret = cfg.require("hookSecret");
-
-    function createWebhook(name: string, handler: ((req: serverless.apigateway.Request, body: any) => Promise<void>)) {
-        return new serverless.apigateway.API(name, {
-            routes: [{
-                path: "/",
-                method: "POST",
-                handler: async (req, ctx) => {
-                    // Compute the HMAC of the body, using `hookSecret` as the key and `sha1` as the algorithm
-
-                    // First, grab the body. It may be base64 encoded, depending on if `req.isBase64Encoded` is set. If so, we
-                    // should decode it.
-                    let body = req.body;
-                    if (req.isBase64Encoded) {
-                        body = Buffer.from(body, 'base64').toString();
-                    }
-
-                    // Now compute the HMAC.
-                    const crypto = await import("crypto");
-                    const hmac = crypto.createHmac("sha1", hookSecret);
-                    hmac.update(body);
-
-                    const computedSignature = `sha1=${hmac.digest("hex")}`;
-
-                    // Compare the signature that came in with the request to what we computed.
-                    if (req.headers['X-Hub-Signature'] === undefined ||
-                        !crypto.timingSafeEqual(Buffer.from(req.headers['X-Hub-Signature']), Buffer.from(computedSignature)))
-                    {
-                        console.log(`error: bad signature ${req.headers['X-Hub-Signature']} !== ${computedSignature}`);
-                        return {
-                            statusCode: 400,
-                            body: "bad signature"
-                        }
-                    }
-
-                    // Call the handler after parsing the body as JSON
-                    await handler(req, JSON.parse(body));
-
-                    return {
-                        statusCode: 200,
-                        body: ""
-                    }
-                }
-            },],
-        });
-    }
-
-    const api = createWebhook("hook", async (req, body) => {
-        console.log(`Got event ${req.headers['X-GitHub-Event']} with action ${body.action}`);
-    });
-
-    export const url = api.url;
+export const url = api.url;
+```
 
 The shape of the JSON object for this event is
 [documented](https://developer.github.com/v3/activity/events/types/#pullrequestevent)
@@ -279,40 +285,42 @@ We'll then add this key to our configuration:
 
 And we can now update our handler to use this API:
 
-    import * as pulumi from "@pulumi/pulumi";
-    import * as serverless from "@pulumi/aws-serverless";
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as serverless from "@pulumi/aws-serverless";
 
-    const cfg = new pulumi.Config(pulumi.getProject());
-    const hookSecret = cfg.require("hookSecret");
+const cfg = new pulumi.Config(pulumi.getProject());
+const hookSecret = cfg.require("hookSecret");
 
-    function createWebhook(name: string, handler: ((req: serverless.apigateway.Request, body: any) => Promise<void>)) {
-        /* Same as the previous version */
+function createWebhook(name: string, handler: ((req: serverless.apigateway.Request, body: any) => Promise<void>)) {
+    /* Same as the previous version */
+}
+
+const githubToken = cfg.require("githubToken");
+
+const api = createWebhook("hook", async (req, body) => {
+    if (body.action === "closed" && body.pull_request.merged &&
+        body.pull_request.base.user.login === body.pull_request.head.user.login &&
+        body.pull_request.base.repo.name === body.pull_request.head.repo.name)
+    {
+        const octokit = require('@octokit/rest')()
+        octokit.authenticate({
+            type: 'token',
+            token: githubToken
+        });
+
+        console.log(`Deleting reference heads/${body.pull_request.head.ref}`);
+
+        await octokit.gitdata.deleteReference({
+            owner: body.pull_request.head.user.login,
+            repo: body.pull_request.head.repo.name,
+            ref: `heads/${body.pull_request.head.ref}`
+        });
     }
+});
 
-    const githubToken = cfg.require("githubToken");
-
-    const api = createWebhook("hook", async (req, body) => {
-        if (body.action === "closed" && body.pull_request.merged &&
-            body.pull_request.base.user.login === body.pull_request.head.user.login &&
-            body.pull_request.base.repo.name === body.pull_request.head.repo.name)
-        {
-            const octokit = require('@octokit/rest')()
-            octokit.authenticate({
-                type: 'token',
-                token: githubToken
-            });
-
-            console.log(`Deleting reference heads/${body.pull_request.head.ref}`);
-
-            await octokit.gitdata.deleteReference({
-                owner: body.pull_request.head.user.login,
-                repo: body.pull_request.head.repo.name,
-                ref: `heads/${body.pull_request.head.ref}`
-            });
-        }
-    });
-
-    export const url = api.url;
+export const url = api.url;
+```
 
 After `pulumi updating`, try merging a pull request! Shortly after you
 click the merge button, the source branch should be deleted
@@ -358,133 +366,137 @@ a resource that manages registration of a webhook with GitHub. To do so,
 we need to implement `dynamic.ResourceProvider` interface. Once we have
 the provider, we can also write a resource that uses it.
 
-    class GithubWebhookProvider implements dynamic.ResourceProvider {
+```typescript
+class GithubWebhookProvider implements dynamic.ResourceProvider {
 
-        // Check ensures that all required properties are set. In this case we have three required parameters.
-        check = async (olds: any, news: any) => {
-            const failedChecks = [];
+    // Check ensures that all required properties are set. In this case we have three required parameters.
+    check = async (olds: any, news: any) => {
+        const failedChecks = [];
 
-            for (const prop of ["url", "owner", "repo"]) {
-                if (news[prop] === undefined) {
-                    failedChecks.push({property: prop, reason: `required property '${prop}' missing`});
-                }
-            }
-
-            return { inputs: news, failedChecks: failedChecks };
-        }
-
-        // Today the engine does the diff between properties to detect if there is a change but this method does
-        // tell the engine if the changes between the old and new values require the resource to be "replaced"
-        // (that is a new one is created and the old one is deleted) vs being edited in place. For us, if the owner
-        // or repo the hook is installed on changes, we'll trigger a replacement.
-        diff = async (id: pulumi.ID, olds: any, news: any) => {
-            const replaces = [];
-
-            for (const prop of ["owner", "repo"]) {
-                if (olds[prop] !== news[prop]) {
-                    replaces.push(prop);
-                }
-            }
-
-            return { replaces: replaces };
-        }
-
-        // Create actually creates the hook. We use octokit under the hood and return the ID of the hook that was created.
-        // Pulumi retains this ID and gives it to us when we need to update or delete the hook.
-        create = async (inputs: any) => {
-            const octokit = require("@octokit/rest")();
-            octokit.authenticate({
-                type: "token",
-                token: githubToken,
-            });
-
-            const res = await octokit.repos.createHook({
-                owner: inputs["owner"],
-                repo: inputs["repo"],
-                name: "web",
-                events: ["pull_request"],
-                config: {
-                    content_type: "json",
-                    url: inputs["url"],
-                    secret: hookSecret,
-                },
-            });
-
-            if (res.status !== 201) {
-                throw new Error(`bad response: ${JSON.stringify(res)}`);
-            }
-
-            // The engine expects that the ID property is a string.
-            return {
-                id: `${res.data.id}`,
-            };
-        }
-
-        update = async (id: pulumi.ID, olds: any, news: any) => {
-            const octokit = require("@octokit/rest")();
-            octokit.authenticate({
-                type: "token",
-                token: githubToken,
-            });
-
-            const res = await octokit.repos.editHook({
-                hook_id: id,
-                owner: news["owner"],
-                repo: news["repo"],
-                events: ["pull_request"],
-                config: {
-                    content_type: "json",
-                    url: news["url"],
-                },
-            });
-
-            if (res.status !== 200) {
-                throw new Error(`bad response: ${JSON.stringify(res)}`);
-            }
-
-            return {}
-        }
-
-        delete = async (id: pulumi.ID, props: any) => {
-            const octokit = require("@octokit/rest")();
-
-            octokit.authenticate({
-                type: "token",
-                token: githubToken,
-            });
-
-            const res = await octokit.repos.deleteHook({
-                hook_id: id,
-                owner: props["owner"],
-                repo: props["repo"],
-            });
-
-            if (res.status !== 204) {
-                throw new Error(`bad response: ${JSON.stringify(res)}`);
+        for (const prop of ["url", "owner", "repo"]) {
+            if (news[prop] === undefined) {
+                failedChecks.push({property: prop, reason: `required property '${prop}' missing`});
             }
         }
+
+        return { inputs: news, failedChecks: failedChecks };
     }
 
-    interface GitHubWebhookResourceArgs {
-        url: pulumi.Input<string>;
-        owner: pulumi.Input<string>;
-        repo: pulumi.Input<string>;
+    // Today the engine does the diff between properties to detect if there is a change but this method does
+    // tell the engine if the changes between the old and new values require the resource to be "replaced"
+    // (that is a new one is created and the old one is deleted) vs being edited in place. For us, if the owner
+    // or repo the hook is installed on changes, we'll trigger a replacement.
+    diff = async (id: pulumi.ID, olds: any, news: any) => {
+        const replaces = [];
+
+        for (const prop of ["owner", "repo"]) {
+            if (olds[prop] !== news[prop]) {
+                replaces.push(prop);
+            }
+        }
+
+        return { replaces: replaces };
     }
 
-    class GitHubWebhookResource extends dynamic.Resource {
-        constructor(name: string, args: GitHubWebhookResourceArgs, opts?: pulumi.ResourceOptions) {
-            super(new GithubWebhookProvider(), name, args, opts);
+    // Create actually creates the hook. We use octokit under the hood and return the ID of the hook that was created.
+    // Pulumi retains this ID and gives it to us when we need to update or delete the hook.
+    create = async (inputs: any) => {
+        const octokit = require("@octokit/rest")();
+        octokit.authenticate({
+            type: "token",
+            token: githubToken,
+        });
+
+        const res = await octokit.repos.createHook({
+            owner: inputs["owner"],
+            repo: inputs["repo"],
+            name: "web",
+            events: ["pull_request"],
+            config: {
+                content_type: "json",
+                url: inputs["url"],
+                secret: hookSecret,
+            },
+        });
+
+        if (res.status !== 201) {
+            throw new Error(`bad response: ${JSON.stringify(res)}`);
+        }
+
+        // The engine expects that the ID property is a string.
+        return {
+            id: `${res.data.id}`,
+        };
+    }
+
+    update = async (id: pulumi.ID, olds: any, news: any) => {
+        const octokit = require("@octokit/rest")();
+        octokit.authenticate({
+            type: "token",
+            token: githubToken,
+        });
+
+        const res = await octokit.repos.editHook({
+            hook_id: id,
+            owner: news["owner"],
+            repo: news["repo"],
+            events: ["pull_request"],
+            config: {
+                content_type: "json",
+                url: news["url"],
+            },
+        });
+
+        if (res.status !== 200) {
+            throw new Error(`bad response: ${JSON.stringify(res)}`);
+        }
+
+        return {}
+    }
+
+    delete = async (id: pulumi.ID, props: any) => {
+        const octokit = require("@octokit/rest")();
+
+        octokit.authenticate({
+            type: "token",
+            token: githubToken,
+        });
+
+        const res = await octokit.repos.deleteHook({
+            hook_id: id,
+            owner: props["owner"],
+            repo: props["repo"],
+        });
+
+        if (res.status !== 204) {
+            throw new Error(`bad response: ${JSON.stringify(res)}`);
         }
     }
+}
+
+interface GitHubWebhookResourceArgs {
+    url: pulumi.Input<string>;
+    owner: pulumi.Input<string>;
+    repo: pulumi.Input<string>;
+}
+
+class GitHubWebhookResource extends dynamic.Resource {
+    constructor(name: string, args: GitHubWebhookResourceArgs, opts?: pulumi.ResourceOptions) {
+        super(new GithubWebhookProvider(), name, args, opts);
+    }
+}
+```
 
 With this new dynamic resource, registering the hook itself becomes
 easy:
 
-    new GitHubWebhookResource("hook-registration", {
-        url: api.url,
-        owner: "ellismg",
-        repo: "testing",
-    });
+```typescript
+new GitHubWebhookResource("hook-registration", {
+    url: api.url,
+    owner: "ellismg",
+    repo: "testing",
+});
+```
 
 Before running `pulumi update` go and manually delete the hook
 registration on GitHub. Now, when you `pulumi update` you'll see the new
@@ -521,76 +533,78 @@ can create the component resource and move much of our logic into there:
 
 The interesting new code looks like this:
 
-    export interface GitHubWebhookArgs {
-        owner: pulumi.Input<string>;
-        repo: pulumi.Input<string>;
-        handler: (req: serverless.apigateway.Request, body: any) => Promise<void>;
-    }
+```typescript
+export interface GitHubWebhookArgs {
+    owner: pulumi.Input<string>;
+    repo: pulumi.Input<string>;
+    handler: (req: serverless.apigateway.Request, body: any) => Promise<void>;
+}
 
-    export class GitHubWebhook extends pulumi.ComponentResource {
-        public readonly url: pulumi.Output<string>;
+export class GitHubWebhook extends pulumi.ComponentResource {
+    public readonly url: pulumi.Output<string>;
 
-        constructor(name: string, args: GitHubWebhookArgs, opts?: pulumi.ResourceOptions) {
-            super("github:webhooks:Hook", name, {}, opts);
+    constructor(name: string, args: GitHubWebhookArgs, opts?: pulumi.ResourceOptions) {
+        super("github:webhooks:Hook", name, {}, opts);
 
-            const api = new serverless.apigateway.API("hook", {
-                routes: [
-                    {
-                        path: "/",
-                        method: "POST",
-                        handler: async (req, ctx) => {
-                            // Compute the HMAC of the body, using `hookSecret` as the key and `sha1` as the algorithm
+        const api = new serverless.apigateway.API("hook", {
+            routes: [
+                {
+                    path: "/",
+                    method: "POST",
+                    handler: async (req, ctx) => {
+                        // Compute the HMAC of the body, using `hookSecret` as the key and `sha1` as the algorithm
 
-                            // First, grab the body. It may be base64 encoded, depending on if `req.isBase64Encoded` is set. If so, we
-                            // should decode it.
-                            let body = req.body;
-                            if (req.isBase64Encoded) {
-                                body = Buffer.from(body, 'base64').toString();
-                            }
+                        // First, grab the body. It may be base64 encoded, depending on if `req.isBase64Encoded` is set. If so, we
+                        // should decode it.
+                        let body = req.body;
+                        if (req.isBase64Encoded) {
+                            body = Buffer.from(body, 'base64').toString();
+                        }
 
-                            // Now compute the HMAC.
-                            const crypto = await import("crypto");
-                            const hmac = crypto.createHmac("sha1", hookSecret);
-                            hmac.update(body);
+                        // Now compute the HMAC.
+                        const crypto = await import("crypto");
+                        const hmac = crypto.createHmac("sha1", hookSecret);
+                        hmac.update(body);
 
-                            const computedSignature = `sha1=${hmac.digest("hex")}`;
+                        const computedSignature = `sha1=${hmac.digest("hex")}`;
 
-                            // Compare the signature that came in with the request to what we computed.
-                            if (req.headers['X-Hub-Signature'] === undefined ||
-                                !crypto.timingSafeEqual(Buffer.from(req.headers['X-Hub-Signature']), Buffer.from(computedSignature)))
-                            {
-                                console.log(`error: bad signature ${req.headers['X-Hub-Signature']} !== ${computedSignature}`);
-                                return {
-                                    statusCode: 400,
-                                    body: "bad signature"
-                                }
-                            }
-
-                            // Call the handler after parsing the body as JSON:
-                            await args.handler(req, JSON.parse(body));
-
+                        // Compare the signature that came in with the request to what we computed.
+                        if (req.headers['X-Hub-Signature'] === undefined ||
+                            !crypto.timingSafeEqual(Buffer.from(req.headers['X-Hub-Signature']), Buffer.from(computedSignature)))
+                        {
+                            console.log(`error: bad signature ${req.headers['X-Hub-Signature']} !== ${computedSignature}`);
                             return {
-                                statusCode: 200,
-                                body: ""
+                                statusCode: 400,
+                                body: "bad signature"
                             }
-                        },
+                        }
+
+                        // Call the handler after parsing the body as JSON:
+                        await args.handler(req, JSON.parse(body));
+
+                        return {
+                            statusCode: 200,
+                            body: ""
+                        }
                     },
-                ],
-            }, {
-                parent: this,
-            });
+                },
+            ],
+        }, {
+            parent: this,
+        });
 
-            new GitHubWebhookResource(`${name}-registration-${args.owner}-${args.repo}`, {
-                owner: args.owner,
-                repo: args.repo,
-                url: api.url,
-            }, {
-                parent: this,
-            });
+        new GitHubWebhookResource(`${name}-registration-${args.owner}-${args.repo}`, {
+            owner: args.owner,
+            repo: args.repo,
+            url: api.url,
+        }, {
+            parent: this,
+        });
 
-            this.url = api.url;
-        }
+        this.url = api.url;
     }
+}
+```
 
 Here, we've transformed our `createWebhook` method into an actual
 `GitHubWebhook` component that manages both the API of the hook as the
@@ -598,38 +612,40 @@ hook's registration with GitHub. With this abstraction (and all of this
 complexity hidden off in a separate `github.ts` file), the code we focus
 on when actually writing our bot is quite small:
 
-    import * as pulumi from "@pulumi/pulumi";
-    import { GitHubWebhook } from "./github";
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import { GitHubWebhook } from "./github";
 
-    const cfg = new pulumi.Config(pulumi.getProject());
-    const githubToken = cfg.require("githubToken");
+const cfg = new pulumi.Config(pulumi.getProject());
+const githubToken = cfg.require("githubToken");
 
-    const hook = new GitHubWebhook("hook", {
-        owner: "ellismg",
-        repo: "testing",
-        handler: async (req, body) => {
-            if (body.action === "closed" && body.pull_request.merged &&
-                body.pull_request.base.user.login === body.pull_request.head.user.login &&
-                body.pull_request.base.repo.name === body.pull_request.head.repo.name)
-            {
-                const octokit = require('@octokit/rest')()
-                octokit.authenticate({
-                    type: 'token',
-                    token: githubToken
-                });
+const hook = new GitHubWebhook("hook", {
+    owner: "ellismg",
+    repo: "testing",
+    handler: async (req, body) => {
+        if (body.action === "closed" && body.pull_request.merged &&
+            body.pull_request.base.user.login === body.pull_request.head.user.login &&
+            body.pull_request.base.repo.name === body.pull_request.head.repo.name)
+        {
+            const octokit = require('@octokit/rest')()
+            octokit.authenticate({
+                type: 'token',
+                token: githubToken
+            });
 
-                console.log(`Deleting reference heads/${body.pull_request.head.ref}`);
+            console.log(`Deleting reference heads/${body.pull_request.head.ref}`);
 
-                await octokit.gitdata.deleteReference({
-                    owner: body.pull_request.head.user.login,
-                    repo: body.pull_request.head.repo.name,
-                    ref: `heads/${body.pull_request.head.ref}`
-                });
-            }
-        },
-    });
+            await octokit.gitdata.deleteReference({
+                owner: body.pull_request.head.user.login,
+                repo: body.pull_request.head.repo.name,
+                ref: `heads/${body.pull_request.head.ref}`
+            });
+        }
+    },
+});
 
-    export const url = hook.url;
+export const url = hook.url;
+```
 
 ## Going Further
 
