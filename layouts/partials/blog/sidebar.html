@@ -11,7 +11,7 @@
         <a href="{{relref . "/blog" }}">🍹 Pulumi Blog</a>
     </div>
 
-    <h3 class="no-anchor hidden md:flex">
+    <h3 class="no-anchor hidden md:flex mt-4">
         <a href="{{relref . "/blog" }}">🍹 Pulumi Blog</a>
     </h3>
 
@@ -24,16 +24,16 @@
             </p>
         </div>
 
-        <ul class="list-none p-0 md:mr-8 my-4">
+        <ul class="list-none p-0 mb-4 inline-flex flex-wrap text-xs">
             {{ $title := .Title | lower }}
             {{ range $tag, $_ := .Site.Taxonomies.tags }}
                 {{ if $tag }}
-                    <li class="inline-flex">
+                    <li>
                         {{ $classes := "bg-white border border-gray-200 text-blue-600 hover:border-blue-600" }}
                         {{ if eq $tag $title }}
-                            {{ $classes = "border-blue-600 bg-blue-600 text-white" }}
+                            {{ $classes = "border-blue-600 bg-blue-600 text-white hover:text-white" }}
                         {{ end }}
-                        <a class="px-1 text-xs rounded transition-all {{ $classes }}" href="{{ .Page.Permalink }}">
+                        <a class="px-2 py-1 mr-1 cursor-auto rounded transition-all {{ $classes }}" href="{{ .Page.Permalink }}">
                             {{ $tag }}
                         </a>
                     </li>
@@ -43,12 +43,12 @@
 
         <div class="hidden lg:block my-4">
             <h5 class="no-anchor">Recent Posts</h5>
-            <ul>
+            <ul class="list-none p-0">
                 {{ range $post := first 10 (where .Site.Pages "Type" "blog").ByDate.Reverse }}
                     {{ if in $post.File.Filename "_index.md" }}
                         {{/* The /blog/_index.md file unfortunately shows up in the list, so we skip it. */}}
                     {{ else }}
-                        <li>
+                        <li class="my-4 leading-snug">
                             <a class="text-sm" href="{{ $post.Permalink }}">{{ $post.Title }}</a>
                         </li>
                     {{ end }}
