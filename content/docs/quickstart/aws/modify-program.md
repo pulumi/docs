@@ -7,7 +7,7 @@ menu:
     identifier: aws-modify-program
 ---
 
-Now that we have an instance of our Pulumi program deployed, let's update it to do something a little more interesting.
+Now that we have an instance of our Pulumi program deployed, let's enable encryption on our S3 bucket.
 
 Replace the entire contents of {{< langfile >}} with the following:
 
@@ -19,40 +19,23 @@ const pulumi = require("@pulumi/pulumi");
 const aws = require("@pulumi/aws");
 const awsx = require("@pulumi/awsx");
 
-const size = "t2.micro"; // t2.micro is available in the AWS free tier
+// Create a KMS Key for S3 server-side encryption
+const key = new aws.kms.Key("my-key");
 
-// Look up the right AMI for running Ubuntu Trusty in our region
-const ami = pulumi.output(aws.getAmi({
-    filters: [
-        { name: "name", values: ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"] },
-        { name: "virtualization-type", values: ["hvm"] },
-    ],
-    owners: ["099720109477"], // Canonical
-    mostRecent: true,
-})).apply(result => result.id);
-
-// Create a new security group for port 80
-const group = new aws.ec2.SecurityGroup("web-secgrp", {
-    ingress: [
-        { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
-    ],
+// Create an AWS resource (S3 Bucket)
+const bucket = new aws.s3.Bucket("my-bucket", {
+    serverSideEncryptionConfiguration: {
+        rule: {
+            applyServerSideEncryptionByDefault: {
+                sseAlgorithm: "aws:kms",
+                kmsMasterKeyId: key.id,
+            }
+        }
+    }
 });
 
-// Create a simple web server using the startup script for the instance
-const userData =
-`#!/bin/bash
-echo "Hello, World!" > index.html
-nohup python -m SimpleHTTPServer 80 &`;
-
-const server = new aws.ec2.Instance("web-server-www", {
-    instanceType: size,
-    securityGroups: [ group.name ], // reference the group object above
-    ami: ami,
-    userData: userData
-});
-
-// Export the host name
-exports.host = server.publicDns;
+// Export the name of the bucket
+exports.bucketName = bucket.id;
 ```
 
 ```typescript
@@ -60,82 +43,48 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
 
-const size = "t2.micro"; // t2.micro is available in the AWS free tier
+// Create a KMS Key for S3 server-side encryption
+const key = new aws.kms.Key("my-key");
 
-// Look up the right AMI for running Ubuntu Trusty in our region
-const ami = pulumi.output(aws.getAmi({
-    filters: [
-        { name: "name", values: ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"] },
-        { name: "virtualization-type", values: ["hvm"] },
-    ],
-    owners: ["099720109477"], // Canonical
-    mostRecent: true,
-})).apply(result => result.id);
-
-// Create a new security group for port 80
-const group = new aws.ec2.SecurityGroup("web-secgrp", {
-    ingress: [
-        { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
-    ],
+// Create an AWS resource (S3 Bucket)
+const bucket = new aws.s3.Bucket("my-bucket", {
+    serverSideEncryptionConfiguration: {
+        rule: {
+            applyServerSideEncryptionByDefault: {
+                sseAlgorithm: "aws:kms",
+                kmsMasterKeyId: key.id,
+            }
+        }
+    }
 });
 
-// Create a simple web server using the startup script for the instance
-const userData =
-`#!/bin/bash
-echo "Hello, World!" > index.html
-nohup python -m SimpleHTTPServer 80 &`;
-
-const server = new aws.ec2.Instance("web-server-www", {
-    instanceType: size,
-    securityGroups: [ group.name ], // reference the group object above
-    ami: ami,
-    userData: userData
-});
-
-// Export the host name
-export const host = server.publicDns;
+// Export the name of the bucket
+export const bucketName = bucket.id;
 ```
 
 ```python
 import pulumi
-from pulumi_aws import ec2
+from pulumi_aws import kms, s3
 
-size = 't2.micro'
+# Create a KMS Key for S3 server-side encryption
+key = kms.Key('my-key')
 
-ami = 'ami-6869aa05' # AMI for us-east-1 (Virginia)
-# ami  = 'ami-c55673a0' # AMI for us-east-2 (Ohio)
-# ami  = 'ami-31490d51' # AMI for us-west-1 (California)
-# ami  = 'ami-7172b611' # AMI for us-west-2 (Oregon)
-# ami  = 'ami-f9dd458a' # AMI for eu-west-1 (Ireland)
-# ami  = 'ami-ea26ce85' # AMI for eu-central-1 (Frankfurt)
+# Create an AWS resource (S3 Bucket)
+bucket = s3.Bucket('my-bucket',
+    server_side_encryption_configuration={
+        'rule': {
+            'apply_server_side_encryption_by_default': {
+                'sse_algorithm': 'aws:kms',
+                'kms_master_key_id': key.id
+            }
+        }
+    })
 
-# Create a new security group for port 80
-group = ec2.SecurityGroup('web-secgrp',
-    ingress=[
-        { 'protocol': 'tcp', 'from_port': 80, 'to_port': 80, 'cidr_blocks': ['0.0.0.0/0'] }
-    ])
-
-# Create a simple web server using the startup script for the instance
-user_data = """
-#!/bin/bash
-echo "Hello, World!" > index.html
-nohup python -m SimpleHTTPServer 80 &"""
-
-server = ec2.Instance('web-server-www',
-    instance_type=size,
-    security_groups=[group.name],
-    ami=ami,
-    user_data=user_data)
-
-# Export the host name
-pulumi.export('host', server.public_dns)
+# Export the name of the bucket
+pulumi.export('bucket_name',  bucket.id)
 ```
 
-Our program now creates a simple EC2 virtual machine running a Python web server.
-
-{{% lang python %}}
-Update the `ami` variable based on your AWS region.
-{{% /lang %}}
+Our program now creates a KMS key and enables server-side encryption on the S3 bucket using the KMS key.
 
 Next, we'll deploy the changes.
 
