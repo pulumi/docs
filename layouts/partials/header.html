@@ -1,4 +1,4 @@
-<nav class="bg-black text-white text-sm py-2 px-8 md:px-0">
+<nav class="bg-black text-white text-sm py-2 px-4 md:px-0 transition-all max-h-screen md:max-h-full">
     <div class="container mx-auto">
         <ul class="flex justify-end items-center h-6">
             <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
@@ -16,7 +16,7 @@
     <a class="underline" href="/crosswalk/aws">Learn more</a>.
 </div> -->
 
-<nav class="nav-main bg-purple-700 py-6 px-8 md:px-0 border-t border-purple-500">
+<nav class="nav-main bg-purple-700 py-6 px-4 md:px-0 border-t border-purple-500">
     <div class="container mx-auto">
         <header class="flex items-center justify-between flex-wrap">
             <div class="flex items-center flex-shrink-0 text-white mr-6">
@@ -32,7 +32,7 @@
                 </button>
             </div>
 
-            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white uppercase pt-4 md:pt-0">
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-xs lg:text-base uppercase pt-4 md:pt-0">
                 {{ range $.Site.Menus.header }}
                     <li>
                         {{ $active := hasPrefix $.RelPermalink .URL }}

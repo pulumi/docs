@@ -1,11 +1,11 @@
 {{ define "hero" }}
-    <header class="bg-purple-500 py-24 text-white">
-        <div class="container mx-auto text-white md:flex px-4 md:px-0">
-            <div class="md:w-1/2">
-                <h1 class="text-white">{{ .Params.hero.title }}</h1>
+    <header class="header-hero">
+        <div class="header-hero-items container mx-auto">
+            <div class="header-hero-item">
+                <h1>{{ .Params.hero.title }}</h1>
                 {{ .Params.hero.body | markdownify }}
             </div>
-            <div class="md:w-1/2 md:ml-8 text-white">
+            <div class="header-hero-item">
                 {{ partial "code" (dict "code" .Params.hero.code "lang" "js" "mode" "dark" "chrome" true) }}
             </div>
         </div>

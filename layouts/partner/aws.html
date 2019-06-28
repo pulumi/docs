@@ -1,11 +1,11 @@
 {{ define "hero" }}
-    <header class="bg-purple-500 py-24">
-        <div class="container mx-auto text-white md:flex px-4 md:px-0">
-            <div class="md:w-1/2">
-                <h1 class="text-white">Modern Infrastructure as Code for AWS</h1>
-                <div class="flex">
-                    <img class="md:w-48 h-48 mr-4" src="/images/partners/aws-apn.png" alt="AWS Technology Partner">
-                    <p class="w-3/4">
+    <header class="header-hero">
+        <div class="header-hero-items container mx-auto">
+            <div class="header-hero-item">
+                <h1>Modern Infrastructure as Code for AWS</h1>
+                <div class="flex flex-col md:flex-row">
+                    <img class="w-48 h-48 md:mr-4" src="/images/partners/aws-apn.png" alt="AWS Technology Partner">
+                    <p class="md:w-3/4">
                         Pulumi's infrastructure-as-code SDK helps create, deploy, and manage AWS containers, serverless functions, and infrastructure using real programming languages.
                     </p>
                 </div>
@@ -16,7 +16,7 @@
                     </a>
                 </p>
             </div>
-            <div class="md:w-1/2 md:ml-8">
+            <div class="header-hero-item">
                 {{ $code := `const aws = require("@pulumi/aws");
 
 let size = "t2.micro";
@@ -46,22 +46,22 @@ let server = new aws.ec2.Instance("web-server-www", {
 {{ end }}
 
 {{ define "main" }}
-    <nav class="bg-black sticky top-0">
+    <nav class="nav-section-sticky">
         <div class="container mx-auto">
-            <ul class="flex list-none justify-between">
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#benefits">Benefits</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#code">Code</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#how-it-works">How it Works</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#case-study">Case Study</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#get-started">Get Started</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#contact-us">Contact Us</a></li>
+            <ul>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#case-study">Case Study</a></li>
+                <li><a href="#get-started">Get Started</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
     {{ partial "benefits-v1.html" . }}
 
-    <section id="code" class="bg-gray-200 py-16">
+    <section id="code" class="bg-gray-200 py-16 px-4 md:px-0">
         <div class="container mx-auto">
 
             <!-- Example 1 -->
@@ -262,7 +262,7 @@ exports.publicHostName = server.publicDns;` }}
 
     {{ partial "get-started.html" . }}
 
-    <section id="contact-us" class="bg-purple-500 mb-0 py-16 text-white">
+    <section id="contact-us" class="bg-purple-500 mb-0 py-16 px-4 md:px-0 text-white">
         <div class="container mx-auto max-w-5xl">
             <div class="md:flex my-8 md:max-w-32 align-top">
                 <div class="md:w-1/2">

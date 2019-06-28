@@ -1,8 +1,8 @@
 {{ define "hero" }}
-    <header class="bg-purple-500 py-24">
-        <div class="container mx-auto text-white md:flex">
-            <div class="md:w-1/2">
-                <h1 class="text-white">Modern Infrastructure as Code for Google Cloud</h1>
+    <header class="header-hero">
+        <div class="header-hero-items container mx-auto">
+            <div class="header-hero-item">
+                <h1>Modern Infrastructure as Code for Google Cloud</h1>
                 <p>
                     Pulumi's infrastructure as code SDK helps create, deploy, and manage
                     GCP containers, serverless functions, and infrastructure using real
@@ -12,7 +12,7 @@
                     Find out how to program the cloud with Pulumi and Google Cloud.
                 </p>
             </div>
-            <div class="md:w-1/2 md:ml-8">
+            <div class="header-hero-item">
                 {{ $code := `import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";
 import { k8sProvider, k8sConfig } from "./cluster";
@@ -38,22 +38,22 @@ export let kubeConfig = k8sConfig;` }}
 {{ end }}
 
 {{ define "main" }}
-    <nav class="bg-black sticky top-0">
+    <nav class="nav-section-sticky">
         <div class="container mx-auto">
-            <ul class="flex list-none justify-between">
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#benefits">Benefits</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#code">Code</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#how-it-works">How it Works</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#case-study">Case Study</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#get-started">Get Started</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#contact-us">Contact Us</a></li>
+            <ul>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#case-study">Case Study</a></li>
+                <li><a href="#get-started">Get Started</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
     {{ partial "benefits-v1.html" . }}
 
-    <section id="code" class="bg-gray-200 py-16">
+    <section id="code" class="bg-gray-200 py-16 px-4 md:px-0">
         <div class="container mx-auto">
 
             <!-- Example 1 -->
@@ -71,7 +71,7 @@ export let kubeConfig = k8sConfig;` }}
                         app to the cluster.
                     </p>
                     <p>
-                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
                     </p>
                     <p>
                         Pulumi can be used on any resource covering serverless,
@@ -118,7 +118,7 @@ export const k8sCluster = new gcp.container.Cluster("gke-cluster", {
                         deploys an nginx canary onto the cluster with 1 replica.
                     </p>
                     <p>
-                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
                     </p>
                     <p>
                         Pulumi can be used on any resource covering serverless,
@@ -166,7 +166,7 @@ export let kubeConfig = k8sConfig;` }}
                         the instance, before exporting the IP and Hostname.
                     </p>
                     <p>
-                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
                     </p>
                     <p>
                         Pulumi can be used on any resource covering serverless,
@@ -233,7 +233,7 @@ exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessC
                         This example shows how to create a simple Google Cloud Function that returns a message when invoked.
                     </p>
                     <p>
-                        <a class="btn" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
                     </p>
                     <p>
                         Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
@@ -260,7 +260,7 @@ export let url = greetingFunction.httpsTriggerUrl;` }}
 
     {{ partial "get-started.html" . }}
 
-    <section id="contact-us" class="bg-purple-500 mb-0 py-16 text-white">
+    <section id="contact-us" class="bg-purple-500 mb-0 py-16 px-4 md:px-0 text-white">
         <div class="container mx-auto max-w-5xl">
             <div class="md:flex my-8 md:max-w-32 align-top">
                 <div class="md:w-1/2">

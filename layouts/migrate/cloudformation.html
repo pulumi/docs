@@ -1,8 +1,8 @@
 {{ define "hero" }}
-    <header class="bg-purple-500 text-white py-24 px-4">
-        <div class="container mx-auto text-white md:flex">
-            <div class="md:w-1/2">
-                <h1 class="text-white">Migrating to Pulumi from CloudFormation</h1>
+    <header class="header-hero">
+        <div class="header-hero-items container mx-auto">
+            <div class="header-hero-item">
+                <h1>Migrating to Pulumi from CloudFormation</h1>
                 <p>
                     AWS CloudFormation provides a configuration DSL for you to describe and
                     provision infrastructure resources on AWS.
@@ -13,7 +13,7 @@
                     of YAML-based configuration files.
                 </p>
             </div>
-            <div class="md:w-1/2 md:ml-8 text-white">
+            <div class="header-hero-item">
                 <div class="hs-form hs-form-fg-light">
                     {{ partial "hubspot-form.html" (dict "hubspotFormID" "1b19f76c-0405-4a38-8a45-7f6a499db8ea") }}
                 </div>
@@ -23,15 +23,15 @@
 {{ end }}
 
 {{ define "main" }}
-    <nav class="bg-black text-white px-4 sticky top-0">
+    <nav class="nav-section-sticky">
         <div class="container mx-auto">
-            <ul class="flex list-none justify-between">
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#benefits">Benefits</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#code">Code</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#how-it-works">How it Works</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#case-study">Case Study</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#get-started">Get Started</a></li>
-                <li><a class="block py-4 px-4 text-white hover:text-gray-300" href="#contact-us">Contact Us</a></li>
+            <ul>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#case-study">Case Study</a></li>
+                <li><a href="#get-started">Get Started</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
             </ul>
         </div>
     </nav>
