@@ -23,14 +23,14 @@ title: Module worklink
 <li><a href="#WebsiteCertificateAuthorityAssociationState">interface WebsiteCertificateAuthorityAssociationState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts">worklink/fleet.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts">worklink/websiteCertificateAuthorityAssociation.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts">worklink/fleet.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts">worklink/websiteCertificateAuthorityAssociation.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Fleet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L49">class <b>Fleet</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L49">class <b>Fleet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -79,7 +79,7 @@ const test = new aws.worklink.Fleet("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Fleet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L119"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L119"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -96,7 +96,7 @@ Create a Fleet resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L58">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -110,7 +110,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -120,7 +120,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L69">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -134,7 +134,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L79">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L79">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -145,7 +145,7 @@ The ARN of the created WorkLink Fleet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-auditStreamArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L83">property <b>auditStreamArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L83">property <b>auditStreamArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>auditStreamArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -156,7 +156,7 @@ The ARN of the Amazon Kinesis data stream that receives the audit events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-companyCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L87">property <b>companyCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L87">property <b>companyCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>companyCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -167,7 +167,7 @@ The identifier used by users to sign in to the Amazon WorkLink app.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-createdTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L91">property <b>createdTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L91">property <b>createdTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createdTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -178,7 +178,7 @@ The time that the fleet was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-deviceCaCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L95">property <b>deviceCaCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L95">property <b>deviceCaCertificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>deviceCaCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -189,7 +189,7 @@ The certificate chain, including intermediate certificates and the root certific
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L99">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L99">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -200,7 +200,7 @@ The name of the fleet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -212,7 +212,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-identityProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L103">property <b>identityProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L103">property <b>identityProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>identityProvider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -226,7 +226,7 @@ Provide this to allow manage the identity provider configuration for the fleet. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-lastUpdatedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L107">property <b>lastUpdatedTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L107">property <b>lastUpdatedTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lastUpdatedTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -237,7 +237,7 @@ The time that the fleet was last updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L111">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L111">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -248,7 +248,7 @@ A region-unique name for the AMI.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L115">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L115">property <b>network</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -263,7 +263,7 @@ Provide this to allow manage the company network configuration for the fleet. Fi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-optimizeForEndUserLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L119">property <b>optimizeForEndUserLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L119">property <b>optimizeForEndUserLocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>optimizeForEndUserLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -274,7 +274,7 @@ The option to optimize for better performance by routing traffic through the clo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Fleet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -287,7 +287,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WebsiteCertificateAuthorityAssociation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L22">class <b>WebsiteCertificateAuthorityAssociation</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L22">class <b>WebsiteCertificateAuthorityAssociation</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -309,7 +309,7 @@ const test = new aws.worklink.WebsiteCertificateAuthorityAssociation("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L64"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -326,7 +326,7 @@ Create a WebsiteCertificateAuthorityAssociation resource with the given unique n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L31">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -340,7 +340,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -350,7 +350,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L42">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -364,7 +364,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L52">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L52">property <b>certificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -375,7 +375,7 @@ The root certificate of the Certificate Authority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L56">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L56">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -386,7 +386,7 @@ The certificate name to display.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-fleetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L60">property <b>fleetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L60">property <b>fleetArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fleetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -397,7 +397,7 @@ The ARN of the fleet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -409,7 +409,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -421,7 +421,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-websiteCaId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L64">property <b>websiteCaId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L64">property <b>websiteCaId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>websiteCaId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -433,7 +433,7 @@ A unique identifier for the Certificate Authority.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FleetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L215">interface <b>FleetArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L215">interface <b>FleetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -442,7 +442,7 @@ The set of arguments for constructing a Fleet resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FleetArgs-auditStreamArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L219">property <b>auditStreamArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L219">property <b>auditStreamArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>auditStreamArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -453,7 +453,7 @@ The ARN of the Amazon Kinesis data stream that receives the audit events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetArgs-deviceCaCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L223">property <b>deviceCaCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L223">property <b>deviceCaCertificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deviceCaCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -464,7 +464,7 @@ The certificate chain, including intermediate certificates and the root certific
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L227">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L227">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -475,7 +475,7 @@ The name of the fleet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetArgs-identityProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L231">property <b>identityProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L231">property <b>identityProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identityProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -489,7 +489,7 @@ Provide this to allow manage the identity provider configuration for the fleet. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L235">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L235">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -500,7 +500,7 @@ A region-unique name for the AMI.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetArgs-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L239">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L239">property <b>network</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -515,7 +515,7 @@ Provide this to allow manage the company network configuration for the fleet. Fi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetArgs-optimizeForEndUserLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L243">property <b>optimizeForEndUserLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L243">property <b>optimizeForEndUserLocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>optimizeForEndUserLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -527,7 +527,7 @@ The option to optimize for better performance by routing traffic through the clo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FleetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L165">interface <b>FleetState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L165">interface <b>FleetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -536,7 +536,7 @@ Input properties used for looking up and filtering Fleet resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FleetState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L169">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L169">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -547,7 +547,7 @@ The ARN of the created WorkLink Fleet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-auditStreamArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L173">property <b>auditStreamArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L173">property <b>auditStreamArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>auditStreamArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -558,7 +558,7 @@ The ARN of the Amazon Kinesis data stream that receives the audit events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-companyCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L177">property <b>companyCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L177">property <b>companyCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>companyCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -569,7 +569,7 @@ The identifier used by users to sign in to the Amazon WorkLink app.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-createdTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L181">property <b>createdTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L181">property <b>createdTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -580,7 +580,7 @@ The time that the fleet was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-deviceCaCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L185">property <b>deviceCaCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L185">property <b>deviceCaCertificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deviceCaCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -591,7 +591,7 @@ The certificate chain, including intermediate certificates and the root certific
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L189">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L189">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -602,7 +602,7 @@ The name of the fleet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-identityProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L193">property <b>identityProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L193">property <b>identityProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identityProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -616,7 +616,7 @@ Provide this to allow manage the identity provider configuration for the fleet. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-lastUpdatedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L197">property <b>lastUpdatedTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L197">property <b>lastUpdatedTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastUpdatedTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -627,7 +627,7 @@ The time that the fleet was last updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L201">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L201">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -638,7 +638,7 @@ A region-unique name for the AMI.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L205">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L205">property <b>network</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -653,7 +653,7 @@ Provide this to allow manage the company network configuration for the fleet. Fi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FleetState-optimizeForEndUserLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/fleet.ts#L209">property <b>optimizeForEndUserLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/fleet.ts#L209">property <b>optimizeForEndUserLocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>optimizeForEndUserLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -665,7 +665,7 @@ The option to optimize for better performance by routing traffic through the clo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WebsiteCertificateAuthorityAssociationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L124">interface <b>WebsiteCertificateAuthorityAssociationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L124">interface <b>WebsiteCertificateAuthorityAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -674,7 +674,7 @@ The set of arguments for constructing a WebsiteCertificateAuthorityAssociation r
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociationArgs-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L128">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L128">property <b>certificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -685,7 +685,7 @@ The root certificate of the Certificate Authority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociationArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L132">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L132">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -696,7 +696,7 @@ The certificate name to display.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociationArgs-fleetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L136">property <b>fleetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L136">property <b>fleetArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fleetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -708,7 +708,7 @@ The ARN of the fleet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WebsiteCertificateAuthorityAssociationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L102">interface <b>WebsiteCertificateAuthorityAssociationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L102">interface <b>WebsiteCertificateAuthorityAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -717,7 +717,7 @@ Input properties used for looking up and filtering WebsiteCertificateAuthorityAs
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociationState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L106">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L106">property <b>certificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -728,7 +728,7 @@ The root certificate of the Certificate Authority.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociationState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L110">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L110">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -739,7 +739,7 @@ The certificate name to display.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociationState-fleetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L114">property <b>fleetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L114">property <b>fleetArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fleetArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -750,7 +750,7 @@ The ARN of the fleet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociationState-websiteCaId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L118">property <b>websiteCaId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L118">property <b>websiteCaId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>websiteCaId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

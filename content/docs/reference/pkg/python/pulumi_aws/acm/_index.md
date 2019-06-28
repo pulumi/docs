@@ -219,7 +219,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.acm.GetCertificateResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.acm.</code><code class="descname">GetCertificateResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>domain=None</em>, <em>most_recent=None</em>, <em>statuses=None</em>, <em>types=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acm.GetCertificateResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.acm.</code><code class="descname">GetCertificateResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>domain=None</em>, <em>key_types=None</em>, <em>most_recent=None</em>, <em>statuses=None</em>, <em>types=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acm.GetCertificateResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCertificate.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.acm.GetCertificateResult.arn">
@@ -237,7 +237,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.acm.get_certificate">
-<code class="descclassname">pulumi_aws.acm.</code><code class="descname">get_certificate</code><span class="sig-paren">(</span><em>domain=None</em>, <em>most_recent=None</em>, <em>statuses=None</em>, <em>types=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acm.get_certificate" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.acm.</code><code class="descname">get_certificate</code><span class="sig-paren">(</span><em>domain=None</em>, <em>key_types=None</em>, <em>most_recent=None</em>, <em>statuses=None</em>, <em>types=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acm.get_certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ARN of a certificate in AWS Certificate
 Manager (ACM), you can reference
 it by domain without having to hard code the ARNs as input.</p>

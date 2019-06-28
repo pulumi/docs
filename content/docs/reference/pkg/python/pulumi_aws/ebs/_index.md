@@ -138,6 +138,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.ebs.GetDefaultKmsKeyResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">GetDefaultKmsKeyResult</code><span class="sig-paren">(</span><em>key_arn=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetDefaultKmsKeyResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDefaultKmsKey.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.ebs.GetDefaultKmsKeyResult.key_arn">
+<code class="descname">key_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetDefaultKmsKeyResult.key_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of the default KMS key uses to encrypt an EBS volume in this region when no key is specified in an API call that creates the volume and encryption by default is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ebs.GetDefaultKmsKeyResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetDefaultKmsKeyResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ebs.GetEncryptionByDefaultResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">GetEncryptionByDefaultResult</code><span class="sig-paren">(</span><em>enabled=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetEncryptionByDefaultResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getEncryptionByDefault.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.ebs.GetEncryptionByDefaultResult.enabled">
+<code class="descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetEncryptionByDefaultResult.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not default EBS encryption is enabled. Returns as <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ebs.GetEncryptionByDefaultResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetEncryptionByDefaultResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.ebs.GetSnapshotIdsResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">GetSnapshotIdsResult</code><span class="sig-paren">(</span><em>filters=None</em>, <em>ids=None</em>, <em>owners=None</em>, <em>restorable_by_user_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetSnapshotIdsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSnapshotIds.</p>
@@ -651,6 +687,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.ebs.get_default_kms_key">
+<code class="descclassname">pulumi_aws.ebs.</code><code class="descname">get_default_kms_key</code><span class="sig-paren">(</span><em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_default_kms_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get the default EBS encryption KMS key in the current region.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.ebs.get_encryption_by_default">
+<code class="descclassname">pulumi_aws.ebs.</code><code class="descname">get_encryption_by_default</code><span class="sig-paren">(</span><em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_encryption_by_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a way to check whether default EBS encryption is enabled for your AWS account in the current AWS region.</p>
 </dd></dl>
 
 <dl class="function">
