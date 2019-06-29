@@ -13,18 +13,12 @@ function selectLanguage(lang) {
 
         // Change the active tab.
         var langTabs = 0;
-        $("a").each(function (i, e) {
-            var classes = getElemClasses(e);
-            for (var i = 0; i < classes.length; i++) {
-                if (classes[i] === "langtab") {
-                    langTabs++;
-                    if (e.innerText.toLowerCase() === lang) {
-                        $(e).addClass("is-active");
-                    } else {
-                        $(e).removeClass("is-active");
-                    }
-                    break;
-                }
+        $("a.langtab").each(function (i, e) {
+            langTabs++;
+            if (e.innerText.toLowerCase() === lang) {
+                $(e).addClass("is-active");
+            } else {
+                $(e).removeClass("is-active");
             }
         });
 
@@ -87,26 +81,36 @@ function selectLanguage(lang) {
 // The first time the DOM is finished loading, select the right language.  If no language is set as the preferred
 // language yet, then JavaScript is chosen as the preferred language as a default.
 $(function() {
-    // For every language tab, inject a handler and make the correct one hidden.
-    $("a").each(function (i, e) {
-        var classes = getElemClasses(e);
-        for (var i = 0; i < classes.length; i++) {
-            if (classes[i] === "langtab") {
-                var lang = e.innerText.toLowerCase();
-                e.addEventListener("click", function() {
-                    selectLanguage(lang);
-                });
-                break;
-            }
-        }
+    var tabLangsOnPage = {};
+    $("a.langtab").each(function (i, e) {
+        var lang = e.innerText.toLowerCase();
+
+        // Save the languages we've seen.
+        tabLangsOnPage[lang] = true;
+
+        // For every language tab, inject a handler and make the correct one hidden.
+        e.addEventListener("click", function() {
+            selectLanguage(lang);
+        });
     });
 
-    // Now select the right language based on whether there's a cookie (defaulting to JavaScript).
+    var tabLangsOnPageKeys = Object.keys(tabLangsOnPage);
+
+    // If we didn't find any lang tabs, there's nothing else to do.
+    if (tabLangsOnPageKeys.length === 0) {
+        return;
+    }
+
+    // Now select the right language based on whether there's a cookie, defaulting to JavaScript,
+    // if it's among the tabs, otherwise falling back to the first lang we find.
     var langCookie = decodeURIComponent(
         document.cookie.replace(/(?:(?:^|.*;\s*)pulumi_language\s*\=\s*([^;]*).*$)|^.*$/, "$1"));
-    if (langCookie) {
+
+    if (langCookie && tabLangsOnPage.hasOwnProperty(langCookie)) {
         selectLanguage(langCookie);
-    } else {
+    } else if (tabLangsOnPage.hasOwnProperty("javascript")) {
         selectLanguage("javascript");
+    } else if (tabLangsOnPageKeys.length > 0) {
+        selectLanguage(tabLangsOnPageKeys[0]);
     }
 });
