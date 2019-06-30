@@ -78,6 +78,55 @@
         </div>
     </section>
 
+    <!-- Investors -->
+    <section id="investors" class="py-16 px-4 md:px-0">
+        <div class="container mx-auto text-center">
+            <h2 class="mb-8">Pulumi Investors</h2>
+            <div class="inline-flex items-center">
+                <a class="mx-8" href="https://www.madrona.com/">
+                    <img class="w-24" src="/logos/investors/madrona.png" alt="Madrona Venture Group logo">
+                </a>
+                <a class="mx-8" href="https://www.tolacapital.com/">
+                    <img class="w-24" src="/logos/investors/tola.png" alt="TOLA Capital logo">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsroom" class="bg-gray-100 py-16 px-4 md:px-0">
+        <div class="container mx-auto md:flex items-top max-w-5xl">
+            <div class="md:w/1-2 md:px-8">
+                <h2 class="text-center md:text-left">Press Releases</h2>
+                <ul class="list-none my-8 p-0">
+                    {{ range $.Site.Data.newsroom.releases }}
+                        <li class="py-4">
+                            <div class="text-sm text-gray-500">{{ .date }}</div>
+                            <h5 class="mt-2 mb-0">{{ .title }}</h5>
+                            <a class="block my-4" href="{{ .url }}">Read more &rarr;</a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="md:w/1-2 md:px-8">
+                <h2 class="text-center md:text-left">Recent News</h2>
+                <ul class="list-none my-8 p-0">
+                    {{ range $.Site.Data.newsroom.coverage }}
+                        <li class="py-4 flex items-top">
+                            <div class="w-20 flex-shrink">
+                                 <img class="inline-block w-full rounded p-2 border-2 border-gray-300" src="{{ .img }}">
+                            </div>
+                            <div class="pl-4 flex-1">
+                                <div class="text-sm text-gray-500">{{ .date }}</div>
+                                <h5 class="mt-2 mb-0">{{ .title }}</h5>
+                                <a class="block my-2" href="{{ .url }}">Read more &rarr;</a>
+                            </div>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <section class="bg-purple-500 py-24 text-white text-center px-4 md:px-0">
         <img class="inline-block md:mx-auto" src="/images/cloud.png">
         <h2 class="mt-0 text-white text-4xl">Why Pulumi?</h2>

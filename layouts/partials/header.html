@@ -1,4 +1,4 @@
-<nav class="bg-black text-white text-sm py-2 px-4 md:px-0 transition-all max-h-screen md:max-h-full">
+<nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
     <div class="container mx-auto">
         <ul class="flex justify-end items-center h-6">
             <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
@@ -16,37 +16,36 @@
     <a class="underline" href="/crosswalk/aws">Learn more</a>.
 </div> -->
 
-<nav class="nav-main bg-purple-700 py-6 px-4 md:px-0 border-t border-purple-500">
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
     <div class="container mx-auto">
         <header class="flex items-center justify-between flex-wrap">
             <div class="flex items-center flex-shrink-0 text-white mr-6">
                 <a class="block" href="/">
-                    <img class="h-10 hidden md:block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
-                    <img class="h-10 md:hidden" src="/images/logo/logo-symbol-inv.svg" alt="Pulumi logo">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
                 </a>
             </div>
 
             <div class="nav-header-toggle block md:hidden">
-                <button class="flex items-center px-3 py-2 border rounded text-white border-purple">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
 
-            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-xs lg:text-base uppercase pt-4 md:pt-0">
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
                 {{ range $.Site.Menus.header }}
                     <li>
                         {{ $active := hasPrefix $.RelPermalink .URL }}
-                        <a href="{{ .URL }}" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 md:mx-4 border text-sm hover:border-purple-500 hover:bg-purple-600 rounded {{ if $active }}border-purple-500 bg-purple-600{{ else }}border-purple-700{{ end }}">
+                        <a href="{{ .URL }}" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 border hover:border-purple-500 hover:bg-purple-600 rounded {{ if $active }}border-purple-500 bg-purple-600{{ else }}border-purple-700{{ end }}">
                             {{ .Name }}
                         </a>
                     </li>
                 {{ end }}
 
-                <li class="md:ml-auto md:mr-4">
-                    <a class="block mt-4 md:mt-0 btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
                 </li>
                 <li>
-                    <a class="block mt-4 md:mt-0 btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
                 </li>
             </ul>
         </header>
