@@ -362,12 +362,10 @@ scales elastically for real-time processing of streaming big data.</p>
 <li><strong>encryption_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encryption type to use. The only acceptable values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> or <code class="docutils literal notranslate"><span class="pre">KMS</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</li>
 <li><strong>enforce_consumer_deletion</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias <code class="docutils literal notranslate"><span class="pre">alias/aws/kinesis</span></code>.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the
-AWS account and region the Stream is created in.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the AWS account and region the Stream is created in.</li>
 <li><strong>retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Length of time data records are accessible after they are added to the stream. The maximum value of a stream’s retention period is 168 hours. Minimum value is 24. Default is 24.</li>
 <li><strong>shard_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of shards that the stream will use.
-Amazon has guidlines for specifying the Stream size that should be referenced
-when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.</li>
+Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.</li>
 <li><strong>shard_level_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch][3] for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
@@ -402,8 +400,7 @@ when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.</li>
 <dl class="attribute">
 <dt id="pulumi_aws.kinesis.Stream.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>A name to identify the stream. This is unique to the
-AWS account and region the Stream is created in.</p>
+<dd><p>A name to identify the stream. This is unique to the AWS account and region the Stream is created in.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -416,8 +413,7 @@ AWS account and region the Stream is created in.</p>
 <dt id="pulumi_aws.kinesis.Stream.shard_count">
 <code class="descname">shard_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.shard_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of shards that the stream will use.
-Amazon has guidlines for specifying the Stream size that should be referenced
-when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.</p>
+Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.</p>
 </dd></dl>
 
 <dl class="attribute">

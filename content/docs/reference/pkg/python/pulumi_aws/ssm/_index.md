@@ -460,7 +460,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.GetParameterResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">GetParameterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>name=None</em>, <em>type=None</em>, <em>value=None</em>, <em>with_decryption=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.GetParameterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">GetParameterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>name=None</em>, <em>type=None</em>, <em>value=None</em>, <em>version=None</em>, <em>with_decryption=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.GetParameterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getParameter.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.GetParameterResult.id">
@@ -912,6 +912,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.Parameter.value">
 <code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Parameter.value" title="Permalink to this definition">¶</a></dt>
 <dd><p>The value of the parameter.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ssm.Parameter.version">
+<code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Parameter.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version of the parameter.</p>
 </dd></dl>
 
 <dl class="method">

@@ -20,14 +20,14 @@ title: Module swf
 <li><a href="#DomainState">interface DomainState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts">swf/domain.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts">swf/domain.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Domain">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L24">class <b>Domain</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L24">class <b>Domain</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -51,7 +51,7 @@ const foo = new aws.swf.Domain("foo", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Domain-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L66"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -68,7 +68,7 @@ Create a Domain resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L33">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -82,7 +82,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -92,7 +92,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L44">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -106,7 +106,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L54">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L54">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -117,7 +117,7 @@ The domain description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -129,7 +129,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L58">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -140,7 +140,7 @@ The name of the domain. If omitted, Terraform will assign a random, unique name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L62">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L62">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -151,7 +151,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -163,7 +163,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-workflowExecutionRetentionPeriodInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L66">property <b>workflowExecutionRetentionPeriodInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L66">property <b>workflowExecutionRetentionPeriodInDays</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>workflowExecutionRetentionPeriodInDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -175,7 +175,7 @@ Length of time that SWF will continue to retain information about the workflow e
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DomainArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L123">interface <b>DomainArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L123">interface <b>DomainArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -184,7 +184,7 @@ The set of arguments for constructing a Domain resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DomainArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L127">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L127">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -195,7 +195,7 @@ The domain description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L131">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L131">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -206,7 +206,7 @@ The name of the domain. If omitted, Terraform will assign a random, unique name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L135">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L135">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -217,7 +217,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainArgs-workflowExecutionRetentionPeriodInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L139">property <b>workflowExecutionRetentionPeriodInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L139">property <b>workflowExecutionRetentionPeriodInDays</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>workflowExecutionRetentionPeriodInDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -229,7 +229,7 @@ Length of time that SWF will continue to retain information about the workflow e
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DomainState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L101">interface <b>DomainState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L101">interface <b>DomainState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -238,7 +238,7 @@ Input properties used for looking up and filtering Domain resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DomainState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L105">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L105">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -249,7 +249,7 @@ The domain description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L109">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -260,7 +260,7 @@ The name of the domain. If omitted, Terraform will assign a random, unique name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L113">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L113">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -271,7 +271,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-workflowExecutionRetentionPeriodInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/28be82585753f7bf8cb1b151d27204b9fb019a63/sdk/nodejs/swf/domain.ts#L117">property <b>workflowExecutionRetentionPeriodInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/swf/domain.ts#L117">property <b>workflowExecutionRetentionPeriodInDays</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>workflowExecutionRetentionPeriodInDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
