@@ -54,7 +54,7 @@ tbody tr td {
 In addition, there are two attribute statements that can optionally be provided so that users
 who sign in with their Okta credentials will have proper user names.
 
-| Attribute | Value | 
+| Attribute | Value |
 | --------- | ----- |
 | firstName | user.firstName |
 | lastName  | user.lastName  |
@@ -91,12 +91,10 @@ a user's identity.
 
 ![SAML Application Metadata](/images/reference/service/saml-okta/okta-xml-descriptor.png)
 
-With the block of XML text in your clipboard, navigate to your SAML organization's page on the
-Pulumi Cloud Console. The exact URL depends on the name of the organization, but it will be
-something like:
-https://app.pulumi.com/robot-co/settings
+With the block of XML text in your clipboard, open the Pulumi Cloud Console and navigate to your SAML
+organization. Click the **Settings** tab, and then select **SAML SSO**.
 
-On the organization settings page, paste the IDP metadata descriptor into the bottom card
+Paste the IDP metadata descriptor into the bottom card
 titled **SAML SSO Settings**. Then click the "SAVE" button at the bottom of the card.
 
 ![Pulumi Organization Settings](/images/reference/service/saml-okta/pulumi-org-settings.png)
