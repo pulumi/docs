@@ -53,11 +53,11 @@ As usual, the future is unevenly distributed. A quick look at Google Trends over
 
 #### Interest Over Time, 5 Years to Current Date
 
-<img class="block mx-auto my-6" src="/images/whitepaper/cloud-native-infrastructure/graph1.png">
+<img class="mx-auto my-8 md:max-w-3xl" src="/images/whitepaper/cloud-native-infrastructure/graph1.png">
 
 We can redraw this picture as an adoption curve across these evolutions approximately as follows:
 
-<img class="block max-w-lg mx-auto my-6" src="/images/whitepaper/cloud-native-infrastructure/graph2.png">
+<img class="mx-auto my-8 md:max-w-xl" src="/images/whitepaper/cloud-native-infrastructure/graph2.png">
 
 Each of these evolutions has opportunity, but also embedded cost: cost to switch, cost of skills, and cost of workflows and tools. Each also carries risk through isolated stovepipes: limited numbers of experts to attend to a given paradigm.
 
@@ -97,7 +97,7 @@ Using real languages changes everything. [The Pulumi Cloud Development Platform]
 
 At the center of Pulumi is an open source cloud object model, coupled with an evaluation runtime that understands how to take programs written in any language, understand the cloud resources necessary to execute them, and then plan and manage those resources in a robust way. This cloud runtime and object model is inherently language- and cloud-neutral, enabling Pulumi to support many languages and clouds rapidly.
 
-<img class="block max-w-xl mx-auto my-6" src="/images/whitepaper/cloud-native-infrastructure/graph3.png">
+<img class="mx-auto my-8 md:max-w-3xl" src="/images/whitepaper/cloud-native-infrastructure/graph3.png">
 
 Pulumi aims to provide a solution to the challenges of cloud application development and delivery by providing a consistent programming model for cloud native development:
 
@@ -167,7 +167,7 @@ Because infrastructure is now linked to application code, and because of the eph
 
 Previously there was very limited tooling at the very point of collaboration needed by development and devops teams. Pulumi connects those teams and improves the required workflows.
 
-<img src="/images/whitepaper/cloud-native-infrastructure/graph4.png">
+<img class="mx-auto my-8 md:max-w-3xl" src="/images/whitepaper/cloud-native-infrastructure/graph4.png">
 
 **Delivering Cloud 'Stacks'.** A core concept in Pulumi is the idea of a "stack." A stack is an isolated instance of a cloud program whose resources and configuration are distinct from all other stacks. A team might have a stack each for production, staging, and testing, or perhaps for each single- tenanted environment. Pulumi's CLI makes it trivial to spin up and tear down lots of stacks. This opens up workflows that might not have previously even attempted, such as each developer having her own stack, spinning up (and tearing down) a fresh stack to test out each Pull Request, or even splitting tiers of your service into many stacks that are linked together - all of which is applicable and useful in cloud application deliver scenarios.
 
@@ -282,7 +282,7 @@ Learning Machine suffered from a loss of productivity and an inability to meet b
 
 By using Pulumi, Learning Machine were able to reduce 25,000 LoC of ad-hoc scripts to 500 LoC of JavaScript that could be understood across all teams, enabling the development team to take accountability for service delivery to meet business needs. Additionally, moving to Pulumi removes lock-in to a specific cloud, and has enabled Learning Machine to begin work on their on-premises private cloud service.
 
-<img class="block max-w-lg mx-auto my-6" src="/images/whitepaper/cloud-native-infrastructure/graph5.png">
+<img class="mx-auto my-8 md:max-w-xl" src="/images/whitepaper/cloud-native-infrastructure/graph5.png">
 
 > Pulumi has given our team the tools and framework to achieve a unified development and DevOps model, boosting productivity and taking our business to any cloud environment that our customers need. We retired 25,000 lines of complex code that few team members understood and replaced it with 100s of lines in a real programming language.
 
