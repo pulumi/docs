@@ -1,8 +1,31 @@
+@import "mixins";
+
 .header-hero {
     @apply bg-purple-500 text-white py-8 px-4;
 
     &-dark {
         @apply bg-purple-800;
+    }
+
+    &-glow {
+
+        @mixin hero-glow($center-x, $center-y) {
+            @include bg-gradient(#846A91, $brand-purple, 30em, $center-x, $center-y);
+        }
+
+        @include hero-glow(50%, 67%);
+
+        @screen md {
+            @include hero-glow(67%, 50%);
+        }
+
+        &-bottom {
+            @include hero-glow(50%, 100%);
+
+            @screen md {
+                @include hero-glow(70%, 120%);
+            }
+        }
     }
 
     @screen lg {
