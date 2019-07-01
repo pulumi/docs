@@ -18,8 +18,8 @@
 
 <nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
     <div class="container mx-auto">
-        <header class="flex items-center justify-between flex-wrap">
-            <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
                 <a class="block" href="/">
                     <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
                 </a>
@@ -33,7 +33,7 @@
 
             <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
                 {{ range $.Site.Menus.header }}
-                    <li>
+                    <li class="whitespace-no-wrap">
                         {{ $active := hasPrefix $.RelPermalink .URL }}
                         <a href="{{ .URL }}" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 border hover:border-purple-500 hover:bg-purple-600 rounded {{ if $active }}border-purple-500 bg-purple-600{{ else }}border-purple-700{{ end }}">
                             {{ .Name }}
