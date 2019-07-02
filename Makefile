@@ -64,7 +64,7 @@ travis_push::
 	$(MAKE) banner
 	$(MAKE) ensure
 # NB. Delete fusion once dust settles.
-ifeq ($(TRAVIS_BRANCH),fuion)
+ifeq ($(TRAVIS_BRANCH),fusion)
 	HUGO_BASEURL=https://www-staging.pulumi.com/ $(MAKE) build
 	$(MAKE) validate
 	./scripts/run-pulumi.sh update staging
@@ -86,7 +86,7 @@ travis_pull_request::
 	$(MAKE) banner
 	$(MAKE) ensure
 # NB. Delete fusion once dust settles.
-ifeq ($(TRAVIS_BRANCH),fuion)
+ifeq ($(TRAVIS_BRANCH),fusion)
 	HUGO_BASEURL=https://www-staging.pulumi.com/ $(MAKE) build
 	$(MAKE) validate
 	./scripts/run-pulumi.sh preview staging
