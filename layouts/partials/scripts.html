@@ -7,7 +7,9 @@
     hash in filename, so no need to add query param to cache bust.
 -->
 {{ $main := resources.Get "js/main.js" }}
+{{ $nav := resources.Get "js/nav.js" }}
+{{ $carousel := resources.Get "js/carousel.js" }}
 {{ $langchoose := resources.Get "js/langchoose.js" }}
 {{ $noselect := resources.Get "js/noselect.js" }}
-{{ $js := slice $main $langchoose $noselect | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
+{{ $js := slice $main $nav $carousel $langchoose $noselect | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
