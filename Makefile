@@ -17,7 +17,7 @@ ensure:
 .PHONY: serve
 serve:
 	@echo -e "\033[0;32mSERVE:\033[0m"
-	hugo server -D
+	NODE_ENV=development hugo server -D
 
 .PHONY: generate
 generate:
@@ -29,7 +29,7 @@ generate:
 .PHONY: build
 build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
-	hugo
+	hugo --minify
 	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
 	rm -rf ./public/docs/search-data
 

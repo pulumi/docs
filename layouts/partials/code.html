@@ -3,6 +3,12 @@
     {{ $lang = "cql" }}
 {{ end }}
 
+<!--
+The following dynamically created classes are mentioned in this comment explicitly so Purgecss does not purge them:
+    * code-mode-light
+    * code-mode-dark
+    * code-plain
+-->
 <div class="code-mode-{{ default "light" .mode }} {{ if .chrome }} code-chrome {{ end }} code-{{ .lang }}">
     {{ if .chrome }}
         {{ partial "chrome.html" . }}
