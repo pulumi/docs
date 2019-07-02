@@ -68,11 +68,11 @@ ifeq ($(TRAVIS_BRANCH),fuion)
 	HUGO_BASEURL=https://www-staging.pulumi.com/ $(MAKE) build
 	$(MAKE) validate
 	./scripts/run-pulumi.sh update staging
-ifeq ($(TRAVIS_BRANCH),master)
+else ($(TRAVIS_BRANCH),master)
 	HUGO_BASEURL=https://www-staging.pulumi.com/ $(MAKE) build
 	$(MAKE) validate
 	./scripts/run-pulumi.sh update staging
-ifeq ($(TRAVIS_BRANCH),production)
+else ($(TRAVIS_BRANCH),production)
 	HUGO_BASEURL=https://www.pulumi.com/ $(MAKE) build
 	$(MAKE) validate
 	./scripts/run-pulumi.sh update production
@@ -90,11 +90,11 @@ ifeq ($(TRAVIS_BRANCH),fuion)
 	HUGO_BASEURL=https://www-staging.pulumi.com/ $(MAKE) build
 	$(MAKE) validate
 	./scripts/run-pulumi.sh preview staging
-ifeq ($(TRAVIS_BRANCH),master)
+else ($(TRAVIS_BRANCH),master)
 	HUGO_BASEURL=https://www-staging.pulumi.com/ $(MAKE) build
 	$(MAKE) validate
 	./scripts/run-pulumi.sh preview staging
-ifeq ($(TRAVIS_BRANCH),production)
+else ($(TRAVIS_BRANCH),production)
 	HUGO_BASEURL=https://www.pulumi.com/ $(MAKE) build
 	$(MAKE) validate
 	./scripts/run-pulumi.sh preview production
