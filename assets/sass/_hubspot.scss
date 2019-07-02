@@ -77,7 +77,11 @@
         }
 
         input {
-            @apply block py-3 px-4 rounded-l rounded-r-none text-gray-600 w-56;
+            @apply block py-3 px-4 rounded-l rounded-r-none text-gray-600;
+
+            @screen md {
+                @apply w-56;
+            }
 
             &.hs-button {
                 @apply block btn btn-lg btn border-none py-3 px-4 rounded-r rounded-l-none w-auto;

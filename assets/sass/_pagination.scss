@@ -9,7 +9,11 @@
         }
 
         > span, > a {
-            @apply block px-4 py-2;
+            @apply block px-2 py-1;
+
+            @screen md {
+                @apply text-sm px-4 py-2;
+            }
         }
 
         a {
