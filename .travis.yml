@@ -1,5 +1,5 @@
-language: go
-go: 1.12
+language: generic
+dist: xenial
 branches:
   only:
   - master
