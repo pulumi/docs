@@ -22,12 +22,14 @@ yarn build
 pulumi login
 pulumi stack select "pulumi/${STACK_NAME}"
 
+ROLE_ARN="arn:aws:iam::058607598222:role/ContinuousIntegrationRole"
+
 case ${PULUMI_ACTION} in
     preview)
-        assume-role pulumi-ci pulumi preview
+        assume-role "${ROLE_ARN}" pulumi preview
         ;;
     update)
-        assume-role pulumi-ci pulumi up --yes
+        assume-role "${ROLE_ARN}" pulumi up --yes
         ;;
     *)
         echo "Unknown action '${PULUMI_ACTION}'"
