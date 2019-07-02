@@ -1,0 +1,280 @@
+{{ define "hero" }}
+    <header class="header-hero header-hero-glow">
+        <div class="header-hero-items container mx-auto">
+            <div class="header-hero-item">
+                <h1>Modern Infrastructure as Code for Google Cloud</h1>
+                <p>
+                    Pulumi's infrastructure as code SDK helps create, deploy, and manage
+                    GCP containers, serverless functions, and infrastructure using real
+                    programming languages.
+                </p>
+                <p>
+                    Find out how to program the cloud with Pulumi and Google Cloud.
+                </p>
+            </div>
+            <div class="header-hero-item">
+                {{ $code := `import * as k8s from "@pulumi/kubernetes";
+import * as pulumi from "@pulumi/pulumi";
+import { k8sProvider, k8sConfig } from "./cluster";
+
+const name = pulumi.getProject() + "-" + pulumi.getStack();
+const canaryLabels = { app: "canary-" + name };
+const canary = new k8s.apps.v1beta1.Deployment("canary", {
+    spec: {
+        selector: { matchLabels: canaryLabels },
+        replicas: 1,
+        template: {
+            metadata: { labels: canaryLabels },
+            spec: { containers: [{ name, image: "nginx" }] },
+        },
+    },
+}, { provider: k8sProvider });
+
+export let kubeConfig = k8sConfig;` }}
+                {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark" "chrome" true) }}
+            </div>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    <nav class="nav-section-sticky">
+        <div class="container mx-auto">
+            <ul>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#case-study">Case Study</a></li>
+                <li><a href="#get-started">Get Started</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {{ partial "benefits-v1.html" . }}
+
+    <section id="code" class="bg-gray-200 py-16 px-4 md:px-0">
+        <div class="container mx-auto">
+
+            <!-- Example 1 -->
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Build and deploy a GKE cluster</h2>
+                    <p>
+                        Pulumi supports programming against Kubernetes – Minikube, custom
+                        on-premises, or cloud-hosted custom clusters or in managed
+                        clusters such as Google GKE.
+                    </p>
+                    <p>
+                        This code defines a GKE cluster with configurable settings which
+                        could be used in a module which could then be used to deploy an
+                        app to the cluster.
+                    </p>
+                    <p>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource covering serverless,
+                        containers, and infrastructure using JavaScript, TypeScript,
+                        Python, and Go.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    {{ $code := `// Define a GKE cluster with configurable settings
+import * as gcp from "@pulumi/gcp";
+import { nodeCount, nodeMachineType, password, username } from "./config";
+
+export const k8sCluster = new gcp.container.Cluster("gke-cluster", {
+    initialNodeCount: nodeCount,
+    nodeVersion: "latest",
+    minMasterVersion: "latest",
+    masterAuth: { username, password },
+    nodeConfig: {
+        machineType: nodeMachineType,
+        oauthScopes: [
+            "https://www.googleapis.com/auth/compute",
+            "https://www.googleapis.com/auth/devstorage.read_only",
+            "https://www.googleapis.com/auth/logging.write",
+            "https://www.googleapis.com/auth/monitoring"
+        ],
+    },
+});` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
+                </div>
+            </div>
+
+            <!-- Example 2 -->
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Build and deploy Kubernetes apps to GKE</h2>
+                    <p>
+                        Pulumi supports programming against Azure's ACI container
+                        orchestrator. Pulumi is entirely unopinionated about how
+                        containers are built, published, and deployed to your
+                        orchestrator.
+                    </p>
+                    <p>
+                        This code makes use of our previously defined GKE cluster and
+                        deploys an nginx canary onto the cluster with 1 replica.
+                    </p>
+                    <p>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource covering serverless,
+                        containers, and infrastructure using JavaScript, TypeScript,
+                        Python, and Go.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    {{ $code := `// Deploy an nginx canary to GKE
+import * as k8s from "@pulumi/kubernetes";
+import * as pulumi from "@pulumi/pulumi";
+import { k8sProvider, k8sConfig } from "./cluster";
+
+// Create a canary deployment to test that this cluster works.
+const name = pulumi.getProject() + "-" + pulumi.getStack();
+const canaryLabels = { app: "canary-" + name };
+const canary = new k8s.apps.v1beta1.Deployment("canary", {
+    spec: {
+        selector: { matchLabels: canaryLabels },
+        replicas: 1,
+        template: {
+            metadata: { labels: canaryLabels },
+            spec: { containers: [{ name, image: "nginx" }] },
+        },
+    },
+}, { provider: k8sProvider });
+
+// Export the Kubeconfig so that clients can easily access our cluster.
+export let kubeConfig = k8sConfig;` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
+                </div>
+            </div>
+
+            <!-- Example 3 -->
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Creating a Simple Web Server</h2>
+                    <p>
+                        Pulumi gives you a way to express infrastructure configuration
+                        using your favorite programming language.
+                    </p>
+                    <p>
+                        This code uses TypeScript on Node.js to define the necessary
+                        environment, defines a very simple web server, and then creates
+                        the instance, before exporting the IP and Hostname.
+                    </p>
+                    <p>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource covering serverless,
+                        containers, and infrastructure using JavaScript, TypeScript,
+                        Python, and Go.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    {{ $code := `const gcp = require("@pulumi/gcp");
+
+const computeNetwork = new gcp.compute.Network("network", {
+    autoCreateSubnetworks: true,
+});
+
+const computeFirewall = new gcp.compute.Firewall("firewall", {
+    network: computeNetwork.selfLink,
+    allows: [{
+        protocol: "tcp",
+        ports: [ "22", "80" ],
+    }],
+});
+
+// Create a simple web server.
+const startupScript =
+    "#!/bin/bash \n" +
+    "echo 'Hello, World!' > index.html \n" +
+    "nohup python -m SimpleHTTPServer 80 &";
+
+const computeInstance = new gcp.compute.Instance("instance", {
+    machineType: "f1-micro",
+    metadataStartupScript: startupScript,
+    bootDisk: {
+        initializeParams: {
+            image: "debian-cloud/debian-8",
+        },
+    },
+    networkInterfaces: [{
+        network: computeNetwork.id,
+        accessConfigs: [{}], // must be empty
+    }],
+    serviceAccount: {
+      scopes: ["https://www.googleapis.com/auth/cloud-platform"],
+    },
+}, { dependsOn: [computeFirewall] });
+
+exports.instanceName = computeInstance.name;
+exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessConfigs[0].natIp);` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
+                </div>
+            </div>
+
+            <!-- Example 4 -->
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Creating a Google Cloud Function</h2>
+                    <p>
+                        With Pulumi, you can combine infrastructure definitions and
+                        application code in one program. The <code>@pulumi/cloud-gcp</code> library is
+                        a set of Pulumi components that provide a higher-level abstraction
+                        over Azure. You can use this library and define application code
+                        at the same time as the infrastructure it depends on.
+                    </p>
+                    <p>
+                        This example shows how to create a simple Google Cloud Function that returns a message when invoked.
+                    </p>
+                    <p>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    {{ $code := `// Create a simple Function
+import * as gcpFunction from "./gcpFunction";
+
+let greetingFunction = new gcpFunction.HttpFunction("greeting", (req, res) => {
+    res.send("Greetings from " + (req.body.name || "Google Cloud Functions") + "!");
+});
+
+export let url = greetingFunction.httpsTriggerUrl;` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{ partial "how-pulumi-works.html" . }}
+
+    {{ partial "learning-machine.html" . }}
+
+    {{ partial "get-started.html" . }}
+
+    <section id="contact-us" class="bg-purple-500 mb-0 py-16 px-4 md:px-0 text-white">
+        <div class="container mx-auto max-w-5xl">
+            <div class="md:flex my-8 md:max-w-32 align-top">
+                <div class="md:w-1/2">
+                    <h2 class="text-white">Let Pulumi assist with your cloud infrastructure.</h2>
+                    <p>
+                        Need help with cloud-native infrastructure as code on GCP? Drop us a line.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml-8">
+                    <div class="hs-form hs-form-fg-light">
+                        {{ partial "hubspot-form.html" (dict "hubspotFormID" "3eee19cc-77d0-440a-85d9-8979e775b4e5") }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}

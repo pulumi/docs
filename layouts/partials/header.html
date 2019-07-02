@@ -1,66 +1,171 @@
-<header class="main-header">
-    <div class="utility-bar hidden-xs hidden-sm">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12">
-                    <ul class="utility-nav">
-                        {{ partial "utility-links.html" . }}
+<nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- <div class="bg-blue-600 text-white text-center px-8 md:px-0 py-4">
+    Announcing Pulumi Crosswalk for AWS.
+    <a class="underline" href="/crosswalk/aws">Learn more</a>.
+</div> -->
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                {{ range $.Site.Menus.header }}
+                    <li class="whitespace-no-wrap">
+                        {{ $active := hasPrefix $.RelPermalink .URL }}
+                        <a href="{{ .URL }}" data-submenu="{{ .Identifier }}" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 border hover:border-purple-500 hover:bg-purple-600 rounded {{ if $active }}border-purple-500 bg-purple-600{{ else }}border-purple-700{{ end }}">
+                            {{ .Name }}
+                        </a>
+                    </li>
+                {{ end }}
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/product#pulumi-sdk" }}">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/product#pulumi-crosswalk" }}">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/product#pulumi-saas" }}">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/product#multi-cloud-subscription" }}">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/pricing" }}">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/docs/reference/install" }}">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/docs" }}">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/migrate/cloudformation.md" }}">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/migrate/terraform.md" }}">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/why-pulumi#for-developers" }}">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/why-pulumi#for-operators" }}">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="{{ relref . "/why-pulumi#for-business-leaders" }}">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/topics/serverless.md" }}">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/topics/containers.md" }}">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/topics/kubernetes.md" }}">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/docs/reference/tutorials/aws/tutorial-ec2-webserver" }}">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/partner/aws.md" }}">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/partner/azure.md" }}">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="{{ relref . "/partner/gcp.md" }}">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="main-nav-block">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12">
-
-                    <div class="wrapper dropdown main-nav-wrapper-wrapper">
-                        <a href="/">
-                            <img src="/images/logo/logo-inv.svg" class="logo hidden-xs hidden-sm">
-                            <img src="/images/logo/logo-symbol-inv.svg" class="logo visible-xs-inline visible-sm-inline">
-                        </a>
-                        <div class="mobile-menu-bg"></div>
-                        <nav class="main-nav-wrapper dropdown-menu" aria-labelledby=".toggle-menu">
-                            <div class="toc-in-nav visible-xs-block visible-sm-block" style="text-align: right">
-                                {{ partial "toc.html" . }}
-                            </div>
-
-                            {{- $is_start := (hasPrefix .RelPermalink "/quickstart/") -}}
-                            {{- $is_apis := (hasPrefix .RelPermalink "/reference/pkg/") -}}
-                            {{- $is_docs := (and (not $is_apis) (hasPrefix .RelPermalink "/reference/")) -}}
-
-                            <ul class="main-nav">
-                                <li class="{{ if $is_start }}current-page{{ end }}"><a href="/quickstart">Get Started</a></li>
-                                <li class="{{ if $is_docs }}current-page{{ end }}"><a href="/reference">Documentation</a></li>
-                                <li class="{{ if $is_apis }}current-page{{ end }}"><a href="/reference/pkg">APIs</a></li>
-                            </ul>
-
-                            <ul class="utility-nav visible-xs-block visible-sm-block">
-                                {{ partial "utility-links.html" . }}
-                            </ul>
-                        </nav>
-
-                        <button class="toggle-menu visible-xs-block visible-sm-block" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="icon">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </button>
-
-                        <div class="right-nav-block">
-                            <form id="search-form" action="/search/" method="get">
-                                <input type="search" id="search-box" name="q" placeholder="Search..." autocomplete="off">
-                                <button class="button" type="submit"><i class="fas fa-search"></i></button>
-                            </form>
-                            <a href="https://app.pulumi.com/signup" class="button" id="sign-in-button">SIGN UP</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+</div>

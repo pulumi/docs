@@ -1,0 +1,6 @@
+{{ with .File }}
+    <a class="text-gray-600 hover:text-blue-700 text-xs" href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
+        <i class="fab fa-github mr-2"></i>
+        Edit This Page
+    </a>
+{{ end }}

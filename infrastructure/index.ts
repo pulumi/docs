@@ -1,15 +1,14 @@
 import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
-import { Output } from "@pulumi/pulumi";
 
 import * as fs from "fs";
 import * as mime from "mime";
 import * as path from "path";
 
-const stackConfig = new pulumi.Config("pulumi.io")
+const stackConfig = new pulumi.Config()
 
 const config = {
-    // pathToWebsiteContents is a relativepath to the website's contents.
+    // pathToWebsiteContents is a relative path to the website's contents.
     pathToWebsiteContents: stackConfig.require("pathToWebsiteContents"),
     // targetDomain is the domain/host to serve content at.
     targetDomain: stackConfig.require("targetDomain"),
@@ -51,7 +50,7 @@ const contentBucket = new aws.s3.Bucket(
 // contents.
 const denyListPolicyState: aws.s3.BucketPolicyArgs = {
     bucket: contentBucket.bucket,
-    policy: contentBucket.arn.apply(arn => JSON.stringify({
+    policy: contentBucket.arn.apply((arn: string) => JSON.stringify({
         Version: "2008-10-17",
         Statement: [
             {
@@ -65,7 +64,7 @@ const denyListPolicyState: aws.s3.BucketPolicyArgs = {
 };
 const denyListPolicy = new aws.s3.BucketPolicy("deny-list", denyListPolicyState);
 
-// logsBucket stores the request logs for incomming requests.
+// logsBucket stores the request logs for incoming requests.
 const logsBucket = new aws.s3.Bucket(
     "requestLogs",
     {
@@ -84,7 +83,6 @@ const oneMinute = 60;
 // https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_cloudfront
 const distributionArgs: aws.cloudfront.DistributionArgs = {
     enabled: true,
-    aliases: (config.alias ? [ config.targetDomain, config.alias ] : [ config.targetDomain ]),
 
     // We only specify one origin for this distribution: the S3 content bucket.
     origins: [

@@ -29,13 +29,13 @@
     {{ end }}
 {{ end }}
 
-<div class="get-started-stepper">
+<div class="mt-6">
 {{ if ne $step $first }}
     {{ $prev := index $pages (sub $step 1) }}
-    <a href="{{ $prev.RelPermalink }}" class="button">&lt; PREVIOUS STEP</a>
+    <a class="btn btn-secondary" href="{{ $prev.RelPermalink }}">&lt; PREVIOUS STEP</a>
 {{ end }}
 {{ if ne $step $last }}
     {{ $next := index $pages (add $step 1) }}
-    <a href="{{ $next.RelPermalink }}" class="button primary">NEXT STEP &gt;</a>
+    <a class="btn" href="{{ $next.RelPermalink }}">NEXT STEP &gt;</a>
 {{ end }}
 </div>

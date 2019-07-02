@@ -1,9 +1,9 @@
 "use strict";
 
 (function () {
-    var searchBox = document.getElementById("search-box");
-    var spinner = document.getElementById("spinner");
-    var searchResultsContainer = document.getElementById("search-results-container");
+    var searchBox = document.getElementById("search-query");
+    var spinner = document.getElementById("search-spinner");
+    var searchResultsContainer = document.getElementById("search-results");
 
     // Use a worker to download and setup the index in the background.
     var worker = new Worker("/js/search-worker.js");
@@ -76,19 +76,19 @@
         {
             name: "APIs",
             predicate: function (url) {
-                return url.startsWith("/reference/pkg/");
+                return url.startsWith("/docs/reference/pkg/");
             }
         },
         {
             name: "CLI",
             predicate: function (url) {
-                return url.startsWith("/reference/cli/") || url === "/reference/commands/";
+                return url.startsWith("/docs/reference/cli/") || url === "/docs/reference/commands/";
             }
         },
         {
             name: "Tutorials",
             predicate: function (url) {
-                return url.startsWith("/quickstart/");
+                return url.startsWith("/docs/quickstart/") || url.startsWith("/docs/reference/tutorials/");
             }
         },
         {
@@ -124,8 +124,8 @@
                 break;
 
             case "CLI":
-                if (result.title.length === 0 && result.url.startsWith("/reference/cli/")) {
-                    var regex = /\/reference\/cli\/([a-z_]+)/gm;
+                if (result.title.length === 0 && result.url.startsWith("/docs/reference/cli/")) {
+                    var regex = /\/docs\/reference\/cli\/([a-z_]+)/gm;
                     var match = regex.exec(result.url)
                     if (match !== null) {
                         result.display = match[1].replace(/_/g, " ");
@@ -139,7 +139,7 @@
     }
 
     function buildCategoryString(categoryName, category) {
-        var appendString = "<div class='search-results'><h3>" + categoryName + " (" + category.length + ")</h3>";
+        var appendString = "<div class='search-results-category'><h2>" + categoryName + " (" + category.length + ")</h2>";
 
         // Display the top 5 results first.
         appendString += "<ul>";
@@ -147,7 +147,7 @@
         for (var i = 0; i < topResults.length; i++) {
             var item = topResults[i];
             var prefix = getPrefix(item, categoryName);
-            appendString += "<li class='top'><a href='" + item.url + "'>" + prefix + item.display + "</a>";
+            appendString += "<li><a href='" + item.url + "' title='" + item.display + "'>" + prefix + item.display + "</a>";
         }
         appendString += "</ul>";
 
@@ -173,9 +173,9 @@
         if (result.type) {
             switch (result.type) {
                 case "module":
-                    return "<span class='symbol module'></span>";
+                    return "<span class='symbol module' title='Module'></span>";
                 case "package":
-                    return "<span class='symbol package'></span>"
+                    return "<span class='symbol package' title='Package'></span>"
             }
         }
 

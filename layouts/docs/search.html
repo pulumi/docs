@@ -1,0 +1,28 @@
+{{ define "main" }}
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+            <div class="w-full">
+
+                <div class="md:flex items-center mb-4">
+                    <div class="mb-4 md:ml-auto md:order-last">
+                        {{ partial "docs/search.html" . }}
+                    </div>
+                    <h1 class="no-anchor mt-0">{{ .Title }}</h1>
+                </div>
+
+                <div class="my-4 text-gray-500" id="search-spinner">
+                    <i class="fas fa-sync-alt spinner text-xl"></i>
+                </div>
+
+                <div class="md:flex items-start" id="search-results"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+        Minify and fingerprint script. Generated file will contain content
+        hash in filename, so no need to add query param to cache bust.
+    -->
+    {{ $js := resources.Get "js/search.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ end }}

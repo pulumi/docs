@@ -1,0 +1,40 @@
+{{ define "main" }}
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+
+            <div class="md:w-3/12 pr-8">
+                {{ partial "blog/sidebar.html" . }}
+            </div>
+
+            <div class="md:w-7/12">
+                {{ $authorData := index $.Site.Data.team.team .Data.Term }}
+                {{ $paginator := .Paginate .Data.Pages.ByDate.Reverse }}
+
+                <header>
+                    <h3 class="no-anchor">Posts Tagged {{ .Data.Term }}</h3>
+                </header>
+
+                {{ range $paginator.Pages }}
+                    <article class="my-8 pb-8 border-b border-gray-200">
+                        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                        <div class="flex items-center">
+                            <time>
+                                {{ .Date.Format "Monday, Jan 2, 2006" }}
+                            </time>
+                        </div>
+                        <section>
+                            {{ partial "blog/poster" . }}
+                            {{ partial "blog/summary" . }}
+                        </section>
+                    </article>
+                {{ end }}
+
+                {{ partial "blog/paginator.html" . }}
+            </div>
+
+            <div class="md:w-2/12 pl-8">
+
+            </div>
+        </div>
+    </div>
+{{ end }}

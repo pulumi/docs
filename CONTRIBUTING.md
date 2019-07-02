@@ -16,15 +16,15 @@
 We generally use Hugo's [`relref` shortcode](https://gohugo.io/content-management/shortcodes/#ref-and-relref) when linking to other pages. Examples:
 
 ```markdown
-[Install]({{< relref "/reference/install.md" >}})
-[Outputs]({{< relref "programming-model.md#stack-outputs" >}})
+[Install]({{< relref "/docs/reference/install.md" >}})
+[Outputs]({{< relref "/docs/reference/programming-model.md#stack-outputs" >}})
 ```
 
 Which, on a page inside the `./content/reference` directory, will generate:
 
 ```html
-<a href="/reference/install/">Install</a>
-<a href="/reference/programming-model/#stack-outputs">Outputs</a>
+<a href="/docs/reference/install/">Install</a>
+<a href="/docs/reference/programming-model/#stack-outputs">Outputs</a>
 ```
 
 

@@ -4,11 +4,11 @@ branches:
   only:
   - master
   - production
+  - fusion
 before_install:
-# Use travisqueue to manage build concurrency.
-- ./scripts/travisqueue.sh install
-- ./scripts/travisqueue.sh start
 # Download and install required tools.
+# Install assume-role tool for use when deploying
+- go get -u github.com/remind101/assume-role
 # AWS CLI
 - pip install --upgrade --user awscli
 # pulumi
@@ -25,7 +25,6 @@ before_install:
 script:
 - echo "TRAVIS_EVENT_TYPE=${TRAVIS_EVENT_TYPE}"
 - make travis_${TRAVIS_EVENT_TYPE}
-after_script:
-- ./scripts/travisqueue.sh finish
-notifications:
-  webhooks: https://ufci1w66n3.execute-api.us-west-2.amazonaws.com/stage/travis
+# TODO: Reenable once kinks worked out.
+# notifications:
+#   webhooks: https://ufci1w66n3.execute-api.us-west-2.amazonaws.com/stage/travis

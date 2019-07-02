@@ -170,7 +170,7 @@ var gitHubBaseURLs = map[string]string{
 	"@pulumi/azuread":      "https://github.com/pulumi/pulumi-azuread/blob/{githash}/sdk/nodejs",
 	"@pulumi/cloud":        "https://github.com/pulumi/pulumi-cloud/blob/{githash}/api",
 	"@pulumi/cloudflare":   "https://github.com/pulumi/pulumi-cloudflare/blob/{githash}/sdk/nodejs",
-	"@pulumi/datadog":    "https://github.com/pulumi/pulumi-datadog/blob/{githash}/sdk/nodejs",
+	"@pulumi/datadog":      "https://github.com/pulumi/pulumi-datadog/blob/{githash}/sdk/nodejs",
 	"@pulumi/digitalocean": "https://github.com/pulumi/pulumi-digitalocean/blob/{githash}/sdk/nodejs",
 	"@pulumi/docker":       "https://github.com/pulumi/pulumi-docker/blob/{githash}/sdk/nodejs",
 	"@pulumi/eks":          "https://github.com/pulumi/pulumi-eks/blob/{githash}/nodejs/eks",
@@ -186,47 +186,6 @@ var gitHubBaseURLs = map[string]string{
 	"@pulumi/random":       "https://github.com/pulumi/pulumi-random/blob/{githash}/sdk/nodejs",
 	"@pulumi/terraform":    "https://github.com/pulumi/pulumi-terraform/blob/{githash}/sdk/nodejs",
 	"@pulumi/vsphere":      "https://github.com/pulumi/pulumi-vsphere/blob/{githash}/sdk/nodejs",
-}
-
-const atAliasPrefix = "/reference/pkg/nodejs/"
-
-// atAliases is a hard-coded list of packages that require aliases because we used to host the docs at
-// `/reference/pkg/nodejs/@pulumi/*` and Jekyll allowed the `@` in the path when it generated the site.
-// However, Hugo elides the `@` from the generated site, so we must provide aliases so that older links
-// to these packages continue to work.
-// Note: These were the only set of packages that existed at the time of the Hugo migration, so there's no
-// need to add new packages to this map.
-var atAliases = map[string]bool{
-	"@pulumi/pulumi":     true,
-	"@pulumi/aws":        true,
-	"@pulumi/awsx":       true,
-	"@pulumi/azure":      true,
-	"@pulumi/azuread":    true,
-	"@pulumi/cloud":      true,
-	"@pulumi/cloudflare": true,
-	"@pulumi/docker":     true,
-	"@pulumi/eks":        true,
-	"@pulumi/f5bigip":    true,
-	"@pulumi/gcp":        true,
-	"@pulumi/kubernetes": true,
-	"@pulumi/linode":     true,
-	"@pulumi/mysql":      true,
-	"@pulumi/newrelic":   true,
-	"@pulumi/openstack":  true,
-	"@pulumi/packet":     true,
-	"@pulumi/random":     true,
-	"@pulumi/vsphere":    true,
-}
-
-// rootAliases is a hard-coded list of packages that need an alias to an older URL.
-// Note: These were the only set of packages that were at these old URLs, so there's no need to add
-// additional packages to this map.
-var rootAliases = map[string]string{
-	"@pulumi/pulumi":     "/packages/pulumi",
-	"@pulumi/aws":        "/packages/pulumi-aws",
-	"@pulumi/azure":      "/packages/pulumi-azure",
-	"@pulumi/cloud":      "/packages/pulumi-cloud",
-	"@pulumi/kubernetes": "/packages/pulumi-kubernetes",
 }
 
 // emitMarkdownDocs takes as input a full Typedoc AST, transforms it into Markdown suitable for our documentation
@@ -357,22 +316,13 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 	var pkg string
 	var pkgvar string
 	var breadcrumbs []string
-	var aliases []string
+
 	if root {
 		title = fmt.Sprintf("Package %s", e.pkg)
 		pkg = e.pkg
 		pkgvar = camelCase(e.pkg[strings.IndexRune(e.pkg, '/')+1:])
-		if _, ok := atAliases[e.pkg]; ok {
-			aliases = append(aliases, fmt.Sprintf("%s%s/", atAliasPrefix, e.pkg))
-		}
-		if rootAlias, ok := rootAliases[e.pkg]; ok {
-			aliases = append(aliases, rootAlias)
-		}
 	} else {
 		title = fmt.Sprintf("Module %s", name)
-		if _, ok := atAliases[e.pkg]; ok {
-			aliases = append(aliases, fmt.Sprintf("%s%s/%s/", atAliasPrefix, e.pkg, name))
-		}
 
 		// Create the breadcrumb links (in LIFO order).  First, add the current module name.
 		var simplename string
@@ -466,8 +416,6 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		"HasModules":  len(modules) > 0,
 		"Members":     members,
 		"HasMembers":  len(members) > 0,
-		"Aliases":     aliases,
-		"HasAliases":  len(aliases) > 0,
 	}); err != nil {
 		return err
 	}
@@ -989,17 +937,17 @@ func typeHyperlink(t *typeDocType) string {
 			case "Archive", "Asset", "AssetMap", "AssetArchive",
 				"FileArchive", "FileAsset", "RemoteArchive", "RemoteAsset", "StringAsset":
 				return fmt.Sprintf(
-					"/reference/pkg/nodejs/pulumi/pulumi/asset/#%s", t.Name)
+					"/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#%s", t.Name)
 			case "ComponentResource", "ComponentResourceOptions", "CustomResource", "CustomResourceOptions",
 				"ID", "Input", "Inputs", "InvokeOptions", "Output", "Outputs", "Resource", "ResourceOptions", "URN":
 				return fmt.Sprintf(
-					"/reference/pkg/nodejs/pulumi/pulumi/#%s", t.Name)
+					"/docs/reference/pkg/nodejs/pulumi/pulumi/#%s", t.Name)
 			}
 
 			// If this is a qualified name, see if it refers to the Pulumi SDK. If so, generate a link.
 			elements := strings.Split(t.Name, ".")
 			if len(elements) > 1 && elements[0] == "pulumi" {
-				link := "/reference/pkg/nodejs/pulumi/pulumi/"
+				link := "/docs/reference/pkg/nodejs/pulumi/pulumi/"
 				for i := 1; i < len(elements)-1; i++ {
 					link += fmt.Sprintf("%s/", elements[i])
 				}

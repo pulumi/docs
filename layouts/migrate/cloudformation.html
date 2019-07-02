@@ -1,0 +1,128 @@
+{{ define "hero" }}
+    <header class="header-hero">
+        <div class="header-hero-items container mx-auto">
+            <div class="header-hero-item">
+                <h1>Migrating to Pulumi from CloudFormation</h1>
+                <p>
+                    AWS CloudFormation provides a configuration DSL for you to describe and
+                    provision infrastructure resources on AWS.
+                </p>
+                <p>
+                    Pulumi enables you to describe the same infrastructure resources as real
+                    code, providing huge productivity gains, while decreasing the brittleness
+                    of YAML-based configuration files.
+                </p>
+            </div>
+            <div class="header-hero-item">
+                <div class="hs-form hs-form-fg-light">
+                    {{ partial "hubspot-form.html" (dict "hubspotFormID" "1b19f76c-0405-4a38-8a45-7f6a499db8ea") }}
+                </div>
+            </div>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    <nav class="nav-section-sticky">
+        <div class="container mx-auto">
+            <ul>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#case-study">Case Study</a></li>
+                <li><a href="#get-started">Get Started</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {{ partial "benefits-v1.html" . }}
+
+    <section id="code" class="bg-gray-200 py-16 px-4">
+        <div class="container mx-auto">
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Creating a Simple Web Server on AWS</h2>
+                    <p>
+                        In this example, we use JavaScript to create a simple web server on AWS
+                        using EC2.
+                    </p>
+                    <p>
+                        This code creates the necessary security group, deploys a very simple web
+                        server for example purposes, and then creates the instance, before
+                        exporting the IP and hostname.
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource on AWS, Azure, GCP, Kubernetes, and
+                        OpenStack, covering serverless, containers, and infrastructure.
+                    </p>
+                    <p>
+                        <a href="https://github.com/pulumi/examples" target="_blank">Find many
+                        other examples here.</a>
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    {{ $code := `const aws = require("@pulumi/aws");
+
+let size = "t2.micro";
+let ami  = "ami-7172b611"
+
+// Create a new security group for port 80.
+let group = new aws.ec2.SecurityGroup("web-secgrp", {
+    ingress: [
+        { protocol: "tcp", fromPort: 22,
+            toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
+        { protocol: "tcp", fromPort: 80,
+            toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
+    ],
+});
+
+// Create a simple web server.
+let userData =
+    "#!/bin/bash \n" +
+    "echo 'Hello, World!' > index.html \n" +
+    "nohup python -m SimpleHTTPServer 80 &";
+
+let server = new aws.ec2.Instance("web-server-www", {
+    tags: { "Name": "web-server-www" },
+    instanceType: size,
+    securityGroups: [ group.name ],
+    ami: ami,
+    userData: userData
+});
+
+exports.publicIp = server.publicIp;
+exports.publicHostName = server.publicDns;` }}
+
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{ partial "how-pulumi-works.html" . }}
+
+    {{ partial "learning-machine.html" .}}
+
+    {{ partial "get-started.html" . }}
+
+    <section id="contact-us" class="bg-purple-500 text-white mb-0 py-16 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <div class="md:flex my-8 md:max-w-32 align-top">
+                <div class="md:w-1/2">
+                    <h2 class="text-white">Let Pulumi assist with your cloud infrastructure.</h2>
+                    <p>
+                        Need help converting your CloudFormation templates into Pulumi code? Drop us a line.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml-8">
+                    <div class="hs-form hs-form-fg-light">
+                        {{ partial "hubspot-form.html" (dict "hubspotFormID" "1b19f76c-0405-4a38-8a45-7f6a499db8ea") }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{ partial "more-from-pulumi.html" . }}
+{{ end }}

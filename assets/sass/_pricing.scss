@@ -1,0 +1,31 @@
+.pricing-item-heading {
+    @apply bg-gray-200 text-purple-700 text-sm font-display font-bold border-b border-gray-300 px-2 py-4;
+
+    @screen md {
+        @apply text-base p-4;
+    }
+}
+
+.pricing-item {
+    @apply flex items-center border-b border-gray-100 text-xs text-center;
+
+    @screen md {
+        @apply text-sm border-b border-gray-200;
+    }
+
+    .pricing-item-label {
+        @apply w-1/4 border-gray-200 text-left p-2 font-bold;
+
+        @screen md {
+            @apply font-bold py-4 px-8;
+        }
+    }
+
+    .pricing-item-value {
+        @apply w-1/4 p-2;
+
+        @screen md {
+            @apply p-4;
+        }
+    }
+}

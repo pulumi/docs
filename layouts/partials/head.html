@@ -5,59 +5,112 @@
     <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
 
     {{ if isset .Params "redirect_to" }}
-    <meta http-equiv="refresh" content="0; url={{ .Params.redirect_to }}" />
+        <meta http-equiv="refresh" content="0; url={{ .Params.redirect_to }}" />
     {{ end }}
 
-    <title>{{ .Title }}{{ if not .IsHome }} - {{ end }}{{ .Site.Title }}</title>
-
-    {{ if isset .Params "meta_title" }}
-    <meta property="og:title" content="{{ .Params.meta_title }}">
-    <meta name="twitter:title" content="{{ .Params.meta_title }}">
-    {{ else if isset .Params "title" }}
-    <meta property="og:title" content="{{ .Params.title }}">
-    <meta name="twitter:title" content="{{ .Params.title }}">
-    {{ else }}
-    <meta property="og:title" content="{{ .Site.Title }}">
-    <meta name="twitter:title" content="{{ .Site.Title }}">
-    {{ end }}
-
-    {{ if isset .Params "meta_desc" }}
-    <meta name="description" content="{{ .Params.meta_desc }}">
-    <meta property="og:description" content="{{ .Params.meta_desc }}">
-    <meta name="twitter:description" content="{{ .Params.meta_desc }}">
-    {{ else }}
-    <meta name="description" content="Pulumi provides a cloud development model for serverless functions, container apps, and data infrastructure for any cloud.">
-    <meta property="og:description" content="Pulumi provides a cloud development model for serverless functions, container apps, and data infrastructure for any cloud.">
-    <meta name="twitter:description" content="Pulumi provides a cloud development model for serverless functions, container apps, and data infrastructure for any cloud.">
-    {{ end }}
-
-    {{ if isset .Params "meta_image" }}
-    <meta property="og:image" content="{{ strings.TrimSuffix "/" .Site.BaseURL }}{{ .Params.meta_image }}">
-    {{ else }}
-    <meta property="og:image" content="{{ strings.TrimSuffix "/" .Site.BaseURL }}/social/pulumi.png">
-    {{ end }}
-
-    <meta property="og:locale" content="en-US">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="{{ .Site.Title }}">
-
+    <!--
+        Metadata tags for OpenGraph and Twitter.
+    -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:site_name" content="pulumi">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@PulumiCorp">
 
+    {{ if isset .Params "meta_twitter_creator" }}
+        <meta name="twitter:creator" content="{{ .Params.meta_twitter_creator }}">
+    {{ else if isset .Params "authors" }}
+        {{ range $idx, $authorName := .Param "authors" }}
+            {{ $authorData := index $.Site.Data.team.team $authorName }}
+            {{ with $authorData.social }}
+                {{ with .twitter }}
+                    <meta name="twitter:creator" content="@{{ . }}">
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+    {{ if isset .Params "meta_title" }}
+        <meta property="og:title" content="{{ .Params.meta_title }}">
+    {{ else if isset .Params "title" }}
+        <meta property="og:title" content="{{ .Params.title }}">
+    {{ else }}
+        <meta property="og:title" content="{{ .Site.Title }}">
+    {{ end }}
+
+    {{ if isset .Params "meta_desc" }}
+        <meta name="description" content="{{ .Params.meta_desc }}">
+        <meta property="og:description" content="{{ .Params.meta_desc }}">
+    {{ else if isset .Params "summary" }}
+        <meta name="description" content="{{ .Params.summary }}">
+        <meta property="og:description" content="{{ .Params.summary }}">
+    {{ else if ne .Summary "" }}
+        <meta name="description" content="{{ .Summary }}">
+        <meta property="og:description" content="{{ .Summary }}">
+    {{ else }}
+        {{ $defaultDescription := "Pulumi provides a cloud development model for serverless functions, container apps, and data infrastructure for any cloud." }}
+        <meta name="description" content="{{ $defaultDescription }}">
+        <meta property="og:description" content="{{ $defaultDescription }}">
+    {{ end }}
+
+    {{ if isset .Params "meta_image" }}
+        {{ if in .Params.meta_image "RELATIVE_TO_PAGE" }}
+            {{ $imagePath := replace .Params.meta_image "RELATIVE_TO_PAGE/" "" }}
+            <meta property="og:image" content="{{ .Page.Permalink }}{{ $imagePath }}">
+        {{ else }}
+            <meta property="og:image" content="{{ .Params.meta_image | absURL }}">
+        {{ end }}
+    {{ else }}
+        <meta property="og:image" content="{{ "/social/pulumi.png" | absURL }}">
+    {{ end }}
+
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - Pulumi{{ end }}</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
 
-    {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-    {{ $style := resources.Get "sass/styles.scss" | resources.ToCSS $options }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    <!-- RSS link for the blog. -->
+    <link rel="alternate" type="application/rss+xml" href="{{ "/blog/rss.xml" | absURL }}" title="Pulumi Blog" />
 
-    <link href="https://blog.pulumi.com/rss.xml" rel="alternate" type="application/rss+xml" title="Pulumi Blog">
+    <!--
+        Build Sass. Generated file will contain content hash in filename,
+        so no need to add query param to cache bust.
+    -->
+    {{ $toCSS := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $postCSS := (dict "config" "assets/config/postcss.config.js") }}
+    {{ $styles := resources.Get "sass/styles.scss" | resources.ToCSS $toCSS | resources.PostCSS $postCSS | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script> !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0"; analytics.load("mNROzbfcr6gi80tV37QuBcL0tK1DWvte"); analytics.page(); }}();</script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+    <!--Segment tracking-->
     <script>
-      document.addEventListener("DOMContentLoaded", function(event) {
-         anchors.add('h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)');
-      });
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u");
+    analytics.page();
+    }}();
     </script>
+
+    <!-- Apply anchor links to headings in the docs, blog and taxonomy pages. -->
+    {{ if and (not .IsHome) (.Section) (in "docs blog authors tags" .Section) }}
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    {{ end }}
+
+    {{/* Tests to enforce required frontmatter for certain content types. */}}
+    {{ if eq .Type "blog" }}
+        {{ if not (isset .Page.Params "authors") }}
+            {{ errorf "Blog posts require authors: %s" .File.Path }}
+        {{ else }}
+            {{ range $authorID := .Page.Params.authors }}
+                {{ if not (index $.Site.Data.team.team $authorID) }}
+                    {{ errorf "Blog posts author (%s) not found: %s" $authorID $.Page.File.Path }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+        {{ if not (isset .Page.Params "tags") }}
+            {{ errorf "Blog posts require tags: %s" .File.Path }}
+        {{ end }}
+    {{ end }}
 </head>

@@ -1,0 +1,42 @@
+{{ define "main" }}
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+            <div class="md:w-3/12 pr-8">
+                {{ partial "blog/sidebar.html" . }}
+            </div>
+
+            <div class="md:w-7/12">
+                <article class="mb-8 pb-8 border-b border-gray-200">
+                    <h1 class="no-anchor"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+                    <div class="flex items-center">
+                        <span>
+                            {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors) }}
+                        </span>
+                    </div>
+                    <section>
+                        {{ .Content }}
+                    </section>
+                    <div>
+                        <p class="text-gray-500">Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time>
+                        {{ if .Params.tags }}
+                        <ul class="m-0 p-0">
+                            {{ range $tag := .Params.tags }}
+                            <li class="inline-flex">
+                                {{ $classes := "bg-white border border-gray-200 text-blue-600 hover:border-blue-600" }}
+                                <a class="px-2 text-s rounded transition-all {{ $classes }}" href="/blog/tag/{{ $tag | urlize }}/">
+                                    {{ $tag }}
+                                </a>
+                            </li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+                    </div>
+                </article>
+            </div>
+
+            <div class="md:w-2/12 pl-8">
+                <!-- Right sidebar, unused. -->
+            </div>
+        </div>
+    </div>
+{{ end }}

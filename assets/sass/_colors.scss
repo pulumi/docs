@@ -1,0 +1,16 @@
+$black: #000;
+$white: #fff;
+
+$brand: (
+    "purple": #512668,
+    "orange": #ee975c,
+    "green": #2fc89f,
+    "blue": #5fb2df,
+);
+
+$brand-purple: map-get($brand, "purple");
+$brand-orange: map-get($brand, "orange");
+$brand-green: map-get($brand, "green");
+$brand-blue: map-get($brand, "blue");
+
+$border-gray: #f1f1f1;
