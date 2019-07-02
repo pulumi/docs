@@ -1,0 +1,282 @@
+{{ define "hero" }}
+    <header class="header-hero header-hero-glow">
+        <div class="header-hero-items container mx-auto">
+            <div class="header-hero-item">
+                <h1>Modern Infrastructure as Code for AWS</h1>
+                <div class="flex flex-col md:flex-row">
+                    <img class="w-48 h-48 md:mr-4" src="/images/partners/aws-apn.png" alt="AWS Technology Partner">
+                    <p class="md:w-3/4">
+                        Pulumi's infrastructure-as-code SDK helps create, deploy, and manage AWS containers, serverless functions, and infrastructure using real programming languages.
+                    </p>
+                </div>
+                <p>
+                    <strong>Now Available</strong>:
+                    <a href="/crosswalk/aws">
+                        Pulumi Crosswalk for AWS: Accelerate Delivery of Well-Architected Infrastructure as Code
+                    </a>
+                </p>
+            </div>
+            <div class="header-hero-item">
+                {{ $code := `const aws = require("@pulumi/aws");
+
+let size = "t2.micro";
+let ami  = "ami-7172b611"
+
+let group = new aws.ec2.SecurityGroup("web-secgrp", {
+    ingress: [
+        { protocol: "tcp", fromPort: 22,
+          toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
+        { protocol: "tcp", fromPort: 80,
+          toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
+    ],
+});
+
+let server = new aws.ec2.Instance("web-server-www", {
+    tags: { "Name": "web-server-www" },
+    instanceType: size,
+    securityGroups: [ group.name ],
+    ami: ami,
+    userData: userData
+});` }}
+                {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark" "chrome" true) }}
+
+            </div>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    <nav class="nav-section-sticky">
+        <div class="container mx-auto">
+            <ul>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#case-study">Case Study</a></li>
+                <li><a href="#get-started">Get Started</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {{ partial "benefits-v1.html" . }}
+
+    <section id="code" class="bg-gray-200 py-16 px-4 md:px-0">
+        <div class="container mx-auto">
+
+            <!-- Example 1 -->
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Creating a Serverless REST API</h2>
+                    <p>
+                        With Pulumi, you can combine infrastructure definitions and application code in one program. The <code>@pulumi/cloud-aws</code> library is a set of Pulumi components that provide a higher-level abstraction over AWS. So, instead of provisioning an API Gateway instance, Lambda functions, and setting up IAM roles, you can use this library and define application code at the same time as the infrastructure it depends on.
+                    </p>
+                    <p>
+                        This example shows how to create a simple REST API that counts the number of times a route has been hit. To implement this API, we need a DynamoDB table, an API endpoint, and a Lambda function.
+                    </p>
+                    <p>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    {{ $code := `const cloud = require("@pulumi/cloud-aws");
+
+// Create a mapping from 'route' to a count.
+let counterTable = new cloud.Table("counterTable", "route");
+
+// Create an API endpoint.
+let endpoint = new cloud.API("hello-world");
+
+endpoint.get("/{route+}", (req, res) => {
+    let route = req.params["route"];
+    console.log("Getting count for " + route);
+
+    // Get previous value and increment
+    // reference outer 'counterTable' object.
+    counterTable.get({ route }).then(value => {
+        let count = (value && value.count) || 0;
+        counterTable.insert({ route, count: ++count }).then(() => {
+            res.status(200).json({ route, count });
+            console.log("Got count " + count + " for " + route);
+        });
+    });
+});
+
+exports.endpoint = endpoint.publish().url;` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
+                </div>
+            </div>
+
+            <!-- Example 2 -->
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Build and deploy containers to AWS</h2>
+                    <p>
+                        Pulumi supports programming against container orchestrators – Amazon’s ECS, EKS, and AWS Fargate. Pulumi is entirely unopinionated about how containers are built, published, and deployed to your orchestrator.
+                    </p>
+                    <p>
+                        This code runs Nginx with 2 load balanced replicas listening on port 80. By default, this will run in Fargate when targeting AWS, which means you can skip the complications of configuring an orchestrator. After running <code>pulumi up</code>, the auto-assigned URL will be printed.
+                    </p>
+                    <p>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    {{ $code := `// Deploy a pre-built container image
+// to AWS Fargate.
+
+import * as cloud from "@pulumi/cloud";
+
+let nginx = new cloud.Service("nginx", {
+    image: "nginx",
+    ports: [{ port: 80 }],
+    replicas: 2,
+});
+
+export let url = nginx.defaultEndpoint;
+
+// Deploy a custom container image based on nginx
+// to AWS Fargate.
+
+import * as cloud from "@pulumi/cloud";
+
+let nginx = new cloud.Service("nginx", {
+    build: ".",
+    ports: [{ port: 80 }],
+    replicas: 2,
+});
+
+export let url = nginx.defaultEndpoint;` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
+                </div>
+            </div>
+
+            <!-- Example 3 -->
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Build and deploy Kubernetes apps to AWS EKS</h2>
+                    <p>
+                        Pulumi supports programming against Kubernetes – Minikube, custom on-premises, or cloud-hosted custom clusters or in managed clusters such as Amazon EKS.
+                    </p>
+                    <p>
+                        This code runs a simple Kubernetes deployment using the Guestbook sample application composed of Redis and a web frontent onto Kubernetes. Pulumi supports sophisticated use cases such as advanced deployment scenarios, sidecar patterns, etc.
+                    </p>
+                    <p>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    {{ $code := `// Deploy a simple app to Kubernetes.
+
+import * as k8sjs from "./k8sjs";
+
+let redisMaster = new k8sjs.ServiceDeployment("redis-master", {
+    image: "k8s.gcr.io/redis:e2e",
+    ports: [ 6379 ]
+});
+
+let redisSlave = new k8sjs.ServiceDeployment("redis-slave", {
+    image: "gcr.io/google_samples/gb-redisslave:v1",
+    ports: [ 6379 ]
+});
+
+let frontend = new k8sjs.ServiceDeployment("frontend", {
+    replicas: 3,
+    image: "gcr.io/google-samples/gb-frontend:v4",
+    ports: [ 80 ],
+    loadBalancer: true,
+});
+
+export let frontendIp = frontend.ipAddress;` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
+                </div>
+            </div>
+
+            <!-- Example 4 -->
+            <div class="md:flex my-8">
+                <div class="md:w-1/2 md:mr-4">
+                    <h2>Creating a Simple Web Server</h2>
+                    <p>
+                        Pulumi gives you a way to express infrastructure configuration using your favorite programming language.
+                    </p>
+                    <p>
+                        This code uses TypeScript on Node.js to define the necessary security group, and defines a very simple web server, and then creates the instance, before exporting the IP and Hostname.
+                    </p>
+                    <p>
+                        <a class="btn inline-block my-2" href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+                    </p>
+                    <p>
+                        Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml:4">
+                    {{ $code := `const aws = require("@pulumi/aws");
+
+let size = "t2.micro";
+let ami  = "ami-7172b611"
+
+// Create a new security group for port 80.
+let group = new aws.ec2.SecurityGroup("web-secgrp", {
+    ingress: [
+        { protocol: "tcp", fromPort: 22,
+          toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
+        { protocol: "tcp", fromPort: 80,
+          toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
+    ],
+});
+
+// Create a simple web server.
+let userData =
+    "#!/bin/bash \n" +
+    "echo 'Hello, World!' > index.html \n" +
+    "nohup python -m SimpleHTTPServer 80 &";
+
+let server = new aws.ec2.Instance("web-server-www", {
+    tags: { "Name": "web-server-www" },
+    instanceType: size,
+    securityGroups: [ group.name ],
+    ami: ami,
+    userData: userData
+});
+
+exports.publicIp = server.publicIp;
+exports.publicHostName = server.publicDns;` }}
+                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{ partial "how-pulumi-works.html" . }}
+
+    {{ partial "learning-machine.html" . }}
+
+    {{ partial "get-started.html" . }}
+
+    <section id="contact-us" class="bg-purple-500 mb-0 py-16 px-4 md:px-0 text-white">
+        <div class="container mx-auto max-w-5xl">
+            <div class="md:flex my-8 md:max-w-32 align-top">
+                <div class="md:w-1/2">
+                    <h2 class="text-white">Let Pulumi assist with your cloud infrastructure.</h2>
+                    <p>
+                        Need help with cloud-native infrastructure as code on AWS? Drop us a line.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml-8">
+                    <div class="hs-form hs-form-fg-light">
+                        {{ partial "hubspot-form.html" (dict "hubspotFormID" "8a0e0f30-b43e-468e-98cc-6b5d481e8660") }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}

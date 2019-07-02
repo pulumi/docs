@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="125px" height="114px" viewBox="0 0 125 114" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/icon-feature-kubernetes</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-12.5%" y="-12.8%" width="125.1%" height="125.6%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-22.8%" y="-22.8%" width="145.5%" height="145.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-159.0%" y="-159.0%" width="418.1%" height="418.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-350.0%" y="-36.3%" width="800.0%" height="172.6%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-46.9%" y="-58.2%" width="193.8%" height="216.4%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-37.6%" y="-151.2%" width="175.3%" height="402.4%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-88.5%" y="-40.1%" width="277.1%" height="180.2%" filterUnits="objectBoundingBox" id="filter-7">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-85.0%" y="-40.1%" width="270.0%" height="180.2%" filterUnits="objectBoundingBox" id="filter-8">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-37.8%" y="-177.4%" width="175.6%" height="454.8%" filterUnits="objectBoundingBox" id="filter-9">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-47.6%" y="-56.6%" width="195.3%" height="213.2%" filterUnits="objectBoundingBox" id="filter-10">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="icons/icon-feature-kubernetes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Group-21" transform="translate(20.000000, 15.000000)" stroke="#EE975C" stroke-width="3">
+            <path d="M38.9079965,1.43181038 C41.0345103,0.402705176 43.5136976,0.397923935 45.6438543,1.41883272 L73.0162312,14.5362812 C75.1463879,15.5569623 76.6957377,17.4924542 77.2257724,19.7942802 L84.036764,49.3733137 C84.5667987,51.6753674 84.0196882,54.0933092 82.5504811,55.9429664 L63.6711819,79.7102877 C62.2019749,81.5599449 59.9702737,82.6398223 57.608113,82.6441482 L27.2549738,82.7024338 C24.8928131,82.7069874 22.6572415,81.635534 21.1809764,79.7915688 L2.21060593,56.0968769 C0.734113176,54.2529116 0.177895475,51.8370188 0.69927842,49.532916 L7.39665864,19.9281549 C7.91804158,17.6240521 9.45987796,15.6828683 11.5861641,14.6537631 L23.7598867,8.76259119" id="Stroke-1" filter="url(#filter-1)"></path>
+            <path d="M65.3751251,42.9105785 C65.3751251,55.6466661 55.0503768,65.9714145 42.3142892,65.9714145 C29.5779739,65.9714145 19.2534532,55.6466661 19.2534532,42.9105785 C19.2534532,30.174491 29.5779739,19.8497426 42.3142892,19.8497426 C55.0503768,19.8497426 65.3751251,30.174491 65.3751251,42.9105785 Z" id="Stroke-3" filter="url(#filter-2)"></path>
+            <path d="M45.6155995,42.9105785 C45.6155995,44.7338251 44.1377406,46.2119116 42.3142664,46.2119116 C40.4910199,46.2119116 39.0129334,44.7338251 39.0129334,42.9105785 C39.0129334,41.087332 40.4910199,39.6092455 42.3142664,39.6092455 C44.1377406,39.6092455 45.6155995,41.087332 45.6155995,42.9105785 Z" id="Stroke-5" filter="url(#filter-3)"></path>
+            <path d="M42,10.6941442 L42,39.6092682" id="Stroke-7" filter="url(#filter-4)"></path>
+            <path d="M67.2450229,22.7610858 L44.853333,40.8009356" id="Stroke-9" filter="url(#filter-5)"></path>
+            <path d="M73.5061718,49.8547619 L45.6155995,42.9105785" id="Stroke-11" filter="url(#filter-6)"></path>
+            <path d="M56.0492235,71.8257025 L44.1901522,45.6267788" id="Stroke-13" filter="url(#filter-7)"></path>
+            <path d="M28.0843825,71.8257025 L40.4384262,45.6267788" id="Stroke-15" filter="url(#filter-8)"></path>
+            <path d="M11.2362001,49.8547619 L39.0129334,43.9351302" id="Stroke-17" filter="url(#filter-9)"></path>
+            <path d="M17.3835099,22.7610858 L39.4229817,41.3168543" id="Stroke-19" filter="url(#filter-10)"></path>
+        </g>
+        <g id="Group-21" transform="translate(20.000000, 15.000000)" stroke="#EE975C" stroke-width="3">
+            <path d="M38.9079965,1.43181038 C41.0345103,0.402705176 43.5136976,0.397923935 45.6438543,1.41883272 L73.0162312,14.5362812 C75.1463879,15.5569623 76.6957377,17.4924542 77.2257724,19.7942802 L84.036764,49.3733137 C84.5667987,51.6753674 84.0196882,54.0933092 82.5504811,55.9429664 L63.6711819,79.7102877 C62.2019749,81.5599449 59.9702737,82.6398223 57.608113,82.6441482 L27.2549738,82.7024338 C24.8928131,82.7069874 22.6572415,81.635534 21.1809764,79.7915688 L2.21060593,56.0968769 C0.734113176,54.2529116 0.177895475,51.8370188 0.69927842,49.532916 L7.39665864,19.9281549 C7.91804158,17.6240521 9.45987796,15.6828683 11.5861641,14.6537631 L23.7598867,8.76259119" id="Stroke-1"></path>
+            <path d="M65.3751251,42.9105785 C65.3751251,55.6466661 55.0503768,65.9714145 42.3142892,65.9714145 C29.5779739,65.9714145 19.2534532,55.6466661 19.2534532,42.9105785 C19.2534532,30.174491 29.5779739,19.8497426 42.3142892,19.8497426 C55.0503768,19.8497426 65.3751251,30.174491 65.3751251,42.9105785 Z" id="Stroke-3"></path>
+            <path d="M45.6155995,42.9105785 C45.6155995,44.7338251 44.1377406,46.2119116 42.3142664,46.2119116 C40.4910199,46.2119116 39.0129334,44.7338251 39.0129334,42.9105785 C39.0129334,41.087332 40.4910199,39.6092455 42.3142664,39.6092455 C44.1377406,39.6092455 45.6155995,41.087332 45.6155995,42.9105785 Z" id="Stroke-5"></path>
+            <path d="M42,10.6941442 L42,39.6092682" id="Stroke-7"></path>
+            <path d="M67.2450229,22.7610858 L44.853333,40.8009356" id="Stroke-9"></path>
+            <path d="M73.5061718,49.8547619 L45.6155995,42.9105785" id="Stroke-11"></path>
+            <path d="M56.0492235,71.8257025 L44.1901522,45.6267788" id="Stroke-13"></path>
+            <path d="M28.0843825,71.8257025 L40.4384262,45.6267788" id="Stroke-15"></path>
+            <path d="M11.2362001,49.8547619 L39.0129334,43.9351302" id="Stroke-17"></path>
+            <path d="M17.3835099,22.7610858 L39.4229817,41.3168543" id="Stroke-19"></path>
+        </g>
+    </g>
+</svg>

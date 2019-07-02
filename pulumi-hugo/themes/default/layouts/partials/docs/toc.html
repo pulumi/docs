@@ -1,0 +1,132 @@
+{{ $menu := .Site.Menus.main }}
+{{ $has_toc := false }}
+
+{{ $isDocsHome := eq .RelPermalink "/docs/" }}
+{{ $isGetStarted := false }}
+{{ $isReference := false }}
+{{ $isAWS := false }}
+
+{{ if hasPrefix .RelPermalink "/docs/quickstart/" }}
+    {{ $menu = .Site.Menus.quickstart }}
+    {{ $has_toc = true }}
+    {{ $isGetStarted = true }}
+{{ else if hasPrefix .RelPermalink "/docs/reference/"}}
+    {{ $menu = .Site.Menus.reference }}
+    {{ $has_toc = true }}
+    {{ $isReference = true }}
+{{ else if hasPrefix .RelPermalink "/docs/tour/" }}
+    {{ $menu = .Site.Menus.tour }}
+    {{ $has_toc = true }}
+{{ else if hasPrefix .RelPermalink "/docs/aws/" }}
+    {{ $menu = .Site.Menus.aws }}
+    {{ $has_toc = true }}
+    {{ $isAWS = true }}
+{{ end }}
+
+<aside class="toc">
+    <h3 class="no-anchor">
+        <a href="{{ relref . "/docs" }}">Docs</a>
+    </h3>
+
+    {{ if or $isDocsHome (or $isGetStarted $isReference) }}
+        <h4 class="no-anchor">
+            <a href="{{ relref . "/docs/quickstart" }}">Get Started</a>
+        </h4>
+    {{ end }}
+    {{ if or $isDocsHome $isReference }}
+        <h4 class="no-anchor">
+            <a href="{{ relref . "/docs/reference" }}">Reference</a>
+        </h4>
+    {{ end }}
+    {{ if $isAWS }}
+        <h4 class="no-anchor">
+            <a href="{{ relref . "/docs/aws" }}">AWS</a>
+        </h4>
+    {{ end }}
+
+    {{ if $has_toc }}
+        {{ $page := . }}
+        {{ $lastindex := (sub (len $menu) 1) }}
+
+        {{ range $index, $element := $menu }}
+            {{ $toggle_state := "toggle" }}
+            {{ $sidenav_selected := "" }}
+
+            {{ if eq $page.RelPermalink .URL }}
+                {{ $toggle_state = "toggleVisible" }}
+                {{ $sidenav_selected = "active" }}
+            {{ else if isset $page.Params "expanded_url" }}
+
+                {{ if eq $page.Params.expanded_url .URL }}
+                    {{ $toggle_state = "toggleVisible" }}
+                {{ end }}
+            {{ else if hasPrefix $page.RelPermalink .URL }}
+                {{ $toggle_state = "toggleVisible" }}
+            {{ end }}
+
+            <div class="toggleVisible{{ if ne $lastindex $index }} separator{{ end }}">
+                <div class="{{ $toggle_state }}" data-title="{{ .Name }}">
+                    <div class="collapsed">
+                        <div class="sidenav-topic {{ $sidenav_selected }}">
+                            <a data-title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
+                            {{- if .HasChildren -}}
+                                <span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span>
+                            {{- end -}}
+                        </div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic {{ if .HasChildren }} sidenav-parent {{ end }} {{ $sidenav_selected }}">
+                            <a data-title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
+                            {{- if .HasChildren -}}
+                                <span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span>
+                            {{- end -}}
+                        </div>
+                        {{ if .HasChildren }}
+                            <div class="sidenav-subsection text-sm">
+                                {{ template "tocsub" (dict "page" $page "menu" . "prefix_selection" false) }}
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        {{ end }}
+
+    {{ end }}
+
+    {{ if $isGetStarted }}
+        <h4 class="no-anchor">
+            <a href="{{ relref . "/docs/reference" }}">Reference</a>
+        </h4>
+    {{ end }}
+</aside>
+
+{{ define "tocsub" }}
+    {{ $page := .page }}
+    {{ $prefix_selection := .prefix_selection }}
+
+    {{ range .menu.Children }}
+        {{ $sidenav_selected := "" }}
+        {{ if or (eq $page.RelPermalink .URL) (and $prefix_selection (hasPrefix $page.RelPermalink .URL)) }}
+            {{ $sidenav_selected = "active" }}
+        {{ end }}
+
+        {{ if .HasChildren }}
+            <div data-title="{{ .Name }}">
+                <div class="sidenav-topic {{ $sidenav_selected }}">
+                    <a data-title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
+                </div>
+                <div class="sidenav-subsection">
+                    {{ template "tocsub" (dict "page" $page "menu" . "prefix_selection" true) }}
+                </div>
+            </div>
+        {{ else }}
+            <div class="sidenav-topic mb-2 {{ $sidenav_selected }}">
+                <a data-title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
+            </div>
+        {{ end }}
+    {{ end }}
+{{ end }}

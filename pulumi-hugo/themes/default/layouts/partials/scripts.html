@@ -1,16 +1,15 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
 
 <!--
     Concatenate, minify, and fingerprint scripts. Generated file will contain content
     hash in filename, so no need to add query param to cache bust.
 -->
 {{ $main := resources.Get "js/main.js" }}
+{{ $nav := resources.Get "js/nav.js" }}
+{{ $carousel := resources.Get "js/carousel.js" }}
 {{ $langchoose := resources.Get "js/langchoose.js" }}
 {{ $noselect := resources.Get "js/noselect.js" }}
-{{ $js := slice $main $langchoose $noselect | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
+{{ $js := slice $main $nav $carousel $langchoose $noselect | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>

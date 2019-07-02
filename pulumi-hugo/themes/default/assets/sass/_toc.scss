@@ -1,0 +1,39 @@
+.toc {
+    @apply text-blue-800;
+
+    a {
+        &:hover {
+            @apply text-blue-700;
+        }
+    }
+
+    .active {
+        @apply text-blue-700;
+    }
+}
+
+.sidenav-topic {
+    @apply mb-4;
+}
+
+.sidenav-subsection {
+    @apply mb-4 ml-4;
+}
+
+.sidenav-parent {
+    @apply mb-2;
+}
+
+.toggleButton {
+    @apply text-gray-500 ml-1 cursor-pointer;
+}
+
+.toggle > .collapsed,
+.toggleVisible > .expanded {
+    @apply visible;
+}
+
+.toggle > .expanded,
+.toggleVisible > .collapsed {
+    @apply hidden;
+}

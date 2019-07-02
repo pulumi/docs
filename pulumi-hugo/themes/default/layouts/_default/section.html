@@ -1,0 +1,17 @@
+{{ define "main" }}
+    <div class="md:flex">
+
+        <div class="md:w-3/12">
+            {{ partial "docs/toc.html" . }}
+        </div>
+
+        <div class="md:w-6/12">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+        </div>
+
+        <div class="md:w-3/12">
+            {{ partial "docs/edit.html" }}
+        </div>
+    </div>
+{{ end }}

@@ -1,0 +1,105 @@
+{{ define "hero" }}
+    <header class="header-hero header-hero-glow">
+        <div class="header-hero-items container mx-auto">
+            <div class="header-hero-item">
+                <h1>{{ .Params.hero.title }}</h1>
+                {{ .Params.hero.body | markdownify }}
+            </div>
+            <div class="header-hero-item">
+                {{ partial "code" (dict "code" .Params.hero.code "lang" "js" "mode" "dark" "chrome" true) }}
+            </div>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    {{ partial "section-nav" (dict "sections" .Params.sections) }}
+
+    <section id="what-is-kubernetes" class="py-16 bg-gray-200 px-4 md:px-0">
+        <div class="container md:mx-auto">
+            <div class="max-w-4xl">
+                <h2>What is Kubernetes?</h2>
+                <p>
+                    Kubernetes is a system for automating the deployment, scaling, and
+                    management of containerized applications.
+                </p>
+                <p>
+                    As an open-source system, it is becoming widely deployed in on-premises
+                    data centers, self-hosted on cloud infrastructure, or as a cloud managed
+                    service, such as Google GKE, Azure AKS, and Amazon EKS.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="kubernetes-everywhere" class="py-16 px-4 md:px-0">
+        <div class="container md:mx-auto ">
+            <div class="max-w-4xl">
+                <h2>Kubernetes Everywhere</h2>
+                <p>
+                    Pulumi's Cloud Native SDK makes it easy to target any Kubernetes
+                    environment to provision a cluster, configure and deploy applications, and
+                    update them as required.
+                </p>
+                <p>
+                    Pulumi uses real code which makes it easy, and efficient, for the
+                    development inner loop, at the same time as unlocking more complicated,
+                    real-world DevOps scenarios.
+                </p>
+                <p>
+                    Pulumi works with Minikube, on-premises and cloud-hosted custom Kubernetes
+                    clusters, and the managed services from Google (GKE), Azure (AKS), and
+                    Amazon (EKS).
+                </p>
+                <ul class="flex list-none mt-8 p-0">
+                    <li><img class="h-8 mr-6" src="/logos/tech/logo-minikube.png" alt="MiniKube" title="MiniKube"></li>
+                    <li><img class="h-8 mx-6" src="/logos/tech/logo-kubernetes.png" alt="Kubernetes" title="Kubernetes"></li>
+                    <li><img class="h-8 mx-6" src="/logos/tech/logo-aws.png" alt="AWS" title="Amazon Web Services"></li>
+                    <li><img class="h-8 mx-6" src="/logos/tech/logo-azure.png" alt="Azure" title="Azure"></li>
+                    <li><img class="h-8 mx-6" src="/logos/tech/logo-gd.png" alt="GCP" title="Google Cloud Platform"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="code" class="py-16 bg-gray-200 px-4 md:px-0">
+        {{ range .Params.examples }}
+            <div id="{{ .id }}" class="container md:mx-auto md:flex">
+                <div class="md:w-1/2">
+                    <h2>{{ .title }}</h2>
+                    <p>
+                        {{ .body | safeHTML }}
+                    </p>
+                    <a class="btn inline-block" href="{{ .cta.url }}">
+                        {{ .cta.label }}
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
+                </div>
+            </div>
+        {{ end }}
+    </section>
+
+    {{ partial "how-pulumi-works.html" . }}
+
+    {{ partial "get-started.html" . }}
+
+    <section id="contact" class="bg-purple-500 mb-0 py-16 text-white px-4 md:px-0">
+        <div class="container mx-auto max-w-5xl">
+            <div class="md:flex my-8 md:max-w-32 align-top">
+                <div class="md:w-1/2">
+                    <h2 class="text-white">Need help with Kubernetes?</h2>
+                    <p>
+                        Drop us a line.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:ml-8">
+                    <div class="hs-form hs-form-fg-light">
+                        {{ partial "hubspot-form.html" (dict "hubspotFormID" "212ce93d-e081-4998-b14b-f26a974da4fb") }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{ partial "more-from-pulumi.html" . }}
+{{ end }}

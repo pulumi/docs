@@ -1,0 +1,29 @@
+@import "pygments";
+
+code {
+    @apply bg-gray-100 rounded py-1 px-2 text-sm;
+}
+
+pre {
+    @apply bg-gray-100 py-4 px-5 rounded border border-gray-200 scrolling-auto overflow-scroll my-4 leading-normal;
+
+    .code-mode-dark & {
+        @apply bg-gray-900 border-none shadow-md;
+    }
+
+    .code-chrome & {
+        @apply mt-0 rounded-t-none;
+    }
+
+    > code {
+        @apply bg-transparent p-0;
+    }
+
+    .code-plain & {
+        @apply text-gray-800;
+    }
+
+    .code-plain.code-mode-dark & {
+        @apply text-gray-300;
+    }
+}

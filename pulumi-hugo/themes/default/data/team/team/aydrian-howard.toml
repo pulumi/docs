@@ -1,0 +1,11 @@
+id = "aydrian-howard"
+name = "Aydrian Howard"
+title = "Staff Developer Advocate"
+weight = 1
+
+status = "active"
+
+[social]
+github = "aydrian"
+linkedin = "aydrian"
+twitter = "itsaydrian"

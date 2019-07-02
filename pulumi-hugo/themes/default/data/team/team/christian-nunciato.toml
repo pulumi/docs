@@ -1,0 +1,11 @@
+id = "christian-nunciato"
+name = "Christian Nunciato"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "cnunciato"
+linkedin = "cnunciato"
+twitter = "cnunciato"

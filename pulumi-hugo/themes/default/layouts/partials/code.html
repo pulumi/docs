@@ -1,0 +1,11 @@
+{{ $lang := .lang }}
+{{ if eq .lang "pulumi" }}
+    {{ $lang = "cql" }}
+{{ end }}
+
+<div class="code-mode-{{ default "light" .mode }} {{ if .chrome }} code-chrome {{ end }} code-{{ .lang }}">
+    {{ if .chrome }}
+        {{ partial "chrome.html" . }}
+    {{ end }}
+    {{ highlight .code $lang (default "" .opts) }}
+</div>
