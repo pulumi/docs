@@ -83,7 +83,6 @@ const oneMinute = 60;
 // https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_cloudfront
 const distributionArgs: aws.cloudfront.DistributionArgs = {
     enabled: true,
-    aliases: (config.alias ? [ config.targetDomain, config.alias ] : [ config.targetDomain ]),
 
     // We only specify one origin for this distribution: the S3 content bucket.
     origins: [
