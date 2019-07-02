@@ -1,0 +1,5 @@
+config:
+  aws:region: us-west-2
+  www.pulumi.com:certificateArn: arn:aws:acm:us-east-1:098437015098:certificate/cfd6fb87-c9d2-48f6-b24b-753eb23834f7
+  www.pulumi.com:pathToWebsiteContents: ../public
+  www.pulumi.com:targetDomain: www-staging.pulumi.com
