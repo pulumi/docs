@@ -71,4 +71,11 @@ module.exports = {
             },
         },
     },
+
+    variants: {
+        margin: [
+            "responsive",
+            "hover",
+        ]
+    }
 }
