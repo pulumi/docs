@@ -295,6 +295,11 @@ sectionPagesMenu = "main"
 
 [[menu.reference]]
     parent = "python"
+    name = "pulumi_mysql"
+    url = "/reference/pkg/python/pulumi_mysql/"
+
+[[menu.reference]]
+    parent = "python"
     name = "pulumi_newrelic"
     url = "/reference/pkg/python/pulumi_newrelic/"
 
