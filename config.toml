@@ -304,6 +304,11 @@ enableRobotsTXT = true
 
 [[menu.reference]]
     parent = "python"
+    name = "pulumi_mysql"
+    url = "/docs/reference/pkg/python/pulumi_mysql/"
+
+[[menu.reference]]
+    parent = "python"
     name = "pulumi_newrelic"
     url = "/docs/reference/pkg/python/pulumi_newrelic/"
 
