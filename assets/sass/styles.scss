@@ -118,6 +118,10 @@ main {
 
 .transition-all {
     @include transition(all);
+
+    &-200 {
+        @include transition($duration: 200ms);
+    }
 }
 
 .github-widget {

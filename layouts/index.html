@@ -1,5 +1,5 @@
 {{ define "hero" }}
-    <header class="header-hero">
+    <header class="header-hero header-hero-glow">
         <div class="header-hero-items container mx-auto">
             <div class="header-hero-item">
                 <h1>Modern Infrastructure as Code</h1>
@@ -13,12 +13,19 @@
                 </div>
             </div>
             <div class="header-hero-item">
-                <iframe class="rounded shadow-lg max-w-full"
-                    width="648" height="356"
-                    src="https://www.youtube.com/embed/B2Z2bT4Q-NY?rel=0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    frameborder="0"
-                    allowfullscreen></iframe>
+                <div class="max-w-xl text-center">
+                    {{ partial "chrome.html" . }}
+                    <div class="relative overflow-auto relative rounded-b">
+                        <img class="carousel-item opacity-1 transition-all-200" src="/images/home/carousel-code.png" alt="Pulumi code">
+                        <img class="carousel-item opacity-0 transition-all-200 absolute inset-0" src="/images/home/carousel-cli.png" alt="Pulumi CLI">
+                        <img class="carousel-item opacity-0 transition-all-200 absolute inset-0" src="/images/home/carousel-console.png" alt="Pulumi Console">
+                    </div>
+                    <div class="inline-flex text-sm font-bold my-6">
+                        <a class="carousel-item-label cursor-pointer pb-1 border-b-2 border-orange-500">Code</a>
+                        <a class="carousel-item-label cursor-pointer pb-1 mx-4 border-orange-500">CLI</a>
+                        <a class="carousel-item-label cursor-pointer pb-1 border-orange-500">Console</a>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
