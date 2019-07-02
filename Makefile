@@ -7,7 +7,7 @@ all: banner generate build
 .PHONY: banner
 banner:
 	@echo -e "\033[1;37m=========================\033[0m"
-	@echo -e "\033[1;37mPulumi Documentation Site\033[0m"
+	@echo -e "\033[1;37mPulumi Website           \033[0m"
 	@echo -e "\033[1;37m=========================\033[0m"
 
 .PHONY: ensure
@@ -59,79 +59,35 @@ validate:
 	$(MAKE) test
 	pkill -f hugo
 
-.PHONY: preview
-preview:
-	@echo -e "\033[0;32mPREVIEW:\033[0m"
-ifeq ($(TRAVIS_BRANCH),master)
-	./scripts/preview.sh staging
-endif
-ifeq ($(TRAVIS_BRANCH),production)
-	./scripts/preview.sh production
-endif
-ifeq ($(TRAVIS_BRANCH),fusion)
-	./scripts/preview.sh fusion
-endif
-
-.PHONY: deploy
-deploy:
-	@echo -e "\033[0;32mDEPLOY:\033[0m"
-ifeq ($(TRAVIS_BRANCH),master)
-	./scripts/update.sh staging
-endif
-ifeq ($(TRAVIS_BRANCH),production)
-	./scripts/update.sh production
-endif
-ifeq ($(TRAVIS_BRANCH),fusion)
-	./scripts/update.sh fusion
-endif
-
 .PHONY: travis_push
 travis_push::
 	$(MAKE) banner
 	$(MAKE) ensure
-ifeq ($(TRAVIS_BRANCH),master)
-	HUGO_BASEURL=https://staging.pulumi.io/ $(MAKE) build
-else ifeq ($(TRAVIS_BRANCH),fusion)
-	HUGO_BASEURL=https://fusion.pulumi.io/ $(MAKE) build
+# NB. Replace with `master` after `fusion` branch merged.
+ifeq ($(TRAVIS_BRANCH),fusion)
+	HUGO_BASEURL=https://www-staging.pulumi.com/ $(MAKE) build
+	./scripts/run-pulumi.sh update staging
 else
 	$(MAKE) build
 endif
-	$(MAKE) deploy
 
 .PHONY: travis_pull_request
 travis_pull_request::
 	$(MAKE) banner
 	$(MAKE) ensure
-ifeq ($(TRAVIS_BRANCH),master)
-	HUGO_BASEURL=https://staging.pulumi.io/ $(MAKE) build
-else ifeq ($(TRAVIS_BRANCH),fusion)
-	HUGO_BASEURL=https://fusion.pulumi.io/ $(MAKE) build
+# NB. Replace with `master` after `fusion` branch merged.
+ifeq ($(TRAVIS_BRANCH),fusion)
+	HUGO_BASEURL=https://www-staging.pulumi.com/ $(MAKE) build
+	$(MAKE) validate
+	./scripts/run-pulumi.sh preview staging
 else
 	$(MAKE) build
-endif
 	$(MAKE) validate
-	$(MAKE) preview
+endif
 
 .PHONY: travis_cron
 travis_cron::
 	$(MAKE) banner
 	$(MAKE) ensure
-ifeq ($(TRAVIS_BRANCH),master)
-	HUGO_BASEURL=https://staging.pulumi.io/ $(MAKE) build
-else ifeq ($(TRAVIS_BRANCH),fusion)
-	HUGO_BASEURL=https://fusion.pulumi.io/ $(MAKE) build
-else
 	$(MAKE) build
-endif
-
-.PHONY: travis_api
-travis_api::
-	$(MAKE) banner
-	$(MAKE) ensure
-ifeq ($(TRAVIS_BRANCH),master)
-	HUGO_BASEURL=https://staging.pulumi.io/ $(MAKE) build
-else ifeq ($(TRAVIS_BRANCH),fusion)
-	HUGO_BASEURL=https://fusion.pulumi.io/ $(MAKE) build
-else
-	$(MAKE) build
-endif
+	$(MAKE) validate
