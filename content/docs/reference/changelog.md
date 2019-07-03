@@ -649,8 +649,8 @@ import * as cloud from "@pulumi/cloud-aws";
 
 const api = new cloud.API("api");
 api.get("/", async (req, res) => {
-    const statusText = (await axios.default.get("https://pulumi.io")).statusText;
-    res.write(`GET https://pulumi.io/ == ${statusText}`).end();
+    const statusText = (await axios.default.get("https://www.pulumi.com")).statusText;
+    res.write(`GET https://www.pulumi.com/ == ${statusText}`).end();
 });
 ```
 
