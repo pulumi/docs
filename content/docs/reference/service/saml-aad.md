@@ -65,6 +65,8 @@ The final step is to configure the **name identifier format**.
 
 1. Finally, click **Save** at the bottom of the **Manage User Claims** panel.
 
+**IMPORTANT:** Do not change the value of Name ID Format value once it is set and your users start using Pulumi with their SAML SSO; not even switching its value between Email or Persistent.
+
 Now the Azure AD-side of the SAML SSO configuration is complete. The next and final
 step is to configure the Pulumi Cloud Console to receive SAML SSO requests from your
 Azure AD.

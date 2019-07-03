@@ -46,9 +46,11 @@ tbody tr td {
 | --------------- | ----- |
 | Single sign on URL | https://api.pulumi.com/login/robot-co/sso/saml/acs |
 | Audience URI | https://api.pulumi.com/login/robot-co/sso/saml/metadata |
-| Default Relay State | https://api.pulumi.com/login/robot-co/sso |
-| Name ID format | EmailAddress |
+| Default relay state | https://api.pulumi.com/login/robot-co/sso |
+| Name ID format | EmailAddress or Persistent |
 | App username | Email |
+
+**IMPORTANT:** Do not change the value of Name ID Format value once it is set and your users start using Pulumi with their SAML SSO; not even switching its value between Email or Persistent.
 
 <p><!-- space between table and text --></p>
 In addition, there are two attribute statements that can optionally be provided so that users
