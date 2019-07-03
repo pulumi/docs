@@ -4,7 +4,7 @@ $tab-group-height: 60px;
 $tab-highlight-color: $brand-purple;
 $tab-text-color: $black;
 $tab-active-text-color: $black;
-$tab-border-color: $border-gray;
+$tab-border-color: map-get($gray, 100);
 $tab-font-size: 14px !default;
 
 .mdl-tabs {
