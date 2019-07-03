@@ -1,6 +1,5 @@
 ---
 title: SAML Configuration > G Suite (Google)
-aliases: ["saml-gsuite.html"]
 ---
 
 This guide explains how to configure your G Suite service as a SAML SSO identity provider

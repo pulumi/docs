@@ -1,6 +1,5 @@
 ---
 title: SAML Configuration > Okta
-aliases: ["saml-okta.html"]
 ---
 
 This guide walks through how to configure Okta as a SAML SSO identity provider (IdP) for use with

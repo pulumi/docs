@@ -1,6 +1,5 @@
 ---
 title: SAML Configuration > Azure Active Directory
-aliases: ["saml-aad.html"]
 ---
 
 This guide explains how to configure your Azure Active Directory (Azure AD) as a SAML SSO identity provider
@@ -38,23 +37,6 @@ The first step is to add a new Pulumi application to your Azure AD tenant.
 The next step is to enter Pulumi-specific configuration data into your Azure AD application.
 The values you will want to use are dependent upon your organization's name on Pulumi. Be sure
 to replace `acmecorp` with whatever your specific Pulumi organization's name is.
-
-<style>
-td, th {
-    padding: 8px 8px;
-    border: 1px solid rgba(0,0,0,0.13);
-}
-
-thead tr th {
-    color: #00acf2;  /* $primary2, blue */
-    font-weight: 800;
-}
-
-tbody tr td {
-    padding-left: 16px;
-    padding-right: 16px;
-}
-</style>
 
 | SAML Setting | Value |
 | --------------- | ----- |
