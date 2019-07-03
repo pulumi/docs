@@ -1,5 +1,5 @@
 ---
-title: An Overview Of SAML SSO Configuration
+title: Overview Of SAML SSO Configuration
 ---
 
 This document walks-through the important aspects of configuring an IdP for SSO with the [Pulumi Console](https://app.pulumi.com). Using this document, you can configure any identity provider for SAML SSO with the Pulumi Console. Pulumi supports only **SAML 2.0**.
