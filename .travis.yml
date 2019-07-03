@@ -8,6 +8,9 @@ branches:
   - fusion
 before_install:
 # Download and install required tools.
+# Limit to one push build per branch.
+- go get github.com/pulumi/travisqueue
+- travisqueue start
 # Install assume-role tool for use when deploying
 - go get -u github.com/remind101/assume-role
 # AWS CLI
@@ -26,6 +29,9 @@ before_install:
 script:
 - echo "TRAVIS_EVENT_TYPE=${TRAVIS_EVENT_TYPE}"
 - make travis_${TRAVIS_EVENT_TYPE}
+after_script:
+# Maybe kick off next build.
+- travisqueue finish
 # TODO: Reenable once kinks worked out.
 # notifications:
 #   webhooks: https://ufci1w66n3.execute-api.us-west-2.amazonaws.com/stage/travis
