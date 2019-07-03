@@ -1,5 +1,6 @@
 language: generic
 dist: xenial
+sudo: true
 branches:
   only:
   - master
