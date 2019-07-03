@@ -50,7 +50,7 @@ tbody tr td {
 | Name ID format | EmailAddress or Persistent |
 | App username | Email |
 
-**IMPORTANT:** Do not change the value of Name ID Format value once it is set and your users start using Pulumi with their SAML SSO; not even switching its value between Email or Persistent.
+**IMPORTANT:** Do not change the value of Name ID Format value once your users have started using Pulumi; not even switching its value between Email or Persistent.
 
 <p><!-- space between table and text --></p>
 In addition, there are two attribute statements that can optionally be provided so that users

@@ -43,7 +43,7 @@ Pulumi organization were `acmecorp`, those values would be:
 
     ![Step 4: Provide ACS and metadata URLs](/images/docs/reference/service/saml-gsuite/gsuite-dialog-step-4.png)
 
-**IMPORTANT:** Do not change the value of Name ID Format value once it is set and your users start using Pulumi with their SAML SSO; not even switching its value between Email or Persistent.
+**IMPORTANT:** Do not change the value of Name ID Format value once your users have started using Pulumi; not even switching its value between Email or Persistent.
 
    Leave the other fields as their default values, then click **Next**.
 
