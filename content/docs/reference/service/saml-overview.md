@@ -20,7 +20,7 @@ The following are the only properties you will really be configuring when you se
 | Single sign on URL | ACS URL |
 | Entity ID | Metadata _or_ Audience URL |
 | Default Relay State | Start _or_ Application Start URL |
-| Name identifier format &nbsp;&nbsp;| Name Identifier, Name |
+| Name identifier format | Name Identifier, Name |
 
 ### Single Sign On URL
 > This value is required.

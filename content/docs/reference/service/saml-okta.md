@@ -14,14 +14,14 @@ the Pulumi Cloud Console.
 The first step is to create a new Okta Application Integration. Of the various "sign on methods"
 available, choose **SAML 2.0**.
 
-![Creating an Okta Application](/images/reference/service/saml-okta/create-okta-application.png)
+![Creating an Okta Application](/images/docs/reference/service/saml-okta/create-okta-application.png)
 
 ### Configuring the Application
 
 Next you will be guided through a wizard to configure the Okta application. The first step is to
 give it a name, e.g. _Pulumi Cloud Console_, and an icon.
 
-![Configuring a SAML Integration](/images/reference/service/saml-okta/create-saml-integration.png)
+![Configuring a SAML Integration](/images/docs/reference/service/saml-okta/create-saml-integration.png)
 
 The next step is where you configure the SAML application's settings. The values to provide will
 depend on the name of your Pulumi organization, e.g. `acmecorp`.
@@ -61,7 +61,7 @@ who sign in with their Okta credentials will have proper user names.
 | lastName  | user.lastName  |
 
 <p><!-- space between table and image --></p>
-![Configuration Settings](/images/reference/service/saml-okta/configure-saml-settings.png)
+![Configuration Settings](/images/docs/reference/service/saml-okta/configure-saml-settings.png)
 
 ### User Assignments
 
@@ -72,7 +72,7 @@ credentials.
 To assign users or groups to the application, navigate to the **Assignments** tab on the application
 page.
 
-![User Assignments](/images/reference/service/saml-okta/user-assignments.png)
+![User Assignments](/images/docs/reference/service/saml-okta/user-assignments.png)
 
 ## Configuring Your Pulumi Organization
 
@@ -83,14 +83,14 @@ it to Pulumi.
 First, navigate to the **Sign On** tab on the application page and click the "View Setup Instructions"
 button.
 
-![View Setup Instructions](/images/reference/service/saml-okta/view-setup-instructions.png)
+![View Setup Instructions](/images/docs/reference/service/saml-okta/view-setup-instructions.png)
 
 Next, scroll to the bottom of the setup instructions and select the value in the large text box
 with the heading "Provide the following IDP metadata to your SP provider". That's the full SAML
 Identity Provider SSO descriptor, which contains all of the settings Pulumi needs to verify
 a user's identity.
 
-![SAML Application Metadata](/images/reference/service/saml-okta/okta-xml-descriptor.png)
+![SAML Application Metadata](/images/docs/reference/service/saml-okta/okta-xml-descriptor.png)
 
 With the block of XML text in your clipboard, open the Pulumi Cloud Console and navigate to your SAML
 organization. Click the **Settings** tab, and then select **SAML SSO**.
@@ -98,7 +98,7 @@ organization. Click the **Settings** tab, and then select **SAML SSO**.
 Paste the IDP metadata descriptor into the bottom card
 titled **SAML SSO Settings**. Then click the "SAVE" button at the bottom of the card.
 
-![Pulumi Organization Settings](/images/reference/service/saml-okta/pulumi-org-settings.png)
+![Pulumi Organization Settings](/images/docs/reference/service/saml-okta/pulumi-org-settings.png)
 
 Once the IDP metadata descriptor has been saved, you are all set to log into to Pulumi.
 
@@ -108,7 +108,7 @@ Members of your Okta application can now sign into Pulumi. Navigate to
 [https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
 name of your Pulumi organization.
 
-![Pulumi Console](/images/reference/service/saml-okta/pulumi-console-signin.png)
+![Pulumi Console](/images/docs/reference/service/saml-okta/pulumi-console-signin.png)
 
 ## Troubleshooting
 
