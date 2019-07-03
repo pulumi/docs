@@ -406,8 +406,8 @@ admins, automation accounts (for CI/CD), and production roles, and supply them t
 placing them in the `aws-auth` ConfigMap for your cluster automatically. Pulumi also lets you configure Kubernetes
 objects, so that can also then create the RBAC cluster role bindings in your cluster to tie everything together.
 
-For a complete example of this in action, please see [Simplifying Kubernetes RBAC in Amazon EKS](
-https://blog.pulumi.com/simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages).
+For a complete example of this in action, please see
+[Simplifying Kubernetes RBAC in Amazon EKS]({{< relref "simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages" >}}).
 
 ## Deploying Kubernetes Apps to Your EKS Cluster
 

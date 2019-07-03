@@ -42,7 +42,7 @@ The major differences between Terraform and Pulumi are as follows:
    sidecar injection, and more. Pulumi is a proud member of the Cloud Native Computing Foundation (CNCF).
 
 For some concrete examples of these differences, please see our article, [From Terraform to Infrastructure as Software](
-https://blog.pulumi.com/from-terraform-to-infrastructure-as-software).
+{{< relref "from-terraform-to-infrastructure-as-software" >}}).
 
 ## Using Terraform Providers
 
@@ -68,8 +68,10 @@ Requests are welcome! [Download and use it now.](https://github.com/pulumi/tf2pu
 
 ## Using Pulumi and Terraform Side-by-Side
 
-Pulumi supports [consuming local or remote Terraform state](
-https://blog.pulumi.com/using-terraform-remote-state-with-pulumi) from your Pulumi programs. This helps with
+Pulumi supports
+[consuming local or remote Terraform state](
+{{< relref "using-terraform-remote-state-with-pulumi" >}})
+from your Pulumi programs. This helps with
 incremental adoption, whereby you continue managing a subset of your infrastructure with Terraform, while you
 incrementally move to Pulumi.
 

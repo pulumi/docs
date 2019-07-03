@@ -243,7 +243,7 @@ Now we have data coming and going from our Solution, we just have to
 hook it up to a Mapbox map. This is actually quite simple now that
 Pulumi has built us a REST API.
 
-![map-client](https://blog.pulumi.com/hs-fs/hubfs/map-client.png)
+![map-client](./map-client.png)
 
 Following this
 [example](https://docs.mapbox.com/mapbox-gl-js/example/live-geojson/),

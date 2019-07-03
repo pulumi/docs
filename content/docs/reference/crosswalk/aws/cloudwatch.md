@@ -68,7 +68,8 @@ Pulumi Crosswalk for AWS supports configuring CloudWatch logging in the followin
 * _Viewing Log Group Outputs_: For any log groups in your Pulumi program, running the `pulumi logs` command line
   will aggregate and stream recent log entries to the console. The `--follow` option enables you to watch the
   logs unfold in real time, `--since` looks at log entries only within a certain time period, and `--resource` allows
-  you to filter to specific log groups. Read more at [Unified Logs with Pulumi Logs](https://blog.pulumi.com/unified-logs-with-pulumi-logs).
+  you to filter to specific log groups. Read more at
+  [Unified Logs with Pulumi Logs]({{< relref "unified-logs-with-pulumi-logs" >}}).
 
 As an example, this code configures a custom CloudWatch log group with a 1 week retention policy for our ECS service:
 

@@ -150,5 +150,5 @@ For more information about using Pulumi with AWS, please see the following:
 
 * [Pulumi AWS Get Started guide]({{< relref "/docs/quickstart/aws" >}})
 * [Pulumi AWS API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}})
-* [Pulumi Blog entries tagged with "AWS"](https://blog.pulumi.com/tag/aws)
+* [Pulumi Blog entries tagged with "AWS"](/blog/tag/aws/)
 * [Pulumi Examples repository](https://github.com/pulumi/examples)
