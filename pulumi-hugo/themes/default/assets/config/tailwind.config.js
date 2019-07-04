@@ -16,11 +16,18 @@ const brand = {
     blue: "#52a6da",
 }
 
+const white = defaultTheme.colors.white;
+const black = defaultTheme.colors.black;
+const gray = defaultTheme.colors.gray;
+const red = defaultTheme.colors.red;
+const yellow = defaultTheme.colors.yellow;
+const transparent = defaultTheme.colors.transparent;
+
 const purple = {
-    100: "#ddcae8",
-    200: "#9c76b3",
-    300: "#83549c",
-    400: "#6c348a",
+    100: "#d7cddc",
+    200: "#a48bb3",
+    300: "#745687",
+    400: "#654276",
     500: brand.purple,
     600: "#421d57",
     700: "#371a47",
@@ -28,23 +35,41 @@ const purple = {
     900: "#180b1f",
 }
 
-// TBD: Orange and green scales. (Using defaults for now.)
-
 const blue = {
-    100: "#c4eeff",
-    200: "#abe7ff",
-    300: "#94e1ff",
-    400: "#63d0ff",
+    100: "#f5fbff",
+    200: "#cae6f7",
+    300: "#9dd1f0",
+    400: "#73b7e7",
     500: brand.blue,
-    600: "#3182ce",
-    700: "#1873bd",
-    800: "#0a4970",
-    900: "#0f2e3b",
+    600: "#4387c7",
+    700: "#3671b0",
+    800: "#365881",
+    900: "#334866",
 }
 
-const orange = defaultTheme.colors.orange;
-const green = defaultTheme.colors.green;
-const gray = defaultTheme.colors.gray;
+const orange = {
+    100: "#fff7eb",
+    200: "#fde6c4",
+    300: "#fad49e",
+    400: "#f6ba7e",
+    500: brand.orange,
+    600: "#e17d47",
+    700: "#d86131",
+    800: "#ba4a2c",
+    900: "#993d29",
+}
+
+const green = {
+    100: "#e0fff2",
+    200: "#b2fbe0",
+    300: "#81eeca",
+    400: "#4ce1b4",
+    500: brand.green,
+    600: "#25a78b",
+    700: "#1d8673",
+    800: "#19675b",
+    900: "#155148",
+}
 
 module.exports = {
     theme: {
@@ -61,14 +86,19 @@ module.exports = {
                     ...defaultTheme.fontFamily.sans,
                 ],
             },
+        },
 
-            colors: {
-                purple,
-                blue,
-                orange,
-                green,
-                gray,
-            },
+        colors: {
+            white,
+            black,
+            gray,
+            red,
+            yellow,
+            purple,
+            blue,
+            orange,
+            green,
+            transparent,
         },
     },
 
