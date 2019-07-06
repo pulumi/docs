@@ -8,3 +8,7 @@
 .DS_Store
 node_modules
 *.map
+
+# These are for IntelliJ based tooling
+.idea/
+*.iml
