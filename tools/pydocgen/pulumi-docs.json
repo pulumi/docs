@@ -36,6 +36,10 @@
       "package_name": "pulumi_digitalocean"
     },
     {
+      "name": "Pulumi DNSimple",
+      "package_name": "pulumi_dnsimple"
+    },
+    {
       "name": "Pulumi GCP",
       "package_name": "pulumi_gcp"
     },
