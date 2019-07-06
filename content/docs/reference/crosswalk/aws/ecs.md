@@ -62,7 +62,7 @@ export const url = lb.endpoint.hostname;
 After deploying this program, we can access our 2 Nginx web servers behind our load balancer:
 
 ```bash
-$ curl https://$(pulumi stack output url)
+$ curl http://$(pulumi stack output url)
 <!DOCTYPE html>
 <html>
 <body>
