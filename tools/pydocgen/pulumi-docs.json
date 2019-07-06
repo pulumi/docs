@@ -74,6 +74,10 @@
     {
       "name": "Pulumi Kubernetes",
       "package_name": "pulumi_kubernetes"
+    },
+    {
+      "name": "Pulumi NewRelic",
+      "package_name": "pulumi_newrelic"
     }
   ]
 }
