@@ -167,6 +167,11 @@ enableRobotsTXT = true
 
 [[menu.reference]]
     parent = "node"
+    name = "dnsimple"
+    url = "/docs/reference/pkg/nodejs/pulumi/dnsimple/"
+
+[[menu.reference]]
+    parent = "node"
     name = "docker"
     url = "/docs/reference/pkg/nodejs/pulumi/docker/"
 
@@ -276,6 +281,11 @@ enableRobotsTXT = true
     parent = "python"
     name = "pulumi_digitalocean"
     url = "/docs/reference/pkg/python/pulumi_digitalocean/"
+
+[[menu.reference]]
+    parent = "python"
+    name = "pulumi_dnsimple"
+    url = "/docs/reference/pkg/python/pulumi_dnsimple/"
 
 [[menu.reference]]
     parent = "python"

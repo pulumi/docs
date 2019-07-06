@@ -13,6 +13,7 @@ TOOLS_REPOS=(
     "pulumi-cloudflare"
     "pulumi-datadog"
     "pulumi-digitalocean"
+    "pulumi-dnsimple"
     "pulumi-docker"
     "pulumi-eks"
     "pulumi-f5bigip"
