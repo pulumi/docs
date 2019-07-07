@@ -29,3 +29,4 @@ The following tutorials are focused on deploying app workloads to running Kubern
 4. [Graceful App Rollout]({{< relref "/docs/reference/tutorials/kubernetes/tutorial-configmap-rollout.md" >}})
 5. [Gating rollout on Prometheus checks]({{< relref "/docs/reference/tutorials/kubernetes/tutorial-p8s-rollout.md" >}})
 6. [Run a Stateless App Deployment]({{< relref "/docs/reference/tutorials/kubernetes/tutorial-stateless-app.md" >}})
+7. [EKS - Migrating Node Groups with Zero Downtime]({{< relref "/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups.md" >}})
