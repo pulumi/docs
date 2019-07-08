@@ -461,8 +461,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>field</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The field name from the schema defined in the GraphQL API.</li>
 <li><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resolver type. Valid values are <code class="docutils literal notranslate"><span class="pre">UNIT</span></code> and <code class="docutils literal notranslate"><span class="pre">PIPELINE</span></code>.</li>
 <li><strong>pipeline_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The PipelineConfig. A <code class="docutils literal notranslate"><span class="pre">pipeline_config</span></code> block is documented below.</li>
-<li><strong>request_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The request mapping template for this resolver.</li>
-<li><strong>response_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The response mapping template for this resolver.</li>
+<li><strong>request_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The request mapping template for UNIT resolver or ‘before mapping template’ for PIPELINE resolver.</li>
+<li><strong>response_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The response mapping template for UNIT resolver or ‘after mapping template’ for PIPELINE resolver.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type name from the schema defined in the GraphQL API.</li>
 </ul>
 </td>
@@ -508,13 +508,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.appsync.Resolver.request_template">
 <code class="descname">request_template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Resolver.request_template" title="Permalink to this definition">¶</a></dt>
-<dd><p>The request mapping template for this resolver.</p>
+<dd><p>The request mapping template for UNIT resolver or ‘before mapping template’ for PIPELINE resolver.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.appsync.Resolver.response_template">
 <code class="descname">response_template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Resolver.response_template" title="Permalink to this definition">¶</a></dt>
-<dd><p>The response mapping template for this resolver.</p>
+<dd><p>The response mapping template for UNIT resolver or ‘after mapping template’ for PIPELINE resolver.</p>
 </dd></dl>
 
 <dl class="attribute">

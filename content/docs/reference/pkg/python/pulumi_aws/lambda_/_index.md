@@ -627,13 +627,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.lambda_.GetInvocationResult.result">
 <code class="descname">result</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetInvocationResult.result" title="Permalink to this definition">¶</a></dt>
-<dd><p>A result of the lambda function invocation.</p>
+<dd><p>String result of the lambda function invocation.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.lambda_.GetInvocationResult.result_map">
 <code class="descname">result_map</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetInvocationResult.result_map" title="Permalink to this definition">¶</a></dt>
-<dd><p>This field is set only if result is a map of primitive types.</p>
+<dd><p>This field is set only if result is a map of primitive types, where the map is string keys and string values. In Terraform 0.12 and later, use the <cite>``jsondecode()`</cite> function &lt;<a class="reference external" href="https://www.terraform.io/docs/configuration/functions/jsondecode.html">https://www.terraform.io/docs/configuration/functions/jsondecode.html</a>&gt;`_ with the <code class="docutils literal notranslate"><span class="pre">result</span></code> attribute instead to convert the result to all supported native Terraform types.</p>
 </dd></dl>
 
 <dl class="attribute">

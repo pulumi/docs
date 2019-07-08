@@ -1586,6 +1586,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the Global Cluster should have deletion protection enabled. The database can’t be deleted when this value is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the database engine to be used for this DB cluster. Valid values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>.</li>
 <li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Engine version of the Aurora global database.</li>
+<li><strong>global_cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The global cluster identifier.</li>
 <li><strong>storage_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the DB cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 </ul>
 </td>
@@ -1620,6 +1621,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.GlobalCluster.engine_version">
 <code class="descname">engine_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.GlobalCluster.engine_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Engine version of the Aurora global database.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.rds.GlobalCluster.global_cluster_identifier">
+<code class="descname">global_cluster_identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.GlobalCluster.global_cluster_identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>The global cluster identifier.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1719,7 +1726,7 @@ will be applied automatically to the DB instance during the maintenance window.
 Defaults to true.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ for the RDS instance.</li>
 <li><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The days to retain backups for. Must be
-between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">35</span></code>. When creating a Read Replica the value must be greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>. [See Read Replica][1].</li>
+between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">35</span></code>. Must be greater than <code class="docutils literal notranslate"><span class="pre">0</span></code> if the database is used as a source for a Read Replica. [See Read Replica][1].</li>
 <li><strong>backup_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The daily time range (in UTC) during which
 automated backups are created if they are enabled. Example: “09:46-10:16”. Must
 not overlap with <code class="docutils literal notranslate"><span class="pre">maintenance_window</span></code>.</li>
@@ -1732,7 +1739,7 @@ for more information.</li>
 <li><strong>db_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html">DB subnet group</a>. DB instance will
 be created in the VPC associated with the DB subnet group. If unspecified, will
 be created in the <code class="docutils literal notranslate"><span class="pre">default</span></code> VPC, or in EC2 Classic, if available. When working
-with read replicas, it needs to be specified only if the source database
+with read replicas, it should be specified only if the source database
 specifies an instance in another AWS Region. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstanceReadReplica.html">DBSubnetGroupName in API
 action CreateDBInstanceReadReplica</a>
 for additional read replica contraints.</li>
@@ -1894,7 +1901,7 @@ Defaults to true.</p>
 <dt id="pulumi_aws.rds.Instance.backup_retention_period">
 <code class="descname">backup_retention_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.backup_retention_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>The days to retain backups for. Must be
-between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">35</span></code>. When creating a Read Replica the value must be greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>. [See Read Replica][1].</p>
+between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">35</span></code>. Must be greater than <code class="docutils literal notranslate"><span class="pre">0</span></code> if the database is used as a source for a Read Replica. [See Read Replica][1].</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1934,7 +1941,7 @@ for more information.</p>
 <dd><p>Name of <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html">DB subnet group</a>. DB instance will
 be created in the VPC associated with the DB subnet group. If unspecified, will
 be created in the <code class="docutils literal notranslate"><span class="pre">default</span></code> VPC, or in EC2 Classic, if available. When working
-with read replicas, it needs to be specified only if the source database
+with read replicas, it should be specified only if the source database
 specifies an instance in another AWS Region. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstanceReadReplica.html">DBSubnetGroupName in API
 action CreateDBInstanceReadReplica</a>
 for additional read replica contraints.</p>

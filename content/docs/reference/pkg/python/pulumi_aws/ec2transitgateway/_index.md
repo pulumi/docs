@@ -215,7 +215,7 @@
 
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.Route">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">Route</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destination_cidr_block=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.Route" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">Route</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>blackhole=None</em>, <em>destination_cidr_block=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.Route" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway Route.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -224,14 +224,21 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>blackhole</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether to drop traffic that matches this route (default to <code class="docutils literal notranslate"><span class="pre">false</span></code>).</li>
 <li><strong>destination_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.</li>
-<li><strong>transit_gateway_attachment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway Attachment.</li>
+<li><strong>transit_gateway_attachment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway Attachment (required if <code class="docutils literal notranslate"><span class="pre">blackhole</span></code> is set to false).</li>
 <li><strong>transit_gateway_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway Route Table.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.Route.blackhole">
+<code class="descname">blackhole</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.Route.blackhole" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether to drop traffic that matches this route (default to <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.ec2transitgateway.Route.destination_cidr_block">
 <code class="descname">destination_cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.Route.destination_cidr_block" title="Permalink to this definition">¶</a></dt>
@@ -241,7 +248,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.ec2transitgateway.Route.transit_gateway_attachment_id">
 <code class="descname">transit_gateway_attachment_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.Route.transit_gateway_attachment_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Identifier of EC2 Transit Gateway Attachment.</p>
+<dd><p>Identifier of EC2 Transit Gateway Attachment (required if <code class="docutils literal notranslate"><span class="pre">blackhole</span></code> is set to false).</p>
 </dd></dl>
 
 <dl class="attribute">
