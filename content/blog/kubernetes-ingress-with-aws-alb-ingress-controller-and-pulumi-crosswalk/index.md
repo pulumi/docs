@@ -143,35 +143,150 @@ reaches your pods, you will need to modify the
 `alb.ingress.kubernetes.io/target-type` annotation when using the helm
 chart.
 
-Append `index.ts` file from Step 1 with the code below and run
+Append `index.ts` file from Step 2 with the code below and run
 `pulumi up`:
 
 ```typescript
-// STEP 2: Declare ALB Ingress Controller from a Helm Chart
-const albingresscntlr = new k8s.helm.v2.Chart("albingresscontroller", {
+// STEP 3: Declare the AWS ALB Ingress Controller
+
+// Create IAM Policy for the IngressController called "ingressController-iam-policy” and read the policy ARN.
+const ingressControllerPolicy = new aws.iam.Policy("ingressController-iam-policy", {
+    policy: {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Action": [
+              "acm:DescribeCertificate",
+              "acm:ListCertificates",
+              "acm:GetCertificate"
+            ],
+            "Resource": "*"
+          },
+          {
+            "Effect": "Allow",
+            "Action": [
+              "ec2:AuthorizeSecurityGroupIngress",
+              "ec2:CreateSecurityGroup",
+              "ec2:CreateTags",
+              "ec2:DeleteTags",
+              "ec2:DeleteSecurityGroup",
+              "ec2:DescribeInstances",
+              "ec2:DescribeInstanceStatus",
+              "ec2:DescribeSecurityGroups",
+              "ec2:DescribeSubnets",
+              "ec2:DescribeTags",
+              "ec2:DescribeVpcs",
+              "ec2:ModifyInstanceAttribute",
+              "ec2:ModifyNetworkInterfaceAttribute",
+              "ec2:RevokeSecurityGroupIngress"
+            ],
+            "Resource": "*"
+          },
+          {
+            "Effect": "Allow",
+            "Action": [
+              "elasticloadbalancing:AddTags",
+              "elasticloadbalancing:CreateListener",
+              "elasticloadbalancing:CreateLoadBalancer",
+              "elasticloadbalancing:CreateRule",
+              "elasticloadbalancing:CreateTargetGroup",
+              "elasticloadbalancing:DeleteListener",
+              "elasticloadbalancing:DeleteLoadBalancer",
+              "elasticloadbalancing:DeleteRule",
+              "elasticloadbalancing:DeleteTargetGroup",
+              "elasticloadbalancing:DeregisterTargets",
+              "elasticloadbalancing:DescribeListeners",
+              "elasticloadbalancing:DescribeLoadBalancers",
+              "elasticloadbalancing:DescribeLoadBalancerAttributes",
+              "elasticloadbalancing:DescribeRules",
+              "elasticloadbalancing:DescribeSSLPolicies",
+              "elasticloadbalancing:DescribeTags",
+              "elasticloadbalancing:DescribeTargetGroups",
+              "elasticloadbalancing:DescribeTargetGroupAttributes",
+              "elasticloadbalancing:DescribeTargetHealth",
+              "elasticloadbalancing:ModifyListener",
+              "elasticloadbalancing:ModifyLoadBalancerAttributes",
+              "elasticloadbalancing:ModifyRule",
+              "elasticloadbalancing:ModifyTargetGroup",
+              "elasticloadbalancing:ModifyTargetGroupAttributes",
+              "elasticloadbalancing:RegisterTargets",
+              "elasticloadbalancing:RemoveTags",
+              "elasticloadbalancing:SetIpAddressType",
+              "elasticloadbalancing:SetSecurityGroups",
+              "elasticloadbalancing:SetSubnets",
+              "elasticloadbalancing:SetWebACL"
+            ],
+            "Resource": "*"
+          },
+          {
+            "Effect": "Allow",
+            "Action": [
+              "iam:GetServerCertificate",
+              "iam:ListServerCertificates"
+            ],
+            "Resource": "*"
+          },
+          {
+            "Effect": "Allow",
+            "Action": [
+              "waf-regional:GetWebACLForResource",
+              "waf-regional:GetWebACL",
+              "waf-regional:AssociateWebACL",
+              "waf-regional:DisassociateWebACL"
+            ],
+            "Resource": "*"
+          },
+          {
+            "Effect": "Allow",
+            "Action": [
+              "tag:GetResources",
+              "tag:TagResources"
+            ],
+            "Resource": "*"
+          },
+          {
+            "Effect": "Allow",
+            "Action": [
+              "waf:GetWebACL"
+            ],
+            "Resource": "*"
+          }
+        ]}
+}); 
+
+// Attach this policy to the NodeInstanceRole of the worker nodes.
+export const nodeinstanceRole = new aws.iam.RolePolicyAttachment("eks-NodeInstanceRole-policy-attach", {
+    policyArn: ingressControllerPolicy.arn,
+    role: clusterNodeInstanceRoleName,
+});
+
+
+// Declare the ALBIngressController in 1 step with the Helm Chart.
+const albingresscntlr = new k8s.helm.v2.Chart("alb", {
     chart: "http://storage.googleapis.com/kubernetes-charts-incubator/aws-alb-ingress-controller-0.1.9.tgz",
     values: {
         clusterName: clusterName,
         autoDiscoverAwsRegion: "true",
         autoDiscoverAwsVpcID: "true",
-        name: "alb-ingress-cntroller-0.1.9",
-        namespace: "kube-system",
     },
 }, { provider: cluster.provider });
 ```
 
 Confirm the alb-ingress-controller was created as follows:
 
-    $ kubectl get pods -n default | egrep -o alb-ingress[a-zA-Z0-9-]+
-    alb-ingress-controller-58f44d4bb8lxs6w
+```
+$ kubectl get pods -n default | grep alb
+alb-aws-alb-ingress-controller-58f44d4bb8lxs6w
 
-    $ kubectl logs alb-ingress-controller-58f44d4bb8lxs6w
-    -------------------------------------------------------------------------------
-    AWS ALB Ingress controller
-      Release:    v1.1.2
-      Build:      git-cc1c5971
-      Repository: https://github.com/kubernetes-sigs/aws-alb-ingress-controller.git
-    -------------------------------------------------------------------------------
+$ kubectl logs alb-ingress-controller-58f44d4bb8lxs6w
+-------------------------------------------------------------------------------
+AWS ALB Ingress controller
+  Release:    v1.1.2
+  Build:      git-cc1c5971
+  Repository: https://github.com/kubernetes-sigs/aws-alb-ingress-controller.git
+-------------------------------------------------------------------------------
+```
 
 Make sure the ingress-controller logs do not show errors about missing subnet tags or missing cluster name before proceeding to Step 4. 
 
