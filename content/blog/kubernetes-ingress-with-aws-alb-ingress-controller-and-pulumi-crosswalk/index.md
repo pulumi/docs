@@ -8,7 +8,7 @@ summary: "Need summary"
 ---
 
 [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
-is an api object that allows you manage external (or) internal HTTP[s]
+is an API object that allows you manage external (or) internal HTTP[s]
 access to [Kubernetes services](https://kubernetes.io/docs/concepts/services-networking/service/)
 running in a cluster.
 [Amazon Elastic Load Balancing Application Load Balancer](https://aws.amazon.com/elasticloadbalancing/features/#Details_for_Elastic_Load_Balancing_Products)
