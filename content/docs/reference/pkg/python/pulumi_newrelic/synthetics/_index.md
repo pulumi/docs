@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_newrelic.synthetics">
-<span id="synthetics"></span><h1>synthetics<a class="headerlink" href="#module-pulumi_newrelic.synthetics" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="synthetics">
+<h1>synthetics<a class="headerlink" href="#synthetics" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-newrelic/issues">pulumi/pulumi-newrelic repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/issues">terraform-providers/terraform-provider-newrelic repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_newrelic.synthetics"></span><dl class="class">
 <dt id="pulumi_newrelic.synthetics.AlertCondition">
 <em class="property">class </em><code class="descclassname">pulumi_newrelic.synthetics.</code><code class="descname">AlertCondition</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>monitor_id=None</em>, <em>name=None</em>, <em>policy_id=None</em>, <em>runbook_url=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.AlertCondition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a AlertCondition resource with the given unique name, props, and options.</p>

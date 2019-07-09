@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_openstack.images">
-<span id="images"></span><h1>images<a class="headerlink" href="#module-pulumi_openstack.images" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="images">
+<h1>images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-openstack/issues">pulumi/pulumi-openstack repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/issues">terraform-providers/terraform-provider-openstack repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_openstack.images"></span><dl class="class">
 <dt id="pulumi_openstack.images.GetImageResult">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.images.</code><code class="descname">GetImageResult</code><span class="sig-paren">(</span><em>checksum=None</em>, <em>container_format=None</em>, <em>created_at=None</em>, <em>disk_format=None</em>, <em>file=None</em>, <em>member_status=None</em>, <em>metadata=None</em>, <em>min_disk_gb=None</em>, <em>min_ram_mb=None</em>, <em>most_recent=None</em>, <em>name=None</em>, <em>owner=None</em>, <em>properties=None</em>, <em>protected=None</em>, <em>region=None</em>, <em>schema=None</em>, <em>size_bytes=None</em>, <em>size_max=None</em>, <em>size_min=None</em>, <em>sort_direction=None</em>, <em>sort_key=None</em>, <em>tag=None</em>, <em>tags=None</em>, <em>updated_at=None</em>, <em>visibility=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.GetImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getImage.</p>

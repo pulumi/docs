@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_aws.lambda_">
-<span id="lambda"></span><h1><a class="reference internal" href="#lambda">lambda</a><a class="headerlink" href="#module-pulumi_aws.lambda_" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="lambda">
+<h1><a class="reference internal" href="#lambda">lambda</a><a class="headerlink" href="#lambda" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_aws.lambda_"></span><dl class="class">
 <dt id="pulumi_aws.lambda_.Alias">
 <em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">Alias</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>function_name=None</em>, <em>function_version=None</em>, <em>name=None</em>, <em>routing_config=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.Alias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Lambda function alias. Creates an alias that points to the specified Lambda function version.</p>

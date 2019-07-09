@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_aws.secretsmanager">
-<span id="secretsmanager"></span><h1>secretsmanager<a class="headerlink" href="#module-pulumi_aws.secretsmanager" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="secretsmanager">
+<h1>secretsmanager<a class="headerlink" href="#secretsmanager" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_aws.secretsmanager"></span><dl class="class">
 <dt id="pulumi_aws.secretsmanager.GetSecretResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">GetSecretResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>description=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>policy=None</em>, <em>rotation_enabled=None</em>, <em>rotation_lambda_arn=None</em>, <em>rotation_rules=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecret.</p>

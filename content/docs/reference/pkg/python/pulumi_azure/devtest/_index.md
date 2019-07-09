@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_azure.devtest">
-<span id="devtest"></span><h1>devtest<a class="headerlink" href="#module-pulumi_azure.devtest" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="devtest">
+<h1>devtest<a class="headerlink" href="#devtest" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure/issues">terraform-providers/terraform-provider-azure repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_azure.devtest"></span><dl class="class">
 <dt id="pulumi_azure.devtest.GetLabResult">
 <em class="property">class </em><code class="descclassname">pulumi_azure.devtest.</code><code class="descname">GetLabResult</code><span class="sig-paren">(</span><em>artifacts_storage_account_id=None</em>, <em>default_premium_storage_account_id=None</em>, <em>default_storage_account_id=None</em>, <em>key_vault_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>premium_data_disk_storage_account_id=None</em>, <em>resource_group_name=None</em>, <em>storage_type=None</em>, <em>tags=None</em>, <em>unique_identifier=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.GetLabResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLab.</p>

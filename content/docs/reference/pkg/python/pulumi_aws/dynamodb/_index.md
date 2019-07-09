@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_aws.dynamodb">
-<span id="dynamodb"></span><h1>dynamodb<a class="headerlink" href="#module-pulumi_aws.dynamodb" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="dynamodb">
+<h1>dynamodb<a class="headerlink" href="#dynamodb" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_aws.dynamodb"></span><dl class="class">
 <dt id="pulumi_aws.dynamodb.GetTableResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.dynamodb.</code><code class="descname">GetTableResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>attributes=None</em>, <em>billing_mode=None</em>, <em>global_secondary_indexes=None</em>, <em>hash_key=None</em>, <em>local_secondary_indexes=None</em>, <em>name=None</em>, <em>point_in_time_recovery=None</em>, <em>range_key=None</em>, <em>read_capacity=None</em>, <em>server_side_encryption=None</em>, <em>stream_arn=None</em>, <em>stream_enabled=None</em>, <em>stream_label=None</em>, <em>stream_view_type=None</em>, <em>tags=None</em>, <em>ttl=None</em>, <em>write_capacity=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.GetTableResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTable.</p>

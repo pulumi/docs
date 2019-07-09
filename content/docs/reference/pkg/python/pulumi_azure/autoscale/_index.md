@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_azure.autoscale">
-<span id="autoscale"></span><h1>autoscale<a class="headerlink" href="#module-pulumi_azure.autoscale" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="autoscale">
+<h1>autoscale<a class="headerlink" href="#autoscale" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure/issues">terraform-providers/terraform-provider-azure repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_azure.autoscale"></span><dl class="class">
 <dt id="pulumi_azure.autoscale.Setting">
 <em class="property">class </em><code class="descclassname">pulumi_azure.autoscale.</code><code class="descname">Setting</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>notification=None</em>, <em>profiles=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>target_resource_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.autoscale.Setting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AutoScale Setting which can be applied to Virtual Machine Scale Sets, App Services and other scalable resources.</p>

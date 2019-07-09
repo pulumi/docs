@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_azure.servicefabric">
-<span id="servicefabric"></span><h1>servicefabric<a class="headerlink" href="#module-pulumi_azure.servicefabric" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="servicefabric">
+<h1>servicefabric<a class="headerlink" href="#servicefabric" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure/issues">terraform-providers/terraform-provider-azure repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_azure.servicefabric"></span><dl class="class">
 <dt id="pulumi_azure.servicefabric.Cluster">
 <em class="property">class </em><code class="descclassname">pulumi_azure.servicefabric.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>add_on_features=None</em>, <em>azure_active_directory=None</em>, <em>certificate=None</em>, <em>certificate_common_names=None</em>, <em>client_certificate_thumbprints=None</em>, <em>cluster_code_version=None</em>, <em>diagnostics_config=None</em>, <em>fabric_settings=None</em>, <em>location=None</em>, <em>management_endpoint=None</em>, <em>name=None</em>, <em>node_types=None</em>, <em>reliability_level=None</em>, <em>resource_group_name=None</em>, <em>reverse_proxy_certificate=None</em>, <em>tags=None</em>, <em>upgrade_mode=None</em>, <em>vm_image=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Service Fabric Cluster.</p>

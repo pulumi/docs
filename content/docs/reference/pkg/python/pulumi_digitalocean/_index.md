@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_digitalocean">
-<span id="pulumi-digitalocean"></span><h1>Pulumi DigitalOcean<a class="headerlink" href="#module-pulumi_digitalocean" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="pulumi-digitalocean">
+<h1>Pulumi DigitalOcean<a class="headerlink" href="#pulumi-digitalocean" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-digitalocean/issues">pulumi/pulumi-digitalocean repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/issues">terraform-providers/terraform-provider-digitalocean repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_digitalocean"></span><dl class="class">
 <dt id="pulumi_digitalocean.Cdn">
 <em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Cdn</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_id=None</em>, <em>custom_domain=None</em>, <em>origin=None</em>, <em>ttl=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Cdn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean CDN Endpoint resource for use with Spaces.</p>

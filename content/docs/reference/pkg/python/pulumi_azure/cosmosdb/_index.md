@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_azure.cosmosdb">
-<span id="cosmosdb"></span><h1>cosmosdb<a class="headerlink" href="#module-pulumi_azure.cosmosdb" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="cosmosdb">
+<h1>cosmosdb<a class="headerlink" href="#cosmosdb" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure/issues">terraform-providers/terraform-provider-azure repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_azure.cosmosdb"></span><dl class="class">
 <dt id="pulumi_azure.cosmosdb.Account">
 <em class="property">class </em><code class="descclassname">pulumi_azure.cosmosdb.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>capabilities=None</em>, <em>consistency_policy=None</em>, <em>enable_automatic_failover=None</em>, <em>enable_multiple_write_locations=None</em>, <em>failover_policies=None</em>, <em>geo_locations=None</em>, <em>ip_range_filter=None</em>, <em>is_virtual_network_filter_enabled=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>name=None</em>, <em>offer_type=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>virtual_network_rules=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.Account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a CosmosDB (formally DocumentDB) Account.</p>

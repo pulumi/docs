@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_aws.neptune">
-<span id="neptune"></span><h1>neptune<a class="headerlink" href="#module-pulumi_aws.neptune" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="neptune">
+<h1>neptune<a class="headerlink" href="#neptune" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_aws.neptune"></span><dl class="class">
 <dt id="pulumi_aws.neptune.Cluster">
 <em class="property">class </em><code class="descclassname">pulumi_aws.neptune.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>availability_zones=None</em>, <em>backup_retention_period=None</em>, <em>cluster_identifier=None</em>, <em>cluster_identifier_prefix=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>final_snapshot_identifier=None</em>, <em>iam_database_authentication_enabled=None</em>, <em>iam_roles=None</em>, <em>kms_key_arn=None</em>, <em>neptune_cluster_parameter_group_name=None</em>, <em>neptune_subnet_group_name=None</em>, <em>port=None</em>, <em>preferred_backup_window=None</em>, <em>preferred_maintenance_window=None</em>, <em>replication_source_identifier=None</em>, <em>skip_final_snapshot=None</em>, <em>snapshot_identifier=None</em>, <em>storage_encrypted=None</em>, <em>tags=None</em>, <em>vpc_security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Cluster resource with the given unique name, props, and options.</p>

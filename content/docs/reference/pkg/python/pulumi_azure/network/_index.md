@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_azure.network">
-<span id="network"></span><h1>network<a class="headerlink" href="#module-pulumi_azure.network" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="network">
+<h1>network<a class="headerlink" href="#network" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure/issues">terraform-providers/terraform-provider-azure repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_azure.network"></span><dl class="class">
 <dt id="pulumi_azure.network.ApplicationGateway">
 <em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">ApplicationGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication_certificates=None</em>, <em>autoscale_configuration=None</em>, <em>backend_address_pools=None</em>, <em>backend_http_settings=None</em>, <em>custom_error_configurations=None</em>, <em>disabled_ssl_protocols=None</em>, <em>enable_http2=None</em>, <em>frontend_ip_configurations=None</em>, <em>frontend_ports=None</em>, <em>gateway_ip_configurations=None</em>, <em>http_listeners=None</em>, <em>location=None</em>, <em>name=None</em>, <em>probes=None</em>, <em>redirect_configurations=None</em>, <em>request_routing_rules=None</em>, <em>resource_group_name=None</em>, <em>rewrite_rule_sets=None</em>, <em>sku=None</em>, <em>ssl_certificates=None</em>, <em>ssl_policies=None</em>, <em>tags=None</em>, <em>url_path_maps=None</em>, <em>waf_configuration=None</em>, <em>zones=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Application Gateway.</p>

@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_openstack.identity">
-<span id="identity"></span><h1>identity<a class="headerlink" href="#module-pulumi_openstack.identity" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="identity">
+<h1>identity<a class="headerlink" href="#identity" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-openstack/issues">pulumi/pulumi-openstack repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/issues">terraform-providers/terraform-provider-openstack repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_openstack.identity"></span><dl class="class">
 <dt id="pulumi_openstack.identity.ApplicationCredential">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.identity.</code><code class="descname">ApplicationCredential</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>expires_at=None</em>, <em>name=None</em>, <em>region=None</em>, <em>roles=None</em>, <em>secret=None</em>, <em>unrestricted=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.ApplicationCredential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V3 Application Credential resource within OpenStack Keystone.</p>

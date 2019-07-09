@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_aws.sqs">
-<span id="sqs"></span><h1>sqs<a class="headerlink" href="#module-pulumi_aws.sqs" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="sqs">
+<h1>sqs<a class="headerlink" href="#sqs" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_aws.sqs"></span><dl class="class">
 <dt id="pulumi_aws.sqs.GetQueueResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.sqs.</code><code class="descname">GetQueueResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>name=None</em>, <em>url=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sqs.GetQueueResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getQueue.</p>

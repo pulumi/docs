@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_azure.notificationhub">
-<span id="notificationhub"></span><h1>notificationhub<a class="headerlink" href="#module-pulumi_azure.notificationhub" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="notificationhub">
+<h1>notificationhub<a class="headerlink" href="#notificationhub" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure/issues">terraform-providers/terraform-provider-azure repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_azure.notificationhub"></span><dl class="class">
 <dt id="pulumi_azure.notificationhub.AuthorizationRule">
 <em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">AuthorizationRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>listen=None</em>, <em>manage=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>notification_hub_name=None</em>, <em>resource_group_name=None</em>, <em>send=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.AuthorizationRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Authorization Rule associated with a Notification Hub within a Notification Hub Namespace.</p>

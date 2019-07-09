@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_gcp.dataproc">
-<span id="dataproc"></span><h1>dataproc<a class="headerlink" href="#module-pulumi_gcp.dataproc" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="dataproc">
+<h1>dataproc<a class="headerlink" href="#dataproc" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gcp">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gcp/issues">terraform-providers/terraform-provider-gcp repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_gcp.dataproc"></span><dl class="class">
 <dt id="pulumi_gcp.dataproc.Cluster">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.dataproc.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_config=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dataproc.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Cloud Dataproc cluster resource within GCP. For more information see
