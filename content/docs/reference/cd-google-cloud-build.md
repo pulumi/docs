@@ -54,6 +54,8 @@ Set the appropriate `gcp:project` and `gcp:region` values. For example, if your 
 
 The Cloud Build configuration file below is a sample, to show you how to install the Pulumi CLI and run pulumi commands such as `pulumi preview` or `pulumi up` as part of your CI/CD workflow.
 
+**Note:** The `_INSECURE_SUBSTITUTION_PULUMI_ACCESS_TOKEN` substitution is a simple way to specify the token, but you should consider using encrypted variables.
+
 ```yaml
 steps:
 - name: 'gcr.io/cloud-builders/yarn'
@@ -67,6 +69,20 @@ steps:
   - 'PULUMI_ACCESS_TOKEN=$_INSECURE_SUBSTITUTION_PULUMI_ACCESS_TOKEN'
   - 'BUILD_TYPE=$_BUILD_TYPE'
 ```
+
+In the above configuration, both `_BUILD_TYPE` and `_INSECURE_SUBSTITUTION_PULUMI_ACCESS_TOKEN` are substitutions configured in Cloud Build Triggers. You can read more about triggers [here](https://cloud.google.com/cloud-build/docs/running-builds/automate-builds).
+
+* `_BUILD_TYPE` is used to indicate to the build environment about the type of build it is running. This allows us to run a `preview` or an `update` based on the build type. To configure the substitution, you need to setup build triggers for each type of branch builds you intend to support for your project.
+
+* `_INSECURE_SUBSTITUTION_PULUMI_ACCESS_TOKEN` is used to supply the [Pulumi Access Token](https://app.pulumi.com/account/tokens) value.
+
+For example, if you only want to support PR and merge builds, setup two triggers with the filter pattern `master` for all merge builds and `^master` for all other builds.
+
+![Cloud Build Triggers](/images/docs/reference/google-cloud-build/cloud-build-triggers.png)
+
+Here's the configuration of the "PR build" type trigger:
+
+![Cloud Build Trigger configuration](/images/docs/reference/google-cloud-build/cloud-build-trigger-config.png)
 
 ### `pulumi.sh`
 
@@ -82,6 +98,11 @@ A basic bash script that does the following:
 
 # exit if a command returns a non-zero exit code and also print the commands and their args as they are executed.
 set -e -x
+
+# Download and install required tools.
+# pulumi
+curl -L https://get.pulumi.com/ | bash
+export PATH=$PATH:$HOME/.pulumi/bin
 
 # Restore npm dependencies for our infra app.
 yarn install
@@ -116,6 +137,10 @@ Click on **Add Trigger** and follow the prompts to setup a trigger for your repo
 - **Build configuration**: `Cloud Build configuration`.
 
 ## Next Steps
+
+### Use the Pulumi community builder image for Google Cloud Build
+
+We have created a builder image that will install the Pulumi CLI for you in a Node-based image. Since the builder is part of Google Cloud Build's community builders, you will need to make the builder available to your project by cloning the community builders' Git repo. See [this](https://github.com/GoogleCloudPlatform/cloud-builders-community/tree/master/pulumi) here for more information and an example for how to use the builder in your project.
 
 ### Encrypted Variables
 
