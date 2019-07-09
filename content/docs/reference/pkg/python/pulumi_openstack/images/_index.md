@@ -119,9 +119,6 @@ Image Service set it.</p>
 “ami”, “ari”, “aki”, “bare”, “ovf”.</li>
 <li><strong>disk_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The disk format. Must be one of
 “ami”, “ari”, “aki”, “vhd”, “vmdk”, “raw”, “qcow2”, “vdi”, “iso”.</li>
-<li><strong>image_cache_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the directory where the images will
-be downloaded. Images will be stored with a filename corresponding to
-the url’s md5 hash. Defaults to “$HOME/.terraform/image_cache”</li>
 <li><strong>image_source_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the url of the raw image that will
 be downloaded in the <code class="docutils literal notranslate"><span class="pre">image_cache_path</span></code> before being uploaded to Glance.
 Glance is able to download image from internet but the <code class="docutils literal notranslate"><span class="pre">gophercloud</span></code> library
@@ -155,6 +152,8 @@ visibility depends upon the configuration of the OpenStack cloud.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.images.Image.checksum">
 <code class="descname">checksum</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.Image.checksum" title="Permalink to this definition">¶</a></dt>
@@ -187,14 +186,6 @@ visibility depends upon the configuration of the OpenStack cloud.</li>
 <dd><p>the trailing path after the glance
 endpoint that represent the location of the image
 or the path to retrieve it.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_openstack.images.Image.image_cache_path">
-<code class="descname">image_cache_path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.Image.image_cache_path" title="Permalink to this definition">¶</a></dt>
-<dd><p>This is the directory where the images will
-be downloaded. Images will be stored with a filename corresponding to
-the url’s md5 hash. Defaults to “$HOME/.terraform/image_cache”</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -370,6 +361,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.images.get_image">
 <code class="descclassname">pulumi_openstack.images.</code><code class="descname">get_image</code><span class="sig-paren">(</span><em>member_status=None</em>, <em>most_recent=None</em>, <em>name=None</em>, <em>owner=None</em>, <em>properties=None</em>, <em>region=None</em>, <em>size_max=None</em>, <em>size_min=None</em>, <em>sort_direction=None</em>, <em>sort_key=None</em>, <em>tag=None</em>, <em>visibility=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack image.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/images_image_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/images_image_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

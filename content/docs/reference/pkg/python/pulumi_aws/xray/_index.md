@@ -31,6 +31,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/xray_sampling_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/xray_sampling_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.xray.SamplingRule.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.xray.SamplingRule.arn" title="Permalink to this definition">¶</a></dt>

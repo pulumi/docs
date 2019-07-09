@@ -27,6 +27,8 @@ re-authorise. Must be one of <code class="docutils literal notranslate"><span cl
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_application.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_application.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.AccessApplication.domain">
 <code class="descname">domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessApplication.domain" title="Permalink to this definition">¶</a></dt>
@@ -137,6 +139,8 @@ added.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.AccessPolicy.application_id">
 <code class="descname">application_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessPolicy.application_id" title="Permalink to this definition">¶</a></dt>
@@ -252,6 +256,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.AccessRule.configuration">
 <code class="descname">configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessRule.configuration" title="Permalink to this definition">¶</a></dt>
@@ -340,6 +346,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/account_member.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/account_member.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.AccountMember.email_address">
 <code class="descname">email_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccountMember.email_address" title="Permalink to this definition">¶</a></dt>
@@ -411,6 +419,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/argo.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/argo.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.Argo.smart_routing">
 <code class="descname">smart_routing</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Argo.smart_routing" title="Permalink to this definition">¶</a></dt>
@@ -483,9 +493,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The account ID where the custom pages should be
 updated. Either <code class="docutils literal notranslate"><span class="pre">account_id</span></code> or <code class="docutils literal notranslate"><span class="pre">zone_id</span></code> must be provided. If
 <code class="docutils literal notranslate"><span class="pre">account_id</span></code> is present, it will override the zone setting.</li>
-<li><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Managed state of the custom page. Must be one of
-<code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">customised</span></code>. If the value is <code class="docutils literal notranslate"><span class="pre">default</span></code> it will be removed
-from the Terraform state management.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of custom page you wish to update. Must
 be one of <code class="docutils literal notranslate"><span class="pre">basic_challenge</span></code>, <code class="docutils literal notranslate"><span class="pre">waf_challenge</span></code>, <code class="docutils literal notranslate"><span class="pre">waf_block</span></code>,
 <code class="docutils literal notranslate"><span class="pre">ratelimit_block</span></code>, <code class="docutils literal notranslate"><span class="pre">country_challenge</span></code>, <code class="docutils literal notranslate"><span class="pre">ip_block</span></code>, <code class="docutils literal notranslate"><span class="pre">under_attack</span></code>,
@@ -498,20 +505,14 @@ updated. Either <code class="docutils literal notranslate"><span class="pre">zon
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_pages.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_pages.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.CustomPages.account_id">
 <code class="descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.CustomPages.account_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The account ID where the custom pages should be
 updated. Either <code class="docutils literal notranslate"><span class="pre">account_id</span></code> or <code class="docutils literal notranslate"><span class="pre">zone_id</span></code> must be provided. If
 <code class="docutils literal notranslate"><span class="pre">account_id</span></code> is present, it will override the zone setting.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_cloudflare.CustomPages.state">
-<code class="descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.CustomPages.state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Managed state of the custom page. Must be one of
-<code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">customised</span></code>. If the value is <code class="docutils literal notranslate"><span class="pre">default</span></code> it will be removed
-from the Terraform state management.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -598,6 +599,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/filter.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/filter.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.Filter.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Filter.description" title="Permalink to this definition">¶</a></dt>
@@ -698,6 +701,8 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/firewall_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.FirewallRule.action">
 <code class="descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.FirewallRule.action" title="Permalink to this definition">¶</a></dt>
@@ -826,6 +831,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.LoadBalancer.created_on">
 <code class="descname">created_on</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LoadBalancer.created_on" title="Permalink to this definition">¶</a></dt>
@@ -984,6 +991,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_monitor.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.LoadBalancerMonitor.allow_insecure">
 <code class="descname">allow_insecure</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerMonitor.allow_insecure" title="Permalink to this definition">¶</a></dt>
@@ -1132,6 +1141,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_pool.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.LoadBalancerPool.check_regions">
 <code class="descname">check_regions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerPool.check_regions" title="Permalink to this definition">¶</a></dt>
@@ -1249,6 +1260,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/logpush_job.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/logpush_job.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.LogpushJob.ownership_challenge">
 <code class="descname">ownership_challenge</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LogpushJob.ownership_challenge" title="Permalink to this definition">¶</a></dt>
@@ -1316,6 +1329,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/page_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/page_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.PageRule.actions">
 <code class="descname">actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.PageRule.actions" title="Permalink to this definition">¶</a></dt>
@@ -1411,6 +1426,8 @@ construction to achieve fine-grained programmatic control over provider settings
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_cloudflare.Provider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1476,6 +1493,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/rate_limit.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/rate_limit.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.RateLimit.action">
 <code class="descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.RateLimit.action" title="Permalink to this definition">¶</a></dt>
@@ -1600,6 +1619,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/record.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/record.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.Record.created_on">
 <code class="descname">created_on</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Record.created_on" title="Permalink to this definition">¶</a></dt>
@@ -1748,6 +1769,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/spectrum_application.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/spectrum_application.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.SpectrumApplication.dns">
 <code class="descname">dns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication.dns" title="Permalink to this definition">¶</a></dt>
@@ -1855,6 +1878,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.WafRule.mode">
 <code class="descname">mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafRule.mode" title="Permalink to this definition">¶</a></dt>
@@ -1950,6 +1975,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_route.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_route.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.WorkerRoute.pattern">
 <code class="descname">pattern</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WorkerRoute.pattern" title="Permalink to this definition">¶</a></dt>
@@ -2032,6 +2059,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_script.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_script.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.WorkerScript.content">
 <code class="descname">content</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WorkerScript.content" title="Permalink to this definition">¶</a></dt>
@@ -2117,6 +2146,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.Zone.jump_start">
 <code class="descname">jump_start</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Zone.jump_start" title="Permalink to this definition">¶</a></dt>
@@ -2231,6 +2262,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_lockdown.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_lockdown.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.ZoneLockdown.configurations">
 <code class="descname">configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.ZoneLockdown.configurations" title="Permalink to this definition">¶</a></dt>
@@ -2325,6 +2358,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_settings_override.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_settings_override.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.ZoneSettingsOverride.initial_settings">
 <code class="descname">initial_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.ZoneSettingsOverride.initial_settings" title="Permalink to this definition">¶</a></dt>
@@ -2397,12 +2432,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.get_ip_ranges">
 <code class="descclassname">pulumi_cloudflare.</code><code class="descname">get_ip_ranges</code><span class="sig-paren">(</span><em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_ip_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the [IP ranges][1] of Cloudflare edge nodes.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/ip_ranges.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/ip_ranges.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_cloudflare.get_zones">
 <code class="descclassname">pulumi_cloudflare.</code><code class="descname">get_zones</code><span class="sig-paren">(</span><em>filter=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to look up [Zone][1] records.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/zones.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/zones.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

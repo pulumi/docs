@@ -6,6 +6,13 @@ title: Package @pulumi/postgresql
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/tscdocgen. -->
 
 
+
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-postgresql)
+> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
+> first check the [`pulumi/pulumi-postgresql` repo](https://github.com/pulumi/pulumi-postgresql/issues); however, if that doesn't turn up anything,
+> please consult the source [`terraform-providers/terraform-provider-postgresql` repo](https://github.com/terraform-providers/terraform-provider-postgresql/issues).
+
+
 {{< langchoose nodeonly >}}
 
 ```javascript
@@ -71,7 +78,7 @@ import * as postgresql from "@pulumi/postgresql";
 </div>
 
 <h2 class="pdoc-module-header" id="Database">
-<a class="pdoc-member-name" href="/database.ts#L28">class <b>Database</b></a>
+<a class="pdoc-member-name" href="/database.ts#L30">class <b>Database</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -96,9 +103,11 @@ const myDb = new postgresql.Database("my_db", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/database.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Database-constructor">
-<a class="pdoc-child-name" href="/database.ts#L128"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="/database.ts#L109"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -115,7 +124,7 @@ Create a Database resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-get">
-<a class="pdoc-child-name" href="/database.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="/database.ts#L39">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -139,7 +148,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-isInstance">
-<a class="pdoc-child-name" href="/database.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="/database.ts#L50">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -153,7 +162,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-allowConnections">
-<a class="pdoc-child-name" href="/database.ts#L60">property <b>allowConnections</b></a>
+<a class="pdoc-child-name" href="/database.ts#L62">property <b>allowConnections</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>allowConnections: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -166,7 +175,7 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-connectionLimit">
-<a class="pdoc-child-name" href="/database.ts#L65">property <b>connectionLimit</b></a>
+<a class="pdoc-child-name" href="/database.ts#L67">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>connectionLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -178,18 +187,13 @@ established to this database. `-1` (the default) means no limit.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-encoding">
-<a class="pdoc-child-name" href="/database.ts#L74">property <b>encoding</b></a>
+<a class="pdoc-child-name" href="/database.ts#L71">property <b>encoding</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>encoding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-Character set encoding to use in the database.
-Specify a string constant (e.g. `UTF8` or `SQL_ASCII`), or an integer encoding
-number.  If unset or set to an empty string the default encoding is set to
-`UTF8`.  If set to `DEFAULT` Terraform will use the same encoding as the
-template database.  Changing this value will force the creation of a new
-resource as this value can only be changed when a database is created.
+Character set encoding to use in the new database
 
 {{% /md %}}
 </div>
@@ -206,7 +210,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-isTemplate">
-<a class="pdoc-child-name" href="/database.ts#L80">property <b>isTemplate</b></a>
+<a class="pdoc-child-name" href="/database.ts#L77">property <b>isTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>isTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -219,41 +223,29 @@ superusers or the owner of the database can clone it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-lcCollate">
-<a class="pdoc-child-name" href="/database.ts#L90">property <b>lcCollate</b></a>
+<a class="pdoc-child-name" href="/database.ts#L81">property <b>lcCollate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lcCollate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-Collation order (`LC_COLLATE`) to use in the
-database.  This affects the sort order applied to strings, e.g. in queries
-with `ORDER BY`, as well as the order used in indexes on text columns. If
-unset or set to an empty string the default collation is set to `C`.  If set
-to `DEFAULT` Terraform will use the same collation order as the specified
-`template` database.  Changing this value will force the creation of a new
-resource as this value can only be changed when a database is created.
+Collation order (LC_COLLATE) to use in the new database
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-lcCtype">
-<a class="pdoc-child-name" href="/database.ts#L100">property <b>lcCtype</b></a>
+<a class="pdoc-child-name" href="/database.ts#L85">property <b>lcCtype</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lcCtype: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-Character classification (`LC_CTYPE`) to use in the
-database. This affects the categorization of characters, e.g. lower, upper and
-digit. If unset or set to an empty string the default character classification
-is set to `C`.  If set to `DEFAULT` Terraform will use the character
-classification of the specified `template` database.  Changing this value will
-force the creation of a new resource as this value can only be changed when a
-database is created.
+Character classification (LC_CTYPE) to use in the new database
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-name">
-<a class="pdoc-child-name" href="/database.ts#L105">property <b>name</b></a>
+<a class="pdoc-child-name" href="/database.ts#L90">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -265,7 +257,7 @@ server instance where it is configured.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-owner">
-<a class="pdoc-child-name" href="/database.ts#L113">property <b>owner</b></a>
+<a class="pdoc-child-name" href="/database.ts#L98">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -280,7 +272,7 @@ the username in the provider is a superuser.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-tablespaceName">
-<a class="pdoc-child-name" href="/database.ts#L120">property <b>tablespaceName</b></a>
+<a class="pdoc-child-name" href="/database.ts#L105">property <b>tablespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tablespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -294,17 +286,13 @@ created in this database.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-template">
-<a class="pdoc-child-name" href="/database.ts#L128">property <b>template</b></a>
+<a class="pdoc-child-name" href="/database.ts#L109">property <b>template</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-The name of the template database from which to create
-the database, or `DEFAULT` to use the default template (`template0`).  NOTE:
-the default in Terraform is `template0`, not `template1`.  Changing this value
-will force the creation of a new resource as this value can only be changed
-when a database is created.
+The name of the template from which to create the new database
 
 {{% /md %}}
 </div>
@@ -322,7 +310,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DefaultPrivileg">
-<a class="pdoc-member-name" href="/defaultPrivileg.ts#L28">class <b>DefaultPrivileg</b></a>
+<a class="pdoc-member-name" href="/defaultPrivileg.ts#L30">class <b>DefaultPrivileg</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -348,9 +336,11 @@ const readOnlyTables = new postgresql.DefaultPrivileg("read_only_tables", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/default_privileges.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DefaultPrivileg-constructor">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L80"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -367,7 +357,7 @@ Create a DefaultPrivileg resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivileg-get">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L39">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -391,7 +381,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivileg-isInstance">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L50">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -405,7 +395,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivileg-database">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L58">property <b>database</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L60">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -428,7 +418,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivileg-objectType">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L62">property <b>objectType</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L64">property <b>objectType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>objectType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -439,7 +429,7 @@ The PostgreSQL object type to set the default privileges on (one of: table, sequ
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivileg-owner">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L66">property <b>owner</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L68">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -450,7 +440,7 @@ Role for which apply default privileges (You can change default privileges only 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivileg-privileges">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L70">property <b>privileges</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L72">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>privileges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -461,7 +451,7 @@ The list of privileges to apply as default privileges.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivileg-role">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L74">property <b>role</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L76">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -472,7 +462,7 @@ The name of the role to which grant default privileges on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivileg-schema">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L78">property <b>schema</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L80">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -496,7 +486,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Extension">
-<a class="pdoc-member-name" href="/extension.ts#L21">class <b>Extension</b></a>
+<a class="pdoc-member-name" href="/extension.ts#L23">class <b>Extension</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -514,9 +504,11 @@ import * as postgresql from "@pulumi/postgresql";
 const myExtension = new postgresql.Extension("my_extension", {});
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/extension.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Extension-constructor">
-<a class="pdoc-child-name" href="/extension.ts#L59"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="/extension.ts#L65"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -533,7 +525,7 @@ Create a Extension resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Extension-get">
-<a class="pdoc-child-name" href="/extension.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="/extension.ts#L32">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -557,7 +549,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Extension-isInstance">
-<a class="pdoc-child-name" href="/extension.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="/extension.ts#L43">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -567,6 +559,17 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of Extension.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Extension-database">
+<a class="pdoc-child-name" href="/extension.ts#L53">property <b>database</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>public </span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+Which database to create the extension on. Defaults to provider database.
 
 {{% /md %}}
 </div>
@@ -583,7 +586,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Extension-name">
-<a class="pdoc-child-name" href="/extension.ts#L51">property <b>name</b></a>
+<a class="pdoc-child-name" href="/extension.ts#L57">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -594,7 +597,7 @@ The name of the extension.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Extension-schema">
-<a class="pdoc-child-name" href="/extension.ts#L55">property <b>schema</b></a>
+<a class="pdoc-child-name" href="/extension.ts#L61">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -617,7 +620,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Extension-version">
-<a class="pdoc-child-name" href="/extension.ts#L59">property <b>version</b></a>
+<a class="pdoc-child-name" href="/extension.ts#L65">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -629,7 +632,7 @@ Sets the version number of the extension.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Grant">
-<a class="pdoc-member-name" href="/grant.ts#L27">class <b>Grant</b></a>
+<a class="pdoc-member-name" href="/grant.ts#L29">class <b>Grant</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -654,9 +657,11 @@ const readonlyTables = new postgresql.Grant("readonly_tables", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/grant.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Grant-constructor">
-<a class="pdoc-child-name" href="/grant.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L75"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -673,7 +678,7 @@ Create a Grant resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Grant-get">
-<a class="pdoc-child-name" href="/grant.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L38">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -697,7 +702,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Grant-isInstance">
-<a class="pdoc-child-name" href="/grant.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L49">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -711,7 +716,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Grant-database">
-<a class="pdoc-child-name" href="/grant.ts#L57">property <b>database</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L59">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -734,7 +739,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Grant-objectType">
-<a class="pdoc-child-name" href="/grant.ts#L61">property <b>objectType</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L63">property <b>objectType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>objectType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -745,7 +750,7 @@ The PostgreSQL object type to grant the privileges on (one of: table, sequence).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Grant-privileges">
-<a class="pdoc-child-name" href="/grant.ts#L65">property <b>privileges</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L67">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>privileges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -756,7 +761,7 @@ The list of privileges to grant.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Grant-role">
-<a class="pdoc-child-name" href="/grant.ts#L69">property <b>role</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L71">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -767,7 +772,7 @@ The name of the role to grant privileges on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Grant-schema">
-<a class="pdoc-child-name" href="/grant.ts#L73">property <b>schema</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L75">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -791,7 +796,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Provider">
-<a class="pdoc-member-name" href="/provider.ts#L13">class <b>Provider</b></a>
+<a class="pdoc-member-name" href="/provider.ts#L15">class <b>Provider</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
@@ -802,9 +807,11 @@ settings, however an explicit `Provider` instance may be created and passed duri
 construction to achieve fine-grained programmatic control over provider settings. See the
 [documentation](https://pulumi.io/reference/programming-model.html#providers) for more information.
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/index.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="/provider.ts#L28"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -831,7 +838,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="/provider.ts#L23">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -870,7 +877,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Role">
-<a class="pdoc-member-name" href="/role.ts#L42">class <b>Role</b></a>
+<a class="pdoc-member-name" href="/role.ts#L44">class <b>Role</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -910,9 +917,11 @@ const myRole = new postgresql.Role("my_role", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/role.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Role-constructor">
-<a class="pdoc-child-name" href="/role.ts#L165"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="/role.ts#L167"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -929,7 +938,7 @@ Create a Role resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-get">
-<a class="pdoc-child-name" href="/role.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="/role.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -953,7 +962,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-isInstance">
-<a class="pdoc-child-name" href="/role.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="/role.ts#L64">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -967,7 +976,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-bypassRowLevelSecurity">
-<a class="pdoc-child-name" href="/role.ts#L73">property <b>bypassRowLevelSecurity</b></a>
+<a class="pdoc-child-name" href="/role.ts#L75">property <b>bypassRowLevelSecurity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>bypassRowLevelSecurity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -979,7 +988,7 @@ row-level security (RLS) policy.  Default value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-connectionLimit">
-<a class="pdoc-child-name" href="/role.ts#L79">property <b>connectionLimit</b></a>
+<a class="pdoc-child-name" href="/role.ts#L81">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>connectionLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -992,7 +1001,7 @@ limit.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-createDatabase">
-<a class="pdoc-child-name" href="/role.ts#L84">property <b>createDatabase</b></a>
+<a class="pdoc-child-name" href="/role.ts#L86">property <b>createDatabase</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createDatabase: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1004,7 +1013,7 @@ DATABASE`.  Default value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-createRole">
-<a class="pdoc-child-name" href="/role.ts#L90">property <b>createRole</b></a>
+<a class="pdoc-child-name" href="/role.ts#L92">property <b>createRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1017,7 +1026,7 @@ is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-encrypted">
-<a class="pdoc-child-name" href="/role.ts#L91">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="/role.ts#L93">property <b>encrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>encrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1025,7 +1034,7 @@ is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-encryptedPassword">
-<a class="pdoc-child-name" href="/role.ts#L99">property <b>encryptedPassword</b></a>
+<a class="pdoc-child-name" href="/role.ts#L101">property <b>encryptedPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>encryptedPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1052,7 +1061,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-inherit">
-<a class="pdoc-child-name" href="/role.ts#L104">property <b>inherit</b></a>
+<a class="pdoc-child-name" href="/role.ts#L106">property <b>inherit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>inherit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1064,7 +1073,7 @@ roles it is a member of.  Default value is `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-login">
-<a class="pdoc-child-name" href="/role.ts#L110">property <b>login</b></a>
+<a class="pdoc-child-name" href="/role.ts#L112">property <b>login</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>login: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1077,7 +1086,7 @@ in the usual sense of the word.  Default value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-name">
-<a class="pdoc-child-name" href="/role.ts#L115">property <b>name</b></a>
+<a class="pdoc-child-name" href="/role.ts#L117">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1089,7 +1098,7 @@ server instance where it is configured.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-password">
-<a class="pdoc-child-name" href="/role.ts#L120">property <b>password</b></a>
+<a class="pdoc-child-name" href="/role.ts#L122">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1101,7 +1110,7 @@ for roles having the `login` attribute set to true.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-replication">
-<a class="pdoc-child-name" href="/role.ts#L126">property <b>replication</b></a>
+<a class="pdoc-child-name" href="/role.ts#L128">property <b>replication</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>replication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1114,7 +1123,7 @@ value is `false`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-roles">
-<a class="pdoc-child-name" href="/role.ts#L130">property <b>roles</b></a>
+<a class="pdoc-child-name" href="/role.ts#L132">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1125,7 +1134,7 @@ Defines list of roles which will be granted to this new role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-skipDropRole">
-<a class="pdoc-child-name" href="/role.ts#L140">property <b>skipDropRole</b></a>
+<a class="pdoc-child-name" href="/role.ts#L142">property <b>skipDropRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>skipDropRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1142,7 +1151,7 @@ This is the third and final step taken when removing a ROLE from a database.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-skipReassignOwned">
-<a class="pdoc-child-name" href="/role.ts#L151">property <b>skipReassignOwned</b></a>
+<a class="pdoc-child-name" href="/role.ts#L153">property <b>skipReassignOwned</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>skipReassignOwned: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1160,7 +1169,7 @@ an implicit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-superuser">
-<a class="pdoc-child-name" href="/role.ts#L157">property <b>superuser</b></a>
+<a class="pdoc-child-name" href="/role.ts#L159">property <b>superuser</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>superuser: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1185,7 +1194,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-validUntil">
-<a class="pdoc-child-name" href="/role.ts#L165">property <b>validUntil</b></a>
+<a class="pdoc-child-name" href="/role.ts#L167">property <b>validUntil</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>validUntil: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1201,7 +1210,7 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Schema">
-<a class="pdoc-member-name" href="/schema.ts#L45">class <b>Schema</b></a>
+<a class="pdoc-member-name" href="/schema.ts#L47">class <b>Schema</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1243,9 +1252,11 @@ const mySchema = new postgresql.Schema("my_schema", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/schema.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Schema-constructor">
-<a class="pdoc-child-name" href="/schema.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="/schema.ts#L91"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1262,7 +1273,7 @@ Create a Schema resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-get">
-<a class="pdoc-child-name" href="/schema.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="/schema.ts#L56">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1286,7 +1297,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-isInstance">
-<a class="pdoc-child-name" href="/schema.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="/schema.ts#L67">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1312,7 +1323,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-ifNotExists">
-<a class="pdoc-child-name" href="/schema.ts#L75">property <b>ifNotExists</b></a>
+<a class="pdoc-child-name" href="/schema.ts#L77">property <b>ifNotExists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ifNotExists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1323,7 +1334,7 @@ When true, use the existing schema if it exists. (Default: true)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-name">
-<a class="pdoc-child-name" href="/schema.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="/schema.ts#L82">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1335,7 +1346,7 @@ database instance where it is configured.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-owner">
-<a class="pdoc-child-name" href="/schema.ts#L84">property <b>owner</b></a>
+<a class="pdoc-child-name" href="/schema.ts#L86">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1346,7 +1357,7 @@ The ROLE who owns the schema.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-policies">
-<a class="pdoc-child-name" href="/schema.ts#L89">property <b>policies</b></a>
+<a class="pdoc-child-name" href="/schema.ts#L91">property <b>policies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1417,7 +1428,7 @@ deployments.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="DatabaseArgs">
-<a class="pdoc-member-name" href="/database.ts#L252">interface <b>DatabaseArgs</b></a>
+<a class="pdoc-member-name" href="/database.ts#L212">interface <b>DatabaseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1426,7 +1437,7 @@ The set of arguments for constructing a Database resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseArgs-allowConnections">
-<a class="pdoc-child-name" href="/database.ts#L258">property <b>allowConnections</b></a>
+<a class="pdoc-child-name" href="/database.ts#L218">property <b>allowConnections</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowConnections?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1439,7 +1450,7 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-connectionLimit">
-<a class="pdoc-child-name" href="/database.ts#L263">property <b>connectionLimit</b></a>
+<a class="pdoc-child-name" href="/database.ts#L223">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1451,23 +1462,18 @@ established to this database. `-1` (the default) means no limit.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-encoding">
-<a class="pdoc-child-name" href="/database.ts#L272">property <b>encoding</b></a>
+<a class="pdoc-child-name" href="/database.ts#L227">property <b>encoding</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encoding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-Character set encoding to use in the database.
-Specify a string constant (e.g. `UTF8` or `SQL_ASCII`), or an integer encoding
-number.  If unset or set to an empty string the default encoding is set to
-`UTF8`.  If set to `DEFAULT` Terraform will use the same encoding as the
-template database.  Changing this value will force the creation of a new
-resource as this value can only be changed when a database is created.
+Character set encoding to use in the new database
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-isTemplate">
-<a class="pdoc-child-name" href="/database.ts#L278">property <b>isTemplate</b></a>
+<a class="pdoc-child-name" href="/database.ts#L233">property <b>isTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1480,41 +1486,29 @@ superusers or the owner of the database can clone it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-lcCollate">
-<a class="pdoc-child-name" href="/database.ts#L288">property <b>lcCollate</b></a>
+<a class="pdoc-child-name" href="/database.ts#L237">property <b>lcCollate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lcCollate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-Collation order (`LC_COLLATE`) to use in the
-database.  This affects the sort order applied to strings, e.g. in queries
-with `ORDER BY`, as well as the order used in indexes on text columns. If
-unset or set to an empty string the default collation is set to `C`.  If set
-to `DEFAULT` Terraform will use the same collation order as the specified
-`template` database.  Changing this value will force the creation of a new
-resource as this value can only be changed when a database is created.
+Collation order (LC_COLLATE) to use in the new database
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-lcCtype">
-<a class="pdoc-child-name" href="/database.ts#L298">property <b>lcCtype</b></a>
+<a class="pdoc-child-name" href="/database.ts#L241">property <b>lcCtype</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lcCtype?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-Character classification (`LC_CTYPE`) to use in the
-database. This affects the categorization of characters, e.g. lower, upper and
-digit. If unset or set to an empty string the default character classification
-is set to `C`.  If set to `DEFAULT` Terraform will use the character
-classification of the specified `template` database.  Changing this value will
-force the creation of a new resource as this value can only be changed when a
-database is created.
+Character classification (LC_CTYPE) to use in the new database
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-name">
-<a class="pdoc-child-name" href="/database.ts#L303">property <b>name</b></a>
+<a class="pdoc-child-name" href="/database.ts#L246">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1526,7 +1520,7 @@ server instance where it is configured.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-owner">
-<a class="pdoc-child-name" href="/database.ts#L311">property <b>owner</b></a>
+<a class="pdoc-child-name" href="/database.ts#L254">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1541,7 +1535,7 @@ the username in the provider is a superuser.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-tablespaceName">
-<a class="pdoc-child-name" href="/database.ts#L318">property <b>tablespaceName</b></a>
+<a class="pdoc-child-name" href="/database.ts#L261">property <b>tablespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tablespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1555,23 +1549,19 @@ created in this database.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-template">
-<a class="pdoc-child-name" href="/database.ts#L326">property <b>template</b></a>
+<a class="pdoc-child-name" href="/database.ts#L265">property <b>template</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-The name of the template database from which to create
-the database, or `DEFAULT` to use the default template (`template0`).  NOTE:
-the default in Terraform is `template0`, not `template1`.  Changing this value
-will force the creation of a new resource as this value can only be changed
-when a database is created.
+The name of the template from which to create the new database
 
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatabaseState">
-<a class="pdoc-member-name" href="/database.ts#L172">interface <b>DatabaseState</b></a>
+<a class="pdoc-member-name" href="/database.ts#L153">interface <b>DatabaseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1580,7 +1570,7 @@ Input properties used for looking up and filtering Database resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseState-allowConnections">
-<a class="pdoc-child-name" href="/database.ts#L178">property <b>allowConnections</b></a>
+<a class="pdoc-child-name" href="/database.ts#L159">property <b>allowConnections</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowConnections?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1593,7 +1583,7 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-connectionLimit">
-<a class="pdoc-child-name" href="/database.ts#L183">property <b>connectionLimit</b></a>
+<a class="pdoc-child-name" href="/database.ts#L164">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1605,23 +1595,18 @@ established to this database. `-1` (the default) means no limit.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-encoding">
-<a class="pdoc-child-name" href="/database.ts#L192">property <b>encoding</b></a>
+<a class="pdoc-child-name" href="/database.ts#L168">property <b>encoding</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encoding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-Character set encoding to use in the database.
-Specify a string constant (e.g. `UTF8` or `SQL_ASCII`), or an integer encoding
-number.  If unset or set to an empty string the default encoding is set to
-`UTF8`.  If set to `DEFAULT` Terraform will use the same encoding as the
-template database.  Changing this value will force the creation of a new
-resource as this value can only be changed when a database is created.
+Character set encoding to use in the new database
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-isTemplate">
-<a class="pdoc-child-name" href="/database.ts#L198">property <b>isTemplate</b></a>
+<a class="pdoc-child-name" href="/database.ts#L174">property <b>isTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1634,41 +1619,29 @@ superusers or the owner of the database can clone it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-lcCollate">
-<a class="pdoc-child-name" href="/database.ts#L208">property <b>lcCollate</b></a>
+<a class="pdoc-child-name" href="/database.ts#L178">property <b>lcCollate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lcCollate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-Collation order (`LC_COLLATE`) to use in the
-database.  This affects the sort order applied to strings, e.g. in queries
-with `ORDER BY`, as well as the order used in indexes on text columns. If
-unset or set to an empty string the default collation is set to `C`.  If set
-to `DEFAULT` Terraform will use the same collation order as the specified
-`template` database.  Changing this value will force the creation of a new
-resource as this value can only be changed when a database is created.
+Collation order (LC_COLLATE) to use in the new database
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-lcCtype">
-<a class="pdoc-child-name" href="/database.ts#L218">property <b>lcCtype</b></a>
+<a class="pdoc-child-name" href="/database.ts#L182">property <b>lcCtype</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lcCtype?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-Character classification (`LC_CTYPE`) to use in the
-database. This affects the categorization of characters, e.g. lower, upper and
-digit. If unset or set to an empty string the default character classification
-is set to `C`.  If set to `DEFAULT` Terraform will use the character
-classification of the specified `template` database.  Changing this value will
-force the creation of a new resource as this value can only be changed when a
-database is created.
+Character classification (LC_CTYPE) to use in the new database
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-name">
-<a class="pdoc-child-name" href="/database.ts#L223">property <b>name</b></a>
+<a class="pdoc-child-name" href="/database.ts#L187">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1680,7 +1653,7 @@ server instance where it is configured.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-owner">
-<a class="pdoc-child-name" href="/database.ts#L231">property <b>owner</b></a>
+<a class="pdoc-child-name" href="/database.ts#L195">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1695,7 +1668,7 @@ the username in the provider is a superuser.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-tablespaceName">
-<a class="pdoc-child-name" href="/database.ts#L238">property <b>tablespaceName</b></a>
+<a class="pdoc-child-name" href="/database.ts#L202">property <b>tablespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tablespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1709,23 +1682,19 @@ created in this database.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-template">
-<a class="pdoc-child-name" href="/database.ts#L246">property <b>template</b></a>
+<a class="pdoc-child-name" href="/database.ts#L206">property <b>template</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-The name of the template database from which to create
-the database, or `DEFAULT` to use the default template (`template0`).  NOTE:
-the default in Terraform is `template0`, not `template1`.  Changing this value
-will force the creation of a new resource as this value can only be changed
-when a database is created.
+The name of the template from which to create the new database
 
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DefaultPrivilegArgs">
-<a class="pdoc-member-name" href="/defaultPrivileg.ts#L162">interface <b>DefaultPrivilegArgs</b></a>
+<a class="pdoc-member-name" href="/defaultPrivileg.ts#L164">interface <b>DefaultPrivilegArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1734,7 +1703,7 @@ The set of arguments for constructing a DefaultPrivileg resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DefaultPrivilegArgs-database">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L166">property <b>database</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L168">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1745,7 +1714,7 @@ The database to grant default privileges for this role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivilegArgs-objectType">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L170">property <b>objectType</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L172">property <b>objectType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1756,7 +1725,7 @@ The PostgreSQL object type to set the default privileges on (one of: table, sequ
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivilegArgs-owner">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L174">property <b>owner</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L176">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1767,7 +1736,7 @@ Role for which apply default privileges (You can change default privileges only 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivilegArgs-privileges">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L178">property <b>privileges</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L180">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privileges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1778,7 +1747,7 @@ The list of privileges to apply as default privileges.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivilegArgs-role">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L182">property <b>role</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L184">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1789,7 +1758,7 @@ The name of the role to which grant default privileges on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivilegArgs-schema">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L186">property <b>schema</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L188">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1801,7 +1770,7 @@ The database schema to set default privileges for this role.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DefaultPrivilegState">
-<a class="pdoc-member-name" href="/defaultPrivileg.ts#L132">interface <b>DefaultPrivilegState</b></a>
+<a class="pdoc-member-name" href="/defaultPrivileg.ts#L134">interface <b>DefaultPrivilegState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1810,7 +1779,7 @@ Input properties used for looking up and filtering DefaultPrivileg resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DefaultPrivilegState-database">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L136">property <b>database</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L138">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1821,7 +1790,7 @@ The database to grant default privileges for this role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivilegState-objectType">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L140">property <b>objectType</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L142">property <b>objectType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1832,7 +1801,7 @@ The PostgreSQL object type to set the default privileges on (one of: table, sequ
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivilegState-owner">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L144">property <b>owner</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L146">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1843,7 +1812,7 @@ Role for which apply default privileges (You can change default privileges only 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivilegState-privileges">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L148">property <b>privileges</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L150">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privileges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1854,7 +1823,7 @@ The list of privileges to apply as default privileges.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivilegState-role">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L152">property <b>role</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L154">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1865,7 +1834,7 @@ The name of the role to which grant default privileges on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivilegState-schema">
-<a class="pdoc-child-name" href="/defaultPrivileg.ts#L156">property <b>schema</b></a>
+<a class="pdoc-child-name" href="/defaultPrivileg.ts#L158">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1877,7 +1846,7 @@ The database schema to set default privileges for this role.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ExtensionArgs">
-<a class="pdoc-member-name" href="/extension.ts#L107">interface <b>ExtensionArgs</b></a>
+<a class="pdoc-member-name" href="/extension.ts#L119">interface <b>ExtensionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1885,8 +1854,19 @@ The database schema to set default privileges for this role.
 The set of arguments for constructing a Extension resource.
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="ExtensionArgs-database">
+<a class="pdoc-child-name" href="/extension.ts#L123">property <b>database</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+Which database to create the extension on. Defaults to provider database.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="ExtensionArgs-name">
-<a class="pdoc-child-name" href="/extension.ts#L111">property <b>name</b></a>
+<a class="pdoc-child-name" href="/extension.ts#L127">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1897,7 +1877,7 @@ The name of the extension.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ExtensionArgs-schema">
-<a class="pdoc-child-name" href="/extension.ts#L115">property <b>schema</b></a>
+<a class="pdoc-child-name" href="/extension.ts#L131">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1908,7 +1888,7 @@ Sets the schema of an extension.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ExtensionArgs-version">
-<a class="pdoc-child-name" href="/extension.ts#L119">property <b>version</b></a>
+<a class="pdoc-child-name" href="/extension.ts#L135">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1920,7 +1900,7 @@ Sets the version number of the extension.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ExtensionState">
-<a class="pdoc-member-name" href="/extension.ts#L89">interface <b>ExtensionState</b></a>
+<a class="pdoc-member-name" href="/extension.ts#L97">interface <b>ExtensionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1928,8 +1908,19 @@ Sets the version number of the extension.
 Input properties used for looking up and filtering Extension resources.
 
 {{% /md %}}
+<h3 class="pdoc-member-header" id="ExtensionState-database">
+<a class="pdoc-child-name" href="/extension.ts#L101">property <b>database</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{% md %}}
+
+Which database to create the extension on. Defaults to provider database.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="ExtensionState-name">
-<a class="pdoc-child-name" href="/extension.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="/extension.ts#L105">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1940,7 +1931,7 @@ The name of the extension.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ExtensionState-schema">
-<a class="pdoc-child-name" href="/extension.ts#L97">property <b>schema</b></a>
+<a class="pdoc-child-name" href="/extension.ts#L109">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1951,7 +1942,7 @@ Sets the schema of an extension.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ExtensionState-version">
-<a class="pdoc-child-name" href="/extension.ts#L101">property <b>version</b></a>
+<a class="pdoc-child-name" href="/extension.ts#L113">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1963,7 +1954,7 @@ Sets the version number of the extension.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GrantArgs">
-<a class="pdoc-member-name" href="/grant.ts#L148">interface <b>GrantArgs</b></a>
+<a class="pdoc-member-name" href="/grant.ts#L150">interface <b>GrantArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1972,7 +1963,7 @@ The set of arguments for constructing a Grant resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GrantArgs-database">
-<a class="pdoc-child-name" href="/grant.ts#L152">property <b>database</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L154">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1983,7 +1974,7 @@ The database to grant privileges on for this role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GrantArgs-objectType">
-<a class="pdoc-child-name" href="/grant.ts#L156">property <b>objectType</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L158">property <b>objectType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1994,7 +1985,7 @@ The PostgreSQL object type to grant the privileges on (one of: table, sequence).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GrantArgs-privileges">
-<a class="pdoc-child-name" href="/grant.ts#L160">property <b>privileges</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L162">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privileges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2005,7 +1996,7 @@ The list of privileges to grant.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GrantArgs-role">
-<a class="pdoc-child-name" href="/grant.ts#L164">property <b>role</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L166">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2016,7 +2007,7 @@ The name of the role to grant privileges on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GrantArgs-schema">
-<a class="pdoc-child-name" href="/grant.ts#L168">property <b>schema</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L170">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2028,7 +2019,7 @@ The database schema to grant privileges on for this role.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GrantState">
-<a class="pdoc-member-name" href="/grant.ts#L122">interface <b>GrantState</b></a>
+<a class="pdoc-member-name" href="/grant.ts#L124">interface <b>GrantState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2037,7 +2028,7 @@ Input properties used for looking up and filtering Grant resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GrantState-database">
-<a class="pdoc-child-name" href="/grant.ts#L126">property <b>database</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L128">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2048,7 +2039,7 @@ The database to grant privileges on for this role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GrantState-objectType">
-<a class="pdoc-child-name" href="/grant.ts#L130">property <b>objectType</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L132">property <b>objectType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2059,7 +2050,7 @@ The PostgreSQL object type to grant the privileges on (one of: table, sequence).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GrantState-privileges">
-<a class="pdoc-child-name" href="/grant.ts#L134">property <b>privileges</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L136">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privileges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2070,7 +2061,7 @@ The list of privileges to grant.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GrantState-role">
-<a class="pdoc-child-name" href="/grant.ts#L138">property <b>role</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L140">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2081,7 +2072,7 @@ The name of the role to grant privileges on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GrantState-schema">
-<a class="pdoc-child-name" href="/grant.ts#L142">property <b>schema</b></a>
+<a class="pdoc-child-name" href="/grant.ts#L144">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2093,7 +2084,7 @@ The database schema to grant privileges on for this role.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="/provider.ts#L59">interface <b>ProviderArgs</b></a>
+<a class="pdoc-member-name" href="/provider.ts#L61">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2102,7 +2093,7 @@ The set of arguments for constructing a Provider resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProviderArgs-connectTimeout">
-<a class="pdoc-child-name" href="/provider.ts#L63">property <b>connectTimeout</b></a>
+<a class="pdoc-child-name" href="/provider.ts#L65">property <b>connectTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2113,7 +2104,7 @@ Maximum wait for connection, in seconds. Zero or not specified means wait indefi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-database">
-<a class="pdoc-child-name" href="/provider.ts#L67">property <b>database</b></a>
+<a class="pdoc-child-name" href="/provider.ts#L69">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2124,7 +2115,7 @@ The name of the database to connect to in order to conenct to (defaults to `post
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-databaseUsername">
-<a class="pdoc-child-name" href="/provider.ts#L71">property <b>databaseUsername</b></a>
+<a class="pdoc-child-name" href="/provider.ts#L73">property <b>databaseUsername</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>databaseUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2135,7 +2126,7 @@ Database username associated to the connected user (for user name maps)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-expectedVersion">
-<a class="pdoc-child-name" href="/provider.ts#L75">property <b>expectedVersion</b></a>
+<a class="pdoc-child-name" href="/provider.ts#L77">property <b>expectedVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expectedVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2146,7 +2137,7 @@ Specify the expected version of PostgreSQL.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-host">
-<a class="pdoc-child-name" href="/provider.ts#L79">property <b>host</b></a>
+<a class="pdoc-child-name" href="/provider.ts#L81">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2157,7 +2148,7 @@ Name of PostgreSQL server address to connect to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-maxConnections">
-<a class="pdoc-child-name" href="/provider.ts#L83">property <b>maxConnections</b></a>
+<a class="pdoc-child-name" href="/provider.ts#L85">property <b>maxConnections</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxConnections?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2168,7 +2159,7 @@ Maximum number of connections to establish to the database. Zero means unlimited
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-password">
-<a class="pdoc-child-name" href="/provider.ts#L87">property <b>password</b></a>
+<a class="pdoc-child-name" href="/provider.ts#L89">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2179,7 +2170,7 @@ Password to be used if the PostgreSQL server demands password authentication
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-port">
-<a class="pdoc-child-name" href="/provider.ts#L92">property <b>port</b></a>
+<a class="pdoc-child-name" href="/provider.ts#L94">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2191,7 +2182,7 @@ connections
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-sslMode">
-<a class="pdoc-child-name" href="/provider.ts#L93">property <b>sslMode</b></a>
+<a class="pdoc-child-name" href="/provider.ts#L95">property <b>sslMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sslMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2199,7 +2190,7 @@ connections
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-sslmode">
-<a class="pdoc-child-name" href="/provider.ts#L98">property <b>sslmode</b></a>
+<a class="pdoc-child-name" href="/provider.ts#L100">property <b>sslmode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sslmode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2211,7 +2202,7 @@ PostgreSQL server
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-superuser">
-<a class="pdoc-child-name" href="/provider.ts#L103">property <b>superuser</b></a>
+<a class="pdoc-child-name" href="/provider.ts#L105">property <b>superuser</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>superuser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2223,7 +2214,7 @@ Refreshing state password from Postgres)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-username">
-<a class="pdoc-child-name" href="/provider.ts#L107">property <b>username</b></a>
+<a class="pdoc-child-name" href="/provider.ts#L109">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2235,7 +2226,7 @@ PostgreSQL user name to connect as
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RoleArgs">
-<a class="pdoc-member-name" href="/role.ts#L324">interface <b>RoleArgs</b></a>
+<a class="pdoc-member-name" href="/role.ts#L326">interface <b>RoleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2244,7 +2235,7 @@ The set of arguments for constructing a Role resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RoleArgs-bypassRowLevelSecurity">
-<a class="pdoc-child-name" href="/role.ts#L329">property <b>bypassRowLevelSecurity</b></a>
+<a class="pdoc-child-name" href="/role.ts#L331">property <b>bypassRowLevelSecurity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bypassRowLevelSecurity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2256,7 +2247,7 @@ row-level security (RLS) policy.  Default value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-connectionLimit">
-<a class="pdoc-child-name" href="/role.ts#L335">property <b>connectionLimit</b></a>
+<a class="pdoc-child-name" href="/role.ts#L337">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2269,7 +2260,7 @@ limit.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-createDatabase">
-<a class="pdoc-child-name" href="/role.ts#L340">property <b>createDatabase</b></a>
+<a class="pdoc-child-name" href="/role.ts#L342">property <b>createDatabase</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createDatabase?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2281,7 +2272,7 @@ DATABASE`.  Default value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-createRole">
-<a class="pdoc-child-name" href="/role.ts#L346">property <b>createRole</b></a>
+<a class="pdoc-child-name" href="/role.ts#L348">property <b>createRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2294,7 +2285,7 @@ is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-encrypted">
-<a class="pdoc-child-name" href="/role.ts#L347">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="/role.ts#L349">property <b>encrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2302,7 +2293,7 @@ is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-encryptedPassword">
-<a class="pdoc-child-name" href="/role.ts#L355">property <b>encryptedPassword</b></a>
+<a class="pdoc-child-name" href="/role.ts#L357">property <b>encryptedPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2317,7 +2308,7 @@ behavior of
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-inherit">
-<a class="pdoc-child-name" href="/role.ts#L360">property <b>inherit</b></a>
+<a class="pdoc-child-name" href="/role.ts#L362">property <b>inherit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>inherit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2329,7 +2320,7 @@ roles it is a member of.  Default value is `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-login">
-<a class="pdoc-child-name" href="/role.ts#L366">property <b>login</b></a>
+<a class="pdoc-child-name" href="/role.ts#L368">property <b>login</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>login?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2342,7 +2333,7 @@ in the usual sense of the word.  Default value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-name">
-<a class="pdoc-child-name" href="/role.ts#L371">property <b>name</b></a>
+<a class="pdoc-child-name" href="/role.ts#L373">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2354,7 +2345,7 @@ server instance where it is configured.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-password">
-<a class="pdoc-child-name" href="/role.ts#L376">property <b>password</b></a>
+<a class="pdoc-child-name" href="/role.ts#L378">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2366,7 +2357,7 @@ for roles having the `login` attribute set to true.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-replication">
-<a class="pdoc-child-name" href="/role.ts#L382">property <b>replication</b></a>
+<a class="pdoc-child-name" href="/role.ts#L384">property <b>replication</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>replication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2379,7 +2370,7 @@ value is `false`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-roles">
-<a class="pdoc-child-name" href="/role.ts#L386">property <b>roles</b></a>
+<a class="pdoc-child-name" href="/role.ts#L388">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2390,7 +2381,7 @@ Defines list of roles which will be granted to this new role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-skipDropRole">
-<a class="pdoc-child-name" href="/role.ts#L396">property <b>skipDropRole</b></a>
+<a class="pdoc-child-name" href="/role.ts#L398">property <b>skipDropRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>skipDropRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2407,7 +2398,7 @@ This is the third and final step taken when removing a ROLE from a database.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-skipReassignOwned">
-<a class="pdoc-child-name" href="/role.ts#L407">property <b>skipReassignOwned</b></a>
+<a class="pdoc-child-name" href="/role.ts#L409">property <b>skipReassignOwned</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>skipReassignOwned?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2425,7 +2416,7 @@ an implicit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-superuser">
-<a class="pdoc-child-name" href="/role.ts#L413">property <b>superuser</b></a>
+<a class="pdoc-child-name" href="/role.ts#L415">property <b>superuser</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>superuser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2438,7 +2429,7 @@ value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleArgs-validUntil">
-<a class="pdoc-child-name" href="/role.ts#L421">property <b>validUntil</b></a>
+<a class="pdoc-child-name" href="/role.ts#L423">property <b>validUntil</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>validUntil?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2454,7 +2445,7 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RoleState">
-<a class="pdoc-member-name" href="/role.ts#L221">interface <b>RoleState</b></a>
+<a class="pdoc-member-name" href="/role.ts#L223">interface <b>RoleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2463,7 +2454,7 @@ Input properties used for looking up and filtering Role resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RoleState-bypassRowLevelSecurity">
-<a class="pdoc-child-name" href="/role.ts#L226">property <b>bypassRowLevelSecurity</b></a>
+<a class="pdoc-child-name" href="/role.ts#L228">property <b>bypassRowLevelSecurity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bypassRowLevelSecurity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2475,7 +2466,7 @@ row-level security (RLS) policy.  Default value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-connectionLimit">
-<a class="pdoc-child-name" href="/role.ts#L232">property <b>connectionLimit</b></a>
+<a class="pdoc-child-name" href="/role.ts#L234">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2488,7 +2479,7 @@ limit.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-createDatabase">
-<a class="pdoc-child-name" href="/role.ts#L237">property <b>createDatabase</b></a>
+<a class="pdoc-child-name" href="/role.ts#L239">property <b>createDatabase</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createDatabase?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2500,7 +2491,7 @@ DATABASE`.  Default value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-createRole">
-<a class="pdoc-child-name" href="/role.ts#L243">property <b>createRole</b></a>
+<a class="pdoc-child-name" href="/role.ts#L245">property <b>createRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2513,7 +2504,7 @@ is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-encrypted">
-<a class="pdoc-child-name" href="/role.ts#L244">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="/role.ts#L246">property <b>encrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2521,7 +2512,7 @@ is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-encryptedPassword">
-<a class="pdoc-child-name" href="/role.ts#L252">property <b>encryptedPassword</b></a>
+<a class="pdoc-child-name" href="/role.ts#L254">property <b>encryptedPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2536,7 +2527,7 @@ behavior of
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-inherit">
-<a class="pdoc-child-name" href="/role.ts#L257">property <b>inherit</b></a>
+<a class="pdoc-child-name" href="/role.ts#L259">property <b>inherit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>inherit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2548,7 +2539,7 @@ roles it is a member of.  Default value is `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-login">
-<a class="pdoc-child-name" href="/role.ts#L263">property <b>login</b></a>
+<a class="pdoc-child-name" href="/role.ts#L265">property <b>login</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>login?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2561,7 +2552,7 @@ in the usual sense of the word.  Default value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-name">
-<a class="pdoc-child-name" href="/role.ts#L268">property <b>name</b></a>
+<a class="pdoc-child-name" href="/role.ts#L270">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2573,7 +2564,7 @@ server instance where it is configured.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-password">
-<a class="pdoc-child-name" href="/role.ts#L273">property <b>password</b></a>
+<a class="pdoc-child-name" href="/role.ts#L275">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2585,7 +2576,7 @@ for roles having the `login` attribute set to true.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-replication">
-<a class="pdoc-child-name" href="/role.ts#L279">property <b>replication</b></a>
+<a class="pdoc-child-name" href="/role.ts#L281">property <b>replication</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>replication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2598,7 +2589,7 @@ value is `false`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-roles">
-<a class="pdoc-child-name" href="/role.ts#L283">property <b>roles</b></a>
+<a class="pdoc-child-name" href="/role.ts#L285">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2609,7 +2600,7 @@ Defines list of roles which will be granted to this new role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-skipDropRole">
-<a class="pdoc-child-name" href="/role.ts#L293">property <b>skipDropRole</b></a>
+<a class="pdoc-child-name" href="/role.ts#L295">property <b>skipDropRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>skipDropRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2626,7 +2617,7 @@ This is the third and final step taken when removing a ROLE from a database.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-skipReassignOwned">
-<a class="pdoc-child-name" href="/role.ts#L304">property <b>skipReassignOwned</b></a>
+<a class="pdoc-child-name" href="/role.ts#L306">property <b>skipReassignOwned</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>skipReassignOwned?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2644,7 +2635,7 @@ an implicit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-superuser">
-<a class="pdoc-child-name" href="/role.ts#L310">property <b>superuser</b></a>
+<a class="pdoc-child-name" href="/role.ts#L312">property <b>superuser</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>superuser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2657,7 +2648,7 @@ value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RoleState-validUntil">
-<a class="pdoc-child-name" href="/role.ts#L318">property <b>validUntil</b></a>
+<a class="pdoc-child-name" href="/role.ts#L320">property <b>validUntil</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>validUntil?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2673,7 +2664,7 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SchemaArgs">
-<a class="pdoc-member-name" href="/schema.ts#L145">interface <b>SchemaArgs</b></a>
+<a class="pdoc-member-name" href="/schema.ts#L147">interface <b>SchemaArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2682,7 +2673,7 @@ The set of arguments for constructing a Schema resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SchemaArgs-ifNotExists">
-<a class="pdoc-child-name" href="/schema.ts#L149">property <b>ifNotExists</b></a>
+<a class="pdoc-child-name" href="/schema.ts#L151">property <b>ifNotExists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ifNotExists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2693,7 +2684,7 @@ When true, use the existing schema if it exists. (Default: true)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SchemaArgs-name">
-<a class="pdoc-child-name" href="/schema.ts#L154">property <b>name</b></a>
+<a class="pdoc-child-name" href="/schema.ts#L156">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2705,7 +2696,7 @@ database instance where it is configured.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SchemaArgs-owner">
-<a class="pdoc-child-name" href="/schema.ts#L158">property <b>owner</b></a>
+<a class="pdoc-child-name" href="/schema.ts#L160">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2716,7 +2707,7 @@ The ROLE who owns the schema.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SchemaArgs-policies">
-<a class="pdoc-child-name" href="/schema.ts#L163">property <b>policies</b></a>
+<a class="pdoc-child-name" href="/schema.ts#L165">property <b>policies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2735,7 +2726,7 @@ policy block supports fields documented below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SchemaState">
-<a class="pdoc-member-name" href="/schema.ts#L121">interface <b>SchemaState</b></a>
+<a class="pdoc-member-name" href="/schema.ts#L123">interface <b>SchemaState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2744,7 +2735,7 @@ Input properties used for looking up and filtering Schema resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SchemaState-ifNotExists">
-<a class="pdoc-child-name" href="/schema.ts#L125">property <b>ifNotExists</b></a>
+<a class="pdoc-child-name" href="/schema.ts#L127">property <b>ifNotExists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ifNotExists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2755,7 +2746,7 @@ When true, use the existing schema if it exists. (Default: true)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SchemaState-name">
-<a class="pdoc-child-name" href="/schema.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="/schema.ts#L132">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2767,7 +2758,7 @@ database instance where it is configured.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SchemaState-owner">
-<a class="pdoc-child-name" href="/schema.ts#L134">property <b>owner</b></a>
+<a class="pdoc-child-name" href="/schema.ts#L136">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2778,7 +2769,7 @@ The ROLE who owns the schema.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SchemaState-policies">
-<a class="pdoc-child-name" href="/schema.ts#L139">property <b>policies</b></a>
+<a class="pdoc-child-name" href="/schema.ts#L141">property <b>policies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{

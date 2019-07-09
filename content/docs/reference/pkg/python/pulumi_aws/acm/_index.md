@@ -6,19 +6,7 @@
 <dl class="class">
 <dt id="pulumi_aws.acm.Certificate">
 <em class="property">class </em><code class="descclassname">pulumi_aws.acm.</code><code class="descname">Certificate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_body=None</em>, <em>certificate_chain=None</em>, <em>domain_name=None</em>, <em>private_key=None</em>, <em>subject_alternative_names=None</em>, <em>tags=None</em>, <em>validation_method=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acm.Certificate" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ACM certificate resource allows requesting and management of certificates
-from the Amazon Certificate Manager.</p>
-<p>It deals with requesting certificates and managing their attributes and life-cycle.
-This resource does not deal with validation of a certificate but can provide inputs
-for other resources implementing the validation. It does not wait for a certificate to be issued.
-Use a <code class="docutils literal notranslate"><span class="pre">aws_acm_certificate_validation</span></code> resource for this.</p>
-<p>Most commonly, this resource is used to together with <code class="docutils literal notranslate"><span class="pre">aws_route53_record</span></code> and
-<code class="docutils literal notranslate"><span class="pre">aws_acm_certificate_validation</span></code> to request a DNS validated certificate,
-deploy the required validation records and wait for validation to complete.</p>
-<p>Domain validation through E-Mail is also supported but should be avoided as it requires a manual step outside
-of Terraform.</p>
-<p>It’s recommended to specify <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span> <span class="pre">=</span> <span class="pre">true</span></code> in a [lifecycle][1] block to replace a certificate
-which is currently in use (eg, by <code class="docutils literal notranslate"><span class="pre">aws_lb_listener</span></code>).</p>
+<dd><p>Create a Certificate resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -32,12 +20,13 @@ which is currently in use (eg, by <code class="docutils literal notranslate"><sp
 <li><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The certificate’s PEM-formatted private key</li>
 <li><strong>subject_alternative_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of domains that should be SANs in the issued certificate</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
-<li><strong>validation_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Which method to use for validation. <code class="docutils literal notranslate"><span class="pre">DNS</span></code> or <code class="docutils literal notranslate"><span class="pre">EMAIL</span></code> are valid, <code class="docutils literal notranslate"><span class="pre">NONE</span></code> can be used for certificates that were imported into ACM and then into Terraform.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acm_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acm_certificate.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.acm.Certificate.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acm.Certificate.arn" title="Permalink to this definition">¶</a></dt>
@@ -90,15 +79,6 @@ which is currently in use (eg, by <code class="docutils literal notranslate"><sp
 <dt id="pulumi_aws.acm.Certificate.validation_emails">
 <code class="descname">validation_emails</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acm.Certificate.validation_emails" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of addresses that received a validation E-Mail. Only set if <code class="docutils literal notranslate"><span class="pre">EMAIL</span></code>-validation was used.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.acm.Certificate.validation_method">
-<code class="descname">validation_method</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acm.Certificate.validation_method" title="Permalink to this definition">¶</a></dt>
-<dd><p>Which method to use for validation. <code class="docutils literal notranslate"><span class="pre">DNS</span></code> or <code class="docutils literal notranslate"><span class="pre">EMAIL</span></code> are valid, <code class="docutils literal notranslate"><span class="pre">NONE</span></code> can be used for certificates that were imported into ACM and then into Terraform.</p>
-<ul class="simple">
-<li>Importing an existing certificate</li>
-</ul>
 </dd></dl>
 
 <dl class="method">
@@ -165,6 +145,8 @@ deploy the required validation records and wait for validation to complete.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acm_certificate_validation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acm_certificate_validation.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.acm.CertificateValidation.certificate_arn">
 <code class="descname">certificate_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acm.CertificateValidation.certificate_arn" title="Permalink to this definition">¶</a></dt>
@@ -241,6 +223,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get the ARN of a certificate in AWS Certificate
 Manager (ACM), you can reference
 it by domain without having to hard code the ARNs as input.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/acm_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/acm_certificate.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

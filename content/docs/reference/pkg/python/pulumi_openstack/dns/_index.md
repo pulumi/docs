@@ -143,6 +143,8 @@ Changing this creates a new DNS  record set.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/dns_recordset_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/dns_recordset_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.dns.RecordSet.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.description" title="Permalink to this definition">¶</a></dt>
@@ -272,6 +274,8 @@ new zone.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/dns_zone_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/dns_zone_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.dns.Zone.attributes">
 <code class="descname">attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.attributes" title="Permalink to this definition">¶</a></dt>
@@ -378,6 +382,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.dns.get_dns_zone">
 <code class="descclassname">pulumi_openstack.dns.</code><code class="descname">get_dns_zone</code><span class="sig-paren">(</span><em>attributes=None</em>, <em>created_at=None</em>, <em>description=None</em>, <em>email=None</em>, <em>masters=None</em>, <em>name=None</em>, <em>pool_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>serial=None</em>, <em>status=None</em>, <em>transferred_at=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>updated_at=None</em>, <em>version=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.get_dns_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack DNS zone.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/dns_zone_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/dns_zone_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

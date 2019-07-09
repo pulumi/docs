@@ -22,6 +22,8 @@ The resource can be an Amazon CloudFront distribution, Elastic Load Balancing lo
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/shield_protection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/shield_protection.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.shield.Protection.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.shield.Protection.name" title="Permalink to this definition">¶</a></dt>

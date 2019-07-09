@@ -133,6 +133,8 @@ Conflicts w/ <code class="docutils literal notranslate"><span class="pre">policy
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudformation_stack.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudformation_stack.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cloudformation.Stack.capabilities">
 <code class="descname">capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.capabilities" title="Permalink to this definition">¶</a></dt>
@@ -291,6 +293,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudformation_stack_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudformation_stack_set.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cloudformation.StackSet.administration_role_arn">
 <code class="descname">administration_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.administration_role_arn" title="Permalink to this definition">¶</a></dt>
@@ -400,11 +404,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.cloudformation.StackSetInstance">
 <em class="property">class </em><code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">StackSetInstance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>parameter_overrides=None</em>, <em>region=None</em>, <em>retain_stack=None</em>, <em>stack_set_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a CloudFormation Stack Set Instance. Instances are managed in the account and region of the Stack Set after the target account permissions have been configured. Additional information about Stack Sets can be found in the <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html">AWS CloudFormation User Guide</a>.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> All target accounts must have an IAM Role created that matches the name of the execution role configured in the Stack Set (the <code class="docutils literal notranslate"><span class="pre">execution_role_name</span></code> argument in the <code class="docutils literal notranslate"><span class="pre">aws_cloudformation_stack_set</span></code> resource) in a trust relationship with the administrative account or administration IAM Role. The execution role must have appropriate permissions to manage resources defined in the template along with those required for Stack Sets to operate. See the <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">AWS CloudFormation User Guide</a> for more details.</p>
-<p><strong>NOTE:</strong> To retain the Stack during Terraform resource destroy, ensure <code class="docutils literal notranslate"><span class="pre">retain_stack</span> <span class="pre">=</span> <span class="pre">true</span></code> has been successfully applied into the Terraform state first. This must be completed <em>before</em> an apply that would destroy the resource.</p>
-</div></blockquote>
+<dd><p>Create a StackSetInstance resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -415,13 +415,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target AWS Account ID to create a Stack based on the Stack Set. Defaults to current account.</li>
 <li><strong>parameter_overrides</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of input parameters to override from the Stack Set for this Instance.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target AWS Region to create a Stack based on the Stack Set. Defaults to current region.</li>
-<li><strong>retain_stack</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – During Terraform resource destroy, remove Instance from Stack Set while keeping the Stack and its associated resources. Must be enabled in Terraform state <em>before</em> destroy operation to take effect. You cannot reassociate a retained Stack or add an existing, saved Stack to a new Stack Set. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>stack_set_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Stack Set.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudformation_stack_set_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudformation_stack_set_instance.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cloudformation.StackSetInstance.account_id">
 <code class="descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.account_id" title="Permalink to this definition">¶</a></dt>
@@ -438,12 +439,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudformation.StackSetInstance.region">
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>Target AWS Region to create a Stack based on the Stack Set. Defaults to current region.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.cloudformation.StackSetInstance.retain_stack">
-<code class="descname">retain_stack</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.retain_stack" title="Permalink to this definition">¶</a></dt>
-<dd><p>During Terraform resource destroy, remove Instance from Stack Set while keeping the Stack and its associated resources. Must be enabled in Terraform state <em>before</em> destroy operation to take effect. You cannot reassociate a retained Stack or add an existing, saved Stack to a new Stack Set. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -499,19 +494,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
-<dt id="pulumi_aws.cloudformation.get_export">
-<code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">get_export</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_export" title="Permalink to this definition">¶</a></dt>
-<dd><p>The CloudFormation Export data source allows access to stack
-exports specified in the <a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html">Output</a> section of the Cloudformation Template using the optional Export Property.</p>
-<blockquote>
-<div>Note: If you are trying to use a value from a Cloudformation Stack in the same Terraform run please use normal interpolation or Cloudformation Outputs.</div></blockquote>
-</dd></dl>
-
-<dl class="function">
 <dt id="pulumi_aws.cloudformation.get_stack">
 <code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">get_stack</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CloudFormation Stack data source allows access to stack
 outputs and other useful data including the template body.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudformation_stack.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudformation_stack.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

@@ -53,6 +53,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/management_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/management_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.managementgroups.ManagementGroup.display_name">
 <code class="descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup.display_name" title="Permalink to this definition">¶</a></dt>
@@ -121,6 +123,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.managementgroups.get_management_group">
 <code class="descclassname">pulumi_azure.managementgroups.</code><code class="descname">get_management_group</code><span class="sig-paren">(</span><em>group_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.get_management_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Management Group.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/management_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/management_group.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

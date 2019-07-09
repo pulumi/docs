@@ -6,14 +6,7 @@
 <dl class="class">
 <dt id="pulumi_aws.neptune.Cluster">
 <em class="property">class </em><code class="descclassname">pulumi_aws.neptune.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>availability_zones=None</em>, <em>backup_retention_period=None</em>, <em>cluster_identifier=None</em>, <em>cluster_identifier_prefix=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>final_snapshot_identifier=None</em>, <em>iam_database_authentication_enabled=None</em>, <em>iam_roles=None</em>, <em>kms_key_arn=None</em>, <em>neptune_cluster_parameter_group_name=None</em>, <em>neptune_subnet_group_name=None</em>, <em>port=None</em>, <em>preferred_backup_window=None</em>, <em>preferred_maintenance_window=None</em>, <em>replication_source_identifier=None</em>, <em>skip_final_snapshot=None</em>, <em>snapshot_identifier=None</em>, <em>storage_encrypted=None</em>, <em>tags=None</em>, <em>vpc_security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.Cluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an Neptune Cluster Resource. A Cluster Resource defines attributes that are
-applied to the entire cluster of Neptune Cluster Instances.</p>
-<p>Changes to a Neptune Cluster can occur when you manually change a
-parameter, such as <code class="docutils literal notranslate"><span class="pre">backup_retention_period</span></code>, and are reflected in the next maintenance
-window. Because of this, Terraform may report a difference in its planning
-phase because a modification has not yet taken place. You can use the
-<code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> flag to instruct the service to apply the change immediately
-(see documentation below).</p>
+<dd><p>Create a Cluster resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -24,7 +17,6 @@ phase because a modification has not yet taken place. You can use the
 <li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of EC2 Availability Zones that instances in the Neptune cluster can be created in.</li>
 <li><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The days to retain backups for. Default <code class="docutils literal notranslate"><span class="pre">1</span></code></li>
-<li><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster identifier. If omitted, Terraform will assign a random, unique identifier.</li>
 <li><strong>cluster_identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">cluster_identifier</span></code>.</li>
 <li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for this Neptune cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">neptune</span></code>.</li>
 <li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database engine version.</li>
@@ -48,6 +40,8 @@ phase because a modification has not yet taken place. You can use the
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.Cluster.apply_immediately">
 <code class="descname">apply_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.Cluster.apply_immediately" title="Permalink to this definition">¶</a></dt>
@@ -70,12 +64,6 @@ phase because a modification has not yet taken place. You can use the
 <dt id="pulumi_aws.neptune.Cluster.backup_retention_period">
 <code class="descname">backup_retention_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.Cluster.backup_retention_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>The days to retain backups for. Default <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.neptune.Cluster.cluster_identifier">
-<code class="descname">cluster_identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.Cluster.cluster_identifier" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster identifier. If omitted, Terraform will assign a random, unique identifier.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -276,7 +264,6 @@ are applied immediately, or during the next maintenance window. Default is<code 
 <li><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``aws_neptune_cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html">https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html</a>&gt;`_ in which to launch this instance.</li>
 <li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for the neptune instance. Defaults to <code class="docutils literal notranslate"><span class="pre">neptune</span></code>. Valid Values: <code class="docutils literal notranslate"><span class="pre">neptune</span></code>.</li>
 <li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The neptune engine version.</li>
-<li><strong>identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The indentifier for the neptune instance, if omitted, Terraform will assign a random, unique identifier.</li>
 <li><strong>identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</li>
 <li><strong>instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance class to use.</li>
 <li><strong>neptune_parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the neptune parameter group to associate with this instance.</li>
@@ -293,6 +280,8 @@ Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster_instance.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.ClusterInstance.address">
 <code class="descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance.address" title="Permalink to this definition">¶</a></dt>
@@ -352,12 +341,6 @@ are applied immediately, or during the next maintenance window. Default is<code 
 <dt id="pulumi_aws.neptune.ClusterInstance.engine_version">
 <code class="descname">engine_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance.engine_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The neptune engine version.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.neptune.ClusterInstance.identifier">
-<code class="descname">identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance.identifier" title="Permalink to this definition">¶</a></dt>
-<dd><p>The indentifier for the neptune instance, if omitted, Terraform will assign a random, unique identifier.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -490,7 +473,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the neptune cluster parameter group. Defaults to “Managed by Terraform”.</li>
 <li><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the neptune cluster parameter group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the neptune parameter.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
@@ -501,16 +483,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster_parameter_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.ClusterParameterGroup.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterParameterGroup.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the neptune cluster parameter group.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.neptune.ClusterParameterGroup.description">
-<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterParameterGroup.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>The description of the neptune cluster parameter group. Defaults to “Managed by Terraform”.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -601,6 +579,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster_snapshot.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.ClusterSnapshot.allocated_storage">
 <code class="descname">allocated_storage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterSnapshot.allocated_storage" title="Permalink to this definition">¶</a></dt>
@@ -737,7 +717,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable the subscription. Defaults to true.</li>
 <li><strong>event_categories</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of event categories for a <code class="docutils literal notranslate"><span class="pre">source_type</span></code> that you want to subscribe to. Run <code class="docutils literal notranslate"><span class="pre">aws</span> <span class="pre">neptune</span> <span class="pre">describe-event-categories</span></code> to find all the event categories.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Neptune event subscription. By default generated by Terraform.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Neptune event subscription. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>sns_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the SNS topic to send events to.</li>
 <li><strong>source_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a <code class="docutils literal notranslate"><span class="pre">source_type</span></code> must also be specified.</li>
@@ -748,6 +727,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_event_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_event_subscription.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.EventSubscription.enabled">
 <code class="descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.EventSubscription.enabled" title="Permalink to this definition">¶</a></dt>
@@ -758,12 +739,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.neptune.EventSubscription.event_categories">
 <code class="descname">event_categories</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.EventSubscription.event_categories" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of event categories for a <code class="docutils literal notranslate"><span class="pre">source_type</span></code> that you want to subscribe to. Run <code class="docutils literal notranslate"><span class="pre">aws</span> <span class="pre">neptune</span> <span class="pre">describe-event-categories</span></code> to find all the event categories.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.neptune.EventSubscription.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.EventSubscription.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the Neptune event subscription. By default generated by Terraform.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -847,7 +822,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Neptune parameter group. Defaults to “Managed by Terraform”.</li>
 <li><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the Neptune parameter group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Neptune parameter.</li>
 <li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Neptune parameters to apply.</li>
@@ -857,16 +831,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_parameter_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.ParameterGroup.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ParameterGroup.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Neptune parameter group Amazon Resource Name (ARN).</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.neptune.ParameterGroup.description">
-<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ParameterGroup.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>The description of the Neptune parameter group. Defaults to “Managed by Terraform”.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -944,8 +914,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the neptune subnet group. Defaults to “Managed by Terraform”.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the neptune subnet group. If omitted, Terraform will assign a random, unique name.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of VPC subnet IDs.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -954,22 +922,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_subnet_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.SubnetGroup.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.SubnetGroup.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the neptune subnet group.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.neptune.SubnetGroup.description">
-<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.SubnetGroup.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>The description of the neptune subnet group. Defaults to “Managed by Terraform”.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.neptune.SubnetGroup.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.SubnetGroup.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the neptune subnet group. If omitted, Terraform will assign a random, unique name.</p>
 </dd></dl>
 
 <dl class="attribute">

@@ -24,6 +24,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_alert_condition.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_alert_condition.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_newrelic.synthetics.AlertCondition.enabled">
 <code class="descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.AlertCondition.enabled" title="Permalink to this definition">¶</a></dt>
@@ -132,6 +134,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_newrelic.synthetics.Monitor.bypass_head_request">
 <code class="descname">bypass_head_request</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.Monitor.bypass_head_request" title="Permalink to this definition">¶</a></dt>
@@ -250,6 +254,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor_script.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor_script.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_newrelic.synthetics.MonitorScript.monitor_id">
 <code class="descname">monitor_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.MonitorScript.monitor_id" title="Permalink to this definition">¶</a></dt>
@@ -306,6 +312,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_newrelic.synthetics.get_monitor">
 <code class="descclassname">pulumi_newrelic.synthetics.</code><code class="descname">get_monitor</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.synthetics.get_monitor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a specific synthetics monitor in New Relic. This can then be used to set up a synthetics alert condition.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/synthetics_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/synthetics_monitor.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

@@ -23,6 +23,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_pagerduty.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_pagerduty.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_datadog.pagerduty.Integration.api_token">
 <code class="descname">api_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.api_token" title="Permalink to this definition">¶</a></dt>

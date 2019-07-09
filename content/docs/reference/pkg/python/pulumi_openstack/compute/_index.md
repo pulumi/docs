@@ -38,6 +38,8 @@ a new flavor.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.Flavor.disk">
 <code class="descname">disk</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Flavor.disk" title="Permalink to this definition">¶</a></dt>
@@ -166,6 +168,8 @@ Changing this creates a new flavor access.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_access_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_access_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.FlavorAccess.flavor_id">
 <code class="descname">flavor_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.FlavorAccess.flavor_id" title="Permalink to this definition">¶</a></dt>
@@ -255,6 +259,8 @@ have a different address).</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.FloatingIp.address">
 <code class="descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.FloatingIp.address" title="Permalink to this definition">¶</a></dt>
@@ -349,15 +355,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new floatingip_associate.</li>
-<li><strong>wait_until_associated</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – In cases where the OpenStack environment
-does not automatically wait until the association has finished, set this
-option to have Terraform poll the instance until the floating IP has been
-associated. Defaults to false.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_associate_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_associate_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.FloatingIpAssociate.fixed_ip">
 <code class="descname">fixed_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.FloatingIpAssociate.fixed_ip" title="Permalink to this definition">¶</a></dt>
@@ -383,15 +387,6 @@ associated. Defaults to false.</li>
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new floatingip_associate.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_openstack.compute.FloatingIpAssociate.wait_until_associated">
-<code class="descname">wait_until_associated</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.FloatingIpAssociate.wait_until_associated" title="Permalink to this definition">¶</a></dt>
-<dd><p>In cases where the OpenStack environment
-does not automatically wait until the association has finished, set this
-option to have Terraform poll the instance until the floating IP has been
-associated. Defaults to false.</p>
 </dd></dl>
 
 <dl class="method">
@@ -588,6 +583,8 @@ Supported options are described below.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_instance_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_instance_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.Instance.access_ip_v4">
 <code class="descname">access_ip_v4</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Instance.access_ip_v4" title="Permalink to this definition">¶</a></dt>
@@ -605,13 +602,6 @@ Supported options are described below.</li>
 <code class="descname">admin_pass</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Instance.admin_pass" title="Permalink to this definition">¶</a></dt>
 <dd><p>The administrative password to assign to the server.
 Changing this changes the root password on the existing server.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_openstack.compute.Instance.all_metadata">
-<code class="descname">all_metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Instance.all_metadata" title="Permalink to this definition">¶</a></dt>
-<dd><p>Contains all instance metadata, even metadata not set
-by Terraform.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -837,6 +827,8 @@ creates a new attachment.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_interface_attach_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_interface_attach_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.InterfaceAttach.fixed_ip">
 <code class="descname">fixed_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.InterfaceAttach.fixed_ip" title="Permalink to this definition">¶</a></dt>
@@ -915,13 +907,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_openstack.compute.Keypair">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">Keypair</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>public_key=None</em>, <em>region=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Keypair" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a V2 keypair resource within OpenStack.</p>
-<blockquote>
-<div><strong>Important Security Notice</strong> The private key generated by this resource will
-be stored <em>unencrypted</em> in your Terraform state file. <strong>Use of this resource
-for production deployments is *not* recommended</strong>. Instead, generate
-a private key file outside of Terraform and distribute it securely
-to the system where Terraform will be run.</div></blockquote>
+<dd><p>Create a Keypair resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -946,6 +932,8 @@ Changing this creates a new keypair.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_keypair_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_keypair_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.Keypair.fingerprint">
 <code class="descname">fingerprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Keypair.fingerprint" title="Permalink to this definition">¶</a></dt>
@@ -1063,6 +1051,8 @@ may be used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_secgroup_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_secgroup_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.SecGroup.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.SecGroup.description" title="Permalink to this definition">¶</a></dt>
@@ -1186,6 +1176,8 @@ this creates a new server group.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_servergroup_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_servergroup_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.ServerGroup.members">
 <code class="descname">members</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.ServerGroup.members" title="Permalink to this definition">¶</a></dt>
@@ -1273,12 +1265,9 @@ Compute (Nova) v2 API.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>device</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device of the volume attachment (ex: <code class="docutils literal notranslate"><span class="pre">/dev/vdc</span></code>).
-<em>NOTE</em>: Being able to specify a device is dependent upon the hypervisor in
-use. There is a chance that the device specified in Terraform will not be
-the same device the hypervisor chose. If this happens, Terraform will wish
-to update the device upon subsequent applying which will cause the volume
-to be detached and reattached indefinitely. Please use with caution.</li>
+<li><strong>device</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – See Argument Reference above. <em>NOTE</em>: The correctness of this
+information is dependent upon the hypervisor in use. In some cases, this
+should not be used as an authoritative piece of information.</li>
 <li><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Instance to attach the Volume to.</li>
 <li><strong>multiattach</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable attachment of multiattach-capable volumes.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
@@ -1291,15 +1280,14 @@ new volume attachment.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_volume_attach_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_volume_attach_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.VolumeAttach.device">
 <code class="descname">device</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.VolumeAttach.device" title="Permalink to this definition">¶</a></dt>
-<dd><p>The device of the volume attachment (ex: <code class="docutils literal notranslate"><span class="pre">/dev/vdc</span></code>).
-<em>NOTE</em>: Being able to specify a device is dependent upon the hypervisor in
-use. There is a chance that the device specified in Terraform will not be
-the same device the hypervisor chose. If this happens, Terraform will wish
-to update the device upon subsequent applying which will cause the volume
-to be detached and reattached indefinitely. Please use with caution.</p>
+<dd><p>See Argument Reference above. <em>NOTE</em>: The correctness of this
+information is dependent upon the hypervisor in use. In some cases, this
+should not be used as an authoritative piece of information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1373,18 +1361,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.compute.get_availability_zones">
 <code class="descclassname">pulumi_openstack.compute.</code><code class="descname">get_availability_zones</code><span class="sig-paren">(</span><em>region=None</em>, <em>state=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.get_availability_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of availability zones from OpenStack</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/compute_availability_zones_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/compute_availability_zones_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.compute.get_flavor">
 <code class="descclassname">pulumi_openstack.compute.</code><code class="descname">get_flavor</code><span class="sig-paren">(</span><em>disk=None</em>, <em>flavor_id=None</em>, <em>min_disk=None</em>, <em>min_ram=None</em>, <em>name=None</em>, <em>ram=None</em>, <em>region=None</em>, <em>rx_tx_factor=None</em>, <em>swap=None</em>, <em>vcpus=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.get_flavor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack flavor.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/compute_flavor_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/compute_flavor_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.compute.get_keypair">
 <code class="descclassname">pulumi_openstack.compute.</code><code class="descname">get_keypair</code><span class="sig-paren">(</span><em>name=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.get_keypair" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID and public key of an OpenStack keypair.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/compute_keypair_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/compute_keypair_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

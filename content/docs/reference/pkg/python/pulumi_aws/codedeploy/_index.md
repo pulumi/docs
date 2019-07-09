@@ -21,6 +21,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_app.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_app.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.codedeploy.Application.compute_platform">
 <code class="descname">compute_platform</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codedeploy.Application.compute_platform" title="Permalink to this definition">¶</a></dt>
@@ -93,6 +95,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_config.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_config.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.codedeploy.DeploymentConfig.compute_platform">
 <code class="descname">compute_platform</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentConfig.compute_platform" title="Permalink to this definition">¶</a></dt>
@@ -166,9 +170,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.codedeploy.DeploymentGroup">
 <em class="property">class </em><code class="descclassname">pulumi_aws.codedeploy.</code><code class="descname">DeploymentGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alarm_configuration=None</em>, <em>app_name=None</em>, <em>auto_rollback_configuration=None</em>, <em>autoscaling_groups=None</em>, <em>blue_green_deployment_config=None</em>, <em>deployment_config_name=None</em>, <em>deployment_group_name=None</em>, <em>deployment_style=None</em>, <em>ec2_tag_filters=None</em>, <em>ec2_tag_sets=None</em>, <em>ecs_service=None</em>, <em>load_balancer_info=None</em>, <em>on_premises_instance_tag_filters=None</em>, <em>service_role_arn=None</em>, <em>trigger_configurations=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a CodeDeploy Deployment Group for a CodeDeploy Application</p>
-<blockquote>
-<div><strong>NOTE on blue/green deployments:</strong> When using <code class="docutils literal notranslate"><span class="pre">green_fleet_provisioning_option</span></code> with the <code class="docutils literal notranslate"><span class="pre">COPY_AUTO_SCALING_GROUP</span></code> action, CodeDeploy will create a new ASG with a different name. This ASG is <em>not</em> managed by terraform and will conflict with existing configuration and state. You may want to use a different approach to managing deployments that involve multiple ASG, such as <code class="docutils literal notranslate"><span class="pre">DISCOVER_EXISTING</span></code> with separate blue and green ASG.</div></blockquote>
+<dd><p>Create a DeploymentGroup resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -196,6 +198,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.codedeploy.DeploymentGroup.alarm_configuration">
 <code class="descname">alarm_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentGroup.alarm_configuration" title="Permalink to this definition">¶</a></dt>

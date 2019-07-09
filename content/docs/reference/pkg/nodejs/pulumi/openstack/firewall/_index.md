@@ -7,6 +7,13 @@ title: Module firewall
 
 <a href="../">@pulumi/openstack</a> &gt; firewall
 
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack)
+> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
+> first check the [`pulumi/pulumi-openstack` repo](https://github.com/pulumi/pulumi-openstack/issues); however, if that doesn't turn up anything,
+> please consult the source [`terraform-providers/terraform-provider-openstack` repo](https://github.com/terraform-providers/terraform-provider-openstack/issues).
+
+
+
 <div class="toggleVisible">
 <div class="collapsed">
 <h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
@@ -29,14 +36,14 @@ title: Module firewall
 <li><a href="#RuleState">interface RuleState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts">firewall/firewall.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts">firewall/getPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts">firewall/policy.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts">firewall/rule.ts</a> 
+<a href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts">firewall/firewall.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts">firewall/getPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts">firewall/policy.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts">firewall/rule.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Firewall">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L41">class <b>Firewall</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L43">class <b>Firewall</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -75,9 +82,11 @@ const firewall1 = new openstack.firewall.Firewall("firewall_1", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_firewall_v1.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Firewall-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L117"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L119"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -94,7 +103,7 @@ Create a Firewall resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L52">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -108,7 +117,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -118,7 +127,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L63">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -132,7 +141,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L73">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L75">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -145,7 +154,7 @@ Changing this updates the `admin_state_up` of an existing firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-associatedRouters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L79">property <b>associatedRouters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L81">property <b>associatedRouters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>associatedRouters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -158,7 +167,7 @@ of an existing firewall. Conflicts with `no_routers`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L84">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L86">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -170,7 +179,7 @@ updates the `description` of an existing firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -182,7 +191,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L89">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L91">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -194,7 +203,7 @@ updates the `name` of an existing firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-noRouters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L95">property <b>noRouters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L97">property <b>noRouters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>noRouters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -207,7 +216,7 @@ Conflicts with `associated_routers`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L100">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L102">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -219,7 +228,7 @@ this updates the `policy_id` of an existing firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L107">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L109">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -233,7 +242,7 @@ firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L113">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L115">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -246,7 +255,7 @@ firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -258,7 +267,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L117">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L119">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -270,7 +279,7 @@ Map of additional options.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Policy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L38">class <b>Policy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L40">class <b>Policy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -306,9 +315,11 @@ const policy1 = new openstack.firewall.Policy("policy_1", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_policy_v1.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Policy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L108"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L110"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -325,7 +336,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L49">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -339,7 +350,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -349,7 +360,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L60">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -363,7 +374,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-audited">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L72">property <b>audited</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L74">property <b>audited</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>audited: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -378,7 +389,7 @@ firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L77">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L79">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -390,7 +401,7 @@ this updates the `description` of an existing firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -402,7 +413,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L84">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -414,7 +425,7 @@ updates the `name` of an existing firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L89">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L91">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -428,7 +439,7 @@ firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L95">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L97">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -441,7 +452,7 @@ existing firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-shared">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L103">property <b>shared</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L105">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>shared: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -456,7 +467,7 @@ can specify if the policy should be shared.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L104">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L106">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -464,7 +475,7 @@ can specify if the policy should be shared.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -476,7 +487,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L108">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L110">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -488,7 +499,7 @@ Map of additional options.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Rule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L25">class <b>Rule</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L27">class <b>Rule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -511,9 +522,11 @@ const rule1 = new openstack.firewall.Rule("rule_1", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_rule_v1.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Rule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L125"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L127"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -530,7 +543,7 @@ Create a Rule resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L36">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -544,7 +557,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -554,7 +567,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L47">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -568,7 +581,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L57">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L59">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -581,7 +594,7 @@ firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L62">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L64">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -593,7 +606,7 @@ updates the `description` of an existing firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-destinationIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L68">property <b>destinationIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L70">property <b>destinationIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>destinationIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -606,7 +619,7 @@ of an existing firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-destinationPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L74">property <b>destinationPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L76">property <b>destinationPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>destinationPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -619,7 +632,7 @@ firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L80">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L82">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -632,7 +645,7 @@ or "false" if provided - defaults to "true"). Changing this updates the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -644,7 +657,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-ipVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L85">property <b>ipVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L87">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ipVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -656,7 +669,7 @@ updates the `ip_version` of an existing firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L90">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L92">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -668,7 +681,7 @@ updates the `name` of an existing firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L96">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L98">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -681,7 +694,7 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L103">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L105">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -695,7 +708,7 @@ firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-sourceIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L109">property <b>sourceIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L111">property <b>sourceIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sourceIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -708,7 +721,7 @@ firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-sourcePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L115">property <b>sourcePort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L117">property <b>sourcePort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sourcePort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -721,7 +734,7 @@ firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L121">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L123">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -734,7 +747,7 @@ new firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -746,7 +759,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L125">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L127">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -758,7 +771,7 @@ Map of additional options.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts#L21">function <b>getPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts#L23">function <b>getPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -779,10 +792,12 @@ const policy = pulumi.output(openstack.firewall.getPolicy({
 }));
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/fw_policy_v1.html.markdown.
+
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="FirewallArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L218">interface <b>FirewallArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L220">interface <b>FirewallArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -791,7 +806,7 @@ The set of arguments for constructing a Firewall resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallArgs-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L224">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L226">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -804,7 +819,7 @@ Changing this updates the `admin_state_up` of an existing firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallArgs-associatedRouters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L230">property <b>associatedRouters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L232">property <b>associatedRouters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>associatedRouters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -817,7 +832,7 @@ of an existing firewall. Conflicts with `no_routers`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L235">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L237">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -829,7 +844,7 @@ updates the `description` of an existing firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L240">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L242">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -841,7 +856,7 @@ updates the `name` of an existing firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallArgs-noRouters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L246">property <b>noRouters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L248">property <b>noRouters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>noRouters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -854,7 +869,7 @@ Conflicts with `associated_routers`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallArgs-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L251">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L253">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -866,7 +881,7 @@ this updates the `policy_id` of an existing firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L258">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L260">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -880,7 +895,7 @@ firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L264">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L266">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -893,7 +908,7 @@ firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallArgs-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L268">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L270">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -905,7 +920,7 @@ Map of additional options.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L162">interface <b>FirewallState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L164">interface <b>FirewallState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -914,7 +929,7 @@ Input properties used for looking up and filtering Firewall resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallState-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L168">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L170">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -927,7 +942,7 @@ Changing this updates the `admin_state_up` of an existing firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-associatedRouters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L174">property <b>associatedRouters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L176">property <b>associatedRouters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>associatedRouters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -940,7 +955,7 @@ of an existing firewall. Conflicts with `no_routers`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L179">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L181">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -952,7 +967,7 @@ updates the `description` of an existing firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L184">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L186">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -964,7 +979,7 @@ updates the `name` of an existing firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-noRouters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L190">property <b>noRouters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L192">property <b>noRouters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>noRouters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -977,7 +992,7 @@ Conflicts with `associated_routers`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L195">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L197">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -989,7 +1004,7 @@ this updates the `policy_id` of an existing firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L202">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L204">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1003,7 +1018,7 @@ firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L208">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L210">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1016,7 +1031,7 @@ firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/firewall.ts#L212">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/firewall.ts#L214">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1028,7 +1043,7 @@ Map of additional options.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts#L34">interface <b>GetPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts#L36">interface <b>GetPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1037,7 +1052,7 @@ A collection of arguments for invoking getPolicy.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts#L40">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1048,7 +1063,7 @@ The name of the firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyArgs-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts#L42">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts#L44">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1059,7 +1074,7 @@ The ID of the firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts#L48">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts#L50">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1072,7 +1087,7 @@ A Neutron client is needed to retrieve firewall policy ids. If omitted, the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts#L52">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts#L54">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1084,7 +1099,7 @@ The owner of the firewall policy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPolicyResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts#L58">interface <b>GetPolicyResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts#L60">interface <b>GetPolicyResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1093,7 +1108,7 @@ A collection of values returned by getPolicy.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetPolicyResult-audited">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts#L62">property <b>audited</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts#L64">property <b>audited</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>audited: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1104,7 +1119,7 @@ The audit status of the firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts#L66">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts#L68">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1115,7 +1130,7 @@ The description of the firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts#L94">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1126,7 +1141,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts#L70">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts#L72">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1137,7 +1152,7 @@ See Argument Reference above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyResult-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts#L74">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts#L76">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1148,7 +1163,7 @@ See Argument Reference above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts#L78">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts#L80">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1159,7 +1174,7 @@ See Argument Reference above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyResult-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts#L82">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts#L84">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rules: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1170,7 +1185,7 @@ The array of one or more firewall rules that comprise the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyResult-shared">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts#L86">property <b>shared</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts#L88">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>shared: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1181,7 +1196,7 @@ The sharing status of the firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyResult-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/getPolicy.ts#L90">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/getPolicy.ts#L92">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1193,7 +1208,7 @@ See Argument Reference above.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L198">interface <b>PolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L200">interface <b>PolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1202,7 +1217,7 @@ The set of arguments for constructing a Policy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyArgs-audited">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L206">property <b>audited</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L208">property <b>audited</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>audited?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1217,7 +1232,7 @@ firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L211">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L213">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1229,7 +1244,7 @@ this updates the `description` of an existing firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L216">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L218">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1241,7 +1256,7 @@ updates the `name` of an existing firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L223">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L225">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1255,7 +1270,7 @@ firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L229">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L231">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1268,7 +1283,7 @@ existing firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-shared">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L237">property <b>shared</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L239">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>shared?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1283,7 +1298,7 @@ can specify if the policy should be shared.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L238">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L240">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1291,7 +1306,7 @@ can specify if the policy should be shared.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L242">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L244">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1303,7 +1318,7 @@ Map of additional options.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L148">interface <b>PolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L150">interface <b>PolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1312,7 +1327,7 @@ Input properties used for looking up and filtering Policy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyState-audited">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L156">property <b>audited</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L158">property <b>audited</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>audited?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1327,7 +1342,7 @@ firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L161">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L163">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1339,7 +1354,7 @@ this updates the `description` of an existing firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L166">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L168">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1351,7 +1366,7 @@ updates the `name` of an existing firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L173">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L175">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1365,7 +1380,7 @@ firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L179">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L181">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1378,7 +1393,7 @@ existing firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-shared">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L187">property <b>shared</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L189">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>shared?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1393,7 +1408,7 @@ can specify if the policy should be shared.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L188">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L190">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1401,7 +1416,7 @@ can specify if the policy should be shared.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/policy.ts#L192">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/policy.ts#L194">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1413,7 +1428,7 @@ Map of additional options.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L261">interface <b>RuleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L263">interface <b>RuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1422,7 +1437,7 @@ The set of arguments for constructing a Rule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuleArgs-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L267">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L269">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1435,7 +1450,7 @@ firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L272">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L274">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1447,7 +1462,7 @@ updates the `description` of an existing firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-destinationIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L278">property <b>destinationIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L280">property <b>destinationIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>destinationIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1460,7 +1475,7 @@ of an existing firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-destinationPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L284">property <b>destinationPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L286">property <b>destinationPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>destinationPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1473,7 +1488,7 @@ firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L290">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L292">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1486,7 +1501,7 @@ or "false" if provided - defaults to "true"). Changing this updates the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-ipVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L295">property <b>ipVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L297">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1498,7 +1513,7 @@ updates the `ip_version` of an existing firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L300">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L302">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1510,7 +1525,7 @@ updates the `name` of an existing firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L306">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L308">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1523,7 +1538,7 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L313">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L315">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1537,7 +1552,7 @@ firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-sourceIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L319">property <b>sourceIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L321">property <b>sourceIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1550,7 +1565,7 @@ firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-sourcePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L325">property <b>sourcePort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L327">property <b>sourcePort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourcePort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1563,7 +1578,7 @@ firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L331">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L333">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1576,7 +1591,7 @@ new firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleArgs-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L335">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L337">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1588,7 +1603,7 @@ Map of additional options.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L181">interface <b>RuleState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L183">interface <b>RuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1597,7 +1612,7 @@ Input properties used for looking up and filtering Rule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RuleState-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L187">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L189">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1610,7 +1625,7 @@ firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L192">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L194">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1622,7 +1637,7 @@ updates the `description` of an existing firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-destinationIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L198">property <b>destinationIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L200">property <b>destinationIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>destinationIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1635,7 +1650,7 @@ of an existing firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-destinationPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L204">property <b>destinationPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L206">property <b>destinationPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>destinationPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1648,7 +1663,7 @@ firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L210">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L212">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1661,7 +1676,7 @@ or "false" if provided - defaults to "true"). Changing this updates the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-ipVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L215">property <b>ipVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L217">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1673,7 +1688,7 @@ updates the `ip_version` of an existing firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L220">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L222">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1685,7 +1700,7 @@ updates the `name` of an existing firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L226">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L228">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1698,7 +1713,7 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L233">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L235">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1712,7 +1727,7 @@ firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-sourceIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L239">property <b>sourceIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L241">property <b>sourceIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1725,7 +1740,7 @@ firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-sourcePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L245">property <b>sourcePort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L247">property <b>sourcePort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourcePort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1738,7 +1753,7 @@ firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L251">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L253">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1751,7 +1766,7 @@ new firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RuleState-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/firewall/rule.ts#L255">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/firewall/rule.ts#L257">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>

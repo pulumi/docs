@@ -26,6 +26,8 @@ the infrastructure that runs those applications.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.Application.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Application.arn" title="Permalink to this definition">¶</a></dt>
@@ -128,6 +130,8 @@ by multiple Elastic Beanstalk Environments.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application_version.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.ApplicationVersion.application">
 <code class="descname">application</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ApplicationVersion.application" title="Permalink to this definition">¶</a></dt>
@@ -251,6 +255,8 @@ off of. Example stacks can be found in the [Amazon API documentation][1]</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_configuration_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_configuration_template.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.ConfigurationTemplate.application">
 <code class="descname">application</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ConfigurationTemplate.application" title="Permalink to this definition">¶</a></dt>
@@ -379,15 +385,13 @@ template to use in deployment</li>
 or <code class="docutils literal notranslate"><span class="pre">WebServer</span></code>. If tier is left blank <code class="docutils literal notranslate"><span class="pre">WebServer</span></code> will be used.</li>
 <li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Elastic Beanstalk Application Version
 to use in deployment.</li>
-<li><strong>wait_for_ready_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum
-<a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration</a> that Terraform should
-wait for an Elastic Beanstalk Environment to be in a ready state before timing
-out.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_environment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.Environment.all_settings">
 <code class="descname">all_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.all_settings" title="Permalink to this definition">¶</a></dt>
@@ -523,15 +527,6 @@ or <code class="docutils literal notranslate"><span class="pre">WebServer</span>
 to use in deployment.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.elasticbeanstalk.Environment.wait_for_ready_timeout">
-<code class="descname">wait_for_ready_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.wait_for_ready_timeout" title="Permalink to this definition">¶</a></dt>
-<dd><p>The maximum
-<a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration</a> that Terraform should
-wait for an Elastic Beanstalk Environment to be in a ready state before timing
-out.</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_aws.elasticbeanstalk.Environment.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -636,18 +631,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticbeanstalk.get_application">
 <code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">get_application</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.get_application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about an Elastic Beanstalk Application.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_application.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.elasticbeanstalk.get_hosted_zone">
 <code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">get_hosted_zone</code><span class="sig-paren">(</span><em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.get_hosted_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an <a class="reference external" href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region">elastic beanstalk hosted zone</a>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_hosted_zone.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_hosted_zone.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.elasticbeanstalk.get_solution_stack">
 <code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">get_solution_stack</code><span class="sig-paren">(</span><em>most_recent=None</em>, <em>name_regex=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.get_solution_stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the name of a elastic beanstalk solution stack.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_solution_stack.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_solution_stack.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

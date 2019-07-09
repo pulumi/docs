@@ -6,11 +6,7 @@
 <dl class="class">
 <dt id="pulumi_aws.securityhub.Account">
 <em class="property">class </em><code class="descclassname">pulumi_aws.securityhub.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.Account" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enables Security Hub for this AWS account.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> Destroying this resource will disable Security Hub for this AWS account.</p>
-<p><strong>NOTE:</strong> This AWS service is in Preview and may change before General Availability release. Backwards compatibility is not guaranteed between Terraform AWS Provider releases.</p>
-</div></blockquote>
+<dd><p>Create a Account resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -23,6 +19,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/securityhub_account.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/securityhub_account.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_aws.securityhub.Account.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.Account.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -66,9 +64,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.securityhub.ProductSubscription">
 <em class="property">class </em><code class="descclassname">pulumi_aws.securityhub.</code><code class="descname">ProductSubscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>product_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.ProductSubscription" title="Permalink to this definition">¶</a></dt>
-<dd><p>Subscribes to a Security Hub product.</p>
-<blockquote>
-<div><strong>NOTE:</strong> This AWS service is in Preview and may change before General Availability release. Backwards compatibility is not guaranteed between Terraform AWS Provider releases.</div></blockquote>
+<dd><p>Create a ProductSubscription resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -82,6 +78,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/securityhub_product_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/securityhub_product_subscription.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.securityhub.ProductSubscription.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.securityhub.ProductSubscription.arn" title="Permalink to this definition">¶</a></dt>
@@ -137,9 +135,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.securityhub.StandardsSubscription">
 <em class="property">class </em><code class="descclassname">pulumi_aws.securityhub.</code><code class="descname">StandardsSubscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>standards_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.StandardsSubscription" title="Permalink to this definition">¶</a></dt>
-<dd><p>Subscribes to a Security Hub standard.</p>
-<blockquote>
-<div><strong>NOTE:</strong> This AWS service is in Preview and may change before General Availability release. Backwards compatibility is not guaranteed between Terraform AWS Provider releases.</div></blockquote>
+<dd><p>Create a StandardsSubscription resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -153,6 +149,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/securityhub_standards_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/securityhub_standards_subscription.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.securityhub.StandardsSubscription.standards_arn">
 <code class="descname">standards_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.securityhub.StandardsSubscription.standards_arn" title="Permalink to this definition">¶</a></dt>

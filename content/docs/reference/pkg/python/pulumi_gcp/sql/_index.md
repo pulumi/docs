@@ -36,6 +36,8 @@ is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_database.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_database.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.Database.charset">
 <code class="descname">charset</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.Database.charset" title="Permalink to this definition">¶</a></dt>
@@ -124,13 +126,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.sql.DatabaseInstance">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.sql.</code><code class="descname">DatabaseInstance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>database_version=None</em>, <em>master_instance_name=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>replica_configuration=None</em>, <em>settings=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a new Google SQL Database Instance. For more information, see the <a class="reference external" href="https://cloud.google.com/sql/">official documentation</a>,
-or the <a class="reference external" href="https://cloud.google.com/sql/docs/admin-api/v1beta4/instances">JSON API</a>.</p>
-<blockquote>
-<div><strong>NOTE on ``google_sql_database_instance``:</strong> - Second-generation instances include a
-default ‘root’&#64;’%’ user with no password. This user will be deleted by Terraform on
-instance creation. You should use <code class="docutils literal notranslate"><span class="pre">google_sql_user</span></code> to define a custom user with
-a restricted host and strong password.</div></blockquote>
+<dd><p>Create a DatabaseInstance resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -146,10 +142,6 @@ for more information.</li>
 <li><strong>master_instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance that will act as
 the master in the replication setup. Note, this requires the master to have
 <code class="docutils literal notranslate"><span class="pre">binary_log_enabled</span></code> set, as well as existing backups.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance. If the name is left
-blank, Terraform will randomly generate one when the instance is first
-created. This is done because after a name is used, it cannot be reused for
-up to <a class="reference external" href="https://cloud.google.com/sql/docs/delete-instance">one week</a>.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region the instance will sit in. Note, first-generation Cloud SQL instance
@@ -168,6 +160,8 @@ configuration is detailed below.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_database_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_database_instance.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.DatabaseInstance.connection_name">
 <code class="descname">connection_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.connection_name" title="Permalink to this definition">¶</a></dt>
@@ -186,14 +180,6 @@ for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_gcp.sql.DatabaseInstance.first_ip_address">
-<code class="descname">first_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.first_ip_address" title="Permalink to this definition">¶</a></dt>
-<dd><p>The first IPv4 address of any type assigned. This is to
-support accessing the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues/912">first address in the list in a terraform output</a>
-when the resource is configured with a <code class="docutils literal notranslate"><span class="pre">count</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.sql.DatabaseInstance.master_instance_name">
 <code class="descname">master_instance_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.master_instance_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the instance that will act as
@@ -202,37 +188,10 @@ the master in the replication setup. Note, this requires the master to have
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_gcp.sql.DatabaseInstance.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the instance. If the name is left
-blank, Terraform will randomly generate one when the instance is first
-created. This is done because after a name is used, it cannot be reused for
-up to <a class="reference external" href="https://cloud.google.com/sql/docs/delete-instance">one week</a>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.sql.DatabaseInstance.private_ip_address">
-<code class="descname">private_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.private_ip_address" title="Permalink to this definition">¶</a></dt>
-<dd><p>The first private (<code class="docutils literal notranslate"><span class="pre">PRIVATE</span></code>) IPv4 address assigned. This is
-a workaround for an <a class="reference external" href="https://github.com/hashicorp/terraform/issues/17048">issue fixed in Terraform 0.12</a>
-but also provides a convenient way to access an IP of a specific type without
-performing filtering in a Terraform config.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.sql.DatabaseInstance.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.sql.DatabaseInstance.public_ip_address">
-<code class="descname">public_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.public_ip_address" title="Permalink to this definition">¶</a></dt>
-<dd><p>The first public (<code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code>) IPv4 address assigned. This is
-a workaround for an <a class="reference external" href="https://github.com/hashicorp/terraform/issues/17048">issue fixed in Terraform 0.12</a>
-but also provides a convenient way to access an IP of a specific type without
-performing filtering in a Terraform config.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -340,6 +299,8 @@ is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_ssl_cert.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_ssl_cert.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.SslCert.cert">
 <code class="descname">cert</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.SslCert.cert" title="Permalink to this definition">¶</a></dt>
@@ -448,11 +409,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.sql.User">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.sql.</code><code class="descname">User</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>host=None</em>, <em>instance=None</em>, <em>name=None</em>, <em>password=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.User" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a new Google SQL User on a Google SQL User Instance. For more information, see the <a class="reference external" href="https://cloud.google.com/sql/">official documentation</a>, or the <a class="reference external" href="https://cloud.google.com/sql/docs/admin-api/v1beta4/users">JSON API</a>.</p>
-<blockquote>
-<div><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
-<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>. Passwords will not be retrieved when running
-“terraform import”.</div></blockquote>
+<dd><p>Create a User resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -475,6 +432,8 @@ is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_user.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_user.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.User.host">
 <code class="descname">host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.User.host" title="Permalink to this definition">¶</a></dt>

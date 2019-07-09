@@ -63,6 +63,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_listener.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_listener.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancingv2.Listener.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.Listener.arn" title="Permalink to this definition">¶</a></dt>
@@ -166,6 +168,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_listener_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_listener_certificate.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancingv2.ListenerCertificate.certificate_arn">
 <code class="descname">certificate_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.ListenerCertificate.certificate_arn" title="Permalink to this definition">¶</a></dt>
@@ -240,6 +244,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_listener_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_listener_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancingv2.ListenerRule.actions">
 <code class="descname">actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.ListenerRule.actions" title="Permalink to this definition">¶</a></dt>
@@ -326,16 +332,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>access_logs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An Access Logs block. Access Logs documented below.</li>
 <li><strong>enable_cross_zone_load_balancing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, cross-zone load balancing of the load balancer will be enabled.
 This is a <code class="docutils literal notranslate"><span class="pre">network</span></code> load balancer feature. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
-<li><strong>enable_deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, deletion of the load balancer will be disabled via
-the AWS API. This will prevent Terraform from deleting the load balancer. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>enable_http2</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether HTTP/2 is enabled in <code class="docutils literal notranslate"><span class="pre">application</span></code> load balancers. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
 <li><strong>idle_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type <code class="docutils literal notranslate"><span class="pre">application</span></code>. Default: 60.</li>
 <li><strong>internal</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the LB will be internal.</li>
 <li><strong>ip_address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of IP addresses used by the subnets for your load balancer. The possible values are <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> and <code class="docutils literal notranslate"><span class="pre">dualstack</span></code></li>
 <li><strong>load_balancer_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of load balancer to create. Possible values are <code class="docutils literal notranslate"><span class="pre">application</span></code> or <code class="docutils literal notranslate"><span class="pre">network</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">application</span></code>.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
-must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
-Terraform will autogenerate a name beginning with <code class="docutils literal notranslate"><span class="pre">tf-lb</span></code>.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group IDs to assign to the LB. Only valid for Load Balancers of type <code class="docutils literal notranslate"><span class="pre">application</span></code>.</li>
 <li><strong>subnet_mappings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A subnet mapping block as documented below.</li>
@@ -348,6 +349,8 @@ for load balancers of type <code class="docutils literal notranslate"><span clas
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancingv2.LoadBalancer.access_logs">
 <code class="descname">access_logs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.LoadBalancer.access_logs" title="Permalink to this definition">¶</a></dt>
@@ -380,13 +383,6 @@ This is a <code class="docutils literal notranslate"><span class="pre">network</
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_aws.elasticloadbalancingv2.LoadBalancer.enable_deletion_protection">
-<code class="descname">enable_deletion_protection</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.LoadBalancer.enable_deletion_protection" title="Permalink to this definition">¶</a></dt>
-<dd><p>If true, deletion of the load balancer will be disabled via
-the AWS API. This will prevent Terraform from deleting the load balancer. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancingv2.LoadBalancer.enable_http2">
 <code class="descname">enable_http2</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.LoadBalancer.enable_http2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates whether HTTP/2 is enabled in <code class="docutils literal notranslate"><span class="pre">application</span></code> load balancers. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
@@ -414,14 +410,6 @@ the AWS API. This will prevent Terraform from deleting the load balancer. Defaul
 <dt id="pulumi_aws.elasticloadbalancingv2.LoadBalancer.load_balancer_type">
 <code class="descname">load_balancer_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.LoadBalancer.load_balancer_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of load balancer to create. Possible values are <code class="docutils literal notranslate"><span class="pre">application</span></code> or <code class="docutils literal notranslate"><span class="pre">network</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">application</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.elasticloadbalancingv2.LoadBalancer.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.LoadBalancer.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
-must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
-Terraform will autogenerate a name beginning with <code class="docutils literal notranslate"><span class="pre">tf-lb</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -518,7 +506,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>deregistration_delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.</li>
 <li><strong>health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Health Check block. Health Check blocks are documented below.</li>
 <li><strong>lambda_multi_value_headers_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the target group. If omitted, Terraform will assign a random, unique name.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Target Group</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>. Cannot be longer than 6 characters.</li>
 <li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port to use to connect with the target. Valid values are either ports 1-65536, or <code class="docutils literal notranslate"><span class="pre">traffic-port</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">traffic-port</span></code>.</li>
 <li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol to use to connect with the target. Defaults to <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>. Not applicable when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</li>
@@ -538,6 +526,8 @@ You can’t specify publicly routable IP addresses.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_target_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_target_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancingv2.TargetGroup.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.TargetGroup.arn" title="Permalink to this definition">¶</a></dt>
@@ -571,7 +561,7 @@ You can’t specify publicly routable IP addresses.</li>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancingv2.TargetGroup.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.TargetGroup.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the target group. If omitted, Terraform will assign a random, unique name.</p>
+<dd><p>The name of the Target Group</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -695,6 +685,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_target_group_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_target_group_attachment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancingv2.TargetGroupAttachment.availability_zone">
 <code class="descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.TargetGroupAttachment.availability_zone" title="Permalink to this definition">¶</a></dt>
@@ -768,6 +760,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>This data source can prove useful when a module accepts an LB Listener as an
 input variable and needs to know the LB it is attached to, or other
 information specific to the listener in question.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lb_listener.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lb_listener.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -779,6 +773,8 @@ information specific to the listener in question.</p>
 <p>This data source can prove useful when a module accepts an LB as an input
 variable and needs to, for example, determine the security groups associated
 with it, etc.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lb.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -790,6 +786,8 @@ with it, etc.</p>
 <p>This data source can prove useful when a module accepts an LB Target Group as an
 input variable and needs to know its attributes. It can also be used to get the ARN of
 an LB Target Group for use in other resources, given LB Target Group name.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lb_target_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lb_target_group.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

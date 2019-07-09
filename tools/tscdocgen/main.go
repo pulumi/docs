@@ -36,19 +36,19 @@ func main() {
 	flag.Parse()
 	args := flag.Args()
 	if len(args) < 3 {
-		fmt.Fprintf(os.Stderr, "error: usage: %s <doc-file> <out-dir> <git-hash>\n", os.Args[0])
+		fmt.Fprintf(os.Stderr, "error: usage: %s <src-dir> <doc-file> <out-dir> <git-hash>\n", os.Args[0])
 		os.Exit(1)
 	}
 
 	// Load and parse the document.
-	doc, err := loadAndParseDoc(args[0])
+	doc, err := loadAndParseDoc(args[1])
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error: reading and parsing docs file: %v\n", err)
 		os.Exit(1)
 	}
 
 	// Assuming that succeeded, simply emit the Markdown docs now.
-	if err = emitMarkdownDocs(doc, args[1], args[2]); err != nil {
+	if err = emitMarkdownDocs(args[0], doc, args[2], args[3]); err != nil {
 		fmt.Fprintf(os.Stderr, "error: emitting Markdown docs: %v\n", err)
 		os.Exit(2)
 	}
@@ -172,7 +172,7 @@ var gitHubBaseURLs = map[string]string{
 	"@pulumi/cloudflare":   "https://github.com/pulumi/pulumi-cloudflare/blob/{githash}/sdk/nodejs",
 	"@pulumi/datadog":      "https://github.com/pulumi/pulumi-datadog/blob/{githash}/sdk/nodejs",
 	"@pulumi/digitalocean": "https://github.com/pulumi/pulumi-digitalocean/blob/{githash}/sdk/nodejs",
-	"@pulumi/dnsimple": 	"https://github.com/pulumi/pulumi-dnsimple/blob/{githash}/sdk/nodejs",
+	"@pulumi/dnsimple":     "https://github.com/pulumi/pulumi-dnsimple/blob/{githash}/sdk/nodejs",
 	"@pulumi/docker":       "https://github.com/pulumi/pulumi-docker/blob/{githash}/sdk/nodejs",
 	"@pulumi/eks":          "https://github.com/pulumi/pulumi-eks/blob/{githash}/nodejs/eks",
 	"@pulumi/f5bigip":      "https://github.com/pulumi/pulumi-f5bigip/blob/{githash}/sdk/nodejs",
@@ -191,7 +191,7 @@ var gitHubBaseURLs = map[string]string{
 
 // emitMarkdownDocs takes as input a full Typedoc AST, transforms it into Markdown suitable for our documentation
 // website, and emits those files into the target directory.  If the target doesn't exist, it will be created.
-func emitMarkdownDocs(doc *typeDocNode, outdir string, githash string) error {
+func emitMarkdownDocs(srcdir string, doc *typeDocNode, outdir, githash string) error {
 	// First, gather up the entries by module.  Note that we are doing something dubious here to make our docs
 	// easier to use and navigate than the default ones that Typedoc generates.  We are assuming an idiomatic module
 	// structure with top-level index-style exports for each submodule.  In the general case, this isn't always true,
@@ -200,7 +200,7 @@ func emitMarkdownDocs(doc *typeDocNode, outdir string, githash string) error {
 	// want to revisit this and make the logic here more sophisticated and general purpose someday.
 	pkg := doc.Name
 	repoURL := strings.Replace(gitHubBaseURLs[pkg], "{githash}", githash, -1)
-	e := newEmitter(pkg, repoURL, outdir)
+	e := newEmitter(pkg, srcdir, repoURL, outdir)
 
 	// The kubernetes package requires some special handling since the structure differs from
 	// the tf-generated providers.
@@ -218,13 +218,15 @@ func emitMarkdownDocs(doc *typeDocNode, outdir string, githash string) error {
 
 type emitter struct {
 	pkg     string // the NPM package name.
+	srcdir  string // the source directory for docs, etc.
 	repoURL string // the base repo URL for this package's code.
 	outdir  string // where to store the output files.
 }
 
-func newEmitter(pkg, repoURL, outdir string) *emitter {
+func newEmitter(pkg, srcdir, repoURL, outdir string) *emitter {
 	return &emitter{
 		pkg:     pkg,
+		srcdir:  srcdir,
 		repoURL: repoURL,
 		outdir:  outdir,
 	}
@@ -316,14 +318,17 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 	var title string
 	var pkg string
 	var pkgvar string
+	var readme string
 	var breadcrumbs []string
 
 	if root {
 		title = fmt.Sprintf("Package %s", e.pkg)
 		pkg = e.pkg
 		pkgvar = camelCase(e.pkg[strings.IndexRune(e.pkg, '/')+1:])
+		readme = filepath.Join(e.srcdir, "README.md")
 	} else {
 		title = fmt.Sprintf("Module %s", name)
+		readme = filepath.Join(e.srcdir, name, "README.md")
 
 		// Create the breadcrumb links (in LIFO order).  First, add the current module name.
 		var simplename string
@@ -357,6 +362,12 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		breadcrumbs = append(
 			[]string{fmt.Sprintf("<a href=\"%s/\">%s</a> &gt; ", crumbs, e.pkg)},
 			breadcrumbs...)
+	}
+
+	// See if there is a README.md file and, if so, include it as the package's comment.
+	pkgcomm, err := ioutil.ReadFile(readme)
+	if err != nil && !os.IsNotExist(err) {
+		return err
 	}
 
 	// Now build an index of files and members.
@@ -407,16 +418,17 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 
 	// To generate the code, simply render the source Mustache template, using the right set of arguments.
 	if err = indexTemplate.FRender(f, map[string]interface{}{
-		"Title":       title,
-		"Breadcrumbs": breadcrumbs,
-		"RepoURL":     e.repoURL,
-		"Package":     pkg,
-		"PackageVar":  pkgvar,
-		"Files":       files,
-		"Modules":     modules,
-		"HasModules":  len(modules) > 0,
-		"Members":     members,
-		"HasMembers":  len(members) > 0,
+		"Title":          title,
+		"Breadcrumbs":    breadcrumbs,
+		"RepoURL":        e.repoURL,
+		"Package":        pkg,
+		"PackageComment": string(pkgcomm),
+		"PackageVar":     pkgvar,
+		"Files":          files,
+		"Modules":        modules,
+		"HasModules":     len(modules) > 0,
+		"Members":        members,
+		"HasMembers":     len(members) > 0,
 	}); err != nil {
 		return err
 	}

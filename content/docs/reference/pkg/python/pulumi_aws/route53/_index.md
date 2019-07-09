@@ -21,6 +21,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_delegation_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_delegation_set.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.DelegationSet.name_servers">
 <code class="descname">name_servers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.DelegationSet.name_servers" title="Permalink to this definition">¶</a></dt>
@@ -153,6 +155,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_health_check.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_health_check.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.HealthCheck.child_health_threshold">
 <code class="descname">child_health_threshold</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.HealthCheck.child_health_threshold" title="Permalink to this definition">¶</a></dt>
@@ -332,6 +336,8 @@ See <a class="reference external" href="https://docs.aws.amazon.com/Route53/late
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_query_log.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_query_log.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.QueryLog.cloudwatch_log_group_arn">
 <code class="descname">cloudwatch_log_group_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.QueryLog.cloudwatch_log_group_arn" title="Permalink to this definition">¶</a></dt>
@@ -397,14 +403,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>aliases</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An alias block. Conflicts with <code class="docutils literal notranslate"><span class="pre">ttl</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">records</span></code>.
 Alias record documented below.</li>
-<li><strong>allow_overwrite</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow creation of this record in Terraform to overwrite an existing record, if any. This does not affect the ability to update the record in Terraform and does not prevent other resources within Terraform or manual Route 53 changes outside Terraform from overwriting this record. <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. This configuration is not recommended for most environments.</li>
 <li><strong>failover_routing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.</li>
 <li><strong>geolocation_routing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.</li>
 <li><strong>health_check_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The health check the record should be associated with.</li>
 <li><strong>latency_routing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.</li>
 <li><strong>multivalue_answer_routing_policy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to indicate a multivalue answer routing policy. Conflicts with any other routing policy.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.</li>
-<li><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> inside the Terraform configuration string (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;first255characters&quot;&quot;morecharacters&quot;</span></code>).</li>
 <li><strong>set_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier to differentiate records with routing policies from one another. Required if using <code class="docutils literal notranslate"><span class="pre">failover</span></code>, <code class="docutils literal notranslate"><span class="pre">geolocation</span></code>, <code class="docutils literal notranslate"><span class="pre">latency</span></code>, or <code class="docutils literal notranslate"><span class="pre">weighted</span></code> routing policies documented below.</li>
 <li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The TTL of the record.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> or <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>. A <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> record will be served if its healthcheck is passing, otherwise the <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code> will be served. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets</a></li>
@@ -415,17 +419,13 @@ Alias record documented below.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_record.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_record.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.Record.aliases">
 <code class="descname">aliases</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.Record.aliases" title="Permalink to this definition">¶</a></dt>
 <dd><p>An alias block. Conflicts with <code class="docutils literal notranslate"><span class="pre">ttl</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">records</span></code>.
 Alias record documented below.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.route53.Record.allow_overwrite">
-<code class="descname">allow_overwrite</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.Record.allow_overwrite" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allow creation of this record in Terraform to overwrite an existing record, if any. This does not affect the ability to update the record in Terraform and does not prevent other resources within Terraform or manual Route 53 changes outside Terraform from overwriting this record. <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. This configuration is not recommended for most environments.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -468,12 +468,6 @@ Alias record documented below.</p>
 <dt id="pulumi_aws.route53.Record.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.Record.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.route53.Record.records">
-<code class="descname">records</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.Record.records" title="Permalink to this definition">¶</a></dt>
-<dd><p>A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> inside the Terraform configuration string (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;first255characters&quot;&quot;morecharacters&quot;</span></code>).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -570,6 +564,8 @@ to your network (for outbound endpoints) or on the way from your network to your
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_endpoint.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.ResolverEndpoint.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.ResolverEndpoint.arn" title="Permalink to this definition">¶</a></dt>
@@ -679,6 +675,8 @@ This argument should only be specified for <code class="docutils literal notrans
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.ResolverRule.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.ResolverRule.arn" title="Permalink to this definition">¶</a></dt>
@@ -795,6 +793,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.ResolverRuleAssociation.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.ResolverRuleAssociation.name" title="Permalink to this definition">¶</a></dt>
@@ -864,9 +864,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A comment for the hosted zone. Defaults to ‘Managed by Terraform’.</li>
 <li><strong>delegation_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with <code class="docutils literal notranslate"><span class="pre">vpc</span></code> as delegation sets can only be used for public zones.</li>
-<li><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to destroy all records (possibly managed outside of Terraform) in the zone when destroying the zone.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the name of the hosted zone.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the zone.</li>
 <li><strong>vpcs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the <code class="docutils literal notranslate"><span class="pre">delegation_set_id</span></code> argument in this resource and any <cite>``aws_route53_zone_association`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html">https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html</a>&gt;`_ specifying the same zone ID. Detailed below.</li>
@@ -875,22 +873,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
-<dl class="attribute">
-<dt id="pulumi_aws.route53.Zone.comment">
-<code class="descname">comment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.Zone.comment" title="Permalink to this definition">¶</a></dt>
-<dd><p>A comment for the hosted zone. Defaults to ‘Managed by Terraform’.</p>
-</dd></dl>
-
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.Zone.delegation_set_id">
 <code class="descname">delegation_set_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.Zone.delegation_set_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with <code class="docutils literal notranslate"><span class="pre">vpc</span></code> as delegation sets can only be used for public zones.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.route53.Zone.force_destroy">
-<code class="descname">force_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.Zone.force_destroy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to destroy all records (possibly managed outside of Terraform) in the zone when destroying the zone.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -967,11 +955,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.route53.ZoneAssociation">
 <em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">ZoneAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>vpc_id=None</em>, <em>vpc_region=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.ZoneAssociation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a Route53 Hosted Zone VPC association. VPC associations can only be made on private zones.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> Unless explicit association ordering is required (e.g. a separate cross-account association authorization), usage of this resource is not recommended. Use the <code class="docutils literal notranslate"><span class="pre">vpc</span></code> configuration blocks available within the <cite>``aws_route53_zone`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html">https://www.terraform.io/docs/providers/aws/r/route53_zone.html</a>&gt;`_ instead.</p>
-<p><strong>NOTE:</strong> Terraform provides both this standalone Zone VPC Association resource and exclusive VPC associations defined in-line in the <cite>``aws_route53_zone`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html">https://www.terraform.io/docs/providers/aws/r/route53_zone.html</a>&gt;`_ via <code class="docutils literal notranslate"><span class="pre">vpc</span></code> configuration blocks. At this time, you cannot use those in-line VPC associations in conjunction with this resource and the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use the generic Terraform resource <a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#lifecycle">lifecycle configuration block</a> with <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> in the <code class="docutils literal notranslate"><span class="pre">aws_route53_zone</span></code> resource to manage additional associations via this resource.</p>
-</div></blockquote>
+<dd><p>Create a ZoneAssociation resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -987,6 +971,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.ZoneAssociation.vpc_id">
 <code class="descname">vpc_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.ZoneAssociation.vpc_id" title="Permalink to this definition">¶</a></dt>
@@ -1050,6 +1036,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_aws.route53.</code><code class="descname">get_delegation_set</code><span class="sig-paren">(</span><em>id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_delegation_set" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">aws_route53_delegation_set</span></code> provides details about a specific Route 53 Delegation Set.</p>
 <p>This data source allows to find a list of name servers associated with a specific delegation set.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_delegation_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_delegation_set.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1057,6 +1045,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_aws.route53.</code><code class="descname">get_zone</code><span class="sig-paren">(</span><em>caller_reference=None</em>, <em>comment=None</em>, <em>name=None</em>, <em>private_zone=None</em>, <em>resource_record_set_count=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>zone_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">aws_route53_zone</span></code> provides details about a specific Route 53 Hosted Zone.</p>
 <p>This data source allows to find a Hosted Zone ID given Hosted Zone name and certain search criteria.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_zone.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_zone.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

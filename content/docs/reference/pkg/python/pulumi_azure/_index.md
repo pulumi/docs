@@ -45,6 +45,7 @@
 <li class="toctree-l1"><a class="reference internal" href="operationalinsights/">operationalinsights</a></li>
 <li class="toctree-l1"><a class="reference internal" href="policy/">policy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="postgresql/">postgresql</a></li>
+<li class="toctree-l1"><a class="reference internal" href="privatedns/">privatedns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="recoveryservices/">recoveryservices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="redis/">redis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="relay/">relay</a></li>

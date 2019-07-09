@@ -21,29 +21,9 @@ database. The default is <code class="docutils literal notranslate"><span class=
 other mechanisms, such as <code class="docutils literal notranslate"><span class="pre">GRANT</span></code> or <code class="docutils literal notranslate"><span class="pre">REVOKE</span> <span class="pre">CONNECT</span></code>).</li>
 <li><strong>connection_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – How many concurrent connections can be
 established to this database. <code class="docutils literal notranslate"><span class="pre">-1</span></code> (the default) means no limit.</li>
-<li><strong>encoding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Character set encoding to use in the database.
-Specify a string constant (e.g. <code class="docutils literal notranslate"><span class="pre">UTF8</span></code> or <code class="docutils literal notranslate"><span class="pre">SQL_ASCII</span></code>), or an integer encoding
-number.  If unset or set to an empty string the default encoding is set to
-<code class="docutils literal notranslate"><span class="pre">UTF8</span></code>.  If set to <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> Terraform will use the same encoding as the
-template database.  Changing this value will force the creation of a new
-resource as this value can only be changed when a database is created.</li>
 <li><strong>is_template</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, then this database can be cloned by any
 user with <code class="docutils literal notranslate"><span class="pre">CREATEDB</span></code> privileges; if <code class="docutils literal notranslate"><span class="pre">false</span></code> (the default), then only
 superusers or the owner of the database can clone it.</li>
-<li><strong>lc_collate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Collation order (<code class="docutils literal notranslate"><span class="pre">LC_COLLATE</span></code>) to use in the
-database.  This affects the sort order applied to strings, e.g. in queries
-with <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code>, as well as the order used in indexes on text columns. If
-unset or set to an empty string the default collation is set to <code class="docutils literal notranslate"><span class="pre">C</span></code>.  If set
-to <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> Terraform will use the same collation order as the specified
-<code class="docutils literal notranslate"><span class="pre">template</span></code> database.  Changing this value will force the creation of a new
-resource as this value can only be changed when a database is created.</li>
-<li><strong>lc_ctype</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Character classification (<code class="docutils literal notranslate"><span class="pre">LC_CTYPE</span></code>) to use in the
-database. This affects the categorization of characters, e.g. lower, upper and
-digit. If unset or set to an empty string the default character classification
-is set to <code class="docutils literal notranslate"><span class="pre">C</span></code>.  If set to <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> Terraform will use the character
-classification of the specified <code class="docutils literal notranslate"><span class="pre">template</span></code> database.  Changing this value will
-force the creation of a new resource as this value can only be changed when a
-database is created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database. Must be unique on the PostgreSQL
 server instance where it is configured.</li>
 <li><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role name of the user who will own the database, or
@@ -55,16 +35,13 @@ the username in the provider is a superuser.</li>
 associated with the database, or <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> to use the template database’s
 tablespace.  This tablespace will be the default tablespace used for objects
 created in this database.</li>
-<li><strong>template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the template database from which to create
-the database, or <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> to use the default template (<code class="docutils literal notranslate"><span class="pre">template0</span></code>).  NOTE:
-the default in Terraform is <code class="docutils literal notranslate"><span class="pre">template0</span></code>, not <code class="docutils literal notranslate"><span class="pre">template1</span></code>.  Changing this value
-will force the creation of a new resource as this value can only be changed
-when a database is created.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/database.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/database.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_postgresql.Database.allow_connections">
 <code class="descname">allow_connections</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Database.allow_connections" title="Permalink to this definition">¶</a></dt>
@@ -81,46 +58,11 @@ established to this database. <code class="docutils literal notranslate"><span c
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_postgresql.Database.encoding">
-<code class="descname">encoding</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Database.encoding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Character set encoding to use in the database.
-Specify a string constant (e.g. <code class="docutils literal notranslate"><span class="pre">UTF8</span></code> or <code class="docutils literal notranslate"><span class="pre">SQL_ASCII</span></code>), or an integer encoding
-number.  If unset or set to an empty string the default encoding is set to
-<code class="docutils literal notranslate"><span class="pre">UTF8</span></code>.  If set to <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> Terraform will use the same encoding as the
-template database.  Changing this value will force the creation of a new
-resource as this value can only be changed when a database is created.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_postgresql.Database.is_template">
 <code class="descname">is_template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Database.is_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, then this database can be cloned by any
 user with <code class="docutils literal notranslate"><span class="pre">CREATEDB</span></code> privileges; if <code class="docutils literal notranslate"><span class="pre">false</span></code> (the default), then only
 superusers or the owner of the database can clone it.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_postgresql.Database.lc_collate">
-<code class="descname">lc_collate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Database.lc_collate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Collation order (<code class="docutils literal notranslate"><span class="pre">LC_COLLATE</span></code>) to use in the
-database.  This affects the sort order applied to strings, e.g. in queries
-with <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code>, as well as the order used in indexes on text columns. If
-unset or set to an empty string the default collation is set to <code class="docutils literal notranslate"><span class="pre">C</span></code>.  If set
-to <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> Terraform will use the same collation order as the specified
-<code class="docutils literal notranslate"><span class="pre">template</span></code> database.  Changing this value will force the creation of a new
-resource as this value can only be changed when a database is created.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_postgresql.Database.lc_ctype">
-<code class="descname">lc_ctype</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Database.lc_ctype" title="Permalink to this definition">¶</a></dt>
-<dd><p>Character classification (<code class="docutils literal notranslate"><span class="pre">LC_CTYPE</span></code>) to use in the
-database. This affects the categorization of characters, e.g. lower, upper and
-digit. If unset or set to an empty string the default character classification
-is set to <code class="docutils literal notranslate"><span class="pre">C</span></code>.  If set to <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> Terraform will use the character
-classification of the specified <code class="docutils literal notranslate"><span class="pre">template</span></code> database.  Changing this value will
-force the creation of a new resource as this value can only be changed when a
-database is created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -147,16 +89,6 @@ the username in the provider is a superuser.</p>
 associated with the database, or <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> to use the template database’s
 tablespace.  This tablespace will be the default tablespace used for objects
 created in this database.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_postgresql.Database.template">
-<code class="descname">template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Database.template" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the template database from which to create
-the database, or <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> to use the default template (<code class="docutils literal notranslate"><span class="pre">template0</span></code>).  NOTE:
-the default in Terraform is <code class="docutils literal notranslate"><span class="pre">template0</span></code>, not <code class="docutils literal notranslate"><span class="pre">template1</span></code>.  Changing this value
-will force the creation of a new resource as this value can only be changed
-when a database is created.</p>
 </dd></dl>
 
 <dl class="method">
@@ -223,6 +155,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/default_privileges.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/default_privileges.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_postgresql.DefaultPrivileg.database">
 <code class="descname">database</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.DefaultPrivileg.database" title="Permalink to this definition">¶</a></dt>
@@ -301,7 +235,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_postgresql.Extension">
-<em class="property">class </em><code class="descclassname">pulumi_postgresql.</code><code class="descname">Extension</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>schema=None</em>, <em>version=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Extension" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_postgresql.</code><code class="descname">Extension</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>database=None</em>, <em>name=None</em>, <em>schema=None</em>, <em>version=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Extension" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">postgresql_extension</span></code> resource creates and manages an extension on a PostgreSQL
 server.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -311,6 +245,7 @@ server.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Which database to create the extension on. Defaults to provider database.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the extension.</li>
 <li><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets the schema of an extension.</li>
 <li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets the version number of the extension.</li>
@@ -319,6 +254,14 @@ server.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/extension.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/extension.html.markdown</a>.</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_postgresql.Extension.database">
+<code class="descname">database</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Extension.database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which database to create the extension on. Defaults to provider database.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_postgresql.Extension.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Extension.name" title="Permalink to this definition">¶</a></dt>
@@ -400,6 +343,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/grant.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/grant.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_postgresql.Grant.database">
 <code class="descname">database</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Grant.database" title="Permalink to this definition">¶</a></dt>
@@ -489,6 +434,8 @@ construction to achieve fine-grained programmatic control over provider settings
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_postgresql.Provider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -609,6 +556,8 @@ set to <code class="docutils literal notranslate"><span class="pre">infinity</sp
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/role.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/role.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_postgresql.Role.bypass_row_level_security">
 <code class="descname">bypass_row_level_security</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Role.bypass_row_level_security" title="Permalink to this definition">¶</a></dt>
@@ -799,6 +748,8 @@ policy block supports fields documented below.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/schema.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/schema.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_postgresql.Schema.if_not_exists">
 <code class="descname">if_not_exists</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Schema.if_not_exists" title="Permalink to this definition">¶</a></dt>

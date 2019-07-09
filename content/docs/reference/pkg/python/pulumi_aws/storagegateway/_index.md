@@ -6,9 +6,7 @@
 <dl class="class">
 <dt id="pulumi_aws.storagegateway.Cache">
 <em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">Cache</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>disk_id=None</em>, <em>gateway_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.Cache" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages an AWS Storage Gateway cache.</p>
-<blockquote>
-<div><strong>NOTE:</strong> The Storage Gateway API provides no method to remove a cache disk. Destroying this Terraform resource does not perform any Storage Gateway actions.</div></blockquote>
+<dd><p>Create a Cache resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -23,6 +21,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cache.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cache.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.storagegateway.Cache.disk_id">
 <code class="descname">disk_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.Cache.disk_id" title="Permalink to this definition">¶</a></dt>
@@ -78,13 +78,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.storagegateway.CachesIscsiVolume">
 <em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">CachesIscsiVolume</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>gateway_arn=None</em>, <em>network_interface_id=None</em>, <em>snapshot_id=None</em>, <em>source_volume_arn=None</em>, <em>target_name=None</em>, <em>volume_size_in_bytes=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.CachesIscsiVolume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages an AWS Storage Gateway cached iSCSI volume.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> The gateway must have cache added (e.g. via the <cite>``aws_storagegateway_cache`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html">https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html</a>&gt;`_ resource) before creating volumes otherwise the Storage Gateway API will return an error.</p>
-<p><strong>NOTE:</strong> The gateway must have an upload buffer added (e.g. via the <cite>``aws_storagegateway_upload_buffer`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/storagegateway_upload_buffer.html">https://www.terraform.io/docs/providers/aws/r/storagegateway_upload_buffer.html</a>&gt;`_ resource) before the volume is operational to clients, however the Storage Gateway API will allow volume creation without error in that case and return volume status as <code class="docutils literal notranslate"><span class="pre">UPLOAD</span> <span class="pre">BUFFER</span> <span class="pre">NOT</span> <span class="pre">CONFIGURED</span></code>.</p>
-</div></blockquote>
-<blockquote>
-<div><strong>NOTE:</strong> These examples are referencing the <cite>``aws_storagegateway_cache`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html">https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html</a>&gt;`_ resource <code class="docutils literal notranslate"><span class="pre">gateway_arn</span></code> attribute to ensure Terraform properly adds cache before creating the volume. If you are not using this method, you may need to declare an expicit dependency (e.g. via <code class="docutils literal notranslate"><span class="pre">depends_on</span> <span class="pre">=</span> <span class="pre">[&quot;aws_storagegateway_cache.example&quot;]</span></code>) to ensure proper ordering.</div></blockquote>
+<dd><p>Create a CachesIscsiVolume resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -103,6 +97,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cached_iscsi_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cached_iscsi_volume.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.storagegateway.CachesIscsiVolume.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.CachesIscsiVolume.arn" title="Permalink to this definition">¶</a></dt>
@@ -235,19 +231,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>activation_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Gateway activation key during resource creation. Conflicts with <code class="docutils literal notranslate"><span class="pre">gateway_ip_address</span></code>. Additional information is available in the <a class="reference external" href="https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html">Storage Gateway User Guide</a>.</li>
-<li><strong>gateway_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Gateway IP address to retrieve activation key during resource creation. Conflicts with <code class="docutils literal notranslate"><span class="pre">activation_key</span></code>. Gateway must be accessible on port 80 from where Terraform is running. Additional information is available in the <a class="reference external" href="https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html">Storage Gateway User Guide</a>.</p>
-</li>
 <li><strong>gateway_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the gateway.</li>
 <li><strong>gateway_timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time zone for the gateway. The time zone is of the format “GMT”, “GMT-hr:mm”, or “GMT+hr:mm”. For example, <code class="docutils literal notranslate"><span class="pre">GMT-4:00</span></code> indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway’s maintenance schedule.</li>
 <li><strong>gateway_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of the gateway. The default value is <code class="docutils literal notranslate"><span class="pre">STORED</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">CACHED</span></code>, <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code>, <code class="docutils literal notranslate"><span class="pre">STORED</span></code>, <code class="docutils literal notranslate"><span class="pre">VTL</span></code>.</li>
 <li><strong>smb_active_directory_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code> gateway type. Must be set before creating <code class="docutils literal notranslate"><span class="pre">ActiveDirectory</span></code> authentication SMB file shares. More details below.</li>
-<li><strong>smb_guest_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Guest password for Server Message Block (SMB) file shares. Only valid for <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code> gateway type. Must be set before creating <code class="docutils literal notranslate"><span class="pre">GuestAccess</span></code> authentication SMB file shares. Terraform can only detect drift of the existence of a guest password, not its actual value from the gateway. Terraform can however update the password with changing the argument.</li>
-<li><strong>tape_drive_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of tape drive to use for tape gateway. Terraform cannot detect drift of this argument. Valid values: <code class="docutils literal notranslate"><span class="pre">IBM-ULT3580-TD5</span></code>.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.storagegateway.Gateway.activation_key">
 <code class="descname">activation_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.Gateway.activation_key" title="Permalink to this definition">¶</a></dt>
@@ -264,12 +258,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.Gateway.gateway_id">
 <code class="descname">gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.Gateway.gateway_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identifier of the gateway.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.storagegateway.Gateway.gateway_ip_address">
-<code class="descname">gateway_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.Gateway.gateway_ip_address" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gateway IP address to retrieve activation key during resource creation. Conflicts with <code class="docutils literal notranslate"><span class="pre">activation_key</span></code>. Gateway must be accessible on port 80 from where Terraform is running. Additional information is available in the <a class="reference external" href="https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html">Storage Gateway User Guide</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -294,18 +282,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.Gateway.smb_active_directory_settings">
 <code class="descname">smb_active_directory_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.Gateway.smb_active_directory_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code> gateway type. Must be set before creating <code class="docutils literal notranslate"><span class="pre">ActiveDirectory</span></code> authentication SMB file shares. More details below.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.storagegateway.Gateway.smb_guest_password">
-<code class="descname">smb_guest_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.Gateway.smb_guest_password" title="Permalink to this definition">¶</a></dt>
-<dd><p>Guest password for Server Message Block (SMB) file shares. Only valid for <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code> gateway type. Must be set before creating <code class="docutils literal notranslate"><span class="pre">GuestAccess</span></code> authentication SMB file shares. Terraform can only detect drift of the existence of a guest password, not its actual value from the gateway. Terraform can however update the password with changing the argument.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.storagegateway.Gateway.tape_drive_type">
-<code class="descname">tape_drive_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.Gateway.tape_drive_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Type of tape drive to use for tape gateway. Terraform cannot detect drift of this argument. Valid values: <code class="docutils literal notranslate"><span class="pre">IBM-ULT3580-TD5</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -395,6 +371,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.storagegateway.NfsFileShare.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.NfsFileShare.arn" title="Permalink to this definition">¶</a></dt>
@@ -554,6 +532,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_smb_file_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_smb_file_share.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.storagegateway.SmbFileShare.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.SmbFileShare.arn" title="Permalink to this definition">¶</a></dt>
@@ -687,9 +667,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.storagegateway.UploadBuffer">
 <em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">UploadBuffer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>disk_id=None</em>, <em>gateway_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.UploadBuffer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages an AWS Storage Gateway upload buffer.</p>
-<blockquote>
-<div><strong>NOTE:</strong> The Storage Gateway API provides no method to remove an upload buffer disk. Destroying this Terraform resource does not perform any Storage Gateway actions.</div></blockquote>
+<dd><p>Create a UploadBuffer resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -704,6 +682,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_upload_buffer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_upload_buffer.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.storagegateway.UploadBuffer.disk_id">
 <code class="descname">disk_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.UploadBuffer.disk_id" title="Permalink to this definition">¶</a></dt>
@@ -759,9 +739,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.storagegateway.WorkingStorage">
 <em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">WorkingStorage</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>disk_id=None</em>, <em>gateway_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.WorkingStorage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages an AWS Storage Gateway working storage.</p>
-<blockquote>
-<div><strong>NOTE:</strong> The Storage Gateway API provides no method to remove a working storage disk. Destroying this Terraform resource does not perform any Storage Gateway actions.</div></blockquote>
+<dd><p>Create a WorkingStorage resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -776,6 +754,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_working_storage.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_working_storage.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.storagegateway.WorkingStorage.disk_id">
 <code class="descname">disk_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.WorkingStorage.disk_id" title="Permalink to this definition">¶</a></dt>
@@ -832,6 +812,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.get_local_disk">
 <code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">get_local_disk</code><span class="sig-paren">(</span><em>disk_node=None</em>, <em>disk_path=None</em>, <em>gateway_arn=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.get_local_disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Storage Gateway local disk. The disk identifier is useful for adding the disk as a cache or upload buffer to a gateway.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/storagegateway_local_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/storagegateway_local_disk.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

@@ -27,6 +27,8 @@ Required for IPv4 BGP peers on public virtual interfaces.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_bgp_peer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_bgp_peer.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directconnect.BgpPeer.address_family">
 <code class="descname">address_family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.BgpPeer.address_family" title="Permalink to this definition">¶</a></dt>
@@ -143,6 +145,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_connection.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directconnect.Connection.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.Connection.arn" title="Permalink to this definition">¶</a></dt>
@@ -249,6 +253,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_connection_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_connection_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directconnect.ConnectionAssociation.connection_id">
 <code class="descname">connection_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.ConnectionAssociation.connection_id" title="Permalink to this definition">¶</a></dt>
@@ -319,6 +325,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directconnect.Gateway.amazon_side_asn">
 <code class="descname">amazon_side_asn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.Gateway.amazon_side_asn" title="Permalink to this definition">¶</a></dt>
@@ -406,6 +414,8 @@ Used for single account Direct Connect gateway associations.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directconnect.GatewayAssociation.allowed_prefixes">
 <code class="descname">allowed_prefixes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociation.allowed_prefixes" title="Permalink to this definition">¶</a></dt>
@@ -525,6 +535,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway_association_proposal.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway_association_proposal.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directconnect.GatewayAssociationProposal.allowed_prefixes">
 <code class="descname">allowed_prefixes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociationProposal.allowed_prefixes" title="Permalink to this definition">¶</a></dt>
@@ -658,6 +670,8 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_private_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_private_virtual_interface.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directconnect.HostedPrivateVirtualInterface.address_family">
 <code class="descname">address_family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedPrivateVirtualInterface.address_family" title="Permalink to this definition">¶</a></dt>
@@ -797,6 +811,8 @@ This resource accepts ownership of a private virtual interface created by anothe
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_private_virtual_interface_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_private_virtual_interface_accepter.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directconnect.HostedPrivateVirtualInterfaceAccepter.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedPrivateVirtualInterfaceAccepter.arn" title="Permalink to this definition">¶</a></dt>
@@ -894,6 +910,8 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_public_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_public_virtual_interface.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directconnect.HostedPublicVirtualInterface.address_family">
 <code class="descname">address_family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedPublicVirtualInterface.address_family" title="Permalink to this definition">¶</a></dt>
@@ -1025,6 +1043,8 @@ This resource accepts ownership of a public virtual interface created by another
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_public_virtual_interface_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_public_virtual_interface_accepter.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directconnect.HostedPublicVirtualInterfaceAccepter.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedPublicVirtualInterfaceAccepter.arn" title="Permalink to this definition">¶</a></dt>
@@ -1086,9 +1106,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.directconnect.LinkAggregationGroup">
 <em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">LinkAggregationGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>connections_bandwidth=None</em>, <em>force_destroy=None</em>, <em>location=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.LinkAggregationGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Direct Connect LAG. Connections can be added to the LAG via the <cite>``aws_dx_connection`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_connection.html">https://www.terraform.io/docs/providers/aws/r/dx_connection.html</a>&gt;`_ and <cite>``aws_dx_connection_association`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_connection_association.html">https://www.terraform.io/docs/providers/aws/r/dx_connection_association.html</a>&gt;`_ resources.</p>
-<blockquote>
-<div><em>NOTE:</em> When creating a LAG, Direct Connect requires creating a Connection. Terraform will remove this unmanaged connection during resource creation.</div></blockquote>
+<dd><p>Create a LinkAggregationGroup resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1107,6 +1125,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_lag.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_lag.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directconnect.LinkAggregationGroup.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.LinkAggregationGroup.arn" title="Permalink to this definition">¶</a></dt>
@@ -1221,6 +1241,8 @@ The MTU of a virtual private interface can be either <code class="docutils liter
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_private_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_private_virtual_interface.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directconnect.PrivateVirtualInterface.address_family">
 <code class="descname">address_family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.PrivateVirtualInterface.address_family" title="Permalink to this definition">¶</a></dt>
@@ -1378,6 +1400,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_public_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_public_virtual_interface.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directconnect.PublicVirtualInterface.address_family">
 <code class="descname">address_family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.PublicVirtualInterface.address_family" title="Permalink to this definition">¶</a></dt>
@@ -1494,6 +1518,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directconnect.get_gateway">
 <code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">get_gateway</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.get_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Direct Connect Gateway.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/dx_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/dx_gateway.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

@@ -92,6 +92,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cur_report_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cur_report_definition.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cur.ReportDefinition.additional_artifacts">
 <code class="descname">additional_artifacts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.additional_artifacts" title="Permalink to this definition">¶</a></dt>
@@ -193,6 +195,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><em>NOTE:</em> The AWS Cost and Usage Report service is only available in <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code> currently.</p>
 <p><em>NOTE:</em> If AWS Organizations is enabled, only the master account can use this resource.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cur_report_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cur_report_definition.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

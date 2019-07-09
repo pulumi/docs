@@ -34,6 +34,8 @@ Changing this creates a new group.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_endpoint_group_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_endpoint_group_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.vpnaas.EndpointGroup.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.vpnaas.EndpointGroup.description" title="Permalink to this definition">¶</a></dt>
@@ -172,6 +174,8 @@ create a service for another policy. Changing this creates a new policy.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_ike_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_ike_policy_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.vpnaas.IkePolicy.auth_algorithm">
 <code class="descname">auth_algorithm</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.vpnaas.IkePolicy.auth_algorithm" title="Permalink to this definition">¶</a></dt>
@@ -343,6 +347,8 @@ Changing this updates the existing policy. Default is ESP.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_ipsec_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_ipsec_policy_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.vpnaas.IpSecPolicy.auth_algorithm">
 <code class="descname">auth_algorithm</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.vpnaas.IpSecPolicy.auth_algorithm" title="Permalink to this definition">¶</a></dt>
@@ -497,6 +503,8 @@ create a service for another project. Changing this creates a new service.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_service_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_service_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.vpnaas.Service.admin_state_up">
 <code class="descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.vpnaas.Service.admin_state_up" title="Permalink to this definition">¶</a></dt>
@@ -672,6 +680,8 @@ create a connection for another project. Changing this creates a new connection.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_site_connection_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_site_connection_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.vpnaas.SiteConnection.admin_state_up">
 <code class="descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.vpnaas.SiteConnection.admin_state_up" title="Permalink to this definition">¶</a></dt>

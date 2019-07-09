@@ -27,6 +27,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/policy_assignment.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/policy_assignment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.policy.Assignment.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.description" title="Permalink to this definition">¶</a></dt>
@@ -151,6 +153,8 @@ or “NotSpecified”. Changing this forces a new resource to be created.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/policy_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/policy_definition.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.policy.Definition.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Definition.description" title="Permalink to this definition">¶</a></dt>
@@ -335,6 +339,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/policy_set_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/policy_set_definition.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.policy.PolicySetDefinition.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.description" title="Permalink to this definition">¶</a></dt>
@@ -427,6 +433,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.policy.get_policy_defintion">
 <code class="descclassname">pulumi_azure.policy.</code><code class="descname">get_policy_defintion</code><span class="sig-paren">(</span><em>display_name=None</em>, <em>management_group_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.get_policy_defintion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about a Policy Definition, both custom and built in. Retrieves Policy Definitions from your current subscription by default.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/policy_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/policy_definition.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

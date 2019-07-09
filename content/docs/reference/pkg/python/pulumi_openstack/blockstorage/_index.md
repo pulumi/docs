@@ -185,6 +185,8 @@ Changing this creates a new volume.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v3.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.blockstorage.Volume.attachments">
 <code class="descname">attachments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.Volume.attachments" title="Permalink to this definition">¶</a></dt>
@@ -376,6 +378,8 @@ connections.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_attach_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_attach_v3.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.blockstorage.VolumeAttach.attach_mode">
 <code class="descname">attach_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeAttach.attach_mode" title="Permalink to this definition">¶</a></dt>
@@ -562,6 +566,8 @@ connections.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_attach_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_attach_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.blockstorage.VolumeAttachV2.attach_mode">
 <code class="descname">attach_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeAttachV2.attach_mode" title="Permalink to this definition">¶</a></dt>
@@ -739,6 +745,8 @@ Changing this creates a new volume.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v1.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.blockstorage.VolumeV1.attachments">
 <code class="descname">attachments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV1.attachments" title="Permalink to this definition">¶</a></dt>
@@ -898,6 +906,8 @@ Changing this creates a new volume.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.blockstorage.VolumeV2.attachments">
 <code class="descname">attachments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV2.attachments" title="Permalink to this definition">¶</a></dt>
@@ -1034,18 +1044,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.blockstorage.get_availability_zones_v3">
 <code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">get_availability_zones_v3</code><span class="sig-paren">(</span><em>region=None</em>, <em>state=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_availability_zones_v3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of Block Storage availability zones from OpenStack</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_availability_zones_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_availability_zones_v3.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.blockstorage.get_snapshot_v2">
 <code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">get_snapshot_v2</code><span class="sig-paren">(</span><em>most_recent=None</em>, <em>name=None</em>, <em>region=None</em>, <em>status=None</em>, <em>volume_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_snapshot_v2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an existing snapshot.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_snapshot_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_snapshot_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.blockstorage.get_snapshot_v3">
 <code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">get_snapshot_v3</code><span class="sig-paren">(</span><em>most_recent=None</em>, <em>name=None</em>, <em>region=None</em>, <em>status=None</em>, <em>volume_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_snapshot_v3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an existing snapshot.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_snapshot_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_snapshot_v3.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

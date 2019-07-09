@@ -63,6 +63,8 @@ in all regions - available regions are listed
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_repository.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.codecommit.Repository.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codecommit.Repository.arn" title="Permalink to this definition">¶</a></dt>
@@ -172,6 +174,8 @@ in all regions - available regions are listed
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_trigger.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_trigger.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.codecommit.Trigger.repository_name">
 <code class="descname">repository_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codecommit.Trigger.repository_name" title="Permalink to this definition">¶</a></dt>
@@ -222,6 +226,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.codecommit.get_repository">
 <code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">get_repository</code><span class="sig-paren">(</span><em>repository_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.get_repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CodeCommit Repository data source allows the ARN, Repository ID, Repository URL for HTTP and Repository URL for SSH to be retrieved for an CodeCommit repository.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/codecommit_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/codecommit_repository.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

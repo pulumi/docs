@@ -6,10 +6,7 @@
 <dl class="class">
 <dt id="pulumi_linode.Domain">
 <em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Domain</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>axfr_ips=None</em>, <em>description=None</em>, <em>domain=None</em>, <em>expire_sec=None</em>, <em>group=None</em>, <em>master_ips=None</em>, <em>refresh_sec=None</em>, <em>retry_sec=None</em>, <em>soa_email=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>ttl_sec=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Domain" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Linode Domain resource.  This can be used to create, modify, and delete Linode Domains through Linode’s managed DNS service.
-For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/manager/dns-manager/">DNS Manager</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createDomain">Linode APIv4 docs</a>.</p>
-<p>The Linode Guide, <a class="reference external" href="https://www.linode.com/docs/applications/configuration-management/deploy-a-wordpress-site-using-terraform-and-linode-stackscripts/">Deploy a WordPress Site Using Terraform and Linode StackScripts</a>, demonstrates the management of Linode Domain resources in the context of Linode Instance running WordPress.</p>
-<p>This resource exports no additional attributes, however <code class="docutils literal notranslate"><span class="pre">status</span></code> may reflect degraded states.</p>
+<dd><p>Create a Domain resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -35,6 +32,8 @@ For more information, see <a class="reference external" href="https://www.linode
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/domain.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/domain.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_linode.Domain.axfr_ips">
 <code class="descname">axfr_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Domain.axfr_ips" title="Permalink to this definition">¶</a></dt>
@@ -192,6 +191,8 @@ For more information, see <a class="reference external" href="https://www.linode
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/domain_record.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/domain_record.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_linode.DomainRecord.domain_id">
 <code class="descname">domain_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.DomainRecord.domain_id" title="Permalink to this definition">¶</a></dt>
@@ -415,6 +416,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/image.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/image.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_linode.Image.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Image.description" title="Permalink to this definition">¶</a></dt>
@@ -482,31 +485,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_linode.Instance">
 <em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alerts=None</em>, <em>authorized_keys=None</em>, <em>authorized_users=None</em>, <em>backup_id=None</em>, <em>backups_enabled=None</em>, <em>boot_config_label=None</em>, <em>configs=None</em>, <em>disks=None</em>, <em>group=None</em>, <em>image=None</em>, <em>label=None</em>, <em>private_ip=None</em>, <em>region=None</em>, <em>root_pass=None</em>, <em>stackscript_data=None</em>, <em>stackscript_id=None</em>, <em>swap_size=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>watchdog_enabled=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Linode Instance resource.  This can be used to create, modify, and delete Linodes.
-For more information, see <a class="reference external" href="https://linode.com/docs/getting-started/">Getting Started with Linode</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createLinodeInstance">Linode APIv4 docs</a>.</p>
-<p>The Linode Guide, <a class="reference external" href="https://www.linode.com/docs/applications/configuration-management/how-to-build-your-infrastructure-using-terraform-and-linode/">Use Terraform to Provision Linode Environments</a>, provides step-by-step guidance and additional examples.</p>
-<p>Linode Instances can also use <a class="reference external" href="https://www.terraform.io/docs/provisioners/index.html">provisioners</a>.</p>
-<p>This Linode Instance resource exports the following attributes:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">status</span></code> - The status of the instance, indicating the current readiness state. (<code class="docutils literal notranslate"><span class="pre">running</span></code>, <code class="docutils literal notranslate"><span class="pre">offline</span></code>, …)</li>
-<li><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> - A string containing the Linode’s public IP address.</li>
-<li><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> - This Linode’s Private IPv4 Address, if enabled.  The regional private IP address range, 192.168.128.0/17, is shared by all Linode Instances in a region.</li>
-<li><code class="docutils literal notranslate"><span class="pre">ipv6</span></code> - This Linode’s IPv6 SLAAC addresses. This address is specific to a Linode, and may not be shared.  The prefix (<code class="docutils literal notranslate"><span class="pre">/64</span></code>) is included in this attribute.</li>
-<li><code class="docutils literal notranslate"><span class="pre">ipv4</span></code> - This Linode’s IPv4 Addresses. Each Linode is assigned a single public IPv4 address upon creation, and may get a single private IPv4 address if needed. You may need to open a support ticket to get additional IPv4 addresses.</li>
-<li><code class="docutils literal notranslate"><span class="pre">specs.0.disk</span></code> -  The amount of storage space, in GB. this Linode has access to. A typical Linode will divide this space between a primary disk with an image deployed to it, and a swap disk, usually 512 MB. This is the default configuration created when deploying a Linode with an image through POST /linode/instances.</li>
-<li><code class="docutils literal notranslate"><span class="pre">specs.0.memory</span></code> - The amount of RAM, in MB, this Linode has access to. Typically a Linode will choose to boot with all of its available RAM, but this can be configured in a Config profile.</li>
-<li><code class="docutils literal notranslate"><span class="pre">specs.0.vcpus</span></code> - The number of vcpus this Linode has access to. Typically a Linode will choose to boot with all of its available vcpus, but this can be configured in a Config Profile.</li>
-<li><code class="docutils literal notranslate"><span class="pre">specs.0.transfer</span></code> - The amount of network transfer this Linode is allotted each month.</li>
-<li><code class="docutils literal notranslate"><span class="pre">backups</span></code> - Information about this Linode’s backups status.<ul>
-<li><code class="docutils literal notranslate"><span class="pre">enabled</span></code> - If this Linode has the Backup service enabled.</li>
-<li><code class="docutils literal notranslate"><span class="pre">schedule</span></code><ul>
-<li><code class="docutils literal notranslate"><span class="pre">day</span></code> -  The day of the week that your Linode’s weekly Backup is taken. If not set manually, a day will be chosen for you. Backups are taken every day, but backups taken on this day are preferred when selecting backups to retain for a longer period.  If not set manually, then when backups are initially enabled, this may come back as “Scheduling” until the day is automatically selected.</li>
-<li><code class="docutils literal notranslate"><span class="pre">window</span></code> - The window (‘W0’-‘W22’) in which your backups will be taken, in UTC. A backups window is a two-hour span of time in which the backup may occur. For example, ‘W10’ indicates that your backups should be taken between 10:00 and 12:00. If you do not choose a backup window, one will be selected for you automatically.  If not set manually, when backups are initially enabled this may come back as Scheduling until the window is automatically selected.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<dd><p>Create a Instance resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -524,7 +503,6 @@ For more information, see <a class="reference external" href="https://linode.com
 <li><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Config’s label for display purposes.  Also used by <code class="docutils literal notranslate"><span class="pre">boot_config_label</span></code>.</li>
 <li><strong>private_ip</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode’s region. It can be enabled on an existing Linode but it can’t be disabled.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the location where the Linode is deployed. Examples are <code class="docutils literal notranslate"><span class="pre">&quot;us-east&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;us-west&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ap-south&quot;</span></code>, etc.  <em>Changing ``region`` forces the creation of a new Linode Instance.</em>.</li>
-<li><strong>root_pass</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The initial password for the <code class="docutils literal notranslate"><span class="pre">root</span></code> user account. <em>This value can not be imported.</em> <em>Changing ``root_pass`` forces the creation of a new Linode Instance.</em> <em>If omitted, a random password will be generated but will not be stored in Terraform state.</em></li>
 <li><strong>stackscript_data</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if ‘stackscript_id’ is given. The required values depend on the StackScript being deployed.  <em>This value can not be imported.</em> <em>Changing ``stackscript_data`` forces the creation of a new Linode Instance.</em></li>
 <li><strong>stackscript_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The StackScript to deploy to the newly created Linode. If provided, ‘image’ must also be provided, and must be an Image that is compatible with this StackScript. <em>This value can not be imported.</em> <em>Changing ``stackscript_id`` forces the creation of a new Linode Instance.</em></li>
 <li><strong>swap_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.</li>
@@ -536,6 +514,8 @@ For more information, see <a class="reference external" href="https://linode.com
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/instance.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_linode.Instance.authorized_keys">
 <code class="descname">authorized_keys</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Instance.authorized_keys" title="Permalink to this definition">¶</a></dt>
@@ -594,12 +574,6 @@ For more information, see <a class="reference external" href="https://linode.com
 <dt id="pulumi_linode.Instance.region">
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Instance.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the location where the Linode is deployed. Examples are <code class="docutils literal notranslate"><span class="pre">&quot;us-east&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;us-west&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ap-south&quot;</span></code>, etc.  <em>Changing ``region`` forces the creation of a new Linode Instance.</em>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_linode.Instance.root_pass">
-<code class="descname">root_pass</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Instance.root_pass" title="Permalink to this definition">¶</a></dt>
-<dd><p>The initial password for the <code class="docutils literal notranslate"><span class="pre">root</span></code> user account. <em>This value can not be imported.</em> <em>Changing ``root_pass`` forces the creation of a new Linode Instance.</em> <em>If omitted, a random password will be generated but will not be stored in Terraform state.</em></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -681,15 +655,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_linode.NodeBalancer">
 <em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">NodeBalancer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>client_conn_throttle=None</em>, <em>label=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Linode NodeBalancer resource.  This can be used to create, modify, and delete Linodes NodeBalancers in Linode’s managed load balancer service.
-For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/nodebalancer/getting-started-with-nodebalancers/">Getting Started with NodeBalancers</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createNodeBalancer">Linode APIv4 docs</a>.</p>
-<p>The Linode Guide, <a class="reference external" href="https://www.linode.com/docs/applications/configuration-management/create-a-nodebalancer-with-terraform/">Create a NodeBalancer with Terraform</a>, provides step-by-step guidance and additional examples.</p>
-<p>This resource exports the following attributes:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">hostname</span></code> - This NodeBalancer’s hostname, ending with .nodebalancer.linode.com</li>
-<li><code class="docutils literal notranslate"><span class="pre">ipv4</span></code> - The Public IPv4 Address of this NodeBalancer</li>
-<li><code class="docutils literal notranslate"><span class="pre">ipv6</span></code> - The Public IPv6 Address of this NodeBalancer</li>
-</ul>
+<dd><p>Create a NodeBalancer resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -706,6 +672,8 @@ For more information, see <a class="reference external" href="https://www.linode
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/nodebalancer.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/nodebalancer.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_linode.NodeBalancer.client_conn_throttle">
 <code class="descname">client_conn_throttle</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.NodeBalancer.client_conn_throttle" title="Permalink to this definition">¶</a></dt>
@@ -773,16 +741,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_linode.NodeBalancerConfig">
 <em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">NodeBalancerConfig</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>algorithm=None</em>, <em>check=None</em>, <em>check_attempts=None</em>, <em>check_body=None</em>, <em>check_interval=None</em>, <em>check_passive=None</em>, <em>check_path=None</em>, <em>check_timeout=None</em>, <em>cipher_suite=None</em>, <em>nodebalancer_id=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>ssl_cert=None</em>, <em>ssl_key=None</em>, <em>stickiness=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancerConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Linode NodeBalancer Config resource.  This can be used to create, modify, and delete Linodes NodeBalancer Configs.
-For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/nodebalancer/getting-started-with-nodebalancers/">Getting Started with NodeBalancers</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createNodeBalancerConfig">Linode APIv4 docs</a>.</p>
-<p>The Linode Guide, <a class="reference external" href="https://www.linode.com/docs/applications/configuration-management/create-a-nodebalancer-with-terraform/">Create a NodeBalancer with Terraform</a>, provides step-by-step guidance and additional examples.</p>
-<p>This resource exports the following attributes:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">ssl_commonname</span></code> - The common name for the SSL certification this port is serving if this port is not configured to use SSL.</li>
-<li><code class="docutils literal notranslate"><span class="pre">ssl_fingerprint</span></code> - The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.</li>
-<li><code class="docutils literal notranslate"><span class="pre">node_status_up</span></code> - The number of backends considered to be ‘UP’ and healthy, and that are serving requests.</li>
-<li><code class="docutils literal notranslate"><span class="pre">node_status_down</span></code> - The number of backends considered to be ‘DOWN’ and unhealthy. These are not in rotation, and not serving requests.</li>
-</ul>
+<dd><p>Create a NodeBalancerConfig resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -809,6 +768,8 @@ For more information, see <a class="reference external" href="https://www.linode
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/nodebalancer_config.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/nodebalancer_config.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_linode.NodeBalancerConfig.algorithm">
 <code class="descname">algorithm</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.NodeBalancerConfig.algorithm" title="Permalink to this definition">¶</a></dt>
@@ -936,15 +897,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_linode.NodeBalancerNode">
 <em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">NodeBalancerNode</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address=None</em>, <em>config_id=None</em>, <em>label=None</em>, <em>mode=None</em>, <em>nodebalancer_id=None</em>, <em>weight=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.NodeBalancerNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Linode NodeBalancer Node resource.  This can be used to create, modify, and delete Linodes NodeBalancer Nodes.
-For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/nodebalancer/getting-started-with-nodebalancers/">Getting Started with NodeBalancers</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createNodeBalancerNode">Linode APIv4 docs</a>.</p>
-<p>The Linode Guide, <a class="reference external" href="https://www.linode.com/docs/applications/configuration-management/create-a-nodebalancer-with-terraform/">Create a NodeBalancer with Terraform</a>, provides step-by-step guidance and additional examples.</p>
-<p>This resource exports the following attributes:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">status</span></code> - The current status of this node, based on the configured checks of its NodeBalancer Config. (unknown, UP, DOWN).</li>
-<li><code class="docutils literal notranslate"><span class="pre">config_id</span></code> - The ID of the NodeBalancerConfig this NodeBalancerNode is attached to.</li>
-<li><code class="docutils literal notranslate"><span class="pre">nodebalancer_id</span></code> - The ID of the NodeBalancer this NodeBalancerNode is attached to.</li>
-</ul>
+<dd><p>Create a NodeBalancerNode resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -963,6 +916,8 @@ For more information, see <a class="reference external" href="https://www.linode
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/nodebalancer_node.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/nodebalancer_node.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_linode.NodeBalancerNode.address">
 <code class="descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.NodeBalancerNode.address" title="Permalink to this definition">¶</a></dt>
@@ -1058,6 +1013,8 @@ construction to achieve fine-grained programmatic control over provider settings
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_linode.Provider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1118,6 +1075,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/rdns.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/rdns.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_linode.Rdns.address">
 <code class="descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Rdns.address" title="Permalink to this definition">¶</a></dt>
@@ -1193,6 +1152,8 @@ For more information, see the <a class="reference external" href="https://develo
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/sshkey.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/sshkey.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_linode.SshKey.label">
 <code class="descname">label</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.SshKey.label" title="Permalink to this definition">¶</a></dt>
@@ -1247,28 +1208,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_linode.StackScript">
-<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">StackScript</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>images=None</em>, <em>is_public=None</em>, <em>label=None</em>, <em>rev_note=None</em>, <em>script=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.StackScript" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Linode StackScript resource.  This can be used to create, modify, and delete Linode StackScripts.  StackScripts are private or public managed scripts which run within an instance during startup.  StackScripts can include variables whose values are specified when the Instance is created.</p>
-<p>For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/stackscripts/">Automate Deployment with StackScripts</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#tag/StackScripts">Linode APIv4 docs</a>.</p>
-<p>The Linode Guide, <a class="reference external" href="https://www.linode.com/docs/applications/configuration-management/deploy-a-wordpress-site-using-terraform-and-linode-stackscripts/">Deploy a WordPress Site Using Terraform and Linode StackScripts</a>, shows how a public StackScript can be used to provision a Linode Instance.   The guide, <a class="reference external" href="https://www.linode.com/docs/applications/configuration-management/create-terraform-module/">Create a Terraform Module</a>, demonstrates StackScript use through a wrapping module.</p>
-<p>This resource exports the following attributes:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">deployments_active</span></code> - Count of currently active, deployed Linodes created from this StackScript.</li>
-<li><code class="docutils literal notranslate"><span class="pre">user_gravatar_id</span></code> - The Gravatar ID for the User who created the StackScript.</li>
-<li><code class="docutils literal notranslate"><span class="pre">deployments_total</span></code> - The total number of times this StackScript has been deployed.</li>
-<li><code class="docutils literal notranslate"><span class="pre">username</span></code> - The User who created the StackScript.</li>
-<li><code class="docutils literal notranslate"><span class="pre">created</span></code> - The date this StackScript was created.</li>
-<li><code class="docutils literal notranslate"><span class="pre">updated</span></code> - The date this StackScript was updated.</li>
-<li><code class="docutils literal notranslate"><span class="pre">user_defined_fields</span></code> - This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized parameters during deployment.<ul>
-<li><code class="docutils literal notranslate"><span class="pre">label</span></code> - A human-readable label for the field that will serve as the input prompt for entering the value during deployment.</li>
-<li><code class="docutils literal notranslate"><span class="pre">name</span></code> - The name of the field.</li>
-<li><code class="docutils literal notranslate"><span class="pre">example</span></code> - An example value for the field.</li>
-<li><code class="docutils literal notranslate"><span class="pre">one_of</span></code> - A list of acceptable single values for the field.</li>
-<li><code class="docutils literal notranslate"><span class="pre">many_of</span></code> - A list of acceptable values for the field in any quantity, combination or order.</li>
-<li><code class="docutils literal notranslate"><span class="pre">default</span></code> - The default value. If not specified, this value will be used.</li>
-</ul>
-</li>
-</ul>
+<em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">StackScript</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>images=None</em>, <em>is_public=None</em>, <em>label=None</em>, <em>rev_note=None</em>, <em>script=None</em>, <em>user_defined_fields=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.StackScript" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a StackScript resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1287,6 +1228,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/stackscript.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/stackscript.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_linode.StackScript.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.StackScript.description" title="Permalink to this definition">¶</a></dt>
@@ -1366,14 +1309,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_linode.Token">
 <em class="property">class </em><code class="descclassname">pulumi_linode.</code><code class="descname">Token</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>expiry=None</em>, <em>label=None</em>, <em>scopes=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Token" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Linode Token resource.  This can be used to create, modify, and delete Linode API Personal Access Tokens.  Personal Access Tokens proxy user credentials for Linode API access.  This is necessary for tools, such as Terraform, to interact with Linode services on a user’s behalf.</p>
-<p>It is common for Terraform itself to be configured with broadly scoped Personal Access Tokens.  Provisioning scripts or tools configured within a Linode Instance should follow the principle of least privilege to afford only the required roles for tools to perform their necessary tasks.  The <code class="docutils literal notranslate"><span class="pre">linode_token</span></code> resource allows for the management of Personal Access Tokens with scopes mirroring or narrowing the scope of the parent token.</p>
-<p>For more information, see the <a class="reference external" href="https://developers.linode.com/api/v4#operation/getTokens">Linode APIv4 docs</a>.</p>
-<p>This resource exports the following attributes:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">token</span></code> - The token used to access the API.</li>
-<li><code class="docutils literal notranslate"><span class="pre">created</span></code> - The date this Token was created.</li>
-</ul>
+<dd><p>Create a Token resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1383,12 +1319,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>expiry</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When this token will expire. Personal Access Tokens cannot be renewed, so after this time the token will be completely unusable and a new token will need to be generated. Tokens may be created with ‘null’ as their expiry and will never expire unless revoked.</li>
 <li><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A label for the Token.</li>
-<li><strong>scopes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id17"><span class="problematic" id="id18">*</span></a>. Tokens with more restrictive scopes are generally more secure.</li>
+<li><strong>scopes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id4"><span class="problematic" id="id5">*</span></a>. Tokens with more restrictive scopes are generally more secure.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/token.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/token.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_linode.Token.expiry">
 <code class="descname">expiry</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Token.expiry" title="Permalink to this definition">¶</a></dt>
@@ -1404,7 +1342,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_linode.Token.scopes">
 <code class="descname">scopes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Token.scopes" title="Permalink to this definition">¶</a></dt>
-<dd><p>The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id19"><span class="problematic" id="id20">*</span></a>. Tokens with more restrictive scopes are generally more secure.</p>
+<dd><p>The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to <a href="#id6"><span class="problematic" id="id7">*</span></a>. Tokens with more restrictive scopes are generally more secure.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1474,6 +1412,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/volume.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_linode.Volume.label">
 <code class="descname">label</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.Volume.label" title="Permalink to this definition">¶</a></dt>
@@ -1564,6 +1504,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><code class="docutils literal notranslate"><span class="pre">zip</span></code> - The zip code of this Account’s billing address.</li>
 <li><code class="docutils literal notranslate"><span class="pre">balance</span></code> - This Account’s balance, in US dollars.</li>
 </ul>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/account.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/account.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1588,6 +1530,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><code class="docutils literal notranslate"><span class="pre">soa_email</span></code> - Start of Authority email address.</li>
 <li><code class="docutils literal notranslate"><span class="pre">tags</span></code> - An array of tags applied to this object.</li>
 </ul>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/domain.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/domain.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1606,6 +1550,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><code class="docutils literal notranslate"><span class="pre">type</span></code> - How the Image was created. Manual Images can be created at any time. image”Automatic” Images are created automatically from a deleted Linode.</li>
 <li><code class="docutils literal notranslate"><span class="pre">vendor</span></code> - The upstream distribution vendor. <code class="docutils literal notranslate"><span class="pre">None</span></code> for private Images.</li>
 </ul>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/image.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/image.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1623,6 +1569,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><code class="docutils literal notranslate"><span class="pre">addons.0.backups.0.price.0.hourly</span></code> - The cost (in US dollars) per hour to add Backups service.</li>
 <li><code class="docutils literal notranslate"><span class="pre">addons.0.backups.0.price.0.monthly</span></code> - The cost (in US dollars) per month to add Backups service.</li>
 </ul>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/instance_type.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/instance_type.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1641,6 +1589,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><code class="docutils literal notranslate"><span class="pre">linode_id</span></code> - The ID of the Linode this address currently belongs to.</li>
 <li><code class="docutils literal notranslate"><span class="pre">region</span></code> - The Region this IP address resides in.</li>
 </ul>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/networking_ip.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/networking_ip.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1666,18 +1616,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><code class="docutils literal notranslate"><span class="pre">referrals.0.code</span></code> - The Profile referral code.  If new accounts use this when signing up for Linode, referring account will receive credit.</li>
 <li><code class="docutils literal notranslate"><span class="pre">referrals.0.url</span></code> - The referral URL.</li>
 </ul>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/profile.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/profile.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_linode.get_region">
 <code class="descclassname">pulumi_linode.</code><code class="descname">get_region</code><span class="sig-paren">(</span><em>country=None</em>, <em>id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_region" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">linode_region</span></code> provides details about a specific Linode region.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/region.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/region.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_linode.get_ssh_key">
 <code class="descclassname">pulumi_linode.</code><code class="descname">get_ssh_key</code><span class="sig-paren">(</span><em>label=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_ssh_key" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">linode_sshkey</span></code> provides access to a specifically labeled SSH Key in the Profile of the User identified by the access token.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/sshkey.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/sshkey.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1690,6 +1646,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><code class="docutils literal notranslate"><span class="pre">email</span></code> - The email address for this User, for account management communications, and may be used for other communications as configured.</li>
 <li><code class="docutils literal notranslate"><span class="pre">restricted</span></code> - If true, this User must be granted access to perform actions or access entities on this Account.</li>
 </ul>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/user.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/user.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

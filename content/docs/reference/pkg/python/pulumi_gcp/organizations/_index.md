@@ -6,16 +6,7 @@
 <dl class="class">
 <dt id="pulumi_gcp.organizations.Folder">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">Folder</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>display_name=None</em>, <em>parent=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Folder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows management of a Google Cloud Platform folder. For more information see 
-<a class="reference external" href="https://cloud.google.com/resource-manager/docs/creating-managing-folders">the official documentation</a>
-and 
-<a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v2/folders">API</a>.</p>
-<p>A folder can contain projects, other folders, or a combination of both. You can use folders to group projects under an organization in a hierarchy. For example, your organization might contain multiple departments, each with its own set of Cloud Platform resources. Folders allows you to group these resources on a per-department basis. Folders are used to group resources that share common IAM policies.</p>
-<p>Folders created live inside an Organization. See the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/quickstarts">Organization documentation</a> for more details.</p>
-<p>The service account used to run Terraform when creating a <code class="docutils literal notranslate"><span class="pre">google_folder</span></code>
-resource must have <code class="docutils literal notranslate"><span class="pre">roles/resourcemanager.folderCreator</span></code>. See the
-<a class="reference external" href="https://cloud.google.com/resource-manager/docs/access-control-folders">Access Control for Folders Using IAM</a>
-doc for more information.</p>
+<dd><p>Create a Folder resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -32,6 +23,8 @@ Must be of the form <code class="docutils literal notranslate"><span class="pre"
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/folder.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/folder.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.Folder.create_time">
 <code class="descname">create_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Folder.create_time" title="Permalink to this definition">¶</a></dt>
@@ -331,18 +324,7 @@ referencing from a resource that supports IAM.</p>
 <dl class="class">
 <dt id="pulumi_gcp.organizations.IAMBinding">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">IAMBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>members=None</em>, <em>org_id=None</em>, <em>role=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows creation and management of a single binding within IAM policy for
-an existing Google Cloud Platform Organization.</p>
-<blockquote>
-<div><dl class="docutils">
-<dt><strong>Note:</strong> This resource <strong>must not</strong> be used in conjunction with</dt>
-<dd><code class="docutils literal notranslate"><span class="pre">google_organization_iam_member</span></code> for the <strong>same role</strong> or they will fight over
-what your policy should be.</dd>
-<dt><strong>Note:</strong> On create, this resource will overwrite members of any existing roles.</dt>
-<dd>Use <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">import</span></code> and inspect the <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">plan</span></code> output to ensure
-your existing members are preserved.</dd>
-</dl>
-</div></blockquote>
+<dd><p>Create a IAMBinding resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -360,6 +342,8 @@ your existing members are preserved.</dd>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_binding.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.IAMBinding.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMBinding.etag" title="Permalink to this definition">¶</a></dt>
@@ -429,20 +413,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.organizations.IAMCustomRole">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">IAMCustomRole</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>org_id=None</em>, <em>permissions=None</em>, <em>role_id=None</em>, <em>stage=None</em>, <em>title=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows management of a customized Cloud IAM organization role. For more information see
-<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-custom-roles">the official documentation</a>
-and
-<a class="reference external" href="https://cloud.google.com/iam/reference/rest/v1/organizations.roles">API</a>.</p>
-<blockquote>
-<div><dl class="docutils">
-<dt><strong>Warning:</strong> Note that custom roles in GCP have the concept of a soft-delete. There are two issues that may arise</dt>
-<dd>from this and how roles are propagated. 1) creating a role may involve undeleting and then updating a role with the
-same name, possibly causing confusing behavior between undelete and update. 2) A deleted role is permanently deleted
-after 7 days, but it can take up to 30 more days (i.e. between 7 and 37 days after deletion) before the role name is
-made available again. This means a deleted role that has been deleted for more than 7 days cannot be changed at all
-by Terraform, and new roles cannot share that name.</dd>
-</dl>
-</div></blockquote>
+<dd><p>Create a IAMCustomRole resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -463,6 +434,8 @@ List of possible stages is <a class="reference external" href="https://cloud.goo
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_custom_role.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_custom_role.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.IAMCustomRole.deleted">
 <code class="descname">deleted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMCustomRole.deleted" title="Permalink to this definition">¶</a></dt>
@@ -575,6 +548,8 @@ what your policy should be.</dd>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_member.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.IAMMember.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMMember.etag" title="Permalink to this definition">¶</a></dt>
@@ -675,6 +650,8 @@ policy applied to the organization.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_iam_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.IAMPolicy.org_id">
 <code class="descname">org_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.IAMPolicy.org_id" title="Permalink to this definition">¶</a></dt>
@@ -754,6 +731,8 @@ documentation</a> and
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/organization_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.Policy.boolean_policy">
 <code class="descname">boolean_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Policy.boolean_policy" title="Permalink to this definition">¶</a></dt>
@@ -845,31 +824,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.organizations.Project">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_create_network=None</em>, <em>billing_account=None</em>, <em>folder_id=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>org_id=None</em>, <em>project_id=None</em>, <em>skip_delete=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Project" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows creation and management of a Google Cloud Platform project.</p>
-<p>Projects created with this resource must be associated with an Organization.
-See the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/quickstarts">Organization documentation</a> for more details.</p>
-<p>The service account used to run Terraform when creating a <code class="docutils literal notranslate"><span class="pre">google_project</span></code>
-resource must have <code class="docutils literal notranslate"><span class="pre">roles/resourcemanager.projectCreator</span></code>. See the
-<a class="reference external" href="https://cloud.google.com/resource-manager/docs/access-control-org">Access Control for Organizations Using IAM</a>
-doc for more information.</p>
-<p>Note that prior to 0.8.5, <code class="docutils literal notranslate"><span class="pre">google_project</span></code> functioned like a data source,
-meaning any project referenced by it had to be created and managed outside
-Terraform. As of 0.8.5, <code class="docutils literal notranslate"><span class="pre">google_project</span></code> functions like any other Terraform
-resource, with Terraform creating and managing the project. To replicate the old
-behavior, either:</p>
-<ul class="simple">
-<li>Use the project ID directly in whatever is referencing the project, using the
-<a class="reference external" href="https://www.terraform.io/docs/providers/google/r/google_project_iam.html">google_project_iam_policy</a>
-to replace the old <code class="docutils literal notranslate"><span class="pre">policy_data</span></code> property.</li>
-<li>Use the <a class="reference external" href="https://www.terraform.io/docs/import/usage.html">import</a> functionality
-to import your pre-existing project into Terraform, where it can be referenced and
-used just like always, keeping in mind that Terraform will attempt to undo any changes
-made outside Terraform.</li>
-</ul>
-<blockquote>
-<div>It’s important to note that any project resources that were added to your Terraform config
-prior to 0.8.5 will continue to function as they always have, and will not be managed by
-Terraform. Only newly added projects are affected.</div></blockquote>
+<dd><p>Create a Project resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -881,11 +836,6 @@ Terraform. Only newly added projects are affected.</div></blockquote>
 If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project succesfully, even if
 you set <code class="docutils literal notranslate"><span class="pre">auto_create_network</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>, since the network will exist momentarily.</li>
-<li><strong>billing_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The alphanumeric ID of the billing account this project
-belongs to. The user or service account performing this operation with Terraform
-must have Billing Account Administrator privileges (<code class="docutils literal notranslate"><span class="pre">roles/billing.admin</span></code>) in
-the organization. See <a class="reference external" href="https://cloud.google.com/billing/v1/how-tos/access-control">Google Cloud Billing API Access Control</a>
-for more details.</li>
 <li><strong>folder_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The numeric ID of the folder this project should be
 created under. Only one of <code class="docutils literal notranslate"><span class="pre">org_id</span></code> or <code class="docutils literal notranslate"><span class="pre">folder_id</span></code> may be
 specified. If the <code class="docutils literal notranslate"><span class="pre">folder_id</span></code> is specified, then the project is
@@ -900,13 +850,13 @@ specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.</li>
 <li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. Changing this forces a new project to be created.</li>
-<li><strong>skip_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the Terraform resource can be deleted
-without deleting the Project via the Google API.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.Project.auto_create_network">
 <code class="descname">auto_create_network</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.auto_create_network" title="Permalink to this definition">¶</a></dt>
@@ -914,16 +864,6 @@ without deleting the Project via the Google API.</li>
 If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project succesfully, even if
 you set <code class="docutils literal notranslate"><span class="pre">auto_create_network</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>, since the network will exist momentarily.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.organizations.Project.billing_account">
-<code class="descname">billing_account</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.billing_account" title="Permalink to this definition">¶</a></dt>
-<dd><p>The alphanumeric ID of the billing account this project
-belongs to. The user or service account performing this operation with Terraform
-must have Billing Account Administrator privileges (<code class="docutils literal notranslate"><span class="pre">roles/billing.admin</span></code>) in
-the organization. See <a class="reference external" href="https://cloud.google.com/billing/v1/how-tos/access-control">Google Cloud Billing API Access Control</a>
-for more details.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -971,13 +911,6 @@ organization.</p>
 <dd><p>The project ID. Changing this forces a new project to be created.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_gcp.organizations.Project.skip_delete">
-<code class="descname">skip_delete</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.skip_delete" title="Permalink to this definition">¶</a></dt>
-<dd><p>If true, the Terraform resource can be deleted
-without deleting the Project via the Google API.</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_gcp.organizations.Project.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.Project.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1022,18 +955,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.organizations.get_active_folder">
 <code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">get_active_folder</code><span class="sig-paren">(</span><em>display_name=None</em>, <em>parent=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_active_folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an active folder within GCP by <code class="docutils literal notranslate"><span class="pre">display_name</span></code> and <code class="docutils literal notranslate"><span class="pre">parent</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/active_folder.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/active_folder.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.organizations.get_billing_account">
 <code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">get_billing_account</code><span class="sig-paren">(</span><em>billing_account=None</em>, <em>display_name=None</em>, <em>open=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_billing_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Google Billing Account.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/billing_account.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/billing_account.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.organizations.get_client_config">
 <code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">get_client_config</code><span class="sig-paren">(</span><em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_client_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the configuration of the Google Cloud provider.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/client_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/client_config.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1047,15 +986,19 @@ account you’ve authenticated the provider with; this can be used alongside
 <code class="docutils literal notranslate"><span class="pre">data.google_client_config</span></code>’s <code class="docutils literal notranslate"><span class="pre">access_token</span></code> to perform OpenID Connect
 authentication with GKE and configure an RBAC role for the email used.</p>
 <blockquote>
-<div>This resource will only work as expected if the provider is configured to
+<div><p>This resource will only work as expected if the provider is configured to
 use the <code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/auth/userinfo.email</span></code> scope! You will
-receive an error otherwise.</div></blockquote>
+receive an error otherwise.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/client_openid_userinfo.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/client_openid_userinfo.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.organizations.get_folder">
 <code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">get_folder</code><span class="sig-paren">(</span><em>folder=None</em>, <em>lookup_organization=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Google Cloud Folder.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/folder.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/folder.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1069,12 +1012,16 @@ from another resource is the only way to apply an IAM policy to a resource.</p>
 <p><strong>Note:</strong> Several restrictions apply when setting IAM policies through this API.
 See the <a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v1/projects/setIamPolicy">setIamPolicy docs</a>
 for a list of these restrictions.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/iam_policy.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.organizations.get_organization">
 <code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">get_organization</code><span class="sig-paren">(</span><em>domain=None</em>, <em>organization=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.get_organization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Google Cloud Organization.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/organization.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/organization.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1083,6 +1030,8 @@ for a list of these restrictions.</p>
 <dd><p>Use this data source to get project details.
 For more information see 
 <a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v1/projects#Project">API</a></p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/project.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1091,6 +1040,8 @@ For more information see
 <dd><p>Use this data source to get details on the enabled project services.</p>
 <p>For a list of services available, visit the
 <a class="reference external" href="https://console.cloud.google.com/apis/library">API library page</a> or run <code class="docutils literal notranslate"><span class="pre">gcloud</span> <span class="pre">services</span> <span class="pre">list</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/project_services.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/project_services.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

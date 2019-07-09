@@ -26,6 +26,8 @@ By using the <code class="docutils literal notranslate"><span class="pre">aws_eb
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_default_kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_default_kms_key.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.DefaultKmsKey.key_arn">
 <code class="descname">key_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.DefaultKmsKey.key_arn" title="Permalink to this definition">¶</a></dt>
@@ -75,9 +77,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ebs.EncryptionByDefault">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">EncryptionByDefault</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.EncryptionByDefault" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to manage whether default EBS encryption is enabled for your AWS account in the current AWS region. To manage the default KMS key for the region, see the <cite>``aws_ebs_default_kms_key`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/ebs_default_kms_key.html">https://www.terraform.io/docs/providers/aws/r/ebs_default_kms_key.html</a>&gt;`_.</p>
-<blockquote>
-<div><strong>NOTE:</strong> Removing this Terraform resource disables default EBS encryption.</div></blockquote>
+<dd><p>Create a EncryptionByDefault resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -91,6 +91,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_encryption_by_default.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_encryption_by_default.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.EncryptionByDefault.enabled">
 <code class="descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.EncryptionByDefault.enabled" title="Permalink to this definition">¶</a></dt>
@@ -354,6 +356,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.Snapshot.data_encryption_key_id">
 <code class="descname">data_encryption_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.Snapshot.data_encryption_key_id" title="Permalink to this definition">¶</a></dt>
@@ -475,6 +479,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot_copy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot_copy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.SnapshotCopy.data_encryption_key_id">
 <code class="descname">data_encryption_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.SnapshotCopy.data_encryption_key_id" title="Permalink to this definition">¶</a></dt>
@@ -595,6 +601,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_volume.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.Volume.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.Volume.arn" title="Permalink to this definition">¶</a></dt>
@@ -693,18 +701,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ebs.get_default_kms_key">
 <code class="descclassname">pulumi_aws.ebs.</code><code class="descname">get_default_kms_key</code><span class="sig-paren">(</span><em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_default_kms_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the default EBS encryption KMS key in the current region.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_default_kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_default_kms_key.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ebs.get_encryption_by_default">
 <code class="descclassname">pulumi_aws.ebs.</code><code class="descname">get_encryption_by_default</code><span class="sig-paren">(</span><em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_encryption_by_default" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a way to check whether default EBS encryption is enabled for your AWS account in the current AWS region.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_encryption_by_default.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_encryption_by_default.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ebs.get_snapshot">
 <code class="descclassname">pulumi_aws.ebs.</code><code class="descname">get_snapshot</code><span class="sig-paren">(</span><em>filters=None</em>, <em>most_recent=None</em>, <em>owners=None</em>, <em>restorable_by_user_ids=None</em>, <em>snapshot_ids=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an EBS Snapshot for use when provisioning EBS Volumes</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_snapshot.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -712,6 +726,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_aws.ebs.</code><code class="descname">get_snapshot_ids</code><span class="sig-paren">(</span><em>filters=None</em>, <em>owners=None</em>, <em>restorable_by_user_ids=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_snapshot_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of EBS Snapshot IDs matching the specified
 criteria.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_snapshot_ids.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_snapshot_ids.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -719,6 +735,8 @@ criteria.</p>
 <code class="descclassname">pulumi_aws.ebs.</code><code class="descname">get_volume</code><span class="sig-paren">(</span><em>filters=None</em>, <em>most_recent=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an EBS volume for use in other
 resources.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_volume.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

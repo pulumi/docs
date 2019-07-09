@@ -59,6 +59,8 @@ routing method. Supports values between 1 and 1000.</td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/traffic_manager_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/traffic_manager_endpoint.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.trafficmanager.Endpoint.endpoint_location">
 <code class="descname">endpoint_location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.trafficmanager.Endpoint.endpoint_location" title="Permalink to this definition">¶</a></dt>
@@ -238,6 +240,8 @@ create the virtual network.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/traffic_manager_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/traffic_manager_profile.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.trafficmanager.Profile.dns_configs">
 <code class="descname">dns_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.trafficmanager.Profile.dns_configs" title="Permalink to this definition">¶</a></dt>
@@ -343,6 +347,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.trafficmanager.get_geographical_location">
 <code class="descclassname">pulumi_azure.trafficmanager.</code><code class="descname">get_geographical_location</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.trafficmanager.get_geographical_location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the ID of a specified Traffic Manager Geographical Location within the Geographical Hierarchy.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/traffic_manager_geographical_location.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/traffic_manager_geographical_location.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

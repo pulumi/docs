@@ -25,6 +25,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_gcp.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_gcp.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_datadog.gcp.Integration.client_email">
 <code class="descname">client_email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.gcp.Integration.client_email" title="Permalink to this definition">¶</a></dt>

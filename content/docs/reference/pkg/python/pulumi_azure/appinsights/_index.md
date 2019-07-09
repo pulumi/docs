@@ -24,6 +24,8 @@ new resource to be created.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/application_insights_api_key.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/application_insights_api_key.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.appinsights.ApiKey.api_key">
 <code class="descname">api_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.ApiKey.api_key" title="Permalink to this definition">¶</a></dt>
@@ -160,6 +162,8 @@ create the Application Insights component.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/application_insights.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/application_insights.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.appinsights.Insights.app_id">
 <code class="descname">app_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.Insights.app_id" title="Permalink to this definition">¶</a></dt>
@@ -272,6 +276,8 @@ new resource to be created.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/application_insights_web_test.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/application_insights_web_test.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.appinsights.WebTest.application_insights_id">
 <code class="descname">application_insights_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.application_insights_id" title="Permalink to this definition">¶</a></dt>
@@ -383,6 +389,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appinsights.get_insights">
 <code class="descclassname">pulumi_azure.appinsights.</code><code class="descname">get_insights</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.get_insights" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Application Insights component.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/application_insights.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/application_insights.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

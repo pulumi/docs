@@ -6,11 +6,7 @@
 <dl class="class">
 <dt id="pulumi_aws.s3.AccountPublicAccessBlock">
 <em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">AccountPublicAccessBlock</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>block_public_acls=None</em>, <em>block_public_policy=None</em>, <em>ignore_public_acls=None</em>, <em>restrict_public_buckets=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AccountPublicAccessBlock" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages S3 account-level Public Access Block configuration. For more information about these settings, see the <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">AWS S3 Block Public Access documentation</a>.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> Each AWS account may only have one S3 Public Access Block configuration. Multiple configurations of the resource against the same AWS account will cause a perpetual difference.</p>
-<p>Advanced usage: To use a custom API endpoint for this Terraform resource, use the <cite>``s3control`</cite> endpoint provider configuration &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/index.html#s3control">https://www.terraform.io/docs/providers/aws/index.html#s3control</a>&gt;`_, not the <code class="docutils literal notranslate"><span class="pre">s3</span></code> endpoint provider configuration.</p>
-</div></blockquote>
+<dd><p>Create a AccountPublicAccessBlock resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -18,7 +14,6 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS account ID to configure. Defaults to automatically determined account ID of the Terraform AWS provider.</li>
 <li><strong>block_public_acls</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Enabling this setting does not affect existing policies or ACLs. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> causes the following behavior:</li>
 </ul>
 </td>
@@ -49,12 +44,8 @@
 </tr>
 </tbody>
 </table>
-<dl class="attribute">
-<dt id="pulumi_aws.s3.AccountPublicAccessBlock.account_id">
-<code class="descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AccountPublicAccessBlock.account_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>AWS account ID to configure. Defaults to automatically determined account ID of the Terraform AWS provider.</p>
-</dd></dl>
-
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_account_public_access_block.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_account_public_access_block.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.AccountPublicAccessBlock.block_public_acls">
 <code class="descname">block_public_acls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AccountPublicAccessBlock.block_public_acls" title="Permalink to this definition">¶</a></dt>
@@ -154,7 +145,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>lifecycle_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A configuration of <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html">object lifecycle management</a> (documented below).</li>
 <li><strong>loggings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A settings of <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html">bucket logging</a> (documented below).</li>
 <li><strong>object_lock_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration of <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">S3 object locking</a> (documented below)</li>
-<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html">bucket policy</a> JSON document. Note that if the policy document is not specific enough (but still valid), Terraform may view the policy as constantly changing in a <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">plan</span></code>. In this case, please make sure you use the verbose/specific version of the policy. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If specified, the AWS region this bucket should reside in. Otherwise, the region used by the callee.</li>
 <li><strong>replication_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration of <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html">replication configuration</a> (documented below).</li>
 <li><strong>request_payer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies who should bear the cost of Amazon S3 data transfer.
@@ -173,6 +163,8 @@ The rule applies only to objects having all the tags in its tagset.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.Bucket.acceleration_status">
 <code class="descname">acceleration_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Bucket.acceleration_status" title="Permalink to this definition">¶</a></dt>
@@ -249,12 +241,6 @@ The rule applies only to objects having all the tags in its tagset.</li>
 <dt id="pulumi_aws.s3.Bucket.object_lock_configuration">
 <code class="descname">object_lock_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Bucket.object_lock_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>A configuration of <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">S3 object locking</a> (documented below)</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.s3.Bucket.policy">
-<code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Bucket.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A valid <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html">bucket policy</a> JSON document. Note that if the policy document is not specific enough (but still valid), Terraform may view the policy as constantly changing in a <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">plan</span></code>. In this case, please make sure you use the verbose/specific version of the policy. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -374,6 +360,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_metric.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_metric.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.BucketMetric.bucket">
 <code class="descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketMetric.bucket" title="Permalink to this definition">¶</a></dt>
@@ -454,6 +442,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_notification.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.BucketNotification.bucket">
 <code class="descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketNotification.bucket" title="Permalink to this definition">¶</a></dt>
@@ -539,8 +529,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>content_encoding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11">w3c content encoding</a> for further information.</li>
 <li><strong>content_language</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The language the content is in e.g. en-US or en-GB.</li>
 <li><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.</li>
-<li><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. The only meaningful value is <code class="docutils literal notranslate"><span class="pre">${filemd5(&quot;path/to/file&quot;)}</span></code> (Terraform 0.11.12 or later) or <code class="docutils literal notranslate"><span class="pre">${md5(file(&quot;path/to/file&quot;))}</span></code> (Terraform 0.11.11 or earlier).
-This attribute is not compatible with KMS encryption, <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> or <code class="docutils literal notranslate"><span class="pre">server_side_encryption</span> <span class="pre">=</span> <span class="pre">&quot;aws:kms&quot;</span></code>.</li>
+<li><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the ETag generated for the object (an MD5 sum of the object content). For plaintext objects or objects encrypted with an AWS-managed key, the hash is an MD5 digest of the object data. For objects encrypted with a KMS key or objects created by either the Multipart Upload or Part Copy operation, the hash is not an MD5 digest, regardless of the method of encryption. More information on possible values can be found on <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTCommonResponseHeaders.html">Common Response Headers</a>.</li>
 <li><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object once it is in the bucket.</li>
 <li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the AWS KMS Key ARN to use for object encryption.
 This value is a fully qualified <strong>ARN</strong> of the KMS Key. If using <code class="docutils literal notranslate"><span class="pre">aws_kms_key</span></code>,
@@ -557,6 +546,8 @@ for the object. Can be either “<code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_object.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.BucketObject.acl">
 <code class="descname">acl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketObject.acl" title="Permalink to this definition">¶</a></dt>
@@ -614,8 +605,7 @@ for the object. Can be either “<code class="docutils literal notranslate"><spa
 <dl class="attribute">
 <dt id="pulumi_aws.s3.BucketObject.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketObject.etag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Used to trigger updates. The only meaningful value is <code class="docutils literal notranslate"><span class="pre">${filemd5(&quot;path/to/file&quot;)}</span></code> (Terraform 0.11.12 or later) or <code class="docutils literal notranslate"><span class="pre">${md5(file(&quot;path/to/file&quot;))}</span></code> (Terraform 0.11.11 or earlier).
-This attribute is not compatible with KMS encryption, <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> or <code class="docutils literal notranslate"><span class="pre">server_side_encryption</span> <span class="pre">=</span> <span class="pre">&quot;aws:kms&quot;</span></code>.</p>
+<dd><p>the ETag generated for the object (an MD5 sum of the object content). For plaintext objects or objects encrypted with an AWS-managed key, the hash is an MD5 digest of the object data. For objects encrypted with a KMS key or objects created by either the Multipart Upload or Part Copy operation, the hash is not an MD5 digest, regardless of the method of encryption. More information on possible values can be found on <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTCommonResponseHeaders.html">Common Response Headers</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -723,23 +713,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket to which to apply the policy.</li>
-<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The text of the policy. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</p>
-</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.BucketPolicy.bucket">
 <code class="descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketPolicy.bucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the bucket to which to apply the policy.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.s3.BucketPolicy.policy">
-<code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketPolicy.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The text of the policy. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -827,6 +811,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_public_access_block.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_public_access_block.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.BucketPublicAccessBlock.block_public_acls">
 <code class="descname">block_public_acls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketPublicAccessBlock.block_public_acls" title="Permalink to this definition">¶</a></dt>
@@ -1108,6 +1094,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_inventory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_inventory.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.Inventory.bucket">
 <code class="descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Inventory.bucket" title="Permalink to this definition">¶</a></dt>
@@ -1202,6 +1190,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides details about a specific S3 bucket.</p>
 <p>This resource may prove useful when setting up a Route53 record, or an origin for a CloudFront
 Distribution.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1210,7 +1200,9 @@ Distribution.</p>
 <dd><p>The S3 object data source allows access to the metadata and
 <em>optionally</em> (see below) content of an object stored inside S3 bucket.</p>
 <blockquote>
-<div><strong>Note:</strong> The content of an object (<code class="docutils literal notranslate"><span class="pre">body</span></code> field) is available only for objects which have a human-readable <code class="docutils literal notranslate"><span class="pre">Content-Type</span></code> (<code class="docutils literal notranslate"><span class="pre">text/*</span></code> and <code class="docutils literal notranslate"><span class="pre">application/json</span></code>). This is to prevent printing unsafe characters and potentially downloading large amount of data which would be thrown away in favour of metadata.</div></blockquote>
+<div><p><strong>Note:</strong> The content of an object (<code class="docutils literal notranslate"><span class="pre">body</span></code> field) is available only for objects which have a human-readable <code class="docutils literal notranslate"><span class="pre">Content-Type</span></code> (<code class="docutils literal notranslate"><span class="pre">text/*</span></code> and <code class="docutils literal notranslate"><span class="pre">application/json</span></code>). This is to prevent printing unsafe characters and potentially downloading large amount of data which would be thrown away in favour of metadata.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket_object.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

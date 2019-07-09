@@ -41,6 +41,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_address.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_address.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Address.address">
 <code class="descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Address.address" title="Permalink to this definition">¶</a></dt>
@@ -103,21 +105,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.compute.AttachedDisk">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">AttachedDisk</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>device_name=None</em>, <em>disk=None</em>, <em>instance=None</em>, <em>mode=None</em>, <em>project=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.AttachedDisk" title="Permalink to this definition">¶</a></dt>
-<dd><p>Persistent disks can be attached to a compute instance using <cite>the ``attached_disk`</cite>
-section within the compute instance configuration &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/google/r/compute_instance.html#attached_disk">https://www.terraform.io/docs/providers/google/r/compute_instance.html#attached_disk</a>&gt;`_.
-However there may be situations where managing the attached disks via the compute
-instance config isn’t preferable or possible, such as attaching dynamic
-numbers of disks using the <code class="docutils literal notranslate"><span class="pre">count</span></code> variable.</p>
-<p>To get more information about attaching disks, see:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/instances/attachDisk">API documentation</a></li>
-<li><a class="reference external" href="https://www.terraform.io/docs/providers/google/r/compute_disk.html">Resource: google_compute_disk</a></li>
-<li>How-to Guides<ul>
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/disks/add-persistent-disk">Adding a persistent disk</a></li>
-</ul>
-</li>
-</ul>
-<p><strong>Note:</strong> When using <code class="docutils literal notranslate"><span class="pre">compute_attached_disk</span></code> you <strong>must</strong> use <code class="docutils literal notranslate"><span class="pre">lifecycle.ignore_changes</span> <span class="pre">=</span> <span class="pre">[&quot;attached_disk&quot;]</span></code> on the <code class="docutils literal notranslate"><span class="pre">compute_instance</span></code> resource that has the disks attached. Otherwise the two resources will fight for control of the attached disk block.</p>
+<dd><p>Create a AttachedDisk resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -130,6 +118,8 @@ numbers of disks using the <code class="docutils literal notranslate"><span clas
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_attached_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_attached_disk.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_gcp.compute.AttachedDisk.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.AttachedDisk.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -197,6 +187,8 @@ define.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_autoscaler.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_autoscaler.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Autoscalar.self_link">
 <code class="descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Autoscalar.self_link" title="Permalink to this definition">¶</a></dt>
@@ -274,6 +266,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_backend_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_backend_bucket.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.BackendBucket.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendBucket.project" title="Permalink to this definition">¶</a></dt>
@@ -357,6 +351,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_backend_service.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_backend_service.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.BackendService.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.project" title="Permalink to this definition">¶</a></dt>
@@ -452,6 +448,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_disk.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Disk.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Disk.project" title="Permalink to this definition">¶</a></dt>
@@ -508,14 +506,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.compute.ExternalVpnGateway">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">ExternalVpnGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>interfaces=None</em>, <em>name=None</em>, <em>project=None</em>, <em>redundancy_type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ExternalVpnGateway" title="Permalink to this definition">¶</a></dt>
-<dd><p>Represents a VPN gateway managed outside of GCP.</p>
-<blockquote>
-<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
-<p>To get more information about ExternalVpnGateway, see:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/externalVpnGateways">API documentation</a></li>
-</ul>
+<dd><p>Create a ExternalVpnGateway resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -530,6 +521,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_external_vpn_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_external_vpn_gateway.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.ExternalVpnGateway.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ExternalVpnGateway.project" title="Permalink to this definition">¶</a></dt>
@@ -612,6 +605,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_firewall.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_firewall.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Firewall.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Firewall.project" title="Permalink to this definition">¶</a></dt>
@@ -693,6 +688,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_forwarding_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_forwarding_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.ForwardingRule.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ForwardingRule.project" title="Permalink to this definition">¶</a></dt>
@@ -783,7 +780,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetBackendServiceResult.backends">
 <code class="descname">backends</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GetBackendServiceResult.backends" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of backends that serve this Backend Service.</p>
+<dd><p>The set of backends that serve this Backend Service.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -813,7 +810,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetBackendServiceResult.health_checks">
 <code class="descname">health_checks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GetBackendServiceResult.health_checks" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of HTTP/HTTPS health checks used by the Backend Service.</p>
+<dd><p>The set of HTTP/HTTPS health checks used by the Backend Service.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1672,6 +1669,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_global_address.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_global_address.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GlobalAddress.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalAddress.project" title="Permalink to this definition">¶</a></dt>
@@ -1748,6 +1747,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_global_forwarding_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_global_forwarding_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GlobalForwardingRule.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalForwardingRule.project" title="Permalink to this definition">¶</a></dt>
@@ -1804,21 +1805,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.compute.HaVpnGateway">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">HaVpnGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>network=None</em>, <em>project=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.HaVpnGateway" title="Permalink to this definition">¶</a></dt>
-<dd><p>Represents a VPN gateway running in GCP. This virtual device is managed
-by Google, but used only by you. This type of VPN Gateway allows for the creation
-of VPN solutions with higher availability than classic Target VPN Gateways.</p>
-<blockquote>
-<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
-<p>To get more information about HaVpnGateway, see:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/vpnGateways">API documentation</a></li>
-<li>How-to Guides<ul>
-<li><a class="reference external" href="https://cloud.google.com/vpn/docs/how-to/choosing-a-vpn">Choosing a VPN</a></li>
-<li><a class="reference external" href="https://cloud.google.com/vpn/docs/concepts/overview">Cloud VPN Overview</a></li>
-</ul>
-</li>
-</ul>
+<dd><p>Create a HaVpnGateway resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1833,6 +1820,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_ha_vpn_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_ha_vpn_gateway.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.HaVpnGateway.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.HaVpnGateway.project" title="Permalink to this definition">¶</a></dt>
@@ -1921,6 +1910,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_health_check.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_health_check.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.HealthCheck.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.HealthCheck.project" title="Permalink to this definition">¶</a></dt>
@@ -2007,6 +1998,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_http_health_check.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_http_health_check.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.HttpHealthCheck.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.HttpHealthCheck.project" title="Permalink to this definition">¶</a></dt>
@@ -2093,6 +2086,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_https_health_check.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_https_health_check.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.HttpsHealthCheck.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.HttpsHealthCheck.project" title="Permalink to this definition">¶</a></dt>
@@ -2184,6 +2179,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_image.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_image.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Image.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Image.project" title="Permalink to this definition">¶</a></dt>
@@ -2251,16 +2248,12 @@ and
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>allow_stopping_for_update</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, allows Terraform to stop the instance to update its properties.
-If you try to update a property that requires stopping the instance without setting this field, the update will fail.</li>
 <li><strong>attached_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.</li>
 <li><strong>boot_disk</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The boot disk for the instance.
 Structure is documented below.</li>
 <li><strong>can_ip_forward</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow sending and receiving of
 packets with non-matching source or destination IPs.
 This defaults to false.</li>
-<li><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable deletion protection on this instance. Defaults to false.
-<strong>Note:</strong> you must disable deletion protection before removing the resource (e.g., via <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">destroy</span></code>), or the instance cannot be deleted and the Terraform run will not complete successfully.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A brief description of this resource.</li>
 <li><strong>guest_accelerators</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of the type and count of accelerator cards attached to the instance. Structure documented below.
 <strong>Note:</strong> GPU accelerators can only be used with <code class="docutils literal notranslate"><span class="pre">on_host_maintenance</span></code> option set to TERMINATE.</li>
@@ -2303,13 +2296,8 @@ Structure is documented below.
 </tr>
 </tbody>
 </table>
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.Instance.allow_stopping_for_update">
-<code class="descname">allow_stopping_for_update</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Instance.allow_stopping_for_update" title="Permalink to this definition">¶</a></dt>
-<dd><p>If true, allows Terraform to stop the instance to update its properties.
-If you try to update a property that requires stopping the instance without setting this field, the update will fail.</p>
-</dd></dl>
-
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Instance.attached_disks">
 <code class="descname">attached_disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Instance.attached_disks" title="Permalink to this definition">¶</a></dt>
@@ -2335,13 +2323,6 @@ This defaults to false.</p>
 <dt id="pulumi_gcp.compute.Instance.cpu_platform">
 <code class="descname">cpu_platform</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Instance.cpu_platform" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CPU platform used by this instance.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.Instance.deletion_protection">
-<code class="descname">deletion_protection</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Instance.deletion_protection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enable deletion protection on this instance. Defaults to false.
-<strong>Note:</strong> you must disable deletion protection before removing the resource (e.g., via <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">destroy</span></code>), or the instance cannot be deleted and the Terraform run will not complete successfully.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2563,6 +2544,8 @@ set, the provider zone is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_from_template.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_from_template.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceFromTemplate.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceFromTemplate.name" title="Permalink to this definition">¶</a></dt>
@@ -2627,13 +2610,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.compute.InstanceGroup">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">InstanceGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>instances=None</em>, <em>name=None</em>, <em>named_ports=None</em>, <em>network=None</em>, <em>project=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a group of dissimilar Compute Engine virtual machine instances.
-For more information, see <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups">the official documentation</a>
-and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instanceGroups">API</a></p>
-<blockquote>
-<div>Recreating an instance group that’s in use by another resource will give a
-<code class="docutils literal notranslate"><span class="pre">resourceInUseByAnotherResource</span></code> error. You can avoid this error with a
-Terraform <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> block as outlined in the example below.</div></blockquote>
+<dd><p>Create a InstanceGroup resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2664,6 +2641,8 @@ is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_group.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceGroup.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroup.description" title="Permalink to this definition">¶</a></dt>
@@ -2827,9 +2806,6 @@ an autoscaler, in which case it should never be set. Defaults to <code class="do
 <li><strong>versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – ) Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
 Structure is documented below.</li>
-<li><strong>wait_for_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to wait for all instances to be created/updated before
-returning. Note that if this is set to true and the operation does not succeed, Terraform will
-continue trying until it times out.</li>
 <li><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone that instances in this group should be created
 in.</li>
 </ul>
@@ -2837,6 +2813,8 @@ in.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_group_manager.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_group_manager.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceGroupManager.auto_healing_policies">
 <code class="descname">auto_healing_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager.auto_healing_policies" title="Permalink to this definition">¶</a></dt>
@@ -2934,14 +2912,6 @@ Structure is documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_gcp.compute.InstanceGroupManager.wait_for_instances">
-<code class="descname">wait_for_instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager.wait_for_instances" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to wait for all instances to be created/updated before
-returning. Note that if this is set to true and the operation does not succeed, Terraform will
-continue trying until it times out.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceGroupManager.zone">
 <code class="descname">zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager.zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>The zone that instances in this group should be created
@@ -3021,6 +2991,8 @@ unspecified, this defaults to the zone configured in the provider.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_iam_binding.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMBinding.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMBinding.etag" title="Permalink to this definition">¶</a></dt>
@@ -3128,6 +3100,8 @@ unspecified, this defaults to the zone configured in the provider.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_iam_member.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMMember.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMMember.etag" title="Permalink to this definition">¶</a></dt>
@@ -3234,6 +3208,8 @@ unspecified, this defaults to the zone configured in the provider.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_iam_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMPolicy.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMPolicy.etag" title="Permalink to this definition">¶</a></dt>
@@ -3342,8 +3318,6 @@ thus the two mechanisms are not allowed to be used simultaneously.</li>
 <li><strong>min_cpu_platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
 <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">Haswell</span></code> or <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">Skylake</span></code>. See the complete list <a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">here</a>.</p>
 </li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance template. If you leave
-this blank, Terraform will auto-generate a unique name.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>network_interfaces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Networks to attach to instances created from
@@ -3369,6 +3343,8 @@ this configuration option are detailed below.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_template.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_template.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceTemplate.can_ip_forward">
 <code class="descname">can_ip_forward</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceTemplate.can_ip_forward" title="Permalink to this definition">¶</a></dt>
@@ -3443,13 +3419,6 @@ thus the two mechanisms are not allowed to be used simultaneously.</p>
 <code class="descname">min_cpu_platform</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceTemplate.min_cpu_platform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
 <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">Haswell</span></code> or <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">Skylake</span></code>. See the complete list <a class="reference external" href="https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform">here</a>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.InstanceTemplate.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceTemplate.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the instance template. If you leave
-this blank, Terraform will auto-generate a unique name.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3582,6 +3551,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_interconnect_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_interconnect_attachment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InterconnectAttachment.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InterconnectAttachment.project" title="Permalink to this definition">¶</a></dt>
@@ -3638,34 +3609,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.compute.MangedSslCertificate">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">MangedSslCertificate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_id=None</em>, <em>description=None</em>, <em>managed=None</em>, <em>name=None</em>, <em>project=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.MangedSslCertificate" title="Permalink to this definition">¶</a></dt>
-<dd><p>An SslCertificate resource, used for HTTPS load balancing.  This resource
-represents a certificate for which the certificate secrets are created and
-managed by Google.</p>
-<p>For a resource where you provide the key, see the
-SSL Certificate resource.</p>
-<blockquote>
-<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
-<p>To get more information about ManagedSslCertificate, see:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/sslCertificates">API documentation</a></li>
-<li>How-to Guides<ul>
-<li><a class="reference external" href="https://cloud.google.com/load-balancing/docs/ssl-certificates">Official Documentation</a></li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<div><strong>Warning:</strong> This resource should be used with extreme caution!  Provisioning an SSL
-certificate is complex.  Ensure that you understand the lifecycle of a
-certificate before attempting complex tasks like cert rotation automatically.
-This resource will “return” as soon as the certificate object is created,
-but post-creation the certificate object will go through a “provisioning”
-process.  The provisioning process can complete only when the domain name
-for which the certificate is created points to a target pool which, itself,
-points at the certificate.  Depending on your DNS provider, this may take
-some time, and migrating from self-managed certificates to Google-managed
-certificates may entail some downtime while the certificate provisions.</div></blockquote>
-<p>In conclusion: Be extremely cautious.</p>
+<dd><p>Create a MangedSslCertificate resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -3680,6 +3624,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_managed_ssl_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_managed_ssl_certificate.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.MangedSslCertificate.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.MangedSslCertificate.project" title="Permalink to this definition">¶</a></dt>
@@ -3759,6 +3705,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_network.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_network.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Network.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Network.project" title="Permalink to this definition">¶</a></dt>
@@ -3842,6 +3790,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_network_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_network_endpoint.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.NetworkEndpoint.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NetworkEndpoint.project" title="Permalink to this definition">¶</a></dt>
@@ -3923,11 +3873,19 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_network_endpoint_group.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_network_endpoint_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.NetworkEndpointGroup.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NetworkEndpointGroup.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.NetworkEndpointGroup.self_link">
+<code class="descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NetworkEndpointGroup.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URI of the created resource.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3998,6 +3956,8 @@ be created and managed automatically. Defaults to <code class="docutils literal 
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_network_peering.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_network_peering.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.NetworkPeering.auto_create_routes">
 <code class="descname">auto_create_routes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NetworkPeering.auto_create_routes" title="Permalink to this definition">¶</a></dt>
@@ -4078,20 +4038,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.compute.NodeGroup">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">NodeGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>node_template=None</em>, <em>project=None</em>, <em>size=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NodeGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Represents a NodeGroup resource to manage a group of sole-tenant nodes.</p>
-<p>To get more information about NodeGroup, see:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups">API documentation</a></li>
-<li>How-to Guides<ul>
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/nodes/">Sole-Tenant Nodes</a></li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<div><strong>Warning:</strong> Due to limitations of the API, Terraform cannot update the
-number of nodes in a node group and changes to node group size either
-through Terraform config or through external changes will cause
-Terraform to delete and recreate the node group.</div></blockquote>
+<dd><p>Create a NodeGroup resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -4106,6 +4053,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_node_group.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_node_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.NodeGroup.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NodeGroup.project" title="Permalink to this definition">¶</a></dt>
@@ -4187,6 +4136,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_node_template.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_node_template.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.NodeTemplate.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NodeTemplate.project" title="Permalink to this definition">¶</a></dt>
@@ -4241,6 +4192,86 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gcp.compute.ProjectDefaultNetworkTier">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">ProjectDefaultNetworkTier</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>network_tier=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ProjectDefaultNetworkTier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures the Google Compute Engine
+<a class="reference external" href="https://cloud.google.com/network-tiers/docs/using-network-service-tiers#setting_the_tier_for_all_resources_in_a_project">Default Network Tier</a>
+for a project.</p>
+<p>For more information, see,
+<a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/projects/setDefaultNetworkTier">the Project API documentation</a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>network_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default network tier to be configured for the project.
+This field can take the following values: <code class="docutils literal notranslate"><span class="pre">PREMIUM</span></code> or <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
+is not provided, the provider project is used.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_project_default_network_tier.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_project_default_network_tier.html.markdown</a>.</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.ProjectDefaultNetworkTier.network_tier">
+<code class="descname">network_tier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ProjectDefaultNetworkTier.network_tier" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default network tier to be configured for the project.
+This field can take the following values: <code class="docutils literal notranslate"><span class="pre">PREMIUM</span></code> or <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.ProjectDefaultNetworkTier.project">
+<code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ProjectDefaultNetworkTier.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs. If it
+is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.ProjectDefaultNetworkTier.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ProjectDefaultNetworkTier.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.ProjectDefaultNetworkTier.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ProjectDefaultNetworkTier.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.compute.ProjectMetadata">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">ProjectMetadata</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>metadata=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ProjectMetadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Authoritatively manages metadata common to all instances for a project in GCE. For more information see
@@ -4267,6 +4298,8 @@ is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_project_metadata.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_project_metadata.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.ProjectMetadata.metadata">
 <code class="descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ProjectMetadata.metadata" title="Permalink to this definition">¶</a></dt>
@@ -4323,10 +4356,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.compute.ProjectMetadataItem">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">ProjectMetadataItem</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>key=None</em>, <em>project=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ProjectMetadataItem" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a single key/value pair on metadata common to all instances for
-a project in GCE. Using <code class="docutils literal notranslate"><span class="pre">google_compute_project_metadata_item</span></code> lets you
-manage a single key/value setting in Terraform rather than the entire
-project metadata map.</p>
+<dd><p>Create a ProjectMetadataItem resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -4343,6 +4373,8 @@ is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_project_metadata_item.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_project_metadata_item.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.ProjectMetadataItem.key">
 <code class="descname">key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ProjectMetadataItem.key" title="Permalink to this definition">¶</a></dt>
@@ -4429,6 +4461,8 @@ define.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_autoscaler.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_autoscaler.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.RegionAutoscaler.self_link">
 <code class="descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionAutoscaler.self_link" title="Permalink to this definition">¶</a></dt>
@@ -4504,6 +4538,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_backend_service.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_backend_service.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.RegionBackendService.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.project" title="Permalink to this definition">¶</a></dt>
@@ -4599,6 +4635,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_disk.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.RegionDisk.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionDisk.project" title="Permalink to this definition">¶</a></dt>
@@ -4714,14 +4752,13 @@ an autoscaler, in which case it should never be set. Defaults to <code class="do
 <li><strong>versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – ) Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
 Structure is documented below.</li>
-<li><strong>wait_for_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to wait for all instances to be created/updated before
-returning. Note that if this is set to true and the operation does not succeed, Terraform will
-continue trying until it times out.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_instance_group_manager.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_instance_group_manager.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.RegionInstanceGroupManager.auto_healing_policies">
 <code class="descname">auto_healing_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager.auto_healing_policies" title="Permalink to this definition">¶</a></dt>
@@ -4831,14 +4868,6 @@ version deals with a specific instance template, allowing canary release scenari
 Structure is documented below.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.RegionInstanceGroupManager.wait_for_instances">
-<code class="descname">wait_for_instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager.wait_for_instances" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to wait for all instances to be created/updated before
-returning. Note that if this is set to true and the operation does not succeed, Terraform will
-continue trying until it times out.</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_gcp.compute.RegionInstanceGroupManager.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -4882,10 +4911,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.compute.ResourcePolicy">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">ResourcePolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>snapshot_schedule_policy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ResourcePolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A policy that can be attached to a resource to specify or schedule actions on that resource.</p>
-<blockquote>
-<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
+<dd><p>Create a ResourcePolicy resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -4900,6 +4926,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_resource_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_resource_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.ResourcePolicy.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ResourcePolicy.project" title="Permalink to this definition">¶</a></dt>
@@ -4994,6 +5022,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_route.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_route.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Route.next_hop_instance_zone">
 <code class="descname">next_hop_instance_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Route.next_hop_instance_zone" title="Permalink to this definition">¶</a></dt>
@@ -5082,6 +5112,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_router.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_router.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Router.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Router.project" title="Permalink to this definition">¶</a></dt>
@@ -5172,6 +5204,8 @@ one of <code class="docutils literal notranslate"><span class="pre">vpn_tunnel</
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_router_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_router_interface.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.RouterInterface.interconnect_attachment">
 <code class="descname">interconnect_attachment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RouterInterface.interconnect_attachment" title="Permalink to this definition">¶</a></dt>
@@ -5319,6 +5353,8 @@ Defaults to 30s if not set. Changing this forces a new NAT to be created.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_router_nat.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_router_nat.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.RouterNat.icmp_idle_timeout_sec">
 <code class="descname">icmp_idle_timeout_sec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RouterNat.icmp_idle_timeout_sec" title="Permalink to this definition">¶</a></dt>
@@ -5495,6 +5531,8 @@ Changing this forces a new peer to be created.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_router_peer.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_router_peer.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.RouterPeer.advertised_route_priority">
 <code class="descname">advertised_route_priority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RouterPeer.advertised_route_priority" title="Permalink to this definition">¶</a></dt>
@@ -5628,6 +5666,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_ssl_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_ssl_certificate.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SSLCertificate.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SSLCertificate.name_prefix" title="Permalink to this definition">¶</a></dt>
@@ -5715,6 +5755,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_ssl_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_ssl_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SSLPolicy.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SSLPolicy.project" title="Permalink to this definition">¶</a></dt>
@@ -5771,10 +5813,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.compute.SecurityPolicy">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SecurityPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>rules=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SecurityPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Security Policy defines an IP blacklist or whitelist that protects load balanced Google Cloud services by denying or permitting traffic from specified IP ranges. For more information
-see the <a class="reference external" href="https://cloud.google.com/armor/docs/configure-security-policies">official documentation</a>
-and the <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/securityPolicies">API</a>.</p>
-<p>Security Policy is used by <cite>``google_compute_backend_service`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#security_policy">https://www.terraform.io/docs/providers/google/r/compute_backend_service.html#security_policy</a>&gt;`_.</p>
+<dd><p>Create a SecurityPolicy resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -5794,6 +5833,8 @@ security policy, a default rule with action “allow” will be added. Structure
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_security_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_security_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SecurityPolicy.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SecurityPolicy.description" title="Permalink to this definition">¶</a></dt>
@@ -5876,18 +5917,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.compute.SecurityScanConfig">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SecurityScanConfig</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication=None</em>, <em>blacklist_patterns=None</em>, <em>display_name=None</em>, <em>export_to_security_command_center=None</em>, <em>max_qps=None</em>, <em>project=None</em>, <em>schedule=None</em>, <em>starting_urls=None</em>, <em>target_platforms=None</em>, <em>user_agent=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SecurityScanConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>A ScanConfig resource contains the configurations to launch a scan.</p>
-<blockquote>
-<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
-<p>To get more information about ScanConfig, see:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/security-scanner/docs/reference/rest/v1beta/projects.scanConfigs">API documentation</a></li>
-<li>How-to Guides<ul>
-<li><a class="reference external" href="https://cloud.google.com/security-scanner/docs/scanning">Using Cloud Security Scanner</a></li>
-</ul>
-</li>
-</ul>
+<dd><p>Create a SecurityScanConfig resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -5902,6 +5932,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/security_scanner_scan_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/security_scanner_scan_config.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SecurityScanConfig.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SecurityScanConfig.project" title="Permalink to this definition">¶</a></dt>
@@ -5971,6 +6003,8 @@ where the Shared VPC feature is referred to by its former name “XPN”.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_shared_vpc_host_project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_shared_vpc_host_project.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SharedVPCHostProject.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SharedVPCHostProject.project" title="Permalink to this definition">¶</a></dt>
@@ -6041,6 +6075,8 @@ where the Shared VPC feature is referred to by its former name “XPN”.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_shared_vpc_service_project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_shared_vpc_service_project.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SharedVPCServiceProject.host_project">
 <code class="descname">host_project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SharedVPCServiceProject.host_project" title="Permalink to this definition">¶</a></dt>
@@ -6128,6 +6164,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_snapshot.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Snapshot.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Snapshot.project" title="Permalink to this definition">¶</a></dt>
@@ -6226,6 +6264,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_subnetwork.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_subnetwork.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Subnetwork.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Subnetwork.project" title="Permalink to this definition">¶</a></dt>
@@ -6282,19 +6322,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.compute.SubnetworkIAMBinding">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SubnetworkIAMBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>members=None</em>, <em>project=None</em>, <em>region=None</em>, <em>role=None</em>, <em>subnetwork=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMBinding" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><strong>Warning:</strong> These resources are in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
-<p>Three different resources help you manage your IAM policy for GCE subnetwork. Each of these resources serves a different use case:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_policy</span></code>: Authoritative. Sets the IAM policy for the subnetwork and replaces any existing policy already attached.</li>
-<li><code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_binding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the subnetwork are preserved.</li>
-<li><code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_member</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the subnetwork are preserved.</li>
-</ul>
-<blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_policy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_binding</span></code> and <code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_member</span></code> or they will fight over what your policy should be.</p>
-<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_binding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_member</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-</div></blockquote>
+<dd><p>Create a SubnetworkIAMBinding resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -6315,6 +6343,8 @@ unspecified, this defaults to the region configured in the provider.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_subnetwork_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_subnetwork_iam_binding.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMBinding.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMBinding.etag" title="Permalink to this definition">¶</a></dt>
@@ -6392,19 +6422,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.compute.SubnetworkIAMMember">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SubnetworkIAMMember</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>member=None</em>, <em>project=None</em>, <em>region=None</em>, <em>role=None</em>, <em>subnetwork=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMMember" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><strong>Warning:</strong> These resources are in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
-<p>Three different resources help you manage your IAM policy for GCE subnetwork. Each of these resources serves a different use case:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_policy</span></code>: Authoritative. Sets the IAM policy for the subnetwork and replaces any existing policy already attached.</li>
-<li><code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_binding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the subnetwork are preserved.</li>
-<li><code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_member</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the subnetwork are preserved.</li>
-</ul>
-<blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_policy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_binding</span></code> and <code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_member</span></code> or they will fight over what your policy should be.</p>
-<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_binding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_member</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-</div></blockquote>
+<dd><p>Create a SubnetworkIAMMember resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -6425,6 +6443,8 @@ unspecified, this defaults to the region configured in the provider.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_subnetwork_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_subnetwork_iam_member.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMMember.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMMember.etag" title="Permalink to this definition">¶</a></dt>
@@ -6502,19 +6522,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.compute.SubnetworkIAMPolicy">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SubnetworkIAMPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>policy_data=None</em>, <em>project=None</em>, <em>region=None</em>, <em>subnetwork=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><strong>Warning:</strong> These resources are in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
-<p>Three different resources help you manage your IAM policy for GCE subnetwork. Each of these resources serves a different use case:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_policy</span></code>: Authoritative. Sets the IAM policy for the subnetwork and replaces any existing policy already attached.</li>
-<li><code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_binding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the subnetwork are preserved.</li>
-<li><code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_member</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the subnetwork are preserved.</li>
-</ul>
-<blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_policy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_binding</span></code> and <code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_member</span></code> or they will fight over what your policy should be.</p>
-<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_binding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_compute_subnetwork_iam_member</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-</div></blockquote>
+<dd><p>Create a SubnetworkIAMPolicy resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -6534,6 +6542,8 @@ unspecified, this defaults to the region configured in the provider.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_subnetwork_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_subnetwork_iam_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMPolicy.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMPolicy.etag" title="Permalink to this definition">¶</a></dt>
@@ -6634,6 +6644,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_target_http_proxy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_target_http_proxy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.TargetHttpProxy.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.TargetHttpProxy.project" title="Permalink to this definition">¶</a></dt>
@@ -6714,6 +6726,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_target_https_proxy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_target_https_proxy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.TargetHttpsProxy.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.TargetHttpsProxy.project" title="Permalink to this definition">¶</a></dt>
@@ -6798,6 +6812,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_target_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_target_instance.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.TargetInstance.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.TargetInstance.project" title="Permalink to this definition">¶</a></dt>
@@ -6873,11 +6889,6 @@ failover_ratio.</li>
 backup pool (which must also be set).</li>
 <li><strong>health_checks</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – List of zero or one health check name or self_link. Only
 legacy <code class="docutils literal notranslate"><span class="pre">google_compute_http_health_check</span></code> is supported.</li>
-<li><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of instances in the pool. They can be given as
-URLs, or in the form of “zone/name”. Note that the instances need not exist
-at the time of target pool creation, so there is no need to use the
-Terraform interpolators to create a dependency on the instances from the
-target pool.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the resource, required by GCE. Changing
 this forces a new resource to be created.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
@@ -6892,6 +6903,8 @@ affinity). “CLIENT_IP” (hash of the source/dest addresses / ports), and
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_target_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_target_pool.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.TargetPool.backup_pool">
 <code class="descname">backup_pool</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.TargetPool.backup_pool" title="Permalink to this definition">¶</a></dt>
@@ -6917,16 +6930,6 @@ backup pool (which must also be set).</p>
 <code class="descname">health_checks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.TargetPool.health_checks" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of zero or one health check name or self_link. Only
 legacy <code class="docutils literal notranslate"><span class="pre">google_compute_http_health_check</span></code> is supported.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.TargetPool.instances">
-<code class="descname">instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.TargetPool.instances" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of instances in the pool. They can be given as
-URLs, or in the form of “zone/name”. Note that the instances need not exist
-at the time of target pool creation, so there is no need to use the
-Terraform interpolators to create a dependency on the instances from the
-target pool.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7032,6 +7035,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_target_ssl_proxy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_target_ssl_proxy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.TargetSSLProxy.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.TargetSSLProxy.project" title="Permalink to this definition">¶</a></dt>
@@ -7113,6 +7118,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_target_tcp_proxy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_target_tcp_proxy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.TargetTCPProxy.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.TargetTCPProxy.project" title="Permalink to this definition">¶</a></dt>
@@ -7185,6 +7192,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_url_map.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_url_map.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.URLMap.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.URLMap.project" title="Permalink to this definition">¶</a></dt>
@@ -7261,6 +7270,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_vpn_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_vpn_gateway.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.VPNGateway.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.VPNGateway.project" title="Permalink to this definition">¶</a></dt>
@@ -7345,6 +7356,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_vpn_tunnel.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_vpn_tunnel.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.VPNTunnel.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.VPNTunnel.project" title="Permalink to this definition">¶</a></dt>
@@ -7403,32 +7416,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_address</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the IP address from a static address. For more information see
 the official <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/addresses/get">API</a> documentation.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_address.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_address.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_backend_service">
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_backend_service</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_backend_service" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provide acces to a Backend Service’s attribute. For more information
+<dd><p>Provide access to a Backend Service’s attribute. For more information
 see <a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/http/backend-service">the official documentation</a>
 and the <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/backendServices">API</a>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_backend_service.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_backend_service.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_certificate">
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_certificate</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get info about a Google Compute SSL Certificate from its name.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_ssl_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_ssl_certificate.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_default_service_account">
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_default_service_account</code><span class="sig-paren">(</span><em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_default_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve default service account for this project</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_default_service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_default_service_account.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_forwarding_rule">
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_forwarding_rule</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_forwarding_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a forwarding rule within GCE from its name.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_forwarding_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_forwarding_rule.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7436,6 +7459,8 @@ and the <a class="reference external" href="https://cloud.google.com/compute/doc
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_global_address</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_global_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the IP address from a static address reserved for a Global Forwarding Rule which are only used for HTTP load balancing. For more information see
 the official <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/globalAddresses">API</a> documentation.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_global_address.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_global_address.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7443,6 +7468,8 @@ the official <a class="reference external" href="https://cloud.google.com/comput
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_image</code><span class="sig-paren">(</span><em>family=None</em>, <em>name=None</em>, <em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information about a Google Compute Image. Check that your service account has the <code class="docutils literal notranslate"><span class="pre">compute.imageUser</span></code> role if you want to share <a class="reference external" href="https://cloud.google.com/compute/docs/images/sharing-images-across-projects">custom images</a> from another project. If you want to use [public images][pubimg], do not forget to specify the dedicated project. For more information see
 <a class="reference external" href="https://cloud.google.com/compute/docs/images">the official documentation</a> and its <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/images">API</a>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_image.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_image.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7452,6 +7479,8 @@ the official <a class="reference external" href="https://cloud.google.com/comput
 <a class="reference external" href="https://cloud.google.com/compute/docs/instances">the official documentation</a>
 and
 <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instances">API</a>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_instance.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7460,6 +7489,8 @@ and
 <dd><p>Get a Compute Instance Group within GCE.
 For more information, see <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups">the official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instanceGroups">API</a></p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_instance_group.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_instance_group.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7467,6 +7498,8 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_lbip_ranges</code><span class="sig-paren">(</span><em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_lbip_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access IP ranges in your firewall rules.</p>
 <p><a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/health-checks#health_check_source_ips_and_firewall_rules">https://cloud.google.com/compute/docs/load-balancing/health-checks#health_check_source_ips_and_firewall_rules</a></p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_lb_ip_ranges.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_lb_ip_ranges.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7474,12 +7507,16 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_netblock_ip_ranges</code><span class="sig-paren">(</span><em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_netblock_ip_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the IP ranges from the sender policy framework (SPF) record of _cloud-netblocks.googleusercontent</p>
 <p><a class="reference external" href="https://cloud.google.com/compute/docs/faq#where_can_i_find_product_name_short_ip_ranges">https://cloud.google.com/compute/docs/faq#where_can_i_find_product_name_short_ip_ranges</a></p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/netblock_ip_ranges.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/netblock_ip_ranges.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_network">
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_network</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a network within GCE from its name.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_network.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_network.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7487,6 +7524,8 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_node_types</code><span class="sig-paren">(</span><em>project=None</em>, <em>zone=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_node_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides available node types for Compute Engine sole-tenant nodes in a zone
 for a given project. For more information, see <a class="reference external" href="https://cloud.google.com/compute/docs/nodes/#types">the official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/nodeTypes">API</a>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_node_types.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_node_types.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7495,6 +7534,8 @@ for a given project. For more information, see <a class="reference external" hre
 <dd><p>Get a Compute Region Instance Group within GCE.
 For more information, see <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups">the official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/regionInstanceGroups">API</a>.</p>
 <p>The most common use of this datasource will be to fetch information about the instances inside regional managed instance groups, for instance:</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_region_instance_group.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_region_instance_group.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7502,6 +7543,8 @@ For more information, see <a class="reference external" href="https://cloud.goog
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_regions</code><span class="sig-paren">(</span><em>project=None</em>, <em>status=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_regions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to available Google Compute regions for a given project.
 See more about <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">regions and regions</a> in the upstream docs.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_regions.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_regions.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7511,18 +7554,24 @@ See more about <a class="reference external" href="https://cloud.google.com/comp
 <dt>Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Target SSL Proxies.</dt>
 <dd>For more information see <a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/ssl-policies">the official documentation</a>.</dd>
 </dl>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_ssl_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_ssl_policy.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_subnetwork">
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_subnetwork</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>self_link=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_subnetwork" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a subnetwork within GCE from its name and region.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_subnetwork.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_subnetwork.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_vpn_gateway">
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_vpn_gateway</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_vpn_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a VPN gateway within GCE from its name.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_vpn_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_vpn_gateway.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7530,6 +7579,8 @@ See more about <a class="reference external" href="https://cloud.google.com/comp
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_zones</code><span class="sig-paren">(</span><em>project=None</em>, <em>region=None</em>, <em>status=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to available Google Compute zones in a region for a given project.
 See more about <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/regions-zones">regions and zones</a> in the upstream docs.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_zones.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_zones.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

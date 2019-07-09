@@ -310,6 +310,8 @@ tenant.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_securityservice_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_securityservice_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.SecurityService.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.SecurityService.description" title="Permalink to this definition">¶</a></dt>
@@ -466,6 +468,8 @@ a new share.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.Share.availability_zone">
 <code class="descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.Share.availability_zone" title="Permalink to this definition">¶</a></dt>
@@ -626,11 +630,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_openstack.sharedfilesystem.ShareAccess">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">ShareAccess</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access_level=None</em>, <em>access_to=None</em>, <em>access_type=None</em>, <em>region=None</em>, <em>share_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.ShareAccess" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this resource to control the share access lists.</p>
-<blockquote>
-<div><strong>Important Security Notice</strong> The access key retrieved by this resource will
-be stored <em>unencrypted</em> in your Terraform state file. If you use this resource
-in production, please make sure your state file is sufficiently protected.</div></blockquote>
+<dd><p>Create a ShareAccess resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -653,6 +653,8 @@ creates a new share access.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_access_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_access_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.ShareAccess.access_key">
 <code class="descname">access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.ShareAccess.access_key" title="Permalink to this definition">¶</a></dt>
@@ -768,6 +770,8 @@ the share network. The security service must be specified by ID and not name.</l
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_sharenetwork_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_sharenetwork_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.ShareNetwork.cidr">
 <code class="descname">cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.ShareNetwork.cidr" title="Permalink to this definition">¶</a></dt>
@@ -889,24 +893,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">get_availbility_zones</code><span class="sig-paren">(</span><em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_availbility_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of Shared File System availability zones
 from OpenStack</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_availability_zones_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_availability_zones_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.sharedfilesystem.get_share">
 <code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">get_share</code><span class="sig-paren">(</span><em>description=None</em>, <em>export_location_path=None</em>, <em>is_public=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>region=None</em>, <em>share_network_id=None</em>, <em>snapshot_id=None</em>, <em>status=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_share" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available Shared File System share.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_share_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_share_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.sharedfilesystem.get_share_network">
 <code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">get_share_network</code><span class="sig-paren">(</span><em>description=None</em>, <em>ip_version=None</em>, <em>name=None</em>, <em>network_type=None</em>, <em>neutron_net_id=None</em>, <em>neutron_subnet_id=None</em>, <em>region=None</em>, <em>security_service_id=None</em>, <em>segmentation_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_share_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available Shared File System share network.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_sharenetwork_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_sharenetwork_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.sharedfilesystem.get_snapshot">
 <code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">get_snapshot</code><span class="sig-paren">(</span><em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>share_id=None</em>, <em>status=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available Shared File System snapshot.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_snapshot_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_snapshot_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

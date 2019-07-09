@@ -21,6 +21,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_cluster.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.Cluster.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Cluster.arn" title="Permalink to this definition">¶</a></dt>
@@ -346,12 +348,13 @@ Guide</a>.</li>
 <li><strong>service_registries</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The service discovery registries for the service. The maximum number of <code class="docutils literal notranslate"><span class="pre">service_registries</span></code> blocks is <code class="docutils literal notranslate"><span class="pre">1</span></code>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</li>
 <li><strong>task_definition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family and revision (<code class="docutils literal notranslate"><span class="pre">family:revision</span></code>) or full ARN of the task definition that you want to run in your service.</li>
-<li><strong>wait_for_steady_state</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, Terraform will wait for the service to reach a steady state (like <cite>``aws ecs wait services-stable`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html">https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html</a>&gt;`_) before continuing. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.Service.cluster">
 <code class="descname">cluster</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.cluster" title="Permalink to this definition">¶</a></dt>
@@ -473,12 +476,6 @@ Guide</a>.</li>
 <dd><p>The family and revision (<code class="docutils literal notranslate"><span class="pre">family:revision</span></code>) or full ARN of the task definition that you want to run in your service.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ecs.Service.wait_for_steady_state">
-<code class="descname">wait_for_steady_state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.wait_for_steady_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, Terraform will wait for the service to reach a steady state (like <cite>``aws ecs wait services-stable`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html">https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html</a>&gt;`_) before continuing. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_aws.ecs.Service.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.Service.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -554,6 +551,8 @@ official <a class="reference external" href="https://docs.aws.amazon.com/AmazonE
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.TaskDefinition.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition.arn" title="Permalink to this definition">¶</a></dt>
@@ -700,6 +699,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_aws.ecs.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>cluster_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS Cluster data source allows access to details of a specific
 cluster within an AWS ECS service.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_cluster.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -707,6 +708,8 @@ cluster within an AWS ECS service.</p>
 <code class="descclassname">pulumi_aws.ecs.</code><code class="descname">get_container_definition</code><span class="sig-paren">(</span><em>container_name=None</em>, <em>task_definition=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_container_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS container definition data source allows access to details of
 a specific container within an AWS ECS service.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_container_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_container_definition.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -714,6 +717,8 @@ a specific container within an AWS ECS service.</p>
 <code class="descclassname">pulumi_aws.ecs.</code><code class="descname">get_service</code><span class="sig-paren">(</span><em>cluster_arn=None</em>, <em>service_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS Service data source allows access to details of a specific
 Service within a AWS ECS Cluster.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_service.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -721,6 +726,8 @@ Service within a AWS ECS Cluster.</p>
 <code class="descclassname">pulumi_aws.ecs.</code><code class="descname">get_task_definition</code><span class="sig-paren">(</span><em>task_definition=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_task_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS task definition data source allows access to details of
 a specific AWS ECS task definition.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_task_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_task_definition.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

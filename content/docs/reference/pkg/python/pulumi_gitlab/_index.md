@@ -23,6 +23,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/branch_protection.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/branch_protection.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.BranchProtection.branch">
 <code class="descname">branch</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.BranchProtection.branch" title="Permalink to this definition">¶</a></dt>
@@ -107,6 +109,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/deploy_key.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/deploy_key.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.DeployKey.can_push">
 <code class="descname">can_push</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.DeployKey.can_push" title="Permalink to this definition">¶</a></dt>
@@ -531,11 +535,7 @@ repository via SSH.</p>
 <dl class="class">
 <dt id="pulumi_gitlab.Group">
 <em class="property">class </em><code class="descclassname">pulumi_gitlab.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>lfs_enabled=None</em>, <em>name=None</em>, <em>parent_id=None</em>, <em>path=None</em>, <em>request_access_enabled=None</em>, <em>visibility_level=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Group" title="Permalink to this definition">¶</a></dt>
-<dd><p>This resource allows you to create and manage GitLab groups.
-Note your provider will need to be configured with admin-level access for this resource to work.</p>
-<p>You can import a group state using <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">import</span> <span class="pre">&lt;resource&gt;</span> <span class="pre">&lt;id&gt;</span></code>.  The
-<code class="docutils literal notranslate"><span class="pre">id</span></code> can be whatever the <a class="reference external" href="https://docs.gitlab.com/ee/api/groups.html#details-of-a-group">details of a group</a> api takes for
-its <code class="docutils literal notranslate"><span class="pre">:id</span></code> value, so for example:</p>
+<dd><p>Create a Group resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -559,6 +559,8 @@ Groups are created as private by default.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/group.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.Group.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.Group.description" title="Permalink to this definition">¶</a></dt>
@@ -683,6 +685,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/group_membership.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/group_membership.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.GroupMembership.access_level">
 <code class="descname">access_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.GroupMembership.access_level" title="Permalink to this definition">¶</a></dt>
@@ -769,6 +773,8 @@ documentation</a>.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/group_variable.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/group_variable.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.GroupVariable.group">
 <code class="descname">group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.GroupVariable.group" title="Permalink to this definition">¶</a></dt>
@@ -855,6 +861,8 @@ documentation</a>.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/label.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/label.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.Label.color">
 <code class="descname">color</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.Label.color" title="Permalink to this definition">¶</a></dt>
@@ -943,6 +951,8 @@ documentation</a>.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/pipeline_schedule.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/pipeline_schedule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.PipelineSchedule.active">
 <code class="descname">active</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.PipelineSchedule.active" title="Permalink to this definition">¶</a></dt>
@@ -1037,6 +1047,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/pipeline_trigger.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/pipeline_trigger.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.PipelineTrigger.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.PipelineTrigger.description" title="Permalink to this definition">¶</a></dt>
@@ -1092,11 +1104,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gitlab.Project">
 <em class="property">class </em><code class="descclassname">pulumi_gitlab.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>approvals_before_merge=None</em>, <em>archived=None</em>, <em>container_registry_enabled=None</em>, <em>default_branch=None</em>, <em>description=None</em>, <em>issues_enabled=None</em>, <em>merge_method=None</em>, <em>merge_requests_enabled=None</em>, <em>name=None</em>, <em>namespace_id=None</em>, <em>only_allow_merge_if_all_discussions_are_resolved=None</em>, <em>only_allow_merge_if_pipeline_succeeds=None</em>, <em>path=None</em>, <em>shared_runners_enabled=None</em>, <em>shared_with_groups=None</em>, <em>snippets_enabled=None</em>, <em>tags=None</em>, <em>visibility_level=None</em>, <em>wiki_enabled=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Project" title="Permalink to this definition">¶</a></dt>
-<dd><p>This resource allows you to create and manage projects within your
-GitLab group or within your user.</p>
-<p>You can import a project state using <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">import</span> <span class="pre">&lt;resource&gt;</span> <span class="pre">&lt;id&gt;</span></code>.  The
-<code class="docutils literal notranslate"><span class="pre">id</span></code> can be whatever the <a class="reference external" href="https://docs.gitlab.com/ee/api/projects.html#get-single-project">get single project api</a> takes for
-its <code class="docutils literal notranslate"><span class="pre">:id</span></code> value, so for example:</p>
+<dd><p>Create a Project resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1133,6 +1141,8 @@ Repositories are created as private by default.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.Project.approvals_before_merge">
 <code class="descname">approvals_before_merge</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.Project.approvals_before_merge" title="Permalink to this definition">¶</a></dt>
@@ -1347,6 +1357,8 @@ documentation</a>.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_cluster.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.ProjectCluster.domain">
 <code class="descname">domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectCluster.domain" title="Permalink to this definition">¶</a></dt>
@@ -1484,6 +1496,8 @@ the hook.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_hook.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_hook.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.ProjectHook.enable_ssl_verification">
 <code class="descname">enable_ssl_verification</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectHook.enable_ssl_verification" title="Permalink to this definition">¶</a></dt>
@@ -1616,6 +1630,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_membership.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_membership.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.ProjectMembership.access_level">
 <code class="descname">access_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectMembership.access_level" title="Permalink to this definition">¶</a></dt>
@@ -1696,6 +1712,8 @@ documentation</a>.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_variable.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_variable.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.ProjectVariable.key">
 <code class="descname">key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectVariable.key" title="Permalink to this definition">¶</a></dt>
@@ -1779,6 +1797,8 @@ construction to achieve fine-grained programmatic control over provider settings
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_gitlab.Provider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1841,6 +1861,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/service_jira.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/service_jira.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.ServiceJira.jira_issue_transition_id">
 <code class="descname">jira_issue_transition_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ServiceJira.jira_issue_transition_id" title="Permalink to this definition">¶</a></dt>
@@ -1955,6 +1977,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/service_slack.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/service_slack.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.ServiceSlack.confidential_issue_channel">
 <code class="descname">confidential_issue_channel</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ServiceSlack.confidential_issue_channel" title="Permalink to this definition">¶</a></dt>
@@ -2146,6 +2170,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/tag_protection.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/tag_protection.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.TagProtection.create_access_level">
 <code class="descname">create_access_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.TagProtection.create_access_level" title="Permalink to this definition">¶</a></dt>
@@ -2207,11 +2233,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gitlab.User">
 <em class="property">class </em><code class="descclassname">pulumi_gitlab.</code><code class="descname">User</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>can_create_group=None</em>, <em>email=None</em>, <em>is_admin=None</em>, <em>is_external=None</em>, <em>name=None</em>, <em>password=None</em>, <em>projects_limit=None</em>, <em>skip_confirmation=None</em>, <em>username=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.User" title="Permalink to this definition">¶</a></dt>
-<dd><p>This resource allows you to create and manage GitLab users.
-Note your provider will need to be configured with admin-level access for this resource to work.</p>
-<p>You can import a user to terraform state using <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">import</span> <span class="pre">&lt;resource&gt;</span> <span class="pre">&lt;id&gt;</span></code>.
-The <code class="docutils literal notranslate"><span class="pre">id</span></code> must be an integer for the id of the user you want to import,
-for example:</p>
+<dd><p>Create a User resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2234,6 +2256,8 @@ for the user.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/user.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/user.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gitlab.User.can_create_group">
 <code class="descname">can_create_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.User.can_create_group" title="Permalink to this definition">¶</a></dt>
@@ -2333,18 +2357,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gitlab.get_group">
 <code class="descclassname">pulumi_gitlab.</code><code class="descname">get_group</code><span class="sig-paren">(</span><em>full_path=None</em>, <em>group_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.get_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific group in the gitlab provider.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/group.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/group.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gitlab.get_project">
 <code class="descclassname">pulumi_gitlab.</code><code class="descname">get_project</code><span class="sig-paren">(</span><em>archived=None</em>, <em>default_branch=None</em>, <em>description=None</em>, <em>http_url_to_repo=None</em>, <em>id=None</em>, <em>issues_enabled=None</em>, <em>merge_requests_enabled=None</em>, <em>name=None</em>, <em>namespace_id=None</em>, <em>path=None</em>, <em>runners_token=None</em>, <em>snippets_enabled=None</em>, <em>ssh_url_to_repo=None</em>, <em>visibility_level=None</em>, <em>web_url=None</em>, <em>wiki_enabled=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.get_project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific project in the gitlab provider. The results include the name of the project, path, description, default branch, etc.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/project.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/project.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gitlab.get_user">
 <code class="descclassname">pulumi_gitlab.</code><code class="descname">get_user</code><span class="sig-paren">(</span><em>email=None</em>, <em>user_id=None</em>, <em>username=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific user in the gitlab provider. Especially the ability to lookup the id for linking to other resources.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/user.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/user.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2352,6 +2382,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_gitlab.</code><code class="descname">get_users</code><span class="sig-paren">(</span><em>active=None</em>, <em>blocked=None</em>, <em>created_after=None</em>, <em>created_before=None</em>, <em>extern_provider=None</em>, <em>extern_uid=None</em>, <em>order_by=None</em>, <em>search=None</em>, <em>sort=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.get_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a list of users in the gitlab provider. The results include id, username, email, name and more about the requested users. Users can also be sorted and filtered using several options.</p>
 <p><strong>NOTE</strong>: Some of the available options require administrator privileges. Please visit [Gitlab API documentation][users_for_admins] for more information.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/users.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/users.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

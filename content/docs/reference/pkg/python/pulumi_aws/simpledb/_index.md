@@ -20,6 +20,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/simpledb_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/simpledb_domain.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.simpledb.Domain.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.simpledb.Domain.name" title="Permalink to this definition">¶</a></dt>

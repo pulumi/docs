@@ -44,6 +44,8 @@ Cannot be set alongside <code class="docutils literal notranslate"><span class="
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudfunctions.Function.available_memory_mb">
 <code class="descname">available_memory_mb</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.available_memory_mb" title="Permalink to this definition">¶</a></dt>
@@ -286,6 +288,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Get information about a Google Cloud Function. For more information see
 the <a class="reference external" href="https://cloud.google.com/functions/docs/">official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/functions/docs/apis">API</a>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/cloudfunctions_function.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/cloudfunctions_function.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

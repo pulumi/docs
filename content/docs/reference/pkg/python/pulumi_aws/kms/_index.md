@@ -6,9 +6,7 @@
 <dl class="class">
 <dt id="pulumi_aws.kms.Alias">
 <em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">Alias</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>target_key_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Alias" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an alias for a KMS customer master key. AWS Console enforces 1-to-1 mapping between aliases &amp; keys,
-but API (hence Terraform too) allows you to create as many aliases as
-the <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html">account limits</a> allow you.</p>
+<dd><p>Create a Alias resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -25,6 +23,8 @@ The name must start with the word “alias” followed by a forward slash (alias
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_alias.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Alias.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Alias.arn" title="Permalink to this definition">¶</a></dt>
@@ -121,6 +121,8 @@ the <cite>``aws_kms_ciphertext`</cite> data source &lt;<a class="reference exter
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_ciphertext.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Ciphertext.ciphertext_blob">
 <code class="descname">ciphertext_blob</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Ciphertext.ciphertext_blob" title="Permalink to this definition">¶</a></dt>
@@ -210,6 +212,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_external_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_external_key.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.ExternalKey.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.ExternalKey.arn" title="Permalink to this definition">¶</a></dt>
@@ -429,7 +433,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>grantee_principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, terraform’s state may not always be refreshed to reflect what is true in AWS.</li>
 <li><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for identifying the grant.</li>
 <li><strong>operations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of operations that the grant permits. The permitted values are: <code class="docutils literal notranslate"><span class="pre">Decrypt,</span> <span class="pre">Encrypt,</span> <span class="pre">GenerateDataKey,</span> <span class="pre">GenerateDataKeyWithoutPlaintext,</span> <span class="pre">ReEncryptFrom,</span> <span class="pre">ReEncryptTo,</span> <span class="pre">CreateGrant,</span> <span class="pre">RetireGrant,</span> <span class="pre">DescribeKey</span></code></li>
@@ -438,6 +441,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_grant.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_grant.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Grant.constraints">
 <code class="descname">constraints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Grant.constraints" title="Permalink to this definition">¶</a></dt>
@@ -464,12 +469,6 @@ See <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/A
 <dt id="pulumi_aws.kms.Grant.grant_token">
 <code class="descname">grant_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Grant.grant_token" title="Permalink to this definition">¶</a></dt>
 <dd><p>The grant token for the created grant. For more information, see <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant Tokens</a>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.kms.Grant.grantee_principal">
-<code class="descname">grantee_principal</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Grant.grantee_principal" title="Permalink to this definition">¶</a></dt>
-<dd><p>The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, terraform’s state may not always be refreshed to reflect what is true in AWS.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -549,13 +548,14 @@ is enabled. Defaults to false.</li>
 <li><strong>is_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the key is enabled. Defaults to true.</li>
 <li><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the intended use of the key.
 Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are supported.</li>
-<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid policy JSON document. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_key.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Key.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Key.arn" title="Permalink to this definition">¶</a></dt>
@@ -599,12 +599,6 @@ is enabled. Defaults to false.</p>
 <code class="descname">key_usage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Key.key_usage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the intended use of the key.
 Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are supported.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.kms.Key.policy">
-<code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Key.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A valid policy JSON document. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -659,6 +653,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get the ARN of a KMS key alias.
 By using this data source, you can reference key alias
 without having to hard code the ARN as input.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_alias.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -669,8 +665,10 @@ by using an AWS KMS customer master key. The value returned by this data source
 changes every apply. For a stable ciphertext value, see the <cite>``aws_kms_ciphertext`</cite>
 resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/kms_ciphertext.html">https://www.terraform.io/docs/providers/aws/r/kms_ciphertext.html</a>&gt;`_.</p>
 <blockquote>
-<div><strong>Note:</strong> All arguments including the plaintext be stored in the raw state as plain-text.
-<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
+<div><p><strong>Note:</strong> All arguments including the plaintext be stored in the raw state as plain-text.
+<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_ciphertext.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -680,20 +678,8 @@ resource &lt;<a class="reference external" href="https://www.terraform.io/docs/p
 the specified KMS Key with flexible key id input. 
 This can be useful to reference key alias 
 without having to hard code the ARN as input.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_aws.kms.get_secret">
-<code class="descclassname">pulumi_aws.kms.</code><code class="descname">get_secret</code><span class="sig-paren">(</span><em>secrets=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_secret" title="Permalink to this definition">¶</a></dt>
-<dd><p>!&gt; <strong>WARNING:</strong> This data source was removed in version 2.0.0 of the Terraform AWS Provider. You can migrate existing configurations to the <cite>``aws_kms_secrets`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/kms_secrets.html">https://www.terraform.io/docs/providers/aws/d/kms_secrets.html</a>&gt;`_ following instructions available in the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/version-2-upgrade.html#data-source-aws_kms_secret">Version 2 Upgrade Guide</a>.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_aws.kms.get_secrets">
-<code class="descclassname">pulumi_aws.kms.</code><code class="descname">get_secrets</code><span class="sig-paren">(</span><em>secrets=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_secrets" title="Permalink to this definition">¶</a></dt>
-<dd><p>Decrypt multiple secrets from data encrypted with the AWS KMS service.</p>
 <blockquote>
-<div><strong>NOTE</strong>: Using this data provider will allow you to conceal secret data within your resource definitions but does not take care of protecting that data in all Terraform logging and state output. Please take care to secure your secret data beyond just the Terraform configuration.</div></blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_key.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

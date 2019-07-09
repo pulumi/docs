@@ -45,6 +45,8 @@ changes the set of further arguments that are required, as described below.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Ami.architecture">
 <code class="descname">architecture</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Ami.architecture" title="Permalink to this definition">¶</a></dt>
@@ -213,6 +215,8 @@ same as the AWS provider region in order to create a copy within the same region
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_copy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_copy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.AmiCopy.architecture">
 <code class="descname">architecture</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiCopy.architecture" title="Permalink to this definition">¶</a></dt>
@@ -406,6 +410,8 @@ guarantees that no filesystem writes will be underway at the time of snapshot.</
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_from_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_from_instance.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.AmiFromInstance.architecture">
 <code class="descname">architecture</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiFromInstance.architecture" title="Permalink to this definition">¶</a></dt>
@@ -565,6 +571,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_launch_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_launch_permission.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.AmiLaunchPermission.account_id">
 <code class="descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiLaunchPermission.account_id" title="Permalink to this definition">¶</a></dt>
@@ -644,6 +652,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_capacity_reservation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_capacity_reservation.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.CapacityReservation.availability_zone">
 <code class="descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation.availability_zone" title="Permalink to this definition">¶</a></dt>
@@ -771,6 +781,8 @@ supports at this time is “ipsec.1”.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/customer_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/customer_gateway.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.CustomerGateway.bgp_asn">
 <code class="descname">bgp_asn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.CustomerGateway.bgp_asn" title="Permalink to this definition">¶</a></dt>
@@ -839,25 +851,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.DefaultNetworkAcl">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultNetworkAcl</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_network_acl_id=None</em>, <em>egress=None</em>, <em>ingress=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultNetworkAcl" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to manage the default AWS Network ACL. VPC Only.</p>
-<p>Each VPC created in AWS comes with a Default Network ACL that can be managed, but not
-destroyed. <strong>This is an advanced resource</strong>, and has special caveats to be aware
-of when using it. Please read this document in its entirety before using this
-resource.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">aws_default_network_acl</span></code> behaves differently from normal resources, in that
-Terraform does not <em>create</em> this resource, but instead attempts to “adopt” it
-into management. We can do this because each VPC created has a Default Network
-ACL that cannot be destroyed, and is created with a known set of default rules.</p>
-<p>When Terraform first adopts the Default Network ACL, it <strong>immediately removes all
-rules in the ACL</strong>. It then proceeds to create any rules specified in the
-configuration. This step is required so that only the rules specified in the
-configuration are created.</p>
-<p>This resource treats its inline rules as absolute; only the rules defined
-inline are created, and any additions/removals external to this resource will
-result in diffs being shown. For these reasons, this resource is incompatible with the
-<code class="docutils literal notranslate"><span class="pre">aws_network_acl_rule</span></code> resource.</p>
-<p>For more information about Network ACLs, see the AWS Documentation on
-[Network ACLs][aws-network-acls].</p>
+<dd><p>Create a DefaultNetworkAcl resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -877,6 +871,8 @@ notes below on managing Subnets in the Default Network ACL</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_network_acl.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultNetworkAcl.default_network_acl_id">
 <code class="descname">default_network_acl_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultNetworkAcl.default_network_acl_id" title="Permalink to this definition">¶</a></dt>
@@ -964,31 +960,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.DefaultRouteTable">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultRouteTable</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_route_table_id=None</em>, <em>propagating_vgws=None</em>, <em>routes=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultRouteTable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to manage a Default VPC Routing Table.</p>
-<p>Each VPC created in AWS comes with a Default Route Table that can be managed, but not
-destroyed. <strong>This is an advanced resource</strong>, and has special caveats to be aware
-of when using it. Please read this document in its entirety before using this
-resource. It is recommended you <strong>do not</strong> use both <code class="docutils literal notranslate"><span class="pre">aws_default_route_table</span></code> to
-manage the default route table <strong>and</strong> use the <code class="docutils literal notranslate"><span class="pre">aws_main_route_table_association</span></code>,
-due to possible conflict in routes.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">aws_default_route_table</span></code> behaves differently from normal resources, in that
-Terraform does not <em>create</em> this resource, but instead attempts to “adopt” it
-into management. We can do this because each VPC created has a Default Route
-Table that cannot be destroyed, and is created with a single route.</p>
-<p>When Terraform first adopts the Default Route Table, it <strong>immediately removes all
-defined routes</strong>. It then proceeds to create any routes specified in the
-configuration. This step is required so that only the routes specified in the
-configuration present in the Default Route Table.</p>
-<p>For more information about Route Tables, see the AWS Documentation on
-[Route Tables][aws-route-tables].</p>
-<p>For more information about managing normal Route Tables in Terraform, see our
-documentation on [aws_route_table][tf-route-tables].</p>
-<blockquote>
-<div><strong>NOTE on Route Tables and Routes:</strong> Terraform currently
-provides both a standalone Route resource and a Route Table resource with routes
-defined in-line. At this time you cannot use a Route Table with in-line routes
-in conjunction with any Route resources. Doing so will cause
-a conflict of rule settings and will overwrite routes.</div></blockquote>
+<dd><p>Create a DefaultRouteTable resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1006,6 +978,8 @@ This argument is processed in <a class="reference external" href="https://www.te
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_route_table.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultRouteTable.default_route_table_id">
 <code class="descname">default_route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultRouteTable.default_route_table_id" title="Permalink to this definition">¶</a></dt>
@@ -1080,35 +1054,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.DefaultSecurityGroup">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultSecurityGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>egress=None</em>, <em>ingress=None</em>, <em>revoke_rules_on_delete=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultSecurityGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to manage the default AWS Security Group.</p>
-<p>For EC2 Classic accounts, each region comes with a Default Security Group.
-Additionally, each VPC created in AWS comes with a Default Security Group that can be managed, but not
-destroyed. <strong>This is an advanced resource</strong>, and has special caveats to be aware
-of when using it. Please read this document in its entirety before using this
-resource.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">aws_default_security_group</span></code> behaves differently from normal resources, in that
-Terraform does not <em>create</em> this resource, but instead “adopts” it
-into management. We can do this because these default security groups cannot be
-destroyed, and are created with a known set of default ingress/egress rules.</p>
-<p>When Terraform first adopts the Default Security Group, it <strong>immediately removes all
-ingress and egress rules in the Security Group</strong>. It then proceeds to create any rules specified in the
-configuration. This step is required so that only the rules specified in the
-configuration are created.</p>
-<p>This resource treats its inline rules as absolute; only the rules defined
-inline are created, and any additions/removals external to this resource will
-result in diff shown. For these reasons, this resource is incompatible with the
-<code class="docutils literal notranslate"><span class="pre">aws_security_group_rule</span></code> resource.</p>
-<p>For more information about Default Security Groups, see the AWS Documentation on
-[Default Security Groups][aws-default-security-groups].</p>
-<p>With the exceptions mentioned above, <code class="docutils literal notranslate"><span class="pre">aws_default_security_group</span></code> should
-identical behavior to <code class="docutils literal notranslate"><span class="pre">aws_security_group</span></code>. Please consult <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/security_group.html">AWS_SECURITY_GROUP</a>
-for further usage documentation.</p>
-<p>Each AWS VPC (or region, if using EC2 Classic) comes with a Default Security
-Group that cannot be deleted. The <code class="docutils literal notranslate"><span class="pre">aws_default_security_group</span></code> allows you to
-manage this Security Group, but Terraform cannot destroy it. Removing this resource
-from your configuration will remove it from your statefile and management, but
-will not destroy the Security Group. All ingress or egress rules will be left as
-they are at the time of removal. You can resume managing them via the AWS Console.</p>
+<dd><p>Create a DefaultSecurityGroup resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1129,6 +1075,8 @@ modified, added, or removed.</strong> It will be left in its current state</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultSecurityGroup.egress">
 <code class="descname">egress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultSecurityGroup.egress" title="Permalink to this definition">¶</a></dt>
@@ -1212,11 +1160,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.DefaultSubnet">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultSubnet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zone=None</em>, <em>map_public_ip_on_launch=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultSubnet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to manage a <a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html#default-vpc-basics">default AWS VPC subnet</a>
-in the current region.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">aws_default_subnet</span></code> behaves differently from normal resources, in that
-Terraform does not <em>create</em> this resource, but instead “adopts” it
-into management.</p>
+<dd><p>Create a DefaultSubnet resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1233,6 +1177,8 @@ a public IP address.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_subnet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_subnet.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultSubnet.cidr_block">
 <code class="descname">cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultSubnet.cidr_block" title="Permalink to this definition">¶</a></dt>
@@ -1314,14 +1260,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.DefaultVpc">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultVpc</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enable_classiclink=None</em>, <em>enable_classiclink_dns_support=None</em>, <em>enable_dns_hostnames=None</em>, <em>enable_dns_support=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to manage the <a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html">default AWS VPC</a>
-in the current region.</p>
-<p>For AWS accounts created after 2013-12-04, each region comes with a Default VPC.
-<strong>This is an advanced resource</strong>, and has special caveats to be aware of when
-using it. Please read this document in its entirety before using this resource.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">aws_default_vpc</span></code> behaves differently from normal resources, in that
-Terraform does not <em>create</em> this resource, but instead “adopts” it
-into management.</p>
+<dd><p>Create a DefaultVpc resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1340,6 +1279,8 @@ See the [ClassicLink documentation][1] for more information. Defaults false.</li
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultVpc.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpc.arn" title="Permalink to this definition">¶</a></dt>
@@ -1478,14 +1419,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.DefaultVpcDhcpOptions">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultVpcDhcpOptions</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>netbios_name_servers=None</em>, <em>netbios_node_type=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpcDhcpOptions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to manage the <a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html#AmazonDNS">default AWS DHCP Options Set</a>
-in the current region.</p>
-<p>Each AWS region comes with a default set of DHCP options.
-<strong>This is an advanced resource</strong>, and has special caveats to be aware of when
-using it. Please read this document in its entirety before using this resource.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">aws_default_vpc_dhcp_options</span></code> behaves differently from normal resources, in that
-Terraform does not <em>create</em> this resource, but instead “adopts” it
-into management.</p>
+<dd><p>Create a DefaultVpcDhcpOptions resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1501,6 +1435,8 @@ into management.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc_dhcp_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc_dhcp_options.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultVpcDhcpOptions.netbios_name_servers">
 <code class="descname">netbios_name_servers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpcDhcpOptions.netbios_name_servers" title="Permalink to this definition">¶</a></dt>
@@ -1585,6 +1521,8 @@ outside of your VPC from initiating an IPv6 connection with your instance.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/egress_only_internet_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/egress_only_internet_gateway.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.EgressOnlyInternetGateway.vpc_id">
 <code class="descname">vpc_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.EgressOnlyInternetGateway.vpc_id" title="Permalink to this definition">¶</a></dt>
@@ -1659,6 +1597,8 @@ the Elastic IP address is associated with the primary private IP address.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Eip.associate_with_private_ip">
 <code class="descname">associate_with_private_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Eip.associate_with_private_ip" title="Permalink to this definition">¶</a></dt>
@@ -1798,6 +1738,8 @@ address.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.EipAssociation.allocation_id">
 <code class="descname">allocation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.EipAssociation.allocation_id" title="Permalink to this definition">¶</a></dt>
@@ -1909,6 +1851,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_fleet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_fleet.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Fleet.excess_capacity_termination_policy">
 <code class="descname">excess_capacity_termination_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Fleet.excess_capacity_termination_policy" title="Permalink to this definition">¶</a></dt>
@@ -2034,6 +1978,8 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/flow_log.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/flow_log.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.FlowLog.eni_id">
 <code class="descname">eni_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.FlowLog.eni_id" title="Permalink to this definition">¶</a></dt>
@@ -3380,6 +3326,8 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/instance.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Instance.ami">
 <code class="descname">ami</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.ami" title="Permalink to this definition">¶</a></dt>
@@ -3686,6 +3634,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/internet_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/internet_gateway.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.InternetGateway.owner_id">
 <code class="descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.InternetGateway.owner_id" title="Permalink to this definition">¶</a></dt>
@@ -3770,6 +3720,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/key_pair.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/key_pair.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.KeyPair.fingerprint">
 <code class="descname">fingerprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.KeyPair.fingerprint" title="Permalink to this definition">¶</a></dt>
@@ -3837,56 +3789,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.LaunchConfiguration">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">LaunchConfiguration</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>associate_public_ip_address=None</em>, <em>ebs_block_devices=None</em>, <em>ebs_optimized=None</em>, <em>enable_monitoring=None</em>, <em>ephemeral_block_devices=None</em>, <em>iam_instance_profile=None</em>, <em>image_id=None</em>, <em>instance_type=None</em>, <em>key_name=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>placement_tenancy=None</em>, <em>root_block_device=None</em>, <em>security_groups=None</em>, <em>spot_price=None</em>, <em>user_data=None</em>, <em>user_data_base64=None</em>, <em>vpc_classic_link_id=None</em>, <em>vpc_classic_link_security_groups=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to create a new launch configuration, used for autoscaling groups.</p>
-<p>Each of the <code class="docutils literal notranslate"><span class="pre">*_block_device</span></code> attributes controls a portion of the AWS
-Launch Configuration’s “Block Device Mapping”. It’s a good idea to familiarize yourself with <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">AWS’s Block Device
-Mapping docs</a>
-to understand the implications of using these attributes.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">root_block_device</span></code> mapping supports the following:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">volume_type</span></code> - (Optional) The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
-or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</li>
-<li><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> - (Optional) The size of the volume in gigabytes.</li>
-<li><code class="docutils literal notranslate"><span class="pre">iops</span></code> - (Optional) The amount of provisioned
-<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
-This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</li>
-<li><code class="docutils literal notranslate"><span class="pre">delete_on_termination</span></code> - (Optional) Whether the volume should be destroyed
-on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</li>
-</ul>
-<p>Modifying any of the <code class="docutils literal notranslate"><span class="pre">root_block_device</span></code> settings requires resource
-replacement.</p>
-<p>Each <code class="docutils literal notranslate"><span class="pre">ebs_block_device</span></code> supports the following:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">device_name</span></code> - (Required) The name of the device to mount.</li>
-<li><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> - (Optional) The Snapshot ID to mount.</li>
-<li><code class="docutils literal notranslate"><span class="pre">volume_type</span></code> - (Optional) The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
-or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</li>
-<li><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> - (Optional) The size of the volume in gigabytes.</li>
-<li><code class="docutils literal notranslate"><span class="pre">iops</span></code> - (Optional) The amount of provisioned
-<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
-This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</li>
-<li><code class="docutils literal notranslate"><span class="pre">delete_on_termination</span></code> - (Optional) Whether the volume should be destroyed
-on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</li>
-<li><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> - (Optional) Whether the volume should be encrypted or not. Do not use this option if you are using <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> as the encrypted flag will be determined by the snapshot. (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</li>
-</ul>
-<p>Modifying any <code class="docutils literal notranslate"><span class="pre">ebs_block_device</span></code> currently requires resource replacement.</p>
-<p>Each <code class="docutils literal notranslate"><span class="pre">ephemeral_block_device</span></code> supports the following:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">device_name</span></code> - The name of the block device to mount on the instance.</li>
-<li><code class="docutils literal notranslate"><span class="pre">virtual_name</span></code> - The <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames">Instance Store Device
-Name</a>
-(e.g. <code class="docutils literal notranslate"><span class="pre">&quot;ephemeral0&quot;</span></code>)</li>
-</ul>
-<p>Each AWS Instance type has a different set of Instance Store block devices
-available for attachment. AWS <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#StorageOnInstanceTypes">publishes a
-list</a>
-of which ephemeral devices are available on each type. The devices are always
-identified by the <code class="docutils literal notranslate"><span class="pre">virtual_name</span></code> in the format <code class="docutils literal notranslate"><span class="pre">&quot;ephemeral{0..N}&quot;</span></code>.</p>
-<blockquote>
-<div><strong>NOTE:</strong> Changes to <code class="docutils literal notranslate"><span class="pre">*_block_device</span></code> configuration of <em>existing</em> resources
-cannot currently be detected by Terraform. After updating to block device
-configuration, resource recreation can be manually triggered by using the
-<cite>``taint`</cite> command &lt;<a class="reference external" href="https://www.terraform.io/docs/commands/taint.html">https://www.terraform.io/docs/commands/taint.html</a>&gt;`_.</div></blockquote>
+<dd><p>Create a LaunchConfiguration resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -3906,8 +3809,7 @@ with launched instances.</li>
 <li><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 image ID to launch.</li>
 <li><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The size of instance to launch.</li>
 <li><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key name that should be used for the instance.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the launch configuration. If you leave
-this blank, Terraform will auto-generate a unique name.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the launch configuration.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>placement_tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tenancy of the instance. Valid values are
@@ -3926,6 +3828,8 @@ device of the instance. See Block Devices below for details.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_configuration.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchConfiguration.associate_public_ip_address">
 <code class="descname">associate_public_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration.associate_public_ip_address" title="Permalink to this definition">¶</a></dt>
@@ -3986,8 +3890,7 @@ with launched instances.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchConfiguration.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the launch configuration. If you leave
-this blank, Terraform will auto-generate a unique name.</p>
+<dd><p>The name of the launch configuration.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4124,7 +4027,6 @@ below for details.</li>
 <li><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key name to use for the instance.</li>
 <li><strong>license_specifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of license specifications to associate with. See License Specification below for more details.</li>
 <li><strong>monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The monitoring option for the instance. See Monitoring below for more details.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the launch template. If you leave this blank, Terraform will auto-generate a unique name.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>network_interfaces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.</li>
@@ -4141,6 +4043,8 @@ Interfaces below for more details.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_template.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchTemplate.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.arn" title="Permalink to this definition">¶</a></dt>
@@ -4269,12 +4173,6 @@ below for details.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_aws.ec2.LaunchTemplate.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the launch template. If you leave this blank, Terraform will auto-generate a unique name.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchTemplate.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.name_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
@@ -4395,6 +4293,8 @@ main route table for the target VPC</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/main_route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/main_route_table_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.MainRouteTableAssociation.original_route_table_id">
 <code class="descname">original_route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.MainRouteTableAssociation.original_route_table_id" title="Permalink to this definition">¶</a></dt>
@@ -4473,6 +4373,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/nat_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/nat_gateway.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NatGateway.allocation_id">
 <code class="descname">allocation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NatGateway.allocation_id" title="Permalink to this definition">¶</a></dt>
@@ -4552,14 +4454,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.NetworkAcl">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NetworkAcl</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>egress=None</em>, <em>ingress=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkAcl" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an network ACL resource. You might set up network ACLs with rules similar
-to your security groups in order to add an additional layer of security to your VPC.</p>
-<blockquote>
-<div><strong>NOTE on Network ACLs and Network ACL Rules:</strong> Terraform currently
-provides both a standalone Network ACL Rule resource and a Network ACL resource with rules
-defined in-line. At this time you cannot use a Network ACL with in-line rules
-in conjunction with any Network ACL Rule resources. Doing so will cause
-a conflict of rule settings and will overwrite rules.</div></blockquote>
+<dd><p>Create a NetworkAcl resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -4581,6 +4476,8 @@ This argument is processed in <a class="reference external" href="https://www.te
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkAcl.egress">
 <code class="descname">egress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkAcl.egress" title="Permalink to this definition">¶</a></dt>
@@ -4662,13 +4559,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.NetworkAclRule">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NetworkAclRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cidr_block=None</em>, <em>egress=None</em>, <em>from_port=None</em>, <em>icmp_code=None</em>, <em>icmp_type=None</em>, <em>ipv6_cidr_block=None</em>, <em>network_acl_id=None</em>, <em>protocol=None</em>, <em>rule_action=None</em>, <em>rule_number=None</em>, <em>to_port=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkAclRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates an entry (a rule) in a network ACL with the specified rule number.</p>
-<blockquote>
-<div><strong>NOTE on Network ACLs and Network ACL Rules:</strong> Terraform currently
-provides both a standalone Network ACL Rule resource and a Network ACL resource with rules
-defined in-line. At this time you cannot use a Network ACL with in-line rules
-in conjunction with any Network ACL Rule resources. Doing so will cause
-a conflict of rule settings and will overwrite rules.</div></blockquote>
+<dd><p>Create a NetworkAclRule resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -4692,6 +4583,8 @@ a conflict of rule settings and will overwrite rules.</div></blockquote>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkAclRule.cidr_block">
 <code class="descname">cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkAclRule.cidr_block" title="Permalink to this definition">¶</a></dt>
@@ -4822,6 +4715,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkInterface.attachments">
 <code class="descname">attachments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface.attachments" title="Permalink to this definition">¶</a></dt>
@@ -4929,6 +4824,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_attachment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkInterfaceAttachment.attachment_id">
 <code class="descname">attachment_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterfaceAttachment.attachment_id" title="Permalink to this definition">¶</a></dt>
@@ -5002,17 +4899,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.NetworkInterfaceSecurityGroupAttachment">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NetworkInterfaceSecurityGroupAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>network_interface_id=None</em>, <em>security_group_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterfaceSecurityGroupAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>This resource attaches a security group to an Elastic Network Interface (ENI).
-It can be used to attach a security group to any existing ENI, be it a
-secondary ENI or one attached as the primary interface on an instance.</p>
-<blockquote>
-<div><strong>NOTE on instances, interfaces, and security groups:</strong> Terraform currently
-provides the capability to assign security groups via the <cite>``aws_instance`</cite> &lt;/docs/providers/aws/d/instance.html&gt;`_
-and the <cite>``aws_network_interface`</cite> &lt;/docs/providers/aws/r/network_interface.html&gt;`_ resources. Using this resource in
-conjunction with security groups provided in-line in those resources will cause
-conflicts, and will lead to spurious diffs and undefined behavior - please use
-one or the other.</div></blockquote>
-<p>There are no outputs for this resource.</p>
+<dd><p>Create a NetworkInterfaceSecurityGroupAttachment resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -5027,6 +4914,8 @@ one or the other.</div></blockquote>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_sg_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_sg_attachment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkInterfaceSecurityGroupAttachment.network_interface_id">
 <code class="descname">network_interface_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterfaceSecurityGroupAttachment.network_interface_id" title="Permalink to this definition">¶</a></dt>
@@ -5082,17 +4971,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.PeeringConnectionOptions">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">PeeringConnectionOptions</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>accepter=None</em>, <em>requester=None</em>, <em>vpc_peering_connection_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.PeeringConnectionOptions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to manage VPC peering connection options.</p>
-<blockquote>
-<div><strong>NOTE on VPC Peering Connections and VPC Peering Connection Options:</strong> Terraform provides
-both a standalone VPC Peering Connection Options and a VPC Peering Connection
-resource with <code class="docutils literal notranslate"><span class="pre">accepter</span></code> and <code class="docutils literal notranslate"><span class="pre">requester</span></code> attributes. Do not manage options for the same VPC peering
-connection in both a VPC Peering Connection resource and a VPC Peering Connection Options resource.
-Doing so will cause a conflict of options and will overwrite the options.
-Using a VPC Peering Connection Options resource decouples management of the connection options from
-management of the VPC Peering Connection and allows options to be set correctly in cross-account scenarios.</div></blockquote>
-<p>Basic usage:</p>
-<p>Basic cross-account usage:</p>
+<dd><p>Create a PeeringConnectionOptions resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -5112,6 +4991,8 @@ the peering connection (a maximum of one).</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.PeeringConnectionOptions.accepter">
 <code class="descname">accepter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.PeeringConnectionOptions.accepter" title="Permalink to this definition">¶</a></dt>
@@ -5193,6 +5074,8 @@ in <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/placement_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/placement_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.PlacementGroup.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.PlacementGroup.name" title="Permalink to this definition">¶</a></dt>
@@ -5265,6 +5148,8 @@ should be attached.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/proxy_protocol_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/proxy_protocol_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.ProxyProtocolPolicy.instance_ports">
 <code class="descname">instance_ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.ProxyProtocolPolicy.instance_ports" title="Permalink to this definition">¶</a></dt>
@@ -5322,13 +5207,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.Route">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">Route</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destination_cidr_block=None</em>, <em>destination_ipv6_cidr_block=None</em>, <em>egress_only_gateway_id=None</em>, <em>gateway_id=None</em>, <em>instance_id=None</em>, <em>nat_gateway_id=None</em>, <em>network_interface_id=None</em>, <em>route_table_id=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_peering_connection_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Route" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to create a routing table entry (a route) in a VPC routing table.</p>
-<blockquote>
-<div><strong>NOTE on Route Tables and Routes:</strong> Terraform currently
-provides both a standalone Route resource and a Route Table resource with routes
-defined in-line. At this time you cannot use a Route Table with in-line routes
-in conjunction with any Route resources. Doing so will cause
-a conflict of rule settings and will overwrite rules.</div></blockquote>
+<dd><p>Create a Route resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -5351,6 +5230,8 @@ a conflict of rule settings and will overwrite rules.</div></blockquote>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Route.destination_cidr_block">
 <code class="descname">destination_cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Route.destination_cidr_block" title="Permalink to this definition">¶</a></dt>
@@ -5454,25 +5335,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.RouteTable">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">RouteTable</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>propagating_vgws=None</em>, <em>routes=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.RouteTable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to create a VPC routing table.</p>
-<blockquote>
-<div><p><strong>NOTE on Route Tables and Routes:</strong> Terraform currently
-provides both a standalone Route resource and a Route Table resource with routes
-defined in-line. At this time you cannot use a Route Table with in-line routes
-in conjunction with any Route resources. Doing so will cause
-a conflict of rule settings and will overwrite rules.</p>
-<p><strong>NOTE on ``gateway_id`` and ``nat_gateway_id``:</strong> The AWS API is very forgiving with these two
-attributes and the <code class="docutils literal notranslate"><span class="pre">aws_route_table</span></code> resource can be created with a NAT ID specified as a Gateway ID attribute.
-This <em>will</em> lead to a permanent diff between your configuration and statefile, as the API returns the correct
-parameters in the returned route table. If you’re experiencing constant diffs in your <code class="docutils literal notranslate"><span class="pre">aws_route_table</span></code> resources,
-the first thing to check is whether or not you’re specifying a NAT ID instead of a Gateway ID, or vice-versa.</p>
-<p><strong>NOTE on ``propagating_vgws`` and the ``aws_vpn_gateway_route_propagation`` resource:</strong>
-If the <code class="docutils literal notranslate"><span class="pre">propagating_vgws</span></code> argument is present, it’s not supported to <em>also</em>
-define route propagations using <code class="docutils literal notranslate"><span class="pre">aws_vpn_gateway_route_propagation</span></code>, since
-this resource will delete any propagating gateways not explicitly listed in
-<code class="docutils literal notranslate"><span class="pre">propagating_vgws</span></code>. Omit this argument when defining route propagation using
-the separate resource.</p>
-</div></blockquote>
+<dd><p>Create a RouteTable resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -5490,6 +5353,8 @@ the separate resource.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.RouteTable.owner_id">
 <code class="descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.RouteTable.owner_id" title="Permalink to this definition">¶</a></dt>
@@ -5578,6 +5443,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.RouteTableAssociation.route_table_id">
 <code class="descname">route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.RouteTableAssociation.route_table_id" title="Permalink to this definition">¶</a></dt>
@@ -5633,16 +5500,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.SecurityGroup">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">SecurityGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>egress=None</em>, <em>ingress=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>revoke_rules_on_delete=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a security group resource.</p>
-<blockquote>
-<div><p><strong>NOTE on Security Groups and Security Group Rules:</strong> Terraform currently
-provides both a standalone Security Group Rule resource (a single <code class="docutils literal notranslate"><span class="pre">ingress</span></code> or
-<code class="docutils literal notranslate"><span class="pre">egress</span></code> rule), and a Security Group resource with <code class="docutils literal notranslate"><span class="pre">ingress</span></code> and <code class="docutils literal notranslate"><span class="pre">egress</span></code> rules
-defined in-line. At this time you cannot use a Security Group with in-line rules
-in conjunction with any Security Group Rule resources. Doing so will cause
-a conflict of rule settings and will overwrite rules.</p>
-<p><strong>NOTE:</strong> Referencing Security Groups across VPC peering has certain restrictions. More information is available in the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html">VPC Peering User Guide</a>.</p>
-</div></blockquote>
+<dd><p>Create a SecurityGroup resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -5650,10 +5508,7 @@ a conflict of rule settings and will overwrite rules.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group description. Defaults to
-“Managed by Terraform”. Cannot be “”. <strong>NOTE</strong>: This field maps to the AWS
-<code class="docutils literal notranslate"><span class="pre">GroupDescription</span></code> attribute, for which there is no Update API. If you’d like
-to classify your security groups in a way that can be updated, use <code class="docutils literal notranslate"><span class="pre">tags</span></code>.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the security group</li>
 <li><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
 This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
@@ -5662,17 +5517,9 @@ This argument is processed in <a class="reference external" href="https://www.te
 ingress rule. Each ingress block supports fields documented below.
 This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
 </li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the security group. If omitted, Terraform will
-assign a random, unique name</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the security group</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
-<li><strong>revoke_rules_on_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Instruct Terraform to revoke all of the
-Security Groups attached ingress and egress rules before deleting the rule
-itself. This is normally not needed, however certain AWS services such as
-Elastic Map Reduce may automatically add required rules to security groups used
-with the service, and those rules may contain a cyclic dependency that prevent
-the security groups from being destroyed without removing the dependency first.
-Default <code class="docutils literal notranslate"><span class="pre">false</span></code></li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID.</li>
 </ul>
@@ -5680,6 +5527,8 @@ Default <code class="docutils literal notranslate"><span class="pre">false</span
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SecurityGroup.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup.arn" title="Permalink to this definition">¶</a></dt>
@@ -5689,10 +5538,7 @@ Default <code class="docutils literal notranslate"><span class="pre">false</span
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SecurityGroup.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>The security group description. Defaults to
-“Managed by Terraform”. Cannot be “”. <strong>NOTE</strong>: This field maps to the AWS
-<code class="docutils literal notranslate"><span class="pre">GroupDescription</span></code> attribute, for which there is no Update API. If you’d like
-to classify your security groups in a way that can be updated, use <code class="docutils literal notranslate"><span class="pre">tags</span></code>.</p>
+<dd><p>The description of the security group</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5714,8 +5560,7 @@ This argument is processed in <a class="reference external" href="https://www.te
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SecurityGroup.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the security group. If omitted, Terraform will
-assign a random, unique name</p>
+<dd><p>The name of the security group</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5729,18 +5574,6 @@ prefix. Conflicts with <code class="docutils literal notranslate"><span class="p
 <dt id="pulumi_aws.ec2.SecurityGroup.owner_id">
 <code class="descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup.owner_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The owner ID.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.SecurityGroup.revoke_rules_on_delete">
-<code class="descname">revoke_rules_on_delete</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup.revoke_rules_on_delete" title="Permalink to this definition">¶</a></dt>
-<dd><p>Instruct Terraform to revoke all of the
-Security Groups attached ingress and egress rules before deleting the rule
-itself. This is normally not needed, however certain AWS services such as
-Elastic Map Reduce may automatically add required rules to security groups used
-with the service, and those rules may contain a cyclic dependency that prevent
-the security groups from being destroyed without removing the dependency first.
-Default <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5798,18 +5631,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.SecurityGroupRule">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">SecurityGroupRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cidr_blocks=None</em>, <em>description=None</em>, <em>from_port=None</em>, <em>ipv6_cidr_blocks=None</em>, <em>prefix_list_ids=None</em>, <em>protocol=None</em>, <em>security_group_id=None</em>, <em>self=None</em>, <em>source_security_group_id=None</em>, <em>to_port=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a security group rule resource. Represents a single <code class="docutils literal notranslate"><span class="pre">ingress</span></code> or
-<code class="docutils literal notranslate"><span class="pre">egress</span></code> group rule, which can be added to external Security Groups.</p>
-<blockquote>
-<div><p><strong>NOTE on Security Groups and Security Group Rules:</strong> Terraform currently
-provides both a standalone Security Group Rule resource (a single <code class="docutils literal notranslate"><span class="pre">ingress</span></code> or
-<code class="docutils literal notranslate"><span class="pre">egress</span></code> rule), and a Security Group resource with <code class="docutils literal notranslate"><span class="pre">ingress</span></code> and <code class="docutils literal notranslate"><span class="pre">egress</span></code> rules
-defined in-line. At this time you cannot use a Security Group with in-line rules
-in conjunction with any Security Group Rule resources. Doing so will cause
-a conflict of rule settings and will overwrite rules.</p>
-<p><strong>NOTE:</strong> Setting <code class="docutils literal notranslate"><span class="pre">protocol</span> <span class="pre">=</span> <span class="pre">&quot;all&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">protocol</span> <span class="pre">=</span> <span class="pre">-1</span></code> with <code class="docutils literal notranslate"><span class="pre">from_port</span></code> and <code class="docutils literal notranslate"><span class="pre">to_port</span></code> will result in the EC2 API creating a security group rule with all ports open. This API behavior cannot be controlled by Terraform and may generate warnings in the future.</p>
-<p><strong>NOTE:</strong> Referencing Security Groups across VPC peering has certain restrictions. More information is available in the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html">VPC Peering User Guide</a>.</p>
-</div></blockquote>
+<dd><p>Create a SecurityGroupRule resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -5837,6 +5659,8 @@ or <code class="docutils literal notranslate"><span class="pre">egress</span></c
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SecurityGroupRule.cidr_blocks">
 <code class="descname">cidr_blocks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule.cidr_blocks" title="Permalink to this definition">¶</a></dt>
@@ -5965,6 +5789,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/snapshot_create_volume_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/snapshot_create_volume_permission.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SnapshotCreateVolumePermission.account_id">
 <code class="descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SnapshotCreateVolumePermission.account_id" title="Permalink to this definition">¶</a></dt>
@@ -6038,6 +5864,8 @@ This data feed is sent to an Amazon S3 bucket that you specify when you subscrib
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_datafeed_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_datafeed_subscription.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotDatafeedSubscription.bucket">
 <code class="descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotDatafeedSubscription.bucket" title="Permalink to this definition">¶</a></dt>
@@ -6136,14 +5964,13 @@ instances should be terminated when the Spot fleet request expires.</li>
 <li><strong>valid_from</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The start date and time of the request, in UTC <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339</a> format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.</li>
 <li><strong>valid_until</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The end date and time of the request, in UTC <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339</a> format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. Defaults to 24 hours.</p>
 </li>
-<li><strong>wait_for_fulfillment</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set, Terraform will
-wait for the Spot Request to be fulfilled, and will throw an error if the
-timeout of 10m is reached.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_fleet_request.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_fleet_request.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotFleetRequest.allocation_strategy">
 <code class="descname">allocation_strategy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.allocation_strategy" title="Permalink to this definition">¶</a></dt>
@@ -6258,14 +6085,6 @@ instances should be terminated when the Spot fleet request expires.</p>
 <dd><p>The end date and time of the request, in UTC <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339</a> format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. Defaults to 24 hours.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.SpotFleetRequest.wait_for_fulfillment">
-<code class="descname">wait_for_fulfillment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.wait_for_fulfillment" title="Permalink to this definition">¶</a></dt>
-<dd><p>If set, Terraform will
-wait for the Spot Request to be fulfilled, and will throw an error if the
-timeout of 10m is reached.</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_aws.ec2.SpotFleetRequest.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -6309,25 +6128,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">SpotInstanceRequest</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ami=None</em>, <em>associate_public_ip_address=None</em>, <em>availability_zone=None</em>, <em>block_duration_minutes=None</em>, <em>cpu_core_count=None</em>, <em>cpu_threads_per_core=None</em>, <em>credit_specification=None</em>, <em>disable_api_termination=None</em>, <em>ebs_block_devices=None</em>, <em>ebs_optimized=None</em>, <em>ephemeral_block_devices=None</em>, <em>get_password_data=None</em>, <em>host_id=None</em>, <em>iam_instance_profile=None</em>, <em>instance_initiated_shutdown_behavior=None</em>, <em>instance_interruption_behaviour=None</em>, <em>instance_type=None</em>, <em>ipv6_address_count=None</em>, <em>ipv6_addresses=None</em>, <em>key_name=None</em>, <em>launch_group=None</em>, <em>monitoring=None</em>, <em>network_interfaces=None</em>, <em>placement_group=None</em>, <em>private_ip=None</em>, <em>root_block_device=None</em>, <em>security_groups=None</em>, <em>source_dest_check=None</em>, <em>spot_price=None</em>, <em>spot_type=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>tenancy=None</em>, <em>user_data=None</em>, <em>user_data_base64=None</em>, <em>valid_from=None</em>, <em>valid_until=None</em>, <em>volume_tags=None</em>, <em>vpc_security_group_ids=None</em>, <em>wait_for_fulfillment=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an EC2 Spot Instance Request resource. This allows instances to be
-requested on the spot market.</p>
-<p>By default Terraform creates Spot Instance Requests with a <code class="docutils literal notranslate"><span class="pre">persistent</span></code> type,
-which means that for the duration of their lifetime, AWS will launch an
-instance with the configured details if and when the spot market will accept
-the requested price.</p>
-<p>On destruction, Terraform will make an attempt to terminate the associated Spot
-Instance if there is one present.</p>
-<p>Spot Instances requests with a <code class="docutils literal notranslate"><span class="pre">one-time</span></code> type will close the spot request
-when the instance is terminated either by the request being below the current spot
-price availability or by a user.</p>
-<blockquote>
-<div><strong>NOTE:</strong> Because their behavior depends on the live status of the spot
-market, Spot Instance Requests have a unique lifecycle that makes them behave
-differently than other Terraform resources. Most importantly: there is <strong>no
-guarantee</strong> that a Spot Instance exists to fulfill the request at any given
-point in time. See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html">AWS Spot Instance
-documentation</a>
-for more information.</div></blockquote>
+<dd><p>Create a SpotInstanceRequest resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -6412,14 +6213,13 @@ the instance is terminated, the spot request will be closed.</li>
 </li>
 <li><strong>volume_tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the devices created by the instance at launch time.</li>
 <li><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group IDs to associate with.</li>
-<li><strong>wait_for_fulfillment</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set, Terraform will
-wait for the Spot Request to be fulfilled, and will throw an error if the
-timeout of 10m is reached.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_instance_request.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_instance_request.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.ami">
 <code class="descname">ami</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.ami" title="Permalink to this definition">¶</a></dt>
@@ -6712,14 +6512,6 @@ the instance is terminated, the spot request will be closed.</p>
 <dd><p>A list of security group IDs to associate with.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.SpotInstanceRequest.wait_for_fulfillment">
-<code class="descname">wait_for_fulfillment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.wait_for_fulfillment" title="Permalink to this definition">¶</a></dt>
-<dd><p>If set, Terraform will
-wait for the Spot Request to be fulfilled, and will throw an error if the
-timeout of 10m is reached.</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -6789,6 +6581,8 @@ a public IP address. Default is <code class="docutils literal notranslate"><span
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/subnet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/subnet.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Subnet.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Subnet.arn" title="Permalink to this definition">¶</a></dt>
@@ -6903,10 +6697,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.VolumeAttachment">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VolumeAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>device_name=None</em>, <em>force_detach=None</em>, <em>instance_id=None</em>, <em>skip_destroy=None</em>, <em>volume_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VolumeAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an AWS EBS Volume Attachment as a top level resource, to attach and
-detach volumes from AWS Instances.</p>
-<blockquote>
-<div><strong>NOTE on EBS block devices:</strong> If you use <code class="docutils literal notranslate"><span class="pre">ebs_block_device</span></code> on an <code class="docutils literal notranslate"><span class="pre">aws_instance</span></code>, Terraform will assume management over the full set of non-root EBS block devices for the instance, and treats additional block devices as drift. For this reason, <code class="docutils literal notranslate"><span class="pre">ebs_block_device</span></code> cannot be mixed with external <code class="docutils literal notranslate"><span class="pre">aws_ebs_volume</span></code> + <code class="docutils literal notranslate"><span class="pre">aws_ebs_volume_attachment</span></code> resources for a given instance.</div></blockquote>
+<dd><p>Create a VolumeAttachment resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -6921,17 +6712,14 @@ volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in <strong>data loss</strong>. See
 [Detaching an Amazon EBS Volume from an Instance][3] for more information.</li>
 <li><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the Instance to attach to</li>
-<li><strong>skip_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set this to true if you do not wish
-to detach the volume from the instance to which it is attached at destroy
-time, and instead just remove the attachment from Terraform state. This is
-useful when destroying an instance which has volumes created by some other
-means attached.</li>
 <li><strong>volume_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the Volume to be attached</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/volume_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/volume_attachment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VolumeAttachment.device_name">
 <code class="descname">device_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VolumeAttachment.device_name" title="Permalink to this definition">¶</a></dt>
@@ -6952,16 +6740,6 @@ as a last resort, as this can result in <strong>data loss</strong>. See
 <dt id="pulumi_aws.ec2.VolumeAttachment.instance_id">
 <code class="descname">instance_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VolumeAttachment.instance_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID of the Instance to attach to</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.VolumeAttachment.skip_destroy">
-<code class="descname">skip_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VolumeAttachment.skip_destroy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set this to true if you do not wish
-to detach the volume from the instance to which it is attached at destroy
-time, and instead just remove the attachment from Terraform state. This is
-useful when destroying an instance which has volumes created by some other
-means attached.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7039,6 +6817,8 @@ Only valid in regions and accounts that support EC2 Classic.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Vpc.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Vpc.arn" title="Permalink to this definition">¶</a></dt>
@@ -7212,6 +6992,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcDhcpOptions.domain_name">
 <code class="descname">domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptions.domain_name" title="Permalink to this definition">¶</a></dt>
@@ -7316,6 +7098,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcDhcpOptionsAssociation.dhcp_options_id">
 <code class="descname">dhcp_options_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptionsAssociation.dhcp_options_id" title="Permalink to this definition">¶</a></dt>
@@ -7371,14 +7155,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcEndpoint">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpoint</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_accept=None</em>, <em>policy=None</em>, <em>private_dns_enabled=None</em>, <em>route_table_ids=None</em>, <em>security_group_ids=None</em>, <em>service_name=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>vpc_endpoint_type=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a VPC Endpoint resource.</p>
-<blockquote>
-<div><strong>NOTE on VPC Endpoints and VPC Endpoint Associations:</strong> Terraform provides both standalone VPC Endpoint Associations for
-Route Tables - (an association between a VPC endpoint and a single <code class="docutils literal notranslate"><span class="pre">route_table_id</span></code>) and
-Subnets - (an association between a VPC endpoint and a single <code class="docutils literal notranslate"><span class="pre">subnet_id</span></code>) and
-a VPC Endpoint resource with <code class="docutils literal notranslate"><span class="pre">route_table_ids</span></code> and <code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> attributes.
-Do not use the same resource ID in both a VPC Endpoint resource and a VPC Endpoint Association resource.
-Doing so will cause a conflict of associations and will overwrite the association.</div></blockquote>
+<dd><p>Create a VpcEndpoint resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -7387,7 +7164,6 @@ Doing so will cause a conflict of associations and will overwrite the associatio
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Accept the VPC endpoint (the VPC endpoint and service need to be in the same AWS account).</li>
-<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A policy to attach to the endpoint that controls access to the service. Defaults to full access. All <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> and some <code class="docutils literal notranslate"><span class="pre">Interface</span></code> endpoints support policies - see the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html">relevant AWS documentation</a> for more details. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</li>
 <li><strong>private_dns_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to associate a private hosted zone with the specified VPC. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>route_table_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more route table IDs. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</li>
@@ -7402,6 +7178,8 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpoint.auto_accept">
 <code class="descname">auto_accept</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.auto_accept" title="Permalink to this definition">¶</a></dt>
@@ -7430,12 +7208,6 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 <dt id="pulumi_aws.ec2.VpcEndpoint.owner_id">
 <code class="descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.owner_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the AWS account that owns the VPC endpoint.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.VpcEndpoint.policy">
-<code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A policy to attach to the endpoint that controls access to the service. Defaults to full access. All <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> and some <code class="docutils literal notranslate"><span class="pre">Interface</span></code> endpoints support policies - see the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html">relevant AWS documentation</a> for more details. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7566,6 +7338,8 @@ Connection notifications notify subscribers of VPC Endpoint events.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_connection_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_connection_notification.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpointConnectionNotification.connection_events">
 <code class="descname">connection_events</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointConnectionNotification.connection_events" title="Permalink to this definition">¶</a></dt>
@@ -7660,6 +7434,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_route_table_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpointRouteTableAssociation.route_table_id">
 <code class="descname">route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointRouteTableAssociation.route_table_id" title="Permalink to this definition">¶</a></dt>
@@ -7715,14 +7491,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcEndpointService">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpointService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>acceptance_required=None</em>, <em>allowed_principals=None</em>, <em>network_load_balancer_arns=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointService" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a VPC Endpoint Service resource.
-Service consumers can create an <em>Interface</em> VPC Endpoint to connect to the service.</p>
-<blockquote>
-<div><strong>NOTE on VPC Endpoint Services and VPC Endpoint Service Allowed Principals:</strong> Terraform provides
-both a standalone VPC Endpoint Service Allowed Principal resource
-and a VPC Endpoint Service resource with an <code class="docutils literal notranslate"><span class="pre">allowed_principals</span></code> attribute. Do not use the same principal ARN in both
-a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal resource. Doing so will cause a conflict
-and will overwrite the association.</div></blockquote>
+<dd><p>Create a VpcEndpointService resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -7739,6 +7508,8 @@ and will overwrite the association.</div></blockquote>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpointService.acceptance_required">
 <code class="descname">acceptance_required</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointService.acceptance_required" title="Permalink to this definition">¶</a></dt>
@@ -7848,13 +7619,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcEndpointServiceAllowedPrinciple">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpointServiceAllowedPrinciple</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>principal_arn=None</em>, <em>vpc_endpoint_service_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointServiceAllowedPrinciple" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to allow a principal to discover a VPC endpoint service.</p>
-<blockquote>
-<div><strong>NOTE on VPC Endpoint Services and VPC Endpoint Service Allowed Principals:</strong> Terraform provides
-both a standalone VPC Endpoint Service Allowed Principal resource
-and a VPC Endpoint Service resource with an <code class="docutils literal notranslate"><span class="pre">allowed_principals</span></code> attribute. Do not use the same principal ARN in both
-a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal resource. Doing so will cause a conflict
-and will overwrite the association.</div></blockquote>
+<dd><p>Create a VpcEndpointServiceAllowedPrinciple resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -7869,6 +7634,8 @@ and will overwrite the association.</div></blockquote>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service_allowed_principal.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service_allowed_principal.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpointServiceAllowedPrinciple.principal_arn">
 <code class="descname">principal_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointServiceAllowedPrinciple.principal_arn" title="Permalink to this definition">¶</a></dt>
@@ -7924,13 +7691,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcEndpointSubnetAssociation">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpointSubnetAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>subnet_id=None</em>, <em>vpc_endpoint_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointSubnetAssociation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to create an association between a VPC endpoint and a subnet.</p>
-<blockquote>
-<div><strong>NOTE on VPC Endpoints and VPC Endpoint Subnet Associations:</strong> Terraform provides
-both a standalone VPC Endpoint Subnet Association (an association between a VPC endpoint
-and a single <code class="docutils literal notranslate"><span class="pre">subnet_id</span></code>) and a VPC Endpoint resource with a <code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code>
-attribute. Do not use the same subnet ID in both a VPC Endpoint resource and a VPC Endpoint Subnet
-Association resource. Doing so will cause a conflict of associations and will overwrite the association.</div></blockquote>
+<dd><p>Create a VpcEndpointSubnetAssociation resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -7945,6 +7706,8 @@ Association resource. Doing so will cause a conflict of associations and will ov
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_subnet_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_subnet_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpointSubnetAssociation.subnet_id">
 <code class="descname">subnet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointSubnetAssociation.subnet_id" title="Permalink to this definition">¶</a></dt>
@@ -8017,6 +7780,8 @@ The <code class="docutils literal notranslate"><span class="pre">aws_vpc_ipv4_ci
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_ipv4_cidr_block_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_ipv4_cidr_block_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcIpv4CidrBlockAssociation.cidr_block">
 <code class="descname">cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcIpv4CidrBlockAssociation.cidr_block" title="Permalink to this definition">¶</a></dt>
@@ -8072,22 +7837,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcPeeringConnection">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcPeeringConnection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>accepter=None</em>, <em>auto_accept=None</em>, <em>peer_owner_id=None</em>, <em>peer_region=None</em>, <em>peer_vpc_id=None</em>, <em>requester=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to manage a VPC peering connection.</p>
-<blockquote>
-<div><p><strong>NOTE on VPC Peering Connections and VPC Peering Connection Options:</strong> Terraform provides
-both a standalone VPC Peering Connection Options and a VPC Peering Connection
-resource with <code class="docutils literal notranslate"><span class="pre">accepter</span></code> and <code class="docutils literal notranslate"><span class="pre">requester</span></code> attributes. Do not manage options for the same VPC peering
-connection in both a VPC Peering Connection resource and a VPC Peering Connection Options resource.
-Doing so will cause a conflict of options and will overwrite the options.
-Using a VPC Peering Connection Options resource decouples management of the connection options from
-management of the VPC Peering Connection and allows options to be set correctly in cross-account scenarios.</p>
-<p><strong>Note:</strong> For cross-account (requester’s AWS account differs from the accepter’s AWS account) or inter-region
-VPC Peering Connections use the <code class="docutils literal notranslate"><span class="pre">aws_vpc_peering_connection</span></code> resource to manage the requester’s side of the
-connection and use the <code class="docutils literal notranslate"><span class="pre">aws_vpc_peering_connection_accepter</span></code> resource to manage the accepter’s side of the connection.</p>
-</div></blockquote>
-<p>If both VPCs are not in the same AWS account do not enable the <code class="docutils literal notranslate"><span class="pre">auto_accept</span></code> attribute.
-The accepter can manage its side of the connection using the <code class="docutils literal notranslate"><span class="pre">aws_vpc_peering_connection_accepter</span></code> resource
-or accept the connection manually using the AWS Management Console, AWS CLI, through SDKs, etc.</p>
+<dd><p>Create a VpcPeeringConnection resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -8114,6 +7864,8 @@ the peering connection (a maximum of one).</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcPeeringConnection.accept_status">
 <code class="descname">accept_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnection.accept_status" title="Permalink to this definition">¶</a></dt>
@@ -8243,6 +7995,8 @@ connection into management.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_accepter.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcPeeringConnectionAccepter.accept_status">
 <code class="descname">accept_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnectionAccepter.accept_status" title="Permalink to this definition">¶</a></dt>
@@ -8377,6 +8131,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpnConnection.customer_gateway_configuration">
 <code class="descname">customer_gateway_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnConnection.customer_gateway_configuration" title="Permalink to this definition">¶</a></dt>
@@ -8567,6 +8323,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection_route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection_route.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpnConnectionRoute.destination_cidr_block">
 <code class="descname">destination_cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnConnectionRoute.destination_cidr_block" title="Permalink to this definition">¶</a></dt>
@@ -8639,6 +8397,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpnGateway.amazon_side_asn">
 <code class="descname">amazon_side_asn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnGateway.amazon_side_asn" title="Permalink to this definition">¶</a></dt>
@@ -8726,6 +8486,8 @@ to an existing VPC by setting the <code class="docutils literal notranslate"><sp
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_attachment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpnGatewayAttachment.vpc_id">
 <code class="descname">vpc_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnGatewayAttachment.vpc_id" title="Permalink to this definition">¶</a></dt>
@@ -8800,6 +8562,8 @@ propagation not explicitly listed in its value will be removed.</div></blockquot
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_route_propagation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_route_propagation.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpnGatewayRoutePropagation.route_table_id">
 <code class="descname">route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnGatewayRoutePropagation.route_table_id" title="Permalink to this definition">¶</a></dt>
@@ -8856,6 +8620,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.get_customer_gateway">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_customer_gateway</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_customer_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AWS Customer Gateway.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/customer_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/customer_gateway.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -8863,53 +8629,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_instance</code><span class="sig-paren">(</span><em>filters=None</em>, <em>get_password_data=None</em>, <em>get_user_data=None</em>, <em>instance_id=None</em>, <em>instance_tags=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an Amazon EC2 Instance for use in other
 resources.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_aws.ec2.get_instances">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_instances</code><span class="sig-paren">(</span><em>filters=None</em>, <em>instance_state_names=None</em>, <em>instance_tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instances" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to get IDs or IPs of Amazon EC2 instances to be referenced elsewhere,
-e.g. to allow easier migration from another management solution
-or to make it easier for an operator to connect through bastion host(s).</p>
 <blockquote>
-<div><p><strong>Note:</strong> It’s a best practice to expose instance details via <a class="reference external" href="https://www.terraform.io/docs/configuration/outputs.html">outputs</a>
-and <a class="reference external" href="https://www.terraform.io/docs/state/remote.html">remote state</a> and
-<strong>use ```terraform_remote_state`` &lt;https://www.terraform.io/docs/providers/terraform/d/remote_state.html&gt;`_
-data source instead</strong> if you manage referenced instances via Terraform.</p>
-<p><strong>Note:</strong> It’s strongly discouraged to use this data source for querying ephemeral
-instances (e.g. managed via autoscaling group), as the output may change at any time
-and you’d need to re-run <code class="docutils literal notranslate"><span class="pre">apply</span></code> every time an instance comes up or dies.</p>
-</div></blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instance.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_internet_gateway">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_internet_gateway</code><span class="sig-paren">(</span><em>filters=None</em>, <em>internet_gateway_id=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_internet_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">aws_internet_gateway</span></code> provides details about a specific Internet Gateway.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/internet_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/internet_gateway.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_launch_configuration">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_launch_configuration</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_launch_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Launch Configuration.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_configuration.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_launch_template">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_launch_template</code><span class="sig-paren">(</span><em>name=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_launch_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Launch Template.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_template.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_nat_gateway">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_nat_gateway</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>state=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_nat_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific Nat Gateway.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/nat_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/nat_gateway.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_network_interface">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_network_interface</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_network_interface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Network Interface.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_interface.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -8919,6 +8680,8 @@ and you’d need to re-run <code class="docutils literal notranslate"><span clas
 <p>This resource can prove useful when finding the resource
 associated with a CIDR. For example, finding the peering
 connection associated with a CIDR value.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -8928,12 +8691,16 @@ connection associated with a CIDR value.</p>
 <p>This resource can prove useful when a module accepts a Subnet id as
 an input variable and needs to, for example, add a route in
 the Route Table.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_table.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_route_tables">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_route_tables</code><span class="sig-paren">(</span><em>filters=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_route_tables" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource can be useful for getting back a list of route table ids to be referenced elsewhere.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_tables.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_tables.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -8943,13 +8710,8 @@ the Route Table.</p>
 <p>This resource can prove useful when a module accepts a Security Group id as
 an input variable and needs to, for example, determine the id of the
 VPC that the security group belongs to.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_aws.ec2.get_security_groups">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_security_groups</code><span class="sig-paren">(</span><em>filters=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_security_groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to get IDs and VPC membership of Security Groups that are created
-outside of Terraform.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_group.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -8959,6 +8721,8 @@ outside of Terraform.</p>
 <p>This resource can prove useful when a module accepts a subnet id as
 an input variable and needs to, for example, determine the id of the
 VPC that the subnet belongs to.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -8966,6 +8730,8 @@ VPC that the subnet belongs to.</p>
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_subnet_ids</code><span class="sig-paren">(</span><em>filters=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_subnet_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">aws_subnet_ids</span></code> provides a list of ids for a vpc_id</p>
 <p>This resource can be useful for getting back a list of subnet ids for a vpc.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet_ids.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet_ids.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -8975,12 +8741,16 @@ VPC that the subnet belongs to.</p>
 <p>This resource can prove useful when a module accepts a vpc id as
 an input variable and needs to, for example, determine the CIDR block of that
 VPC.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_vpc_dhcp_options">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc_dhcp_options</code><span class="sig-paren">(</span><em>dhcp_options_id=None</em>, <em>filters=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_dhcp_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about an EC2 DHCP Options configuration.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_dhcp_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_dhcp_options.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -8988,6 +8758,8 @@ VPC.</p>
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc_endpoint</code><span class="sig-paren">(</span><em>id=None</em>, <em>service_name=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Endpoint data source provides details about
 a specific VPC endpoint.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -8995,6 +8767,8 @@ a specific VPC endpoint.</p>
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc_endpoint_service</code><span class="sig-paren">(</span><em>service=None</em>, <em>service_name=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Endpoint Service data source details about a specific service that
 can be specified when creating a VPC endpoint within the region configured in the provider.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint_service.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9002,6 +8776,8 @@ can be specified when creating a VPC endpoint within the region configured in th
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc_peering_connection</code><span class="sig-paren">(</span><em>cidr_block=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>owner_id=None</em>, <em>peer_cidr_block=None</em>, <em>peer_owner_id=None</em>, <em>peer_region=None</em>, <em>peer_vpc_id=None</em>, <em>region=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_peering_connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Peering Connection data source provides details about
 a specific VPC peering connection.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_peering_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_peering_connection.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9009,6 +8785,8 @@ a specific VPC peering connection.</p>
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpcs</code><span class="sig-paren">(</span><em>filters=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpcs" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource can be useful for getting back a list of VPC Ids for a region.</p>
 <p>The following example retrieves a list of VPC Ids with a custom tag of <code class="docutils literal notranslate"><span class="pre">service</span></code> set to a value of “production”.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpcs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpcs.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -9016,6 +8794,8 @@ a specific VPC peering connection.</p>
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpn_gateway</code><span class="sig-paren">(</span><em>amazon_side_asn=None</em>, <em>attached_vpc_id=None</em>, <em>availability_zone=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpn_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPN Gateway data source provides details about
 a specific VPN gateway.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpn_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpn_gateway.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

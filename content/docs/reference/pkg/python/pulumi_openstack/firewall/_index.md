@@ -42,6 +42,8 @@ firewall.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_firewall_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_firewall_v1.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.firewall.Firewall.admin_state_up">
 <code class="descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.firewall.Firewall.admin_state_up" title="Permalink to this definition">¶</a></dt>
@@ -248,6 +250,8 @@ can specify if the policy should be shared.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_policy_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_policy_v1.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.firewall.Policy.audited">
 <code class="descname">audited</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.firewall.Policy.audited" title="Permalink to this definition">¶</a></dt>
@@ -396,6 +400,8 @@ new firewall rule.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_rule_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_rule_v1.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.firewall.Rule.action">
 <code class="descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.firewall.Rule.action" title="Permalink to this definition">¶</a></dt>
@@ -540,6 +546,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.firewall.get_policy">
 <code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">get_policy</code><span class="sig-paren">(</span><em>name=None</em>, <em>policy_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.get_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get firewall policy information of an available OpenStack firewall policy.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/fw_policy_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/fw_policy_v1.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

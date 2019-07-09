@@ -23,6 +23,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_datagroup.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_datagroup.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.DataGroup.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.DataGroup.name" title="Permalink to this definition">¶</a></dt>
@@ -100,6 +102,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_irule.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_irule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.IRule.irule">
 <code class="descname">irule</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.IRule.irule" title="Permalink to this definition">¶</a></dt>
@@ -179,6 +183,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_monitor.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.Monitor.compatibility">
 <code class="descname">compatibility</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.Monitor.compatibility" title="Permalink to this definition">¶</a></dt>
@@ -302,6 +308,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_node.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_node.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.Node.address">
 <code class="descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.Node.address" title="Permalink to this definition">¶</a></dt>
@@ -411,6 +419,8 @@ If this is configured specify <code class="docutils literal notranslate"><span c
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_persistence_profile_cookie.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_persistence_profile_cookie.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_f5bigip.ltm.PersistenceProfileCookie.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.PersistenceProfileCookie.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -475,6 +485,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_persistence_profile_dstaddr.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_persistence_profile_dstaddr.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_f5bigip.ltm.PersistenceProfileDstAddr.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.PersistenceProfileDstAddr.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -542,6 +554,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_persistence_profile_srcaddr.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_persistence_profile_srcaddr.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_f5bigip.ltm.PersistenceProfileSrcAddr.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.PersistenceProfileSrcAddr.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -606,6 +620,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_persistence_profile_ssl.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_persistence_profile_ssl.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_f5bigip.ltm.PersistenceProfileSsl.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.PersistenceProfileSsl.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -668,6 +684,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.Policy.controls">
 <code class="descname">controls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.Policy.controls" title="Permalink to this definition">¶</a></dt>
@@ -757,6 +775,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_pool.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.Pool.monitors">
 <code class="descname">monitors</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.Pool.monitors" title="Permalink to this definition">¶</a></dt>
@@ -828,6 +848,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_pool_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_pool_attachment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.PoolAttachment.node">
 <code class="descname">node</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.PoolAttachment.node" title="Permalink to this definition">¶</a></dt>
@@ -908,6 +930,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_profile_fasthttp.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_profile_fasthttp.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.ProfileFastHttp.connpool_maxreuse">
 <code class="descname">connpool_maxreuse</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileFastHttp.connpool_maxreuse" title="Permalink to this definition">¶</a></dt>
@@ -1041,6 +1065,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_profile_fastl4.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_profile_fastl4.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.ProfileFastL4.client_timeout">
 <code class="descname">client_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileFastL4.client_timeout" title="Permalink to this definition">¶</a></dt>
@@ -1166,6 +1192,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_profile_http.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_profile_http.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.ProfileHttp.basic_auth_realm">
 <code class="descname">basic_auth_realm</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileHttp.basic_auth_realm" title="Permalink to this definition">¶</a></dt>
@@ -1276,6 +1304,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_profile_http2.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_profile_http2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.ProfileHttp2.activation_modes">
 <code class="descname">activation_modes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileHttp2.activation_modes" title="Permalink to this definition">¶</a></dt>
@@ -1369,6 +1399,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_profile_httpcompress.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_profile_httpcompress.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.ProfileHttpCompress.content_type_excludes">
 <code class="descname">content_type_excludes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileHttpCompress.content_type_excludes" title="Permalink to this definition">¶</a></dt>
@@ -1471,6 +1503,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_profile_oneconnect.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_profile_oneconnect.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.ProfileOneConnect.defaults_from">
 <code class="descname">defaults_from</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileOneConnect.defaults_from" title="Permalink to this definition">¶</a></dt>
@@ -1592,6 +1626,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_profile_tcp.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_profile_tcp.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.ProfileTcp.close_wait_timeout">
 <code class="descname">close_wait_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileTcp.close_wait_timeout" title="Permalink to this definition">¶</a></dt>
@@ -1718,6 +1754,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_snat.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_snat.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.Snat.mirror">
 <code class="descname">mirror</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.Snat.mirror" title="Permalink to this definition">¶</a></dt>
@@ -1831,6 +1869,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_snatpool.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_snatpool.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.SnatPool.members">
 <code class="descname">members</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.SnatPool.members" title="Permalink to this definition">¶</a></dt>
@@ -1908,6 +1948,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_virtual_address.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_virtual_address.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.VirtualAddress.advertize_route">
 <code class="descname">advertize_route</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.VirtualAddress.advertize_route" title="Permalink to this definition">¶</a></dt>
@@ -2029,6 +2071,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_virtual_server.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_virtual_server.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.ltm.VirtualServer.client_profiles">
 <code class="descname">client_profiles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.ltm.VirtualServer.client_profiles" title="Permalink to this definition">¶</a></dt>

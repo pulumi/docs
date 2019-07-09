@@ -7,6 +7,13 @@ title: Module loadbalancer
 
 <a href="../">@pulumi/openstack</a> &gt; loadbalancer
 
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack)
+> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
+> first check the [`pulumi/pulumi-openstack` repo](https://github.com/pulumi/pulumi-openstack/issues); however, if that doesn't turn up anything,
+> please consult the source [`terraform-providers/terraform-provider-openstack` repo](https://github.com/terraform-providers/terraform-provider-openstack/issues).
+
+
+
 <div class="toggleVisible">
 <div class="collapsed">
 <h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
@@ -50,14 +57,14 @@ title: Module loadbalancer
 <li><a href="#VipState">interface VipState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts">loadbalancer/l7PolicyV2.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts">loadbalancer/l7RuleV2.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts">loadbalancer/listener.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts">loadbalancer/loadBalancer.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts">loadbalancer/member.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts">loadbalancer/memberV1.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts">loadbalancer/monitor.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts">loadbalancer/monitorV1.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts">loadbalancer/pool.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts">loadbalancer/poolV1.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts">loadbalancer/vip.ts</a> 
+<a href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts">loadbalancer/l7PolicyV2.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts">loadbalancer/l7RuleV2.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts">loadbalancer/listener.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts">loadbalancer/loadBalancer.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts">loadbalancer/member.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts">loadbalancer/memberV1.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts">loadbalancer/monitor.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts">loadbalancer/monitorV1.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts">loadbalancer/pool.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts">loadbalancer/poolV1.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts">loadbalancer/vip.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="L7PolicyV2">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L46">class <b>L7PolicyV2</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L48">class <b>L7PolicyV2</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -101,9 +108,11 @@ const l7policy1 = new openstack.loadbalancer.L7PolicyV2("l7policy_1", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_l7policy_v2.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="L7PolicyV2-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L123"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L125"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -120,7 +129,7 @@ Create a L7PolicyV2 resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L57">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -134,7 +143,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -144,7 +153,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L68">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -158,7 +167,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L77">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L79">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -170,7 +179,7 @@ REDIRECT\_TO\_URL or REJECT.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L82">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L84">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -182,7 +191,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L86">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L88">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -193,7 +202,7 @@ Human-readable description for the L7 Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -205,7 +214,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2-listenerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L91">property <b>listenerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L93">property <b>listenerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>listenerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -217,7 +226,7 @@ Changing this creates a new L7 Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L96">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L98">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -229,7 +238,7 @@ to be unique.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2-position">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L100">property <b>position</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L102">property <b>position</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>position: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -240,7 +249,7 @@ The position of this policy on the listener. Positions start at 1.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2-redirectPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L105">property <b>redirectPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L107">property <b>redirectPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>redirectPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -252,7 +261,7 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2-redirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L110">property <b>redirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L112">property <b>redirectUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>redirectUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -264,7 +273,7 @@ Only valid if action is REDIRECT\_TO\_URL.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L117">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L119">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -278,7 +287,7 @@ L7 Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L123">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L125">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -291,7 +300,7 @@ other than their own. Changing this creates a new L7 Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -304,7 +313,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="L7RuleV2">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L52">class <b>L7RuleV2</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L54">class <b>L7RuleV2</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -354,9 +363,11 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_l7rule_v2.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="L7RuleV2-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L130"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L132"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -373,7 +384,7 @@ Create a L7RuleV2 resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L63">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -387,7 +398,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -397,7 +408,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L74">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -411,7 +422,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L83">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L85">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -423,7 +434,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2-compareType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L88">property <b>compareType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L90">property <b>compareType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>compareType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -435,7 +446,7 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -447,7 +458,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2-invert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L93">property <b>invert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L95">property <b>invert</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>invert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -459,7 +470,7 @@ true, equal to would become not equal to. Default is false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L98">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L100">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -471,7 +482,7 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2-l7policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L103">property <b>l7policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L105">property <b>l7policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>l7policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -483,7 +494,7 @@ L7 Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2-listenerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L107">property <b>listenerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L109">property <b>listenerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>listenerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -494,7 +505,7 @@ The ID of the Listener owning this resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L114">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L116">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -508,7 +519,7 @@ L7 Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L120">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L122">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -521,7 +532,7 @@ other than their own. Changing this creates a new L7 Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L125">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L127">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -533,7 +544,7 @@ HOST\_NAME or PATH.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -545,7 +556,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L130">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L132">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -558,7 +569,7 @@ compare.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Listener">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L23">class <b>Listener</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L25">class <b>Listener</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -579,9 +590,11 @@ const listener1 = new openstack.loadbalancer.Listener("listener_1", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_listener_v2.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Listener-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L116"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L118"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -598,7 +611,7 @@ Create a Listener resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L34">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -612,7 +625,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -622,7 +635,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L45">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -636,7 +649,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L54">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L56">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -648,7 +661,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-connectionLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L59">property <b>connectionLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L61">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>connectionLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -660,7 +673,7 @@ for the Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-defaultPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L64">property <b>defaultPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L66">property <b>defaultPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -672,7 +685,7 @@ Listener is associated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-defaultTlsContainerRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L72">property <b>defaultTlsContainerRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L74">property <b>defaultTlsContainerRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultTlsContainerRef: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -687,7 +700,7 @@ for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L76">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L78">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -698,7 +711,7 @@ Human-readable description for the Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -710,7 +723,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-loadbalancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L81">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L83">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>loadbalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -722,7 +735,7 @@ Listener. Changing this creates a new Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L86">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L88">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -734,7 +747,7 @@ to be unique.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L91">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L93">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -746,7 +759,7 @@ Changing this creates a new Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-protocolPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L96">property <b>protocolPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L98">property <b>protocolPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protocolPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -758,7 +771,7 @@ Changing this creates a new Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L103">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L105">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -772,7 +785,7 @@ Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-sniContainerRefs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L110">property <b>sniContainerRefs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L112">property <b>sniContainerRefs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sniContainerRefs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -786,7 +799,7 @@ for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L116">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L118">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -799,7 +812,7 @@ other than their own. Changing this creates a new Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -812,7 +825,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancer">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L21">class <b>LoadBalancer</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L23">class <b>LoadBalancer</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -831,9 +844,11 @@ const lb1 = new openstack.loadbalancer.LoadBalancer("lb_1", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_loadbalancer_v2.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L108"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -850,7 +865,7 @@ Create a LoadBalancer resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L32">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -864,7 +879,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -874,7 +889,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L43">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -888,7 +903,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L52">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L54">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -900,7 +915,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L56">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L58">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -911,7 +926,7 @@ Human-readable description for the Loadbalancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-flavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L61">property <b>flavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L63">property <b>flavor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>flavor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -923,7 +938,7 @@ loadbalancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -935,7 +950,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-loadbalancerProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L66">property <b>loadbalancerProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L68">property <b>loadbalancerProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>loadbalancerProvider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -947,7 +962,7 @@ creates a new loadbalancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L73">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -959,7 +974,7 @@ to be unique.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L78">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L80">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -973,7 +988,7 @@ LB member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L84">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L86">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -986,7 +1001,7 @@ opposed to how they are configured with the Compute Instance).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L90">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L92">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -999,7 +1014,7 @@ other than their own.  Changing this creates a new loadbalancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1011,7 +1026,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-vipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L95">property <b>vipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L97">property <b>vipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1023,7 +1038,7 @@ Changing this creates a new loadbalancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-vipPortId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L99">property <b>vipPortId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L101">property <b>vipPortId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vipPortId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1034,7 +1049,7 @@ The Port ID of the Load Balancer IP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-vipSubnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L106">property <b>vipSubnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L108">property <b>vipSubnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vipSubnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1049,7 +1064,7 @@ are shared).  Changing this creates a new loadbalancer.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Member">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L22">class <b>Member</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L24">class <b>Member</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1069,9 +1084,11 @@ const member1 = new openstack.loadbalancer.Member("member_1", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_member_v2.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Member-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L98"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1088,7 +1105,7 @@ Create a Member resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L33">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1102,7 +1119,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1112,7 +1129,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L44">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1126,7 +1143,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L53">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L55">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1138,7 +1155,7 @@ the load balancer. Changing this creates a new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L58">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L60">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1150,7 +1167,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1162,7 +1179,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L62">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L64">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1173,7 +1190,7 @@ Human-readable name for the member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-poolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L67">property <b>poolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L69">property <b>poolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>poolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1185,7 +1202,7 @@ assigned to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-protocolPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L72">property <b>protocolPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L74">property <b>protocolPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protocolPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1197,7 +1214,7 @@ Changing this creates a new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L79">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L81">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1211,7 +1228,7 @@ member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L83">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L85">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1222,7 +1239,7 @@ The subnet in which to access the member
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L89">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L91">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1235,7 +1252,7 @@ other than their own. Changing this creates a new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1247,7 +1264,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L96">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L98">property <b>weight</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1262,7 +1279,7 @@ as a member with a weight of 2.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MemberV1">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L23">class <b>MemberV1</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L25">class <b>MemberV1</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1283,9 +1300,11 @@ const member1 = new openstack.loadbalancer.MemberV1("member_1", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_member_v1.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MemberV1-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L85"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1302,7 +1321,7 @@ Create a MemberV1 resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L34">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1316,7 +1335,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1326,7 +1345,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L45">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1340,7 +1359,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L54">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L56">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1352,7 +1371,7 @@ new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L60">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L62">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1365,7 +1384,7 @@ state of the existing member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1377,7 +1396,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1-poolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L65">property <b>poolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L67">property <b>poolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>poolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1389,7 +1408,7 @@ member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L70">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L72">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1401,7 +1420,7 @@ hosted. Changing this creates a new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L77">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L79">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1415,7 +1434,7 @@ LB member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L82">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L84">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1427,7 +1446,7 @@ create a member for another tenant. Changing this creates a new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1439,20 +1458,16 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L87">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L85">property <b>weight</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
-
-The load balancing weight of the member. This is currently unable
-to be set through Terraform.
-
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Monitor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L25">class <b>Monitor</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L27">class <b>Monitor</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1475,9 +1490,11 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_monitor_v2.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Monitor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L116"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L118"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1494,7 +1511,7 @@ Create a Monitor resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L36">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1508,7 +1525,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1518,7 +1535,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L47">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1532,7 +1549,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L56">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L58">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1544,7 +1561,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-delay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L60">property <b>delay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L62">property <b>delay</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>delay: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1555,7 +1572,7 @@ The time, in seconds, between sending probes to members.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-expectedCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L66">property <b>expectedCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L68">property <b>expectedCodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>expectedCodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1568,7 +1585,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-httpMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L72">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L74">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>httpMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1581,7 +1598,7 @@ defaults to "GET".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1593,7 +1610,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-maxRetries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L78">property <b>maxRetries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L80">property <b>maxRetries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>maxRetries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1606,7 +1623,7 @@ and 10..
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L84">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1617,7 +1634,7 @@ The Name of the Monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-poolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L86">property <b>poolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L88">property <b>poolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>poolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1628,7 +1645,7 @@ The id of the pool that this monitor will be assigned to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L93">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L95">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1642,7 +1659,7 @@ monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L99">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L101">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1655,7 +1672,7 @@ other than their own. Changing this creates a new monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L105">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L107">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1668,7 +1685,7 @@ value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L111">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L113">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1681,7 +1698,7 @@ creates a new monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-urlPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L116">property <b>urlPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L118">property <b>urlPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>urlPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1693,7 +1710,7 @@ accessed if monitor type is HTTP or HTTPS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1706,7 +1723,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MonitorV1">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L25">class <b>MonitorV1</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L27">class <b>MonitorV1</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1729,9 +1746,11 @@ const monitor1 = new openstack.loadbalancer.MonitorV1("monitor_1", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_monitor_v1.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MonitorV1-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L111"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L113"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1748,7 +1767,7 @@ Create a MonitorV1 resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L36">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1762,7 +1781,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1772,7 +1791,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L47">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1786,7 +1805,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L57">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L59">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1799,7 +1818,7 @@ state of the existing monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1-delay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L62">property <b>delay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L64">property <b>delay</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>delay: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1811,7 +1830,7 @@ Changing this creates a new monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1-expectedCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L69">property <b>expectedCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L71">property <b>expectedCodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>expectedCodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1825,7 +1844,7 @@ of the existing monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1-httpMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L75">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L77">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>httpMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1838,7 +1857,7 @@ to "GET". Changing this updates the http_method of the existing monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1850,7 +1869,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1-maxRetries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L81">property <b>maxRetries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L83">property <b>maxRetries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>maxRetries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1863,7 +1882,7 @@ this updates the max_retries of the existing monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L88">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L90">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1877,7 +1896,7 @@ LB monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L93">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L95">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1889,7 +1908,7 @@ create a monitor for another tenant. Changing this creates a new monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L99">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L101">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1902,7 +1921,7 @@ Changing this updates the timeout of the existing monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L105">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L107">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1915,7 +1934,7 @@ creates a new monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1-urlPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L111">property <b>urlPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L113">property <b>urlPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>urlPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1928,7 +1947,7 @@ url_path of the existing monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1941,7 +1960,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Pool">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L27">class <b>Pool</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L29">class <b>Pool</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1966,9 +1985,11 @@ const pool1 = new openstack.loadbalancer.Pool("pool_1", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_pool_v2.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Pool-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L107"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L109"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1985,7 +2006,7 @@ Create a Pool resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L38">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1999,7 +2020,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2009,7 +2030,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L49">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2023,7 +2044,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L58">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L60">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2035,7 +2056,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L62">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L64">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2046,7 +2067,7 @@ Human-readable description for the pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2058,7 +2079,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-lbMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L68">property <b>lbMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L70">property <b>lbMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lbMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2071,7 +2092,7 @@ ROUND_ROBIN, LEAST_CONNECTIONS, or SOURCE_IP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-listenerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L74">property <b>listenerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L76">property <b>listenerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>listenerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2084,7 +2105,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-loadbalancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L80">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L82">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>loadbalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2097,7 +2118,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L84">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L86">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2108,7 +2129,7 @@ Human-readable name for the pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-persistences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L90">property <b>persistences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L92">property <b>persistences</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>persistences: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2124,7 +2145,7 @@ member or not. Changing this creates a new pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L94">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L96">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2135,7 +2156,7 @@ See Argument Reference above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L101">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L103">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2149,7 +2170,7 @@ pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L107">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L109">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2162,7 +2183,7 @@ other than their own. Changing this creates a new pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2175,7 +2196,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PoolV1">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L109">class <b>PoolV1</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L111">class <b>PoolV1</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2282,9 +2303,11 @@ const vip1 = new openstack.loadbalancer.Vip("vip_1", {
 
 The `member` block is deprecated in favor of the `openstack_lb_member_v1` resource.
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_pool_v1.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PoolV1-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L179"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L181"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2301,7 +2324,7 @@ Create a PoolV1 resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L118">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L120">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2315,7 +2338,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2325,7 +2348,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L129">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L131">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2339,7 +2362,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2351,7 +2374,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1-lbMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L141">property <b>lbMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L143">property <b>lbMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lbMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2364,7 +2387,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1-lbProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L146">property <b>lbProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L148">property <b>lbProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lbProvider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2376,7 +2399,7 @@ The backend load balancing provider. For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1-monitorIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L151">property <b>monitorIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L153">property <b>monitorIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>monitorIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2388,7 +2411,7 @@ pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L158">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2400,7 +2423,7 @@ the existing pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L161">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L163">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2412,7 +2435,7 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L168">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L170">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2426,7 +2449,7 @@ LB pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L174">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L176">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2439,7 +2462,7 @@ Changing this creates a new pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L179">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L181">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2451,7 +2474,7 @@ create a pool member for another tenant. Changing this creates a new pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2464,7 +2487,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Vip">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L24">class <b>Vip</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L26">class <b>Vip</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2486,9 +2509,11 @@ const vip1 = new openstack.loadbalancer.Vip("vip_1", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_vip_v1.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Vip-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L126"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L128"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2505,7 +2530,7 @@ Create a Vip resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L35">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2519,7 +2544,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2529,7 +2554,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L46">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2543,7 +2568,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L55">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L57">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2555,7 +2580,7 @@ vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L61">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L63">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2568,7 +2593,7 @@ state of the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-connLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L67">property <b>connLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L69">property <b>connLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>connLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2581,7 +2606,7 @@ of the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L72">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L74">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2593,7 +2618,7 @@ this updates the description of the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-floatingIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L77">property <b>floatingIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L79">property <b>floatingIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>floatingIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2605,7 +2630,7 @@ with the vip. The Floating IP must be provisioned already.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2617,7 +2642,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L84">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2629,7 +2654,7 @@ the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-persistence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L88">property <b>persistence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L90">property <b>persistence</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>persistence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2642,7 +2667,7 @@ the persistence of the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-poolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L93">property <b>poolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L95">property <b>poolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>poolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2654,7 +2679,7 @@ Changing this updates the pool_id of the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L98">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L100">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2666,7 +2691,7 @@ this creates a new vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-portId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L102">property <b>portId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L104">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>portId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2677,7 +2702,7 @@ Port UUID for this VIP at associated floating IP (if any).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L107">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L109">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2689,7 +2714,7 @@ HTTPS'. Changing this creates a new vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L114">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L116">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2703,7 +2728,7 @@ VIP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L121">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L123">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2717,7 +2742,7 @@ new vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L126">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L128">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2729,7 +2754,7 @@ create a vip member for another tenant. Changing this creates a new vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vip-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2742,7 +2767,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="L7PolicyV2Args">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L230">interface <b>L7PolicyV2Args</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L232">interface <b>L7PolicyV2Args</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2751,7 +2776,7 @@ The set of arguments for constructing a L7PolicyV2 resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="L7PolicyV2Args-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L235">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L237">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2763,7 +2788,7 @@ REDIRECT\_TO\_URL or REJECT.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2Args-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L240">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L242">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2775,7 +2800,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2Args-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L244">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L246">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2786,7 +2811,7 @@ Human-readable description for the L7 Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2Args-listenerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L249">property <b>listenerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L251">property <b>listenerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>listenerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2798,7 +2823,7 @@ Changing this creates a new L7 Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2Args-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L254">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L256">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2810,7 +2835,7 @@ to be unique.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2Args-position">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L258">property <b>position</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L260">property <b>position</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>position?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2821,7 +2846,7 @@ The position of this policy on the listener. Positions start at 1.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2Args-redirectPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L263">property <b>redirectPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L265">property <b>redirectPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>redirectPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2833,7 +2858,7 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2Args-redirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L268">property <b>redirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L270">property <b>redirectUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>redirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2845,7 +2870,7 @@ Only valid if action is REDIRECT\_TO\_URL.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2Args-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L275">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L277">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2859,7 +2884,7 @@ L7 Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2Args-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L281">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L283">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2873,7 +2898,7 @@ other than their own. Changing this creates a new L7 Policy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="L7PolicyV2State">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L173">interface <b>L7PolicyV2State</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L175">interface <b>L7PolicyV2State</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2882,7 +2907,7 @@ Input properties used for looking up and filtering L7PolicyV2 resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="L7PolicyV2State-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L178">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L180">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2894,7 +2919,7 @@ REDIRECT\_TO\_URL or REJECT.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2State-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L183">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L185">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2906,7 +2931,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2State-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L187">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L189">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2917,7 +2942,7 @@ Human-readable description for the L7 Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2State-listenerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L192">property <b>listenerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L194">property <b>listenerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>listenerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2929,7 +2954,7 @@ Changing this creates a new L7 Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2State-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L197">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L199">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2941,7 +2966,7 @@ to be unique.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2State-position">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L201">property <b>position</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L203">property <b>position</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>position?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2952,7 +2977,7 @@ The position of this policy on the listener. Positions start at 1.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2State-redirectPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L206">property <b>redirectPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L208">property <b>redirectPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>redirectPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2964,7 +2989,7 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2State-redirectUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L211">property <b>redirectUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L213">property <b>redirectUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>redirectUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2976,7 +3001,7 @@ Only valid if action is REDIRECT\_TO\_URL.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2State-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L218">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L220">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2990,7 +3015,7 @@ L7 Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7PolicyV2State-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L224">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7PolicyV2.ts#L226">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3004,7 +3029,7 @@ other than their own. Changing this creates a new L7 Policy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="L7RuleV2Args">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L244">interface <b>L7RuleV2Args</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L246">interface <b>L7RuleV2Args</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3013,7 +3038,7 @@ The set of arguments for constructing a L7RuleV2 resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="L7RuleV2Args-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L249">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L251">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3025,7 +3050,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2Args-compareType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L254">property <b>compareType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L256">property <b>compareType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>compareType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3037,7 +3062,7 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2Args-invert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L259">property <b>invert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L261">property <b>invert</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>invert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3049,7 +3074,7 @@ true, equal to would become not equal to. Default is false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2Args-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L264">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L266">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3061,7 +3086,7 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2Args-l7policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L269">property <b>l7policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L271">property <b>l7policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>l7policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3073,7 +3098,7 @@ L7 Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2Args-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L276">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L278">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3087,7 +3112,7 @@ L7 Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2Args-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L282">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L284">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3100,7 +3125,7 @@ other than their own. Changing this creates a new L7 Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2Args-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L287">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L289">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3112,7 +3137,7 @@ HOST\_NAME or PATH.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2Args-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L292">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L294">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3125,7 +3150,7 @@ compare.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="L7RuleV2State">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L186">interface <b>L7RuleV2State</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L188">interface <b>L7RuleV2State</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3134,7 +3159,7 @@ Input properties used for looking up and filtering L7RuleV2 resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="L7RuleV2State-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L191">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L193">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3146,7 +3171,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2State-compareType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L196">property <b>compareType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L198">property <b>compareType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>compareType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3158,7 +3183,7 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2State-invert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L201">property <b>invert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L203">property <b>invert</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>invert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3170,7 +3195,7 @@ true, equal to would become not equal to. Default is false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2State-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L206">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L208">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3182,7 +3207,7 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2State-l7policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L211">property <b>l7policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L213">property <b>l7policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>l7policyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3194,7 +3219,7 @@ L7 Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2State-listenerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L215">property <b>listenerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L217">property <b>listenerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>listenerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3205,7 +3230,7 @@ The ID of the Listener owning this resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2State-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L222">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L224">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3219,7 +3244,7 @@ L7 Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2State-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L228">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L230">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3232,7 +3257,7 @@ other than their own. Changing this creates a new L7 Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2State-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L233">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L235">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3244,7 +3269,7 @@ HOST\_NAME or PATH.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="L7RuleV2State-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/l7RuleV2.ts#L238">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/l7RuleV2.ts#L240">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3257,7 +3282,7 @@ compare.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L246">interface <b>ListenerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L248">interface <b>ListenerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3266,7 +3291,7 @@ The set of arguments for constructing a Listener resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ListenerArgs-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L251">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L253">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3278,7 +3303,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-connectionLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L256">property <b>connectionLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L258">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3290,7 +3315,7 @@ for the Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-defaultPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L261">property <b>defaultPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L263">property <b>defaultPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3302,7 +3327,7 @@ Listener is associated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-defaultTlsContainerRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L269">property <b>defaultTlsContainerRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L271">property <b>defaultTlsContainerRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultTlsContainerRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3317,7 +3342,7 @@ for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L273">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L275">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3328,7 +3353,7 @@ Human-readable description for the Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-loadbalancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L278">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L280">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3340,7 +3365,7 @@ Listener. Changing this creates a new Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L283">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L285">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3352,7 +3377,7 @@ to be unique.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L288">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L290">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3364,7 +3389,7 @@ Changing this creates a new Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-protocolPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L293">property <b>protocolPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L295">property <b>protocolPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocolPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3376,7 +3401,7 @@ Changing this creates a new Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L300">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L302">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3390,7 +3415,7 @@ Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-sniContainerRefs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L307">property <b>sniContainerRefs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L309">property <b>sniContainerRefs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sniContainerRefs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3404,7 +3429,7 @@ for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L313">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L315">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3418,7 +3443,7 @@ other than their own. Changing this creates a new Listener.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L173">interface <b>ListenerState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L175">interface <b>ListenerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3427,7 +3452,7 @@ Input properties used for looking up and filtering Listener resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ListenerState-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L178">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L180">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3439,7 +3464,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-connectionLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L183">property <b>connectionLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L185">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3451,7 +3476,7 @@ for the Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-defaultPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L188">property <b>defaultPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L190">property <b>defaultPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3463,7 +3488,7 @@ Listener is associated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-defaultTlsContainerRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L196">property <b>defaultTlsContainerRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L198">property <b>defaultTlsContainerRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultTlsContainerRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3478,7 +3503,7 @@ for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L200">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L202">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3489,7 +3514,7 @@ Human-readable description for the Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-loadbalancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L205">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L207">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3501,7 +3526,7 @@ Listener. Changing this creates a new Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L210">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L212">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3513,7 +3538,7 @@ to be unique.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L215">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L217">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3525,7 +3550,7 @@ Changing this creates a new Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-protocolPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L220">property <b>protocolPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L222">property <b>protocolPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocolPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3537,7 +3562,7 @@ Changing this creates a new Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L227">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L229">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3551,7 +3576,7 @@ Listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-sniContainerRefs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L234">property <b>sniContainerRefs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L236">property <b>sniContainerRefs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sniContainerRefs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3565,7 +3590,7 @@ for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/listener.ts#L240">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/listener.ts#L242">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3579,7 +3604,7 @@ other than their own. Changing this creates a new Listener.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L220">interface <b>LoadBalancerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L222">interface <b>LoadBalancerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3588,7 +3613,7 @@ The set of arguments for constructing a LoadBalancer resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L225">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L227">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3600,7 +3625,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L229">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L231">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3611,7 +3636,7 @@ Human-readable description for the Loadbalancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-flavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L234">property <b>flavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L236">property <b>flavor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>flavor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3623,7 +3648,7 @@ loadbalancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-loadbalancerProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L239">property <b>loadbalancerProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L241">property <b>loadbalancerProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3635,7 +3660,7 @@ creates a new loadbalancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L244">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L246">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3647,7 +3672,7 @@ to be unique.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L251">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L253">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3661,7 +3686,7 @@ LB member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L257">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L259">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3674,7 +3699,7 @@ opposed to how they are configured with the Compute Instance).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L263">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L265">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3687,7 +3712,7 @@ other than their own.  Changing this creates a new loadbalancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-vipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L268">property <b>vipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L270">property <b>vipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3699,7 +3724,7 @@ Changing this creates a new loadbalancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-vipSubnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L275">property <b>vipSubnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L277">property <b>vipSubnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vipSubnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3714,7 +3739,7 @@ are shared).  Changing this creates a new loadbalancer.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L155">interface <b>LoadBalancerState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L157">interface <b>LoadBalancerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3723,7 +3748,7 @@ Input properties used for looking up and filtering LoadBalancer resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerState-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L160">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L162">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3735,7 +3760,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L164">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L166">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3746,7 +3771,7 @@ Human-readable description for the Loadbalancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-flavor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L169">property <b>flavor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L171">property <b>flavor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>flavor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3758,7 +3783,7 @@ loadbalancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-loadbalancerProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L174">property <b>loadbalancerProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L176">property <b>loadbalancerProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3770,7 +3795,7 @@ creates a new loadbalancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L181">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3782,7 +3807,7 @@ to be unique.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L186">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L188">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3796,7 +3821,7 @@ LB member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L192">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L194">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3809,7 +3834,7 @@ opposed to how they are configured with the Compute Instance).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L198">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L200">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3822,7 +3847,7 @@ other than their own.  Changing this creates a new loadbalancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-vipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L203">property <b>vipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L205">property <b>vipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3834,7 +3859,7 @@ Changing this creates a new loadbalancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-vipPortId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L207">property <b>vipPortId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L209">property <b>vipPortId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vipPortId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3845,7 +3870,7 @@ The Port ID of the Load Balancer IP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-vipSubnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/loadBalancer.ts#L214">property <b>vipSubnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/loadBalancer.ts#L216">property <b>vipSubnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vipSubnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3860,7 +3885,7 @@ are shared).  Changing this creates a new loadbalancer.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MemberArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L201">interface <b>MemberArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L203">interface <b>MemberArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3869,7 +3894,7 @@ The set of arguments for constructing a Member resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MemberArgs-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L206">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L208">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3881,7 +3906,7 @@ the load balancer. Changing this creates a new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberArgs-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L211">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L213">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3893,7 +3918,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L215">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L217">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3904,7 +3929,7 @@ Human-readable name for the member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberArgs-poolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L220">property <b>poolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L222">property <b>poolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>poolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3916,7 +3941,7 @@ assigned to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberArgs-protocolPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L225">property <b>protocolPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L227">property <b>protocolPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocolPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3928,7 +3953,7 @@ Changing this creates a new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L232">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L234">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3942,7 +3967,7 @@ member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberArgs-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L236">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L238">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3953,7 +3978,7 @@ The subnet in which to access the member
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L242">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L244">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3966,7 +3991,7 @@ other than their own. Changing this creates a new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberArgs-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L249">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L251">property <b>weight</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3981,7 +4006,7 @@ as a member with a weight of 2.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MemberState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L147">interface <b>MemberState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L149">interface <b>MemberState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3990,7 +4015,7 @@ Input properties used for looking up and filtering Member resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MemberState-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L152">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L154">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4002,7 +4027,7 @@ the load balancer. Changing this creates a new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberState-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L157">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L159">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4014,7 +4039,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L161">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L163">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4025,7 +4050,7 @@ Human-readable name for the member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberState-poolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L166">property <b>poolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L168">property <b>poolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>poolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4037,7 +4062,7 @@ assigned to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberState-protocolPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L171">property <b>protocolPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L173">property <b>protocolPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocolPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4049,7 +4074,7 @@ Changing this creates a new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L178">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L180">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4063,7 +4088,7 @@ member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberState-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L182">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L184">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4074,7 +4099,7 @@ The subnet in which to access the member
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L188">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L190">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4087,7 +4112,7 @@ other than their own. Changing this creates a new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberState-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/member.ts#L195">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/member.ts#L197">property <b>weight</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4102,7 +4127,7 @@ as a member with a weight of 2.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MemberV1Args">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L178">interface <b>MemberV1Args</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L172">interface <b>MemberV1Args</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4111,7 +4136,7 @@ The set of arguments for constructing a MemberV1 resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MemberV1Args-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L183">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L177">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4123,7 +4148,7 @@ new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1Args-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L189">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L183">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4136,7 +4161,7 @@ state of the existing member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1Args-poolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L194">property <b>poolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L188">property <b>poolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>poolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4148,7 +4173,7 @@ member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1Args-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L199">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L193">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4160,7 +4185,7 @@ hosted. Changing this creates a new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1Args-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L206">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L200">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4174,7 +4199,7 @@ LB member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1Args-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L211">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L205">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4186,20 +4211,16 @@ create a member for another tenant. Changing this creates a new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1Args-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L216">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L206">property <b>weight</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
-
-The load balancing weight of the member. This is currently unable
-to be set through Terraform.
-
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MemberV1State">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L134">interface <b>MemberV1State</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L132">interface <b>MemberV1State</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4208,7 +4229,7 @@ Input properties used for looking up and filtering MemberV1 resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MemberV1State-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L139">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L137">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4220,7 +4241,7 @@ new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1State-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L145">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L143">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4233,7 +4254,7 @@ state of the existing member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1State-poolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L150">property <b>poolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L148">property <b>poolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>poolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4245,7 +4266,7 @@ member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1State-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L155">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L153">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4257,7 +4278,7 @@ hosted. Changing this creates a new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1State-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L162">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L160">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4271,7 +4292,7 @@ LB member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1State-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L167">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L165">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4283,20 +4304,16 @@ create a member for another tenant. Changing this creates a new member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberV1State-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/memberV1.ts#L172">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/memberV1.ts#L166">property <b>weight</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 {{% md %}}
-
-The load balancing weight of the member. This is currently unable
-to be set through Terraform.
-
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MonitorArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L250">interface <b>MonitorArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L252">interface <b>MonitorArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4305,7 +4322,7 @@ The set of arguments for constructing a Monitor resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MonitorArgs-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L255">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L257">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4317,7 +4334,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorArgs-delay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L259">property <b>delay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L261">property <b>delay</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>delay: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4328,7 +4345,7 @@ The time, in seconds, between sending probes to members.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorArgs-expectedCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L265">property <b>expectedCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L267">property <b>expectedCodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expectedCodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4341,7 +4358,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorArgs-httpMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L271">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L273">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4354,7 +4371,7 @@ defaults to "GET".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorArgs-maxRetries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L277">property <b>maxRetries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L279">property <b>maxRetries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxRetries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4367,7 +4384,7 @@ and 10..
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L281">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L283">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4378,7 +4395,7 @@ The Name of the Monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorArgs-poolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L285">property <b>poolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L287">property <b>poolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>poolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4389,7 +4406,7 @@ The id of the pool that this monitor will be assigned to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L292">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L294">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4403,7 +4420,7 @@ monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L298">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L300">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4416,7 +4433,7 @@ other than their own. Changing this creates a new monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorArgs-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L304">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L306">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4429,7 +4446,7 @@ value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L310">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L312">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4442,7 +4459,7 @@ creates a new monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorArgs-urlPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L315">property <b>urlPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L317">property <b>urlPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urlPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4455,7 +4472,7 @@ accessed if monitor type is HTTP or HTTPS.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MonitorState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L179">interface <b>MonitorState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L181">interface <b>MonitorState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4464,7 +4481,7 @@ Input properties used for looking up and filtering Monitor resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MonitorState-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L184">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L186">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4476,7 +4493,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorState-delay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L188">property <b>delay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L190">property <b>delay</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>delay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4487,7 +4504,7 @@ The time, in seconds, between sending probes to members.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorState-expectedCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L194">property <b>expectedCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L196">property <b>expectedCodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expectedCodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4500,7 +4517,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorState-httpMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L200">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L202">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4513,7 +4530,7 @@ defaults to "GET".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorState-maxRetries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L206">property <b>maxRetries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L208">property <b>maxRetries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxRetries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4526,7 +4543,7 @@ and 10..
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L210">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L212">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4537,7 +4554,7 @@ The Name of the Monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorState-poolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L214">property <b>poolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L216">property <b>poolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>poolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4548,7 +4565,7 @@ The id of the pool that this monitor will be assigned to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L221">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L223">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4562,7 +4579,7 @@ monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L227">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L229">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4575,7 +4592,7 @@ other than their own. Changing this creates a new monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorState-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L233">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L235">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4588,7 +4605,7 @@ value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L239">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L241">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4601,7 +4618,7 @@ creates a new monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorState-urlPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitor.ts#L244">property <b>urlPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitor.ts#L246">property <b>urlPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urlPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4614,7 +4631,7 @@ accessed if monitor type is HTTP or HTTPS.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MonitorV1Args">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L233">interface <b>MonitorV1Args</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L235">interface <b>MonitorV1Args</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4623,7 +4640,7 @@ The set of arguments for constructing a MonitorV1 resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MonitorV1Args-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L239">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L241">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4636,7 +4653,7 @@ state of the existing monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1Args-delay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L244">property <b>delay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L246">property <b>delay</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>delay: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4648,7 +4665,7 @@ Changing this creates a new monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1Args-expectedCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L251">property <b>expectedCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L253">property <b>expectedCodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expectedCodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4662,7 +4679,7 @@ of the existing monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1Args-httpMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L257">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L259">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4675,7 +4692,7 @@ to "GET". Changing this updates the http_method of the existing monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1Args-maxRetries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L263">property <b>maxRetries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L265">property <b>maxRetries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxRetries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4688,7 +4705,7 @@ this updates the max_retries of the existing monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1Args-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L270">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L272">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4702,7 +4719,7 @@ LB monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1Args-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L275">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L277">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4714,7 +4731,7 @@ create a monitor for another tenant. Changing this creates a new monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1Args-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L281">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L283">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4727,7 +4744,7 @@ Changing this updates the timeout of the existing monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1Args-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L287">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L289">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4740,7 +4757,7 @@ creates a new monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1Args-urlPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L293">property <b>urlPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L295">property <b>urlPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urlPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4754,7 +4771,7 @@ url_path of the existing monitor.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MonitorV1State">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L167">interface <b>MonitorV1State</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L169">interface <b>MonitorV1State</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4763,7 +4780,7 @@ Input properties used for looking up and filtering MonitorV1 resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MonitorV1State-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L173">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L175">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4776,7 +4793,7 @@ state of the existing monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1State-delay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L178">property <b>delay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L180">property <b>delay</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>delay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4788,7 +4805,7 @@ Changing this creates a new monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1State-expectedCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L185">property <b>expectedCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L187">property <b>expectedCodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expectedCodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4802,7 +4819,7 @@ of the existing monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1State-httpMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L191">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L193">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4815,7 +4832,7 @@ to "GET". Changing this updates the http_method of the existing monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1State-maxRetries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L197">property <b>maxRetries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L199">property <b>maxRetries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxRetries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4828,7 +4845,7 @@ this updates the max_retries of the existing monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1State-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L204">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L206">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4842,7 +4859,7 @@ LB monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1State-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L209">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L211">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4854,7 +4871,7 @@ create a monitor for another tenant. Changing this creates a new monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1State-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L215">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L217">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -4867,7 +4884,7 @@ Changing this updates the timeout of the existing monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1State-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L221">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L223">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4880,7 +4897,7 @@ creates a new monitor.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorV1State-urlPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/monitorV1.ts#L227">property <b>urlPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/monitorV1.ts#L229">property <b>urlPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urlPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4894,7 +4911,7 @@ url_path of the existing monitor.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PoolArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L217">interface <b>PoolArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L219">interface <b>PoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4903,7 +4920,7 @@ The set of arguments for constructing a Pool resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PoolArgs-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L222">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L224">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4915,7 +4932,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L226">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L228">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4926,7 +4943,7 @@ Human-readable description for the pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-lbMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L232">property <b>lbMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L234">property <b>lbMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lbMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4939,7 +4956,7 @@ ROUND_ROBIN, LEAST_CONNECTIONS, or SOURCE_IP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-listenerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L238">property <b>listenerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L240">property <b>listenerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>listenerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4952,7 +4969,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-loadbalancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L244">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L246">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4965,7 +4982,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L248">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L250">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4976,7 +4993,7 @@ Human-readable name for the pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-persistences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L254">property <b>persistences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L256">property <b>persistences</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>persistences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -4992,7 +5009,7 @@ member or not. Changing this creates a new pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L258">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L260">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5003,7 +5020,7 @@ See Argument Reference above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L265">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L267">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5017,7 +5034,7 @@ pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L271">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L273">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5031,7 +5048,7 @@ other than their own. Changing this creates a new pool.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PoolState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L157">interface <b>PoolState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L159">interface <b>PoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5040,7 +5057,7 @@ Input properties used for looking up and filtering Pool resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PoolState-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L162">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L164">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5052,7 +5069,7 @@ A valid value is true (UP) or false (DOWN).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L166">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L168">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5063,7 +5080,7 @@ Human-readable description for the pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-lbMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L172">property <b>lbMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L174">property <b>lbMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lbMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5076,7 +5093,7 @@ ROUND_ROBIN, LEAST_CONNECTIONS, or SOURCE_IP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-listenerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L178">property <b>listenerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L180">property <b>listenerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>listenerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5089,7 +5106,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-loadbalancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L184">property <b>loadbalancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L186">property <b>loadbalancerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadbalancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5102,7 +5119,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L188">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L190">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5113,7 +5130,7 @@ Human-readable name for the pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-persistences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L194">property <b>persistences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L196">property <b>persistences</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>persistences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5129,7 +5146,7 @@ member or not. Changing this creates a new pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L198">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L200">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5140,7 +5157,7 @@ See Argument Reference above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L205">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L207">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5154,7 +5171,7 @@ pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/pool.ts#L211">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/pool.ts#L213">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5168,7 +5185,7 @@ other than their own. Changing this creates a new pool.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PoolV1Args">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L278">interface <b>PoolV1Args</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L280">interface <b>PoolV1Args</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5177,7 +5194,7 @@ The set of arguments for constructing a PoolV1 resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PoolV1Args-lbMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L284">property <b>lbMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L286">property <b>lbMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lbMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5190,7 +5207,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1Args-lbProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L289">property <b>lbProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L291">property <b>lbProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lbProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5202,7 +5219,7 @@ The backend load balancing provider. For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1Args-monitorIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L294">property <b>monitorIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L296">property <b>monitorIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>monitorIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -5214,7 +5231,7 @@ pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1Args-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L299">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L301">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5226,7 +5243,7 @@ the existing pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1Args-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L304">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L306">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5238,7 +5255,7 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1Args-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L311">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L313">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5252,7 +5269,7 @@ LB pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1Args-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L317">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L319">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5265,7 +5282,7 @@ Changing this creates a new pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1Args-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L322">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L324">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5278,7 +5295,7 @@ create a pool member for another tenant. Changing this creates a new pool.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PoolV1State">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L228">interface <b>PoolV1State</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L230">interface <b>PoolV1State</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5287,7 +5304,7 @@ Input properties used for looking up and filtering PoolV1 resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PoolV1State-lbMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L234">property <b>lbMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L236">property <b>lbMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lbMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5300,7 +5317,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1State-lbProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L239">property <b>lbProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L241">property <b>lbProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lbProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5312,7 +5329,7 @@ The backend load balancing provider. For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1State-monitorIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L244">property <b>monitorIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L246">property <b>monitorIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>monitorIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -5324,7 +5341,7 @@ pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1State-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L249">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L251">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5336,7 +5353,7 @@ the existing pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1State-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L254">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L256">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5348,7 +5365,7 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1State-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L261">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L263">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5362,7 +5379,7 @@ LB pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1State-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L267">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L269">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5375,7 +5392,7 @@ Changing this creates a new pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolV1State-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/poolV1.ts#L272">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/poolV1.ts#L274">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5388,7 +5405,7 @@ create a pool member for another tenant. Changing this creates a new pool.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VipArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L272">interface <b>VipArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L274">interface <b>VipArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5397,7 +5414,7 @@ The set of arguments for constructing a Vip resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VipArgs-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L277">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L279">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5409,7 +5426,7 @@ vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipArgs-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L283">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L285">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5422,7 +5439,7 @@ state of the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipArgs-connLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L289">property <b>connLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L291">property <b>connLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5435,7 +5452,7 @@ of the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L294">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L296">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5447,7 +5464,7 @@ this updates the description of the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipArgs-floatingIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L299">property <b>floatingIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L301">property <b>floatingIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>floatingIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5459,7 +5476,7 @@ with the vip. The Floating IP must be provisioned already.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L304">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L306">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5471,7 +5488,7 @@ the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipArgs-persistence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L310">property <b>persistence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L312">property <b>persistence</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>persistence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -5484,7 +5501,7 @@ the persistence of the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipArgs-poolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L315">property <b>poolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L317">property <b>poolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>poolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5496,7 +5513,7 @@ Changing this updates the pool_id of the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L320">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L322">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5508,7 +5525,7 @@ this creates a new vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L325">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L327">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5520,7 +5537,7 @@ HTTPS'. Changing this creates a new vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L332">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L334">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5534,7 +5551,7 @@ VIP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipArgs-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L339">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L341">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5548,7 +5565,7 @@ new vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L344">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L346">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5561,7 +5578,7 @@ create a vip member for another tenant. Changing this creates a new vip.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VipState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L190">interface <b>VipState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L192">interface <b>VipState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5570,7 +5587,7 @@ Input properties used for looking up and filtering Vip resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VipState-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L195">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L197">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5582,7 +5599,7 @@ vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipState-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L201">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L203">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5595,7 +5612,7 @@ state of the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipState-connLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L207">property <b>connLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L209">property <b>connLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5608,7 +5625,7 @@ of the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L212">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L214">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5620,7 +5637,7 @@ this updates the description of the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipState-floatingIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L217">property <b>floatingIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L219">property <b>floatingIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>floatingIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5632,7 +5649,7 @@ with the vip. The Floating IP must be provisioned already.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L222">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L224">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5644,7 +5661,7 @@ the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipState-persistence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L228">property <b>persistence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L230">property <b>persistence</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>persistence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -5657,7 +5674,7 @@ the persistence of the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipState-poolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L233">property <b>poolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L235">property <b>poolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>poolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5669,7 +5686,7 @@ Changing this updates the pool_id of the existing vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L238">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L240">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5681,7 +5698,7 @@ this creates a new vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipState-portId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L242">property <b>portId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L244">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>portId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5692,7 +5709,7 @@ Port UUID for this VIP at associated floating IP (if any).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L247">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L249">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5704,7 +5721,7 @@ HTTPS'. Changing this creates a new vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L254">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L256">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5718,7 +5735,7 @@ VIP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipState-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L261">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L263">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5732,7 +5749,7 @@ new vip.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VipState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/95edd829cfb6f9a67866ce658f1fe969255241c2/sdk/nodejs/loadbalancer/vip.ts#L266">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/9536dac4817d1c2c8f8ad2346f28be64351cade4/sdk/nodejs/loadbalancer/vip.ts#L268">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

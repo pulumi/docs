@@ -22,6 +22,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_conditional_forwarder.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_conditional_forwarder.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directoryservice.ConditionalForwader.directory_id">
 <code class="descname">directory_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.ConditionalForwader.directory_id" title="Permalink to this definition">¶</a></dt>
@@ -111,6 +113,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.directoryservice.Directory.access_url">
 <code class="descname">access_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.access_url" title="Permalink to this definition">¶</a></dt>

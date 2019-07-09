@@ -35,6 +35,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_global_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_global_table.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.dynamodb.GlobalTable.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.GlobalTable.arn" title="Permalink to this definition">¶</a></dt>
@@ -131,6 +133,8 @@ definition after you have created the resource.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.dynamodb.Table.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.Table.arn" title="Permalink to this definition">¶</a></dt>
@@ -314,6 +318,8 @@ Only the primary key attributes are required; you can optionally provide other a
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table_item.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table_item.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.dynamodb.TableItem.hash_key">
 <code class="descname">hash_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.TableItem.hash_key" title="Permalink to this definition">¶</a></dt>
@@ -383,6 +389,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dynamodb.get_table">
 <code class="descclassname">pulumi_aws.dynamodb.</code><code class="descname">get_table</code><span class="sig-paren">(</span><em>name=None</em>, <em>server_side_encryption=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.get_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a DynamoDB table.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/dynamodb_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/dynamodb_table.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

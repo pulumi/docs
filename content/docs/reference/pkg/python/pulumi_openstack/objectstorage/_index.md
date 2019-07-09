@@ -40,6 +40,8 @@ creates a new container.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_container_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_container_v1.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.objectstorage.Container.container_read">
 <code class="descname">container_read</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.objectstorage.Container.container_read" title="Permalink to this definition">¶</a></dt>
@@ -206,6 +208,8 @@ as the object’s content. Conflicts with <code class="docutils literal notransl
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_object_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_object_v1.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.objectstorage.ContainerObject.container_name">
 <code class="descname">container_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.objectstorage.ContainerObject.container_name" title="Permalink to this definition">¶</a></dt>
@@ -419,6 +423,8 @@ be valid.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_tempurl_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_tempurl_v1.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.objectstorage.TempUrl.container">
 <code class="descname">container</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.objectstorage.TempUrl.container" title="Permalink to this definition">¶</a></dt>

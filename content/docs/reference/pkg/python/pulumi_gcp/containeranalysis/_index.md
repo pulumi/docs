@@ -6,18 +6,7 @@
 <dl class="class">
 <dt id="pulumi_gcp.containeranalysis.Note">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.containeranalysis.</code><code class="descname">Note</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attestation_authority=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.containeranalysis.Note" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a detailed description of a Note.</p>
-<blockquote>
-<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
-<p>To get more information about Note, see:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/container-analysis/api/reference/rest/">API documentation</a></li>
-<li>How-to Guides<ul>
-<li><a class="reference external" href="https://cloud.google.com/container-analysis/">Official Documentation</a></li>
-</ul>
-</li>
-</ul>
+<dd><p>Create a Note resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -30,6 +19,8 @@ See <a class="reference external" href="https://terraform.io/docs/providers/goog
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_analysis_note.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_analysis_note.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_gcp.containeranalysis.Note.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.containeranalysis.Note.translate_output_property" title="Permalink to this definition">¶</a></dt>

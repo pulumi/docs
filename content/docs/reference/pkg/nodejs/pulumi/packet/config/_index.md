@@ -7,6 +7,13 @@ title: Module config
 
 <a href="../">@pulumi/packet</a> &gt; config
 
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-packet)
+> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
+> first check the [`pulumi/pulumi-packet` repo](https://github.com/pulumi/pulumi-packet/issues); however, if that doesn't turn up anything,
+> please consult the source [`terraform-providers/terraform-provider-packet` repo](https://github.com/terraform-providers/terraform-provider-packet/issues).
+
+
+
 <div class="toggleVisible">
 <div class="collapsed">
 <h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
@@ -18,14 +25,14 @@ title: Module config
 <li><a href="#authToken">let authToken</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-packet/blob/a4629fbdd23a212e3183b78a57ef65732d07e581/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
+<a href="https://github.com/pulumi/pulumi-packet/blob/54d451fc217c3ca1c3324653f9d5b728ced41341/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="authToken">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-packet/blob/a4629fbdd23a212e3183b78a57ef65732d07e581/sdk/nodejs/config/vars.ts#L12">let <b>authToken</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-packet/blob/54d451fc217c3ca1c3324653f9d5b728ced41341/sdk/nodejs/config/vars.ts#L12">let <b>authToken</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> authToken: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;authToken&#34;) || utilities.getEnv(&#34;PACKET_AUTH_TOKEN&#34;)</span>;</pre>
