@@ -73,12 +73,16 @@
 <dt id="pulumi_aws.servicequotas.get_service">
 <code class="descclassname">pulumi_aws.servicequotas.</code><code class="descname">get_service</code><span class="sig-paren">(</span><em>service_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Service Quotas Service.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.servicequotas.get_service_quota">
 <code class="descclassname">pulumi_aws.servicequotas.</code><code class="descname">get_service_quota</code><span class="sig-paren">(</span><em>quota_code=None</em>, <em>quota_name=None</em>, <em>service_code=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.get_service_quota" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Service Quota.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service_quota.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service_quota.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

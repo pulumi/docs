@@ -23,6 +23,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/media_services_account.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/media_services_account.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.mediaservices.Account.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mediaservices.Account.location" title="Permalink to this definition">¶</a></dt>

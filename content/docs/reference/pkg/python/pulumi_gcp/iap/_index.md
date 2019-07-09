@@ -6,19 +6,7 @@
 <dl class="class">
 <dt id="pulumi_gcp.iap.TunnelInstanceIAMBinding">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.iap.</code><code class="descname">TunnelInstanceIAMBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>instance=None</em>, <em>members=None</em>, <em>project=None</em>, <em>role=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.TunnelInstanceIAMBinding" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><strong>Warning:</strong> These resources are in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
-<p>Three different resources help you manage your IAM policy for IAP Tunnel Instance. Each of these resources serves a different use case:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_policy</span></code>: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.</li>
-<li><code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_binding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.</li>
-<li><code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_member</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.</li>
-</ul>
-<blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_policy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_binding</span></code> and <code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_member</span></code> or they will fight over what your policy should be.</p>
-<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_binding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_member</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-</div></blockquote>
+<dd><p>Create a TunnelInstanceIAMBinding resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -39,6 +27,8 @@ unspecified, this defaults to the zone configured in the provider.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_tunnel_instance_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_tunnel_instance_iam_binding.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.iap.TunnelInstanceIAMBinding.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.iap.TunnelInstanceIAMBinding.etag" title="Permalink to this definition">¶</a></dt>
@@ -116,19 +106,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.TunnelInstanceIAMMember">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.iap.</code><code class="descname">TunnelInstanceIAMMember</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>instance=None</em>, <em>member=None</em>, <em>project=None</em>, <em>role=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.TunnelInstanceIAMMember" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><strong>Warning:</strong> These resources are in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
-<p>Three different resources help you manage your IAM policy for IAP Tunnel Instance. Each of these resources serves a different use case:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_policy</span></code>: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.</li>
-<li><code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_binding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.</li>
-<li><code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_member</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.</li>
-</ul>
-<blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_policy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_binding</span></code> and <code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_member</span></code> or they will fight over what your policy should be.</p>
-<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_binding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_member</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-</div></blockquote>
+<dd><p>Create a TunnelInstanceIAMMember resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -149,6 +127,8 @@ unspecified, this defaults to the zone configured in the provider.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_tunnel_instance_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_tunnel_instance_iam_member.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.iap.TunnelInstanceIAMMember.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.iap.TunnelInstanceIAMMember.etag" title="Permalink to this definition">¶</a></dt>
@@ -226,19 +206,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.TunnelInstanceIAMPolicy">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.iap.</code><code class="descname">TunnelInstanceIAMPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>instance=None</em>, <em>policy_data=None</em>, <em>project=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.TunnelInstanceIAMPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><strong>Warning:</strong> These resources are in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
-<p>Three different resources help you manage your IAM policy for IAP Tunnel Instance. Each of these resources serves a different use case:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_policy</span></code>: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.</li>
-<li><code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_binding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.</li>
-<li><code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_member</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.</li>
-</ul>
-<blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_policy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_binding</span></code> and <code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_member</span></code> or they will fight over what your policy should be.</p>
-<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_binding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_iap_tunnel_instance_iam_member</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-</div></blockquote>
+<dd><p>Create a TunnelInstanceIAMPolicy resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -258,6 +226,8 @@ unspecified, this defaults to the zone configured in the provider.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_tunnel_instance_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_tunnel_instance_iam_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.iap.TunnelInstanceIAMPolicy.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.iap.TunnelInstanceIAMPolicy.etag" title="Permalink to this definition">¶</a></dt>

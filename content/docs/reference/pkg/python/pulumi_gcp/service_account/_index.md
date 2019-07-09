@@ -6,12 +6,7 @@
 <dl class="class">
 <dt id="pulumi_gcp.service_account.Account">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>display_name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.Account" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows management of a <a class="reference external" href="https://cloud.google.com/compute/docs/access/service-accounts">Google Cloud Platform service account</a></p>
-<blockquote>
-<div>Creation of service accounts is eventually consistent, and that can lead to
-errors when you try to apply ACLs to service accounts immediately after
-creation. If using these resources in the same config, you can add a
-<cite>``sleep`</cite> using <code class="docutils literal notranslate"><span class="pre">local-exec</span></code> &lt;<a class="reference external" href="https://github.com/hashicorp/terraform/issues/17726#issuecomment-377357866">https://github.com/hashicorp/terraform/issues/17726#issuecomment-377357866</a>&gt;`_.</div></blockquote>
+<dd><p>Create a Account resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -32,6 +27,8 @@ Defaults to the provider project configuration.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_account.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.service_account.Account.account_id">
 <code class="descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.Account.account_id" title="Permalink to this definition">¶</a></dt>
@@ -219,6 +216,8 @@ that would grant the service account privileges.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_account_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_account_iam_binding.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.service_account.IAMBinding.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.IAMBinding.etag" title="Permalink to this definition">¶</a></dt>
@@ -309,6 +308,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_account_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_account_iam_member.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.service_account.IAMMember.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.IAMMember.etag" title="Permalink to this definition">¶</a></dt>
@@ -398,6 +399,8 @@ a <code class="docutils literal notranslate"><span class="pre">google_iam_policy
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_account_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_account_iam_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.service_account.IAMPolicy.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.IAMPolicy.etag" title="Permalink to this definition">¶</a></dt>
@@ -486,6 +489,8 @@ unique id of the service account. If the <code class="docutils literal notransla
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_account_key.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_account_key.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.service_account.Key.key_algorithm">
 <code class="descname">key_algorithm</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.Key.key_algorithm" title="Permalink to this definition">¶</a></dt>
@@ -617,6 +622,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">get_account</code><span class="sig-paren">(</span><em>account_id=None</em>, <em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.get_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the service account from a project. For more information see
 the official <a class="reference external" href="https://cloud.google.com/compute/docs/access/service-accounts">API</a> documentation.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/service_account.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -625,12 +632,16 @@ the official <a class="reference external" href="https://cloud.google.com/comput
 <dd><p>This data source provides a google <code class="docutils literal notranslate"><span class="pre">oauth2</span></code> <code class="docutils literal notranslate"><span class="pre">access_token</span></code> for a different service account than the one initially running the script.</p>
 <p>For more information see
 <a class="reference external" href="https://cloud.google.com/iam/docs/creating-short-lived-service-account-credentials">the official documentation</a> as well as <a class="reference external" href="https://cloud.google.com/iam/credentials/reference/rest/v1/projects.serviceAccounts/generateAccessToken">iamcredentials.generateAccessToken()</a></p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/service_account_access_token.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/service_account_access_token.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.service_account.get_account_key">
 <code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">get_account_key</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>public_key_type=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.get_account_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get service account public key. For more information, see <a class="reference external" href="https://cloud.google.com/iam/docs/creating-managing-service-account-keys">the official documentation</a> and <a class="reference external" href="https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys/get">API</a>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/service_account_key.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/service_account_key.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

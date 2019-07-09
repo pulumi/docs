@@ -6,20 +6,7 @@
 <dl class="class">
 <dt id="pulumi_aws.mq.Broker">
 <em class="property">class </em><code class="descclassname">pulumi_aws.mq.</code><code class="descname">Broker</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>broker_name=None</em>, <em>configuration=None</em>, <em>deployment_mode=None</em>, <em>engine_type=None</em>, <em>engine_version=None</em>, <em>host_instance_type=None</em>, <em>logs=None</em>, <em>maintenance_window_start_time=None</em>, <em>publicly_accessible=None</em>, <em>security_groups=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>users=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Broker" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an MQ Broker Resource. This resources also manages users for the broker.</p>
-<p>For more information on Amazon MQ, see <a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/welcome.html">Amazon MQ documentation</a>.</p>
-<p>Changes to an MQ Broker can occur when you change a
-parameter, such as <code class="docutils literal notranslate"><span class="pre">configuration</span></code> or <code class="docutils literal notranslate"><span class="pre">user</span></code>, and are reflected in the next maintenance
-window. Because of this, Terraform may report a difference in its planning
-phase because a modification has not yet taken place. You can use the
-<code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> flag to instruct the service to apply the change immediately
-(see documentation below).</p>
-<blockquote>
-<div><p><strong>Note:</strong> using <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> can result in a
-brief downtime as the broker reboots.</p>
-<p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
-<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-</div></blockquote>
+<dd><p>Create a Broker resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -48,6 +35,8 @@ are applied immediately, or during the next maintenance window. Default is <code
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/mq_broker.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/mq_broker.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.mq.Broker.apply_immediately">
 <code class="descname">apply_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.apply_immediately" title="Permalink to this definition">¶</a></dt>
@@ -226,6 +215,8 @@ for supported parameters and format of the XML.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/mq_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/mq_configuration.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.mq.Configuration.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.arn" title="Permalink to this definition">¶</a></dt>
@@ -332,6 +323,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.mq.get_broker">
 <code class="descclassname">pulumi_aws.mq.</code><code class="descname">get_broker</code><span class="sig-paren">(</span><em>broker_id=None</em>, <em>broker_name=None</em>, <em>logs=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.get_broker" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a MQ Broker.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/mq_broker.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/mq_broker.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

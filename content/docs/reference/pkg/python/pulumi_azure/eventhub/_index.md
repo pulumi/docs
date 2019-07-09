@@ -26,6 +26,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_domain.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.EventGridDomain.endpoint">
 <code class="descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventGridDomain.endpoint" title="Permalink to this definition">¶</a></dt>
@@ -143,6 +145,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_event_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_event_subscription.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.EventGridEventSubscription.event_delivery_schema">
 <code class="descname">event_delivery_schema</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventGridEventSubscription.event_delivery_schema" title="Permalink to this definition">¶</a></dt>
@@ -283,6 +287,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_topic.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.EventGridTopic.endpoint">
 <code class="descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventGridTopic.endpoint" title="Permalink to this definition">¶</a></dt>
@@ -387,6 +393,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.EventHub.capture_description">
 <code class="descname">capture_description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventHub.capture_description" title="Permalink to this definition">¶</a></dt>
@@ -492,6 +500,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_authorization_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_authorization_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.EventHubAuthorizationRule.eventhub_name">
 <code class="descname">eventhub_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventHubAuthorizationRule.eventhub_name" title="Permalink to this definition">¶</a></dt>
@@ -619,6 +629,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_consumer_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_consumer_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.EventHubConsumerGroup.eventhub_name">
 <code class="descname">eventhub_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventHubConsumerGroup.eventhub_name" title="Permalink to this definition">¶</a></dt>
@@ -714,6 +726,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_namespace.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.EventHubNamespace.auto_inflate_enabled">
 <code class="descname">auto_inflate_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespace.auto_inflate_enabled" title="Permalink to this definition">¶</a></dt>
@@ -856,6 +870,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_namespace_authorization_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_namespace_authorization_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.EventHubNamespaceAuthorizationRule.listen">
 <code class="descname">listen</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespaceAuthorizationRule.listen" title="Permalink to this definition">¶</a></dt>
@@ -1116,6 +1132,8 @@ create the namespace.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_namespace.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Namespace.capacity">
 <code class="descname">capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Namespace.capacity" title="Permalink to this definition">¶</a></dt>
@@ -1242,6 +1260,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_namespace_authorization_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_namespace_authorization_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.NamespaceAuthorizationRule.listen">
 <code class="descname">listen</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.NamespaceAuthorizationRule.listen" title="Permalink to this definition">¶</a></dt>
@@ -1393,6 +1413,8 @@ create the namespace. Changing this forces a new resource to be created.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_queue.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Queue.auto_delete_on_idle">
 <code class="descname">auto_delete_on_idle</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Queue.auto_delete_on_idle" title="Permalink to this definition">¶</a></dt>
@@ -1566,6 +1588,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_queue_authorization_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_queue_authorization_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.QueueAuthorizationRule.listen">
 <code class="descname">listen</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.QueueAuthorizationRule.listen" title="Permalink to this definition">¶</a></dt>
@@ -1717,6 +1741,8 @@ this Subscription in. Changing this forces a new resource to be created.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_subscription.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.auto_delete_on_idle">
 <code class="descname">auto_delete_on_idle</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.auto_delete_on_idle" title="Permalink to this definition">¶</a></dt>
@@ -1876,6 +1902,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_subscription_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_subscription_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.SubscriptionRule.action">
 <code class="descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.SubscriptionRule.action" title="Permalink to this definition">¶</a></dt>
@@ -2019,6 +2047,8 @@ supports ordering. Defaults to false.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_topic.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Topic.auto_delete_on_idle">
 <code class="descname">auto_delete_on_idle</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Topic.auto_delete_on_idle" title="Permalink to this definition">¶</a></dt>
@@ -2183,6 +2213,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_topic_authorization_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_topic_authorization_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.TopicAuthorizationRule.listen">
 <code class="descname">listen</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.TopicAuthorizationRule.listen" title="Permalink to this definition">¶</a></dt>
@@ -2293,12 +2325,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.eventhub.get_eventhub_namespace">
 <code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">get_eventhub_namespace</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.get_eventhub_namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing EventHub Namespace.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/eventhub_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/eventhub_namespace.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.eventhub.get_service_bus_namespace">
 <code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">get_service_bus_namespace</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.get_service_bus_namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing ServiceBus Namespace.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/servicebus_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/servicebus_namespace.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

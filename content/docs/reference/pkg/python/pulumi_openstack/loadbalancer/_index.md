@@ -40,6 +40,8 @@ other than their own. Changing this creates a new L7 Policy.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_l7policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_l7policy_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.loadbalancer.L7PolicyV2.action">
 <code class="descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.L7PolicyV2.action" title="Permalink to this definition">¶</a></dt>
@@ -188,6 +190,8 @@ compare.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_l7rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_l7rule_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.loadbalancer.L7RuleV2.admin_state_up">
 <code class="descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.L7RuleV2.admin_state_up" title="Permalink to this definition">¶</a></dt>
@@ -348,6 +352,8 @@ other than their own. Changing this creates a new Listener.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_listener_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_listener_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.loadbalancer.Listener.admin_state_up">
 <code class="descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Listener.admin_state_up" title="Permalink to this definition">¶</a></dt>
@@ -520,6 +526,8 @@ are shared).  Changing this creates a new loadbalancer.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_loadbalancer_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_loadbalancer_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.loadbalancer.LoadBalancer.admin_state_up">
 <code class="descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer.admin_state_up" title="Permalink to this definition">¶</a></dt>
@@ -678,6 +686,8 @@ as a member with a weight of 2.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_member_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_member_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.loadbalancer.Member.address">
 <code class="descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Member.address" title="Permalink to this definition">¶</a></dt>
@@ -810,13 +820,13 @@ A Networking client is needed to create an LB member. If omitted, the
 LB member.</li>
 <li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the member. Required if admin wants to
 create a member for another tenant. Changing this creates a new member.</li>
-<li><strong>weight</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The load balancing weight of the member. This is currently unable
-to be set through Terraform.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_member_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_member_v1.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.loadbalancer.MemberV1.address">
 <code class="descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.MemberV1.address" title="Permalink to this definition">¶</a></dt>
@@ -860,13 +870,6 @@ LB member.</p>
 <code class="descname">tenant_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.MemberV1.tenant_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The owner of the member. Required if admin wants to
 create a member for another tenant. Changing this creates a new member.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_openstack.loadbalancer.MemberV1.weight">
-<code class="descname">weight</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.MemberV1.weight" title="Permalink to this definition">¶</a></dt>
-<dd><p>The load balancing weight of the member. This is currently unable
-to be set through Terraform.</p>
 </dd></dl>
 
 <dl class="method">
@@ -954,6 +957,8 @@ accessed if monitor type is HTTP or HTTPS.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_monitor_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_monitor_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.loadbalancer.Monitor.admin_state_up">
 <code class="descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Monitor.admin_state_up" title="Permalink to this definition">¶</a></dt>
@@ -1129,6 +1134,8 @@ url_path of the existing monitor.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_monitor_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_monitor_v1.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.loadbalancer.MonitorV1.admin_state_up">
 <code class="descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.MonitorV1.admin_state_up" title="Permalink to this definition">¶</a></dt>
@@ -1289,6 +1296,8 @@ other than their own. Changing this creates a new pool.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_pool_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_pool_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.loadbalancer.Pool.admin_state_up">
 <code class="descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Pool.admin_state_up" title="Permalink to this definition">¶</a></dt>
@@ -1440,6 +1449,8 @@ create a pool member for another tenant. Changing this creates a new pool.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_pool_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_pool_v1.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.loadbalancer.PoolV1.lb_method">
 <code class="descname">lb_method</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.PoolV1.lb_method" title="Permalink to this definition">¶</a></dt>
@@ -1589,6 +1600,8 @@ create a vip member for another tenant. Changing this creates a new vip.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_vip_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_vip_v1.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.loadbalancer.Vip.address">
 <code class="descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Vip.address" title="Permalink to this definition">¶</a></dt>

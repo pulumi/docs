@@ -42,6 +42,8 @@ create the storage account. Changing this forces a new resource to be created.</
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_account.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_account.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.Account.access_tier">
 <code class="descname">access_tier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.access_tier" title="Permalink to this definition">¶</a></dt>
@@ -407,6 +409,8 @@ this becomes required.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_blob.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_blob.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.Blob.attempts">
 <code class="descname">attempts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Blob.attempts" title="Permalink to this definition">¶</a></dt>
@@ -551,6 +555,8 @@ Changing this forces a new resource to be created.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_container.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_container.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.Container.container_access_type">
 <code class="descname">container_access_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Container.container_access_type" title="Permalink to this definition">¶</a></dt>
@@ -947,6 +953,8 @@ Changing this forces a new resource to be created.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_queue.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.Queue.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Queue.name" title="Permalink to this definition">¶</a></dt>
@@ -1029,6 +1037,8 @@ Changing this forces a new resource to be created.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_share.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_share.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.Share.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Share.name" title="Permalink to this definition">¶</a></dt>
@@ -1122,6 +1132,8 @@ Changing this forces a new resource to be created.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_table.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_table.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.Table.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Table.name" title="Permalink to this definition">¶</a></dt>
@@ -1242,6 +1254,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.storage.get_account">
 <code class="descclassname">pulumi_azure.storage.</code><code class="descname">get_account</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.get_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Storage Account.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_account.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_account.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1251,6 +1265,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>Shared access signatures allow fine-grained, ephemeral access control to various aspects of an Azure Storage Account.</p>
 <p>Note that this is an <a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-an-account-sas">Account SAS</a>
 and <em>not</em> a <a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas">Service SAS</a>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_account_sas.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_account_sas.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

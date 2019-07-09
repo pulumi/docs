@@ -26,6 +26,8 @@ should be attached.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/app_cookie_stickiness_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/app_cookie_stickiness_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.AppCookieStickinessPolicy.cookie_name">
 <code class="descname">cookie_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.AppCookieStickinessPolicy.cookie_name" title="Permalink to this definition">¶</a></dt>
@@ -96,14 +98,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.elasticloadbalancing.Attachment">
 <em class="property">class </em><code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">Attachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>elb=None</em>, <em>instance=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.Attachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Attaches an EC2 instance to an Elastic Load Balancer (ELB). For attaching resources with Application Load Balancer (ALB) or Network Load Balancer (NLB), see the <cite>``aws_lb_target_group_attachment`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lb_target_group_attachment.html">https://www.terraform.io/docs/providers/aws/r/lb_target_group_attachment.html</a>&gt;`_.</p>
-<blockquote>
-<div><strong>NOTE on ELB Instances and ELB Attachments:</strong> Terraform currently provides
-both a standalone ELB Attachment resource (describing an instance attached to
-an ELB), and an Elastic Load Balancer resource with
-<code class="docutils literal notranslate"><span class="pre">instances</span></code> defined in-line. At this time you cannot use an ELB with in-line
-instances in conjunction with an ELB Attachment resource. Doing so will cause a
-conflict and will overwrite attachments.</div></blockquote>
+<dd><p>Create a Attachment resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -118,6 +113,8 @@ conflict and will overwrite attachments.</div></blockquote>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb_attachment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.Attachment.elb">
 <code class="descname">elb</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.Attachment.elb" title="Permalink to this definition">¶</a></dt>
@@ -231,6 +228,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_listener_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_listener_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.ListenerPolicy.load_balancer_name">
 <code class="descname">load_balancer_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.ListenerPolicy.load_balancer_name" title="Permalink to this definition">¶</a></dt>
@@ -292,21 +291,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancer">
 <em class="property">class </em><code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">LoadBalancer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access_logs=None</em>, <em>availability_zones=None</em>, <em>connection_draining=None</em>, <em>connection_draining_timeout=None</em>, <em>cross_zone_load_balancing=None</em>, <em>health_check=None</em>, <em>idle_timeout=None</em>, <em>instances=None</em>, <em>internal=None</em>, <em>listeners=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>security_groups=None</em>, <em>source_security_group=None</em>, <em>subnets=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an Elastic Load Balancer resource, also known as a “Classic
-Load Balancer” after the release of
-<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lb.html">Application/Network Load Balancers</a>.</p>
-<blockquote>
-<div><strong>NOTE on ELB Instances and ELB Attachments:</strong> Terraform currently
-provides both a standalone ELB Attachment resource
-(describing an instance attached to an ELB), and an ELB resource with
-<code class="docutils literal notranslate"><span class="pre">instances</span></code> defined in-line. At this time you cannot use an ELB with in-line
-instances in conjunction with a ELB Attachment resources. Doing so will cause a
-conflict and will overwrite attachments.</div></blockquote>
-<p>If the ARN of the <code class="docutils literal notranslate"><span class="pre">ssl_certificate_id</span></code> that is pointed to references a
-certificate that was signed by an ECDSA key, note that ELB only supports the
-P256 and P384 curves.  Using a certificate signed by a key using a different
-curve could produce the error <code class="docutils literal notranslate"><span class="pre">ERR_SSL_VERSION_OR_CIPHER_MISMATCH</span></code> in your
-browser.</p>
+<dd><p>Create a LoadBalancer resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -324,7 +309,7 @@ browser.</p>
 <li><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of instance ids to place in the ELB pool.</li>
 <li><strong>internal</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, ELB will be an internal ELB.</li>
 <li><strong>listeners</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of listener blocks. Listeners documented below.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ELB. By default generated by Terraform.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ELB</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group IDs to assign to the ELB.
@@ -339,6 +324,8 @@ instances. Use this for Classic or Default VPC only.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancer.access_logs">
 <code class="descname">access_logs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancer.access_logs" title="Permalink to this definition">¶</a></dt>
@@ -414,7 +401,7 @@ instances. Use this for Classic or Default VPC only.</li>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancer.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancer.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the ELB. By default generated by Terraform.</p>
+<dd><p>The name of the ELB</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -524,6 +511,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_backend_server_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_backend_server_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancerBackendServerPolicy.instance_port">
 <code class="descname">instance_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancerBackendServerPolicy.instance_port" title="Permalink to this definition">¶</a></dt>
@@ -606,6 +595,8 @@ should be attached.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_cookie_stickiness_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_cookie_stickiness_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicy.cookie_expiration_period">
 <code class="descname">cookie_expiration_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicy.cookie_expiration_period" title="Permalink to this definition">¶</a></dt>
@@ -694,6 +685,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancerPolicy.load_balancer_name">
 <code class="descname">load_balancer_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancerPolicy.load_balancer_name" title="Permalink to this definition">¶</a></dt>
@@ -781,6 +774,8 @@ should be attached.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_ssl_negotiation_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_ssl_negotiation_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.SslNegotiationPolicy.attributes">
 <code class="descname">attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.SslNegotiationPolicy.attributes" title="Permalink to this definition">¶</a></dt>
@@ -853,6 +848,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">get_hosted_zone_id</code><span class="sig-paren">(</span><em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.get_hosted_zone_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the HostedZoneId of the AWS Elastic Load Balancing HostedZoneId
 in a given region for the purpose of using in an AWS Route53 Alias.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_hosted_zone_id.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_hosted_zone_id.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -864,6 +861,8 @@ Application Load Balancer (ALB) or Network Load Balancer (NLB).</p>
 <p>This data source can prove useful when a module accepts an LB as an input
 variable and needs to, for example, determine the security groups associated
 with it, etc.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -871,6 +870,8 @@ with it, etc.</p>
 <code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">get_service_account</code><span class="sig-paren">(</span><em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.get_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the Account ID of the <a class="reference external" href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-access-logs.html#attach-bucket-policy">AWS Elastic Load Balancing Service Account</a>
 in a given region for the purpose of whitelisting in S3 bucket policy.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_service_account.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

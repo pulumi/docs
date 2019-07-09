@@ -21,6 +21,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_aggregate_authorization.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_aggregate_authorization.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cfg.AggregateAuthorization.account_id">
 <code class="descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cfg.AggregateAuthorization.account_id" title="Permalink to this definition">¶</a></dt>
@@ -98,6 +100,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_aggregator.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_aggregator.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cfg.ConfigurationAggregator.account_aggregation_source">
 <code class="descname">account_aggregation_source</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cfg.ConfigurationAggregator.account_aggregation_source" title="Permalink to this definition">¶</a></dt>
@@ -185,6 +189,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_delivery_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_delivery_channel.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cfg.DeliveryChannel.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cfg.DeliveryChannel.name" title="Permalink to this definition">¶</a></dt>
@@ -278,6 +284,8 @@ See <a class="reference external" href="http://docs.aws.amazon.com/config/latest
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cfg.Recorder.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cfg.Recorder.name" title="Permalink to this definition">¶</a></dt>
@@ -358,6 +366,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder_status.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_recorder_status.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cfg.RecorderStatus.is_enabled">
 <code class="descname">is_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cfg.RecorderStatus.is_enabled" title="Permalink to this definition">¶</a></dt>
@@ -436,6 +446,8 @@ the function to evaluate your AWS resources as documented below.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_config_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_config_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.cfg.Rule.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cfg.Rule.arn" title="Permalink to this definition">¶</a></dt>

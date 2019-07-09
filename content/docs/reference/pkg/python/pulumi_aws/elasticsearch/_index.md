@@ -15,10 +15,6 @@
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>access_policies</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM policy document specifying the access policies for the domain</li>
-<li><strong>advanced_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value string pairs to specify advanced configuration options.
-Note that the values for these configuration options must be strings (wrapped in quotes) or they
-may be wrong and cause a perpetual diff, causing Terraform to want to recreate your Elasticsearch
-domain on every apply.</li>
 <li><strong>cluster_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Cluster configuration of the domain, see below.</li>
 <li><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the domain.</li>
 <li><strong>ebs_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – EBS related options, may be required based on chosen <a class="reference external" href="https://aws.amazon.com/elasticsearch-service/pricing/">instance size</a>. See below.</li>
@@ -34,19 +30,12 @@ domain on every apply.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticsearch.Domain.access_policies">
 <code class="descname">access_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain.access_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>IAM policy document specifying the access policies for the domain</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.elasticsearch.Domain.advanced_options">
-<code class="descname">advanced_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain.advanced_options" title="Permalink to this definition">¶</a></dt>
-<dd><p>Key-value string pairs to specify advanced configuration options.
-Note that the values for these configuration options must be strings (wrapped in quotes) or they
-may be wrong and cause a perpetual diff, causing Terraform to want to recreate your Elasticsearch
-domain on every apply.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -195,6 +184,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticsearch.DomainPolicy.access_policies">
 <code class="descname">access_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.DomainPolicy.access_policies" title="Permalink to this definition">¶</a></dt>

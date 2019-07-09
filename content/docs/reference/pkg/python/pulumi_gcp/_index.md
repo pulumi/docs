@@ -25,6 +25,7 @@
 <li class="toctree-l1"><a class="reference internal" href="filestore/">filestore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="firestore/">firestore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="folder/">folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="healthcare/">healthcare</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iam/">iam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iap/">iap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kms/">kms</a></li>

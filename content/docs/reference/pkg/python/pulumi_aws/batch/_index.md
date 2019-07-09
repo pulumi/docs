@@ -32,6 +32,8 @@ For information about compute environment, see [Compute Environments][2] .</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_compute_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_compute_environment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.batch.ComputeEnvironment.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.ComputeEnvironment.arn" title="Permalink to this definition">¶</a></dt>
@@ -267,6 +269,8 @@ Maximum number of <code class="docutils literal notranslate"><span class="pre">r
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_definition.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.batch.JobDefinition.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.JobDefinition.arn" title="Permalink to this definition">¶</a></dt>
@@ -381,6 +385,8 @@ are evaluated first when associated with the same compute environment.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_queue.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.batch.JobQueue.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.batch.JobQueue.arn" title="Permalink to this definition">¶</a></dt>
@@ -460,6 +466,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_aws.batch.</code><code class="descname">get_compute_environment</code><span class="sig-paren">(</span><em>compute_environment_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.get_compute_environment" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Batch Compute Environment data source allows access to details of a specific
 compute environment within AWS Batch.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_compute_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_compute_environment.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -467,6 +475,8 @@ compute environment within AWS Batch.</p>
 <code class="descclassname">pulumi_aws.batch.</code><code class="descname">get_job_queue</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.get_job_queue" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Batch Job Queue data source allows access to details of a specific
 job queue within AWS Batch.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_job_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_job_queue.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

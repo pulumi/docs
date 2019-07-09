@@ -6,15 +6,7 @@
 <dl class="class">
 <dt id="pulumi_gcp.appengine.Application">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.appengine.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auth_domain=None</em>, <em>feature_settings=None</em>, <em>location_id=None</em>, <em>project=None</em>, <em>serving_status=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.appengine.Application" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows creation and management of an App Engine application.</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>App Engine applications cannot be deleted once they’re created; you have to delete the</dt>
-<dd>entire project to delete the application. Terraform will report the application has been
-successfully deleted; this is a limitation of Terraform, and will go away in the future.
-Terraform is not able to delete App Engine applications.</dd>
-</dl>
-</div></blockquote>
+<dd><p>Create a Application resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -32,6 +24,8 @@ to serve the app from.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_application.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_application.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.appengine.Application.auth_domain">
 <code class="descname">auth_domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.Application.auth_domain" title="Permalink to this definition">¶</a></dt>
@@ -160,6 +154,8 @@ If it is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_firewall_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.appengine.FirewallRule.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.FirewallRule.project" title="Permalink to this definition">¶</a></dt>

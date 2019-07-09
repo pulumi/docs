@@ -25,6 +25,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_activation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_activation.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.Activation.activation_code">
 <code class="descname">activation_code</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Activation.activation_code" title="Permalink to this definition">¶</a></dt>
@@ -146,6 +148,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.Association.association_name">
 <code class="descname">association_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Association.association_name" title="Permalink to this definition">¶</a></dt>
@@ -286,6 +290,8 @@ publicly, you must specify All as the account ID.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_document.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_document.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.Document.content">
 <code class="descname">content</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Document.content" title="Permalink to this definition">¶</a></dt>
@@ -497,6 +503,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindow.allow_unassociated_targets">
 <code class="descname">allow_unassociated_targets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindow.allow_unassociated_targets" title="Permalink to this definition">¶</a></dt>
@@ -619,6 +627,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window_target.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTarget.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTarget.description" title="Permalink to this definition">¶</a></dt>
@@ -722,6 +732,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window_task.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window_task.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask.description" title="Permalink to this definition">¶</a></dt>
@@ -844,7 +856,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the parameter.</li>
 <li><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The KMS key id or arn for encrypting a SecureString.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the parameter. If the name contains a path (e.g. any forward slashes (<code class="docutils literal notranslate"><span class="pre">/</span></code>)), it must be fully qualified with a leading forward slash (<code class="docutils literal notranslate"><span class="pre">/</span></code>). For additional requirements and constraints, see the <a class="reference external" href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html">AWS SSM User Guide</a>.</li>
-<li><strong>overwrite</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Overwrite an existing parameter. If not specified, will default to <code class="docutils literal notranslate"><span class="pre">false</span></code> if the resource has not been created by terraform to avoid overwrite of existing resource and will default to <code class="docutils literal notranslate"><span class="pre">true</span></code> otherwise (terraform lifecycle rules should then be used to manage the update behavior).</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</li>
 <li><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tier of the parameter. If not specified, will default to <code class="docutils literal notranslate"><span class="pre">Standard</span></code>. Valid tiers are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Advanced</span></code>. For more information on parameter tiers, see the <a class="reference external" href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html">AWS SSM Parameter tier comparison and guide</a>.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the parameter. Valid types are <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">StringList</span></code> and <code class="docutils literal notranslate"><span class="pre">SecureString</span></code>.</li>
@@ -854,6 +865,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_parameter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_parameter.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.Parameter.allowed_pattern">
 <code class="descname">allowed_pattern</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Parameter.allowed_pattern" title="Permalink to this definition">¶</a></dt>
@@ -882,12 +895,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.Parameter.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Parameter.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the parameter. If the name contains a path (e.g. any forward slashes (<code class="docutils literal notranslate"><span class="pre">/</span></code>)), it must be fully qualified with a leading forward slash (<code class="docutils literal notranslate"><span class="pre">/</span></code>). For additional requirements and constraints, see the <a class="reference external" href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html">AWS SSM User Guide</a>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.ssm.Parameter.overwrite">
-<code class="descname">overwrite</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Parameter.overwrite" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overwrite an existing parameter. If not specified, will default to <code class="docutils literal notranslate"><span class="pre">false</span></code> if the resource has not been created by terraform to avoid overwrite of existing resource and will default to <code class="docutils literal notranslate"><span class="pre">true</span></code> otherwise (terraform lifecycle rules should then be used to manage the update behavior).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -988,6 +995,8 @@ of them is specified.</div></blockquote>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_patch_baseline.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_patch_baseline.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.PatchBaseline.approval_rules">
 <code class="descname">approval_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.PatchBaseline.approval_rules" title="Permalink to this definition">¶</a></dt>
@@ -1094,6 +1103,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_patch_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_patch_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.PatchGroup.baseline_id">
 <code class="descname">baseline_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.PatchGroup.baseline_id" title="Permalink to this definition">¶</a></dt>
@@ -1172,6 +1183,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_resource_data_sync.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_resource_data_sync.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.ResourceDataSync.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.ResourceDataSync.name" title="Permalink to this definition">¶</a></dt>
@@ -1228,12 +1241,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.get_document">
 <code class="descclassname">pulumi_aws.ssm.</code><code class="descname">get_document</code><span class="sig-paren">(</span><em>document_format=None</em>, <em>document_version=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.get_document" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the contents of the specified Systems Manager document.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ssm_document.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ssm_document.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ssm.get_parameter">
 <code class="descclassname">pulumi_aws.ssm.</code><code class="descname">get_parameter</code><span class="sig-paren">(</span><em>name=None</em>, <em>with_decryption=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.get_parameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Parameter data source.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ssm_parameter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ssm_parameter.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

@@ -72,6 +72,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_protected_vm.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_protected_vm.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.recoveryservices.ProtectedVM.backup_policy_id">
 <code class="descname">backup_policy_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.ProtectedVM.backup_policy_id" title="Permalink to this definition">¶</a></dt>
@@ -168,6 +170,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_protection_policy_vm.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_protection_policy_vm.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.recoveryservices.ProtectionPolicyVM.backup">
 <code class="descname">backup</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.ProtectionPolicyVM.backup" title="Permalink to this definition">¶</a></dt>
@@ -289,6 +293,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_vault.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_vault.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.recoveryservices.Vault.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.Vault.location" title="Permalink to this definition">¶</a></dt>
@@ -363,12 +369,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.recoveryservices.get_vault">
 <code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">get_vault</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.get_vault" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Recovery Services Vault.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/recovery_services_vault.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/recovery_services_vault.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.recoveryservices.get_vm_protection_policy">
 <code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">get_vm_protection_policy</code><span class="sig-paren">(</span><em>name=None</em>, <em>recovery_vault_name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.get_vm_protection_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Recovery Services VM Protection Policy.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/recovery_services_protection_policy_vm.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/recovery_services_protection_policy_vm.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

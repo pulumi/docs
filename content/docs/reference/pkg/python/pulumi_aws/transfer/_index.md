@@ -78,6 +78,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_server.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_server.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.transfer.Server.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.Server.arn" title="Permalink to this definition">¶</a></dt>
@@ -199,6 +201,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_ssh_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_ssh_key.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.transfer.SshKey.body">
 <code class="descname">body</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.SshKey.body" title="Permalink to this definition">¶</a></dt>
@@ -269,7 +273,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>home_directory</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a <code class="docutils literal notranslate"><span class="pre">/</span></code>.  The first item in the path is the name of the home bucket (accessible as <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeBucket}</span></code> in the policy) and the rest is the home directory (accessible as <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeDirectory}</span></code> in the policy). For example, <code class="docutils literal notranslate"><span class="pre">/example-bucket-1234/username</span></code> would set the home bucket to <code class="docutils literal notranslate"><span class="pre">example-bucket-1234</span></code> and the home directory to <code class="docutils literal notranslate"><span class="pre">username</span></code>.</li>
-<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include <code class="docutils literal notranslate"><span class="pre">${Transfer:UserName}</span></code>, <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeDirectory}</span></code>, and <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeBucket}</span></code>. Since the IAM variable syntax matches Terraform’s interpolation syntax, they must be escaped inside Terraform configuration strings (<code class="docutils literal notranslate"><span class="pre">$${Transfer:UserName}</span></code>).  These are evaluated on-the-fly when navigating the bucket.</li>
 <li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.</li>
 <li><strong>server_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Server ID of the Transfer Server (e.g. <code class="docutils literal notranslate"><span class="pre">s-12345678</span></code>)</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -279,6 +282,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_user.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_user.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.transfer.User.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.User.arn" title="Permalink to this definition">¶</a></dt>
@@ -289,12 +294,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.transfer.User.home_directory">
 <code class="descname">home_directory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.User.home_directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a <code class="docutils literal notranslate"><span class="pre">/</span></code>.  The first item in the path is the name of the home bucket (accessible as <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeBucket}</span></code> in the policy) and the rest is the home directory (accessible as <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeDirectory}</span></code> in the policy). For example, <code class="docutils literal notranslate"><span class="pre">/example-bucket-1234/username</span></code> would set the home bucket to <code class="docutils literal notranslate"><span class="pre">example-bucket-1234</span></code> and the home directory to <code class="docutils literal notranslate"><span class="pre">username</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.transfer.User.policy">
-<code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.User.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include <code class="docutils literal notranslate"><span class="pre">${Transfer:UserName}</span></code>, <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeDirectory}</span></code>, and <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeBucket}</span></code>. Since the IAM variable syntax matches Terraform’s interpolation syntax, they must be escaped inside Terraform configuration strings (<code class="docutils literal notranslate"><span class="pre">$${Transfer:UserName}</span></code>).  These are evaluated on-the-fly when navigating the bucket.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -366,6 +365,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_aws.transfer.</code><code class="descname">get_server</code><span class="sig-paren">(</span><em>server_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.get_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ARN of an AWS Transfer Server for use in other
 resources.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/transfer_server.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/transfer_server.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

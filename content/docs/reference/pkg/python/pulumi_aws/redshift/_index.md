@@ -63,6 +63,8 @@ Format: ddd:hh24:mi-ddd:hh24:mi</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_cluster.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.redshift.Cluster.allow_version_upgrade">
 <code class="descname">allow_version_upgrade</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.Cluster.allow_version_upgrade" title="Permalink to this definition">¶</a></dt>
@@ -356,6 +358,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_event_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_event_subscription.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.redshift.EventSubscription.enabled">
 <code class="descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.EventSubscription.enabled" title="Permalink to this definition">¶</a></dt>
@@ -659,7 +663,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Redshift parameter group. Defaults to “Managed by Terraform”.</li>
 <li><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the Redshift parameter group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redshift parameter.</li>
 <li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Redshift parameters to apply.</li>
@@ -669,16 +672,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_parameter_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.redshift.ParameterGroup.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.ParameterGroup.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Name (ARN) of parameter group</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.redshift.ParameterGroup.description">
-<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.ParameterGroup.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>The description of the Redshift parameter group. Defaults to “Managed by Terraform”.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -756,7 +755,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Redshift security group. Defaults to “Managed by Terraform”.</li>
 <li><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of ingress rules.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redshift security group.</li>
 </ul>
@@ -764,12 +762,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
-<dl class="attribute">
-<dt id="pulumi_aws.redshift.SecurityGroup.description">
-<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.SecurityGroup.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>The description of the Redshift security group. Defaults to “Managed by Terraform”.</p>
-</dd></dl>
-
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_security_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.redshift.SecurityGroup.ingress">
 <code class="descname">ingress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.SecurityGroup.ingress" title="Permalink to this definition">¶</a></dt>
@@ -842,6 +836,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_snapshot_copy_grant.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_snapshot_copy_grant.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.redshift.SnapshotCopyGrant.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.SnapshotCopyGrant.arn" title="Permalink to this definition">¶</a></dt>
@@ -917,7 +913,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Redshift Subnet group. Defaults to “Managed by Terraform”.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redshift Subnet group.</li>
 <li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of VPC subnet IDs.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -926,16 +921,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_subnet_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.redshift.SubnetGroup.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.SubnetGroup.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Name (ARN) of the Redshift Subnet group name</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.redshift.SubnetGroup.description">
-<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.SubnetGroup.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>The description of the Redshift Subnet group. Defaults to “Managed by Terraform”.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1000,6 +991,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.get_cluster">
 <code class="descclassname">pulumi_aws.redshift.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>cluster_identifier=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific redshift cluster.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/redshift_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/redshift_cluster.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1007,6 +1000,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_aws.redshift.</code><code class="descname">get_service_account</code><span class="sig-paren">(</span><em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.get_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the Account ID of the <a class="reference external" href="http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging">AWS Redshift Service Account</a>
 in a given region for the purpose of allowing Redshift to store audit data in S3.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/redshift_service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/redshift_service_account.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

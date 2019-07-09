@@ -6,60 +6,7 @@
 <dl class="class">
 <dt id="pulumi_vsphere.ComputeCluster">
 <em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ComputeCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>custom_attributes=None</em>, <em>datacenter_id=None</em>, <em>dpm_automation_level=None</em>, <em>dpm_enabled=None</em>, <em>dpm_threshold=None</em>, <em>drs_advanced_options=None</em>, <em>drs_automation_level=None</em>, <em>drs_enable_predictive_drs=None</em>, <em>drs_enable_vm_overrides=None</em>, <em>drs_enabled=None</em>, <em>drs_migration_threshold=None</em>, <em>folder=None</em>, <em>force_evacuate_on_destroy=None</em>, <em>ha_admission_control_failover_host_system_ids=None</em>, <em>ha_admission_control_host_failure_tolerance=None</em>, <em>ha_admission_control_performance_tolerance=None</em>, <em>ha_admission_control_policy=None</em>, <em>ha_admission_control_resource_percentage_auto_compute=None</em>, <em>ha_admission_control_resource_percentage_cpu=None</em>, <em>ha_admission_control_resource_percentage_memory=None</em>, <em>ha_admission_control_slot_policy_explicit_cpu=None</em>, <em>ha_admission_control_slot_policy_explicit_memory=None</em>, <em>ha_admission_control_slot_policy_use_explicit_size=None</em>, <em>ha_advanced_options=None</em>, <em>ha_datastore_apd_recovery_action=None</em>, <em>ha_datastore_apd_response=None</em>, <em>ha_datastore_apd_response_delay=None</em>, <em>ha_datastore_pdl_response=None</em>, <em>ha_enabled=None</em>, <em>ha_heartbeat_datastore_ids=None</em>, <em>ha_heartbeat_datastore_policy=None</em>, <em>ha_host_isolation_response=None</em>, <em>ha_host_monitoring=None</em>, <em>ha_vm_component_protection=None</em>, <em>ha_vm_dependency_restart_condition=None</em>, <em>ha_vm_failure_interval=None</em>, <em>ha_vm_maximum_failure_window=None</em>, <em>ha_vm_maximum_resets=None</em>, <em>ha_vm_minimum_uptime=None</em>, <em>ha_vm_monitoring=None</em>, <em>ha_vm_restart_additional_delay=None</em>, <em>ha_vm_restart_priority=None</em>, <em>ha_vm_restart_timeout=None</em>, <em>host_cluster_exit_timeout=None</em>, <em>host_system_ids=None</em>, <em>name=None</em>, <em>proactive_ha_automation_level=None</em>, <em>proactive_ha_enabled=None</em>, <em>proactive_ha_moderate_remediation=None</em>, <em>proactive_ha_provider_ids=None</em>, <em>proactive_ha_severe_remediation=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeCluster" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><strong>A note on the naming of this resource:</strong> VMware refers to clusters of
-hosts in the UI and documentation as <em>clusters</em>, <em>HA clusters</em>, or <em>DRS
-clusters</em>. All of these refer to the same kind of resource (with the latter two
-referring to specific features of clustering). In Terraform, we use
-<code class="docutils literal notranslate"><span class="pre">vsphere_compute_cluster</span></code> to differentiate host clusters from <em>datastore
-clusters</em>, which are clusters of datastores that can be used to distribute load
-and ensure fault tolerance via distribution of virtual machines. Datastore
-clusters can also be managed through Terraform, via the
-<cite>``vsphere_datastore_cluster`</cite> resource &lt;/docs/providers/vsphere/r/datastore_cluster.html&gt;`_.</div></blockquote>
-<p>The <code class="docutils literal notranslate"><span class="pre">vsphere_compute_cluster</span></code> resource can be used to create and manage
-clusters of hosts allowing for resource control of compute resources, load
-balancing through DRS, and high availability through vSphere HA.</p>
-<p>For more information on vSphere clusters and DRS, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-8ACF3502-5314-469F-8CC9-4A9BD5925BC2.html">this
-page</a>. For more information on vSphere HA, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html">this
-page</a>.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
-connections.</p>
-<p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
-</div></blockquote>
-<p>A large number of settings in the <code class="docutils literal notranslate"><span class="pre">vsphere_compute_cluster</span></code> resource require a
-specific version of vSphere to function. Rather than include warnings at every
-setting or section, these settings are documented below.  Note that this list
-is for cluster-specific attributes only, and does not include the
-<code class="docutils literal notranslate"><span class="pre">tags</span></code> parameter, which requires vSphere 6.0 or higher across all
-resources that can be tagged.</p>
-<p>All settings are footnoted by an asterisk (<code class="docutils literal notranslate"><span class="pre">*</span></code>) in their specific section in
-the documentation, which takes you here.</p>
-<p>These settings require vSphere 6.0 or higher:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">ha_datastore_apd_recovery_action</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">ha_datastore_apd_response</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">ha_datastore_apd_response_delay</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">ha_datastore_pdl_response</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">ha_vm_component_protection</span></code></li>
-</ul>
-<p>These settings require vSphere 6.5 or higher:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">drs_enable_predictive_drs</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">ha_admission_control_host_failure_tolerance</span></code>
-(When <code class="docutils literal notranslate"><span class="pre">ha_admission_control_policy</span></code> is set to
-<code class="docutils literal notranslate"><span class="pre">resourcePercentage</span></code> or <code class="docutils literal notranslate"><span class="pre">slotPolicy</span></code>. Permitted in all versions under
-<code class="docutils literal notranslate"><span class="pre">failoverHosts</span></code>)</li>
-<li><code class="docutils literal notranslate"><span class="pre">ha_admission_control_resource_percentage_auto_compute</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">ha_vm_restart_timeout</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">ha_vm_dependency_restart_condition</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">ha_vm_restart_additional_delay</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">proactive_ha_automation_level</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">proactive_ha_enabled</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">proactive_ha_moderate_remediation</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">proactive_ha_provider_ids</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">proactive_ha_severe_remediation</span></code></li>
-</ul>
+<dd><p>Create a ComputeCluster resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -98,17 +45,6 @@ set for virtual machines in the cluster. Default: <code class="docutils literal 
 the threshold of imbalance tolerated between hosts. A lower setting will
 tolerate more imbalance while a higher setting will tolerate less. Default:
 <code class="docutils literal notranslate"><span class="pre">3</span></code>.</li>
-<li><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The relative path to a folder to put this cluster in.
-This is a path relative to the datacenter you are deploying the cluster to.
-Example: for the <code class="docutils literal notranslate"><span class="pre">dc1</span></code> datacenter, and a provided <code class="docutils literal notranslate"><span class="pre">folder</span></code> of <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code>,
-Terraform will place a cluster named <code class="docutils literal notranslate"><span class="pre">terraform-compute-cluster-test</span></code> in a
-host folder located at <code class="docutils literal notranslate"><span class="pre">/dc1/host/foo/bar</span></code>, with the final inventory path
-being <code class="docutils literal notranslate"><span class="pre">/dc1/host/foo/bar/terraform-datastore-cluster-test</span></code>.</li>
-<li><strong>force_evacuate_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When destroying the resource, setting this to
-<code class="docutils literal notranslate"><span class="pre">true</span></code> will auto-remove any hosts that are currently a member of the cluster,
-as if they were removed by taking their entry out of <code class="docutils literal notranslate"><span class="pre">host_system_ids</span></code> (see
-below). This is an advanced
-option and should only be used for testing. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>ha_admission_control_failover_host_system_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Defines the
 [managed object IDs][docs-about-morefs] of hosts to use as dedicated failover
 hosts. These hosts are kept as available as possible - admission control will
@@ -255,6 +191,8 @@ set to <code class="docutils literal notranslate"><span class="pre">MaintenanceM
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.ComputeCluster.custom_attributes">
 <code class="descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.custom_attributes" title="Permalink to this definition">¶</a></dt>
@@ -339,27 +277,6 @@ set for virtual machines in the cluster. Default: <code class="docutils literal 
 the threshold of imbalance tolerated between hosts. A lower setting will
 tolerate more imbalance while a higher setting will tolerate less. Default:
 <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_vsphere.ComputeCluster.folder">
-<code class="descname">folder</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.folder" title="Permalink to this definition">¶</a></dt>
-<dd><p>The relative path to a folder to put this cluster in.
-This is a path relative to the datacenter you are deploying the cluster to.
-Example: for the <code class="docutils literal notranslate"><span class="pre">dc1</span></code> datacenter, and a provided <code class="docutils literal notranslate"><span class="pre">folder</span></code> of <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code>,
-Terraform will place a cluster named <code class="docutils literal notranslate"><span class="pre">terraform-compute-cluster-test</span></code> in a
-host folder located at <code class="docutils literal notranslate"><span class="pre">/dc1/host/foo/bar</span></code>, with the final inventory path
-being <code class="docutils literal notranslate"><span class="pre">/dc1/host/foo/bar/terraform-datastore-cluster-test</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_vsphere.ComputeCluster.force_evacuate_on_destroy">
-<code class="descname">force_evacuate_on_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.force_evacuate_on_destroy" title="Permalink to this definition">¶</a></dt>
-<dd><p>When destroying the resource, setting this to
-<code class="docutils literal notranslate"><span class="pre">true</span></code> will auto-remove any hosts that are currently a member of the cluster,
-as if they were removed by taking their entry out of <code class="docutils literal notranslate"><span class="pre">host_system_ids</span></code> (see
-below). This is an advanced
-option and should only be used for testing. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -773,6 +690,8 @@ cluster. Forces a new resource if changed.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_host_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_host_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.ComputeClusterHostGroup.compute_cluster_id">
 <code class="descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -879,6 +798,8 @@ on the same host together.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_affinity_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmAffinityRule.compute_cluster_id">
 <code class="descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -998,6 +919,8 @@ on hosts different from each other.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_anti_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_anti_affinity_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmAntiAffinityRule.compute_cluster_id">
 <code class="descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -1115,6 +1038,8 @@ the group specified by
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_dependency_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_dependency_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmDependencyRule.compute_cluster_id">
 <code class="descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -1237,6 +1162,8 @@ group.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmGroup.compute_cluster_id">
 <code class="descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -1346,6 +1273,8 @@ with this rule.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_host_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_host_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.ComputeClusterVmHostRule.affinity_host_group_name">
 <code class="descname">affinity_host_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.affinity_host_group_name" title="Permalink to this definition">¶</a></dt>
@@ -1485,6 +1414,8 @@ resource if changed.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/custom_attribute.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/custom_attribute.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.CustomAttribute.managed_object_type">
 <code class="descname">managed_object_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.CustomAttribute.managed_object_type" title="Permalink to this definition">¶</a></dt>
@@ -1567,6 +1498,8 @@ within the folder. Forces a new resource if changed.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datacenter.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datacenter.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.Datacenter.custom_attributes">
 <code class="descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Datacenter.custom_attributes" title="Permalink to this definition">¶</a></dt>
@@ -1671,16 +1604,7 @@ for custom attributes.</li>
 <li><strong>datacenter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object ID][docs-about-morefs] of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.</li>
-<li><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The relative path to a folder to put this datastore
-cluster in.  This is a path relative to the datacenter you are deploying the
-datastore to.  Example: for the <code class="docutils literal notranslate"><span class="pre">dc1</span></code> datacenter, and a provided <code class="docutils literal notranslate"><span class="pre">folder</span></code> of
-<code class="docutils literal notranslate"><span class="pre">foo/bar</span></code>, Terraform will place a datastore cluster named
-<code class="docutils literal notranslate"><span class="pre">terraform-datastore-cluster-test</span></code> in a datastore folder located at
-<code class="docutils literal notranslate"><span class="pre">/dc1/datastore/foo/bar</span></code>, with the final inventory path being
-<code class="docutils literal notranslate"><span class="pre">/dc1/datastore/foo/bar/terraform-datastore-cluster-test</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the datastore cluster.</li>
-<li><strong>sdrs_advanced_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A key/value map of advanced Storage DRS
-settings that are not exposed via Terraform or the vSphere client.</li>
 <li><strong>sdrs_automation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The global automation level for all
 virtual machines in this datastore cluster. Default: <code class="docutils literal notranslate"><span class="pre">manual</span></code>.</li>
 <li><strong>sdrs_default_intra_vm_affinity</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When <code class="docutils literal notranslate"><span class="pre">true</span></code>, all disks in a
@@ -1735,6 +1659,8 @@ automation settings when generating recommendations for datastore evacuation.</l
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.custom_attributes">
 <code class="descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.custom_attributes" title="Permalink to this definition">¶</a></dt>
@@ -1753,28 +1679,9 @@ changed.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_vsphere.DatastoreCluster.folder">
-<code class="descname">folder</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.folder" title="Permalink to this definition">¶</a></dt>
-<dd><p>The relative path to a folder to put this datastore
-cluster in.  This is a path relative to the datacenter you are deploying the
-datastore to.  Example: for the <code class="docutils literal notranslate"><span class="pre">dc1</span></code> datacenter, and a provided <code class="docutils literal notranslate"><span class="pre">folder</span></code> of
-<code class="docutils literal notranslate"><span class="pre">foo/bar</span></code>, Terraform will place a datastore cluster named
-<code class="docutils literal notranslate"><span class="pre">terraform-datastore-cluster-test</span></code> in a datastore folder located at
-<code class="docutils literal notranslate"><span class="pre">/dc1/datastore/foo/bar</span></code>, with the final inventory path being
-<code class="docutils literal notranslate"><span class="pre">/dc1/datastore/foo/bar/terraform-datastore-cluster-test</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_vsphere.DatastoreCluster.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the datastore cluster.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_vsphere.DatastoreCluster.sdrs_advanced_options">
-<code class="descname">sdrs_advanced_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.sdrs_advanced_options" title="Permalink to this definition">¶</a></dt>
-<dd><p>A key/value map of advanced Storage DRS
-settings that are not exposed via Terraform or the vSphere client.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1995,6 +1902,8 @@ on different datastores from each other.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster_vm_anti_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster_vm_anti_affinity_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.datastore_cluster_id">
 <code class="descname">datastore_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.datastore_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -2140,6 +2049,8 @@ on this port group to be overridden on an individual port.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.auto_expand">
 <code class="descname">auto_expand</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.auto_expand" title="Permalink to this definition">¶</a></dt>
@@ -2474,6 +2385,8 @@ below:</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_virtual_switch.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.active_uplinks">
 <code class="descname">active_uplinks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.active_uplinks" title="Permalink to this definition">¶</a></dt>
@@ -2928,6 +2841,8 @@ operations on this host. Can be one of <code class="docutils literal notranslate
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/dpm_host_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/dpm_host_override.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.DpmHostOverride.compute_cluster_id">
 <code class="descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -3027,6 +2942,8 @@ the override for.  Forces a new resource if changed.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/drs_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/drs_vm_override.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.DrsVmOverride.compute_cluster_id">
 <code class="descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -3100,17 +3017,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_vsphere.File">
 <em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">File</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>create_directories=None</em>, <em>datacenter=None</em>, <em>datastore=None</em>, <em>destination_file=None</em>, <em>source_datacenter=None</em>, <em>source_datastore=None</em>, <em>source_file=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.File" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_file</span></code> resource can be used to upload files (such as virtual disk
-files) from the host machine that Terraform is running on to a target
-datastore.  The resource can also be used to copy files between datastores, or
-from one location to another on the same datastore.</p>
-<p>Updates to destination parameters such as <code class="docutils literal notranslate"><span class="pre">datacenter</span></code>, <code class="docutils literal notranslate"><span class="pre">datastore</span></code>, or
-<code class="docutils literal notranslate"><span class="pre">destination_file</span></code> will move the managed file a new destination based on the
-values of the new settings.  If any source parameter is changed, such as
-<code class="docutils literal notranslate"><span class="pre">source_datastore</span></code>, <code class="docutils literal notranslate"><span class="pre">source_datacenter</span></code> or <code class="docutils literal notranslate"><span class="pre">source_file</span></code>), the resource will be
-re-created. Depending on if destination parameters are being changed as well,
-this may result in the destination file either being overwritten or deleted at
-the old location.</p>
+<dd><p>Create a File resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -3130,14 +3037,13 @@ or copied to on vSphere.</li>
 will be copied from. Forces a new resource if changed.</li>
 <li><strong>source_datastore</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the datastore in which file will
 be copied from. Forces a new resource if changed.</li>
-<li><strong>source_file</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to the file being uploaded from the
-Terraform host to vSphere or copied within vSphere. Forces a new resource if
-changed.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/file.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/file.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.File.create_directories">
 <code class="descname">create_directories</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.File.create_directories" title="Permalink to this definition">¶</a></dt>
@@ -3178,14 +3084,6 @@ will be copied from. Forces a new resource if changed.</p>
 <code class="descname">source_datastore</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.File.source_datastore" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the datastore in which file will
 be copied from. Forces a new resource if changed.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_vsphere.File.source_file">
-<code class="descname">source_file</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.File.source_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>The path to the file being uploaded from the
-Terraform host to vSphere or copied within vSphere. Forces a new resource if
-changed.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3252,12 +3150,6 @@ for a reference on how to set values for custom attributes.</li>
 <li><strong>datacenter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the datacenter the folder will be created in.
 Required for all folder types except for datacenter folders. Forces a new
 resource if changed.</li>
-<li><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of the folder to be created. This is relative to
-the root of the type of folder you are creating, and the supplied datacenter.
-For example, given a default datacenter of <code class="docutils literal notranslate"><span class="pre">default-dc</span></code>, a folder of type
-<code class="docutils literal notranslate"><span class="pre">vm</span></code> (denoting a virtual machine folder), and a supplied folder of
-<code class="docutils literal notranslate"><span class="pre">terraform-test-folder</span></code>, the resulting path would be
-<code class="docutils literal notranslate"><span class="pre">/default-dc/vm/terraform-test-folder</span></code>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of folder to create. Allowed options are
@@ -3269,6 +3161,8 @@ For example, given a default datacenter of <code class="docutils literal notrans
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/folder.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/folder.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.Folder.custom_attributes">
 <code class="descname">custom_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Folder.custom_attributes" title="Permalink to this definition">¶</a></dt>
@@ -3283,17 +3177,6 @@ for a reference on how to set values for custom attributes.</p>
 <dd><p>The ID of the datacenter the folder will be created in.
 Required for all folder types except for datacenter folders. Forces a new
 resource if changed.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_vsphere.Folder.path">
-<code class="descname">path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Folder.path" title="Permalink to this definition">¶</a></dt>
-<dd><p>The path of the folder to be created. This is relative to
-the root of the type of folder you are creating, and the supplied datacenter.
-For example, given a default datacenter of <code class="docutils literal notranslate"><span class="pre">default-dc</span></code>, a folder of type
-<code class="docutils literal notranslate"><span class="pre">vm</span></code> (denoting a virtual machine folder), and a supplied folder of
-<code class="docutils literal notranslate"><span class="pre">terraform-test-folder</span></code>, the resulting path would be
-<code class="docutils literal notranslate"><span class="pre">/default-dc/vm/terraform-test-folder</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3687,6 +3570,8 @@ the override for.  Forces a new resource if changed.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/ha_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/ha_vm_override.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.HaVmOverride.compute_cluster_id">
 <code class="descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -3891,6 +3776,8 @@ tagging. Default: <code class="docutils literal notranslate"><span class="pre">0
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.HostPortGroup.computed_policy">
 <code class="descname">computed_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.computed_policy" title="Permalink to this definition">¶</a></dt>
@@ -4051,6 +3938,8 @@ of <code class="docutils literal notranslate"><span class="pre">loadbalance_ip</
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_virtual_switch.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.HostVirtualSwitch.active_nics">
 <code class="descname">active_nics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.active_nics" title="Permalink to this definition">¶</a></dt>
@@ -4263,6 +4152,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/license.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/license.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.License.edition_key">
 <code class="descname">edition_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.License.edition_key" title="Permalink to this definition">¶</a></dt>
@@ -4368,13 +4259,6 @@ for custom attributes.</li>
 <li><strong>datastore_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object
 ID][docs-about-morefs] of a datastore cluster to put this datastore in.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">folder</span></code>.</li>
-<li><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The relative path to a folder to put this datastore in.
-This is a path relative to the datacenter you are deploying the datastore to.
-Example: for the <code class="docutils literal notranslate"><span class="pre">dc1</span></code> datacenter, and a provided <code class="docutils literal notranslate"><span class="pre">folder</span></code> of <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code>,
-Terraform will place a datastore named <code class="docutils literal notranslate"><span class="pre">terraform-test</span></code> in a datastore folder
-located at <code class="docutils literal notranslate"><span class="pre">/dc1/datastore/foo/bar</span></code>, with the final inventory path being
-<code class="docutils literal notranslate"><span class="pre">/dc1/datastore/foo/bar/terraform-test</span></code>. Conflicts with
-<code class="docutils literal notranslate"><span class="pre">datastore_cluster_id</span></code>.</li>
 <li><strong>host_system_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The [managed object IDs][docs-about-morefs] of
 the hosts to mount the datastore on.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the datastore. Forces a new resource if
@@ -4397,6 +4281,8 @@ changed.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/nas_datastore.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/nas_datastore.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.NasDatastore.access_mode">
 <code class="descname">access_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.access_mode" title="Permalink to this definition">¶</a></dt>
@@ -4434,18 +4320,6 @@ for custom attributes.</p>
 <dd><p>The [managed object
 ID][docs-about-morefs] of a datastore cluster to put this datastore in.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">folder</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_vsphere.NasDatastore.folder">
-<code class="descname">folder</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.NasDatastore.folder" title="Permalink to this definition">¶</a></dt>
-<dd><p>The relative path to a folder to put this datastore in.
-This is a path relative to the datacenter you are deploying the datastore to.
-Example: for the <code class="docutils literal notranslate"><span class="pre">dc1</span></code> datacenter, and a provided <code class="docutils literal notranslate"><span class="pre">folder</span></code> of <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code>,
-Terraform will place a datastore named <code class="docutils literal notranslate"><span class="pre">terraform-test</span></code> in a datastore folder
-located at <code class="docutils literal notranslate"><span class="pre">/dc1/datastore/foo/bar</span></code>, with the final inventory path being
-<code class="docutils literal notranslate"><span class="pre">/dc1/datastore/foo/bar/terraform-test</span></code>. Conflicts with
-<code class="docutils literal notranslate"><span class="pre">datastore_cluster_id</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4598,6 +4472,8 @@ construction to achieve fine-grained programmatic control over provider settings
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_vsphere.Provider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -4697,6 +4573,8 @@ resource pool or the move will fail.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/resource_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/resource_pool.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.ResourcePool.cpu_expandable">
 <code class="descname">cpu_expandable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.ResourcePool.cpu_expandable" title="Permalink to this definition">¶</a></dt>
@@ -4881,6 +4759,8 @@ the override for.  Forces a new resource if changed.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/storage_drs_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/storage_drs_vm_override.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.StorageDrsVmOverride.datastore_cluster_id">
 <code class="descname">datastore_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.datastore_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -4990,6 +4870,8 @@ within its category.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.Tag.category_id">
 <code class="descname">category_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Tag.category_id" title="Permalink to this definition">¶</a></dt>
@@ -5083,6 +4965,8 @@ multiple tags in this category). Forces a new resource if changed.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag_category.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag_category.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.TagCategory.associable_types">
 <code class="descname">associable_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.TagCategory.associable_types" title="Permalink to this definition">¶</a></dt>
@@ -5215,6 +5099,8 @@ resource pool or the move will fail.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_container.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_container.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.VappContainer.cpu_expandable">
 <code class="descname">cpu_expandable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappContainer.cpu_expandable" title="Permalink to this definition">¶</a></dt>
@@ -5407,6 +5293,8 @@ property has no effect for vApps. Default: false</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_entity.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_entity.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.VappEntity.container_id">
 <code class="descname">container_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VappEntity.container_id" title="Permalink to this definition">¶</a></dt>
@@ -5542,6 +5430,8 @@ be created.  This needs to end in <code class="docutils literal notranslate"><sp
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_disk.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.VirtualDisk.adapter_type">
 <code class="descname">adapter_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.adapter_type" title="Permalink to this definition">¶</a></dt>
@@ -5637,197 +5527,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_vsphere.VirtualMachine">
 <em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">VirtualMachine</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alternate_guest_name=None</em>, <em>annotation=None</em>, <em>boot_delay=None</em>, <em>boot_retry_delay=None</em>, <em>boot_retry_enabled=None</em>, <em>cdrom=None</em>, <em>clone=None</em>, <em>cpu_hot_add_enabled=None</em>, <em>cpu_hot_remove_enabled=None</em>, <em>cpu_limit=None</em>, <em>cpu_performance_counters_enabled=None</em>, <em>cpu_reservation=None</em>, <em>cpu_share_count=None</em>, <em>cpu_share_level=None</em>, <em>custom_attributes=None</em>, <em>datastore_cluster_id=None</em>, <em>datastore_id=None</em>, <em>disks=None</em>, <em>efi_secure_boot_enabled=None</em>, <em>enable_disk_uuid=None</em>, <em>enable_logging=None</em>, <em>ept_rvi_mode=None</em>, <em>extra_config=None</em>, <em>firmware=None</em>, <em>folder=None</em>, <em>force_power_off=None</em>, <em>guest_id=None</em>, <em>host_system_id=None</em>, <em>hv_mode=None</em>, <em>ignored_guest_ips=None</em>, <em>latency_sensitivity=None</em>, <em>memory=None</em>, <em>memory_hot_add_enabled=None</em>, <em>memory_limit=None</em>, <em>memory_reservation=None</em>, <em>memory_share_count=None</em>, <em>memory_share_level=None</em>, <em>migrate_wait_timeout=None</em>, <em>name=None</em>, <em>nested_hv_enabled=None</em>, <em>network_interfaces=None</em>, <em>num_cores_per_socket=None</em>, <em>num_cpus=None</em>, <em>resource_pool_id=None</em>, <em>run_tools_scripts_after_power_on=None</em>, <em>run_tools_scripts_after_resume=None</em>, <em>run_tools_scripts_before_guest_reboot=None</em>, <em>run_tools_scripts_before_guest_shutdown=None</em>, <em>run_tools_scripts_before_guest_standby=None</em>, <em>scsi_bus_sharing=None</em>, <em>scsi_controller_count=None</em>, <em>scsi_type=None</em>, <em>shutdown_wait_timeout=None</em>, <em>swap_placement_policy=None</em>, <em>sync_time_with_host=None</em>, <em>tags=None</em>, <em>vapp=None</em>, <em>wait_for_guest_ip_timeout=None</em>, <em>wait_for_guest_net_routable=None</em>, <em>wait_for_guest_net_timeout=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_virtual_machine</span></code> resource can be used to manage the complex
-lifecycle of a virtual machine. It supports management of disk, network
-interface, and CDROM devices, creation from scratch or cloning from template,
-and migration through both host and storage vMotion.</p>
-<p>For more details on working with virtual machines in vSphere, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-55238059-912E-411F-A0E9-A7A536972A91.html">this
-page</a>.</p>
-<p>A high degree of control and flexibility is afforded to a vSphere user when it
-comes to how to configure, deploy, and manage virtual machines - much more
-control than given in a traditional cloud provider. As such, Terraform has to
-make some decisions on how to manage the virtual machines it creates and
-manages. This section documents things you need to know about your virtual
-machine configuration that you should consider when setting up virtual
-machines, creating templates to clone from, or migrating from previous versions
-of this resource.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">vsphere_virtual_machine</span></code> resource currently only supports standard
-VMDK-backed virtual disks - it does not support other special kinds of disk
-devices like RDM disks.</p>
-<p>Disks are managed by an arbitrary label supplied to the <code class="docutils literal notranslate"><span class="pre">label</span></code>
-attribute of a <code class="docutils literal notranslate"><span class="pre">disk</span></code> block. This is separate from the
-automatic naming that vSphere picks for you when creating a virtual machine.
-Control over a virtual disk’s name is not supported unless you are attaching an
-external disk with the <code class="docutils literal notranslate"><span class="pre">attach</span></code> attribute.</p>
-<p>Virtual disks can be SCSI disks only. The SCSI controllers managed by Terraform
-can vary, depending on the value supplied to
-<code class="docutils literal notranslate"><span class="pre">scsi_controller_count</span></code>. This also dictates the
-controllers that are checked when looking for disks during a cloning process.
-By default, this value is <code class="docutils literal notranslate"><span class="pre">1</span></code>, meaning that you can have up to 15 disks
-configured on a virtual machine. These are all configured with the controller
-type defined by the <code class="docutils literal notranslate"><span class="pre">scsi_type</span></code> setting. If you are cloning from
-a template, devices will be added or re-configured as necessary.</p>
-<p>When cloning from a template, you must specify disks of either the same or
-greater size than the disks in the source template when creating a traditional
-clone, or exactly the same size when cloning from snapshot (also known as a
-linked clone). For more details, see the section on creating a virtual machine
-from a template.</p>
-<p>A maximum of 60 virtual disks can be configured when the
-<code class="docutils literal notranslate"><span class="pre">scsi_controller_count</span></code> setting is configured to its
-maximum of <code class="docutils literal notranslate"><span class="pre">4</span></code> controllers. See the disk options section for
-more details.</p>
-<p>Terraform waits during various parts of a virtual machine deployment to ensure
-that it is in a correct expected state before proceeding. These happen when a
-VM is created, or also when it’s updated, depending on the waiter.</p>
-<p>Two waiters of note are:</p>
-<ul class="simple">
-<li><strong>The customization waiter:</strong> This waiter watches events in vSphere to
-monitor when customization on a virtual machine completes during VM creation.
-Depending on your vSphere or VM configuration it may be necessary to change
-the timeout or turn it off. This can be controlled by the
-<code class="docutils literal notranslate"><span class="pre">timeout</span></code> setting in the customization
-settings block.</li>
-<li><strong>The network waiter:</strong> This waiter waits for interfaces to show up on a
-guest virtual machine close to the end of both VM creation and update. This
-waiter is necessary to ensure that correct IP information gets reported to
-the guest virtual machine, mainly to facilitate the availability of a valid,
-reachable default IP address for any <a class="reference external" href="/docs/provisioners/index.html">provisioners</a>.
-The behavior of the waiter can be controlled with the
-<code class="docutils literal notranslate"><span class="pre">wait_for_guest_net_timeout</span></code>,
-<code class="docutils literal notranslate"><span class="pre">wait_for_guest_net_routable</span></code>,
-<code class="docutils literal notranslate"><span class="pre">wait_for_guest_ip_timeout</span></code>, and
-<code class="docutils literal notranslate"><span class="pre">ignored_guest_ips</span></code> settings.</li>
-</ul>
-<blockquote>
-<div><strong>NOTE:</strong> This section only applies to versions of this resource available
-in versions v0.4.2 of this provider or earlier.</div></blockquote>
-<p>The path for migrating to the current version of this resource is very similar
-to the import path, with the exception that the <code class="docutils literal notranslate"><span class="pre">terraform</span>
-<span class="pre">import</span></code> command does not need to be run. See that section for details on what
-is required before you run <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">plan</span></code> on a state that requires migration.</p>
-<p>A successful migration usually only results in a configuration-only diff - that
-is, Terraform reconciles some configuration settings that cannot be set during
-the migration process with state. In this event, no reconfiguration operations
-are sent to the vSphere server during the next <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">apply</span></code>.  See the
-importing section for more details.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">clone</span></code> block can be used to create a new virtual machine from an existing
-virtual machine or template. The resource supports both making a complete copy
-of a virtual machine, or cloning from a snapshot (otherwise known as a linked
-clone).</p>
-<p>See the cloning and customization
-example for a usage synopsis.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> Changing any option in <code class="docutils literal notranslate"><span class="pre">clone</span></code> after creation forces a new
-resource.</p>
-<p><strong>NOTE:</strong> Cloning requires vCenter and is not supported on direct ESXi
-connections.</p>
-</div></blockquote>
-<p>The options available in the <code class="docutils literal notranslate"><span class="pre">clone</span></code> block are:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">template_uuid</span></code> - (Required) The UUID of the source virtual machine or
-template.</li>
-<li><code class="docutils literal notranslate"><span class="pre">linked_clone</span></code> - (Optional) Clone this virtual machine from a snapshot.
-Templates must have a single snapshot only in order to be eligible. Default:
-<code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
-<li><code class="docutils literal notranslate"><span class="pre">timeout</span></code> - (Optional) The timeout, in minutes, to wait for the virtual
-machine clone to complete. Default: 30 minutes.</li>
-<li><code class="docutils literal notranslate"><span class="pre">customize</span></code> - (Optional) The customization spec for this clone. This allows
-the user to configure the virtual machine post-clone. For more details, see
-virtual machine customization.</li>
-</ul>
-<p>Note that when cloning from a template, there are additional requirements in
-both the resource configuration and source template:</p>
-<ul class="simple">
-<li>The virtual machine must not be powered on at the time of cloning.</li>
-<li>All disks on the virtual machine must be SCSI disks.</li>
-<li>You must specify at least the same number of <code class="docutils literal notranslate"><span class="pre">disk</span></code> devices as there are
-disks that exist in the template. These devices are ordered and lined up by
-the <code class="docutils literal notranslate"><span class="pre">unit_number</span></code> attribute. Additional disks can be added past this.</li>
-<li>The <code class="docutils literal notranslate"><span class="pre">size</span></code> of a virtual disk must be at least the same size as its
-counterpart disk in the template.</li>
-<li>When using <code class="docutils literal notranslate"><span class="pre">linked_clone</span></code>, the <code class="docutils literal notranslate"><span class="pre">size</span></code>, <code class="docutils literal notranslate"><span class="pre">thin_provisioned</span></code>, and
-<code class="docutils literal notranslate"><span class="pre">eagerly_scrub</span></code> settings for each disk must be an exact match to the
-individual disk’s counterpart in the source template.</li>
-<li>The <code class="docutils literal notranslate"><span class="pre">scsi_controller_count</span></code> setting should be
-configured as necessary to cover all of the disks on the template. For best
-results, only configure this setting for the amount of controllers you will
-need to cover your disk quantity and bandwidth needs, and configure your
-template accordingly. For most workloads, this setting should be kept at its
-default of <code class="docutils literal notranslate"><span class="pre">1</span></code>, and all disks in the template should reside on the single,
-primary controller.</li>
-<li>Some operating systems (such as Windows) do not respond well to a change in
-disk controller type, so when using such OSes, take care to ensure that
-<code class="docutils literal notranslate"><span class="pre">scsi_type</span></code> is set to an exact match of the template’s controller set. For
-maximum compatibility, make sure the SCSI controllers on the source template
-are all the same type.</li>
-</ul>
-<p>To ease the gathering of some of these options, you can use the
-[<code class="docutils literal notranslate"><span class="pre">vsphere_virtual_machine</span></code> data source][tf-vsphere-virtual-machine-ds], which
-will give you disk attributes, network interface types, SCSI bus types, and
-also the guest ID of the source template.  See the cloning and customization
-example for usage details.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">vsphere_virtual_machine</span></code> resource supports live migration (otherwise known
-as vMotion) both on the host and storage level. One can migrate the entire VM
-to another host, cluster, resource pool, or datastore, and migrate or pin a
-single disk to a specific datastore.</p>
-<p>To migrate the virtual machine to another host or resource pool, change the
-<code class="docutils literal notranslate"><span class="pre">host_system_id</span></code> or <code class="docutils literal notranslate"><span class="pre">resource_pool_id</span></code> to the manged object IDs of the new host
-or resource pool accordingly. To change the virtual machine’s cluster or
-standalone host, select a resource pool within the specific target.</p>
-<p>The same rules apply for migration as they do for VM creation - any host
-specified needs to be a part of the resource pool supplied. Also keep in mind
-the implications of moving the virtual machine to a resource pool in another
-cluster or standalone host, namely ensuring that all hosts in the cluster (or
-the single standalone host) have access to the datastore that the virtual
-machine is in.</p>
-<p>Many of the same requirements for
-cloning apply to importing,
-although since importing writes directly to state, a lot of these rules cannot
-be enforced at import time, so every effort should be made to ensure the
-correctness of the configuration before the import.</p>
-<p>In addition to these rules, the following extra rules apply to importing:</p>
-<ul class="simple">
-<li>Disks need to have their <code class="docutils literal notranslate"><span class="pre">label</span></code> argument assigned in a convention
-matching <code class="docutils literal notranslate"><span class="pre">diskN</span></code>, starting with disk number 0, based on each disk’s order on
-the SCSI bus. As an example, a disk on SCSI controller 0 with a unit number
-of 0 would be labeled <code class="docutils literal notranslate"><span class="pre">disk0</span></code>, a disk on the same controller with a unit
-number of 1 would be <code class="docutils literal notranslate"><span class="pre">disk1</span></code>, but the next disk, which is on SCSI controller
-1 with a unit number of 0, still becomes <code class="docutils literal notranslate"><span class="pre">disk2</span></code>.</li>
-<li>Disks always get imported with <code class="docutils literal notranslate"><span class="pre">keep_on_remove</span></code> enabled
-until the first <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">apply</span></code> runs, which will remove the setting for
-known disks. This is an extra safeguard against naming or accounting mistakes
-in the disk configuration.</li>
-<li>The <code class="docutils literal notranslate"><span class="pre">scsi_controller_count</span></code> for the resource is set
-to the number of contiguous SCSI controllers found, starting with the SCSI
-controller at bus number 0. If no SCSI controllers are found, the VM is not
-eligible for import. To ensure maximum compatibility, make sure your virtual
-machine has the exact number of SCSI controllers it needs, and set
-<code class="docutils literal notranslate"><span class="pre">scsi_controller_count</span></code> accordingly.</li>
-</ul>
-<p>After importing, you should run <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">plan</span></code>. Unless you have changed
-anything else in configuration that would be causing other attributes to
-change, the only difference should be configuration-only changes, usually
-comprising of:</p>
-<ul class="simple">
-<li>The <code class="docutils literal notranslate"><span class="pre">imported</span></code> flag will transition from <code class="docutils literal notranslate"><span class="pre">true</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
-<li><code class="docutils literal notranslate"><span class="pre">keep_on_remove</span></code> of known disks will transition from
-<code class="docutils literal notranslate"><span class="pre">true</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
-<li>Configuration supplied in the <code class="docutils literal notranslate"><span class="pre">clone</span></code> block, if present, will be
-persisted to state. This initial persistence operation does not perform any
-cloning or customization actions, nor does it force a new resource. After the
-first apply operation, further changes to <code class="docutils literal notranslate"><span class="pre">clone</span></code> will force a new resource
-as per normal operation.</li>
-</ul>
-<blockquote>
-<div><strong>NOTE:</strong> Further to the above, do not make any configuration changes to
-<code class="docutils literal notranslate"><span class="pre">clone</span></code> after importing or upgrading from a legacy version of the provider
-before doing an initial <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">apply</span></code> as these changes will not correctly
-force a new resource, and your changes will have persisted to state, preventing
-further plans from correctly triggering a diff.</div></blockquote>
-<p>These changes only update Terraform state when applied, hence it is safe to run
-when the virtual machine is running. If more settings are being modified, you
-may need to plan maintenance accordingly for any necessary re-configuration of
-the virtual machine.</p>
+<dd><p>Create a VirtualMachine resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -5967,10 +5667,6 @@ of pre-shutdown scripts when VMware tools is installed. Default: <code class="do
 pre-standby scripts when VMware tools is installed. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
 <li><strong>scsi_bus_sharing</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: <code class="docutils literal notranslate"><span class="pre">noSharing</span></code>.</li>
-<li><strong>scsi_controller_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of SCSI controllers that
-Terraform manages on this virtual machine. This directly affects the amount
-of disks you can add to the virtual machine and the maximum disk unit number.
-Note that lowering this value does not remove controllers. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</li>
 <li><strong>scsi_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
 pvscsi (VMware Paravirtual). Defualt: <code class="docutils literal notranslate"><span class="pre">pvscsi</span></code>.</li>
@@ -6012,6 +5708,8 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.VirtualMachine.alternate_guest_name">
 <code class="descname">alternate_guest_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.alternate_guest_name" title="Permalink to this definition">¶</a></dt>
@@ -6147,18 +5845,6 @@ migration for details on changing this value.</p>
 <code class="descname">datastore_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.datastore_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_vsphere.VirtualMachine.default_ip_address">
-<code class="descname">default_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.default_ip_address" title="Permalink to this definition">¶</a></dt>
-<dd><p>The IP address selected by Terraform to be used with
-any [provisioners][tf-docs-provisioners] configured on this resource.
-Whenever possible, this is the first IPv4 address that is reachable through
-the default gateway configured on the machine, then the first reachable IPv6
-address, and then the first general discovered address if neither exist. If
-VMware tools is not running on the virtual machine, or if the VM is powered
-off, this value will be blank.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6385,14 +6071,6 @@ virtual machine. Default: <code class="docutils literal notranslate"><span class
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_vsphere.VirtualMachine.reboot_required">
-<code class="descname">reboot_required</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.reboot_required" title="Permalink to this definition">¶</a></dt>
-<dd><p>Value internal to Terraform used to determine if a
-configuration set change requires a reboot. This value is only useful during
-an update process and gets reset on refresh.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_vsphere.VirtualMachine.resource_pool_id">
 <code class="descname">resource_pool_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.resource_pool_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The [managed object reference
@@ -6441,15 +6119,6 @@ pre-standby scripts when VMware tools is installed. Default: <code class="docuti
 <code class="descname">scsi_bus_sharing</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.scsi_bus_sharing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: <code class="docutils literal notranslate"><span class="pre">noSharing</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_vsphere.VirtualMachine.scsi_controller_count">
-<code class="descname">scsi_controller_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.scsi_controller_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of SCSI controllers that
-Terraform manages on this virtual machine. This directly affects the amount
-of disks you can add to the virtual machine and the maximum disk unit number.
-Note that lowering this value does not remove controllers. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6646,6 +6315,8 @@ is removed when this resource is destroyed.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine_snapshot.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.VirtualMachineSnapshot.consolidate">
 <code class="descname">consolidate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.consolidate" title="Permalink to this definition">¶</a></dt>
@@ -6737,32 +6408,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_vsphere.VmfsDatastore">
 <em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">VmfsDatastore</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>custom_attributes=None</em>, <em>datastore_cluster_id=None</em>, <em>disks=None</em>, <em>folder=None</em>, <em>host_system_id=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_vmfs_datastore</span></code> resource can be used to create and manage VMFS
-datastores on an ESXi host or a set of hosts. The resource supports using any
-SCSI device that can generally be used in a datastore, such as local disks, or
-disks presented to a host or multiple hosts over Fibre Channel or iSCSI.
-Devices can be specified manually, or discovered using the
-<cite>``vsphere_vmfs_disks`</cite> &lt;/docs/providers/vsphere/d/vmfs_disks.html&gt;`_ data source.</p>
-<p>Note that the current behaviour of this resource will auto-mount any created
-datastores to any other host within vCenter that has access to the same disk.</p>
-<p>Example: You want to create a datastore with a iSCSI LUN that is visible on 3
-hosts in a single vSphere cluster (<code class="docutils literal notranslate"><span class="pre">esxi1</span></code>, <code class="docutils literal notranslate"><span class="pre">esxi2</span></code> and <code class="docutils literal notranslate"><span class="pre">esxi3</span></code>). When you
-create the datastore on <code class="docutils literal notranslate"><span class="pre">esxi1</span></code>, the datastore will be automatically mounted on
-<code class="docutils literal notranslate"><span class="pre">esxi2</span></code> and <code class="docutils literal notranslate"><span class="pre">esxi3</span></code>, without the need to configure the resource on either of
-those two hosts.</p>
-<p>Future versions of this resource may allow you to control the hosts that a
-datastore is mounted to, but currently, this automatic behaviour cannot be
-changed, so keep this in mind when writing your configurations and deploying
-your disks.</p>
-<p>To increase the size of a datastore, you must add additional disks to the
-<code class="docutils literal notranslate"><span class="pre">disks</span></code> attribute. Expanding the size of a datastore by increasing the size of
-an already provisioned disk is currently not supported (but may be in future
-versions of this resource).</p>
-<blockquote>
-<div><strong>NOTE:</strong> You cannot decrease the size of a datastore. If the resource
-detects disks removed from the configuration, Terraform will give an error. To
-reduce the size of the datastore, the resource needs to be re-created - run
-<cite>``terraform taint`</cite> &lt;/docs/commands/taint.html&gt;`_ to taint the resource so it can be re-created.</div></blockquote>
+<dd><p>Create a VmfsDatastore resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -6778,13 +6424,6 @@ for custom attributes.</li>
 ID][docs-about-morefs] of a datastore cluster to put this datastore in.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">folder</span></code>.</li>
 <li><strong>disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The disks to use with the datastore.</li>
-<li><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The relative path to a folder to put this datastore in.
-This is a path relative to the datacenter you are deploying the datastore to.
-Example: for the <code class="docutils literal notranslate"><span class="pre">dc1</span></code> datacenter, and a provided <code class="docutils literal notranslate"><span class="pre">folder</span></code> of <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code>,
-Terraform will place a datastore named <code class="docutils literal notranslate"><span class="pre">terraform-test</span></code> in a datastore folder
-located at <code class="docutils literal notranslate"><span class="pre">/dc1/datastore/foo/bar</span></code>, with the final inventory path being
-<code class="docutils literal notranslate"><span class="pre">/dc1/datastore/foo/bar/terraform-test</span></code>. Conflicts with
-<code class="docutils literal notranslate"><span class="pre">datastore_cluster_id</span></code>.</li>
 <li><strong>host_system_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object ID][docs-about-morefs] of
 the host to set the datastore up on. Note that this is not necessarily the
 only host that the datastore will be set up on - see
@@ -6799,6 +6438,8 @@ changed.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vmfs_datastore.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vmfs_datastore.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_vsphere.VmfsDatastore.accessible">
 <code class="descname">accessible</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.accessible" title="Permalink to this definition">¶</a></dt>
@@ -6833,18 +6474,6 @@ Conflicts with <code class="docutils literal notranslate"><span class="pre">fold
 <dt id="pulumi_vsphere.VmfsDatastore.disks">
 <code class="descname">disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>The disks to use with the datastore.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_vsphere.VmfsDatastore.folder">
-<code class="descname">folder</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.folder" title="Permalink to this definition">¶</a></dt>
-<dd><p>The relative path to a folder to put this datastore in.
-This is a path relative to the datacenter you are deploying the datastore to.
-Example: for the <code class="docutils literal notranslate"><span class="pre">dc1</span></code> datacenter, and a provided <code class="docutils literal notranslate"><span class="pre">folder</span></code> of <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code>,
-Terraform will place a datastore named <code class="docutils literal notranslate"><span class="pre">terraform-test</span></code> in a datastore folder
-located at <code class="docutils literal notranslate"><span class="pre">/dc1/datastore/foo/bar</span></code>, with the final inventory path being
-<code class="docutils literal notranslate"><span class="pre">/dc1/datastore/foo/bar/terraform-test</span></code>. Conflicts with
-<code class="docutils literal notranslate"><span class="pre">datastore_cluster_id</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6944,41 +6573,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
-<dt id="pulumi_vsphere.get_compute_cluster">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_compute_cluster</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_compute_cluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_compute_cluster</span></code> data source can be used to discover the ID of a
-cluster in vSphere. This is useful to fetch the ID of a cluster that you want
-to use for virtual machine placement via the
-<cite>``vsphere_virtual_machine`</cite> &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource, allowing
-you to specify the cluster’s root resource pool directly versus using the alias
-available through the <cite>``vsphere_resource_pool`</cite> &lt;/docs/providers/vsphere/d/resource_pool.html&gt;`_
-data source.</p>
-<blockquote>
-<div>You may also wish to see the
-<cite>``vsphere_compute_cluster`</cite> &lt;/docs/providers/vsphere/r/compute_cluster.html&gt;`_ resource for further
-details about clusters or how to work with them in Terraform.</div></blockquote>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_vsphere.get_custom_attribute">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_custom_attribute</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_custom_attribute" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_custom_attribute</span></code> data source can be used to reference custom 
-attributes that are not managed by Terraform. Its attributes are exactly the 
-same as the <cite>``vsphere_custom_attribute`</cite> resource &lt;/docs/providers/vsphere/r/custom_attribute.html&gt;`_, 
-and, like importing, the data source takes a name to search on. The <code class="docutils literal notranslate"><span class="pre">id</span></code> and 
-other attributes are then populated with the data found by the search.</p>
-<blockquote>
-<div><strong>NOTE:</strong> Custom attributes are unsupported on direct ESXi connections 
-and require vCenter.</div></blockquote>
-</dd></dl>
-
-<dl class="function">
 <dt id="pulumi_vsphere.get_datacenter">
 <code class="descclassname">pulumi_vsphere.</code><code class="descname">get_datacenter</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_datacenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_datacenter</span></code> data source can be used to discover the ID of a
 vSphere datacenter. This can then be used with resources or data sources that
 require a datacenter, such as the <cite>``vsphere_host`</cite> &lt;/docs/providers/vsphere/d/host.html&gt;`_
 data source.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datacenter.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datacenter.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -6988,6 +6590,8 @@ data source.</p>
 datastore in vSphere. This is useful to fetch the ID of a datastore that you
 want to use to create virtual machines in using the
 <cite>``vsphere_virtual_machine`</cite> &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7000,6 +6604,8 @@ cluster that you want to use to assign datastores to using the
 <cite>``vsphere_vmfs_datastore`</cite> &lt;/docs/providers/vsphere/r/vmfs_datastore.html&gt;`_ resources, or create
 virtual machines in using the
 <cite>``vsphere_virtual_machine`</cite> &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore_cluster.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7011,8 +6617,10 @@ can then be used with resources or data sources that require a DVS, such as the
 <cite>``vsphere_distributed_port_group`</cite> &lt;/docs/providers/vsphere/r/distributed_port_group.html&gt;`_ resource, for which
 an example is shown below.</p>
 <blockquote>
-<div><strong>NOTE:</strong> This data source requires vCenter and is not available on direct
-ESXi connections.</div></blockquote>
+<div><p><strong>NOTE:</strong> This data source requires vCenter and is not available on direct
+ESXi connections.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/distributed_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/distributed_virtual_switch.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7021,6 +6629,8 @@ ESXi connections.</div></blockquote>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_folder</span></code> data source can be used to get the general attributes of a
 vSphere inventory folder. Paths are absolute and include must include the
 datacenter.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/folder.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/folder.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7029,6 +6639,8 @@ datacenter.</p>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_host</span></code> data source can be used to discover the ID of a vSphere
 host. This can then be used with resources or data sources that require a host
 managed object reference ID.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/host.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/host.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7039,6 +6651,8 @@ in vSphere. This can be any network that can be used as the backing for a
 network interface for <code class="docutils literal notranslate"><span class="pre">vsphere_virtual_machine</span></code> or any other vSphere resource
 that requires a network. This includes standard (host-based) port groups, DVS
 port groups, or opaque networks such as those managed by NSX.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/network.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/network.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7048,32 +6662,8 @@ port groups, or opaque networks such as those managed by NSX.</p>
 resource pool in vSphere. This is useful to fetch the ID of a resource pool
 that you want to use to create virtual machines in using the
 <cite>``vsphere_virtual_machine`</cite> &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_vsphere.get_tag">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_tag</code><span class="sig-paren">(</span><em>category_id=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_tag" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_tag</span></code> data source can be used to reference tags that are not
-managed by Terraform. Its attributes are exactly the same as the <cite>``vsphere_tag`</cite>
-resource &lt;/docs/providers/vsphere/r/tag.html&gt;`_, and, like importing, the data source takes a name and
-category to search on. The <code class="docutils literal notranslate"><span class="pre">id</span></code> and other attributes are then populated with
-the data found by the search.</p>
 <blockquote>
-<div><strong>NOTE:</strong> Tagging support is unsupported on direct ESXi connections and
-requires vCenter 6.0 or higher.</div></blockquote>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_vsphere.get_tag_category">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_tag_category</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_tag_category" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_tag_category</span></code> data source can be used to reference tag categories
-that are not managed by Terraform. Its attributes are exactly the same as the
-<cite>``vsphere_tag_category`</cite> resource &lt;/docs/providers/vsphere/r/tag_category.html&gt;`_, and, like importing,
-the data source takes a name to search on. The <code class="docutils literal notranslate"><span class="pre">id</span></code> and other attributes are
-then populated with the data found by the search.</p>
-<blockquote>
-<div><strong>NOTE:</strong> Tagging support is unsupported on direct ESXi connections and
-requires vCenter 6.0 or higher.</div></blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/resource_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/resource_pool.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7083,6 +6673,8 @@ requires vCenter 6.0 or higher.</div></blockquote>
 vApp container in vSphere. This is useful to fetch the ID of a vApp container
 that you want to use to create virtual machines in using the
 <cite>``vsphere_virtual_machine`</cite> &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vapp_container.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vapp_container.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7093,6 +6685,8 @@ existing virtual machine or template. Its most relevant purpose is for finding
 the UUID of a template to be used as the source for cloning into a new
 <cite>``vsphere_virtual_machine`</cite> &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource. It also
 reads the guest ID so that can be supplied as well.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/virtual_machine.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7102,6 +6696,8 @@ reads the guest ID so that can be supplied as well.</p>
 devices available on an ESXi host. This data source can be combined with the
 <cite>``vsphere_vmfs_datastore`</cite> &lt;/docs/providers/vsphere/r/vmfs_datastore.html&gt;`_ resource to create VMFS
 datastores based off a set of discovered disks.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vmfs_disks.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vmfs_disks.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

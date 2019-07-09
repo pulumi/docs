@@ -27,6 +27,8 @@ For information about function aliases, see [CreateAlias][2] and [AliasRoutingCo
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_alias.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.lambda_.Alias.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.Alias.arn" title="Permalink to this definition">¶</a></dt>
@@ -133,6 +135,8 @@ For information about event source mappings, see [CreateEventSourceMapping][2] i
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_event_source_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_event_source_mapping.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.lambda_.EventSourceMapping.batch_size">
 <code class="descname">batch_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.EventSourceMapping.batch_size" title="Permalink to this definition">¶</a></dt>
@@ -282,7 +286,7 @@ large files efficiently.</p>
 <li><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id14"><span class="problematic" id="id15">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</li>
 <li><strong>s3_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 key of an object containing the function’s deployment package. Conflicts with``filename<a href="#id16"><span class="problematic" id="id17">``</span></a>.</li>
 <li><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename<a href="#id18"><span class="problematic" id="id19">``</span></a>.</li>
-<li><strong>source_code_hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either``filename<code class="docutils literal notranslate"><span class="pre">or</span></code>s3_key<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">The</span> <span class="pre">usual</span> <span class="pre">way</span> <span class="pre">to</span> <span class="pre">set</span> <span class="pre">this</span> <span class="pre">is</span></code>filebase64sha256(“file.zip”)<code class="docutils literal notranslate"><span class="pre">(Terraform</span> <span class="pre">0.11.12</span> <span class="pre">and</span> <span class="pre">later)</span> <span class="pre">or</span></code>base64sha256(file(“file.zip”))<a href="#id20"><span class="problematic" id="id21">``</span></a>(Terraform 0.11.11 and earlier), where “file.zip” is the local filename of the lambda function source archive.</li>
+<li><strong>source_code_hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64-encoded representation of raw SHA-256 sum of the zip file, provided either via``filename<code class="docutils literal notranslate"><span class="pre">or</span></code>s3_*<a href="#id20"><span class="problematic" id="id21">``</span></a>parameters.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</li>
 <li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time your Lambda Function has to run in seconds. Defaults to``3`. See [Limits][5]</li>
 <li><strong>vpc_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]</li>
@@ -291,6 +295,8 @@ large files efficiently.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_function.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_function.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.lambda_.Function.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.Function.arn" title="Permalink to this definition">¶</a></dt>
@@ -415,7 +421,7 @@ large files efficiently.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.lambda_.Function.source_code_hash">
 <code class="descname">source_code_hash</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.Function.source_code_hash" title="Permalink to this definition">¶</a></dt>
-<dd><p>Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either <code class="docutils literal notranslate"><span class="pre">filename</span></code> or <code class="docutils literal notranslate"><span class="pre">s3_key</span></code>. The usual way to set this is <code class="docutils literal notranslate"><span class="pre">filebase64sha256(&quot;file.zip&quot;)</span></code> (Terraform 0.11.12 and later) or <code class="docutils literal notranslate"><span class="pre">base64sha256(file(&quot;file.zip&quot;))</span></code> (Terraform 0.11.11 and earlier), where “file.zip” is the local filename of the lambda function source archive.</p>
+<dd><p>Base64-encoded representation of raw SHA-256 sum of the zip file, provided either via <code class="docutils literal notranslate"><span class="pre">filename</span></code> or <code class="docutils literal notranslate"><span class="pre">s3_*</span></code> parameters.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -631,12 +637,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_aws.lambda_.GetInvocationResult.result_map">
-<code class="descname">result_map</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetInvocationResult.result_map" title="Permalink to this definition">¶</a></dt>
-<dd><p>This field is set only if result is a map of primitive types, where the map is string keys and string values. In Terraform 0.12 and later, use the <cite>``jsondecode()`</cite> function &lt;<a class="reference external" href="https://www.terraform.io/docs/configuration/functions/jsondecode.html">https://www.terraform.io/docs/configuration/functions/jsondecode.html</a>&gt;`_ with the <code class="docutils literal notranslate"><span class="pre">result</span></code> attribute instead to convert the result to all supported native Terraform types.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_aws.lambda_.GetInvocationResult.id">
 <code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetInvocationResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -737,13 +737,14 @@ large files efficiently.</p>
 <li><strong>license_info</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – License info for your Lambda Layer. See [License Info][3].</li>
 <li><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id24"><span class="problematic" id="id25">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</li>
 <li><strong>s3_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 key of an object containing the function’s deployment package. Conflicts with``filename<a href="#id26"><span class="problematic" id="id27">``</span></a>.</li>
-<li><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename<a href="#id28"><span class="problematic" id="id29">``</span></a>.</li>
-<li><strong>source_code_hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either``filename<code class="docutils literal notranslate"><span class="pre">or</span></code>s3_key<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">The</span> <span class="pre">usual</span> <span class="pre">way</span> <span class="pre">to</span> <span class="pre">set</span> <span class="pre">this</span> <span class="pre">is</span></code>${filebase64sha256(“file.zip”)}<code class="docutils literal notranslate"><span class="pre">(Terraform</span> <span class="pre">0.11.12</span> <span class="pre">or</span> <span class="pre">later)</span> <span class="pre">or</span></code>${base64sha256(file(“file.zip”))}` (Terraform 0.11.11 and earlier), where “file.zip” is the local filename of the lambda layer source archive.</li>
+<li><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename`.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_layer_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_layer_version.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.lambda_.LayerVersion.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.LayerVersion.arn" title="Permalink to this definition">¶</a></dt>
@@ -808,12 +809,6 @@ large files efficiently.</p>
 <dt id="pulumi_aws.lambda_.LayerVersion.s3_object_version">
 <code class="descname">s3_object_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.LayerVersion.s3_object_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The object version containing the function’s deployment package. Conflicts with <code class="docutils literal notranslate"><span class="pre">filename</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.lambda_.LayerVersion.source_code_hash">
-<code class="descname">source_code_hash</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.LayerVersion.source_code_hash" title="Permalink to this definition">¶</a></dt>
-<dd><p>Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either <code class="docutils literal notranslate"><span class="pre">filename</span></code> or <code class="docutils literal notranslate"><span class="pre">s3_key</span></code>. The usual way to set this is <code class="docutils literal notranslate"><span class="pre">${filebase64sha256(&quot;file.zip&quot;)}</span></code> (Terraform 0.11.12 or later) or <code class="docutils literal notranslate"><span class="pre">${base64sha256(file(&quot;file.zip&quot;))}</span></code> (Terraform 0.11.11 and earlier), where “file.zip” is the local filename of the lambda layer source archive.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -896,13 +891,13 @@ for the S3 Bucket or CloudWatch Events Rule as its value.  This ensures that onl
 generated from the specified bucket or rule can invoke the function.
 API Gateway ARNs have a unique structure described
 <a class="reference external" href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html">here</a>.</li>
-<li><strong>statement_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique statement identifier. By default generated by Terraform.</li>
-<li><strong>statement_id_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A statement identifier prefix. Terraform will generate a unique suffix. Conflicts with <code class="docutils literal notranslate"><span class="pre">statement_id</span></code>.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_permission.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.lambda_.Permission.action">
 <code class="descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.Permission.action" title="Permalink to this definition">¶</a></dt>
@@ -954,18 +949,6 @@ API Gateway ARNs have a unique structure described
 <a class="reference external" href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html">here</a>.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.lambda_.Permission.statement_id">
-<code class="descname">statement_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.Permission.statement_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>A unique statement identifier. By default generated by Terraform.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.lambda_.Permission.statement_id_prefix">
-<code class="descname">statement_id_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.Permission.statement_id_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>A statement identifier prefix. Terraform will generate a unique suffix. Conflicts with <code class="docutils literal notranslate"><span class="pre">statement_id</span></code>.</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_aws.lambda_.Permission.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.Permission.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1010,6 +993,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.lambda_.get_function">
 <code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">get_function</code><span class="sig-paren">(</span><em>function_name=None</em>, <em>qualifier=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.get_function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Lambda Function.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lambda_function.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lambda_function.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1018,12 +1003,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to invoke custom lambda functions as data source.
 The lambda function is invoked with <a class="reference external" href="https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html#API_Invoke_RequestSyntax">RequestResponse</a>
 invocation type.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lambda_invocation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lambda_invocation.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.lambda_.get_layer_version">
 <code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">get_layer_version</code><span class="sig-paren">(</span><em>compatible_runtime=None</em>, <em>layer_name=None</em>, <em>version=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.get_layer_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Lambda Layer Version.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lambda_layer_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lambda_layer_version.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

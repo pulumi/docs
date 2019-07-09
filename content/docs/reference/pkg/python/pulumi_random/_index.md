@@ -22,6 +22,8 @@ construction to achieve fine-grained programmatic control over provider settings
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_random.Provider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -95,6 +97,8 @@ base64 encoded.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/id.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/id.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_random.RandomId.b64_std">
 <code class="descname">b64_std</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomId.b64_std" title="Permalink to this definition">¶</a></dt>
@@ -208,6 +212,8 @@ the main provider documentation for more information.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/integer.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/integer.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_random.RandomInteger.keepers">
 <code class="descname">keepers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomInteger.keepers" title="Permalink to this definition">¶</a></dt>
@@ -307,6 +313,8 @@ the main provider documentation for more information.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/pet.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/pet.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_random.RandomPet.keepers">
 <code class="descname">keepers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomPet.keepers" title="Permalink to this definition">¶</a></dt>
@@ -394,17 +402,13 @@ the number of items in the <code class="docutils literal notranslate"><span clas
 some elements will be excluded from the result. If more items are requested,
 items will be repeated in the result but not more frequently than the number
 of items in the input list.</li>
-<li><strong>seed</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Arbitrary string with which to seed the random number
-generator, in order to produce less-volatile permutations of the list.
-<strong>Important:</strong> Even with an identical seed, it is not guaranteed that the
-same permutation will be produced across different versions of Terraform.
-This argument causes the result to be <em>less volatile</em>, but not fixed for
-all time.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/shuffle.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/shuffle.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_random.RandomShuffle.inputs">
 <code class="descname">inputs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomShuffle.inputs" title="Permalink to this definition">¶</a></dt>
@@ -433,17 +437,6 @@ the number of items in the <code class="docutils literal notranslate"><span clas
 some elements will be excluded from the result. If more items are requested,
 items will be repeated in the result but not more frequently than the number
 of items in the input list.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_random.RandomShuffle.seed">
-<code class="descname">seed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomShuffle.seed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Arbitrary string with which to seed the random number
-generator, in order to produce less-volatile permutations of the list.
-<strong>Important:</strong> Even with an identical seed, it is not guaranteed that the
-same permutation will be produced across different versions of Terraform.
-This argument causes the result to be <em>less volatile</em>, but not fixed for
-all time.</p>
 </dd></dl>
 
 <dl class="method">
@@ -529,6 +522,8 @@ in random string.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/string.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/string.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_random.RandomString.keepers">
 <code class="descname">keepers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomString.keepers" title="Permalink to this definition">¶</a></dt>
@@ -676,6 +671,8 @@ the main provider documentation for more information.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/uuid.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/uuid.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_random.RandomUuid.keepers">
 <code class="descname">keepers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomUuid.keepers" title="Permalink to this definition">¶</a></dt>

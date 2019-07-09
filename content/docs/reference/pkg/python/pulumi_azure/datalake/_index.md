@@ -25,6 +25,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_analytics_account.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_analytics_account.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.datalake.AnalyticsAccount.default_store_account_name">
 <code class="descname">default_store_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsAccount.default_store_account_name" title="Permalink to this definition">¶</a></dt>
@@ -122,6 +124,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_analytics_firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_analytics_firewall_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.datalake.AnalyticsFirewallRule.account_name">
 <code class="descname">account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsFirewallRule.account_name" title="Permalink to this definition">¶</a></dt>
@@ -265,6 +269,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_store.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_store.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.datalake.Store.encryption_state">
 <code class="descname">encryption_state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datalake.Store.encryption_state" title="Permalink to this definition">¶</a></dt>
@@ -387,6 +393,8 @@ taint the resource so the <code class="docutils literal notranslate"><span class
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_store_file.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_store_file.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.datalake.StoreFile.account_name">
 <code class="descname">account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datalake.StoreFile.account_name" title="Permalink to this definition">¶</a></dt>
@@ -466,6 +474,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_store_firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_lake_store_firewall_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.datalake.StoreFirewallRule.account_name">
 <code class="descname">account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datalake.StoreFirewallRule.account_name" title="Permalink to this definition">¶</a></dt>
@@ -540,6 +550,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.datalake.get_store">
 <code class="descclassname">pulumi_azure.datalake.</code><code class="descname">get_store</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.get_store" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Data Lake Store.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/data_lake_store.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/data_lake_store.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

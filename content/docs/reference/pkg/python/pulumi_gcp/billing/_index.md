@@ -6,18 +6,7 @@
 <dl class="class">
 <dt id="pulumi_gcp.billing.AccountIamBinding">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.billing.</code><code class="descname">AccountIamBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>billing_account_id=None</em>, <em>members=None</em>, <em>role=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.billing.AccountIamBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows creation and management of a single binding within IAM policy for
-an existing Google Cloud Platform Billing Account.</p>
-<blockquote>
-<div><dl class="docutils">
-<dt><strong>Note:</strong> This resource <strong>must not</strong> be used in conjunction with</dt>
-<dd><code class="docutils literal notranslate"><span class="pre">google_billing_account_iam_member</span></code> for the <strong>same role</strong> or they will fight over
-what your policy should be.</dd>
-<dt><strong>Note:</strong> On create, this resource will overwrite members of any existing roles.</dt>
-<dd>Use <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">import</span></code> and inspect the <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">plan</span></code> output to ensure
-your existing members are preserved.</dd>
-</dl>
-</div></blockquote>
+<dd><p>Create a AccountIamBinding resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -33,6 +22,8 @@ your existing members are preserved.</dd>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/billing_account_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/billing_account_iam_binding.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.billing.AccountIamBinding.billing_account_id">
 <code class="descname">billing_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.billing.AccountIamBinding.billing_account_id" title="Permalink to this definition">¶</a></dt>
@@ -124,6 +115,8 @@ what your policy should be.</dd>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/billing_account_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/billing_account_iam_member.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.billing.AccountIamMember.billing_account_id">
 <code class="descname">billing_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.billing.AccountIamMember.billing_account_id" title="Permalink to this definition">¶</a></dt>
@@ -221,6 +214,8 @@ policy applied to the billing account.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/billing_account_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/billing_account_iam_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.billing.AccountIamPolicy.billing_account_id">
 <code class="descname">billing_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.billing.AccountIamPolicy.billing_account_id" title="Permalink to this definition">¶</a></dt>

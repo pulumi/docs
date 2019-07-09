@@ -25,6 +25,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_function_javascript_udf.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_function_javascript_udf.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.streamanalytics.FunctionJavaScriptUDF.inputs">
 <code class="descname">inputs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.FunctionJavaScriptUDF.inputs" title="Permalink to this definition">¶</a></dt>
@@ -202,6 +204,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_job.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_job.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.streamanalytics.Job.compatibility_level">
 <code class="descname">compatibility_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.Job.compatibility_level" title="Permalink to this definition">¶</a></dt>
@@ -346,6 +350,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_blob.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_blob.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.streamanalytics.OutputBlob.date_format">
 <code class="descname">date_format</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputBlob.date_format" title="Permalink to this definition">¶</a></dt>
@@ -470,6 +476,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_eventhub.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_eventhub.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.streamanalytics.OutputEventHub.eventhub_name">
 <code class="descname">eventhub_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputEventHub.eventhub_name" title="Permalink to this definition">¶</a></dt>
@@ -559,6 +567,113 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.streamanalytics.OutputMssql">
+<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">OutputMssql</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>database=None</em>, <em>name=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>server=None</em>, <em>stream_analytics_job_name=None</em>, <em>table=None</em>, <em>user=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputMssql" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Stream Analytics Output to Microsoft SQL Server Database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Stream Output. Changing this forces a new resource to be created.</li>
+<li><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password used together with username, to login to the Microsoft SQL Server. Changing this forces a new resource to be created.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.</li>
+<li><strong>server</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SQL server url. Changing this forces a new resource to be created.</li>
+<li><strong>stream_analytics_job_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Stream Analytics Job. Changing this forces a new resource to be created.</li>
+<li><strong>table</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Table in the database that the output points to. Changing this forces a new resource to be created.</li>
+<li><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username used to login to the Microsoft SQL Server. Changing this forces a new resource to be created.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_mssql.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_mssql.html.markdown</a>.</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.streamanalytics.OutputMssql.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputMssql.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Stream Output. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.streamanalytics.OutputMssql.password">
+<code class="descname">password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputMssql.password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password used together with username, to login to the Microsoft SQL Server. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.streamanalytics.OutputMssql.resource_group_name">
+<code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputMssql.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.streamanalytics.OutputMssql.server">
+<code class="descname">server</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputMssql.server" title="Permalink to this definition">¶</a></dt>
+<dd><p>The SQL server url. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.streamanalytics.OutputMssql.stream_analytics_job_name">
+<code class="descname">stream_analytics_job_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputMssql.stream_analytics_job_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Stream Analytics Job. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.streamanalytics.OutputMssql.table">
+<code class="descname">table</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputMssql.table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Table in the database that the output points to. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.streamanalytics.OutputMssql.user">
+<code class="descname">user</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputMssql.user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Username used to login to the Microsoft SQL Server. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.streamanalytics.OutputMssql.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputMssql.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.streamanalytics.OutputMssql.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputMssql.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.streamanalytics.OutputServiceBusQueue">
 <em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">OutputServiceBusQueue</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>queue_name=None</em>, <em>resource_group_name=None</em>, <em>serialization=None</em>, <em>servicebus_namespace=None</em>, <em>shared_access_policy_key=None</em>, <em>shared_access_policy_name=None</em>, <em>stream_analytics_job_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputServiceBusQueue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Output to a ServiceBus Queue.</p>
@@ -582,6 +697,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_servicebus_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_servicebus_queue.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.streamanalytics.OutputServiceBusQueue.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputServiceBusQueue.name" title="Permalink to this definition">¶</a></dt>
@@ -696,6 +813,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_blob.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_blob.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.streamanalytics.StreamInputBlob.date_format">
 <code class="descname">date_format</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputBlob.date_format" title="Permalink to this definition">¶</a></dt>
@@ -821,6 +940,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_eventhub.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_eventhub.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.streamanalytics.StreamInputEventHub.eventhub_consumer_group_name">
 <code class="descname">eventhub_consumer_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputEventHub.eventhub_consumer_group_name" title="Permalink to this definition">¶</a></dt>
@@ -940,6 +1061,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_iothub.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_iothub.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.streamanalytics.StreamInputIotHub.endpoint">
 <code class="descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputIotHub.endpoint" title="Permalink to this definition">¶</a></dt>
@@ -1038,6 +1161,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.streamanalytics.get_job">
 <code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">get_job</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.get_job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Stream Analytics Job.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/stream_analytics_job.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/stream_analytics_job.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

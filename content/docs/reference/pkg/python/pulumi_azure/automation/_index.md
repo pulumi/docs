@@ -5,7 +5,7 @@
 <span id="automation"></span><h1>automation<a class="headerlink" href="#module-pulumi_azure.automation" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.automation.Account">
-<em class="property">class </em><code class="descclassname">pulumi_azure.automation.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.Account" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.automation.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>sku_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.Account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Automation Account.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -15,15 +15,18 @@
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU name of the account - only <code class="docutils literal notranslate"><span class="pre">Basic</span></code> is supported at this time. Defaults to <code class="docutils literal notranslate"><span class="pre">Basic</span></code>.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Automation Account. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Automation Account is created. Changing this forces a new resource to be created.</li>
-<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as defined below.</li>
+<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as described below.</li>
+<li><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU name of the account - only <code class="docutils literal notranslate"><span class="pre">Basic</span></code> is supported at this time.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_account.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_account.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.automation.Account.dsc_primary_access_key">
 <code class="descname">dsc_primary_access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.Account.dsc_primary_access_key" title="Permalink to this definition">¶</a></dt>
@@ -51,7 +54,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.automation.Account.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.Account.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The SKU name of the account - only <code class="docutils literal notranslate"><span class="pre">Basic</span></code> is supported at this time. Defaults to <code class="docutils literal notranslate"><span class="pre">Basic</span></code>.</p>
+<dd><p>Specifies the name of the Automation Account. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -63,7 +66,13 @@
 <dl class="attribute">
 <dt id="pulumi_azure.automation.Account.sku">
 <code class="descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.Account.sku" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as defined below.</p>
+<dd><p>) A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as described below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.Account.sku_name">
+<code class="descname">sku_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.Account.sku_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The SKU name of the account - only <code class="docutils literal notranslate"><span class="pre">Basic</span></code> is supported at this time.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -134,6 +143,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_variable_bool.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_variable_bool.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.automation.BoolVariable.automation_account_name">
 <code class="descname">automation_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.BoolVariable.automation_account_name" title="Permalink to this definition">¶</a></dt>
@@ -232,6 +243,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_credential.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_credential.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.automation.Credential.account_name">
 <code class="descname">account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.Credential.account_name" title="Permalink to this definition">¶</a></dt>
@@ -330,6 +343,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_variable_datetime.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_variable_datetime.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.automation.DateTimeVariable.automation_account_name">
 <code class="descname">automation_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.DateTimeVariable.automation_account_name" title="Permalink to this definition">¶</a></dt>
@@ -429,6 +444,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_dsc_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_dsc_configuration.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.automation.DscConfiguration.automation_account_name">
 <code class="descname">automation_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.DscConfiguration.automation_account_name" title="Permalink to this definition">¶</a></dt>
@@ -531,6 +548,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_dsc_nodeconfiguration.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_dsc_nodeconfiguration.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.automation.DscNodeConfiguration.automation_account_name">
 <code class="descname">automation_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.DscNodeConfiguration.automation_account_name" title="Permalink to this definition">¶</a></dt>
@@ -737,6 +756,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_variable_int.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_variable_int.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.automation.IntVariable.automation_account_name">
 <code class="descname">automation_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.IntVariable.automation_account_name" title="Permalink to this definition">¶</a></dt>
@@ -833,6 +854,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_module.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_module.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.automation.Module.automation_account_name">
 <code class="descname">automation_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.Module.automation_account_name" title="Permalink to this definition">¶</a></dt>
@@ -924,6 +947,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_runbook.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_runbook.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.automation.RunBook.account_name">
 <code class="descname">account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.RunBook.account_name" title="Permalink to this definition">¶</a></dt>
@@ -1058,6 +1083,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_schedule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_schedule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.automation.Schedule.automation_account_name">
 <code class="descname">automation_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.Schedule.automation_account_name" title="Permalink to this definition">¶</a></dt>
@@ -1192,6 +1219,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_variable_string.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_variable_string.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.automation.StringVariable.automation_account_name">
 <code class="descname">automation_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.StringVariable.automation_account_name" title="Permalink to this definition">¶</a></dt>
@@ -1272,24 +1301,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.get_bool_variable">
 <code class="descclassname">pulumi_azure.automation.</code><code class="descname">get_bool_variable</code><span class="sig-paren">(</span><em>automation_account_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.get_bool_variable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Automation Bool Variable.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_bool.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_bool.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.automation.get_date_time_variable">
 <code class="descclassname">pulumi_azure.automation.</code><code class="descname">get_date_time_variable</code><span class="sig-paren">(</span><em>automation_account_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.get_date_time_variable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Automation Datetime Variable.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_datetime.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_datetime.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.automation.get_int_variable">
 <code class="descclassname">pulumi_azure.automation.</code><code class="descname">get_int_variable</code><span class="sig-paren">(</span><em>automation_account_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.get_int_variable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Automation Int Variable.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_int.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_int.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.automation.get_string_variable">
 <code class="descclassname">pulumi_azure.automation.</code><code class="descname">get_string_variable</code><span class="sig-paren">(</span><em>automation_account_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.get_string_variable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Automation String Variable.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_string.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_string.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

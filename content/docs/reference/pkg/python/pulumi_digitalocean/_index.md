@@ -22,6 +22,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/cdn.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/cdn.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.Cdn.created_at">
 <code class="descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Cdn.created_at" title="Permalink to this definition">¶</a></dt>
@@ -129,6 +131,8 @@ corresponding to the SSL certificate. Only valid when type is <code class="docut
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/certificate.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.Certificate.certificate_chain">
 <code class="descname">certificate_chain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Certificate.certificate_chain" title="Permalink to this definition">¶</a></dt>
@@ -247,6 +251,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_cluster.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.DatabaseCluster.database">
 <code class="descname">database</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster.database" title="Permalink to this definition">¶</a></dt>
@@ -381,7 +387,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the record.</li>
 <li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">SRV</span></code>.  Must be between 1 and 65535.</li>
 <li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">MX</span></code> or <code class="docutils literal notranslate"><span class="pre">SRV</span></code>. Must be between 0 and 65535.</li>
-<li><strong>tag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tag of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">CAA</span></code>. Must be one of <code class="docutils literal notranslate"><span class="pre">issue</span></code>, <code class="docutils literal notranslate"><span class="pre">wildissue</span></code>, or <code class="docutils literal notranslate"><span class="pre">iodef</span></code>.</li>
+<li><strong>tag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tag of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">CAA</span></code>. Must be one of <code class="docutils literal notranslate"><span class="pre">issue</span></code>, <code class="docutils literal notranslate"><span class="pre">issuewild</span></code>, or <code class="docutils literal notranslate"><span class="pre">iodef</span></code>.</li>
 <li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time to live for the record, in seconds. Must be at least 0.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of record. Must be one of <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">AAAA</span></code>, <code class="docutils literal notranslate"><span class="pre">CAA</span></code>, <code class="docutils literal notranslate"><span class="pre">CNAME</span></code>, <code class="docutils literal notranslate"><span class="pre">MX</span></code>, <code class="docutils literal notranslate"><span class="pre">NS</span></code>, <code class="docutils literal notranslate"><span class="pre">TXT</span></code>, or <code class="docutils literal notranslate"><span class="pre">SRV</span></code>.</li>
 <li><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the record.</li>
@@ -391,6 +397,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/record.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/record.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.DnsRecord.domain">
 <code class="descname">domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DnsRecord.domain" title="Permalink to this definition">¶</a></dt>
@@ -430,7 +438,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_digitalocean.DnsRecord.tag">
 <code class="descname">tag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DnsRecord.tag" title="Permalink to this definition">¶</a></dt>
-<dd><p>The tag of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">CAA</span></code>. Must be one of <code class="docutils literal notranslate"><span class="pre">issue</span></code>, <code class="docutils literal notranslate"><span class="pre">wildissue</span></code>, or <code class="docutils literal notranslate"><span class="pre">iodef</span></code>.</p>
+<dd><p>The tag of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">CAA</span></code>. Must be one of <code class="docutils literal notranslate"><span class="pre">issue</span></code>, <code class="docutils literal notranslate"><span class="pre">issuewild</span></code>, or <code class="docutils literal notranslate"><span class="pre">iodef</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -516,6 +524,8 @@ is used to created an initial A record for the domain.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/domain.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/domain.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.Domain.ip_address">
 <code class="descname">ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Domain.ip_address" title="Permalink to this definition">¶</a></dt>
@@ -615,6 +625,8 @@ to retrieve them.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/droplet.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/droplet.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.Droplet.backups">
 <code class="descname">backups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Droplet.backups" title="Permalink to this definition">¶</a></dt>
@@ -823,6 +835,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/droplet_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/droplet_snapshot.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.DropletSnapshot.created_at">
 <code class="descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DropletSnapshot.created_at" title="Permalink to this definition">¶</a></dt>
@@ -924,6 +938,8 @@ The <code class="docutils literal notranslate"><span class="pre">outbound_rule</
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/firewall.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/firewall.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.Firewall.created_at">
 <code class="descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Firewall.created_at" title="Permalink to this definition">¶</a></dt>
@@ -1041,6 +1057,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/floating_ip.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/floating_ip.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.FloatingIp.droplet_id">
 <code class="descname">droplet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.FloatingIp.droplet_id" title="Permalink to this definition">¶</a></dt>
@@ -1125,6 +1143,8 @@ Droplet.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/floating_ip_assignment.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/floating_ip_assignment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.FloatingIpAssignment.droplet_id">
 <code class="descname">droplet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.FloatingIpAssignment.droplet_id" title="Permalink to this definition">¶</a></dt>
@@ -1184,6 +1204,84 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetCertificateResult.id">
 <code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetCertificateResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult">
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">GetDatabaseClusterResult</code><span class="sig-paren">(</span><em>database=None</em>, <em>engine=None</em>, <em>host=None</em>, <em>maintenance_windows=None</em>, <em>name=None</em>, <em>node_count=None</em>, <em>port=None</em>, <em>region=None</em>, <em>size=None</em>, <em>uri=None</em>, <em>user=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDatabaseCluster.</p>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.database">
+<code class="descname">database</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the cluster’s default database.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.engine">
+<code class="descname">engine</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.engine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Database engine used by the cluster (ex. <code class="docutils literal notranslate"><span class="pre">pg</span></code> for PostreSQL).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.host">
+<code class="descname">host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Database cluster’s hostname.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.maintenance_windows">
+<code class="descname">maintenance_windows</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.maintenance_windows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines when the automatic maintenance should be performed for the database cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.node_count">
+<code class="descname">node_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.node_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of nodes that will be included in the cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.port">
+<code class="descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Network port that the database cluster is listening on.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.region">
+<code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>DigitalOcean region where the cluster will reside.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.size">
+<code class="descname">size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Database droplet size associated with the cluster (ex. <code class="docutils literal notranslate"><span class="pre">db-s-1vcpu-1gb</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.uri">
+<code class="descname">uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full URI for connecting to the database cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.user">
+<code class="descname">user</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Username for the cluster’s default user.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.version">
+<code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Engine version used by the cluster (ex. <code class="docutils literal notranslate"><span class="pre">11</span></code> for PostgreSQL 11).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -1675,9 +1773,7 @@ snapshots and backups and are only available within your account.</p>
 <dl class="class">
 <dt id="pulumi_digitalocean.KubernetesCluster">
 <em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">KubernetesCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>node_pool=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>version=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><strong>NOTE:</strong> DigitalOcean Kubernetes is currently in <a class="reference external" href="https://www.digitalocean.com/docs/platform/product-lifecycle/">Limited Availability</a>. In order to access its API, you must first enable Kubernetes on your account by opting-in via the <a class="reference external" href="https://cloud.digitalocean.com/kubernetes/clusters">cloud control panel</a>. While the Kubernetes Cluster functionality is currently in limited availability the structure of this resource may change over time. Please share any feedback you may have by <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/issues">opening an issue on GitHub</a>.</div></blockquote>
-<p>Provides a DigitalOcean Kubernetes cluster resource. This can be used to create, delete, and modify clusters. For more information see the <a class="reference external" href="https://www.digitalocean.com/docs/kubernetes/">official documentation</a>.</p>
+<dd><p>Provides a DigitalOcean Kubernetes cluster resource. This can be used to create, delete, and modify clusters. For more information see the <a class="reference external" href="https://www.digitalocean.com/docs/kubernetes/">official documentation</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1705,6 +1801,8 @@ snapshots and backups and are only available within your account.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_cluster.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.KubernetesCluster.cluster_subnet">
 <code class="descname">cluster_subnet</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster.cluster_subnet" title="Permalink to this definition">¶</a></dt>
@@ -1834,9 +1932,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_digitalocean.KubernetesNodePool">
 <em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">KubernetesNodePool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_id=None</em>, <em>name=None</em>, <em>node_count=None</em>, <em>size=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><strong>NOTE:</strong> DigitalOcean Kubernetes is currently in <a class="reference external" href="https://www.digitalocean.com/docs/platform/product-lifecycle/">Limited Availability</a>. In order to access its API, you must first enable Kubernetes on your account by opting-in via the <a class="reference external" href="https://cloud.digitalocean.com/kubernetes/clusters">cloud control panel</a>. While the Kubernetes Cluster functionality is currently in limited availability the structure of this resource may change over time. Please share any feedback you may have by <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/issues">opening an issue on GitHub</a>.</div></blockquote>
-<p>Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the <code class="docutils literal notranslate"><span class="pre">digitalocean_kubernetes_cluster</span></code> resource, this resource can be used to add additional ones to a cluster.</p>
+<dd><p>Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the <code class="docutils literal notranslate"><span class="pre">digitalocean_kubernetes_cluster</span></code> resource, this resource can be used to add additional ones to a cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1854,6 +1950,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_node_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_node_pool.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.KubernetesNodePool.cluster_id">
 <code class="descname">cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool.cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -1973,6 +2071,8 @@ Load Balancer. The <code class="docutils literal notranslate"><span class="pre">
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/loadbalancer.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/loadbalancer.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.LoadBalancer.algorithm">
 <code class="descname">algorithm</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.LoadBalancer.algorithm" title="Permalink to this definition">¶</a></dt>
@@ -2122,6 +2222,8 @@ in ways that align with the applications you host on DigitalOcean.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/project.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.Project.created_at">
 <code class="descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Project.created_at" title="Permalink to this definition">¶</a></dt>
@@ -2235,6 +2337,8 @@ construction to achieve fine-grained programmatic control over provider settings
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_digitalocean.Provider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2298,7 +2402,7 @@ example:</p>
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Canned ACL applied on bucket creation (<code class="docutils literal notranslate"><span class="pre">private</span></code> or <code class="docutils literal notranslate"><span class="pre">public-read</span></code>)</li>
-<li><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Unless <code class="docutils literal notranslate"><span class="pre">true</span></code>, the bucket will only be destroyed if empty (Defalts to <code class="docutils literal notranslate"><span class="pre">false</span></code>)</li>
+<li><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Unless <code class="docutils literal notranslate"><span class="pre">true</span></code>, the bucket will only be destroyed if empty (Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>)</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region where the bucket resides (Defaults to <code class="docutils literal notranslate"><span class="pre">nyc3</span></code>)</li>
 </ul>
@@ -2306,6 +2410,8 @@ example:</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/spaces_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/spaces_bucket.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.SpacesBucket.acl">
 <code class="descname">acl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket.acl" title="Permalink to this definition">¶</a></dt>
@@ -2321,7 +2427,7 @@ example:</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.SpacesBucket.force_destroy">
 <code class="descname">force_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket.force_destroy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Unless <code class="docutils literal notranslate"><span class="pre">true</span></code>, the bucket will only be destroyed if empty (Defalts to <code class="docutils literal notranslate"><span class="pre">false</span></code>)</p>
+<dd><p>Unless <code class="docutils literal notranslate"><span class="pre">true</span></code>, the bucket will only be destroyed if empty (Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2404,6 +2510,8 @@ can be read using the file interpolation function</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/ssh_key.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/ssh_key.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.SshKey.fingerprint">
 <code class="descname">fingerprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SshKey.fingerprint" title="Permalink to this definition">¶</a></dt>
@@ -2483,6 +2591,8 @@ configuration via their ID or name.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/tag.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/tag.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.Tag.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Tag.name" title="Permalink to this definition">¶</a></dt>
@@ -2553,6 +2663,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.Volume.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Volume.description" title="Permalink to this definition">¶</a></dt>
@@ -2673,6 +2785,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume_attachment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.VolumeAttachment.droplet_id">
 <code class="descname">droplet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.VolumeAttachment.droplet_id" title="Permalink to this definition">¶</a></dt>
@@ -2743,6 +2857,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume_snapshot.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.VolumeSnapshot.created_at">
 <code class="descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.VolumeSnapshot.created_at" title="Permalink to this definition">¶</a></dt>
@@ -2820,34 +2936,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
-<dt id="pulumi_digitalocean.get_certificate">
-<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_certificate</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_certificate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get information on a certificate. This data source provides the name, type, state,
-domains, expiry date, and the sha1 fingerprint as configured on your DigitalOcean account.
-This is useful if the certificate in question is not managed by Terraform or you need to utilize
-any of the certificates data.</p>
-<p>An error is triggered if the provided certificate name does not exist.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_digitalocean.get_domain">
-<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_domain</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_domain" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get information on a domain. This data source provides the name, TTL, and zone
-file as configured on your DigitalOcean account. This is useful if the domain
-name in question is not managed by Terraform or you need to utilize TTL or zone
-file data.</p>
-<p>An error is triggered if the provided domain name is not managed with your
-DigitalOcean account.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_digitalocean.get_droplet">
-<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_droplet</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_droplet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get information on a Droplet for use in other resources. This data source provides
-all of the Droplet’s properties as configured on your DigitalOcean account. This
-is useful if the Droplet in question is not managed by Terraform or you need to
-utilize any of the Droplets data.</p>
-<p>An error is triggered if the provided Droplet name does not exist.</p>
+<dt id="pulumi_digitalocean.get_database_cluster">
+<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_database_cluster</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_database_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides information on a DigitalOcean database cluster resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/database_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/database_cluster.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2856,83 +2949,8 @@ utilize any of the Droplets data.</p>
 <dd><p>Droplet snapshots are saved instances of a Droplet. Use this data
 source to retrieve the ID of a DigitalOcean Droplet snapshot for use in other
 resources.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_digitalocean.get_floating_ip">
-<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_floating_ip</code><span class="sig-paren">(</span><em>ip_address=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_floating_ip" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get information on a floating ip. This data source provides the region and Droplet id
-as configured on your DigitalOcean account. This is useful if the floating IP
-in question is not managed by Terraform or you need to find the Droplet the IP is
-attached to.</p>
-<p>An error is triggered if the provided floating IP does not exist.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_digitalocean.get_image">
-<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_image</code><span class="sig-paren">(</span><em>name=None</em>, <em>slug=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_image" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get information on an images for use in other resources (e.g. creating a Droplet
-based on snapshot). This data source provides all of the image properties as
-configured on your DigitalOcean account. This is useful if the image in question
-is not managed by Terraform or you need to utilize any of the image’s data.</p>
-<p>An error is triggered if zero or more than one result is returned by the query.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_digitalocean.get_kubernetes_cluster">
-<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_kubernetes_cluster</code><span class="sig-paren">(</span><em>name=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_kubernetes_cluster" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><strong>NOTE:</strong> DigitalOcean Kubernetes is currently in <a class="reference external" href="https://www.digitalocean.com/docs/platform/product-lifecycle/">Limited Availability</a>. In order to access its API, you must first enable Kubernetes on your account by opting-in via the <a class="reference external" href="https://cloud.digitalocean.com/kubernetes/clusters">cloud control panel</a>. While the Kubernetes Cluster functionality is currently in limited availability the structure of this resource may change over time. Please share any feedback you may have by <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/issues">opening an issue on GitHub</a>.</div></blockquote>
-<p>Retrieves information about a DigitalOcean Kubernetes cluster for use in other resources. This data source provides all of the cluster’s properties as configured on your DigitalOcean account. This is useful if the cluster in question is not managed by Terraform.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_digitalocean.get_load_balancer">
-<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_load_balancer</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_load_balancer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get information on a load balancer for use in other resources. This data source
-provides all of the load balancers properties as configured on your DigitalOcean
-account. This is useful if the load balancer in question is not managed by
-Terraform or you need to utilize any of the load balancers data.</p>
-<p>An error is triggered if the provided load balancer name does not exist.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_digitalocean.get_record">
-<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_record</code><span class="sig-paren">(</span><em>domain=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_record" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get information on a DNS record. This data source provides the name, TTL, and zone
-file as configured on your DigitalOcean account. This is useful if the record
-in question is not managed by Terraform.</p>
-<p>An error is triggered if the provided domain name or record are not managed with
-your DigitalOcean account.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_digitalocean.get_ssh_key">
-<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_ssh_key</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_ssh_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get information on a ssh key. This data source provides the name, public key,
-and fingerprint as configured on your DigitalOcean account. This is useful if
-the ssh key in question is not managed by Terraform or you need to utilize any
-of the keys data.</p>
-<p>An error is triggered if the provided ssh key name does not exist.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_digitalocean.get_tag">
-<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_tag</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_tag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get information on a tag. This data source provides the name as configured on
-your DigitalOcean account. This is useful if the tag name in question is not
-managed by Terraform or you need validate if the tag exists in the account.</p>
-<p>An error is triggered if the provided tag name does not exist.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pulumi_digitalocean.get_volume">
-<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_volume</code><span class="sig-paren">(</span><em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_volume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get information on a volume for use in other resources. This data source provides
-all of the volumes properties as configured on your DigitalOcean account. This is
-useful if the volume in question is not managed by Terraform or you need to utilize
-any of the volumes data.</p>
-<p>An error is triggered if the provided volume name does not exist.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/droplet_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/droplet_snapshot.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2941,6 +2959,8 @@ any of the volumes data.</p>
 <dd><p>Volume snapshots are saved instances of a block storage volume. Use this data
 source to retrieve the ID of a DigitalOcean volume snapshot for use in other
 resources.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/volume_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/volume_snapshot.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

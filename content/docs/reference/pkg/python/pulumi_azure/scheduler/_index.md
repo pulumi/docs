@@ -74,6 +74,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/scheduler_job.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/scheduler_job.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.scheduler.Job.action_storage_queue">
 <code class="descname">action_storage_queue</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.scheduler.Job.action_storage_queue" title="Permalink to this definition">¶</a></dt>
@@ -205,6 +207,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/scheduler_job_collection.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/scheduler_job_collection.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.scheduler.JobCollection.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.scheduler.JobCollection.location" title="Permalink to this definition">¶</a></dt>
@@ -292,7 +296,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">get_job_collection</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.get_job_collection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Scheduler Job Collection.</p>
 <blockquote>
-<div><strong>NOTE:</strong> Support for Scheduler Job Collections has been deprecated by Microsoft in favour of Logic Apps (<a class="reference external" href="https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps">more information can be found at this link</a>) - as such we plan to remove support for this data source as a part of version 2.0 of the AzureRM Provider.</div></blockquote>
+<div><p><strong>NOTE:</strong> Support for Scheduler Job Collections has been deprecated by Microsoft in favour of Logic Apps (<a class="reference external" href="https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps">more information can be found at this link</a>) - as such we plan to remove support for this data source as a part of version 2.0 of the AzureRM Provider.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/scheduler_job_collection.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/scheduler_job_collection.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

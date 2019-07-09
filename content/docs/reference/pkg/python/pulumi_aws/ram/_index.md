@@ -53,6 +53,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_principal_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_principal_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ram.PrincipalAssociation.principal">
 <code class="descname">principal</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ram.PrincipalAssociation.principal" title="Permalink to this definition">¶</a></dt>
@@ -125,6 +127,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_resource_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_resource_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ram.ResourceAssociation.resource_arn">
 <code class="descname">resource_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ram.ResourceAssociation.resource_arn" title="Permalink to this definition">¶</a></dt>
@@ -196,6 +200,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_resource_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_resource_share.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ram.ResourceShare.allow_external_principals">
 <code class="descname">allow_external_principals</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ram.ResourceShare.allow_external_principals" title="Permalink to this definition">¶</a></dt>
@@ -264,6 +270,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ram.get_resource_share">
 <code class="descclassname">pulumi_aws.ram.</code><code class="descname">get_resource_share</code><span class="sig-paren">(</span><em>filters=None</em>, <em>name=None</em>, <em>resource_owner=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ram.get_resource_share" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">aws_ram_resource_share</span></code> Retrieve information about a RAM Resource Share.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ram_resource_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ram_resource_share.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

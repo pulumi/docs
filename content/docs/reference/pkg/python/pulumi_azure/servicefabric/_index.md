@@ -5,7 +5,7 @@
 <span id="servicefabric"></span><h1>servicefabric<a class="headerlink" href="#module-pulumi_azure.servicefabric" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.servicefabric.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_azure.servicefabric.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>add_on_features=None</em>, <em>azure_active_directory=None</em>, <em>certificate=None</em>, <em>client_certificate_thumbprints=None</em>, <em>cluster_code_version=None</em>, <em>diagnostics_config=None</em>, <em>fabric_settings=None</em>, <em>location=None</em>, <em>management_endpoint=None</em>, <em>name=None</em>, <em>node_types=None</em>, <em>reliability_level=None</em>, <em>resource_group_name=None</em>, <em>reverse_proxy_certificate=None</em>, <em>tags=None</em>, <em>upgrade_mode=None</em>, <em>vm_image=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.servicefabric.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>add_on_features=None</em>, <em>azure_active_directory=None</em>, <em>certificate=None</em>, <em>certificate_common_names=None</em>, <em>client_certificate_thumbprints=None</em>, <em>cluster_code_version=None</em>, <em>diagnostics_config=None</em>, <em>fabric_settings=None</em>, <em>location=None</em>, <em>management_endpoint=None</em>, <em>name=None</em>, <em>node_types=None</em>, <em>reliability_level=None</em>, <em>resource_group_name=None</em>, <em>reverse_proxy_certificate=None</em>, <em>tags=None</em>, <em>upgrade_mode=None</em>, <em>vm_image=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Service Fabric Cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -15,8 +15,9 @@
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>add_on_features</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A List of one or more features which should be enabled, such as <code class="docutils literal notranslate"><span class="pre">DnsService</span></code>.</li>
-<li><strong>azure_active_directory</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> block as defined below. Changing this forces a new resource to be created.</li>
-<li><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below.</li>
+<li><strong>azure_active_directory</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> block as defined below.</li>
+<li><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below. Conflicts with <code class="docutils literal notranslate"><span class="pre">certificate_common_names</span></code>.</li>
+<li><strong>certificate_common_names</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate_common_names</span></code> block as defined below. Conflicts with <code class="docutils literal notranslate"><span class="pre">certificate</span></code>.</li>
 <li><strong>client_certificate_thumbprints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or two <code class="docutils literal notranslate"><span class="pre">client_certificate_thumbprint</span></code> blocks as defined below.</li>
 <li><strong>cluster_code_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required if Upgrade Mode set to <code class="docutils literal notranslate"><span class="pre">Manual</span></code>, Specifies the Version of the Cluster Code of the cluster.</li>
 <li><strong>diagnostics_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">diagnostics_config</span></code> block as defined below. Changing this forces a new resource to be created.</li>
@@ -36,6 +37,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/service_fabric_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/service_fabric_cluster.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.add_on_features">
 <code class="descname">add_on_features</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.add_on_features" title="Permalink to this definition">¶</a></dt>
@@ -45,13 +48,19 @@
 <dl class="attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.azure_active_directory">
 <code class="descname">azure_active_directory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.azure_active_directory" title="Permalink to this definition">¶</a></dt>
-<dd><p>An <code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> block as defined below. Changing this forces a new resource to be created.</p>
+<dd><p>An <code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> block as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.certificate">
 <code class="descname">certificate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.certificate" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below. Conflicts with <code class="docutils literal notranslate"><span class="pre">certificate_common_names</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.servicefabric.Cluster.certificate_common_names">
+<code class="descname">certificate_common_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.certificate_common_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">certificate_common_names</span></code> block as defined below. Conflicts with <code class="docutils literal notranslate"><span class="pre">certificate</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">

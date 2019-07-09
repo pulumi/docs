@@ -25,6 +25,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_certificate.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.dms.Certificate.certificate_arn">
 <code class="descname">certificate_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.Certificate.certificate_arn" title="Permalink to this definition">¶</a></dt>
@@ -124,6 +126,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_endpoint.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.dms.Endpoint.certificate_arn">
 <code class="descname">certificate_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.Endpoint.certificate_arn" title="Permalink to this definition">¶</a></dt>
@@ -296,6 +300,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_replication_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_replication_instance.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.dms.ReplicationInstance.allocated_storage">
 <code class="descname">allocated_storage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.ReplicationInstance.allocated_storage" title="Permalink to this definition">¶</a></dt>
@@ -458,6 +464,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_replication_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_replication_subnet_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.dms.ReplicationSubnetGroup.replication_subnet_group_description">
 <code class="descname">replication_subnet_group_description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.ReplicationSubnetGroup.replication_subnet_group_description" title="Permalink to this definition">¶</a></dt>
@@ -553,6 +561,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_replication_task.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_replication_task.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.dms.ReplicationTask.cdc_start_time">
 <code class="descname">cdc_start_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.ReplicationTask.cdc_start_time" title="Permalink to this definition">¶</a></dt>

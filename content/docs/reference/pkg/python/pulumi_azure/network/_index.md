@@ -54,6 +54,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/application_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/application_gateway.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.ApplicationGateway.authentication_certificates">
 <code class="descname">authentication_certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.authentication_certificates" title="Permalink to this definition">¶</a></dt>
@@ -266,6 +268,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/application_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/application_security_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.ApplicationSecurityGroup.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationSecurityGroup.location" title="Permalink to this definition">¶</a></dt>
@@ -357,6 +361,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/connection_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/connection_monitor.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.ConnectionMonitor.auto_start">
 <code class="descname">auto_start</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ConnectionMonitor.auto_start" title="Permalink to this definition">¶</a></dt>
@@ -473,6 +479,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_ddos_protection_plan.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_ddos_protection_plan.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.DdosProtectionPlan.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.DdosProtectionPlan.location" title="Permalink to this definition">¶</a></dt>
@@ -568,6 +576,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/express_route_circuit.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/express_route_circuit.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.ExpressRouteCircuit.allow_classic_operations">
 <code class="descname">allow_classic_operations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ExpressRouteCircuit.allow_classic_operations" title="Permalink to this definition">¶</a></dt>
@@ -695,6 +705,8 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/express_route_circuit_authorization.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/express_route_circuit_authorization.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.ExpressRouteCircuitAuthorization.authorization_key">
 <code class="descname">authorization_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ExpressRouteCircuitAuthorization.authorization_key" title="Permalink to this definition">¶</a></dt>
@@ -793,6 +805,8 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/express_route_circuit_peering.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/express_route_circuit_peering.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.ExpressRouteCircuitPeering.azure_asn">
 <code class="descname">azure_asn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ExpressRouteCircuitPeering.azure_asn" title="Permalink to this definition">¶</a></dt>
@@ -927,6 +941,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/firewall.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/firewall.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.Firewall.ip_configuration">
 <code class="descname">ip_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Firewall.ip_configuration" title="Permalink to this definition">¶</a></dt>
@@ -1019,6 +1035,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/firewall_application_rule_collection.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/firewall_application_rule_collection.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.FirewallApplicationRuleCollection.action">
 <code class="descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallApplicationRuleCollection.action" title="Permalink to this definition">¶</a></dt>
@@ -1117,6 +1135,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/firewall_nat_rule_collection.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/firewall_nat_rule_collection.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.FirewallNatRuleCollection.action">
 <code class="descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallNatRuleCollection.action" title="Permalink to this definition">¶</a></dt>
@@ -1215,6 +1235,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/firewall_network_rule_collection.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/firewall_network_rule_collection.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.FirewallNetworkRuleCollection.action">
 <code class="descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallNetworkRuleCollection.action" title="Permalink to this definition">¶</a></dt>
@@ -1936,6 +1958,8 @@ create the local network gateway.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/local_network_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/local_network_gateway.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.LocalNetworkGateway.address_spaces">
 <code class="descname">address_spaces</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.LocalNetworkGateway.address_spaces" title="Permalink to this definition">¶</a></dt>
@@ -2049,6 +2073,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_connection_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_connection_monitor.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkConnectionMonitor.auto_start">
 <code class="descname">auto_start</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkConnectionMonitor.auto_start" title="Permalink to this definition">¶</a></dt>
@@ -2172,6 +2198,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_interface.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkInterface.applied_dns_servers">
 <code class="descname">applied_dns_servers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkInterface.applied_dns_servers" title="Permalink to this definition">¶</a></dt>
@@ -2321,6 +2349,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_interface_application_gateway_backend_address_pool_association.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_interface_application_gateway_backend_address_pool_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation.backend_address_pool_id">
 <code class="descname">backend_address_pool_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation.backend_address_pool_id" title="Permalink to this definition">¶</a></dt>
@@ -2398,6 +2428,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_interface_application_security_group_association.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_interface_application_security_group_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation.application_security_group_id">
 <code class="descname">application_security_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation.application_security_group_id" title="Permalink to this definition">¶</a></dt>
@@ -2475,6 +2507,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_interface_backend_address_pool_association.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_interface_backend_address_pool_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkInterfaceBackendAddressPoolAssociation.backend_address_pool_id">
 <code class="descname">backend_address_pool_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkInterfaceBackendAddressPoolAssociation.backend_address_pool_id" title="Permalink to this definition">¶</a></dt>
@@ -2552,6 +2586,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_interface_nat_rule_association.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_interface_nat_rule_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkInterfaceNatRuleAssociation.ip_configuration_name">
 <code class="descname">ip_configuration_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkInterfaceNatRuleAssociation.ip_configuration_name" title="Permalink to this definition">¶</a></dt>
@@ -2635,6 +2671,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_packet_capture.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_packet_capture.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkPacketCapture.filters">
 <code class="descname">filters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkPacketCapture.filters" title="Permalink to this definition">¶</a></dt>
@@ -2732,11 +2770,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.network.NetworkSecurityGroup">
 <em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkSecurityGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>security_rules=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a network security group that contains a list of network security rules.  Network security groups enable inbound or outbound traffic to be enabled or denied.</p>
-<blockquote>
-<div><strong>NOTE on Network Security Groups and Network Security Rules:</strong> Terraform currently
-provides both a standalone Network Security Rule resource, and allows for Network Security Rules to be defined in-line within the Network Security Group resource.
-At this time you cannot use a Network Security Group with in-line Network Security Rules in conjunction with any Network Security Rule resources. Doing so will cause a conflict of rule settings and will overwrite rules.</div></blockquote>
+<dd><p>Create a NetworkSecurityGroup resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2754,6 +2788,8 @@ At this time you cannot use a Network Security Group with in-line Network Securi
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_security_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkSecurityGroup.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityGroup.location" title="Permalink to this definition">¶</a></dt>
@@ -2827,11 +2863,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.network.NetworkSecurityRule">
 <em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkSecurityRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access=None</em>, <em>description=None</em>, <em>destination_address_prefix=None</em>, <em>destination_address_prefixes=None</em>, <em>destination_application_security_group_ids=None</em>, <em>destination_port_range=None</em>, <em>destination_port_ranges=None</em>, <em>direction=None</em>, <em>name=None</em>, <em>network_security_group_name=None</em>, <em>priority=None</em>, <em>protocol=None</em>, <em>resource_group_name=None</em>, <em>source_address_prefix=None</em>, <em>source_address_prefixes=None</em>, <em>source_application_security_group_ids=None</em>, <em>source_port_range=None</em>, <em>source_port_ranges=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a Network Security Rule.</p>
-<blockquote>
-<div><strong>NOTE on Network Security Groups and Network Security Rules:</strong> Terraform currently
-provides both a standalone Network Security Rule resource, and allows for Network Security Rules to be defined in-line within the Network Security Group resource.
-At this time you cannot use a Network Security Group with in-line Network Security Rules in conjunction with any Network Security Rule resources. Doing so will cause a conflict of rule settings and will overwrite rules.</div></blockquote>
+<dd><p>Create a NetworkSecurityRule resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2862,6 +2894,8 @@ At this time you cannot use a Network Security Group with in-line Network Securi
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_security_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_security_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkSecurityRule.access">
 <code class="descname">access</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityRule.access" title="Permalink to this definition">¶</a></dt>
@@ -3030,6 +3064,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_watcher.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_watcher.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkWatcher.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkWatcher.location" title="Permalink to this definition">¶</a></dt>
@@ -3121,6 +3157,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/packet_capture.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/packet_capture.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.PacketCapture.filters">
 <code class="descname">filters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.PacketCapture.filters" title="Permalink to this definition">¶</a></dt>
@@ -3235,6 +3273,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_profile.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.Profile.container_network_interface_ids">
 <code class="descname">container_network_interface_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Profile.container_network_interface_ids" title="Permalink to this definition">¶</a></dt>
@@ -3335,6 +3375,8 @@ create the public ip.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/public_ip.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/public_ip.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.PublicIp.allocation_method">
 <code class="descname">allocation_method</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.PublicIp.allocation_method" title="Permalink to this definition">¶</a></dt>
@@ -3486,6 +3528,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/public_ip_prefix.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/public_ip_prefix.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.PublicIpPrefix.ip_prefix">
 <code class="descname">ip_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.PublicIpPrefix.ip_prefix" title="Permalink to this definition">¶</a></dt>
@@ -3577,7 +3621,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.network.Route">
 <em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">Route</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_prefix=None</em>, <em>name=None</em>, <em>next_hop_in_ip_address=None</em>, <em>next_hop_type=None</em>, <em>resource_group_name=None</em>, <em>route_table_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Route" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a Route within a Route Table.</p>
+<dd><p>Create a Route resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -3596,6 +3640,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/route.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/route.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.Route.address_prefix">
 <code class="descname">address_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Route.address_prefix" title="Permalink to this definition">¶</a></dt>
@@ -3695,6 +3741,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/route_table.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.RouteTable.disable_bgp_route_propagation">
 <code class="descname">disable_bgp_route_propagation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.RouteTable.disable_bgp_route_propagation" title="Permalink to this definition">¶</a></dt>
@@ -3780,11 +3828,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.network.Subnet">
 <em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">Subnet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_prefix=None</em>, <em>delegations=None</em>, <em>ip_configurations=None</em>, <em>name=None</em>, <em>network_security_group_id=None</em>, <em>resource_group_name=None</em>, <em>route_table_id=None</em>, <em>service_endpoints=None</em>, <em>virtual_network_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Subnet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a subnet. Subnets represent network segments within the IP space defined by the virtual network.</p>
-<blockquote>
-<div><strong>NOTE on Virtual Networks and Subnet’s:</strong> Terraform currently
-provides both a standalone Subnet resource, and allows for Subnets to be defined in-line within the Virtual Network resource.
-At this time you cannot use a Virtual Network with in-line Subnets in conjunction with any Subnet resources. Doing so will cause a conflict of Subnet configurations and will overwrite Subnet’s.</div></blockquote>
+<dd><p>Create a Subnet resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -3806,6 +3850,8 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/subnet.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/subnet.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.Subnet.address_prefix">
 <code class="descname">address_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Subnet.address_prefix" title="Permalink to this definition">¶</a></dt>
@@ -3920,6 +3966,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/subnet_network_security_group_association.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/subnet_network_security_group_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.SubnetNetworkSecurityGroupAssociation.network_security_group_id">
 <code class="descname">network_security_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.SubnetNetworkSecurityGroupAssociation.network_security_group_id" title="Permalink to this definition">¶</a></dt>
@@ -3992,6 +4040,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/subnet_route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/subnet_route_table_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.SubnetRouteTableAssociation.route_table_id">
 <code class="descname">route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.SubnetRouteTableAssociation.route_table_id" title="Permalink to this definition">¶</a></dt>
@@ -4047,12 +4097,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.network.VirtualNetwork">
 <em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">VirtualNetwork</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_spaces=None</em>, <em>ddos_protection_plan=None</em>, <em>dns_servers=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>subnets=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetwork" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a virtual network including any configured subnets. Each subnet can
-optionally be configured with a security group to be associated with the subnet.</p>
-<blockquote>
-<div><strong>NOTE on Virtual Networks and Subnet’s:</strong> Terraform currently
-provides both a standalone Subnet resource, and allows for Subnets to be defined in-line within the Virtual Network resource.
-At this time you cannot use a Virtual Network with in-line Subnets in conjunction with any Subnet resources. Doing so will cause a conflict of Subnet configurations and will overwrite Subnet’s.</div></blockquote>
+<dd><p>Create a VirtualNetwork resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -4079,6 +4124,8 @@ subnets. Each <code class="docutils literal notranslate"><span class="pre">subne
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_network.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_network.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetwork.address_spaces">
 <code class="descname">address_spaces</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetwork.address_spaces" title="Permalink to this definition">¶</a></dt>
@@ -4227,6 +4274,8 @@ options are <code class="docutils literal notranslate"><span class="pre">RouteBa
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_network_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_network_gateway.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGateway.active_active">
 <code class="descname">active_active</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway.active_active" title="Permalink to this definition">¶</a></dt>
@@ -4418,6 +4467,8 @@ resource to be created.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_network_gateway_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_network_gateway_connection.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGatewayConnection.authorization_key">
 <code class="descname">authorization_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGatewayConnection.authorization_key" title="Permalink to this definition">¶</a></dt>
@@ -4618,6 +4669,8 @@ this forces a new resource to be created.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_network_peering.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_network_peering.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkPeering.allow_forwarded_traffic">
 <code class="descname">allow_forwarded_traffic</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkPeering.allow_forwarded_traffic" title="Permalink to this definition">¶</a></dt>
@@ -4724,78 +4777,104 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.network.get_application_security_group">
 <code class="descclassname">pulumi_azure.network.</code><code class="descname">get_application_security_group</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_application_security_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Application Security Group.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/application_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/application_security_group.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.network.get_express_route_circuit">
 <code class="descclassname">pulumi_azure.network.</code><code class="descname">get_express_route_circuit</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_express_route_circuit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing ExpressRoute circuit.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/express_route_circuit.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/express_route_circuit.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.network.get_firewall">
 <code class="descclassname">pulumi_azure.network.</code><code class="descname">get_firewall</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_firewall" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Azure Firewall.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/firewall.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/firewall.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.network.get_gateway_connection">
 <code class="descclassname">pulumi_azure.network.</code><code class="descname">get_gateway_connection</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_gateway_connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Virtual Network Gateway Connection.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/virtual_network_gateway_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/virtual_network_gateway_connection.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.network.get_network_interface">
 <code class="descclassname">pulumi_azure.network.</code><code class="descname">get_network_interface</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_network_interface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Network Interface.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/network_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/network_interface.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.network.get_network_security_group">
 <code class="descclassname">pulumi_azure.network.</code><code class="descname">get_network_security_group</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_network_security_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Network Security Group.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/network_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/network_security_group.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.network.get_network_watcher">
 <code class="descclassname">pulumi_azure.network.</code><code class="descname">get_network_watcher</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_network_watcher" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Network Watcher.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/network_watcher.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/network_watcher.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.network.get_public_i_ps">
 <code class="descclassname">pulumi_azure.network.</code><code class="descname">get_public_i_ps</code><span class="sig-paren">(</span><em>allocation_type=None</em>, <em>attached=None</em>, <em>name_prefix=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_public_i_ps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about a set of existing Public IP Addresses.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/public_ips.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/public_ips.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.network.get_public_ip">
 <code class="descclassname">pulumi_azure.network.</code><code class="descname">get_public_ip</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>zones=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_public_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Public IP Address.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/public_ip.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/public_ip.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.network.get_route_table">
 <code class="descclassname">pulumi_azure.network.</code><code class="descname">get_route_table</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_route_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Route Table.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/route_table.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.network.get_subnet">
 <code class="descclassname">pulumi_azure.network.</code><code class="descname">get_subnet</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>virtual_network_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Subnet within a Virtual Network.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/subnet.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/subnet.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.network.get_virtual_network">
 <code class="descclassname">pulumi_azure.network.</code><code class="descname">get_virtual_network</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_virtual_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Virtual Network.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/virtual_network.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/virtual_network.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.network.get_virtual_network_gateway">
 <code class="descclassname">pulumi_azure.network.</code><code class="descname">get_virtual_network_gateway</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_virtual_network_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Virtual Network Gateway.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/virtual_network_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/virtual_network_gateway.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

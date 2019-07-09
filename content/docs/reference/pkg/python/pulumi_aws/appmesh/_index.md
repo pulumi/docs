@@ -22,6 +22,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_mesh.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_mesh.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.appmesh.Mesh.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.Mesh.arn" title="Permalink to this definition">¶</a></dt>
@@ -119,6 +121,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_route.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.appmesh.Route.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.Route.arn" title="Permalink to this definition">¶</a></dt>
@@ -210,14 +214,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.appmesh.VirtualNode">
 <em class="property">class </em><code class="descclassname">pulumi_aws.appmesh.</code><code class="descname">VirtualNode</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>mesh_name=None</em>, <em>name=None</em>, <em>spec=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.VirtualNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an AWS App Mesh virtual node resource.</p>
-<p>Because of backward incompatible API changes (read <a class="reference external" href="https://github.com/awslabs/aws-app-mesh-examples/issues/92">here</a>), <code class="docutils literal notranslate"><span class="pre">aws_appmesh_virtual_node</span></code> resource definitions created with provider versions earlier than v2.3.0 will need to be modified:</p>
-<ul class="simple">
-<li>Rename the <code class="docutils literal notranslate"><span class="pre">service_name</span></code> attribute of the <code class="docutils literal notranslate"><span class="pre">dns</span></code> object to <code class="docutils literal notranslate"><span class="pre">hostname</span></code>.</li>
-<li>Replace the <code class="docutils literal notranslate"><span class="pre">backends</span></code> attribute of the <code class="docutils literal notranslate"><span class="pre">spec</span></code> object with one or more <code class="docutils literal notranslate"><span class="pre">backend</span></code> configuration blocks,
-setting <code class="docutils literal notranslate"><span class="pre">virtual_service_name</span></code> to the name of the service.</li>
-</ul>
-<p>The Terraform state associated with existing resources will automatically be migrated.</p>
+<dd><p>Create a VirtualNode resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -234,6 +231,8 @@ setting <code class="docutils literal notranslate"><span class="pre">virtual_ser
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_node.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_node.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.appmesh.VirtualNode.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.VirtualNode.arn" title="Permalink to this definition">¶</a></dt>
@@ -319,15 +318,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.appmesh.VirtualRouter">
 <em class="property">class </em><code class="descclassname">pulumi_aws.appmesh.</code><code class="descname">VirtualRouter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>mesh_name=None</em>, <em>name=None</em>, <em>spec=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.VirtualRouter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an AWS App Mesh virtual router resource.</p>
-<p>Because of backward incompatible API changes (read <a class="reference external" href="https://github.com/awslabs/aws-app-mesh-examples/issues/92">here</a> and <a class="reference external" href="https://github.com/awslabs/aws-app-mesh-examples/issues/94">here</a>), <code class="docutils literal notranslate"><span class="pre">aws_appmesh_virtual_router</span></code> resource definitions created with provider versions earlier than v2.3.0 will need to be modified:</p>
-<ul class="simple">
-<li>Remove service <code class="docutils literal notranslate"><span class="pre">service_names</span></code> from the <code class="docutils literal notranslate"><span class="pre">spec</span></code> argument.
-AWS has created a <code class="docutils literal notranslate"><span class="pre">aws_appmesh_virtual_service</span></code> resource for each of service names.
-These resource can be imported using <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">import</span></code>.</li>
-<li>Add a <code class="docutils literal notranslate"><span class="pre">listener</span></code> configuration block to the <code class="docutils literal notranslate"><span class="pre">spec</span></code> argument.</li>
-</ul>
-<p>The Terraform state associated with existing resources will automatically be migrated.</p>
+<dd><p>Create a VirtualRouter resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -343,6 +334,8 @@ These resource can be imported using <code class="docutils literal notranslate">
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_router.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_router.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.appmesh.VirtualRouter.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.VirtualRouter.arn" title="Permalink to this definition">¶</a></dt>
@@ -438,6 +431,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_service.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.appmesh.VirtualService.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.VirtualService.arn" title="Permalink to this definition">¶</a></dt>

@@ -23,6 +23,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_association.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.licensemanager.Association.license_configuration_arn">
 <code class="descname">license_configuration_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.licensemanager.Association.license_configuration_arn" title="Permalink to this definition">¶</a></dt>
@@ -78,19 +80,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.licensemanager.LicenseConfiguration">
 <em class="property">class </em><code class="descclassname">pulumi_aws.licensemanager.</code><code class="descname">LicenseConfiguration</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>license_count=None</em>, <em>license_count_hard_limit=None</em>, <em>license_counting_type=None</em>, <em>license_rules=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.licensemanager.LicenseConfiguration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a License Manager license configuration resource.</p>
-<blockquote>
-<div><strong>Note:</strong> Removing the <code class="docutils literal notranslate"><span class="pre">license_count</span></code> attribute is not supported by the License Manager API - use <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">taint</span> <span class="pre">aws_licensemanager_license_configuration.&lt;id&gt;</span></code> to recreate the resource instead.</div></blockquote>
-<p>License rules should be in the format of <code class="docutils literal notranslate"><span class="pre">#RuleType=RuleValue</span></code>. Supported rule types:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">minimumVcpus</span></code> - Resource must have minimum vCPU count in order to use the license. Default: 1</li>
-<li><code class="docutils literal notranslate"><span class="pre">maximumVcpus</span></code> - Resource must have maximum vCPU count in order to use the license. Default: unbounded, limit: 10000</li>
-<li><code class="docutils literal notranslate"><span class="pre">minimumCores</span></code> - Resource must have minimum core count in order to use the license. Default: 1</li>
-<li><code class="docutils literal notranslate"><span class="pre">maximumCores</span></code> - Resource must have maximum core count in order to use the license. Default: unbounded, limit: 10000</li>
-<li><code class="docutils literal notranslate"><span class="pre">minimumSockets</span></code> - Resource must have minimum socket count in order to use the license. Default: 1</li>
-<li><code class="docutils literal notranslate"><span class="pre">maximumSockets</span></code> - Resource must have maximum socket count in order to use the license. Default: unbounded, limit: 10000</li>
-<li><code class="docutils literal notranslate"><span class="pre">allowedTenancy</span></code> - Defines where the license can be used. If set, restricts license usage to selected tenancies. Specify a comma delimited list of <code class="docutils literal notranslate"><span class="pre">EC2-Default</span></code>, <code class="docutils literal notranslate"><span class="pre">EC2-DedicatedHost</span></code>, <code class="docutils literal notranslate"><span class="pre">EC2-DedicatedInstance</span></code></li>
-</ul>
+<dd><p>Create a LicenseConfiguration resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -110,6 +100,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_license_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_license_configuration.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.licensemanager.LicenseConfiguration.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.licensemanager.LicenseConfiguration.description" title="Permalink to this definition">¶</a></dt>

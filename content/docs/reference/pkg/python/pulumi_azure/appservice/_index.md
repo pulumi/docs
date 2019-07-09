@@ -24,6 +24,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_active_slot.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_active_slot.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.ActiveSlot.app_service_name">
 <code class="descname">app_service_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.ActiveSlot.app_service_name" title="Permalink to this definition">¶</a></dt>
@@ -84,7 +86,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appservice.AppService">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">AppService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>auth_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>client_cert_enabled=None</em>, <em>connection_strings=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.AppService" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">AppService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>auth_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>client_cert_enabled=None</em>, <em>connection_strings=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>logs=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.AppService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an App Service (within an App Service Plan).</p>
 <blockquote>
 <div><strong>Note:</strong> When using Slots - the <code class="docutils literal notranslate"><span class="pre">app_settings</span></code>, <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> and <code class="docutils literal notranslate"><span class="pre">site_config</span></code> blocks on the <code class="docutils literal notranslate"><span class="pre">azurerm_app_service</span></code> resource will be overwritten when promoting a Slot using the <code class="docutils literal notranslate"><span class="pre">azurerm_app_service_active_slot</span></code> resource.</div></blockquote>
@@ -105,6 +107,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>https_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Can the App Service only be accessed via HTTPS? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Managed Service Identity block as defined below.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
+<li><strong>logs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">logs</span></code> block as defined below.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the App Service. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the App Service.</li>
 <li><strong>site_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">site_config</span></code> block as defined below.</li>
@@ -114,6 +117,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.AppService.app_service_plan_id">
 <code class="descname">app_service_plan_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.AppService.app_service_plan_id" title="Permalink to this definition">¶</a></dt>
@@ -178,6 +183,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.AppService.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.AppService.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.AppService.logs">
+<code class="descname">logs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.AppService.logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">logs</span></code> block as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -287,6 +298,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_custom_hostname_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_custom_hostname_binding.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.CustomHostnameBinding.app_service_name">
 <code class="descname">app_service_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CustomHostnameBinding.app_service_name" title="Permalink to this definition">¶</a></dt>
@@ -376,6 +389,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/function_app.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/function_app.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.FunctionApp.app_service_plan_id">
 <code class="descname">app_service_plan_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionApp.app_service_plan_id" title="Permalink to this definition">¶</a></dt>
@@ -712,6 +727,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_plan.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_plan.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.Plan.app_service_environment_id">
 <code class="descname">app_service_environment_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Plan.app_service_environment_id" title="Permalink to this definition">¶</a></dt>
@@ -849,6 +866,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_slot.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_slot.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.Slot.app_service_name">
 <code class="descname">app_service_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Slot.app_service_name" title="Permalink to this definition">¶</a></dt>
@@ -983,12 +1002,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.get_app_service">
 <code class="descclassname">pulumi_azure.appservice.</code><code class="descname">get_app_service</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.get_app_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing App Service.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/app_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/app_service.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.appservice.get_app_service_plan">
 <code class="descclassname">pulumi_azure.appservice.</code><code class="descname">get_app_service_plan</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.get_app_service_plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing App Service Plan (formerly known as a <code class="docutils literal notranslate"><span class="pre">Server</span> <span class="pre">Farm</span></code>).</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/app_service_plan.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/app_service_plan.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

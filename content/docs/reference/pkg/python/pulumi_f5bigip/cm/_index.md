@@ -20,6 +20,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/cm_device.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/cm_device.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_f5bigip.cm.Device.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.cm.Device.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -80,6 +82,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/cm_devicegroup.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/cm_devicegroup.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.cm.DeviceGroup.auto_sync">
 <code class="descname">auto_sync</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.cm.DeviceGroup.auto_sync" title="Permalink to this definition">¶</a></dt>

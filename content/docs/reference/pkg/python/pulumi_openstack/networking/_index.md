@@ -33,6 +33,8 @@ address-scope.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_addressscope_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_addressscope_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.AddressScope.ip_version">
 <code class="descname">ip_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.AddressScope.ip_version" title="Permalink to this definition">¶</a></dt>
@@ -163,6 +165,8 @@ may or may not have a different address)</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.FloatingIp.address">
 <code class="descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.FloatingIp.address" title="Permalink to this definition">¶</a></dt>
@@ -328,6 +332,8 @@ floating IP (which may or may not have a different address).</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_associate_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_floatingip_associate_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.FloatingIpAssociate.floating_ip">
 <code class="descname">floating_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.FloatingIpAssociate.floating_ip" title="Permalink to this definition">¶</a></dt>
@@ -962,6 +968,8 @@ network.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_network_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_network_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Network.admin_state_up">
 <code class="descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Network.admin_state_up" title="Permalink to this definition">¶</a></dt>
@@ -1198,6 +1206,8 @@ to create a port for another tenant. Changing this creates a new port.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Port.admin_state_up">
 <code class="descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.admin_state_up" title="Permalink to this definition">¶</a></dt>
@@ -1421,13 +1431,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_openstack.networking.PortSecGroupAssociate">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">PortSecGroupAssociate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enforce=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.PortSecGroupAssociate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a V2 port’s security groups within OpenStack. Useful, when the port was
-created not by Terraform (e.g. Manila or LBaaS). It should not be used, when the
-port was created directly within Terraform.</p>
-<p>When the resource is deleted, Terraform doesn’t delete the port, but unsets the
-list of user defined security group IDs.  However, if <code class="docutils literal notranslate"><span class="pre">enforce</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>
-and the resource is deleted, Terraform will remove all assigned security group
-IDs.</p>
+<dd><p>Create a PortSecGroupAssociate resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1450,6 +1454,8 @@ opposed to how they are configured with the Compute Instance).</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_secgroup_associate_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_secgroup_associate_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.PortSecGroupAssociate.all_security_group_ids">
 <code class="descname">all_security_group_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.PortSecGroupAssociate.all_security_group_ids" title="Permalink to this definition">¶</a></dt>
@@ -1581,6 +1587,8 @@ Supported options are described below.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Router.admin_state_up">
 <code class="descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Router.admin_state_up" title="Permalink to this definition">¶</a></dt>
@@ -1762,6 +1770,8 @@ this creates a new router interface.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_interface_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_interface_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.RouterInterface.port_id">
 <code class="descname">port_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.RouterInterface.port_id" title="Permalink to this definition">¶</a></dt>
@@ -1861,6 +1871,8 @@ this creates a new routing entry.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_route_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_route_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.RouterRoute.destination_cidr">
 <code class="descname">destination_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.RouterRoute.destination_cidr" title="Permalink to this definition">¶</a></dt>
@@ -1962,6 +1974,8 @@ security group.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.SecGroup.all_tags">
 <code class="descname">all_tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.SecGroup.all_tags" title="Permalink to this definition">¶</a></dt>
@@ -2107,6 +2121,8 @@ security group rule.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_rule_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.SecGroupRule.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.SecGroupRule.description" title="Permalink to this definition">¶</a></dt>
@@ -2318,6 +2334,8 @@ create a subnet for another tenant. Changing this creates a new subnet.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Subnet.all_tags">
 <code class="descname">all_tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Subnet.all_tags" title="Permalink to this definition">¶</a></dt>
@@ -2572,6 +2590,8 @@ subnetpool.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnetpool_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnetpool_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.SubnetPool.address_scope_id">
 <code class="descname">address_scope_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.SubnetPool.address_scope_id" title="Permalink to this definition">¶</a></dt>
@@ -2779,6 +2799,8 @@ this creates a new routing entry.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_route_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_route_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.SubnetRoute.destination_cidr">
 <code class="descname">destination_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.SubnetRoute.destination_cidr" title="Permalink to this definition">¶</a></dt>
@@ -2884,6 +2906,8 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_trunk_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_trunk_v2.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Trunk.admin_state_up">
 <code class="descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Trunk.admin_state_up" title="Permalink to this definition">¶</a></dt>
@@ -2994,18 +3018,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.get_floating_ip">
 <code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_floating_ip</code><span class="sig-paren">(</span><em>address=None</em>, <em>description=None</em>, <em>fixed_ip=None</em>, <em>pool=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_floating_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack floating IP.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_floatingip_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_floatingip_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_network">
 <code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_network</code><span class="sig-paren">(</span><em>description=None</em>, <em>external=None</em>, <em>matching_subnet_cidr=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>region=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>transparent_vlan=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack network.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_network_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_network_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_port">
 <code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_port</code><span class="sig-paren">(</span><em>admin_state_up=None</em>, <em>description=None</em>, <em>device_id=None</em>, <em>device_owner=None</em>, <em>dns_name=None</em>, <em>fixed_ip=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>port_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack port.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -3013,36 +3043,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_port_ids</code><span class="sig-paren">(</span><em>admin_state_up=None</em>, <em>description=None</em>, <em>device_id=None</em>, <em>device_owner=None</em>, <em>dns_name=None</em>, <em>fixed_ip=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>sort_direction=None</em>, <em>sort_key=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_port_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of Openstack Port IDs matching the
 specified criteria.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_ids_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_ids_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_router">
 <code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_router</code><span class="sig-paren">(</span><em>admin_state_up=None</em>, <em>description=None</em>, <em>distributed=None</em>, <em>enable_snat=None</em>, <em>name=None</em>, <em>region=None</em>, <em>router_id=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_router" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack router.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_router_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_router_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_sec_group">
 <code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_sec_group</code><span class="sig-paren">(</span><em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>secgroup_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_sec_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack security group.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_secgroup_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_secgroup_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_subnet">
 <code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_subnet</code><span class="sig-paren">(</span><em>cidr=None</em>, <em>description=None</em>, <em>dhcp_disabled=None</em>, <em>dhcp_enabled=None</em>, <em>gateway_ip=None</em>, <em>ip_version=None</em>, <em>ipv6_address_mode=None</em>, <em>ipv6_ra_mode=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>subnetpool_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack subnet.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_subnet_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_subnet_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_subnet_pool">
 <code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_subnet_pool</code><span class="sig-paren">(</span><em>address_scope_id=None</em>, <em>default_prefixlen=None</em>, <em>default_quota=None</em>, <em>description=None</em>, <em>ip_version=None</em>, <em>is_default=None</em>, <em>max_prefixlen=None</em>, <em>min_prefixlen=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_subnet_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack subnetpool.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_subnetpool_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_subnetpool_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_trunk">
 <code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_trunk</code><span class="sig-paren">(</span><em>admin_state_up=None</em>, <em>description=None</em>, <em>name=None</em>, <em>port_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>trunk_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_trunk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack trunk.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_trunk_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_trunk_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

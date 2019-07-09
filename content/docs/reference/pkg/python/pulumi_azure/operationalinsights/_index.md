@@ -25,6 +25,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_solution.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_solution.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.operationalinsights.AnalyticsSolution.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsSolution.location" title="Permalink to this definition">¶</a></dt>
@@ -123,6 +125,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_workspace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_workspace.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.operationalinsights.AnalyticsWorkspace.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspace.location" title="Permalink to this definition">¶</a></dt>
@@ -247,6 +251,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_workspace_linked_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/log_analytics_workspace_linked_service.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.operationalinsights.AnalyticsWorkspaceLinkedService.linked_service_name">
 <code class="descname">linked_service_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspaceLinkedService.linked_service_name" title="Permalink to this definition">¶</a></dt>
@@ -387,6 +393,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.operationalinsights.get_analytics_workspace">
 <code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">get_analytics_workspace</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.get_analytics_workspace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Log Analytics (formally Operational Insights) Workspace.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/log_analytics_workspace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/log_analytics_workspace.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

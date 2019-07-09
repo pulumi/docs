@@ -6,18 +6,7 @@
 <dl class="class">
 <dt id="pulumi_gcp.binaryauthorization.Attestor">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.binaryauthorization.</code><code class="descname">Attestor</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attestation_authority_note=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Attestor" title="Permalink to this definition">¶</a></dt>
-<dd><p>An attestor that attests to container image artifacts.</p>
-<blockquote>
-<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
-<p>To get more information about Attestor, see:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/binary-authorization/docs/reference/rest/">API documentation</a></li>
-<li>How-to Guides<ul>
-<li><a class="reference external" href="https://cloud.google.com/binary-authorization/">Official Documentation</a></li>
-</ul>
-</li>
-</ul>
+<dd><p>Create a Attestor resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -30,6 +19,8 @@ See <a class="reference external" href="https://terraform.io/docs/providers/goog
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_attestor.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_gcp.binaryauthorization.Attestor.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Attestor.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -73,18 +64,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.binaryauthorization.Policy">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.binaryauthorization.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admission_whitelist_patterns=None</em>, <em>cluster_admission_rules=None</em>, <em>default_admission_rule=None</em>, <em>description=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A policy for container image binary authorization.</p>
-<blockquote>
-<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
-<p>To get more information about Policy, see:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/binary-authorization/docs/reference/rest/">API documentation</a></li>
-<li>How-to Guides<ul>
-<li><a class="reference external" href="https://cloud.google.com/binary-authorization/">Official Documentation</a></li>
-</ul>
-</li>
-</ul>
+<dd><p>Create a Policy resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -97,6 +77,8 @@ See <a class="reference external" href="https://terraform.io/docs/providers/goog
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/binary_authorization_policy.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_gcp.binaryauthorization.Policy.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Policy.translate_output_property" title="Permalink to this definition">¶</a></dt>

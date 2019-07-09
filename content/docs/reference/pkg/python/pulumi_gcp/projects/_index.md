@@ -121,6 +121,8 @@ will not be inferred from the provider.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_iam_binding.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.IAMBinding.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMBinding.etag" title="Permalink to this definition">¶</a></dt>
@@ -187,20 +189,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.projects.IAMCustomRole">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">IAMCustomRole</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>permissions=None</em>, <em>project=None</em>, <em>role_id=None</em>, <em>stage=None</em>, <em>title=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMCustomRole" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows management of a customized Cloud IAM project role. For more information see
-<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-custom-roles">the official documentation</a>
-and
-<a class="reference external" href="https://cloud.google.com/iam/reference/rest/v1/projects.roles">API</a>.</p>
-<blockquote>
-<div><dl class="docutils">
-<dt><strong>Warning:</strong> Note that custom roles in GCP have the concept of a soft-delete. There are two issues that may arise</dt>
-<dd>from this and how roles are propagated. 1) creating a role may involve undeleting and then updating a role with the
-same name, possibly causing confusing behavior between undelete and update. 2) A deleted role is permanently deleted
-after 7 days, but it can take up to 30 more days (i.e. between 7 and 37 days after deletion) before the role name is
-made available again. This means a deleted role that has been deleted for more than 7 days cannot be changed at all
-by Terraform, and new roles cannot share that name.</dd>
-</dl>
-</div></blockquote>
+<dd><p>Create a IAMCustomRole resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -222,6 +211,8 @@ List of possible stages is <a class="reference external" href="https://cloud.goo
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_iam_custom_role.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_iam_custom_role.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.IAMCustomRole.deleted">
 <code class="descname">deleted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMCustomRole.deleted" title="Permalink to this definition">¶</a></dt>
@@ -339,6 +330,8 @@ will not be inferred from the provider.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_iam_member.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.IAMMember.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMMember.etag" title="Permalink to this definition">¶</a></dt>
@@ -434,6 +427,8 @@ will not be inferred from the provider.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_iam_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.IAMPolicy.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMPolicy.etag" title="Permalink to this definition">¶</a></dt>
@@ -522,6 +517,8 @@ documentation</a> and
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_organization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_organization_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.OrganizationPolicy.boolean_policy">
 <code class="descname">boolean_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.OrganizationPolicy.boolean_policy" title="Permalink to this definition">¶</a></dt>
@@ -631,7 +628,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>disable_dependent_services</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, services that are enabled and which depend on this service should also be disabled when this service is destroyed.
 If <code class="docutils literal notranslate"><span class="pre">false</span></code> or unset, an error will be generated if any enabled services depend on this service when destroying it.</li>
-<li><strong>disable_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, disable the service when the terraform resource is destroyed.  Defaults to true.  May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not provided, the provider project is used.</li>
 <li><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service to enable.</li>
 </ul>
@@ -639,17 +635,13 @@ If <code class="docutils literal notranslate"><span class="pre">false</span></co
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_service.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_service.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.Service.disable_dependent_services">
 <code class="descname">disable_dependent_services</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.Service.disable_dependent_services" title="Permalink to this definition">¶</a></dt>
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, services that are enabled and which depend on this service should also be disabled when this service is destroyed.
 If <code class="docutils literal notranslate"><span class="pre">false</span></code> or unset, an error will be generated if any enabled services depend on this service when destroying it.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.projects.Service.disable_on_destroy">
-<code class="descname">disable_on_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.Service.disable_on_destroy" title="Permalink to this definition">¶</a></dt>
-<dd><p>If true, disable the service when the terraform resource is destroyed.  Defaults to true.  May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -727,9 +719,6 @@ google_project_service resource, one resource per API.</dd>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID.
-Changing this forces Terraform to attempt to disable all previously managed
-API services in the previous project.</li>
 <li><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of services that are enabled. Supports
 update.</li>
 </ul>
@@ -737,14 +726,8 @@ update.</li>
 </tr>
 </tbody>
 </table>
-<dl class="attribute">
-<dt id="pulumi_gcp.projects.Services.project">
-<code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.Services.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The project ID.
-Changing this forces Terraform to attempt to disable all previously managed
-API services in the previous project.</p>
-</dd></dl>
-
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_services.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_services.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.Services.services">
 <code class="descname">services</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.Services.services" title="Permalink to this definition">¶</a></dt>
@@ -795,31 +778,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.projects.UsageExportBucket">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">UsageExportBucket</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket_name=None</em>, <em>prefix=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.UsageExportBucket" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows creation and management of a Google Cloud Platform project.</p>
-<p>Projects created with this resource must be associated with an Organization.
-See the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/quickstarts">Organization documentation</a> for more details.</p>
-<p>The service account used to run Terraform when creating a <code class="docutils literal notranslate"><span class="pre">google_project</span></code>
-resource must have <code class="docutils literal notranslate"><span class="pre">roles/resourcemanager.projectCreator</span></code>. See the
-<a class="reference external" href="https://cloud.google.com/resource-manager/docs/access-control-org">Access Control for Organizations Using IAM</a>
-doc for more information.</p>
-<p>Note that prior to 0.8.5, <code class="docutils literal notranslate"><span class="pre">google_project</span></code> functioned like a data source,
-meaning any project referenced by it had to be created and managed outside
-Terraform. As of 0.8.5, <code class="docutils literal notranslate"><span class="pre">google_project</span></code> functions like any other Terraform
-resource, with Terraform creating and managing the project. To replicate the old
-behavior, either:</p>
-<ul class="simple">
-<li>Use the project ID directly in whatever is referencing the project, using the
-<a class="reference external" href="https://www.terraform.io/docs/providers/google/r/google_project_iam.html">google_project_iam_policy</a>
-to replace the old <code class="docutils literal notranslate"><span class="pre">policy_data</span></code> property.</li>
-<li>Use the <a class="reference external" href="https://www.terraform.io/docs/import/usage.html">import</a> functionality
-to import your pre-existing project into Terraform, where it can be referenced and
-used just like always, keeping in mind that Terraform will attempt to undo any changes
-made outside Terraform.</li>
-</ul>
-<blockquote>
-<div>It’s important to note that any project resources that were added to your Terraform config
-prior to 0.8.5 will continue to function as they always have, and will not be managed by
-Terraform. Only newly added projects are affected.</div></blockquote>
+<dd><p>Create a UsageExportBucket resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -832,6 +791,8 @@ Terraform. Only newly added projects are affected.</div></blockquote>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_usage_export_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_usage_export_bucket.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_gcp.projects.UsageExportBucket.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.UsageExportBucket.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -878,6 +839,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Allows management of Organization policies for a Google Project. For more information see
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">the official
 documentation</a></p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/project_organization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/project_organization_policy.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -886,6 +849,8 @@ documentation</a></p>
 <dd><p>Retrieve information about a set of projects based on a filter. See the
 <a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v1/projects/list">REST API</a>
 for more details.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/projects.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/projects.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

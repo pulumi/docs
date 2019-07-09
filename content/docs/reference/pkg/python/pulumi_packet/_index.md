@@ -24,6 +24,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/bgp_session.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/bgp_session.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_packet.BgpSession.address_family">
 <code class="descname">address_family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.BgpSession.address_family" title="Permalink to this definition">¶</a></dt>
@@ -115,6 +117,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/connect.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/connect.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_packet.Connect.facility">
 <code class="descname">facility</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.facility" title="Permalink to this definition">¶</a></dt>
@@ -237,7 +241,6 @@ continue to boot via iPXE on reboots.</li>
 information is in the
 <a class="reference external" href="https://support.packet.com/kb/articles/custom-ipxe">Custom iPXE</a>
 doc.</li>
-<li><strong>network_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network type of device, used for <a class="reference external" href="https://support.packet.com/kb/articles/layer-2-overview">Layer 2 networking</a>. Allowed values are <code class="docutils literal notranslate"><span class="pre">layer3</span></code>, <code class="docutils literal notranslate"><span class="pre">hybrid</span></code>, <code class="docutils literal notranslate"><span class="pre">layer2-individual</span></code> and <code class="docutils literal notranslate"><span class="pre">layer2-bonded</span></code>. If you keep it empty, Terraform will not handle the network type of the device.</li>
 <li><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operating system slug. To find the slug, or visit <a class="reference external" href="https://www.packet.com/developers/api/#operatingsystems">Operating Systems API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</li>
 <li><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device plan slug. To find the plan slug, visit <a class="reference external" href="https://www.packet.com/developers/api/#plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</li>
 <li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the project in which to create the device</li>
@@ -253,6 +256,8 @@ information is in the
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/device.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/device.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_packet.Device.access_private_ipv4">
 <code class="descname">access_private_ipv4</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.access_private_ipv4" title="Permalink to this definition">¶</a></dt>
@@ -352,12 +357,6 @@ doc.</p>
 Elastic addresses then stack by type - an assigned public IPv4 will go after the management public IPv4 (to index 1), and will then shift the indices of the IPv6 and private IPv4. Assigned private IPv4 will go after the management private IPv4 (to the end of the network list).
 The fields of the network attributes are:</li>
 </ul>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_packet.Device.network_type">
-<code class="descname">network_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.network_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Network type of device, used for <a class="reference external" href="https://support.packet.com/kb/articles/layer-2-overview">Layer 2 networking</a>. Allowed values are <code class="docutils literal notranslate"><span class="pre">layer3</span></code>, <code class="docutils literal notranslate"><span class="pre">hybrid</span></code>, <code class="docutils literal notranslate"><span class="pre">layer2-individual</span></code> and <code class="docutils literal notranslate"><span class="pre">layer2-bonded</span></code>. If you keep it empty, Terraform will not handle the network type of the device.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -559,6 +558,8 @@ project and facility as the device</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/ip_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/ip_attachment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_packet.IpAttachment.address_family">
 <code class="descname">address_family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.IpAttachment.address_family" title="Permalink to this definition">¶</a></dt>
@@ -669,6 +670,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/organization.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/organization.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_packet.Organization.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Organization.description" title="Permalink to this definition">¶</a></dt>
@@ -772,6 +775,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/port_vlan_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/port_vlan_attachment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_packet.PortVlanAttachment.device_id">
 <code class="descname">device_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.PortVlanAttachment.device_id" title="Permalink to this definition">¶</a></dt>
@@ -864,6 +869,8 @@ in your projects.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_packet.Project.backend_transfer">
 <code class="descname">backend_transfer</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Project.backend_transfer" title="Permalink to this definition">¶</a></dt>
@@ -966,6 +973,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project_ssh_key.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project_ssh_key.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_packet.ProjectSshKey.created">
 <code class="descname">created</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.ProjectSshKey.created" title="Permalink to this definition">¶</a></dt>
@@ -1061,6 +1070,8 @@ construction to achieve fine-grained programmatic control over provider settings
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
 <dl class="method">
 <dt id="pulumi_packet.Provider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1128,6 +1139,8 @@ The IPv6 and private IPv4 blocks can’t be created, only imported. With this re
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/reserved_ip_block.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/reserved_ip_block.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_packet.ReservedIpBlock.address_family">
 <code class="descname">address_family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.ReservedIpBlock.address_family" title="Permalink to this definition">¶</a></dt>
@@ -1258,6 +1271,8 @@ manage spot market requests on your account. <a class="reference external" href=
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/spot_market_request.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/spot_market_request.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_packet.SpotMarketRequest.devices_max">
 <code class="descname">devices_max</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.SpotMarketRequest.devices_max" title="Permalink to this definition">¶</a></dt>
@@ -1360,6 +1375,8 @@ can be read using the file interpolation function</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/ssh_key.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/ssh_key.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_packet.SshKey.created">
 <code class="descname">created</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.SshKey.created" title="Permalink to this definition">¶</a></dt>
@@ -1455,6 +1472,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/vlan.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/vlan.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_packet.Vlan.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Vlan.description" title="Permalink to this definition">¶</a></dt>
@@ -1522,11 +1541,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_packet.Volume">
 <em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>billing_cycle=None</em>, <em>description=None</em>, <em>facility=None</em>, <em>locked=None</em>, <em>plan=None</em>, <em>project_id=None</em>, <em>size=None</em>, <em>snapshot_policies=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Volume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Packet Block Storage Volume resource to allow you to
-manage block volumes on your account.
-Once created by Terraform, they must then be attached and mounted
-using the api and <code class="docutils literal notranslate"><span class="pre">packet_block_attach</span></code> and <code class="docutils literal notranslate"><span class="pre">packet_block_detach</span></code>
-scripts.</p>
+<dd><p>Create a Volume resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1547,6 +1562,8 @@ scripts.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_packet.Volume.attachments">
 <code class="descname">attachments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Volume.attachments" title="Permalink to this definition">¶</a></dt>
@@ -1668,9 +1685,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_packet.VolumeAttachment">
 <em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">VolumeAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>device_id=None</em>, <em>volume_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.VolumeAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides attachment of Packet Block Storage Volume to Devices.</p>
-<p>Device and volume must be in the same location (facility).</p>
-<p>Once attached by Terraform, they must then be mounted using the <code class="docutils literal notranslate"><span class="pre">packet_block_attach</span></code> and <code class="docutils literal notranslate"><span class="pre">packet_block_detach</span></code> scripts.</p>
+<dd><p>Create a VolumeAttachment resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1685,6 +1700,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume_attachment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_packet.VolumeAttachment.device_id">
 <code class="descname">device_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.VolumeAttachment.device_id" title="Permalink to this definition">¶</a></dt>
@@ -1741,6 +1758,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.get_operating_system">
 <code class="descclassname">pulumi_packet.</code><code class="descname">get_operating_system</code><span class="sig-paren">(</span><em>distro=None</em>, <em>name=None</em>, <em>provisionable_on=None</em>, <em>version=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_operating_system" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get Packet Operating System image.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/operating_system.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/operating_system.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1748,12 +1767,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_packet.</code><code class="descname">get_precreated_ip_block</code><span class="sig-paren">(</span><em>address_family=None</em>, <em>facility=None</em>, <em>global_=None</em>, <em>project_id=None</em>, <em>public=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_precreated_ip_block" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get CIDR expression for precreated IPv6 and IPv4 blocks in Packet.
 You can then use the cidrsubnet TF builtin function to derive subnets.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/precreated_ip_block.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/precreated_ip_block.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_packet.get_spot_market_price">
 <code class="descclassname">pulumi_packet.</code><code class="descname">get_spot_market_price</code><span class="sig-paren">(</span><em>facility=None</em>, <em>plan=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_spot_market_price" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get Packet Spot Market Price.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/spot_market_price.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/spot_market_price.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

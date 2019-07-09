@@ -24,6 +24,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/lb_backend_address_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/lb_backend_address_pool.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.lb.BackendAddressPool.backend_ip_configurations">
 <code class="descname">backend_ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.backend_ip_configurations" title="Permalink to this definition">¶</a></dt>
@@ -171,7 +173,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>frontend_ip_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> block as documented below.</li>
+<li><strong>frontend_ip_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or multiple <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks as documented below.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure Region where the Load Balancer should be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the frontend ip configuration.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which to create the Load Balancer.</li>
@@ -182,10 +184,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/lb.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/lb.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.lb.LoadBalancer.frontend_ip_configurations">
 <code class="descname">frontend_ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.frontend_ip_configurations" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> block as documented below.</p>
+<dd><p>One or multiple <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks as documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -296,6 +300,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/lb_nat_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/lb_nat_pool.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.lb.NatPool.backend_port">
 <code class="descname">backend_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.backend_port" title="Permalink to this definition">¶</a></dt>
@@ -410,6 +416,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/lb_nat_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/lb_nat_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.lb.NatRule.backend_port">
 <code class="descname">backend_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.backend_port" title="Permalink to this definition">¶</a></dt>
@@ -525,6 +533,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/lb_outbound_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/lb_outbound_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.lb.OutboundRule.allocated_outbound_ports">
 <code class="descname">allocated_outbound_ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.allocated_outbound_ports" title="Permalink to this definition">¶</a></dt>
@@ -645,6 +655,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/lb_probe.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/lb_probe.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.lb.Probe.interval_in_seconds">
 <code class="descname">interval_in_seconds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.interval_in_seconds" title="Permalink to this definition">¶</a></dt>
@@ -735,7 +747,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.lb.Rule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">Rule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backend_address_pool_id=None</em>, <em>backend_port=None</em>, <em>enable_floating_ip=None</em>, <em>frontend_ip_configuration_name=None</em>, <em>frontend_port=None</em>, <em>idle_timeout_in_minutes=None</em>, <em>load_distribution=None</em>, <em>loadbalancer_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>probe_id=None</em>, <em>protocol=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Rule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">Rule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backend_address_pool_id=None</em>, <em>backend_port=None</em>, <em>disable_outbound_snat=None</em>, <em>enable_floating_ip=None</em>, <em>frontend_ip_configuration_name=None</em>, <em>frontend_port=None</em>, <em>idle_timeout_in_minutes=None</em>, <em>load_distribution=None</em>, <em>loadbalancer_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>probe_id=None</em>, <em>protocol=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Load Balancer Rule.</p>
 <blockquote>
 <div><strong>NOTE</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached</div></blockquote>
@@ -748,6 +760,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>backend_address_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A reference to a Backend Address Pool over which this Load Balancing Rule operates.</li>
 <li><strong>backend_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port used for internal connections on the endpoint. Possible values range between 0 and 65535, inclusive.</li>
+<li><strong>disable_outbound_snat</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether outbound snat is disabled or enabled. Default false.</li>
 <li><strong>enable_floating_ip</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Floating IP is pertinent to failover scenarios: a “floating” IP is reassigned to a secondary server in case the primary server fails. Floating IP is required for SQL AlwaysOn.</li>
 <li><strong>frontend_ip_configuration_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the frontend IP configuration to which the rule is associated.</li>
 <li><strong>frontend_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port for the external endpoint. Port numbers for each Rule must be unique within the Load Balancer. Possible values range between 0 and 65534, inclusive.</li>
@@ -763,6 +776,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/lb_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/lb_rule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.lb.Rule.backend_address_pool_id">
 <code class="descname">backend_address_pool_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.backend_address_pool_id" title="Permalink to this definition">¶</a></dt>
@@ -773,6 +788,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.lb.Rule.backend_port">
 <code class="descname">backend_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.backend_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>The port used for internal connections on the endpoint. Possible values range between 0 and 65535, inclusive.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.lb.Rule.disable_outbound_snat">
+<code class="descname">disable_outbound_snat</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.disable_outbound_snat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether outbound snat is disabled or enabled. Default false.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -879,12 +900,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.lb.get_backend_address_pool">
 <code class="descclassname">pulumi_azure.lb.</code><code class="descname">get_backend_address_pool</code><span class="sig-paren">(</span><em>loadbalancer_id=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.get_backend_address_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Load Balancer Backend Address Pool.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/lb_backend_address_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/lb_backend_address_pool.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.lb.get_lb">
 <code class="descclassname">pulumi_azure.lb.</code><code class="descname">get_lb</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.get_lb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Load Balancer</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/lb.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/lb.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

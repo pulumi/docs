@@ -15,13 +15,15 @@
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>endpoint_config_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the endpoint configuration to use.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the endpoint. If omitted, Terraform will assign a random, unique name.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the endpoint.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_endpoint.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.sagemaker.Endpoint.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.Endpoint.arn" title="Permalink to this definition">¶</a></dt>
@@ -37,7 +39,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.sagemaker.Endpoint.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.Endpoint.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the endpoint. If omitted, Terraform will assign a random, unique name.</p>
+<dd><p>The name of the endpoint.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -98,7 +100,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>kms_key_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the endpoint configuration. If omitted, Terraform will assign a random, unique name.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the endpoint configuration.</li>
 <li><strong>production_variants</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Fields are documented below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
@@ -106,6 +108,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_endpoint_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_endpoint_configuration.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.sagemaker.EndpointConfiguration.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.EndpointConfiguration.arn" title="Permalink to this definition">¶</a></dt>
@@ -121,7 +125,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.sagemaker.EndpointConfiguration.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.EndpointConfiguration.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the endpoint configuration. If omitted, Terraform will assign a random, unique name.</p>
+<dd><p>The name of the endpoint configuration.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -190,7 +194,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>containers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies containers in the inference pipeline. If not specified, the <code class="docutils literal notranslate"><span class="pre">primary_container</span></code> argument is required. Fields are documented below.</li>
 <li><strong>enable_network_isolation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Isolates the model container. No inbound or outbound network calls can be made to or from the model container.</li>
 <li><strong>execution_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A role that SageMaker can assume to access model artifacts and docker images for deployment.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the model (must be unique). If omitted, Terraform will assign a random, unique name.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the model.</li>
 <li><strong>primary_container</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the <code class="docutils literal notranslate"><span class="pre">container</span></code> argument is required. Fields are documented below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>vpc_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.</li>
@@ -199,6 +203,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_model.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_model.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.sagemaker.Model.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.Model.arn" title="Permalink to this definition">¶</a></dt>
@@ -226,7 +232,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.sagemaker.Model.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.Model.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the model (must be unique). If omitted, Terraform will assign a random, unique name.</p>
+<dd><p>The name of the model.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -311,6 +317,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_notebook_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_notebook_instance.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.sagemaker.NotebookInstance.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.NotebookInstance.arn" title="Permalink to this definition">¶</a></dt>
@@ -416,7 +424,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the lifecycle configuration (must be unique). If omitted, Terraform will assign a random, unique name.</li>
 <li><strong>on_create</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A shell script (base64-encoded) that runs only once when the SageMaker Notebook Instance is created.</li>
 <li><strong>on_start</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A shell script (base64-encoded) that runs every time the SageMaker Notebook Instance is started including the time it’s created.</li>
 </ul>
@@ -424,16 +431,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_notebook_instance_lifecycle_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_notebook_instance_lifecycle_configuration.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.sagemaker.NotebookInstanceLifecycleConfiguration.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.NotebookInstanceLifecycleConfiguration.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Resource Name (ARN) assigned by AWS to this lifecycle configuration.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.sagemaker.NotebookInstanceLifecycleConfiguration.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.NotebookInstanceLifecycleConfiguration.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the lifecycle configuration (must be unique). If omitted, Terraform will assign a random, unique name.</p>
 </dd></dl>
 
 <dl class="attribute">

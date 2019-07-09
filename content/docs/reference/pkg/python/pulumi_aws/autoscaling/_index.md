@@ -6,14 +6,7 @@
 <dl class="class">
 <dt id="pulumi_aws.autoscaling.Attachment">
 <em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">Attachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alb_target_group_arn=None</em>, <em>autoscaling_group_name=None</em>, <em>elb=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an AutoScaling Attachment resource.</p>
-<blockquote>
-<div><strong>NOTE on AutoScaling Groups and ASG Attachments:</strong> Terraform currently provides
-both a standalone ASG Attachment resource (describing an ASG attached to
-an ELB), and an AutoScaling Group resource with
-<code class="docutils literal notranslate"><span class="pre">load_balancers</span></code> defined in-line. At this time you cannot use an ASG with in-line
-load balancers in conjunction with an ASG Attachment resource. Doing so will cause a
-conflict and will overwrite attachments.</div></blockquote>
+<dd><p>Create a Attachment resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -29,6 +22,8 @@ conflict and will overwrite attachments.</div></blockquote>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_attachment.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.autoscaling.Attachment.alb_target_group_arn">
 <code class="descname">alb_target_group_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment.alb_target_group_arn" title="Permalink to this definition">¶</a></dt>
@@ -198,49 +193,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.autoscaling.Group">
 <em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zones=None</em>, <em>default_cooldown=None</em>, <em>desired_capacity=None</em>, <em>enabled_metrics=None</em>, <em>force_delete=None</em>, <em>health_check_grace_period=None</em>, <em>health_check_type=None</em>, <em>initial_lifecycle_hooks=None</em>, <em>launch_configuration=None</em>, <em>launch_template=None</em>, <em>load_balancers=None</em>, <em>max_size=None</em>, <em>metrics_granularity=None</em>, <em>min_elb_capacity=None</em>, <em>min_size=None</em>, <em>mixed_instances_policy=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>placement_group=None</em>, <em>protect_from_scale_in=None</em>, <em>service_linked_role_arn=None</em>, <em>suspended_processes=None</em>, <em>tags=None</em>, <em>tags_collection=None</em>, <em>target_group_arns=None</em>, <em>termination_policies=None</em>, <em>vpc_zone_identifiers=None</em>, <em>wait_for_capacity_timeout=None</em>, <em>wait_for_elb_capacity=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Group" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an AutoScaling Group resource.</p>
-<blockquote>
-<div><strong>Note:</strong> You must specify either <code class="docutils literal notranslate"><span class="pre">launch_configuration</span></code>, <code class="docutils literal notranslate"><span class="pre">launch_template</span></code>, or <code class="docutils literal notranslate"><span class="pre">mixed_instances_policy</span></code>.</div></blockquote>
-<p>A newly-created ASG is initially empty and begins to scale to <code class="docutils literal notranslate"><span class="pre">min_size</span></code> (or
-<code class="docutils literal notranslate"><span class="pre">desired_capacity</span></code>, if specified) by launching instances using the provided
-Launch Configuration. These instances take time to launch and boot.</p>
-<p>On ASG Update, changes to these values also take time to result in the target
-number of instances providing service.</p>
-<p>Terraform provides two mechanisms to help consistently manage ASG scale up
-time across dependent resources.</p>
-<p>The first is default behavior. Terraform waits after ASG creation for
-<code class="docutils literal notranslate"><span class="pre">min_size</span></code> (or <code class="docutils literal notranslate"><span class="pre">desired_capacity</span></code>, if specified) healthy instances to show up
-in the ASG before continuing.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">min_size</span></code> or <code class="docutils literal notranslate"><span class="pre">desired_capacity</span></code> are changed in a subsequent update,
-Terraform will also wait for the correct number of healthy instances before
-continuing.</p>
-<p>Terraform considers an instance “healthy” when the ASG reports <code class="docutils literal notranslate"><span class="pre">HealthStatus:</span>
-<span class="pre">&quot;Healthy&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">LifecycleState:</span> <span class="pre">&quot;InService&quot;</span></code>. See the <a class="reference external" href="https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/AutoScalingGroupLifecycle.html">AWS AutoScaling
-Docs</a>
-for more information on an ASG’s lifecycle.</p>
-<p>Terraform will wait for healthy instances for up to
-<code class="docutils literal notranslate"><span class="pre">wait_for_capacity_timeout</span></code>. If ASG creation is taking more than a few minutes,
-it’s worth investigating for scaling activity errors, which can be caused by
-problems with the selected Launch Configuration.</p>
-<p>Setting <code class="docutils literal notranslate"><span class="pre">wait_for_capacity_timeout</span></code> to <code class="docutils literal notranslate"><span class="pre">&quot;0&quot;</span></code> disables ASG Capacity waiting.</p>
-<p>The second mechanism is optional, and affects ASGs with attached ELBs specified
-via the <code class="docutils literal notranslate"><span class="pre">load_balancers</span></code> attribute or with ALBs specified with <code class="docutils literal notranslate"><span class="pre">target_group_arns</span></code>.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">min_elb_capacity</span></code> parameter causes Terraform to wait for at least the
-requested number of instances to show up <code class="docutils literal notranslate"><span class="pre">&quot;InService&quot;</span></code> in all attached ELBs
-during ASG creation.  It has no effect on ASG updates.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">wait_for_elb_capacity</span></code> is set, Terraform will wait for exactly that number
-of Instances to be <code class="docutils literal notranslate"><span class="pre">&quot;InService&quot;</span></code> in all attached ELBs on both creation and
-updates.</p>
-<p>These parameters can be used to ensure that service is being provided before
-Terraform moves on. If new instances don’t pass the ELB’s health checks for any
-reason, the Terraform apply will time out, and the ASG will be marked as
-tainted (i.e. marked to be destroyed in a follow up run).</p>
-<p>As with ASG Capacity, Terraform will wait for up to <code class="docutils literal notranslate"><span class="pre">wait_for_capacity_timeout</span></code>
-for the proper number of instances to be healthy.</p>
-<p>If ASG creation takes more than a few minutes, this could indicate one of a
-number of configuration problems. See the <a class="reference external" href="https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-troubleshooting.html">AWS Docs on Load Balancer
-Troubleshooting</a>
-for more information.</p>
+<dd><p>Create a Group resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -253,22 +206,6 @@ for more information.</p>
 <li><strong>desired_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of Amazon EC2 instances that
 should be running in the group. (See also Waiting for
 Capacity below.)</li>
-<li><strong>enabled_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of metrics to collect. The allowed values are <code class="docutils literal notranslate"><span class="pre">GroupMinSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupMaxSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupDesiredCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupInServiceInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupPendingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupStandbyInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTerminatingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTotalInstances</span></code>.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allows deleting the autoscaling group without waiting
-for all instances in the pool to terminate.  You can force an autoscaling group to delete
-even if it’s in the process of scaling a resource. Normally, Terraform
-drains all the instances before deleting the group.  This bypasses that
-behavior and potentially leaves resources dangling.</li>
 <li><strong>health_check_grace_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Time (in seconds) after instance comes into service before checking health.</li>
 <li><strong>health_check_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – “EC2” or “ELB”. Controls how health checking is done.</li>
 <li><strong>initial_lifecycle_hooks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more
@@ -284,14 +221,10 @@ a new autoscaling group. For all other use-cases, please use <code class="docuti
 group names. Only valid for classic load balancers. For ALBs, use <code class="docutils literal notranslate"><span class="pre">target_group_arns</span></code> instead.</li>
 <li><strong>max_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum size of the auto scale group.</li>
 <li><strong>metrics_granularity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The granularity to associate with the metrics to collect. The only valid value is <code class="docutils literal notranslate"><span class="pre">1Minute</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">1Minute</span></code>.</li>
-<li><strong>min_elb_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Setting this causes Terraform to wait for
-this number of instances from this autoscaling group to show up healthy in the
-ELB only on creation. Updates will not wait on ELB instance number changes.
-(See also Waiting for Capacity below.)</li>
 <li><strong>min_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum size of the auto scale group.
 (See also Waiting for Capacity below.)</li>
 <li><strong>mixed_instances_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the auto scaling group. By default generated by Terraform.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the autoscale group</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the placement group into which you’ll launch your instances, if any.</li>
@@ -306,16 +239,13 @@ Note that if you suspend either the <code class="docutils literal notranslate"><
 <li><strong>target_group_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of <code class="docutils literal notranslate"><span class="pre">aws_alb_target_group</span></code> ARNs, for use with Application or Network Load Balancing.</li>
 <li><strong>termination_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are <code class="docutils literal notranslate"><span class="pre">OldestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchConfiguration</span></code>, <code class="docutils literal notranslate"><span class="pre">ClosestToNextInstanceHour</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchTemplate</span></code>, <code class="docutils literal notranslate"><span class="pre">AllocationStrategy</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</li>
 <li><strong>vpc_zone_identifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of subnet IDs to launch resources in.</li>
-<li><strong>wait_for_elb_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Setting this will cause Terraform to wait
-for exactly this number of healthy instances from this autoscaling group in
-all attached load balancers on both create and update operations. (Takes
-precedence over <code class="docutils literal notranslate"><span class="pre">min_elb_capacity</span></code> behavior.)
-(See also Waiting for Capacity below.)</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_group.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.autoscaling.Group.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.arn" title="Permalink to this definition">¶</a></dt>
@@ -340,29 +270,6 @@ precedence over <code class="docutils literal notranslate"><span class="pre">min
 <dd><p>The number of Amazon EC2 instances that
 should be running in the group. (See also Waiting for
 Capacity below.)</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.autoscaling.Group.enabled_metrics">
-<code class="descname">enabled_metrics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.enabled_metrics" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of metrics to collect. The allowed values are <code class="docutils literal notranslate"><span class="pre">GroupMinSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupMaxSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupDesiredCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupInServiceInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupPendingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupStandbyInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTerminatingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTotalInstances</span></code>.</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">wait_for_capacity_timeout</span></code> (Default: “10m”) A maximum
-<a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration</a> that Terraform should
-wait for ASG instances to be healthy before timing out.  (See also Waiting
-for Capacity below.) Setting this to “0” causes
-Terraform to skip all Capacity Waiting behavior.</li>
-</ul>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.autoscaling.Group.force_delete">
-<code class="descname">force_delete</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.force_delete" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows deleting the autoscaling group without waiting
-for all instances in the pool to terminate.  You can force an autoscaling group to delete
-even if it’s in the process of scaling a resource. Normally, Terraform
-drains all the instances before deleting the group.  This bypasses that
-behavior and potentially leaves resources dangling.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -421,15 +328,6 @@ group names. Only valid for classic load balancers. For ALBs, use <code class="d
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_aws.autoscaling.Group.min_elb_capacity">
-<code class="descname">min_elb_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.min_elb_capacity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Setting this causes Terraform to wait for
-this number of instances from this autoscaling group to show up healthy in the
-ELB only on creation. Updates will not wait on ELB instance number changes.
-(See also Waiting for Capacity below.)</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_aws.autoscaling.Group.min_size">
 <code class="descname">min_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.min_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The minimum size of the auto scale group.
@@ -445,7 +343,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
 <dl class="attribute">
 <dt id="pulumi_aws.autoscaling.Group.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the auto scaling group. By default generated by Terraform.</p>
+<dd><p>The name of the autoscale group</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -512,16 +410,6 @@ Note that if you suspend either the <code class="docutils literal notranslate"><
 <dd><p>A list of subnet IDs to launch resources in.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.autoscaling.Group.wait_for_elb_capacity">
-<code class="descname">wait_for_elb_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.wait_for_elb_capacity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Setting this will cause Terraform to wait
-for exactly this number of healthy instances from this autoscaling group in
-all attached load balancers on both create and update operations. (Takes
-precedence over <code class="docutils literal notranslate"><span class="pre">min_elb_capacity</span></code> behavior.)
-(See also Waiting for Capacity below.)</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_aws.autoscaling.Group.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Group.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -565,19 +453,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.autoscaling.LifecycleHook">
 <em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">LifecycleHook</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>autoscaling_group_name=None</em>, <em>default_result=None</em>, <em>heartbeat_timeout=None</em>, <em>lifecycle_transition=None</em>, <em>name=None</em>, <em>notification_metadata=None</em>, <em>notification_target_arn=None</em>, <em>role_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an AutoScaling Lifecycle Hook resource.</p>
-<blockquote>
-<div><strong>NOTE:</strong> Terraform has two types of ways you can add lifecycle hooks - via
-the <code class="docutils literal notranslate"><span class="pre">initial_lifecycle_hook</span></code> attribute from the
-<cite>``aws_autoscaling_group`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html</a>&gt;`_
-resource, or via this one. Hooks added via this resource will not be added
-until the autoscaling group has been created, and depending on your
-<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#waiting-for-capacity">capacity</a>
-settings, after the initial instances have been launched, creating unintended
-behavior. If you need hooks to run on all instances, add them with
-<code class="docutils literal notranslate"><span class="pre">initial_lifecycle_hook</span></code> in
-<cite>``aws_autoscaling_group`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html</a>&gt;`_,
-but take care to not duplicate those hooks with this resource.</div></blockquote>
+<dd><p>Create a LifecycleHook resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -598,6 +474,8 @@ but take care to not duplicate those hooks with this resource.</div></blockquote
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_lifecycle_hook.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_lifecycle_hook.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.autoscaling.LifecycleHook.autoscaling_group_name">
 <code class="descname">autoscaling_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook.autoscaling_group_name" title="Permalink to this definition">¶</a></dt>
@@ -708,6 +586,8 @@ notifications. Acceptable values are documented [in the AWS documentation here][
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_notification.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.autoscaling.Notification.group_names">
 <code class="descname">group_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Notification.group_names" title="Permalink to this definition">¶</a></dt>
@@ -800,6 +680,8 @@ up. A negative value scales down.</li>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_policy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.autoscaling.Policy.adjustment_type">
 <code class="descname">adjustment_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.adjustment_type" title="Permalink to this definition">¶</a></dt>
@@ -930,6 +812,8 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_schedule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_schedule.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.autoscaling.Schedule.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule.arn" title="Permalink to this definition">¶</a></dt>
@@ -1032,6 +916,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.autoscaling.get_group">
 <code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">get_group</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.get_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information on an existing autoscaling group.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/autoscaling_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/autoscaling_group.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

@@ -27,6 +27,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/devspace_controller.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/devspace_controller.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.devspace.Controller.data_plane_fqdn">
 <code class="descname">data_plane_fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devspace.Controller.data_plane_fqdn" title="Permalink to this definition">¶</a></dt>

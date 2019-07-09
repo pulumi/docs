@@ -24,6 +24,8 @@ This resource will error if you try to create a project in another region.</p>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/devicefarm_project.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/devicefarm_project.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.devicefarm.Project.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.devicefarm.Project.arn" title="Permalink to this definition">¶</a></dt>

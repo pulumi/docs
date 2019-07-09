@@ -25,6 +25,8 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_aws.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_datadog.aws.Integration.account_id">
 <code class="descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.aws.Integration.account_id" title="Permalink to this definition">¶</a></dt>
