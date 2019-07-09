@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_aws.ram">
-<span id="ram"></span><h1>ram<a class="headerlink" href="#module-pulumi_aws.ram" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="ram">
+<h1>ram<a class="headerlink" href="#ram" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_aws.ram"></span><dl class="class">
 <dt id="pulumi_aws.ram.GetResourceShareResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ram.</code><code class="descname">GetResourceShareResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>name=None</em>, <em>resource_owner=None</em>, <em>status=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ram.GetResourceShareResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getResourceShare.</p>

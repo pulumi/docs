@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_openstack.vpnaas">
-<span id="vpnaas"></span><h1>vpnaas<a class="headerlink" href="#module-pulumi_openstack.vpnaas" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="vpnaas">
+<h1>vpnaas<a class="headerlink" href="#vpnaas" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-openstack/issues">pulumi/pulumi-openstack repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/issues">terraform-providers/terraform-provider-openstack repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_openstack.vpnaas"></span><dl class="class">
 <dt id="pulumi_openstack.vpnaas.EndpointGroup">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">EndpointGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>endpoints=None</em>, <em>name=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>type=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.EndpointGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron Endpoint Group resource within OpenStack.</p>

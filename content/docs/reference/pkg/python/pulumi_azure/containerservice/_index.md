@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_azure.containerservice">
-<span id="containerservice"></span><h1>containerservice<a class="headerlink" href="#module-pulumi_azure.containerservice" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="containerservice">
+<h1>containerservice<a class="headerlink" href="#containerservice" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure/issues">terraform-providers/terraform-provider-azure repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_azure.containerservice"></span><dl class="class">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult">
 <em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">GetKubernetesClusterResult</code><span class="sig-paren">(</span><em>addon_profiles=None</em>, <em>agent_pool_profiles=None</em>, <em>dns_prefix=None</em>, <em>fqdn=None</em>, <em>kube_admin_configs=None</em>, <em>kube_admin_config_raw=None</em>, <em>kube_configs=None</em>, <em>kube_config_raw=None</em>, <em>kubernetes_version=None</em>, <em>linux_profiles=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_profiles=None</em>, <em>node_resource_group=None</em>, <em>resource_group_name=None</em>, <em>role_based_access_controls=None</em>, <em>service_principals=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKubernetesCluster.</p>

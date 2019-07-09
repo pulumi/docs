@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_postgresql">
-<span id="pulumi-postgresql"></span><h1>Pulumi PostgreSQL<a class="headerlink" href="#module-pulumi_postgresql" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="pulumi-postgresql">
+<h1>Pulumi PostgreSQL<a class="headerlink" href="#pulumi-postgresql" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-postgresql/issues">pulumi/pulumi-postgresql repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/issues">terraform-providers/terraform-provider-postgresql repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_postgresql"></span><dl class="class">
 <dt id="pulumi_postgresql.Database">
 <em class="property">class </em><code class="descclassname">pulumi_postgresql.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_connections=None</em>, <em>connection_limit=None</em>, <em>encoding=None</em>, <em>is_template=None</em>, <em>lc_collate=None</em>, <em>lc_ctype=None</em>, <em>name=None</em>, <em>owner=None</em>, <em>tablespace_name=None</em>, <em>template=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">postgresql_database</span></code> resource creates and manages <a class="reference external" href="https://www.postgresql.org/docs/current/static/managing-databases.html">database

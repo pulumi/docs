@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_azure.storage">
-<span id="storage"></span><h1>storage<a class="headerlink" href="#module-pulumi_azure.storage" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="storage">
+<h1>storage<a class="headerlink" href="#storage" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure/issues">terraform-providers/terraform-provider-azure repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_azure.storage"></span><dl class="class">
 <dt id="pulumi_azure.storage.Account">
 <em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access_tier=None</em>, <em>account_encryption_source=None</em>, <em>account_kind=None</em>, <em>account_replication_type=None</em>, <em>account_tier=None</em>, <em>account_type=None</em>, <em>custom_domain=None</em>, <em>enable_blob_encryption=None</em>, <em>enable_file_encryption=None</em>, <em>enable_https_traffic_only=None</em>, <em>identity=None</em>, <em>is_hns_enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_rules=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Storage Account.</p>

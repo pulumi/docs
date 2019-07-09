@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_gcp.logging">
-<span id="logging"></span><h1>logging<a class="headerlink" href="#module-pulumi_gcp.logging" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="logging">
+<h1>logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gcp">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gcp/issues">terraform-providers/terraform-provider-gcp repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_gcp.logging"></span><dl class="class">
 <dt id="pulumi_gcp.logging.BillingAccountExclusion">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">BillingAccountExclusion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>billing_account=None</em>, <em>description=None</em>, <em>disabled=None</em>, <em>filter=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountExclusion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a BillingAccountExclusion resource with the given unique name, props, and options.</p>

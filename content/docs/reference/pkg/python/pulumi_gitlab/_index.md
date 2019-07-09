@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_gitlab">
-<span id="pulumi-gitlab"></span><h1>Pulumi GitLab<a class="headerlink" href="#module-pulumi_gitlab" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="pulumi-gitlab">
+<h1>Pulumi GitLab<a class="headerlink" href="#pulumi-gitlab" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-gitlab/issues">pulumi/pulumi-gitlab repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/issues">terraform-providers/terraform-provider-gitlab repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_gitlab"></span><dl class="class">
 <dt id="pulumi_gitlab.BranchProtection">
 <em class="property">class </em><code class="descclassname">pulumi_gitlab.</code><code class="descname">BranchProtection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>branch=None</em>, <em>merge_access_level=None</em>, <em>project=None</em>, <em>push_access_level=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.BranchProtection" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to protect a specific branch by an access level so that the user with less access level cannot Merge/Push to the branch. GitLab EE features to protect by group or user are not supported.</p>

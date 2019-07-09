@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_datadog.pagerduty">
-<span id="pagerduty"></span><h1>pagerduty<a class="headerlink" href="#module-pulumi_datadog.pagerduty" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="pagerduty">
+<h1>pagerduty<a class="headerlink" href="#pagerduty" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-datadog/issues">pulumi/pulumi-datadog repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog/issues">terraform-providers/terraform-provider-datadog repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_datadog.pagerduty"></span><dl class="class">
 <dt id="pulumi_datadog.pagerduty.Integration">
 <em class="property">class </em><code class="descclassname">pulumi_datadog.pagerduty.</code><code class="descname">Integration</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_token=None</em>, <em>schedules=None</em>, <em>services=None</em>, <em>subdomain=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Datadog - PagerDuty resource. This can be used to create and manage Datadog - PagerDuty integration.</p>

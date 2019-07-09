@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_azure.scheduler">
-<span id="scheduler"></span><h1>scheduler<a class="headerlink" href="#module-pulumi_azure.scheduler" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="scheduler">
+<h1>scheduler<a class="headerlink" href="#scheduler" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure/issues">terraform-providers/terraform-provider-azure repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_azure.scheduler"></span><dl class="class">
 <dt id="pulumi_azure.scheduler.GetJobCollectionResult">
 <em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">GetJobCollectionResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>name=None</em>, <em>quotas=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.GetJobCollectionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getJobCollection.</p>

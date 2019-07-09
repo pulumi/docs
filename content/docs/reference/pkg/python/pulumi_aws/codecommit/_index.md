@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_aws.codecommit">
-<span id="codecommit"></span><h1>codecommit<a class="headerlink" href="#module-pulumi_aws.codecommit" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="codecommit">
+<h1>codecommit<a class="headerlink" href="#codecommit" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_aws.codecommit"></span><dl class="class">
 <dt id="pulumi_aws.codecommit.GetRepositoryResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">GetRepositoryResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>clone_url_http=None</em>, <em>clone_url_ssh=None</em>, <em>repository_id=None</em>, <em>repository_name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.GetRepositoryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRepository.</p>

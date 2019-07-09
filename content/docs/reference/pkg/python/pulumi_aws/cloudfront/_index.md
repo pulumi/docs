@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_aws.cloudfront">
-<span id="cloudfront"></span><h1>cloudfront<a class="headerlink" href="#module-pulumi_aws.cloudfront" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="cloudfront">
+<h1>cloudfront<a class="headerlink" href="#cloudfront" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_aws.cloudfront"></span><dl class="class">
 <dt id="pulumi_aws.cloudfront.Distribution">
 <em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">Distribution</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aliases=None</em>, <em>comment=None</em>, <em>custom_error_responses=None</em>, <em>default_cache_behavior=None</em>, <em>default_root_object=None</em>, <em>enabled=None</em>, <em>http_version=None</em>, <em>is_ipv6_enabled=None</em>, <em>logging_config=None</em>, <em>ordered_cache_behaviors=None</em>, <em>origins=None</em>, <em>origin_groups=None</em>, <em>price_class=None</em>, <em>restrictions=None</em>, <em>retain_on_delete=None</em>, <em>tags=None</em>, <em>viewer_certificate=None</em>, <em>wait_for_deployment=None</em>, <em>web_acl_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Amazon CloudFront web distribution.</p>

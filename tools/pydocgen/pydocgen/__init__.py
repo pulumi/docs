@@ -28,7 +28,7 @@ import shutil
 from subprocess import check_call
 import sys
 import tempfile
-from typing import NamedTuple, List
+from typing import NamedTuple, List, Optional
 from jinja2 import Environment, PackageLoader, select_autoescape
 
 class Project(NamedTuple):
@@ -44,10 +44,12 @@ class Project(NamedTuple):
 
 class Provider(NamedTuple):
     """
-    A provider is a tuple of "name" (a human-readable name) and "package_name" (the actual Python package name).
+    A provider is a tuple of "name" (a human-readable name) and "package_name" (the actual Python package name) and
+    a name of the terraform provider this is derived from, in the case of providers generated using pulumi-terraform
     """
     name: str
     package_name: str
+    terraform_provider_name: Optional[str]
 
 class Input(NamedTuple):
     """
@@ -153,9 +155,15 @@ def generate_module(ctx, provider, import_path, output_path, use_provider_metada
     # Construct the "metadata" for this module. This metadata bag is passed verbatim to the template engine.
     module_name = module.__name__.split(".").pop()
     if use_provider_metadata:
-        meta = { "name": provider.name, "package_name": provider.package_name, "directory_name": provider.package_name }
+        meta = { 
+            "name": provider.name, "package_name": provider.package_name, "directory_name": provider.package_name,
+            "terraform_provider_name": provider.terraform_provider_name,
+         }
     else:
-        meta = { "name": module_name, "package_name": module.__name__, "directory_name": module_name }
+        meta = { 
+            "name": module_name, "package_name": module.__name__, "directory_name": module_name,
+            "terraform_provider_name": provider.terraform_provider_name
+        }
 
     # If this module doesn't have any submodules, we're going to generate all of the type documentation in a single file
     # and not proceed any further.
@@ -216,7 +224,7 @@ def transform_sphinx_output_to_markdown(ctx: Context):
     """
     out_base  = create_dir(ctx.mdoutdir, "python")
     base_json = path.join(ctx.outdir, "providers")
-    pulumi_pkg = Provider(name="Pulumi SDK", package_name="pulumi")
+    pulumi_pkg = Provider(name="Pulumi SDK", package_name="pulumi", terraform_provider_name="")
     for provider in ctx.input.providers + [pulumi_pkg]:
         provider_path = create_dir(out_base, provider.package_name)
         provider_sphinx_output = path.join(base_json, provider.package_name)

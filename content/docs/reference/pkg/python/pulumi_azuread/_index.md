@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_azuread">
-<span id="pulumi-azure-active-directory"></span><h1>Pulumi Azure Active Directory<a class="headerlink" href="#module-pulumi_azuread" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="pulumi-azure-active-directory">
+<h1>Pulumi Azure Active Directory<a class="headerlink" href="#pulumi-azure-active-directory" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-azuread/issues">pulumi/pulumi-azuread repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/issues">terraform-providers/terraform-provider-azuread repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_azuread"></span><dl class="class">
 <dt id="pulumi_azuread.Application">
 <em class="property">class </em><code class="descclassname">pulumi_azuread.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>available_to_other_tenants=None</em>, <em>group_membership_claims=None</em>, <em>homepage=None</em>, <em>identifier_uris=None</em>, <em>name=None</em>, <em>oauth2_allow_implicit_flow=None</em>, <em>reply_urls=None</em>, <em>required_resource_accesses=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Application within Azure Active Directory.</p>

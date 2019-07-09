@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_openstack.sharedfilesystem">
-<span id="sharedfilesystem"></span><h1>sharedfilesystem<a class="headerlink" href="#module-pulumi_openstack.sharedfilesystem" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="sharedfilesystem">
+<h1>sharedfilesystem<a class="headerlink" href="#sharedfilesystem" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-openstack/issues">pulumi/pulumi-openstack repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/issues">terraform-providers/terraform-provider-openstack repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_openstack.sharedfilesystem"></span><dl class="class">
 <dt id="pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">GetAvailbilityZonesResult</code><span class="sig-paren">(</span><em>names=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAvailbilityZones.</p>

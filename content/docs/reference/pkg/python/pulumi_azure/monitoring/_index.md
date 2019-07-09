@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_azure.monitoring">
-<span id="monitoring"></span><h1>monitoring<a class="headerlink" href="#module-pulumi_azure.monitoring" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="monitoring">
+<h1>monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure/issues">terraform-providers/terraform-provider-azure repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_azure.monitoring"></span><dl class="class">
 <dt id="pulumi_azure.monitoring.ActionGroup">
 <em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">ActionGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>email_receivers=None</em>, <em>enabled=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>short_name=None</em>, <em>sms_receivers=None</em>, <em>tags=None</em>, <em>webhook_receivers=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Action Group within Azure Monitor.</p>

@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_mysql">
-<span id="pulumi-mysql"></span><h1>Pulumi MySQL<a class="headerlink" href="#module-pulumi_mysql" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="pulumi-mysql">
+<h1>Pulumi MySQL<a class="headerlink" href="#pulumi-mysql" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-mysql/issues">pulumi/pulumi-mysql repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/issues">terraform-providers/terraform-provider-mysql repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_mysql"></span><dl class="class">
 <dt id="pulumi_mysql.Database">
 <em class="property">class </em><code class="descclassname">pulumi_mysql.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_character_set=None</em>, <em>default_collation=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">mysql_database</span></code> resource creates and manages a database on a MySQL

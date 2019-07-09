@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_azure.managementgroups">
-<span id="managementgroups"></span><h1>managementgroups<a class="headerlink" href="#module-pulumi_azure.managementgroups" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="managementgroups">
+<h1>managementgroups<a class="headerlink" href="#managementgroups" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure/issues">terraform-providers/terraform-provider-azure repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_azure.managementgroups"></span><dl class="class">
 <dt id="pulumi_azure.managementgroups.GetManagementGroupResult">
 <em class="property">class </em><code class="descclassname">pulumi_azure.managementgroups.</code><code class="descname">GetManagementGroupResult</code><span class="sig-paren">(</span><em>display_name=None</em>, <em>group_id=None</em>, <em>parent_management_group_id=None</em>, <em>subscription_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.GetManagementGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getManagementGroup.</p>

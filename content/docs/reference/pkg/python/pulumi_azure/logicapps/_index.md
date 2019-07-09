@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_azure.logicapps">
-<span id="logicapps"></span><h1>logicapps<a class="headerlink" href="#module-pulumi_azure.logicapps" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="logicapps">
+<h1>logicapps<a class="headerlink" href="#logicapps" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure/issues">terraform-providers/terraform-provider-azure repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_azure.logicapps"></span><dl class="class">
 <dt id="pulumi_azure.logicapps.ActionCustom">
 <em class="property">class </em><code class="descclassname">pulumi_azure.logicapps.</code><code class="descname">ActionCustom</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>body=None</em>, <em>logic_app_id=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Custom Action within a Logic App Workflow</p>

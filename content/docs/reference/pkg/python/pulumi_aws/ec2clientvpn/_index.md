@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_aws.ec2clientvpn">
-<span id="ec2clientvpn"></span><h1>ec2clientvpn<a class="headerlink" href="#module-pulumi_aws.ec2clientvpn" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="ec2clientvpn">
+<h1>ec2clientvpn<a class="headerlink" href="#ec2clientvpn" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_aws.ec2clientvpn"></span><dl class="class">
 <dt id="pulumi_aws.ec2clientvpn.Endpoint">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2clientvpn.</code><code class="descname">Endpoint</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication_options=None</em>, <em>client_cidr_block=None</em>, <em>connection_log_options=None</em>, <em>description=None</em>, <em>dns_servers=None</em>, <em>server_certificate_arn=None</em>, <em>tags=None</em>, <em>transport_protocol=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2clientvpn.Endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Client VPN endpoint for OpenVPN clients. For more information on usage, please see the

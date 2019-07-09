@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_azure.keyvault">
-<span id="keyvault"></span><h1>keyvault<a class="headerlink" href="#module-pulumi_azure.keyvault" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="keyvault">
+<h1>keyvault<a class="headerlink" href="#keyvault" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure/issues">terraform-providers/terraform-provider-azure repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_azure.keyvault"></span><dl class="class">
 <dt id="pulumi_azure.keyvault.AccessPolicy">
 <em class="property">class </em><code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">AccessPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application_id=None</em>, <em>certificate_permissions=None</em>, <em>key_permissions=None</em>, <em>key_vault_id=None</em>, <em>object_id=None</em>, <em>resource_group_name=None</em>, <em>secret_permissions=None</em>, <em>storage_permissions=None</em>, <em>tenant_id=None</em>, <em>vault_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.AccessPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Key Vault Access Policy.</p>

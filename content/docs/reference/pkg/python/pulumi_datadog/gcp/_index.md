@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_datadog.gcp">
-<span id="gcp"></span><h1>gcp<a class="headerlink" href="#module-pulumi_datadog.gcp" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="gcp">
+<h1>gcp<a class="headerlink" href="#gcp" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-datadog/issues">pulumi/pulumi-datadog repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog/issues">terraform-providers/terraform-provider-datadog repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_datadog.gcp"></span><dl class="class">
 <dt id="pulumi_datadog.gcp.Integration">
 <em class="property">class </em><code class="descclassname">pulumi_datadog.gcp.</code><code class="descname">Integration</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>client_email=None</em>, <em>client_id=None</em>, <em>host_filters=None</em>, <em>private_key=None</em>, <em>private_key_id=None</em>, <em>project_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.gcp.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Datadog - Google Cloud Platform integration resource. This can be used to create and manage Datadog - Google Cloud Platform integration.</p>

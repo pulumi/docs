@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_gcp.appengine">
-<span id="appengine"></span><h1>appengine<a class="headerlink" href="#module-pulumi_gcp.appengine" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="appengine">
+<h1>appengine<a class="headerlink" href="#appengine" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gcp">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gcp/issues">terraform-providers/terraform-provider-gcp repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_gcp.appengine"></span><dl class="class">
 <dt id="pulumi_gcp.appengine.Application">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.appengine.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auth_domain=None</em>, <em>feature_settings=None</em>, <em>location_id=None</em>, <em>project=None</em>, <em>serving_status=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.appengine.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Application resource with the given unique name, props, and options.</p>

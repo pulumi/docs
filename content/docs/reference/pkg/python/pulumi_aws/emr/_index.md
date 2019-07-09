@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_aws.emr">
-<span id="emr"></span><h1>emr<a class="headerlink" href="#module-pulumi_aws.emr" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="emr">
+<h1>emr<a class="headerlink" href="#emr" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_aws.emr"></span><dl class="class">
 <dt id="pulumi_aws.emr.Cluster">
 <em class="property">class </em><code class="descclassname">pulumi_aws.emr.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>additional_info=None</em>, <em>applications=None</em>, <em>autoscaling_role=None</em>, <em>bootstrap_actions=None</em>, <em>configurations=None</em>, <em>configurations_json=None</em>, <em>core_instance_count=None</em>, <em>core_instance_group=None</em>, <em>core_instance_type=None</em>, <em>custom_ami_id=None</em>, <em>ebs_root_volume_size=None</em>, <em>ec2_attributes=None</em>, <em>instance_groups=None</em>, <em>keep_job_flow_alive_when_no_steps=None</em>, <em>kerberos_attributes=None</em>, <em>log_uri=None</em>, <em>master_instance_group=None</em>, <em>master_instance_type=None</em>, <em>name=None</em>, <em>release_label=None</em>, <em>scale_down_behavior=None</em>, <em>security_configuration=None</em>, <em>service_role=None</em>, <em>steps=None</em>, <em>tags=None</em>, <em>termination_protection=None</em>, <em>visible_to_all_users=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Cluster resource with the given unique name, props, and options.</p>

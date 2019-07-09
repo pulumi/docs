@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_f5bigip.cm">
-<span id="cm"></span><h1>cm<a class="headerlink" href="#module-pulumi_f5bigip.cm" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="cm">
+<h1>cm<a class="headerlink" href="#cm" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-f5bigip">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-f5bigip/issues">pulumi/pulumi-f5bigip repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-f5bigip/issues">terraform-providers/terraform-provider-f5bigip repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_f5bigip.cm"></span><dl class="class">
 <dt id="pulumi_f5bigip.cm.Device">
 <em class="property">class </em><code class="descclassname">pulumi_f5bigip.cm.</code><code class="descname">Device</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>configsync_ip=None</em>, <em>mirror_ip=None</em>, <em>mirror_secondary_ip=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.cm.Device" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">bigip_cm_device</span></code> provides details about a specific bigip</p>

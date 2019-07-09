@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_openstack.blockstorage">
-<span id="blockstorage"></span><h1>blockstorage<a class="headerlink" href="#module-pulumi_openstack.blockstorage" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="blockstorage">
+<h1>blockstorage<a class="headerlink" href="#blockstorage" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-openstack/issues">pulumi/pulumi-openstack repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/issues">terraform-providers/terraform-provider-openstack repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_openstack.blockstorage"></span><dl class="class">
 <dt id="pulumi_openstack.blockstorage.GetAvailabilityZonesV3Result">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">GetAvailabilityZonesV3Result</code><span class="sig-paren">(</span><em>names=None</em>, <em>region=None</em>, <em>state=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.GetAvailabilityZonesV3Result" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAvailabilityZonesV3.</p>

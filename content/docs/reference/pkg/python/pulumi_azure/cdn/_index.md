@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_azure.cdn">
-<span id="cdn"></span><h1>cdn<a class="headerlink" href="#module-pulumi_azure.cdn" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="cdn">
+<h1>cdn<a class="headerlink" href="#cdn" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure/issues">terraform-providers/terraform-provider-azure repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_azure.cdn"></span><dl class="class">
 <dt id="pulumi_azure.cdn.Endpoint">
 <em class="property">class </em><code class="descclassname">pulumi_azure.cdn.</code><code class="descname">Endpoint</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>content_types_to_compresses=None</em>, <em>geo_filters=None</em>, <em>is_compression_enabled=None</em>, <em>is_http_allowed=None</em>, <em>is_https_allowed=None</em>, <em>location=None</em>, <em>name=None</em>, <em>optimization_type=None</em>, <em>origins=None</em>, <em>origin_host_header=None</em>, <em>origin_path=None</em>, <em>probe_path=None</em>, <em>profile_name=None</em>, <em>querystring_caching_behaviour=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cdn.Endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>A CDN Endpoint is the entity within a CDN Profile containing configuration information regarding caching behaviors and origins. The CDN Endpoint is exposed using the URL format <span class="raw-html-m2r"><endpointname></span>.azureedge.net.</p>

@@ -1,9 +1,14 @@
 ---
 ---
 
-<div class="section" id="module-pulumi_azure.hdinsight">
-<span id="hdinsight"></span><h1>hdinsight<a class="headerlink" href="#module-pulumi_azure.hdinsight" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="hdinsight">
+<h1>hdinsight<a class="headerlink" href="#hdinsight" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure">Terraform Provider</a> distributed under
+<a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
+<a class="reference external" href="https://github.com/pulumi/pulumi-azure/issues">pulumi/pulumi-azure repo</a>; however, if that doesn’t turn up
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azure/issues">terraform-providers/terraform-provider-azure repo</a>.</div></blockquote>
+<span class="target" id="module-pulumi_azure.hdinsight"></span><dl class="class">
 <dt id="pulumi_azure.hdinsight.GetClusterResult">
 <em class="property">class </em><code class="descclassname">pulumi_azure.hdinsight.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>cluster_version=None</em>, <em>component_versions=None</em>, <em>edge_ssh_endpoint=None</em>, <em>gateways=None</em>, <em>https_endpoint=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>ssh_endpoint=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
