@@ -32,6 +32,5 @@ script:
 after_script:
 # Maybe kick off next build.
 - travisqueue finish
-# TODO: Reenable once kinks worked out.
-# notifications:
-#   webhooks: https://ufci1w66n3.execute-api.us-west-2.amazonaws.com/stage/travis
+notifications:
+  webhooks: https://ufci1w66n3.execute-api.us-west-2.amazonaws.com/stage/travis
