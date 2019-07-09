@@ -70,7 +70,11 @@ steps:
   - 'BUILD_TYPE=$_BUILD_TYPE'
 ```
 
-In the above configuration, we use a substitution `_BUILD_TYPE` to indicate to the build environment about the type of build it is running. This allows us to run a `preview` or an `update` based on the build type. To configure the substitution, you need to setup build triggers for each type of branch builds you intend to support for your project.
+In the above configuration, both `_BUILD_TYPE` and `_INSECURE_SUBSTITUTION_PULUMI_ACCESS_TOKEN` are substitutions configured in Cloud Build Triggers. You can read more about triggers [here](https://cloud.google.com/cloud-build/docs/running-builds/automate-builds).
+
+* `_BUILD_TYPE` is used to indicate to the build environment about the type of build it is running. This allows us to run a `preview` or an `update` based on the build type. To configure the substitution, you need to setup build triggers for each type of branch builds you intend to support for your project.
+
+* `_INSECURE_SUBSTITUTION_PULUMI_ACCESS_TOKEN` is used to supply the [Pulumi Access Token](https://app.pulumi.com/account/tokens) value.
 
 For example, if you only want to support PR and merge builds, setup two triggers with the filter pattern `master` for all merge builds and `^master` for all other builds.
 
