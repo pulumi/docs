@@ -1,5 +1,4 @@
 User-agent: *
-{{- /* baseURL is a template.URL, so we need to convert it before we compare it.  */ -}}
-{{- if ne (string .Site.BaseURL) "https://www.pulumi.com/" }}
+{{- if ne hugo.Environment "production" }}
 Disallow: *
 {{ end }}

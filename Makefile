@@ -1,3 +1,7 @@
+# The SITE_ENVIRONMENT environment variable determines which Hugo environment
+# to build/serve.
+SITE_ENVIRONMENT ?= default
+
 .PHONY: default
 default: banner generate build
 
@@ -17,7 +21,7 @@ ensure:
 .PHONY: serve
 serve:
 	@echo -e "\033[0;32mSERVE:\033[0m"
-	hugo server -D
+	hugo server --buildDrafts --environment $(SITE_ENVIRONMENT)
 
 .PHONY: generate
 generate:
@@ -28,8 +32,8 @@ generate:
 
 .PHONY: build
 build:
-	@echo -e "\033[0;32mBUILD:\033[0m"
-	hugo
+	@echo -e "\033[0;32mBUILD ($(SITE_ENVIRONMENT)):\033[0m"
+	hugo --environment $(SITE_ENVIRONMENT)
 	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
 	rm -rf ./public/docs/search-data
 
@@ -54,7 +58,9 @@ test:
 
 .PHONY: validate
 validate:
-	hugo server -D --disableBrowserError --disableLiveReload &>/dev/null &
+	hugo server \
+	    --buildDrafts --disableBrowserError --disableLiveReload  --environment $(SITE_ENVIRONMENT) \
+	    &>/dev/null &
 	while ! nc -z localhost 1313; do sleep 0.1; done
 	$(MAKE) test
 	pkill -f hugo
@@ -73,7 +79,7 @@ else ifeq ($(TRAVIS_BRANCH),master)
 	$(MAKE) validate
 	./scripts/run-pulumi.sh update staging
 else ifeq ($(TRAVIS_BRANCH),production)
-	HUGO_BASEURL=https://www.pulumi.com/ $(MAKE) build
+	SITE_ENVIRONMENT=production HUGO_BASEURL=https://www.pulumi.com/ $(MAKE) build
 	$(MAKE) validate
 	./scripts/run-pulumi.sh update production
 else

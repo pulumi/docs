@@ -1,0 +1,30 @@
+baseURL = "https://www.pulumi.com/"
+languageCode = "en-us"
+title = "Pulumi"
+
+disableKinds = ["category", "taxonomyTerm"]
+sectionPagesMenu = "main"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+# We always generate the robots.txt file. But based on the environment
+# built, it may disallow crawling.
+enableRobotsTXT = true
+
+[outputFormats.RSS]
+    baseName = "rss"
+
+[taxonomies]
+    author = "authors"
+    tag = "tags"
+
+[permalinks]
+    authors = "/blog/author/:slug/"
+    tags = "/blog/tag/:slug/"
+
+[blackfriday]
+    fractions = false
+
+[params]
+    repositoryURL = "https://github.com/pulumi/docs"
+    repositoryBranch = "master"

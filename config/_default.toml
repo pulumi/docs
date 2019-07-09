@@ -1,4 +1,4 @@
-baseURL = "https://www.pulumi.com/"
+baseURL = "https://www.example.com/"
 languageCode = "en-us"
 title = "Pulumi"
 
