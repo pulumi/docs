@@ -1,5 +1,5 @@
 ---
-title: "Persisting Kubernetes workloads with Amazon EFS CSI volumes using Pulumi open source sdks"
+title: "Persisting Kubernetes workloads with Amazon EFS CSI volumes using Pulumi open source SDKs"
 authors: ["nishi-davidson"]
 tags: ["AWS", "EKS", "Kubernetes"]
 date: "2019-08-06"
@@ -11,15 +11,15 @@ The Amazon Elastic File System Container Storage Interface (CSI) Driver implemen
 
 The [AWS EFS CSI Driver](https://github.com/kubernetes-sigs/aws-efs-csi-driver) is a Kubernetes [SIG-AWS](https://github.com/kubernetes/community/tree/master/sig-aws) subproject. The AWS EFS CSI Driver triggers the creation of out-of-tree CSI volume plugins in any Kubernetes cluster. Thereafter Kubernetes storage classes, persistent volumes and claims can be used by a Kubernetes workload to access the EFS CSI volume plugin as before.
 
-In this blog, we will work through an example that shows how to use AWS EFS CSI storage components with Kubernetes workloads running on Amazon EKS worker nodes using Pulumi libraries ([EKS](https://github.com/pulumi/pulumi-eks), [AWS](https://github.com/pulumi/pulumi-aws), and [AWSX] (https://github.com/pulumi/pulumi-awsx/tree/master/nodejs/awsx)).
+In this blog, we will work through an example that shows how to use AWS EFS CSI storage components with Kubernetes workloads running on Amazon EKS worker nodes using Pulumi libraries ([EKS](https://github.com/pulumi/pulumi-eks), [AWS](https://github.com/pulumi/pulumi-aws), and [AWSX] (https://github.com/pulumi/pulumi-awsx/tree/master/nodejs/awsx)). These example steps are running on OS X.
 
 ## Step 1: Initialize Pulumi Project and Stack for your organization:
-[Install pulumi CLI](https://pulumi.io/quickstart/install.html?__hstc=194006706.92c420b2463a950f50b989da5e9a9de1.1559843842775.1560878104539.1560906741042.31&__hssc=194006706.2.1560906741042&__hsfp=3773980820) and set up your [AWS credentials](https://pulumi.io/quickstart/aws/setup.html?__hstc=194006706.92c420b2463a950f50b989da5e9a9de1.1559843842775.1560878104539.1560906741042.31&__hssc=194006706.2.1560906741042&__hsfp=3773980820). Initialize a new [Pulumi project](https://pulumi.io/reference/project.html?__hstc=194006706.92c420b2463a950f50b989da5e9a9de1.1559843842775.1560878104539.1560906741042.31&__hssc=194006706.2.1560906741042&__hsfp=3773980820) from available templates. We use `aws-typescript` template here to install all library dependencies.
+[Install Pulumi CLI](({{< ref "/docs/quickstart" >}})) and set up your [AWS credentials]()({{< ref "/docs/quickstart/aws" >}}). Initialize a new [Pulumi project](({{< ref "/docs/quickstart/project" >}})) from available templates. We use `aws-typescript` template here to install all library dependencies.
 
 We will work with two Pulumi stacks in this example, one for the Amazon EKS cluster and AWS EFS CSI components caled k8sinfra. The other for the application and its storage class, persistent volume and persistent volume claim called app. The AWS EFS CSI (Container Storage Interface) is based on the initial [AWS EFS CSI Driver](https://github.com/kubernetes-sigs/aws-efs-csi-driver/) work done by Kubernetes [SIG-AWS](https://github.com/kubernetes/community/tree/master/sig-aws).
 
 ```bash
-$ brew install pulumi # download pulumi CLI
+$ brew install pulumi # download Pulumi CLI
 
 $ mkdir k8sinfra && cd k8sinfra
 
@@ -38,12 +38,11 @@ drwxr-xr-x   95 nishidavidson  staff   3040 Jun 18 18:22 node_modules
 -rw-r--r--    1 nishidavidson  staff  50650 Jun 18 18:22 package-lock.json
 -rw-------    1 nishidavidson  staff    228 Jun 18 18:22 package.json
 -rw-------    1 nishidavidson  staff    522 Jun 18 18:22 tsconfig.json
-
 ```
 
 ## Step 2: Create the EKS cluster, EFS endpoint and MountTargets:
 
-The code below can be pasted in `index.ts` to create a default EKS cluster with two public subnets in the new VPC. We then declare EFS endpoint and mount the same to both subnets so the the EKS worker nodes can access the filesystem. 
+The code below first declares an EKS cluster attached to two public subnets in a new VPC. We then declare EFS endpoint and mount the same to both subnets so the the EKS worker nodes can access the filesystem. This code should be pasted into `index.ts`.
 
 ```typescript
 import * as aws from "@pulumi/aws";
@@ -70,8 +69,8 @@ export const cluster = new eks.Cluster("eks-cluster", {
   },
 });
 
-const nodesg = cluster.nodeSecurityGroup;
-export const nodesubnetId = cluster.core.subnetIds;
+const nodeSecurityGroup = cluster.nodeSecurityGroup;
+export const nodesubnetIds = cluster.core.subnetIds;
 export const clusterName = cluster.eksCluster.name;
 export const kubeconfig = cluster.kubeconfig.apply(JSON.stringify);
 
@@ -85,14 +84,14 @@ export const efsFilesystemId = efsFilesystem.id;
 // Create a mounttarget in each of the EKS cluster VPC's AZs so that EC2 instances across the VPC can access the filesystem
 new aws.efs.MountTarget("MyEFS-MountTarget1", {
   fileSystemId: efsFilesystemId,
-  securityGroups: [ nodesg.id ],
-  subnetId: nodesubnetId[0],
+  securityGroups: [ nodeSecurityGroup.id ],
+  subnetId: nodesubnetIds[0],
 });
 
 new aws.efs.MountTarget("MyEFS-MountTarget2", {
   fileSystemId: efsFilesystemId,
-  securityGroups: [ nodesg.id ],
-  subnetId: nodesubnetId[1],
+  securityGroups: [ nodeSecurityGroup.id ],
+  subnetId: nodesubnetIds[1],
 });
 
 ```
@@ -102,7 +101,7 @@ new aws.efs.MountTarget("MyEFS-MountTarget2", {
 Currently, only static provisioning for AWS EFS CSI drivers is supported by SIG-AWS, which implies the Amazon EFS filesystem needs to be manually created first. After that it can be mounted inside a container as a volume using the driver. The code below will allow you to deploy allow the CSI Driver components on the Amazon EKS cluster.
 
 ```typescript
-//* STEP 3: Install EFS CSI Driver node and controller components
+//* STEP 3: Install EFS CSI Driver Node and Controller components
 
 // Install EFS CSI Driver node components
 const svcacntcsiNode = new k8s.core.v1.ServiceAccount ("csi-node-sa", {
@@ -213,7 +212,7 @@ const daemonsetcsiNode = new k8s.apps.v1beta2.DaemonSet("efs-csi-node", {
   }, 
 }, { provider: cluster.provider });
 
-// Install EFS CSI Driver controller components 
+// Install EFS CSI Driver Controller components 
 const svcacctcsiController = new k8s.core.v1.ServiceAccount ("csi-controller-sa", {
   metadata: { name: "csi-controller-sa", namespace: "kube-system"},
 }, { provider: cluster.provider });
@@ -394,4 +393,4 @@ Mon Jul 8 06:12:15 UTC 2019
 
 ```
 
-This brings us to the end of our solution with Pulumi and AWS EFS on Amazon EKS. For more examples, refer to Pulumi's open source repository [here](https://github.com/pulumi/examples). Refer to other Kubernetes blogs [here](https://blog.pulumi.com/author/nishi-davidson).
+This brings us to the end of our solution with Pulumi and AWS EFS on Amazon EKS. For more examples, refer to Pulumi's open source repository [here](https://github.com/pulumi/examples) or refer to my other [Kubernetes articles](https://www.pulumi.com/blog/author/nishi-davidson/).
