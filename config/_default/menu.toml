@@ -1,0 +1,318 @@
+# -------------------------------------
+# Command Line Menu
+# -------------------------------------
+
+[[reference]]
+    name = "Cancel"
+    parent = "cli"
+    url = "/docs/reference/cli/pulumi_cancel/"
+    weight = 1
+
+[[reference]]
+    name = "Config"
+    parent = "cli"
+    url = "/docs/reference/cli/pulumi_config/"
+    weight = 2
+
+[[reference]]
+    name = "Destroy"
+    parent = "cli"
+    url = "/docs/reference/cli/pulumi_destroy/"
+    weight = 3
+
+[[reference]]
+    name = "Login"
+    parent = "cli"
+    url = "/docs/reference/cli/pulumi_login/"
+    weight = 4
+
+[[reference]]
+    name = "Logout"
+    parent = "cli"
+    url = "/docs/reference/cli/pulumi_logout/"
+    weight = 5
+
+[[reference]]
+    name = "Logs"
+    parent = "cli"
+    url = "/docs/reference/cli/pulumi_logs/"
+    weight = 5
+
+[[reference]]
+    name = "New"
+    parent = "cli"
+    url = "/docs/reference/cli/pulumi_new/"
+    weight = 6
+
+[[reference]]
+    name = "Plugin"
+    parent = "cli"
+    url = "/docs/reference/cli/pulumi_plugin/"
+    weight = 7
+
+[[reference]]
+    name = "Preview"
+    parent = "cli"
+    url = "/docs/reference/cli/pulumi_preview/"
+    weight = 8
+
+[[reference]]
+    name = "Refresh"
+    parent = "cli"
+    url = "/docs/reference/cli/pulumi_refresh/"
+    weight = 9
+
+[[reference]]
+    name = "Stack"
+    parent = "cli"
+    url = "/docs/reference/cli/pulumi_stack/"
+    weight = 10
+
+[[reference]]
+    name = "State"
+    parent = "cli"
+    url = "/docs/reference/cli/pulumi_state/"
+    weight = 11
+
+[[reference]]
+    name = "Update"
+    parent = "cli"
+    url = "/docs/reference/cli/pulumi_up/"
+    weight = 11
+
+[[reference]]
+    name = "Cancel"
+    parent = "cli"
+    url = "/docs/reference/cli/pulumi_cancel/"
+    weight = 1
+
+# -------------------------------------
+# API Reference Menu
+# -------------------------------------
+
+[[reference]]
+    parent = "node"
+    identifier = "node-pulumi"
+    name = "pulumi"
+    url = "/docs/reference/pkg/nodejs/pulumi/pulumi/"
+    weight = 1
+
+[[reference]]
+    parent = "node"
+    name = "aws"
+    url = "/docs/reference/pkg/nodejs/pulumi/aws/"
+
+[[reference]]
+    parent = "node"
+    name = "awsx"
+    url = "/docs/reference/pkg/nodejs/pulumi/awsx/"
+
+[[reference]]
+    parent = "node"
+    name = "azure"
+    url = "/docs/reference/pkg/nodejs/pulumi/azure/"
+
+#[[reference]]
+#    parent = "node"
+#    name = "azuread"
+#    url = "/docs/reference/pkg/nodejs/pulumi/azuread/"
+
+[[reference]]
+    parent = "node"
+    name = "cloud"
+    url = "/docs/reference/pkg/nodejs/pulumi/cloud/"
+
+# Note: We deliberately aren't including the @pulumi/cloud-aws and @pulumi/cloud-azure
+# packages in the docs listing as they are implementation details of @pulumi/cloud.
+
+[[reference]]
+    parent = "node"
+    name = "cloudflare"
+    url = "/docs/reference/pkg/nodejs/pulumi/cloudflare/"
+
+[[reference]]
+    parent = "node"
+    name = "datadog"
+    url = "/docs/reference/pkg/nodejs/pulumi/datadog/"
+
+[[reference]]
+    parent = "node"
+    name = "digitalocean"
+    url = "/docs/reference/pkg/nodejs/pulumi/digitalocean/"
+
+[[reference]]
+    parent = "node"
+    name = "dnsimple"
+    url = "/docs/reference/pkg/nodejs/pulumi/dnsimple/"
+
+[[reference]]
+    parent = "node"
+    name = "docker"
+    url = "/docs/reference/pkg/nodejs/pulumi/docker/"
+
+[[reference]]
+    parent = "node"
+    name = "eks"
+    url = "/docs/reference/pkg/nodejs/pulumi/eks/"
+
+[[reference]]
+    parent = "node"
+    name = "f5bigip"
+    url = "/docs/reference/pkg/nodejs/pulumi/f5bigip/"
+
+[[reference]]
+    parent = "node"
+    name = "gcp"
+    url = "/docs/reference/pkg/nodejs/pulumi/gcp/"
+
+[[reference]]
+    parent = "node"
+    name = "gitlab"
+    url = "/docs/reference/pkg/nodejs/pulumi/gitlab/"
+
+[[reference]]
+    parent = "node"
+    name = "kubernetes"
+    url = "/docs/reference/pkg/nodejs/pulumi/kubernetes/"
+
+[[reference]]
+    parent = "node"
+    name = "linode"
+    url = "/docs/reference/pkg/nodejs/pulumi/linode/"
+
+[[reference]]
+    parent = "node"
+    name = "mysql"
+    url = "/docs/reference/pkg/nodejs/pulumi/mysql/"
+
+[[reference]]
+    parent = "node"
+    name = "newrelic"
+    url = "/docs/reference/pkg/nodejs/pulumi/newrelic/"
+
+[[reference]]
+    parent = "node"
+    name = "openstack"
+    url = "/docs/reference/pkg/nodejs/pulumi/openstack/"
+
+[[reference]]
+    parent = "node"
+    name = "packet"
+    url = "/docs/reference/pkg/nodejs/pulumi/packet/"
+
+[[reference]]
+    parent = "node"
+    name = "postgresql"
+    url = "/docs/reference/pkg/nodejs/pulumi/postgresql/"
+
+[[reference]]
+    parent = "node"
+    name = "random"
+    url = "/docs/reference/pkg/nodejs/pulumi/random/"
+
+[[reference]]
+    parent = "node"
+    name = "terraform"
+    url = "/docs/reference/pkg/nodejs/pulumi/terraform/"
+
+[[reference]]
+    parent = "node"
+    name = "vsphere"
+    url = "/docs/reference/pkg/nodejs/pulumi/vsphere/"
+
+[[reference]]
+    parent = "python"
+    identifier = "python-pulumi"
+    name = "pulumi"
+    url = "/docs/reference/pkg/python/pulumi/"
+    weight = 1
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_aws"
+    url = "/docs/reference/pkg/python/pulumi_aws/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_azure"
+    url = "/docs/reference/pkg/python/pulumi_azure/"
+
+#[[reference]]
+#    parent = "python"
+#    name = "pulumi_azuread"
+#    url = "/docs/reference/pkg/python/pulumi_azuread/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_cloudflare"
+    url = "/docs/reference/pkg/python/pulumi_cloudflare/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_datadog"
+    url = "/docs/reference/pkg/python/pulumi_datadog/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_digitalocean"
+    url = "/docs/reference/pkg/python/pulumi_digitalocean/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_dnsimple"
+    url = "/docs/reference/pkg/python/pulumi_dnsimple/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_f5bigip"
+    url = "/docs/reference/pkg/python/pulumi_f5bigip/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_gcp"
+    url = "/docs/reference/pkg/python/pulumi_gcp/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_gitlab"
+    url = "/docs/reference/pkg/python/pulumi_gitlab/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_kubernetes"
+    url = "/docs/reference/pkg/python/pulumi_kubernetes/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_linode"
+    url = "/docs/reference/pkg/python/pulumi_linode/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_mysql"
+    url = "/docs/reference/pkg/python/pulumi_mysql/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_newrelic"
+    url = "/docs/reference/pkg/python/pulumi_newrelic/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_openstack"
+    url = "/docs/reference/pkg/python/pulumi_openstack/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_postgresql"
+    url = "/docs/reference/pkg/python/pulumi_postgresql/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_random"
+    url = "/docs/reference/pkg/python/pulumi_random/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_vsphere"
+    url = "/docs/reference/pkg/python/pulumi_vsphere/"
