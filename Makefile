@@ -65,10 +65,6 @@ validate:
 	$(MAKE) test
 	pkill -f hugo
 
-.PHONY: testx
-testx::
-	SITE_ENVIRONMENT=production HUGO_BASEURL=https://www.pulumi.com/ $(MAKE) build
-
 .PHONY: travis_push
 travis_push::
 	$(MAKE) banner

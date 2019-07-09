@@ -7,8 +7,9 @@ sectionPagesMenu = "main"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
-# Don't crawl non-prod instances.
-enableRobotsTXT = false
+# We always generate the robots.txt file. But based on the environment
+# built, it may disallow crawling.
+enableRobotsTXT = true
 
 [outputFormats.RSS]
     baseName = "rss"

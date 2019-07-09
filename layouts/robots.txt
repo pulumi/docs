@@ -1,4 +1,4 @@
 User-agent: *
-{{- if eq hugo.Environment "production" }}
+{{- if ne hugo.Environment "production" }}
 Disallow: *
 {{ end }}
