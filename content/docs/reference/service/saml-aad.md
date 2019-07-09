@@ -41,9 +41,31 @@ to replace `acmecorp` with whatever your specific Pulumi organization's name is.
 | SAML Setting | Value |
 | --------------- | ----- |
 | Identifier (Entity ID) | https://api.pulumi.com/login/**acmecorp**/sso/saml/metadata |
-| Replay URL | https://api.pulumi.com/login/**acmecorp**/sso/saml/acs |
+| Reply URL | https://api.pulumi.com/login/**acmecorp**/sso/saml/acs |
+| Relay State | https://api.pulumi.com/login/**acmecorp**/sso |
+
+
+<p><!-- space between table and image --></p>
 
 ![Edited SAML configuration](/images/docs/reference/service/saml-aad/edited-saml-configuration.png)
+
+The final step is to configure the **name identifier format**.
+
+1. Click the **Edit** icon on the **User Attributes & Claims** panel.
+
+![User Attributes & Claims Panel](/images/docs/reference/service/saml-aad/attributes-and-claims-panel.png)
+
+1. Then, click on the **Edit** icon next to **Name identifier value**.
+
+![User Attributes & Claims](/images/docs/reference/service/saml-aad/attributes-and-claims.png)
+
+1. In the **Manage User Claims** panel, expand the **Choose name identifier format** and select **Email address**.
+
+![Manage Name Identifier Format](/images/docs/reference/service/saml-aad/name-identifier-format.png)
+
+1. Finally, click **Save** at the bottom of the **Manage User Claims** panel.
+
+**IMPORTANT:** Do not change the value of Name ID Format value once your users have started using Pulumi; not even switching its value between Email or Persistent.
 
 Now the Azure AD-side of the SAML SSO configuration is complete. The next and final
 step is to configure the Pulumi Cloud Console to receive SAML SSO requests from your

@@ -2,7 +2,7 @@
 title: SAML Configuration > Okta
 ---
 
-This guide walks through how to configure Okta as a SAML SSO identity provider (IDP) for use with
+This guide walks through how to configure Okta as a SAML SSO identity provider (IdP) for use with
 the Pulumi Cloud Console.
 
 > **NOTE:** The screen shots below are using the Okta _Classic UI_. You can switch to it by clicking the gear
@@ -10,7 +10,7 @@ the Pulumi Cloud Console.
 
 ## Creating the Okta Application
 
-The first step is to create a new Okta Application Integration. Of the various sign on methods
+The first step is to create a new Okta Application Integration. Of the various "sign on methods"
 available, choose **SAML 2.0**.
 
 ![Creating an Okta Application](/images/docs/reference/service/saml-okta/create-okta-application.png)
@@ -44,10 +44,13 @@ tbody tr td {
 
 | General Setting | Value |
 | --------------- | ----- |
-| Single sign on URL | https://api.pulumi.com/login/**acmecorp**/sso/saml/acs |
-| Audience URI | https://api.pulumi.com/login/**acmecorp**/sso/saml/metadata |
-| Name ID format | Unspecified |
+| Single sign on URL | https://api.pulumi.com/login/robot-co/sso/saml/acs |
+| Audience URI | https://api.pulumi.com/login/robot-co/sso/saml/metadata |
+| Default relay state | https://api.pulumi.com/login/robot-co/sso |
+| Name ID format | EmailAddress or Persistent |
 | App username | Email |
+
+**IMPORTANT:** Do not change the value of Name ID Format value once your users have started using Pulumi; not even switching its value between Email or Persistent.
 
 <p><!-- space between table and text --></p>
 In addition, there are two attribute statements that can optionally be provided so that users
@@ -78,8 +81,8 @@ The final step is to configure the Pulumi Cloud Console with the details about y
 SAML application. To do this, you need to obtain the IDP metadata document from Okta and then provide
 it to Pulumi.
 
-First, navigate to the **General** tab on the application page and click the "View setup instructions"
-page.
+First, navigate to the **Sign On** tab on the application page and click the "View Setup Instructions"
+button.
 
 ![View Setup Instructions](/images/docs/reference/service/saml-okta/view-setup-instructions.png)
 
