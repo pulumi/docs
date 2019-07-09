@@ -9,11 +9,11 @@ meta_image: "RELATIVE_TO_PAGE/featured-img-efs-csi-driver.png"
 
 The Amazon Elastic File System Container Storage Interface (CSI) Driver implements the [CSI specification](https://github.com/container-storage-interface/spec/blob/master/spec.md) for container orchestrators to manage the lifecycle of Amazon EFS filesystems. The CSI specification defines an interface along with the minimum operational and packaging recommendations for a storage provider to implement a CSI compatible plugin. The interface declares the RPCs that a plugin must expose. The CSI drivers are the right mechanism to work with, when using a cloud storage component with Kubernetes workloads. Amazon Elastic File System (Amazon EFS) provides parallel shared access through a standard file system interface to Amazon EC2 instances and Linux-based workloads without disrupting your applications. EFS is a regional service storing data across multiple Availability Zones (AZs) for high availability and durability. 
 
-The [AWS EFS CSI Driver](https://github.com/kubernetes-sigs/aws-efs-csi-driver) is a Kubernetes[SIG-AWS](https://github.com/kubernetes/community/tree/master/sig-aws) subproject. The AWS EFS CSI Driver triggers the creation of out-of-tree CSI volume plugins in any Kubernetes cluster. Thereafter Kubernetes storage classes, persistent volumes and claims can be used by a Kubernetes workload to access the EFS CSI volume plugin as before.
+The [AWS EFS CSI Driver](https://github.com/kubernetes-sigs/aws-efs-csi-driver) is a Kubernetes [SIG-AWS](https://github.com/kubernetes/community/tree/master/sig-aws) subproject. The AWS EFS CSI Driver triggers the creation of out-of-tree CSI volume plugins in any Kubernetes cluster. Thereafter Kubernetes storage classes, persistent volumes and claims can be used by a Kubernetes workload to access the EFS CSI volume plugin as before.
 
 In this blog, we will work through an example that shows how to use AWS EFS CSI storage components with Kubernetes workloads running on Amazon EKS worker nodes using Pulumi libraries ([EKS](https://github.com/pulumi/pulumi-eks), [AWS](https://github.com/pulumi/pulumi-aws), and [AWSX] (https://github.com/pulumi/pulumi-awsx/tree/master/nodejs/awsx)).
 
-## Step 1: Initialize Pulumi project and stack in your organization:
+## Step 1: Initialize Pulumi Project and Stack for your organization:
 [Install pulumi CLI](https://pulumi.io/quickstart/install.html?__hstc=194006706.92c420b2463a950f50b989da5e9a9de1.1559843842775.1560878104539.1560906741042.31&__hssc=194006706.2.1560906741042&__hsfp=3773980820) and set up your [AWS credentials](https://pulumi.io/quickstart/aws/setup.html?__hstc=194006706.92c420b2463a950f50b989da5e9a9de1.1559843842775.1560878104539.1560906741042.31&__hssc=194006706.2.1560906741042&__hsfp=3773980820). Initialize a new [Pulumi project](https://pulumi.io/reference/project.html?__hstc=194006706.92c420b2463a950f50b989da5e9a9de1.1559843842775.1560878104539.1560906741042.31&__hssc=194006706.2.1560906741042&__hsfp=3773980820) from available templates. We use `aws-typescript` template here to install all library dependencies.
 
 We will work with two Pulumi stacks in this example, one for the Amazon EKS cluster and AWS EFS CSI components caled k8sinfra. The other for the application and its storage class, persistent volume and persistent volume claim called app. The AWS EFS CSI (Container Storage Interface) is based on the initial [AWS EFS CSI Driver](https://github.com/kubernetes-sigs/aws-efs-csi-driver/) work done by Kubernetes [SIG-AWS](https://github.com/kubernetes/community/tree/master/sig-aws).
@@ -41,7 +41,7 @@ drwxr-xr-x   95 nishidavidson  staff   3040 Jun 18 18:22 node_modules
 
 ```
 
-## Step 2: Create an EKS cluster, an EFS endpoint and mount targets in the public subnets of the EKS cluster:
+## Step 2: Create the EKS cluster, EFS endpoint and MountTargets:
 
 The code below can be pasted in `index.ts` to create a default EKS cluster with two public subnets in the new VPC. We then declare EFS endpoint and mount the same to both subnets so the the EKS worker nodes can access the filesystem. 
 
@@ -97,9 +97,9 @@ new aws.efs.MountTarget("MyEFS-MountTarget2", {
 
 ```
 
-## Step 3: Create the CSI driver node and controller components
+## Step 3: Create the CSI Driver Node and Controller Components
 
-Currently, only static provisioning for AWS EFS CSI drivers is supported by SIG-AWS. Implies, Amazon EFS filesystem needs to be created manually first. After that it can be mounted inside a container as a volume using the driver. The code below will allow you to deploy allow the CSI Driver components on the Amazon EKS cluster.
+Currently, only static provisioning for AWS EFS CSI drivers is supported by SIG-AWS, which implies the Amazon EFS filesystem needs to be manually created first. After that it can be mounted inside a container as a volume using the driver. The code below will allow you to deploy allow the CSI Driver components on the Amazon EKS cluster.
 
 ```typescript
 //* STEP 3: Install EFS CSI Driver node and controller components
