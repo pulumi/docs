@@ -7,6 +7,13 @@ title: Module batch
 
 <a href="../">@pulumi/aws</a> &gt; batch
 
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws)
+> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
+> first check the [`pulumi/pulumi-aws` repo](https://github.com/pulumi/pulumi-aws/issues); however, if that doesn't turn up anything,
+> please consult the source [`terraform-providers/terraform-provider-aws` repo](https://github.com/terraform-providers/terraform-provider-aws/issues).
+
+
+
 <div class="toggleVisible">
 <div class="collapsed">
 <h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
@@ -32,14 +39,14 @@ title: Module batch
 <li><a href="#JobQueueState">interface JobQueueState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts">batch/computeEnvironment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getComputeEnvironment.ts">batch/getComputeEnvironment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getJobQueue.ts">batch/getJobQueue.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts">batch/jobDefinition.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts">batch/jobQueue.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts">batch/computeEnvironment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getComputeEnvironment.ts">batch/getComputeEnvironment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getJobQueue.ts">batch/getJobQueue.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts">batch/jobDefinition.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts">batch/jobQueue.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="ComputeEnvironment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L87">class <b>ComputeEnvironment</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L89">class <b>ComputeEnvironment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -124,9 +131,11 @@ const ecsInstanceRoleRolePolicyAttachment = new aws.iam.RolePolicyAttachment("ec
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_compute_environment.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ComputeEnvironment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L149"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L151"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -143,7 +152,7 @@ Create a ComputeEnvironment resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L96">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L98">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -157,7 +166,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -167,7 +176,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L109">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -181,7 +190,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironment-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L117">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L119">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -192,7 +201,7 @@ The Amazon Resource Name (ARN) of the compute environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironment-computeEnvironmentName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L121">property <b>computeEnvironmentName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L123">property <b>computeEnvironmentName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>computeEnvironmentName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -203,7 +212,7 @@ The name for your compute environment. Up to 128 letters (uppercase and lowercas
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironment-computeResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L125">property <b>computeResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L127">property <b>computeResources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>computeResources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -233,7 +242,7 @@ Details of the compute resources managed by the compute environment. This parame
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironment-ecsClusterArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L129">property <b>ecsClusterArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L131">property <b>ecsClusterArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ecsClusterArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -244,7 +253,7 @@ The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -256,7 +265,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironment-serviceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L133">property <b>serviceRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L135">property <b>serviceRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serviceRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -267,7 +276,7 @@ The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to mak
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironment-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L137">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L139">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -278,7 +287,7 @@ The state of the compute environment. If the state is `ENABLED`, then the comput
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironment-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L141">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L143">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -289,7 +298,7 @@ The current status of the compute environment (for example, CREATING or VALID).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironment-statusReason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L145">property <b>statusReason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L147">property <b>statusReason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>statusReason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -300,7 +309,7 @@ A short, human-readable string to provide additional details about the current s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironment-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L149">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L151">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -311,7 +320,7 @@ The type of compute environment. Valid items are `EC2` or `SPOT`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -324,7 +333,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="JobDefinition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L65">class <b>JobDefinition</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L67">class <b>JobDefinition</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -387,9 +396,11 @@ const test = new aws.batch.JobDefinition("test", {
 
 * `attempt_duration_seconds` - (Optional) The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_definition.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="JobDefinition-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L125"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L127"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -406,7 +417,7 @@ Create a JobDefinition resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinition-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L74">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L76">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -420,7 +431,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinition-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -430,7 +441,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinition-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L87">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -444,7 +455,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinition-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L95">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L97">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -455,7 +466,7 @@ The Amazon Resource Name of the job definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinition-containerProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L100">property <b>containerProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L102">property <b>containerProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>containerProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -467,7 +478,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinition-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -479,7 +490,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinition-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L104">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L106">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -490,7 +501,7 @@ Specifies the name of the job definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinition-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L108">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L110">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -501,7 +512,7 @@ Specifies the parameter substitution placeholders to set in the job definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinition-retryStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L113">property <b>retryStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L115">property <b>retryStrategy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>retryStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -515,7 +526,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinition-revision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L117">property <b>revision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L119">property <b>revision</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>revision: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -526,7 +537,7 @@ The revision of the job definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinition-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L121">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L123">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -539,7 +550,7 @@ Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinition-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L125">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L127">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -550,7 +561,7 @@ The type of job definition.  Must be `container`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinition-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -563,7 +574,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="JobQueue">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L26">class <b>JobQueue</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L28">class <b>JobQueue</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -587,9 +598,11 @@ const testQueue = new aws.batch.JobQueue("test_queue", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_queue.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="JobQueue-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L78"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -606,7 +619,7 @@ Create a JobQueue resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueue-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L37">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -620,7 +633,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueue-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -630,7 +643,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueue-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L48">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -644,7 +657,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueue-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L56">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L58">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -655,7 +668,7 @@ The Amazon Resource Name of the job queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueue-computeEnvironments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L63">property <b>computeEnvironments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L65">property <b>computeEnvironments</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>computeEnvironments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -669,7 +682,7 @@ with a job queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueue-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -681,7 +694,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueue-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L69">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -692,7 +705,7 @@ Specifies the name of the job queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueue-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L72">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L74">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -704,7 +717,7 @@ are evaluated first when associated with the same compute environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueue-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L76">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L78">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -715,7 +728,7 @@ The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueue-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -728,7 +741,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getComputeEnvironment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getComputeEnvironment.ts#L22">function <b>getComputeEnvironment</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getComputeEnvironment.ts#L24">function <b>getComputeEnvironment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -750,10 +763,12 @@ const batch_mongo = pulumi.output(aws.batch.getComputeEnvironment({
 }));
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_compute_environment.html.markdown.
+
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getJobQueue">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getJobQueue.ts#L22">function <b>getJobQueue</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getJobQueue.ts#L24">function <b>getJobQueue</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -775,10 +790,12 @@ const test_queue = pulumi.output(aws.batch.getJobQueue({
 }));
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_job_queue.html.markdown.
+
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="ComputeEnvironmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L242">interface <b>ComputeEnvironmentArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L244">interface <b>ComputeEnvironmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -787,7 +804,7 @@ The set of arguments for constructing a ComputeEnvironment resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ComputeEnvironmentArgs-computeEnvironmentName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L246">property <b>computeEnvironmentName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L248">property <b>computeEnvironmentName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>computeEnvironmentName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -798,7 +815,7 @@ The name for your compute environment. Up to 128 letters (uppercase and lowercas
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironmentArgs-computeResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L250">property <b>computeResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L252">property <b>computeResources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>computeResources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -828,7 +845,7 @@ Details of the compute resources managed by the compute environment. This parame
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironmentArgs-serviceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L254">property <b>serviceRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L256">property <b>serviceRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -839,7 +856,7 @@ The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to mak
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironmentArgs-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L258">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L260">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -850,7 +867,7 @@ The state of the compute environment. If the state is `ENABLED`, then the comput
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironmentArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L262">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L264">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -862,7 +879,7 @@ The type of compute environment. Valid items are `EC2` or `SPOT`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ComputeEnvironmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L200">interface <b>ComputeEnvironmentState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L202">interface <b>ComputeEnvironmentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -871,7 +888,7 @@ Input properties used for looking up and filtering ComputeEnvironment resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ComputeEnvironmentState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L204">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L206">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -882,7 +899,7 @@ The Amazon Resource Name (ARN) of the compute environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironmentState-computeEnvironmentName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L208">property <b>computeEnvironmentName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L210">property <b>computeEnvironmentName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>computeEnvironmentName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -893,7 +910,7 @@ The name for your compute environment. Up to 128 letters (uppercase and lowercas
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironmentState-computeResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L212">property <b>computeResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L214">property <b>computeResources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>computeResources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -923,7 +940,7 @@ Details of the compute resources managed by the compute environment. This parame
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironmentState-ecsClusterArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L216">property <b>ecsClusterArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L218">property <b>ecsClusterArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ecsClusterArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -934,7 +951,7 @@ The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironmentState-serviceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L220">property <b>serviceRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L222">property <b>serviceRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -945,7 +962,7 @@ The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to mak
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironmentState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L224">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L226">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -956,7 +973,7 @@ The state of the compute environment. If the state is `ENABLED`, then the comput
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironmentState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L228">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L230">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -967,7 +984,7 @@ The current status of the compute environment (for example, CREATING or VALID).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironmentState-statusReason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L232">property <b>statusReason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L234">property <b>statusReason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>statusReason?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -978,7 +995,7 @@ A short, human-readable string to provide additional details about the current s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeEnvironmentState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/computeEnvironment.ts#L236">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/computeEnvironment.ts#L238">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -990,7 +1007,7 @@ The type of compute environment. Valid items are `EC2` or `SPOT`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetComputeEnvironmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getComputeEnvironment.ts#L31">interface <b>GetComputeEnvironmentArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getComputeEnvironment.ts#L33">interface <b>GetComputeEnvironmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -999,7 +1016,7 @@ A collection of arguments for invoking getComputeEnvironment.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetComputeEnvironmentArgs-computeEnvironmentName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getComputeEnvironment.ts#L35">property <b>computeEnvironmentName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getComputeEnvironment.ts#L37">property <b>computeEnvironmentName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>computeEnvironmentName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1011,7 +1028,7 @@ The name of the Batch Compute Environment
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetComputeEnvironmentResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getComputeEnvironment.ts#L41">interface <b>GetComputeEnvironmentResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getComputeEnvironment.ts#L43">interface <b>GetComputeEnvironmentResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1020,7 +1037,7 @@ A collection of values returned by getComputeEnvironment.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetComputeEnvironmentResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getComputeEnvironment.ts#L45">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getComputeEnvironment.ts#L47">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1031,7 +1048,7 @@ The ARN of the compute environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetComputeEnvironmentResult-computeEnvironmentName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getComputeEnvironment.ts#L46">property <b>computeEnvironmentName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getComputeEnvironment.ts#L48">property <b>computeEnvironmentName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>computeEnvironmentName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1039,7 +1056,7 @@ The ARN of the compute environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetComputeEnvironmentResult-ecsClusterArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getComputeEnvironment.ts#L50">property <b>ecsClusterArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getComputeEnvironment.ts#L52">property <b>ecsClusterArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ecsClusterArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1050,7 +1067,7 @@ The ARN of the underlying Amazon ECS cluster used by the compute environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetComputeEnvironmentResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getComputeEnvironment.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getComputeEnvironment.ts#L76">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1061,7 +1078,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetComputeEnvironmentResult-serviceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getComputeEnvironment.ts#L54">property <b>serviceRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getComputeEnvironment.ts#L56">property <b>serviceRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceRole: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1072,7 +1089,7 @@ The ARN of the IAM role that allows AWS Batch to make calls to other AWS service
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetComputeEnvironmentResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getComputeEnvironment.ts#L58">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getComputeEnvironment.ts#L60">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1083,7 +1100,7 @@ The state of the compute environment (for example, `ENABLED` or `DISABLED`). If 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetComputeEnvironmentResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getComputeEnvironment.ts#L62">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getComputeEnvironment.ts#L64">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1094,7 +1111,7 @@ The current status of the compute environment (for example, `CREATING` or `VALID
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetComputeEnvironmentResult-statusReason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getComputeEnvironment.ts#L66">property <b>statusReason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getComputeEnvironment.ts#L68">property <b>statusReason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>statusReason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1105,7 +1122,7 @@ A short, human-readable string to provide additional details about the current s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetComputeEnvironmentResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getComputeEnvironment.ts#L70">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getComputeEnvironment.ts#L72">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1117,7 +1134,7 @@ The type of the compute environment (for example, `MANAGED` or `UNMANAGED`).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetJobQueueArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getJobQueue.ts#L31">interface <b>GetJobQueueArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getJobQueue.ts#L33">interface <b>GetJobQueueArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1126,7 +1143,7 @@ A collection of arguments for invoking getJobQueue.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetJobQueueArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getJobQueue.ts#L35">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getJobQueue.ts#L37">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1138,7 +1155,7 @@ The name of the job queue.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetJobQueueResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getJobQueue.ts#L41">interface <b>GetJobQueueResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getJobQueue.ts#L43">interface <b>GetJobQueueResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1147,7 +1164,7 @@ A collection of values returned by getJobQueue.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetJobQueueResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getJobQueue.ts#L45">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getJobQueue.ts#L47">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1158,7 +1175,7 @@ The ARN of the job queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetJobQueueResult-computeEnvironmentOrders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getJobQueue.ts#L52">property <b>computeEnvironmentOrders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getJobQueue.ts#L54">property <b>computeEnvironmentOrders</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>computeEnvironmentOrders: {
@@ -1175,7 +1192,7 @@ which job placement is preferred. Compute environments are selected for job plac
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetJobQueueResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getJobQueue.ts#L75">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getJobQueue.ts#L77">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1186,7 +1203,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetJobQueueResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getJobQueue.ts#L53">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getJobQueue.ts#L55">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1194,7 +1211,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetJobQueueResult-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getJobQueue.ts#L58">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getJobQueue.ts#L60">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>priority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1206,7 +1223,7 @@ associated with the same compute environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetJobQueueResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getJobQueue.ts#L62">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getJobQueue.ts#L64">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1217,7 +1234,7 @@ Describes the ability of the queue to accept new jobs (for example, `ENABLED` or
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetJobQueueResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getJobQueue.ts#L66">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getJobQueue.ts#L68">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1228,7 +1245,7 @@ The current status of the job queue (for example, `CREATING` or `VALID`).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetJobQueueResult-statusReason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/getJobQueue.ts#L71">property <b>statusReason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/getJobQueue.ts#L73">property <b>statusReason</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>statusReason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1241,7 +1258,7 @@ of the job queue.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="JobDefinitionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L208">interface <b>JobDefinitionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L210">interface <b>JobDefinitionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1250,7 +1267,7 @@ The set of arguments for constructing a JobDefinition resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="JobDefinitionArgs-containerProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L213">property <b>containerProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L215">property <b>containerProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>containerProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1262,7 +1279,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinitionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L217">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L219">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1273,7 +1290,7 @@ Specifies the name of the job definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinitionArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L221">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L223">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -1284,7 +1301,7 @@ Specifies the parameter substitution placeholders to set in the job definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinitionArgs-retryStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L226">property <b>retryStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L228">property <b>retryStrategy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>retryStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1298,7 +1315,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinitionArgs-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L230">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L232">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1311,7 +1328,7 @@ Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinitionArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L234">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L236">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1323,7 +1340,7 @@ The type of job definition.  Must be `container`
 </div>
 </div>
 <h2 class="pdoc-module-header" id="JobDefinitionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L168">interface <b>JobDefinitionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L170">interface <b>JobDefinitionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1332,7 +1349,7 @@ Input properties used for looking up and filtering JobDefinition resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="JobDefinitionState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L172">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L174">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1343,7 +1360,7 @@ The Amazon Resource Name of the job definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinitionState-containerProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L177">property <b>containerProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L179">property <b>containerProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>containerProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1355,7 +1372,7 @@ provided as a single valid JSON document. This parameter is required if the `typ
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinitionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L181">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L183">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1366,7 +1383,7 @@ Specifies the name of the job definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinitionState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L185">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L187">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -1377,7 +1394,7 @@ Specifies the parameter substitution placeholders to set in the job definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinitionState-retryStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L190">property <b>retryStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L192">property <b>retryStrategy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>retryStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1391,7 +1408,7 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinitionState-revision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L194">property <b>revision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L196">property <b>revision</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>revision?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1402,7 +1419,7 @@ The revision of the job definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinitionState-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L198">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L200">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1415,7 +1432,7 @@ Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobDefinitionState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobDefinition.ts#L202">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobDefinition.ts#L204">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1427,7 +1444,7 @@ The type of job definition.  Must be `container`
 </div>
 </div>
 <h2 class="pdoc-module-header" id="JobQueueArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L149">interface <b>JobQueueArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L151">interface <b>JobQueueArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1436,7 +1453,7 @@ The set of arguments for constructing a JobQueue resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="JobQueueArgs-computeEnvironments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L156">property <b>computeEnvironments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L158">property <b>computeEnvironments</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>computeEnvironments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1450,7 +1467,7 @@ with a job queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueueArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L160">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L162">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1461,7 +1478,7 @@ Specifies the name of the job queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueueArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L165">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L167">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1473,7 +1490,7 @@ are evaluated first when associated with the same compute environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueueArgs-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L169">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L171">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1485,7 +1502,7 @@ The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
 </div>
 </div>
 <h2 class="pdoc-module-header" id="JobQueueState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L119">interface <b>JobQueueState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L121">interface <b>JobQueueState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1494,7 +1511,7 @@ Input properties used for looking up and filtering JobQueue resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="JobQueueState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L123">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L125">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1505,7 +1522,7 @@ The Amazon Resource Name of the job queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueueState-computeEnvironments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L130">property <b>computeEnvironments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L132">property <b>computeEnvironments</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>computeEnvironments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1519,7 +1536,7 @@ with a job queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueueState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L134">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L136">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1530,7 +1547,7 @@ Specifies the name of the job queue.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueueState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L139">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L141">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1542,7 +1559,7 @@ are evaluated first when associated with the same compute environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="JobQueueState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/batch/jobQueue.ts#L143">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/batch/jobQueue.ts#L145">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

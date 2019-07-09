@@ -7,6 +7,13 @@ title: Module cognito
 
 <a href="../">@pulumi/aws</a> &gt; cognito
 
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws)
+> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
+> first check the [`pulumi/pulumi-aws` repo](https://github.com/pulumi/pulumi-aws/issues); however, if that doesn't turn up anything,
+> please consult the source [`terraform-providers/terraform-provider-aws` repo](https://github.com/terraform-providers/terraform-provider-aws/issues).
+
+
+
 <div class="toggleVisible">
 <div class="collapsed">
 <h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
@@ -44,14 +51,14 @@ title: Module cognito
 <li><a href="#UserPoolState">interface UserPoolState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/getUserPools.ts">cognito/getUserPools.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts">cognito/identityPool.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPoolRoleAttachment.ts">cognito/identityPoolRoleAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts">cognito/identityProvider.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts">cognito/resourceServer.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts">cognito/userGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts">cognito/userPool.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts">cognito/userPoolClient.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts">cognito/userPoolDomain.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/getUserPools.ts">cognito/getUserPools.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts">cognito/identityPool.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPoolRoleAttachment.ts">cognito/identityPoolRoleAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts">cognito/identityProvider.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts">cognito/resourceServer.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts">cognito/userGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts">cognito/userPool.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts">cognito/userPoolClient.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts">cognito/userPoolDomain.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="IdentityPool">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L44">class <b>IdentityPool</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L46">class <b>IdentityPool</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -93,9 +100,11 @@ const main = new aws.cognito.IdentityPool("main", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_pool.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityPool-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L105"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -112,7 +121,7 @@ Create a IdentityPool resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L55">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -126,7 +135,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -136,7 +145,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L66">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -150,7 +159,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-allowUnauthenticatedIdentities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L74">property <b>allowUnauthenticatedIdentities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L76">property <b>allowUnauthenticatedIdentities</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>allowUnauthenticatedIdentities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -161,7 +170,7 @@ Whether the identity pool supports unauthenticated logins or not.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L78">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L80">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -172,7 +181,7 @@ The ARN of the identity pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-cognitoIdentityProviders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L82">property <b>cognitoIdentityProviders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L84">property <b>cognitoIdentityProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>cognitoIdentityProviders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -187,7 +196,7 @@ An array of Amazon Cognito Identity user pools and their client IDs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-developerProviderName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L87">property <b>developerProviderName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L89">property <b>developerProviderName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>developerProviderName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -199,7 +208,7 @@ backend and the Cognito service to communicate about the developer provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -211,7 +220,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-identityPoolName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L91">property <b>identityPoolName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L93">property <b>identityPoolName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>identityPoolName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -222,7 +231,7 @@ The Cognito Identity Pool name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-openidConnectProviderArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L95">property <b>openidConnectProviderArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L97">property <b>openidConnectProviderArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>openidConnectProviderArns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -233,7 +242,7 @@ A list of OpendID Connect provider ARNs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-samlProviderArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L99">property <b>samlProviderArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L101">property <b>samlProviderArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>samlProviderArns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -244,7 +253,7 @@ An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-supportedLoginProviders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L103">property <b>supportedLoginProviders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L105">property <b>supportedLoginProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>supportedLoginProviders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -255,7 +264,7 @@ Key-Value pairs mapping provider names to provider app IDs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -268,7 +277,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityPoolRoleAttachment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L85">class <b>IdentityPoolRoleAttachment</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L87">class <b>IdentityPoolRoleAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -351,9 +360,11 @@ const authenticatedRolePolicy = new aws.iam.RolePolicy("authenticated", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_pool_roles_attachment.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L123"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L125"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -370,7 +381,7 @@ Create a IdentityPoolRoleAttachment resource with the given unique name, argumen
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L94">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L96">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -384,7 +395,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -394,7 +405,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L105">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -408,7 +419,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -420,7 +431,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-identityPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L115">property <b>identityPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L117">property <b>identityPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>identityPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -431,7 +442,7 @@ An identity pool ID in the format REGION:GUID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-roleMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L119">property <b>roleMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L121">property <b>roleMappings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>roleMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -452,7 +463,7 @@ A List of Role Mapping.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L123">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L125">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -466,7 +477,7 @@ The map of roles associated with this pool. For a given role, the key will be ei
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -479,7 +490,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityProvider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L35">class <b>IdentityProvider</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L37">class <b>IdentityProvider</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -512,9 +523,11 @@ const exampleProvider = new aws.cognito.IdentityProvider("example_provider", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_provider.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityProvider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L87"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -531,7 +544,7 @@ Create a IdentityProvider resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L46">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -545,7 +558,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -555,7 +568,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L57">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -569,7 +582,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-attributeMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L65">property <b>attributeMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L67">property <b>attributeMapping</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>attributeMapping: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -580,7 +593,7 @@ The map of attribute mapping of user pool attributes. [AttributeMapping in AWS A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -592,7 +605,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-idpIdentifiers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L69">property <b>idpIdentifiers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L71">property <b>idpIdentifiers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>idpIdentifiers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -603,7 +616,7 @@ The list of identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-providerDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L73">property <b>providerDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L75">property <b>providerDetails</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>providerDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -614,7 +627,7 @@ The map of identity details, such as access token
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-providerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L77">property <b>providerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L79">property <b>providerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>providerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -625,7 +638,7 @@ The provider name
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-providerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L81">property <b>providerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L83">property <b>providerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>providerType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -636,7 +649,7 @@ The provider type.  [See AWS API for valid values](https://docs.aws.amazon.com/c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -648,7 +661,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-userPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L85">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L87">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -660,7 +673,7 @@ The user pool id
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceServer">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L42">class <b>ResourceServer</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L44">class <b>ResourceServer</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -700,9 +713,11 @@ const resource = new aws.cognito.ResourceServer("resource", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_resource_server.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceServer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L87"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -719,7 +734,7 @@ Create a ResourceServer resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -733,7 +748,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -743,7 +758,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L64">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -757,7 +772,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -769,7 +784,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L72">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L74">property <b>identifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>identifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -780,7 +795,7 @@ An identifier for the resource server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L78">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -791,7 +806,7 @@ A name for the resource server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-scopeIdentifiers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L84">property <b>scopeIdentifiers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L86">property <b>scopeIdentifiers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>scopeIdentifiers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -802,7 +817,7 @@ A list of all scopes configured for this resource server in the format identifie
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L80">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L82">property <b>scopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -816,7 +831,7 @@ A list of Authorization Scope.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -828,7 +843,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-userPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L85">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L87">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -837,56 +852,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L49">class <b>UserGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L7">class <b>UserGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{% md %}}
-
-Provides a Cognito User Group resource.
-
-## Example Usage
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const mainUserPool = new aws.cognito.UserPool("main", {});
-const groupRole = new aws.iam.Role("group_role", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "",
-      "Effect": "Allow",
-      "Principal": {
-        "Federated": "cognito-identity.amazonaws.com"
-      },
-      "Action": "sts:AssumeRoleWithWebIdentity",
-      "Condition": {
-        "StringEquals": {
-          "cognito-identity.amazonaws.com:aud": "us-east-1:12345678-dead-beef-cafe-123456790ab"
-        },
-        "ForAnyValue:StringLike": {
-          "cognito-identity.amazonaws.com:amr": "authenticated"
-        }
-      }
-    }
-  ]
-}
-`,
-});
-const mainUserGroup = new aws.cognito.UserGroup("main", {
-    description: "Managed by Terraform",
-    precedence: 42,
-    roleArn: groupRole.arn,
-    userPoolId: mainUserPool.id,
-});
-```
-
-{{% /md %}}
 <h3 class="pdoc-member-header" id="UserGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L53"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -903,7 +874,7 @@ Create a UserGroup resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L16">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -917,7 +888,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -927,7 +898,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L27">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -941,7 +912,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L79">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L37">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -952,7 +923,7 @@ The description of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -964,7 +935,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L41">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -975,7 +946,7 @@ The name of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-precedence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L87">property <b>precedence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L45">property <b>precedence</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>precedence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -986,7 +957,7 @@ The precedence of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L91">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L49">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -997,7 +968,7 @@ The ARN of the IAM role to be associated with the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1009,7 +980,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-userPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L95">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L53">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1021,7 +992,7 @@ The user pool ID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPool">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L21">class <b>UserPool</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L23">class <b>UserPool</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1040,9 +1011,11 @@ import * as aws from "@pulumi/aws";
 const pool = new aws.cognito.UserPool("pool", {});
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPool-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L139"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L141"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1059,7 +1032,7 @@ Create a UserPool resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L32">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1073,7 +1046,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1083,7 +1056,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L43">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1097,7 +1070,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-adminCreateUserConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L51">property <b>adminCreateUserConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L53">property <b>adminCreateUserConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>adminCreateUserConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1116,7 +1089,7 @@ The configuration for AdminCreateUser requests.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-aliasAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L55">property <b>aliasAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L57">property <b>aliasAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>aliasAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1127,7 +1100,7 @@ Attributes supported as an alias for this user pool. Possible values: phone_numb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L59">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L61">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1138,7 +1111,7 @@ The ARN of the user pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-autoVerifiedAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L63">property <b>autoVerifiedAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L65">property <b>autoVerifiedAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>autoVerifiedAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1149,7 +1122,7 @@ The attributes to be auto-verified. Possible values: email, phone_number.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-creationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L67">property <b>creationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L69">property <b>creationDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>creationDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1160,7 +1133,7 @@ The date the user pool was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-deviceConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L71">property <b>deviceConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L73">property <b>deviceConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>deviceConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1174,7 +1147,7 @@ The configuration for the user pool's device tracking.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-emailConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L75">property <b>emailConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L77">property <b>emailConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>emailConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1189,7 +1162,7 @@ The Email Configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-emailVerificationMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L79">property <b>emailVerificationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L81">property <b>emailVerificationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>emailVerificationMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1200,7 +1173,7 @@ A string representing the email verification message. Conflicts with `verificati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-emailVerificationSubject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L83">property <b>emailVerificationSubject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L85">property <b>emailVerificationSubject</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>emailVerificationSubject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1211,7 +1184,7 @@ A string representing the email verification subject. Conflicts with `verificati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L87">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L89">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1222,7 +1195,7 @@ The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1234,7 +1207,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-lambdaConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L91">property <b>lambdaConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L93">property <b>lambdaConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lambdaConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1256,7 +1229,7 @@ A container for the AWS Lambda triggers associated with the user pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-lastModifiedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L95">property <b>lastModifiedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L97">property <b>lastModifiedDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lastModifiedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1267,7 +1240,7 @@ The date the user pool was last modified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-mfaConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L99">property <b>mfaConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L101">property <b>mfaConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>mfaConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1278,7 +1251,7 @@ Set to enable multi-factor authentication. Must be one of the following values (
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L103">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L105">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1289,7 +1262,7 @@ The name of the attribute.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-passwordPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L107">property <b>passwordPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L109">property <b>passwordPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>passwordPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1306,7 +1279,7 @@ A container for information about the user pool password policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-schemas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L111">property <b>schemas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L113">property <b>schemas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>schemas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1331,7 +1304,7 @@ A container with the schema attributes of a user pool. Maximum of 50 attributes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-smsAuthenticationMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L115">property <b>smsAuthenticationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L117">property <b>smsAuthenticationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>smsAuthenticationMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1342,7 +1315,7 @@ A string representing the SMS authentication message.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-smsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L119">property <b>smsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L121">property <b>smsConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>smsConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1356,7 +1329,7 @@ The SMS Configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-smsVerificationMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L123">property <b>smsVerificationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L125">property <b>smsVerificationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>smsVerificationMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1367,7 +1340,7 @@ A string representing the SMS verification message. Conflicts with `verification
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L127">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L129">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1378,7 +1351,7 @@ A mapping of tags to assign to the User Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1390,7 +1363,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-userPoolAddOns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L131">property <b>userPoolAddOns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L133">property <b>userPoolAddOns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>userPoolAddOns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1403,7 +1376,7 @@ Configuration block for user pool add-ons to enable user pool advanced security 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-usernameAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L135">property <b>usernameAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L137">property <b>usernameAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>usernameAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1414,7 +1387,7 @@ Specifies whether email addresses or phone numbers can be specified as usernames
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-verificationMessageTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L139">property <b>verificationMessageTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L141">property <b>verificationMessageTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>verificationMessageTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1433,7 +1406,7 @@ The verification message templates configuration.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPoolClient">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L37">class <b>UserPoolClient</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L39">class <b>UserPoolClient</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1468,9 +1441,11 @@ const client = new aws.cognito.UserPoolClient("client", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool_client.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPoolClient-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L123"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L125"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1487,7 +1462,7 @@ Create a UserPoolClient resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L48">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1501,7 +1476,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1511,7 +1486,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L59">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1525,7 +1500,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-allowedOauthFlows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L67">property <b>allowedOauthFlows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L69">property <b>allowedOauthFlows</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>allowedOauthFlows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1536,7 +1511,7 @@ List of allowed OAuth flows (code, implicit, client_credentials).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-allowedOauthFlowsUserPoolClient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L71">property <b>allowedOauthFlowsUserPoolClient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L73">property <b>allowedOauthFlowsUserPoolClient</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>allowedOauthFlowsUserPoolClient: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1547,7 +1522,7 @@ Whether the client is allowed to follow the OAuth protocol when interacting with
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-allowedOauthScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L75">property <b>allowedOauthScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L77">property <b>allowedOauthScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>allowedOauthScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1558,7 +1533,7 @@ List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.sig
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-callbackUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L79">property <b>callbackUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L81">property <b>callbackUrls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>callbackUrls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1569,7 +1544,7 @@ List of allowed callback URLs for the identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L83">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L85">property <b>clientSecret</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1580,7 +1555,7 @@ The client secret of the user pool client.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-defaultRedirectUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L87">property <b>defaultRedirectUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L89">property <b>defaultRedirectUri</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultRedirectUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1591,7 +1566,7 @@ The default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-explicitAuthFlows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L91">property <b>explicitAuthFlows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L93">property <b>explicitAuthFlows</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>explicitAuthFlows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1602,7 +1577,7 @@ List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PAS
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-generateSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L95">property <b>generateSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L97">property <b>generateSecret</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>generateSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1613,7 +1588,7 @@ Should an application secret be generated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1625,7 +1600,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-logoutUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L99">property <b>logoutUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L101">property <b>logoutUrls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>logoutUrls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1636,7 +1611,7 @@ List of allowed logout URLs for the identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L103">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L105">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1647,7 +1622,7 @@ The name of the application client.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-readAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L107">property <b>readAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L109">property <b>readAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>readAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1658,7 +1633,7 @@ List of user pool attributes the application client can read from.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-refreshTokenValidity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L111">property <b>refreshTokenValidity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L113">property <b>refreshTokenValidity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>refreshTokenValidity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1669,7 +1644,7 @@ The time limit in days refresh tokens are valid for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-supportedIdentityProviders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L115">property <b>supportedIdentityProviders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L117">property <b>supportedIdentityProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>supportedIdentityProviders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1680,7 +1655,7 @@ List of provider names for the identity providers that are supported on this cli
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1692,7 +1667,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-userPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L119">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L121">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1703,7 +1678,7 @@ The user pool the client belongs to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-writeAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L123">property <b>writeAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L125">property <b>writeAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>writeAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1715,7 +1690,7 @@ List of user pool attributes the application client can write to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPoolDomain">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L36">class <b>UserPoolDomain</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L38">class <b>UserPoolDomain</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1749,9 +1724,11 @@ const main = new aws.cognito.UserPoolDomain("main", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool_domain.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPoolDomain-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L92"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1768,7 +1745,7 @@ Create a UserPoolDomain resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L47">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1782,7 +1759,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1792,7 +1769,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L58">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1806,7 +1783,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-awsAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L66">property <b>awsAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L68">property <b>awsAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>awsAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1817,7 +1794,7 @@ The AWS account ID for the user pool owner.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-certificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L70">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L72">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>certificateArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1828,7 +1805,7 @@ The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-cloudfrontDistributionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L74">property <b>cloudfrontDistributionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L76">property <b>cloudfrontDistributionArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>cloudfrontDistributionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1839,7 +1816,7 @@ The ARN of the CloudFront distribution.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L78">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L80">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1850,7 +1827,7 @@ The domain string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1862,7 +1839,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-s3Bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L82">property <b>s3Bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L84">property <b>s3Bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>s3Bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1873,7 +1850,7 @@ The S3 bucket where the static files for this domain are stored.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1885,7 +1862,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-userPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L86">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L88">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1896,7 +1873,7 @@ The user pool ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L90">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L92">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1908,7 +1885,7 @@ The app version.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getUserPools">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/getUserPools.ts#L29">function <b>getUserPools</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/getUserPools.ts#L31">function <b>getUserPools</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1937,10 +1914,12 @@ const cognito = new aws.apigateway.Authorizer("cognito", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cognito_user_pools.html.markdown.
+
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="GetUserPoolsArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/getUserPools.ts#L38">interface <b>GetUserPoolsArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/getUserPools.ts#L40">interface <b>GetUserPoolsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1949,7 +1928,7 @@ A collection of arguments for invoking getUserPools.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserPoolsArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/getUserPools.ts#L42">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/getUserPools.ts#L44">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1961,7 +1940,7 @@ Name of the cognito user pools. Name is not a unique attribute for cognito user 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUserPoolsResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/getUserPools.ts#L48">interface <b>GetUserPoolsResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/getUserPools.ts#L50">interface <b>GetUserPoolsResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1970,7 +1949,7 @@ A collection of values returned by getUserPools.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserPoolsResult-arns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/getUserPools.ts#L49">property <b>arns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/getUserPools.ts#L51">property <b>arns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1978,7 +1957,7 @@ A collection of values returned by getUserPools.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserPoolsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/getUserPools.ts#L58">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/getUserPools.ts#L60">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1989,7 +1968,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserPoolsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/getUserPools.ts#L53">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/getUserPools.ts#L55">property <b>ids</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2000,7 +1979,7 @@ The list of cognito user pool ids.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserPoolsResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/getUserPools.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/getUserPools.ts#L56">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2009,7 +1988,7 @@ The list of cognito user pool ids.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityPoolArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L185">interface <b>IdentityPoolArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L187">interface <b>IdentityPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2018,7 +1997,7 @@ The set of arguments for constructing a IdentityPool resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityPoolArgs-allowUnauthenticatedIdentities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L189">property <b>allowUnauthenticatedIdentities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L191">property <b>allowUnauthenticatedIdentities</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowUnauthenticatedIdentities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2029,7 +2008,7 @@ Whether the identity pool supports unauthenticated logins or not.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolArgs-cognitoIdentityProviders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L193">property <b>cognitoIdentityProviders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L195">property <b>cognitoIdentityProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cognitoIdentityProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2044,7 +2023,7 @@ An array of Amazon Cognito Identity user pools and their client IDs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolArgs-developerProviderName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L198">property <b>developerProviderName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L200">property <b>developerProviderName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>developerProviderName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2056,7 +2035,7 @@ backend and the Cognito service to communicate about the developer provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolArgs-identityPoolName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L202">property <b>identityPoolName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L204">property <b>identityPoolName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identityPoolName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2067,7 +2046,7 @@ The Cognito Identity Pool name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolArgs-openidConnectProviderArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L206">property <b>openidConnectProviderArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L208">property <b>openidConnectProviderArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>openidConnectProviderArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2078,7 +2057,7 @@ A list of OpendID Connect provider ARNs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolArgs-samlProviderArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L210">property <b>samlProviderArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L212">property <b>samlProviderArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>samlProviderArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2089,7 +2068,7 @@ An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolArgs-supportedLoginProviders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L214">property <b>supportedLoginProviders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L216">property <b>supportedLoginProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>supportedLoginProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -2101,7 +2080,7 @@ Key-Value pairs mapping provider names to provider app IDs.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityPoolRoleAttachmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L177">interface <b>IdentityPoolRoleAttachmentArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L179">interface <b>IdentityPoolRoleAttachmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2110,7 +2089,7 @@ The set of arguments for constructing a IdentityPoolRoleAttachment resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachmentArgs-identityPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L181">property <b>identityPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L183">property <b>identityPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identityPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2121,7 +2100,7 @@ An identity pool ID in the format REGION:GUID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachmentArgs-roleMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L185">property <b>roleMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L187">property <b>roleMappings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2142,7 +2121,7 @@ A List of Role Mapping.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachmentArgs-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L189">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L191">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2157,7 +2136,7 @@ The map of roles associated with this pool. For a given role, the key will be ei
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityPoolRoleAttachmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L159">interface <b>IdentityPoolRoleAttachmentState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L161">interface <b>IdentityPoolRoleAttachmentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2166,7 +2145,7 @@ Input properties used for looking up and filtering IdentityPoolRoleAttachment re
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachmentState-identityPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L163">property <b>identityPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L165">property <b>identityPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identityPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2177,7 +2156,7 @@ An identity pool ID in the format REGION:GUID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachmentState-roleMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L167">property <b>roleMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L169">property <b>roleMappings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2198,7 +2177,7 @@ A List of Role Mapping.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachmentState-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L171">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPoolRoleAttachment.ts#L173">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2213,7 +2192,7 @@ The map of roles associated with this pool. For a given role, the key will be ei
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityPoolState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L146">interface <b>IdentityPoolState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L148">interface <b>IdentityPoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2222,7 +2201,7 @@ Input properties used for looking up and filtering IdentityPool resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityPoolState-allowUnauthenticatedIdentities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L150">property <b>allowUnauthenticatedIdentities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L152">property <b>allowUnauthenticatedIdentities</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowUnauthenticatedIdentities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2233,7 +2212,7 @@ Whether the identity pool supports unauthenticated logins or not.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L154">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L156">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2244,7 +2223,7 @@ The ARN of the identity pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolState-cognitoIdentityProviders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L158">property <b>cognitoIdentityProviders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L160">property <b>cognitoIdentityProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cognitoIdentityProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2259,7 +2238,7 @@ An array of Amazon Cognito Identity user pools and their client IDs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolState-developerProviderName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L163">property <b>developerProviderName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L165">property <b>developerProviderName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>developerProviderName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2271,7 +2250,7 @@ backend and the Cognito service to communicate about the developer provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolState-identityPoolName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L167">property <b>identityPoolName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L169">property <b>identityPoolName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identityPoolName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2282,7 +2261,7 @@ The Cognito Identity Pool name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolState-openidConnectProviderArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L171">property <b>openidConnectProviderArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L173">property <b>openidConnectProviderArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>openidConnectProviderArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2293,7 +2272,7 @@ A list of OpendID Connect provider ARNs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolState-samlProviderArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L175">property <b>samlProviderArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L177">property <b>samlProviderArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>samlProviderArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2304,7 +2283,7 @@ An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolState-supportedLoginProviders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityPool.ts#L179">property <b>supportedLoginProviders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityPool.ts#L181">property <b>supportedLoginProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>supportedLoginProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
@@ -2316,7 +2295,7 @@ Key-Value pairs mapping provider names to provider app IDs.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L163">interface <b>IdentityProviderArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L165">interface <b>IdentityProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2325,7 +2304,7 @@ The set of arguments for constructing a IdentityProvider resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityProviderArgs-attributeMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L167">property <b>attributeMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L169">property <b>attributeMapping</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attributeMapping?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2336,7 +2315,7 @@ The map of attribute mapping of user pool attributes. [AttributeMapping in AWS A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderArgs-idpIdentifiers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L171">property <b>idpIdentifiers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L173">property <b>idpIdentifiers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>idpIdentifiers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2347,7 +2326,7 @@ The list of identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderArgs-providerDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L175">property <b>providerDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L177">property <b>providerDetails</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>providerDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2358,7 +2337,7 @@ The map of identity details, such as access token
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderArgs-providerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L179">property <b>providerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L181">property <b>providerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>providerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2369,7 +2348,7 @@ The provider name
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderArgs-providerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L183">property <b>providerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L185">property <b>providerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>providerType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2380,7 +2359,7 @@ The provider type.  [See AWS API for valid values](https://docs.aws.amazon.com/c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderArgs-userPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L187">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L189">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2392,7 +2371,7 @@ The user pool id
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityProviderState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L133">interface <b>IdentityProviderState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L135">interface <b>IdentityProviderState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2401,7 +2380,7 @@ Input properties used for looking up and filtering IdentityProvider resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityProviderState-attributeMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L137">property <b>attributeMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L139">property <b>attributeMapping</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attributeMapping?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2412,7 +2391,7 @@ The map of attribute mapping of user pool attributes. [AttributeMapping in AWS A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderState-idpIdentifiers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L141">property <b>idpIdentifiers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L143">property <b>idpIdentifiers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>idpIdentifiers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2423,7 +2402,7 @@ The list of identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderState-providerDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L145">property <b>providerDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L147">property <b>providerDetails</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>providerDetails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2434,7 +2413,7 @@ The map of identity details, such as access token
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderState-providerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L149">property <b>providerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L151">property <b>providerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>providerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2445,7 +2424,7 @@ The provider name
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderState-providerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L153">property <b>providerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L155">property <b>providerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>providerType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2456,7 +2435,7 @@ The provider type.  [See AWS API for valid values](https://docs.aws.amazon.com/c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderState-userPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/identityProvider.ts#L157">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/identityProvider.ts#L159">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2468,7 +2447,7 @@ The user pool id
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceServerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L148">interface <b>ResourceServerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L150">interface <b>ResourceServerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2477,7 +2456,7 @@ The set of arguments for constructing a ResourceServer resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceServerArgs-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L152">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L154">property <b>identifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2488,7 +2467,7 @@ An identifier for the resource server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L158">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2499,7 +2478,7 @@ A name for the resource server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServerArgs-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L160">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L162">property <b>scopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2513,7 +2492,7 @@ A list of Authorization Scope.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServerArgs-userPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L161">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L163">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2522,7 +2501,7 @@ A list of Authorization Scope.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceServerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L125">interface <b>ResourceServerState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L127">interface <b>ResourceServerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2531,7 +2510,7 @@ Input properties used for looking up and filtering ResourceServer resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceServerState-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L129">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L131">property <b>identifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2542,7 +2521,7 @@ An identifier for the resource server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L133">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L135">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2553,7 +2532,7 @@ A name for the resource server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServerState-scopeIdentifiers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L141">property <b>scopeIdentifiers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L143">property <b>scopeIdentifiers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scopeIdentifiers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2564,7 +2543,7 @@ A list of all scopes configured for this resource server in the format identifie
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServerState-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L137">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L139">property <b>scopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2578,7 +2557,7 @@ A list of Authorization Scope.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServerState-userPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/resourceServer.ts#L142">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/resourceServer.ts#L144">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2587,7 +2566,7 @@ A list of Authorization Scope.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L158">interface <b>UserGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L116">interface <b>UserGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2596,7 +2575,7 @@ The set of arguments for constructing a UserGroup resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L162">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L120">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2607,7 +2586,7 @@ The description of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L166">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L124">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2618,7 +2597,7 @@ The name of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupArgs-precedence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L170">property <b>precedence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L128">property <b>precedence</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>precedence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2629,7 +2608,7 @@ The precedence of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L174">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L132">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2640,7 +2619,7 @@ The ARN of the IAM role to be associated with the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupArgs-userPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L178">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L136">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2652,7 +2631,7 @@ The user pool ID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserGroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L132">interface <b>UserGroupState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L90">interface <b>UserGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2661,7 +2640,7 @@ Input properties used for looking up and filtering UserGroup resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L136">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L94">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2672,7 +2651,7 @@ The description of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L140">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L98">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2683,7 +2662,7 @@ The name of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupState-precedence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L144">property <b>precedence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L102">property <b>precedence</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>precedence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2694,7 +2673,7 @@ The precedence of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L148">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L106">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2705,7 +2684,7 @@ The ARN of the IAM role to be associated with the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupState-userPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userGroup.ts#L152">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userGroup.ts#L110">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2717,7 +2696,7 @@ The user pool ID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPoolArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L307">interface <b>UserPoolArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L309">interface <b>UserPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2726,7 +2705,7 @@ The set of arguments for constructing a UserPool resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPoolArgs-adminCreateUserConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L311">property <b>adminCreateUserConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L313">property <b>adminCreateUserConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminCreateUserConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2745,7 +2724,7 @@ The configuration for AdminCreateUser requests.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-aliasAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L315">property <b>aliasAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L317">property <b>aliasAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>aliasAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2756,7 +2735,7 @@ Attributes supported as an alias for this user pool. Possible values: phone_numb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-autoVerifiedAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L319">property <b>autoVerifiedAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L321">property <b>autoVerifiedAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>autoVerifiedAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2767,7 +2746,7 @@ The attributes to be auto-verified. Possible values: email, phone_number.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-deviceConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L323">property <b>deviceConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L325">property <b>deviceConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deviceConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2781,7 +2760,7 @@ The configuration for the user pool's device tracking.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-emailConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L327">property <b>emailConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L329">property <b>emailConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>emailConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2796,7 +2775,7 @@ The Email Configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-emailVerificationMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L331">property <b>emailVerificationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L333">property <b>emailVerificationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>emailVerificationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2807,7 +2786,7 @@ A string representing the email verification message. Conflicts with `verificati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-emailVerificationSubject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L335">property <b>emailVerificationSubject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L337">property <b>emailVerificationSubject</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>emailVerificationSubject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2818,7 +2797,7 @@ A string representing the email verification subject. Conflicts with `verificati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-lambdaConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L339">property <b>lambdaConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L341">property <b>lambdaConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2840,7 +2819,7 @@ A container for the AWS Lambda triggers associated with the user pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-mfaConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L343">property <b>mfaConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L345">property <b>mfaConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mfaConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2851,7 +2830,7 @@ Set to enable multi-factor authentication. Must be one of the following values (
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L347">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L349">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2862,7 +2841,7 @@ The name of the attribute.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-passwordPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L351">property <b>passwordPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L353">property <b>passwordPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>passwordPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2879,7 +2858,7 @@ A container for information about the user pool password policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-schemas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L355">property <b>schemas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L357">property <b>schemas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schemas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2904,7 +2883,7 @@ A container with the schema attributes of a user pool. Maximum of 50 attributes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-smsAuthenticationMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L359">property <b>smsAuthenticationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L361">property <b>smsAuthenticationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>smsAuthenticationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2915,7 +2894,7 @@ A string representing the SMS authentication message.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-smsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L363">property <b>smsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L365">property <b>smsConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>smsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2929,7 +2908,7 @@ The SMS Configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-smsVerificationMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L367">property <b>smsVerificationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L369">property <b>smsVerificationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>smsVerificationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2940,7 +2919,7 @@ A string representing the SMS verification message. Conflicts with `verification
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L371">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L373">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2951,7 +2930,7 @@ A mapping of tags to assign to the User Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-userPoolAddOns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L375">property <b>userPoolAddOns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L377">property <b>userPoolAddOns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPoolAddOns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2964,7 +2943,7 @@ Configuration block for user pool add-ons to enable user pool advanced security 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-usernameAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L379">property <b>usernameAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L381">property <b>usernameAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>usernameAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2975,7 +2954,7 @@ Specifies whether email addresses or phone numbers can be specified as usernames
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-verificationMessageTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L383">property <b>verificationMessageTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L385">property <b>verificationMessageTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>verificationMessageTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2994,7 +2973,7 @@ The verification message templates configuration.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPoolClientArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L246">interface <b>UserPoolClientArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L248">interface <b>UserPoolClientArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3003,7 +2982,7 @@ The set of arguments for constructing a UserPoolClient resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-allowedOauthFlows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L250">property <b>allowedOauthFlows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L252">property <b>allowedOauthFlows</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedOauthFlows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3014,7 +2993,7 @@ List of allowed OAuth flows (code, implicit, client_credentials).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-allowedOauthFlowsUserPoolClient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L254">property <b>allowedOauthFlowsUserPoolClient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L256">property <b>allowedOauthFlowsUserPoolClient</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedOauthFlowsUserPoolClient?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3025,7 +3004,7 @@ Whether the client is allowed to follow the OAuth protocol when interacting with
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-allowedOauthScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L258">property <b>allowedOauthScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L260">property <b>allowedOauthScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedOauthScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3036,7 +3015,7 @@ List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.sig
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-callbackUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L262">property <b>callbackUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L264">property <b>callbackUrls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>callbackUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3047,7 +3026,7 @@ List of allowed callback URLs for the identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-defaultRedirectUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L266">property <b>defaultRedirectUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L268">property <b>defaultRedirectUri</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultRedirectUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3058,7 +3037,7 @@ The default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-explicitAuthFlows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L270">property <b>explicitAuthFlows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L272">property <b>explicitAuthFlows</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>explicitAuthFlows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3069,7 +3048,7 @@ List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PAS
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-generateSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L274">property <b>generateSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L276">property <b>generateSecret</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>generateSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3080,7 +3059,7 @@ Should an application secret be generated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-logoutUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L278">property <b>logoutUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L280">property <b>logoutUrls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>logoutUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3091,7 +3070,7 @@ List of allowed logout URLs for the identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L282">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L284">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3102,7 +3081,7 @@ The name of the application client.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-readAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L286">property <b>readAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L288">property <b>readAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3113,7 +3092,7 @@ List of user pool attributes the application client can read from.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-refreshTokenValidity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L290">property <b>refreshTokenValidity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L292">property <b>refreshTokenValidity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>refreshTokenValidity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3124,7 +3103,7 @@ The time limit in days refresh tokens are valid for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-supportedIdentityProviders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L294">property <b>supportedIdentityProviders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L296">property <b>supportedIdentityProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>supportedIdentityProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3135,7 +3114,7 @@ List of provider names for the identity providers that are supported on this cli
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-userPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L298">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L300">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3146,7 +3125,7 @@ The user pool the client belongs to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-writeAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L302">property <b>writeAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L304">property <b>writeAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>writeAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3158,7 +3137,7 @@ List of user pool attributes the application client can write to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPoolClientState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L180">interface <b>UserPoolClientState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L182">interface <b>UserPoolClientState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3167,7 +3146,7 @@ Input properties used for looking up and filtering UserPoolClient resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPoolClientState-allowedOauthFlows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L184">property <b>allowedOauthFlows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L186">property <b>allowedOauthFlows</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedOauthFlows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3178,7 +3157,7 @@ List of allowed OAuth flows (code, implicit, client_credentials).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-allowedOauthFlowsUserPoolClient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L188">property <b>allowedOauthFlowsUserPoolClient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L190">property <b>allowedOauthFlowsUserPoolClient</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedOauthFlowsUserPoolClient?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3189,7 +3168,7 @@ Whether the client is allowed to follow the OAuth protocol when interacting with
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-allowedOauthScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L192">property <b>allowedOauthScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L194">property <b>allowedOauthScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedOauthScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3200,7 +3179,7 @@ List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.sig
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-callbackUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L196">property <b>callbackUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L198">property <b>callbackUrls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>callbackUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3211,7 +3190,7 @@ List of allowed callback URLs for the identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L200">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L202">property <b>clientSecret</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3222,7 +3201,7 @@ The client secret of the user pool client.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-defaultRedirectUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L204">property <b>defaultRedirectUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L206">property <b>defaultRedirectUri</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultRedirectUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3233,7 +3212,7 @@ The default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-explicitAuthFlows">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L208">property <b>explicitAuthFlows</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L210">property <b>explicitAuthFlows</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>explicitAuthFlows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3244,7 +3223,7 @@ List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PAS
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-generateSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L212">property <b>generateSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L214">property <b>generateSecret</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>generateSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3255,7 +3234,7 @@ Should an application secret be generated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-logoutUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L216">property <b>logoutUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L218">property <b>logoutUrls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>logoutUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3266,7 +3245,7 @@ List of allowed logout URLs for the identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L220">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L222">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3277,7 +3256,7 @@ The name of the application client.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-readAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L224">property <b>readAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L226">property <b>readAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3288,7 +3267,7 @@ List of user pool attributes the application client can read from.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-refreshTokenValidity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L228">property <b>refreshTokenValidity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L230">property <b>refreshTokenValidity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>refreshTokenValidity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3299,7 +3278,7 @@ The time limit in days refresh tokens are valid for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-supportedIdentityProviders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L232">property <b>supportedIdentityProviders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L234">property <b>supportedIdentityProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>supportedIdentityProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3310,7 +3289,7 @@ List of provider names for the identity providers that are supported on this cli
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-userPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L236">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L238">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3321,7 +3300,7 @@ The user pool the client belongs to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-writeAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolClient.ts#L240">property <b>writeAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolClient.ts#L242">property <b>writeAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>writeAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3333,7 +3312,7 @@ List of user pool attributes the application client can write to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPoolDomainArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L168">interface <b>UserPoolDomainArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L170">interface <b>UserPoolDomainArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3342,7 +3321,7 @@ The set of arguments for constructing a UserPoolDomain resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPoolDomainArgs-certificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L172">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L174">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificateArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3353,7 +3332,7 @@ The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomainArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L176">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L178">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3364,7 +3343,7 @@ The domain string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomainArgs-userPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L180">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L182">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3376,7 +3355,7 @@ The user pool ID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPoolDomainState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L134">interface <b>UserPoolDomainState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L136">interface <b>UserPoolDomainState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3385,7 +3364,7 @@ Input properties used for looking up and filtering UserPoolDomain resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPoolDomainState-awsAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L138">property <b>awsAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L140">property <b>awsAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>awsAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3396,7 +3375,7 @@ The AWS account ID for the user pool owner.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomainState-certificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L142">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L144">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>certificateArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3407,7 +3386,7 @@ The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomainState-cloudfrontDistributionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L146">property <b>cloudfrontDistributionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L148">property <b>cloudfrontDistributionArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cloudfrontDistributionArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3418,7 +3397,7 @@ The ARN of the CloudFront distribution.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomainState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L150">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L152">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3429,7 +3408,7 @@ The domain string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomainState-s3Bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L154">property <b>s3Bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L156">property <b>s3Bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>s3Bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3440,7 +3419,7 @@ The S3 bucket where the static files for this domain are stored.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomainState-userPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L158">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L160">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3451,7 +3430,7 @@ The user pool ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomainState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPoolDomain.ts#L162">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPoolDomain.ts#L164">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3463,7 +3442,7 @@ The app version.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPoolState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L209">interface <b>UserPoolState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L211">interface <b>UserPoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3472,7 +3451,7 @@ Input properties used for looking up and filtering UserPool resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPoolState-adminCreateUserConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L213">property <b>adminCreateUserConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L215">property <b>adminCreateUserConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminCreateUserConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3491,7 +3470,7 @@ The configuration for AdminCreateUser requests.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-aliasAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L217">property <b>aliasAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L219">property <b>aliasAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>aliasAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3502,7 +3481,7 @@ Attributes supported as an alias for this user pool. Possible values: phone_numb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L221">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L223">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3513,7 +3492,7 @@ The ARN of the user pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-autoVerifiedAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L225">property <b>autoVerifiedAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L227">property <b>autoVerifiedAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>autoVerifiedAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3524,7 +3503,7 @@ The attributes to be auto-verified. Possible values: email, phone_number.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-creationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L229">property <b>creationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L231">property <b>creationDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>creationDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3535,7 +3514,7 @@ The date the user pool was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-deviceConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L233">property <b>deviceConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L235">property <b>deviceConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deviceConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3549,7 +3528,7 @@ The configuration for the user pool's device tracking.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-emailConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L237">property <b>emailConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L239">property <b>emailConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>emailConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3564,7 +3543,7 @@ The Email Configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-emailVerificationMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L241">property <b>emailVerificationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L243">property <b>emailVerificationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>emailVerificationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3575,7 +3554,7 @@ A string representing the email verification message. Conflicts with `verificati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-emailVerificationSubject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L245">property <b>emailVerificationSubject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L247">property <b>emailVerificationSubject</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>emailVerificationSubject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3586,7 +3565,7 @@ A string representing the email verification subject. Conflicts with `verificati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L249">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L251">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3597,7 +3576,7 @@ The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-lambdaConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L253">property <b>lambdaConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L255">property <b>lambdaConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3619,7 +3598,7 @@ A container for the AWS Lambda triggers associated with the user pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-lastModifiedDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L257">property <b>lastModifiedDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L259">property <b>lastModifiedDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lastModifiedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3630,7 +3609,7 @@ The date the user pool was last modified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-mfaConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L261">property <b>mfaConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L263">property <b>mfaConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mfaConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3641,7 +3620,7 @@ Set to enable multi-factor authentication. Must be one of the following values (
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L265">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L267">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3652,7 +3631,7 @@ The name of the attribute.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-passwordPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L269">property <b>passwordPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L271">property <b>passwordPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>passwordPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3669,7 +3648,7 @@ A container for information about the user pool password policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-schemas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L273">property <b>schemas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L275">property <b>schemas</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schemas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3694,7 +3673,7 @@ A container with the schema attributes of a user pool. Maximum of 50 attributes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-smsAuthenticationMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L277">property <b>smsAuthenticationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L279">property <b>smsAuthenticationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>smsAuthenticationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3705,7 +3684,7 @@ A string representing the SMS authentication message.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-smsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L281">property <b>smsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L283">property <b>smsConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>smsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3719,7 +3698,7 @@ The SMS Configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-smsVerificationMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L285">property <b>smsVerificationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L287">property <b>smsVerificationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>smsVerificationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3730,7 +3709,7 @@ A string representing the SMS verification message. Conflicts with `verification
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L289">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L291">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3741,7 +3720,7 @@ A mapping of tags to assign to the User Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-userPoolAddOns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L293">property <b>userPoolAddOns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L295">property <b>userPoolAddOns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPoolAddOns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3754,7 +3733,7 @@ Configuration block for user pool add-ons to enable user pool advanced security 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-usernameAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L297">property <b>usernameAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L299">property <b>usernameAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>usernameAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3765,7 +3744,7 @@ Specifies whether email addresses or phone numbers can be specified as usernames
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-verificationMessageTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/cognito/userPool.ts#L301">property <b>verificationMessageTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/cognito/userPool.ts#L303">property <b>verificationMessageTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>verificationMessageTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{

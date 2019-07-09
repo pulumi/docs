@@ -7,6 +7,13 @@ title: Module cognitive
 
 <a href="../">@pulumi/azure</a> &gt; cognitive
 
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-azure)
+> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
+> first check the [`pulumi/pulumi-azure` repo](https://github.com/pulumi/pulumi-azure/issues); however, if that doesn't turn up anything,
+> please consult the source [`terraform-providers/terraform-provider-azure` repo](https://github.com/terraform-providers/terraform-provider-azure/issues).
+
+
+
 <div class="toggleVisible">
 <div class="collapsed">
 <h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
@@ -20,14 +27,14 @@ title: Module cognitive
 <li><a href="#AccountState">interface AccountState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts">cognitive/account.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts">cognitive/account.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Account">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L35">class <b>Account</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L37">class <b>Account</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -60,9 +67,11 @@ const testAccount = new azure.cognitive.Account("test", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cognitive_account.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L99"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -79,7 +88,7 @@ Create a Account resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L46">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -93,7 +102,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -103,7 +112,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L57">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -117,7 +126,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L65">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L67">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -128,7 +137,7 @@ The endpoint used to connect to the Cognitive Service Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -140,7 +149,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L69">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L71">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -151,7 +160,7 @@ Specifies the type of Cognitive Service Account that should be created. Possible
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L73">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L75">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -162,7 +171,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L79">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -173,7 +182,7 @@ Specifies the name of the Cognitive Service Account. Changing this forces a new 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L81">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L83">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>primaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -184,7 +193,7 @@ A primary access key which can be used to connect to the Cognitive Service Accou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L85">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L87">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -195,7 +204,7 @@ The name of the resource group in which the Cognitive Service Account is created
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L89">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L91">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -206,7 +215,7 @@ The secondary access key which can be used to connect to the Cognitive Service A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L93">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L95">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -220,7 +229,7 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L97">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L99">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -231,7 +240,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -244,7 +253,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L190">interface <b>AccountArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L192">interface <b>AccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -253,7 +262,7 @@ The set of arguments for constructing a Account resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L194">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L196">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -264,7 +273,7 @@ Specifies the type of Cognitive Service Account that should be created. Possible
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L198">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L200">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -275,7 +284,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L202">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L204">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -286,7 +295,7 @@ Specifies the name of the Cognitive Service Account. Changing this forces a new 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L206">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L208">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -297,7 +306,7 @@ The name of the resource group in which the Cognitive Service Account is created
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L210">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L212">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -311,7 +320,7 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L214">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L216">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -323,7 +332,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L148">interface <b>AccountState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L150">interface <b>AccountState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -332,7 +341,7 @@ Input properties used for looking up and filtering Account resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L152">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L154">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -343,7 +352,7 @@ The endpoint used to connect to the Cognitive Service Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L156">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L158">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -354,7 +363,7 @@ Specifies the type of Cognitive Service Account that should be created. Possible
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L160">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L162">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -365,7 +374,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L166">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -376,7 +385,7 @@ Specifies the name of the Cognitive Service Account. Changing this forces a new 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L168">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L170">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>primaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -387,7 +396,7 @@ A primary access key which can be used to connect to the Cognitive Service Accou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L172">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L174">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -398,7 +407,7 @@ The name of the resource group in which the Cognitive Service Account is created
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L176">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L178">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -409,7 +418,7 @@ The secondary access key which can be used to connect to the Cognitive Service A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L180">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L182">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -423,7 +432,7 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/e8a2c544c39c6d2198efe782f43112576037915d/sdk/nodejs/cognitive/account.ts#L184">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/cognitive/account.ts#L186">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>

@@ -7,6 +7,13 @@ title: Module iap
 
 <a href="../">@pulumi/gcp</a> &gt; iap
 
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-gcp)
+> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
+> first check the [`pulumi/pulumi-gcp` repo](https://github.com/pulumi/pulumi-gcp/issues); however, if that doesn't turn up anything,
+> please consult the source [`terraform-providers/terraform-provider-gcp` repo](https://github.com/terraform-providers/terraform-provider-gcp/issues).
+
+
+
 <div class="toggleVisible">
 <div class="collapsed">
 <h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
@@ -26,79 +33,19 @@ title: Module iap
 <li><a href="#TunnelInstanceIAMPolicyState">interface TunnelInstanceIAMPolicyState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts">iap/tunnelInstanceIAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts">iap/tunnelInstanceIAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts">iap/tunnelInstanceIAMPolicy.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts">iap/tunnelInstanceIAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts">iap/tunnelInstanceIAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts">iap/tunnelInstanceIAMPolicy.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="TunnelInstanceIAMBinding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L65">class <b>TunnelInstanceIAMBinding</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L7">class <b>TunnelInstanceIAMBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{% md %}}
-
-> **Warning:** These resources are in beta, and should be used with the terraform-provider-google-beta provider.
-See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta resources.
-
-Three different resources help you manage your IAM policy for IAP Tunnel Instance. Each of these resources serves a different use case:
-
-* `google_iap_tunnel_instance_iam_policy`: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.
-* `google_iap_tunnel_instance_iam_binding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.
-* `google_iap_tunnel_instance_iam_member`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.
-
-> **Note:** `google_iap_tunnel_instance_iam_policy` **cannot** be used in conjunction with `google_iap_tunnel_instance_iam_binding` and `google_iap_tunnel_instance_iam_member` or they will fight over what your policy should be.
-
-> **Note:** `google_iap_tunnel_instance_iam_binding` resources **can be** used in conjunction with `google_iap_tunnel_instance_iam_member` resources **only if** they do not grant privilege to the same role.
-
-## google\_iap\_tunnel\_instance\_iam\_policy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
-    bindings: [{
-        members: ["user:jane@example.com"],
-        role: "roles/editor",
-    }],
-}));
-const instance = new gcp.iap.TunnelInstanceIAMPolicy("instance", {
-    instance: "your-instance-name",
-    policyData: admin.policyData,
-});
-```
-
-## google\_iap\_tunnel\_instance\_iam\_binding
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const instance = new gcp.iap.TunnelInstanceIAMBinding("instance", {
-    instance: "your-instance-name",
-    members: ["user:jane@example.com"],
-    role: "roles/compute.networkUser",
-});
-```
-
-## google\_iap\_tunnel\_instance\_iam\_member
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const instance = new gcp.iap.TunnelInstanceIAMMember("instance", {
-    instance: "your-instance-name",
-    member: "user:jane@example.com",
-    role: "roles/compute.networkUser",
-});
-```
-
-{{% /md %}}
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L116"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L58"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -115,7 +62,7 @@ Create a TunnelInstanceIAMBinding resource with the given unique name, arguments
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L74">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L16">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -129,7 +76,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -139,7 +86,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L27">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -153,7 +100,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBinding-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L95">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L37">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -164,7 +111,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -176,7 +123,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBinding-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L99">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L41">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -187,7 +134,7 @@ The name of the instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBinding-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L100">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L42">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -195,7 +142,7 @@ The name of the instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBinding-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L105">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L47">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -207,7 +154,7 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBinding-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L111">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L53">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -220,7 +167,7 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -232,7 +179,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBinding-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L116">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L58">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -245,72 +192,12 @@ unspecified, this defaults to the zone configured in the provider.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TunnelInstanceIAMMember">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L65">class <b>TunnelInstanceIAMMember</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L7">class <b>TunnelInstanceIAMMember</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{% md %}}
-
-> **Warning:** These resources are in beta, and should be used with the terraform-provider-google-beta provider.
-See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta resources.
-
-Three different resources help you manage your IAM policy for IAP Tunnel Instance. Each of these resources serves a different use case:
-
-* `google_iap_tunnel_instance_iam_policy`: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.
-* `google_iap_tunnel_instance_iam_binding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.
-* `google_iap_tunnel_instance_iam_member`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.
-
-> **Note:** `google_iap_tunnel_instance_iam_policy` **cannot** be used in conjunction with `google_iap_tunnel_instance_iam_binding` and `google_iap_tunnel_instance_iam_member` or they will fight over what your policy should be.
-
-> **Note:** `google_iap_tunnel_instance_iam_binding` resources **can be** used in conjunction with `google_iap_tunnel_instance_iam_member` resources **only if** they do not grant privilege to the same role.
-
-## google\_iap\_tunnel\_instance\_iam\_policy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
-    bindings: [{
-        members: ["user:jane@example.com"],
-        role: "roles/editor",
-    }],
-}));
-const instance = new gcp.iap.TunnelInstanceIAMPolicy("instance", {
-    instance: "your-instance-name",
-    policyData: admin.policyData,
-});
-```
-
-## google\_iap\_tunnel\_instance\_iam\_binding
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const instance = new gcp.iap.TunnelInstanceIAMBinding("instance", {
-    instance: "your-instance-name",
-    members: ["user:jane@example.com"],
-    role: "roles/compute.networkUser",
-});
-```
-
-## google\_iap\_tunnel\_instance\_iam\_member
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const instance = new gcp.iap.TunnelInstanceIAMMember("instance", {
-    instance: "your-instance-name",
-    member: "user:jane@example.com",
-    role: "roles/compute.networkUser",
-});
-```
-
-{{% /md %}}
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L116"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L58"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -327,7 +214,7 @@ Create a TunnelInstanceIAMMember resource with the given unique name, arguments,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L74">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L16">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -341,7 +228,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -351,7 +238,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L27">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -365,7 +252,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMember-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L95">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L37">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -376,7 +263,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -388,7 +275,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMember-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L99">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L41">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -399,7 +286,7 @@ The name of the instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMember-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L100">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L42">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -407,7 +294,7 @@ The name of the instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMember-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L105">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L47">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -419,7 +306,7 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMember-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L111">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L53">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -432,7 +319,7 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -444,7 +331,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMember-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L116">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L58">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -457,72 +344,12 @@ unspecified, this defaults to the zone configured in the provider.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TunnelInstanceIAMPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L65">class <b>TunnelInstanceIAMPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L7">class <b>TunnelInstanceIAMPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{% md %}}
-
-> **Warning:** These resources are in beta, and should be used with the terraform-provider-google-beta provider.
-See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta resources.
-
-Three different resources help you manage your IAM policy for IAP Tunnel Instance. Each of these resources serves a different use case:
-
-* `google_iap_tunnel_instance_iam_policy`: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.
-* `google_iap_tunnel_instance_iam_binding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.
-* `google_iap_tunnel_instance_iam_member`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.
-
-> **Note:** `google_iap_tunnel_instance_iam_policy` **cannot** be used in conjunction with `google_iap_tunnel_instance_iam_binding` and `google_iap_tunnel_instance_iam_member` or they will fight over what your policy should be.
-
-> **Note:** `google_iap_tunnel_instance_iam_binding` resources **can be** used in conjunction with `google_iap_tunnel_instance_iam_member` resources **only if** they do not grant privilege to the same role.
-
-## google\_iap\_tunnel\_instance\_iam\_policy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
-    bindings: [{
-        members: ["user:jane@example.com"],
-        role: "roles/editor",
-    }],
-}));
-const instance = new gcp.iap.TunnelInstanceIAMPolicy("instance", {
-    instance: "your-instance-name",
-    policyData: admin.policyData,
-});
-```
-
-## google\_iap\_tunnel\_instance\_iam\_binding
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const instance = new gcp.iap.TunnelInstanceIAMBinding("instance", {
-    instance: "your-instance-name",
-    members: ["user:jane@example.com"],
-    role: "roles/compute.networkUser",
-});
-```
-
-## google\_iap\_tunnel\_instance\_iam\_member
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const instance = new gcp.iap.TunnelInstanceIAMMember("instance", {
-    instance: "your-instance-name",
-    member: "user:jane@example.com",
-    role: "roles/compute.networkUser",
-});
-```
-
-{{% /md %}}
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L114"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -539,7 +366,7 @@ Create a TunnelInstanceIAMPolicy resource with the given unique name, arguments,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L74">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L16">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -553,7 +380,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -563,7 +390,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L27">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -577,7 +404,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicy-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L95">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L37">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -588,7 +415,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -600,7 +427,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicy-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L99">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L41">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -611,7 +438,7 @@ The name of the instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicy-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L104">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L46">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -623,7 +450,7 @@ a `google_iam_policy` data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicy-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L109">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L51">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -635,7 +462,7 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -647,7 +474,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicy-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L114">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L56">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -660,7 +487,7 @@ unspecified, this defaults to the zone configured in the provider.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TunnelInstanceIAMBindingArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L192">interface <b>TunnelInstanceIAMBindingArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L134">interface <b>TunnelInstanceIAMBindingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -669,7 +496,7 @@ The set of arguments for constructing a TunnelInstanceIAMBinding resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBindingArgs-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L196">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L138">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -680,7 +507,7 @@ The name of the instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBindingArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L197">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L139">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -688,7 +515,7 @@ The name of the instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBindingArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L202">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L144">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -700,7 +527,7 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBindingArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L208">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L150">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -713,7 +540,7 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBindingArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L213">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L155">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -726,7 +553,7 @@ unspecified, this defaults to the zone configured in the provider.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TunnelInstanceIAMBindingState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L161">interface <b>TunnelInstanceIAMBindingState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L103">interface <b>TunnelInstanceIAMBindingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -735,7 +562,7 @@ Input properties used for looking up and filtering TunnelInstanceIAMBinding reso
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBindingState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L165">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L107">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -746,7 +573,7 @@ Input properties used for looking up and filtering TunnelInstanceIAMBinding reso
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBindingState-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L169">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L111">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -757,7 +584,7 @@ The name of the instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBindingState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L170">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L112">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -765,7 +592,7 @@ The name of the instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBindingState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L175">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L117">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -777,7 +604,7 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBindingState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L181">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L123">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -790,7 +617,7 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMBindingState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L186">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMBinding.ts#L128">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -803,7 +630,7 @@ unspecified, this defaults to the zone configured in the provider.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TunnelInstanceIAMMemberArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L192">interface <b>TunnelInstanceIAMMemberArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L134">interface <b>TunnelInstanceIAMMemberArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -812,7 +639,7 @@ The set of arguments for constructing a TunnelInstanceIAMMember resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMemberArgs-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L196">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L138">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -823,7 +650,7 @@ The name of the instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMemberArgs-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L197">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L139">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -831,7 +658,7 @@ The name of the instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMemberArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L202">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L144">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -843,7 +670,7 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMemberArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L208">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L150">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -856,7 +683,7 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMemberArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L213">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L155">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -869,7 +696,7 @@ unspecified, this defaults to the zone configured in the provider.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TunnelInstanceIAMMemberState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L161">interface <b>TunnelInstanceIAMMemberState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L103">interface <b>TunnelInstanceIAMMemberState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -878,7 +705,7 @@ Input properties used for looking up and filtering TunnelInstanceIAMMember resou
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMemberState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L165">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L107">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -889,7 +716,7 @@ Input properties used for looking up and filtering TunnelInstanceIAMMember resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMemberState-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L169">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L111">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -900,7 +727,7 @@ The name of the instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMemberState-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L170">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L112">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -908,7 +735,7 @@ The name of the instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMemberState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L175">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L117">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -920,7 +747,7 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMemberState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L181">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L123">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -933,7 +760,7 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMMemberState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L186">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMMember.ts#L128">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -946,7 +773,7 @@ unspecified, this defaults to the zone configured in the provider.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TunnelInstanceIAMPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L183">interface <b>TunnelInstanceIAMPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L125">interface <b>TunnelInstanceIAMPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -955,7 +782,7 @@ The set of arguments for constructing a TunnelInstanceIAMPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicyArgs-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L187">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L129">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -966,7 +793,7 @@ The name of the instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicyArgs-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L192">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L134">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -978,7 +805,7 @@ a `google_iam_policy` data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L197">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L139">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -990,7 +817,7 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicyArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L202">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L144">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1003,7 +830,7 @@ unspecified, this defaults to the zone configured in the provider.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TunnelInstanceIAMPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L154">interface <b>TunnelInstanceIAMPolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L96">interface <b>TunnelInstanceIAMPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1012,7 +839,7 @@ Input properties used for looking up and filtering TunnelInstanceIAMPolicy resou
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L158">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L100">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1023,7 +850,7 @@ Input properties used for looking up and filtering TunnelInstanceIAMPolicy resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicyState-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L162">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L104">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1034,7 +861,7 @@ The name of the instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicyState-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L167">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L109">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1046,7 +873,7 @@ a `google_iam_policy` data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicyState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L172">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L114">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1058,7 +885,7 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TunnelInstanceIAMPolicyState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/f25eb1de9caaca1e0f9f571e570b1d821cfd6e97/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L177">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/6e7746d998f1196bccfd36a282c4fcd2ed4ace6a/sdk/nodejs/iap/tunnelInstanceIAMPolicy.ts#L119">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

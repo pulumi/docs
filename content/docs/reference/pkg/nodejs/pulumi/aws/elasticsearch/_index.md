@@ -7,6 +7,13 @@ title: Module elasticsearch
 
 <a href="../">@pulumi/aws</a> &gt; elasticsearch
 
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws)
+> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
+> first check the [`pulumi/pulumi-aws` repo](https://github.com/pulumi/pulumi-aws/issues); however, if that doesn't turn up anything,
+> please consult the source [`terraform-providers/terraform-provider-aws` repo](https://github.com/terraform-providers/terraform-provider-aws/issues).
+
+
+
 <div class="toggleVisible">
 <div class="collapsed">
 <h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
@@ -23,185 +30,19 @@ title: Module elasticsearch
 <li><a href="#DomainState">interface DomainState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts">elasticsearch/domain.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domainPolicy.ts">elasticsearch/domainPolicy.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts">elasticsearch/domain.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domainPolicy.ts">elasticsearch/domainPolicy.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Domain">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L173">class <b>Domain</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L9">class <b>Domain</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{% md %}}
-
-Manages an AWS Elasticsearch Domain.
-
-## Example Usage
-
-### Basic Usage
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.elasticsearch.Domain("example", {
-    clusterConfig: {
-        instanceType: "r4.large.elasticsearch",
-    },
-    elasticsearchVersion: "1.5",
-    snapshotOptions: {
-        automatedSnapshotStartHour: 23,
-    },
-    tags: {
-        Domain: "TestDomain",
-    },
-});
-```
-
-### Access Policy
-
-> See also: [`aws_elasticsearch_domain_policy` resource](https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain_policy.html)
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const config = new pulumi.Config();
-const domain = config.get("domain") || "tf-test";
-
-const currentCallerIdentity = pulumi.output(aws.getCallerIdentity({}));
-const currentRegion = pulumi.output(aws.getRegion({}));
-const example = new aws.elasticsearch.Domain("example", {
-    accessPolicies: pulumi.interpolate`{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "es:*",
-      "Principal": "*",
-      "Effect": "Allow",
-      "Resource": "arn:aws:es:${currentRegion.name}:${currentCallerIdentity.accountId}:domain/${domain}/*",
-      "Condition": {
-        "IpAddress": {"aws:SourceIp": ["66.193.100.22/32"]}
-      }
-    }
-  ]
-}
-`,
-});
-```
-
-### Log Publishing to CloudWatch Logs
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleLogGroup = new aws.cloudwatch.LogGroup("example", {});
-const exampleLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("example", {
-    policyDocument: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "es.amazonaws.com"
-      },
-      "Action": [
-        "logs:PutLogEvents",
-        "logs:PutLogEventsBatch",
-        "logs:CreateLogStream"
-      ],
-      "Resource": "arn:aws:logs:*"
-    }
-  ]
-}
-`,
-    policyName: "example",
-});
-const exampleDomain = new aws.elasticsearch.Domain("example", {
-    logPublishingOptions: [{
-        cloudwatchLogGroupArn: exampleLogGroup.arn,
-        logType: "INDEX_SLOW_LOGS",
-    }],
-});
-```
-### VPC based ES
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const config = new pulumi.Config();
-const domain = config.get("domain") || "tf-test";
-const vpc = config.require("vpc");
-
-const esServiceLinkedRole = new aws.iam.ServiceLinkedRole("es", {
-    awsServiceName: "es.amazonaws.com",
-});
-const currentCallerIdentity = pulumi.output(aws.getCallerIdentity({}));
-const currentRegion = pulumi.output(aws.getRegion({}));
-const selectedVpc = pulumi.output(aws.ec2.getVpc({
-    tags: {
-        Name: vpc,
-    },
-}));
-const selectedSubnetIds = selectedVpc.apply(selectedVpc => aws.ec2.getSubnetIds({
-    tags: {
-        Tier: "private",
-    },
-    vpcId: selectedVpc.id,
-}));
-const esDomain = new aws.elasticsearch.Domain("es", {
-    accessPolicies: pulumi.interpolate`{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Action": "es:*",
-			"Principal": "*",
-			"Effect": "Allow",
-			"Resource": "arn:aws:es:${currentRegion.name}:${currentCallerIdentity.accountId}:domain/${domain}/*"
-		}
-	]
-}
-`,
-    advancedOptions: {
-        "rest.action.multi.allow_explicit_index": "true",
-    },
-    clusterConfig: {
-        instanceType: "m4.large.elasticsearch",
-    },
-    elasticsearchVersion: "6.3",
-    snapshotOptions: {
-        automatedSnapshotStartHour: 23,
-    },
-    tags: {
-        Domain: "TestDomain",
-    },
-    vpcOptions: {
-        securityGroupIds: [aws_security_group_elasticsearch.id],
-        subnetIds: [
-            selectedSubnetIds.apply(selectedSubnetIds => selectedSubnetIds.ids[0]),
-            selectedSubnetIds.apply(selectedSubnetIds => selectedSubnetIds.ids[1]),
-        ],
-    },
-}, {dependsOn: [esServiceLinkedRole]});
-const esSecurityGroup = new aws.ec2.SecurityGroup("es", {
-    description: "Managed by Terraform",
-    ingress: [{
-        cidrBlocks: [selectedVpc.cidrBlocks],
-        fromPort: 443,
-        protocol: "tcp",
-        toPort: 443,
-    }],
-    vpcId: selectedVpc.id,
-});
-```
-
-{{% /md %}}
 <h3 class="pdoc-member-header" id="Domain-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L269"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L99"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -218,7 +59,7 @@ Create a Domain resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L182">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L18">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -232,7 +73,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -242,7 +83,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L193">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L29">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -256,7 +97,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-accessPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L203">property <b>accessPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L39">property <b>accessPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accessPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -267,21 +108,15 @@ IAM policy document specifying the access policies for the domain
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-advancedOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L210">property <b>advancedOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L40">property <b>advancedOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>advancedOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
 {{% md %}}
-
-Key-value string pairs to specify advanced configuration options.
-Note that the values for these configuration options must be strings (wrapped in quotes) or they
-may be wrong and cause a perpetual diff, causing Terraform to want to recreate your Elasticsearch
-domain on every apply.
-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L214">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L44">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -292,7 +127,7 @@ Amazon Resource Name (ARN) of the domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-clusterConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L218">property <b>clusterConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L48">property <b>clusterConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clusterConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -310,7 +145,7 @@ Cluster configuration of the domain, see below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-cognitoOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L219">property <b>cognitoOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L49">property <b>cognitoOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>cognitoOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -323,7 +158,7 @@ Cluster configuration of the domain, see below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L223">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L53">property <b>domainId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>domainId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -334,7 +169,7 @@ Unique identifier for the domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L227">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L57">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -345,7 +180,7 @@ Name of the domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-ebsOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L231">property <b>ebsOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L61">property <b>ebsOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ebsOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -361,7 +196,7 @@ EBS related options, may be required based on chosen [instance size](https://aws
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-elasticsearchVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L235">property <b>elasticsearchVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L65">property <b>elasticsearchVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>elasticsearchVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -372,7 +207,7 @@ The version of Elasticsearch to deploy. Defaults to `1.5`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-encryptAtRest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L239">property <b>encryptAtRest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L69">property <b>encryptAtRest</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>encryptAtRest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -386,7 +221,7 @@ Encrypt at rest options. Only available for [certain instance types](http://docs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L243">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L73">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -397,7 +232,7 @@ Domain-specific endpoint used to submit index, search, and data upload requests.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -409,7 +244,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-kibanaEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L249">property <b>kibanaEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L79">property <b>kibanaEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kibanaEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -422,7 +257,7 @@ Domain-specific endpoint for kibana without https scheme.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-logPublishingOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L253">property <b>logPublishingOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L83">property <b>logPublishingOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>logPublishingOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -437,7 +272,7 @@ Options for publishing slow logs to CloudWatch Logs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-nodeToNodeEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L257">property <b>nodeToNodeEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L87">property <b>nodeToNodeEncryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>nodeToNodeEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -450,7 +285,7 @@ Node-to-node encryption options. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-snapshotOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L261">property <b>snapshotOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L91">property <b>snapshotOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>snapshotOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -463,7 +298,7 @@ Snapshot related options, see below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L265">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L95">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -474,7 +309,7 @@ A mapping of tags to assign to the resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -486,7 +321,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-vpcOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L269">property <b>vpcOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L99">property <b>vpcOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vpcOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -503,7 +338,7 @@ VPC related options, see below. Adding or removing this configuration forces a n
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DomainPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domainPolicy.ts#L41">class <b>DomainPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domainPolicy.ts#L43">class <b>DomainPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -540,9 +375,11 @@ const main = new aws.elasticsearch.DomainPolicy("main", {
 });
 ```
 
+> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain_policy.html.markdown.
+
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DomainPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domainPolicy.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domainPolicy.ts#L77"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -559,7 +396,7 @@ Create a DomainPolicy resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domainPolicy.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domainPolicy.ts#L52">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -573,7 +410,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -583,7 +420,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domainPolicy.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domainPolicy.ts#L63">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -597,7 +434,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainPolicy-accessPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domainPolicy.ts#L71">property <b>accessPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domainPolicy.ts#L73">property <b>accessPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accessPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -608,7 +445,7 @@ IAM policy document specifying the access policies for the domain
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainPolicy-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domainPolicy.ts#L75">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domainPolicy.ts#L77">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -619,7 +456,7 @@ Name of the domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -631,7 +468,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -644,7 +481,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DomainArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L403">interface <b>DomainArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L227">interface <b>DomainArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -653,7 +490,7 @@ The set of arguments for constructing a Domain resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DomainArgs-accessPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L407">property <b>accessPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L231">property <b>accessPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
@@ -664,21 +501,15 @@ IAM policy document specifying the access policies for the domain
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainArgs-advancedOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L414">property <b>advancedOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L232">property <b>advancedOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>advancedOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
 {{% md %}}
-
-Key-value string pairs to specify advanced configuration options.
-Note that the values for these configuration options must be strings (wrapped in quotes) or they
-may be wrong and cause a perpetual diff, causing Terraform to want to recreate your Elasticsearch
-domain on every apply.
-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainArgs-clusterConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L418">property <b>clusterConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L236">property <b>clusterConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clusterConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -696,7 +527,7 @@ Cluster configuration of the domain, see below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainArgs-cognitoOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L419">property <b>cognitoOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L237">property <b>cognitoOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cognitoOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -709,7 +540,7 @@ Cluster configuration of the domain, see below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L423">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L241">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -720,7 +551,7 @@ Name of the domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainArgs-ebsOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L427">property <b>ebsOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L245">property <b>ebsOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ebsOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -736,7 +567,7 @@ EBS related options, may be required based on chosen [instance size](https://aws
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainArgs-elasticsearchVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L431">property <b>elasticsearchVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L249">property <b>elasticsearchVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>elasticsearchVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -747,7 +578,7 @@ The version of Elasticsearch to deploy. Defaults to `1.5`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainArgs-encryptAtRest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L435">property <b>encryptAtRest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L253">property <b>encryptAtRest</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encryptAtRest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -761,7 +592,7 @@ Encrypt at rest options. Only available for [certain instance types](http://docs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainArgs-logPublishingOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L439">property <b>logPublishingOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L257">property <b>logPublishingOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>logPublishingOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -776,7 +607,7 @@ Options for publishing slow logs to CloudWatch Logs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainArgs-nodeToNodeEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L443">property <b>nodeToNodeEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L261">property <b>nodeToNodeEncryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeToNodeEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -789,7 +620,7 @@ Node-to-node encryption options. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainArgs-snapshotOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L447">property <b>snapshotOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L265">property <b>snapshotOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>snapshotOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -802,7 +633,7 @@ Snapshot related options, see below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L451">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L269">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -813,7 +644,7 @@ A mapping of tags to assign to the resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainArgs-vpcOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L455">property <b>vpcOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L273">property <b>vpcOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -830,7 +661,7 @@ VPC related options, see below. Adding or removing this configuration forces a n
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DomainPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domainPolicy.ts#L123">interface <b>DomainPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domainPolicy.ts#L125">interface <b>DomainPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -839,7 +670,7 @@ The set of arguments for constructing a DomainPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DomainPolicyArgs-accessPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domainPolicy.ts#L127">property <b>accessPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domainPolicy.ts#L129">property <b>accessPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accessPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
@@ -850,7 +681,7 @@ IAM policy document specifying the access policies for the domain
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainPolicyArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domainPolicy.ts#L131">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domainPolicy.ts#L133">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -862,7 +693,7 @@ Name of the domain.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DomainPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domainPolicy.ts#L109">interface <b>DomainPolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domainPolicy.ts#L111">interface <b>DomainPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -871,7 +702,7 @@ Input properties used for looking up and filtering DomainPolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DomainPolicyState-accessPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domainPolicy.ts#L113">property <b>accessPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domainPolicy.ts#L115">property <b>accessPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
@@ -882,7 +713,7 @@ IAM policy document specifying the access policies for the domain
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainPolicyState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domainPolicy.ts#L117">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domainPolicy.ts#L119">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -894,7 +725,7 @@ Name of the domain.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DomainState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L327">interface <b>DomainState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L157">interface <b>DomainState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -903,7 +734,7 @@ Input properties used for looking up and filtering Domain resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DomainState-accessPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L331">property <b>accessPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L161">property <b>accessPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
@@ -914,21 +745,15 @@ IAM policy document specifying the access policies for the domain
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-advancedOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L338">property <b>advancedOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L162">property <b>advancedOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>advancedOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
 {{% md %}}
-
-Key-value string pairs to specify advanced configuration options.
-Note that the values for these configuration options must be strings (wrapped in quotes) or they
-may be wrong and cause a perpetual diff, causing Terraform to want to recreate your Elasticsearch
-domain on every apply.
-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L342">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L166">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -939,7 +764,7 @@ Amazon Resource Name (ARN) of the domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-clusterConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L346">property <b>clusterConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L170">property <b>clusterConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clusterConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -957,7 +782,7 @@ Cluster configuration of the domain, see below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-cognitoOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L347">property <b>cognitoOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L171">property <b>cognitoOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cognitoOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -970,7 +795,7 @@ Cluster configuration of the domain, see below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L351">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L175">property <b>domainId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domainId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -981,7 +806,7 @@ Unique identifier for the domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L355">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L179">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -992,7 +817,7 @@ Name of the domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-ebsOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L359">property <b>ebsOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L183">property <b>ebsOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ebsOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1008,7 +833,7 @@ EBS related options, may be required based on chosen [instance size](https://aws
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-elasticsearchVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L363">property <b>elasticsearchVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L187">property <b>elasticsearchVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>elasticsearchVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1019,7 +844,7 @@ The version of Elasticsearch to deploy. Defaults to `1.5`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-encryptAtRest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L367">property <b>encryptAtRest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L191">property <b>encryptAtRest</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encryptAtRest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1033,7 +858,7 @@ Encrypt at rest options. Only available for [certain instance types](http://docs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L371">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L195">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1044,7 +869,7 @@ Domain-specific endpoint used to submit index, search, and data upload requests.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-kibanaEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L377">property <b>kibanaEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L201">property <b>kibanaEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kibanaEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1057,7 +882,7 @@ Domain-specific endpoint for kibana without https scheme.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-logPublishingOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L381">property <b>logPublishingOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L205">property <b>logPublishingOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>logPublishingOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1072,7 +897,7 @@ Options for publishing slow logs to CloudWatch Logs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-nodeToNodeEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L385">property <b>nodeToNodeEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L209">property <b>nodeToNodeEncryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeToNodeEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1085,7 +910,7 @@ Node-to-node encryption options. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-snapshotOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L389">property <b>snapshotOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L213">property <b>snapshotOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>snapshotOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1098,7 +923,7 @@ Snapshot related options, see below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L393">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L217">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1109,7 +934,7 @@ A mapping of tags to assign to the resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-vpcOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/elasticsearch/domain.ts#L397">property <b>vpcOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/elasticsearch/domain.ts#L221">property <b>vpcOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{

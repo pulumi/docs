@@ -7,6 +7,13 @@ title: Module config
 
 <a href="../">@pulumi/digitalocean</a> &gt; config
 
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean)
+> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
+> first check the [`pulumi/pulumi-digitalocean` repo](https://github.com/pulumi/pulumi-digitalocean/issues); however, if that doesn't turn up anything,
+> please consult the source [`terraform-providers/terraform-provider-digitalocean` repo](https://github.com/terraform-providers/terraform-provider-digitalocean/issues).
+
+
+
 <div class="toggleVisible">
 <div class="collapsed">
 <h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
@@ -21,14 +28,14 @@ title: Module config
 <li><a href="#token">let token</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-digitalocean/blob/99d476762b48f8088903efbea56bbaa30ccd1d35/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
+<a href="https://github.com/pulumi/pulumi-digitalocean/blob/43afc4e607d69c60d1a2ff7f696652a5ea52c18d/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="apiEndpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/99d476762b48f8088903efbea56bbaa30ccd1d35/sdk/nodejs/config/vars.ts#L12">let <b>apiEndpoint</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/43afc4e607d69c60d1a2ff7f696652a5ea52c18d/sdk/nodejs/config/vars.ts#L12">let <b>apiEndpoint</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> apiEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiEndpoint&#34;) || (utilities.getEnv(&#34;DIGITALOCEAN_API_URL&#34;) || &#34;https://api.digitalocean.com&#34;)</span>;</pre>
@@ -39,7 +46,7 @@ The URL to use for the DigitalOcean API.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="spacesAccessId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/99d476762b48f8088903efbea56bbaa30ccd1d35/sdk/nodejs/config/vars.ts#L16">let <b>spacesAccessId</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/43afc4e607d69c60d1a2ff7f696652a5ea52c18d/sdk/nodejs/config/vars.ts#L16">let <b>spacesAccessId</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> spacesAccessId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;spacesAccessId&#34;) || utilities.getEnv(&#34;SPACES_ACCESS_KEY_ID&#34;)</span>;</pre>
@@ -50,7 +57,7 @@ The access key ID for Spaces API operations.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="spacesSecretKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/99d476762b48f8088903efbea56bbaa30ccd1d35/sdk/nodejs/config/vars.ts#L20">let <b>spacesSecretKey</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/43afc4e607d69c60d1a2ff7f696652a5ea52c18d/sdk/nodejs/config/vars.ts#L20">let <b>spacesSecretKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> spacesSecretKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;spacesSecretKey&#34;) || utilities.getEnv(&#34;SPACES_SECRET_ACCESS_KEY&#34;)</span>;</pre>
@@ -61,7 +68,7 @@ The secret access key for Spaces API operations.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="token">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/99d476762b48f8088903efbea56bbaa30ccd1d35/sdk/nodejs/config/vars.ts#L24">let <b>token</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/43afc4e607d69c60d1a2ff7f696652a5ea52c18d/sdk/nodejs/config/vars.ts#L24">let <b>token</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> token: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;token&#34;) || utilities.getEnv(&#34;DIGITALOCEAN_TOKEN&#34;)</span>;</pre>

@@ -7,6 +7,13 @@ title: Module config
 
 <a href="../">@pulumi/linode</a> &gt; config
 
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-linode)
+> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
+> first check the [`pulumi/pulumi-linode` repo](https://github.com/pulumi/pulumi-linode/issues); however, if that doesn't turn up anything,
+> please consult the source [`terraform-providers/terraform-provider-linode` repo](https://github.com/terraform-providers/terraform-provider-linode/issues).
+
+
+
 <div class="toggleVisible">
 <div class="collapsed">
 <h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
@@ -20,14 +27,14 @@ title: Module config
 <li><a href="#url">let url</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-linode/blob/6f9b34e991c7cbeb2a71db05658036e880e13b3e/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
+<a href="https://github.com/pulumi/pulumi-linode/blob/29e908d50b92935322ad26b420f10f0768ac0d7c/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="token">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/6f9b34e991c7cbeb2a71db05658036e880e13b3e/sdk/nodejs/config/vars.ts#L12">let <b>token</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/29e908d50b92935322ad26b420f10f0768ac0d7c/sdk/nodejs/config/vars.ts#L12">let <b>token</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> token: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;token&#34;) || utilities.getEnv(&#34;LINODE_TOKEN&#34;, &#34;LINODE_API_TOKEN&#34;)</span>;</pre>
@@ -38,7 +45,7 @@ The token that allows you access to your Linode account
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="uaPrefix">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/6f9b34e991c7cbeb2a71db05658036e880e13b3e/sdk/nodejs/config/vars.ts#L16">let <b>uaPrefix</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/29e908d50b92935322ad26b420f10f0768ac0d7c/sdk/nodejs/config/vars.ts#L16">let <b>uaPrefix</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> uaPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;uaPrefix&#34;)</span>;</pre>
@@ -49,7 +56,7 @@ An HTTP User-Agent Prefix to prepend in API requests.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="url">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/6f9b34e991c7cbeb2a71db05658036e880e13b3e/sdk/nodejs/config/vars.ts#L20">let <b>url</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/29e908d50b92935322ad26b420f10f0768ac0d7c/sdk/nodejs/config/vars.ts#L20">let <b>url</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;url&#34;)</span>;</pre>

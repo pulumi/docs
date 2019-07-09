@@ -7,6 +7,13 @@ title: Module config
 
 <a href="../">@pulumi/newrelic</a> &gt; config
 
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-newrelic)
+> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
+> first check the [`pulumi/pulumi-newrelic` repo](https://github.com/pulumi/pulumi-newrelic/issues); however, if that doesn't turn up anything,
+> please consult the source [`terraform-providers/terraform-provider-newrelic` repo](https://github.com/terraform-providers/terraform-provider-newrelic/issues).
+
+
+
 <div class="toggleVisible">
 <div class="collapsed">
 <h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
@@ -20,26 +27,26 @@ title: Module config
 <li><a href="#infraApiUrl">let infraApiUrl</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-newrelic/blob/879999fd070da5c4dddedab73e0dee037bbaec35/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
+<a href="https://github.com/pulumi/pulumi-newrelic/blob/217dd9478261e90edc29191f2b3c7b65dca3f560/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="apiKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-newrelic/blob/879999fd070da5c4dddedab73e0dee037bbaec35/sdk/nodejs/config/vars.ts#L9">let <b>apiKey</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-newrelic/blob/217dd9478261e90edc29191f2b3c7b65dca3f560/sdk/nodejs/config/vars.ts#L9">let <b>apiKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> apiKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiKey&#34;) || utilities.getEnv(&#34;NEWRELIC_API_KEY&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="apiUrl">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-newrelic/blob/879999fd070da5c4dddedab73e0dee037bbaec35/sdk/nodejs/config/vars.ts#L10">let <b>apiUrl</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-newrelic/blob/217dd9478261e90edc29191f2b3c7b65dca3f560/sdk/nodejs/config/vars.ts#L10">let <b>apiUrl</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> apiUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiUrl&#34;) || (utilities.getEnv(&#34;NEWRELIC_API_URL&#34;) || &#34;https://api.newrelic.com/v2&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="infraApiUrl">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-newrelic/blob/879999fd070da5c4dddedab73e0dee037bbaec35/sdk/nodejs/config/vars.ts#L11">let <b>infraApiUrl</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-newrelic/blob/217dd9478261e90edc29191f2b3c7b65dca3f560/sdk/nodejs/config/vars.ts#L11">let <b>infraApiUrl</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> infraApiUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;infraApiUrl&#34;) || (utilities.getEnv(&#34;NEWRELIC_INFRA_API_URL&#34;) || &#34;https://infra-api.newrelic.com/v2&#34;)</span>;</pre>

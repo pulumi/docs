@@ -7,6 +7,13 @@ title: Module config
 
 <a href="../">@pulumi/mysql</a> &gt; config
 
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-mysql)
+> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
+> first check the [`pulumi/pulumi-mysql` repo](https://github.com/pulumi/pulumi-mysql/issues); however, if that doesn't turn up anything,
+> please consult the source [`terraform-providers/terraform-provider-mysql` repo](https://github.com/terraform-providers/terraform-provider-mysql/issues).
+
+
+
 <div class="toggleVisible">
 <div class="collapsed">
 <h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
@@ -21,32 +28,32 @@ title: Module config
 <li><a href="#username">let username</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-mysql/blob/b29d7cc2fa641c1d880fc90124b04bd552bcee6e/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
+<a href="https://github.com/pulumi/pulumi-mysql/blob/11ea48ee0759ea648f5c34e0378b3aa035b7d280/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="endpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/b29d7cc2fa641c1d880fc90124b04bd552bcee6e/sdk/nodejs/config/vars.ts#L9">let <b>endpoint</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/11ea48ee0759ea648f5c34e0378b3aa035b7d280/sdk/nodejs/config/vars.ts#L9">let <b>endpoint</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;endpoint&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="password">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/b29d7cc2fa641c1d880fc90124b04bd552bcee6e/sdk/nodejs/config/vars.ts#L10">let <b>password</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/11ea48ee0759ea648f5c34e0378b3aa035b7d280/sdk/nodejs/config/vars.ts#L10">let <b>password</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;password&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="tls">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/b29d7cc2fa641c1d880fc90124b04bd552bcee6e/sdk/nodejs/config/vars.ts#L11">let <b>tls</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/11ea48ee0759ea648f5c34e0378b3aa035b7d280/sdk/nodejs/config/vars.ts#L11">let <b>tls</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> tls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;tls&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="username">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/b29d7cc2fa641c1d880fc90124b04bd552bcee6e/sdk/nodejs/config/vars.ts#L12">let <b>username</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/11ea48ee0759ea648f5c34e0378b3aa035b7d280/sdk/nodejs/config/vars.ts#L12">let <b>username</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;username&#34;)</span>;</pre>
