@@ -1,14 +1,14 @@
 ---
 title: "Getting Started on DigitalOcean with Pulumi"
 authors: ["paul-stack"]
-tags: ["DigitalOcean", "typescript"]
+tags: ["DigitalOcean", "Typescript"]
 date: "2019-07-08"
 
 meta_image: "RELATIVE_TO_PAGE/app-insights.png"
 ---
 
 Recently, support for the management of [DigitalOcean](https://www.digitalocean.com/) resources has been added to Pulumi. 
-In this article, we are going to show you how Pulumi can help to deploy some load balanced droplets on DigitalOcean.
+In this article, we are going to show you how Pulumi can help to deploy some load balanced Droplets on DigitalOcean.
 
 To get started, let's create a new Pulumi program written in TypeScript:
 
@@ -61,14 +61,15 @@ for (let i = 0; i < dropletCount; i ++) {
 }
 ```
 
-There are a number of things going on here. Firstly, we are declaring a `dropletTypeTag`. We will come back to what this
-tag means a little later. Then we have a `userData` constant that we can pass to all the instances so we can see they are
-running a web server. Then we are declaring a `nameTag` constant. This means we can use the interpolation of the loop to
-ensure that each of our droplets are tagged with the appropriate name. Then we can see that the region constant is being
-used in the droplet declaration. We are then adding the droplet information back to the droplets array for use later.
+Let's take a closer look at what we've programmed. First, we declared a `dropletTypeTag`; we'll come back to what this 
+tag signifies later, below. Next, we have a `userData` constant that we can pass to all the instances, so that we can 
+see they are running a web server. Then, we are declaring a `nameTag` constant. This allows us to use the interpolation 
+of the loop to ensure that each of our Droplets is tagged with the appropriate name. We can also see that the region 
+constant is being used in the Droplet declaration and we are adding the meta-information back to the Droplets array for 
+later use.
 
-Our next piece of infrastructure is our load balancer. We are going to create a public load balancer, that will accept 
-connections on port 80 and forward those connections to the droplets that are attached on port 80. The infrastructure 
+Our next piece of infrastructure is our load balancer. We are going to create a public load balancer that will accept 
+connections on port 80 and forward those connections to the Droplets that are attached on port 80. The infrastructure 
 block looks as follows:
 
 ```typescript
@@ -91,10 +92,10 @@ export const endpoint = lb.ip;
 ```
 
 The configuration is made up of an array of forwarding rules, in our case, we are forwarding from the load balancer to 
-the droplets as expressed. Then we have a health check that makes sure that port 80 is actually available and we deploy 
+the Droplets as expressed. Then we have a health check that makes sure that port 80 is actually available and we deploy 
 the load balancer into the region that we declared as a constant earlier. The interesting thing about load balancers in 
-DigitalOcean is that you can attach instances by droplet tag. You don't need to know the droplet IDs. We can suggest that
-all droplets that have the tag `demo-app`, in this region, will be attached to the load balancer. 
+DigitalOcean is that you can attach instances by Droplet tag. You don't need to know the Droplet IDs. We can suggest that
+all Droplets that have the tag `demo-app`, in this region, will be attached to the load balancer. 
 
 Running this gives us:
 
