@@ -41,7 +41,7 @@
 
 <dl class="class">
 <dt id="pulumi_aws.codecommit.Repository">
-<em class="property">class </em><code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">Repository</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_branch=None</em>, <em>description=None</em>, <em>repository_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Repository" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">Repository</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_branch=None</em>, <em>description=None</em>, <em>repository_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeCommit Repository Resource.</p>
 <blockquote>
 <div><strong>NOTE on CodeCommit Availability</strong>: The CodeCommit is not yet rolled out
@@ -57,6 +57,7 @@ in all regions - available regions are listed
 <li><strong>default_branch</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default branch of the repository. The branch specified here needs to exist.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the repository. This needs to be less than 1000 characters</li>
 <li><strong>repository_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the repository. This needs to be less than 100 characters.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</li>
 </ul>
 </td>
 </tr>
@@ -102,6 +103,12 @@ in all regions - available regions are listed
 <dt id="pulumi_aws.codecommit.Repository.repository_name">
 <code class="descname">repository_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codecommit.Repository.repository_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name for the repository. This needs to be less than 100 characters.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.codecommit.Repository.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codecommit.Repository.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags</p>
 </dd></dl>
 
 <dl class="method">

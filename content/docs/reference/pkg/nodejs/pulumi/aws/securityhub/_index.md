@@ -26,14 +26,14 @@ title: Module securityhub
 <li><a href="#StandardsSubscriptionState">interface StandardsSubscriptionState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/account.ts">securityhub/account.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/productSubscription.ts">securityhub/productSubscription.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/standardsSubscription.ts">securityhub/standardsSubscription.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/account.ts">securityhub/account.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/productSubscription.ts">securityhub/productSubscription.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/standardsSubscription.ts">securityhub/standardsSubscription.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Account">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/account.ts#L23">class <b>Account</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/account.ts#L23">class <b>Account</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -56,7 +56,7 @@ const example = new aws.securityhub.Account("example", {});
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/account.ts#L48"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/account.ts#L48"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -73,7 +73,7 @@ Create a Account resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/account.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/account.ts#L32">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -87,7 +87,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -97,7 +97,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/account.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/account.ts#L43">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -111,7 +111,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -123,7 +123,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -136,7 +136,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProductSubscription">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/productSubscription.ts#L25">class <b>ProductSubscription</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/productSubscription.ts#L25">class <b>ProductSubscription</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -161,7 +161,7 @@ const exampleProductSubscription = new aws.securityhub.ProductSubscription("exam
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProductSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/productSubscription.ts#L59"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/productSubscription.ts#L59"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -178,7 +178,7 @@ Create a ProductSubscription resource with the given unique name, arguments, and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProductSubscription-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/productSubscription.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/productSubscription.ts#L34">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -192,7 +192,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProductSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -202,7 +202,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProductSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/productSubscription.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/productSubscription.ts#L45">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -216,7 +216,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProductSubscription-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/productSubscription.ts#L55">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/productSubscription.ts#L55">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -227,7 +227,7 @@ The ARN of a resource that represents your subscription to the product that gene
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProductSubscription-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -239,7 +239,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProductSubscription-productArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/productSubscription.ts#L59">property <b>productArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/productSubscription.ts#L59">property <b>productArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>productArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -250,7 +250,7 @@ The ARN of the product that generates findings that you want to import into Secu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProductSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -263,7 +263,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StandardsSubscription">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/standardsSubscription.ts#L24">class <b>StandardsSubscription</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/standardsSubscription.ts#L24">class <b>StandardsSubscription</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -287,7 +287,7 @@ const exampleStandardsSubscription = new aws.securityhub.StandardsSubscription("
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StandardsSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/standardsSubscription.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/standardsSubscription.ts#L54"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -304,7 +304,7 @@ Create a StandardsSubscription resource with the given unique name, arguments, a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StandardsSubscription-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/standardsSubscription.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/standardsSubscription.ts#L33">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -318,7 +318,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StandardsSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -328,7 +328,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StandardsSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/standardsSubscription.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/standardsSubscription.ts#L44">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -342,7 +342,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StandardsSubscription-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -354,7 +354,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StandardsSubscription-standardsArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/standardsSubscription.ts#L54">property <b>standardsArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/standardsSubscription.ts#L54">property <b>standardsArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>standardsArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -365,7 +365,7 @@ The ARN of a standard - see below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StandardsSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -378,7 +378,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/account.ts#L79">interface <b>AccountArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/account.ts#L79">interface <b>AccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -388,7 +388,7 @@ The set of arguments for constructing a Account resource.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="AccountState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/account.ts#L73">interface <b>AccountState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/account.ts#L73">interface <b>AccountState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -398,7 +398,7 @@ Input properties used for looking up and filtering Account resources.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="ProductSubscriptionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/productSubscription.ts#L104">interface <b>ProductSubscriptionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/productSubscription.ts#L104">interface <b>ProductSubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -407,7 +407,7 @@ The set of arguments for constructing a ProductSubscription resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProductSubscriptionArgs-productArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/productSubscription.ts#L108">property <b>productArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/productSubscription.ts#L108">property <b>productArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>productArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -419,7 +419,7 @@ The ARN of the product that generates findings that you want to import into Secu
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProductSubscriptionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/productSubscription.ts#L90">interface <b>ProductSubscriptionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/productSubscription.ts#L90">interface <b>ProductSubscriptionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -428,7 +428,7 @@ Input properties used for looking up and filtering ProductSubscription resources
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProductSubscriptionState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/productSubscription.ts#L94">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/productSubscription.ts#L94">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -439,7 +439,7 @@ The ARN of a resource that represents your subscription to the product that gene
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProductSubscriptionState-productArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/productSubscription.ts#L98">property <b>productArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/productSubscription.ts#L98">property <b>productArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>productArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -451,7 +451,7 @@ The ARN of the product that generates findings that you want to import into Secu
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StandardsSubscriptionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/standardsSubscription.ts#L93">interface <b>StandardsSubscriptionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/standardsSubscription.ts#L93">interface <b>StandardsSubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -460,7 +460,7 @@ The set of arguments for constructing a StandardsSubscription resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StandardsSubscriptionArgs-standardsArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/standardsSubscription.ts#L97">property <b>standardsArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/standardsSubscription.ts#L97">property <b>standardsArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>standardsArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -472,7 +472,7 @@ The ARN of a standard - see below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StandardsSubscriptionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/standardsSubscription.ts#L83">interface <b>StandardsSubscriptionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/standardsSubscription.ts#L83">interface <b>StandardsSubscriptionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -481,7 +481,7 @@ Input properties used for looking up and filtering StandardsSubscription resourc
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StandardsSubscriptionState-standardsArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/securityhub/standardsSubscription.ts#L87">property <b>standardsArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/securityhub/standardsSubscription.ts#L87">property <b>standardsArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>standardsArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

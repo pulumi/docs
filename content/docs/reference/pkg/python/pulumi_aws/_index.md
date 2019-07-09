@@ -88,6 +88,7 @@
 <li class="toctree-l1"><a class="reference internal" href="securityhub/">securityhub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="servicecatalog/">servicecatalog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="servicediscovery/">servicediscovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servicequotas/">servicequotas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ses/">ses</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sfn/">sfn</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shield/">shield</a></li>

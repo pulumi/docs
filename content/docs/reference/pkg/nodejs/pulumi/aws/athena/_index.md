@@ -23,14 +23,14 @@ title: Module athena
 <li><a href="#NamedQueryState">interface NamedQueryState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts">athena/database.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts">athena/namedQuery.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts">athena/database.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts">athena/namedQuery.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Database">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L23">class <b>Database</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L23">class <b>Database</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -53,7 +53,7 @@ const hogeDatabase = new aws.athena.Database("hoge", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Database-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L65"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -70,7 +70,7 @@ Create a Database resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L32">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -84,7 +84,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -94,7 +94,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L43">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -108,7 +108,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L53">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L53">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -119,7 +119,7 @@ Name of s3 bucket to save the results of the query execution.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-encryptionConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L57">property <b>encryptionConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L57">property <b>encryptionConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>encryptionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -133,7 +133,7 @@ The encryption key block AWS Athena uses to decrypt the data in S3, such as an A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L61">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L61">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>forceDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -144,7 +144,7 @@ A boolean that indicates all tables should be deleted from the database so that 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -156,7 +156,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L65">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -167,7 +167,7 @@ Name of the database to create.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -180,7 +180,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NamedQuery">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L27">class <b>NamedQuery</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L27">class <b>NamedQuery</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -207,7 +207,7 @@ const foo = new aws.athena.NamedQuery("foo", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NamedQuery-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -224,7 +224,7 @@ Create a NamedQuery resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamedQuery-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L36">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -238,7 +238,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamedQuery-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -248,7 +248,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamedQuery-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L47">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -262,7 +262,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamedQuery-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L57">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L57">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -273,7 +273,7 @@ The database to which the query belongs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamedQuery-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L61">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L61">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -284,7 +284,7 @@ A brief explanation of the query. Maximum length of 1024.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamedQuery-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -296,7 +296,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamedQuery-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L65">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -307,7 +307,7 @@ The plain language name for the query. Maximum length of 128.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamedQuery-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L69">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L69">property <b>query</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -318,7 +318,7 @@ The text of the query itself. In other words, all query statements. Maximum leng
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamedQuery-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -331,7 +331,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatabaseArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L122">interface <b>DatabaseArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L122">interface <b>DatabaseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -340,7 +340,7 @@ The set of arguments for constructing a Database resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L126">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L126">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -351,7 +351,7 @@ Name of s3 bucket to save the results of the query execution.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-encryptionConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L130">property <b>encryptionConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L130">property <b>encryptionConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -365,7 +365,7 @@ The encryption key block AWS Athena uses to decrypt the data in S3, such as an A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L134">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L134">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -376,7 +376,7 @@ A boolean that indicates all tables should be deleted from the database so that 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L138">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -388,7 +388,7 @@ Name of the database to create.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatabaseState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L100">interface <b>DatabaseState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L100">interface <b>DatabaseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -397,7 +397,7 @@ Input properties used for looking up and filtering Database resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseState-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L104">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L104">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -408,7 +408,7 @@ Name of s3 bucket to save the results of the query execution.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-encryptionConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L108">property <b>encryptionConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L108">property <b>encryptionConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -422,7 +422,7 @@ The encryption key block AWS Athena uses to decrypt the data in S3, such as an A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L112">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L112">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -433,7 +433,7 @@ A boolean that indicates all tables should be deleted from the database so that 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/database.ts#L116">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/database.ts#L116">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -445,7 +445,7 @@ Name of the database to create.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NamedQueryArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L129">interface <b>NamedQueryArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L129">interface <b>NamedQueryArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -454,7 +454,7 @@ The set of arguments for constructing a NamedQuery resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NamedQueryArgs-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L133">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L133">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -465,7 +465,7 @@ The database to which the query belongs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamedQueryArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L137">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L137">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -476,7 +476,7 @@ A brief explanation of the query. Maximum length of 1024.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamedQueryArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L141">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L141">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -487,7 +487,7 @@ The plain language name for the query. Maximum length of 128.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamedQueryArgs-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L145">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L145">property <b>query</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -499,7 +499,7 @@ The text of the query itself. In other words, all query statements. Maximum leng
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NamedQueryState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L107">interface <b>NamedQueryState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L107">interface <b>NamedQueryState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -508,7 +508,7 @@ Input properties used for looking up and filtering NamedQuery resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NamedQueryState-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L111">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L111">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -519,7 +519,7 @@ The database to which the query belongs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamedQueryState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L115">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L115">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -530,7 +530,7 @@ A brief explanation of the query. Maximum length of 1024.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamedQueryState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L119">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L119">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -541,7 +541,7 @@ The plain language name for the query. Maximum length of 128.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamedQueryState-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/55bd0390160d27350b297834026fee52114a2d41/sdk/nodejs/athena/namedQuery.ts#L123">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/cf21e2fd10c33cf810b3f29b0b8d3649199d65c6/sdk/nodejs/athena/namedQuery.ts#L123">property <b>query</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>query?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

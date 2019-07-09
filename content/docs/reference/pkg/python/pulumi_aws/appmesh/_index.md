@@ -100,7 +100,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.appmesh.Route">
-<em class="property">class </em><code class="descclassname">pulumi_aws.appmesh.</code><code class="descname">Route</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>mesh_name=None</em>, <em>name=None</em>, <em>spec=None</em>, <em>virtual_router_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.Route" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.appmesh.</code><code class="descname">Route</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>mesh_name=None</em>, <em>name=None</em>, <em>spec=None</em>, <em>tags=None</em>, <em>virtual_router_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.Route" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS App Mesh route resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -112,6 +112,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>mesh_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the service mesh in which to create the route.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to use for the route.</li>
 <li><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The route specification to apply.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>virtual_router_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the virtual router in which to create the route.</li>
 </ul>
 </td>
@@ -152,6 +153,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appmesh.Route.spec">
 <code class="descname">spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.Route.spec" title="Permalink to this definition">¶</a></dt>
 <dd><p>The route specification to apply.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.appmesh.Route.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.Route.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -202,7 +209,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.appmesh.VirtualNode">
-<em class="property">class </em><code class="descclassname">pulumi_aws.appmesh.</code><code class="descname">VirtualNode</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>mesh_name=None</em>, <em>name=None</em>, <em>spec=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.VirtualNode" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.appmesh.</code><code class="descname">VirtualNode</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>mesh_name=None</em>, <em>name=None</em>, <em>spec=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.VirtualNode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS App Mesh virtual node resource.</p>
 <p>Because of backward incompatible API changes (read <a class="reference external" href="https://github.com/awslabs/aws-app-mesh-examples/issues/92">here</a>), <code class="docutils literal notranslate"><span class="pre">aws_appmesh_virtual_node</span></code> resource definitions created with provider versions earlier than v2.3.0 will need to be modified:</p>
 <ul class="simple">
@@ -221,6 +228,7 @@ setting <code class="docutils literal notranslate"><span class="pre">virtual_ser
 <li><strong>mesh_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the service mesh in which to create the virtual node.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to use for the virtual node.</li>
 <li><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The virtual node specification to apply.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
 </tr>
@@ -260,6 +268,12 @@ setting <code class="docutils literal notranslate"><span class="pre">virtual_ser
 <dt id="pulumi_aws.appmesh.VirtualNode.spec">
 <code class="descname">spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.VirtualNode.spec" title="Permalink to this definition">¶</a></dt>
 <dd><p>The virtual node specification to apply.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.appmesh.VirtualNode.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.VirtualNode.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="method">
