@@ -137,10 +137,10 @@ enableRobotsTXT = true
     name = "azure"
     url = "/docs/reference/pkg/nodejs/pulumi/azure/"
 
-[[menu.reference]]
-    parent = "node"
-    name = "azuread"
-    url = "/docs/reference/pkg/nodejs/pulumi/azuread/"
+#[[menu.reference]]
+#    parent = "node"
+#    name = "azuread"
+#    url = "/docs/reference/pkg/nodejs/pulumi/azuread/"
 
 [[menu.reference]]
     parent = "node"
@@ -262,10 +262,10 @@ enableRobotsTXT = true
     name = "pulumi_azure"
     url = "/docs/reference/pkg/python/pulumi_azure/"
 
-[[menu.reference]]
-    parent = "python"
-    name = "pulumi_azuread"
-    url = "/docs/reference/pkg/python/pulumi_azuread/"
+#[[menu.reference]]
+#    parent = "python"
+#    name = "pulumi_azuread"
+#    url = "/docs/reference/pkg/python/pulumi_azuread/"
 
 [[menu.reference]]
     parent = "python"
