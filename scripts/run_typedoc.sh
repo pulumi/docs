@@ -41,21 +41,29 @@ generate_docs() {
     if [[ ! -z "$GENPKG" ]]; then
         echo -e "\033[0;95m$1\033[0m"
         echo -e "\033[0;93mGenerating typedocs\033[0m"
-        pushd ../$2
+
+        # Change to the target directory and rebuild if necessary.
+        PKGPATH=../$2
+        if [[ ! -z "$3" ]]; then
+            PKGPATH=$PKGPATH/$3
+        fi
+        pushd $PKGPATH
         if [[ -z "$NOBUILD" ]]; then
             git clean -xdf
             make ensure && make build && make install
         fi
-        if [[ ! -z "$3" ]]; then
-            cd $3
-        fi
+
+        # Generate the docs, copy any READMEs, and remember the Git hash.
         ${TOOL_TYPEDOC} --json "${PULUMI_DOC_TMP}/$1.docs.json" \
             --mode modules --includeDeclarations --excludeExternals --excludePrivate
+        find . -name 'README.md' -exec rsync -R {} ${PULUMI_DOC_TMP}/readmes \;
         HEAD_COMMIT=$(git rev-parse HEAD)
+
+        # Change back to the origin directory and create the API documents.
         popd
         echo -e "\033[0;93mGenerating pulumi.io API docs\033[0m"
-        echo -e ${TOOL_APIDOCGEN} "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" $HEAD_COMMIT
-        ${TOOL_APIDOCGEN} "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" $HEAD_COMMIT
+        echo -e ${TOOL_APIDOCGEN} "${PKGPATH}" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" $HEAD_COMMIT
+        ${TOOL_APIDOCGEN} "${PKGPATH}" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" $HEAD_COMMIT
     fi
 }
 
