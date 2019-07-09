@@ -20,11 +20,23 @@ just check the resulting files directly into the repo under `./content/reference
 
 ### Prerequisites
 
+- [Node.js and npm](https://www.npmjs.com/get-npm)
+- [Ruby](https://www.ruby-lang.org/en/downloads/)
+- [Yarn](https://yarnpkg.com/en/docs/install) for installing dependencies in package.json
+- [Hugo](#hugo)
+- [Go](https://golang.org/dl/)
+
 #### Hugo
 
 The website is powered by [Hugo](https://gohugo.io).
 
 **IMPORTANT.** Recent versions of Hugo have bugs in the markdown renderer (Blackfriday) that prevents fenced code from rendering correctly in lists when a language is specified. Many of our tutorials are made up of ordered lists of steps, each step containing a code snippet. Until those bugs are fixed, and Hugo has adopted the version of Blackfriday with the fixes, we'll pin to [Hugo v0.55.4](https://github.com/gohugoio/hugo/releases/tag/v0.55.4). Tracking issue: https://github.com/pulumi/docs/issues/1091
+
+#### macOS
+
+The following commands use the package manager, [Homebrew](https://brew.sh/). 
+
+##### Install Hugo 
 
 If you already have Hugo installed, uninstall it:
 
@@ -44,17 +56,45 @@ To prevent brew from upgrading Hugo:
 brew pin hugo
 ```
 
-#### Go and Tools
+##### Install Go
+
+
+```bash
+brew install go
+```
+
+#### Linux (Ubuntu)
+
+##### Install Hugo
+
+The quickest way to install the extended version of Hugo v0.55.4 on your Linux machine is to use `wget` and the `dpkg` utility. For confirming your server architecture and post-installation cleanup, see [Installing Hugo Using the dpkg utility](https://hostadvice.com/how-to/how-to-install-hugo-on-ubuntu-18-04).
+
+```bash
+wget https://github.com/gohugoio/hugo/releases/download/v0.55.4/hugo_extended_0.55.4_Linux-64bit.deb
+```
+
+```bash
+sudo dpkg -i hugo_extended_0.55.4_Linux-64bit.deb
+```
+
+If you wish to use `brew` on Linux, see [Homebrew on Linux](https://docs.brew.sh/Homebrew-on-Linux).
+
+##### Install Go
+
+Download the Linux package from https://golang.org/dl/. Follow [installation and setup steps](https://tecadmin.net/install-go-on-ubuntu/) on "Installing Go on Ubuntu".
+
+#### Go-based Tools
 
 There are several other Go-based tools to install as well.
 
 ```bash
-brew install go
 go get -u github.com/cbroglie/mustache
 go get -u github.com/gobuffalo/packr
 ```
 
 ### Makefile
+
+`make ensure` will run `yarn install` which resolves project dependencies.
 
 `make build` will generate the website (published to public).
 
@@ -65,6 +105,7 @@ go get -u github.com/gobuffalo/packr
 `make generate` will regenerate the TypeScript documentation if needed, as well as the CLI documentation in [content/references/cli](content/reference/cli). The generated API documentation is placed in the [/content/reference/pkg/nodejs]/content/reference/pkg/nodejs) folder. This is extremely hacky.
 
 The following repos must be peers of `docs`, should be checked out to an appropriate branch, and should be built before running `make generate`:
+
 - `pulumi`
 - `pulumi-aws`
 - `pulumi-azure`
