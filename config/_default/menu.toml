@@ -217,6 +217,11 @@
 
 [[reference]]
     parent = "node"
+    name = "tls"
+    url = "/docs/reference/pkg/nodejs/pulumi/tls/"
+
+[[reference]]
+    parent = "node"
     name = "vsphere"
     url = "/docs/reference/pkg/nodejs/pulumi/vsphere/"
 
@@ -311,6 +316,11 @@
     parent = "python"
     name = "pulumi_random"
     url = "/docs/reference/pkg/python/pulumi_random/"
+
+[[reference]]
+    parent = "python"
+    name = "pulumi_tls"
+    url = "/docs/reference/pkg/python/pulumi_tls/"
 
 [[reference]]
     parent = "python"
