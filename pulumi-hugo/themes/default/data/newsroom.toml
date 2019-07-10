@@ -1,8 +1,8 @@
 [[releases]]
 date = "11th June 2019"
-title = "Pulumi Announces $15M in Series A Funding to Accelerate Development and Adoption of its Cloud Native Development Platform"
-summary = "Commercial offering of common language cloud programming platform enables deployment of any application to any cloud by any team."
-url = "https://info.pulumi.com/press-release/pulumi-announces-15m-in-series-a-funding-to-accelerate-development-and-adoption-of-its-cloud-native-development-platform"
+title = "Pulumi Crosswalk for AWS Accelerates Delivery of Well-Architected Infrastructure as Code"
+summary = "Pulumi announces Pulumi Crosswalk for Amazon Web Services (AWS), an open source framework for defining and deploying modern AWS applications and infrastructure with built-in AWS Best Practices."
+url = "https://info.pulumi.com/press-release/pulumi-crosswalk-for-aws-accelerates-delivery-of-well-architected-infrastructure-as-code"
 
 [[releases]]
 date = "22nd October 2018"
