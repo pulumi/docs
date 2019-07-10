@@ -12,3 +12,9 @@ node_modules
 # These are for IntelliJ based tooling
 .idea/
 *.iml
+
+# We use yarn instead of npm. If someone happens to use npm, a
+# package-lock.json file will be created, which is redundant with
+# yarn's yarn.lock file. We ignore package-lock.json to prevent
+# it from being added mistakenly.
+/package-lock.json
