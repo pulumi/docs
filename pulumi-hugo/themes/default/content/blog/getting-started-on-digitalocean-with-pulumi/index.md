@@ -4,7 +4,7 @@ authors: ["paul-stack"]
 tags: ["DigitalOcean", "TypeScript"]
 date: "2019-07-08"
 
-meta_image: "RELATIVE_TO_PAGE/app-insights.png"
+meta_image: "RELATIVE_TO_PAGE/Feature.png"
 ---
 
 Pulumi recently added support for managing [DigitalOcean](https://www.digitalocean.com/) resources. This article will 
