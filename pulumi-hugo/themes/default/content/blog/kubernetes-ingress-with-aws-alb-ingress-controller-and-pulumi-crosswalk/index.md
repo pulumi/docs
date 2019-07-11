@@ -4,7 +4,7 @@ authors: ["nishi-davidson"]
 tags: ["Kubernetes", "EKS"]
 date: "2019-07-04"
 
-summary: "Need summary"
+meta_image: "RELATIVE_TO_PAGE/featured-img-albingresscontroller.png"
 ---
 
 [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
