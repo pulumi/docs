@@ -134,7 +134,8 @@ To install on Linux, run our installation script:
 $ curl -fsSL https://get.pulumi.com | sh
 ```
 
-This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path.
+This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `~/.pulumi/bin`, you will be prompted to add it manually. 
+
 
 ### (Alternative) Manual Installation
 
