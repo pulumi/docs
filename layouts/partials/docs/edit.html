@@ -1,6 +1,16 @@
 {{ with .File }}
-    <a class="text-gray-600 hover:text-blue-700 text-xs" href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
-        <i class="fab fa-github mr-2"></i>
-        Edit This Page
-    </a>
+    <ul class="p-0 list-none">
+        <li>
+	    <a class="text-gray-600 hover:text-blue-700 text-xs" href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
+		<i class="fas fa-edit mr-2"></i>
+		Edit this Page
+	    </a>
+	</li>
+        <li>
+	    <a class="text-gray-600 hover:text-blue-700 text-xs" href="{{ $.Site.Params.repositoryURL }}/issues/new?body=File: [{{ .Path }}]({{ $.Page.Permalink }})">
+		<i class="far fa-check-square mr-2"></i>
+	        Request a Change
+	    </a>
+	</li>
+    </ul>
 {{ end }}
