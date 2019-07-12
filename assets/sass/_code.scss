@@ -27,3 +27,18 @@ pre {
         @apply text-gray-300;
     }
 }
+
+.typing {
+    .char {
+        opacity: 0;
+    }
+
+    .cursor {
+        @extend .blink;
+
+        &:after{
+            @apply text-white;
+			content: "|";
+		}
+    }
+}

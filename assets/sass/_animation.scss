@@ -7,6 +7,19 @@
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .spinner {
     animation: rotate360 1s linear infinite;
+}
+
+.blink {
+    animation: fadeIn 500ms linear infinite alternate;
 }

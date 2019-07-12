@@ -6,7 +6,7 @@
                 {{ .Params.hero.body | markdownify }}
             </div>
             <div class="header-hero-item">
-                {{ partial "code" (dict "code" .Params.hero.code "lang" "js" "mode" "dark" "chrome" true) }}
+                {{ partial "code" (dict "code" .Params.hero.code "lang" "js" "mode" "dark" "chrome" true "typing" true) }}
             </div>
         </div>
     </header>
