@@ -51,4 +51,15 @@ function generateMiniToc() {
         $(".blog-sidebar-content").toggleClass("hidden");
     });
 
+    // Shuffle lists that want to be shuffled.
+    $("ul[data-shuffle='true']")
+        .each(function(i, list) {
+            var items = $(list).find("> li");
+
+            items.each(function(i, item) {
+                $(item).css("order", Math.ceil(Math.random() * items.length));
+            });
+
+            $(list).removeClass("invisible");
+        });
 }(jQuery));
