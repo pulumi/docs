@@ -28,6 +28,7 @@ TOOLS_REPOS=(
     "pulumi-postgresql"
     "pulumi-random"
     "pulumi-terraform"
+    "pulumi-tls"
     "pulumi-vsphere"
 )
 

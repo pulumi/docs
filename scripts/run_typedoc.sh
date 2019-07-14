@@ -94,6 +94,7 @@ REPOS=(
     "vsphere,pulumi-vsphere,sdk/nodejs"
     "azuread,pulumi-azuread,sdk/nodejs"
     "terraform,pulumi-terraform,sdk/nodejs"
+    "tls,pulumi-tls,sdk/nodejs"
 )
 
 PIDS=()
