@@ -48,7 +48,7 @@ import { cluster } from "../";
 
 describe("#Amazon EKS Cluster", () => {
     it("Should use an approved Kubernetes version", async () => {
-        const version = await promise<string>(cluster.eksCluster.version);
+        const version = await promise(cluster.eksCluster.version);
         expect(version).to.equal("1.13");
     });
     it("Should be provisioned inside a custom, non-default VPC", async () => {
@@ -170,6 +170,7 @@ registers all of the test files in the `tests/` directory and will work for any 
 import * as fs from "fs";
 import * as Mocha from "mocha";
 import * as path from "path";
+import * as pulumi from "@pulumi/pulumi";
 
 // runTests executes all test files (*.ts) in the current directory.
 export function runTests() {
@@ -190,8 +191,8 @@ export function runTests() {
 }
 
 // promise returns a resource output's value, even if it's undefined.
-export function promise<T>(output: any): Promise<T | undefined> {
-    return output.promise() as Promise<T>;
+export function promise<T>(output: pulumi.Output<T>): Promise<T | undefined> {
+    return (output as any).promise() as Promise<T>;
 }
 ```
 
