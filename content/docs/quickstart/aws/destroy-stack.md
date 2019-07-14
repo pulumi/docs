@@ -20,10 +20,10 @@ You'll be prompted to make sure you really want to delete these resources. This 
 ```
 Previewing destroy (dev):
 
-     Type                      Name            Plan
- -   pulumi:pulumi:Stack       quickstart-dev  delete
- -   ├─ aws:ec2:Instance       web-server-www  delete
- -   └─ aws:ec2:SecurityGroup  web-secgrp      delete
+     Type                 Name            Plan
+ -   pulumi:pulumi:Stack  quickstart-dev  delete
+ -   ├─ aws:s3:Bucket     my-bucket       delete
+ -   └─ aws:kms:Key       my-key          delete
 
 Resources:
     - 3 to delete
@@ -31,15 +31,15 @@ Resources:
 Do you want to perform this destroy? yes
 Destroying (dev):
 
-     Type                      Name            Status
- -   pulumi:pulumi:Stack       quickstart-dev  deleted
- -   ├─ aws:ec2:Instance       web-server-www  deleted
- -   └─ aws:ec2:SecurityGroup  web-secgrp      deleted
+     Type                 Name            Status
+ -   pulumi:pulumi:Stack  quickstart-dev  deleted
+ -   ├─ aws:s3:Bucket     my-bucket       deleted
+ -   └─ aws:kms:Key       my-key          deleted
 
 Resources:
     - 3 deleted
 
-Duration: 36s
+Duration: 26s
 ```
 
 To delete the stack itself, run `pulumi stack rm`.
