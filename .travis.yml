@@ -31,6 +31,6 @@ script:
 - make travis_${TRAVIS_EVENT_TYPE}
 after_script:
 # Maybe kick off next build.
-- if [ ! -z ${TRAVIS_TOKEN} ]; travisqueue finish; fi
+- if [ ! -z ${TRAVIS_TOKEN} ]; then travisqueue finish; fi
 notifications:
   webhooks: https://ufci1w66n3.execute-api.us-west-2.amazonaws.com/stage/travis

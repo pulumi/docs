@@ -13,6 +13,14 @@ fi
 export PULUMI_ACTION=${1}
 export STACK_NAME=${2}
 
+# Double check we have the right credentials. If CI/CD is running from a repo's fork,
+# they won't be available. In which case, skip the preview step and just rely on
+# make build/validate.
+if [ -z ${PULUMI_ACCESS_TOKEN:-} ]; then
+    echo "PULUMI_ACCESS_TOKEN not set. Skipping ${PULUMI_ACTION} on pulumi/${STACK_NAME}."
+    exit 0
+fi
+
 cd ./infrastructure
 
 # Sync dependencies and build the Pulumi program.
