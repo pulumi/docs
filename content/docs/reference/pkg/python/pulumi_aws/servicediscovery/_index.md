@@ -263,7 +263,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.servicediscovery.Service">
-<em class="property">class </em><code class="descclassname">pulumi_aws.servicediscovery.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>dns_config=None</em>, <em>health_check_config=None</em>, <em>health_check_custom_config=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicediscovery.Service" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.servicediscovery.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>dns_config=None</em>, <em>health_check_config=None</em>, <em>health_check_custom_config=None</em>, <em>name=None</em>, <em>namespace_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicediscovery.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Service Discovery Service resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -277,6 +277,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>health_check_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A complex type that contains settings for an optional health check. Only for Public DNS namespaces.</li>
 <li><strong>health_check_custom_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A complex type that contains settings for ECS managed health checks.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the service.</li>
+<li><strong>namespace_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the namespace to use for DNS configuration.</li>
 </ul>
 </td>
 </tr>
@@ -318,6 +319,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.servicediscovery.Service.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicediscovery.Service.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the service.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.servicediscovery.Service.namespace_id">
+<code class="descname">namespace_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicediscovery.Service.namespace_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the namespace to use for DNS configuration.</p>
 </dd></dl>
 
 <dl class="method">

@@ -314,12 +314,62 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pulumi_aws.msk.GetConfigurationResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.msk.</code><code class="descname">GetConfigurationResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>description=None</em>, <em>kafka_versions=None</em>, <em>latest_revision=None</em>, <em>name=None</em>, <em>server_properties=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.GetConfigurationResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getConfiguration.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.msk.GetConfigurationResult.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetConfigurationResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of the configuration.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.msk.GetConfigurationResult.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetConfigurationResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of the configuration.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.msk.GetConfigurationResult.kafka_versions">
+<code class="descname">kafka_versions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetConfigurationResult.kafka_versions" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of Apache Kafka versions which can use this configuration.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.msk.GetConfigurationResult.latest_revision">
+<code class="descname">latest_revision</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetConfigurationResult.latest_revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Latest revision of the configuration.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.msk.GetConfigurationResult.server_properties">
+<code class="descname">server_properties</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetConfigurationResult.server_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contents of the server.properties file.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.msk.GetConfigurationResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.GetConfigurationResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="function">
 <dt id="pulumi_aws.msk.get_cluster">
 <code class="descclassname">pulumi_aws.msk.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>cluster_name=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an Amazon MSK Cluster.</p>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/msk_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/msk_cluster.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.msk.get_configuration">
+<code class="descclassname">pulumi_aws.msk.</code><code class="descname">get_configuration</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.get_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get information on an Amazon MSK Configuration.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/msk_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/msk_configuration.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

@@ -3814,7 +3814,6 @@ with launched instances.</li>
 <li><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 image ID to launch.</li>
 <li><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The size of instance to launch.</li>
 <li><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key name that should be used for the instance.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the launch configuration.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>placement_tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tenancy of the instance. Valid values are
@@ -3890,12 +3889,6 @@ with launched instances.</p>
 <dt id="pulumi_aws.ec2.LaunchConfiguration.key_name">
 <code class="descname">key_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration.key_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The key name that should be used for the instance.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.LaunchConfiguration.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the launch configuration.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5513,7 +5506,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the security group</li>
 <li><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
 This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
@@ -5522,7 +5514,6 @@ This argument is processed in <a class="reference external" href="https://www.te
 ingress rule. Each ingress block supports fields documented below.
 This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
 </li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the security group</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -5541,12 +5532,6 @@ prefix. Conflicts with <code class="docutils literal notranslate"><span class="p
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_aws.ec2.SecurityGroup.description">
-<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>The description of the security group</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_aws.ec2.SecurityGroup.egress">
 <code class="descname">egress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup.egress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Can be specified multiple times for each
@@ -5560,12 +5545,6 @@ This argument is processed in <a class="reference external" href="https://www.te
 <dd><p>Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
 This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.SecurityGroup.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the security group</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8639,6 +8618,13 @@ resources.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_aws.ec2.get_instances">
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_instances</code><span class="sig-paren">(</span><em>filters=None</em>, <em>instance_state_names=None</em>, <em>instance_tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instances" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instances.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instances.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_aws.ec2.get_internet_gateway">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_internet_gateway</code><span class="sig-paren">(</span><em>filters=None</em>, <em>internet_gateway_id=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_internet_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">aws_internet_gateway</span></code> provides details about a specific Internet Gateway.</p>
@@ -8717,6 +8703,13 @@ an input variable and needs to, for example, determine the id of the
 VPC that the security group belongs to.</p>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_group.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.ec2.get_security_groups">
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_security_groups</code><span class="sig-paren">(</span><em>filters=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_security_groups" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_groups.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">

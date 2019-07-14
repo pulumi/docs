@@ -229,7 +229,6 @@ group names. Only valid for classic load balancers. For ALBs, use <code class="d
 <li><strong>min_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum size of the auto scale group.
 (See also Waiting for Capacity below.)</li>
 <li><strong>mixed_instances_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the autoscale group</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the placement group into which you’ll launch your instances, if any.</li>
@@ -343,12 +342,6 @@ group names. Only valid for classic load balancers. For ALBs, use <code class="d
 <dt id="pulumi_aws.autoscaling.Group.mixed_instances_policy">
 <code class="descname">mixed_instances_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.mixed_instances_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.autoscaling.Group.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the autoscale group</p>
 </dd></dl>
 
 <dl class="attribute">

@@ -403,6 +403,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_openstack.networking.GetAddressScopeResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">GetAddressScopeResult</code><span class="sig-paren">(</span><em>ip_version=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>shared=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetAddressScopeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAddressScope.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetAddressScopeResult.ip_version">
+<code class="descname">ip_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetAddressScopeResult.ip_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetAddressScopeResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetAddressScopeResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetAddressScopeResult.project_id">
+<code class="descname">project_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetAddressScopeResult.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetAddressScopeResult.shared">
+<code class="descname">shared</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetAddressScopeResult.shared" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetAddressScopeResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetAddressScopeResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_openstack.networking.GetFloatingIpResult">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">GetFloatingIpResult</code><span class="sig-paren">(</span><em>address=None</em>, <em>all_tags=None</em>, <em>description=None</em>, <em>dns_domain=None</em>, <em>dns_name=None</em>, <em>fixed_ip=None</em>, <em>pool=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetFloatingIpResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFloatingIp.</p>
@@ -645,6 +681,174 @@ The structure is described below.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.GetPortResult.id">
 <code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetPortResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.GetQosBandwidthLimitRuleResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">GetQosBandwidthLimitRuleResult</code><span class="sig-paren">(</span><em>direction=None</em>, <em>max_burst_kbps=None</em>, <em>max_kbps=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetQosBandwidthLimitRuleResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getQosBandwidthLimitRule.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.direction">
+<code class="descname">direction</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.max_burst_kbps">
+<code class="descname">max_burst_kbps</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.max_burst_kbps" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.max_kbps">
+<code class="descname">max_kbps</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.max_kbps" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.qos_policy_id">
+<code class="descname">qos_policy_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.qos_policy_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.region">
+<code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosBandwidthLimitRuleResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.GetQosDscpMarkingRuleResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">GetQosDscpMarkingRuleResult</code><span class="sig-paren">(</span><em>dscp_mark=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetQosDscpMarkingRuleResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getQosDscpMarkingRule.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosDscpMarkingRuleResult.dscp_mark">
+<code class="descname">dscp_mark</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosDscpMarkingRuleResult.dscp_mark" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosDscpMarkingRuleResult.qos_policy_id">
+<code class="descname">qos_policy_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosDscpMarkingRuleResult.qos_policy_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosDscpMarkingRuleResult.region">
+<code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosDscpMarkingRuleResult.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosDscpMarkingRuleResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosDscpMarkingRuleResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">GetQosMinimumBandwidthRuleResult</code><span class="sig-paren">(</span><em>direction=None</em>, <em>min_kbps=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getQosMinimumBandwidthRule.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult.min_kbps">
+<code class="descname">min_kbps</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult.min_kbps" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult.qos_policy_id">
+<code class="descname">qos_policy_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult.qos_policy_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult.region">
+<code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosMinimumBandwidthRuleResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.GetQosPolicyResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">GetQosPolicyResult</code><span class="sig-paren">(</span><em>all_tags=None</em>, <em>created_at=None</em>, <em>description=None</em>, <em>is_default=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>revision_number=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>updated_at=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.GetQosPolicyResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getQosPolicy.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosPolicyResult.all_tags">
+<code class="descname">all_tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosPolicyResult.all_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>The set of string tags applied on the QoS policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosPolicyResult.created_at">
+<code class="descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosPolicyResult.created_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time at which QoS policy was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosPolicyResult.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosPolicyResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosPolicyResult.is_default">
+<code class="descname">is_default</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosPolicyResult.is_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosPolicyResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosPolicyResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosPolicyResult.region">
+<code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosPolicyResult.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosPolicyResult.revision_number">
+<code class="descname">revision_number</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosPolicyResult.revision_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>The revision number of the QoS policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosPolicyResult.shared">
+<code class="descname">shared</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosPolicyResult.shared" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosPolicyResult.updated_at">
+<code class="descname">updated_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosPolicyResult.updated_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time at which QoS policy was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.GetQosPolicyResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetQosPolicyResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -917,7 +1121,7 @@ described below.</p>
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.Network">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Network</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>availability_zone_hints=None</em>, <em>description=None</em>, <em>dns_domain=None</em>, <em>external=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>port_security_enabled=None</em>, <em>region=None</em>, <em>segments=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>transparent_vlan=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Network" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Network</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>availability_zone_hints=None</em>, <em>description=None</em>, <em>dns_domain=None</em>, <em>external=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>port_security_enabled=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>segments=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>transparent_vlan=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron network resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -952,6 +1156,7 @@ port security on the network. Port Security is usually enabled by default, so
 omitting this argument will usually result in a value of “true”. Setting this
 explicitly to <code class="docutils literal notranslate"><span class="pre">false</span></code> will disable port security. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and
 <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>qos_policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Reference to the associated QoS policy.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron network. If omitted, the
 <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
@@ -1049,6 +1254,12 @@ explicitly to <code class="docutils literal notranslate"><span class="pre">false
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_openstack.networking.Network.qos_policy_id">
+<code class="descname">qos_policy_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Network.qos_policy_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference to the associated QoS policy.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_openstack.networking.Network.region">
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Network.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 Networking client.
@@ -1141,7 +1352,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.Port">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Port</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>allowed_address_pairs=None</em>, <em>binding=None</em>, <em>description=None</em>, <em>device_id=None</em>, <em>device_owner=None</em>, <em>dns_name=None</em>, <em>extra_dhcp_options=None</em>, <em>fixed_ips=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>no_fixed_ip=None</em>, <em>no_security_groups=None</em>, <em>port_security_enabled=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Port" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Port</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>allowed_address_pairs=None</em>, <em>binding=None</em>, <em>description=None</em>, <em>device_id=None</em>, <em>device_owner=None</em>, <em>dns_name=None</em>, <em>extra_dhcp_options=None</em>, <em>fixed_ips=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>no_fixed_ip=None</em>, <em>no_security_groups=None</em>, <em>port_security_enabled=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 port resource within OpenStack.</p>
 <p>There are some notes to consider when connecting Instances to networks using
 Ports. Please see the <code class="docutils literal notranslate"><span class="pre">openstack_compute_instance_v2</span></code> documentation for further
@@ -1194,6 +1405,7 @@ omitting argument will usually result in a value of “true”. Setting this
 explicitly to <code class="docutils literal notranslate"><span class="pre">false</span></code> will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code>
 and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>qos_policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Reference to the associated QoS policy.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
 <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
@@ -1354,6 +1566,12 @@ omitting argument will usually result in a value of “true”. Setting this
 explicitly to <code class="docutils literal notranslate"><span class="pre">false</span></code> will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code>
 and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.Port.qos_policy_id">
+<code class="descname">qos_policy_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.qos_policy_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference to the associated QoS policy.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1520,6 +1738,447 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_openstack.networking.PortSecGroupAssociate.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.PortSecGroupAssociate.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.QosBandwidthLimitRule">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">QosBandwidthLimitRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>direction=None</em>, <em>max_burst_kbps=None</em>, <em>max_kbps=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosBandwidthLimitRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a V2 Neutron QoS bandwidth limit rule resource within OpenStack.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>direction</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The direction of traffic. Defaults to “egress”. Changing this updates the direction of the
+existing QoS bandwidth limit rule.</li>
+<li><strong>max_burst_kbps</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum burst size in kilobits of a QoS bandwidth limit rule. Changing this updates the
+maximum burst size in kilobits of the existing QoS bandwidth limit rule.</li>
+<li><strong>max_kbps</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum kilobits per second of a QoS bandwidth limit rule. Changing this updates the
+maximum kilobits per second of the existing QoS bandwidth limit rule.</li>
+<li><strong>qos_policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The QoS policy reference. Changing this creates a new QoS bandwidth limit rule.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron QoS bandwidth limit rule. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new QoS bandwidth limit rule.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_bandwidth_limit_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_bandwidth_limit_rule_v2.html.markdown</a>.</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosBandwidthLimitRule.direction">
+<code class="descname">direction</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosBandwidthLimitRule.direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>The direction of traffic. Defaults to “egress”. Changing this updates the direction of the
+existing QoS bandwidth limit rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosBandwidthLimitRule.max_burst_kbps">
+<code class="descname">max_burst_kbps</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosBandwidthLimitRule.max_burst_kbps" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum burst size in kilobits of a QoS bandwidth limit rule. Changing this updates the
+maximum burst size in kilobits of the existing QoS bandwidth limit rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosBandwidthLimitRule.max_kbps">
+<code class="descname">max_kbps</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosBandwidthLimitRule.max_kbps" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum kilobits per second of a QoS bandwidth limit rule. Changing this updates the
+maximum kilobits per second of the existing QoS bandwidth limit rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosBandwidthLimitRule.qos_policy_id">
+<code class="descname">qos_policy_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosBandwidthLimitRule.qos_policy_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The QoS policy reference. Changing this creates a new QoS bandwidth limit rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosBandwidthLimitRule.region">
+<code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosBandwidthLimitRule.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron QoS bandwidth limit rule. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new QoS bandwidth limit rule.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.networking.QosBandwidthLimitRule.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosBandwidthLimitRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.networking.QosBandwidthLimitRule.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosBandwidthLimitRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.QosDscpMarkingRule">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">QosDscpMarkingRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dscp_mark=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosDscpMarkingRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a V2 Neutron QoS DSCP marking rule resource within OpenStack.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>dscp_mark</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The value of DSCP mark. Changing this updates the DSCP mark value existing
+QoS DSCP marking rule.</li>
+<li><strong>qos_policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The QoS policy reference. Changing this creates a new QoS DSCP marking rule.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron QoS DSCP marking rule. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new QoS DSCP marking rule.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_dscp_marking_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_dscp_marking_rule_v2.html.markdown</a>.</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosDscpMarkingRule.dscp_mark">
+<code class="descname">dscp_mark</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosDscpMarkingRule.dscp_mark" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of DSCP mark. Changing this updates the DSCP mark value existing
+QoS DSCP marking rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosDscpMarkingRule.qos_policy_id">
+<code class="descname">qos_policy_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosDscpMarkingRule.qos_policy_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The QoS policy reference. Changing this creates a new QoS DSCP marking rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosDscpMarkingRule.region">
+<code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosDscpMarkingRule.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron QoS DSCP marking rule. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new QoS DSCP marking rule.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.networking.QosDscpMarkingRule.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosDscpMarkingRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.networking.QosDscpMarkingRule.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosDscpMarkingRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.QosMinimumBandwidthRule">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">QosMinimumBandwidthRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>direction=None</em>, <em>min_kbps=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosMinimumBandwidthRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a V2 Neutron QoS minimum bandwidth rule resource within OpenStack.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>direction</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The direction of traffic. Defaults to “egress”. Changing this updates the direction of the
+existing QoS minimum bandwidth rule.</li>
+<li><strong>min_kbps</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum kilobits per second. Changing this updates the min kbps value of the existing
+QoS minimum bandwidth rule.</li>
+<li><strong>qos_policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new QoS minimum bandwidth rule.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_minimum_bandwidth_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_minimum_bandwidth_rule_v2.html.markdown</a>.</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosMinimumBandwidthRule.direction">
+<code class="descname">direction</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosMinimumBandwidthRule.direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>The direction of traffic. Defaults to “egress”. Changing this updates the direction of the
+existing QoS minimum bandwidth rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosMinimumBandwidthRule.min_kbps">
+<code class="descname">min_kbps</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosMinimumBandwidthRule.min_kbps" title="Permalink to this definition">¶</a></dt>
+<dd><p>The minimum kilobits per second. Changing this updates the min kbps value of the existing
+QoS minimum bandwidth rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosMinimumBandwidthRule.qos_policy_id">
+<code class="descname">qos_policy_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosMinimumBandwidthRule.qos_policy_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosMinimumBandwidthRule.region">
+<code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosMinimumBandwidthRule.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new QoS minimum bandwidth rule.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.networking.QosMinimumBandwidthRule.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosMinimumBandwidthRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.networking.QosMinimumBandwidthRule.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosMinimumBandwidthRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.networking.QosPolicy">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">QosPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>is_default=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a V2 Neutron QoS policy resource within OpenStack.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable description for the QoS policy.
+Changing this updates the description of the existing QoS policy.</li>
+<li><strong>is_default</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the QoS policy is default
+QoS policy or not. Changing this updates the default status of the existing
+QoS policy.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the QoS policy. Changing this updates the name of
+the existing QoS policy.</li>
+<li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the QoS policy. Required if admin wants to
+create a QoS policy for another project. Changing this creates a new QoS policy.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron Qos policy. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+QoS policy.</li>
+<li><strong>shared</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this QoS policy is shared across
+all projects. Changing this updates the shared status of the existing
+QoS policy.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the QoS policy.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_policy_v2.html.markdown</a>.</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosPolicy.all_tags">
+<code class="descname">all_tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.all_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>The collection of tags assigned on the QoS policy, which have been
+explicitly and implicitly added.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosPolicy.created_at">
+<code class="descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.created_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time at which QoS policy was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosPolicy.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The human-readable description for the QoS policy.
+Changing this updates the description of the existing QoS policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosPolicy.is_default">
+<code class="descname">is_default</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.is_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether the QoS policy is default
+QoS policy or not. Changing this updates the default status of the existing
+QoS policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosPolicy.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the QoS policy. Changing this updates the name of
+the existing QoS policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosPolicy.project_id">
+<code class="descname">project_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The owner of the QoS policy. Required if admin wants to
+create a QoS policy for another project. Changing this creates a new QoS policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosPolicy.region">
+<code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron Qos policy. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+QoS policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosPolicy.revision_number">
+<code class="descname">revision_number</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.revision_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>The revision number of the QoS policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosPolicy.shared">
+<code class="descname">shared</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.shared" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether this QoS policy is shared across
+all projects. Changing this updates the shared status of the existing
+QoS policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosPolicy.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of string tags for the QoS policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosPolicy.updated_at">
+<code class="descname">updated_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.updated_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time at which QoS policy was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QosPolicy.value_specs">
+<code class="descname">value_specs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.value_specs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Map of additional options.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.networking.QosPolicy.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.networking.QosPolicy.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QosPolicy.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2284,11 +2943,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>allocation_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of sub-ranges of CIDR available for
-dynamic allocation to ports. The allocation_pool object structure is
-documented below.</li>
-<li><strong>allocation_pools_collection</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of sub-ranges of CIDR available for dynamic allocation to ports.
-The allocation_pools object structure is documented below.</li>
+<li><strong>allocation_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A block declaring the start and end range of
+the IP addresses available for use with DHCP in this subnet. Multiple
+<code class="docutils literal notranslate"><span class="pre">allocation_pool</span></code> blocks can be declared, providing the subnet with more
+than one range of IP addresses to use with DHCP. However, each IP range
+must be from the same CIDR that the subnet is part of.
+The <code class="docutils literal notranslate"><span class="pre">allocation_pool</span></code> block is documented below.</li>
+<li><strong>allocation_pools_collection</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A block declaring the start and end range of the IP addresses available for
+use with DHCP in this subnet.
+The <code class="docutils literal notranslate"><span class="pre">allocation_pools</span></code> block is documented below.</li>
 <li><strong>cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
 subnet pool.</li>
@@ -2351,16 +3014,20 @@ explicitly and implicitly added.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Subnet.allocation_pools">
 <code class="descname">allocation_pools</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Subnet.allocation_pools" title="Permalink to this definition">¶</a></dt>
-<dd><p>An array of sub-ranges of CIDR available for
-dynamic allocation to ports. The allocation_pool object structure is
-documented below.</p>
+<dd><p>A block declaring the start and end range of
+the IP addresses available for use with DHCP in this subnet. Multiple
+<code class="docutils literal notranslate"><span class="pre">allocation_pool</span></code> blocks can be declared, providing the subnet with more
+than one range of IP addresses to use with DHCP. However, each IP range
+must be from the same CIDR that the subnet is part of.
+The <code class="docutils literal notranslate"><span class="pre">allocation_pool</span></code> block is documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Subnet.allocation_pools_collection">
 <code class="descname">allocation_pools_collection</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Subnet.allocation_pools_collection" title="Permalink to this definition">¶</a></dt>
-<dd><p>An array of sub-ranges of CIDR available for dynamic allocation to ports.
-The allocation_pools object structure is documented below.</p>
+<dd><p>A block declaring the start and end range of the IP addresses available for
+use with DHCP in this subnet.
+The <code class="docutils literal notranslate"><span class="pre">allocation_pools</span></code> block is documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3020,6 +3687,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_openstack.networking.get_address_scope">
+<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_address_scope</code><span class="sig-paren">(</span><em>ip_version=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>shared=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_address_scope" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get the ID of an available OpenStack address-scope.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_addressscope_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_addressscope_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_openstack.networking.get_floating_ip">
 <code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_floating_ip</code><span class="sig-paren">(</span><em>address=None</em>, <em>description=None</em>, <em>fixed_ip=None</em>, <em>pool=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_floating_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack floating IP.</p>
@@ -3050,6 +3725,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 specified criteria.</p>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_ids_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_ids_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_openstack.networking.get_qos_bandwidth_limit_rule">
+<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_qos_bandwidth_limit_rule</code><span class="sig-paren">(</span><em>max_burst_kbps=None</em>, <em>max_kbps=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_qos_bandwidth_limit_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get the ID of an available OpenStack QoS bandwidth limit rule.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_bandwidth_limit_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_bandwidth_limit_rule_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_openstack.networking.get_qos_dscp_marking_rule">
+<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_qos_dscp_marking_rule</code><span class="sig-paren">(</span><em>dscp_mark=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_qos_dscp_marking_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get the ID of an available OpenStack QoS DSCP marking rule.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_dscp_marking_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_dscp_marking_rule_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_openstack.networking.get_qos_minimum_bandwidth_rule">
+<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_qos_minimum_bandwidth_rule</code><span class="sig-paren">(</span><em>direction=None</em>, <em>min_kbps=None</em>, <em>qos_policy_id=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_qos_minimum_bandwidth_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get the ID of an available OpenStack QoS minimum bandwidth rule.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_minimum_bandwidth_rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_minimum_bandwidth_rule_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_openstack.networking.get_qos_policy">
+<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_qos_policy</code><span class="sig-paren">(</span><em>description=None</em>, <em>is_default=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_qos_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get the ID of an available OpenStack QoS policy.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_policy_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">

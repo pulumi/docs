@@ -24,7 +24,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><strong>permanent_deletion_time_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.</li>
 <li><strong>revocation_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing revocation configuration. Defined below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies a key-value map of user-defined tags that are attached to the certificate authority.</li>
-<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the certificate authority. Currently, this must be <code class="docutils literal notranslate"><span class="pre">SUBORDINATE</span></code>.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the certificate authority. Defaults to <code class="docutils literal notranslate"><span class="pre">SUBORDINATE</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">ROOT</span></code> and <code class="docutils literal notranslate"><span class="pre">SUBORDINATE</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -113,7 +113,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.type">
 <code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of the certificate authority. Currently, this must be <code class="docutils literal notranslate"><span class="pre">SUBORDINATE</span></code>.</p>
+<dd><p>The type of the certificate authority. Defaults to <code class="docutils literal notranslate"><span class="pre">SUBORDINATE</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">ROOT</span></code> and <code class="docutils literal notranslate"><span class="pre">SUBORDINATE</span></code>.</p>
 </dd></dl>
 
 <dl class="method">

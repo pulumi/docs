@@ -43,14 +43,14 @@ title: Module config
 <li><a href="#token">let token</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/require.ts">config/require.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/require.ts">config/require.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="requireRegion">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/require.ts#L21">function <b>requireRegion</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/require.ts#L21">function <b>requireRegion</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -63,7 +63,7 @@ requireRegion fetches the AWS region, requiring that it exists; if it has not be
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="accessKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L14">let <b>accessKey</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L14">let <b>accessKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> accessKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;accessKey&#34;)</span>;</pre>
@@ -74,13 +74,13 @@ The access key for API operations. You can retrieve this from the 'Security & Cr
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="allowedAccountIds">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L15">let <b>allowedAccountIds</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L15">let <b>allowedAccountIds</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> allowedAccountIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;string[]&gt;(&#34;allowedAccountIds&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="assumeRole">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L16">let <b>assumeRole</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L16">let <b>assumeRole</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> assumeRole: {
@@ -91,7 +91,7 @@ The access key for API operations. You can retrieve this from the 'Security & Cr
 } | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;{ externalId?: string, policy?: string, roleArn?: string, sessionName?: string }&gt;(&#34;assumeRole&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="endpoints">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L17">let <b>endpoints</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L17">let <b>endpoints</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> endpoints: {
@@ -217,13 +217,13 @@ The access key for API operations. You can retrieve this from the 'Security & Cr
 }[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;{ acm?: string, acmpca?: string, apigateway?: string, applicationautoscaling?: string, applicationinsights?: string, appmesh?: string, appsync?: string, athena?: string, autoscaling?: string, autoscalingplans?: string, backup?: string, batch?: string, budgets?: string, cloud9?: string, cloudformation?: string, cloudfront?: string, cloudhsm?: string, cloudsearch?: string, cloudtrail?: string, cloudwatch?: string, cloudwatchevents?: string, cloudwatchlogs?: string, codebuild?: string, codecommit?: string, codedeploy?: string, codepipeline?: string, cognitoidentity?: string, cognitoidp?: string, configservice?: string, cur?: string, datapipeline?: string, datasync?: string, dax?: string, devicefarm?: string, directconnect?: string, dlm?: string, dms?: string, docdb?: string, ds?: string, dynamodb?: string, ec2?: string, ecr?: string, ecs?: string, efs?: string, eks?: string, elasticache?: string, elasticbeanstalk?: string, elastictranscoder?: string, elb?: string, emr?: string, es?: string, firehose?: string, fms?: string, fsx?: string, gamelift?: string, glacier?: string, globalaccelerator?: string, glue?: string, guardduty?: string, iam?: string, inspector?: string, iot?: string, kafka?: string, kinesis?: string, kinesisAnalytics?: string, kinesisanalytics?: string, kinesisvideo?: string, kms?: string, lambda?: string, lexmodels?: string, licensemanager?: string, lightsail?: string, macie?: string, managedblockchain?: string, mediaconnect?: string, mediaconvert?: string, medialive?: string, mediapackage?: string, mediastore?: string, mediastoredata?: string, mq?: string, neptune?: string, opsworks?: string, organizations?: string, pinpoint?: string, pricing?: string, quicksight?: string, r53?: string, ram?: string, rds?: string, redshift?: string, resourcegroups?: string, route53?: string, route53resolver?: string, s3?: string, s3control?: string, sagemaker?: string, sdb?: string, secretsmanager?: string, securityhub?: string, serverlessrepo?: string, servicecatalog?: string, servicediscovery?: string, servicequotas?: string, ses?: string, shield?: string, sns?: string, sqs?: string, ssm?: string, stepfunctions?: string, storagegateway?: string, sts?: string, swf?: string, transfer?: string, waf?: string, wafregional?: string, worklink?: string, workspaces?: string, xray?: string }[]&gt;(&#34;endpoints&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="forbiddenAccountIds">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L18">let <b>forbiddenAccountIds</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L18">let <b>forbiddenAccountIds</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> forbiddenAccountIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;string[]&gt;(&#34;forbiddenAccountIds&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="insecure">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L22">let <b>insecure</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L22">let <b>insecure</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> insecure: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;insecure&#34;)</span>;</pre>
@@ -234,7 +234,7 @@ Explicitly allow the provider to perform "insecure" SSL requests. If omitted,def
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="maxRetries">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L26">let <b>maxRetries</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L26">let <b>maxRetries</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> maxRetries: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;number&gt;(&#34;maxRetries&#34;)</span>;</pre>
@@ -245,7 +245,7 @@ The maximum number of times an AWS API request is being executed. If the API req
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="profile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L30">let <b>profile</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L30">let <b>profile</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> profile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;profile&#34;) || utilities.getEnv(&#34;AWS_PROFILE&#34;)</span>;</pre>
@@ -256,7 +256,7 @@ The profile for API operations. If not set, the default profile created with `aw
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="region">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L34">let <b>region</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L34">let <b>region</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> region: <a href='#Region'>Region</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> &lt;any&gt;__config.get(&#34;region&#34;) || utilities.getEnv(&#34;AWS_REGION&#34;, &#34;AWS_DEFAULT_REGION&#34;)</span>;</pre>
@@ -267,7 +267,7 @@ The region where AWS operations will take place. Examples are us-east-1, us-west
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="s3ForcePathStyle">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L40">let <b>s3ForcePathStyle</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L40">let <b>s3ForcePathStyle</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> s3ForcePathStyle: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;s3ForcePathStyle&#34;)</span>;</pre>
@@ -280,7 +280,7 @@ Specific to the Amazon S3 service.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="secretKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L44">let <b>secretKey</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L44">let <b>secretKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> secretKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;secretKey&#34;)</span>;</pre>
@@ -291,7 +291,7 @@ The secret key for API operations. You can retrieve this from the 'Security & Cr
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="sharedCredentialsFile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L48">let <b>sharedCredentialsFile</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L48">let <b>sharedCredentialsFile</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> sharedCredentialsFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;sharedCredentialsFile&#34;)</span>;</pre>
@@ -302,7 +302,7 @@ The path to the shared credentials file. If not set this defaults to ~/.aws/cred
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="skipCredentialsValidation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L53">let <b>skipCredentialsValidation</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L53">let <b>skipCredentialsValidation</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> skipCredentialsValidation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;skipCredentialsValidation&#34;)</span>;</pre>
@@ -314,7 +314,7 @@ available/implemented.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="skipGetEc2Platforms">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L57">let <b>skipGetEc2Platforms</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L57">let <b>skipGetEc2Platforms</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> skipGetEc2Platforms: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;skipGetEc2Platforms&#34;)</span>;</pre>
@@ -325,13 +325,13 @@ Skip getting the supported EC2 platforms. Used by users that don't have ec2:Desc
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="skipMetadataApiCheck">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L58">let <b>skipMetadataApiCheck</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L58">let <b>skipMetadataApiCheck</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> skipMetadataApiCheck: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;skipMetadataApiCheck&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="skipRegionValidation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L63">let <b>skipRegionValidation</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L63">let <b>skipRegionValidation</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> skipRegionValidation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;skipRegionValidation&#34;)</span>;</pre>
@@ -343,7 +343,7 @@ not public (yet).
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="skipRequestingAccountId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L67">let <b>skipRequestingAccountId</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L67">let <b>skipRequestingAccountId</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> skipRequestingAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;skipRequestingAccountId&#34;)</span>;</pre>
@@ -354,7 +354,7 @@ Skip requesting the account ID. Used for AWS API implementations that do not hav
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="token">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/35faf389944ec00da164b2681656a982bf699412/sdk/nodejs/config/vars.ts#L71">let <b>token</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/config/vars.ts#L71">let <b>token</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> token: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;token&#34;)</span>;</pre>

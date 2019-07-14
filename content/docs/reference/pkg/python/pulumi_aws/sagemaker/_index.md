@@ -20,7 +20,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>endpoint_config_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the endpoint configuration to use.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the endpoint.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
@@ -39,12 +38,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.sagemaker.Endpoint.endpoint_config_name">
 <code class="descname">endpoint_config_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.Endpoint.endpoint_config_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the endpoint configuration to use.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.sagemaker.Endpoint.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.Endpoint.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the endpoint.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -105,7 +98,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>kms_key_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the endpoint configuration.</li>
 <li><strong>production_variants</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Fields are documented below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
@@ -125,12 +117,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.sagemaker.EndpointConfiguration.kms_key_arn">
 <code class="descname">kms_key_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.EndpointConfiguration.kms_key_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.sagemaker.EndpointConfiguration.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.EndpointConfiguration.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the endpoint configuration.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -199,7 +185,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>containers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies containers in the inference pipeline. If not specified, the <code class="docutils literal notranslate"><span class="pre">primary_container</span></code> argument is required. Fields are documented below.</li>
 <li><strong>enable_network_isolation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Isolates the model container. No inbound or outbound network calls can be made to or from the model container.</li>
 <li><strong>execution_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A role that SageMaker can assume to access model artifacts and docker images for deployment.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the model.</li>
 <li><strong>primary_container</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the <code class="docutils literal notranslate"><span class="pre">container</span></code> argument is required. Fields are documented below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>vpc_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.</li>
@@ -232,12 +217,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.sagemaker.Model.execution_role_arn">
 <code class="descname">execution_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.Model.execution_role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>A role that SageMaker can assume to access model artifacts and docker images for deployment.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.sagemaker.Model.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.Model.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the model.</p>
 </dd></dl>
 
 <dl class="attribute">

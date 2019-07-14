@@ -22,10 +22,8 @@ anything, please consult the source <a class="reference external" href="https://
 <li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 <code class="docutils literal notranslate"><span class="pre">false</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Amazon RDS Documentation for more information.</a></li>
-<li><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The availability zone of the instance</li>
 <li><strong>backtrack_window</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The target backtrack window, in seconds. Only available for <code class="docutils literal notranslate"><span class="pre">aurora</span></code> engine currently. To disable backtracking, set this value to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Must be between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">259200</span></code> (72 hours)</li>
 <li><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The days to retain backups for. Default <code class="docutils literal notranslate"><span class="pre">1</span></code></li>
-<li><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The RDS Cluster Identifier</li>
 <li><strong>cluster_identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">cluster_identifier</span></code>.</li>
 <li><strong>cluster_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of RDS Instances that are a part of this cluster</li>
 <li><strong>copy_tags_to_snapshot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Copy all Cluster <code class="docutils literal notranslate"><span class="pre">tags</span></code> to snapshots. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
@@ -83,12 +81,6 @@ are applied immediately, or during the next maintenance window. Default is
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_aws.rds.Cluster.availability_zones">
-<code class="descname">availability_zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.availability_zones" title="Permalink to this definition">¶</a></dt>
-<dd><p>The availability zone of the instance</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.backtrack_window">
 <code class="descname">backtrack_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.backtrack_window" title="Permalink to this definition">¶</a></dt>
 <dd><p>The target backtrack window, in seconds. Only available for <code class="docutils literal notranslate"><span class="pre">aurora</span></code> engine currently. To disable backtracking, set this value to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Must be between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">259200</span></code> (72 hours)</p>
@@ -98,12 +90,6 @@ are applied immediately, or during the next maintenance window. Default is
 <dt id="pulumi_aws.rds.Cluster.backup_retention_period">
 <code class="descname">backup_retention_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.backup_retention_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>The days to retain backups for. Default <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.rds.Cluster.cluster_identifier">
-<code class="descname">cluster_identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.cluster_identifier" title="Permalink to this definition">¶</a></dt>
-<dd><p>The RDS Cluster Identifier</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -481,7 +467,6 @@ For information on the difference between the available Aurora MySQL engines
 see <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html">Comparison between Aurora MySQL 1 and Aurora MySQL 2</a>
 in the Amazon RDS User Guide.</li>
 <li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database engine version.</li>
-<li><strong>identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Instance identifier</li>
 <li><strong>identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</li>
 <li><strong>instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance class to use. For details on CPU
 and memory, see [Scaling Aurora DB Instances][4]. Aurora uses <code class="docutils literal notranslate"><span class="pre">db.*</span></code> instance classes/types. Please see [AWS Documentation][7] for currently available instance classes and complete details.</li>
@@ -582,12 +567,6 @@ in the Amazon RDS User Guide.</p>
 <dt id="pulumi_aws.rds.ClusterInstance.engine_version">
 <code class="descname">engine_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.engine_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The database engine version.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.rds.ClusterInstance.identifier">
-<code class="descname">identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.identifier" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Instance identifier</p>
 </dd></dl>
 
 <dl class="attribute">
