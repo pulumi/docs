@@ -44,13 +44,14 @@ generate_docs() {
 
         # Change to the target directory and rebuild if necessary.
         PKGPATH=../$2
-        if [[ ! -z "$3" ]]; then
-            PKGPATH=$PKGPATH/$3
-        fi
         pushd $PKGPATH
         if [[ -z "$NOBUILD" ]]; then
             git clean -xdf
             make ensure && make build && make install
+        fi
+        if [[ ! -z "$3" ]]; then
+            PKGPATH=$PKGPATH/$3
+            cd $3
         fi
 
         # Generate the docs, copy any READMEs, and remember the Git hash.
