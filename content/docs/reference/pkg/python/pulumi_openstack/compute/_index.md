@@ -1270,9 +1270,6 @@ Compute (Nova) v2 API.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>device</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – See Argument Reference above. <em>NOTE</em>: The correctness of this
-information is dependent upon the hypervisor in use. In some cases, this
-should not be used as an authoritative piece of information.</li>
 <li><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Instance to attach the Volume to.</li>
 <li><strong>multiattach</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable attachment of multiattach-capable volumes.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
@@ -1287,14 +1284,6 @@ new volume attachment.</li>
 </table>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_volume_attach_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_volume_attach_v2.html.markdown</a>.</div></blockquote>
-<dl class="attribute">
-<dt id="pulumi_openstack.compute.VolumeAttach.device">
-<code class="descname">device</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.VolumeAttach.device" title="Permalink to this definition">¶</a></dt>
-<dd><p>See Argument Reference above. <em>NOTE</em>: The correctness of this
-information is dependent upon the hypervisor in use. In some cases, this
-should not be used as an authoritative piece of information.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.VolumeAttach.instance_id">
 <code class="descname">instance_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.VolumeAttach.instance_id" title="Permalink to this definition">¶</a></dt>

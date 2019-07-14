@@ -208,7 +208,7 @@ resource.</li>
 
 <dl class="class">
 <dt id="pulumi.ResourceOptions">
-<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em>, <em>delete_before_replace: Optional[bool] = None</em>, <em>ignore_changes: Optional[List[str]] = None</em>, <em>version: Optional[str] = None</em>, <em>additional_secret_outputs: Optional[List[str]] = None</em>, <em>id: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em>, <em>delete_before_replace: Optional[bool] = None</em>, <em>ignore_changes: Optional[List[str]] = None</em>, <em>version: Optional[str] = None</em>, <em>additional_secret_outputs: Optional[List[str]] = None</em>, <em>id: Optional[str] = None</em>, <em>import_: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>ResourceOptions is a bag of optional settings that control a resource’s behavior.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -228,14 +228,21 @@ by package name (e.g. “aws”)</li>
 <li><strong>delete_before_replace</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – If provided and True, this resource must be deleted before it is replaced.</li>
 <li><strong>ignore_changes</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>string</em><em>]</em><em>]</em>) – If provided, a list of property names to ignore for purposes of updates
 or replacements.</li>
-<li><strong>additional_secret_outputs</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>string</em><em>]</em><em>]</em>) – If provided, a list of output property names that should
-also be treated as secret.</li>
+<li><strong>additional_secret*outputs</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>string</em><em>]</em><em>]</em>) – <p>If provided, a list of output property names that should
+also be treated as secret.</p>
+</li>
 <li><strong>id</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – If provided, an existing resource ID to read, rather than create.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>:param Optional[str] import*\ <span class="classifier-delimiter">:</span> <span class="classifier">When provided with a resource ID, import indicates that this resource’s provider should</span></dt>
+<dd>import its state from the cloud resource with the given ID. The inputs to the resource’s constructor must align
+with the resource’s current state. Once a resource has been imported, the import property must be removed from
+the resource’s options.</dd>
+</dl>
 <dl class="attribute">
 <dt id="pulumi.ResourceOptions.parent">
 <code class="descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.parent" title="Permalink to this definition">¶</a></dt>
@@ -300,6 +307,14 @@ to mark certain ouputs as a secrets on a per resource basis.</p>
 <dt id="pulumi.ResourceOptions.id">
 <code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>An optional existing ID to load, rather than create.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.import_">
+<code class="descname">import_</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.import_" title="Permalink to this definition">¶</a></dt>
+<dd><p>When provided with a resource ID, import indicates that this resource’s provider should import its state from the
+cloud resource with the given ID. The inputs to the resource’s constructor must align with the resource’s current
+state. Once a resource has been imported, the import property must be removed from the resource’s options.</p>
 </dd></dl>
 
 </dd></dl>
