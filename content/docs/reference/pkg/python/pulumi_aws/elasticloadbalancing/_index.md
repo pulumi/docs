@@ -314,7 +314,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of instance ids to place in the ELB pool.</li>
 <li><strong>internal</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, ELB will be an internal ELB.</li>
 <li><strong>listeners</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of listener blocks. Listeners documented below.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ELB</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group IDs to assign to the ELB.
@@ -401,12 +400,6 @@ instances. Use this for Classic or Default VPC only.</li>
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancer.listeners">
 <code class="descname">listeners</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancer.listeners" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of listener blocks. Listeners documented below.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.elasticloadbalancing.LoadBalancer.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancer.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the ELB</p>
 </dd></dl>
 
 <dl class="attribute">

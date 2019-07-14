@@ -35,6 +35,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="codepipeline/">codepipeline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cognito/">cognito</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cur/">cur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datapipeline/">datapipeline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datasync/">datasync</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dax/">dax</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devicefarm/">devicefarm</a></li>

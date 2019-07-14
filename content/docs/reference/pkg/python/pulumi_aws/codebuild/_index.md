@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.codebuild"></span><dl class="class">
 <dt id="pulumi_aws.codebuild.Project">
-<em class="property">class </em><code class="descclassname">pulumi_aws.codebuild.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>artifacts=None</em>, <em>badge_enabled=None</em>, <em>build_timeout=None</em>, <em>cache=None</em>, <em>description=None</em>, <em>encryption_key=None</em>, <em>environment=None</em>, <em>name=None</em>, <em>secondary_artifacts=None</em>, <em>secondary_sources=None</em>, <em>service_role=None</em>, <em>source=None</em>, <em>tags=None</em>, <em>vpc_config=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codebuild.Project" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.codebuild.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>artifacts=None</em>, <em>badge_enabled=None</em>, <em>build_timeout=None</em>, <em>cache=None</em>, <em>description=None</em>, <em>encryption_key=None</em>, <em>environment=None</em>, <em>logs_config=None</em>, <em>name=None</em>, <em>secondary_artifacts=None</em>, <em>secondary_sources=None</em>, <em>service_role=None</em>, <em>source=None</em>, <em>tags=None</em>, <em>vpc_config=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codebuild.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeBuild Project resource. See also the <cite>``aws_codebuild_webhook`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/codebuild_webhook.html">https://www.terraform.io/docs/providers/aws/r/codebuild_webhook.html</a>&gt;`_, which manages the webhook to the source (e.g. the “rebuild every time a code change is pushed” option in the CodeBuild web console).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -26,6 +26,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A short description of the project.</li>
 <li><strong>encryption_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project’s build output artifacts.</li>
 <li><strong>environment</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Information about the project’s build environment. Environment blocks are documented below.</li>
+<li><strong>logs_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration for the builds to store log data to CloudWatch or S3.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the project. If <code class="docutils literal notranslate"><span class="pre">type</span></code> is set to <code class="docutils literal notranslate"><span class="pre">S3</span></code>, this is the name of the output artifact object</li>
 <li><strong>secondary_artifacts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.</li>
 <li><strong>secondary_sources</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.</li>
@@ -92,6 +93,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.codebuild.Project.environment">
 <code class="descname">environment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codebuild.Project.environment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Information about the project’s build environment. Environment blocks are documented below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.codebuild.Project.logs_config">
+<code class="descname">logs_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codebuild.Project.logs_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration for the builds to store log data to CloudWatch or S3.</p>
 </dd></dl>
 
 <dl class="attribute">
