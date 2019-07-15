@@ -274,10 +274,12 @@ in at least two Availability Zones. We recommend a network architecture that use
 worker nodes and public subnets for Kubernetes to create Internet-facing load balancers within. When you create your
 cluster, specify all of the subnets that will host resources for your cluster (including workers and load balancers).
 
-In the above example, we passed both the private and public subnets from our VPC. The EKS package figures out which
-are public -- and ensures they are tagged so that Kubernetes understands to use them for all public load balancers --
-and which ones are private -- and creates the work nodes inside of them. The package follows conventions outlined
-in [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html).
+In the above example, we passed both the private and public subnets from our VPC. The EKS package
+figures out which ones are public and which ones are private -- and creates the worker nodes inside
+only the private subnets if any are specified. EKS will tag the provided subnets so that Kubernetes
+can discover them.   If additional control is needed over how load balancers are allocated to
+subnets, users can attach additional subnet tags themselves as outlined in
+[Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html).
 
 > Note that by default the `eks.Cluster` will do the same as what is described here, just inside of the default
 > VPC inside of your account, rather than a custom VPC as shown in this example.
