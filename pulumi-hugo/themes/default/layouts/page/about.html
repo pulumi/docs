@@ -37,7 +37,8 @@
 
     <section id="team" class="px-4 md:px-0">
         <div class="container md:mx-auto max-w-5xl text-center">
-            <ul class="inline-flex flex-wrap list-none justify-center p-0">
+            <!-- Hide the list initially, in order to avoid any visual flicker when shuffled. -->
+            <ul class="invisible inline-flex flex-wrap list-none justify-center p-0" data-shuffle="true">
                 {{ range $.Site.Data.team.team }}
                     {{ if eq .status "active" }}
                         <li class="text-center w-48 mx-4 mb-8">
@@ -64,7 +65,7 @@
         <div class="container md:mx-auto max-w-5xl text-center">
             <h2 class="mb-8 text-center">Board of Directors</h2>
             <ul class="inline-flex flex-wrap list-none justify-center p-0">
-                {{ range $.Site.Data.team.board }}
+                {{ range (sort $.Site.Data.team.board "weight") }}
                     <li class="text-center w-48 mx-4 mb-8">
                         <img class="rounded mb-4 shadow-md mx-auto" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" >
                         <h4 class="{{if .bio }}cursor-pointer{{ end }} mb-0 text-gray-900" {{ if .bio }}data-toggle="modal" data-target="#{{ .id }}"{{ end }}>{{ .name }}</h4>
