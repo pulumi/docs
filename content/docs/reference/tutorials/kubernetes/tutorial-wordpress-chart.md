@@ -27,13 +27,13 @@ Use the [Helm installation guide](https://docs.helm.sh/using_helm/#installing-he
 `helm` CLI. On macOS this might look something like:
 
 ```sh
-brew install kubernetes-helm
+$ brew install kubernetes-helm
 ```
 
 Once `helm` is installed, initialize it with:
 
 ```sh
-helm init --client-only
+$ helm init --client-only
 ```
 
 If you haven't already, follow the steps in [Pulumi Installation and
@@ -44,7 +44,7 @@ Pulumi and Kubernetes.
 Now, install dependencies:
 
 ```sh
-npm install
+$ npm install
 ```
 
 Create a new stack:

@@ -13,7 +13,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance
 
 1.  In a new folder `webserver`, create an empty project with `pulumi new`. Be sure to use `us-east-1` as the region:
 
-    ```
+    ```bash
     $ mkdir webserver && cd webserver
     $ pulumi new aws-javascript
     ...

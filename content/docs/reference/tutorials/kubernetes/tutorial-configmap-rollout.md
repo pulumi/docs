@@ -52,10 +52,10 @@ To provision the application, we need to:
 1. **Run** `pulumi new`**.**
 
     ```sh
-    mkdir test-pulumi && cd test-pulumi
+    $ mkdir test-pulumi && cd test-pulumi
     # Clones the application into the current directory, and begins provisioning it in the active
     # context of your kubeconfig file.
-    pulumi new https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout
+    $ pulumi new https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout
     ```
 
 1. **Answer the questions prompted by** `pulumi new`**.** This will bring up a CLI prompt that looks
@@ -71,7 +71,7 @@ To provision the application, we need to:
 1. **Accept the update.** After all the questions are answered, you should see a prompt like the
    following, asking if you'd like to proceed with the update. You can opt to view the diff, if you like, but we'll also do this later when we update the application.
 
-    ```sh
+    ```
     Resources:
         + 4 to create
 
@@ -158,13 +158,13 @@ Here are the steps to make this change:
 1. **Change the configuration file.** If you're on macOS, you can run:
 
     ```sh
-    sed -i bak "s/pulumi.github.io/google.com/g" default.conf
+    $ sed -i bak "s/pulumi.github.io/google.com/g" default.conf
     ```
 
     If you're running a platform that does not support `sed`, paste the following into your
     `default.conf` file:
 
-    ```
+    ```conf
     upstream node {
       server google.com;
     }
@@ -201,8 +201,8 @@ Once we're confident this is what we want, we can run the update:
 
 1. **Run** `pulumi up`**.**
 
-    ```typescript
-    pulumi up
+    ```sh
+    $ pulumi up
     ```
 
     The output should look something like this.
@@ -220,8 +220,8 @@ Once we're confident this is what we want, we can run the update:
 
 Once we're done with the application, it's possible to destroy it using:
 
-```typescript
-pulumi destroy
+```sh
+$ pulumi destroy
 ```
 
 [ts]: https://www.typescriptlang.org/

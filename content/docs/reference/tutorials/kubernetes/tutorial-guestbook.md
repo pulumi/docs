@@ -412,7 +412,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
     Afterwards, query the list of pods to verify that none are remaining:
 
-    ```
+    ```shell
     $ kubectl get pods
     ```
 

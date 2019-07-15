@@ -87,7 +87,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
 3.  Now we're ready to deploy our code. To do so, simply run `pulumi up`:
 
-    ```
+    ```shell
     $ pulumi up
     ```
 
@@ -174,7 +174,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
     Let's also list the pods created by this deployment:
 
-    ```
+    ```shell
     $ kubectl get pods -l app=nginx
     ```
 
@@ -274,7 +274,7 @@ $ pulumi stack rm --yes
 
 Afterwards, query the list of pods to verify that none are remaining:
 
-```
+```shell
 $ kubectl get pods -l app=nginx
 ```
 

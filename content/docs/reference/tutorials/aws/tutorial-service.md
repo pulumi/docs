@@ -77,7 +77,7 @@ To get started, we will create a project, initialize it, then run `pulumi up`:
 
 1.  Ensure you have the following directory structure:
 
-    ```bash
+    ```
     Pulumi.yaml
     index.ts
     app/
@@ -95,7 +95,7 @@ To get started, we will create a project, initialize it, then run `pulumi up`:
     provisions an ECR container registry, builds the Docker container, and pushed the image into the repository. This
     all happens automatically and does not require manual configuration on your part:
 
-    ```
+    ```bash
     $ pulumi up
     Previewing changes:
     ...

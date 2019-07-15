@@ -16,7 +16,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
 
 1.  In a new folder `webserver`, create an empty project with `pulumi new`. Choose a Google Cloud `project` you have access to create Virtual Machines within.
 
-    ```
+    ```bash
     $ mkdir webserver && cd webserver
     $ pulumi new gcp-javascript
     ...

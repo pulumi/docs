@@ -55,16 +55,16 @@ can see `canary-example-app` and `canary-staging-app` created.
 
 1. Now, install dependencies:
 
-   ```sh
-   npm install
-   ```
+    ```sh
+    $ npm install
+    ```
 
 1. Create a new stack:
 
-   ```sh
-   $ pulumi stack init
-   Enter a stack name: staged-rollout
-   ```
+    ```sh
+    $ pulumi stack init
+    Enter a stack name: staged-rollout
+    ```
 
 1. **IMPORTANT NOTE:** The code in `index.ts` is meant to be run out-of-cluster (_e.g._, on your
    local machine). It will thus call `kubectl port-forward` on your behalf so that the Prometheus
@@ -73,54 +73,52 @@ can see `canary-example-app` and `canary-staging-app` created.
 
 1. Perform the deployment:
 
-   ```sh
-   $ pulumi up
-   Updating stack 'staged-rollout'
-   Performing changes:
+        $ pulumi up
+        Updating stack 'staged-rollout'
+        Performing changes:
 
-        Type                           Name                 Status      Info
-    +   pulumi:pulumi:Stack                                            prometheus-staged-rollout
-    +   ├─ kubernetes:helm.sh:Chart                                    p8s                                created
-    +   │  ├─ kubernetes:core:ServiceAccount                           p8s-prometheus-alertmanager        created
-    +   │  ├─ kubernetes:core:ServiceAccount                           p8s-prometheus-pushgateway         created
-    +   │  ├─ kubernetes:core:ServiceAccount                           p8s-prometheus-kube-state-metrics  created
-    +   │  ├─ kubernetes:core:ServiceAccount                           p8s-prometheus-server              created
-    +   │  ├─ kubernetes:core:ServiceAccount                           p8s-prometheus-node-exporter       created
-    +   │  ├─ kubernetes:core:ConfigMap                                p8s-prometheus-alertmanager        created
-    +   │  ├─ kubernetes:rbac.authorization.k8s.io:ClusterRoleBinding  p8s-prometheus-server              created
-    +   │  ├─ kubernetes:core:PersistentVolumeClaim                    p8s-prometheus-server              created
-    +   │  ├─ kubernetes:rbac.authorization.k8s.io:ClusterRoleBinding  p8s-prometheus-kube-state-metrics  created
-    +   │  ├─ kubernetes:core:ConfigMap                                p8s-prometheus-server              created
-    +   │  ├─ kubernetes:core:PersistentVolumeClaim                    p8s-prometheus-alertmanager        created
-    +   │  ├─ kubernetes:core:Service                                  p8s-prometheus-alertmanager        created
-    +   │  ├─ kubernetes:core:Service                                  p8s-prometheus-kube-state-metrics  created
-    +   │  ├─ kubernetes:core:Service                                  p8s-prometheus-pushgateway         created
-    +   │  ├─ kubernetes:core:Service                                  p8s-prometheus-node-exporter       created
-    +   │  ├─ kubernetes:extensions:Deployment                         p8s-prometheus-kube-state-metrics  created
-    +   │  ├─ kubernetes:core:Service                                  p8s-prometheus-server              created
-    +   │  ├─ kubernetes:extensions:Deployment                         p8s-prometheus-pushgateway         created
-    +   │  ├─ kubernetes:rbac.authorization.k8s.io:ClusterRole         p8s-prometheus-kube-state-metrics  created
-    +   │  ├─ kubernetes:extensions:DaemonSet                          p8s-prometheus-node-exporter       created
-    +   │  ├─ kubernetes:extensions:Deployment                         p8s-prometheus-alertmanager        created
-    +   │  ├─ kubernetes:extensions:Deployment                         p8s-prometheus-server              created
-    +   │  └─ kubernetes:rbac.authorization.k8s.io:ClusterRole         p8s-prometheus-server              created
-    +   ├─ kubernetes:apps:Deployment                                  canary-example-app                 created
-    +   └─ kubernetes:apps:Deployment                                  staging-example-app                created
+            Type                           Name                 Status      Info
+        +   pulumi:pulumi:Stack                                            prometheus-staged-rollout
+        +   ├─ kubernetes:helm.sh:Chart                                    p8s                                created
+        +   │  ├─ kubernetes:core:ServiceAccount                           p8s-prometheus-alertmanager        created
+        +   │  ├─ kubernetes:core:ServiceAccount                           p8s-prometheus-pushgateway         created
+        +   │  ├─ kubernetes:core:ServiceAccount                           p8s-prometheus-kube-state-metrics  created
+        +   │  ├─ kubernetes:core:ServiceAccount                           p8s-prometheus-server              created
+        +   │  ├─ kubernetes:core:ServiceAccount                           p8s-prometheus-node-exporter       created
+        +   │  ├─ kubernetes:core:ConfigMap                                p8s-prometheus-alertmanager        created
+        +   │  ├─ kubernetes:rbac.authorization.k8s.io:ClusterRoleBinding  p8s-prometheus-server              created
+        +   │  ├─ kubernetes:core:PersistentVolumeClaim                    p8s-prometheus-server              created
+        +   │  ├─ kubernetes:rbac.authorization.k8s.io:ClusterRoleBinding  p8s-prometheus-kube-state-metrics  created
+        +   │  ├─ kubernetes:core:ConfigMap                                p8s-prometheus-server              created
+        +   │  ├─ kubernetes:core:PersistentVolumeClaim                    p8s-prometheus-alertmanager        created
+        +   │  ├─ kubernetes:core:Service                                  p8s-prometheus-alertmanager        created
+        +   │  ├─ kubernetes:core:Service                                  p8s-prometheus-kube-state-metrics  created
+        +   │  ├─ kubernetes:core:Service                                  p8s-prometheus-pushgateway         created
+        +   │  ├─ kubernetes:core:Service                                  p8s-prometheus-node-exporter       created
+        +   │  ├─ kubernetes:extensions:Deployment                         p8s-prometheus-kube-state-metrics  created
+        +   │  ├─ kubernetes:core:Service                                  p8s-prometheus-server              created
+        +   │  ├─ kubernetes:extensions:Deployment                         p8s-prometheus-pushgateway         created
+        +   │  ├─ kubernetes:rbac.authorization.k8s.io:ClusterRole         p8s-prometheus-kube-state-metrics  created
+        +   │  ├─ kubernetes:extensions:DaemonSet                          p8s-prometheus-node-exporter       created
+        +   │  ├─ kubernetes:extensions:Deployment                         p8s-prometheus-alertmanager        created
+        +   │  ├─ kubernetes:extensions:Deployment                         p8s-prometheus-server              created
+        +   │  └─ kubernetes:rbac.authorization.k8s.io:ClusterRole         p8s-prometheus-server              created
+        +   ├─ kubernetes:apps:Deployment                                  canary-example-app                 created
+        +   └─ kubernetes:apps:Deployment                                  staging-example-app                created
 
-   Diagnostics:
-     pulumi:pulumi:Stack: prometheus-test-p8s
-       info: Checking HTTP metrics
+        Diagnostics:
+            pulumi:pulumi:Stack: prometheus-test-p8s
+            info: Checking HTTP metrics
 
-       ---outputs:---
-     + p90ResponseTime: "8221.236"
+            ---outputs:---
+            + p90ResponseTime: "8221.236"
 
-   info: 2 changes performed:
-       + 2 resources created
-         26 resources unchanged
-   Update duration: 7.362744393s
+        info: 2 changes performed:
+            + 2 resources created
+                26 resources unchanged
+        Update duration: 7.362744393s
 
-   Permalink: https://app.pulumi.com/hausdorff/test-p8s/updates/1
-   ```
+        Permalink: https://app.pulumi.com/hausdorff/test-p8s/updates/1
 
    One useful sidenote, we can see here in the `---outputs:---` section that the `p90ResponseTime`
    that was computed by the promise is `export`ed, which causes Pulumi to report its value just

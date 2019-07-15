@@ -182,7 +182,7 @@ To test the application, we'll upload a video to S3, view the running applicatio
 
 -  Copy the video to S3, encoding the time index in the filename (00:01 becomes `00-01`):
 
-    ```
+    ```bash
     $ aws s3 cp cat.mp4 s3://$(pulumi stack output bucketName)/cat_00-01.mp4
     upload: cat.mp4 to s3://bucket-0c91106/cat_00-01.mp4
     ```
@@ -191,7 +191,7 @@ To test the application, we'll upload a video to S3, view the running applicatio
 
 Run `pulumi logs -f` for the streaming logs of the Lambda functions as well as the Fargate task. Note that the log contains a prefix that matches the functions and tasks in your code, such as `onNewVideo` and `ffmpegThumbTask`:
 
-```
+```bash
 $ pulumi logs -f
 Collecting logs for stack thumbnail-quickstart-dev since 2018-05-25T13:32:27.000-07:00.
 
