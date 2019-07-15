@@ -2,7 +2,7 @@
 title: "Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS"
 authors: ["nishi-davidson"]
 tags: ["Kubernetes", "EKS"]
-date: "2019-07-04"
+date: "2019-07-09"
 
 meta_image: "RELATIVE_TO_PAGE/featured-img-albingresscontroller.png"
 ---
@@ -44,6 +44,7 @@ Kubernetes Ingresses with Pulumi
 [AWS](https://github.com/pulumi/pulumi-aws), and
 [AWSX](https://github.com/pulumi/pulumi-awsx/tree/master/nodejs/awsx)
 packages.
+
 <!--more-->
 
 ## Step 1: Initialize Pulumi project and stack
@@ -84,30 +85,34 @@ import * as awsx from "@pulumi/awsx";
 import * as eks from "@pulumi/eks";
 import * as k8s from "@pulumi/kubernetes";
 
-const vpc = new awsx.Network("vpc-alb-ingress-eks", { usePrivateSubnets: false });
+const vpc = new awsx.Network("vpc-alb-ingress-eks", {
+  usePrivateSubnets: false
+});
 const cluster = new eks.Cluster("eks-cluster", {
-    vpcId             : vpc.id,
-    subnetIds         : vpc.publicSubnetIds,
-    instanceType      : "t2.medium",
-    version           : "1.12",
-    nodeRootVolumeSize: 200,
-    desiredCapacity   : 3,
-    maxSize           : 4,
-    minSize           : 3,
-    deployDashboard   : false,
-    vpcCniOptions     : {
-    warmIpTarget    : 4,
-    },
+  vpcId: vpc.id,
+  subnetIds: vpc.publicSubnetIds,
+  instanceType: "t2.medium",
+  version: "1.12",
+  nodeRootVolumeSize: 200,
+  desiredCapacity: 3,
+  maxSize: 4,
+  minSize: 3,
+  deployDashboard: false,
+  vpcCniOptions: {
+    warmIpTarget: 4
+  }
 });
 
 export const clusterName = cluster.eksCluster.name;
 export const kubeconfig = cluster.kubeconfig;
-export const clusterNodeInstanceRoleName = cluster.instanceRoles.apply(roles => roles[0].name);
+export const clusterNodeInstanceRoleName = cluster.instanceRoles.apply(
+  roles => roles[0].name
+);
 export const nodesubnetId = cluster.core.subnetIds;
 ```
 
 Configure the Public subnets in the console as defined in
-[this guide](https://kubernetes-sigs.github.io/aws-alb-ingress-controller/guide/controller/config/#subnet-auto-discovery).  
+[this guide](https://kubernetes-sigs.github.io/aws-alb-ingress-controller/guide/controller/config/#subnet-auto-discovery).
 
 ## Step 3: Deploy AWS ALB Ingress Controller
 
@@ -150,127 +155,130 @@ Append `index.ts` file from Step 2 with the code below and run
 // STEP 3: Declare the AWS ALB Ingress Controller
 
 // Create IAM Policy for the IngressController called "ingressController-iam-policy” and read the policy ARN.
-const ingressControllerPolicy = new aws.iam.Policy("ingressController-iam-policy", {
+const ingressControllerPolicy = new aws.iam.Policy(
+  "ingressController-iam-policy",
+  {
     policy: {
-        "Version": "2012-10-17",
-        "Statement": [
-          {
-            "Effect": "Allow",
-            "Action": [
-              "acm:DescribeCertificate",
-              "acm:ListCertificates",
-              "acm:GetCertificate"
-            ],
-            "Resource": "*"
-          },
-          {
-            "Effect": "Allow",
-            "Action": [
-              "ec2:AuthorizeSecurityGroupIngress",
-              "ec2:CreateSecurityGroup",
-              "ec2:CreateTags",
-              "ec2:DeleteTags",
-              "ec2:DeleteSecurityGroup",
-              "ec2:DescribeInstances",
-              "ec2:DescribeInstanceStatus",
-              "ec2:DescribeSecurityGroups",
-              "ec2:DescribeSubnets",
-              "ec2:DescribeTags",
-              "ec2:DescribeVpcs",
-              "ec2:ModifyInstanceAttribute",
-              "ec2:ModifyNetworkInterfaceAttribute",
-              "ec2:RevokeSecurityGroupIngress"
-            ],
-            "Resource": "*"
-          },
-          {
-            "Effect": "Allow",
-            "Action": [
-              "elasticloadbalancing:AddTags",
-              "elasticloadbalancing:CreateListener",
-              "elasticloadbalancing:CreateLoadBalancer",
-              "elasticloadbalancing:CreateRule",
-              "elasticloadbalancing:CreateTargetGroup",
-              "elasticloadbalancing:DeleteListener",
-              "elasticloadbalancing:DeleteLoadBalancer",
-              "elasticloadbalancing:DeleteRule",
-              "elasticloadbalancing:DeleteTargetGroup",
-              "elasticloadbalancing:DeregisterTargets",
-              "elasticloadbalancing:DescribeListeners",
-              "elasticloadbalancing:DescribeLoadBalancers",
-              "elasticloadbalancing:DescribeLoadBalancerAttributes",
-              "elasticloadbalancing:DescribeRules",
-              "elasticloadbalancing:DescribeSSLPolicies",
-              "elasticloadbalancing:DescribeTags",
-              "elasticloadbalancing:DescribeTargetGroups",
-              "elasticloadbalancing:DescribeTargetGroupAttributes",
-              "elasticloadbalancing:DescribeTargetHealth",
-              "elasticloadbalancing:ModifyListener",
-              "elasticloadbalancing:ModifyLoadBalancerAttributes",
-              "elasticloadbalancing:ModifyRule",
-              "elasticloadbalancing:ModifyTargetGroup",
-              "elasticloadbalancing:ModifyTargetGroupAttributes",
-              "elasticloadbalancing:RegisterTargets",
-              "elasticloadbalancing:RemoveTags",
-              "elasticloadbalancing:SetIpAddressType",
-              "elasticloadbalancing:SetSecurityGroups",
-              "elasticloadbalancing:SetSubnets",
-              "elasticloadbalancing:SetWebACL"
-            ],
-            "Resource": "*"
-          },
-          {
-            "Effect": "Allow",
-            "Action": [
-              "iam:GetServerCertificate",
-              "iam:ListServerCertificates"
-            ],
-            "Resource": "*"
-          },
-          {
-            "Effect": "Allow",
-            "Action": [
-              "waf-regional:GetWebACLForResource",
-              "waf-regional:GetWebACL",
-              "waf-regional:AssociateWebACL",
-              "waf-regional:DisassociateWebACL"
-            ],
-            "Resource": "*"
-          },
-          {
-            "Effect": "Allow",
-            "Action": [
-              "tag:GetResources",
-              "tag:TagResources"
-            ],
-            "Resource": "*"
-          },
-          {
-            "Effect": "Allow",
-            "Action": [
-              "waf:GetWebACL"
-            ],
-            "Resource": "*"
-          }
-        ]}
-}); 
+      Version: "2012-10-17",
+      Statement: [
+        {
+          Effect: "Allow",
+          Action: [
+            "acm:DescribeCertificate",
+            "acm:ListCertificates",
+            "acm:GetCertificate"
+          ],
+          Resource: "*"
+        },
+        {
+          Effect: "Allow",
+          Action: [
+            "ec2:AuthorizeSecurityGroupIngress",
+            "ec2:CreateSecurityGroup",
+            "ec2:CreateTags",
+            "ec2:DeleteTags",
+            "ec2:DeleteSecurityGroup",
+            "ec2:DescribeInstances",
+            "ec2:DescribeInstanceStatus",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeTags",
+            "ec2:DescribeVpcs",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:ModifyNetworkInterfaceAttribute",
+            "ec2:RevokeSecurityGroupIngress"
+          ],
+          Resource: "*"
+        },
+        {
+          Effect: "Allow",
+          Action: [
+            "elasticloadbalancing:AddTags",
+            "elasticloadbalancing:CreateListener",
+            "elasticloadbalancing:CreateLoadBalancer",
+            "elasticloadbalancing:CreateRule",
+            "elasticloadbalancing:CreateTargetGroup",
+            "elasticloadbalancing:DeleteListener",
+            "elasticloadbalancing:DeleteLoadBalancer",
+            "elasticloadbalancing:DeleteRule",
+            "elasticloadbalancing:DeleteTargetGroup",
+            "elasticloadbalancing:DeregisterTargets",
+            "elasticloadbalancing:DescribeListeners",
+            "elasticloadbalancing:DescribeLoadBalancers",
+            "elasticloadbalancing:DescribeLoadBalancerAttributes",
+            "elasticloadbalancing:DescribeRules",
+            "elasticloadbalancing:DescribeSSLPolicies",
+            "elasticloadbalancing:DescribeTags",
+            "elasticloadbalancing:DescribeTargetGroups",
+            "elasticloadbalancing:DescribeTargetGroupAttributes",
+            "elasticloadbalancing:DescribeTargetHealth",
+            "elasticloadbalancing:ModifyListener",
+            "elasticloadbalancing:ModifyLoadBalancerAttributes",
+            "elasticloadbalancing:ModifyRule",
+            "elasticloadbalancing:ModifyTargetGroup",
+            "elasticloadbalancing:ModifyTargetGroupAttributes",
+            "elasticloadbalancing:RegisterTargets",
+            "elasticloadbalancing:RemoveTags",
+            "elasticloadbalancing:SetIpAddressType",
+            "elasticloadbalancing:SetSecurityGroups",
+            "elasticloadbalancing:SetSubnets",
+            "elasticloadbalancing:SetWebACL"
+          ],
+          Resource: "*"
+        },
+        {
+          Effect: "Allow",
+          Action: ["iam:GetServerCertificate", "iam:ListServerCertificates"],
+          Resource: "*"
+        },
+        {
+          Effect: "Allow",
+          Action: [
+            "waf-regional:GetWebACLForResource",
+            "waf-regional:GetWebACL",
+            "waf-regional:AssociateWebACL",
+            "waf-regional:DisassociateWebACL"
+          ],
+          Resource: "*"
+        },
+        {
+          Effect: "Allow",
+          Action: ["tag:GetResources", "tag:TagResources"],
+          Resource: "*"
+        },
+        {
+          Effect: "Allow",
+          Action: ["waf:GetWebACL"],
+          Resource: "*"
+        }
+      ]
+    }
+  }
+);
 
 // Attach this policy to the NodeInstanceRole of the worker nodes.
-export const nodeinstanceRole = new aws.iam.RolePolicyAttachment("eks-NodeInstanceRole-policy-attach", {
+export const nodeinstanceRole = new aws.iam.RolePolicyAttachment(
+  "eks-NodeInstanceRole-policy-attach",
+  {
     policyArn: ingressControllerPolicy.arn,
-    role: clusterNodeInstanceRoleName,
-});
-
+    role: clusterNodeInstanceRoleName
+  }
+);
 
 // Declare the ALBIngressController in 1 step with the Helm Chart.
-const albingresscntlr = new k8s.helm.v2.Chart("alb", {
-    chart: "http://storage.googleapis.com/kubernetes-charts-incubator/aws-alb-ingress-controller-0.1.9.tgz",
+const albingresscntlr = new k8s.helm.v2.Chart(
+  "alb",
+  {
+    chart:
+      "http://storage.googleapis.com/kubernetes-charts-incubator/aws-alb-ingress-controller-0.1.9.tgz",
     values: {
-        clusterName: clusterName,
-        autoDiscoverAwsRegion: "true",
-        autoDiscoverAwsVpcID: "true",
-    },
-}, { provider: cluster.provider });
+      clusterName: clusterName,
+      autoDiscoverAwsRegion: "true",
+      autoDiscoverAwsVpcID: "true"
+    }
+  },
+  { provider: cluster.provider }
+);
 ```
 
 Confirm the alb-ingress-controller was created as follows:
@@ -288,7 +296,7 @@ AWS ALB Ingress controller
 -------------------------------------------------------------------------------
 ```
 
-Make sure the ingress-controller logs do not show errors about missing subnet tags or missing cluster name before proceeding to Step 4. 
+Make sure the ingress-controller logs do not show errors about missing subnet tags or missing cluster name before proceeding to Step 4.
 
 ## Step 4: Deploy Sample Application
 
@@ -299,58 +307,84 @@ code into `index.ts` file from Step 3 and run `pulumi up`:
 
 ```typescript
 function createNewNamespace(name: string): k8s.core.v1.Namespace {
-    //Create new namespace
-    return new k8s.core.v1.Namespace(name, { metadata: { name: name } }, { provider: cluster.provider });
+  //Create new namespace
+  return new k8s.core.v1.Namespace(
+    name,
+    { metadata: { name: name } },
+    { provider: cluster.provider }
+  );
 }
 
 // Define the 2048 namespace, deployment, and service.
 const nsgame = createNewNamespace("2048-game");
 
-const deploymentgame = new k8s.extensions.v1beta1.Deployment("deployment-game", {
+const deploymentgame = new k8s.extensions.v1beta1.Deployment(
+  "deployment-game",
+  {
     metadata: { name: "deployment-game", namespace: "2048-game" },
     spec: {
-        replicas: 5,
-        template: {
-            metadata: { labels: { app: "2048" } },
-            spec: { containers: [{
-                        image: "alexwhen/docker-2048",
-                        imagePullPolicy: "Always",
-                        name: "2048",
-                        ports: [{ containerPort: 80 }]
-                    }],
-            },
-        },
-    },
-}, { provider: cluster.provider });
+      replicas: 5,
+      template: {
+        metadata: { labels: { app: "2048" } },
+        spec: {
+          containers: [
+            {
+              image: "alexwhen/docker-2048",
+              imagePullPolicy: "Always",
+              name: "2048",
+              ports: [{ containerPort: 80 }]
+            }
+          ]
+        }
+      }
+    }
+  },
+  { provider: cluster.provider }
+);
 
-const servicegame = new k8s.core.v1.Service("service-game", {
+const servicegame = new k8s.core.v1.Service(
+  "service-game",
+  {
     metadata: { name: "service-2048", namespace: "2048-game" },
     spec: {
-        ports: [{ port: 80, targetPort: 80, protocol: "TCP" }],
-        type: "NodePort",
-        selector: { app: "2048" },
-    },
-}, { provider: cluster.provider });
+      ports: [{ port: 80, targetPort: 80, protocol: "TCP" }],
+      type: "NodePort",
+      selector: { app: "2048" }
+    }
+  },
+  { provider: cluster.provider }
+);
 
 //declare 2048 ingress
-const ingressgame = new k8s.extensions.v1beta1.Ingress("ingress-game", {
+const ingressgame = new k8s.extensions.v1beta1.Ingress(
+  "ingress-game",
+  {
     metadata: {
-        name: "2048-ingress",
-        namespace: "2048-game",
-        annotations: {
-            "kubernetes.io/ingress.class": "alb",
-            "alb.ingress.kubernetes.io/scheme": "internet-facing"
-        },
-        labels: { app: "2048-ingress" },
+      name: "2048-ingress",
+      namespace: "2048-game",
+      annotations: {
+        "kubernetes.io/ingress.class": "alb",
+        "alb.ingress.kubernetes.io/scheme": "internet-facing"
+      },
+      labels: { app: "2048-ingress" }
     },
     spec: {
-        rules: [{
-            http: {
-                paths: [{ path: "/*", backend: { serviceName: "service-2048", servicePort: 80 } }]
-            }
-        }],
-    },
-}, { provider: cluster.provider });
+      rules: [
+        {
+          http: {
+            paths: [
+              {
+                path: "/*",
+                backend: { serviceName: "service-2048", servicePort: 80 }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  { provider: cluster.provider }
+);
 ```
 
 After few seconds, verify the Ingress resource as follows:
