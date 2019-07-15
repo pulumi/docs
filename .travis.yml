@@ -10,7 +10,7 @@ before_install:
 # Download and install required tools.
 # Limit to one push build per branch.
 - go get github.com/pulumi/travisqueue
-- travisqueue start
+- if [ ! -z ${TRAVIS_TOKEN} ]; then travisqueue start; fi
 # Install assume-role tool for use when deploying
 - go get -u github.com/remind101/assume-role
 # AWS CLI
@@ -31,6 +31,6 @@ script:
 - make travis_${TRAVIS_EVENT_TYPE}
 after_script:
 # Maybe kick off next build.
-- travisqueue finish
+- if [ ! -z ${TRAVIS_TOKEN} ]; then travisqueue finish; fi
 notifications:
   webhooks: https://ufci1w66n3.execute-api.us-west-2.amazonaws.com/stage/travis
