@@ -4,7 +4,7 @@ authors: ["erin-xue"]
 tags: ["AWS","CI/CD","Cloud-Native"]
 date: "2019-01-09"
 
-meta_image: RELATIVE_TO_PAGE/code-comparison.png
+meta_image: code-comparison.png
 ---
 
 Pulumi is hosting [a webinar with AWS Fargate]({{< ref "/webinar/aws-fargate-and-pulumi" >}}) **on

@@ -4,7 +4,7 @@ authors: ["joe-duffy"]
 tags: ["Pulumi-News"]
 date: "2019-06-18"
 
-meta_image: "RELATIVE_TO_PAGE/pulumi-birthday.png"
+meta_image: "pulumi-birthday.png"
 ---
 
 

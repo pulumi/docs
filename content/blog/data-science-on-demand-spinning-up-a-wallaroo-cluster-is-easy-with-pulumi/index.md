@@ -4,7 +4,7 @@ authors: ["marc-holmes", "simon-zelazny"]
 tags: ["Infrastructure","Customer"]
 date: "2018-11-02"
 
-meta_image: "RELATIVE_TO_PAGE/tty-fast.gif"
+meta_image: "tty-fast.gif"
 ---
 
 *This guest post is from Simon Zelazny of

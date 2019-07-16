@@ -4,7 +4,7 @@ authors: ["praneet-loke"]
 tags: ["CI/CD"]
 date: "2018-12-14"
 
-meta_image: "RELATIVE_TO_PAGE/multi-id.gif"
+meta_image: "multi-id.gif"
 ---
 
 

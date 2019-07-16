@@ -4,7 +4,7 @@ authors: ["donna-malayeri"]
 tags: ["JavaScript","Serverless","AWS","Containers","Infrastructure"]
 date: "2018-06-21"
 
-meta_image: "RELATIVE_TO_PAGE/video-thumbnail-diagram.png"
+meta_image: "video-thumbnail-diagram.png"
 ---
 
 Pulumi makes it easy to build cloud applications that use a combination

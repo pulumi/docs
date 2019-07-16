@@ -4,7 +4,7 @@ authors: ["alex-clemmer"]
 tags: ["Kubernetes"]
 date: "2018-09-18"
 
-meta_image: "RELATIVE_TO_PAGE/1-created.png"
+meta_image: "1-created.png"
 ---
 
 <p><!-- spacer --></p>

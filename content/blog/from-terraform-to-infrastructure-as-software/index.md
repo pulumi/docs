@@ -4,7 +4,7 @@ authors: ["pat-gavlin"]
 tags: ["JavaScript","Infrastructure","TypeScript"]
 date: "2018-11-02"
 
-meta_image: "RELATIVE_TO_PAGE/tf-to-pulumi.png"
+meta_image: "tf-to-pulumi.png"
 ---
 
 Here at Pulumi, we love programming the cloud using infrastructure as

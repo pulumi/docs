@@ -4,7 +4,7 @@ authors: ["levi-blackstone"]
 tags: ["Kubernetes"]
 date: "2019-03-05"
 
-meta_image: "RELATIVE_TO_PAGE/status-rich.gif"
+meta_image: "status-rich.gif"
 ---
 
 Pulumi enables customers to create, deploy, and manage modern
@@ -136,4 +136,3 @@ any questions, need support, or just want to say hello.
 If you'd like to chat with our team, or get hands-on assistance with
 migrating your existing configuration code (including ksonnet programs)
 to Pulumi, please don't hesitate [to drop us a line]({{< ref "/contact" >}}).
-

@@ -4,7 +4,7 @@ authors: ["marc-holmes"]
 tags: ["Serverless"]
 date: "2018-07-05"
 
-meta_image: "RELATIVE_TO_PAGE/code-completion.gif"
+meta_image: "code-completion.gif"
 ---
 
 In this tutorial, we'll use Pulumi, to build a

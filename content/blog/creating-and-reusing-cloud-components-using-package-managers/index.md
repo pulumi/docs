@@ -4,7 +4,7 @@ authors: ["chris-smith"]
 tags: ["Infrastructure", "CI/CD"]
 date: "2018-08-09"
 
-meta_image: "RELATIVE_TO_PAGE/pulumi-resource-visualization.png"
+meta_image: "pulumi-resource-visualization.png"
 ---
 
 

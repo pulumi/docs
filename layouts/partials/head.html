@@ -54,12 +54,7 @@
     {{ end }}
 
     {{ if isset .Params "meta_image" }}
-        {{ if in .Params.meta_image "RELATIVE_TO_PAGE" }}
-            {{ $imagePath := replace .Params.meta_image "RELATIVE_TO_PAGE/" "" }}
-            <meta property="og:image" content="{{ .Page.Permalink }}{{ $imagePath }}">
-        {{ else }}
-            <meta property="og:image" content="{{ .Params.meta_image | absURL }}">
-        {{ end }}
+        <meta property="og:image" content="{{ (.Resources.GetMatch .Params.meta_image).Permalink }}">
     {{ else }}
         <meta property="og:image" content="{{ "/social/pulumi.png" | absURL }}">
     {{ end }}
