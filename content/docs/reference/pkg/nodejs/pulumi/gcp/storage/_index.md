@@ -813,6 +813,21 @@ deployments and may be missing (undefined) during planning phases.
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
 {{% md %}}
+
+Identities that will be granted the privilege in `role`. Each entry can have one of the following values:
+
+* `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google account.
+    
+* `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google account or a service account.
+    
+* `user:{emailid}`: An email address that represents a specific Google account. For example, [alice@gmail.com](mailto:alice@gmail.com) or [joe@example.com](mailto:joe@example.com).
+    
+* `serviceAccount:{emailid}`: An email address that represents a service account. For example, [my-other-app@appspot.gserviceaccount.com](mailto:my-other-app@appspot.gserviceaccount.com).
+    
+* `group:{emailid}`: An email address that represents a Google group. For example, [admins@example.com](mailto:admins@example.com).
+    
+* `domain:{domain}`: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketIAMBinding-role">
@@ -1004,6 +1019,21 @@ deployments and may be missing (undefined) during planning phases.
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
+
+Identities that will be granted the privilege in `role`. Each entry can have one of the following values:
+
+* `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google account.
+    
+* `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google account or a service account.
+    
+* `user:{emailid}`: An email address that represents a specific Google account. For example, [alice@gmail.com](mailto:alice@gmail.com) or [joe@example.com](mailto:joe@example.com).
+    
+* `serviceAccount:{emailid}`: An email address that represents a service account. For example, [my-other-app@appspot.gserviceaccount.com](mailto:my-other-app@appspot.gserviceaccount.com).
+    
+* `group:{emailid}`: An email address that represents a Google group. For example, [admins@example.com](mailto:admins@example.com).
+    
+* `domain:{domain}`: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketIAMMember-role">
