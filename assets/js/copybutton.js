@@ -67,7 +67,7 @@ $(function() {
         '</button>\n' +
         '<span class="copy-button-tooltip hidden">Copied!</span>';
 
-    $("div:not(.code-hero) > div.highlight")
+    $(":not(.no-copy) > div.highlight")
         .addClass("relative")
         .append(buttonHtml)
         .on("click", "button.copy-button", function() {

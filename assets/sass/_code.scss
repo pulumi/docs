@@ -5,7 +5,7 @@ code {
 }
 
 pre {
-    @apply bg-gray-100 py-4 px-5 rounded border border-gray-200 scrolling-auto overflow-scroll my-4 leading-normal;
+    @apply bg-gray-100 py-4 px-5 pr-8 rounded border border-gray-200 scrolling-auto overflow-x-auto my-4 leading-normal;
 
     .code-mode-dark & {
         @apply bg-gray-900 border-none shadow-md;

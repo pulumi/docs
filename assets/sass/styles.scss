@@ -106,11 +106,6 @@ main {
     blockquote {
         @apply border-l-4 rounded border-orange-300 px-4 py-1 text-sm;
     }
-
-    pre {
-        // For our code snippets, only show scrollbars if needed.
-        overflow: auto;
-    }
 }
 
 .link {
