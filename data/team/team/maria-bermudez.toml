@@ -1,0 +1,10 @@
+id = "maria-bermudez"
+name = "Maria Bermudez"
+title = "Technical Content Manager"
+weight = 1
+
+status = "active"
+
+[social]
+github = "bermudezmt"
+twitter = "bermudezmt"
