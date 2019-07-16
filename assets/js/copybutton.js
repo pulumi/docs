@@ -61,18 +61,19 @@ $(function() {
     }
 
     var buttonHtml =
-        '<button class="copy-button">\n' +
-        '    <i class="material-icons copy" title="Copy code snippet">content_copy</i>\n' +
-        '    <i class="material-icons copied hidden text-green-500">check</i>\n' +
-        '</button>\n' +
-        '<span class="copy-button-tooltip hidden">Copied!</span>';
+        '<div class="copy-button-container">\n' +
+        '    <button class="copy-button">\n' +
+        '        <i class="far fa-copy copy text-xl" title="Copy code snippet"></i>\n' +
+        '    </button>\n' +
+        '    <span class="copy-button-tooltip">Copied!</span>\n'+
+        '</div>';
 
     $(":not(.no-copy) > div.highlight")
         .addClass("relative")
         .append(buttonHtml)
         .on("click", "button.copy-button", function() {
             var $b = $(this);
-            var $code = $b.siblings("pre").children("code");
+            var $code = $b.parent().siblings("pre").children("code");
 
             // Get the lang and code.
             var lang = $code.attr("data-lang");
@@ -87,16 +88,11 @@ $(function() {
             // Remove focus from the button.
             $b.blur();
 
-            // Show a green check mark and "Copied!" tooltip for a couple seconds.
-            var duration = 2000;
-            var $copy = $b.children(".copy").hide();
-            var $copied = $b.children(".copied").fadeIn();
+            // Show a "Copied!" tooltip for a second.
+            var duration = 1000;
             var $tooltip = $b.siblings(".copy-button-tooltip").fadeIn();
             setTimeout(function() {
                 $tooltip.fadeOut();
-                $copied.fadeOut(function() {
-                    $copy.show();
-                });
             }, duration);
         })
 });

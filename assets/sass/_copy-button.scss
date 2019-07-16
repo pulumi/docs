@@ -1,17 +1,25 @@
 @import "colors";
 @import "mixins";
 
+.copy-button-container {
+    @apply absolute top-0 right-0 mt-px mr-px p-1 pt-2 pr-2 rounded bg-gray-100;
+
+    .code-mode-dark & {
+        @apply bg-gray-900;
+    }
+}
+
 .copy-button {
     @include transition;
 
-    @apply absolute top-0 right-0 mt-px mr-px pt-3 pr-2 rounded text-gray-500 bg-gray-100;
+    @apply text-gray-500;
 
     &:hover {
         @apply text-gray-600;
     }
 
     .code-mode-dark & {
-        @apply bg-gray-900 text-gray-600;
+        @apply text-gray-600;
 
         &:hover {
             @apply text-gray-500;
@@ -20,7 +28,7 @@
 }
 
 .copy-button-tooltip {
-    @apply absolute text-white text-xs text-center bg-gray-900 rounded p-2 z-0 opacity-75 top-0 right-0 mt-10 -mr-2;
+    @apply absolute hidden text-white text-xs text-center bg-gray-900 rounded p-2 z-0 opacity-75 top-0 right-0 mt-10 -mr-3;
 
     // Arrow on top of the tooltip.
     &::after {
