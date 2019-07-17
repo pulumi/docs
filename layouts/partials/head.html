@@ -53,16 +53,15 @@
         <meta property="og:description" content="{{ $defaultDescription }}">
     {{ end }}
 
+    {{ $image := "/social/pulumi.png" }}
     {{ if isset .Params "meta_image" }}
-        {{ if in .Params.meta_image "RELATIVE_TO_PAGE" }}
-            {{ $imagePath := replace .Params.meta_image "RELATIVE_TO_PAGE/" "" }}
-            <meta property="og:image" content="{{ .Page.Permalink }}{{ $imagePath }}">
+        {{ if eq .Section "blog" }}
+            {{ $image = (.Resources.GetMatch .Params.meta_image).RelPermalink }}
         {{ else }}
-            <meta property="og:image" content="{{ .Params.meta_image | absURL }}">
+            {{ $image = .Params.meta_image }}
         {{ end }}
-    {{ else }}
-        <meta property="og:image" content="{{ "/social/pulumi.png" | absURL }}">
     {{ end }}
+    <meta property="og:image" content="{{ $image | absURL }}">
 
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - Pulumi{{ end }}</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />

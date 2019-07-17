@@ -4,7 +4,7 @@ authors: ["joe-duffy"]
 tags: ["JavaScript","AWS","Containers","Infrastructure","TypeScript"]
 date: "2019-04-30"
 
-meta_image: "RELATIVE_TO_PAGE/docker-fargate-history.png"
+meta_image: "docker-fargate-history.png"
 ---
 
 The [Docker Getting Started tutorial](https://docs.docker.com/get-started/) shows how to develop,

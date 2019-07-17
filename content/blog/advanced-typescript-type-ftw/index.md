@@ -4,7 +4,7 @@ authors: ["cyrus-najmabadi"]
 tags: ["TypeScript"]
 date: "2018-09-19"
 
-meta_image: "RELATIVE_TO_PAGE/completion-list.png"
+meta_image: "completion-list.png"
 ---
 
 We at Pulumi love TypeScript for cloud apps and infrastructure, because of its rich type system and great ahead-of-time

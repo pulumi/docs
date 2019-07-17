@@ -5,7 +5,7 @@ tags: ["JavaScript","Serverless","AWS"]
 date: "2018-06-22"
 
 summary: "In this post, we'll use Pulumi to create a simple serverless REST API that counts the number of times a route has been hit, using JavaScript to define both the infrastructure and application code."
-meta_image: "RELATIVE_TO_PAGE/counter-arch.png"
+meta_image: "counter-arch.png"
 ---
 
 Pulumi makes it easy to build serverless

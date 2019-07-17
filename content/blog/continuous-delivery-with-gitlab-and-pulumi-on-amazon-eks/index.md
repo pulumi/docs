@@ -4,7 +4,7 @@ authors: ["nishi-davidson"]
 tags: ["AWS","Kubernetes","CI/CD"]
 date: "2019-05-22"
 
-meta_image: "RELATIVE_TO_PAGE/post-image.png"
+meta_image: "post-image.png"
 ---
 
 In this blog, we will work through an example that shows how to use Pulumi to enable GitLab-based

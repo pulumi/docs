@@ -4,7 +4,7 @@ authors: ["praneet-loke"]
 tags: ["Azure", "CI/CD", "New-Features"]
 date: "2019-05-06"
 
-meta_image: "RELATIVE_TO_PAGE/add-pulumi.png"
+meta_image: "add-pulumi.png"
 ---
 
 Azure DevOps is very popular among teams that want a single place to

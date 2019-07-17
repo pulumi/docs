@@ -4,7 +4,7 @@ authors: ["levi-blackstone"]
 tags: ["Kubernetes"]
 date: "2019-05-21"
 
-meta_image: "RELATIVE_TO_PAGE/helm-deploy-using-pulumi.gif"
+meta_image: "helm-deploy-using-pulumi.gif"
 ---
 
 Kubernetes is a powerful container orchestrator that is being adopted

@@ -4,7 +4,7 @@ authors: ["chris-toomey"]
 tags: ["JavaScript","Serverless","AWS","Infrastructure","Customer"]
 date: "2019-06-12"
 
-meta_image: "RELATIVE_TO_PAGE/aws-architecture-iot.png"
+meta_image: "aws-architecture-iot.png"
 ---
 
 **Guest Author: Chris Toomey, Solution Architect Lead @ Mapbox**

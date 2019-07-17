@@ -4,7 +4,7 @@ authors: ["joe-duffy"]
 tags: ["Testing","Infrastructure"]
 date: "2019-07-13"
 
-meta_image: "RELATIVE_TO_PAGE/meta.png"
+meta_image: "meta.png"
 ---
 
 

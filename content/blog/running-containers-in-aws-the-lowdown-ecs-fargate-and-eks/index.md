@@ -4,7 +4,7 @@ authors: ["joe-duffy"]
 tags: ["AWS","Containers","Kubernetes","EKS"]
 date: "2019-06-20"
 
-meta_image: "RELATIVE_TO_PAGE/pulumi-crosswalk-for-aws.webp"
+meta_image: "pulumi-crosswalk-for-aws.webp"
 ---
 
 

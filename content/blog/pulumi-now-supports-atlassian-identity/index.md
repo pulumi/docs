@@ -4,7 +4,7 @@ authors: ["praneet-loke"]
 tags: ["Features","CI/CD"]
 date: "2019-01-30"
 
-meta_image: "RELATIVE_TO_PAGE/atlassian-1.png"
+meta_image: "atlassian-1.png"
 ---
 
 Today we added support for yet another developer favorite product,

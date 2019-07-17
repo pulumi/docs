@@ -4,7 +4,7 @@ authors: ["luke-hoban"]
 tags: ["AWS","Features","Logging"]
 date: "2019-04-02"
 
-meta_image: "RELATIVE_TO_PAGE/terminal-logs.png"
+meta_image: "terminal-logs.png"
 ---
 
 Pulumi makes developing and deploying

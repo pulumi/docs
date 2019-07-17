@@ -4,7 +4,7 @@ authors: ["mikhail-shilkov"]
 tags: ["Infrastructure","Azure"]
 date: "2019-05-06"
 
-meta_image: "RELATIVE_TO_PAGE/app-insights.png"
+meta_image: "app-insights.png"
 ---
 
 *Today's guest post is from [Mikhail Shilkov](https://mikhail.io/), a

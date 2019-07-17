@@ -4,7 +4,7 @@ authors: ["nishi-davidson"]
 tags: ["Kubernetes","Applications","GKE","Jupyter"]
 date: "2019-05-30"
 
-meta_image: "RELATIVE_TO_PAGE/post-image-jupyter.png"
+meta_image: "post-image-jupyter.png"
 ---
 
 In this post, we will work through an example that shows how to use Pulumi to create Jupyter

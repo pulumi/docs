@@ -4,5 +4,4 @@ layout: azure
 url: /azure
 
 meta_desc: Programming the Azure cloud with Pulumi for huge productivity gains, and a unified programming model for Devs and DevOps.
-meta_image: /images/pulumi.png
 ---

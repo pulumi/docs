@@ -4,7 +4,7 @@ authors: ["joe-duffy"]
 tags: ["Kubernetes"]
 date: "2018-09-12"
 
-meta_image: "RELATIVE_TO_PAGE/health-checks.gif"
+meta_image: "health-checks.gif"
 ---
 
 In this post, we'll take a look at 11 "pearls" -- bite-sized code

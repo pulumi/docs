@@ -4,7 +4,7 @@ authors: ["luke-hoban"]
 tags: ["AWS","Kubernetes"]
 date: "2019-01-24"
 
-meta_image: "RELATIVE_TO_PAGE/easy-eks.png"
+meta_image: "easy-eks.png"
 ---
 
 

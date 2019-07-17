@@ -4,7 +4,7 @@ authors: ["luke-hoban"]
 tags: ["Serverless"]
 date: "2018-11-29"
 
-meta_image: "RELATIVE_TO_PAGE/espagon-console-2.png"
+meta_image: "espagon-console-2.png"
 ---
 
 [Pulumi](/) makes it incredibly easy to use serverless

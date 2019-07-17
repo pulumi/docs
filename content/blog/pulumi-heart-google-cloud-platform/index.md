@@ -4,7 +4,7 @@ authors: ["luke-hoban"]
 tags: ["Serverless","Kubernetes","Features","CI/CD","GCP"]
 date: "2019-04-09"
 
-meta_image: "RELATIVE_TO_PAGE/pulumi_console.png"
+meta_image: "pulumi_console.png"
 ---
 
 Google Cloud is one of the most exciting cloud platforms available

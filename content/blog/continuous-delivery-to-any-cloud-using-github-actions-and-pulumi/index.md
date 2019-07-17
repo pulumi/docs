@@ -4,7 +4,7 @@ authors: ["joe-duffy"]
 tags: ["Pulumi-News", "New-Features", "CI/CD"]
 date: "2018-10-17"
 
-meta_image: "RELATIVE_TO_PAGE/gh-actions-prs.png"
+meta_image: "gh-actions-prs.png"
 ---
 
 Today we announced our partnership with GitHub on the [new GitHub

@@ -4,7 +4,7 @@ authors: ["joe-duffy"]
 tags: ["JavaScript","Serverless","AWS"]
 date: "2019-03-11"
 
-meta_image: "RELATIVE_TO_PAGE/hero.png"
+meta_image: "hero.png"
 ---
 
 With Pulumi, you can create, deploy, and manage any cloud resource using

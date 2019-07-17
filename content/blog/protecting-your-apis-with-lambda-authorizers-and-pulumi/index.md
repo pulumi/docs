@@ -4,7 +4,7 @@ authors: ["erin-krengel"]
 tags: ["Serverless","AWS","Lambda","Auth","APIGateway"]
 date: "2019-04-24"
 
-meta_image: "RELATIVE_TO_PAGE/lambda-authorizer.jpg"
+meta_image: "lambda-authorizer.jpg"
 ---
 
 Creating serverless applications just got even easier! You can now
