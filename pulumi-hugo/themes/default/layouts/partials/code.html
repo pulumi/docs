@@ -3,7 +3,7 @@
     {{ $lang = "cql" }}
 {{ end }}
 
-<div class="code-mode-{{ default "light" .mode }} {{ if .chrome }} code-chrome {{ end }} code-{{ .lang }}">
+<div class="code-mode-{{ default "light" .mode }} {{ if .chrome }} code-chrome no-copy {{ end }} code-{{ .lang }}">
     {{ if .chrome }}
         {{ partial "chrome.html" . }}
     {{ end }}

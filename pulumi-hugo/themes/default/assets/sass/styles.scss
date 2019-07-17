@@ -9,6 +9,7 @@
 @import "api-python";
 @import "buttons";
 @import "code";
+@import "copy-button";
 @import "fonts";
 @import "hero";
 @import "hubspot";
@@ -104,11 +105,6 @@ main {
 
     blockquote {
         @apply border-l-4 rounded border-orange-300 px-4 py-1 text-sm;
-    }
-
-    pre {
-        // For our code snippets, only show scrollbars if needed.
-        overflow: auto;
     }
 }
 
