@@ -1,3 +1,1 @@
-# The production configuration doesn't have any unique settings just yet.
-# However, we do have a few places in the code where we check the value of
-# `hugo.Environment`.
+baseURL = "https://www.pulumi.com/"

@@ -5,7 +5,6 @@ branches:
   only:
   - master
   - production
-  - fusion
 before_install:
 # Download and install required tools.
 # Limit to one push build per branch.
