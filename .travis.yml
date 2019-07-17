@@ -4,7 +4,7 @@ sudo: true
 branches:
   only:
   - master
-  - production
+  - staging
 before_install:
 # Download and install required tools.
 # Limit to one push build per branch.
