@@ -1,5 +1,0 @@
-config:
-  aws:region: us-west-2
-  pulumi.io:certificateArn: arn:aws:acm:us-east-1:058607598222:certificate/2781ea98-97cf-4a14-aaa6-f222c0c758e5
-  pulumi.io:pathToWebsiteContents: ../public
-  pulumi.io:targetDomain: fusion.pulumi.io

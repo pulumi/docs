@@ -1,6 +1,6 @@
-# The SITE_ENVIRONMENT environment variable determines which Hugo environment
+# The HUGO_ENVIRONMENT environment variable determines which Hugo environment
 # to build/serve.
-SITE_ENVIRONMENT ?= default
+HUGO_ENVIRONMENT ?= development
 
 .PHONY: default
 default: banner generate build
@@ -21,7 +21,7 @@ ensure:
 .PHONY: serve
 serve:
 	@echo -e "\033[0;32mSERVE:\033[0m"
-	hugo server --buildDrafts --environment $(SITE_ENVIRONMENT)
+	hugo server --buildDrafts
 
 .PHONY: generate
 generate:
@@ -32,8 +32,8 @@ generate:
 
 .PHONY: build
 build:
-	@echo -e "\033[0;32mBUILD ($(SITE_ENVIRONMENT)):\033[0m"
-	hugo --environment $(SITE_ENVIRONMENT)
+	@echo -e "\033[0;32mBUILD ($(HUGO_ENVIRONMENT)):\033[0m"
+	hugo
 	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
 	rm -rf ./public/docs/search-data
 
@@ -59,7 +59,7 @@ test:
 .PHONY: validate
 validate:
 	hugo server \
-	    --buildDrafts --disableBrowserError --disableLiveReload  --environment $(SITE_ENVIRONMENT) \
+	    --buildDrafts --disableBrowserError --disableLiveReload \
 	    &>/dev/null &
 	while ! nc -z localhost 1313; do sleep 0.1; done
 	$(MAKE) test
@@ -69,17 +69,12 @@ validate:
 travis_push::
 	$(MAKE) banner
 	$(MAKE) ensure
-# NB. Delete fusion once dust settles.
-ifeq ($(TRAVIS_BRANCH),fusion)
-	HUGO_BASEURL=https://www-staging.pulumi.com/ $(MAKE) build
-	$(MAKE) validate
-	./scripts/run-pulumi.sh update staging
-else ifeq ($(TRAVIS_BRANCH),master)
-	HUGO_BASEURL=https://www-staging.pulumi.com/ $(MAKE) build
+ifeq ($(TRAVIS_BRANCH),master)
+	HUGO_ENVIRONMENT=staging $(MAKE) build
 	$(MAKE) validate
 	./scripts/run-pulumi.sh update staging
 else ifeq ($(TRAVIS_BRANCH),production)
-	SITE_ENVIRONMENT=production HUGO_BASEURL=https://www.pulumi.com/ $(MAKE) build
+	HUGO_ENVIRONMENT=production $(MAKE) build
 	$(MAKE) validate
 	./scripts/run-pulumi.sh update production
 else
@@ -91,17 +86,12 @@ endif
 travis_pull_request::
 	$(MAKE) banner
 	$(MAKE) ensure
-# NB. Delete fusion once dust settles.
-ifeq ($(TRAVIS_BRANCH),fusion)
-	HUGO_BASEURL=https://www-staging.pulumi.com/ $(MAKE) build
-	$(MAKE) validate
-	./scripts/run-pulumi.sh preview staging
-else ifeq ($(TRAVIS_BRANCH),master)
-	HUGO_BASEURL=https://www-staging.pulumi.com/ $(MAKE) build
+ifeq ($(TRAVIS_BRANCH),master)
+	HUGO_ENVIRONMENT=staging $(MAKE) build
 	$(MAKE) validate
 	./scripts/run-pulumi.sh preview staging
 else ifeq ($(TRAVIS_BRANCH),production)
-	HUGO_BASEURL=https://www.pulumi.com/ $(MAKE) build
+	HUGO_ENVIRONMENT=production $(MAKE) build
 	$(MAKE) validate
 	./scripts/run-pulumi.sh preview production
 else
