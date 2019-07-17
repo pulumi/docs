@@ -44,9 +44,9 @@ tbody tr td {
 
 | General Setting | Value |
 | --------------- | ----- |
-| Single sign on URL | https://api.pulumi.com/login/robot-co/sso/saml/acs |
-| Audience URI | https://api.pulumi.com/login/robot-co/sso/saml/metadata |
-| Default relay state | https://api.pulumi.com/login/robot-co/sso |
+| Single sign on URL | `https://api.pulumi.com/login/robot-co/sso/saml/acs` |
+| Audience URI | `https://api.pulumi.com/login/robot-co/sso/saml/metadata` |
+| Default relay state | `https://api.pulumi.com/login/robot-co/sso` |
 | Name ID format | EmailAddress or Persistent |
 | App username | Email |
 
