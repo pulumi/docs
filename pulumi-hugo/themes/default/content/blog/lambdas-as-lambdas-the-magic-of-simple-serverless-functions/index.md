@@ -4,7 +4,7 @@ authors: ["cyrus-najmabadi"]
 tags: ["Serverless","TypeScript"]
 date: "2018-10-10"
 
-meta_image: "RELATIVE_TO_PAGE/closure.png"
+meta_image: "closure.png"
 ---
 
 Pulumi's approach to infrastructure as code uses real languages instead

@@ -4,7 +4,7 @@ authors: ["mikhail-shilkov"]
 tags: ["Serverless", "Azure"]
 date: "2019-07-02"
 
-meta_image: "RELATIVE_TO_PAGE/feature.jpg"
+meta_image: "feature.jpg"
 ---
 
 Pulumi is excellent at connecting multiple cloud components into a

@@ -4,7 +4,7 @@ authors: ["donna-malayeri"]
 tags: ["JavaScript","AWS","Containers"]
 date: "2018-06-20"
 
-meta_image: "RELATIVE_TO_PAGE/hello-world-page.png"
+meta_image: "hello-world-page.png"
 ---
 
 Containers are a great way to deploy applications to the cloud,

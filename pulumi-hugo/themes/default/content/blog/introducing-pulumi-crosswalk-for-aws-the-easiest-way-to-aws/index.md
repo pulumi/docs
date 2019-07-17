@@ -4,7 +4,7 @@ authors: ["luke-hoban"]
 tags: ["Serverless","AWS","Containers","Pulumi-News","Kubernetes","EKS","Lambda","APIGateway","Docker"]
 date: "2019-06-10"
 
-meta_image: "RELATIVE_TO_PAGE/crosswalk-for-aws.png"
+meta_image: "crosswalk-for-aws.png"
 ---
 
 Amazon Web Services provides an incredible platform for developers to

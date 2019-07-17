@@ -4,7 +4,7 @@ authors: ["marc-holmes"]
 tags: ["Features"]
 date: "2018-10-01"
 
-meta_image: "RELATIVE_TO_PAGE/new-project-ui-1.gif"
+meta_image: "new-project-ui-1.gif"
 ---
 
 When you're able to build an app for any cloud using real languages,

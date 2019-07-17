@@ -4,7 +4,7 @@ authors: ["alex-clemmer"]
 tags: ["Kubernetes","Azure"]
 date: "2018-10-31"
 
-meta_image: "RELATIVE_TO_PAGE/helm-pulumi-deploy.gif"
+meta_image: "helm-pulumi-deploy.gif"
 ---
 
 The Helm community is one of the brightest spots in the infrastructure

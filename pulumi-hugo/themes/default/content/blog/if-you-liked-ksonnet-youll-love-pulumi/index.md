@@ -4,7 +4,7 @@ authors: ["mike-metral"]
 tags: ["Kubernetes","Cloud-Native"]
 date: "2019-02-13"
 
-meta_image: "RELATIVE_TO_PAGE/kube-update.gif"
+meta_image: "kube-update.gif"
 ---
 
 The Kubernetes landscape is constantly evolving as end users and

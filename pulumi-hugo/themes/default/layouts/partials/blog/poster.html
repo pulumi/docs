@@ -1,12 +1,6 @@
 {{/*
     If a general image is associated with the post, display it in-line.
-    Though we need to do some work to convert a relative image path.
 */}}
 {{ if .Params.meta_image }}
-    {{ if in .Params.meta_image "RELATIVE_TO_PAGE" }}
-        {{ $imagePath := replace .Params.meta_image "RELATIVE_TO_PAGE/" "" }}
-        <img class="rounded-lg md:m-2 md:mt-0 md:max-w-xs md:float-right my-8 border-2 border-gray-100" src="{{ .Page.Permalink }}{{ $imagePath }}" alt="{{ .Title }}">
-    {{ else }}
-        <img class="rounded-lg md:m-2 md:mt-0 md:max-w-xs md:float-right my-8 border-2 border-gray-100" src="{{ .Params.meta_image }}" alt="{{ .Title }}">
-    {{ end }}
+    <img class="rounded-lg md:m-2 md:mt-0 md:max-w-xs md:float-right my-8 border-2 border-gray-100" src="{{ (.Resources.GetMatch .Params.meta_image).RelPermalink }}" alt="{{ .Title }}">
 {{ end }}

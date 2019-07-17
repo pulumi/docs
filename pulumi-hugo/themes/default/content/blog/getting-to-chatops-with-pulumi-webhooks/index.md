@@ -4,7 +4,7 @@ authors: ["chris-smith"]
 tags: ["CI/CD", "New-Features"]
 date: "2019-01-23"
 
-meta_image: "RELATIVE_TO_PAGE/pulumi-webhooks.png"
+meta_image: "pulumi-webhooks.png"
 ---
 
 Today we are delighted to announce the availability of Webhooks on

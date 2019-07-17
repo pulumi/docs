@@ -4,7 +4,7 @@ authors: ["alex-clemmer"]
 tags: ["Kubernetes"]
 date: "2018-09-26"
 
-meta_image: "RELATIVE_TO_PAGE/trace-success-create-svc.gif"
+meta_image: "trace-success-create-svc.gif"
 ---
 
 <p><!-- spacer --></p>

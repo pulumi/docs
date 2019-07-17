@@ -4,7 +4,7 @@ authors: ["praneet-loke"]
 tags: ["CI/CD"]
 date: "2018-12-03"
 
-meta_image: "RELATIVE_TO_PAGE/gl-2.gif"
+meta_image: "gl-2.gif"
 ---
 
 We are very pleased to announce that [Pulumi](/) now

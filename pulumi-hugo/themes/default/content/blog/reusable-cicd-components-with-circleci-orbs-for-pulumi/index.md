@@ -4,7 +4,7 @@ authors: ["chris-smith"]
 tags: ["CI/CD"]
 date: "2018-11-07"
 
-meta_image: "RELATIVE_TO_PAGE/circleci-ui.png"
+meta_image: "circleci-ui.png"
 ---
 
 

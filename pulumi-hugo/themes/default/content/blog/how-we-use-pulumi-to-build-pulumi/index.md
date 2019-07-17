@@ -4,7 +4,7 @@ authors: ["luke-hoban"]
 tags: ["Serverless","AWS","Containers","Infrastructure"]
 date: "2018-06-26"
 
-meta_image: "RELATIVE_TO_PAGE/image-4.png"
+meta_image: "image-4.png"
 ---
 
 

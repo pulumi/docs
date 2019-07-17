@@ -4,7 +4,7 @@ authors: ["alex-clemmer"]
 tags: ["Infrastructure","Kubernetes","TypeScript"]
 date: "2018-08-24"
 
-meta_image: "RELATIVE_TO_PAGE/diff.gif"
+meta_image: "diff.gif"
 ---
 
 Kubernetes is a powerful container orchestrator for cloud native

@@ -4,7 +4,7 @@ authors: ["joe-duffy"]
 tags: ["JavaScript","TypeScript","CI/CD","Cloud-Native","Python"]
 date: "2019-04-17"
 
-meta_image: "RELATIVE_TO_PAGE/InfraTesting.png"
+meta_image: "InfraTesting.png"
 ---
 
 Using Pulumi and general purpose languages for infrastructure as code

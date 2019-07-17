@@ -4,7 +4,7 @@ authors: ["joe-duffy"]
 tags: ["Kubernetes"]
 date: "2018-09-12"
 
-meta_image: "RELATIVE_TO_PAGE/diff.gif"
+meta_image: "diff.gif"
 ---
 
 Today we're pleased to

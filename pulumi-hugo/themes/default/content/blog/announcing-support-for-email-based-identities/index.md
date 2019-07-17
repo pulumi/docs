@@ -5,7 +5,7 @@ tags: ["Pulumi-News","Features"]
 date: "2019-03-21"
 
 summary: "Today, we are pleased to announce that we are launching support for email-based identities. You no longer need to use a social identity to sign-up for an account on Pulumi. Just fill out the signup form, and you are ready to go."
-meta_image: "RELATIVE_TO_PAGE/email-signup.png"
+meta_image: "email-signup.png"
 ---
 
 We have been hard at work the past few months providing our users with

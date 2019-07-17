@@ -4,7 +4,7 @@ authors: ["linio-engineering"]
 tags: ["Applications","MySQL"]
 date: "2019-05-28"
 
-meta_image: "RELATIVE_TO_PAGE/hero.png"
+meta_image: "hero.png"
 ---
 
 One of the most critical components of an application’s infrastructure is its

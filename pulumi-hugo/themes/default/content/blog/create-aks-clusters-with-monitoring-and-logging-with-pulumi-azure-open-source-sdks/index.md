@@ -4,7 +4,7 @@ authors: ["nishi-davidson"]
 tags: ["Kubernetes","Azure"]
 date: "2019-05-08"
 
-meta_image: "RELATIVE_TO_PAGE/hero.png"
+meta_image: "hero.png"
 ---
 
 Pulumi-Azure open source package can be used to create Azure Kubernetes

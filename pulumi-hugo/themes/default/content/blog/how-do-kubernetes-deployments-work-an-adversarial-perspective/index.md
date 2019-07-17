@@ -4,7 +4,7 @@ authors: ["alex-clemmer"]
 tags: ["Kubernetes"]
 date: "2018-10-03"
 
-meta_image: "RELATIVE_TO_PAGE/deployment-rollout.gif"
+meta_image: "deployment-rollout.gif"
 ---
 
 *This post is part 3 in a series on the Kubernetes API. Earlier,
