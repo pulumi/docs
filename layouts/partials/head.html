@@ -66,6 +66,14 @@
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - Pulumi{{ end }}</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
 
+    <!--
+        The canonical URL for the website. In all cases, this should be the public-facing
+        production URL of the site, to avoid SEO penalties for duplicate content.
+        https://support.google.com/webmasters/answer/139066?hl=en
+        https://en.wikipedia.org/wiki/Canonical_link_element
+    -->
+    <link rel="canonical" href="{{ .Site.Params.canonicalURL }}{{ .RelPermalink }}" >
+
     <!-- RSS link for the blog. -->
     <link rel="alternate" type="application/rss+xml" href="{{ "/blog/rss.xml" | absURL }}" title="Pulumi Blog" />
 
