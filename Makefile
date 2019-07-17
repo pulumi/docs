@@ -50,6 +50,7 @@ test:
 	./node_modules/.bin/blc http://localhost:1313 --recursive --follow \
 		--exclude "/docs/reference/pkg" \
 		--exclude "/docs/reference/changelog" \
+		--exclude "https://api.pulumi.com/" \
 		--exclude "https://github.com/pulumi/docs/edit/master" \
 		--exclude "https://www.linkedin.com/" \
 		--exclude "https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task" \
