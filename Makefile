@@ -47,7 +47,7 @@ test:
 	#     - Our Visual Studio Marketplace link for the Azure Pipelines task extension,
 	#       although valid and publicly available, is reported as a broken link.
 	# Fixes for the former two are tracked by https://github.com/pulumi/docs/issues/568.
-	./node_modules/.bin/blc http://localhost:1313 -r \
+	./node_modules/.bin/blc http://localhost:1313 --recursive --follow \
 		--exclude "/docs/reference/pkg" \
 		--exclude "/docs/reference/changelog" \
 		--exclude "https://github.com/pulumi/docs/edit/master" \
