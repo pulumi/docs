@@ -195,7 +195,7 @@ const lambda = new aws.lambda.CallbackFunction("mylambda", {
 });
 ```
 
-When `pulumi` starts executing `createLambdaFunction` it will analyze the JavaScript function code and will see that it uses the 'obj' value. At that point in time it will use whatever the value is currently to serialize over. So, in the first example, it will serialize the value `{ a: 1, b: 2 }`, even though right after executing createLambdaFunction the program code will update that value to `{ a: 3, b: 4}`. In the second example, the code will see the `{ a: 3, b: 4 }` value and will serialize that into the 'run time' code.
+When `pulumi` starts executing `new aws.lambda.CallbackFunction` it will analyze the JavaScript function code and will see that it uses the 'obj' value. At that point in time it will use whatever the value is currently to serialize over. So, in the first example, it will serialize the value `{ a: 1, b: 2 }`, even though right after executing createLambdaFunction the program code will update that value to `{ a: 3, b: 4}`. In the second example, the code will see the `{ a: 3, b: 4 }` value and will serialize that into the 'run time' code.
 
 Notes:
 
