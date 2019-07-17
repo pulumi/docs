@@ -15,7 +15,7 @@ code to the rescue! We can now provision an entire EKS cluster with a
 CLI single gesture, thanks to [the `@pulumi/eks`
 package](https://github.com/pulumi/pulumi-eks). Let's see how.
 
-![Pulumi making EKS Easy](./easy-eks.png)
+{{< img src="easy-eks.png" alt="Pulumi making EKS Easy" >}}
 
 To get started, download the free and open source
 [Pulumi SDK]({{< ref "/docs/reference/install.md" >}}). The SDK includes

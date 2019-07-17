@@ -20,7 +20,7 @@ One of the most popular features of the recent
 of Pulumi is fine-grained status updates for Kubernetes resources. On
 the CLI they look like this:
 
-![status-rich](./status-rich.gif)
+{{< img src="status-rich.gif" alt="status-rich" >}}
 
 But wait --- how does this work exactly? What is *actually happening*
 when you deploy a `Pod` to a cluster? How does a `Service` go from
