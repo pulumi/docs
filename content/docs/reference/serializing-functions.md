@@ -166,7 +166,7 @@ Notes:
 
 ### Pulumi Execution Order
 
-`pulumi` uses `node` to execute a Pulumi application. During execution, when a call to `createLambdaFunction` is encountered, the function is converted to a Lambda at that point in execution. That means that if the function captures any state, then the value that is captured will be whatever it was at the point in time.
+`pulumi` uses `node` to execute a Pulumi application. During execution, when a call to `new aws.lambda.CallbackFunction` is encountered, the function is converted to a Lambda at that point in execution. That means that if the function captures any state, then the value that is captured will be whatever it was at the point in time.
 
 For this reason, it is highly recommended that code not capture values which are also mutated in code. It is much safer and easier to reason about immutable values that are captured in code.
 
