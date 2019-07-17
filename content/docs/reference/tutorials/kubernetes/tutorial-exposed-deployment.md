@@ -30,7 +30,7 @@ Pulumi and Kubernetes.
 Now, install dependencies:
 
 ```sh
-npm install
+$ npm install
 ```
 
 Create a new stack:
@@ -45,7 +45,7 @@ This example will attempt to expose the `nginx` deployment Internet with a `Serv
 type `ClusterIP` instead; all you need to do is to tell it whether you're deploying to minikube:
 
 ```sh
-pulumi config set isMinikube <value>
+$ pulumi config set isMinikube <value>
 ```
 
 Perform the deployment:

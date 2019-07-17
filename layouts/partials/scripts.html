@@ -6,10 +6,12 @@
     Concatenate, minify, and fingerprint scripts. Generated file will contain content
     hash in filename, so no need to add query param to cache bust.
 -->
-{{ $main := resources.Get "js/main.js" }}
-{{ $nav := resources.Get "js/nav.js" }}
-{{ $carousel := resources.Get "js/carousel.js" }}
-{{ $langchoose := resources.Get "js/langchoose.js" }}
-{{ $noselect := resources.Get "js/noselect.js" }}
-{{ $js := slice $main $nav $carousel $langchoose $noselect | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
+{{ $s := slice (resources.Get "js/main.js") }}
+{{ $s = $s | append (resources.Get "js/nav.js") }}
+{{ $s = $s | append (resources.Get "js/carousel.js") }}
+{{ $s = $s | append (resources.Get "js/langchoose.js") }}
+{{ $s = $s | append (resources.Get "js/noselect.js") }}
+{{ $s = $s | append (readFile "node_modules/clipboard-polyfill/build/clipboard-polyfill.promise.js" | resources.FromString "js/node/clipboard-polyfill.js") }}
+{{ $s = $s | append (resources.Get "js/copybutton.js") }}
+{{ $js := $s | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>

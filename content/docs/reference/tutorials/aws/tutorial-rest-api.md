@@ -24,9 +24,9 @@ concepts to explore additional containers, serverless, and infrastructure tutori
 
 Let's use the Pulumi CLI to initialize a new project:
 
-```
-mkdir ahoy-pulumi && cd ahoy-pulumi
-pulumi new hello-aws-javascript
+```bash
+$ mkdir ahoy-pulumi && cd ahoy-pulumi
+$ pulumi new hello-aws-javascript
 ```
 
 You can accept the defaults for this command. For instance, you can change the AWS region to `us-west-2`.
@@ -89,7 +89,7 @@ See the [reference documentation]({{< relref "/docs/reference" >}}) for details 
 The stack is ready to deploy, which is done as follows:
 
 ```bash
-pulumi up
+$ pulumi up
 ```
 
 This command instructs Pulumi to determine the resources needed to create the stack. First, a preview is shown of the changes that will be made:
@@ -103,7 +103,7 @@ Choosing `yes` will create resources in AWS. This may take a minute or two.
 Since there was a stack export (via `exports.url` in the code), this is printed in the output of `pulumi up`. We can easily `curl` this URL via `pulumi stack output`:
 
 ```bash
-curl $(pulumi stack output url)
+$ curl $(pulumi stack output url)
 ```
 
 For a more interesting view that shows the result of calling a Lambda function, open the page in a browser:
@@ -121,7 +121,7 @@ Our output also contained a permalink to the Pulumi dashboard. We can review the
 To destroy resources, run the following:
 
 ```bash
-pulumi destroy
+$ pulumi destroy
 ```
 
 Once confirmed, Pulumi will remove all of the resources you've created. The stack itself is preserved in the Pulumi dashboard and is ready to go again as needed.

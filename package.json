@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "broken-link-checker": "^0.7.8",
+    "clipboard-polyfill": "^2.8.1",
     "typedoc": "^0.15.0-0",
     "typescript": "^3.4.5"
   },

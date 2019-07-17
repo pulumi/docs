@@ -1,0 +1,44 @@
+@import "colors";
+@import "mixins";
+
+.copy-button-container {
+    @apply absolute top-0 right-0 mt-px mr-px p-1 pt-2 pr-2 rounded bg-gray-100;
+
+    .code-mode-dark & {
+        @apply bg-gray-900;
+    }
+}
+
+.copy-button {
+    @include transition;
+
+    @apply text-gray-500;
+
+    &:hover {
+        @apply text-gray-600;
+    }
+
+    .code-mode-dark & {
+        @apply text-gray-600;
+
+        &:hover {
+            @apply text-gray-500;
+        }
+    }
+}
+
+.copy-button-tooltip {
+    @apply absolute hidden text-white text-xs text-center bg-gray-900 rounded p-2 z-0 opacity-75 top-0 right-0 mt-10 -mr-3;
+
+    // Arrow on top of the tooltip.
+    &::after {
+        @apply absolute border-solid;
+
+        content: " ";
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-color: transparent transparent map-get($gray, 900) transparent;
+    }
+}
