@@ -20,7 +20,7 @@ and browse the site locally, you're ready to move on to the next section.
     hugo new --kind blog-post blog/my-new-post
     ```
 
-    This will create a minimal post browseable at http://localhost:1313/blog/. You'll find the new post's source file at `content/blog/my-new-post/_index.md` containing the set of [Hugo front matter](https://gohugo.io/content-management/front-matter/) properties you'll need to get started:
+    This will create a minimal post browsable at http://localhost:1313/blog/. You'll find the new post's source file at `content/blog/my-new-post/_index.md` containing the set of [Hugo front matter](https://gohugo.io/content-management/front-matter/) properties you'll need to get started:
 
     ```
     ---
