@@ -13,7 +13,8 @@ show you how to deploy some load balanced Droplets on DigitalOcean using Pulumi.
 To get started, let's create a new Pulumi program written in TypeScript:
 
 ```bash
- $ mkdir infra && cd infra && pulumi new typescript
+ $ mkdir infra && cd infra
+ $ pulumi new typescript
 ```
 
 Now we should install the latest Pulumi DigitalOcean provider:
