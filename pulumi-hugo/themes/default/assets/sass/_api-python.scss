@@ -22,8 +22,8 @@ div.section[id^="pulumi"] {
     }
 }
 
-// This selector is for the module page and for the Pulumi Python SDK page.
-div[id^="module-"], div[id="pulumi-python-sdk"] {
+// We rely on the Python docs that begin with `<div class="section" id="foo">` to target these styles.
+div.section[id]:not([id=""]) {
     // Don't show the header link - there's an anchorjs link on this header that does the
     // job just as well.
     h1[id$="\B6"],
@@ -50,9 +50,6 @@ div[id^="module-"], div[id="pulumi-python-sdk"] {
     // subchildren:
     dl.class, dl.function, dl.exception {
         > dt {
-            // Top-level definitions get larger text.
-            @apply text-lg;
-
             // Hide the header link when not hovering.
             > a.headerlink {
                 @apply invisible;
@@ -61,7 +58,7 @@ div[id^="module-"], div[id="pulumi-python-sdk"] {
 
         dt {
             // Use the same styling as our `pre` tags for definitions.
-            @apply bg-gray-100 py-4 px-5 rounded border border-gray-200 scrolling-auto overflow-scroll my-4 leading-normal;
+            @apply font-mono bg-gray-100 py-4 px-5 rounded border border-gray-200 scrolling-auto overflow-scroll my-4 leading-normal;
 
             // Remove italics in these definitions.
             em {
