@@ -344,8 +344,8 @@ export function createRole(name: string): aws.iam.Role {
 }
 
 // Now create the roles and instance profiles for the two worker groups.
-const role1 = iam.createRole("my-worker-role1");
-const role2 = iam.createRole("my-worker-role2");
+const role1 = createRole("my-worker-role1");
+const role2 = createRole("my-worker-role2");
 const instanceProfile1 = new aws.iam.InstanceProfile("my-instance-profile1", {role: role1});
 const instanceProfile2 = new aws.iam.InstanceProfile("my-instance-profile2", {role: role2});
 
