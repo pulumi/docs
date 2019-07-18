@@ -115,30 +115,47 @@ The `args` provided to a resource determine what inputs will be used to initiali
 
 All resource constructors also accept an `options` argument which can provide the following additional resource options controlling how the resource will be managed by Pulumi.
 
-###### `dependsOn`
-Provides a list of explicit resource dependencies to add to the resource. Every resource referenced either directly or indirectly by an `Output` that is passed in to the resource constructor will implicitly be included, so this additional information is only needed when the dependency is on something that is not already an input to the resource. The default is `[]`.
+###### `additionalSecretOutputs`
+Provides a list of output properties which should be treated as secrets. This value augments any values that Pulumi detects itself, based on what secret inputs to the resource has. This is typically used to express that for a specific instance of a resource, some of its output properties should be treated as secrets (when they would not normally be).
 
-###### `protect`
-Marks a resource as protected. A protected resource cannot be deleted directly: first you must set `protect: false` and run `pulumi up`. Then, the resource can be deleted, either by removing the line of code or by running `pulumi destroy`.  The default is to inherit this value from the parent resource, and `false` for resources without a parent.
+###### `aliases`
+Provides a list of aliases for a resource or component. When making a breaking change to the name or type of a resource or component, you can add the old name to the list of `aliases` for a resource to ensure that existing resources will be migrated to the new name instead of being deleted and replaced with the new named resource. 
 
-###### `parent`
-A parent for the resource. See [Components](#components).  The default is to parent to the implicitly-created `Stack` resource that is a root resource for all Pulumi stacks.
+For example, a resource can be aliased to a full previous [resource URN](#urns):
+ 
+`aliases: ["urn:pulumi:stackname::projectname::aws:s3/bucket:Bucket::app-function"]`
 
-###### `provider`
-A provider for the resource. See [Providers](#providers).  The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
+Or it can be aliased to a relative change to the resource's name, parent, and/or type: 
+
+`aliases: [{ name: "otherchild", parent: this }]`
+
+###### `customTimeouts`
+Provides a set of custom timeouts for `create`, `update`, and `delete` operations on a resource. These timeouts can be specified as a string like "5m", "40s", or "1d" (5 minutes, 40 seconds, or 1 day, respectively). For example, `customTimeouts: { create: "1m" }`.
 
 ###### `deleteBeforeReplace`
-Specify that replacements of the resource will delete the existing resource before creating its replacement.  This will lead to downtime during the replacement, but may be necessary for some resources that manage scarce resources behind the scenes.  The default is `false`.
+Set this option to `true` to specify that replacements of the resource will delete the existing resource before creating its replacement.  This will lead to downtime during the replacement, but may be necessary for some resources that manage scarce resources behind the scenes.  The default is `false`.
+
+###### `dependsOn`
+Provides a list of explicit resource dependencies to add to the resource. Every resource referenced either directly or indirectly by an `Output` that is passed in to the resource constructor will implicitly be included, so this additional information is only needed when the dependency is on something that is not already an input to the resource. The default is `[]`.
 
 ###### `ignoreChanges`
 Provides a list of properties which will be ignored as part of updates. The value of the property will be used for newly created resources, but will not be used as part of updates. This is typically used to avoid changes in properties leading to diffs or to change defaults for a property without forcing all existing deployed stacks to update or replace the affected resource.
 
-###### `additionalSecretOutputs`
-Provides a list of output properties which should be treated as secrets. This value aguments any values that Pulumi detects itself, based on what secret inputs to the resource has. This is typically used to express that for a specific instance of a resource, some of its output properties should be treated as secrets (when they would not normally be).
+###### `import`
+The ID of an existing resource to import for Pulumi to manage. When set, Pulumi will read the current state of the resource with the given ID from the backing provider &ndash; AWS, Azure, GCP, or Kubernetes for example. The inputs to the resource's constructor must not differ from this state or the import will fail. Once a resource has been imported, this property should be unset.
+
+###### `parent`
+A parent for the resource. See [Components](#components).  The default is to parent to the implicitly-created `Stack` resource that is a root resource for all Pulumi stacks.
+
+###### `protect`
+Marks a resource as protected. A protected resource cannot be deleted directly: First, you must set `protect: false` and run `pulumi up`. Then, you can delete the resource by removing the line of code or by running `pulumi destroy`.  The default is to inherit this value from the parent resource, and `false` for resources without a parent.
+
+###### `provider`
+A provider for the resource. See [Providers](#providers).  The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
 
 ### Resource names {#names}
 
-Every resource managed by Pulumi has a name.  This name is used to track the identity of a resource across multiple deployments of the same program.  The name that is specified when a resource is created is used in three ways:
+Every resource managed by Pulumi has a name.  This name is used to track the identity of a resource across multiple deployments of the same program.  The name specified during resource creation is used in three ways:
 
 1. It is used as part of constructing the Universal Resource Name (URN) used by the Pulumi engine to track the resource across updates.
 2. Most resource providers will use it as a default prefix for constructing the cloud-provider name of the resource.
