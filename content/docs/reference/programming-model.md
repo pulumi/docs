@@ -119,10 +119,18 @@ All resource constructors also accept an `options` argument which can provide th
 Provides a list of output properties which should be treated as secrets. This value augments any values that Pulumi detects itself, based on what secret inputs to the resource has. This is typically used to express that for a specific instance of a resource, some of its output properties should be treated as secrets (when they would not normally be).
 
 ###### `aliases`
-Provides a list of aliases for a resource or component. When making a breaking change to the name or type of a resource or component, you can add the old name to the list of `aliases` for a resource to ensure that existing resources will be migrated to the new name instead of being deleted and replaced with the new named resource.
+Provides a list of aliases for a resource or component. When making a breaking change to the name or type of a resource or component, you can add the old name to the list of `aliases` for a resource to ensure that existing resources will be migrated to the new name instead of being deleted and replaced with the new named resource. 
+
+For example, a resource can be aliased to a full previous [resource URN](#urns):
+ 
+`aliases: ["urn:pulumi:stackname::projectname::aws:s3/bucket:Bucket::app-function"]`
+
+Or it can be aliased to a relative change to the resource's name, parent, and/or type: 
+
+`aliases: [{ name: "otherchild", parent: this }]`
 
 ###### `customTimeouts`
-Provides a set of custom timeouts for create, update, and delete operations on a resource. These timeouts can be specified as a string like "5m", "40s", or "1d" (5 minutes, 40 seconds, or 1 day, respectively).
+Provides a set of custom timeouts for `create`, `update`, and `delete` operations on a resource. These timeouts can be specified as a string like "5m", "40s", or "1d" (5 minutes, 40 seconds, or 1 day, respectively). For example, `customTimeouts: { create: "1m" }`.
 
 ###### `deleteBeforeReplace`
 Set this option to `true` to specify that replacements of the resource will delete the existing resource before creating its replacement.  This will lead to downtime during the replacement, but may be necessary for some resources that manage scarce resources behind the scenes.  The default is `false`.
