@@ -2,8 +2,8 @@
 
 ## Pulumi terminology
 
-- Use `pulumi` or "the Pulumi CLI" to refer to the CLI
-- Use `pulumi.com` to refer to the service
+- Use `pulumi` or "the Pulumi CLI" to refer to the CLI.
+- Use `pulumi.com` to refer to the service.
 
 ## Documentation structure
 
@@ -26,7 +26,6 @@ Which, on a page inside the `./content/reference` directory, will generate:
 <a href="/docs/reference/install/">Install</a>
 <a href="/docs/reference/programming-model/#stack-outputs">Outputs</a>
 ```
-
 
 ### Hugo tips
 
@@ -55,22 +54,30 @@ Which, on a page inside the `./content/reference` directory, will generate:
 ### Language and terminology styles
 
 - Top level headings use **Title Case**, where each word starts with a capital letter.
-- All other headings use **Sentence case**, where only the first word and any proper nouns have a capital letter. 
-- Use capitalization only for a proper noun, and use throughout. For example, "stack" should almost always be lowercase in text
+- All other headings use **Sentence case**, where only the first word and any proper nouns have a capital letter.
+- Use capitalization only for a proper noun, and use throughout. For example, "stack" should almost always be lowercase in text.
 
 ### Referring to "things"
 
 - References to the Pulumi CLI or CLI commands should be enclosed in backticks (e.g., `pulumi up`).
 - References to UI elements within a webpage should be **bold**. (e.g., "Go to the **Account** page in the Pulumi Console and select **sync profile with GitHub**").
-- Use arrows to indicate a navigation. (e.g., "Go to **FooPage** -> **BarItem**").
+- Use arrows to indicate a navigation. (e.g., "Go to **FooPage** &gt; **BarItem**").
 
 ### Formatting
 
 - Use hash marks for headings (`#`, `##`, etc)
 - Use double-asterisks for bold `**`
 - Use underscore for italic `_`
-- Use triple-backtick and language for code formatting, e.g. ```typescript
+
+- Use code fences (triple-backticks) and a [language identifier](https://gohugo.io/content-management/syntax-highlighting/) for code formatting and syntax highlighting:
+  <pre><code>```typescript
+  const foo = "bar";
+  ```</code></pre>
 
 ### Sections
 
 If a tutorial has more following tutorials, use a **Next steps** section at the end. If you're linking to other reference material, use **Learn more**.
+
+## Blog Post Authoring
+
+For instructions on contributing to the [Pulumi blog](https://www.pulumi.com/blog/), [see BLOGGING.md](BLOGGING.md).

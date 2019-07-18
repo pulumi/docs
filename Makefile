@@ -21,7 +21,7 @@ ensure:
 .PHONY: serve
 serve:
 	@echo -e "\033[0;32mSERVE:\033[0m"
-	hugo server --buildDrafts
+	hugo server --buildDrafts --buildFuture
 
 .PHONY: generate
 generate:
