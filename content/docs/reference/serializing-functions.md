@@ -1,8 +1,14 @@
 ---
 title: Serializing JavaScript Functions
+description: Use Pulumi's Node.js SDK to serialize JavaScript functions into an artifact that can be used at runtime in the cloud.
+keywords:
+- javascript
+- aws lambda
+- function serialization
+- pulumi sdk 
 ---
 
-The Pulumi Node.js SDK provides a core API for converting a JavaScript function into all the code and files necessary to have that function be used at runtime within some cloud, like in an [AWS Lambda](https://aws.amazon.com/lambda/) for example.
+The Pulumi [Node.js SDK](https://github.com/pulumi/pulumi/tree/master/sdk/nodejs) provides a core API for converting a JavaScript function into all the code and files necessary to have that function be used at runtime within some cloud, like in an [AWS Lambda](https://aws.amazon.com/lambda/) for example.
 
 There are many cases where a small piece of runtime functionality must be defined as part of a cloud application, and it makes sense to define that runtime functionality directly inline as part of the Pulumi program. This can augment, or even replace, using runtime code and binaries defined outside of Pulumi in Lambda ZIPs, Docker images, VM images, etc.
 
@@ -38,7 +44,7 @@ bucket.onObjectCreated("mytrigger", async (eventInfo) => {
 });
 ```
 
-This functionality provides a powerful and convenient way to create your Lambdas, without needing to manually create the **index.js** file, package up all necessary `node_modules` directories, specify Roles or RolePolicyAttachments, upload S3 buckets, or do any of the traditionally necessary work.
+This functionality provides a powerful and convenient way to create your Lambdas, without needing to manually create the `index.js` file, package up all necessary `node_modules` directories, specify Roles or RolePolicyAttachments, upload S3 buckets, or do any of the traditionally necessary work.
 
 ## JavaScript Function Transformation
 
@@ -67,7 +73,7 @@ The primary JavaScript function ends up calling both `foo` and `bar`, so both th
 
 All functions that are needed for _run time_ execution will then be included in the uploaded code for the Lambda. Generally speaking, this code is almost always included as originally written, ensuring that the serialized code behaves as close as possible to the original code definition. It is a primary goal of Pulumi to have the semantics of the _run time_ code match the semantics of the original program's code.
 
-## Capturing Values in a JavaScript Function
+### Capturing values in a JavaScript function
 
 For most functions, the code of the function can simply be included practically as is in the code file for the Lambda. The important exception to this are functions that ***capture*** values defined outside of the function itself. For example:
 
@@ -95,11 +101,12 @@ The actual process of serialization is conceptually straightforward. Because Jav
 Because of this, almost all JavaScript values can be serialized with very few exceptions. Importantly, Pulumi resources themselves are captured in this fashion, allowing _run time_ code to simply reference the defined resources of a Pulumi application and to use them when a Lambda is triggered.
 
 > ### Notes
-> Native functions are not capturable. This impacts capturing any value that is either itself a native function or which _transitively_ references a native from being capturable.
-> Each time the cloud Lambda is triggered, these values will be rehydrated. This happens immediately before the code for the Lambda itself starts executing.
-> Any mutations made to those values will be seen across a single invocation of that Lambda. However, it will not be seen by subsequent invocations. They will always start with the original value that was captured. This behavior is similar to how a web page works, where each client visiting the pages gets its own fresh copy of variables, and will not see mutations made by other clients on other machines.
+>
+> * Native functions are not capturable. This impacts capturing any value that is either itself a native function or which _transitively_ references a native from being capturable.
+> * Each time the cloud Lambda is triggered, these values will be rehydrated. This happens immediately before the code for the Lambda itself starts executing.
+> * Any mutations made to those values will be seen across a single invocation of that Lambda. However, it will not be seen by subsequent invocations. They will always start with the original value that was captured. This behavior is similar to how a web page works, where each client visiting the pages gets its own fresh copy of variables, and will not see mutations made by other clients on other machines.
 
-## Size of Captured Values
+#### Size of captured values
 
 Pulumi will attempt to reduce the size of a serialized object by removing parts of it that it can prove are not used in a program. For example:
 
@@ -125,9 +132,9 @@ const lambda = new aws.lambda.CallbackFunction("mylambda", {
 });
 ```
 
-Then Pulumi would need to serialize the entire object value, since `bar` itself is used from `foo`. This process happens conservatively. By default objects are serialized in their entirety, and they are only trimmed down when it can be proved that it is totally safe to do so.
+Then Pulumi would need to serialize the entire object value, since `bar` itself is used from `foo`. This process happens conservatively. By default objects are serialized in their entirety, and they are only trimmed down when it can be proven that it is totally safe to do so.
 
-## Capturing Modules in a JavaScript Function
+### Capturing modules in a JavaScript function
 
 Capturing of most JavaScript values normally works by serializing the entire object graph to produce a representation which can then be rehydated into a replica instance. However, this process works differently when the value being dealt with is a JavaScript module. For example, consider the following code:
 
@@ -216,7 +223,7 @@ obj = { a: 3, b: 4 };
 
 It may be the case that the value `{ a: 1, b: 2}` or `{ a: 3, b: 4}` is serialized depending on the order that things are serialized in. As previously mentioned, it is highly recommended to not mutate values that are captured _especially_ in the presence of asynchronously executing code.
 
-## Customizing the Cloud Lambda Produced from a JavaScript Function
+## Customizing the cloud Lambda produced from a JavaScript function
 
 By default, Pulumi will generate a cloud Lambda for a given JavaScript function with reasonable defaults for many configurable properties. For example, values are picked to define the default roles and permissions for the Lambda, the timeout it should have, how much memory it can use, which version of the Node runtime to use, and so on and so forth. If these defaults are not desirable, any or all of them can be overridden by supplying desired values. For example:
 
@@ -250,12 +257,12 @@ bucket.onObjectCreated(
 
 In other words, the Lambda will first be created with appropriate values overridden. Then that Lambda itself can be passed in as the code to run for the specific API.
 
-### Determining the appropriate node_modules Packages to include with a Lambda
+## Determining the appropriate node_modules packages to include with a Lambda
 
 Because a Pulumi application contains both _deployment time_ code and _run time_ code, it is necessary for the program's `package.json` definition to have a `dependencies` section which specifies all necessary packages needed for both execution times. When `pulumi` produces a Lambda from a user-provided function, it will transitively include all packages specified in that `dependencies` section in the final uploaded Lambda.
 
-> **Note:** `pulumi` will not include `@pulumi/...` packages with the Lambda. These packages exist solely to provide _deployment time_ functionality, and do not contain any code that can work properly at _run time_. They are automatically stripped from a Lambda both to prevent accidental usage and to help reduce the size of the uploaded Lambda.
+Note that `pulumi` will not include `@pulumi/...` packages with the Lambda. These packages exist solely to provide _deployment time_ functionality, and do not contain any code that can work properly at _run time_. They are automatically stripped from a Lambda both to prevent accidental usage and to help reduce the size of the uploaded Lambda.
 
-> ### Referencing `aws-sdk`
+> **Referencing `aws-sdk`**
 >
-> It is optional to specify a reference to "aws-sdk" in your **package.json**. AWS always includes this package with Lambdas, so it is not necessary to explicitly include it yourself.
+> It is optional to specify a reference to "aws-sdk" in your `package.json`. AWS always includes this package with Lambdas, so it is not necessary to explicitly include it yourself.
