@@ -106,7 +106,7 @@ Aspect Ratio  | Minimum Size  | Format  | Background
 ------------- | ------------- | ------- | ------------------------
 2:1           | 1600×800      | PNG     | Opaque (No Transparency)
 
-Remember to replace the `meta_image` placeholder (or remove the property altogether) before submitting your post.
+Remember to replace the `meta_image` placeholder (or remove the property altogether and delete the placeholder `meta.png` file) before submitting your post.
 
 #### Video
 
