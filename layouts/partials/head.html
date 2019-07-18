@@ -78,13 +78,19 @@
     <link rel="alternate" type="application/rss+xml" href="{{ "/blog/rss.xml" | absURL }}" title="Pulumi Blog" />
 
     <!--
-        Build Sass. Generated file will contain content hash in filename,
-        so no need to add query param to cache bust.
+        Build Sass. Generated file will contain content hash in filename, so no need to add query param to cache bust.
+        We check if `postcss-cli` has been installed, which is required by Hugo to use PostCSS, to provide a more
+        relevant error message.
     -->
-    {{ $toCSS := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-    {{ $postCSS := (dict "config" "assets/config/postcss.config.js") }}
-    {{ $styles := resources.Get "sass/styles.scss" | resources.ToCSS $toCSS | resources.PostCSS $postCSS | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
+    {{ $postCSSCLIFile := "node_modules/postcss-cli" }}
+    {{ if fileExists $postCSSCLIFile }}
+        {{ $toCSS := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+        {{ $postCSS := (dict "config" "assets/config/postcss.config.js") }}
+        {{ $styles := resources.Get "sass/styles.scss" | resources.ToCSS $toCSS | resources.PostCSS $postCSS | resources.Fingerprint }}
+        <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
+    {{ else }}
+        {{ errorf "%q does not exist. Run `make ensure` to install required dependencies." $postCSSCLIFile }}
+    {{ end }}
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     {{- if eq hugo.Environment "production" }}
