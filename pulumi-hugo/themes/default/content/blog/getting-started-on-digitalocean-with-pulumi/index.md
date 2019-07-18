@@ -2,7 +2,7 @@
 title: "Getting Started on DigitalOcean with Pulumi"
 authors: ["paul-stack"]
 tags: ["DigitalOcean", "TypeScript"]
-date: "2019-07-08"
+date: "2019-07-18"
 
 meta_image: "RELATIVE_TO_PAGE/Feature.jpg"
 ---
