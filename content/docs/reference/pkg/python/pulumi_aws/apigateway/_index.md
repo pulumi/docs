@@ -767,7 +767,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.DomainName">
-<em class="property">class </em><code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">DomainName</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_arn=None</em>, <em>certificate_body=None</em>, <em>certificate_chain=None</em>, <em>certificate_name=None</em>, <em>certificate_private_key=None</em>, <em>domain_name=None</em>, <em>endpoint_configuration=None</em>, <em>regional_certificate_arn=None</em>, <em>regional_certificate_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.DomainName" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">DomainName</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_arn=None</em>, <em>certificate_body=None</em>, <em>certificate_chain=None</em>, <em>certificate_name=None</em>, <em>certificate_private_key=None</em>, <em>domain_name=None</em>, <em>endpoint_configuration=None</em>, <em>regional_certificate_arn=None</em>, <em>regional_certificate_name=None</em>, <em>security_policy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.DomainName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers a custom domain name for use with AWS API Gateway. Additional information about this functionality
 can be found in the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html">API Gateway Developer Guide</a>.</p>
 <p>This resource just establishes ownership of and the TLS settings for
@@ -813,6 +813,7 @@ domain certificate given in <code class="docutils literal notranslate"><span cla
 <li><strong>regional_certificate_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with <code class="docutils literal notranslate"><span class="pre">certificate_arn</span></code>, <code class="docutils literal notranslate"><span class="pre">certificate_name</span></code>, <code class="docutils literal notranslate"><span class="pre">certificate_body</span></code>, <code class="docutils literal notranslate"><span class="pre">certificate_chain</span></code>, and <code class="docutils literal notranslate"><span class="pre">certificate_private_key</span></code>.</li>
 <li><strong>regional_certificate_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with <code class="docutils literal notranslate"><span class="pre">certificate_arn</span></code>, <code class="docutils literal notranslate"><span class="pre">certificate_name</span></code>, <code class="docutils literal notranslate"><span class="pre">certificate_body</span></code>, <code class="docutils literal notranslate"><span class="pre">certificate_chain</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">certificate_private_key</span></code>.</li>
+<li><strong>security_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are <code class="docutils literal notranslate"><span class="pre">TLS_1_0</span></code> and <code class="docutils literal notranslate"><span class="pre">TLS_1_2</span></code>. Must be configured to perform drift detection.</li>
 </ul>
 </td>
 </tr>
@@ -913,6 +914,12 @@ that can be used to create a Route53 alias record for the distribution.</p>
 <dt id="pulumi_aws.apigateway.DomainName.regional_zone_id">
 <code class="descname">regional_zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.DomainName.regional_zone_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.DomainName.security_policy">
+<code class="descname">security_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.DomainName.security_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are <code class="docutils literal notranslate"><span class="pre">TLS_1_0</span></code> and <code class="docutils literal notranslate"><span class="pre">TLS_1_2</span></code>. Must be configured to perform drift detection.</p>
 </dd></dl>
 
 <dl class="method">
