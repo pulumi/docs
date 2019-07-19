@@ -1,6 +1,0 @@
-{{- if .Get "src" -}}
-    {{- $img := $.Page.Resources.GetMatch (.Get "src") -}}
-    <img src="{{ $img.RelPermalink }}" {{ with .Get "alt" }}alt="{{ . }}"{{ end }} />
-{{- else -}}
-    {{- errorf "missing value for param 'src': %s" .Position -}}
-{{- end -}}
