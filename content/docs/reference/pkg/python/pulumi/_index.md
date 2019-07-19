@@ -208,7 +208,7 @@ resource.</li>
 
 <dl class="class">
 <dt id="pulumi.ResourceOptions">
-<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em>, <em>delete_before_replace: Optional[bool] = None</em>, <em>ignore_changes: Optional[List[str]] = None</em>, <em>version: Optional[str] = None</em>, <em>additional_secret_outputs: Optional[List[str]] = None</em>, <em>id: Optional[str] = None</em>, <em>import_: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em>, <em>delete_before_replace: Optional[bool] = None</em>, <em>ignore_changes: Optional[List[str]] = None</em>, <em>version: Optional[str] = None</em>, <em>additional_secret_outputs: Optional[List[str]] = None</em>, <em>id: Optional[str] = None</em>, <em>import_: Optional[str] = None</em>, <em>custom_timeouts: Optional[CustomTimeouts] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>ResourceOptions is a bag of optional settings that control a resource’s behavior.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -231,6 +231,7 @@ or replacements.</li>
 <li><strong>additional_secret*outputs</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>string</em><em>]</em><em>]</em>) – <p>If provided, a list of output property names that should
 also be treated as secret.</p>
 </li>
+<li><strong>customTimeouts</strong> (<em>Optional</em><em>[</em><em>CustomTimeouts</em><em>]</em>) – If provided, a config block for custom timeout information.</li>
 <li><strong>id</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – If provided, an existing resource ID to read, rather than create.</li>
 </ul>
 </td>
@@ -301,6 +302,12 @@ used.</p>
 <dd><p>The names of outputs for this resource that should be treated as secrets. This augments the list that
 the resource provider and pulumi engine already determine based on inputs to your resource. It can be used
 to mark certain ouputs as a secrets on a per resource basis.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.custom_timeouts">
+<code class="descname">custom_timeouts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.custom_timeouts" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional customTimeouts config block.</p>
 </dd></dl>
 
 <dl class="attribute">

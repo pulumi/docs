@@ -5,7 +5,7 @@
 <span id="v1beta1"></span><h1>v1beta1<a class="headerlink" href="#module-pulumi_kubernetes.node.v1beta1" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_kubernetes.node.v1beta1.RuntimeClass">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.node.v1beta1.</code><code class="descname">RuntimeClass</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>handler=None</em>, <em>metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.node.v1beta1.RuntimeClass" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.node.v1beta1.</code><code class="descname">RuntimeClass</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>handler=None</em>, <em>metadata=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.node.v1beta1.RuntimeClass" title="Permalink to this definition">¶</a></dt>
 <dd><p>RuntimeClass defines a class of container runtime supported in the cluster. The RuntimeClass is
 used to determine which container runtime is used to run all containers in a pod. RuntimeClasses
 are (currently) manually defined by a user or cluster provisioner, and referenced in the
@@ -53,7 +53,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.node.v1beta1.RuntimeClassList">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.node.v1beta1.</code><code class="descname">RuntimeClassList</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>items=None</em>, <em>metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.node.v1beta1.RuntimeClassList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.node.v1beta1.</code><code class="descname">RuntimeClassList</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>items=None</em>, <em>metadata=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.node.v1beta1.RuntimeClassList" title="Permalink to this definition">¶</a></dt>
 <dd><p>RuntimeClassList is a list of RuntimeClass objects.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.node.v1beta1.RuntimeClassList.translate_output_property">

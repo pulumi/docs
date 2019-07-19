@@ -90,7 +90,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.route53.GetZoneResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">GetZoneResult</code><span class="sig-paren">(</span><em>caller_reference=None</em>, <em>comment=None</em>, <em>name=None</em>, <em>name_servers=None</em>, <em>private_zone=None</em>, <em>resource_record_set_count=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>zone_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.GetZoneResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">GetZoneResult</code><span class="sig-paren">(</span><em>caller_reference=None</em>, <em>comment=None</em>, <em>linked_service_description=None</em>, <em>linked_service_principal=None</em>, <em>name=None</em>, <em>name_servers=None</em>, <em>private_zone=None</em>, <em>resource_record_set_count=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>zone_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.GetZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getZone.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.GetZoneResult.caller_reference">
@@ -105,6 +105,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.route53.GetZoneResult.linked_service_description">
+<code class="descname">linked_service_description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetZoneResult.linked_service_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description provided by the service that created the Hosted Zone (e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.route53.GetZoneResult.linked_service_principal">
+<code class="descname">linked_service_principal</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetZoneResult.linked_service_principal" title="Permalink to this definition">¶</a></dt>
+<dd><p>The service that created the Hosted Zone (e.g. <code class="docutils literal notranslate"><span class="pre">servicediscovery.amazonaws.com</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.route53.GetZoneResult.name_servers">
 <code class="descname">name_servers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetZoneResult.name_servers" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of DNS name servers for the Hosted Zone.</p>
@@ -113,7 +125,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.route53.GetZoneResult.resource_record_set_count">
 <code class="descname">resource_record_set_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetZoneResult.resource_record_set_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>the number of Record Set in the Hosted Zone</p>
+<dd><p>The number of Record Set in the Hosted Zone.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1047,7 +1059,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.route53.get_zone">
-<code class="descclassname">pulumi_aws.route53.</code><code class="descname">get_zone</code><span class="sig-paren">(</span><em>caller_reference=None</em>, <em>comment=None</em>, <em>name=None</em>, <em>private_zone=None</em>, <em>resource_record_set_count=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>zone_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_zone" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.route53.</code><code class="descname">get_zone</code><span class="sig-paren">(</span><em>name=None</em>, <em>private_zone=None</em>, <em>resource_record_set_count=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>zone_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">aws_route53_zone</span></code> provides details about a specific Route 53 Hosted Zone.</p>
 <p>This data source allows to find a Hosted Zone ID given Hosted Zone name and certain search criteria.</p>
 <blockquote>

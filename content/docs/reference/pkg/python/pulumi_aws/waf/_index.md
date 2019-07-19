@@ -157,6 +157,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.waf.GetRuleResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.waf.</code><code class="descname">GetRuleResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.waf.GetRuleResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getRule.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.waf.GetRuleResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.waf.GetRuleResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.waf.GetWebAclResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.waf.</code><code class="descname">GetWebAclResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.waf.GetWebAclResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getWebAcl.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.waf.GetWebAclResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.waf.GetWebAclResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.waf.IpSet">
 <em class="property">class </em><code class="descclassname">pulumi_aws.waf.</code><code class="descname">IpSet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ip_set_descriptors=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.waf.IpSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF IPSet Resource</p>
@@ -938,6 +962,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.waf.get_rule">
+<code class="descclassname">pulumi_aws.waf.</code><code class="descname">get_rule</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.waf.get_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">aws_waf_rule</span></code> Retrieves a WAF Rule Resource Id.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/waf_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/waf_rule.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.waf.get_web_acl">
+<code class="descclassname">pulumi_aws.waf.</code><code class="descname">get_web_acl</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.waf.get_web_acl" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">aws_waf_rule</span></code> Retrieves a WAF Web ACL Resource Id.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/waf_web_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/waf_web_acl.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

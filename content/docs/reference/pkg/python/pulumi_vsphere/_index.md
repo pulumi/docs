@@ -6578,6 +6578,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_vsphere.get_compute_cluster">
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_compute_cluster</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_compute_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/compute_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/compute_cluster.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_vsphere.get_custom_attribute">
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_custom_attribute</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_custom_attribute" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/custom_attribute.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/custom_attribute.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_vsphere.get_datacenter">
 <code class="descclassname">pulumi_vsphere.</code><code class="descname">get_datacenter</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_datacenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_datacenter</span></code> data source can be used to discover the ID of a
@@ -6669,6 +6683,20 @@ that you want to use to create virtual machines in using the
 <cite>``vsphere_virtual_machine`</cite> &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/resource_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/resource_pool.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_vsphere.get_tag">
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_tag</code><span class="sig-paren">(</span><em>category_id=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_tag" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/tag.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/tag.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_vsphere.get_tag_category">
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_tag_category</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_tag_category" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/tag_category.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/tag_category.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
