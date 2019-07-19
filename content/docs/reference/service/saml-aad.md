@@ -40,9 +40,9 @@ to replace `acmecorp` with whatever your specific Pulumi organization's name is.
 
 | SAML Setting | Value |
 | --------------- | ----- |
-| Identifier (Entity ID) | https://api.pulumi.com/login/**acmecorp**/sso/saml/metadata |
-| Reply URL | https://api.pulumi.com/login/**acmecorp**/sso/saml/acs |
-| Relay State | https://api.pulumi.com/login/**acmecorp**/sso |
+| Identifier (Entity ID) | `https://api.pulumi.com/login/**acmecorp**/sso/saml/metadata` |
+| Reply URL | `https://api.pulumi.com/login/**acmecorp**/sso/saml/acs` |
+| Relay State | `https://api.pulumi.com/login/**acmecorp**/sso` |
 
 
 <p><!-- space between table and image --></p>

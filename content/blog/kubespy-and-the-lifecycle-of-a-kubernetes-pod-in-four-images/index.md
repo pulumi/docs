@@ -19,6 +19,7 @@ One of the most popular features of the recent
 [v0.15.2 release]({{< relref "cloud-native-infrastructure-with-kubernetes-and-pulumi" >}})
 of Pulumi is fine-grained status updates for Kubernetes resources. On
 the CLI they look like this:
+<!--more-->
 
 ![status-rich](./status-rich.gif)
 
@@ -33,7 +34,6 @@ purpose-built to help you answer questions like this, by displaying the
 changes made to a Kubernetes object in real time. For example, in the
 following gif, we're running `kubespy status v1 Pod nginx` to watch the
 changes to a `Pod`'s status as it is booted up.
-<!--more-->
 
 We will spend the rest of this short post using `kubespy` to take a
 closer look at what happens to a `Pod` when it's deployed to the
