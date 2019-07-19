@@ -262,7 +262,7 @@ const allVpcSubnets = vpc.privateSubnetIds.concat(vpc.publicSubnetIds);
 const cluster2 = new eks.Cluster("my-cluster", {
     vpcId: vpc.vpcId,
     subnetIds: allVpcSubnets,
-    nodeAssociatedPublicIpAddress: false,
+    nodeAssociatePublicIpAddress: false,
 });
 
 // Export the cluster's kubeconfig.
