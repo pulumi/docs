@@ -48,14 +48,14 @@ title: Module storagegateway
 <li><a href="#WorkingStorageState">interface WorkingStorageState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cache.ts">storagegateway/cache.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts">storagegateway/cachesIscsiVolume.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts">storagegateway/gateway.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/getLocalDisk.ts">storagegateway/getLocalDisk.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts">storagegateway/nfsFileShare.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts">storagegateway/smbFileShare.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/uploadBuffer.ts">storagegateway/uploadBuffer.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/workingStorage.ts">storagegateway/workingStorage.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cache.ts">storagegateway/cache.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts">storagegateway/cachesIscsiVolume.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts">storagegateway/gateway.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/getLocalDisk.ts">storagegateway/getLocalDisk.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts">storagegateway/nfsFileShare.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts">storagegateway/smbFileShare.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/uploadBuffer.ts">storagegateway/uploadBuffer.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/workingStorage.ts">storagegateway/workingStorage.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Cache">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cache.ts#L10">class <b>Cache</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cache.ts#L10">class <b>Cache</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -65,7 +65,7 @@ title: Module storagegateway
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Cache-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cache.ts#L44"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cache.ts#L44"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -82,7 +82,7 @@ Create a Cache resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cache.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cache.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -96,7 +96,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -106,7 +106,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cache.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cache.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -120,7 +120,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cache.ts#L40">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cache.ts#L40">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>diskId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -131,7 +131,7 @@ Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cache.ts#L44">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cache.ts#L44">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>gatewayArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -142,7 +142,7 @@ The Amazon Resource Name (ARN) of the gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -154,7 +154,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -167,7 +167,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CachesIscsiVolume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L10">class <b>CachesIscsiVolume</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L10">class <b>CachesIscsiVolume</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -177,7 +177,7 @@ deployments.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L88"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -194,7 +194,7 @@ Create a CachesIscsiVolume resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -208,7 +208,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -218,7 +218,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -232,7 +232,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L40">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L40">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -243,7 +243,7 @@ Volume Amazon Resource Name (ARN), e.g. `arn:aws:storagegateway:us-east-1:123456
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-chapEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L44">property <b>chapEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L44">property <b>chapEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>chapEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -254,7 +254,7 @@ Whether mutual CHAP is enabled for the iSCSI target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L48">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L48">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>gatewayArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -265,7 +265,7 @@ The Amazon Resource Name (ARN) of the gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -277,7 +277,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-lunNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L52">property <b>lunNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L52">property <b>lunNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lunNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -288,7 +288,7 @@ Logical disk number.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L56">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L56">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>networkInterfaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -299,7 +299,7 @@ The network interface of the gateway on which to expose the iSCSI target. Only I
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-networkInterfacePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L60">property <b>networkInterfacePort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L60">property <b>networkInterfacePort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>networkInterfacePort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -310,7 +310,7 @@ The port used to communicate with iSCSI targets.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L64">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L64">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>snapshotId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -321,7 +321,7 @@ The snapshot ID of the snapshot to restore as the new cached volume. e.g. `snap-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-sourceVolumeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L68">property <b>sourceVolumeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L68">property <b>sourceVolumeArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sourceVolumeArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -332,7 +332,7 @@ The ARN for an existing volume. Specifying this ARN makes the new volume into an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-targetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L72">property <b>targetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L72">property <b>targetArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>targetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -343,7 +343,7 @@ Target Amazon Resource Name (ARN), e.g. `arn:aws:storagegateway:us-east-1:123456
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-targetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L76">property <b>targetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L76">property <b>targetName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>targetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -354,7 +354,7 @@ The name of the iSCSI target used by initiators to connect to the target and as 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -366,7 +366,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-volumeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L80">property <b>volumeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L80">property <b>volumeArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>volumeArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -377,7 +377,7 @@ Volume Amazon Resource Name (ARN), e.g. `arn:aws:storagegateway:us-east-1:123456
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L84">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L84">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -388,7 +388,7 @@ Volume ID, e.g. `vol-12345678`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-volumeSizeInBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L88">property <b>volumeSizeInBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L88">property <b>volumeSizeInBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>volumeSizeInBytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -400,7 +400,7 @@ The size of the volume in bytes.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Gateway">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L74">class <b>Gateway</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L74">class <b>Gateway</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -474,7 +474,7 @@ const example = new aws.storagegateway.Gateway("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Gateway-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L132"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L132"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -491,7 +491,7 @@ Create a Gateway resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L83">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L83">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -505,7 +505,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -515,7 +515,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L94">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L94">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -529,7 +529,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-activationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L104">property <b>activationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L104">property <b>activationKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>activationKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -540,7 +540,7 @@ Gateway activation key during resource creation. Conflicts with `gateway_ip_addr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L108">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L108">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -551,7 +551,7 @@ Amazon Resource Name (ARN) of the gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-gatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L112">property <b>gatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L112">property <b>gatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>gatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -562,7 +562,7 @@ Identifier of the gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-gatewayIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L113">property <b>gatewayIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L113">property <b>gatewayIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>gatewayIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -570,7 +570,7 @@ Identifier of the gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-gatewayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L117">property <b>gatewayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L117">property <b>gatewayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>gatewayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -581,7 +581,7 @@ Name of the gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-gatewayTimezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L121">property <b>gatewayTimezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L121">property <b>gatewayTimezone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>gatewayTimezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -592,7 +592,7 @@ Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-gatewayType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L125">property <b>gatewayType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L125">property <b>gatewayType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>gatewayType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -603,7 +603,7 @@ Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FIL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -615,7 +615,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-mediumChangerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L126">property <b>mediumChangerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L126">property <b>mediumChangerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>mediumChangerType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -623,7 +623,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-smbActiveDirectorySettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L130">property <b>smbActiveDirectorySettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L130">property <b>smbActiveDirectorySettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>smbActiveDirectorySettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -638,7 +638,7 @@ Nested argument with Active Directory domain join information for Server Message
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-smbGuestPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L131">property <b>smbGuestPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L131">property <b>smbGuestPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>smbGuestPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -646,7 +646,7 @@ Nested argument with Active Directory domain join information for Server Message
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-tapeDriveType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L132">property <b>tapeDriveType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L132">property <b>tapeDriveType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tapeDriveType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -654,7 +654,7 @@ Nested argument with Active Directory domain join information for Server Message
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -667,7 +667,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NfsFileShare">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L26">class <b>NfsFileShare</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L26">class <b>NfsFileShare</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -693,7 +693,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NfsFileShare-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L112"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L112"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -710,7 +710,7 @@ Create a NfsFileShare resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L35">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -724,7 +724,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -734,7 +734,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L46">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -748,7 +748,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L56">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L56">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -759,7 +759,7 @@ Amazon Resource Name (ARN) of the NFS File Share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-clientLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L60">property <b>clientLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L60">property <b>clientLists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clientLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -770,7 +770,7 @@ The list of clients that are allowed to access the file gateway. The list must c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-defaultStorageClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L64">property <b>defaultStorageClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L64">property <b>defaultStorageClass</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultStorageClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -781,7 +781,7 @@ The default storage class for objects put into an Amazon S3 bucket by the file g
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-fileshareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L68">property <b>fileshareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L68">property <b>fileshareId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fileshareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -792,7 +792,7 @@ ID of the NFS File Share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L72">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L72">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>gatewayArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -803,7 +803,7 @@ Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-guessMimeTypeEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L76">property <b>guessMimeTypeEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L76">property <b>guessMimeTypeEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>guessMimeTypeEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -814,7 +814,7 @@ Boolean value that enables guessing of the MIME type for uploaded objects based 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -826,7 +826,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-kmsEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L80">property <b>kmsEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L80">property <b>kmsEncrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kmsEncrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -837,7 +837,7 @@ Boolean value if `true` to use Amazon S3 server side encryption with your own AW
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L84">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L84">property <b>kmsKeyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -848,7 +848,7 @@ Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-locationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L88">property <b>locationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L88">property <b>locationArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>locationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -859,7 +859,7 @@ The ARN of the backed storage used for storing file data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-nfsFileShareDefaults">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L92">property <b>nfsFileShareDefaults</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L92">property <b>nfsFileShareDefaults</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>nfsFileShareDefaults: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -875,7 +875,7 @@ Nested argument with file share default values. More information below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-objectAcl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L96">property <b>objectAcl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L96">property <b>objectAcl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>objectAcl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -886,7 +886,7 @@ Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L100">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L100">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>readOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -897,7 +897,7 @@ Boolean to indicate write status of file share. File share does not accept write
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-requesterPays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L104">property <b>requesterPays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L104">property <b>requesterPays</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>requesterPays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -908,7 +908,7 @@ Boolean who pays the cost of the request and the data download from the Amazon S
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L108">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L108">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -919,7 +919,7 @@ The ARN of the AWS Identity and Access Management (IAM) role that a file gateway
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-squash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L112">property <b>squash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L112">property <b>squash</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>squash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -930,7 +930,7 @@ Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSqua
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShare-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -943,7 +943,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SmbFileShare">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L46">class <b>SmbFileShare</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L46">class <b>SmbFileShare</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -989,7 +989,7 @@ const example = new aws.storagegateway.SmbFileShare("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SmbFileShare-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L132"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L132"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1006,7 +1006,7 @@ Create a SmbFileShare resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L55">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1020,7 +1020,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1030,7 +1030,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L66">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1044,7 +1044,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L76">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L76">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1055,7 +1055,7 @@ Amazon Resource Name (ARN) of the SMB File Share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-authentication">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L80">property <b>authentication</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L80">property <b>authentication</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>authentication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1066,7 +1066,7 @@ The authentication method that users use to access the file share. Defaults to `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-defaultStorageClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L84">property <b>defaultStorageClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L84">property <b>defaultStorageClass</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultStorageClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1077,7 +1077,7 @@ The default storage class for objects put into an Amazon S3 bucket by the file g
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-fileshareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L88">property <b>fileshareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L88">property <b>fileshareId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fileshareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1088,7 +1088,7 @@ ID of the SMB File Share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L92">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L92">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>gatewayArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1099,7 +1099,7 @@ Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-guessMimeTypeEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L96">property <b>guessMimeTypeEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L96">property <b>guessMimeTypeEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>guessMimeTypeEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1110,7 +1110,7 @@ Boolean value that enables guessing of the MIME type for uploaded objects based 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1122,7 +1122,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-invalidUserLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L100">property <b>invalidUserLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L100">property <b>invalidUserLists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>invalidUserLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1133,7 +1133,7 @@ A list of users in the Active Directory that are not allowed to access the file 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-kmsEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L104">property <b>kmsEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L104">property <b>kmsEncrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kmsEncrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1144,7 +1144,7 @@ Boolean value if `true` to use Amazon S3 server side encryption with your own AW
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L108">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L108">property <b>kmsKeyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1155,7 +1155,7 @@ Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-locationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L112">property <b>locationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L112">property <b>locationArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>locationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1166,7 +1166,7 @@ The ARN of the backed storage used for storing file data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-objectAcl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L116">property <b>objectAcl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L116">property <b>objectAcl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>objectAcl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1177,7 +1177,7 @@ Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L120">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L120">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>readOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1188,7 +1188,7 @@ Boolean to indicate write status of file share. File share does not accept write
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-requesterPays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L124">property <b>requesterPays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L124">property <b>requesterPays</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>requesterPays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1199,7 +1199,7 @@ Boolean who pays the cost of the request and the data download from the Amazon S
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L128">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L128">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1210,7 +1210,7 @@ The ARN of the AWS Identity and Access Management (IAM) role that a file gateway
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1222,7 +1222,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShare-validUserLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L132">property <b>validUserLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L132">property <b>validUserLists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>validUserLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1234,7 +1234,7 @@ A list of users in the Active Directory that are allowed to access the file shar
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UploadBuffer">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/uploadBuffer.ts#L10">class <b>UploadBuffer</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/uploadBuffer.ts#L10">class <b>UploadBuffer</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1244,7 +1244,7 @@ A list of users in the Active Directory that are allowed to access the file shar
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UploadBuffer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/uploadBuffer.ts#L44"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/uploadBuffer.ts#L44"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1261,7 +1261,7 @@ Create a UploadBuffer resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UploadBuffer-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/uploadBuffer.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/uploadBuffer.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1275,7 +1275,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UploadBuffer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1285,7 +1285,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UploadBuffer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/uploadBuffer.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/uploadBuffer.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1299,7 +1299,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UploadBuffer-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/uploadBuffer.ts#L40">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/uploadBuffer.ts#L40">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>diskId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1310,7 +1310,7 @@ Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UploadBuffer-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/uploadBuffer.ts#L44">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/uploadBuffer.ts#L44">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>gatewayArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1321,7 +1321,7 @@ The Amazon Resource Name (ARN) of the gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UploadBuffer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1333,7 +1333,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UploadBuffer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1346,7 +1346,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WorkingStorage">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/workingStorage.ts#L10">class <b>WorkingStorage</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/workingStorage.ts#L10">class <b>WorkingStorage</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1356,7 +1356,7 @@ deployments.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="WorkingStorage-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/workingStorage.ts#L44"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/workingStorage.ts#L44"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1373,7 +1373,7 @@ Create a WorkingStorage resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkingStorage-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/workingStorage.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/workingStorage.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1387,7 +1387,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkingStorage-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1397,7 +1397,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkingStorage-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/workingStorage.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/workingStorage.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1411,7 +1411,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkingStorage-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/workingStorage.ts#L40">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/workingStorage.ts#L40">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>diskId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1422,7 +1422,7 @@ Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkingStorage-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/workingStorage.ts#L44">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/workingStorage.ts#L44">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>gatewayArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1433,7 +1433,7 @@ The Amazon Resource Name (ARN) of the gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkingStorage-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1445,7 +1445,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkingStorage-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1458,7 +1458,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getLocalDisk">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/getLocalDisk.ts#L24">function <b>getLocalDisk</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/getLocalDisk.ts#L24">function <b>getLocalDisk</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1485,7 +1485,7 @@ const test = pulumi.all([aws_volume_attachment_test.deviceName, aws_storagegatew
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="CacheArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cache.ts#L92">interface <b>CacheArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cache.ts#L92">interface <b>CacheArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1494,7 +1494,7 @@ The set of arguments for constructing a Cache resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CacheArgs-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cache.ts#L96">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cache.ts#L96">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>diskId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1505,7 +1505,7 @@ Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheArgs-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cache.ts#L100">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cache.ts#L100">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1517,7 +1517,7 @@ The Amazon Resource Name (ARN) of the gateway.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CacheState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cache.ts#L78">interface <b>CacheState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cache.ts#L78">interface <b>CacheState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1526,7 +1526,7 @@ Input properties used for looking up and filtering Cache resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CacheState-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cache.ts#L82">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cache.ts#L82">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>diskId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1537,7 +1537,7 @@ Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cache.ts#L86">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cache.ts#L86">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1549,7 +1549,7 @@ The Amazon Resource Name (ARN) of the gateway.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CachesIscsiVolumeArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L208">interface <b>CachesIscsiVolumeArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L208">interface <b>CachesIscsiVolumeArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1558,7 +1558,7 @@ The set of arguments for constructing a CachesIscsiVolume resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeArgs-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L212">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L212">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1569,7 +1569,7 @@ The Amazon Resource Name (ARN) of the gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeArgs-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L216">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L216">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>networkInterfaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1580,7 +1580,7 @@ The network interface of the gateway on which to expose the iSCSI target. Only I
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeArgs-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L220">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L220">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1591,7 +1591,7 @@ The snapshot ID of the snapshot to restore as the new cached volume. e.g. `snap-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeArgs-sourceVolumeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L224">property <b>sourceVolumeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L224">property <b>sourceVolumeArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceVolumeArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1602,7 +1602,7 @@ The ARN for an existing volume. Specifying this ARN makes the new volume into an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeArgs-targetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L228">property <b>targetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L228">property <b>targetName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1613,7 +1613,7 @@ The name of the iSCSI target used by initiators to connect to the target and as 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeArgs-volumeSizeInBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L232">property <b>volumeSizeInBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L232">property <b>volumeSizeInBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeSizeInBytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1625,7 +1625,7 @@ The size of the volume in bytes.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CachesIscsiVolumeState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L150">interface <b>CachesIscsiVolumeState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L150">interface <b>CachesIscsiVolumeState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1634,7 +1634,7 @@ Input properties used for looking up and filtering CachesIscsiVolume resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L154">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L154">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1645,7 +1645,7 @@ Volume Amazon Resource Name (ARN), e.g. `arn:aws:storagegateway:us-east-1:123456
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeState-chapEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L158">property <b>chapEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L158">property <b>chapEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>chapEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1656,7 +1656,7 @@ Whether mutual CHAP is enabled for the iSCSI target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeState-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L162">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L162">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1667,7 +1667,7 @@ The Amazon Resource Name (ARN) of the gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeState-lunNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L166">property <b>lunNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L166">property <b>lunNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lunNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1678,7 +1678,7 @@ Logical disk number.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeState-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L170">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L170">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>networkInterfaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1689,7 +1689,7 @@ The network interface of the gateway on which to expose the iSCSI target. Only I
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeState-networkInterfacePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L174">property <b>networkInterfacePort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L174">property <b>networkInterfacePort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>networkInterfacePort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1700,7 +1700,7 @@ The port used to communicate with iSCSI targets.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeState-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L178">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L178">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1711,7 +1711,7 @@ The snapshot ID of the snapshot to restore as the new cached volume. e.g. `snap-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeState-sourceVolumeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L182">property <b>sourceVolumeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L182">property <b>sourceVolumeArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceVolumeArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1722,7 +1722,7 @@ The ARN for an existing volume. Specifying this ARN makes the new volume into an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeState-targetArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L186">property <b>targetArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L186">property <b>targetArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1733,7 +1733,7 @@ Target Amazon Resource Name (ARN), e.g. `arn:aws:storagegateway:us-east-1:123456
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeState-targetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L190">property <b>targetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L190">property <b>targetName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1744,7 +1744,7 @@ The name of the iSCSI target used by initiators to connect to the target and as 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeState-volumeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L194">property <b>volumeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L194">property <b>volumeArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1755,7 +1755,7 @@ Volume Amazon Resource Name (ARN), e.g. `arn:aws:storagegateway:us-east-1:123456
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeState-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L198">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L198">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1766,7 +1766,7 @@ Volume ID, e.g. `vol-12345678`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CachesIscsiVolumeState-volumeSizeInBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L202">property <b>volumeSizeInBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L202">property <b>volumeSizeInBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>volumeSizeInBytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1778,7 +1778,7 @@ The size of the volume in bytes.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GatewayArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L222">interface <b>GatewayArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L222">interface <b>GatewayArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1787,7 +1787,7 @@ The set of arguments for constructing a Gateway resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GatewayArgs-activationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L226">property <b>activationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L226">property <b>activationKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>activationKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1798,7 +1798,7 @@ Gateway activation key during resource creation. Conflicts with `gateway_ip_addr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayArgs-gatewayIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L227">property <b>gatewayIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L227">property <b>gatewayIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1806,7 +1806,7 @@ Gateway activation key during resource creation. Conflicts with `gateway_ip_addr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayArgs-gatewayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L231">property <b>gatewayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L231">property <b>gatewayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1817,7 +1817,7 @@ Name of the gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayArgs-gatewayTimezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L235">property <b>gatewayTimezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L235">property <b>gatewayTimezone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayTimezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1828,7 +1828,7 @@ Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayArgs-gatewayType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L239">property <b>gatewayType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L239">property <b>gatewayType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1839,7 +1839,7 @@ Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FIL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayArgs-mediumChangerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L240">property <b>mediumChangerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L240">property <b>mediumChangerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mediumChangerType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1847,7 +1847,7 @@ Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FIL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayArgs-smbActiveDirectorySettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L244">property <b>smbActiveDirectorySettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L244">property <b>smbActiveDirectorySettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>smbActiveDirectorySettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1862,7 +1862,7 @@ Nested argument with Active Directory domain join information for Server Message
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayArgs-smbGuestPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L245">property <b>smbGuestPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L245">property <b>smbGuestPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>smbGuestPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1870,7 +1870,7 @@ Nested argument with Active Directory domain join information for Server Message
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayArgs-tapeDriveType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L246">property <b>tapeDriveType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L246">property <b>tapeDriveType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tapeDriveType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1879,7 +1879,7 @@ Nested argument with Active Directory domain join information for Server Message
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GatewayState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L184">interface <b>GatewayState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L184">interface <b>GatewayState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1888,7 +1888,7 @@ Input properties used for looking up and filtering Gateway resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GatewayState-activationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L188">property <b>activationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L188">property <b>activationKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>activationKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1899,7 +1899,7 @@ Gateway activation key during resource creation. Conflicts with `gateway_ip_addr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L192">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L192">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1910,7 +1910,7 @@ Amazon Resource Name (ARN) of the gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayState-gatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L196">property <b>gatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L196">property <b>gatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1921,7 +1921,7 @@ Identifier of the gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayState-gatewayIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L197">property <b>gatewayIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L197">property <b>gatewayIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1929,7 +1929,7 @@ Identifier of the gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayState-gatewayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L201">property <b>gatewayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L201">property <b>gatewayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1940,7 +1940,7 @@ Name of the gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayState-gatewayTimezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L205">property <b>gatewayTimezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L205">property <b>gatewayTimezone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayTimezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1951,7 +1951,7 @@ Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayState-gatewayType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L209">property <b>gatewayType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L209">property <b>gatewayType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1962,7 +1962,7 @@ Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FIL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayState-mediumChangerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L210">property <b>mediumChangerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L210">property <b>mediumChangerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mediumChangerType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1970,7 +1970,7 @@ Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FIL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayState-smbActiveDirectorySettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L214">property <b>smbActiveDirectorySettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L214">property <b>smbActiveDirectorySettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>smbActiveDirectorySettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1985,7 +1985,7 @@ Nested argument with Active Directory domain join information for Server Message
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayState-smbGuestPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L215">property <b>smbGuestPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L215">property <b>smbGuestPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>smbGuestPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1993,7 +1993,7 @@ Nested argument with Active Directory domain join information for Server Message
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayState-tapeDriveType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/gateway.ts#L216">property <b>tapeDriveType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/gateway.ts#L216">property <b>tapeDriveType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tapeDriveType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2002,7 +2002,7 @@ Nested argument with Active Directory domain join information for Server Message
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetLocalDiskArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/getLocalDisk.ts#L35">interface <b>GetLocalDiskArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/getLocalDisk.ts#L35">interface <b>GetLocalDiskArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2011,7 +2011,7 @@ A collection of arguments for invoking getLocalDisk.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetLocalDiskArgs-diskNode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/getLocalDisk.ts#L39">property <b>diskNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/getLocalDisk.ts#L39">property <b>diskNode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>diskNode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2022,7 +2022,7 @@ The device node of the local disk to retrieve. For example, `/dev/sdb`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLocalDiskArgs-diskPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/getLocalDisk.ts#L43">property <b>diskPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/getLocalDisk.ts#L43">property <b>diskPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>diskPath?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2033,7 +2033,7 @@ The device path of the local disk to retrieve. For example, `/dev/xvdb` or `/dev
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLocalDiskArgs-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/getLocalDisk.ts#L47">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/getLocalDisk.ts#L47">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2045,7 +2045,7 @@ The Amazon Resource Name (ARN) of the gateway.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetLocalDiskResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/getLocalDisk.ts#L53">interface <b>GetLocalDiskResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/getLocalDisk.ts#L53">interface <b>GetLocalDiskResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2054,7 +2054,7 @@ A collection of values returned by getLocalDisk.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetLocalDiskResult-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/getLocalDisk.ts#L57">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/getLocalDisk.ts#L57">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>diskId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2065,7 +2065,7 @@ The disk identifier. e.g. `pci-0000:03:00.0-scsi-0:0:0:0`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLocalDiskResult-diskNode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/getLocalDisk.ts#L58">property <b>diskNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/getLocalDisk.ts#L58">property <b>diskNode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>diskNode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2073,7 +2073,7 @@ The disk identifier. e.g. `pci-0000:03:00.0-scsi-0:0:0:0`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLocalDiskResult-diskPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/getLocalDisk.ts#L59">property <b>diskPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/getLocalDisk.ts#L59">property <b>diskPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>diskPath?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2081,7 +2081,7 @@ The disk identifier. e.g. `pci-0000:03:00.0-scsi-0:0:0:0`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLocalDiskResult-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/getLocalDisk.ts#L60">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/getLocalDisk.ts#L60">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2089,7 +2089,7 @@ The disk identifier. e.g. `pci-0000:03:00.0-scsi-0:0:0:0`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLocalDiskResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/getLocalDisk.ts#L64">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/getLocalDisk.ts#L64">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2101,7 +2101,7 @@ id is the provider-assigned unique ID for this managed resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NfsFileShareArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L244">interface <b>NfsFileShareArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L244">interface <b>NfsFileShareArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2110,7 +2110,7 @@ The set of arguments for constructing a NfsFileShare resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NfsFileShareArgs-clientLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L248">property <b>clientLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L248">property <b>clientLists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2121,7 +2121,7 @@ The list of clients that are allowed to access the file gateway. The list must c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareArgs-defaultStorageClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L252">property <b>defaultStorageClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L252">property <b>defaultStorageClass</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultStorageClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2132,7 +2132,7 @@ The default storage class for objects put into an Amazon S3 bucket by the file g
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareArgs-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L256">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L256">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2143,7 +2143,7 @@ Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareArgs-guessMimeTypeEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L260">property <b>guessMimeTypeEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L260">property <b>guessMimeTypeEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>guessMimeTypeEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2154,7 +2154,7 @@ Boolean value that enables guessing of the MIME type for uploaded objects based 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareArgs-kmsEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L264">property <b>kmsEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L264">property <b>kmsEncrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kmsEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2165,7 +2165,7 @@ Boolean value if `true` to use Amazon S3 server side encryption with your own AW
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareArgs-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L268">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L268">property <b>kmsKeyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2176,7 +2176,7 @@ Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareArgs-locationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L272">property <b>locationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L272">property <b>locationArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>locationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2187,7 +2187,7 @@ The ARN of the backed storage used for storing file data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareArgs-nfsFileShareDefaults">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L276">property <b>nfsFileShareDefaults</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L276">property <b>nfsFileShareDefaults</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nfsFileShareDefaults?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2203,7 +2203,7 @@ Nested argument with file share default values. More information below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareArgs-objectAcl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L280">property <b>objectAcl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L280">property <b>objectAcl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectAcl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2214,7 +2214,7 @@ Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareArgs-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L284">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L284">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2225,7 +2225,7 @@ Boolean to indicate write status of file share. File share does not accept write
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareArgs-requesterPays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L288">property <b>requesterPays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L288">property <b>requesterPays</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requesterPays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2236,7 +2236,7 @@ Boolean who pays the cost of the request and the data download from the Amazon S
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L292">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L292">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2247,7 +2247,7 @@ The ARN of the AWS Identity and Access Management (IAM) role that a file gateway
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareArgs-squash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L296">property <b>squash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L296">property <b>squash</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>squash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2259,7 +2259,7 @@ Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSqua
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NfsFileShareState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L178">interface <b>NfsFileShareState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L178">interface <b>NfsFileShareState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2268,7 +2268,7 @@ Input properties used for looking up and filtering NfsFileShare resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NfsFileShareState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L182">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L182">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2279,7 +2279,7 @@ Amazon Resource Name (ARN) of the NFS File Share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareState-clientLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L186">property <b>clientLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L186">property <b>clientLists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2290,7 +2290,7 @@ The list of clients that are allowed to access the file gateway. The list must c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareState-defaultStorageClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L190">property <b>defaultStorageClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L190">property <b>defaultStorageClass</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultStorageClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2301,7 +2301,7 @@ The default storage class for objects put into an Amazon S3 bucket by the file g
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareState-fileshareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L194">property <b>fileshareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L194">property <b>fileshareId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fileshareId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2312,7 +2312,7 @@ ID of the NFS File Share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareState-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L198">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L198">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2323,7 +2323,7 @@ Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareState-guessMimeTypeEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L202">property <b>guessMimeTypeEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L202">property <b>guessMimeTypeEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>guessMimeTypeEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2334,7 +2334,7 @@ Boolean value that enables guessing of the MIME type for uploaded objects based 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareState-kmsEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L206">property <b>kmsEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L206">property <b>kmsEncrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kmsEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2345,7 +2345,7 @@ Boolean value if `true` to use Amazon S3 server side encryption with your own AW
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareState-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L210">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L210">property <b>kmsKeyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2356,7 +2356,7 @@ Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareState-locationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L214">property <b>locationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L214">property <b>locationArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>locationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2367,7 +2367,7 @@ The ARN of the backed storage used for storing file data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareState-nfsFileShareDefaults">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L218">property <b>nfsFileShareDefaults</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L218">property <b>nfsFileShareDefaults</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nfsFileShareDefaults?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2383,7 +2383,7 @@ Nested argument with file share default values. More information below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareState-objectAcl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L222">property <b>objectAcl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L222">property <b>objectAcl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectAcl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2394,7 +2394,7 @@ Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareState-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L226">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L226">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2405,7 +2405,7 @@ Boolean to indicate write status of file share. File share does not accept write
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareState-requesterPays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L230">property <b>requesterPays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L230">property <b>requesterPays</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requesterPays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2416,7 +2416,7 @@ Boolean who pays the cost of the request and the data download from the Amazon S
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L234">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L234">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2427,7 +2427,7 @@ The ARN of the AWS Identity and Access Management (IAM) role that a file gateway
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NfsFileShareState-squash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/nfsFileShare.ts#L238">property <b>squash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/nfsFileShare.ts#L238">property <b>squash</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>squash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2439,7 +2439,7 @@ Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSqua
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SmbFileShareArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L261">interface <b>SmbFileShareArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L261">interface <b>SmbFileShareArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2448,7 +2448,7 @@ The set of arguments for constructing a SmbFileShare resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SmbFileShareArgs-authentication">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L265">property <b>authentication</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L265">property <b>authentication</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>authentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2459,7 +2459,7 @@ The authentication method that users use to access the file share. Defaults to `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareArgs-defaultStorageClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L269">property <b>defaultStorageClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L269">property <b>defaultStorageClass</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultStorageClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2470,7 +2470,7 @@ The default storage class for objects put into an Amazon S3 bucket by the file g
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareArgs-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L273">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L273">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2481,7 +2481,7 @@ Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareArgs-guessMimeTypeEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L277">property <b>guessMimeTypeEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L277">property <b>guessMimeTypeEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>guessMimeTypeEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2492,7 +2492,7 @@ Boolean value that enables guessing of the MIME type for uploaded objects based 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareArgs-invalidUserLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L281">property <b>invalidUserLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L281">property <b>invalidUserLists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>invalidUserLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2503,7 +2503,7 @@ A list of users in the Active Directory that are not allowed to access the file 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareArgs-kmsEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L285">property <b>kmsEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L285">property <b>kmsEncrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kmsEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2514,7 +2514,7 @@ Boolean value if `true` to use Amazon S3 server side encryption with your own AW
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareArgs-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L289">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L289">property <b>kmsKeyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2525,7 +2525,7 @@ Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareArgs-locationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L293">property <b>locationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L293">property <b>locationArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>locationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2536,7 +2536,7 @@ The ARN of the backed storage used for storing file data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareArgs-objectAcl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L297">property <b>objectAcl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L297">property <b>objectAcl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectAcl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2547,7 +2547,7 @@ Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareArgs-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L301">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L301">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2558,7 +2558,7 @@ Boolean to indicate write status of file share. File share does not accept write
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareArgs-requesterPays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L305">property <b>requesterPays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L305">property <b>requesterPays</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requesterPays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2569,7 +2569,7 @@ Boolean who pays the cost of the request and the data download from the Amazon S
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L309">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L309">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2580,7 +2580,7 @@ The ARN of the AWS Identity and Access Management (IAM) role that a file gateway
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareArgs-validUserLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L313">property <b>validUserLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L313">property <b>validUserLists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>validUserLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2592,7 +2592,7 @@ A list of users in the Active Directory that are allowed to access the file shar
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SmbFileShareState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L195">interface <b>SmbFileShareState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L195">interface <b>SmbFileShareState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2601,7 +2601,7 @@ Input properties used for looking up and filtering SmbFileShare resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SmbFileShareState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L199">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L199">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2612,7 +2612,7 @@ Amazon Resource Name (ARN) of the SMB File Share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareState-authentication">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L203">property <b>authentication</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L203">property <b>authentication</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>authentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2623,7 +2623,7 @@ The authentication method that users use to access the file share. Defaults to `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareState-defaultStorageClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L207">property <b>defaultStorageClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L207">property <b>defaultStorageClass</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultStorageClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2634,7 +2634,7 @@ The default storage class for objects put into an Amazon S3 bucket by the file g
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareState-fileshareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L211">property <b>fileshareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L211">property <b>fileshareId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fileshareId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2645,7 +2645,7 @@ ID of the SMB File Share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareState-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L215">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L215">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2656,7 +2656,7 @@ Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareState-guessMimeTypeEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L219">property <b>guessMimeTypeEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L219">property <b>guessMimeTypeEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>guessMimeTypeEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2667,7 +2667,7 @@ Boolean value that enables guessing of the MIME type for uploaded objects based 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareState-invalidUserLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L223">property <b>invalidUserLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L223">property <b>invalidUserLists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>invalidUserLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2678,7 +2678,7 @@ A list of users in the Active Directory that are not allowed to access the file 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareState-kmsEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L227">property <b>kmsEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L227">property <b>kmsEncrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kmsEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2689,7 +2689,7 @@ Boolean value if `true` to use Amazon S3 server side encryption with your own AW
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareState-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L231">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L231">property <b>kmsKeyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2700,7 +2700,7 @@ Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareState-locationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L235">property <b>locationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L235">property <b>locationArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>locationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2711,7 +2711,7 @@ The ARN of the backed storage used for storing file data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareState-objectAcl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L239">property <b>objectAcl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L239">property <b>objectAcl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectAcl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2722,7 +2722,7 @@ Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareState-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L243">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L243">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2733,7 +2733,7 @@ Boolean to indicate write status of file share. File share does not accept write
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareState-requesterPays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L247">property <b>requesterPays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L247">property <b>requesterPays</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requesterPays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2744,7 +2744,7 @@ Boolean who pays the cost of the request and the data download from the Amazon S
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L251">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L251">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2755,7 +2755,7 @@ The ARN of the AWS Identity and Access Management (IAM) role that a file gateway
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SmbFileShareState-validUserLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/smbFileShare.ts#L255">property <b>validUserLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/smbFileShare.ts#L255">property <b>validUserLists</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>validUserLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2767,7 +2767,7 @@ A list of users in the Active Directory that are allowed to access the file shar
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UploadBufferArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/uploadBuffer.ts#L92">interface <b>UploadBufferArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/uploadBuffer.ts#L92">interface <b>UploadBufferArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2776,7 +2776,7 @@ The set of arguments for constructing a UploadBuffer resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UploadBufferArgs-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/uploadBuffer.ts#L96">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/uploadBuffer.ts#L96">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>diskId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2787,7 +2787,7 @@ Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UploadBufferArgs-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/uploadBuffer.ts#L100">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/uploadBuffer.ts#L100">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2799,7 +2799,7 @@ The Amazon Resource Name (ARN) of the gateway.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UploadBufferState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/uploadBuffer.ts#L78">interface <b>UploadBufferState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/uploadBuffer.ts#L78">interface <b>UploadBufferState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2808,7 +2808,7 @@ Input properties used for looking up and filtering UploadBuffer resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UploadBufferState-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/uploadBuffer.ts#L82">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/uploadBuffer.ts#L82">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>diskId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2819,7 +2819,7 @@ Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UploadBufferState-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/uploadBuffer.ts#L86">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/uploadBuffer.ts#L86">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2831,7 +2831,7 @@ The Amazon Resource Name (ARN) of the gateway.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WorkingStorageArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/workingStorage.ts#L92">interface <b>WorkingStorageArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/workingStorage.ts#L92">interface <b>WorkingStorageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2840,7 +2840,7 @@ The set of arguments for constructing a WorkingStorage resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="WorkingStorageArgs-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/workingStorage.ts#L96">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/workingStorage.ts#L96">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>diskId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2851,7 +2851,7 @@ Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkingStorageArgs-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/workingStorage.ts#L100">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/workingStorage.ts#L100">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2863,7 +2863,7 @@ The Amazon Resource Name (ARN) of the gateway.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WorkingStorageState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/workingStorage.ts#L78">interface <b>WorkingStorageState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/workingStorage.ts#L78">interface <b>WorkingStorageState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2872,7 +2872,7 @@ Input properties used for looking up and filtering WorkingStorage resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="WorkingStorageState-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/workingStorage.ts#L82">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/workingStorage.ts#L82">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>diskId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2883,7 +2883,7 @@ Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkingStorageState-gatewayArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b468ea2e053d377b0786dfb645f5ee37a4f8a0e2/sdk/nodejs/storagegateway/workingStorage.ts#L86">property <b>gatewayArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/storagegateway/workingStorage.ts#L86">property <b>gatewayArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>gatewayArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
