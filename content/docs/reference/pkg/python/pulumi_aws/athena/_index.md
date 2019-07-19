@@ -96,7 +96,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.athena.NamedQuery">
-<em class="property">class </em><code class="descclassname">pulumi_aws.athena.</code><code class="descname">NamedQuery</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>database=None</em>, <em>description=None</em>, <em>name=None</em>, <em>query=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.NamedQuery" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.athena.</code><code class="descname">NamedQuery</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>database=None</em>, <em>description=None</em>, <em>name=None</em>, <em>query=None</em>, <em>workgroup=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.NamedQuery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Athena Named Query resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -109,6 +109,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A brief explanation of the query. Maximum length of 1024.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The plain language name for the query. Maximum length of 128.</li>
 <li><strong>query</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The text of the query itself. In other words, all query statements. Maximum length of 262144.</li>
+<li><strong>workgroup</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The workgroup to which the query belongs. Defaults to <code class="docutils literal notranslate"><span class="pre">primary</span></code></li>
 </ul>
 </td>
 </tr>
@@ -138,6 +139,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.athena.NamedQuery.query">
 <code class="descname">query</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.athena.NamedQuery.query" title="Permalink to this definition">¶</a></dt>
 <dd><p>The text of the query itself. In other words, all query statements. Maximum length of 262144.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.athena.NamedQuery.workgroup">
+<code class="descname">workgroup</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.athena.NamedQuery.workgroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>The workgroup to which the query belongs. Defaults to <code class="docutils literal notranslate"><span class="pre">primary</span></code></p>
 </dd></dl>
 
 <dl class="method">
