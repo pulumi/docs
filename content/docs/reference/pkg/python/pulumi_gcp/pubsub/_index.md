@@ -4,10 +4,10 @@
 <div class="section" id="pubsub">
 <h1>pubsub<a class="headerlink" href="#pubsub" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gcp">Terraform Provider</a> distributed under
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google">Terraform Provider</a> distributed under
 <a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
 <a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
-anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gcp/issues">terraform-providers/terraform-provider-gcp repo</a>.</div></blockquote>
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_gcp.pubsub"></span><dl class="class">
 <dt id="pulumi_gcp.pubsub.Subscription">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.pubsub.</code><code class="descname">Subscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ack_deadline_seconds=None</em>, <em>expiration_policy=None</em>, <em>labels=None</em>, <em>message_retention_duration=None</em>, <em>name=None</em>, <em>project=None</em>, <em>push_config=None</em>, <em>retain_acked_messages=None</em>, <em>topic=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.pubsub.Subscription" title="Permalink to this definition">¶</a></dt>
@@ -460,7 +460,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.pubsub.TopicIAMBinding">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.pubsub.</code><code class="descname">TopicIAMBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>members=None</em>, <em>project=None</em>, <em>role=None</em>, <em>topic=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.pubsub.TopicIAMBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Three different resources help you manage your IAM policy for pubsub topic. Each of these resources serves a different use case:</p>
+<dd><p>Three different resources help you manage your IAM policy for Pubsub Topic. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">google_pubsub_topic_iam_policy</span></code>: Authoritative. Sets the IAM policy for the topic and replaces any existing policy already attached.</li>
 <li><code class="docutils literal notranslate"><span class="pre">google_pubsub_topic_iam_binding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the topic are preserved.</li>
@@ -560,7 +560,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.pubsub.TopicIAMMember">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.pubsub.</code><code class="descname">TopicIAMMember</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>member=None</em>, <em>project=None</em>, <em>role=None</em>, <em>topic=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.pubsub.TopicIAMMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Three different resources help you manage your IAM policy for pubsub topic. Each of these resources serves a different use case:</p>
+<dd><p>Three different resources help you manage your IAM policy for Pubsub Topic. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">google_pubsub_topic_iam_policy</span></code>: Authoritative. Sets the IAM policy for the topic and replaces any existing policy already attached.</li>
 <li><code class="docutils literal notranslate"><span class="pre">google_pubsub_topic_iam_binding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the topic are preserved.</li>
@@ -660,7 +660,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.pubsub.TopicIAMPolicy">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.pubsub.</code><code class="descname">TopicIAMPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>policy_data=None</em>, <em>project=None</em>, <em>topic=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.pubsub.TopicIAMPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Three different resources help you manage your IAM policy for pubsub topic. Each of these resources serves a different use case:</p>
+<dd><p>Three different resources help you manage your IAM policy for Pubsub Topic. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">google_pubsub_topic_iam_policy</span></code>: Authoritative. Sets the IAM policy for the topic and replaces any existing policy already attached.</li>
 <li><code class="docutils literal notranslate"><span class="pre">google_pubsub_topic_iam_binding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the topic are preserved.</li>

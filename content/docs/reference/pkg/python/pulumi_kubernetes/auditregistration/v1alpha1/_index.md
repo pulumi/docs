@@ -5,7 +5,7 @@
 <span id="v1alpha1"></span><h1>v1alpha1<a class="headerlink" href="#module-pulumi_kubernetes.auditregistration.v1alpha1" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_kubernetes.auditregistration.v1alpha1.AuditSink">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.auditregistration.v1alpha1.</code><code class="descname">AuditSink</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>spec=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.auditregistration.v1alpha1.AuditSink" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.auditregistration.v1alpha1.</code><code class="descname">AuditSink</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.auditregistration.v1alpha1.AuditSink" title="Permalink to this definition">¶</a></dt>
 <dd><p>AuditSink represents a cluster level audit sink</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.auditregistration.v1alpha1.AuditSink.translate_output_property">
@@ -49,7 +49,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.auditregistration.v1alpha1.AuditSinkList">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.auditregistration.v1alpha1.</code><code class="descname">AuditSinkList</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>items=None</em>, <em>metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.auditregistration.v1alpha1.AuditSinkList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.auditregistration.v1alpha1.</code><code class="descname">AuditSinkList</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>items=None</em>, <em>metadata=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.auditregistration.v1alpha1.AuditSinkList" title="Permalink to this definition">¶</a></dt>
 <dd><p>AuditSinkList is a list of AuditSink items.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.auditregistration.v1alpha1.AuditSinkList.translate_output_property">

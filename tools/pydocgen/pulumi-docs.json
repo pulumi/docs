@@ -10,101 +10,121 @@
     {
       "name": "Pulumi Random",
       "package_name": "pulumi_random",
+      "pulumi_provider_name": "random",
       "terraform_provider_name": "random"
     },
     {
       "name": "Pulumi AWS",
       "package_name": "pulumi_aws",
+      "pulumi_provider_name": "aws",
       "terraform_provider_name": "aws"
     },
     {
       "name": "Pulumi Azure",
       "package_name": "pulumi_azure",
-      "terraform_provider_name": "azure"
+      "pulumi_provider_name": "azure",
+      "terraform_provider_name": "azurerm"
     },
     {
       "name": "Pulumi Azure Active Directory",
       "package_name": "pulumi_azuread",
+      "pulumi_provider_name": "azuread",
       "terraform_provider_name": "azuread"
     },
     {
       "name": "Pulumi Cloudflare",
       "package_name": "pulumi_cloudflare",
+      "pulumi_provider_name": "cloudflare",
       "terraform_provider_name": "cloudflare"
     },
     {
       "name": "Pulumi Datadog",
       "package_name": "pulumi_datadog",
+      "pulumi_provider_name": "datadog",
       "terraform_provider_name": "datadog"
     },
     {
       "name": "Pulumi DigitalOcean",
       "package_name": "pulumi_digitalocean",
+      "pulumi_provider_name": "digitalocean",
       "terraform_provider_name": "digitalocean"
     },
     {
       "name": "Pulumi DNSimple",
       "package_name": "pulumi_dnsimple",
+      "pulumi_provider_name": "dnsimple",
       "terraform_provider_name": "dnsimple"
     },
     {
       "name": "Pulumi GCP",
       "package_name": "pulumi_gcp",
-      "terraform_provider_name": "gcp"
+      "pulumi_provider_name": "gcp",
+      "terraform_provider_name": "google"
     },
     {
       "name": "Pulumi GitLab",
       "package_name": "pulumi_gitlab",
+      "pulumi_provider_name": "gitlab",
       "terraform_provider_name": "gitlab"
     },
     {
       "name": "Pulumi vSphere",
       "package_name": "pulumi_vsphere",
+      "pulumi_provider_name": "vsphere",
       "terraform_provider_name": "vsphere"
     },
     {
       "name": "Pulumi OpenStack",
       "package_name": "pulumi_openstack",
+      "pulumi_provider_name": "openstack",
       "terraform_provider_name": "openstack"
     },
     {
       "name": "Pulumi Linode",
       "package_name": "pulumi_linode",
+      "pulumi_provider_name": "linode",
       "terraform_provider_name": "linode"
     },
     {
       "name": "Pulumi MySQL",
       "package_name": "pulumi_mysql",
+      "pulumi_provider_name": "mysql",
       "terraform_provider_name": "mysql"
     },
     {
       "name": "Pulumi F5BigIP",
       "package_name": "pulumi_f5bigip",
+      "pulumi_provider_name": "f5bigip",
       "terraform_provider_name": "f5bigip"
     },
     {
       "name": "Pulumi Packet",
       "package_name": "pulumi_packet",
+      "pulumi_provider_name": "packet",
       "terraform_provider_name": "packet"
     },
     {
       "name": "Pulumi PostgreSQL",
       "package_name": "pulumi_postgresql",
+      "pulumi_provider_name": "postgresql",
       "terraform_provider_name": "postgresql"
     },
     {
       "name": "Pulumi Kubernetes",
       "package_name": "pulumi_kubernetes",
+      "pulumi_provider_name": "kubernetes",
       "terraform_provider_name": ""
     },
     {
       "name": "Pulumi NewRelic",
       "package_name": "pulumi_newrelic",
+      "pulumi_provider_name": "newrelic",
       "terraform_provider_name": "newrelic"
     },
     {
       "name": "Pulumi TLS",
       "package_name": "pulumi_tls",
+      "pulumi_provider_name": "tls",
       "terraform_provider_name": "tls"
     }
   ]
