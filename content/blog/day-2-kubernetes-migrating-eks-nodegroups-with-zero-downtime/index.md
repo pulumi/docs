@@ -1,5 +1,5 @@
 ---
-title: "Day 2 Kubernetes - Migrating EKS Node Groups with Zero Downtime"
+title: "Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime"
 authors: ["mike-metral"]
 tags: ["Kubernetes","EKS", "Migrations", "Node Groups"]
 date: "2019-07-22"
@@ -12,7 +12,7 @@ administering Kubernetes. However, the cluster is only one of the
 components under management, as app lifecycles are self-driven tasks
 that vary by workloads.
 
-In Kubernetes, node groups are a useful mechanism of creating pools of resources that can enforce
+In Kubernetes, node groups are a useful mechanism for creating pools of resources that can enforce
 scheduling requirements. They also provide a utility for shifting
 workloads around during cluster management and updates.
 
@@ -29,16 +29,16 @@ over to it with zero downtime using code and `kubectl`.
 
 ## Create an EKS cluster and Deploy the Workload
 
-The inital update we'll perform will configure and launch an EKS cluster using
-`v1.13` of Kubernetes, along with the cluster's infrastructure dependencies
-(VPC and IAM) using [Crosswalk for AWS][crosswalk-aws]. We'll also
+For our initial update, we will configure and launch an EKS cluster using
+`v1.13` of Kubernetes, with the cluster's infrastructure dependencies 
+(such as VPC and IAM) defined using [Crosswalk for AWS][crosswalk-aws]. We'll also
 create and attach the following node groups to the cluster:
 
-* A standard `t2.medium` worker node group using the recent `v1.13.7` worker [AMI][eks-amis]. For use by general purpose workloads such as the [`EchoServer`][echoserver], a simple app that echo's client request headers.
-* A 2xlarge `t3.2xlarge` worker node group using an older `v1.12.7` worker [AMI][eks-amis]. For use use by larger, intensive workloads such as the [NGINX Ingress Controller][ingress-nginx].
+* A standard `t2.medium` worker node group using the recent `v1.13.7` worker [AMI][eks-amis], for general purpose workloads such as the [`EchoServer`][echoserver] &mdash; a simple app that echo's client request headers.
+* A 2xlarge `t3.2xlarge` worker node group using an older `v1.12.7` worker [AMI][eks-amis], for use by larger, intensive workloads such as the [NGINX Ingress Controller][ingress-nginx].
 
 With the cluster successfully created and the node groups available, Pulumi
-will deploy the workload: the [`EchoServer`][echoserver], and the [NGINX Ingress Controller][ingress-nginx] that will manage it's ingress.
+will deploy the workload: the [`EchoServer`][echoserver], and the [NGINX Ingress Controller][ingress-nginx] that will manage its ingress.
 The `echoserver` will land on the Standard node group, and NGINX is set
 to specifically target the `2xlarge` node group.
 
@@ -51,22 +51,22 @@ the `echoserver` behind the NGINX endpoint using `curl`:
 
 ## The Great Migration
 
-After initial deployment, we decide to update the node group used by NGINX.
+After our initial deployment, let's say we decide to update the node group used by NGINX.
 
-We'll move NGINX from the `2xlarge` node group over to a new, `4xlarge` worker
-node group that differs in: an updated AMI, instance type, and desired instance count.
+To do so, we'll move NGINX from the `2xlarge` node group over to a new, `4xlarge` worker
+node group with an updated AMI, a different instance type, and a different desired instance count.
 
 As we migrate NGINX over to the `4xlarge` and decommission the `2xlarge` node
 group in the next steps, we'll also actively load test the endpoint of the
-`echoserver` to ensure that we are not losing requests through out the migration.
+`echoserver` to ensure that we are not losing requests throughout the migration.
 
-### Step 1: Create the new `4xlarge` Node Group
+### Step 1: Create the new `4xlarge` node group.
 
 Create the new, `4xlarge` node group by defining it and running an update.
 
 <p align="center"><img src="ng-4xlarge.svg" width="650"/></p>
 
-### Step 2: Migrate NGINX to the `4xlarge` Node Group
+### Step 2: Migrate NGINX to the `4xlarge` node group.
 
 With the `4xlarge` node group created, we'll migrate the NGINX service away
 from the `2xlarge` node group over to the `4xlarge` node group by changing
@@ -82,20 +82,20 @@ and can gracefully terminate within the Kubernetes [Pod lifecycle][pod-lifecycle
 
 <p align="center"><img src="target-ng-4xlarge.svg" width="650"/></p>
 
-### Step 3: Decomission the `2xlarge` Node Group
+### Step 3: Decommission the `2xlarge` node group.
 
-Once migration of NGINX has completed onto the `4xlarge` node group, we can
-commence the decommissioning of the original `2xlarge` node group no
+Once NGINX has been completely migrated to the `4xlarge` node group, we can
+begin decommissioning the original `2xlarge` node group which is no longer in use.
 longer in use from Kubernetes and AWS.
 
-Decommissioning the node group means that we'll:
+Decommissioning the node group involves:
 
-  * Drain the Kubernetes nodes.
+  * Draining the Kubernetes nodes.
   * Delete the Kubernetes nodes from the APIServer.
   * Scale down the Auto Scaling Group to `0`.
   * Delete the node group.
 
-Setup `kubectl` by using the `kubeconfig` from the stack output.
+Set up `kubectl` by using the `kubeconfig` from the stack output.
 
 ```bash
 $ pulumi stack output kubeconfig > kubeconfig.json
@@ -110,7 +110,7 @@ for node in $(kubectl get nodes -l beta.kubernetes.io/instance-type=t3.2xlarge -
 done
 ```
 
-After draining has completed, to delete the nodes from the APIServer use `kubectl delete node`:
+After draining has completed, use `kubectl delete node` to delete the nodes from the APIServer.
 
 ```bash
 for node in $(kubectl get nodes -l beta.kubernetes.io/instance-type=t3.2xlarge -o=name); do
@@ -130,11 +130,11 @@ AWS and the Pulumi program:
 
 ## Summary
 
-In this post we stood up an EKS cluster with a couple of node groups, and an
+In this post, we stood up an EKS cluster with a couple of node groups, and an
 `echoserver` and NGINX workload. We then created a new, updated node group and
 migrated NGINX over to it.
 
-We acheived this node group migration with zero downtime to our apps during
+We achieved this node group migration with zero downtime to our apps during
 load testing and decommissioning of the original node group.
 
 <img style="max-width:none; height: 350px; width: 850px;" src="eks-migration.gif"/>
@@ -144,10 +144,10 @@ load testing and decommissioning of the original node group.
 ## Learn More
 
 If you'd like to learn about Pulumi and how to manage your
-infrastructure and Kubernetes through code, [click here to get started today]({{< ref "/docs/quickstart" >}}). Pulumi is open source and free to
+infrastructure and Kubernetes through code, [get started today]({{< ref "/docs/quickstart" >}}). Pulumi is open source and free to
 use.
 
-For a follow-up example on how to further use Pulumi to create Kubernetes
+For further examples on how to use Pulumi to create Kubernetes
 clusters, or deploy workloads to a cluster, check out the rest of the
 [Kubernetes tutorials]({{< relref "/docs/reference/tutorials/kubernetes" >}}).
 
