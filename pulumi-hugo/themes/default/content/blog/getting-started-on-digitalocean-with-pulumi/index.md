@@ -10,6 +10,8 @@ meta_image: "Feature.jpg"
 Pulumi recently added support for managing [DigitalOcean](https://www.digitalocean.com/) resources. This article will
 show you how to deploy some load balanced Droplets on DigitalOcean using Pulumi.
 
+<!--more-->
+
 To get started, let's create a new Pulumi program written in TypeScript:
 
 ```bash
