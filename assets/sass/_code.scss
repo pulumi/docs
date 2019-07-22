@@ -1,7 +1,7 @@
 @import "pygments";
 
 code {
-    @apply bg-gray-100 rounded py-1 px-2 text-sm;
+    @apply bg-gray-100 rounded py-1 px-2 text-sm break-words;
 }
 
 pre {
@@ -25,5 +25,9 @@ pre {
 
     .code-plain.code-mode-dark & {
         @apply text-gray-300;
+    }
+
+    code {
+        @apply break-normal;
     }
 }
