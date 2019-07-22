@@ -1,10 +1,10 @@
 ---
 title: Get Started with Google Cloud
+linktitle: Google Cloud
 weight: 1
 menu:
   quickstart:
     identifier: gcp
-    name: Google Cloud
     weight: 2
 ---
 

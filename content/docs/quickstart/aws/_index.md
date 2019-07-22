@@ -1,10 +1,10 @@
 ---
 title: Get Started with AWS
+linktitle: AWS
 weight: 1
 menu:
   quickstart:
     identifier: aws
-    name: AWS
     weight: 2
 ---
 

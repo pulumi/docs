@@ -1,9 +1,9 @@
 ---
 title: Pulumi Documentation
+linktitle: Docs
 noindex: true
 menu:
     header:
-        name: Docs
         weight: 4
 ---
 

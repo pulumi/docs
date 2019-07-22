@@ -1,10 +1,10 @@
 ---
 title: Get Started with Azure
+linktitle: Azure
 weight: 1
 menu:
   quickstart:
     identifier: azure
-    name: Azure
     weight: 2
 ---
 

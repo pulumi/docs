@@ -17,7 +17,12 @@
             </div>
 
             <div class="md:w-7/12">
-                <h1>{{ .Title }}</h1>
+                {{ partial "docs/breadcrumb.html" . }}
+
+                {{ if ne .Title "" }}
+                    <h1>{{ .Title }}</h1>
+                {{ end }}
+
                 {{ .Content }}
             </div>
         </div>
