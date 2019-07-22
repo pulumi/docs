@@ -48,3 +48,8 @@
         }
     }
 }
+
+.pdoc-module-header,
+.pdoc-module-contents {
+    @apply break-all;
+}
