@@ -575,6 +575,22 @@ If the configuration value isn’t a legal float, this function will throw an er
 </dd></dl>
 
 <dl class="method">
+<dt id="pulumi.Config.get_object">
+<code class="descname">get_object</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Optional[Any]<a class="headerlink" href="#pulumi.Config.get_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an optional configuration value, as an object, by its key, or undefined if it
+doesn’t exist. This routine simply JSON parses and doesn’t validate the shape of the
+contents.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.get_secret_object">
+<code class="descname">get_secret_object</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[typing.Any][Any]]<a class="headerlink" href="#pulumi.Config.get_secret_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an optional configuration value, as an object, by its key, marking it as a secret or
+undefined if it doesn’t exist. This routine simply JSON parses and doesn’t validate the
+shape of the contents.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pulumi.Config.require">
 <code class="descname">require</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi.Config.require" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a configuration value by its given key.  If it doesn’t exist, an error is thrown.</p>
@@ -780,6 +796,22 @@ configuration value is not a legal number, an error is thrown.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.require_object">
+<code class="descname">require_object</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#pulumi.Config.require_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a configuration value as a JSON string and deserializes the JSON into a Python
+object. If it doesn’t exist, or the configuration value is not a legal JSON string, an error
+is thrown.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.require_secret_object">
+<code class="descname">require_secret_object</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.Any][Any]<a class="headerlink" href="#pulumi.Config.require_secret_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a configuration value as a JSON string and deserializes the JSON into a Python
+object, marking it as a secret. If it doesn’t exist, or the configuration value is not a
+legal JSON string, an error is thrown.</p>
 </dd></dl>
 
 <dl class="method">
