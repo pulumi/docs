@@ -712,7 +712,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">MaintenanceWindowTask</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>logging_info=None</em>, <em>max_concurrency=None</em>, <em>max_errors=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>service_role_arn=None</em>, <em>targets=None</em>, <em>task_arn=None</em>, <em>task_parameters=None</em>, <em>task_type=None</em>, <em>window_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">MaintenanceWindowTask</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>logging_info=None</em>, <em>max_concurrency=None</em>, <em>max_errors=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>service_role_arn=None</em>, <em>targets=None</em>, <em>task_arn=None</em>, <em>task_invocation_parameters=None</em>, <em>task_parameters=None</em>, <em>task_type=None</em>, <em>window_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Maintenance Window Task resource</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -722,14 +722,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the maintenance window task.</li>
-<li><strong>logging_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A structure containing information about an Amazon S3 bucket to write instance-level logs to. Documented below.</li>
+<li><strong>logging_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">run_command_parameters</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">output_s3_*</span></code> arguments instead. Conflicts with <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code>. Documented below.</li>
 <li><strong>max_concurrency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum number of targets this task can be run for in parallel.</li>
 <li><strong>max_errors</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum number of errors allowed before this task stops being scheduled.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The parameter name.</li>
 <li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.</li>
-<li><strong>service_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be assumed when executing the task.</li>
+<li><strong>service_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM service role to assume during task execution.</li>
 <li><strong>targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.</li>
 <li><strong>task_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the task to execute.</li>
-<li><strong>task_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A structure containing information about parameters required by the particular <code class="docutils literal notranslate"><span class="pre">task_arn</span></code>. Documented below.</li>
+<li><strong>task_invocation_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The parameters for task execution. This argument is conflict with <code class="docutils literal notranslate"><span class="pre">task_parameters</span></code> and <code class="docutils literal notranslate"><span class="pre">logging_info</span></code>.</li>
+<li><strong>task_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A structure containing information about parameters required by the particular <code class="docutils literal notranslate"><span class="pre">task_arn</span></code>. Use <code class="docutils literal notranslate"><span class="pre">parameter</span></code> configuration blocks under the <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code> configuration block instead. Conflicts with <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code>. Documented below.</li>
 <li><strong>task_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of task being registered. The only allowed value is <code class="docutils literal notranslate"><span class="pre">RUN_COMMAND</span></code>.</li>
 <li><strong>window_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of the maintenance window to register the task with.</li>
 </ul>
@@ -748,7 +750,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask.logging_info">
 <code class="descname">logging_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask.logging_info" title="Permalink to this definition">¶</a></dt>
-<dd><p>A structure containing information about an Amazon S3 bucket to write instance-level logs to. Documented below.</p>
+<dd><p>A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">run_command_parameters</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">output_s3_*</span></code> arguments instead. Conflicts with <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code>. Documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -764,6 +766,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ssm.MaintenanceWindowTask.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parameter name.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask.priority">
 <code class="descname">priority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask.priority" title="Permalink to this definition">¶</a></dt>
 <dd><p>The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.</p>
@@ -772,7 +780,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask.service_role_arn">
 <code class="descname">service_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask.service_role_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The role that should be assumed when executing the task.</p>
+<dd><p>The IAM service role to assume during task execution.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -788,9 +796,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ssm.MaintenanceWindowTask.task_invocation_parameters">
+<code class="descname">task_invocation_parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask.task_invocation_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parameters for task execution. This argument is conflict with <code class="docutils literal notranslate"><span class="pre">task_parameters</span></code> and <code class="docutils literal notranslate"><span class="pre">logging_info</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask.task_parameters">
 <code class="descname">task_parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask.task_parameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>A structure containing information about parameters required by the particular <code class="docutils literal notranslate"><span class="pre">task_arn</span></code>. Documented below.</p>
+<dd><p>A structure containing information about parameters required by the particular <code class="docutils literal notranslate"><span class="pre">task_arn</span></code>. Use <code class="docutils literal notranslate"><span class="pre">parameter</span></code> configuration blocks under the <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code> configuration block instead. Conflicts with <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code>. Documented below.</p>
 </dd></dl>
 
 <dl class="attribute">

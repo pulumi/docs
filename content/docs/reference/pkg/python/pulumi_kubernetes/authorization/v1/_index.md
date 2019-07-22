@@ -5,7 +5,7 @@
 <span id="v1"></span><h1>v1<a class="headerlink" href="#module-pulumi_kubernetes.authorization.v1" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_kubernetes.authorization.v1.LocalSubjectAccessReview">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.authorization.v1.</code><code class="descname">LocalSubjectAccessReview</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.authorization.v1.LocalSubjectAccessReview" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.authorization.v1.</code><code class="descname">LocalSubjectAccessReview</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>status=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.authorization.v1.LocalSubjectAccessReview" title="Permalink to this definition">¶</a></dt>
 <dd><p>LocalSubjectAccessReview checks whether or not a user or group can perform an action in a given
 namespace. Having a namespace scoped resource makes it much easier to grant namespace scoped
 policy that includes permissions checking.</p>
@@ -51,7 +51,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.authorization.v1.SelfSubjectAccessReview">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.authorization.v1.</code><code class="descname">SelfSubjectAccessReview</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.authorization.v1.SelfSubjectAccessReview" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.authorization.v1.</code><code class="descname">SelfSubjectAccessReview</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>status=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.authorization.v1.SelfSubjectAccessReview" title="Permalink to this definition">¶</a></dt>
 <dd><p>SelfSubjectAccessReview checks whether or the current user can perform an action.  Not filling
 in a spec.namespace means “in all namespaces”.  Self is a special case, because users should
 always be able to check whether they can perform an action</p>
@@ -97,7 +97,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.authorization.v1.SelfSubjectRulesReview">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.authorization.v1.</code><code class="descname">SelfSubjectRulesReview</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.authorization.v1.SelfSubjectRulesReview" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.authorization.v1.</code><code class="descname">SelfSubjectRulesReview</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>status=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.authorization.v1.SelfSubjectRulesReview" title="Permalink to this definition">¶</a></dt>
 <dd><p>SelfSubjectRulesReview enumerates the set of actions the current user can perform within a
 namespace. The returned list of actions may be incomplete depending on the server’s
 authorization mode, and any errors experienced during the evaluation. SelfSubjectRulesReview
@@ -148,7 +148,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.authorization.v1.SubjectAccessReview">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.authorization.v1.</code><code class="descname">SubjectAccessReview</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.authorization.v1.SubjectAccessReview" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.authorization.v1.</code><code class="descname">SubjectAccessReview</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>status=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.authorization.v1.SubjectAccessReview" title="Permalink to this definition">¶</a></dt>
 <dd><p>SubjectAccessReview checks whether or not a user or group can perform an action.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.authorization.v1.SubjectAccessReview.translate_output_property">

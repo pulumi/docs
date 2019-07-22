@@ -26,6 +26,16 @@ menu:
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01723-2019-07-19">0.17.24</a></th>
+            <td>2019/07/11</td>
+            <td>{{< sdk-links version="0.17.24" >}}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01723-2019-07-16">0.17.23</a></th>
+            <td>2019/07/11</td>
+            <td>{{< sdk-links version="0.17.23" >}}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01722-2019-07-11">0.17.22</a></th>
             <td>2019/07/11</td>
             <td>{{< sdk-links version="0.17.22" >}}</td>

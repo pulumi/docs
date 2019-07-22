@@ -5,7 +5,7 @@
 <span id="v1"></span><h1>v1<a class="headerlink" href="#module-pulumi_kubernetes.meta.v1" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_kubernetes.meta.v1.Status">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.meta.v1.</code><code class="descname">Status</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>code=None</em>, <em>details=None</em>, <em>message=None</em>, <em>metadata=None</em>, <em>reason=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.meta.v1.Status" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.meta.v1.</code><code class="descname">Status</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>code=None</em>, <em>details=None</em>, <em>message=None</em>, <em>metadata=None</em>, <em>reason=None</em>, <em>status=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.meta.v1.Status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Status is a return value for calls that don’t return other objects.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.meta.v1.Status.translate_output_property">

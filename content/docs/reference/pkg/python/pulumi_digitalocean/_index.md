@@ -2941,11 +2941,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_digitalocean.get_certificate">
+<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_certificate</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_certificate" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/certificate.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_digitalocean.get_database_cluster">
 <code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_database_cluster</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_database_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information on a DigitalOcean database cluster resource.</p>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/database_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/database_cluster.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_domain">
+<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_domain</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_domain" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/domain.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/domain.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_droplet">
+<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_droplet</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_droplet" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/droplet.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/droplet.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2956,6 +2977,62 @@ source to retrieve the ID of a DigitalOcean Droplet snapshot for use in other
 resources.</p>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/droplet_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/droplet_snapshot.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_floating_ip">
+<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_floating_ip</code><span class="sig-paren">(</span><em>ip_address=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_floating_ip" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/floating_ip.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/floating_ip.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_image">
+<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_image</code><span class="sig-paren">(</span><em>name=None</em>, <em>slug=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_image" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/image.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/image.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_kubernetes_cluster">
+<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_kubernetes_cluster</code><span class="sig-paren">(</span><em>name=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_kubernetes_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/kubernetes_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/kubernetes_cluster.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_load_balancer">
+<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_load_balancer</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_load_balancer" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/loadbalancer.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/loadbalancer.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_record">
+<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_record</code><span class="sig-paren">(</span><em>domain=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_record" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/record.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/record.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_ssh_key">
+<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_ssh_key</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_ssh_key" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/ssh_key.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/ssh_key.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_tag">
+<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_tag</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_tag" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/tag.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/tag.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_volume">
+<code class="descclassname">pulumi_digitalocean.</code><code class="descname">get_volume</code><span class="sig-paren">(</span><em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_volume" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/volume.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">

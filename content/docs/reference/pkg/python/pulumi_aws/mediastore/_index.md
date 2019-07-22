@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.mediastore"></span><dl class="class">
 <dt id="pulumi_aws.mediastore.Container">
-<em class="property">class </em><code class="descclassname">pulumi_aws.mediastore.</code><code class="descname">Container</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediastore.Container" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.mediastore.</code><code class="descname">Container</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediastore.Container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a MediaStore Container.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -20,6 +20,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the container. Must contain alphanumeric characters or underscores.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
 </tr>
@@ -43,6 +44,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.mediastore.Container.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mediastore.Container.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the container. Must contain alphanumeric characters or underscores.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.mediastore.Container.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mediastore.Container.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="method">

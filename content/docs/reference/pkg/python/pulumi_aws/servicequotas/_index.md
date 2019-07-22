@@ -74,6 +74,115 @@ anything, please consult the source <a class="reference external" href="https://
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pulumi_aws.servicequotas.ServiceQuota">
+<em class="property">class </em><code class="descclassname">pulumi_aws.servicequotas.</code><code class="descname">ServiceQuota</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>quota_code=None</em>, <em>service_code=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.ServiceQuota" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an individual Service Quota.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>quota_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Code of the service quota to track. For example: <code class="docutils literal notranslate"><span class="pre">L-F678F1CE</span></code>. Available values can be found with the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html">AWS CLI service-quotas list-service-quotas command</a>.</li>
+<li><strong>service_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Code of the service to track. For example: <code class="docutils literal notranslate"><span class="pre">vpc</span></code>. Available values can be found with the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html">AWS CLI service-quotas list-services command</a>.</li>
+<li><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Float specifying the desired value for the service quota. If the desired value is higher than the current value, a quota increase request is submitted. When a known request is submitted and pending, the value reflects the desired value of the pending request.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/servicequotas_service_quota.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/servicequotas_service_quota.html.markdown</a>.</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.servicequotas.ServiceQuota.adjustable">
+<code class="descname">adjustable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicequotas.ServiceQuota.adjustable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the service quota can be increased.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.servicequotas.ServiceQuota.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicequotas.ServiceQuota.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of the service quota.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.servicequotas.ServiceQuota.default_value">
+<code class="descname">default_value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicequotas.ServiceQuota.default_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default value of the service quota.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.servicequotas.ServiceQuota.quota_code">
+<code class="descname">quota_code</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicequotas.ServiceQuota.quota_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Code of the service quota to track. For example: <code class="docutils literal notranslate"><span class="pre">L-F678F1CE</span></code>. Available values can be found with the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html">AWS CLI service-quotas list-service-quotas command</a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.servicequotas.ServiceQuota.quota_name">
+<code class="descname">quota_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicequotas.ServiceQuota.quota_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the quota.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.servicequotas.ServiceQuota.service_code">
+<code class="descname">service_code</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicequotas.ServiceQuota.service_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Code of the service to track. For example: <code class="docutils literal notranslate"><span class="pre">vpc</span></code>. Available values can be found with the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html">AWS CLI service-quotas list-services command</a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.servicequotas.ServiceQuota.service_name">
+<code class="descname">service_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicequotas.ServiceQuota.service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the service.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.servicequotas.ServiceQuota.value">
+<code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicequotas.ServiceQuota.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Float specifying the desired value for the service quota. If the desired value is higher than the current value, a quota increase request is submitted. When a known request is submitted and pending, the value reflects the desired value of the pending request.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.servicequotas.ServiceQuota.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.ServiceQuota.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.servicequotas.ServiceQuota.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.ServiceQuota.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="function">
 <dt id="pulumi_aws.servicequotas.get_service">
 <code class="descclassname">pulumi_aws.servicequotas.</code><code class="descname">get_service</code><span class="sig-paren">(</span><em>service_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.get_service" title="Permalink to this definition">¶</a></dt>

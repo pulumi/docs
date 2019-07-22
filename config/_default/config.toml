@@ -1,4 +1,3 @@
-baseURL = "https://www.pulumi.com/"
 languageCode = "en-us"
 title = "Pulumi"
 
@@ -14,6 +13,16 @@ enableRobotsTXT = true
 [outputFormats.RSS]
     baseName = "rss"
 
+# We set the outputs explicitly to just "HTML" as otherwise they default to both
+# "HTML" and "RSS", and we only want to generate RSS for the blog section -- not
+# all sections/taxonomies. We enable RSS as an output for the blog section alone
+# in the front matter of content/blog/_index.md and have a custom RSS template
+# in layouts/blog/rss.xml.
+[outputs]
+    home = ["HTML"]
+    section = ["HTML"]
+    taxonomy = ["HTML"]
+
 [taxonomies]
     author = "authors"
     tag = "tags"
@@ -26,5 +35,6 @@ enableRobotsTXT = true
     fractions = false
 
 [params]
+    canonicalURL = "https://www.pulumi.com"
     repositoryURL = "https://github.com/pulumi/docs"
     repositoryBranch = "master"
