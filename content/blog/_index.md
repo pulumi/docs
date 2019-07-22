@@ -1,5 +1,6 @@
 ---
 title: Blog
+outputs: ["html", "rss"]
 authors: []
 tags: []
 summary: ""
