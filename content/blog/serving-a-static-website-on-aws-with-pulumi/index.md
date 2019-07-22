@@ -32,14 +32,13 @@ The architecture we will use for the website is to follow AWS "[Web Application 
 reference architecture ([pdf](https://media.amazonwebservices.com/architecturecenter/AWS_ac_ra_web_01.pdf)).
 This integrates several AWS products: 
 
--   [Amazon S3](https://aws.amazon.com/s3/), used to store the
-    website's contents
--   [Amazon CloudFront](https://aws.amazon.com/cloudfront/), a CDN
-    improving site performance
--   [Amazon Route53](https://aws.amazon.com/route53/), for managing DNS
--   [Amazon Certificate
-    Manager](https://aws.amazon.com/certificate-manager/), for serving
-    content over HTTPS
+- [Amazon S3](https://aws.amazon.com/s3/), used to store the
+  website's contents
+- [Amazon CloudFront](https://aws.amazon.com/cloudfront/), a CDN
+  improving site performance
+- [Amazon Route53](https://aws.amazon.com/route53/), for managing DNS
+- [Amazon Certificate Manager](https://aws.amazon.com/certificate-manager/), for serving
+  content over HTTPS
 
 ## How it Works
 
@@ -144,7 +143,7 @@ for using using constants like tenMinutes rather than the number 600.
 Finally, we hook up our domain to the CloudFront distribution. We just
 create an alias (A) record that aliases our own domain (e.g.
 [www.pulumi.com](http://www.pulumi.com/)) to the CloudFront distribution
-(e.g. [dhy4niicdm7ba.cloudfront.net](http://dhy4niicdm7ba.cloudfront.net/)).
+(e.g. `dhy4niicdm7ba.cloudfront.net`).
 
 There is a little extra processing we need to do to get the Amazon
 Route53 Hosted Zone ID for the domain. But we can do that directly in

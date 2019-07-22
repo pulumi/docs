@@ -5,7 +5,7 @@
 <span id="v2alpha1"></span><h1>v2alpha1<a class="headerlink" href="#module-pulumi_kubernetes.batch.v2alpha1" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_kubernetes.batch.v2alpha1.CronJob">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.batch.v2alpha1.</code><code class="descname">CronJob</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.batch.v2alpha1.CronJob" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.batch.v2alpha1.</code><code class="descname">CronJob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>status=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.batch.v2alpha1.CronJob" title="Permalink to this definition">¶</a></dt>
 <dd><p>CronJob represents the configuration of a single cron job.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.batch.v2alpha1.CronJob.translate_output_property">
@@ -49,7 +49,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.batch.v2alpha1.CronJobList">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.batch.v2alpha1.</code><code class="descname">CronJobList</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>items=None</em>, <em>metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.batch.v2alpha1.CronJobList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.batch.v2alpha1.</code><code class="descname">CronJobList</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>items=None</em>, <em>metadata=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.batch.v2alpha1.CronJobList" title="Permalink to this definition">¶</a></dt>
 <dd><p>CronJobList is a collection of cron jobs.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.batch.v2alpha1.CronJobList.translate_output_property">
