@@ -4,10 +4,10 @@
 <div class="section" id="bigtable">
 <h1>bigtable<a class="headerlink" href="#bigtable" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gcp">Terraform Provider</a> distributed under
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google">Terraform Provider</a> distributed under
 <a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
 <a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
-anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gcp/issues">terraform-providers/terraform-provider-gcp repo</a>.</div></blockquote>
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_gcp.bigtable"></span><dl class="class">
 <dt id="pulumi_gcp.bigtable.Instance">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.bigtable.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>clusters=None</em>, <em>display_name=None</em>, <em>instance_type=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.Instance" title="Permalink to this definition">¶</a></dt>
@@ -87,6 +87,275 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_gcp.bigtable.Instance.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.Instance.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.bigtable.InstanceIamBinding">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.bigtable.</code><code class="descname">InstanceIamBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>instance=None</em>, <em>members=None</em>, <em>project=None</em>, <em>role=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamBinding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Three different resources help you manage IAM policies on bigtable instances. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_policy</span></code>: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.</li>
+<li><code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_binding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.</li>
+<li><code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_member</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.</li>
+</ul>
+<blockquote>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_policy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_binding</span></code> and <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_member</span></code> or they will fight over what your policy should be. In addition, be careful not to accidentaly unset ownership of the instance as <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_policy</span></code> replaces the entire policy.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_binding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_member</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or relative resource id of the instance to manage IAM policies for.</li>
+<li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_instance_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_instance_iam_binding.html.markdown</a>.</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.bigtable.InstanceIamBinding.etag">
+<code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamBinding.etag" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) The etag of the instances’s IAM policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigtable.InstanceIamBinding.instance">
+<code class="descname">instance</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamBinding.instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name or relative resource id of the instance to manage IAM policies for.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigtable.InstanceIamBinding.role">
+<code class="descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamBinding.role" title="Permalink to this definition">¶</a></dt>
+<dd><p>The role that should be applied. Only one
+<code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.bigtable.InstanceIamBinding.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamBinding.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.bigtable.InstanceIamBinding.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamBinding.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.bigtable.InstanceIamMember">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.bigtable.</code><code class="descname">InstanceIamMember</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>instance=None</em>, <em>member=None</em>, <em>project=None</em>, <em>role=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamMember" title="Permalink to this definition">¶</a></dt>
+<dd><p>Three different resources help you manage IAM policies on bigtable instances. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_policy</span></code>: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.</li>
+<li><code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_binding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.</li>
+<li><code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_member</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.</li>
+</ul>
+<blockquote>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_policy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_binding</span></code> and <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_member</span></code> or they will fight over what your policy should be. In addition, be careful not to accidentaly unset ownership of the instance as <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_policy</span></code> replaces the entire policy.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_binding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_member</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or relative resource id of the instance to manage IAM policies for.</li>
+<li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_instance_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_instance_iam_member.html.markdown</a>.</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.bigtable.InstanceIamMember.etag">
+<code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamMember.etag" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) The etag of the instances’s IAM policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigtable.InstanceIamMember.instance">
+<code class="descname">instance</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamMember.instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name or relative resource id of the instance to manage IAM policies for.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigtable.InstanceIamMember.role">
+<code class="descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamMember.role" title="Permalink to this definition">¶</a></dt>
+<dd><p>The role that should be applied. Only one
+<code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.bigtable.InstanceIamMember.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamMember.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.bigtable.InstanceIamMember.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamMember.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.bigtable.InstanceIamPolicy">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.bigtable.</code><code class="descname">InstanceIamPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>instance=None</em>, <em>policy_data=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Three different resources help you manage IAM policies on bigtable instances. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_policy</span></code>: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.</li>
+<li><code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_binding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.</li>
+<li><code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_member</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.</li>
+</ul>
+<blockquote>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_policy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_binding</span></code> and <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_member</span></code> or they will fight over what your policy should be. In addition, be careful not to accidentaly unset ownership of the instance as <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_policy</span></code> replaces the entire policy.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_binding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">google_bigtable_instance_iam_member</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or relative resource id of the instance to manage IAM policies for.</li>
+<li><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by a <code class="docutils literal notranslate"><span class="pre">google_iam_policy</span></code> data source.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_instance_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_instance_iam_policy.html.markdown</a>.</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.bigtable.InstanceIamPolicy.etag">
+<code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamPolicy.etag" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) The etag of the instances’s IAM policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigtable.InstanceIamPolicy.instance">
+<code class="descname">instance</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamPolicy.instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name or relative resource id of the instance to manage IAM policies for.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigtable.InstanceIamPolicy.policy_data">
+<code class="descname">policy_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamPolicy.policy_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The policy data generated by a <code class="docutils literal notranslate"><span class="pre">google_iam_policy</span></code> data source.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.bigtable.InstanceIamPolicy.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.bigtable.InstanceIamPolicy.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.InstanceIamPolicy.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">

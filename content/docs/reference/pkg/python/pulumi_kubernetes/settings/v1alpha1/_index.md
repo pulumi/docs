@@ -5,7 +5,7 @@
 <span id="v1alpha1"></span><h1>v1alpha1<a class="headerlink" href="#module-pulumi_kubernetes.settings.v1alpha1" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_kubernetes.settings.v1alpha1.PodPreset">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.settings.v1alpha1.</code><code class="descname">PodPreset</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>spec=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.settings.v1alpha1.PodPreset" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.settings.v1alpha1.</code><code class="descname">PodPreset</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.settings.v1alpha1.PodPreset" title="Permalink to this definition">¶</a></dt>
 <dd><p>PodPreset is a policy resource that defines additional runtime requirements for a Pod.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.settings.v1alpha1.PodPreset.translate_output_property">
@@ -49,7 +49,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.settings.v1alpha1.PodPresetList">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.settings.v1alpha1.</code><code class="descname">PodPresetList</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>items=None</em>, <em>metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.settings.v1alpha1.PodPresetList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.settings.v1alpha1.</code><code class="descname">PodPresetList</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>items=None</em>, <em>metadata=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.settings.v1alpha1.PodPresetList" title="Permalink to this definition">¶</a></dt>
 <dd><p>PodPresetList is a list of PodPreset objects.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.settings.v1alpha1.PodPresetList.translate_output_property">

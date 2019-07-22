@@ -56,7 +56,7 @@ test:
 		--exclude "https://www.linkedin.com/" \
 		--exclude "https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task" \
 		--exclude "https://blog.mapbox.com/" \
-		--exclude "https://www.youtube.com/pulumitv"
+		--exclude "https://www.youtube.com/"
 
 .PHONY: validate
 validate:

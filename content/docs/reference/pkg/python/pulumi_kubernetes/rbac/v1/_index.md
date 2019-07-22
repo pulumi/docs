@@ -5,7 +5,7 @@
 <span id="v1"></span><h1>v1<a class="headerlink" href="#module-pulumi_kubernetes.rbac.v1" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_kubernetes.rbac.v1.ClusterRole">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.rbac.v1.</code><code class="descname">ClusterRole</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>aggregation_rule=None</em>, <em>metadata=None</em>, <em>rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1.ClusterRole" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.rbac.v1.</code><code class="descname">ClusterRole</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aggregation_rule=None</em>, <em>metadata=None</em>, <em>rules=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1.ClusterRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a unit
 by a RoleBinding or ClusterRoleBinding.</p>
 <dl class="method">
@@ -50,7 +50,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.rbac.v1.ClusterRoleBinding">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.rbac.v1.</code><code class="descname">ClusterRoleBinding</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>role_ref=None</em>, <em>subjects=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1.ClusterRoleBinding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.rbac.v1.</code><code class="descname">ClusterRoleBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>metadata=None</em>, <em>role_ref=None</em>, <em>subjects=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1.ClusterRoleBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>ClusterRoleBinding references a ClusterRole, but not contain it.  It can reference a ClusterRole
 in the global namespace, and adds who information via Subject.</p>
 <dl class="method">
@@ -95,7 +95,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.rbac.v1.ClusterRoleBindingList">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.rbac.v1.</code><code class="descname">ClusterRoleBindingList</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>items=None</em>, <em>metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1.ClusterRoleBindingList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.rbac.v1.</code><code class="descname">ClusterRoleBindingList</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>items=None</em>, <em>metadata=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1.ClusterRoleBindingList" title="Permalink to this definition">¶</a></dt>
 <dd><p>ClusterRoleBindingList is a collection of ClusterRoleBindings</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.rbac.v1.ClusterRoleBindingList.translate_output_property">
@@ -139,7 +139,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.rbac.v1.ClusterRoleList">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.rbac.v1.</code><code class="descname">ClusterRoleList</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>items=None</em>, <em>metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1.ClusterRoleList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.rbac.v1.</code><code class="descname">ClusterRoleList</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>items=None</em>, <em>metadata=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1.ClusterRoleList" title="Permalink to this definition">¶</a></dt>
 <dd><p>ClusterRoleList is a collection of ClusterRoles</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.rbac.v1.ClusterRoleList.translate_output_property">
@@ -183,7 +183,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.rbac.v1.Role">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.rbac.v1.</code><code class="descname">Role</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1.Role" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.rbac.v1.</code><code class="descname">Role</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>metadata=None</em>, <em>rules=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1.Role" title="Permalink to this definition">¶</a></dt>
 <dd><p>Role is a namespaced, logical grouping of PolicyRules that can be referenced as a unit by a
 RoleBinding.</p>
 <dl class="method">
@@ -228,7 +228,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.rbac.v1.RoleBinding">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.rbac.v1.</code><code class="descname">RoleBinding</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>role_ref=None</em>, <em>subjects=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1.RoleBinding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.rbac.v1.</code><code class="descname">RoleBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>metadata=None</em>, <em>role_ref=None</em>, <em>subjects=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1.RoleBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>RoleBinding references a role, but does not contain it.  It can reference a Role in the same
 namespace or a ClusterRole in the global namespace. It adds who information via Subjects and
 namespace information by which namespace it exists in.  RoleBindings in a given namespace only
@@ -275,7 +275,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.rbac.v1.RoleBindingList">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.rbac.v1.</code><code class="descname">RoleBindingList</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>items=None</em>, <em>metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1.RoleBindingList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.rbac.v1.</code><code class="descname">RoleBindingList</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>items=None</em>, <em>metadata=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1.RoleBindingList" title="Permalink to this definition">¶</a></dt>
 <dd><p>RoleBindingList is a collection of RoleBindings</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.rbac.v1.RoleBindingList.translate_output_property">
@@ -319,7 +319,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.rbac.v1.RoleList">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.rbac.v1.</code><code class="descname">RoleList</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>items=None</em>, <em>metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1.RoleList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.rbac.v1.</code><code class="descname">RoleList</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>items=None</em>, <em>metadata=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.rbac.v1.RoleList" title="Permalink to this definition">¶</a></dt>
 <dd><p>RoleList is a collection of Roles</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.rbac.v1.RoleList.translate_output_property">

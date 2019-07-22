@@ -4,10 +4,10 @@
 <div class="section" id="bigquery">
 <h1>bigquery<a class="headerlink" href="#bigquery" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gcp">Terraform Provider</a> distributed under
+<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google">Terraform Provider</a> distributed under
 <a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
 <a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
-anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gcp/issues">terraform-providers/terraform-provider-gcp repo</a>.</div></blockquote>
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_gcp.bigquery"></span><dl class="class">
 <dt id="pulumi_gcp.bigquery.Dataset">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.bigquery.</code><code class="descname">Dataset</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>accesses=None</em>, <em>dataset_id=None</em>, <em>default_partition_expiration_ms=None</em>, <em>default_table_expiration_ms=None</em>, <em>delete_contents_on_destroy=None</em>, <em>description=None</em>, <em>friendly_name=None</em>, <em>labels=None</em>, <em>location=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset" title="Permalink to this definition">¶</a></dt>
@@ -181,7 +181,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.bigquery.Table">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.bigquery.</code><code class="descname">Table</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dataset_id=None</em>, <em>description=None</em>, <em>expiration_time=None</em>, <em>friendly_name=None</em>, <em>labels=None</em>, <em>project=None</em>, <em>schema=None</em>, <em>table_id=None</em>, <em>time_partitioning=None</em>, <em>view=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Table" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.bigquery.</code><code class="descname">Table</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dataset_id=None</em>, <em>description=None</em>, <em>expiration_time=None</em>, <em>external_data_configuration=None</em>, <em>friendly_name=None</em>, <em>labels=None</em>, <em>project=None</em>, <em>schema=None</em>, <em>table_id=None</em>, <em>time_partitioning=None</em>, <em>view=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a table resource in a dataset for Google BigQuery. For more information see
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/">the official documentation</a> and
 <a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/tables">API</a>.</p>
@@ -199,11 +199,19 @@ Changing this forces a new resource to be created.</li>
 milliseconds since the epoch. If not present, the table will persist
 indefinitely. Expired tables will be deleted and their storage
 reclaimed.</li>
+<li><strong>external_data_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Describes the data format,
+location, and other properties of a table stored outside of BigQuery.
+By defining these properties, the data source can then be queried as
+if it were a standard BigQuery table. Structure is documented below.</li>
 <li><strong>friendly_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A descriptive name for the table.</li>
 <li><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of labels to assign to the resource.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</li>
-<li><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A JSON schema for the table.</li>
+<li><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A JSON schema for the table. Schema is required
+for CSV and JSON formats and is disallowed for Google Cloud
+Bigtable, Cloud Datastore backups, and Avro formats when using
+external tables. For more information see the
+<a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#resource">BigQuery API documentation</a>.</li>
 <li><strong>table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique ID for the resource.
 Changing this forces a new resource to be created.</li>
 <li><strong>time_partitioning</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – If specified, configures time-based
@@ -249,6 +257,15 @@ Changing this forces a new resource to be created.</p>
 milliseconds since the epoch. If not present, the table will persist
 indefinitely. Expired tables will be deleted and their storage
 reclaimed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigquery.Table.external_data_configuration">
+<code class="descname">external_data_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.external_data_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Describes the data format,
+location, and other properties of a table stored outside of BigQuery.
+By defining these properties, the data source can then be queried as
+if it were a standard BigQuery table. Structure is documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -303,7 +320,11 @@ is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigquery.Table.schema">
 <code class="descname">schema</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigquery.Table.schema" title="Permalink to this definition">¶</a></dt>
-<dd><p>A JSON schema for the table.</p>
+<dd><p>A JSON schema for the table. Schema is required
+for CSV and JSON formats and is disallowed for Google Cloud
+Bigtable, Cloud Datastore backups, and Avro formats when using
+external tables. For more information see the
+<a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#resource">BigQuery API documentation</a>.</p>
 </dd></dl>
 
 <dl class="attribute">

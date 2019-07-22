@@ -5,7 +5,7 @@
 <span id="v1beta1"></span><h1>v1beta1<a class="headerlink" href="#module-pulumi_kubernetes.events.v1beta1" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_kubernetes.events.v1beta1.Event">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.events.v1beta1.</code><code class="descname">Event</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>action=None</em>, <em>deprecated_count=None</em>, <em>deprecated_first_timestamp=None</em>, <em>deprecated_last_timestamp=None</em>, <em>deprecated_source=None</em>, <em>event_time=None</em>, <em>metadata=None</em>, <em>note=None</em>, <em>reason=None</em>, <em>regarding=None</em>, <em>related=None</em>, <em>reporting_controller=None</em>, <em>reporting_instance=None</em>, <em>series=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.events.v1beta1.Event" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.events.v1beta1.</code><code class="descname">Event</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action=None</em>, <em>deprecated_count=None</em>, <em>deprecated_first_timestamp=None</em>, <em>deprecated_last_timestamp=None</em>, <em>deprecated_source=None</em>, <em>event_time=None</em>, <em>metadata=None</em>, <em>note=None</em>, <em>reason=None</em>, <em>regarding=None</em>, <em>related=None</em>, <em>reporting_controller=None</em>, <em>reporting_instance=None</em>, <em>series=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.events.v1beta1.Event" title="Permalink to this definition">¶</a></dt>
 <dd><p>Event is a report of an event somewhere in the cluster. It generally denotes some state change
 in the system.</p>
 <dl class="method">
@@ -50,7 +50,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.events.v1beta1.EventList">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.events.v1beta1.</code><code class="descname">EventList</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>items=None</em>, <em>metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.events.v1beta1.EventList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.events.v1beta1.</code><code class="descname">EventList</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>items=None</em>, <em>metadata=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.events.v1beta1.EventList" title="Permalink to this definition">¶</a></dt>
 <dd><p>EventList is a list of Event objects.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.events.v1beta1.EventList.translate_output_property">
