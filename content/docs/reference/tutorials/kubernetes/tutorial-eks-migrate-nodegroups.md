@@ -52,13 +52,13 @@ original node group from Kubernetes and AWS.
 
 1.  Install the dependencies.
 
-    ```
+    ```bash
     $ npm install
     ```
 
 1.  Create a new Pulumi [stack][stack] named `dev`.
 
-    ```
+    ```bash
     $ pulumi stack init dev
     ```
 
@@ -112,7 +112,7 @@ $ pulumi stack output nginxServiceUrl
 
 Example: 
 
-```
+```bash
 $ pulumi stack output nginxServiceUrl
 
 a3a6ae14f9e6d11e99ea4023e81f316e-1155138699.us-east-2.elb.amazonaws.com
