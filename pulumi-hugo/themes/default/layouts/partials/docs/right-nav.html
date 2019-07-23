@@ -1,0 +1,32 @@
+{{ with .File }}
+    <ul class="p-0 list-none">
+        <!-- Only show "Edit this Page" for pages that are not generated. -->
+        {{ $isCLICommand := hasPrefix .Path "docs/reference/cli/" }}
+        {{ $isNodePackage := hasPrefix .Path "docs/reference/pkg/nodejs/pulumi" }}
+        {{ $isPythonPackage := hasPrefix .Path "docs/reference/pkg/python/pulumi" }}
+        {{ if not (or $isCLICommand $isNodePackage $isPythonPackage) }}
+            <li>
+                <a class="text-gray-600 hover:text-blue-700 text-xs" href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
+                    <i class="fas fa-edit mr-2"></i>
+                    Edit this Page
+                </a>
+            </li>
+        {{ end }}
+
+        <li>
+            <a class="text-gray-600 hover:text-blue-700 text-xs" href="{{ $.Site.Params.repositoryURL }}/issues/new?body=File: [{{ .Path }}]({{ $.Page.Permalink }})" target="_blank">
+                <i class="far fa-check-square mr-2"></i>
+                Request a Change
+            </a>
+        </li>
+    </ul>
+    {{ $isDocsHome := eq $.Page.RelPermalink "/docs/" }}
+    {{ if not $isDocsHome }}
+        <div class="mini-toc border-b border-gray-200 mt-2 mb-8 py-6">
+            <h4 class="text-gray-600 uppercase tracking-wide font-bold text-sm lg:text-xs">On This Page</h4>
+            <ul class="p-0 list-none">
+                {{/* This will be populated dynamically with all H2s on the page; see static/js/main.js */}}
+            </ul>
+        </div>
+    {{ end }}
+{{ end }}
