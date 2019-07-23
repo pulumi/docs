@@ -25,7 +25,7 @@ over to it with zero downtime using code and `kubectl`.
 
 [View the full tutorial and code.][eks-nodegroup-tutorial]
 
-<p align="center"><img src="eks-migrate-nodegroups.svg" width="650"/></p>
+![](eks-migrate-nodegroups.svg)
 
 ## Create an EKS cluster and Deploy the Workload
 
@@ -45,7 +45,7 @@ to specifically target the `2xlarge` node group.
 Once the workload is deployed, we can validate it is up and running by accessing
 the `echoserver` behind the NGINX endpoint using `curl`:
 
-<img style="max-width:none; height: 350px; width: 850px;" src="k8s-cluster-workload.gif"/>
+![](k8s-cluster-workload.gif)
 
 > **Note**: You can open the <a href="./k8s-cluster-workload.gif" target="_blank">GIF</a> for a maximized view.
 
@@ -64,7 +64,7 @@ group in the next steps, we'll also actively load test the endpoint of the
 
 Create the new, `4xlarge` node group by defining it and running an update.
 
-<p align="center"><img src="ng-4xlarge.svg" width="650"/></p>
+![](ng-4xlarge.svg)
 
 ### Step 2: Migrate NGINX to the `4xlarge` node group.
 
@@ -80,13 +80,12 @@ NGINX is able to successfully migrate across node groups because it is
 configured with HA settings, [spread-type scheduling predicates][tutorial-ha-refs],
 and can gracefully terminate within the Kubernetes [Pod lifecycle][pod-lifecycle].
 
-<p align="center"><img src="target-ng-4xlarge.svg" width="650"/></p>
+![](target-ng-4xlarge.svg)
 
 ### Step 3: Decommission the `2xlarge` node group.
 
 Once NGINX has been completely migrated to the `4xlarge` node group, we can
 begin decommissioning the original `2xlarge` node group which is no longer in use.
-longer in use from Kubernetes and AWS.
 
 Decommissioning the node group involves:
 
@@ -121,12 +120,12 @@ done
 Scale down the node group Auto Scaling Group completely by setting
 the `desiredCapacity: 0` and running an update:
 
-<p align="center"><img src="scale-down-ng-2xlarge.svg" width="650"/></p>
+![](scale-down-ng-2xlarge.svg)
 
 Once the Auto Scaling Group has scaled down, we can delete the node group from
 AWS and the Pulumi program:
 
-<p align="center"><img src="remove-ng-2xlarge.svg" width="650"/></p>
+![](remove-ng-2xlarge.svg)
 
 ## Summary
 
@@ -137,7 +136,7 @@ migrated NGINX over to it.
 We achieved this node group migration with zero downtime to our apps during
 load testing and decommissioning of the original node group.
 
-<img style="max-width:none; height: 350px; width: 850px;" src="eks-migration.gif"/>
+![](eks-migration.gif)
 
 > **Note**: You can open the <a href="./eks-migration.gif" target="_blank">GIF</a> for a maximized view.
 
