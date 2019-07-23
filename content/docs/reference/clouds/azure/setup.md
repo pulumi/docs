@@ -53,7 +53,11 @@ subscription, by simply setting your subscription ID to the `id` output from `az
 
 ```bash
 $ az account list
-# pick out the <id> from the list
+```
+
+Pick out the `<id>` from the list and run:
+
+```bash
 $ az account set --subscription=<id>
 ```
 
@@ -107,13 +111,13 @@ For example, a common Service Principal as displayed by the Azure CLI looks some
 
 You also need to obtain a Subscription ID. To retrieve your current Subscription ID, you can use:
 
-```
+```bash
 $ az account show --query id -o tsv
 ```
 
 To list all available subscriptions, you can use:
 
-```
+```bash
 $ az account list --query '[].{subscriptionName:name,subscriptionId:id}' -o tsv
 ```
 
