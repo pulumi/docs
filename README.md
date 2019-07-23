@@ -32,9 +32,9 @@ The website is powered by [Hugo](https://gohugo.io).
 
 #### macOS
 
-The following commands use the package manager, [Homebrew](https://brew.sh/). 
+The following commands use the package manager, [Homebrew](https://brew.sh/).
 
-##### Install Hugo 
+##### Install Hugo
 
 If you already have Hugo installed, uninstall it:
 
@@ -145,3 +145,5 @@ Examples of other sites and their docs as inspiration:
 - http://developer.mailchimp.com/documentation/mailchimp/
 - http://ionicframework.com/docs/
 - https://www.twilio.com/docs/
+
+## Some trivial change
