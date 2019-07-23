@@ -28,7 +28,7 @@ original node group from Kubernetes and AWS.
 ## Table of Contents
 
 - [Initialize the Pulumi Project](#initialize-the-pulumi-project)
-- [Create an EKS Cluster & Deploy Workload](#create-an-eks-cluster-deploy-workload)
+- [Create an EKS Cluster and Deploy the Workload](#create-an-eks-cluster-and-deploy-the-workload)
   * [Access the Workload](#access-the-workload)
 - [...But First, Let's Talk About Resource Updates](#but-first-let-s-talk-about-resource-updates)
   * [Pulumi's Approach: `create-before-delete`](#pulumi-s-approach-create-before-delete)
@@ -71,7 +71,7 @@ original node group from Kubernetes and AWS.
     $ pulumi config set aws:region us-west-2
     ```
 
-## Create an EKS Cluster & Deploy Workload
+## Create an EKS cluster and Deploy the Workload
 
 Create the cluster and deploy the workload by running an update:
 
@@ -79,7 +79,7 @@ Create the cluster and deploy the workload by running an update:
 $ pulumi up
 ```
 
-The update will create the following resources in AWS:
+The update takes ~15 minutes and will create the following resources in AWS:
 
 * A VPC in our region, with public & private subnets across all of the region's availability zones.
 * The IAM Roles & Instance Profiles for each node group.
@@ -112,7 +112,7 @@ $ pulumi stack output nginxServiceUrl
 
 Example: 
 
-```bash
+```
 $ pulumi stack output nginxServiceUrl
 
 a3a6ae14f9e6d11e99ea4023e81f316e-1155138699.us-east-2.elb.amazonaws.com
@@ -309,7 +309,7 @@ for overall network performance and throughput on your client.
 ### Step 1: Create the new `4xlarge` Node Group
 
 Next, we'll create a new node group in AWS using Pulumi for the `4xlarge` node
-group. This is as simple as defining a new node group at the end of our program:
+group. This is as simple as defining a new node group at the end of `index.ts`:
 
 ```typescript
 // Create a 4xlarge node group of c5.4xlarge workers. This new node group will
@@ -347,7 +347,7 @@ This change updates the NGINX Deployment spec to require the use of
 
 <p align="center"><img src="/images/docs/reference/kubernetes/target-ng-4xlarge.svg" width="650"/></p>
 
-Edit the `nodeSelectorTermValues` to use `c5.4xlarge` in the Pulumi program, and run an update:
+Edit `index.ts` by setting `nodeSelectorTermValues` to `c5.4xlarge`, and run an update:
 
 ```bash
 $ pulumi up
@@ -369,6 +369,9 @@ noticing that the Pods are in fact running on updated nodes.
 $ kubectl get pods --all-namespaces -o wide --show-labels -l app=nginx-ing-cntlr
 $ kubectl get nodes -o wide --show-labels -l beta.kubernetes.io/instance-type=c5.4xlarge
 ```
+
+> Note: It may take a couple of minutes for the Pods to fully migrate over, but
+> it will do so with zero downtime as demonstrated in the load testing.
 
 > Note: You should also notice a linear up-tick in **requests per second** in the
 load testing results, due to the more capable `c5.4xlarge` worker instances
@@ -412,7 +415,7 @@ Scale down the node group Auto Scaling Group completely:
 
 <p align="center"><img src="/images/docs/reference/kubernetes/scale-down-ng-2xlarge.svg" width="650"/></p>
 
-Edit the `desiredCapacity` to `0` for the `2xlarge` node group in the Pulumi program, and run an update:
+Edit `index.ts` by setting the `desiredCapacity` to `0` for the `2xlarge` node group, and run an update:
 
 ```bash
 $ pulumi up
@@ -422,7 +425,7 @@ Once the Auto Scaling Group has scaled down, we can delete the node group from A
 
 <p align="center"><img src="/images/docs/reference/kubernetes/remove-ng-2xlarge.svg" width="650"/></p>
 
-Delete the snippet above from the Pulumi program, and run an update:
+Delete the snippet above from `index.ts`, and run an update:
 
 ```bash
 $ pulumi up
