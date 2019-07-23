@@ -40,6 +40,9 @@ $(function() {
                 // Include all initial lines that start with "$ " and discard subsequent lines after
                 // a line is reached that doesn't start with "$ ".
                 if (line.startsWith("$ ")) {
+                    // Removing trailing comments.
+                    line = line.replace(/\s+#.*$/m, "")
+
                     results.push(line.substring(2));
                 } else {
                     break;
