@@ -68,7 +68,7 @@ This will have created the `~/.aws/credentials` file and populated it with the e
 
 It is possible to create this file by hand.  For example:
 
-```
+```ini
 [default]
 aws_access_key_id = <YOUR_ACCESS_KEY_ID>
 aws_secret_access_key = <YOUR_SECRET_ACCESS_KEY>
@@ -76,7 +76,7 @@ aws_secret_access_key = <YOUR_SECRET_ACCESS_KEY>
 
 If you want to specify multiple profiles, those are listed in different sections:
 
-```
+```ini
 [default]
 aws_access_key_id = <YOUR_DEFAULT_ACCESS_KEY_ID>
 aws_secret_access_key = <YOUR_DEFAULT_SECRET_ACCESS_KEY>
