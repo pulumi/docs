@@ -9,7 +9,7 @@ date: 2019-07-23T15:35:24-07:00
 
 # Draft posts are visible in development, but excluded from production builds.
 # Set this property to `false` before submitting your post for review.
-draft: true
+draft: false
 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
