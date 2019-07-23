@@ -1,0 +1,8 @@
+[build]
+publish = "public"
+
+[context.deploy-preview]
+command = "hugo --buildFuture --baseURL $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.55.4"
