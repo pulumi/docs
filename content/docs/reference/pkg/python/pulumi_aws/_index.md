@@ -83,6 +83,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="organizations/">organizations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pinpoint/">pinpoint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pricing/">pricing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quicksight/">quicksight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ram/">ram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rds/">rds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="redshift/">redshift</a></li>

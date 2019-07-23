@@ -43,7 +43,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with <code class="docutils literal notranslate"><span class="pre">release_label</span></code> 4.8.0 or greater</li>
 <li><strong>service_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM role that will be assumed by the Amazon EMR service to access AWS resources</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – list of tags to apply to the EMR Cluster</li>
-<li><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Switch on/off termination protection (default is off)</li>
+<li><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Switch on/off termination protection (default is <code class="docutils literal notranslate"><span class="pre">false</span></code>, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>visible_to_all_users</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default <code class="docutils literal notranslate"><span class="pre">true</span></code></li>
 </ul>
 </td>
@@ -202,7 +202,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_aws.emr.Cluster.termination_protection">
 <code class="descname">termination_protection</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.Cluster.termination_protection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Switch on/off termination protection (default is off)</p>
+<dd><p>Switch on/off termination protection (default is <code class="docutils literal notranslate"><span class="pre">false</span></code>, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">

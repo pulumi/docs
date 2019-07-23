@@ -5,7 +5,7 @@
 <span id="v1beta1"></span><h1>v1beta1<a class="headerlink" href="#module-pulumi_kubernetes.coordination.v1beta1" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_kubernetes.coordination.v1beta1.Lease">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.coordination.v1beta1.</code><code class="descname">Lease</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>spec=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.coordination.v1beta1.Lease" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.coordination.v1beta1.</code><code class="descname">Lease</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.coordination.v1beta1.Lease" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lease defines a lease concept.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.coordination.v1beta1.Lease.translate_output_property">
@@ -49,7 +49,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.coordination.v1beta1.LeaseList">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.coordination.v1beta1.</code><code class="descname">LeaseList</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>items=None</em>, <em>metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.coordination.v1beta1.LeaseList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.coordination.v1beta1.</code><code class="descname">LeaseList</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>items=None</em>, <em>metadata=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.coordination.v1beta1.LeaseList" title="Permalink to this definition">¶</a></dt>
 <dd><p>LeaseList is a list of Lease objects.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.coordination.v1beta1.LeaseList.translate_output_property">

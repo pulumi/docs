@@ -7,10 +7,10 @@ title: Module appservice
 
 <a href="../">@pulumi/azure</a> &gt; appservice
 
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-azure)
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm)
 > distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
 > first check the [`pulumi/pulumi-azure` repo](https://github.com/pulumi/pulumi-azure/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-azure` repo](https://github.com/terraform-providers/terraform-provider-azure/issues).
+> please consult the source [`terraform-providers/terraform-provider-azurerm` repo](https://github.com/terraform-providers/terraform-provider-azurerm/issues).
 
 
 
@@ -46,13 +46,17 @@ title: Module appservice
 <li><a href="#AppServiceArgs">interface AppServiceArgs</a></li>
 <li><a href="#AppServiceState">interface AppServiceState</a></li>
 <li><a href="#ArchiveFunctionAppArgs">interface ArchiveFunctionAppArgs</a></li>
+<li><a href="#BindingSettings">interface BindingSettings</a></li>
 <li><a href="#CallbackArgs">interface CallbackArgs</a></li>
 <li><a href="#CallbackFunctionAppArgs">interface CallbackFunctionAppArgs</a></li>
+<li><a href="#CallbackFunctionArgs">interface CallbackFunctionArgs</a></li>
 <li><a href="#Context">interface Context</a></li>
 <li><a href="#CustomHostnameBindingArgs">interface CustomHostnameBindingArgs</a></li>
 <li><a href="#CustomHostnameBindingState">interface CustomHostnameBindingState</a></li>
 <li><a href="#FunctionAppArgs">interface FunctionAppArgs</a></li>
 <li><a href="#FunctionAppState">interface FunctionAppState</a></li>
+<li><a href="#FunctionHostKeys">interface FunctionHostKeys</a></li>
+<li><a href="#FunctionKeys">interface FunctionKeys</a></li>
 <li><a href="#GetAppServiceArgs">interface GetAppServiceArgs</a></li>
 <li><a href="#GetAppServicePlanArgs">interface GetAppServicePlanArgs</a></li>
 <li><a href="#GetAppServicePlanResult">interface GetAppServicePlanResult</a></li>
@@ -62,7 +66,10 @@ title: Module appservice
 <li><a href="#HttpFunctionArgs">interface HttpFunctionArgs</a></li>
 <li><a href="#HttpHostExtensions">interface HttpHostExtensions</a></li>
 <li><a href="#HttpHostSettings">interface HttpHostSettings</a></li>
+<li><a href="#InputBindingDefinition">interface InputBindingDefinition</a></li>
+<li><a href="#InputOutputsArgs">interface InputOutputsArgs</a></li>
 <li><a href="#MultiCallbackFunctionAppArgs">interface MultiCallbackFunctionAppArgs</a></li>
+<li><a href="#OutputBindingDefinition">interface OutputBindingDefinition</a></li>
 <li><a href="#PlanArgs">interface PlanArgs</a></li>
 <li><a href="#PlanState">interface PlanState</a></li>
 <li><a href="#ScheduleArgs">interface ScheduleArgs</a></li>
@@ -76,20 +83,24 @@ title: Module appservice
 <li><a href="#Callback">type Callback</a></li>
 <li><a href="#CallbackFactory">type CallbackFactory</a></li>
 <li><a href="#DayOfWeek">type DayOfWeek</a></li>
+<li><a href="#ExtendedHttpResponse">type ExtendedHttpResponse</a></li>
+<li><a href="#FunctionDefaultResponse">type FunctionDefaultResponse</a></li>
 <li><a href="#HttpRequest">type HttpRequest</a></li>
 <li><a href="#HttpResponse">type HttpResponse</a></li>
+<li><a href="#InputBindingSettings">type InputBindingSettings</a></li>
 <li><a href="#Month">type Month</a></li>
+<li><a href="#OutputBindingSettings">type OutputBindingSettings</a></li>
 <li><a href="#Result">type Result</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/activeSlot.ts">appservice/activeSlot.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts">appservice/appService.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/customHostnameBinding.ts">appservice/customHostnameBinding.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts">appservice/functionApp.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts">appservice/getAppService.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts">appservice/getAppServicePlan.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts">appservice/plan.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts">appservice/slot.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts">appservice/zMixins.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts">appservice/zMixins_http.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts">appservice/zMixins_timer.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/activeSlot.ts">appservice/activeSlot.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts">appservice/appService.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/customHostnameBinding.ts">appservice/customHostnameBinding.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts">appservice/functionApp.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts">appservice/getAppService.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts">appservice/getAppServicePlan.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts">appservice/plan.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts">appservice/slot.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts">appservice/zMixins.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts">appservice/zMixins_http.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts">appservice/zMixins_timer.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="ActiveSlot">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/activeSlot.ts#L33">class <b>ActiveSlot</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/activeSlot.ts#L33">class <b>ActiveSlot</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -122,7 +133,7 @@ const testActiveSlot = new azure.appservice.ActiveSlot("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ActiveSlot-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/activeSlot.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/activeSlot.ts#L71"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -139,7 +150,7 @@ Create a ActiveSlot resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlot-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/activeSlot.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/activeSlot.ts#L42">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -153,7 +164,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlot-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -163,7 +174,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlot-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/activeSlot.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/activeSlot.ts#L53">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -177,7 +188,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlot-appServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/activeSlot.ts#L63">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/activeSlot.ts#L63">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -188,7 +199,7 @@ The name of the App Service within which the Slot exists.  Changing this forces 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlot-appServiceSlotName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/activeSlot.ts#L67">property <b>appServiceSlotName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/activeSlot.ts#L67">property <b>appServiceSlotName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServiceSlotName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -199,7 +210,7 @@ The name of the App Service Slot which should be promoted to the Production Slot
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlot-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -211,7 +222,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlot-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/activeSlot.ts#L71">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/activeSlot.ts#L71">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -222,7 +233,7 @@ The name of the resource group in which the App Service exists. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlot-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -235,12 +246,17 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AppService">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L7">class <b>AppService</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L10">class <b>AppService</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service.html.markdown.
+
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AppService-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L113"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L116"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -257,7 +273,7 @@ Create a AppService resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L16">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -271,7 +287,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -281,7 +297,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L27">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -295,7 +311,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-appServicePlanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L37">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L40">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServicePlanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -306,7 +322,7 @@ The ID of the App Service Plan within which to create this App Service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L41">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L44">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -317,7 +333,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-authSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L45">property <b>authSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L48">property <b>authSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>authSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -362,7 +378,7 @@ A `auth_settings` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L49">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L52">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clientAffinityEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -373,7 +389,7 @@ Should the App Service send session affinity cookies, which route client request
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-clientCertEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L53">property <b>clientCertEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L56">property <b>clientCertEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clientCertEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -384,7 +400,7 @@ Does the App Service require client certificates for incoming requests? Defaults
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L57">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L60">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -399,7 +415,7 @@ One or more `connection_string` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-defaultSiteHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L61">property <b>defaultSiteHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L64">property <b>defaultSiteHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultSiteHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -410,7 +426,7 @@ The Default Hostname associated with the App Service - such as `mysite.azurewebs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L65">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L68">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -421,7 +437,7 @@ Is the App Service Enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L69">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L72">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>httpsOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -432,7 +448,7 @@ Can the App Service only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -444,7 +460,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L73">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L76">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -459,7 +475,7 @@ A Managed Service Identity block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L77">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L80">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -470,7 +486,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-logs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L81">property <b>logs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L84">property <b>logs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>logs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -489,7 +505,7 @@ A `logs` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L88">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -500,7 +516,7 @@ Specifies the name of the App Service. Changing this forces a new resource to be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-outboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L89">property <b>outboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L92">property <b>outboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>outboundIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -511,7 +527,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-possibleOutboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L93">property <b>possibleOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L96">property <b>possibleOutboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>possibleOutboundIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -522,7 +538,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L97">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L100">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -533,7 +549,7 @@ The name of the resource group in which to create the App Service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L101">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L104">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -575,7 +591,7 @@ A `site_config` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-siteCredential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L105">property <b>siteCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L108">property <b>siteCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -589,7 +605,7 @@ A `site_credential` block as defined below, which contains the site-level creden
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-sourceControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L109">property <b>sourceControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L112">property <b>sourceControl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sourceControl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -603,7 +619,7 @@ A `source_control` block as defined below, which contains the Source Control inf
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L113">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L116">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -614,7 +630,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppService-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -627,7 +643,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ArchiveFunctionApp">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L620">class <b>ArchiveFunctionApp</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L692">class <b>ArchiveFunctionApp</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#PackagedFunctionApp'>PackagedFunctionApp</a></pre>
@@ -639,7 +655,7 @@ into the Function App.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ArchiveFunctionApp-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L620"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L692"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -649,7 +665,7 @@ into the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionApp-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -659,7 +675,7 @@ into the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionApp-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L233">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L258">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -673,7 +689,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionApp-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L248">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L273">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -683,7 +699,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionApp-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L575">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L647">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>account: storageForTypesOnly.Account;</pre>
@@ -694,7 +710,7 @@ Storage account where the FunctionApp's zipbBlob is uploaded to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionApp-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L579">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L651">property <b>container</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>container: storageForTypesOnly.Container;</pre>
@@ -705,7 +721,7 @@ Storage container where the FunctionApp's zipbBlob is uploaded to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionApp-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L595">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L667">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -716,7 +732,7 @@ Root HTTP endpoint of the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionApp-functionApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L591">property <b>functionApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L663">property <b>functionApp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>functionApp: appservice.FunctionApp;</pre>
@@ -727,7 +743,7 @@ The Function App which contains the functions from the archive.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionApp-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L587">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L659">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>plan: appservice.Plan;</pre>
@@ -738,7 +754,7 @@ The plan this Function App runs under.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionApp-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -750,7 +766,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionApp-zipBlob">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L583">property <b>zipBlob</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L655">property <b>zipBlob</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zipBlob: storageForTypesOnly.ZipBlob;</pre>
@@ -762,10 +778,10 @@ The blob containing all the code for this FunctionApp.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CallbackFunctionApp">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L520">class <b>CallbackFunctionApp</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L592">class <b>CallbackFunctionApp</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#FunctionApp'>FunctionApp</a></pre>
+<pre class="highlight"><span class='kd'>extends</span> FunctionApp</pre>
 {{% md %}}
 
 A CallbackFunctionApp is a special type of azure.appservice.FunctionApp that can be created out
@@ -776,7 +792,7 @@ details on this process.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L540"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L612"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -786,12 +802,12 @@ details on this process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L91">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L91">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FunctionAppState'>FunctionAppState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#FunctionApp'>FunctionApp</a></pre>
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FunctionAppState'>FunctionAppState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): FunctionApp</pre>
 
 
 Get an existing FunctionApp resource's state with the given name, ID, and optional extra
@@ -799,8 +815,34 @@ properties used to qualify the lookup.
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="CallbackFunctionApp-getFunctionKeys">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L832">method <b>getFunctionKeys</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>getFunctionKeys(functionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionKeys'>FunctionKeys</a>&gt;</pre>
+
+
+Retrieve the keys associated with the given Function.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CallbackFunctionApp-getHostKeys">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L827">method <b>getHostKeys</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>getHostKeys(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionHostKeys'>FunctionHostKeys</a>&gt;</pre>
+
+
+Retrieve the keys associated with the Function App.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -810,7 +852,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L102">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L102">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -824,7 +866,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L524">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L596">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>account: storageForTypesOnly.Account;</pre>
@@ -835,7 +877,7 @@ Storage account where the FunctionApp's zipBlob is uploaded to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-appServicePlanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L112">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L112">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServicePlanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -846,7 +888,7 @@ The ID of the App Service Plan within which to create this Function App. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L116">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L116">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -857,7 +899,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L120">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L120">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clientAffinityEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -868,7 +910,7 @@ Should the Function App send session affinity cookies, which route client reques
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L124">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L124">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -883,7 +925,7 @@ An `connection_string` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L528">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L600">property <b>container</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>container: storageForTypesOnly.Container;</pre>
@@ -894,7 +936,7 @@ Storage container where the FunctionApp's zipBlob is uploaded to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-defaultHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L128">property <b>defaultHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L128">property <b>defaultHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -905,7 +947,7 @@ The default hostname associated with the Function App - such as `mysite.azureweb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-enableBuiltinLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L132">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L132">property <b>enableBuiltinLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enableBuiltinLogging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -916,7 +958,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L136">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L136">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -927,7 +969,7 @@ Is the Function App enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L540">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L612">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -938,7 +980,7 @@ Root HTTP endpoint of the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L140">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L140">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>httpsOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -949,7 +991,7 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -961,7 +1003,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L144">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L144">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -976,7 +1018,7 @@ An `identity` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L148">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L148">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -987,7 +1029,7 @@ The Function App kind - such as `functionapp,linux,container`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L152">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L152">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -998,7 +1040,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L156">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1009,7 +1051,7 @@ The name of the Connection String.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-outboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L160">property <b>outboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L160">property <b>outboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>outboundIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1020,7 +1062,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L536">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L608">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>plan: appservice.Plan;</pre>
@@ -1031,7 +1073,7 @@ The plan this Function App runs under.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-possibleOutboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L164">property <b>possibleOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L164">property <b>possibleOutboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>possibleOutboundIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1042,7 +1084,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L168">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L168">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1053,7 +1095,7 @@ The name of the resource group in which to create the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L172">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L172">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1069,7 +1111,7 @@ A `site_config` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-siteCredential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L176">property <b>siteCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L176">property <b>siteCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1083,7 +1125,7 @@ A `site_credential` block as defined below, which contains the site-level creden
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-storageConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L180">property <b>storageConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L180">property <b>storageConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>storageConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1094,7 +1136,7 @@ The connection string of the backend storage account which will be used by this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L184">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L184">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1105,7 +1147,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1117,7 +1159,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L188">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L188">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1128,7 +1170,7 @@ The runtime version associated with the Function App. Defaults to `~1`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionApp-zipBlob">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L532">property <b>zipBlob</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L604">property <b>zipBlob</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zipBlob: storageForTypesOnly.ZipBlob;</pre>
@@ -1140,7 +1182,7 @@ The blob containing all the code for this FunctionApp.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomHostnameBinding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/customHostnameBinding.ts#L51">class <b>CustomHostnameBinding</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/customHostnameBinding.ts#L51">class <b>CustomHostnameBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1191,7 +1233,7 @@ const testCustomHostnameBinding = new azure.appservice.CustomHostnameBinding("te
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CustomHostnameBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/customHostnameBinding.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/customHostnameBinding.ts#L89"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1208,7 +1250,7 @@ Create a CustomHostnameBinding resource with the given unique name, arguments, a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/customHostnameBinding.ts#L60">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/customHostnameBinding.ts#L60">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1222,7 +1264,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1232,7 +1274,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/customHostnameBinding.ts#L71">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/customHostnameBinding.ts#L71">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1246,7 +1288,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBinding-appServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/customHostnameBinding.ts#L81">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/customHostnameBinding.ts#L81">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1257,7 +1299,7 @@ The name of the App Service in which to add the Custom Hostname Binding. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBinding-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/customHostnameBinding.ts#L85">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/customHostnameBinding.ts#L85">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1268,7 +1310,7 @@ Specifies the Custom Hostname to use for the App Service, example `www.example.c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1280,7 +1322,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBinding-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/customHostnameBinding.ts#L89">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/customHostnameBinding.ts#L89">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1291,7 +1333,7 @@ The name of the resource group in which the App Service exists. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1304,7 +1346,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventSubscription">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L666">class <b>EventSubscription</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L738">class <b>EventSubscription</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
@@ -1315,7 +1357,7 @@ azure resource an an FunctionApp that will be triggered when something happens t
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L667"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L739"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1325,7 +1367,7 @@ azure resource an an FunctionApp that will be triggered when something happens t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1335,7 +1377,7 @@ azure resource an an FunctionApp that will be triggered when something happens t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L233">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L258">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1349,7 +1391,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventSubscription-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L248">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L273">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1359,7 +1401,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventSubscription-functionApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L667">property <b>functionApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L739">property <b>functionApp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;C, E, R&gt;;</pre>
@@ -1367,7 +1409,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1380,7 +1422,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Function">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L386">class <b>Function</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L457">class <b>Function</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1389,17 +1431,17 @@ Azure Function base class.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Function-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L405"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L476"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Function(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, bindings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt;, callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;C, E, R&gt;, appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Function(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, trigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#InputBindingDefinition'>InputBindingDefinition</a>&gt;, args: <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;C, E, R&gt;, settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;)</pre>
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L405">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L476">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</pre>
@@ -1410,7 +1452,7 @@ Application settings required by the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-bindings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L395">property <b>bindings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L466">property <b>bindings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>bindings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt;;</pre>
@@ -1421,7 +1463,7 @@ An array of function binding definitions.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L400">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L471">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;C, E, R&gt;;</pre>
@@ -1432,7 +1474,7 @@ Function callback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Function-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L390">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L461">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1444,7 +1486,7 @@ Function name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FunctionApp">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L82">class <b>FunctionApp</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L82">class <b>FunctionApp</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1526,7 +1568,7 @@ const testFunctionApp = new azure.appservice.FunctionApp("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FunctionApp-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L188"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L188"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1543,12 +1585,12 @@ Create a FunctionApp resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L91">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L91">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FunctionAppState'>FunctionAppState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#FunctionApp'>FunctionApp</a></pre>
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FunctionAppState'>FunctionAppState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): FunctionApp</pre>
 
 
 Get an existing FunctionApp resource's state with the given name, ID, and optional extra
@@ -1556,8 +1598,34 @@ properties used to qualify the lookup.
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="FunctionApp-getFunctionKeys">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L832">method <b>getFunctionKeys</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>getFunctionKeys(functionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionKeys'>FunctionKeys</a>&gt;</pre>
+
+
+Retrieve the keys associated with the given Function.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="FunctionApp-getHostKeys">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L827">method <b>getHostKeys</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{% md %}}
+
+<pre class="highlight"><span class='kd'></span>getHostKeys(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionHostKeys'>FunctionHostKeys</a>&gt;</pre>
+
+
+Retrieve the keys associated with the Function App.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="FunctionApp-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1567,7 +1635,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L102">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L102">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1581,7 +1649,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-appServicePlanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L112">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L112">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServicePlanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1592,7 +1660,7 @@ The ID of the App Service Plan within which to create this Function App. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L116">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L116">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1603,7 +1671,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L120">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L120">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clientAffinityEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1614,7 +1682,7 @@ Should the Function App send session affinity cookies, which route client reques
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L124">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L124">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1629,7 +1697,7 @@ An `connection_string` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-defaultHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L128">property <b>defaultHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L128">property <b>defaultHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1640,7 +1708,7 @@ The default hostname associated with the Function App - such as `mysite.azureweb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-enableBuiltinLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L132">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L132">property <b>enableBuiltinLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enableBuiltinLogging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1651,7 +1719,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L136">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L136">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1662,7 +1730,7 @@ Is the Function App enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L140">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L140">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>httpsOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1673,7 +1741,7 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1685,7 +1753,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L144">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L144">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1700,7 +1768,7 @@ An `identity` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L148">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L148">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1711,7 +1779,7 @@ The Function App kind - such as `functionapp,linux,container`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L152">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L152">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1722,7 +1790,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L156">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1733,7 +1801,7 @@ The name of the Connection String.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-outboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L160">property <b>outboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L160">property <b>outboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>outboundIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1744,7 +1812,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-possibleOutboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L164">property <b>possibleOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L164">property <b>possibleOutboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>possibleOutboundIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1755,7 +1823,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L168">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L168">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1766,7 +1834,7 @@ The name of the resource group in which to create the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L172">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L172">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1782,7 +1850,7 @@ A `site_config` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-siteCredential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L176">property <b>siteCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L176">property <b>siteCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1796,7 +1864,7 @@ A `site_credential` block as defined below, which contains the site-level creden
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-storageConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L180">property <b>storageConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L180">property <b>storageConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>storageConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1807,7 +1875,7 @@ The connection string of the backend storage account which will be used by this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L184">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L184">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1818,7 +1886,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1830,7 +1898,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionApp-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L188">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L188">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1842,10 +1910,10 @@ The runtime version associated with the Function App. Defaults to `~1`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HttpEventSubscription">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L93">class <b>HttpEventSubscription</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L101">class <b>HttpEventSubscription</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, HttpResponse&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
 {{% md %}}
 
 An Azure Function exposed via an HTTP endpoint that is implemented on top of a
@@ -1853,7 +1921,7 @@ JavaScript/TypeScript callback function.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HttpEventSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L105"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1863,7 +1931,7 @@ JavaScript/TypeScript callback function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1873,7 +1941,7 @@ JavaScript/TypeScript callback function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L233">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L258">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1887,7 +1955,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscription-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L248">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L273">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1897,15 +1965,15 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscription-functionApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L667">property <b>functionApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L739">property <b>functionApp</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, HttpResponse&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscription-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L97">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L105">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1916,7 +1984,7 @@ Endpoint where this FunctionApp can be invoked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1929,17 +1997,17 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HttpFunction">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L112">class <b>HttpFunction</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L120">class <b>HttpFunction</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#Function'>Function</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, HttpResponse&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#Function'>Function</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
 {{% md %}}
 
 Azure Function triggered by HTTP requests.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HttpFunction-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L112"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L120"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1949,7 +2017,7 @@ Azure Function triggered by HTTP requests.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpFunction-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L405">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L476">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</pre>
@@ -1960,7 +2028,7 @@ Application settings required by the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpFunction-bindings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L395">property <b>bindings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L466">property <b>bindings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>bindings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt;;</pre>
@@ -1971,10 +2039,10 @@ An array of function binding definitions.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpFunction-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L400">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L471">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, HttpResponse&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{% md %}}
 
 Function callback.
@@ -1982,7 +2050,7 @@ Function callback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpFunction-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L390">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L461">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1994,7 +2062,7 @@ Function name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MultiCallbackFunctionApp">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L636">class <b>MultiCallbackFunctionApp</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L708">class <b>MultiCallbackFunctionApp</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#PackagedFunctionApp'>PackagedFunctionApp</a></pre>
@@ -2008,7 +2076,7 @@ details on this process.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionApp-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L636"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L708"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2018,7 +2086,7 @@ details on this process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionApp-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2028,7 +2096,7 @@ details on this process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionApp-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L233">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L258">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2042,7 +2110,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionApp-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L248">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L273">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2052,7 +2120,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionApp-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L575">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L647">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>account: storageForTypesOnly.Account;</pre>
@@ -2063,7 +2131,7 @@ Storage account where the FunctionApp's zipbBlob is uploaded to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionApp-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L579">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L651">property <b>container</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>container: storageForTypesOnly.Container;</pre>
@@ -2074,7 +2142,7 @@ Storage container where the FunctionApp's zipbBlob is uploaded to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionApp-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L595">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L667">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2085,7 +2153,7 @@ Root HTTP endpoint of the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionApp-functionApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L591">property <b>functionApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L663">property <b>functionApp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>functionApp: appservice.FunctionApp;</pre>
@@ -2096,7 +2164,7 @@ The Function App which contains the functions from the archive.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionApp-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L587">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L659">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>plan: appservice.Plan;</pre>
@@ -2107,7 +2175,7 @@ The plan this Function App runs under.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionApp-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2119,7 +2187,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionApp-zipBlob">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L583">property <b>zipBlob</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L655">property <b>zipBlob</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zipBlob: storageForTypesOnly.ZipBlob;</pre>
@@ -2131,7 +2199,7 @@ The blob containing all the code for this FunctionApp.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PackagedFunctionApp">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L571">class <b>PackagedFunctionApp</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L643">class <b>PackagedFunctionApp</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
@@ -2143,7 +2211,7 @@ tree.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PackagedFunctionApp-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L595"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L667"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2153,7 +2221,7 @@ tree.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PackagedFunctionApp-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2163,7 +2231,7 @@ tree.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PackagedFunctionApp-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L233">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L258">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2177,7 +2245,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PackagedFunctionApp-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L248">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L273">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2187,7 +2255,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PackagedFunctionApp-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L575">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L647">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>account: storageForTypesOnly.Account;</pre>
@@ -2198,7 +2266,7 @@ Storage account where the FunctionApp's zipbBlob is uploaded to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PackagedFunctionApp-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L579">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L651">property <b>container</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>container: storageForTypesOnly.Container;</pre>
@@ -2209,7 +2277,7 @@ Storage container where the FunctionApp's zipbBlob is uploaded to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PackagedFunctionApp-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L595">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L667">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2220,7 +2288,7 @@ Root HTTP endpoint of the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PackagedFunctionApp-functionApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L591">property <b>functionApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L663">property <b>functionApp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>functionApp: appservice.FunctionApp;</pre>
@@ -2231,7 +2299,7 @@ The Function App which contains the functions from the archive.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PackagedFunctionApp-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L587">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L659">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>plan: appservice.Plan;</pre>
@@ -2242,7 +2310,7 @@ The plan this Function App runs under.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PackagedFunctionApp-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2254,7 +2322,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PackagedFunctionApp-zipBlob">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L583">property <b>zipBlob</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L655">property <b>zipBlob</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zipBlob: storageForTypesOnly.ZipBlob;</pre>
@@ -2266,7 +2334,7 @@ The blob containing all the code for this FunctionApp.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Plan">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L101">class <b>Plan</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L101">class <b>Plan</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2367,7 +2435,7 @@ const testPlan = new azure.appservice.Plan("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Plan-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L173"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L173"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2384,7 +2452,7 @@ Create a Plan resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L110">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L110">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2398,7 +2466,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2408,7 +2476,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L121">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L121">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2422,7 +2490,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-appServiceEnvironmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L131">property <b>appServiceEnvironmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L131">property <b>appServiceEnvironmentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServiceEnvironmentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2433,7 +2501,7 @@ The ID of the App Service Environment where the App Service Plan should be locat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2445,7 +2513,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-isXenon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L132">property <b>isXenon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L132">property <b>isXenon</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>isXenon: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2453,7 +2521,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L136">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L136">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2464,7 +2532,7 @@ The kind of the App Service Plan to create. Possible values are `Windows` (also 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L140">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L140">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2475,7 +2543,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-maximumElasticWorkerCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L144">property <b>maximumElasticWorkerCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L144">property <b>maximumElasticWorkerCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>maximumElasticWorkerCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2486,7 +2554,7 @@ The maximum number of total workers allowed for this ElasticScaleEnabled App Ser
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-maximumNumberOfWorkers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L148">property <b>maximumNumberOfWorkers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L148">property <b>maximumNumberOfWorkers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>maximumNumberOfWorkers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2497,7 +2565,7 @@ The maximum number of workers supported with the App Service Plan's sku.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L152">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L152">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2508,7 +2576,7 @@ Specifies the name of the App Service Plan component. Changing this forces a new
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-perSiteScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L156">property <b>perSiteScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L156">property <b>perSiteScaling</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>perSiteScaling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2519,7 +2587,7 @@ Can Apps assigned to this App Service Plan be scaled independently? If set to `f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-properties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L157">property <b>properties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L157">property <b>properties</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2531,7 +2599,7 @@ Can Apps assigned to this App Service Plan be scaled independently? If set to `f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-reserved">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L161">property <b>reserved</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L161">property <b>reserved</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>reserved: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2542,7 +2610,7 @@ Is this App Service Plan `Reserved`. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L165">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L165">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2553,7 +2621,7 @@ The name of the resource group in which to create the App Service Plan component
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L169">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L169">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2568,7 +2636,7 @@ A `sku` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L173">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L173">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2579,7 +2647,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2592,7 +2660,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Slot">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L129">class <b>Slot</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L129">class <b>Slot</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2721,7 +2789,7 @@ const testSlot = new azure.appservice.Slot("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Slot-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L215"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L215"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2738,7 +2806,7 @@ Create a Slot resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L138">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L138">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2752,7 +2820,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2762,7 +2830,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L149">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L149">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2776,7 +2844,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-appServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L159">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L159">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2787,7 +2855,7 @@ The name of the App Service within which to create the App Service Slot.  Changi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-appServicePlanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L163">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L163">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appServicePlanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2798,7 +2866,7 @@ The ID of the App Service Plan within which to create this App Service Slot. Cha
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L167">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L167">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2809,7 +2877,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L171">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L171">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clientAffinityEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2820,7 +2888,7 @@ Should the App Service Slot send session affinity cookies, which route client re
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L175">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L175">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2835,7 +2903,7 @@ An `connection_string` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-defaultSiteHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L179">property <b>defaultSiteHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L179">property <b>defaultSiteHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultSiteHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2846,7 +2914,7 @@ The Default Hostname associated with the App Service Slot - such as `mysite.azur
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L183">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L183">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2857,7 +2925,7 @@ Is the App Service Slot Enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L187">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L187">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>httpsOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2868,7 +2936,7 @@ Can the App Service Slot only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2880,7 +2948,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L191">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L191">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2895,7 +2963,7 @@ A Managed Service Identity block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L195">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L195">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2906,7 +2974,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L199">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L199">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2917,7 +2985,7 @@ The name of the Connection String.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L203">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L203">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2928,7 +2996,7 @@ The name of the resource group in which to create the App Service Slot component
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L207">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L207">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2970,7 +3038,7 @@ A `site_config` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-siteCredential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L211">property <b>siteCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L211">property <b>siteCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2984,7 +3052,7 @@ A `site_credential` block as defined below, which contains the site-level creden
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L215">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L215">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2995,7 +3063,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Slot-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3008,17 +3076,17 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TimerFunction">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L219">class <b>TimerFunction</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L217">class <b>TimerFunction</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#Function'>Function</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#Function'>Function</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, mod.FunctionDefaultResponse&gt;</pre>
 {{% md %}}
 
 Azure Function triggered on a CRON schedule.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TimerFunction-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L219"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L217"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3028,7 +3096,7 @@ Azure Function triggered on a CRON schedule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerFunction-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L405">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L476">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</pre>
@@ -3039,7 +3107,7 @@ Application settings required by the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerFunction-bindings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L395">property <b>bindings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L466">property <b>bindings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>bindings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt;;</pre>
@@ -3050,10 +3118,10 @@ An array of function binding definitions.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerFunction-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L400">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L471">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, mod.FunctionDefaultResponse&gt;;</pre>
 {{% md %}}
 
 Function callback.
@@ -3061,7 +3129,7 @@ Function callback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerFunction-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L390">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L461">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3073,12 +3141,12 @@ Function name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TimerSubscription">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L207">class <b>TimerSubscription</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L205">class <b>TimerSubscription</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, mod.FunctionDefaultResponse&gt;</pre>
 <h3 class="pdoc-member-header" id="TimerSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L207"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L205"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3088,7 +3156,7 @@ Function name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3098,7 +3166,7 @@ Function name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L233">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L258">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3112,7 +3180,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscription-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L248">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L273">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3122,15 +3190,15 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscription-functionApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L667">property <b>functionApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L739">property <b>functionApp</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, mod.FunctionDefaultResponse&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3143,12 +3211,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getAppService">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L26">function <b>getAppService</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L26">function <b>getAppService</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>getAppService(args: <a href='#GetAppServiceArgs'>GetAppServiceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetAppServiceResult'>GetAppServiceResult</a>&gt;</pre>
+<pre class="highlight"><span class='kd'></span>getAppService(args: <a href='#GetAppServiceArgs'>GetAppServiceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetAppServiceResult'>GetAppServiceResult</a>&gt; &amp; <a href='#GetAppServiceResult'>GetAppServiceResult</a></pre>
 
 
 Use this data source to access information about an existing App Service.
@@ -3172,12 +3240,12 @@ export const appServiceId = test.id;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getAppServicePlan">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts#L26">function <b>getAppServicePlan</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts#L26">function <b>getAppServicePlan</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>getAppServicePlan(args: <a href='#GetAppServicePlanArgs'>GetAppServicePlanArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetAppServicePlanResult'>GetAppServicePlanResult</a>&gt;</pre>
+<pre class="highlight"><span class='kd'></span>getAppServicePlan(args: <a href='#GetAppServicePlanArgs'>GetAppServicePlanArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetAppServicePlanResult'>GetAppServicePlanResult</a>&gt; &amp; <a href='#GetAppServicePlanResult'>GetAppServicePlanResult</a></pre>
 
 
 Use this data source to access information about an existing App Service Plan (formerly known as a `Server Farm`).
@@ -3201,12 +3269,12 @@ export const appServicePlanId = test.id;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getResourceGroupNameAndLocation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L699">function <b>getResourceGroupNameAndLocation</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L771">function <b>getResourceGroupNameAndLocation</b></a>
 </h2>
 <div class="pdoc-module-contents">
 </div>
 <h2 class="pdoc-module-header" id="ActiveSlotArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/activeSlot.ts#L128">interface <b>ActiveSlotArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/activeSlot.ts#L128">interface <b>ActiveSlotArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3215,7 +3283,7 @@ The set of arguments for constructing a ActiveSlot resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ActiveSlotArgs-appServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/activeSlot.ts#L132">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/activeSlot.ts#L132">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3226,7 +3294,7 @@ The name of the App Service within which the Slot exists.  Changing this forces 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlotArgs-appServiceSlotName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/activeSlot.ts#L136">property <b>appServiceSlotName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/activeSlot.ts#L136">property <b>appServiceSlotName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceSlotName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3237,7 +3305,7 @@ The name of the App Service Slot which should be promoted to the Production Slot
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlotArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/activeSlot.ts#L140">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/activeSlot.ts#L140">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3249,7 +3317,7 @@ The name of the resource group in which the App Service exists. Changing this fo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ActiveSlotState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/activeSlot.ts#L110">interface <b>ActiveSlotState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/activeSlot.ts#L110">interface <b>ActiveSlotState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3258,7 +3326,7 @@ Input properties used for looking up and filtering ActiveSlot resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ActiveSlotState-appServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/activeSlot.ts#L114">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/activeSlot.ts#L114">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3269,7 +3337,7 @@ The name of the App Service within which the Slot exists.  Changing this forces 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlotState-appServiceSlotName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/activeSlot.ts#L118">property <b>appServiceSlotName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/activeSlot.ts#L118">property <b>appServiceSlotName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceSlotName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3280,7 +3348,7 @@ The name of the App Service Slot which should be promoted to the Production Slot
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActiveSlotState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/activeSlot.ts#L122">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/activeSlot.ts#L122">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3292,7 +3360,7 @@ The name of the resource group in which the App Service exists. Changing this fo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AppServiceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L269">interface <b>AppServiceArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L272">interface <b>AppServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3301,7 +3369,7 @@ The set of arguments for constructing a AppService resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AppServiceArgs-appServicePlanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L273">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L276">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServicePlanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3312,7 +3380,7 @@ The ID of the App Service Plan within which to create this App Service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L277">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L280">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3323,7 +3391,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-authSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L281">property <b>authSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L284">property <b>authSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3368,7 +3436,7 @@ A `auth_settings` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L285">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L288">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3379,7 +3447,7 @@ Should the App Service send session affinity cookies, which route client request
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-clientCertEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L289">property <b>clientCertEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L292">property <b>clientCertEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientCertEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3390,7 +3458,7 @@ Does the App Service require client certificates for incoming requests? Defaults
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L293">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L296">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3405,7 +3473,7 @@ One or more `connection_string` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L297">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L300">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3416,7 +3484,7 @@ Is the App Service Enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L301">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L304">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3427,7 +3495,7 @@ Can the App Service only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L305">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L308">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3442,7 +3510,7 @@ A Managed Service Identity block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L309">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L312">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3453,7 +3521,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-logs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L313">property <b>logs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L316">property <b>logs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3472,7 +3540,7 @@ A `logs` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L317">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L320">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3483,7 +3551,7 @@ Specifies the name of the App Service. Changing this forces a new resource to be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L321">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L324">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3494,7 +3562,7 @@ The name of the resource group in which to create the App Service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L325">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L328">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3536,7 +3604,7 @@ A `site_config` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L329">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L332">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3548,7 +3616,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AppServiceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L183">interface <b>AppServiceState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L186">interface <b>AppServiceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3557,7 +3625,7 @@ Input properties used for looking up and filtering AppService resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AppServiceState-appServicePlanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L187">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L190">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServicePlanId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3568,7 +3636,7 @@ The ID of the App Service Plan within which to create this App Service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L191">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L194">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3579,7 +3647,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-authSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L195">property <b>authSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L198">property <b>authSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3624,7 +3692,7 @@ A `auth_settings` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L199">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L202">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3635,7 +3703,7 @@ Should the App Service send session affinity cookies, which route client request
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-clientCertEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L203">property <b>clientCertEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L206">property <b>clientCertEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientCertEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3646,7 +3714,7 @@ Does the App Service require client certificates for incoming requests? Defaults
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L207">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L210">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3661,7 +3729,7 @@ One or more `connection_string` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-defaultSiteHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L211">property <b>defaultSiteHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L214">property <b>defaultSiteHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultSiteHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3672,7 +3740,7 @@ The Default Hostname associated with the App Service - such as `mysite.azurewebs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L215">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L218">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3683,7 +3751,7 @@ Is the App Service Enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L219">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L222">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3694,7 +3762,7 @@ Can the App Service only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L223">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L226">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3709,7 +3777,7 @@ A Managed Service Identity block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L227">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L230">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3720,7 +3788,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-logs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L231">property <b>logs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L234">property <b>logs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3739,7 +3807,7 @@ A `logs` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L235">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L238">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3750,7 +3818,7 @@ Specifies the name of the App Service. Changing this forces a new resource to be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-outboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L239">property <b>outboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L242">property <b>outboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>outboundIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3761,7 +3829,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-possibleOutboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L243">property <b>possibleOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L246">property <b>possibleOutboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>possibleOutboundIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3772,7 +3840,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L247">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L250">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3783,7 +3851,7 @@ The name of the resource group in which to create the App Service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L251">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L254">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3825,7 +3893,7 @@ A `site_config` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-siteCredential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L255">property <b>siteCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L258">property <b>siteCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>siteCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3839,7 +3907,7 @@ A `site_credential` block as defined below, which contains the site-level creden
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-sourceControl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L259">property <b>sourceControl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L262">property <b>sourceControl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3853,7 +3921,7 @@ A `source_control` block as defined below, which contains the Source Control inf
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AppServiceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/appService.ts#L263">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/appService.ts#L266">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3865,7 +3933,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ArchiveFunctionAppArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L431">interface <b>ArchiveFunctionAppArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L504">interface <b>ArchiveFunctionAppArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#FunctionAppArgsBase'>FunctionAppArgsBase</a></pre>
@@ -3875,7 +3943,7 @@ Arguments to create a Function App component and deploy the specified raw archiv
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L101">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L102">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>account?: storageForTypesOnly.Account;</pre>
@@ -3888,7 +3956,7 @@ account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L106">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L107">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3899,7 +3967,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-archive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L435">property <b>archive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L508">property <b>archive</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>archive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a>&gt;;</pre>
@@ -3910,7 +3978,7 @@ The deployment package of a Function App to deploy as-is.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L111">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L112">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3921,7 +3989,7 @@ Should the Function App send session affinity cookies, which route client reques
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-codePathOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L116">property <b>codePathOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L117">property <b>codePathOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</pre>
@@ -3932,7 +4000,7 @@ Options to control which files and packages are included with the serialized Fun
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L121">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L122">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3947,7 +4015,7 @@ An `connection_string` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L127">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L128">property <b>container</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>container?: storageForTypesOnly.Container;</pre>
@@ -3959,7 +4027,7 @@ provided, the root container of the storage account will be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L132">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L133">property <b>enableBuiltinLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3970,7 +4038,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L137">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L138">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3981,7 +4049,7 @@ Is the Function App enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-hostSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L142">property <b>hostSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L143">property <b>hostSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostSettings?: <a href='#HostSettings'>HostSettings</a>;</pre>
@@ -3992,7 +4060,7 @@ Host configuration options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L147">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L148">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4003,7 +4071,7 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L152">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L153">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -4018,7 +4086,7 @@ An `identity` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L157">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L158">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4029,7 +4097,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L163">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4040,7 +4108,7 @@ The name of the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-nodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L168">property <b>nodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L169">property <b>nodeVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4052,7 +4120,7 @@ defaults to `8.11.1`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L178">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L179">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>plan?: appservice.Plan;</pre>
@@ -4068,7 +4136,7 @@ more details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L183">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L184">property <b>resourceGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroup?: core.ResourceGroup;</pre>
@@ -4079,7 +4147,7 @@ The resource group in which to create the event subscription. [resourceGroup] ta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L189">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L190">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4091,7 +4159,7 @@ Either [resourceGroupName] or [resourceGroup] must be supplied.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L194">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L195">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -4107,7 +4175,7 @@ A `site_config` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L200">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -4118,7 +4186,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArchiveFunctionAppArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L204">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L205">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4129,8 +4197,40 @@ The runtime version associated with the Function App. Defaults to `~2`.
 {{% /md %}}
 </div>
 </div>
+<h2 class="pdoc-module-header" id="BindingSettings">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L416">interface <b>BindingSettings</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{% md %}}
+
+Azure Function Binding with the required corresponding application settings (e.g., a connection string setting).
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="BindingSettings-binding">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L420">property <b>binding</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>binding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;T&gt;;</pre>
+{{% md %}}
+
+A binding definition.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="BindingSettings-settings">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L425">property <b>settings</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{% md %}}
+
+A dictionary of application settings to be applied to the Function App.
+
+{{% /md %}}
+</div>
+</div>
 <h2 class="pdoc-module-header" id="CallbackArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L75">interface <b>CallbackArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L76">interface <b>CallbackArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4139,7 +4239,7 @@ Arguments to pass either a callback or a callback factory to be used as an Azure
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CallbackArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L80">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;C, E, R&gt;;</pre>
@@ -4151,7 +4251,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L92">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;C, E, R&gt;;</pre>
@@ -4170,12 +4270,17 @@ the Azure will call into each time the FunctionApp it is is invoked.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CallbackFunctionAppArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L207">interface <b>CallbackFunctionAppArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L217">interface <b>CallbackFunctionAppArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackArgs'>CallbackArgs</a>&lt;C, E, R&gt;, <a href='#FunctionAppArgsBase'>FunctionAppArgsBase</a></pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;C, E, R&gt;, <a href='#FunctionAppArgsBase'>FunctionAppArgsBase</a></pre>
+{{% md %}}
+
+Base arguments for all single-Function subscription apps.
+
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L101">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L102">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>account?: storageForTypesOnly.Account;</pre>
@@ -4188,7 +4293,7 @@ account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L106">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L107">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -4199,7 +4304,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L80">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;C, E, R&gt;;</pre>
@@ -4211,7 +4316,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L92">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;C, E, R&gt;;</pre>
@@ -4229,7 +4334,7 @@ the Azure will call into each time the FunctionApp it is is invoked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L111">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L112">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4240,7 +4345,7 @@ Should the Function App send session affinity cookies, which route client reques
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-codePathOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L116">property <b>codePathOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L117">property <b>codePathOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</pre>
@@ -4251,7 +4356,7 @@ Options to control which files and packages are included with the serialized Fun
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L121">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L122">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -4266,7 +4371,7 @@ An `connection_string` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L127">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L128">property <b>container</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>container?: storageForTypesOnly.Container;</pre>
@@ -4278,7 +4383,7 @@ provided, the root container of the storage account will be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L132">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L133">property <b>enableBuiltinLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4289,7 +4394,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L137">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L138">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4300,7 +4405,7 @@ Is the Function App enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-hostSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L142">property <b>hostSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L143">property <b>hostSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostSettings?: <a href='#HostSettings'>HostSettings</a>;</pre>
@@ -4311,7 +4416,7 @@ Host configuration options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L147">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L148">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4322,7 +4427,7 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L152">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L153">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -4336,8 +4441,19 @@ An `identity` block as defined below.
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-inputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
+{{% md %}}
+
+Input bindings.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L157">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L158">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4348,7 +4464,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L163">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4359,7 +4475,7 @@ The name of the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-nodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L168">property <b>nodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L169">property <b>nodeVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4370,8 +4486,19 @@ defaults to `8.11.1`.
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-outputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
+{{% md %}}
+
+Output bindings.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L178">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L179">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>plan?: appservice.Plan;</pre>
@@ -4387,7 +4514,7 @@ more details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L183">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L184">property <b>resourceGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroup?: core.ResourceGroup;</pre>
@@ -4398,7 +4525,7 @@ The resource group in which to create the event subscription. [resourceGroup] ta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L189">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L190">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4410,7 +4537,7 @@ Either [resourceGroupName] or [resourceGroup] must be supplied.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L194">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L195">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -4426,7 +4553,7 @@ A `site_config` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L200">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -4437,7 +4564,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CallbackFunctionAppArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L204">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L205">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4448,13 +4575,76 @@ The runtime version associated with the Function App. Defaults to `~2`.
 {{% /md %}}
 </div>
 </div>
+<h2 class="pdoc-module-header" id="CallbackFunctionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L211">interface <b>CallbackFunctionArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+<pre class="highlight"><span class='kd'>extends</span> <a href='#InputOutputsArgs'>InputOutputsArgs</a>, <a href='#CallbackArgs'>CallbackArgs</a>&lt;C, E, R&gt;</pre>
+{{% md %}}
+
+Base arguments for all Azure Function components that are passed to MultiFunctionCallbackApp.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="CallbackFunctionArgs-callback">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;C, E, R&gt;;</pre>
+{{% md %}}
+
+The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
+[callback] or [callbackFactory] must be provided.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CallbackFunctionArgs-callbackFactory">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;C, E, R&gt;;</pre>
+{{% md %}}
+
+The Javascript function instance that will be called to produce the function that is the
+entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
+provided.
+
+This form is useful when there is expensive initialization work that should only be executed
+once.  The factory-function will be invoked once when the final Azure FunctionApp module is
+loaded. It can run whatever code it needs, and will end by returning the actual function that
+the Azure will call into each time the FunctionApp it is is invoked.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CallbackFunctionArgs-inputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
+{{% md %}}
+
+Input bindings.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CallbackFunctionArgs-outputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
+{{% md %}}
+
+Output bindings.
+
+{{% /md %}}
+</div>
+</div>
 <h2 class="pdoc-module-header" id="Context">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L35">interface <b>Context</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L36">interface <b>Context</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> Context</pre>
 <h3 class="pdoc-member-header" id="Context-done">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L46">method <b>done</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L47">method <b>done</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4469,7 +4659,7 @@ is asynchronous, you should not use this callback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Context-bindingData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L37">property <b>bindingData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L37">property <b>bindingData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bindingData: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -4480,7 +4670,7 @@ Trigger metadata and function invocation data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Context-bindingDefinitions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L43">property <b>bindingDefinitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L43">property <b>bindingDefinitions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bindingDefinitions: BindingDefinition[];</pre>
@@ -4491,7 +4681,7 @@ Bindings your function uses, as defined in function.json.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Context-bindings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L31">property <b>bindings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L31">property <b>bindings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bindings: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -4503,7 +4693,7 @@ generated and named based off of the "name" property in function.json.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Context-executionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L26">property <b>executionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L26">property <b>executionContext</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>executionContext: ExecutionContext;</pre>
@@ -4514,7 +4704,7 @@ Function execution metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Context-invocationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L22">property <b>invocationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L22">property <b>invocationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4525,7 +4715,7 @@ A unique GUID per function invocation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Context-log">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L48">property <b>log</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L48">property <b>log</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>log: Logger;</pre>
@@ -4537,7 +4727,7 @@ at the default trace level.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Context-req">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L62">property <b>req</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L62">property <b>req</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>req?: <a href='#HttpRequest'>HttpRequest</a>;</pre>
@@ -4548,7 +4738,7 @@ HTTP request object. Provided to your function when using HTTP Bindings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Context-res">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L66">property <b>res</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L66">property <b>res</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>res?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -4560,7 +4750,7 @@ HTTP response object. Provided to your function when using HTTP Bindings.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomHostnameBindingArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/customHostnameBinding.ts#L146">interface <b>CustomHostnameBindingArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/customHostnameBinding.ts#L146">interface <b>CustomHostnameBindingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4569,7 +4759,7 @@ The set of arguments for constructing a CustomHostnameBinding resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CustomHostnameBindingArgs-appServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/customHostnameBinding.ts#L150">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/customHostnameBinding.ts#L150">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4580,7 +4770,7 @@ The name of the App Service in which to add the Custom Hostname Binding. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBindingArgs-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/customHostnameBinding.ts#L154">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/customHostnameBinding.ts#L154">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4591,7 +4781,7 @@ Specifies the Custom Hostname to use for the App Service, example `www.example.c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBindingArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/customHostnameBinding.ts#L158">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/customHostnameBinding.ts#L158">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4603,7 +4793,7 @@ The name of the resource group in which the App Service exists. Changing this fo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomHostnameBindingState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/customHostnameBinding.ts#L128">interface <b>CustomHostnameBindingState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/customHostnameBinding.ts#L128">interface <b>CustomHostnameBindingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4612,7 +4802,7 @@ Input properties used for looking up and filtering CustomHostnameBinding resourc
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CustomHostnameBindingState-appServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/customHostnameBinding.ts#L132">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/customHostnameBinding.ts#L132">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4623,7 +4813,7 @@ The name of the App Service in which to add the Custom Hostname Binding. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBindingState-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/customHostnameBinding.ts#L136">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/customHostnameBinding.ts#L136">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4634,7 +4824,7 @@ Specifies the Custom Hostname to use for the App Service, example `www.example.c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomHostnameBindingState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/customHostnameBinding.ts#L140">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/customHostnameBinding.ts#L140">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4646,7 +4836,7 @@ The name of the resource group in which the App Service exists. Changing this fo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FunctionAppArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L347">interface <b>FunctionAppArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L347">interface <b>FunctionAppArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4655,7 +4845,7 @@ The set of arguments for constructing a FunctionApp resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FunctionAppArgs-appServicePlanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L351">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L351">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServicePlanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4666,7 +4856,7 @@ The ID of the App Service Plan within which to create this Function App. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L355">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L355">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -4677,7 +4867,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L359">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L359">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4688,7 +4878,7 @@ Should the Function App send session affinity cookies, which route client reques
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L363">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L363">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -4703,7 +4893,7 @@ An `connection_string` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L367">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L367">property <b>enableBuiltinLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4714,7 +4904,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L371">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L371">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4725,7 +4915,7 @@ Is the Function App enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L375">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L375">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4736,7 +4926,7 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L379">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L379">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -4751,7 +4941,7 @@ An `identity` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L383">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L383">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4762,7 +4952,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L387">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L387">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4773,7 +4963,7 @@ The name of the Connection String.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L391">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L391">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4784,7 +4974,7 @@ The name of the resource group in which to create the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L395">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L395">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -4800,7 +4990,7 @@ A `site_config` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-storageConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L399">property <b>storageConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L399">property <b>storageConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4811,7 +5001,7 @@ The connection string of the backend storage account which will be used by this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L403">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L403">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -4822,7 +5012,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L407">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L407">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4834,7 +5024,7 @@ The runtime version associated with the Function App. Defaults to `~1`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FunctionAppState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L261">interface <b>FunctionAppState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L261">interface <b>FunctionAppState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4843,7 +5033,7 @@ Input properties used for looking up and filtering FunctionApp resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FunctionAppState-appServicePlanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L265">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L265">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServicePlanId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4854,7 +5044,7 @@ The ID of the App Service Plan within which to create this Function App. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L269">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L269">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -4865,7 +5055,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L273">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L273">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4876,7 +5066,7 @@ Should the Function App send session affinity cookies, which route client reques
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L277">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L277">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -4891,7 +5081,7 @@ An `connection_string` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-defaultHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L281">property <b>defaultHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L281">property <b>defaultHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4902,7 +5092,7 @@ The default hostname associated with the Function App - such as `mysite.azureweb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-enableBuiltinLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L285">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L285">property <b>enableBuiltinLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4913,7 +5103,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L289">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L289">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4924,7 +5114,7 @@ Is the Function App enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L293">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L293">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4935,7 +5125,7 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L297">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L297">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -4950,7 +5140,7 @@ An `identity` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L301">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L301">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4961,7 +5151,7 @@ The Function App kind - such as `functionapp,linux,container`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L305">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L305">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4972,7 +5162,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L309">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L309">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4983,7 +5173,7 @@ The name of the Connection String.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-outboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L313">property <b>outboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L313">property <b>outboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>outboundIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4994,7 +5184,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-possibleOutboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L317">property <b>possibleOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L317">property <b>possibleOutboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>possibleOutboundIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5005,7 +5195,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L321">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L321">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5016,7 +5206,7 @@ The name of the resource group in which to create the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L325">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L325">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5032,7 +5222,7 @@ A `site_config` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-siteCredential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L329">property <b>siteCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L329">property <b>siteCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>siteCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5046,7 +5236,7 @@ A `site_credential` block as defined below, which contains the site-level creden
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-storageConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L333">property <b>storageConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L333">property <b>storageConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>storageConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5057,7 +5247,7 @@ The connection string of the backend storage account which will be used by this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L337">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L337">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -5068,7 +5258,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FunctionAppState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/functionApp.ts#L341">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/functionApp.ts#L341">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5079,8 +5269,69 @@ The runtime version associated with the Function App. Defaults to `~1`.
 {{% /md %}}
 </div>
 </div>
+<h2 class="pdoc-module-header" id="FunctionHostKeys">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L805">interface <b>FunctionHostKeys</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{% md %}}
+
+Keys associated with a Function App.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="FunctionHostKeys-functionKeys">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L811">property <b>functionKeys</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>functionKeys: <a href='#FunctionKeys'>FunctionKeys</a>;</pre>
+{{% md %}}
+
+Default function keys.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="FunctionHostKeys-masterKey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L807">property <b>masterKey</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>masterKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{% md %}}
+
+Master key.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="FunctionHostKeys-systemKeys">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L809">property <b>systemKeys</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>systemKeys: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
+{{% md %}}
+
+A dictionary of system keys, e.g. for Durable Functions or Event Grid.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="FunctionKeys">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L817">interface <b>FunctionKeys</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{% md %}}
+
+Keys associated with a single Function.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="FunctionKeys-default">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L818">property <b>default</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>default: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{% md %}}
+{{% /md %}}
+</div>
+</div>
 <h2 class="pdoc-module-header" id="GetAppServiceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L36">interface <b>GetAppServiceArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L38">interface <b>GetAppServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5089,7 +5340,7 @@ A collection of arguments for invoking getAppService.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAppServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L40">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L42">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5100,7 +5351,7 @@ The name of the App Service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L44">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L46">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5112,7 +5363,7 @@ The Name of the Resource Group where the App Service exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAppServicePlanArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts#L36">interface <b>GetAppServicePlanArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts#L38">interface <b>GetAppServicePlanArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5121,7 +5372,7 @@ A collection of arguments for invoking getAppServicePlan.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAppServicePlanArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts#L40">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts#L42">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5132,7 +5383,7 @@ The name of the App Service Plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts#L44">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts#L46">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5144,7 +5395,7 @@ The Name of the Resource Group where the App Service Plan exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAppServicePlanResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts#L50">interface <b>GetAppServicePlanResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts#L52">interface <b>GetAppServicePlanResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5153,7 +5404,7 @@ A collection of values returned by getAppServicePlan.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts#L88">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts#L90">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5164,7 +5415,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-isXenon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts#L54">property <b>isXenon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts#L56">property <b>isXenon</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isXenon: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -5175,7 +5426,7 @@ A flag that indicates if it's a xenon plan (support for Windows Container)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts#L58">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts#L60">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5186,7 +5437,7 @@ The Operating System type of the App Service Plan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts#L62">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts#L64">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5197,7 +5448,7 @@ The Azure location where the App Service Plan exists
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-maximumElasticWorkerCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts#L66">property <b>maximumElasticWorkerCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts#L68">property <b>maximumElasticWorkerCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maximumElasticWorkerCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -5208,7 +5459,7 @@ The maximum number of total workers allowed for this ElasticScaleEnabled App Ser
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-maximumNumberOfWorkers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts#L70">property <b>maximumNumberOfWorkers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts#L72">property <b>maximumNumberOfWorkers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maximumNumberOfWorkers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -5219,7 +5470,7 @@ Maximum number of instances that can be assigned to this App Service plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts#L73">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5227,7 +5478,7 @@ Maximum number of instances that can be assigned to this App Service plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-properties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts#L75">property <b>properties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts#L77">property <b>properties</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>properties: {
@@ -5242,7 +5493,7 @@ A `properties` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts#L76">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts#L78">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5250,7 +5501,7 @@ A `properties` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts#L80">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts#L82">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sku: {
@@ -5265,7 +5516,7 @@ A `sku` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServicePlanResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppServicePlan.ts#L84">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppServicePlan.ts#L86">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -5277,7 +5528,7 @@ A mapping of tags assigned to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAppServiceResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L50">interface <b>GetAppServiceResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L52">interface <b>GetAppServiceResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5286,7 +5537,7 @@ A collection of values returned by getAppService.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAppServiceResult-appServicePlanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L54">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L56">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServicePlanId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5297,7 +5548,7 @@ The ID of the App Service Plan within which the App Service exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L58">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L60">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -5308,7 +5559,7 @@ A key-value pair of App Settings for the App Service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L62">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L64">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -5319,7 +5570,7 @@ Does the App Service send session affinity cookies, which route client requests 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-clientCertEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L66">property <b>clientCertEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L68">property <b>clientCertEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientCertEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -5330,7 +5581,7 @@ Does the App Service require client certificates for incoming requests?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L70">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L72">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionStrings: {
@@ -5345,7 +5596,7 @@ An `connection_string` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-defaultSiteHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L71">property <b>defaultSiteHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L73">property <b>defaultSiteHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultSiteHostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5353,7 +5604,7 @@ An `connection_string` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L75">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L77">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -5364,7 +5615,7 @@ Is the App Service Enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L79">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L81">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -5375,7 +5626,7 @@ Can the App Service only be accessed via HTTPS?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L110">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L112">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5386,7 +5637,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L83">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L85">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5397,7 +5648,7 @@ The Azure location where the App Service exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L89">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5408,7 +5659,7 @@ The name of the Connection String.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-outboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L91">property <b>outboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L93">property <b>outboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>outboundIpAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5419,7 +5670,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-possibleOutboundIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L95">property <b>possibleOutboundIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L97">property <b>possibleOutboundIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>possibleOutboundIpAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5430,7 +5681,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L96">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L98">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5438,7 +5689,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-siteConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L100">property <b>siteConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L102">property <b>siteConfigs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>siteConfigs: {
@@ -5480,7 +5731,7 @@ A `site_config` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-siteCredentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L101">property <b>siteCredentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L103">property <b>siteCredentials</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>siteCredentials: {
@@ -5491,7 +5742,7 @@ A `site_config` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-sourceControls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L102">property <b>sourceControls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L104">property <b>sourceControls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sourceControls: {
@@ -5502,7 +5753,7 @@ A `site_config` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAppServiceResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/getAppService.ts#L106">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/getAppService.ts#L108">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -5514,7 +5765,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HostSettings">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L216">interface <b>HostSettings</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L226">interface <b>HostSettings</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5526,7 +5777,7 @@ For more details see https://docs.microsoft.com/en-us/azure/azure-functions/func
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HostSettings-aggregator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L224">property <b>aggregator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L234">property <b>aggregator</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>aggregator?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -5544,7 +5795,7 @@ more details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostSettings-extensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L297">property <b>extensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L307">property <b>extensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>extensions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -5559,7 +5810,7 @@ Extension-specific configuration options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostSettings-functionTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L236">property <b>functionTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L246">property <b>functionTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>functionTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5573,7 +5824,7 @@ plan, there is no overall limit and the default depends on the runtime version. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostSettings-healthMonitor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L242">property <b>healthMonitor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L252">property <b>healthMonitor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>healthMonitor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -5591,7 +5842,7 @@ Configuration settings for
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostSettings-logging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L262">property <b>logging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L272">property <b>logging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>logging?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -5613,7 +5864,7 @@ Controls the logging behaviors of the function app, including Application Insigh
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostSettings-singleton">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L283">property <b>singleton</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L293">property <b>singleton</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>singleton?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -5633,12 +5884,12 @@ support.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HttpEventSubscriptionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L75">interface <b>HttpEventSubscriptionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L83">interface <b>HttpEventSubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#HttpFunctionArgs'>HttpFunctionArgs</a>, <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, HttpResponse&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#HttpFunctionArgs'>HttpFunctionArgs</a>, <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L101">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L102">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>account?: storageForTypesOnly.Account;</pre>
@@ -5651,7 +5902,7 @@ account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L106">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L107">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -5662,10 +5913,10 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L80">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, HttpResponse&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{% md %}}
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
@@ -5674,10 +5925,10 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L92">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, HttpResponse&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{% md %}}
 
 The Javascript function instance that will be called to produce the function that is the
@@ -5692,7 +5943,7 @@ the Azure will call into each time the FunctionApp it is is invoked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L111">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L112">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5703,7 +5954,7 @@ Should the Function App send session affinity cookies, which route client reques
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-codePathOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L116">property <b>codePathOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L117">property <b>codePathOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</pre>
@@ -5714,7 +5965,7 @@ Options to control which files and packages are included with the serialized Fun
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L121">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L122">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5729,7 +5980,7 @@ An `connection_string` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L127">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L128">property <b>container</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>container?: storageForTypesOnly.Container;</pre>
@@ -5741,7 +5992,7 @@ provided, the root container of the storage account will be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L132">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L133">property <b>enableBuiltinLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5752,7 +6003,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L137">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L138">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5763,7 +6014,7 @@ Is the Function App enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-hostSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L80">property <b>hostSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L88">property <b>hostSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostSettings?: <a href='#HttpHostSettings'>HttpHostSettings</a>;</pre>
@@ -5775,7 +6026,7 @@ be used in their place.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L147">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L148">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5786,7 +6037,7 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L152">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L153">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5800,8 +6051,19 @@ An `identity` block as defined below.
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-inputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
+{{% md %}}
+
+Input bindings.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L157">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L158">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5812,7 +6074,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-methods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L72">property <b>methods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L80">property <b>methods</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>methods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -5824,7 +6086,7 @@ responds to all HTTP methods.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L163">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5835,7 +6097,7 @@ The name of the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-nodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L168">property <b>nodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L169">property <b>nodeVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5846,8 +6108,19 @@ defaults to `8.11.1`.
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-outputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
+{{% md %}}
+
+Output bindings.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L178">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L179">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>plan?: appservice.Plan;</pre>
@@ -5863,7 +6136,7 @@ more details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L183">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L184">property <b>resourceGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroup?: core.ResourceGroup;</pre>
@@ -5874,7 +6147,7 @@ The resource group in which to create the event subscription. [resourceGroup] ta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L189">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L190">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5886,7 +6159,7 @@ Either [resourceGroupName] or [resourceGroup] must be supplied.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-route">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L66">property <b>route</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L74">property <b>route</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>route?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5898,7 +6171,7 @@ default value if none is provided is <functionname>.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L194">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L195">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5914,7 +6187,7 @@ A `site_config` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L200">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -5925,7 +6198,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L204">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L205">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5937,15 +6210,15 @@ The runtime version associated with the Function App. Defaults to `~2`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HttpFunctionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L61">interface <b>HttpFunctionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L69">interface <b>HttpFunctionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackArgs'>CallbackArgs</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, HttpResponse&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
 <h3 class="pdoc-member-header" id="HttpFunctionArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L80">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, HttpResponse&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{% md %}}
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
@@ -5954,10 +6227,10 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpFunctionArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L92">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, HttpResponse&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{% md %}}
 
 The Javascript function instance that will be called to produce the function that is the
@@ -5971,8 +6244,19 @@ the Azure will call into each time the FunctionApp it is is invoked.
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="HttpFunctionArgs-inputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
+{{% md %}}
+
+Input bindings.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="HttpFunctionArgs-methods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L72">property <b>methods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L80">property <b>methods</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>methods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -5983,8 +6267,19 @@ responds to all HTTP methods.
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="HttpFunctionArgs-outputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
+{{% md %}}
+
+Output bindings.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="HttpFunctionArgs-route">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L66">property <b>route</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L74">property <b>route</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>route?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5997,7 +6292,7 @@ default value if none is provided is <functionname>.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HttpHostExtensions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L37">interface <b>HttpHostExtensions</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L37">interface <b>HttpHostExtensions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6008,7 +6303,7 @@ For more details see https://docs.microsoft.com/en-us/azure/azure-functions/func
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HttpHostExtensions-dynamicThrottlesEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L53">property <b>dynamicThrottlesEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L53">property <b>dynamicThrottlesEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dynamicThrottlesEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -6022,7 +6317,7 @@ to normal levels.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpHostExtensions-maxConcurrentRequests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L45">property <b>maxConcurrentRequests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L45">property <b>maxConcurrentRequests</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxConcurrentRequests?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -6033,7 +6328,7 @@ The maximum number of http functions that will be executed in parallel.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpHostExtensions-maxOutstandingRequests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L42">property <b>maxOutstandingRequests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L42">property <b>maxOutstandingRequests</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxOutstandingRequests?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -6044,7 +6339,7 @@ The maximum number of outstanding requests that are held at any given time.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpHostExtensions-routePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L39">property <b>routePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L39">property <b>routePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>routePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6056,12 +6351,12 @@ The route prefix that applies to all routes. Use an empty string to remove the d
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HttpHostSettings">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L55">interface <b>HttpHostSettings</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L55">interface <b>HttpHostSettings</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#HostSettings'>HostSettings</a></pre>
 <h3 class="pdoc-member-header" id="HttpHostSettings-aggregator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L224">property <b>aggregator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L234">property <b>aggregator</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>aggregator?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -6079,7 +6374,7 @@ more details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpHostSettings-extensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L56">property <b>extensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L56">property <b>extensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>extensions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -6089,7 +6384,7 @@ more details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpHostSettings-functionTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L236">property <b>functionTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L246">property <b>functionTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>functionTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -6103,7 +6398,7 @@ plan, there is no overall limit and the default depends on the runtime version. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpHostSettings-healthMonitor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L242">property <b>healthMonitor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L252">property <b>healthMonitor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>healthMonitor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -6121,7 +6416,7 @@ Configuration settings for
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpHostSettings-logging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L262">property <b>logging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L272">property <b>logging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>logging?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -6143,7 +6438,7 @@ Controls the logging behaviors of the function app, including Application Insigh
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HttpHostSettings-singleton">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L283">property <b>singleton</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L293">property <b>singleton</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>singleton?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -6162,8 +6457,79 @@ support.
 {{% /md %}}
 </div>
 </div>
+<h2 class="pdoc-module-header" id="InputBindingDefinition">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L323">interface <b>InputBindingDefinition</b></a>
+</h2>
+<div class="pdoc-module-contents">
+<pre class="highlight"><span class='kd'>extends</span> BindingDefinition</pre>
+{{% md %}}
+
+Base interface for input bindings.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="InputBindingDefinition-direction">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L327">property <b>direction</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>direction: <span class='s2'>"in"</span>;</pre>
+{{% md %}}
+
+The direction of the binding. Must be 'in' for an input binding.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="InputBindingDefinition-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L132">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{% md %}}
+
+The name of your binding, as defined in function.json.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="InputBindingDefinition-type">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L136">property <b>type</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{% md %}}
+
+The type of your binding, as defined in function.json.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="InputOutputsArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L432">interface <b>InputOutputsArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+<h3 class="pdoc-member-header" id="InputOutputsArgs-inputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
+{{% md %}}
+
+Input bindings.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="InputOutputsArgs-outputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
+{{% md %}}
+
+Output bindings.
+
+{{% /md %}}
+</div>
+</div>
 <h2 class="pdoc-module-header" id="MultiCallbackFunctionAppArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L421">interface <b>MultiCallbackFunctionAppArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L494">interface <b>MultiCallbackFunctionAppArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#FunctionAppArgsBase'>FunctionAppArgsBase</a></pre>
@@ -6173,7 +6539,7 @@ Arguments to create a Function App component with multiple callback functions in
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L101">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L102">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>account?: storageForTypesOnly.Account;</pre>
@@ -6186,7 +6552,7 @@ account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L106">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L107">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6197,7 +6563,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L111">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L112">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6208,7 +6574,7 @@ Should the Function App send session affinity cookies, which route client reques
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-codePathOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L116">property <b>codePathOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L117">property <b>codePathOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</pre>
@@ -6219,7 +6585,7 @@ Options to control which files and packages are included with the serialized Fun
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L121">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L122">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6234,7 +6600,7 @@ An `connection_string` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L127">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L128">property <b>container</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>container?: storageForTypesOnly.Container;</pre>
@@ -6246,7 +6612,7 @@ provided, the root container of the storage account will be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L132">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L133">property <b>enableBuiltinLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6257,7 +6623,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L137">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L138">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6268,7 +6634,7 @@ Is the Function App enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-functions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L425">property <b>functions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L498">property <b>functions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>functions: <a href='#Function'>Function</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;[];</pre>
@@ -6279,7 +6645,7 @@ The functions to deploy as parts of this application. At least 1 function is req
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-hostSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L142">property <b>hostSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L143">property <b>hostSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostSettings?: <a href='#HostSettings'>HostSettings</a>;</pre>
@@ -6290,7 +6656,7 @@ Host configuration options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L147">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L148">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6301,7 +6667,7 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L152">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L153">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6316,7 +6682,7 @@ An `identity` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L157">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L158">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6327,7 +6693,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L163">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6338,7 +6704,7 @@ The name of the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-nodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L168">property <b>nodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L169">property <b>nodeVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6350,7 +6716,7 @@ defaults to `8.11.1`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L178">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L179">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>plan?: appservice.Plan;</pre>
@@ -6366,7 +6732,7 @@ more details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L183">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L184">property <b>resourceGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroup?: core.ResourceGroup;</pre>
@@ -6377,7 +6743,7 @@ The resource group in which to create the event subscription. [resourceGroup] ta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L189">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L190">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6389,7 +6755,7 @@ Either [resourceGroupName] or [resourceGroup] must be supplied.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L194">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L195">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6405,7 +6771,7 @@ A `site_config` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L200">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6416,7 +6782,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MultiCallbackFunctionAppArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L204">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L205">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6427,8 +6793,52 @@ The runtime version associated with the Function App. Defaults to `~2`.
 {{% /md %}}
 </div>
 </div>
+<h2 class="pdoc-module-header" id="OutputBindingDefinition">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L333">interface <b>OutputBindingDefinition</b></a>
+</h2>
+<div class="pdoc-module-contents">
+<pre class="highlight"><span class='kd'>extends</span> BindingDefinition</pre>
+{{% md %}}
+
+Base interface for output bindings.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="OutputBindingDefinition-direction">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L337">property <b>direction</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>direction: <span class='s2'>"out"</span>;</pre>
+{{% md %}}
+
+The direction of the binding. Must be 'out' for an output binding.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="OutputBindingDefinition-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L132">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{% md %}}
+
+The name of your binding, as defined in function.json.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="OutputBindingDefinition-type">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L136">property <b>type</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{% md %}}
+
+The type of your binding, as defined in function.json.
+
+{{% /md %}}
+</div>
+</div>
 <h2 class="pdoc-module-header" id="PlanArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L281">interface <b>PlanArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L281">interface <b>PlanArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6437,7 +6847,7 @@ The set of arguments for constructing a Plan resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PlanArgs-appServiceEnvironmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L285">property <b>appServiceEnvironmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L285">property <b>appServiceEnvironmentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceEnvironmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6448,7 +6858,7 @@ The ID of the App Service Environment where the App Service Plan should be locat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-isXenon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L286">property <b>isXenon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L286">property <b>isXenon</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isXenon?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6456,7 +6866,7 @@ The ID of the App Service Environment where the App Service Plan should be locat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L290">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L290">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6467,7 +6877,7 @@ The kind of the App Service Plan to create. Possible values are `Windows` (also 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L294">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L294">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6478,7 +6888,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-maximumElasticWorkerCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L298">property <b>maximumElasticWorkerCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L298">property <b>maximumElasticWorkerCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maximumElasticWorkerCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6489,7 +6899,7 @@ The maximum number of total workers allowed for this ElasticScaleEnabled App Ser
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L302">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L302">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6500,7 +6910,7 @@ Specifies the name of the App Service Plan component. Changing this forces a new
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-perSiteScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L306">property <b>perSiteScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L306">property <b>perSiteScaling</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>perSiteScaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6511,7 +6921,7 @@ Can Apps assigned to this App Service Plan be scaled independently? If set to `f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-properties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L307">property <b>properties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L307">property <b>properties</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6523,7 +6933,7 @@ Can Apps assigned to this App Service Plan be scaled independently? If set to `f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-reserved">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L311">property <b>reserved</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L311">property <b>reserved</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reserved?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6534,7 +6944,7 @@ Is this App Service Plan `Reserved`. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L315">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L315">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6545,7 +6955,7 @@ The name of the resource group in which to create the App Service Plan component
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L319">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L319">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6560,7 +6970,7 @@ A `sku` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L323">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L323">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6572,7 +6982,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PlanState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L229">interface <b>PlanState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L229">interface <b>PlanState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6581,7 +6991,7 @@ Input properties used for looking up and filtering Plan resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PlanState-appServiceEnvironmentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L233">property <b>appServiceEnvironmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L233">property <b>appServiceEnvironmentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceEnvironmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6592,7 +7002,7 @@ The ID of the App Service Environment where the App Service Plan should be locat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-isXenon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L234">property <b>isXenon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L234">property <b>isXenon</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isXenon?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6600,7 +7010,7 @@ The ID of the App Service Environment where the App Service Plan should be locat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L238">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L238">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6611,7 +7021,7 @@ The kind of the App Service Plan to create. Possible values are `Windows` (also 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L242">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L242">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6622,7 +7032,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-maximumElasticWorkerCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L246">property <b>maximumElasticWorkerCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L246">property <b>maximumElasticWorkerCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maximumElasticWorkerCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6633,7 +7043,7 @@ The maximum number of total workers allowed for this ElasticScaleEnabled App Ser
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-maximumNumberOfWorkers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L250">property <b>maximumNumberOfWorkers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L250">property <b>maximumNumberOfWorkers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maximumNumberOfWorkers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6644,7 +7054,7 @@ The maximum number of workers supported with the App Service Plan's sku.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L254">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L254">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6655,7 +7065,7 @@ Specifies the name of the App Service Plan component. Changing this forces a new
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-perSiteScaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L258">property <b>perSiteScaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L258">property <b>perSiteScaling</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>perSiteScaling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6666,7 +7076,7 @@ Can Apps assigned to this App Service Plan be scaled independently? If set to `f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-properties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L259">property <b>properties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L259">property <b>properties</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6678,7 +7088,7 @@ Can Apps assigned to this App Service Plan be scaled independently? If set to `f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-reserved">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L263">property <b>reserved</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L263">property <b>reserved</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>reserved?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6689,7 +7099,7 @@ Is this App Service Plan `Reserved`. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L267">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L267">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6700,7 +7110,7 @@ The name of the resource group in which to create the App Service Plan component
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L271">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L271">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6715,7 +7125,7 @@ A `sku` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/plan.ts#L275">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/plan.ts#L275">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6727,11 +7137,11 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ScheduleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L99">interface <b>ScheduleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L99">interface <b>ScheduleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ScheduleArgs-dayOfMonth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L110">property <b>dayOfMonth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L110">property <b>dayOfMonth</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dayOfMonth?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -6742,7 +7152,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-dayOfWeek">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L116">property <b>dayOfWeek</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L116">property <b>dayOfWeek</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dayOfWeek?: <a href='#DayOfWeek'>DayOfWeek</a>;</pre>
@@ -6753,7 +7163,7 @@ Day of the week to perform the scheduled action on.  Leave undefined to indicate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-hour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L107">property <b>hour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L107">property <b>hour</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hour?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -6764,7 +7174,7 @@ Day of the week to perform the scheduled action on.  Leave undefined to indicate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-minute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L104">property <b>minute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L104">property <b>minute</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minute?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -6775,7 +7185,7 @@ Day of the week to perform the scheduled action on.  Leave undefined to indicate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-month">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L113">property <b>month</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L113">property <b>month</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>month?: <a href='#Month'>Month</a>;</pre>
@@ -6786,7 +7196,7 @@ Month of the year to perform the scheduled action on.  Leave undefined to indica
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-second">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L101">property <b>second</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L101">property <b>second</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>second?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -6798,7 +7208,7 @@ Month of the year to perform the scheduled action on.  Leave undefined to indica
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SlotArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L344">interface <b>SlotArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L344">interface <b>SlotArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6807,7 +7217,7 @@ The set of arguments for constructing a Slot resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SlotArgs-appServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L348">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L348">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6818,7 +7228,7 @@ The name of the App Service within which to create the App Service Slot.  Changi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-appServicePlanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L352">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L352">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServicePlanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6829,7 +7239,7 @@ The ID of the App Service Plan within which to create this App Service Slot. Cha
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L356">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L356">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6840,7 +7250,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L360">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L360">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6851,7 +7261,7 @@ Should the App Service Slot send session affinity cookies, which route client re
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L364">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L364">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6866,7 +7276,7 @@ An `connection_string` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L368">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L368">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6877,7 +7287,7 @@ Is the App Service Slot Enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L372">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L372">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6888,7 +7298,7 @@ Can the App Service Slot only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L376">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L376">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6903,7 +7313,7 @@ A Managed Service Identity block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L380">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L380">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6914,7 +7324,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L384">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L384">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6925,7 +7335,7 @@ The name of the Connection String.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L388">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L388">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6936,7 +7346,7 @@ The name of the resource group in which to create the App Service Slot component
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L392">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L392">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6978,7 +7388,7 @@ A `site_config` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L396">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L396">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6990,7 +7400,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SlotState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L278">interface <b>SlotState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L278">interface <b>SlotState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6999,7 +7409,7 @@ Input properties used for looking up and filtering Slot resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SlotState-appServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L282">property <b>appServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L282">property <b>appServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServiceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7010,7 +7420,7 @@ The name of the App Service within which to create the App Service Slot.  Changi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-appServicePlanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L286">property <b>appServicePlanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L286">property <b>appServicePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appServicePlanId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7021,7 +7431,7 @@ The ID of the App Service Plan within which to create this App Service Slot. Cha
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L290">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L290">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7032,7 +7442,7 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L294">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L294">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7043,7 +7453,7 @@ Should the App Service Slot send session affinity cookies, which route client re
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L298">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L298">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7058,7 +7468,7 @@ An `connection_string` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-defaultSiteHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L302">property <b>defaultSiteHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L302">property <b>defaultSiteHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultSiteHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7069,7 +7479,7 @@ The Default Hostname associated with the App Service Slot - such as `mysite.azur
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L306">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L306">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7080,7 +7490,7 @@ Is the App Service Slot Enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L310">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L310">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7091,7 +7501,7 @@ Can the App Service Slot only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L314">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L314">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7106,7 +7516,7 @@ A Managed Service Identity block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L318">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L318">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7117,7 +7527,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L322">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L322">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7128,7 +7538,7 @@ The name of the Connection String.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L326">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L326">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7139,7 +7549,7 @@ The name of the resource group in which to create the App Service Slot component
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L330">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L330">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7181,7 +7591,7 @@ A `site_config` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-siteCredential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L334">property <b>siteCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L334">property <b>siteCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>siteCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7195,7 +7605,7 @@ A `site_credential` block as defined below, which contains the site-level creden
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SlotState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/slot.ts#L338">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/slot.ts#L338">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7207,17 +7617,17 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TimerContext">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L172">interface <b>TimerContext</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L172">interface <b>TimerContext</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#Context'>Context</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#Context'>Context</a>&lt;mod.FunctionDefaultResponse&gt;</pre>
 {{% md %}}
 
 Data that will be passed along in the context object to the timer callback.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TimerContext-done">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L46">method <b>done</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L47">method <b>done</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -7232,7 +7642,7 @@ is asynchronous, you should not use this callback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerContext-bindingData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L180">property <b>bindingData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L180">property <b>bindingData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bindingData: {
@@ -7247,7 +7657,7 @@ is asynchronous, you should not use this callback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerContext-bindingDefinitions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L43">property <b>bindingDefinitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L43">property <b>bindingDefinitions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bindingDefinitions: BindingDefinition[];</pre>
@@ -7258,7 +7668,7 @@ Bindings your function uses, as defined in function.json.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerContext-bindings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L179">property <b>bindings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L179">property <b>bindings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bindings: {
@@ -7268,7 +7678,7 @@ Bindings your function uses, as defined in function.json.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerContext-executionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L174">property <b>executionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L174">property <b>executionContext</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>executionContext: {
@@ -7280,7 +7690,7 @@ Bindings your function uses, as defined in function.json.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerContext-invocationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L173">property <b>invocationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L173">property <b>invocationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -7288,7 +7698,7 @@ Bindings your function uses, as defined in function.json.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerContext-log">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L48">property <b>log</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L48">property <b>log</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>log: Logger;</pre>
@@ -7300,7 +7710,7 @@ at the default trace level.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerContext-req">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L62">property <b>req</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L62">property <b>req</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>req?: <a href='#HttpRequest'>HttpRequest</a>;</pre>
@@ -7311,7 +7721,7 @@ HTTP request object. Provided to your function when using HTTP Bindings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerContext-res">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L66">property <b>res</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@azure/functions/Interfaces.d.ts#L66">property <b>res</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>res?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -7323,15 +7733,15 @@ HTTP response object. Provided to your function when using HTTP Bindings.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TimerFunctionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L190">interface <b>TimerFunctionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L190">interface <b>TimerFunctionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackArgs'>CallbackArgs</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, mod.FunctionDefaultResponse&gt;</pre>
 <h3 class="pdoc-member-header" id="TimerFunctionArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L80">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, mod.FunctionDefaultResponse&gt;;</pre>
 {{% md %}}
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
@@ -7340,10 +7750,10 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerFunctionArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L92">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, mod.FunctionDefaultResponse&gt;;</pre>
 {{% md %}}
 
 The Javascript function instance that will be called to produce the function that is the
@@ -7357,8 +7767,30 @@ the Azure will call into each time the FunctionApp it is is invoked.
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="TimerFunctionArgs-inputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
+{{% md %}}
+
+Input bindings.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="TimerFunctionArgs-outputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
+{{% md %}}
+
+Output bindings.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="TimerFunctionArgs-runOnStartup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L201">property <b>runOnStartup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L199">property <b>runOnStartup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runOnStartup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7369,21 +7801,19 @@ If true, the function is invoked when the runtime starts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerFunctionArgs-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L196">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L194">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#ScheduleArgs'>ScheduleArgs</a>&gt;;</pre>
 {{% md %}}
 
 A schedule or a CRON expression for the timer schedule, e.g. '0 * * * * *'.
-/**
-A CRON expression for the timer schedule, e.g. '0 * * * * *'.
 
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TimerInfo">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L157">interface <b>TimerInfo</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L157">interface <b>TimerInfo</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7392,7 +7822,7 @@ Timer event data that will be passed to the timer callback.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TimerInfo-IsPastDue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L166">property <b>IsPastDue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L166">property <b>IsPastDue</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>IsPastDue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -7400,7 +7830,7 @@ Timer event data that will be passed to the timer callback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerInfo-Schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L158">property <b>Schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L158">property <b>Schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>Schedule: {
@@ -7410,7 +7840,7 @@ Timer event data that will be passed to the timer callback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerInfo-ScheduleStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L161">property <b>ScheduleStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L161">property <b>ScheduleStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ScheduleStatus: {
@@ -7423,12 +7853,12 @@ Timer event data that will be passed to the timer callback.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TimerSubscriptionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L204">interface <b>TimerSubscriptionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L202">interface <b>TimerSubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#TimerFunctionArgs'>TimerFunctionArgs</a>, <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#TimerFunctionArgs'>TimerFunctionArgs</a>, <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, mod.FunctionDefaultResponse&gt;</pre>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L101">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L102">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>account?: storageForTypesOnly.Account;</pre>
@@ -7441,7 +7871,7 @@ account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L106">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L107">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7452,10 +7882,10 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L80">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, mod.FunctionDefaultResponse&gt;;</pre>
 {{% md %}}
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
@@ -7464,10 +7894,10 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L92">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#TimerContext'>TimerContext</a>, <a href='#TimerInfo'>TimerInfo</a>, mod.FunctionDefaultResponse&gt;;</pre>
 {{% md %}}
 
 The Javascript function instance that will be called to produce the function that is the
@@ -7482,7 +7912,7 @@ the Azure will call into each time the FunctionApp it is is invoked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L111">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L112">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7493,7 +7923,7 @@ Should the Function App send session affinity cookies, which route client reques
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-codePathOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L116">property <b>codePathOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L117">property <b>codePathOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</pre>
@@ -7504,7 +7934,7 @@ Options to control which files and packages are included with the serialized Fun
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L121">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L122">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7519,7 +7949,7 @@ An `connection_string` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L127">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L128">property <b>container</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>container?: storageForTypesOnly.Container;</pre>
@@ -7531,7 +7961,7 @@ provided, the root container of the storage account will be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L132">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L133">property <b>enableBuiltinLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7542,7 +7972,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L137">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L138">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7553,7 +7983,7 @@ Is the Function App enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-hostSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L142">property <b>hostSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L143">property <b>hostSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostSettings?: <a href='#HostSettings'>HostSettings</a>;</pre>
@@ -7564,7 +7994,7 @@ Host configuration options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L147">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L148">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7575,7 +8005,7 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L152">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L153">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7589,8 +8019,19 @@ An `identity` block as defined below.
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="TimerSubscriptionArgs-inputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
+{{% md %}}
+
+Input bindings.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L157">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L158">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7601,7 +8042,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L163">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7612,7 +8053,7 @@ The name of the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-nodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L168">property <b>nodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L169">property <b>nodeVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7623,8 +8064,19 @@ defaults to `8.11.1`.
 
 {{% /md %}}
 </div>
+<h3 class="pdoc-member-header" id="TimerSubscriptionArgs-outputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
+{{% md %}}
+
+Output bindings.
+
+{{% /md %}}
+</div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L178">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L179">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>plan?: appservice.Plan;</pre>
@@ -7640,7 +8092,7 @@ more details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L183">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L184">property <b>resourceGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroup?: core.ResourceGroup;</pre>
@@ -7651,7 +8103,7 @@ The resource group in which to create the event subscription. [resourceGroup] ta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L189">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L190">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7663,7 +8115,7 @@ Either [resourceGroupName] or [resourceGroup] must be supplied.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-runOnStartup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L201">property <b>runOnStartup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L199">property <b>runOnStartup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>runOnStartup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7674,20 +8126,18 @@ If true, the function is invoked when the runtime starts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-schedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L196">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L194">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#ScheduleArgs'>ScheduleArgs</a>&gt;;</pre>
 {{% md %}}
 
 A schedule or a CRON expression for the timer schedule, e.g. '0 * * * * *'.
-/**
-A CRON expression for the timer schedule, e.g. '0 * * * * *'.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L194">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L195">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7703,7 +8153,7 @@ A `site_config` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L200">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7714,7 +8164,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TimerSubscriptionArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L204">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L205">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7726,7 +8176,7 @@ The runtime version associated with the Function App. Defaults to `~2`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BindingDefinition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L308">type <b>BindingDefinition</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L318">type <b>BindingDefinition</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> BindingDefinition = azurefunctions.BindingDefinition;</pre>
@@ -7738,10 +8188,10 @@ Individual services will have more specific information they will define in thei
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="Callback">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L64">type <b>Callback</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L65">type <b>Callback</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>type</span> Callback = (context: C, event: E) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;R&gt; | <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>;</pre>
+<pre class="highlight"><span class='kd'>type</span> Callback = (context: C, event: E, inputs: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[]) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;R&gt; | <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>;</pre>
 {{% md %}}
 
 `Callback` is the signature for an Azure FunctionApp entrypoint.
@@ -7761,7 +8211,7 @@ containing the result can be returned.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="CallbackFactory">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L72">type <b>CallbackFactory</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L73">type <b>CallbackFactory</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> CallbackFactory = () => <a href='#Callback'>Callback</a>&lt;C, E, R&gt;;</pre>
@@ -7775,7 +8225,7 @@ the same warm node instance).
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="DayOfWeek">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L90">type <b>DayOfWeek</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L90">type <b>DayOfWeek</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> DayOfWeek = <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='s2'>"Monday"</span> | <span class='s2'>"Tuesday"</span> | <span class='s2'>"Wednesday"</span> | <span class='s2'>"Thursday"</span> | <span class='s2'>"Friday"</span> | <span class='s2'>"Saturday"</span> | <span class='s2'>"Sunday"</span>;</pre>
@@ -7785,8 +8235,40 @@ If a number, it must be between 0 to 7 (inclusive). (0 and 7 both represent Sund
 
 {{% /md %}}
 </div>
+<h2 class="pdoc-module-header" id="ExtendedHttpResponse">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L67">type <b>ExtendedHttpResponse</b></a>
+</h2>
+<div class="pdoc-module-contents">
+<pre class="highlight"><span class='kd'>type</span> ExtendedHttpResponse = HttpResponse | {
+    response: HttpResponse;
+};</pre>
+{{% md %}}
+
+HTTP Response that may or may not contain extra output binding data.
+For each output binding, the callback should define a property in the response record with the property
+name matching the binding name. For instance, for an output binding called 'myoutput', the response could
+be '{ response: { status: 200, body: "My Response" }, myoutput: "My Value" }'.
+
+{{% /md %}}
+</div>
+<h2 class="pdoc-module-header" id="FunctionDefaultResponse">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L452">type <b>FunctionDefaultResponse</b></a>
+</h2>
+<div class="pdoc-module-contents">
+<pre class="highlight"><span class='kd'>type</span> FunctionDefaultResponse = <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span> | Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;;</pre>
+{{% md %}}
+
+Type alias for a response coming from an Azure Function callback, which applies to most Function types
+(HTTP being a notable exception).
+'void' is returned when a Function has no output bindings.
+For each output binding, the callback should define a property in the response record with the property
+name matching the binding name. For instance, for an output binding called 'myoutput', the response could
+be '{ myoutput: "My Value" }'.
+
+{{% /md %}}
+</div>
 <h2 class="pdoc-module-header" id="HttpRequest">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L25">type <b>HttpRequest</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L25">type <b>HttpRequest</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> HttpRequest = azurefunctions.HttpRequest;</pre>
@@ -7797,7 +8279,7 @@ HTTP request object. Provided to your function when using HttpEventSubscription.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="HttpResponse">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_http.ts#L30">type <b>HttpResponse</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_http.ts#L30">type <b>HttpResponse</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> HttpResponse = azureessentials.HttpResponse;</pre>
@@ -7807,8 +8289,14 @@ Represents an HTTP response including the status code and data.
 
 {{% /md %}}
 </div>
+<h2 class="pdoc-module-header" id="InputBindingSettings">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L428">type <b>InputBindingSettings</b></a>
+</h2>
+<div class="pdoc-module-contents">
+<pre class="highlight"><span class='kd'>type</span> InputBindingSettings = <a href='#BindingSettings'>BindingSettings</a>&lt;<a href='#InputBindingDefinition'>InputBindingDefinition</a>&gt;;</pre>
+</div>
 <h2 class="pdoc-module-header" id="Month">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins_timer.ts#L95">type <b>Month</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins_timer.ts#L95">type <b>Month</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> Month = <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='s2'>"January"</span> | <span class='s2'>"February"</span> | <span class='s2'>"March"</span> | <span class='s2'>"April"</span> | <span class='s2'>"May"</span> | <span class='s2'>"June"</span> | <span class='s2'>"July"</span> | <span class='s2'>"August"</span> | <span class='s2'>"September"</span> | <span class='s2'>"October"</span> | <span class='s2'>"November"</span> | <span class='s2'>"December"</span>;</pre>
@@ -7818,8 +8306,14 @@ If a number, it must be between 1 to 12 (inclusive).
 
 {{% /md %}}
 </div>
+<h2 class="pdoc-module-header" id="OutputBindingSettings">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L429">type <b>OutputBindingSettings</b></a>
+</h2>
+<div class="pdoc-module-contents">
+<pre class="highlight"><span class='kd'>type</span> OutputBindingSettings = <a href='#BindingSettings'>BindingSettings</a>&lt;<a href='#OutputBindingDefinition'>OutputBindingDefinition</a>&gt;;</pre>
+</div>
 <h2 class="pdoc-module-header" id="Result">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/appservice/zMixins.ts#L33">type <b>Result</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/appservice/zMixins.ts#L34">type <b>Result</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> Result = <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | Buffer | ArrayBufferView | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span> | <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>;</pre>

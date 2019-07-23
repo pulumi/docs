@@ -5,7 +5,7 @@
 <span id="v1beta1"></span><h1>v1beta1<a class="headerlink" href="#module-pulumi_kubernetes.apps.v1beta1" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_kubernetes.apps.v1beta1.ControllerRevision">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.apps.v1beta1.</code><code class="descname">ControllerRevision</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>data=None</em>, <em>metadata=None</em>, <em>revision=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta1.ControllerRevision" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.apps.v1beta1.</code><code class="descname">ControllerRevision</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>data=None</em>, <em>metadata=None</em>, <em>revision=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta1.ControllerRevision" title="Permalink to this definition">¶</a></dt>
 <dd><p>DEPRECATED - This group version of ControllerRevision is deprecated by
 apps/v1beta2/ControllerRevision. See the release notes for more information. ControllerRevision
 implements an immutable snapshot of state data. Clients are responsible for serializing and
@@ -58,7 +58,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.apps.v1beta1.ControllerRevisionList">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.apps.v1beta1.</code><code class="descname">ControllerRevisionList</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>items=None</em>, <em>metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta1.ControllerRevisionList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.apps.v1beta1.</code><code class="descname">ControllerRevisionList</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>items=None</em>, <em>metadata=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta1.ControllerRevisionList" title="Permalink to this definition">¶</a></dt>
 <dd><p>ControllerRevisionList is a resource containing a list of ControllerRevision objects.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.apps.v1beta1.ControllerRevisionList.translate_output_property">
@@ -102,7 +102,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.apps.v1beta1.Deployment">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.apps.v1beta1.</code><code class="descname">Deployment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta1.Deployment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.apps.v1beta1.</code><code class="descname">Deployment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>status=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta1.Deployment" title="Permalink to this definition">¶</a></dt>
 <dd><p>DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Deployment. See the
 release notes for more information. Deployment enables declarative updates for Pods and
 ReplicaSets.</p>
@@ -148,7 +148,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.apps.v1beta1.DeploymentList">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.apps.v1beta1.</code><code class="descname">DeploymentList</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>items=None</em>, <em>metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta1.DeploymentList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.apps.v1beta1.</code><code class="descname">DeploymentList</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>items=None</em>, <em>metadata=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta1.DeploymentList" title="Permalink to this definition">¶</a></dt>
 <dd><p>DeploymentList is a list of Deployments.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.apps.v1beta1.DeploymentList.translate_output_property">
@@ -192,7 +192,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.apps.v1beta1.StatefulSet">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.apps.v1beta1.</code><code class="descname">StatefulSet</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta1.StatefulSet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.apps.v1beta1.</code><code class="descname">StatefulSet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>status=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta1.StatefulSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>DEPRECATED - This group version of StatefulSet is deprecated by apps/v1beta2/StatefulSet. See
 the release notes for more information. StatefulSet represents a set of pods with consistent
 identities. Identities are defined as:</p>
@@ -244,7 +244,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.apps.v1beta1.StatefulSetList">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.apps.v1beta1.</code><code class="descname">StatefulSetList</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>items=None</em>, <em>metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta1.StatefulSetList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.apps.v1beta1.</code><code class="descname">StatefulSetList</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>items=None</em>, <em>metadata=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1beta1.StatefulSetList" title="Permalink to this definition">¶</a></dt>
 <dd><p>StatefulSetList is a collection of StatefulSets.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.apps.v1beta1.StatefulSetList.translate_output_property">

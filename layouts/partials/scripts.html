@@ -11,7 +11,15 @@
 {{ $s = $s | append (resources.Get "js/carousel.js") }}
 {{ $s = $s | append (resources.Get "js/langchoose.js") }}
 {{ $s = $s | append (resources.Get "js/noselect.js") }}
-{{ $s = $s | append (readFile "node_modules/clipboard-polyfill/build/clipboard-polyfill.promise.js" | resources.FromString "js/node/clipboard-polyfill.js") }}
+
+<!-- We use the `clipboard-polyfill` npm package. If it hasn't been installed, show a friendlier error message. -->
+{{ $clipboardFile := "node_modules/clipboard-polyfill/build/clipboard-polyfill.promise.js" }}
+{{ if fileExists $clipboardFile }}
+    {{ $s = $s | append (readFile $clipboardFile | resources.FromString "js/node/clipboard-polyfill.js") }}
+{{ else }}
+    {{ errorf "%q does not exist. Run `make ensure` to install required dependencies." $clipboardFile }}
+{{ end }}
+
 {{ $s = $s | append (resources.Get "js/copybutton.js") }}
 {{ $js := $s | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>

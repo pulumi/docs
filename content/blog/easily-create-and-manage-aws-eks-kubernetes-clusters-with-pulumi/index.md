@@ -14,6 +14,7 @@ it's still difficult to get up and running. Pulumi's infrastructure as
 code to the rescue! We can now provision an entire EKS cluster with a
 CLI single gesture, thanks to [the `@pulumi/eks`
 package](https://github.com/pulumi/pulumi-eks). Let's see how.
+<!--more-->
 
 ![Pulumi making EKS Easy](./easy-eks.png)
 
@@ -29,7 +30,6 @@ From here, there are two ways to proceed:
 
 - Provision a new cluster with a single CLI command
 - Use infrastructure as code to manage clusters ... including Kubernetes resources themselves!
-<!--more-->
 
 ## Installing Amazon EKS with Pulumi
 

@@ -7,10 +7,10 @@ title: Module role
 
 <a href="../">@pulumi/azure</a> &gt; role
 
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-azure)
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm)
 > distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
 > first check the [`pulumi/pulumi-azure` repo](https://github.com/pulumi/pulumi-azure/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-azure` repo](https://github.com/terraform-providers/terraform-provider-azure/issues).
+> please consult the source [`terraform-providers/terraform-provider-azurerm` repo](https://github.com/terraform-providers/terraform-provider-azurerm/issues).
 
 
 
@@ -36,14 +36,14 @@ title: Module role
 <li><a href="#GetRoleDefinitionResult">interface GetRoleDefinitionResult</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts">role/assignment.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts">role/definition.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getBuiltinRoleDefinition.ts">role/getBuiltinRoleDefinition.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getRoleDefinition.ts">role/getRoleDefinition.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts">role/assignment.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts">role/definition.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getBuiltinRoleDefinition.ts">role/getBuiltinRoleDefinition.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getRoleDefinition.ts">role/getRoleDefinition.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Assignment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L79">class <b>Assignment</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L79">class <b>Assignment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -122,7 +122,7 @@ const testAssignment = new azure.role.Assignment("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Assignment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L125"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L125"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -139,7 +139,7 @@ Create a Assignment resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L88">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L88">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -153,7 +153,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -163,7 +163,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L99">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L99">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -177,7 +177,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -189,7 +189,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L109">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -200,7 +200,7 @@ A unique UUID/GUID for this Role Assignment - one will be generated if not speci
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-principalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L113">property <b>principalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L113">property <b>principalId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -211,7 +211,7 @@ The ID of the Principal (User, Group, Service Principal, or Application) to assi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-roleDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L117">property <b>roleDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L117">property <b>roleDefinitionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>roleDefinitionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -222,7 +222,7 @@ The Scoped-ID of the Role Definition. Changing this forces a new resource to be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-roleDefinitionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L121">property <b>roleDefinitionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L121">property <b>roleDefinitionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>roleDefinitionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -233,7 +233,7 @@ The name of a built-in Role. Changing this forces a new resource to be created. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L125">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L125">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -244,7 +244,7 @@ The scope at which the Role Assignment applies too, such as `/subscriptions/0b1f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -257,12 +257,17 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Definition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L7">class <b>Definition</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L10">class <b>Definition</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/role_definition.html.markdown.
+
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Definition-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L57"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L60"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -279,7 +284,7 @@ Create a Definition resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L16">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -293,7 +298,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -303,7 +308,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L27">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -317,7 +322,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-assignableScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L37">property <b>assignableScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L40">property <b>assignableScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>assignableScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -328,7 +333,7 @@ One or more assignable scopes for this Role Definition, such as `/subscriptions/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L41">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L44">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -339,7 +344,7 @@ A description of the Role Definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -351,7 +356,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L45">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L48">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -362,7 +367,7 @@ The name of the Role Definition. Changing this forces a new resource to be creat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L49">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L52">property <b>permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -378,7 +383,7 @@ A `permissions` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-roleDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L53">property <b>roleDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L56">property <b>roleDefinitionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>roleDefinitionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -389,7 +394,7 @@ A unique UUID/GUID which identifies this role - one will be generated if not spe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L57">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L60">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -400,7 +405,7 @@ The scope at which the Role Definition applies too, such as `/subscriptions/0b1f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -413,12 +418,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getBuiltinRoleDefinition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L27">function <b>getBuiltinRoleDefinition</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L27">function <b>getBuiltinRoleDefinition</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>getBuiltinRoleDefinition(args: <a href='#GetBuiltinRoleDefinitionArgs'>GetBuiltinRoleDefinitionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetBuiltinRoleDefinitionResult'>GetBuiltinRoleDefinitionResult</a>&gt;</pre>
+<pre class="highlight"><span class='kd'></span>getBuiltinRoleDefinition(args: <a href='#GetBuiltinRoleDefinitionArgs'>GetBuiltinRoleDefinitionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetBuiltinRoleDefinitionResult'>GetBuiltinRoleDefinitionResult</a>&gt; &amp; <a href='#GetBuiltinRoleDefinitionResult'>GetBuiltinRoleDefinitionResult</a></pre>
 
 
 Use this data source to access information about a built-in Role Definition. To access information about a custom Role Definition, please see the `azurerm_role_definition` data source instead.
@@ -443,12 +448,12 @@ export const contributorRoleDefinitionId = contributor.id;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getRoleDefinition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getRoleDefinition.ts#L40">function <b>getRoleDefinition</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getRoleDefinition.ts#L40">function <b>getRoleDefinition</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>getRoleDefinition(args?: <a href='#GetRoleDefinitionArgs'>GetRoleDefinitionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetRoleDefinitionResult'>GetRoleDefinitionResult</a>&gt;</pre>
+<pre class="highlight"><span class='kd'></span>getRoleDefinition(args?: <a href='#GetRoleDefinitionArgs'>GetRoleDefinitionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetRoleDefinitionResult'>GetRoleDefinitionResult</a>&gt; &amp; <a href='#GetRoleDefinitionResult'>GetRoleDefinitionResult</a></pre>
 
 
 Use this data source to access information about an existing Role Definition.
@@ -486,7 +491,7 @@ export const customRoleDefinitionId = customRoleDefinition.id;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="AssignmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L191">interface <b>AssignmentArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L191">interface <b>AssignmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -495,7 +500,7 @@ The set of arguments for constructing a Assignment resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AssignmentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L195">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L195">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -506,7 +511,7 @@ A unique UUID/GUID for this Role Assignment - one will be generated if not speci
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentArgs-principalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L199">property <b>principalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L199">property <b>principalId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -517,7 +522,7 @@ The ID of the Principal (User, Group, Service Principal, or Application) to assi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentArgs-roleDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L203">property <b>roleDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L203">property <b>roleDefinitionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleDefinitionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -528,7 +533,7 @@ The Scoped-ID of the Role Definition. Changing this forces a new resource to be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentArgs-roleDefinitionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L207">property <b>roleDefinitionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L207">property <b>roleDefinitionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleDefinitionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -539,7 +544,7 @@ The name of a built-in Role. Changing this forces a new resource to be created. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L211">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L211">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -551,7 +556,7 @@ The scope at which the Role Assignment applies too, such as `/subscriptions/0b1f
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AssignmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L165">interface <b>AssignmentState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L165">interface <b>AssignmentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -560,7 +565,7 @@ Input properties used for looking up and filtering Assignment resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AssignmentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L169">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L169">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -571,7 +576,7 @@ A unique UUID/GUID for this Role Assignment - one will be generated if not speci
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentState-principalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L173">property <b>principalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L173">property <b>principalId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>principalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -582,7 +587,7 @@ The ID of the Principal (User, Group, Service Principal, or Application) to assi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentState-roleDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L177">property <b>roleDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L177">property <b>roleDefinitionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleDefinitionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -593,7 +598,7 @@ The Scoped-ID of the Role Definition. Changing this forces a new resource to be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentState-roleDefinitionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L181">property <b>roleDefinitionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L181">property <b>roleDefinitionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleDefinitionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -604,7 +609,7 @@ The name of a built-in Role. Changing this forces a new resource to be created. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/assignment.ts#L185">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/assignment.ts#L185">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -616,7 +621,7 @@ The scope at which the Role Assignment applies too, such as `/subscriptions/0b1f
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DefinitionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L132">interface <b>DefinitionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L135">interface <b>DefinitionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -625,7 +630,7 @@ The set of arguments for constructing a Definition resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DefinitionArgs-assignableScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L136">property <b>assignableScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L139">property <b>assignableScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>assignableScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -636,7 +641,7 @@ One or more assignable scopes for this Role Definition, such as `/subscriptions/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L140">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L143">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -647,7 +652,7 @@ A description of the Role Definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L147">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -658,7 +663,7 @@ The name of the Role Definition. Changing this forces a new resource to be creat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L148">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L151">property <b>permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -674,7 +679,7 @@ A `permissions` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionArgs-roleDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L152">property <b>roleDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L155">property <b>roleDefinitionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleDefinitionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -685,7 +690,7 @@ A unique UUID/GUID which identifies this role - one will be generated if not spe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L156">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L159">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -697,7 +702,7 @@ The scope at which the Role Definition applies too, such as `/subscriptions/0b1f
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DefinitionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L102">interface <b>DefinitionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L105">interface <b>DefinitionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -706,7 +711,7 @@ Input properties used for looking up and filtering Definition resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DefinitionState-assignableScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L106">property <b>assignableScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L109">property <b>assignableScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>assignableScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -717,7 +722,7 @@ One or more assignable scopes for this Role Definition, such as `/subscriptions/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L110">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L113">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -728,7 +733,7 @@ A description of the Role Definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L114">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L117">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -739,7 +744,7 @@ The name of the Role Definition. Changing this forces a new resource to be creat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L118">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L121">property <b>permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -755,7 +760,7 @@ A `permissions` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionState-roleDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L122">property <b>roleDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L125">property <b>roleDefinitionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleDefinitionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -766,7 +771,7 @@ A unique UUID/GUID which identifies this role - one will be generated if not spe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/definition.ts#L126">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/definition.ts#L129">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -778,7 +783,7 @@ The scope at which the Role Definition applies too, such as `/subscriptions/0b1f
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetBuiltinRoleDefinitionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L36">interface <b>GetBuiltinRoleDefinitionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L38">interface <b>GetBuiltinRoleDefinitionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -787,7 +792,7 @@ A collection of arguments for invoking getBuiltinRoleDefinition.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetBuiltinRoleDefinitionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L40">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L42">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -799,7 +804,7 @@ Specifies the name of the built-in Role Definition. Possible values are: `Contri
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetBuiltinRoleDefinitionResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L46">interface <b>GetBuiltinRoleDefinitionResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L48">interface <b>GetBuiltinRoleDefinitionResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -808,7 +813,7 @@ A collection of values returned by getBuiltinRoleDefinition.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetBuiltinRoleDefinitionResult-assignableScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L50">property <b>assignableScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L52">property <b>assignableScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>assignableScopes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -819,7 +824,7 @@ One or more assignable scopes for this Role Definition, such as `/subscriptions/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBuiltinRoleDefinitionResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L54">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L56">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -830,7 +835,7 @@ the Description of the built-in Role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBuiltinRoleDefinitionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L69">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -841,7 +846,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBuiltinRoleDefinitionResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L55">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L57">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -849,7 +854,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBuiltinRoleDefinitionResult-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L59">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L61">property <b>permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>permissions: {
@@ -865,7 +870,7 @@ a `permissions` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBuiltinRoleDefinitionResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L63">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L65">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -877,7 +882,7 @@ the Type of the Role.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRoleDefinitionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getRoleDefinition.ts#L52">interface <b>GetRoleDefinitionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getRoleDefinition.ts#L54">interface <b>GetRoleDefinitionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -886,7 +891,7 @@ A collection of arguments for invoking getRoleDefinition.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetRoleDefinitionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getRoleDefinition.ts#L56">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getRoleDefinition.ts#L58">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -897,7 +902,7 @@ Specifies the Name of either a built-in or custom Role Definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleDefinitionArgs-roleDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getRoleDefinition.ts#L60">property <b>roleDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getRoleDefinition.ts#L62">property <b>roleDefinitionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleDefinitionId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -908,7 +913,7 @@ Specifies the ID of the Role Definition as a UUID/GUID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleDefinitionArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getRoleDefinition.ts#L64">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getRoleDefinition.ts#L66">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scope?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -920,7 +925,7 @@ Specifies the Scope at which the Custom Role Definition exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRoleDefinitionResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getRoleDefinition.ts#L70">interface <b>GetRoleDefinitionResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getRoleDefinition.ts#L72">interface <b>GetRoleDefinitionResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -929,7 +934,7 @@ A collection of values returned by getRoleDefinition.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetRoleDefinitionResult-assignableScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getRoleDefinition.ts#L74">property <b>assignableScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getRoleDefinition.ts#L76">property <b>assignableScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>assignableScopes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -940,7 +945,7 @@ One or more assignable scopes for this Role Definition, such as `/subscriptions/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleDefinitionResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getRoleDefinition.ts#L78">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getRoleDefinition.ts#L80">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -951,7 +956,7 @@ the Description of the built-in Role.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleDefinitionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getRoleDefinition.ts#L93">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getRoleDefinition.ts#L95">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -962,7 +967,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleDefinitionResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getRoleDefinition.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getRoleDefinition.ts#L81">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -970,7 +975,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleDefinitionResult-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getRoleDefinition.ts#L83">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getRoleDefinition.ts#L85">property <b>permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>permissions: {
@@ -986,7 +991,7 @@ a `permissions` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleDefinitionResult-roleDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getRoleDefinition.ts#L84">property <b>roleDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getRoleDefinition.ts#L86">property <b>roleDefinitionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleDefinitionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -994,7 +999,7 @@ a `permissions` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleDefinitionResult-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getRoleDefinition.ts#L85">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getRoleDefinition.ts#L87">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scope?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1002,7 +1007,7 @@ a `permissions` block as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRoleDefinitionResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/13434c8606705352bec13526bdda6ead9061e409/sdk/nodejs/role/getRoleDefinition.ts#L89">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/da6d699a4901b098fcbc39062b846b115d555fa1/sdk/nodejs/role/getRoleDefinition.ts#L91">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
