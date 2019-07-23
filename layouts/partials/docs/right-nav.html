@@ -20,4 +20,13 @@
             </a>
         </li>
     </ul>
+    {{ $isDocsHome := eq $.Page.RelPermalink "/docs/" }}
+    {{ if not $isDocsHome }}
+        <div class="mini-toc border-b border-gray-200 mt-2 mb-8 py-6">
+            <h4 class="text-gray-600 uppercase tracking-wide font-bold text-sm lg:text-xs">On This Page</h4>
+            <ul class="p-0 list-none">
+                {{/* This will be populated dynamically with all H2s on the page; see static/js/main.js */}}
+            </ul>
+        </div>
+    {{ end }}
 {{ end }}
