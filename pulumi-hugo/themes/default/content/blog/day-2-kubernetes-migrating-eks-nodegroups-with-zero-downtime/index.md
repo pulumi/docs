@@ -1,8 +1,8 @@
 ---
 title: "Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime"
 authors: ["mike-metral"]
-tags: ["Kubernetes","EKS", "Migrations", "Node Groups"]
-date: "2019-07-22"
+tags: ["Kubernetes","EKS"]
+date: "2019-07-23"
 
 meta_image: "eks-migrate-nodegroups.png"
 ---
@@ -25,14 +25,18 @@ over to it with zero downtime using code and `kubectl`.
 
 [View the full tutorial and code.][eks-nodegroup-tutorial]
 
-![](eks-migrate-nodegroups.svg)
+![](eks-migrate-nodegroups.png)
 
 ## Create an EKS cluster and Deploy the Workload
 
 For our initial update, we will configure and launch an EKS cluster using
 `v1.13` of Kubernetes, with the cluster's infrastructure dependencies 
-(such as VPC and IAM) defined using [Crosswalk for AWS][crosswalk-aws]. We'll also
-create and attach the following node groups to the cluster:
+(such as VPC and IAM) defined using [Crosswalk for AWS][crosswalk-aws].
+Crosswalk allows us to leverage the Pulumi libraries of common infrastructure
+for AWS to simplify cloud resource instantiation and management while gaining
+best-practices as defaults.
+
+We'll also create and attach the following node groups to the cluster:
 
 * A standard `t2.medium` worker node group using the recent `v1.13.7` worker [AMI][eks-amis], for general purpose workloads such as the [`EchoServer`][echoserver] &mdash; a simple app that echo's client request headers.
 * A 2xlarge `t3.2xlarge` worker node group using an older `v1.12.7` worker [AMI][eks-amis], for use by larger, intensive workloads such as the [NGINX Ingress Controller][ingress-nginx].
@@ -64,7 +68,7 @@ group in the next steps, we'll also actively load test the endpoint of the
 
 Create the new, `4xlarge` node group by defining it and running an update.
 
-![](ng-4xlarge.svg)
+![](new-4xlarge.png)
 
 ### Step 2: Migrate NGINX to the `4xlarge` node group.
 
@@ -80,7 +84,7 @@ NGINX is able to successfully migrate across node groups because it is
 configured with HA settings, [spread-type scheduling predicates][tutorial-ha-refs],
 and can gracefully terminate within the Kubernetes [Pod lifecycle][pod-lifecycle].
 
-![](target-ng-4xlarge.svg)
+![](migrate-nginx-4xlarge.png)
 
 ### Step 3: Decommission the `2xlarge` node group.
 
@@ -90,9 +94,9 @@ begin decommissioning the original `2xlarge` node group which is no longer in us
 Decommissioning the node group involves:
 
   * Draining the Kubernetes nodes.
-  * Delete the Kubernetes nodes from the APIServer.
-  * Scale down the Auto Scaling Group to `0`.
-  * Delete the node group.
+  * Deleting the Kubernetes nodes from the APIServer.
+  * Scaling down the Auto Scaling Group to `0`.
+  * Deleting the node group.
 
 Set up `kubectl` by using the `kubeconfig` from the stack output.
 
@@ -120,12 +124,12 @@ done
 Scale down the node group Auto Scaling Group completely by setting
 the `desiredCapacity: 0` and running an update:
 
-![](scale-down-ng-2xlarge.svg)
+![](scale-down-ng-2xlarge.png)
 
 Once the Auto Scaling Group has scaled down, we can delete the node group from
 AWS and the Pulumi program:
 
-![](remove-ng-2xlarge.svg)
+![](remove-ng-2xlarge.png)
 
 ## Summary
 
