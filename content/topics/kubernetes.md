@@ -231,10 +231,11 @@ examples:
           import * as gcp from "@pulumi/gcp";
           import { nodeCount, nodeMachineType, password, username } from "./config";
 
+          const engineVersion = gcp.container.getEngineVersions().then(v => v.latestMasterVersion);
           export const k8sCluster = new gcp.container.Cluster("gke-cluster", {
               initialNodeCount: nodeCount,
-              nodeVersion: "latest",
-              minMasterVersion: "latest",
+              minMasterVersion: engineVersion,
+              nodeVersion: engineVersion,
               masterAuth: { username, password },
               nodeConfig: {
                   machineType: nodeMachineType,
