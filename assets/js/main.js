@@ -22,7 +22,9 @@ function bindToggles(selector) {
 function generateMiniToc() {
     var toc = $(".mini-toc > ul");
     if (toc) {
-        $("h2").each(function () {
+        toc.addClass("sidenav-subsection text-sm");
+        $("h2, h3").each(function () {
+            $("h3").addClass("sidenav-topic pl-2");
             var id = $(this).attr("id");
             var text = $(this).text();
             if (id && text) {
