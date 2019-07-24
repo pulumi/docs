@@ -3,7 +3,7 @@ title: "Building and Publishing Docker Images to a Private Amazon ECR Repository
 authors: ["cyrus-najmabadi"]
 tags: ["Kubernetes"]
 date: "2019-06-18"
-meta_image: "pulumi-crosswalk-for-aws.webp"
+meta_image: "pulumi-crosswalk-for-aws.png"
 ---
 
 
@@ -107,7 +107,7 @@ to contain our own custom `index.html` file:
 The `Dockerfile`:
 
     FROM nginx
-    COPY content/index.html /usr/share/nginx/html 
+    COPY content/index.html /usr/share/nginx/html
 
 The `index.html` file:
 
