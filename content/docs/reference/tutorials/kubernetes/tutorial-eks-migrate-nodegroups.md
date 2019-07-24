@@ -21,7 +21,7 @@ original node group from Kubernetes and AWS.
 
 [View the code on GitHub][example-gh].
 
-<p align="center"><img src="/images/docs/reference/kubernetes/eks-update-nodegroups.svg" width="650"></p>
+![](/images/docs/reference/kubernetes/eks-migrate-nodegroups.png)
 
 {{< aws-eks-prereqs >}}
 
@@ -121,14 +121,14 @@ a3a6ae14f9e6d11e99ea4023e81f316e-1155138699.us-east-2.elb.amazonaws.com
 After the load balancer is provisioned and resolvable on AWS, let's access the `echoserver` behind
 NGINX:
 
-> Note: It can take a few minutes for the load balancer to be resolvable.
+> **Note:** It can take a few minutes for the load balancer to be resolvable.
 
 ```bash
 $ export LB=`pulumi stack output nginxServiceUrl`
 $ curl -Lv -H "Host: apps.example.com" $LB/echoserver
 ```
 
-> *Note*: If we used a Kubernetes DNS manager such as
+> **Note:** If we used a Kubernetes DNS manager such as
 [external-dns][external-dns], we could simply use the FQDN instead of the load
 balancer's endpoint with custom host headers.
 
@@ -302,7 +302,7 @@ $ export LB=`pulumi stack output nginxServiceUrl`
 $ ./scripts/load-testing.sh $LB 75
 ```
 
-> **Note**: Given the large number of requests being generated during load
+> **Note:** Given the large number of requests being generated during load
 > testing (millions), a seperate machine for testing would be best suited
 for overall network performance and throughput on your client.
 
@@ -345,7 +345,7 @@ This change updates the NGINX Deployment spec to require the use of
 `c5.4xlarge` nodes during scheduling, and forces a rolling update over to the
 `4xlarge` node group.
 
-<p align="center"><img src="/images/docs/reference/kubernetes/target-ng-4xlarge.svg" width="650"/></p>
+![](/images/docs/reference/kubernetes/migrate-nginx-4xlarge.png)
 
 Edit `index.ts` by setting `nodeSelectorTermValues` to `c5.4xlarge`, and run an update:
 
@@ -370,10 +370,10 @@ $ kubectl get pods --all-namespaces -o wide --show-labels -l app=nginx-ing-cntlr
 $ kubectl get nodes -o wide --show-labels -l beta.kubernetes.io/instance-type=c5.4xlarge
 ```
 
-> Note: It may take a couple of minutes for the Pods to fully migrate over, but
+> **Note:** It may take a couple of minutes for the Pods to fully migrate over, but
 > it will do so with zero downtime as demonstrated in the load testing.
 
-> Note: You should also notice a linear up-tick in **requests per second** in the
+> **Note:** You should also notice a linear up-tick in **requests per second** in the
 load testing results, due to the more capable `c5.4xlarge` worker instances
 being used.
 
@@ -413,7 +413,7 @@ $ ./scripts/delete-t3.2xlarge-nodes.sh
 
 Scale down the node group Auto Scaling Group completely:
 
-<p align="center"><img src="/images/docs/reference/kubernetes/scale-down-ng-2xlarge.svg" width="650"/></p>
+![](/images/docs/reference/kubernetes/scale-down-ng-2xlarge.png)
 
 Edit `index.ts` by setting the `desiredCapacity` to `0` for the `2xlarge` node group, and run an update:
 
@@ -423,7 +423,7 @@ $ pulumi up
 
 Once the Auto Scaling Group has scaled down, we can delete the node group from AWS and the Pulumi program:
 
-<p align="center"><img src="/images/docs/reference/kubernetes/remove-ng-2xlarge.svg" width="650"/></p>
+![](/images/docs/reference/kubernetes/remove-ng-2xlarge.png)
 
 Delete the snippet above from `index.ts`, and run an update:
 
@@ -444,18 +444,15 @@ process. 🍹🎉
 
 Run the following command to tear down the resources that are part of our stack.
 
-1.  Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these resources.
-
+1. Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these resources.
 ```bash
 $ pulumi destroy
 ```
 
-1.  To delete the stack, run the following command.
-
+1. To delete the stack, run the following command.
 ```bash
 $ pulumi stack rm
 ```
-
 > **Note:** This command deletes all deployment history from the Pulumi Console and cannot be undone.
 
 ## Summary
