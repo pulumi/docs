@@ -112,10 +112,10 @@
     name = "azure"
     url = "/docs/reference/pkg/nodejs/pulumi/azure/"
 
-#[[reference]]
-#    parent = "node"
-#    name = "azuread"
-#    url = "/docs/reference/pkg/nodejs/pulumi/azuread/"
+[[reference]]
+    parent = "node"
+    name = "azuread"
+    url = "/docs/reference/pkg/nodejs/pulumi/azuread/"
 
 [[reference]]
     parent = "node"
@@ -242,10 +242,10 @@
     name = "pulumi_azure"
     url = "/docs/reference/pkg/python/pulumi_azure/"
 
-#[[reference]]
-#    parent = "python"
-#    name = "pulumi_azuread"
-#    url = "/docs/reference/pkg/python/pulumi_azuread/"
+[[reference]]
+    parent = "python"
+    name = "pulumi_azuread"
+    url = "/docs/reference/pkg/python/pulumi_azuread/"
 
 [[reference]]
     parent = "python"
