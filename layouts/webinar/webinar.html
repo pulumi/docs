@@ -59,7 +59,7 @@
                     <p class="text-gray-600">
                         {{ .description }}
                     </p>
-                    <h6>Presenters</h6>
+                    <h6 class="uppercase">Presenters</h6>
                     <ul class="list-none p-0">
                         {{ range .presenters }}
                             <li class="mb-4">
@@ -68,7 +68,7 @@
                             </li>
                         {{ end }}
                     </ul>
-                    <h6>Who Should Attend</h6>
+                    <h6 class="uppercase">Who Should Attend</h6>
                     <div class="text-gray-600 text-sm">
                         {{ delimit .audience ", " }}
                     </div>
@@ -84,7 +84,7 @@
                     <img src="/icons/case_study.svg">
                 </div>
                 <div>
-                    <h6 class="text-gray-600">Study</h6>
+                    <h6 class="text-gray-600 uppercase">Study</h6>
                     <div class="text-xl">How Learning Machine Improved Time to Ship</div>
                     <p class="text-gray-600">
                         Pulumi helped Learning Machine delivered a more agile, streamlined
@@ -101,7 +101,7 @@
                     <img src="/icons/ebook.svg">
                 </div>
                 <div>
-                    <h6 class="text-gray-600">Ebook</h6>
+                    <h6 class="text-gray-600 uppercase">Ebook</h6>
                     <div class="text-xl">Implementing Cloud Native Infrastructure for your Organization</div>
                     <p class="text-gray-600">
                         Learn how Pulumi's cloud native development platform provides a
