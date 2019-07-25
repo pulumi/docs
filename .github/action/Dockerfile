@@ -9,6 +9,10 @@ LABEL "repository"="https://github.com/joeduffy/pulumify"
 LABEL "homepage"="http://pulumi.com/docs"
 LABEL "maintainer"="Joe Duffy <joe@pulumi.com>"
 
+# Install some tools we'll need.
+RUN apt-get update -y
+RUN apt-get install -y jq
+
 # Copy the Pulumi infrastructure definition to a well-known location. Because the image
 # will immediately begin running Pulumi commands, also switch the working directory.
 COPY ./infra /infra
