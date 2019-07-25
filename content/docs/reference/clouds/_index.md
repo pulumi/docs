@@ -1,10 +1,8 @@
 ---
-title: Supported Clouds & Languages
-aliases: 
-    - /docs/reference/languages/
+title: Supported Clouds
 menu:
   reference:
-    identifier: clouds-languages
+    identifier: clouds
     weight: 4
 ---
 

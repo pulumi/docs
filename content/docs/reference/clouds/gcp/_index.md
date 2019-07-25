@@ -2,7 +2,7 @@
 title: Google Cloud
 menu:
   reference:
-    parent: clouds-languages
+    parent: clouds
     identifier: clouds-gcp
 ---
 

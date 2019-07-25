@@ -4,7 +4,7 @@ title: "Node.js"
 expanded_url: /docs/reference/languages/
 menu:
   reference:
-    parent: clouds-languages
+    parent: languages
     weight: 1
 ---
 

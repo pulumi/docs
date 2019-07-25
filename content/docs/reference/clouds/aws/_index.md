@@ -2,7 +2,7 @@
 title: AWS
 menu:
   reference:
-    parent: clouds-languages
+    parent: clouds
     identifier: clouds-aws
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Pulumi Cloud Development
+title: Architecture & Concepts
 menu:
   reference:
     identifier: concepts
