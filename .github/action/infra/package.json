@@ -3,7 +3,7 @@
     "main": "bin/index.js",
     "typings": "bin/index.d.ts",
     "scripts": {
-        "build": "tsc",
+        "build": "tsc"
     },
     "devDependencies": {
         "tslint": "^5.10.0",
