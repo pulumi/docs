@@ -85,13 +85,13 @@ resource_group = core.ResourceGroup("resource_group",
 # Create an Azure Container Group
 container = containerservice.Group("nginx",
     containers=[{
-        name: "nginx",
-        image: "nginx",
-        memory: 1,
-        cpu: 1,
-        ports: [{
-            port: 80,
-            protocol: "TCP"
+        "name": "nginx",
+        "image": "nginx",
+        "memory": 1,
+        "cpu": 1,
+        "ports": [{
+            "port": 80,
+            "protocol": "TCP"
         }],
     }],
     os_type="Linux",
