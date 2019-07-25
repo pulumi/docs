@@ -13,8 +13,10 @@ implemented halfway, or the configuration becomes impossible to
 maintain. 
 
 Fortunately, Pulumi makes RBAC on Kuberenetes so easy that you'll never create an insecure cluster again. In this post, we will contrast the traditional way of working
-with RBAC on EKS with using Pulumi. Here are a few highlights:
+with RBAC on EKS with using Pulumi.
 <!--more-->
+
+Here are a few highlights:
 
 - **NO MORE YAMLs!** Configuring YAMLs, operators or custom resources
   is now a thing in the past! You use TypeScript or JavaScript to
