@@ -1,5 +1,5 @@
-{{ $menu := .Site.Menus.main }}
-{{ $has_toc := false }}
+{{ $menu := .Site.Menus.reference }}
+{{ $has_toc := true }}
 
 {{ $isDocsHome := eq .RelPermalink "/docs/" }}
 {{ $isGetStarted := false }}
@@ -24,9 +24,6 @@
 {{ end }}
 
 <aside class="toc">
-    <h3 class="no-anchor">
-        <a href="{{ relref . "/docs" }}">Docs</a>
-    </h3>
 
     {{ if or $isDocsHome (or $isGetStarted $isReference) }}
         <h4 class="no-anchor">
