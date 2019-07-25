@@ -3,7 +3,7 @@ title: "Python"
 expanded_url: /docs/reference/languages/
 menu:
   reference:
-    parent: languages
+    parent: clouds-languages
     weight: 2
 ---
 

@@ -2,7 +2,7 @@
 title: Kubernetes
 menu:
   reference:
-    parent: clouds
+    parent: clouds-languages
     identifier: clouds-kubernetes
 ---
 

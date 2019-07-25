@@ -2,7 +2,7 @@
 title: Azure
 menu:
   reference:
-    parent: clouds
+    parent: clouds-languages
     identifier: clouds-azure
 ---
 

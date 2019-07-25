@@ -1,9 +1,9 @@
 ---
-title: Architecture & Concepts
+title: Pulumi Cloud Development
 menu:
   reference:
     identifier: concepts
-    weight: 2
+    weight: 3
 ---
 
 The Pulumi Cloud Development Platform is a combination of tools, libraries, runtime, and service that delivers a consistent development and operational control plane for cloud-native infrastructure.  That is, Pulumi enables you to not only manage your infrastructure as code, it enables you to define and manage your infrastructure using real programming languages and all of their supporting tools, not YAML.
