@@ -2,7 +2,7 @@
 title: "Download and Install"
 menu:
   reference:
-    weight: 13
+    weight: 2
 ---
 
 <!--
