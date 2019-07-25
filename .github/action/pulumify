@@ -49,7 +49,7 @@ fi
 
 # Detect what PR action is being taken. If it's one of the edit actions, we will preview the changes;
 # if it's a "close", we will delete the stack; otherwise, we exit cleanly because there's nothing to do.
-PR_ACTION=$(echo "$GITHUB_EVENT_PATH" | jq -r ".action")
+PR_ACTION=$(cat "$GITHUB_EVENT_PATH" | jq -r ".action")
 case "$PR_ACTION" in
     "opened" | "reopened" | "edited" | "synchronize")
         echo "# PR action '$PR_ACTION': updating content"
