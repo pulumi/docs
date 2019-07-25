@@ -4,7 +4,7 @@ workflow "Pulimify" {
 }
 
 action "Publish Live Preview" {
-    uses = "./action"
+    uses = "./.github/action"
     env = {
         "DOCS_ROOT" = "public"
     }
