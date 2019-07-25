@@ -150,7 +150,7 @@ resources to check out:
 [show where Pulumi fits in on his TGIKlivestream](https://www.youtube.com/watch?v=ILMK65YVSKw),
 highlighting how to use your favorite language and consistent workflows to create,
 deploy, and manage cloud resources across multiple clouds and
-Kubernetes. [Watch Joe Beda take Pulumi for a spin here.](https://www.youtube.com/watch?v=ILMK65YVSKw)
+Kubernetes. [Watch Joe Beda take Pulumi for a spin here](https://www.youtube.com/watch?v=ILMK65YVSKw).
 
 As always, you can check out our code on
 [GitHub](https://github.com/pulumi), follow us on
