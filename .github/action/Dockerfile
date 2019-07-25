@@ -22,6 +22,5 @@ RUN npm install
 # GitHub Actions will mount the repo source code at this volume.
 VOLUME [ "/app" ]
 
-# Copy the entrypoint script and use it as this container's entrypoint.
-COPY ./pulumify /usr/bin/pulumify
-ENTRYPOINT [ "/usr/bin/pulumify" ]
+# Use the pulumify script as this container's entrypoint -- it will get the job done.
+ENTRYPOINT [ "/infra/pulumify" ]
