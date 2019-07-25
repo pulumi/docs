@@ -147,7 +147,7 @@ resources to check out:
 - Docs: [Pulumi docs]({{< ref "/docs/reference" >}}), including an
   [overview of the programming model]({{< ref "/docs/reference/programming-model" >}})
 - Video: In February, we were honored to have Joe Beda
-[show where Pulumi fits in on his TGIKlivestream](https://www.youtube.com/watch?v=ILMK65YVSKw),
+[show where Pulumi fits in on his TGIK livestream](https://www.youtube.com/watch?v=ILMK65YVSKw),
 highlighting how to use your favorite language and consistent workflows to create,
 deploy, and manage cloud resources across multiple clouds and
 Kubernetes. [Watch Joe Beda take Pulumi for a spin here](https://www.youtube.com/watch?v=ILMK65YVSKw).
