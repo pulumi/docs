@@ -12,7 +12,7 @@ in production, spanning public, private, and hybrid cloud scenarios.
 It's been remarkable to watch its explosive growth just this
 past year alone. Every cloud vendor now supports an easy-to-use managed
 Kubernetes solution --- Google GKE, Azure AKS, and AWS AKS --- making it
-easier than ever before to get started writing and deploying Kubernetes
+easier than ever to start writing and deploying Kubernetes
 applications.
 
 [Pulumi for Kubernetes](https://info.pulumi.com/press-release/pulumi-cloud-native-sdk-delivers-cloud-native-infrastructure-as-code-for-kubernetes) is
