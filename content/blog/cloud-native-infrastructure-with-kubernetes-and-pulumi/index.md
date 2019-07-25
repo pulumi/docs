@@ -139,7 +139,7 @@ These two tutorials will walk you through your first Pulumi for Kubernetes proje
 [Program Kubernetes with 11 Pearls]({{< relref "program-kubernetes-with-11-cloud-native-pulumi-pearls" >}}):
 a companion blog post with 11 exciting examples.
 
-[Pulumi: A Better Way to Kubernetes]({{< relref "pulumi-a-better-way-to-kubernetes" >}}): A walkthrough blog on how Pulumi can make Kubernetes more accessible, using familiar languages and your favorite tools.
+[Pulumi: A Better Way to Kubernetes]({{< relref "pulumi-a-better-way-to-kubernetes" >}}): A walkthrough on how Pulumi can make Kubernetes more accessible, using your favorite languages and tools.
 
 
 If you have any questions or comments, we'd love to hear from you in our
