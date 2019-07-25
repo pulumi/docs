@@ -17,7 +17,7 @@ applications.
 
 [Pulumi for Kubernetes](https://info.pulumi.com/press-release/pulumi-cloud-native-sdk-delivers-cloud-native-infrastructure-as-code-for-kubernetes) is
 a way to create, deploy, and manage Kubernetes applications using your
-favorite programming languages, bringing a lovable experience
+favorite programming languages, bringing the same lovable experience
 that works across AWS, Azure, Google Cloud, OpenStack, and other clouds,
 now to Kubernetes and cloud native architectures. You can
 [dive right in here]({{< ref "/docs/quickstart/kubernetes" >}}) and
