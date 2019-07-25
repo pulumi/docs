@@ -15,7 +15,6 @@ functions -- and the CLI safely and reliably manages your cloud resources using 
 
 <div class="flex justify-center py-6">
     <a class="btn btn-lg mx-1 my-1" href="{{< relref "/docs/quickstart" >}}">GET STARTED</a>
-    <a class="btn btn-lg btn-secondary mx-1 my-1" href="{{< relref "/docs/reference" >}}">LEARN</a>
 </div>
 
 <div class="my-4 bg-gray-100 border-t border-b border-gray-300 md:flex justify-center py-8 max-w-6xl">
