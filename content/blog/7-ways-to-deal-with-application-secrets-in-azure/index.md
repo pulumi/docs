@@ -3,7 +3,7 @@ title: "7 Ways to Deal with Application Secrets in Azure"
 authors: ["mikhail-shilkov"]
 tags: ["Azure", "Security"]
 draft: true
-date: "2019-12-31"
+date: "2019-07-25"
 
 meta_image: "feature.jpg"
 ---
