@@ -545,4 +545,4 @@ non-sequential and part of your everyday programming experience. You can find th
 
 
 Pulumi is open source and free to use. For more examples visit our GitHub examples page
-[here](https://github.com/pulumi/examples). If you'd like to learn more about Pulumi and how to manage your Kubernetes through code, [click here to get started today] ({{< ref "/docs/quickstart" >}}). 
+[here](https://github.com/pulumi/examples). To learn more about Pulumi and how to manage Kubernetes through code, have a look at our ["Get Started with Kubernetes" guide]({{< ref "/docs/quickstart/kubernetes/" >}}). 
