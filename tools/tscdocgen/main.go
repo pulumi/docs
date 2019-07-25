@@ -186,7 +186,7 @@ var gitHubBaseURLs = map[string]string{
 	"@pulumi/packet":       "https://github.com/pulumi/pulumi-packet/blob/{githash}/sdk/nodejs",
 	"@pulumi/random":       "https://github.com/pulumi/pulumi-random/blob/{githash}/sdk/nodejs",
 	"@pulumi/terraform":    "https://github.com/pulumi/pulumi-terraform/blob/{githash}/sdk/nodejs",
-	"@pulumi/tls":    		"https://github.com/pulumi/pulumi-tls/blob/{githash}/sdk/nodejs",
+	"@pulumi/tls":          "https://github.com/pulumi/pulumi-tls/blob/{githash}/sdk/nodejs",
 	"@pulumi/vsphere":      "https://github.com/pulumi/pulumi-vsphere/blob/{githash}/sdk/nodejs",
 }
 
@@ -984,6 +984,11 @@ func createTypeLabel(t *typeDocType, indent int) string {
 			label += fmt.Sprintf("<a href='%s'>%s</a>", hyperlink, t.Name)
 		} else {
 			label += t.Name
+		}
+
+		// If it's a reference type named `__type`, it's an empty type literal.
+		if t.Type == typeDocReferenceType && label == "__type" {
+			label = "{ }"
 		}
 
 		if t.Type == typeDocIntrinsicType {
