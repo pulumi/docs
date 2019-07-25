@@ -992,6 +992,11 @@ func createTypeLabel(t *typeDocType, indent int) string {
 			label += t.Name
 		}
 
+		// If it's a reference type named `__type`, it's an empty type literal.
+		if t.Type == typeDocReferenceType && label == "__type" {
+			label = "{ }"
+		}
+
 		if t.Type == typeDocIntrinsicType {
 			label = fmt.Sprintf("<span class='kd'>%s</span>", label)
 		}
