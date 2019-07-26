@@ -47,4 +47,4 @@ crawlDirectory(contentRoot, (filePath: string) => {
 });
 
 // Export the bucket's URL for easy access.
-export const url = contentBucket.websiteEndpoint;
+export const url = pulumi.interpolate`http://${contentBucket.websiteEndpoint}`;

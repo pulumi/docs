@@ -70,8 +70,8 @@ case "$PR_ACTION" in
         # TODO(joe): recognize failures?
         PR_COMMENT_API_LINK=$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request._links.comments.href")
         curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
-            "{ \"body\": \"Updated site preview at: $(pulumi stack output url)\" }" \
-            $(PR_COMMENT_API_LINK)
+            -d "{ \"body\": \"Updated site preview at: <$(pulumi stack output url)>\" }" \
+            $PR_COMMENT_API_LINK
         ;;
     "closed")
         echo "# Destroying ..."
