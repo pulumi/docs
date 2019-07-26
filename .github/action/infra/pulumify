@@ -39,8 +39,6 @@ PR_BRANCH=$(echo $GITHUB_REF | sed "s/refs\/heads\///g")
 PULUMI_STACK_NAME=$(echo "pulumify-$PR_BRANCH" | sed "s/[^[:alnum:].-]/-/g")
 echo "# PR stack name: $PULUMI_STACK_NAME"
 
-# TODO(joe): post comments.
-
 # Now attempt to change to the desired stack. Ignore errors, we'll check the result later.
 pulumi stack select $PULUMI_STACK_NAME >/dev/null 2>&1 && \
     PULUMI_STACK_EXISTS=$? || PULUMI_STACK_EXISTS=$?
@@ -53,9 +51,11 @@ fi
 # Detect what PR action is being taken. If it's one of the edit actions, we will preview the changes;
 # if it's a "close", we will delete the stack; otherwise, we exit cleanly because there's nothing to do.
 PR_ACTION=$(cat "$GITHUB_EVENT_PATH" | jq -r ".action")
+PR_NUMBER=$(cat "$GITHUB_EVENT_PATH" | jq -r ".number")
+echo "# PR $PR_NUMBER action '$PR_ACTION'"
 case "$PR_ACTION" in
     "opened" | "reopened" | "edited" | "synchronize")
-        echo "# PR action '$PR_ACTION': updating content"
+        echo "# Updating ..."
 
         if [ $PULUMI_STACK_EXISTS -ne 0 ]; then
             pulumi stack init $PULUMI_STACK_NAME
@@ -65,9 +65,16 @@ case "$PR_ACTION" in
 
         # Now simply run an update to provision and/or update the static website.
         pulumi up --skip-preview
+
+        # Next, post a comment to the PR that directs the user to the resulting bucket URL.
+        # TODO(joe): recognize failures?
+        PR_COMMENT_API_LINK=$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request._links.comments.href")
+        curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
+            "{ \"body\": \"Updated site preview at: $(pulumi stack output url)\" }" \
+            $(PR_COMMENT_API_LINK)
         ;;
     "closed")
-        echo "# PR action '$PR_ACTION': destroying stack"
+        echo "# Destroying ..."
 
         # If the stack doesn't even exist, there's nothing to do. Otherwise, we must destroy and then
         # remove the resulting stack altogether.
@@ -75,11 +82,10 @@ case "$PR_ACTION" in
             pulumi destroy --skip-preview
             pulumi stack rm --yes
         else
-            echo "# Stack has already been destroyed -- nothing more to do"
+            echo "# Already destroyed -- nothing more to do"
         fi
         ;;
     *)
-        echo "# PR action is '$PR_ACTION'; nothing to do, so exiting"
-        exit 0
+        echo "# Nothing to do for '$PR_ACTION' action"
         ;;
 esac
