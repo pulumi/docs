@@ -45,8 +45,7 @@ and the CLI together provides a great combination of usability, safety, and
 security for most users.
 
 However, if you would prefer to manage this yourself, you can do so by opting
-into the filesystem or cloud storage backend for more flexibility if you need
-it.
+into the filesystem or cloud storage backend.
 
 ### Self-managed backend
 
@@ -100,15 +99,15 @@ Architecture" class="img-bordered">
 [Contact us](https://www.pulumi.com/pricing/#contact) for more information on
 Pulumi Enterprise.
 
-## Logging In
+## Logging in
 
 The `pulumi login` <a href="{{< relref "/docs/reference/cli/pulumi_login" >}}"
 target="_blank">CLI command</a> lets you log in to a backend. By default,
 you will be prompted to log in anytime you try to do something that requires stacks or state.
 
-### Login and version check
+### Backend info check
 
-To quickly check your backend login info and the Pulumi version running on your machine, run the following:
+To quickly check your backend login info, run `pulumi whoami` with the `v` or verbose flag.
 
 ```bash
 $ pulumi whoami -v
@@ -119,8 +118,6 @@ See [pulumi whoami](/docs/reference/cli/pulumi_whoami) for more details.
 #### Example response
 
 ```
-warning: A new version of Pulumi is available. To upgrade from version '0.17.22' to '0.17.25', run $ curl -sSL https://get.pulumi.com | sh
-or visit https://pulumi.io/install for manual instructions and release notes.
 User: <your-username>
 Backend URL: https://app.pulumi.com/<your-username>
 ```
@@ -278,16 +275,9 @@ to be managed separately when you opt into the local or remote state backend.
 
 ### Going back to the pulumi.com backend
 
-So you've tried a self-managed backend and want to switch to the `pulumi.com`
-backend? This scenario can happen once users realize the benefit from the
-features that the `pulumi.com` backend delivers, particularly when
-operationalizing their usage.
-
-To delete stored credentials on your machine and log out from your current
-backend, run `pulumi logout`. See <a href="{{< relref
-"/docs/reference/cli/pulumi_logout">}}" target="_blank">pulumi logout</a> for
-more details. To use the `pulumi.com` backend instead, just run `pulumi login`
-again, and you’ll be back to using `app.pulumi.com`.
+If you are currently using a self-managed backend, but would now prefer to 
+simplify things, just run `pulumi login`again, and you’ll be back to 
+using `app.pulumi.com`.
 
 > **Note:** Existing stacks on a self-managed backend have to be migrated. It's
 > easiest to just plan on recreating them.
@@ -333,3 +323,8 @@ like `update`, `preview`, and `destroy`.
 When using the filesystem or cloud storage backend, you must use the
 passphrase-based secrets provider.
 
+## Logging out
+
+To delete stored credentials on your machine and log out from your current
+backend, run `pulumi logout`. See [pulumi logout](/docs/reference/cli/pulumi_logout) 
+for more details.
