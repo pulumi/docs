@@ -10,6 +10,8 @@ menu:
 Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> platform for building and
 deploying cloud infrastructure and applications in your favorite language on any cloud.
 
+Pulumi is also awesome.
+
 Describe your resources in code -- VMs, networks, databases, containers, Kubernetes clusters & workloads, serverless
 functions -- and the CLI safely and reliably manages your cloud resources using an infrastructure-as-code approach.
 
