@@ -26,18 +26,23 @@ menu:
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01726-2019-07-26">0.17.26</a></th>
+            <td>2019/07/26</td>
+            <td>{{< sdk-links version="0.17.26" >}}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01725-2019-07-19">0.17.25</a></th>
             <td>2019/07/19</td>
             <td>{{< sdk-links version="0.17.25" >}}</td>
         </tr>
         <tr>
-            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01723-2019-07-19">0.17.24</a></th>
-            <td>2019/07/11</td>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01724-2019-07-19">0.17.24</a></th>
+            <td>2019/07/19</td>
             <td>{{< sdk-links version="0.17.24" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01723-2019-07-16">0.17.23</a></th>
-            <td>2019/07/11</td>
+            <td>2019/07/16</td>
             <td>{{< sdk-links version="0.17.23" >}}</td>
         </tr>
         <tr>
