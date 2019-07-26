@@ -47,7 +47,8 @@ resource.</li>
 <dl class="attribute">
 <dt id="pulumi.Resource.urn">
 <code class="descname">urn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.Resource.urn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The stable, logical URN used to distinctly address a resource, both before and after deployments.</p>
+<dd><p>The stable, logical URN used to distinctly address a resource, both before and after
+deployments.</p>
 </dd></dl>
 
 <dl class="method">
@@ -208,7 +209,7 @@ resource.</li>
 
 <dl class="class">
 <dt id="pulumi.ResourceOptions">
-<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em>, <em>delete_before_replace: Optional[bool] = None</em>, <em>ignore_changes: Optional[List[str]] = None</em>, <em>version: Optional[str] = None</em>, <em>additional_secret_outputs: Optional[List[str]] = None</em>, <em>id: Optional[str] = None</em>, <em>import_: Optional[str] = None</em>, <em>custom_timeouts: Optional[CustomTimeouts] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em>, <em>delete_before_replace: Optional[bool] = None</em>, <em>ignore_changes: Optional[List[str]] = None</em>, <em>version: Optional[str] = None</em>, <em>aliases: Optional[List[Input[Union[str</em>, <em>Alias]]]] = None</em>, <em>additional_secret_outputs: Optional[List[str]] = None</em>, <em>id: Optional[str] = None</em>, <em>import_: Optional[str] = None</em>, <em>custom_timeouts: Optional[CustomTimeouts] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>ResourceOptions is a bag of optional settings that control a resource’s behavior.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -294,6 +295,12 @@ provider bag (see also ResourceOptions.providers).</p>
 <dd><p>An optional version. If provided, the engine loads a provider with exactly the requested version to operate on this
 resource. This version overrides the version information inferred from the current package and should rarely be
 used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.aliases">
+<code class="descname">aliases</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.aliases" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional list of aliases to treat this resource as matching.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -575,6 +582,22 @@ If the configuration value isn’t a legal float, this function will throw an er
 </dd></dl>
 
 <dl class="method">
+<dt id="pulumi.Config.get_object">
+<code class="descname">get_object</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Optional[Any]<a class="headerlink" href="#pulumi.Config.get_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an optional configuration value, as an object, by its key, or undefined if it
+doesn’t exist. This routine simply JSON parses and doesn’t validate the shape of the
+contents.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.get_secret_object">
+<code class="descname">get_secret_object</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[typing.Any][Any]]<a class="headerlink" href="#pulumi.Config.get_secret_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an optional configuration value, as an object, by its key, marking it as a secret or
+undefined if it doesn’t exist. This routine simply JSON parses and doesn’t validate the
+shape of the contents.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pulumi.Config.require">
 <code class="descname">require</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi.Config.require" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a configuration value by its given key.  If it doesn’t exist, an error is thrown.</p>
@@ -780,6 +803,22 @@ configuration value is not a legal number, an error is thrown.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.require_object">
+<code class="descname">require_object</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#pulumi.Config.require_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a configuration value as a JSON string and deserializes the JSON into a Python
+object. If it doesn’t exist, or the configuration value is not a legal JSON string, an error
+is thrown.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.require_secret_object">
+<code class="descname">require_secret_object</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.Any][Any]<a class="headerlink" href="#pulumi.Config.require_secret_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a configuration value as a JSON string and deserializes the JSON into a Python
+object, marking it as a secret. If it doesn’t exist, or the configuration value is not a
+legal JSON string, an error is thrown.</p>
 </dd></dl>
 
 <dl class="method">

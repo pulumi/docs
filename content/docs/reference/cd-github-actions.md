@@ -200,7 +200,7 @@ Pulumi GitHub App, and just copies the raw output of the Pulumi command-line.
 To do this you need to set the `COMMENT_ON_PR` environment variable, and add the `GITHUB_TOKEN` value to
 the secrets passed to the GitHub Action step. For example,
 
-```
+```hcl
 action "Pulumi Preview (Merged Stack)" {
   uses = "docker://pulumi/actions"
   args = ["preview"]
@@ -228,7 +228,7 @@ You can configure how Pulumi's GitHub Actions work to have more control about wh
 By default, the Pulumi GitHub Action assumes your Pulumi project is in your repo's root directory. If you are using a
 different root directory for your project, simply set the `PULUMI_ROOT` variable in your workflow. For example
 
-```
+```hcl
 action "Pulumi Deploy (Current Stack)" {
     ...
     env = {

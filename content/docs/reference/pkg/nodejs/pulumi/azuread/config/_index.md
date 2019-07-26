@@ -7,6 +7,13 @@ title: Module config
 
 <a href="../">@pulumi/azuread</a> &gt; config
 
+> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread)
+> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
+> first check the [`pulumi/pulumi-azuread` repo](https://github.com/pulumi/pulumi-azuread/issues); however, if that doesn't turn up anything,
+> please consult the source [`terraform-providers/terraform-provider-azuread` repo](https://github.com/terraform-providers/terraform-provider-azuread/issues).
+
+
+
 <div class="toggleVisible">
 <div class="collapsed">
 <h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
@@ -26,62 +33,62 @@ title: Module config
 <li><a href="#useMsi">let useMsi</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-azuread/blob/02be69dd047ee9ea764e0a8d8c2b516be0a3fbd3/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azuread/blob/514c1d0ef744e1a12159e59c0032ff42528cd673/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="clientCertificatePassword">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/02be69dd047ee9ea764e0a8d8c2b516be0a3fbd3/sdk/nodejs/config/vars.ts#L9">let <b>clientCertificatePassword</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/514c1d0ef744e1a12159e59c0032ff42528cd673/sdk/nodejs/config/vars.ts#L9">let <b>clientCertificatePassword</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> clientCertificatePassword: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientCertificatePassword&#34;) || (utilities.getEnv(&#34;ARM_CLIENT_CERTIFICATE_PASSWORD&#34;) || &#34;&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="clientCertificatePath">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/02be69dd047ee9ea764e0a8d8c2b516be0a3fbd3/sdk/nodejs/config/vars.ts#L10">let <b>clientCertificatePath</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/514c1d0ef744e1a12159e59c0032ff42528cd673/sdk/nodejs/config/vars.ts#L10">let <b>clientCertificatePath</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> clientCertificatePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientCertificatePath&#34;) || (utilities.getEnv(&#34;ARM_CLIENT_CERTIFICATE_PATH&#34;) || &#34;&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="clientId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/02be69dd047ee9ea764e0a8d8c2b516be0a3fbd3/sdk/nodejs/config/vars.ts#L11">let <b>clientId</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/514c1d0ef744e1a12159e59c0032ff42528cd673/sdk/nodejs/config/vars.ts#L11">let <b>clientId</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientId&#34;) || (utilities.getEnv(&#34;ARM_CLIENT_ID&#34;) || &#34;&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="clientSecret">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/02be69dd047ee9ea764e0a8d8c2b516be0a3fbd3/sdk/nodejs/config/vars.ts#L12">let <b>clientSecret</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/514c1d0ef744e1a12159e59c0032ff42528cd673/sdk/nodejs/config/vars.ts#L12">let <b>clientSecret</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> clientSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientSecret&#34;) || (utilities.getEnv(&#34;ARM_CLIENT_SECRET&#34;) || &#34;&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="environment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/02be69dd047ee9ea764e0a8d8c2b516be0a3fbd3/sdk/nodejs/config/vars.ts#L13">let <b>environment</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/514c1d0ef744e1a12159e59c0032ff42528cd673/sdk/nodejs/config/vars.ts#L13">let <b>environment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> environment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;environment&#34;) || (utilities.getEnv(&#34;ARM_ENVIRONMENT&#34;) || &#34;public&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="msiEndpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/02be69dd047ee9ea764e0a8d8c2b516be0a3fbd3/sdk/nodejs/config/vars.ts#L14">let <b>msiEndpoint</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/514c1d0ef744e1a12159e59c0032ff42528cd673/sdk/nodejs/config/vars.ts#L14">let <b>msiEndpoint</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> msiEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;msiEndpoint&#34;) || (utilities.getEnv(&#34;ARM_MSI_ENDPOINT&#34;) || &#34;&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="subscriptionId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/02be69dd047ee9ea764e0a8d8c2b516be0a3fbd3/sdk/nodejs/config/vars.ts#L15">let <b>subscriptionId</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/514c1d0ef744e1a12159e59c0032ff42528cd673/sdk/nodejs/config/vars.ts#L15">let <b>subscriptionId</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> subscriptionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;subscriptionId&#34;) || (utilities.getEnv(&#34;ARM_SUBSCRIPTION_ID&#34;) || &#34;&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="tenantId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/02be69dd047ee9ea764e0a8d8c2b516be0a3fbd3/sdk/nodejs/config/vars.ts#L16">let <b>tenantId</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/514c1d0ef744e1a12159e59c0032ff42528cd673/sdk/nodejs/config/vars.ts#L16">let <b>tenantId</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;tenantId&#34;) || (utilities.getEnv(&#34;ARM_TENANT_ID&#34;) || &#34;&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="useMsi">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/02be69dd047ee9ea764e0a8d8c2b516be0a3fbd3/sdk/nodejs/config/vars.ts#L17">let <b>useMsi</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/514c1d0ef744e1a12159e59c0032ff42528cd673/sdk/nodejs/config/vars.ts#L17">let <b>useMsi</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> useMsi: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;useMsi&#34;) || (utilities.getEnvBoolean(&#34;ARM_USE_MSI&#34;) || false)</span>;</pre>

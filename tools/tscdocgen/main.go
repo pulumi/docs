@@ -184,9 +184,10 @@ var gitHubBaseURLs = map[string]string{
 	"@pulumi/newrelic":     "https://github.com/pulumi/pulumi-newrelic/blob/{githash}/sdk/nodejs",
 	"@pulumi/openstack":    "https://github.com/pulumi/pulumi-openstack/blob/{githash}/sdk/nodejs",
 	"@pulumi/packet":       "https://github.com/pulumi/pulumi-packet/blob/{githash}/sdk/nodejs",
+	"@pulumi/postgresql":   "https://github.com/pulumi/pulumi-postgresql/blob/{githash}/sdk/nodejs",
 	"@pulumi/random":       "https://github.com/pulumi/pulumi-random/blob/{githash}/sdk/nodejs",
 	"@pulumi/terraform":    "https://github.com/pulumi/pulumi-terraform/blob/{githash}/sdk/nodejs",
-	"@pulumi/tls":    		"https://github.com/pulumi/pulumi-tls/blob/{githash}/sdk/nodejs",
+	"@pulumi/tls":          "https://github.com/pulumi/pulumi-tls/blob/{githash}/sdk/nodejs",
 	"@pulumi/vsphere":      "https://github.com/pulumi/pulumi-vsphere/blob/{githash}/sdk/nodejs",
 }
 
@@ -200,7 +201,12 @@ func emitMarkdownDocs(srcdir string, doc *typeDocNode, outdir, githash string) e
 	// important details about the specific inner modules that truly contain the members in question.  I'm sure we'll
 	// want to revisit this and make the logic here more sophisticated and general purpose someday.
 	pkg := doc.Name
-	repoURL := strings.Replace(gitHubBaseURLs[pkg], "{githash}", githash, -1)
+
+	gitHubBaseURL, ok := gitHubBaseURLs[pkg]
+	if !ok {
+		return errors.Errorf("package %q is missing from gitHubBaseURLs", pkg)
+	}
+	repoURL := strings.Replace(gitHubBaseURL, "{githash}", githash, -1)
 	e := newEmitter(pkg, srcdir, repoURL, outdir)
 
 	// The kubernetes package requires some special handling since the structure differs from
@@ -984,6 +990,11 @@ func createTypeLabel(t *typeDocType, indent int) string {
 			label += fmt.Sprintf("<a href='%s'>%s</a>", hyperlink, t.Name)
 		} else {
 			label += t.Name
+		}
+
+		// If it's a reference type named `__type`, it's an empty type literal.
+		if t.Type == typeDocReferenceType && label == "__type" {
+			label = "{ }"
 		}
 
 		if t.Type == typeDocIntrinsicType {

@@ -113,4 +113,8 @@ div.section[id]:not([id=""]) {
             }
         }
     }
+
+    table td, .pre {
+        @apply break-all;
+    }
 }

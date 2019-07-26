@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
 
-    {{ if isset .Params "redirect_to" }}
+    {{ if .Params.redirect_to }}
         <meta http-equiv="refresh" content="0; url={{ .Params.redirect_to }}" />
     {{ end }}
 
@@ -17,10 +17,10 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@PulumiCorp">
 
-    {{ if isset .Params "meta_twitter_creator" }}
+    {{ if .Params.meta_twitter_creator }}
         <meta name="twitter:creator" content="{{ .Params.meta_twitter_creator }}">
-    {{ else if isset .Params "authors" }}
-        {{ range $idx, $authorName := .Param "authors" }}
+    {{ else if .Params.authors }}
+        {{ range $idx, $authorName := .Params.authors }}
             {{ $authorData := index $.Site.Data.team.team $authorName }}
             {{ with $authorData.social }}
                 {{ with .twitter }}
@@ -30,21 +30,21 @@
         {{ end }}
     {{ end }}
 
-    {{ if isset .Params "meta_title" }}
+    {{ if .Params.meta_title }}
         <meta property="og:title" content="{{ .Params.meta_title }}">
-    {{ else if isset .Params "title" }}
+    {{ else if .Params.title }}
         <meta property="og:title" content="{{ .Params.title }}">
     {{ else }}
         <meta property="og:title" content="{{ .Site.Title }}">
     {{ end }}
 
-    {{ if isset .Params "meta_desc" }}
+    {{ if .Params.meta_desc }}
         <meta name="description" content="{{ .Params.meta_desc }}">
         <meta property="og:description" content="{{ .Params.meta_desc }}">
-    {{ else if isset .Params "summary" }}
+    {{ else if .Params.summary }}
         <meta name="description" content="{{ .Params.summary }}">
         <meta property="og:description" content="{{ .Params.summary }}">
-    {{ else if ne .Summary "" }}
+    {{ else if .Summary }}
         <meta name="description" content="{{ .Summary }}">
         <meta property="og:description" content="{{ .Summary }}">
     {{ else }}
@@ -54,7 +54,7 @@
     {{ end }}
 
     {{ $image := "/social/pulumi.png" }}
-    {{ if isset .Params "meta_image" }}
+    {{ if .Params.meta_image }}
         {{ if eq .Section "blog" }}
             {{ $image = (.Resources.GetMatch .Params.meta_image).RelPermalink }}
         {{ else }}
@@ -114,17 +114,17 @@
     {{ end }}
 
     {{/* Tests to enforce required frontmatter for certain content types. */}}
-    {{ if eq .Type "blog" }}
-        {{ if not (isset .Page.Params "authors") }}
+    {{ if and (eq .Type "blog") .IsPage }}
+        {{ if not .Params.authors }}
             {{ errorf "Blog posts require authors: %s" .File.Path }}
         {{ else }}
-            {{ range $authorID := .Page.Params.authors }}
+            {{ range $authorID := .Params.authors }}
                 {{ if not (index $.Site.Data.team.team $authorID) }}
                     {{ errorf "Blog posts author (%s) not found: %s" $authorID $.Page.File.Path }}
                 {{ end }}
             {{ end }}
         {{ end }}
-        {{ if not (isset .Page.Params "tags") }}
+        {{ if not .Params.tags }}
             {{ errorf "Blog posts require tags: %s" .File.Path }}
         {{ end }}
     {{ end }}

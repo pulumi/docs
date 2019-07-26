@@ -58,10 +58,11 @@ const name = "jupyter-notebook";
 /*
  * STEP 2: Create a GKE Cluster
  */
+const engineVersion = gcp.container.getEngineVersions().then(v => v.latestMasterVersion);
 const cluster = new gcp.container.Cluster(name, {
     initialNodeCount: 2,
-    minMasterVersion: "latest",
-    nodeVersion: "latest",
+    minMasterVersion: engineVersion,
+    nodeVersion: engineVersion,
     nodeConfig: {
         machineType: "n1-standard-1",
         oauthScopes: [
