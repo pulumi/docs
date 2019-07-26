@@ -1,0 +1,2738 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.pulumi.com/docs/reference/crosswalk/aws/ecr/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+
+    
+        <meta property="og:title" content="AWS Elastic Container Registry (ECR)">
+    
+
+    
+        <meta name="description" content="Amazon Elastic Container Registry (ECR) is a managed Docker container registry that makes it easy to store, manage, and deploy Docker container images. ECR supports private Docker registries with resource-based permissions using AWS IAM, so specific users and instances can access images. Using ECR simplifies going from development to production, and eliminates the need to operate your own container repositories or worry about scaling the underlying infrastructure, while hosting your images in a highly available and scalable architecture.">
+        <meta property="og:description" content="Amazon Elastic Container Registry (ECR) is a managed Docker container registry that makes it easy to store, manage, and deploy Docker container images. ECR supports private Docker registries with resource-based permissions using AWS IAM, so specific users and instances can access images. Using ECR simplifies going from development to production, and eliminates the need to operate your own container repositories or worry about scaling the underlying infrastructure, while hosting your images in a highly available and scalable architecture.">
+    
+
+    
+    
+    <meta property="og:image" content="https://www.pulumi.com/social/pulumi.png">
+
+    <title>AWS Elastic Container Registry (ECR) - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/docs/reference/crosswalk/aws/ecr/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="https://www.pulumi.com/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="https://www.pulumi.com/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u");
+    analytics.page();
+    }}();
+    </script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+</head>
+
+    <body class="section-docs">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+
+            <div class="md:w-2/12 mt-2 md:order-last">
+                <div class="mb-8 md:mb-4">
+                    <form class="relative" action="/docs/search/" method="GET">
+    <i class="fas fa-search absolute inset-y-0 flex items-center pl-3 text-gray-500"></i>
+    <input
+        id="search-query"
+        name="q"
+        class="block w-full py-2 px-4 pl-8 text-sm border border-gray-400 focus:border-blue-500 focus:outline-none rounded transition"
+        placeholder="Search the docs"
+        autocomplete="off">
+</form>
+
+                </div>
+
+                <div class="ml-3 hidden md:block">
+                    
+    <ul class="p-0 list-none">
+        
+        
+        
+        
+        
+            <li>
+                <a class="text-gray-600 hover:text-blue-700 text-xs" href="https://github.com/pulumi/docs/edit/master/content/docs/reference/crosswalk/aws/ecr.md" target="_blank">
+                    <i class="fas fa-edit mr-2"></i>
+                    Edit this Page
+                </a>
+            </li>
+        
+
+        <li>
+            <a class="text-gray-600 hover:text-blue-700 text-xs" href="https://github.com/pulumi/docs/issues/new?body=File: [docs%2freference%2fcrosswalk%2faws%2fecr.md](https%3a%2f%2fwww.pulumi.com%2fdocs%2freference%2fcrosswalk%2faws%2fecr%2f)" target="_blank">
+                <i class="far fa-check-square mr-2"></i>
+                Request a Change
+            </a>
+        </li>
+    </ul>
+
+
+                </div>
+            </div>
+
+            <div class="md:w-3/12 pr-8 mt-2 mb-8 pb-8 border-b-2 border-gray-400 md:border-none md:pb-0 md:mb-0">
+                
+
+
+
+
+
+
+
+
+    
+    
+    
+
+
+<aside class="toc">
+    <h3 class="no-anchor">
+        <a href="/docs/">Docs</a>
+    </h3>
+
+    
+        <h4 class="no-anchor">
+            <a href="/docs/quickstart/">Get Started</a>
+        </h4>
+    
+    
+        <h4 class="no-anchor">
+            <a href="/docs/reference/">Reference</a>
+        </h4>
+    
+    
+
+    
+        
+        
+
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Architecture &amp; Concepts">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Programming Model" href="/docs/reference/programming-model/">Programming Model</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Projects" href="/docs/reference/project/">Projects</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stacks" href="/docs/reference/stack/">Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Configuration and Secrets" href="/docs/reference/config/">Configuration and Secrets</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizing Projects and Stacks" href="/docs/reference/organizing-stacks-projects/">Organizing Projects and Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="How Pulumi Works" href="/docs/reference/how/">How Pulumi Works</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State and Backends" href="/docs/reference/state/">State and Backends</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Tutorials">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/tutorials/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateways and Lambda" href="/docs/reference/tutorials/aws/tutorial-rest-api/">API Gateways and Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Containers on ECS &#34;Fargate&#34;" href="/docs/reference/tutorials/aws/tutorial-service/">Containers on ECS &#34;Fargate&#34;</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="EC2 Linux WebServer Instance" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">EC2 Linux WebServer Instance</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serve a Static Website from S3" href="/docs/reference/tutorials/aws/tutorial-s3-website/">Serve a Static Website from S3</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Video Thumbnailer" href="/docs/reference/tutorials/aws/tutorial-thumbnailer/">Video Thumbnailer</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/tutorials/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Container Instance" href="/docs/reference/tutorials/azure/tutorial-container-webserver/">Web Server Container Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/tutorials/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Virtual Machine Instance" href="/docs/reference/tutorials/gcp/tutorial-gce-webserver/">Web Server Virtual Machine Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/tutorials/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: EKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-eks/">Clusters: EKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: GKE - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-gke/">Clusters: GKE - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: AKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-aks/">Clusters: AKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#1: Hello, World!" href="/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment/">#1: Hello, World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#2: Deploying the WordPress Helm Chart" href="/docs/reference/tutorials/kubernetes/tutorial-wordpress-chart/">#2: Deploying the WordPress Helm Chart</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#3: Guestbook App with Redis and Nginx" href="/docs/reference/tutorials/kubernetes/tutorial-guestbook/">#3: Guestbook App with Redis and Nginx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#4: Graceful App Rollout" href="/docs/reference/tutorials/kubernetes/tutorial-configmap-rollout/">#4: Graceful App Rollout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#5: Gating rollout on Prometheus checks" href="/docs/reference/tutorials/kubernetes/tutorial-p8s-rollout/">#5: Gating rollout on Prometheus checks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#6: Run a Stateless App Deployment" href="/docs/reference/tutorials/kubernetes/tutorial-stateless-app/">#6: Run a Stateless App Deployment</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#7: EKS - Migrating Node Groups with Zero Downtime" href="/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups/">#7: EKS - Migrating Node Groups with Zero Downtime</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Command Line">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cancel" href="/docs/reference/cli/pulumi_cancel/">Cancel</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Config" href="/docs/reference/cli/pulumi_config/">Config</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Destroy" href="/docs/reference/cli/pulumi_destroy/">Destroy</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Login" href="/docs/reference/cli/pulumi_login/">Login</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logout" href="/docs/reference/cli/pulumi_logout/">Logout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logs" href="/docs/reference/cli/pulumi_logs/">Logs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="New" href="/docs/reference/cli/pulumi_new/">New</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Plugin" href="/docs/reference/cli/pulumi_plugin/">Plugin</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Preview" href="/docs/reference/cli/pulumi_preview/">Preview</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Refresh" href="/docs/reference/cli/pulumi_refresh/">Refresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stack" href="/docs/reference/cli/pulumi_stack/">Stack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State" href="/docs/reference/cli/pulumi_state/">State</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Update" href="/docs/reference/cli/pulumi_up/">Update</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Clouds">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/clouds/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/aws/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/clouds/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/azure/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/clouds/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/gcp/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/clouds/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Introduction" href="/docs/reference/clouds/kubernetes/introduction/">Introduction</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/kubernetes/setup/">Setup</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="FAQ" href="/docs/reference/clouds/kubernetes/faq/">FAQ</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="OpenStack">
+                <div class="sidenav-topic ">
+                    <a data-title="OpenStack" href="/docs/reference/clouds/openstack/">OpenStack</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/openstack/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggleVisible" data-title="Crosswalk for AWS 🆕">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateway" href="/docs/reference/crosswalk/aws/api-gateway/">API Gateway</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Auto Scaling" href="/docs/reference/crosswalk/aws/autoscaling/">Auto Scaling</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CloudWatch" href="/docs/reference/crosswalk/aws/cloudwatch/">CloudWatch</a>
+            </div>
+        
+    
+        
+        
+            
+        
+
+        
+            <div class="sidenav-topic mb-2 active">
+                <a data-title="Elastic Container Registry (ECR)" href="/docs/reference/crosswalk/aws/ecr/">Elastic Container Registry (ECR)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Service (ECS)" href="/docs/reference/crosswalk/aws/ecs/">Elastic Container Service (ECS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Kubernetes Service (EKS)" href="/docs/reference/crosswalk/aws/eks/">Elastic Kubernetes Service (EKS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Load Balancing (ELB)" href="/docs/reference/crosswalk/aws/elb/">Elastic Load Balancing (ELB)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Identity and Access Management (IAM)" href="/docs/reference/crosswalk/aws/iam/">Identity and Access Management (IAM)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Lambda" href="/docs/reference/crosswalk/aws/lambda/">Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Virtual Private Cloud (VPC)" href="/docs/reference/crosswalk/aws/vpc/">Virtual Private Cloud (VPC)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Other AWS Services" href="/docs/reference/crosswalk/aws/other/">Other AWS Services</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Languages">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Node.js" href="/docs/reference/javascript/">Node.js</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Python" href="/docs/reference/python/">Python</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Teams &amp; Collaboration">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizations" href="/docs/reference/service/orgs/">Organizations</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Teams" href="/docs/reference/service/teams/">Teams</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Roles and Access Controls" href="/docs/reference/service/roles-and-access-controls/">Roles and Access Controls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub App" href="/docs/reference/cd-github/">Pulumi GitHub App</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi Webhooks" href="/docs/reference/service/webhooks/">Pulumi Webhooks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Creating a &#39;Deploy with Pulumi&#39; Button" href="/docs/reference/service/pulumi-button/">Creating a &#39;Deploy with Pulumi&#39; Button</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Continuous Delivery">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Supporting A New CI System" href="/docs/reference/cd-supporting-new-ci/">Supporting A New CI System</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="AWS Code Services" href="/docs/reference/cd-aws-code-services/">AWS Code Services</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Azure DevOps" href="/docs/reference/cd-azure-devops/">Azure DevOps</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CircleCI" href="/docs/reference/cd-circleci/">CircleCI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Codefresh" href="/docs/reference/cd-codefresh/">Codefresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="GitLab CI" href="/docs/reference/cd-gitlab-ci/">GitLab CI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Google Cloud Build" href="/docs/reference/cd-google-cloud-build/">Google Cloud Build</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub Actions" href="/docs/reference/cd-github-actions/">Pulumi GitHub Actions</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Travis CI" href="/docs/reference/cd-travis/">Travis CI</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Compared to Others">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Terraform" href="/docs/reference/vs/terraform/">Terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud Templates" href="/docs/reference/vs/cloud_templates/">Cloud Templates</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud SDKs" href="/docs/reference/vs/cloud_sdks/">Cloud SDKs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serverless" href="/docs/reference/vs/serverless/">Serverless</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Kubernetes YAML" href="/docs/reference/vs/k8s_yaml_dsls/">Kubernetes YAML</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Chef, Puppet, etc." href="/docs/reference/vs/chef_puppet_etc/">Chef, Puppet, etc.</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Custom Solutions" href="/docs/reference/vs/custom/">Custom Solutions</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="API Reference">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="Node.js">
+                <div class="sidenav-topic ">
+                    <a data-title="Node.js" href="/docs/reference/pkg/nodejs/">Node.js</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/nodejs/pulumi/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="aws" href="/docs/reference/pkg/nodejs/pulumi/aws/">aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="awsx" href="/docs/reference/pkg/nodejs/pulumi/awsx/">awsx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azure" href="/docs/reference/pkg/nodejs/pulumi/azure/">azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azuread" href="/docs/reference/pkg/nodejs/pulumi/azuread/">azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloud" href="/docs/reference/pkg/nodejs/pulumi/cloud/">cloud</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloudflare" href="/docs/reference/pkg/nodejs/pulumi/cloudflare/">cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="datadog" href="/docs/reference/pkg/nodejs/pulumi/datadog/">datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="digitalocean" href="/docs/reference/pkg/nodejs/pulumi/digitalocean/">digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="dnsimple" href="/docs/reference/pkg/nodejs/pulumi/dnsimple/">dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="docker" href="/docs/reference/pkg/nodejs/pulumi/docker/">docker</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="eks" href="/docs/reference/pkg/nodejs/pulumi/eks/">eks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="f5bigip" href="/docs/reference/pkg/nodejs/pulumi/f5bigip/">f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gcp" href="/docs/reference/pkg/nodejs/pulumi/gcp/">gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gitlab" href="/docs/reference/pkg/nodejs/pulumi/gitlab/">gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="kubernetes" href="/docs/reference/pkg/nodejs/pulumi/kubernetes/">kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="linode" href="/docs/reference/pkg/nodejs/pulumi/linode/">linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="mysql" href="/docs/reference/pkg/nodejs/pulumi/mysql/">mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="newrelic" href="/docs/reference/pkg/nodejs/pulumi/newrelic/">newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="openstack" href="/docs/reference/pkg/nodejs/pulumi/openstack/">openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="packet" href="/docs/reference/pkg/nodejs/pulumi/packet/">packet</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="postgresql" href="/docs/reference/pkg/nodejs/pulumi/postgresql/">postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="random" href="/docs/reference/pkg/nodejs/pulumi/random/">random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="terraform" href="/docs/reference/pkg/nodejs/pulumi/terraform/">terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="tls" href="/docs/reference/pkg/nodejs/pulumi/tls/">tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="vsphere" href="/docs/reference/pkg/nodejs/pulumi/vsphere/">vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Python">
+                <div class="sidenav-topic ">
+                    <a data-title="Python" href="/docs/reference/pkg/python/">Python</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/python/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_aws" href="/docs/reference/pkg/python/pulumi_aws/">pulumi_aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azure" href="/docs/reference/pkg/python/pulumi_azure/">pulumi_azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azuread" href="/docs/reference/pkg/python/pulumi_azuread/">pulumi_azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_cloudflare" href="/docs/reference/pkg/python/pulumi_cloudflare/">pulumi_cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_datadog" href="/docs/reference/pkg/python/pulumi_datadog/">pulumi_datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_digitalocean" href="/docs/reference/pkg/python/pulumi_digitalocean/">pulumi_digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_dnsimple" href="/docs/reference/pkg/python/pulumi_dnsimple/">pulumi_dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_f5bigip" href="/docs/reference/pkg/python/pulumi_f5bigip/">pulumi_f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gcp" href="/docs/reference/pkg/python/pulumi_gcp/">pulumi_gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gitlab" href="/docs/reference/pkg/python/pulumi_gitlab/">pulumi_gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_kubernetes" href="/docs/reference/pkg/python/pulumi_kubernetes/">pulumi_kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_linode" href="/docs/reference/pkg/python/pulumi_linode/">pulumi_linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_mysql" href="/docs/reference/pkg/python/pulumi_mysql/">pulumi_mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_newrelic" href="/docs/reference/pkg/python/pulumi_newrelic/">pulumi_newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_openstack" href="/docs/reference/pkg/python/pulumi_openstack/">pulumi_openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_postgresql" href="/docs/reference/pkg/python/pulumi_postgresql/">pulumi_postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_random" href="/docs/reference/pkg/python/pulumi_random/">pulumi_random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_tls" href="/docs/reference/pkg/python/pulumi_tls/">pulumi_tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_vsphere" href="/docs/reference/pkg/python/pulumi_vsphere/">pulumi_vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="FAQ">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Download and Install">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Changelog">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible">
+                <div class="toggle" data-title="Troubleshooting &amp; Support">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+    
+
+    
+</aside>
+
+
+
+            </div>
+
+            <div class="md:w-7/12">
+                <h1>AWS Elastic Container Registry (ECR)</h1>
+                
+
+<p><a href="/docs/reference/crosswalk/aws/">
+    <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+</a></p>
+
+<p><a href="https://aws.amazon.com/ecr/">Amazon Elastic Container Registry (ECR)</a> is a managed Docker container registry that
+makes it easy to store, manage, and deploy Docker container images. ECR supports private Docker registries with
+resource-based permissions using AWS IAM, so specific users and instances can access images. Using ECR simplifies
+going from development to production, and eliminates the need to operate your own container repositories or worry
+about scaling the underlying infrastructure, while hosting your images in a highly available and scalable architecture.</p>
+
+<div class="mini-toc border-b border-gray-200 mt-2 mb-8 py-6">
+    <h4>On This Page</h4>
+    <ul>
+        
+    </ul>
+</div>
+
+
+<h2 id="overview">Overview</h2>
+
+<p>Pulumi Crosswalk for AWS ECR makes the provisioning of new ECR repositories as simple as one line of code,
+integrates with Pulumi Crosswalk for AWS <a href="/docs/reference/crosswalk/aws/ecs/">ECS</a> and <a href="/docs/reference/crosswalk/aws/eks/">EKS</a> to ease
+deployment of new application containers to your ECS, &ldquo;Fargate&rdquo;, and/or Kubernetes clusters, and even supports
+building and deploying Docker images from your developer desktop or CI/CD workflows.</p>
+
+<h2 id="provisioning-an-ecr-repository">Provisioning an ECR Repository</h2>
+
+<p>Each AWS account automatically has an ECR <a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html"><em>registry</em></a>,
+and within each registry, you can create any number of <a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html"><em>repositories</em></a> to actually contain your Docker images.</p>
+
+<p>To create a new ECR repository, simply allocate an instance of the <code>awsx.ecr.Repository</code> class:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Create a repository.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">repo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ecr</span><span class="p">.</span><span class="nx">Repository</span><span class="p">(</span><span class="s2">&#34;my-repo&#34;</span><span class="p">);</span>
+
+<span class="c1">// And publish its URL, so we can push to it if we&#39;d like.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">repo</span><span class="p">.</span><span class="nx">repository</span><span class="p">.</span><span class="nx">repositoryUrl</span><span class="p">;</span></code></pre></div>
+<p>From there, we can just run <code>pulumi up</code> to provision a new repository:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi up
+Updating <span class="o">(</span>dev<span class="o">)</span>:
+
+     Type                           Name               Status
+ +   pulumi:pulumi:Stack            crosswalk-aws-dev  created
+ +   └─ awsx:ecr:Repository         my-repo            created
+ +      ├─ aws:ecr:Repository       my-repo            created
+ +      └─ aws:ecr:LifecyclePolicy  my-repo            created
+
+Outputs:
+    url: <span class="s2">&#34;012345678901.dkr.ecr.us-west-2.amazonaws.com/my-repo-e2fe830&#34;</span>
+
+Resources:
+    + <span class="m">4</span> created
+
+Duration: 4s</code></pre></div>
+<p>The <code>url</code> emitted is what we will use to push and pull images to and from the newly created repository. We can do
+so either using the Docker CLI or through infrastructure as code in our Pulumi program.</p>
+
+<h2 id="building-and-publishing-container-images">Building and Publishing Container Images</h2>
+
+<p>Amazon ECR stores <a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/images.html"><em>images</em></a> inside of the
+repositories you create. You can use the Docker CLI to push and pull images explicitly, using the <code>build</code>, <code>push</code>,
+and <code>pull</code> commands, targeting the repository&rsquo;s URL. Alternatively, you can use your Pulumi program to build and
+publish container images as part of your Pulumi deployment, and consume them from ECS or EKS directly.</p>
+
+<h3 id="building-and-publishing-images-manually-using-the-docker-cli">Building and Publishing Images Manually Using the Docker CLI</h3>
+
+<p>All repositories in your account&rsquo;s ECR registry will have a URL of the form
+<code>&lt;aws_account_id&gt;.dkr.ecr.&lt;region&gt;.amazonaws.com/&lt;repo&gt;</code>, where <code>&lt;aws_account_id&gt;</code> is your AWS account ID,
+<code>&lt;region&gt;</code> is the location for the repository, and <code>&lt;repo&gt;</code> is the name given to the repository. In the above example,
+the resulting URL is exported and printed to the console.</p>
+
+<p>To build and publish a new Docker image to such a repository, first retrieve your container image in the usual way,
+e.g. either using <a href="https://docs.docker.com/engine/reference/commandline/build/"><code>docker build</code></a> or
+<a href="https://docs.docker.com/engine/reference/commandline/pull/"><code>docker pull</code></a>.</p>
+
+<p>The image then needs to be tagged with the URL of the repository you&rsquo;re publishing to. This can be done using
+<code>docker build</code>&rsquo;s <code>-t</code> argument, while building the image, as in:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker build -t <span class="m">012345678901</span>.dkr.ecr.us-west-2.amazonaws.com/my-repo-e2fe830 .</code></pre></div>
+<p>Alternatively, this can be done by tagging the image with <a href="https://docs.docker.com/engine/reference/commandline/tag/"><code>docker tag</code></a> after building or pulling it. For example, if the image
+ID to tag is <code>e9ae3c220b23</code>, then we would run the following:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker tag e9ae3c220b23 <span class="m">012345678901</span>.dkr.ecr.us-west-2.amazonaws.com/my-repo-e2fe830</code></pre></div>
+<p>By default, this tag will be tagged as <code>latest</code>; if you&rsquo;d like to tag it using something else, do so as usual:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker tag e9ae3c220b23 <span class="m">012345678901</span>.dkr.ecr.us-west-2.amazonaws.com/my-repo-e2fe830:v2.0</code></pre></div>
+<p>After building and tagging, we then need to authenticate with the ECR registry. Each authentication token covers a
+single registry and lasts 12 hours. The AWS CLI provides an easy way to do this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="k">$(</span>aws ecr get-login --no-include-email<span class="k">)</span></code></pre></div>
+<p>Notice the <code>$(...)</code> part, which executes the command returned by the AWS CLI (which is a <code>docker login ...</code> sequence).
+For more information on authentication, please see <a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html#registry_auth">Registry Authentication</a></p>
+
+<p>Finally, after building, tagging, and logging in, we are ready to push to our repository:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker push <span class="m">012345678901</span>.dkr.ecr.us-west-2.amazonaws.com/my-repo-e2fe830
+The push refers to repository <span class="o">[</span><span class="m">012345678901</span>.dkr.ecr.us-west-2.amazonaws.com/my-repo-e2fe830<span class="o">]</span>
+8a453b312607: Pushed
+e6b5722b9fb4: Pushed
+137a99b96f0d: Pushed
+d6c6b3975afa: Pushed
+36daa25da760: Pushed
+be03501d5dd0: Pushed
+3f9a4fb2ec3f: Pushed
+a464c54f93a9: Pushed
+latest: digest: sha256:f2d7dca5c0800e2dce13b655a439f368587b77ad82de11675851be4c9f2cbf91 size: <span class="m">1999</span></code></pre></div>
+<p>Afterwards, we can then pull the image from the registry by authenticating and pulling from the repository URL.</p>
+
+<h3 id="building-and-publishing-images-automatically-in-code">Building and Publishing Images Automatically in Code</h3>
+
+<p>Instead of using the Docker CLI directly, Pulumi supports building, publishing, and consuming Docker images
+entirely from code. This lets you version and deploy container changes easily alongside the supporting infrastructure.</p>
+
+<p>The ECR repository class has a <code>buildAndPushImage</code> function that does this in one go:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Create a repository, as before.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">repo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ecr</span><span class="p">.</span><span class="nx">Repository</span><span class="p">(</span><span class="s2">&#34;my-repo&#34;</span><span class="p">);</span>
+
+<span class="c1">// Build an image from the &#34;./app&#34; directory (relative to our project and containing Dockerfile),
+</span><span class="c1">// and publish it to our ECR repository provisioned above.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">image</span> <span class="o">=</span> <span class="nx">repo</span><span class="p">.</span><span class="nx">buildAndPushImage</span><span class="p">(</span><span class="s2">&#34;./app&#34;</span><span class="p">);</span></code></pre></div>
+<p>As we run <code>pulumi up</code>, we will see Docker build output in the Pulumi CLI display. If there is an error, it&rsquo;ll
+be printed in the diagnostics section, but otherwise the resulting image name is printed:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi up
+Updating <span class="o">(</span>dev<span class="o">)</span>:
+
+     Type                           Name               Status
+ +   pulumi:pulumi:Stack            crosswalk-aws-dev  created
+ +   └─ awsx:ecr:Repository         my-repo            created
+ +      ├─ aws:ecr:Repository       my-repo            created
+ +      └─ aws:ecr:LifecyclePolicy  my-repo            created
+
+Outputs:
+    image: <span class="s2">&#34;012345678901.dkr.ecr.us-west-2.amazonaws.com/my-repo-e2fe830:latest&#34;</span>
+
+Resources:
+    + <span class="m">4</span> created
+
+Duration: 13s</code></pre></div>
+<p>This image URL can then be used anywhere you&rsquo;d normally use a Docker image name. For example, we can run it:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker run -p <span class="m">80</span>:80 <span class="m">012345678901</span>.dkr.ecr.us-west-2.amazonaws.com/my-repo-e2fe830:latest</code></pre></div>
+<p>As we will see below, this can also be consumed from your container orchestrator, to run the container as a service.</p>
+
+<h3 id="deleting-images">Deleting Images</h3>
+
+<p>If you are done using an image, you can delete it from your repository. This can be done by <a href="#managing-container-image-lifecycles-using-policies">defining a lifecycle
+policy</a> or manually using the AWS CLI. For more information on
+how to manually delete an image, see the ECR documentation on <a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/delete_image.html">Deleting an Image</a>.</p>
+
+<h2 id="using-a-private-repository-from-your-container-orchestrator">Using a Private Repository from Your Container Orchestrator</h2>
+
+<p>To use your ECR images with Amazon ECS and EKS, use the full repository name as the image name. As seen above,
+this is of the form <code>&lt;aws_account_id&gt;.dkr.ecr.&lt;region&gt;.amazonaws.com/&lt;repo&gt;[:&lt;tag&gt;]</code>, where the <code>&lt;tag&gt;</code> is optional (it
+defaults to <code>latest</code>). The container instances require IAM permissions which are typically enabled by default.</p>
+
+<h3 id="consuming-a-private-repository-from-ecs">Consuming a Private Repository from ECS</h3>
+
+<p>To use your private repository from an ECS task definition, reference it like so:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Build and publish an image.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">repo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ecr</span><span class="p">.</span><span class="nx">Repository</span><span class="p">(</span><span class="s2">&#34;app&#34;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">image</span> <span class="o">=</span> <span class="nx">repo</span><span class="p">.</span><span class="nx">buildAndPushImage</span><span class="p">(</span><span class="s2">&#34;./app&#34;</span><span class="p">);</span>
+
+<span class="c1">// Create a load balanced service using this image.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">lb</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">elasticloadbalancingv2</span><span class="p">.</span><span class="nx">NetworkListener</span><span class="p">(</span><span class="s2">&#34;app&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">port</span>: <span class="kt">80</span> <span class="p">});</span>
+<span class="kr">const</span> <span class="nx">nginx</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ecs</span><span class="p">.</span><span class="nx">FargateService</span><span class="p">(</span><span class="s2">&#34;app&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">taskDefinitionArgs</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">containers</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">nginx</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">image</span>: <span class="kt">image</span><span class="p">,</span>
+                <span class="nx">portMappings</span><span class="o">:</span> <span class="p">[</span> <span class="nx">lb</span> <span class="p">],</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="nx">desiredCount</span>: <span class="kt">2</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// Export the URL for the load balanced service.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">lb</span><span class="p">.</span><span class="nx">endpoint</span><span class="p">.</span><span class="nx">hostname</span><span class="p">;</span></code></pre></div>
+<p>In the case where you don&rsquo;t really need to use the repository (except as a place to store the built image), the above
+can be simplified to:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Create a load balanced service using out of a built Docker image.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">lb</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">elasticloadbalancingv2</span><span class="p">.</span><span class="nx">NetworkListener</span><span class="p">(</span><span class="s2">&#34;app&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">port</span>: <span class="kt">80</span> <span class="p">});</span>
+<span class="kr">const</span> <span class="nx">nginx</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ecs</span><span class="p">.</span><span class="nx">FargateService</span><span class="p">(</span><span class="s2">&#34;app&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">taskDefinitionArgs</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">containers</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">nginx</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">image</span>: <span class="kt">awsx.ecr.buildAndPushImage</span><span class="p">(</span><span class="s2">&#34;app&#34;</span><span class="p">,</span> <span class="s2">&#34;./app&#34;</span><span class="p">).</span><span class="nx">image</span><span class="p">(),</span>
+                <span class="nx">portMappings</span><span class="o">:</span> <span class="p">[</span> <span class="nx">lb</span> <span class="p">],</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="nx">desiredCount</span>: <span class="kt">2</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// Export the URL for the load balanced service.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">lb</span><span class="p">.</span><span class="nx">endpoint</span><span class="p">.</span><span class="nx">hostname</span><span class="p">;</span></code></pre></div>
+<p>For information about ECS, refer to the <a href="/docs/reference/crosswalk/aws/ecs/">Pulumi Crosswalk for AWS ECS documentation</a>. For
+information about consuming ECR images from ECS services specifically, please see
+<a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_ECS.html">Using Amazon ECR Images with Amazon ECR</a>.</p>
+
+<h3 id="consuming-a-private-repository-from-eks">Consuming a Private Repository from EKS</h3>
+
+<p>To use your private repository from a Kubernetes service, such as one using EKS, reference it like so:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">eks</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/eks&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">k8s</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/kubernetes&#34;</span><span class="p">;</span>
+
+<span class="c1">// Build and publish to an ECR registry.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">repo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ecr</span><span class="p">.</span><span class="nx">Repository</span><span class="p">(</span><span class="s2">&#34;my-repo&#34;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">image</span> <span class="o">=</span> <span class="nx">repo</span><span class="p">.</span><span class="nx">buildAndPushImage</span><span class="p">(</span><span class="s2">&#34;./app&#34;</span><span class="p">);</span>
+
+<span class="c1">// Create a new EKS cluster.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">cluster</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">eks</span><span class="p">.</span><span class="nx">Cluster</span><span class="p">(</span><span class="s2">&#34;cluster&#34;</span><span class="p">);</span>
+
+<span class="c1">// Create a NGINX Deployment and load balanced Service, running our app.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">appName</span> <span class="o">=</span> <span class="s2">&#34;my-app&#34;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">appLabels</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">appClass</span>: <span class="kt">appName</span> <span class="p">};</span>
+<span class="kr">const</span> <span class="nx">deployment</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">apps</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Deployment</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">appName</span><span class="si">}</span><span class="sb">-dep`</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">replicas</span>: <span class="kt">2</span><span class="p">,</span>
+        <span class="nx">selector</span><span class="o">:</span> <span class="p">{</span> <span class="nx">matchLabels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+        <span class="nx">template</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+            <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">containers</span><span class="o">:</span> <span class="p">[{</span>
+                    <span class="nx">name</span>: <span class="kt">appName</span><span class="p">,</span>
+                    <span class="nx">image</span><span class="p">,</span> <span class="c1">// **Use the image built above**
+</span><span class="c1"></span>                    <span class="nx">ports</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;http&#34;</span><span class="p">,</span> <span class="nx">containerPort</span>: <span class="kt">80</span> <span class="p">}]</span>
+                <span class="p">}],</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+<span class="p">},</span> <span class="p">{</span> <span class="nx">provider</span>: <span class="kt">cluster.provider</span> <span class="p">});</span>
+<span class="kr">const</span> <span class="nx">service</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">core</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Service</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">appName</span><span class="si">}</span><span class="sb">-svc`</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;LoadBalancer&#34;</span><span class="p">,</span>
+        <span class="nx">ports</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">port</span>: <span class="kt">80</span><span class="p">,</span> <span class="nx">targetPort</span><span class="o">:</span> <span class="s2">&#34;http&#34;</span> <span class="p">}],</span>
+        <span class="nx">selector</span>: <span class="kt">appLabels</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">},</span> <span class="p">{</span> <span class="nx">provider</span>: <span class="kt">cluster.provider</span> <span class="p">});</span>
+
+<span class="c1">// Export the URL for the load balanced service.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">service</span><span class="p">.</span><span class="nx">status</span><span class="p">.</span><span class="nx">loadBalancer</span><span class="p">.</span><span class="nx">ingress</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">hostname</span><span class="p">;</span></code></pre></div>
+<p>In the case where you don&rsquo;t really need to use the repository (except as a place to store the built image), the above
+can be simplified to:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">eks</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/eks&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">k8s</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/kubernetes&#34;</span><span class="p">;</span>
+
+<span class="c1">// Create a new EKS cluster.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">cluster</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">eks</span><span class="p">.</span><span class="nx">Cluster</span><span class="p">(</span><span class="s2">&#34;cluster&#34;</span><span class="p">);</span>
+
+<span class="c1">// Create a NGINX Deployment and load balanced Service, running our app.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">appName</span> <span class="o">=</span> <span class="s2">&#34;my-app&#34;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">appLabels</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">appClass</span>: <span class="kt">appName</span> <span class="p">};</span>
+<span class="kr">const</span> <span class="nx">deployment</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">apps</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Deployment</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">appName</span><span class="si">}</span><span class="sb">-dep`</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">replicas</span>: <span class="kt">2</span><span class="p">,</span>
+        <span class="nx">selector</span><span class="o">:</span> <span class="p">{</span> <span class="nx">matchLabels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+        <span class="nx">template</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+            <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">containers</span><span class="o">:</span> <span class="p">[{</span>
+                    <span class="nx">name</span>: <span class="kt">appName</span><span class="p">,</span>
+                    <span class="nx">image</span>: <span class="kt">awsx.ecr.buildAndPushImage</span><span class="p">(</span><span class="s2">&#34;my-repo&#34;</span><span class="p">,</span> <span class="s2">&#34;./app&#34;</span><span class="p">).</span><span class="nx">image</span><span class="p">(),</span>
+                    <span class="nx">ports</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;http&#34;</span><span class="p">,</span> <span class="nx">containerPort</span>: <span class="kt">80</span> <span class="p">}]</span>
+                <span class="p">}],</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+<span class="p">},</span> <span class="p">{</span> <span class="nx">provider</span>: <span class="kt">cluster.provider</span> <span class="p">});</span>
+<span class="kr">const</span> <span class="nx">service</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">core</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Service</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">appName</span><span class="si">}</span><span class="sb">-svc`</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;LoadBalancer&#34;</span><span class="p">,</span>
+        <span class="nx">ports</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">port</span>: <span class="kt">80</span><span class="p">,</span> <span class="nx">targetPort</span><span class="o">:</span> <span class="s2">&#34;http&#34;</span> <span class="p">}],</span>
+        <span class="nx">selector</span>: <span class="kt">appLabels</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">},</span> <span class="p">{</span> <span class="nx">provider</span>: <span class="kt">cluster.provider</span> <span class="p">});</span>
+
+<span class="c1">// Export the URL for the load balanced service.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">service</span><span class="p">.</span><span class="nx">status</span><span class="p">.</span><span class="nx">loadBalancer</span><span class="p">.</span><span class="nx">ingress</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">hostname</span><span class="p">;</span></code></pre></div>
+<p>For information about EKS, refer to the <a href="/docs/reference/crosswalk/aws/eks/">Pulumi Crosswalk for AWS EKS documentation</a>.</p>
+
+<h3 id="iam-permissions-required-to-use-ecr">IAM Permissions Required to use ECR</h3>
+
+<p>For the above examples to work, the container instances powering your ECS or EKS cluster need proper IAM
+policy permissions to access your Amazon ECR registry. The following example defines such an IAM policy:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+    <span class="nt">&#34;Version&#34;</span><span class="p">:</span> <span class="s2">&#34;2012-10-17&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;Statement&#34;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&#34;Effect&#34;</span><span class="p">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;Action&#34;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&#34;ecr:BatchCheckLayerAvailability&#34;</span><span class="p">,</span>
+                <span class="s2">&#34;ecr:BatchGetImage&#34;</span><span class="p">,</span>
+                <span class="s2">&#34;ecr:GetDownloadUrlForLayer&#34;</span><span class="p">,</span>
+                <span class="s2">&#34;ecr:GetAuthorizationToken&#34;</span>
+            <span class="p">],</span>
+            <span class="nt">&#34;Resource&#34;</span><span class="p">:</span> <span class="s2">&#34;*&#34;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span></code></pre></div>
+<p>See the <a href="/docs/reference/crosswalk/aws/iam/">Pulumi Crosswalk for AWS IAM documentation</a> for instructions on how to manage
+such policies.</p>
+
+<h2 id="managing-container-image-lifcycles-using-policies">Managing Container Image Lifcycles using Policies</h2>
+
+<p><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html">ECR lifecycle policies</a> allow
+you to specify the lifecycle management of images in a repository. A lifecycle policy is a set of one or more rules,
+where each rule defines an action for Amazon ECR. The actions apply to images that contain tags prefixed with the
+given strings. This allows the automation of cleaning up unused images, for example expiring images based on age or
+count. You should expect that after creating a lifecycle policy the affected images are expired within 24 hours.</p>
+
+<p>Pulumi Crosswalk for AWS ECR module makes it easy to configure a repository&rsquo;s lifecycle policy, using the
+<code>lifeCyclePolicyArgs</code> property on the <code>Repository</code> class&rsquo;s constructor. Using this property, there are two main ways
+to control how an image is purged from the repository:</p>
+
+<ol>
+<li>Once a maximum number of images has been reached (<code>maximumNumberOfImages</code>).</li>
+<li>Once an image reaches a maximum allowed age (<code>maximumAgeLimit</code>).</li>
+</ol>
+
+<p>Policies can apply to all images, untagged images, or tagged images that match a specific tag-prefix.</p>
+
+<p>By default an <code>awsx.ecr.Repository</code> is created with a policy that will only keep at most one untagged image
+around. In other words, the following repositories have equivalent lifecycle policies:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">repository1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ecr</span><span class="p">.</span><span class="nx">Repository</span><span class="p">(</span><span class="s2">&#34;app1&#34;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">repository2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ecr</span><span class="p">.</span><span class="nx">Repository</span><span class="p">(</span><span class="s2">&#34;app2&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">lifeCyclePolicyArgs</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">rules</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="nx">selection</span><span class="o">:</span> <span class="s2">&#34;untagged&#34;</span><span class="p">,</span>
+            <span class="nx">maximumNumberOfImages</span>: <span class="kt">1</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+<span class="p">});</span></code></pre></div>
+<h3 id="lifecycle-policy-rules">Lifecycle Policy Rules</h3>
+
+<p>A custom lifecycle policy is built from one or more <code>rules</code>, ordered in the array from lowest priority to
+highest priority. The collection of rules are interpreted as follows:</p>
+
+<ol>
+<li>An image is expired by exactly one or zero rules.</li>
+<li>An image that matches the tagging requirements of a higher priority rule cannot be expired by a
+rule with a lower priority.</li>
+<li>Rules can never mark images that are marked by higher priority rules, but can still identify them
+as if they haven&rsquo;t been expired.</li>
+<li>The set of rules must contain a unique set of tag prefixes.</li>
+<li>Only one rule is allowed to select <code>untagged</code> images.</li>
+<li>Expiration is always ordered by the &ldquo;pushed at time&rdquo; for an image, and always expires older
+images before newer ones.</li>
+<li>When using the <code>tagPrefixList</code>, an image is successfully matched if all of the tags in the
+<code>tagPrefixList</code> value are matched against any of the image&rsquo;s tags.</li>
+<li>With <code>maximumNumberOfImages</code>, images are sorted from youngest to oldest based on their &ldquo;pushed at
+time&rdquo; and then all images greater than the specified count are expired.</li>
+<li><code>maximumAgeLimit</code>, all images whose &ldquo;pushed at time&rdquo; is older than the specified number of days
+based on <code>countNumber</code> are expired.</li>
+</ol>
+
+<p>For more details, refer to <a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html">Amazon ECR Lifecycle Policies</a>, however we will now examine
+a number of examples to demonstrate how lifecycle policies are applied.</p>
+
+<h3 id="examples">Examples</h3>
+
+<h4 id="example-a">Example A:</h4>
+
+<p>The following example shows the lifecycle policy syntax for a policy that expires untagged images older than 14 days:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">repository</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ecr</span><span class="p">.</span><span class="nx">Repository</span><span class="p">(</span><span class="s2">&#34;app&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">lifeCyclePolicyArgs</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">rules</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="nx">selection</span><span class="o">:</span> <span class="s2">&#34;untagged&#34;</span><span class="p">,</span>
+            <span class="nx">maximumAgeLimit</span>: <span class="kt">14</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+<span class="p">});</span></code></pre></div>
+<h4 id="example-b-filtering-on-multiple-rules">Example B: Filtering on Multiple Rules</h4>
+
+<p>The following examples use multiple rules in a lifecycle policy. An example repository and lifecycle policy are given
+along with an explanation of the outcome:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">repository</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ecr</span><span class="p">.</span><span class="nx">Repository</span><span class="p">(</span><span class="s2">&#34;app&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">lifeCyclePolicyArgs</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">rules</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="nx">selection</span><span class="o">:</span> <span class="p">{</span> <span class="nx">tagPrefixList</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;prod&#34;</span><span class="p">]</span> <span class="p">},</span>
+            <span class="nx">maximumNumberOfImages</span>: <span class="kt">1</span><span class="p">,</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="nx">selection</span><span class="o">:</span> <span class="p">{</span> <span class="nx">tagPrefixList</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;beta&#34;</span><span class="p">]</span> <span class="p">},</span>
+            <span class="nx">maximumNumberOfImages</span>: <span class="kt">1</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+<span class="p">});</span></code></pre></div>
+<p>Repository contents:</p>
+
+<ul>
+<li>Image A, Taglist: <code>[&quot;beta-1&quot;, &quot;prod-1&quot;]</code>, Pushed: 10 days ago</li>
+<li>Image B, Taglist: <code>[&quot;beta-2&quot;, &quot;prod-2&quot;]</code>, Pushed: 9 days ago</li>
+<li>Image C, Taglist: <code>[&quot;beta-3&quot;]</code>, Pushed: 8 days ago</li>
+</ul>
+
+<p>The logic of this lifecycle policy would be:</p>
+
+<ol>
+<li><p>Rule 1 identifies images tagged with prefix <code>prod</code>. It should mark images, starting with the
+oldest, until there is one or fewer images remaining that match. It marks Image A for expiration.</p></li>
+
+<li><p>Rule 2 identifies images tagged with prefix beta. It should mark images, starting with the
+oldest, until there is one or fewer images remaining that match. It marks both Image A and Image
+B for expiration. However, Image A has already been seen by Rule 1 and if Image B were expired it
+would violate Rule 1 and thus is skipped.</p></li>
+</ol>
+
+<p>Result: Image A is expired.</p>
+
+<h4 id="example-c-filtering-on-multiple-rules">Example C: Filtering on Multiple Rules</h4>
+
+<p>This is the same repository as the previous example but the rule priority order is changed to illustrate the outcome:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">repository</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ecr</span><span class="p">.</span><span class="nx">Repository</span><span class="p">(</span><span class="s2">&#34;app&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">lifeCyclePolicyArgs</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">rules</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="nx">selection</span><span class="o">:</span> <span class="p">{</span> <span class="nx">tagPrefixList</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;beta&#34;</span><span class="p">]</span> <span class="p">},</span>
+            <span class="nx">maximumNumberOfImages</span>: <span class="kt">1</span><span class="p">,</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="nx">selection</span><span class="o">:</span> <span class="p">{</span> <span class="nx">tagPrefixList</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;prod&#34;</span><span class="p">]</span> <span class="p">},</span>
+            <span class="nx">maximumNumberOfImages</span>: <span class="kt">1</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+<span class="p">});</span></code></pre></div>
+<p>Repository contents:</p>
+
+<ul>
+<li>Image A, Taglist: <code>[&quot;beta-1&quot;, &quot;prod-1&quot;]</code>, Pushed: 10 days ago</li>
+<li>Image B, Taglist: <code>[&quot;beta-2&quot;, &quot;prod-2&quot;]</code>, Pushed: 9 days ago</li>
+<li>Image C, Taglist: <code>[&quot;beta-3&quot;]</code>, Pushed: 8 days ago</li>
+</ul>
+
+<p>The logic of this lifecycle policy would be:</p>
+
+<ol>
+<li><p>Rule 1 identifies images tagged with beta. It should mark images, starting with the oldest, until
+there is one or fewer images remaining that match. It sees all three images and would mark Image
+A and Image B for expiration.</p></li>
+
+<li><p>Rule 2 identifies images tagged with prod. It should mark images, starting with the oldest, until
+there is one or fewer images remaining that match. It would see no images because all available
+images were already seen by Rule 1 and thus would mark no additional images.</p></li>
+</ol>
+
+<p>Result: Images A and B are expired.</p>
+
+<h4 id="example-d-filtering-on-multiple-tags-in-a-single-rule">Example D: Filtering on Multiple Tags in a Single Rule</h4>
+
+<p>The following examples specify the lifecycle policy syntax for multiple tag prefixes in a single rule. An example
+repository and lifecycle policy are given along with an explanation of the outcome.</p>
+
+<p>When multiple tag prefixes are specified on a single rule, images must match all listed tag prefixes:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">repository</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ecr</span><span class="p">.</span><span class="nx">Repository</span><span class="p">(</span><span class="s2">&#34;app&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">lifeCyclePolicyArgs</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">rules</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="nx">selection</span><span class="o">:</span> <span class="p">{</span> <span class="nx">tagPrefixList</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;alpha&#34;</span><span class="p">,</span> <span class="s2">&#34;beta&#34;</span><span class="p">]</span> <span class="p">},</span>
+            <span class="nx">maximumAgeLimit</span>: <span class="kt">5</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">});</span></code></pre></div>
+<p>Repository contents:</p>
+
+<ul>
+<li>Image A, Taglist: <code>[&quot;alpha-1&quot;]</code>, Pushed: 12 days ago</li>
+<li>Image B, Taglist: <code>[&quot;beta-1&quot;]</code>, Pushed: 11 days ago</li>
+<li>Image C, Taglist: <code>[&quot;alpha-2&quot;, &quot;beta-2&quot;]</code>, Pushed: 10 days ago</li>
+<li>Image D, Taglist: <code>[&quot;alpha-3&quot;]</code>, Pushed: 4 days ago</li>
+<li>Image E, Taglist: <code>[&quot;beta-3&quot;]</code>, Pushed: 3 days ago</li>
+<li>Image F, Taglist: <code>[&quot;alpha-4&quot;, &quot;beta-4&quot;]</code>, Pushed: 2 days ago</li>
+</ul>
+
+<p>The logic of this lifecycle policy would be:</p>
+
+<ol>
+<li><p>Rule 1 identifies images tagged with alpha and beta. It sees images C and F. It should mark
+images that are older than five days, which would be Image C.</p></li>
+
+<li><p>Result: Image C is expired.</p></li>
+</ol>
+
+<h4 id="example-e-filtering-on-all-images">Example E: Filtering on All Images</h4>
+
+<p>The following lifecycle policy examples specify all images with different filters. An example repository and lifecycle
+policy are given along with an explanation of the outcome:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">repository</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ecr</span><span class="p">.</span><span class="nx">Repository</span><span class="p">(</span><span class="s2">&#34;app&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">lifeCyclePolicyArgs</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">rules</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="nx">selection</span><span class="o">:</span> <span class="s2">&#34;any&#34;</span><span class="p">,</span>
+            <span class="nx">maximumNumberOfImages</span>: <span class="kt">5</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">});</span></code></pre></div>
+<p>Repository contents:</p>
+
+<ul>
+<li>Image A, Taglist: <code>[&quot;alpha-1&quot;]</code>, Pushed: 4 days ago</li>
+<li>Image B, Taglist: <code>[&quot;beta-1&quot;]</code>, Pushed: 3 days ago</li>
+<li>Image C, Taglist: <code>[]</code>, Pushed: 2 days ago</li>
+<li>Image D, Taglist: <code>[&quot;alpha-2&quot;]</code>, Pushed: 1 day ago</li>
+</ul>
+
+<p>The logic of this lifecycle policy would be:</p>
+
+<ol>
+<li><p>Rule 1 identifies all images. It sees images A, B, C, and D. It should expire all images other
+than the newest one. It marks images A, B, and C for expiration.</p></li>
+
+<li><p>Result: Images A, B, and C are expired.</p></li>
+</ol>
+
+<h2 id="additional-ecr-resources">Additional ECR Resources</h2>
+
+<p>For more information about Amazon ECR, please see the following:</p>
+
+<ul>
+<li><a href="https://aws.amazon.com/ecr/">Amazon Elastic Container Registry homepage</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

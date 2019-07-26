@@ -1,0 +1,3303 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/awsx/rds/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+
+    
+        <meta property="og:title" content="Module rds">
+    
+
+    
+        <meta name="description" content="@pulumi/awsx &gt; rds
+Index ▹  Index ▾  module metrics  rds/metrics.ts    module metrics  function activeTransactions  activeTransactions(change?: RdsMetricChange): Metric The average number of current transactions executing on an Aurora database instance per second. By default, Aurora doesn&rsquo;t enable this metric. To begin measuring this value, set innodb_monitor_enable=&lsquo;all&rsquo; in the DB parameter group for a specific DB instance.
+Applies to: Aurora MySQL
+ function auroraBinlogReplicaLag  auroraBinlogReplicaLag(change?">
+        <meta property="og:description" content="@pulumi/awsx &gt; rds
+Index ▹  Index ▾  module metrics  rds/metrics.ts    module metrics  function activeTransactions  activeTransactions(change?: RdsMetricChange): Metric The average number of current transactions executing on an Aurora database instance per second. By default, Aurora doesn&rsquo;t enable this metric. To begin measuring this value, set innodb_monitor_enable=&lsquo;all&rsquo; in the DB parameter group for a specific DB instance.
+Applies to: Aurora MySQL
+ function auroraBinlogReplicaLag  auroraBinlogReplicaLag(change?">
+    
+
+    
+    
+    <meta property="og:image" content="https://www.pulumi.com/social/pulumi.png">
+
+    <title>Module rds - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/awsx/rds/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="https://www.pulumi.com/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="https://www.pulumi.com/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u");
+    analytics.page();
+    }}();
+    </script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+</head>
+
+    <body class="section-docs">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+
+            <div class="md:w-2/12 mt-2 md:order-last">
+                <div class="mb-8 md:mb-4">
+                    <form class="relative" action="/docs/search/" method="GET">
+    <i class="fas fa-search absolute inset-y-0 flex items-center pl-3 text-gray-500"></i>
+    <input
+        id="search-query"
+        name="q"
+        class="block w-full py-2 px-4 pl-8 text-sm border border-gray-400 focus:border-blue-500 focus:outline-none rounded transition"
+        placeholder="Search the docs"
+        autocomplete="off">
+</form>
+
+                </div>
+
+                <div class="ml-3 hidden md:block">
+                    
+    <ul class="p-0 list-none">
+        
+        
+        
+        
+        
+
+        <li>
+            <a class="text-gray-600 hover:text-blue-700 text-xs" href="https://github.com/pulumi/docs/issues/new?body=File: [docs%2freference%2fpkg%2fnodejs%2fpulumi%2fawsx%2frds%2f_index.md](https%3a%2f%2fwww.pulumi.com%2fdocs%2freference%2fpkg%2fnodejs%2fpulumi%2fawsx%2frds%2f)" target="_blank">
+                <i class="far fa-check-square mr-2"></i>
+                Request a Change
+            </a>
+        </li>
+    </ul>
+
+
+                </div>
+            </div>
+
+            <div class="md:w-3/12 pr-8 mt-2 mb-8 pb-8 border-b-2 border-gray-400 md:border-none md:pb-0 md:mb-0">
+                
+
+
+
+
+
+
+
+
+    
+    
+    
+
+
+<aside class="toc">
+    <h3 class="no-anchor">
+        <a href="/docs/">Docs</a>
+    </h3>
+
+    
+        <h4 class="no-anchor">
+            <a href="/docs/quickstart/">Get Started</a>
+        </h4>
+    
+    
+        <h4 class="no-anchor">
+            <a href="/docs/reference/">Reference</a>
+        </h4>
+    
+    
+
+    
+        
+        
+
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Architecture &amp; Concepts">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Programming Model" href="/docs/reference/programming-model/">Programming Model</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Projects" href="/docs/reference/project/">Projects</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stacks" href="/docs/reference/stack/">Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Configuration and Secrets" href="/docs/reference/config/">Configuration and Secrets</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizing Projects and Stacks" href="/docs/reference/organizing-stacks-projects/">Organizing Projects and Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="How Pulumi Works" href="/docs/reference/how/">How Pulumi Works</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State and Backends" href="/docs/reference/state/">State and Backends</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Tutorials">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/tutorials/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateways and Lambda" href="/docs/reference/tutorials/aws/tutorial-rest-api/">API Gateways and Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Containers on ECS &#34;Fargate&#34;" href="/docs/reference/tutorials/aws/tutorial-service/">Containers on ECS &#34;Fargate&#34;</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="EC2 Linux WebServer Instance" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">EC2 Linux WebServer Instance</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serve a Static Website from S3" href="/docs/reference/tutorials/aws/tutorial-s3-website/">Serve a Static Website from S3</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Video Thumbnailer" href="/docs/reference/tutorials/aws/tutorial-thumbnailer/">Video Thumbnailer</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/tutorials/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Container Instance" href="/docs/reference/tutorials/azure/tutorial-container-webserver/">Web Server Container Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/tutorials/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Virtual Machine Instance" href="/docs/reference/tutorials/gcp/tutorial-gce-webserver/">Web Server Virtual Machine Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/tutorials/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: EKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-eks/">Clusters: EKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: GKE - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-gke/">Clusters: GKE - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: AKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-aks/">Clusters: AKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#1: Hello, World!" href="/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment/">#1: Hello, World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#2: Deploying the WordPress Helm Chart" href="/docs/reference/tutorials/kubernetes/tutorial-wordpress-chart/">#2: Deploying the WordPress Helm Chart</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#3: Guestbook App with Redis and Nginx" href="/docs/reference/tutorials/kubernetes/tutorial-guestbook/">#3: Guestbook App with Redis and Nginx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#4: Graceful App Rollout" href="/docs/reference/tutorials/kubernetes/tutorial-configmap-rollout/">#4: Graceful App Rollout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#5: Gating rollout on Prometheus checks" href="/docs/reference/tutorials/kubernetes/tutorial-p8s-rollout/">#5: Gating rollout on Prometheus checks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#6: Run a Stateless App Deployment" href="/docs/reference/tutorials/kubernetes/tutorial-stateless-app/">#6: Run a Stateless App Deployment</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#7: EKS - Migrating Node Groups with Zero Downtime" href="/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups/">#7: EKS - Migrating Node Groups with Zero Downtime</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Command Line">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cancel" href="/docs/reference/cli/pulumi_cancel/">Cancel</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Config" href="/docs/reference/cli/pulumi_config/">Config</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Destroy" href="/docs/reference/cli/pulumi_destroy/">Destroy</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Login" href="/docs/reference/cli/pulumi_login/">Login</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logout" href="/docs/reference/cli/pulumi_logout/">Logout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logs" href="/docs/reference/cli/pulumi_logs/">Logs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="New" href="/docs/reference/cli/pulumi_new/">New</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Plugin" href="/docs/reference/cli/pulumi_plugin/">Plugin</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Preview" href="/docs/reference/cli/pulumi_preview/">Preview</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Refresh" href="/docs/reference/cli/pulumi_refresh/">Refresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stack" href="/docs/reference/cli/pulumi_stack/">Stack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State" href="/docs/reference/cli/pulumi_state/">State</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Update" href="/docs/reference/cli/pulumi_up/">Update</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Clouds">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/clouds/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/aws/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/clouds/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/azure/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/clouds/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/gcp/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/clouds/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Introduction" href="/docs/reference/clouds/kubernetes/introduction/">Introduction</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/kubernetes/setup/">Setup</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="FAQ" href="/docs/reference/clouds/kubernetes/faq/">FAQ</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="OpenStack">
+                <div class="sidenav-topic ">
+                    <a data-title="OpenStack" href="/docs/reference/clouds/openstack/">OpenStack</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/openstack/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Crosswalk for AWS 🆕">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateway" href="/docs/reference/crosswalk/aws/api-gateway/">API Gateway</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Auto Scaling" href="/docs/reference/crosswalk/aws/autoscaling/">Auto Scaling</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CloudWatch" href="/docs/reference/crosswalk/aws/cloudwatch/">CloudWatch</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Registry (ECR)" href="/docs/reference/crosswalk/aws/ecr/">Elastic Container Registry (ECR)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Service (ECS)" href="/docs/reference/crosswalk/aws/ecs/">Elastic Container Service (ECS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Kubernetes Service (EKS)" href="/docs/reference/crosswalk/aws/eks/">Elastic Kubernetes Service (EKS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Load Balancing (ELB)" href="/docs/reference/crosswalk/aws/elb/">Elastic Load Balancing (ELB)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Identity and Access Management (IAM)" href="/docs/reference/crosswalk/aws/iam/">Identity and Access Management (IAM)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Lambda" href="/docs/reference/crosswalk/aws/lambda/">Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Virtual Private Cloud (VPC)" href="/docs/reference/crosswalk/aws/vpc/">Virtual Private Cloud (VPC)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Other AWS Services" href="/docs/reference/crosswalk/aws/other/">Other AWS Services</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Languages">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Node.js" href="/docs/reference/javascript/">Node.js</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Python" href="/docs/reference/python/">Python</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Teams &amp; Collaboration">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizations" href="/docs/reference/service/orgs/">Organizations</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Teams" href="/docs/reference/service/teams/">Teams</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Roles and Access Controls" href="/docs/reference/service/roles-and-access-controls/">Roles and Access Controls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub App" href="/docs/reference/cd-github/">Pulumi GitHub App</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi Webhooks" href="/docs/reference/service/webhooks/">Pulumi Webhooks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Creating a &#39;Deploy with Pulumi&#39; Button" href="/docs/reference/service/pulumi-button/">Creating a &#39;Deploy with Pulumi&#39; Button</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Continuous Delivery">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Supporting A New CI System" href="/docs/reference/cd-supporting-new-ci/">Supporting A New CI System</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="AWS Code Services" href="/docs/reference/cd-aws-code-services/">AWS Code Services</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Azure DevOps" href="/docs/reference/cd-azure-devops/">Azure DevOps</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CircleCI" href="/docs/reference/cd-circleci/">CircleCI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Codefresh" href="/docs/reference/cd-codefresh/">Codefresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="GitLab CI" href="/docs/reference/cd-gitlab-ci/">GitLab CI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Google Cloud Build" href="/docs/reference/cd-google-cloud-build/">Google Cloud Build</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub Actions" href="/docs/reference/cd-github-actions/">Pulumi GitHub Actions</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Travis CI" href="/docs/reference/cd-travis/">Travis CI</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Compared to Others">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Terraform" href="/docs/reference/vs/terraform/">Terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud Templates" href="/docs/reference/vs/cloud_templates/">Cloud Templates</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud SDKs" href="/docs/reference/vs/cloud_sdks/">Cloud SDKs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serverless" href="/docs/reference/vs/serverless/">Serverless</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Kubernetes YAML" href="/docs/reference/vs/k8s_yaml_dsls/">Kubernetes YAML</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Chef, Puppet, etc." href="/docs/reference/vs/chef_puppet_etc/">Chef, Puppet, etc.</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Custom Solutions" href="/docs/reference/vs/custom/">Custom Solutions</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggleVisible" data-title="API Reference">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="Node.js">
+                <div class="sidenav-topic ">
+                    <a data-title="Node.js" href="/docs/reference/pkg/nodejs/">Node.js</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/nodejs/pulumi/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="aws" href="/docs/reference/pkg/nodejs/pulumi/aws/">aws</a>
+            </div>
+        
+    
+        
+        
+            
+        
+
+        
+            <div class="sidenav-topic mb-2 active">
+                <a data-title="awsx" href="/docs/reference/pkg/nodejs/pulumi/awsx/">awsx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azure" href="/docs/reference/pkg/nodejs/pulumi/azure/">azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azuread" href="/docs/reference/pkg/nodejs/pulumi/azuread/">azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloud" href="/docs/reference/pkg/nodejs/pulumi/cloud/">cloud</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloudflare" href="/docs/reference/pkg/nodejs/pulumi/cloudflare/">cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="datadog" href="/docs/reference/pkg/nodejs/pulumi/datadog/">datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="digitalocean" href="/docs/reference/pkg/nodejs/pulumi/digitalocean/">digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="dnsimple" href="/docs/reference/pkg/nodejs/pulumi/dnsimple/">dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="docker" href="/docs/reference/pkg/nodejs/pulumi/docker/">docker</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="eks" href="/docs/reference/pkg/nodejs/pulumi/eks/">eks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="f5bigip" href="/docs/reference/pkg/nodejs/pulumi/f5bigip/">f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gcp" href="/docs/reference/pkg/nodejs/pulumi/gcp/">gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gitlab" href="/docs/reference/pkg/nodejs/pulumi/gitlab/">gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="kubernetes" href="/docs/reference/pkg/nodejs/pulumi/kubernetes/">kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="linode" href="/docs/reference/pkg/nodejs/pulumi/linode/">linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="mysql" href="/docs/reference/pkg/nodejs/pulumi/mysql/">mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="newrelic" href="/docs/reference/pkg/nodejs/pulumi/newrelic/">newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="openstack" href="/docs/reference/pkg/nodejs/pulumi/openstack/">openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="packet" href="/docs/reference/pkg/nodejs/pulumi/packet/">packet</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="postgresql" href="/docs/reference/pkg/nodejs/pulumi/postgresql/">postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="random" href="/docs/reference/pkg/nodejs/pulumi/random/">random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="terraform" href="/docs/reference/pkg/nodejs/pulumi/terraform/">terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="tls" href="/docs/reference/pkg/nodejs/pulumi/tls/">tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="vsphere" href="/docs/reference/pkg/nodejs/pulumi/vsphere/">vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Python">
+                <div class="sidenav-topic ">
+                    <a data-title="Python" href="/docs/reference/pkg/python/">Python</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/python/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_aws" href="/docs/reference/pkg/python/pulumi_aws/">pulumi_aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azure" href="/docs/reference/pkg/python/pulumi_azure/">pulumi_azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azuread" href="/docs/reference/pkg/python/pulumi_azuread/">pulumi_azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_cloudflare" href="/docs/reference/pkg/python/pulumi_cloudflare/">pulumi_cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_datadog" href="/docs/reference/pkg/python/pulumi_datadog/">pulumi_datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_digitalocean" href="/docs/reference/pkg/python/pulumi_digitalocean/">pulumi_digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_dnsimple" href="/docs/reference/pkg/python/pulumi_dnsimple/">pulumi_dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_f5bigip" href="/docs/reference/pkg/python/pulumi_f5bigip/">pulumi_f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gcp" href="/docs/reference/pkg/python/pulumi_gcp/">pulumi_gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gitlab" href="/docs/reference/pkg/python/pulumi_gitlab/">pulumi_gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_kubernetes" href="/docs/reference/pkg/python/pulumi_kubernetes/">pulumi_kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_linode" href="/docs/reference/pkg/python/pulumi_linode/">pulumi_linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_mysql" href="/docs/reference/pkg/python/pulumi_mysql/">pulumi_mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_newrelic" href="/docs/reference/pkg/python/pulumi_newrelic/">pulumi_newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_openstack" href="/docs/reference/pkg/python/pulumi_openstack/">pulumi_openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_postgresql" href="/docs/reference/pkg/python/pulumi_postgresql/">pulumi_postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_random" href="/docs/reference/pkg/python/pulumi_random/">pulumi_random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_tls" href="/docs/reference/pkg/python/pulumi_tls/">pulumi_tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_vsphere" href="/docs/reference/pkg/python/pulumi_vsphere/">pulumi_vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="FAQ">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Download and Install">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Changelog">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible">
+                <div class="toggle" data-title="Troubleshooting &amp; Support">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+    
+
+    
+</aside>
+
+
+
+            </div>
+
+            <div class="md:w-7/12">
+                
+                    <h1>Module rds</h1>
+                
+
+                <!-- WARNING: this page was generated by a tool. Do not edit it by hand. -->
+
+<!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/tscdocgen. -->
+
+<p><a href="../">@pulumi/awsx</a> &gt; rds</p>
+
+<div class="toggleVisible">
+<div class="collapsed">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
+</div>
+<div class="expanded">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
+<div class="pdoc-module-contents">
+<ul>
+<li><a href="#metrics">module metrics</a></li>
+</ul>
+
+<a href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts">rds/metrics.ts</a> 
+</div>
+</div>
+</div>
+
+<p><h2 class="pdoc-module-header" id="metrics">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L20">module <b>metrics</b></a>
+</h2>
+<div class="pdoc-module-contents">
+<h3 class="pdoc-member-header" id="activeTransactions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L449">function <b>activeTransactions</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>activeTransactions(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average number of current transactions executing on an Aurora database instance per
+second. By default, Aurora doesn&rsquo;t enable this metric. To begin measuring this value, set
+innodb_monitor_enable=&lsquo;all&rsquo; in the DB parameter group for a specific DB instance.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="auroraBinlogReplicaLag">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L462">function <b>auroraBinlogReplicaLag</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>auroraBinlogReplicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of time a replica DB cluster running on Aurora with MySQL compatibility lags
+behind the source DB cluster. This metric reports the value of the Seconds_Behind_Master
+field of the MySQL SHOW SLAVE STATUS command. This metric is useful for monitoring replica
+lag between Aurora DB clusters that are replicating across different AWS Regions. For more
+information, see Aurora MySQL Replication.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="auroraGlobalDBDataTransferBytes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L480">function <b>auroraGlobalDBDataTransferBytes</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>auroraGlobalDBDataTransferBytes(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>Units: Bytes</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="auroraGlobalDBReplicatedWriteIO">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L471">function <b>auroraGlobalDBReplicatedWriteIO</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>auroraGlobalDBReplicatedWriteIO(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>Units: Bytes</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="auroraGlobalDBReplicationLag">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L489">function <b>auroraGlobalDBReplicationLag</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>auroraGlobalDBReplicationLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>Units: Milliseconds</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="auroraReplicaLag">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L499">function <b>auroraReplicaLag</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>auroraReplicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>For an Aurora Replica, the amount of lag when replicating updates from the primary instance,
+in milliseconds.</p>
+
+<p>Applies to: Aurora MySQL and Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="auroraReplicaLagMaximum">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L509">function <b>auroraReplicaLagMaximum</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>auroraReplicaLagMaximum(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The maximum amount of lag between the primary instance and each Aurora DB instance in the DB
+cluster, in milliseconds.</p>
+
+<p>Applies to: Aurora MySQL and Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="auroraReplicaLagMinimum">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L519">function <b>auroraReplicaLagMinimum</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>auroraReplicaLagMinimum(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The minimum amount of lag between the primary instance and each Aurora DB instance in the DB
+cluster, in milliseconds.</p>
+
+<p>Applies to: Aurora MySQL and Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="backtrackChangeRecordsCreationRate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L528">function <b>backtrackChangeRecordsCreationRate</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>backtrackChangeRecordsCreationRate(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The number of backtrack change records created over five minutes for your DB cluster.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="backtrackChangeRecordsStored">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L537">function <b>backtrackChangeRecordsStored</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>backtrackChangeRecordsStored(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The actual number of backtrack change records used by your DB cluster.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="backtrackWindowActual">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L546">function <b>backtrackWindowActual</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>backtrackWindowActual(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The difference between the target backtrack window and the actual backtrack window.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="backtrackWindowAlert">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L556">function <b>backtrackWindowAlert</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>backtrackWindowAlert(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The number of times that the actual backtrack window is smaller than the target backtrack
+window for a given period of time.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="backupRetentionPeriodStorageUsed">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L568">function <b>backupRetentionPeriodStorageUsed</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>backupRetentionPeriodStorageUsed(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The total amount of backup storage in GiB used to support the point-in-time restore feature
+within the Aurora DB cluster&rsquo;s backup retention window. Included in the total reported by the
+TotalBackupStorageBilled metric. Computed separately for each Aurora cluster. For
+instructions, see Understanding Aurora Backup Storage Usage. Units: Gibibytes (GiB)</p>
+
+<p>Applies to: Aurora MySQL and Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="binLogDiskUsage">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L198">function <b>binLogDiskUsage</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>binLogDiskUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of disk space occupied by binary logs on the master. Applies to MySQL read
+replicas.</p>
+
+<p>Units: Bytes</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="blockedTransactions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L577">function <b>blockedTransactions</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>blockedTransactions(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average number of transactions in the database that are blocked per second.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="bufferCacheHitRatio">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L586">function <b>bufferCacheHitRatio</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>bufferCacheHitRatio(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The percentage of requests that are served by the buffer cache.</p>
+
+<p>Applies to: Aurora MySQL and Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="burstBalance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L207">function <b>burstBalance</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>burstBalance(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The percent of General Purpose SSD (gp2) burst-bucket I/O credits available.</p>
+
+<p>Units: Percent</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="commitLatency">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L595">function <b>commitLatency</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>commitLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of latency for commit operations, in milliseconds.</p>
+
+<p>Applies to: Aurora MySQL and Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="commitThroughput">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L604">function <b>commitThroughput</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>commitThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average number of commit operations per second.</p>
+
+<p>Applies to: Aurora MySQL and Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="cpuCreditBalance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L251">function <b>cpuCreditBalance</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>cpuCreditBalance(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>[T2 instances] The number of earned CPU credits that an instance has accrued since it was
+launched or started. For T2 Standard, the CPUCreditBalance also includes the number of launch
+credits that have been accrued.</p>
+
+<p>Credits are accrued in the credit balance after they are earned, and removed from the credit
+balance when they are spent. The credit balance has a maximum limit, determined by the
+instance size. Once the limit is reached, any new credits that are earned are discarded. For
+T2 Standard, launch credits do not count towards the limit.</p>
+
+<p>The credits in the CPUCreditBalance are available for the instance to spend to burst beyond
+its baseline CPU utilization.</p>
+
+<p>When an instance is running, credits in the CPUCreditBalance do not expire. When the instance
+stops, the CPUCreditBalance does not persist, and all accrued credits are lost.</p>
+
+<p>CPU credit metrics are available at a five-minute frequency only.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="cpuCreditUsage">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L229">function <b>cpuCreditUsage</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>cpuCreditUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>[T2 instances] The number of CPU credits spent by the instance for CPU utilization. One CPU
+credit equals one vCPU running at 100% utilization for one minute or an equivalent
+combination of vCPUs, utilization, and time (for example, one vCPU running at 50% utilization
+for two minutes or two vCPUs running at 25% utilization for two minutes).</p>
+
+<p>CPU credit metrics are available at a five-minute frequency only. If you specify a period
+greater than five minutes, use the Sum statistic instead of the Average statistic.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="cpuUtilization">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L216">function <b>cpuUtilization</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>cpuUtilization(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The percentage of CPU utilization.</p>
+
+<p>Units: Percent</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="databaseConnections">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L260">function <b>databaseConnections</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>databaseConnections(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The number of database connections in use.</p>
+
+<p>Units: Count</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ddlLatency">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L614">function <b>ddlLatency</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>ddlLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of latency for data definition language (DDL) requests, in milliseconds—for
+example, create, alter, and drop requests.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ddlThroughput">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L623">function <b>ddlThroughput</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>ddlThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average number of DDL requests per second.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="deadlocks">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L632">function <b>deadlocks</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>deadlocks(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average number of deadlocks in the database per second.</p>
+
+<p>Applies to: Aurora MySQL and Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="deleteLatency">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L641">function <b>deleteLatency</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>deleteLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of latency for delete queries, in milliseconds.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="deleteThroughput">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L650">function <b>deleteThroughput</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>deleteThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average number of delete queries per second.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="diskQueueDepth">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L269">function <b>diskQueueDepth</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>diskQueueDepth(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The number of outstanding IOs (read/write requests) waiting to access the disk.</p>
+
+<p>Units: Count</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="dmlLatency">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L659">function <b>dmlLatency</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>dmlLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of latency for inserts, updates, and deletes, in milliseconds.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="dmlThroughput">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L668">function <b>dmlThroughput</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>dmlThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average number of inserts, updates, and deletes per second.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="engineUptime">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L677">function <b>engineUptime</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>engineUptime(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of time that the instance has been running, in seconds.</p>
+
+<p>Applies to: Aurora MySQL and Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="failedSQLServerAgentJobsCount">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L278">function <b>failedSQLServerAgentJobsCount</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>failedSQLServerAgentJobsCount(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The number of failed SQL Server Agent jobs during the last minute.</p>
+
+<p>Unit: Count/Minute</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="freeLocalStorage">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L690">function <b>freeLocalStorage</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>freeLocalStorage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of storage available for temporary tables and logs, in bytes. Unlike for other DB
+engines, for Aurora DB instances this metric reports the amount of storage available to each
+DB instance for temporary tables and logs. This value depends on the DB instance class (for
+pricing information, see the Amazon RDS product page). You can increase the amount of free
+storage space for an instance by choosing a larger DB instance class for your instance.</p>
+
+<p>Applies to: Aurora MySQL and Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="freeStorageSpace">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L296">function <b>freeStorageSpace</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>freeStorageSpace(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of available storage space.</p>
+
+<p>Units: Bytes</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="freeableMemory">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L287">function <b>freeableMemory</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>freeableMemory(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of available random access memory.</p>
+
+<p>Units: Bytes</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="insertLatency">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L699">function <b>insertLatency</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>insertLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of latency for insert queries, in milliseconds.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="insertThroughput">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L708">function <b>insertThroughput</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>insertThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average number of insert queries per second.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="loginFailures">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L717">function <b>loginFailures</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>loginFailures(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average number of failed login attempts per second.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="maximumUsedTransactionIDs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L305">function <b>maximumUsedTransactionIDs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>maximumUsedTransactionIDs(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The maximum transaction ID that has been used. Applies to PostgreSQL.</p>
+
+<p>Units: Count</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="metric">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L164">function <b>metric</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#RdsMetricName'>RdsMetricName</a>, change: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>Creates an AWS/RDS metric with the requested [metricName]. See
+<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html#monitoring-cloudwatch">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html#monitoring-cloudwatch</a>
+for list of all metric-names.</p>
+
+<p>Note, individual metrics can easily be obtained without supplying the name using the other
+[metricXXX] functions.</p>
+
+<p>You can monitor DB instances using Amazon CloudWatch, which collects and processes raw data from
+Amazon RDS into readable, near real-time metrics. These statistics are recorded for a period of
+two weeks, so that you can access historical information and gain a better perspective on how
+your web application or service is performing. By default, Amazon RDS metric data is
+automatically sent to CloudWatch in 1-minute periods.</p>
+
+<p>Amazon RDS metrics data can be filtered by using any of the following dimensions:</p>
+
+<ol>
+<li>&ldquo;DBInstanceIdentifier&rdquo;: This dimension filters the data you request for a specific database
+instance.</li>
+<li>&ldquo;DBClusterIdentifier&rdquo;: This dimension filters the data you request for a specific Amazon
+Aurora DB cluster.</li>
+<li>&ldquo;DBClusterIdentifier, Role&rdquo;: This dimension filters the data you request for a specific Aurora
+DB cluster, aggregating the metric by instance role (WRITER/READER). For example, you can
+aggregate metrics for all READER instances that belong to a cluster.</li>
+<li>&ldquo;DatabaseClass&rdquo;: This dimension filters the data you request for all instances in a database
+class. For example, you can aggregate metrics for all instances that belong to the database
+class db.m1.small</li>
+<li>&ldquo;EngineName&rdquo;: This dimension filters the data you request for the identified engine name only.
+For example, you can aggregate metrics for all instances that have the engine name mysql.</li>
+<li>&ldquo;SourceRegion&rdquo;: This dimension filters the data you request for the specified region only. For
+example, you can aggregate metrics for all instances in the region us-east-1.</li>
+</ol>
+
+
+</div>
+<h3 class="pdoc-member-header" id="networkReceiveThroughput">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L315">function <b>networkReceiveThroughput</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>networkReceiveThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The incoming (Receive) network traffic on the DB instance, including both customer database
+traffic and Amazon RDS traffic used for monitoring and replication.</p>
+
+<p>Units: Bytes/Second</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="networkThroughput">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L728">function <b>networkThroughput</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>networkThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of network throughput both received from and transmitted to clients by each
+instance in the Aurora MySQL DB cluster, in bytes per second. This throughput doesn&rsquo;t include
+network traffic between instances in the DB cluster and the cluster volume.</p>
+
+<p>Applies to: Aurora MySQL and Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="networkTransmitThroughput">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L325">function <b>networkTransmitThroughput</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>networkTransmitThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The outgoing (Transmit) network traffic on the DB instance, including both customer database
+traffic and Amazon RDS traffic used for monitoring and replication.</p>
+
+<p>Units: Bytes/Second</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="oldestReplicationSlotLag">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L335">function <b>oldestReplicationSlotLag</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>oldestReplicationSlotLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The lagging size of the replica lagging the most in terms of WAL data received. Applies to
+PostgreSQL.</p>
+
+<p>Units: Megabytes</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="queries">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L737">function <b>queries</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>queries(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average number of queries executed per second.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="rdsToAuroraPostgreSQLReplicaLag">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L747">function <b>rdsToAuroraPostgreSQLReplicaLag</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>rdsToAuroraPostgreSQLReplicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of lag in seconds when replicating updates from the primary RDS PostgreSQL
+instance to other nodes in the cluster.</p>
+
+<p>Applies to: Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="readIOPS">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L344">function <b>readIOPS</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>readIOPS(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average number of disk read I/O operations per second.</p>
+
+<p>Units: Count/Second</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="readLatency">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L353">function <b>readLatency</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>readLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average amount of time taken per disk I/O operation.</p>
+
+<p>Units: Seconds</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="readThroughput">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L362">function <b>readThroughput</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>readThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average number of bytes read from disk per second.</p>
+
+<p>Units: Bytes/Second</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="replicaLag">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L372">function <b>replicaLag</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>replicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of time a Read Replica DB instance lags behind the source DB instance. Applies to
+MySQL, MariaDB, and PostgreSQL Read Replicas.</p>
+
+<p>Units: Seconds</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="replicationSlotDiskUsage">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L381">function <b>replicationSlotDiskUsage</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>replicationSlotDiskUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The disk space used by replication slot files. Applies to PostgreSQL.</p>
+
+<p>Units: Megabytes</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="resultSetCacheHitRatio">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L756">function <b>resultSetCacheHitRatio</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>resultSetCacheHitRatio(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The percentage of requests that are served by the Resultset cache.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="selectLatency">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L765">function <b>selectLatency</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>selectLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of latency for select queries, in milliseconds.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="selectThroughput">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L774">function <b>selectThroughput</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>selectThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average number of select queries per second.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="snapshotStorageUsed">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L786">function <b>snapshotStorageUsed</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>snapshotStorageUsed(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The total amount of backup storage in GiB consumed by all Aurora snapshots for an Aurora DB
+cluster outside its backup retention window. Included in the total reported by the
+TotalBackupStorageBilled metric. Computed separately for each Aurora cluster. For
+instructions, see Understanding Aurora Backup Storage Usage. Units: Gibibytes (GiB)</p>
+
+<p>Applies to: Aurora MySQL and Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="swapUsage">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L391">function <b>swapUsage</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>swapUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of swap space used on the DB instance. This metric is not available for SQL
+Server.</p>
+
+<p>Units: Bytes</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="totalBackupStorageBilled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L798">function <b>totalBackupStorageBilled</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>totalBackupStorageBilled(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The total amount of backup storage in GiB for which you are billed for a given Aurora DB
+cluster. Includes the backup storage measured by the BackupRetentionPeriodStorageUsed and
+SnapshotStorageUsed metrics. Computed separately for each Aurora cluster. For instructions,
+see Understanding Aurora Backup Storage Usage. Units: Gibibytes (GiB)</p>
+
+<p>Applies to: Aurora MySQL and Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="transactionLogsDiskUsage">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L400">function <b>transactionLogsDiskUsage</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>transactionLogsDiskUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The disk space used by transaction logs. Applies to PostgreSQL.</p>
+
+<p>Units: Megabytes</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="transactionLogsGeneration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L409">function <b>transactionLogsGeneration</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>transactionLogsGeneration(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The size of transaction logs generated per second. Applies to PostgreSQL.</p>
+
+<p>Units: Megabytes/Second</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="updateLatency">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L807">function <b>updateLatency</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>updateLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of latency for update queries, in milliseconds.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="updateThroughput">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L816">function <b>updateThroughput</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>updateThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average number of update queries per second.</p>
+
+<p>Applies to: Aurora MySQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="volumeBytesUsed">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L826">function <b>volumeBytesUsed</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>volumeBytesUsed(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The amount of storage used by your Aurora DB instance, in bytes. This value affects the cost
+of the Aurora DB cluster (for pricing information, see the Amazon RDS product page).</p>
+
+<p>Applies to: Aurora MySQL and Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="volumeReadIOPs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L844">function <b>volumeReadIOPs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>volumeReadIOPs(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The number of billed read I/O operations from a cluster volume, reported at 5-minute
+intervals. Billed read operations are calculated at the cluster volume level, aggregated from
+all instances in the Aurora DB cluster, and then reported at 5-minute intervals. The value is
+calculated by taking the value of the Read operations metric over a 5-minute period. You can
+determine the amount of billed read operations per second by taking the value of the Billed
+read operations metric and dividing by 300 seconds. For example, if the Billed read
+operations returns 13,686, then the billed read operations per second is 45 (13,686 / 300 =
+45.62). You accrue billed read operations for queries that request database pages that aren&rsquo;t
+in the buffer cache and therefore must be loaded from storage. You might see spikes in billed
+read operations as query results are read from storage and then loaded into the buffer cache.</p>
+
+<p>Applies to: Aurora MySQL and Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="volumeWriteIOPs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L855">function <b>volumeWriteIOPs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>volumeWriteIOPs(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The number of write disk I/O operations to the cluster volume, reported at 5-minute
+intervals. See the description of VolumeReadIOPS above for a detailed description of how
+billed write operations are calculated.</p>
+
+<p>Applies to: Aurora MySQL and Aurora PostgreSQL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="writeIOPS">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L418">function <b>writeIOPS</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>writeIOPS(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average number of disk write I/O operations per second.</p>
+
+<p>Units: Count/Second</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="writeLatency">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L427">function <b>writeLatency</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>writeLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average amount of time taken per disk I/O operation.</p>
+
+<p>Units: Seconds</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="writeThroughput">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L436">function <b>writeThroughput</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>writeThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+<p>The average number of bytes written to disk per second.</p>
+
+<p>Units: Bytes/Second</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="RdsMetricChange">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L93">interface <b>RdsMetricChange</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+
+
+</div>
+<h3 class="pdoc-member-header" id="RdsMetricName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/rds/metrics.ts#L21">type <b>RdsMetricName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>type</span> RdsMetricName = <span class='s2'>&ldquo;BinLogDiskUsage&rdquo;</span> | <span class='s2'>&ldquo;BurstBalance&rdquo;</span> | <span class='s2'>&ldquo;CPUUtilization&rdquo;</span> | <span class='s2'>&ldquo;CPUCreditUsage&rdquo;</span> | <span class='s2'>&ldquo;CPUCreditBalance&rdquo;</span> | <span class='s2'>&ldquo;DatabaseConnections&rdquo;</span> | <span class='s2'>&ldquo;DiskQueueDepth&rdquo;</span> | <span class='s2'>&ldquo;FailedSQLServerAgentJobsCount&rdquo;</span> | <span class='s2'>&ldquo;FreeableMemory&rdquo;</span> | <span class='s2'>&ldquo;FreeStorageSpace&rdquo;</span> | <span class='s2'>&ldquo;MaximumUsedTransactionIDs&rdquo;</span> | <span class='s2'>&ldquo;NetworkReceiveThroughput&rdquo;</span> | <span class='s2'>&ldquo;NetworkTransmitThroughput&rdquo;</span> | <span class='s2'>&ldquo;OldestReplicationSlotLag&rdquo;</span> | <span class='s2'>&ldquo;ReadIOPS&rdquo;</span> | <span class='s2'>&ldquo;ReadLatency&rdquo;</span> | <span class='s2'>&ldquo;ReadThroughput&rdquo;</span> | <span class='s2'>&ldquo;ReplicaLag&rdquo;</span> | <span class='s2'>&ldquo;ReplicationSlotDiskUsage&rdquo;</span> | <span class='s2'>&ldquo;SwapUsage&rdquo;</span> | <span class='s2'>&ldquo;TransactionLogsDiskUsage&rdquo;</span> | <span class='s2'>&ldquo;TransactionLogsGeneration&rdquo;</span> | <span class='s2'>&ldquo;WriteIOPS&rdquo;</span> | <span class='s2'>&ldquo;WriteLatency&rdquo;</span> | <span class='s2'>&ldquo;WriteThroughput&rdquo;</span> | <span class='s2'>&ldquo;ActiveTransactions&rdquo;</span> | <span class='s2'>&ldquo;AuroraBinlogReplicaLag&rdquo;</span> | <span class='s2'>&ldquo;AuroraGlobalDBReplicatedWriteIO&rdquo;</span> | <span class='s2'>&ldquo;AuroraGlobalDBDataTransferBytes&rdquo;</span> | <span class='s2'>&ldquo;AuroraGlobalDBReplicationLag&rdquo;</span> | <span class='s2'>&ldquo;AuroraReplicaLag&rdquo;</span> | <span class='s2'>&ldquo;AuroraReplicaLagMaximum&rdquo;</span> | <span class='s2'>&ldquo;AuroraReplicaLagMinimum&rdquo;</span> | <span class='s2'>&ldquo;BacktrackChangeRecordsCreationRate&rdquo;</span> | <span class='s2'>&ldquo;BacktrackChangeRecordsStored&rdquo;</span> | <span class='s2'>&ldquo;BacktrackWindowActual&rdquo;</span> | <span class='s2'>&ldquo;BacktrackWindowAlert&rdquo;</span> | <span class='s2'>&ldquo;BackupRetentionPeriodStorageUsed&rdquo;</span> | <span class='s2'>&ldquo;BinLogDiskUsage&rdquo;</span> | <span class='s2'>&ldquo;BlockedTransactions&rdquo;</span> | <span class='s2'>&ldquo;BufferCacheHitRatio&rdquo;</span> | <span class='s2'>&ldquo;CommitLatency&rdquo;</span> | <span class='s2'>&ldquo;CommitThroughput&rdquo;</span> | <span class='s2'>&ldquo;CPUCreditBalance&rdquo;</span> | <span class='s2'>&ldquo;CPUCreditUsage&rdquo;</span> | <span class='s2'>&ldquo;CPUUtilization&rdquo;</span> | <span class='s2'>&ldquo;DatabaseConnections&rdquo;</span> | <span class='s2'>&ldquo;DDLLatency&rdquo;</span> | <span class='s2'>&ldquo;DDLThroughput&rdquo;</span> | <span class='s2'>&ldquo;Deadlocks&rdquo;</span> | <span class='s2'>&ldquo;DeleteLatency&rdquo;</span> | <span class='s2'>&ldquo;DeleteThroughput&rdquo;</span> | <span class='s2'>&ldquo;DiskQueueDepth&rdquo;</span> | <span class='s2'>&ldquo;DMLLatency&rdquo;</span> | <span class='s2'>&ldquo;DMLThroughput&rdquo;</span> | <span class='s2'>&ldquo;EngineUptime&rdquo;</span> | <span class='s2'>&ldquo;FreeableMemory&rdquo;</span> | <span class='s2'>&ldquo;FreeLocalStorage&rdquo;</span> | <span class='s2'>&ldquo;InsertLatency&rdquo;</span> | <span class='s2'>&ldquo;InsertThroughput&rdquo;</span> | <span class='s2'>&ldquo;LoginFailures&rdquo;</span> | <span class='s2'>&ldquo;MaximumUsedTransactionIDs&rdquo;</span> | <span class='s2'>&ldquo;NetworkReceiveThroughput&rdquo;</span> | <span class='s2'>&ldquo;NetworkThroughput&rdquo;</span> | <span class='s2'>&ldquo;NetworkTransmitThroughput&rdquo;</span> | <span class='s2'>&ldquo;Queries&rdquo;</span> | <span class='s2'>&ldquo;RDSToAuroraPostgreSQLReplicaLag&rdquo;</span> | <span class='s2'>&ldquo;ReadIOPS&rdquo;</span> | <span class='s2'>&ldquo;ReadLatency&rdquo;</span> | <span class='s2'>&ldquo;ReadThroughput&rdquo;</span> | <span class='s2'>&ldquo;ResultSetCacheHitRatio&rdquo;</span> | <span class='s2'>&ldquo;SelectLatency&rdquo;</span> | <span class='s2'>&ldquo;SelectThroughput&rdquo;</span> | <span class='s2'>&ldquo;SnapshotStorageUsed&rdquo;</span> | <span class='s2'>&ldquo;SwapUsage&rdquo;</span> | <span class='s2'>&ldquo;TotalBackupStorageBilled&rdquo;</span> | <span class='s2'>&ldquo;TransactionLogsDiskUsage&rdquo;</span> | <span class='s2'>&ldquo;UpdateLatency&rdquo;</span> | <span class='s2'>&ldquo;UpdateThroughput&rdquo;</span> | <span class='s2'>&ldquo;VolumeBytesUsed&rdquo;</span> | <span class='s2'>&ldquo;VolumeReadIOPs&rdquo;</span> | <span class='s2'>&ldquo;VolumeWriteIOPs&rdquo;</span> | <span class='s2'>&ldquo;WriteIOPS&rdquo;</span> | <span class='s2'>&ldquo;WriteLatency&rdquo;</span> | <span class='s2'>&ldquo;WriteThroughput&rdquo;</span>;</pre>
+
+
+
+
+</div>
+</div></p>
+
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

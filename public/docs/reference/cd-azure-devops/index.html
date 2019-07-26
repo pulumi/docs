@@ -1,0 +1,2621 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.pulumi.com/docs/reference/cd-azure-devops/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+
+    
+        <meta property="og:title" content="Azure DevOps">
+    
+
+    
+        <meta name="description" content="This page details how to use Azure DevOps to manage deploying stacks based on commits to specific Git branches, and based on the build reason. You may also choose to introduce a Manual Intervention task to control the preview vs. update step for any Pulumi stack.
+Pulumi doesn&rsquo;t require any particular arrangement of stacks or workflow to work in a continuous integration / continuous deployment system. So the steps described here can be altered to fit into any existing type of deployment setup.">
+        <meta property="og:description" content="This page details how to use Azure DevOps to manage deploying stacks based on commits to specific Git branches, and based on the build reason. You may also choose to introduce a Manual Intervention task to control the preview vs. update step for any Pulumi stack.
+Pulumi doesn&rsquo;t require any particular arrangement of stacks or workflow to work in a continuous integration / continuous deployment system. So the steps described here can be altered to fit into any existing type of deployment setup.">
+    
+
+    
+    
+    <meta property="og:image" content="https://www.pulumi.com/social/pulumi.png">
+
+    <title>Azure DevOps - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/docs/reference/cd-azure-devops/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="https://www.pulumi.com/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="https://www.pulumi.com/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u");
+    analytics.page();
+    }}();
+    </script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+</head>
+
+    <body class="section-docs">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+
+            <div class="md:w-2/12 mt-2 md:order-last">
+                <div class="mb-8 md:mb-4">
+                    <form class="relative" action="/docs/search/" method="GET">
+    <i class="fas fa-search absolute inset-y-0 flex items-center pl-3 text-gray-500"></i>
+    <input
+        id="search-query"
+        name="q"
+        class="block w-full py-2 px-4 pl-8 text-sm border border-gray-400 focus:border-blue-500 focus:outline-none rounded transition"
+        placeholder="Search the docs"
+        autocomplete="off">
+</form>
+
+                </div>
+
+                <div class="ml-3 hidden md:block">
+                    
+    <ul class="p-0 list-none">
+        
+        
+        
+        
+        
+            <li>
+                <a class="text-gray-600 hover:text-blue-700 text-xs" href="https://github.com/pulumi/docs/edit/master/content/docs/reference/cd-azure-devops.md" target="_blank">
+                    <i class="fas fa-edit mr-2"></i>
+                    Edit this Page
+                </a>
+            </li>
+        
+
+        <li>
+            <a class="text-gray-600 hover:text-blue-700 text-xs" href="https://github.com/pulumi/docs/issues/new?body=File: [docs%2freference%2fcd-azure-devops.md](https%3a%2f%2fwww.pulumi.com%2fdocs%2freference%2fcd-azure-devops%2f)" target="_blank">
+                <i class="far fa-check-square mr-2"></i>
+                Request a Change
+            </a>
+        </li>
+    </ul>
+
+
+                </div>
+            </div>
+
+            <div class="md:w-3/12 pr-8 mt-2 mb-8 pb-8 border-b-2 border-gray-400 md:border-none md:pb-0 md:mb-0">
+                
+
+
+
+
+
+
+
+
+    
+    
+    
+
+
+<aside class="toc">
+    <h3 class="no-anchor">
+        <a href="/docs/">Docs</a>
+    </h3>
+
+    
+        <h4 class="no-anchor">
+            <a href="/docs/quickstart/">Get Started</a>
+        </h4>
+    
+    
+        <h4 class="no-anchor">
+            <a href="/docs/reference/">Reference</a>
+        </h4>
+    
+    
+
+    
+        
+        
+
+        
+            
+            
+
+            
+
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Architecture &amp; Concepts">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Programming Model" href="/docs/reference/programming-model/">Programming Model</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Projects" href="/docs/reference/project/">Projects</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stacks" href="/docs/reference/stack/">Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Configuration and Secrets" href="/docs/reference/config/">Configuration and Secrets</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizing Projects and Stacks" href="/docs/reference/organizing-stacks-projects/">Organizing Projects and Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="How Pulumi Works" href="/docs/reference/how/">How Pulumi Works</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State and Backends" href="/docs/reference/state/">State and Backends</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Tutorials">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/tutorials/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateways and Lambda" href="/docs/reference/tutorials/aws/tutorial-rest-api/">API Gateways and Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Containers on ECS &#34;Fargate&#34;" href="/docs/reference/tutorials/aws/tutorial-service/">Containers on ECS &#34;Fargate&#34;</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="EC2 Linux WebServer Instance" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">EC2 Linux WebServer Instance</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serve a Static Website from S3" href="/docs/reference/tutorials/aws/tutorial-s3-website/">Serve a Static Website from S3</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Video Thumbnailer" href="/docs/reference/tutorials/aws/tutorial-thumbnailer/">Video Thumbnailer</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/tutorials/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Container Instance" href="/docs/reference/tutorials/azure/tutorial-container-webserver/">Web Server Container Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/tutorials/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Virtual Machine Instance" href="/docs/reference/tutorials/gcp/tutorial-gce-webserver/">Web Server Virtual Machine Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/tutorials/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: EKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-eks/">Clusters: EKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: GKE - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-gke/">Clusters: GKE - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: AKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-aks/">Clusters: AKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#1: Hello, World!" href="/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment/">#1: Hello, World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#2: Deploying the WordPress Helm Chart" href="/docs/reference/tutorials/kubernetes/tutorial-wordpress-chart/">#2: Deploying the WordPress Helm Chart</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#3: Guestbook App with Redis and Nginx" href="/docs/reference/tutorials/kubernetes/tutorial-guestbook/">#3: Guestbook App with Redis and Nginx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#4: Graceful App Rollout" href="/docs/reference/tutorials/kubernetes/tutorial-configmap-rollout/">#4: Graceful App Rollout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#5: Gating rollout on Prometheus checks" href="/docs/reference/tutorials/kubernetes/tutorial-p8s-rollout/">#5: Gating rollout on Prometheus checks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#6: Run a Stateless App Deployment" href="/docs/reference/tutorials/kubernetes/tutorial-stateless-app/">#6: Run a Stateless App Deployment</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#7: EKS - Migrating Node Groups with Zero Downtime" href="/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups/">#7: EKS - Migrating Node Groups with Zero Downtime</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Command Line">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cancel" href="/docs/reference/cli/pulumi_cancel/">Cancel</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Config" href="/docs/reference/cli/pulumi_config/">Config</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Destroy" href="/docs/reference/cli/pulumi_destroy/">Destroy</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Login" href="/docs/reference/cli/pulumi_login/">Login</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logout" href="/docs/reference/cli/pulumi_logout/">Logout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logs" href="/docs/reference/cli/pulumi_logs/">Logs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="New" href="/docs/reference/cli/pulumi_new/">New</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Plugin" href="/docs/reference/cli/pulumi_plugin/">Plugin</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Preview" href="/docs/reference/cli/pulumi_preview/">Preview</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Refresh" href="/docs/reference/cli/pulumi_refresh/">Refresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stack" href="/docs/reference/cli/pulumi_stack/">Stack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State" href="/docs/reference/cli/pulumi_state/">State</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Update" href="/docs/reference/cli/pulumi_up/">Update</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Clouds">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/clouds/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/aws/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/clouds/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/azure/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/clouds/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/gcp/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/clouds/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Introduction" href="/docs/reference/clouds/kubernetes/introduction/">Introduction</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/kubernetes/setup/">Setup</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="FAQ" href="/docs/reference/clouds/kubernetes/faq/">FAQ</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="OpenStack">
+                <div class="sidenav-topic ">
+                    <a data-title="OpenStack" href="/docs/reference/clouds/openstack/">OpenStack</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/openstack/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Crosswalk for AWS 🆕">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateway" href="/docs/reference/crosswalk/aws/api-gateway/">API Gateway</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Auto Scaling" href="/docs/reference/crosswalk/aws/autoscaling/">Auto Scaling</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CloudWatch" href="/docs/reference/crosswalk/aws/cloudwatch/">CloudWatch</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Registry (ECR)" href="/docs/reference/crosswalk/aws/ecr/">Elastic Container Registry (ECR)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Service (ECS)" href="/docs/reference/crosswalk/aws/ecs/">Elastic Container Service (ECS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Kubernetes Service (EKS)" href="/docs/reference/crosswalk/aws/eks/">Elastic Kubernetes Service (EKS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Load Balancing (ELB)" href="/docs/reference/crosswalk/aws/elb/">Elastic Load Balancing (ELB)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Identity and Access Management (IAM)" href="/docs/reference/crosswalk/aws/iam/">Identity and Access Management (IAM)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Lambda" href="/docs/reference/crosswalk/aws/lambda/">Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Virtual Private Cloud (VPC)" href="/docs/reference/crosswalk/aws/vpc/">Virtual Private Cloud (VPC)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Other AWS Services" href="/docs/reference/crosswalk/aws/other/">Other AWS Services</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Languages">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Node.js" href="/docs/reference/javascript/">Node.js</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Python" href="/docs/reference/python/">Python</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Teams &amp; Collaboration">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizations" href="/docs/reference/service/orgs/">Organizations</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Teams" href="/docs/reference/service/teams/">Teams</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Roles and Access Controls" href="/docs/reference/service/roles-and-access-controls/">Roles and Access Controls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub App" href="/docs/reference/cd-github/">Pulumi GitHub App</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi Webhooks" href="/docs/reference/service/webhooks/">Pulumi Webhooks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Creating a &#39;Deploy with Pulumi&#39; Button" href="/docs/reference/service/pulumi-button/">Creating a &#39;Deploy with Pulumi&#39; Button</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+                
+                    
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggleVisible" data-title="Continuous Delivery">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Supporting A New CI System" href="/docs/reference/cd-supporting-new-ci/">Supporting A New CI System</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="AWS Code Services" href="/docs/reference/cd-aws-code-services/">AWS Code Services</a>
+            </div>
+        
+    
+        
+        
+            
+        
+
+        
+            <div class="sidenav-topic mb-2 active">
+                <a data-title="Azure DevOps" href="/docs/reference/cd-azure-devops/">Azure DevOps</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CircleCI" href="/docs/reference/cd-circleci/">CircleCI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Codefresh" href="/docs/reference/cd-codefresh/">Codefresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="GitLab CI" href="/docs/reference/cd-gitlab-ci/">GitLab CI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Google Cloud Build" href="/docs/reference/cd-google-cloud-build/">Google Cloud Build</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub Actions" href="/docs/reference/cd-github-actions/">Pulumi GitHub Actions</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Travis CI" href="/docs/reference/cd-travis/">Travis CI</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Compared to Others">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Terraform" href="/docs/reference/vs/terraform/">Terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud Templates" href="/docs/reference/vs/cloud_templates/">Cloud Templates</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud SDKs" href="/docs/reference/vs/cloud_sdks/">Cloud SDKs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serverless" href="/docs/reference/vs/serverless/">Serverless</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Kubernetes YAML" href="/docs/reference/vs/k8s_yaml_dsls/">Kubernetes YAML</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Chef, Puppet, etc." href="/docs/reference/vs/chef_puppet_etc/">Chef, Puppet, etc.</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Custom Solutions" href="/docs/reference/vs/custom/">Custom Solutions</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="API Reference">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="Node.js">
+                <div class="sidenav-topic ">
+                    <a data-title="Node.js" href="/docs/reference/pkg/nodejs/">Node.js</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/nodejs/pulumi/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="aws" href="/docs/reference/pkg/nodejs/pulumi/aws/">aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="awsx" href="/docs/reference/pkg/nodejs/pulumi/awsx/">awsx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azure" href="/docs/reference/pkg/nodejs/pulumi/azure/">azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azuread" href="/docs/reference/pkg/nodejs/pulumi/azuread/">azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloud" href="/docs/reference/pkg/nodejs/pulumi/cloud/">cloud</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloudflare" href="/docs/reference/pkg/nodejs/pulumi/cloudflare/">cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="datadog" href="/docs/reference/pkg/nodejs/pulumi/datadog/">datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="digitalocean" href="/docs/reference/pkg/nodejs/pulumi/digitalocean/">digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="dnsimple" href="/docs/reference/pkg/nodejs/pulumi/dnsimple/">dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="docker" href="/docs/reference/pkg/nodejs/pulumi/docker/">docker</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="eks" href="/docs/reference/pkg/nodejs/pulumi/eks/">eks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="f5bigip" href="/docs/reference/pkg/nodejs/pulumi/f5bigip/">f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gcp" href="/docs/reference/pkg/nodejs/pulumi/gcp/">gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gitlab" href="/docs/reference/pkg/nodejs/pulumi/gitlab/">gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="kubernetes" href="/docs/reference/pkg/nodejs/pulumi/kubernetes/">kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="linode" href="/docs/reference/pkg/nodejs/pulumi/linode/">linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="mysql" href="/docs/reference/pkg/nodejs/pulumi/mysql/">mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="newrelic" href="/docs/reference/pkg/nodejs/pulumi/newrelic/">newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="openstack" href="/docs/reference/pkg/nodejs/pulumi/openstack/">openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="packet" href="/docs/reference/pkg/nodejs/pulumi/packet/">packet</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="postgresql" href="/docs/reference/pkg/nodejs/pulumi/postgresql/">postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="random" href="/docs/reference/pkg/nodejs/pulumi/random/">random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="terraform" href="/docs/reference/pkg/nodejs/pulumi/terraform/">terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="tls" href="/docs/reference/pkg/nodejs/pulumi/tls/">tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="vsphere" href="/docs/reference/pkg/nodejs/pulumi/vsphere/">vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Python">
+                <div class="sidenav-topic ">
+                    <a data-title="Python" href="/docs/reference/pkg/python/">Python</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/python/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_aws" href="/docs/reference/pkg/python/pulumi_aws/">pulumi_aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azure" href="/docs/reference/pkg/python/pulumi_azure/">pulumi_azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azuread" href="/docs/reference/pkg/python/pulumi_azuread/">pulumi_azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_cloudflare" href="/docs/reference/pkg/python/pulumi_cloudflare/">pulumi_cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_datadog" href="/docs/reference/pkg/python/pulumi_datadog/">pulumi_datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_digitalocean" href="/docs/reference/pkg/python/pulumi_digitalocean/">pulumi_digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_dnsimple" href="/docs/reference/pkg/python/pulumi_dnsimple/">pulumi_dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_f5bigip" href="/docs/reference/pkg/python/pulumi_f5bigip/">pulumi_f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gcp" href="/docs/reference/pkg/python/pulumi_gcp/">pulumi_gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gitlab" href="/docs/reference/pkg/python/pulumi_gitlab/">pulumi_gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_kubernetes" href="/docs/reference/pkg/python/pulumi_kubernetes/">pulumi_kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_linode" href="/docs/reference/pkg/python/pulumi_linode/">pulumi_linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_mysql" href="/docs/reference/pkg/python/pulumi_mysql/">pulumi_mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_newrelic" href="/docs/reference/pkg/python/pulumi_newrelic/">pulumi_newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_openstack" href="/docs/reference/pkg/python/pulumi_openstack/">pulumi_openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_postgresql" href="/docs/reference/pkg/python/pulumi_postgresql/">pulumi_postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_random" href="/docs/reference/pkg/python/pulumi_random/">pulumi_random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_tls" href="/docs/reference/pkg/python/pulumi_tls/">pulumi_tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_vsphere" href="/docs/reference/pkg/python/pulumi_vsphere/">pulumi_vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="FAQ">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Download and Install">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Changelog">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+                
+            
+
+            <div class="toggleVisible">
+                <div class="toggle" data-title="Troubleshooting &amp; Support">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+    
+
+    
+</aside>
+
+
+
+            </div>
+
+            <div class="md:w-7/12">
+                <h1>Azure DevOps</h1>
+                
+
+<p>This page details how to use <a href="https://azure.microsoft.com/en-us/services/devops/">Azure DevOps</a> to manage deploying
+stacks based on commits to specific Git branches, and based on the build reason. You may also choose to introduce a
+<a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/manual-intervention?view=vsts">Manual Intervention</a> task to control the preview vs. update step for any Pulumi stack.</p>
+
+<p>Pulumi doesn&rsquo;t require any particular arrangement of stacks or workflow to work in a
+continuous integration / continuous deployment system. So the steps described here can be
+altered to fit into any existing type of deployment setup.</p>
+
+<p>This page shows you how to use the YAML method to configure your DevOps pipeline, but you can easily adapt
+the steps outlined in the sample YAML file below to the Visual Designer as well.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+<li>An account on <a href="https://app.pulumi.com">https://app.pulumi.com</a>.</li>
+<li>The latest CLI.
+
+<ul>
+<li>Installation instructions are <a href="/docs/reference/install/">here</a>.</li>
+</ul></li>
+<li>A git repo with your Azure DevOps project set as the remote URL.
+
+<ul>
+<li>To learn more about how to create a git repo in your DevOps project, click <a href="https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project?view=vsts&amp;tabs=new-nav">here</a>.</li>
+</ul></li>
+</ul>
+
+<h2 id="stack-and-branch-mappings">Stack and Branch Mappings</h2>
+
+<blockquote>
+<p>The names used above are purely for demonstration purposes only. You may choose a naming convention that best suits your organization.</p>
+</blockquote>
+
+<p>The scripts below act on a hypothetical stack: <code>acmeCorp/acmeProject/acme-ui</code>.
+<code>acme-ui</code> contains the infrastructure code or <code>pulumi</code> program. It also contains an Angular-based SPA.
+The git repo for this look like this:</p>
+
+<pre><code>acme-ui
+  src/
+    app/
+      components/
+    index.html
+  infra/
+    index.ts
+    Pulumi.yaml
+    Pulumi.acme-ui.yaml
+  azure-pipelines.yml
+</code></pre>
+
+<p>Once you login into the <code>pulumi</code> CLI on your machine, you can create a stack by running <code>pulumi stack init</code>.
+To create a <code>pulumi</code> program using one of the many available templates, you may run <code>pulumi new &lt;template&gt;</code>.
+You can find a suitable template to run, using the command <code>pulumi new --help</code>.
+Learn more about the <code>pulumi</code> CLI commands <a href="/docs/reference/commands/">here</a>.</p>
+
+<p>Once your stack has been initialized, the <code>Pulumi.&lt;stack-name&gt;.yaml</code> file will be created with some basic configuration.
+The yaml file is used just for configuration values. All of your infrastructure will be built using your <code>pulumi</code> program.</p>
+
+<p>For this walkthrough, we will assume a <code>TypeScript</code>-based <code>pulumi</code> program, which will deploy resources to an Azure Subscription.</p>
+
+<h3 id="about-the-pulumi-program">About The <code>pulumi</code> Program</h3>
+
+<p>The code inside <code>infra/index.ts</code> creates a resource group, a storage account and a blob container in the storage account. It then <code>exports</code> three
+values using the syntax <code>export const &lt;variable_name&gt; = &lt;value&gt;;</code>. Learn more about stack outputs <a href="/docs/reference/programming-model/#stack-outputs">here</a>.</p>
+
+<h2 id="build-variables">Build Variables</h2>
+
+<p>Build variables are an important aspect of any CI/CD pipeline. We will use some pre-defined <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&amp;tabs=yaml%2Cbatch#system-defined-variables">system build variables</a> provided
+by the Azure DevOps pipeline to decide whether or not we should run an update on our infrastructure.</p>
+
+<blockquote>
+<p>Build variable formats differ based on the agent in which your job is running. See <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&amp;tabs=yaml%2Cbatch#set-in-script">this</a> to learn more about how
+you can access a build variable correctly depending on your agent OS.</p>
+</blockquote>
+
+<h3 id="user-defined-output-variables">User-Defined Output Variables</h3>
+
+<p>You can set <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&amp;tabs=yaml%2Cbatch#set-a-job-scoped-variable-from-a-script">job-scoped output variables</a> or <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&amp;tabs=yaml%2Cbatch#set-an-output-multi-job-variable">multi-job variables</a>. In this article, we demonstrate the use of multi-job variables with job dependencies, using the <code>dependsOn</code> job constraint.</p>
+
+<h3 id="environment-variables">Environment Variables</h3>
+
+<p><code>pulumi</code> requires a few environment variables in order to work in a CI/CD environment. More specifically, <code>PULUMI_ACCESS_TOKEN</code> is required
+to allow the <code>pulumi</code> CLI to perform an unattended login. In addition to this, you will also need to set the cloud provider-specific
+variables. For Azure, the environment variables you will need are documented <a href="/docs/quickstart/azure/">here</a>.</p>
+
+<p><strong>Note</strong>: If you are using the <a href="https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task">Pulumi task extension</a> for Azure Pipelines, you don&rsquo;t need to manually configure the environment variables in your pipeline builds. You can use <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops">Service Connections</a> to centralize access to your Azure subscription(s).</p>
+
+<h2 id="agents">Agents</h2>
+
+<p>Azure DevOps allows you to specify a build agent for each of your jobs in your pipeline. You may have a requirement to run certain jobs on a
+Ubuntu agent, and some on a Windows agent. <code>pulumi</code> can be installed on these agents by following the directions from <a href="/docs/reference/install/">this</a> page.</p>
+
+<h2 id="setup">Setup</h2>
+
+<p>For the YAML-driven DevOps pipeline, the repository must contain the <code>azure-pipelines.yml</code> in the root of the repo for Azure DevOps to use it automatically.
+The following are samples only. You may choose to structure your configuration any way you like.</p>
+
+<h3 id="pulumi-task-extension-for-azure-pipelines">Pulumi Task Extension for Azure Pipelines</h3>
+
+<p>We built a task extension that will let you easily use Pulumi in your CI/CD pipelines. It can be used with the Azure Pipelines wizard UI or the YAML config. The task handles installing the Pulumi CLI, and running any commands without the need for any scripts.</p>
+
+<p>Install the Pulumi task from the <a href="https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task">Visual Studio Marketplace</a> to your Azure DevOps organization.</p>
+
+<p>The task requires the use of a service connection, which allows the pipeline to connect to your Azure Subscription. The task also looks for the build variable <code>pulumi.access.token</code>, and automatically maps it to the environment variable <code>PULUMI_ACCESS_TOKEN</code>, that is used by the CLI for non-interactive logins. You may still use the <code>env</code> directive to map any other environment variables you wish to make available to your Pulumi app.</p>
+
+<p>You can get your Pulumi access token from <a href="https://app.pulumi.com/account/tokens">https://app.pulumi.com/account/tokens</a>. Here&rsquo;s an example snippet of how you can use the task in your pipeline yaml.</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># Lines omitted for brevity.</span><span class="w">
+</span><span class="w"></span>...<span class="w">
+</span><span class="w"></span>...<span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>task<span class="p">:</span><span class="w"> </span>Pulumi@<span class="m">0</span><span class="w">
+</span><span class="w">    </span>condition<span class="p">:</span><span class="w"> </span>or(eq(variables<span class="p">[</span><span class="s1">&#39;Build.Reason&#39;</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;PullRequest&#39;</span>)<span class="p">,</span><span class="w"> </span>eq(variables<span class="p">[</span><span class="s1">&#39;Build.Reason&#39;</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;Manual&#39;</span>))<span class="w">
+</span><span class="w">    </span>inputs<span class="p">:</span><span class="w">
+</span><span class="w">      </span>azureSubscription<span class="p">:</span><span class="w"> </span><span class="s2">&#34;My Service Connection&#34;</span><span class="w">
+</span><span class="w">      </span>command<span class="p">:</span><span class="w"> </span><span class="s2">&#34;preview&#34;</span><span class="w">
+</span><span class="w">      </span>cwd<span class="p">:</span><span class="w"> </span><span class="s2">&#34;infra/&#34;</span><span class="w">
+</span><span class="w">      </span>stack<span class="p">:</span><span class="w"> </span><span class="s2">&#34;acmeCorp/acmeProject/acme-ui&#34;</span><span class="w">
+</span><span class="w"></span>...<span class="w">
+</span><span class="w"></span>...</code></pre></div>
+<h3 id="sample-azure-pipelines-yml">Sample <code>azure-pipelines.yml</code></h3>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># Node.js with Angular</span><span class="w">
+</span><span class="w"></span><span class="c"># Build a Node.js project that uses Angular.</span><span class="w">
+</span><span class="w"></span><span class="c"># Add steps that analyze code, save build artifacts, deploy, and more:</span><span class="w">
+</span><span class="w"></span><span class="c"># https://docs.microsoft.com/azure/devops/pipelines/languages/javascript</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span>jobs<span class="p">:</span><span class="w">
+</span><span class="w"></span>-<span class="w"> </span>job<span class="p">:</span><span class="w"> </span>infrastructure<span class="w">
+</span><span class="w">  </span>pool<span class="p">:</span><span class="w">
+</span><span class="w">    </span>vmImage<span class="p">:</span><span class="w"> </span><span class="s1">&#39;ubuntu-16.04&#39;</span><span class="w">
+</span><span class="w">  </span>steps<span class="p">:</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>task<span class="p">:</span><span class="w"> </span>Pulumi@<span class="m">0</span><span class="w">
+</span><span class="w">    </span>condition<span class="p">:</span><span class="w"> </span>or(eq(variables<span class="p">[</span><span class="s1">&#39;Build.Reason&#39;</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;PullRequest&#39;</span>)<span class="p">,</span><span class="w"> </span>eq(variables<span class="p">[</span><span class="s1">&#39;Build.Reason&#39;</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;Manual&#39;</span>))<span class="w">
+</span><span class="w">    </span>inputs<span class="p">:</span><span class="w">
+</span><span class="w">      </span>azureSubscription<span class="p">:</span><span class="w"> </span><span class="s1">&#39;My Service Connection&#39;</span><span class="w">
+</span><span class="w">      </span>command<span class="p">:</span><span class="w"> </span><span class="s1">&#39;preview&#39;</span><span class="w">
+</span><span class="w">      </span>cwd<span class="p">:</span><span class="w"> </span><span class="s1">&#39;infra/&#39;</span><span class="w">
+</span><span class="w">      </span>stack<span class="p">:</span><span class="w"> </span><span class="s1">&#39;acmeCorp/acmeProject/acme-ui&#39;</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>task<span class="p">:</span><span class="w"> </span>Pulumi@<span class="m">0</span><span class="w">
+</span><span class="w">    </span>condition<span class="p">:</span><span class="w"> </span>or(eq(variables<span class="p">[</span><span class="s1">&#39;Build.Reason&#39;</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;IndividualCI&#39;</span>)<span class="p">,</span><span class="w"> </span>eq(variables<span class="p">[</span><span class="s1">&#39;Build.Reason&#39;</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;BatchedCI&#39;</span>))<span class="w">
+</span><span class="w">    </span>inputs<span class="p">:</span><span class="w">
+</span><span class="w">      </span>azureSubscription<span class="p">:</span><span class="w"> </span><span class="s1">&#39;My Service Connection&#39;</span><span class="w">
+</span><span class="w">      </span>command<span class="p">:</span><span class="w"> </span><span class="s1">&#39;up&#39;</span><span class="w">
+</span><span class="w">      </span>cwd<span class="p">:</span><span class="w"> </span><span class="s1">&#39;infra/&#39;</span><span class="w">
+</span><span class="w">      </span>stack<span class="p">:</span><span class="w"> </span><span class="s1">&#39;acmeCorp/acmeProject/acme-ui&#39;</span><span class="w">
+</span><span class="w">      </span>args<span class="p">:</span><span class="w"> </span><span class="s1">&#39;--yes&#39;</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>script<span class="p">:</span><span class="w"> </span><span class="sd">|
+</span><span class="sd">      echo &#34;##vso[task.setvariable variable=resourceGroupName;isOutput=true]$(pulumi stack output resourceGroupName)&#34;</span><span class="w">
+</span><span class="w">      </span>echo<span class="w"> </span><span class="s2">&#34;##vso[task.setvariable variable=storageAccountName;isOutput=true]$(pulumi stack output storageAccountName)&#34;</span><span class="w">
+</span><span class="w">      </span>echo<span class="w"> </span><span class="s2">&#34;##vso[task.setvariable variable=containerName;isOutput=true]$(pulumi stack output containerName)&#34;</span><span class="w">
+</span><span class="w">    </span>displayName<span class="p">:</span><span class="w"> </span><span class="s1">&#39;Set stack outputs as variables&#39;</span><span class="w">
+</span><span class="w">    </span>name<span class="p">:</span><span class="w"> </span><span class="s1">&#39;pulumi&#39;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c"># The following job is optional, and shown here for demonstration purposes only.</span><span class="w">
+</span><span class="w"></span>-<span class="w"> </span>job<span class="p">:</span><span class="w"> </span>build_and_deploy<span class="w">
+</span><span class="w">  </span>condition<span class="p">:</span><span class="w"> </span>ne(dependencies.infrastructure.outputs<span class="p">[</span><span class="s1">&#39;pulumi.containerName&#39;</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;&#39;</span>)<span class="w">
+</span><span class="w">  </span>dependsOn<span class="p">:</span><span class="w"> </span>infrastructure<span class="w">
+</span><span class="w">  </span>variables<span class="p">:</span><span class="w">
+</span><span class="w">    </span>resourceGroupName<span class="p">:</span><span class="w"> </span>$<span class="p">[</span><span class="w"> </span>dependencies.infrastructure.outputs<span class="p">[</span><span class="s1">&#39;pulumi.resourceGroupName&#39;</span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="w">    </span>storageAccountName<span class="p">:</span><span class="w"> </span>$<span class="p">[</span><span class="w"> </span>dependencies.infrastructure.outputs<span class="p">[</span><span class="s1">&#39;pulumi.storageAccountName&#39;</span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="w">    </span>containerName<span class="p">:</span><span class="w"> </span>$<span class="p">[</span><span class="w"> </span>dependencies.infrastructure.outputs<span class="p">[</span><span class="s1">&#39;pulumi.containerName&#39;</span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="w">  </span>steps<span class="p">:</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>task<span class="p">:</span><span class="w"> </span>NodeTool@<span class="m">0</span><span class="w">
+</span><span class="w">    </span>inputs<span class="p">:</span><span class="w">
+</span><span class="w">      </span>versionSpec<span class="p">:</span><span class="w"> </span><span class="s1">&#39;8.x&#39;</span><span class="w">
+</span><span class="w">    </span>displayName<span class="p">:</span><span class="w"> </span><span class="s1">&#39;Install Node.js&#39;</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>task<span class="p">:</span><span class="w"> </span>Npm@<span class="m">1</span><span class="w">
+</span><span class="w">    </span>inputs<span class="p">:</span><span class="w">
+</span><span class="w">      </span>command<span class="p">:</span><span class="w"> </span><span class="s1">&#39;install&#39;</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>script<span class="p">:</span><span class="w"> </span><span class="sd">|
+</span><span class="sd">      npm run build</span><span class="w">
+</span><span class="w">    </span>displayName<span class="p">:</span><span class="w"> </span><span class="s1">&#39;UI build&#39;</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>task<span class="p">:</span><span class="w"> </span>AzurePowerShell@<span class="m">3</span><span class="w">
+</span><span class="w">    </span>displayName<span class="p">:</span><span class="w"> </span><span class="s1">&#39;Upload UI dist bundle to Storage Account&#39;</span><span class="w">
+</span><span class="w">    </span>inputs<span class="p">:</span><span class="w">
+</span><span class="w">      </span>azureConnectionType<span class="p">:</span><span class="w"> </span><span class="s1">&#39;ConnectedServiceNameARM&#39;</span><span class="w">
+</span><span class="w">      </span>azureSubscription<span class="p">:</span><span class="w"> </span><span class="s1">&#39;My Service Connection&#39;</span><span class="w">
+</span><span class="w">      </span>scriptType<span class="p">:</span><span class="w"> </span><span class="s1">&#39;FilePath&#39;</span><span class="w">
+</span><span class="w">      </span><span class="c"># This script file is shown below in the next section.</span><span class="w">
+</span><span class="w">      </span>scriptPath<span class="p">:</span><span class="w"> </span><span class="s1">&#39;build-and-deploy.ps1&#39;</span><span class="w">
+</span><span class="w">      </span>scriptArguments<span class="p">:</span><span class="w"> </span><span class="s1">&#39;-resourceGroupName $(resourceGroupName) -storageAccountName $(storageAccountName) -containerName $(containerName) -isAzurePipelineBuild $true -skipBuild $true -localFolder $(Build.SourcesDirectory)/dist&#39;</span><span class="w">
+</span><span class="w">      </span>errorActionPreference<span class="p">:</span><span class="w"> </span><span class="s1">&#39;stop&#39;</span><span class="w">
+</span><span class="w">      </span>failOnStandardError<span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">      </span>azurePowerShellVersion<span class="p">:</span><span class="w"> </span><span class="s1">&#39;LatestVersion&#39;</span></code></pre></div>
+<h3 id="sample-build-and-deploy-ps1-optional">Sample <code>build-and-deploy.ps1</code> (Optional)</h3>
+
+<p>This <code>PowerShell</code> script simply builds the UI app, and uploads the <code>dist/</code> folder to an Azure Storage blob container. You don&rsquo;t have to use a script like this. You can always use the built-in Azure DevOps task to accomplish the steps in this script. This script is just an example of how <code>pulumi</code> can be easily integrated into your existing app.</p>
+<div class="highlight"><pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="k">Param</span><span class="p">(</span>
+  <span class="no">[string]</span><span class="nv">$storageAccountName</span><span class="p">,</span>
+  <span class="no">[string]</span><span class="nv">$containerName</span><span class="p">,</span>
+  <span class="no">[string]</span><span class="nv">$resourceGroupName</span><span class="p">,</span>
+  <span class="no">[int]</span> <span class="nv">$maxAge</span> <span class="p">=</span> <span class="n">86400</span><span class="p">,</span>
+  <span class="no">[int]</span> <span class="nv">$indexMaxAge</span> <span class="p">=</span> <span class="n">3600</span><span class="p">,</span>
+  <span class="no">[boolean]</span> <span class="nv">$isProductionBuild</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">,</span>
+  <span class="no">[boolean]</span> <span class="nv">$skipBuild</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">,</span>
+  <span class="no">[boolean]</span> <span class="nv">$isAzurePipelineBuild</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">,</span>
+  <span class="c"># Upload files in the dist subfolder to Azure.</span>
+  <span class="no">[string]</span> <span class="nv">$localFolder</span> <span class="p">=</span> <span class="s2">&#34;.\dist&#34;</span>
+<span class="p">)</span>
+
+<span class="k">function</span> <span class="nb">Get-MimeType</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">param</span><span class="p">([</span><span class="k">parameter</span><span class="p">(</span><span class="k">Mandatory</span><span class="p">=</span><span class="nv">$true</span><span class="p">,</span> <span class="k">ValueFromPipeline</span><span class="p">=</span><span class="nv">$true</span><span class="p">)][</span><span class="n">ValidateNotNullorEmpty</span><span class="p">()]</span><span class="no">[System.IO.FileInfo]</span><span class="nv">$CheckFile</span><span class="p">)</span>
+  <span class="k">begin</span> <span class="p">{</span>
+      <span class="nb">Add-Type</span> <span class="n">-AssemblyName</span> <span class="s2">&#34;System.Web&#34;</span>
+      <span class="no">[System.IO.FileInfo]</span><span class="nv">$check_file</span> <span class="p">=</span> <span class="nv">$CheckFile</span>
+      <span class="no">[string]</span><span class="nv">$mime_type</span> <span class="p">=</span> <span class="nv">$null</span>
+  <span class="p">}</span>
+  <span class="k">process</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nv">$check_file</span><span class="p">.</span><span class="n">Exists</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nv">$mime_type</span> <span class="p">=</span> <span class="no">[System.Web.MimeMapping]</span><span class="p">::</span><span class="n">GetMimeMapping</span><span class="p">(</span><span class="nv">$check_file</span><span class="p">.</span><span class="n">FullName</span><span class="p">)</span>
+      <span class="p">}</span>
+      <span class="k">else</span> <span class="p">{</span>
+          <span class="nv">$mime_type</span> <span class="p">=</span> <span class="s2">&#34;false&#34;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">end</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$mime_type</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$false</span> <span class="o">-eq</span> <span class="nv">$skipBuild</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">npm</span> <span class="n">ci</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nv">$false</span> <span class="o">-eq</span> <span class="nv">$isProductionBuild</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">write-host</span> <span class="s2">&#34;Building the UI for non-prod&#34;</span>
+    <span class="n">npm</span> <span class="n">run</span> <span class="n">build</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nb">write-host</span> <span class="s2">&#34;Building the UI for PROD&#34;</span>
+    <span class="n">npm</span> <span class="n">run</span> <span class="n">build</span><span class="err">:</span><span class="n">prod</span>
+  <span class="p">}</span>
+  <span class="nb">write-host</span> <span class="s2">&#34;UI build completed&#34;</span>
+  <span class="nb">write-host</span> <span class="s2">&#34;Launching Azure login pop-up..&#34;</span>
+<span class="p">}</span>
+
+<span class="c"># The destination folder. BE SURE TO INCLUDE THE TRAILING SLASH IF YOU ENTER A NON-EMPTY VALUE HERE.</span>
+<span class="nv">$destfolder</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+<span class="nv">$storageAccount</span> <span class="p">=</span> <span class="nb">Get-AzureRmStorageAccount</span> <span class="n">-ErrorAction</span> <span class="n">Stop</span> <span class="p">|</span> <span class="nb">where-object</span> <span class="p">{</span><span class="nv">$_</span><span class="p">.</span><span class="n">StorageAccountName</span> <span class="o">-eq</span> <span class="nv">$storageAccountName</span><span class="p">}</span>
+<span class="k">If</span><span class="p">(</span><span class="nv">$storageAccount</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="nv">$storageAccountKey</span> <span class="p">=</span> <span class="nb">Get-AzureRmStorageAccountKey</span> <span class="n">-ResourceGroupName</span> <span class="nv">$storageAccount</span><span class="p">.</span><span class="n">ResourceGroupName</span> <span class="n">-StorageAccountName</span> <span class="nv">$storageAccountName</span>
+  <span class="nv">$storageContext</span> <span class="p">=</span> <span class="nb">New-AzureStorageContext</span> <span class="n">-StorageAccountName</span> <span class="nv">$storageAccountName</span> <span class="n">-StorageAccountKey</span> <span class="nv">$storageAccountKey</span><span class="p">[</span><span class="n">0</span><span class="p">].</span><span class="n">Value</span>
+  <span class="nv">$storageContainer</span> <span class="p">=</span> <span class="nb">Get-AzureStorageContainer</span> <span class="n">-Context</span> <span class="nv">$storageContext</span> <span class="n">-ErrorAction</span> <span class="n">Stop</span> <span class="p">|</span> <span class="nb">where-object</span> <span class="p">{</span><span class="nv">$_</span><span class="p">.</span><span class="n">Name</span> <span class="o">-eq</span> <span class="s2">&#34;$ContainerName&#34;</span><span class="p">}</span>
+
+  <span class="nb">Invoke-Expression</span> <span class="n">-Command</span> <span class="s2">&#34;ls $localFolder&#34;</span>
+  <span class="nv">$files</span> <span class="p">=</span> <span class="nb">Get-ChildItem</span> <span class="nv">$localFolder</span>  <span class="o">-File</span> <span class="n">-Recurse</span>
+  <span class="k">foreach</span><span class="p">(</span><span class="nv">$file</span> <span class="k">in</span> <span class="nv">$files</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="nv">$directoryName</span> <span class="p">=</span> <span class="nv">$file</span><span class="p">.</span><span class="n">Directory</span><span class="p">.</span><span class="n">Name</span>
+    <span class="nv">$filename</span> <span class="p">=</span> <span class="nv">$file</span><span class="p">.</span><span class="n">Name</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$directoryName</span> <span class="o">-ne</span> <span class="s2">&#34;dist&#34;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nv">$blobName</span> <span class="p">=</span> <span class="nv">$destfolder</span> <span class="p">+</span> <span class="nv">$file</span><span class="p">.</span><span class="n">FullName</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="nv">$file</span><span class="p">.</span><span class="n">FullName</span><span class="p">.</span><span class="n">IndexOf</span><span class="p">(</span><span class="s2">&#34;dist\&#34;</span><span class="p">)</span> <span class="p">+</span> <span class="n">5</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nv">$blobName</span> <span class="p">=</span> <span class="nv">$destfolder</span> <span class="p">+</span> <span class="nv">$filename</span>
+    <span class="p">}</span>
+    <span class="nb">write-host</span> <span class="s2">&#34;copying $directoryName\$filename to $blobName&#34;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$file</span><span class="p">.</span><span class="n">Name</span> <span class="o">-like</span> <span class="s2">&#34;*mp4*&#34;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nv">$mimeType</span> <span class="p">=</span> <span class="s2">&#34;video/mp4&#34;</span>
+    <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$file</span><span class="p">.</span><span class="n">Name</span> <span class="o">-like</span> <span class="s2">&#34;*webm*&#34;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nv">$mimeType</span> <span class="p">=</span> <span class="s2">&#34;video/webm&#34;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nv">$mimeType</span> <span class="p">=</span> <span class="p">$(</span><span class="nb">Get-MimeType</span> <span class="n">-CheckFile</span> <span class="nv">$file</span><span class="p">.</span><span class="n">FullName</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="c"># For index.html, use the $indexMaxAge</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$file</span><span class="p">.</span><span class="n">Name</span> <span class="o">-eq</span> <span class="s2">&#34;index.html&#34;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nv">$maxAge</span> <span class="p">=</span> <span class="nv">$indexMaxAge</span>
+    <span class="p">}</span>
+    <span class="nv">$Properties</span> <span class="p">=</span> <span class="p">@{</span><span class="s2">&#34;CacheControl&#34;</span> <span class="p">=</span> <span class="s2">&#34;max-age=$maxAge&#34;</span><span class="p">;</span> <span class="s2">&#34;ContentType&#34;</span> <span class="p">=</span> <span class="nv">$mimeType</span><span class="p">}</span>
+    <span class="nb">Set-AzureStorageBlobContent</span> <span class="o">-File</span> <span class="nv">$file</span><span class="p">.</span><span class="n">FullName</span> <span class="n">-Container</span> <span class="s2">&#34;$containerName&#34;</span> <span class="n">-Blob</span> <span class="nv">$blobName</span> <span class="n">-Context</span> <span class="nv">$storageContext</span> <span class="n">-Force</span> <span class="n">-Properties</span> <span class="nv">$Properties</span>
+  <span class="p">}</span>
+  <span class="nb">write-host</span> <span class="s2">&#34;All files in $localFolder uploaded to $containerName!&#34;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nb">Write-Warning</span> <span class="s2">&#34;&#39;$storageAccountName&#39; storage account not found.&#34;</span>
+<span class="p">}</span></code></pre></div>
+<h2 id="using-scripts-manual-approach">Using Scripts (Manual Approach)</h2>
+
+<p>If you prefer to control the installation of the Pulumi CLI and how it runs your Pulumi app, you can use scripts in your pipeline builds. Below are some sample scripts to help you get started in order to install the CLI and run your Pulumi app.</p>
+
+<p>The <code>run-pulumi.sh</code> script runs <code>pulumi preview</code> for PR builds and the <code>pulumi up --yes</code> command with explicit consent,
+for master branches.</p>
+
+<p>The following environment variables are set in the build pipeline using the Azure DevOps portal.</p>
+
+<ul>
+<li><code>pulumi.access.token</code></li>
+<li><code>arm.client.id</code></li>
+<li><code>arm.client.secret</code></li>
+<li><code>arm.subscription.id</code></li>
+<li><code>arm.tenant.id</code></li>
+</ul>
+
+<p>The above variables are <em>mapped-in</em> to the job using the <code>env:</code> directive as described <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&amp;tabs=yaml%2Cbatch#secret-variables">here</a>.</p>
+
+<h4 id="azure-pipelines-yml"><code>azure-pipelines.yml</code></h4>
+
+<p>In your pipeline configuration, you need to then call these scripts when appropriate. Here&rsquo;s an example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">...<span class="w">
+</span><span class="w"></span>...<span class="w">
+</span><span class="w">  </span><span class="c"># Some lines omitted for brevity.</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>script<span class="p">:</span><span class="w"> </span><span class="sd">|
+</span><span class="sd">      chmod +x infra/scripts/*.sh</span><span class="w">
+</span><span class="w">      </span>./infra/scripts/setup.sh<span class="w">
+</span><span class="w">      </span>./infra/scripts/run-pulumi.sh<span class="w">
+</span><span class="w">    </span>displayName<span class="p">:</span><span class="w"> </span><span class="s1">&#39;Install pulumi and run infra code&#39;</span><span class="w">
+</span><span class="w">    </span>name<span class="p">:</span><span class="w"> </span>pulumi<span class="w">
+</span><span class="w">    </span>env<span class="p">:</span><span class="w">
+</span><span class="w">      </span>PULUMI_ACCESS_TOKEN<span class="p">:</span><span class="w"> </span>$(pulumi.access.token)<span class="w">
+</span><span class="w">      </span>ARM_CLIENT_SECRET<span class="p">:</span><span class="w"> </span>$(arm.client.secret)<span class="w">
+</span><span class="w">      </span>ARM_SUBSCRIPTION_ID<span class="p">:</span><span class="w"> </span>$(arm.subscription.id)<span class="w">
+</span><span class="w">      </span>ARM_CLIENT_ID<span class="p">:</span><span class="w"> </span>$(arm.client.id)<span class="w">
+</span><span class="w">      </span>ARM_TENANT_ID<span class="p">:</span><span class="w"> </span>$(arm.tenant.id)<span class="w">
+</span><span class="w"></span>...<span class="w">
+</span><span class="w"></span>...</code></pre></div>
+<h4 id="sample-setup-sh">Sample <code>setup.sh</code></h4>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
+<span class="c1"># exit if a command returns a non-zero exit code and also print the commands and their args as they are executed</span>
+<span class="nb">set</span> -e -x
+<span class="c1"># Download and install required tools.</span>
+<span class="c1"># pulumi</span>
+curl -fsSL https://get.pulumi.com/ <span class="p">|</span> bash
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/.pulumi/bin
+<span class="c1"># Login into pulumi. This will require the PULUMI_ACCESS_TOKEN environment variable</span>
+pulumi login
+<span class="c1"># update the GitLab Runner&#39;s packages</span>
+apt-get update -y
+apt-get install sudo -y
+<span class="c1"># nodejs</span>
+curl -sL https://deb.nodesource.com/setup_8.x <span class="p">|</span> sudo -E bash -
+apt-get install -y nodejs
+<span class="c1"># yarn</span>
+npm i -g yarn</code></pre></div>
+<h4 id="sample-run-pulumi-sh">Sample <code>run-pulumi.sh</code></h4>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
+<span class="c1"># exit if a command returns a non-zero exit code and also print the commands and their args as they are executed</span>
+<span class="nb">set</span> -e -x
+
+<span class="c1"># Add the pulumi CLI to the PATH</span>
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/.pulumi/bin
+
+<span class="nb">pushd</span> infra/
+
+npm install
+npm run build
+
+pulumi stack <span class="k">select</span> acmeCorp/acmeProject/acme-ui
+
+<span class="c1"># https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=vsts</span>
+<span class="k">case</span> <span class="nv">$BUILD_REASON</span> in
+  PullRequest<span class="o">)</span>
+      pulumi preview
+    <span class="p">;;</span>
+  BuildCompletion<span class="p">|</span>BatchedCI<span class="o">)</span>
+      pulumi up --yes
+    <span class="p">;;</span>
+  *<span class="o">)</span>
+<span class="k">esac</span>
+
+<span class="c1"># Save the stack output variables to job variables.</span>
+<span class="c1"># Note: Before the `pulumi up` is run for the first time, there are no stack output variables.</span>
+<span class="c1"># The pulumi program exports three values: resourceGroupName, storageAccountName and containerName.</span>
+<span class="nb">echo</span> <span class="s2">&#34;##vso[task.setvariable variable=resourceGroupName;isOutput=true]</span><span class="k">$(</span>pulumi stack output resourceGroupName<span class="k">)</span><span class="s2">&#34;</span>
+<span class="nb">echo</span> <span class="s2">&#34;##vso[task.setvariable variable=storageAccountName;isOutput=true]</span><span class="k">$(</span>pulumi stack output storageAccountName<span class="k">)</span><span class="s2">&#34;</span>
+<span class="nb">echo</span> <span class="s2">&#34;##vso[task.setvariable variable=containerName;isOutput=true]</span><span class="k">$(</span>pulumi stack output containerName<span class="k">)</span><span class="s2">&#34;</span>
+
+popd</code></pre></div>
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

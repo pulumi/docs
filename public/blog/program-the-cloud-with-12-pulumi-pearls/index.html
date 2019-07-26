@@ -1,0 +1,1871 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.pulumi.com/blog/program-the-cloud-with-12-pulumi-pearls/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+        
+            
+            
+                
+                    <meta name="twitter:creator" content="@funcOfJoe">
+                
+            
+        
+    
+
+    
+        <meta property="og:title" content="Program the Cloud with 12 Pulumi Pearls">
+    
+
+    
+        <meta name="description" content="In this post, we&rsquo;ll look at 12 &ldquo;pearls&rdquo; &ndash; bite-sized code snippets &ndash; that demonstrate some fun ways you can program the cloud using Pulumi. In my introductory post, I mentioned a few of my &ldquo;favorite things&rdquo;. Now let&rsquo;s dive into a few specifics, from multi-cloud to cloud-specific, spanning containers, serverless, and infrastructure, and generally highlighting why using real languages is so empowering for cloud scenarios. Since Pulumi lets you do infrastructure-as-code from the lowest-level to the highest, we will cover a lot of interesting ground in short order.">
+        <meta property="og:description" content="In this post, we&rsquo;ll look at 12 &ldquo;pearls&rdquo; &ndash; bite-sized code snippets &ndash; that demonstrate some fun ways you can program the cloud using Pulumi. In my introductory post, I mentioned a few of my &ldquo;favorite things&rdquo;. Now let&rsquo;s dive into a few specifics, from multi-cloud to cloud-specific, spanning containers, serverless, and infrastructure, and generally highlighting why using real languages is so empowering for cloud scenarios. Since Pulumi lets you do infrastructure-as-code from the lowest-level to the highest, we will cover a lot of interesting ground in short order.">
+    
+
+    
+    
+    <meta property="og:image" content="https://www.pulumi.com/social/pulumi.png">
+
+    <title>Program the Cloud with 12 Pulumi Pearls - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/blog/program-the-cloud-with-12-pulumi-pearls/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="https://www.pulumi.com/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="https://www.pulumi.com/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u");
+    analytics.page();
+    }}();
+    </script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+        
+            
+                
+            
+        
+        
+    
+</head>
+
+    <body class="section-blog">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+            <div class="md:w-3/12 pr-8">
+                
+<aside class="md:pr-8">
+
+    
+    <div class="md:hidden">
+        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </div>
+
+    <h3 class="no-anchor hidden md:flex mt-4">
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </h3>
+
+    
+    <div class="blog-sidebar-content hidden md:block">
+        <div class="bg-gray-100 rounded-lg p-4 my-6 text-gray-700">
+            <h5 class="no-anchor text-gray-700">Program the Cloud</h5>
+            <p class="text-sm my-0">
+                Create, deploy, and manage cloud infrastructure using your favorite language.
+            </p>
+        </div>
+
+        <ul class="list-none p-0 mb-4 inline-flex flex-wrap text-xs">
+            
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/apigateway/">
+                            apigateway
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/applications/">
+                            applications
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/auth/">
+                            auth
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/aws/">
+                            aws
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/azure/">
+                            azure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/ci/cd/">
+                            ci/cd
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/cloud-native/">
+                            cloud-native
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/containers/">
+                            containers
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/customer/">
+                            customer
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/digitalocean/">
+                            digitalocean
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/docker/">
+                            docker
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/eks/">
+                            eks
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/events/">
+                            events
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/features/">
+                            features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/gcp/">
+                            gcp
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/gke/">
+                            gke
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/infrastructure/">
+                            infrastructure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/javascript/">
+                            javascript
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/jupyter/">
+                            jupyter
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/kubernetes/">
+                            kubernetes
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/lambda/">
+                            lambda
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/logging/">
+                            logging
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/mysql/">
+                            mysql
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/new-features/">
+                            new-features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/pulumi/">
+                            pulumi
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/pulumi-news/">
+                            pulumi-news
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/python/">
+                            python
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/security/">
+                            security
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/serverless/">
+                            serverless
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/testing/">
+                            testing
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/typescript/">
+                            typescript
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="hidden lg:block my-4">
+            <h5 class="no-anchor">Recent Posts</h5>
+            <ul class="list-none p-0">
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/day-2-kubernetes-migrating-eks-nodegroups-with-zero-downtime/">Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime</a>
+                        </li>
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/getting-started-on-digitalocean-with-pulumi/">Getting Started on DigitalOcean with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/pulumi-meetup-recap-apis-custom-resources-and-github-webhooks/">Pulumi Meetup Recap: APIs, Custom Resources and GitHub Webhooks</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks/">Persisting Kubernetes workloads with Amazon EFS CSI volumes using Pulumi open source SDKs</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/unit-testing-infrastructure-in-nodejs-and-mocha/">Unit Testing Your Infrastructure with Node.js and Mocha</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/kubernetes-ingress-with-aws-alb-ingress-controller-and-pulumi-crosswalk/">Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included/">Globally-distributed Serverless Application in 100 Lines of Code. Infrastructure Included!</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/hosting-a-static-website-on-azure-with-pulumi/">Hosting a Static Website on Azure with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/running-containers-in-aws-the-lowdown-ecs-fargate-and-eks/">Running Containers in AWS, the Lowdown: ECS, Fargate, and EKS</a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="md:hidden pb-4">
+        
+    </div>
+</aside>
+
+            </div>
+
+            <div class="md:w-7/12">
+                <article class="mb-8 pb-8 border-b border-gray-200">
+                    <h1 class="no-anchor"><a href="https://www.pulumi.com/blog/program-the-cloud-with-12-pulumi-pearls/">Program the Cloud with 12 Pulumi Pearls</a></h1>
+                    <div class="flex items-center">
+                        <span>
+                            <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="https://www.pulumi.com/blog/author/joe-duffy/">
+                    <img class="w-8 rounded-full" src="/images/team/joe-duffy.jpg" alt="Joe Duffy" title="Joe Duffy">
+                </a>
+                <a class="" href="https://www.pulumi.com/blog/author/joe-duffy/">Joe Duffy</a>
+            
+        </span>
+    
+</span>
+
+                        </span>
+                    </div>
+                    <section>
+                        
+
+<p>In this post, we&rsquo;ll look at 12 &ldquo;pearls&rdquo; &ndash; bite-sized code snippets &ndash;
+that demonstrate some fun ways you can program the cloud using Pulumi.
+In my introductory post, I mentioned <a href="http://joeduffyblog.com/2018/06/18/hello-pulumi/#my-favorite-things">a few of my &ldquo;favorite things&rdquo;</a>.
+Now let&rsquo;s dive into a few specifics, from multi-cloud to cloud-specific,
+spanning containers, serverless, and infrastructure, and generally
+highlighting why using real languages is so empowering for cloud
+scenarios. Since Pulumi lets you do infrastructure-as-code from the
+lowest-level to the highest, we will cover a lot of interesting ground
+in short order.</p>
+
+<p>If you want to follow along and try some of this out, Pulumi is
+<a href="https://github.com/pulumi/pulumi">open source on GitHub</a>, free to download
+and use, and <a href="https://www.pulumi.com/docs/quickstart/">the quickstart</a> will acquaint you with the CLI. Most of
+the examples are directly runnable and available in <a href="https://github.com/pulumi/examples">our examples repo</a>, and are just a
+<code>pulumi up</code> away, unlike other approaches that
+require you to point-and-click around in your cloud&rsquo;s console, and/or
+author reams of yucky YAML. And you get to use real languages!</p>
+
+<p>Here is an index of the pearls in case you want to dive straight into
+one in particular:</p>
+
+<p><a href="#infrastructure"><strong>Infrastructure</strong></a>:</p>
+
+<ol>
+<li><a href="#real-languages">Declare cloud infra using a real language (with loops!)</a></li>
+<li><a href="#reusable-components">Make a reusable component out of your cloud infra</a></li>
+</ol>
+
+<p><a href="#serverless"><strong>Serverless</strong></a>:</p>
+
+<ol>
+<li><a href="#no-yaml">Go serverless without the YAML</a></li>
+<li><a href="#real-lambdas">Capture state in your serverless funcs, like real lambdas</a></li>
+<li><a href="#cron-jobs">Simple serverless cron jobs</a></li>
+<li><a href="#rest-apis">Run Express-like serverless SPAs and REST APIs at near zero cost</a></li>
+</ol>
+
+<p><a href="#containers"><strong>Containers</strong></a>:</p>
+
+<ol>
+<li><a href="#easy-deployment">Deploy production containers without the fuss</a></li>
+<li><a href="#no-dockerfiles">Use containers without Dockerfiles</a></li>
+<li><a href="#long-running-containers-as-tasks">Invoke a long-running container as a task</a></li>
+</ol>
+
+<p><a href="#general-tips-and-tricks"><strong>General Tips and Tricks</strong></a>:</p>
+
+<ol>
+<li><a href="#avoid-hard-coding-config">Use code to avoid hard-coding config</a></li>
+<li><a href="#multi-instantiation-and-code-reuse">Use config to enable multi-instantiation and code reuse</a></li>
+<li><a href="#give-components-runtime-apis">Give your components runtime APIs</a></li>
+</ol>
+
+<p>Even if you&rsquo;re uninterested in low-level infrastructure, it can be fun
+to work through these examples; it&rsquo;s &ldquo;turtles all the way down&rdquo; with
+Pulumi and doing so can help understand how the system works. And
+similarly, it can be fun to see the high-level scenarios these building
+blocks facilitate, even if you just want to stand up containers and
+functions.</p>
+
+<p>And with that, let&rsquo;s dive in.</p>
+
+<h2 id="infrastructure">Infrastructure</h2>
+
+<h3 id="real-languages">Real Languages</h3>
+
+<p>[ <a href="https://github.com/pulumi/examples/tree/master/aws-js-webserver">Runnable Example</a> ]</p>
+
+<p>Pulumi gives you a way to express infrastructure configuration using
+your favorite programming language. In this article, we&rsquo;ll use
+TypeScript on Node.js, as it delivers great productivity by blending
+dynamic and static typing with the NPM ecosystem of reusable packages.</p>
+
+<p>At the lowest layer, there are packages for all major cloud providers &ndash;
+<a href="https://github.com/pulumi/pulumi-aws">AWS</a>,
+<a href="https://github.com/pulumi/pulumi-azure">Azure</a>,
+<a href="https://github.com/pulumi/pulumi-gcp">Google Cloud</a> &ndash; in addition to
+<a href="https://github.com/pulumi/pulumi-kubernetes">Kubernetes</a> and
+<a href="https://github.com/pulumi/pulumi-openstack">OpenStack</a>. So, if you want
+an EC2 instance, Azure CosmosDB, or Kubernetes Pod, you just
+<code>new</code> up an object. From there, Pulumi uses an
+infrastructure-as-code approach similar to using AWS CloudFormation,
+Azure Resource Manager, Google Resource Manager, Kubernetes or Helm
+YAML, or Terraform &ndash; just without the YAML DSLs.</p>
+
+<p>The strength of using a language truly begins to shine when you go
+beyond <code>new</code>, however. Using a language gives you
+control structures, like for loops and if branches. This is easy to take
+for granted, but compared to existing YAML DSLs, it is very powerful.</p>
+
+<p>For example, let&rsquo;s create three EC2 VMs and export their IP addresses.
+Normally you&rsquo;d need to copy-and-paste, however for loops to the rescue!</p>
+
+<p><strong>index.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">webSg</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">SecurityGroup</span><span class="p">(</span><span class="s2">&#34;web-secgrp&#34;</span><span class="p">,</span> <span class="p">{</span> 
+    <span class="nx">ingress</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nx">protocol</span><span class="o">:</span> <span class="s2">&#34;tcp&#34;</span><span class="p">,</span> <span class="nx">fromPort</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span> <span class="nx">toPort</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span> <span class="nx">cidrBlocks</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;0.0.0.0/0&#34;</span><span class="p">]</span> <span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">});</span>
+
+<span class="kd">let</span> <span class="nx">webServers</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">webServers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">Instance</span><span class="p">(</span><span class="sb">`web-server-</span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span> <span class="p">{</span>
+        <span class="nx">instanceType</span><span class="o">:</span> <span class="s2">&#34;t2.micro&#34;</span><span class="p">,</span>
+        <span class="nx">ami</span><span class="o">:</span> <span class="s2">&#34;ami-6869aa05&#34;</span><span class="p">,</span> <span class="c1">// us-east-1-only
+</span><span class="c1"></span>        <span class="nx">securityGroups</span><span class="o">:</span> <span class="p">[</span> <span class="nx">webSg</span><span class="p">.</span><span class="nx">name</span> <span class="p">],</span>
+        <span class="nx">userData</span><span class="o">:</span> <span class="sb">`#!/bin/bashn`</span> <span class="o">+</span>
+            <span class="sb">`echo &#39;Hello, World #</span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb">!&#39; &gt; index.htmln`</span> <span class="o">+</span>
+            <span class="sb">`nohup python -m SimpleHTTPServer 80 &amp;n`</span><span class="p">,</span>
+    <span class="p">}));</span>
+<span class="p">}</span>
+<span class="k">export</span> <span class="kd">let</span> <span class="nx">publicHostnames</span> <span class="o">=</span> <span class="nx">webServers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">s</span> <span class="p">=&gt;</span> <span class="nx">s</span><span class="p">.</span><span class="nx">publicDns</span><span class="p">);</span>
+</code></pre></div>
+<p>This provisions three web servers, each of which runs a simple Python
+webserver.</p>
+
+<p>Of course, this can unlock far more sophisticated scenarios. For
+example, our own <a href="https://github.com/pulumi/pulumi-aws-infra">AWS Infrastructure</a> package
+offers core AWS infrastructure components using AWS&rsquo;s own best
+practices, and a community member <a href="https://github.com/jen20/pulumi-aws-vpc">built an AWS Virtual Private Cloud (VPC) component</a> that
+automatically distributes subnets across all availability zones in a
+region, including smartly calculating the CIDR addresses, hiding lots of
+the messy details of AWS networking.</p>
+
+<h3 id="reusable-components">Reusable Components</h3>
+
+<p>[ <a href="https://github.com/pulumi/pulumi-aws/blob/master/examples/webserver-comp/">Runnable Example</a> ]</p>
+
+<p>Speaking of components, this is another benefit of using real languages:
+abstraction. This includes the ability to hide uninteresting details
+through encapsulation, and create bigger things out of smaller things, a
+key to how we&rsquo;ve become so productive with programming languages
+generally over the years. Applied to infrastructure, this enables some
+powerful scenarios.</p>
+
+<p>For instance, perhaps you want a standard base class for all servers in
+your organization, enforcing security policy or even just naming
+conventions. Or maybe you want to ensure there is an Envoy proxy sidecar
+for all of your Kubernetes pods. No matter the scenario, we call these
+things &ldquo;components&rdquo; and Pulumi has a rich model that supports parents
+and children.</p>
+
+<p>To stick with the running example, let&rsquo;s make a WebServer class that
+internally creates the EC2 VM so that callers don&rsquo;t need to know messy
+details like how to create and configure a SecurityGroup and choosing
+the right image:</p>
+
+<p><strong>web.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">webSg</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">SecurityGroup</span><span class="p">(</span><span class="s2">&#34;web-secgrp&#34;</span><span class="p">,</span> <span class="p">{</span> 
+    <span class="nx">ingress</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nx">protocol</span><span class="o">:</span> <span class="s2">&#34;tcp&#34;</span><span class="p">,</span> <span class="nx">fromPort</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span> <span class="nx">toPort</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span> <span class="nx">cidrBlocks</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;0.0.0.0/0&#34;</span><span class="p">]</span> <span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">});</span>
+
+<span class="k">export</span> <span class="k">class</span> <span class="nx">WebServer</span> <span class="p">{</span>
+    <span class="kr">public</span> <span class="nx">readonly</span> <span class="nx">vm</span><span class="o">:</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">Instance</span><span class="p">;</span>
+
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">Instance</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span> <span class="p">{</span>
+            <span class="nx">instanceType</span><span class="o">:</span> <span class="s2">&#34;t2.micro&#34;</span><span class="p">,</span>
+            <span class="nx">ami</span><span class="o">:</span> <span class="s2">&#34;ami-6869aa05&#34;</span><span class="p">,</span> <span class="c1">// us-east-1-only
+</span><span class="c1"></span>            <span class="nx">securityGroups</span><span class="o">:</span> <span class="p">[</span> <span class="nx">webSg</span><span class="p">.</span><span class="nx">name</span> <span class="p">],</span>
+            <span class="nx">userData</span><span class="o">:</span> <span class="sb">`#!/bin/bashn`</span> <span class="o">+</span>
+                <span class="sb">`echo &#39;Hello from </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">!&#39; &gt; index.htmln`</span> <span class="o">+</span>
+                <span class="sb">`nohup python -m SimpleHTTPServer 80 &amp;n`</span><span class="p">,</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Now we can go back to our original program and tidy it up a bit:</p>
+
+<p><strong>index.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="p">{</span> <span class="nx">WebServer</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;./web&#34;</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">webServers</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">webServers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">new</span> <span class="nx">WebServer</span><span class="p">(</span><span class="sb">`web-server-</span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb">`</span><span class="p">));</span>
+<span class="p">}</span>
+<span class="k">export</span> <span class="kd">let</span> <span class="nx">publicHostnames</span> <span class="o">=</span> <span class="nx">webServers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">s</span> <span class="p">=&gt;</span> <span class="nx">s</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">publicDns</span><span class="p">);</span>
+</code></pre></div>
+<p>Not only is the result simpler, but we now have a way to divvy up
+responsibilities within a team, helping Dev and DevOps to work better
+together.</p>
+
+<p>This example used purely local components, but you can of course publish
+and consume any old packages from your favorite package manager &ndash;
+including private registries for your own team.</p>
+
+<p>We will return to these examples later on and improve them to be more
+reusable through configuration, however let&rsquo;s first tour some fun
+serverless and container pearls.</p>
+
+<h2 id="serverless">Serverless</h2>
+
+<h3 id="no-yaml">No YAML</h3>
+
+<p>[ <a href="https://github.com/pulumi/examples/tree/master/aws-js-webserver">Runnable Example</a> ]</p>
+
+<p>Let&rsquo;s shift gears and jump into serverless. Pulumi is unique in that its
+goal is to be a platform for all aspects of modern cloud programming, so
+that includes serverless, in addition to the abovementioned
+infrastructure examples and the soon-to-be-mentioned container ones.
+Most real-world examples we see in fact mix all of these things together
+in the same program.</p>
+
+<p>Because of the way it uses real languages, there are great benefits to
+serverless programming in Pulumi. No YAML required &ndash; just write lambdas
+in your favorite language, and our compiler/runtime magic will deal with
+them. But first, let&rsquo;s start simple.</p>
+
+<p>The <a href="https://github.com/pulumi/pulumi-aws-serverless">AWS Serverless</a>
+package provides event sources for all of the possible AWS Lambda
+triggers. This leverages the
+<code>aws.serverless.Function</code> abstraction that takes a
+lambda in your language and translates it into a package suitable for
+uploading to AWS. No need to embed code in YAML files, manually upload
+to S3, etc. Pulumi handles all of this including versioning.</p>
+
+<p>Let&rsquo;s look at a simple example that simply posts a Slack message for
+every new message that arrives in an SQS queue
+(<a href="https://aws.amazon.com/blogs/aws/aws-lambda-adds-amazon-simple-queue-service-to-supported-event-sources/">a new capability recently added to AWS</a>).
+The way you express serverless functions in Pulumi is by writing
+ordinary lambdas and the way you hook them up to event sources is by
+using an event-driven style on your existing cloud resources:</p>
+
+<p><strong>index.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+<span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">serverless</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws-serverless&#34;</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">sqs</span><span class="p">.</span><span class="nx">Queue</span><span class="p">(</span><span class="s2">&#34;mySlackQueue&#34;</span><span class="p">);</span>
+<span class="nx">serverless</span><span class="p">.</span><span class="nx">queue</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s2">&#34;mySlackPoster&#34;</span><span class="p">,</span> <span class="nx">queue</span><span class="p">,</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+
+<span class="kd">let</span> <span class="nx">slack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;@slack/client&#34;</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">slack</span><span class="p">.</span><span class="nx">WebClient</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">slackToken</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">rec</span> <span class="k">of</span> <span class="nx">e</span><span class="p">.</span><span class="nx">Records</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kr">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">chat</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">({</span>
+            <span class="nx">channel</span><span class="o">:</span> <span class="nx">config</span><span class="p">.</span><span class="nx">slackChannel</span><span class="p">,</span>
+            <span class="nx">text</span><span class="o">:</span> <span class="sb">`*SQS message </span><span class="si">${</span><span class="nx">rec</span><span class="p">.</span><span class="nx">messageId</span><span class="si">}</span><span class="sb">*:n</span><span class="si">${</span><span class="nx">rec</span><span class="p">.</span><span class="nx">body</span><span class="si">}</span><span class="sb">n`</span><span class="o">+</span>
+                <span class="sb">`(with :love_letter: from Pulumi)`</span><span class="p">,</span>
+            <span class="nx">as_user</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="p">});</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Posted SQS message </span><span class="si">${</span><span class="nx">rec</span><span class="p">.</span><span class="nx">messageId</span><span class="si">}</span><span class="sb"> to </span><span class="si">${</span><span class="nx">config</span><span class="p">.</span><span class="nx">slackChannel</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+<span class="k">export</span> <span class="kd">let</span> <span class="nx">queueURL</span> <span class="o">=</span> <span class="nx">queue</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+</code></pre></div>
+<p>The code and instructions for running this example are available
+<a href="https://github.com/pulumi/examples/tree/master/aws-js-sqs-slack">in our examples repo</a>.</p>
+
+<p>Serverless programs written in this style feel just like your favorite
+event-driven frameworks, and &ndash; because these are just ordinary lambdas
+in your language of choice &ndash; they compose in all the usual ways,
+unlocking some fascinating future possibilities (like serverless Spark
+and/or RxJS). Behind the scenes, Pulumi is doing the hard work to
+extract out the body of the function, rewrite it minimally but as needed
+to wire it up to AWS Lambda, and package it up. Subsequent deployments
+are as easy as the first one, as Pulumi does diffing to compute the
+minimal deltas.</p>
+
+<p>Not everybody will want to mix infrastructure definitions and runtime
+code like this. Because these are just ordinary programs, you are free
+to split code into submodules and structure your workspace as you see
+fit. In fact, you can create distinct stacks for the different pieces.</p>
+
+<p>This example is AWS-specific, however the <a href="https://github.com/pulumi/pulumi-cloud">Pulumi Cloud Framework</a> offers several
+multi-cloud serverless (and container) capabilities. We will see some
+examples of that package in action below, however being able to target
+your cloud of choice directly means you can use all of its underlying
+features.</p>
+
+<h3 id="real-lambdas">Real Lambdas</h3>
+
+<p>[ <a href="https://github.com/pulumi/examples/tree/master/aws-js-webserver">Runnable Example</a> ]</p>
+
+<p>Pulumi also lets you capture state in your serverless functions. This is
+one of the major advantages to this approach; normally you&rsquo;d need to
+awkwardly arrange for such state to be passed into your function through
+some sideband mechanism, such as environment variables.</p>
+
+<p>In Pulumi, we just capture state. Just like in your favorite language.</p>
+
+<p>Let&rsquo;s say we want the Slack information above to be configurable &ndash; a
+good idea, since the Slack token is a secret that should be configured
+using the &ndash;secret flag. To do so, first let&rsquo;s create a config module:</p>
+
+<p><strong>config.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">pulumi</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/pulumi&#34;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">config</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">pulumi</span><span class="p">.</span><span class="nx">Config</span><span class="p">(</span><span class="nx">pulumi</span><span class="p">.</span><span class="nx">getProject</span><span class="p">());</span>
+
+<span class="k">export</span> <span class="kd">let</span> <span class="nx">slackChannel</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;slackChannel&#34;</span><span class="p">)</span> <span class="o">||</span> <span class="s2">&#34;#general&#34;</span><span class="p">,</span>
+<span class="k">export</span> <span class="kd">let</span> <span class="nx">slackToken</span><span class="o">:</span> <span class="nx">config</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="s2">&#34;slackToken&#34;</span><span class="p">);</span>
+</code></pre></div>
+<p>And now let&rsquo;s go back to our above program, and use the config module
+for these properties. Notice that we simply capture a reference to the
+config module &ndash; that&rsquo;s it!</p>
+
+<p><strong>index.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">config</span> <span class="nx">from</span> <span class="s2">&#34;./config&#34;</span><span class="p">;</span>
+<span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+<span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">serverless</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws-serverless&#34;</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">sqs</span><span class="p">.</span><span class="nx">Queue</span><span class="p">(</span><span class="s2">&#34;mySlackQueue&#34;</span><span class="p">);</span>
+<span class="nx">serverless</span><span class="p">.</span><span class="nx">queue</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s2">&#34;mySlackPoster&#34;</span><span class="p">,</span> <span class="nx">queue</span><span class="p">,</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">slack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;@slack/client&#34;</span><span class="p">);</span>
+    <span class="kd">let</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">slack</span><span class="p">.</span><span class="nx">WebClient</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">slackToken</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">rec</span> <span class="k">of</span> <span class="nx">e</span><span class="p">.</span><span class="nx">Records</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kr">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">chat</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">({</span>
+            <span class="nx">channel</span><span class="o">:</span> <span class="nx">config</span><span class="p">.</span><span class="nx">slackChannel</span><span class="p">,</span>
+            <span class="nx">text</span><span class="o">:</span> <span class="sb">`*SQS message </span><span class="si">${</span><span class="nx">rec</span><span class="p">.</span><span class="nx">messageId</span><span class="si">}</span><span class="sb">*:n</span><span class="si">${</span><span class="nx">rec</span><span class="p">.</span><span class="nx">body</span><span class="si">}</span><span class="sb">n`</span><span class="o">+</span>
+                <span class="sb">`(with :love_letter: from Pulumi)`</span><span class="p">,</span>
+            <span class="nx">as_user</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="p">});</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Posted SQS message </span><span class="si">${</span><span class="nx">rec</span><span class="p">.</span><span class="nx">messageId</span><span class="si">}</span><span class="sb"> to </span><span class="si">${</span><span class="nx">config</span><span class="p">.</span><span class="nx">slackChannel</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+<span class="k">export</span> <span class="kd">let</span> <span class="nx">queueURL</span> <span class="o">=</span> <span class="nx">queue</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+</code></pre></div>
+<p>We often call this &ldquo;capture by serialization&rdquo; because, of course, the
+captured state is marshaled into the serverless function&rsquo;s package, and
+then unmarshaled at runtime at the time of use. The semantics of capture
+are specific to each language, but for JavaScript, we do a deep
+serialization of the object, including its prototype chain, so that the
+full structure is preserved.</p>
+
+<p>Because of this, functions are even available. We use this capability to
+let you capture resources by-value that internally have references to a
+live cloud resource. We will see that next in our serverless cron job
+example.</p>
+
+<h3 id="cron-jobs">Cron Jobs</h3>
+
+<p>[ <a href="https://github.com/pulumi/pulumi-cloud/tree/master/examples/timers">Runnable Example</a> ]</p>
+
+<p><a href="https://github.com/pulumi/pulumi-cloud">Pulumi&rsquo;s Cloud Framework</a> has
+an ultra-straightforward timer module that lets you schedule cron jobs
+that run serverless functions. This is the easiest way to get up and
+running with serverless functions, because you don&rsquo;t even need any other
+resources to trigger events from.</p>
+
+<p>There are several ways to schedule a timer, depending on your stylistic
+preferences. These examples simply print the current time to the console
+on a given interval:</p>
+
+<p><strong>index.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">cloud</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/cloud&#34;</span><span class="p">;</span>
+
+<span class="c1">// Run a timer every minute:
+</span><span class="c1"></span><span class="nx">cloud</span><span class="p">.</span><span class="nx">timer</span><span class="p">.</span><span class="nx">interval</span><span class="p">(</span><span class="s2">&#34;interval-timer&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">minutes</span><span class="o">:</span> <span class="mi">0</span> <span class="p">},</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`interval-timer: </span><span class="si">${</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Run a timer every minute (cron-style expression):
+</span><span class="c1"></span><span class="nx">cloud</span><span class="p">.</span><span class="nx">timer</span><span class="p">.</span><span class="nx">cron</span><span class="p">(</span><span class="s2">&#34;cron-timer&#34;</span><span class="p">,</span> <span class="s2">&#34;0 * * * * *&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`cron-timer: </span><span class="si">${</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Run a timer every day at 7:30 UTC:
+</span><span class="c1"></span><span class="nx">cloud</span><span class="p">.</span><span class="nx">timer</span><span class="p">.</span><span class="nx">daily</span><span class="p">(</span><span class="s2">&#34;daily-timer&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">hourUTC</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span> <span class="nx">minuteUTC</span><span class="o">:</span> <span class="mi">30</span> <span class="p">},</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`daily-timer: </span><span class="si">${</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Run a timer at the 45th minute UTC of every hour:
+</span><span class="c1"></span><span class="nx">cloud</span><span class="p">.</span><span class="nx">timer</span><span class="p">.</span><span class="nx">hourly</span><span class="p">(</span><span class="s2">&#34;hourly-timer&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">minuteUTC</span><span class="o">:</span> <span class="mi">45</span> <span class="p">},</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`hourly-timer: </span><span class="si">${</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>To make things slightly more interesting, let&rsquo;s write a serverless timer
+that fetches the Hacker News homepage every hour and stashes it into a
+document database:</p>
+
+<p><strong>index.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">cloud</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/cloud&#34;</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">snapshots</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">Table</span><span class="p">(</span><span class="s2">&#34;snapshots&#34;</span><span class="p">);</span>
+<span class="nx">cloud</span><span class="p">.</span><span class="nx">timer</span><span class="p">.</span><span class="nx">daily</span><span class="p">(</span><span class="s2">&#34;daily-yc-snapshot&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">hourUTC</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">minuteUTC</span><span class="o">:</span> <span class="mi">0</span> <span class="p">},</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">req</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;https&#34;</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;https://news.ycombinator.com&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">content</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+
+    <span class="nx">res</span><span class="p">.</span><span class="nx">setEncoding</span><span class="p">(</span><span class="s2">&#34;utf8&#34;</span><span class="p">);</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;data&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">chunk</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">content</span> <span class="o">+=</span> <span class="nx">chunk</span> <span class="p">});</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;end&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="nx">snapshots</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span> <span class="nx">date</span><span class="o">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span> <span class="nx">content</span><span class="o">:</span> <span class="nx">content</span> <span class="p">});</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>We are using the ability to capture a reference to our
+<code>cloud.Table</code> and call functions on it, like
+<code>insert</code>. Of course, the body of that function can
+do absolutely anything that you&rsquo;d like.</p>
+
+<h3 id="rest-apis">REST APIs</h3>
+
+<p>[ <a href="https://github.com/pulumi/examples/tree/master/cloud-js-api">Runnable Example</a> ]</p>
+
+<p>Us Node.js programmers love web frameworks, whether that be serving
+static content using a single page application (SPA) built using
+React.js, Vue.js, or Angular.js, a program built using dynamic
+server-side logic using Express.js, or some combination thereof.
+Serverless offers a way to run these programs at incredible density and
+low cost, often reducing a VM- or container-based solution to 1/10th its
+cost (or better). The problem is, this usually means abandoning
+productive frameworks, and resorting to YAML, hand-authoring Swagger
+files, and configuring complex API Gateway machinery &ndash; all foreign
+concepts when you just want to run a website.</p>
+
+<p>Pulumi lets you just write code to host both static and dynamic content
+simply, using its cross-cloud framework&rsquo;s cloud.API abstraction. It has
+been designed to have a familiar Node.js feel. The following example
+serves all static content underneath my www directory at the root, and
+provides a simple GET endpoint at <code>/hello</code> that
+returns a <code>{ hello: &quot;World!&quot; }</code> JSON object:</p>
+
+<p><strong>index.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">cloud</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/cloud&#34;</span><span class="p">;</span>
+<span class="c1">// Create a new API endpoint:
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;my-app&#34;</span><span class="p">);</span>
+<span class="c1">// Serve static files from the `www` folder (using AWS S3):
+</span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="s2">&#34;/&#34;</span><span class="p">,</span> <span class="s2">&#34;www&#34;</span><span class="p">);</span>
+<span class="c1">// Serve a simple REST API on `GET /hello` (using AWS Lambda):
+</span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;/hello&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span> <span class="nx">hello</span><span class="o">:</span> <span class="s2">&#34;World!&#34;</span> <span class="p">}));</span>
+<span class="c1">// Export the public URL for the HTTP service:
+</span><span class="c1"></span><span class="k">export</span> <span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">publish</span><span class="p">().</span><span class="nx">url</span><span class="p">;</span>
+</code></pre></div>
+<p>All of the usual verbs are available &ndash; <code>post</code>,
+<code>patch</code>, etc. &ndash; as is support for middleware.</p>
+
+<p>The structure of my local filesystem will demonstrate how some of this
+ties together:</p>
+
+<pre><code>.
+├── Pulumi.yaml
+├── index.ts
+├── package.json
+└── www
+├── favicon.png
+└── index.html
+1 directory, 5 files
+</code></pre>
+
+<p>Again, all we need to do is <code>pulumi up</code>, and Pulumi
+will figure out what has changed. So, if we are building an SPA using
+React.js, etc., then we would simply have a build step that updates the
+content, and the next time we run <code>pulumi up</code>, it
+will figure out what has changed and make the minimal set of updates.
+Similarly, if we edit a dynamic function, it will update just the
+function.</p>
+
+<p>As you can imagine, things get fun when you start mixing scenarios. Say
+we wanted a web frontend to our Hacker News timer fetcher above. Thanks
+to the way we can simply capture a reference to the snapshots database
+and use it in the body of our API, this is extremely trivial.</p>
+
+<p>Per the earlier conversation around mixing infrastructure and
+application code, some folks prefer to split the routes from the
+application code. This is a fine convention, and easy to do:</p>
+
+<p><strong>index.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">cloud</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/cloud&#34;</span><span class="p">;</span>
+<span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">routes</span> <span class="nx">from</span> <span class="s2">&#34;./app/routes&#34;</span><span class="p">;</span>
+
+<span class="c1">// Create an API like before, but use a routes module instead of defining inline:
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;my-app&#34;</span><span class="p">);</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;/hello&#34;</span><span class="p">,</span> <span class="nx">routes</span><span class="p">.</span><span class="nx">hello</span><span class="p">);</span>
+
+<span class="k">export</span> <span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">publish</span><span class="p">().</span><span class="nx">url</span><span class="p">;</span>
+</code></pre></div>
+<p>For now, Pulumi only offers an AWS implementation of these APIs, but
+more clouds are on their way!</p>
+
+<h2 id="containers">Containers</h2>
+
+<h3 id="easy-deployment">Easy Deployment</h3>
+
+<p>[ <a href="https://github.com/pulumi/examples/tree/master/cloud-js-containers">Runnable Example</a> ]</p>
+
+<p>Let&rsquo;s shift gears again and take a look at containers. Pulumi supports
+programming against raw container orchestrators &ndash; Amazon&rsquo;s ECS, Azure&rsquo;s
+ACS, Google Cloud&rsquo;s GKE, Kubernetes directly, and so on &ndash; using the
+cloud resources directly. In this mode, Pulumi is entirely unopinionated
+about how containers are built, published, and deployed to your
+orchestrator.</p>
+
+<p>It is important that Pulumi supports that low-level approach, and is
+what distinguishes it compared to PaaS-like offerings. This entails
+significant spelunking at a level that is only loosely connected to the
+task of standing up a container, however, which can be time-consuming
+and frustrating for many developers. To make this common case easier,
+Pulumi also offers higher-level abstractions to make these common cases
+easier, similar in spirit to Docker Compose, except that you can mix
+these abstractions with all your other cloud resources.</p>
+
+<p>For example, to create a load balanced Nginx container using an image
+from the Docker Hub:</p>
+
+<p><strong>index.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">cloud</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/cloud&#34;</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">nginx</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">Service</span><span class="p">(</span><span class="s2">&#34;nginx&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">image</span><span class="o">:</span> <span class="s2">&#34;nginx&#34;</span><span class="p">,</span>
+    <span class="nx">ports</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">port</span><span class="o">:</span> <span class="mi">80</span> <span class="p">}],</span>
+    <span class="nx">replicas</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="k">export</span> <span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">nginx</span><span class="p">.</span><span class="nx">defaultEndpoint</span><span class="p">;</span>
+</code></pre></div>
+<p>This is all you need to run Nginx with 2 load balanced replicas
+listening on port 80. By default, this will run in Fargate when
+targeting AWS, which means you can skip the complications of configuring
+an orchestrator. After running <code>pulumi up</code>, the
+auto-assigned URL will be printed.</p>
+
+<p>The image directive supports any normal Docker image URL, so private
+registries work just as well as the default public Docker Hub. And there
+are a number of other supported properties for memory and CPU
+constraints, advanced port mapping, and volumes.</p>
+
+<p>Now things get a bit more interesting. Let&rsquo;s say we wanted to build our
+own custom container instead. Normally that would mean defining a
+Dockerfile, provisioning a private registry, and manually building and
+publishing your image to the registry, and then consuming that container
+image from the registry. That&rsquo;s a lot of boilerplate scripting!</p>
+
+<p>Pulumi unifies all container building, publishing, and consumption
+underneath a simple <code>pulumi up</code>:</p>
+
+<p><strong>index.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">cloud</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/cloud&#34;</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">nginx</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">Service</span><span class="p">(</span><span class="s2">&#34;nginx&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">build</span><span class="o">:</span> <span class="s2">&#34;.&#34;</span><span class="p">,</span>
+    <span class="nx">ports</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">port</span><span class="o">:</span> <span class="mi">80</span> <span class="p">}],</span>
+    <span class="nx">replicas</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="k">export</span> <span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">nginx</span><span class="p">.</span><span class="nx">defaultEndpoint</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Dockerfile</strong>:</p>
+
+<pre><code>FROM nginx
+COPY ./www /usr/share/nginx/html
+</code></pre>
+
+<p>This is trivial Dockerfile that derives from the nginx base image and
+copies the ./www directory into the Nginx HTML target so that it will be
+served up. This is our directory structure:</p>
+
+<pre><code>.
+├── Dockerfile
+├── Pulumi.yaml
+├── index.ts
+├── package.json
+└── www
+├── favicon.png
+└── index.html
+1 directory, 5 files
+</code></pre>
+
+<p>Of course, this Dockerfile could be arbitrarily complex, using any
+Docker image.</p>
+
+<h3 id="no-dockerfiles">No Dockerfiles</h3>
+
+<p>[ <a href="https://github.com/pulumi/pulumi-cloud/tree/master/examples/containers">Runnable Example</a> ]</p>
+
+<p>The above example showed you how to create services that use Docker
+containers, either via a pre-built image stored in a registry like the
+Docker Hub, or by building one from a Dockerfile. The cloud.Service
+class supports a third possibility, which is really fun, as it takes
+advantage of Pulumi&rsquo;s serverless programming model earlier to define a
+container and its service.</p>
+
+<p>Imagine we want to define a simple Node.js webserver rather than using
+Nginx like this. Perhaps it uses Express.js. For this blog post,
+however, let&rsquo;s stick with the most basic http-module-based webserver:</p>
+
+<p><strong>index.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">cloud</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/cloud&#34;</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">www</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">Service</span><span class="p">(</span><span class="s2">&#34;www&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="kd">function</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">rand</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">();</span>
+        <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;http&#34;</span><span class="p">).</span><span class="nx">createServer</span><span class="p">((</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="sb">`Hello, world! (from </span><span class="si">${</span><span class="nx">rand</span><span class="si">}</span><span class="sb">)`</span><span class="p">);</span>
+        <span class="p">}).</span><span class="nx">listen</span><span class="p">(</span><span class="mi">80</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="nx">ports</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">port</span><span class="o">:</span> <span class="mi">80</span> <span class="p">}]</span>
+    <span class="nx">memory</span><span class="o">:</span> <span class="mi">128</span><span class="p">,</span>
+    <span class="nx">replicas</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="k">export</span> <span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">www</span><span class="p">.</span><span class="nx">defaultEndpoint</span><span class="p">;</span>
+</code></pre></div>
+<p>This code defines a load balanced service, backed by a container that
+Pulumi builds on your behalf out of the body of the function provided in
+the program, all done with a simple <code>pulumi up</code>
+gesture. This function, of course, can close over other state just like
+the earlier serverless examples, including cloud resources, making it as
+easy as can be to connect your microservices.</p>
+
+<h3 id="long-running-containers-as-tasks">Long Running Containers as Tasks</h3>
+
+<p>[ <a href="https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer">Runnable Example</a> ]</p>
+
+<p>The above examples are great if what you want is a load balanced,
+long-running service. Sometimes a container is useful simply for
+executing a long-running task, or one that has very specific
+requirements about its execution environment (such as a specific base
+image).</p>
+
+<p>For those cases, a cloud.Task is just what the doctor ordered. Task
+supports all the same construction techniques as Service, so you can
+give it a pre-built image, a build directive, or an inline function. For
+purposes of illustration, let&rsquo;s build a custom Dockerfile that performs
+an FFMPEG transformation, to extract a thumbnail anytime someone adds a
+video to a bucket:</p>
+
+<p><strong>index.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">cloud</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;@pulumi/cloud-aws&#34;</span><span class="p">);</span>
+<span class="c1">// A bucket to store videos and thumbnails.
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">videos</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">Bucket</span><span class="p">(</span><span class="s2">&#34;bucket&#34;</span><span class="p">);</span>
+<span class="c1">// A task which runs an FFMPEG transform to extract a thumbnail image.
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">ffmpegThumbnailTask</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">Task</span><span class="p">(</span><span class="s2">&#34;ffmpegThumbTask&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">build</span><span class="o">:</span> <span class="s2">&#34;.&#34;</span><span class="p">,</span>
+    <span class="nx">memoryReservation</span><span class="o">:</span> <span class="mi">512</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// When a new video is uploaded, run the FFMPEG task on the video file.
+</span><span class="c1"></span><span class="nx">videos</span><span class="p">.</span><span class="nx">onPut</span><span class="p">(</span>
+    <span class="s2">&#34;onNewVideo&#34;</span><span class="p">,</span>
+    <span class="nx">args</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">args</span><span class="p">.</span><span class="nx">key</span><span class="p">;</span>
+        <span class="nx">ffmpegThumbnailTask</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span>
+        <span class="p">{</span>
+            <span class="nx">environment</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&#34;S3_BUCKET&#34;</span><span class="o">:</span>   <span class="nx">videos</span><span class="p">.</span><span class="nx">bucket</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">get</span><span class="p">(),</span>
+                <span class="s2">&#34;INPUT_VIDEO&#34;</span><span class="o">:</span> <span class="nx">file</span><span class="p">,</span>
+                <span class="s2">&#34;TIME_OFFSET&#34;</span><span class="o">:</span> <span class="nx">file</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="nx">file</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nx">file</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)).</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;:&#39;</span><span class="p">),</span>
+                <span class="s2">&#34;OUTPUT_FILE&#34;</span><span class="o">:</span> <span class="nx">file</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">file</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;.jpg&#39;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">});</span>
+    <span class="p">},</span>
+    <span class="p">{</span> <span class="nx">keySuffix</span><span class="o">:</span> <span class="s2">&#34;.mp4&#34;</span> <span class="p">});</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">bucketName</span> <span class="o">=</span> <span class="nx">videos</span><span class="p">.</span><span class="nx">bucket</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Dockerfile</strong>:</p>
+
+<pre><code>FROM jrottenberg/ffmpeg
+RUN apt-get update &amp;&amp;      apt-get install python-dev python-pip -y &amp;&amp;      apt-get clean
+RUN pip install awscli
+WORKDIR /tmp/workdir
+ENTRYPOINT 
+echo &quot;Starting ffmpeg task... &quot; &amp;&amp; 
+echo &quot;Copying video from s3://${S3_BUCKET}/${INPUT_VIDEO} to ${INPUT_VIDEO}...&quot; &amp;&amp; 
+aws s3 cp s3://${S3_BUCKET}/${INPUT_VIDEO} ./${INPUT_VIDEO} &amp;&amp; 
+ffmpeg -v error -i ./${INPUT_VIDEO} -ss ${TIME_OFFSET} -vframes 1 -f image2 -an -y ${OUTPUT_FILE} &amp;&amp; 
+echo &quot;Copying thumbnail to S3://${S3_BUCKET}/${OUTPUT_FILE} ...&quot; &amp;&amp; 
+aws s3 cp ./${OUTPUT_FILE} s3://${S3_BUCKET}/${OUTPUT_FILE}
+</code></pre>
+
+<p>Notice that, just like before, this is backed by an ordinary Dockerfile.
+This example actually showcases serverless and containers living
+alongside one another in harmony. Notice how we kick off the task &ndash;
+simply by capturing a reference to the Task from the serverless event
+handler, and invoking its run method. This leverages Pulumi&rsquo;s ability to
+give resources like Tasks custom APIs that can be invoked at runtime,
+something we will return to again later on.</p>
+
+<h2 id="general-tips-and-tricks">General Tips and Tricks</h2>
+
+<h3 id="avoid-hard-coding-config">Avoid Hard-Coding Config</h3>
+
+<p>Let&rsquo;s return to our webserver example from earlier. Unfortunately, this
+code will only work in one region, because we hard-coded the
+<code>&quot;ami-6869aa05&quot;</code> image name (AMI). (Image names in
+AWS are region-specific.) In general, we prefer to build Pulumi programs
+that can be multi-instantiated across different regions. Pulumi&rsquo;s stacks
+model streamlines this workflow, making it easy to spin up fresh copies
+of your entire application and/or infrastructure when you need to scale,
+while also reducing friction during development and testing. Such
+hard-coding is a definite code smell and impediment, however.</p>
+
+<p>Because we are using a real language, we can do anything that real
+languages can do. That includes dynamically querying sources of
+information which, in this case, can be used to avoid hard-coding. We
+can even use the AWS SDK, which gives us full access to all AWS
+functionality:</p>
+
+<p><strong>ami.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">function</span> <span class="nx">getLinuxAmi</span><span class="p">()</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">ec2</span> <span class="o">=</span> <span class="k">new</span> <span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s2">&#34;aws-sdk&#34;</span><span class="p">)).</span><span class="nx">EC2</span><span class="p">({</span> <span class="nx">region</span><span class="o">:</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">requireRegion</span><span class="p">()</span> <span class="p">});</span>
+        <span class="nx">ec2</span><span class="p">.</span><span class="nx">describeImages</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="nx">Owners</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&#34;amazon&#34;</span> <span class="p">],</span>
+                <span class="nx">Filters</span><span class="o">:</span> <span class="p">[{</span>
+                    <span class="nx">Name</span><span class="o">:</span> <span class="s2">&#34;name&#34;</span><span class="p">,</span>
+                    <span class="nx">Values</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&#34;amzn-ami-hvm-????.??.?.x86_64-gp2&#34;</span> <span class="p">],</span>
+                <span class="p">}],</span>
+            <span class="p">},</span>
+            <span class="p">(</span><span class="nx">err</span><span class="o">:</span> <span class="nx">any</span><span class="p">,</span> <span class="nx">data</span><span class="o">:</span> <span class="nx">any</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="kd">let</span> <span class="nx">newestImage</span><span class="o">:</span> <span class="nx">string</span> <span class="o">|</span> <span class="kc">undefined</span><span class="p">;</span>
+                    <span class="kd">let</span> <span class="nx">newestImageDate</span><span class="o">:</span> <span class="nx">number</span> <span class="o">|</span> <span class="kc">undefined</span><span class="p">;</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">image</span> <span class="k">of</span> <span class="nx">data</span><span class="p">.</span><span class="nx">Images</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="kd">let</span> <span class="nx">imageDate</span> <span class="o">=</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">image</span><span class="p">.</span><span class="nx">CreationDate</span><span class="p">);</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">newestImage</span> <span class="o">||</span> <span class="o">!</span><span class="nx">newestImageDate</span> <span class="o">||</span>
+                            <span class="nx">imageDate</span> <span class="o">&gt;</span> <span class="nx">newestImageDate</span><span class="p">)</span> <span class="p">{</span>
+                            <span class="nx">newestImage</span> <span class="o">=</span> <span class="nx">image</span><span class="p">.</span><span class="nx">ImageId</span><span class="p">;</span>
+                            <span class="nx">newestImageDate</span> <span class="o">=</span> <span class="nx">imageDate</span><span class="p">;</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nx">newestImage</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`AMI: </span><span class="si">${</span><span class="nx">newestImage</span><span class="si">}</span><span class="sb"> (</span><span class="si">${</span><span class="nx">newestImageDate</span><span class="si">}</span><span class="sb">)`</span><span class="p">);</span>
+                        <span class="nx">resolve</span><span class="p">(</span><span class="nx">newestImage</span><span class="p">);</span>
+                    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                        <span class="nx">reject</span><span class="p">(</span><span class="s2">&#34;No Linux AMI found for the current region&#34;</span><span class="p">);</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+        <span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>I&rsquo;ll be the first to admit that this is code that only a mother could
+love. Even better would be to wrap it up in a reusable NPM package that
+others can use without the boilerplate! Either way, it&rsquo;s very powerful
+to have the full capabilities of a language at our fingertips, as this
+sort of thing simply isn&rsquo;t possible in other infra-as-code solutions.</p>
+
+<p>Now that we have this function, we can revisit the way we set the AMI
+property on our VMs:</p>
+
+<p><strong>web.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">getLinuxAmi</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;./ami&#34;</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">webSg</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">SecurityGroup</span><span class="p">(</span><span class="s2">&#34;web-secgrp&#34;</span><span class="p">,</span> <span class="p">{</span> 
+    <span class="nx">ingress</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nx">protocol</span><span class="o">:</span> <span class="s2">&#34;tcp&#34;</span><span class="p">,</span> <span class="nx">fromPort</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span> <span class="nx">toPort</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span> <span class="nx">cidrBlocks</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;0.0.0.0/0&#34;</span><span class="p">]</span> <span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">});</span>
+
+<span class="k">export</span> <span class="k">class</span> <span class="nx">WebServer</span> <span class="p">{</span>
+    <span class="kr">public</span> <span class="nx">readonly</span> <span class="nx">vm</span><span class="o">:</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">Instance</span><span class="p">;</span>
+
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">Instance</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span> <span class="p">{</span>
+            <span class="nx">instanceType</span><span class="o">:</span> <span class="s2">&#34;t2.micro&#34;</span><span class="p">,</span>
+            <span class="nx">ami</span><span class="o">:</span> <span class="nx">getLinuxAmi</span><span class="p">(),</span>
+            <span class="nx">securityGroups</span><span class="o">:</span> <span class="p">[</span> <span class="nx">webSg</span><span class="p">.</span><span class="nx">name</span> <span class="p">],</span>
+            <span class="nx">userData</span><span class="o">:</span> <span class="sb">`#!/bin/bashn`</span> <span class="o">+</span>
+                <span class="sb">`echo &#39;Hello from </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">!&#39; &gt; index.htmln`</span> <span class="o">+</span>
+                <span class="sb">`nohup python -m SimpleHTTPServer 80 &amp;n`</span><span class="p">,</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Given this change, we can safely deploy our WebServer to any AWS region.</p>
+
+<h3 id="multi-instantiation-and-code-reuse">Multi-Instantiation and Code Reuse</h3>
+
+<p>In the webserver example, we used the
+<code>aws.config.requireRegion()</code> function to obtain the
+configured AWS region. Using configuration in this manner lets us
+multi-instantiate stacks; in other words, to easily stand up multiple
+copies of a service, application, or infrastructure.</p>
+
+<p>We can even make the quantity configurable using Pulumi&rsquo;s config system:</p>
+
+<p><strong>index.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="p">{</span> <span class="nx">WebServer</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;./web&#34;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Config</span><span class="p">,</span> <span class="nx">getProject</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/pulumi&#34;</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">config</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Config</span><span class="p">(</span><span class="nx">getProject</span><span class="p">());</span>
+<span class="kd">let</span> <span class="nx">webServers</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="kd">let</span> <span class="nx">webServersCount</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">getNumber</span><span class="p">(</span><span class="s2">&#34;count&#34;</span><span class="p">)</span> <span class="o">||</span> <span class="mi">3</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">webServersCount</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">webServers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">new</span> <span class="nx">WebServer</span><span class="p">(</span><span class="sb">`web-server-</span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb">`</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kd">let</span> <span class="nx">publicHostnames</span> <span class="o">=</span> <span class="nx">webServers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">s</span> <span class="p">=&gt;</span> <span class="nx">s</span><span class="p">.</span><span class="nx">vm</span><span class="p">.</span><span class="nx">publicDns</span><span class="p">);</span>
+</code></pre></div>
+<p>Given this specific program, we can easily change the number of servers
+created from the default of three, to something larger:</p>
+
+<pre><code>$ pulumi config set count 7
+</code></pre>
+
+<p>There are plenty of opportunities for configuration like this, like the
+machine size. By making such settings configurable, different
+environments can easily have different settings, while still sharing the
+same code beneath them, eliminating copy-and-paste and its associated
+pitfalls.</p>
+
+<h3 id="give-components-runtime-apis">Give Components Runtime APIs</h3>
+
+<p>[ <a href="https://github.com/pulumi/examples/blob/master/cloud-ts-url-shortener-cache/cache.ts">Runnable Example</a> ]</p>
+
+<p>As our final example, let&rsquo;s see how to give your own components APIs
+that can be invoked at runtime. We&rsquo;ve already seen this a few times now,
+such as managing data in a cloud.Table that has been captured in a
+lambda, and cloud.Task&rsquo;s run method. Pulumi is built to be extensible,
+so you can define your own abstractions just like these with APIs too.</p>
+
+<p>For this example, let&rsquo;s take a simple Redis cache service and turn it
+into a component. After doing so, we can then add simple
+<code>get</code>/<code>set</code> APIs on it that let
+you interact with the cache at runtime in simple ways. By providing this
+sort of abstraction, we open up interesting possibilities. For instance,
+our default implementation can use a custom container-backed service,
+via <code>cloud.Service</code>, but opt to use a simpler hosted
+solution when running in a public cloud &ndash; AWS ElastiCache, Azure Redis
+Cache, or Memorystore in Google Cloud.</p>
+
+<p>To make our component, we will simply allocate a
+<code>cloud.Service</code> in the constructor, taking an
+optional memory parameter to control its memory reservation. We are
+using configuration to read the Redis password using Pulumi&rsquo;s built-in
+secrets mechanism. To give that component APIs, we just define methods
+on the class that access Redis through its own NPM package, and that&rsquo;s
+it! The way lambda capture works will ensure that these functions are
+accessible:</p>
+
+<p><strong>cache.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">cloud</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/cloud&#34;</span><span class="p">;</span>
+<span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">config</span> <span class="nx">from</span> <span class="s2">&#34;./config&#34;</span><span class="p">;</span>
+
+<span class="c1">// A simple cache abstraction that wraps Redis.
+</span><span class="c1"></span><span class="k">export</span> <span class="k">class</span> <span class="nx">Cache</span> <span class="p">{</span>
+    <span class="kr">public</span> <span class="nx">readonly</span> <span class="nx">get</span><span class="o">:</span> <span class="p">(</span><span class="nx">key</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="kr">public</span> <span class="nx">readonly</span> <span class="nx">set</span><span class="o">:</span> <span class="p">(</span><span class="nx">key</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="kr">private</span> <span class="nx">readonly</span> <span class="nx">redis</span><span class="o">:</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">Service</span><span class="p">;</span>
+
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">memory</span><span class="o">:</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">128</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">redis</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="p">{</span>
+            <span class="nx">image</span><span class="o">:</span> <span class="s2">&#34;redis:alpine&#34;</span><span class="p">,</span>
+            <span class="nx">memory</span><span class="o">:</span> <span class="nx">memory</span><span class="p">,</span>
+            <span class="nx">ports</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">port</span><span class="o">:</span> <span class="mi">6379</span> <span class="p">}],</span>
+            <span class="nx">command</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;redis-server&#34;</span><span class="p">,</span> <span class="s2">&#34;--requirepass&#34;</span><span class="p">,</span> <span class="nx">config</span><span class="p">.</span><span class="nx">redisPassword</span><span class="p">],</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="kr">public</span> <span class="kr">async</span> <span class="nx">get</span><span class="p">(</span><span class="nx">key</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">client</span> <span class="o">=</span> <span class="kr">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">createRedisClient</span><span class="p">();</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                <span class="nx">client</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="o">:</span> <span class="nx">any</span><span class="p">,</span> <span class="nx">v</span><span class="o">:</span> <span class="nx">any</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+                <span class="k">else</span>     <span class="nx">resolve</span><span class="p">(</span><span class="nx">v</span><span class="p">);</span>
+            <span class="p">});</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="kr">public</span> <span class="kr">async</span> <span class="nx">set</span><span class="p">(</span><span class="nx">key</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">client</span> <span class="o">=</span> <span class="kr">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">createRedisClient</span><span class="p">();</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="nx">client</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="o">:</span> <span class="nx">any</span><span class="p">,</span> <span class="nx">v</span><span class="o">:</span> <span class="nx">any</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+                <span class="k">else</span>     <span class="nx">resolve</span><span class="p">();</span>
+            <span class="p">});</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="kr">private</span> <span class="kr">async</span> <span class="nx">createRedisClient</span><span class="p">()</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="nx">ep</span> <span class="o">=</span> <span class="p">(</span><span class="kr">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">redis</span><span class="p">.</span><span class="nx">defaultEndpoint</span><span class="p">).</span><span class="nx">get</span><span class="p">();</span>
+            <span class="k">return</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;redis&#34;</span><span class="p">).</span><span class="nx">createClient</span><span class="p">(</span>
+                <span class="nx">ep</span><span class="p">.</span><span class="nx">port</span><span class="p">,</span> <span class="nx">ep</span><span class="p">.</span><span class="nx">hostname</span><span class="p">,</span> <span class="p">{</span> <span class="nx">password</span><span class="o">:</span> <span class="nx">config</span><span class="p">.</span><span class="nx">redisPassword</span> <span class="p">});</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Because this is just a class, we have all the standard programming
+facilities available to us. If we wanted to specialize it to use our
+cloud&rsquo;s hosted Redis services, we could do that using the standard
+techniques, including conditional code or, slightly more elegantly,
+using concrete subclasses for the different options.</p>
+
+<p>Now that we&rsquo;ve defined our cache, we can create an instance, and then
+use it from within a callback, such as a serverless API implementation.
+This is a fairly complex application that acts as a URL shortener, with
+both GET and POST endpoints, but really shows off the power of combining
+many of the techniques we&rsquo;ve seen throughout this post:</p>
+
+<p><strong>index.ts</strong>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">cloud</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/cloud&#34;</span><span class="p">;</span>
+<span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">cache</span> <span class="nx">from</span> <span class="s2">&#34;./cache&#34;</span><span class="p">;</span>
+
+<span class="c1">// Create a URL shortener app and a table to hold shortened URLs.
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;shortener&#34;</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">urlTable</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">Table</span><span class="p">(</span><span class="s2">&#34;urls&#34;</span><span class="p">,</span> <span class="s2">&#34;name&#34;</span><span class="p">);</span> 
+
+<span class="c1">// Use our cache component to cache frequently accessed URLs.
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">urlCache</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">cache</span><span class="p">.</span><span class="nx">Cache</span><span class="p">(</span><span class="s2">&#34;urlcache&#34;</span><span class="p">);</span>
+
+<span class="c1">// GET /url lists all URLs currently registered.
+</span><span class="c1"></span><span class="nx">endpoint</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;/url&#34;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="kr">await</span> <span class="nx">urlTable</span><span class="p">.</span><span class="nx">scan</span><span class="p">());</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">500</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// GET /url/{name} redirects to the target URL based on a short-name.
+</span><span class="c1"></span><span class="nx">endpoint</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;/url/{name}&#34;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">];</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="c1">// First try the Redis cache. If we miss, consult the table.
+</span><span class="c1"></span>        <span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">urlCache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s2">&#34;X-Powered-By&#34;</span><span class="p">,</span> <span class="s2">&#34;redis&#34;</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="nx">value</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">urlTable</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span> <span class="nx">name</span> <span class="p">});</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">value</span> <span class="o">&amp;&amp;</span> <span class="nx">value</span><span class="p">.</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">url</span> <span class="o">=</span> <span class="nx">value</span><span class="p">.</span><span class="nx">url</span><span class="p">;</span>
+                <span class="nx">urlCache</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">url</span><span class="p">);</span> <span class="c1">// cache for next time.
+</span><span class="c1"></span>            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">// If we found an entry, 301 redirect to it; else, 404.
+</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s2">&#34;Location&#34;</span><span class="p">,</span> <span class="nx">url</span><span class="p">);</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">302</span><span class="p">);</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">404</span><span class="p">);</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">500</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// POST /url registers a new URL with a given short-name.
+</span><span class="c1"></span><span class="nx">endpoint</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&#34;/url&#34;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">[</span><span class="s2">&#34;url&#34;</span><span class="p">];</span>
+    <span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">];</span>
+
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="c1">// Insert into the table and our URL cache.
+</span><span class="c1"></span>        <span class="kr">await</span> <span class="nx">urlTable</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">url</span> <span class="p">});</span>
+        <span class="kr">await</span> <span class="nx">urlCache</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">url</span><span class="p">);</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span> <span class="nx">shortenedURLName</span><span class="o">:</span> <span class="nx">name</span> <span class="p">});</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">500</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="k">export</span> <span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">endpoint</span><span class="p">.</span><span class="nx">publish</span><span class="p">().</span><span class="nx">url</span><span class="p">;</span>
+</code></pre></div>
+<p>Notice that we can capture and use our <code>Cache</code>
+component just like we can the <code>cloud.Table</code>!</p>
+
+<p>We&rsquo;ve only scratched the surface of what&rsquo;s possible with components and
+custom APIs, however hopefully you&rsquo;re starting to get a sense of why
+this is such a powerful capability.</p>
+
+<h2 id="winding-down">Winding Down</h2>
+
+<p>In this post, we&rsquo;ve seen how Pulumi can define infrastructure,
+containers, and serverless cloud software, often combining many of the
+techniques together to build powerful distributed applications. This
+includes programming to specific resources that your cloud of choice
+provides, in addition to writing higher level cloud programs that are
+able to target many clouds (expect more multi-cloud progress here in the
+weeks to come &ndash; including Kubernetes). Each pearl is a topic unto
+itself; we&rsquo;d love your feedback on what topics to dig into next.</p>
+
+<p>Happy hacking &ndash; and have fun programming the cloud!</p>
+
+                    </section>
+                    <div>
+                        <p class="text-gray-500">Posted on <time>Wednesday, Jul 25, 2018</time>
+                        
+                        <ul class="m-0 p-0">
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/serverless/">
+                                    Serverless
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/aws/">
+                                    AWS
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/containers/">
+                                    Containers
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/infrastructure/">
+                                    Infrastructure
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/typescript/">
+                                    TypeScript
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+                </article>
+            </div>
+
+            <div class="md:w-2/12 pl-8">
+                
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

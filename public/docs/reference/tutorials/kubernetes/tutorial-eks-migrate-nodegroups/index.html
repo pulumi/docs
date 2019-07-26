@@ -1,0 +1,2650 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.pulumi.com/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+
+    
+        <meta property="og:title" content="#7: EKS - Migrating Node Groups with Zero Downtime">
+    
+
+    
+        <meta name="description" content="In this tutorial we&rsquo;ll launch a new, managed Kubernetes cluster in Elastic Kubernetes Service (EKS) on AWS. Then we&rsquo;ll walk through Kubernetes Day 2 operations to help you administer and update the cluster, and your workloads running on it.
+We&rsquo;ll cover how to:
+ Create various worker node groups with different settings, such as instance types and AMIs. Deploy a workload to the set of node groups: the NGINX Ingress Controller, and a simple echoserver app that echo&rsquo;s client request headers.">
+        <meta property="og:description" content="In this tutorial we&rsquo;ll launch a new, managed Kubernetes cluster in Elastic Kubernetes Service (EKS) on AWS. Then we&rsquo;ll walk through Kubernetes Day 2 operations to help you administer and update the cluster, and your workloads running on it.
+We&rsquo;ll cover how to:
+ Create various worker node groups with different settings, such as instance types and AMIs. Deploy a workload to the set of node groups: the NGINX Ingress Controller, and a simple echoserver app that echo&rsquo;s client request headers.">
+    
+
+    
+    
+    <meta property="og:image" content="https://www.pulumi.com/social/pulumi.png">
+
+    <title>#7: EKS - Migrating Node Groups with Zero Downtime - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="https://www.pulumi.com/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="https://www.pulumi.com/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u");
+    analytics.page();
+    }}();
+    </script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+</head>
+
+    <body class="section-docs">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+
+            <div class="md:w-2/12 mt-2 md:order-last">
+                <div class="mb-8 md:mb-4">
+                    <form class="relative" action="/docs/search/" method="GET">
+    <i class="fas fa-search absolute inset-y-0 flex items-center pl-3 text-gray-500"></i>
+    <input
+        id="search-query"
+        name="q"
+        class="block w-full py-2 px-4 pl-8 text-sm border border-gray-400 focus:border-blue-500 focus:outline-none rounded transition"
+        placeholder="Search the docs"
+        autocomplete="off">
+</form>
+
+                </div>
+
+                <div class="ml-3 hidden md:block">
+                    
+    <ul class="p-0 list-none">
+        
+        
+        
+        
+        
+            <li>
+                <a class="text-gray-600 hover:text-blue-700 text-xs" href="https://github.com/pulumi/docs/edit/master/content/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups.md" target="_blank">
+                    <i class="fas fa-edit mr-2"></i>
+                    Edit this Page
+                </a>
+            </li>
+        
+
+        <li>
+            <a class="text-gray-600 hover:text-blue-700 text-xs" href="https://github.com/pulumi/docs/issues/new?body=File: [docs%2freference%2ftutorials%2fkubernetes%2ftutorial-eks-migrate-nodegroups.md](https%3a%2f%2fwww.pulumi.com%2fdocs%2freference%2ftutorials%2fkubernetes%2ftutorial-eks-migrate-nodegroups%2f)" target="_blank">
+                <i class="far fa-check-square mr-2"></i>
+                Request a Change
+            </a>
+        </li>
+    </ul>
+
+
+                </div>
+            </div>
+
+            <div class="md:w-3/12 pr-8 mt-2 mb-8 pb-8 border-b-2 border-gray-400 md:border-none md:pb-0 md:mb-0">
+                
+
+
+
+
+
+
+
+
+    
+    
+    
+
+
+<aside class="toc">
+    <h3 class="no-anchor">
+        <a href="/docs/">Docs</a>
+    </h3>
+
+    
+        <h4 class="no-anchor">
+            <a href="/docs/quickstart/">Get Started</a>
+        </h4>
+    
+    
+        <h4 class="no-anchor">
+            <a href="/docs/reference/">Reference</a>
+        </h4>
+    
+    
+
+    
+        
+        
+
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Architecture &amp; Concepts">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Programming Model" href="/docs/reference/programming-model/">Programming Model</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Projects" href="/docs/reference/project/">Projects</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stacks" href="/docs/reference/stack/">Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Configuration and Secrets" href="/docs/reference/config/">Configuration and Secrets</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizing Projects and Stacks" href="/docs/reference/organizing-stacks-projects/">Organizing Projects and Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="How Pulumi Works" href="/docs/reference/how/">How Pulumi Works</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State and Backends" href="/docs/reference/state/">State and Backends</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggleVisible" data-title="Tutorials">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/tutorials/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateways and Lambda" href="/docs/reference/tutorials/aws/tutorial-rest-api/">API Gateways and Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Containers on ECS &#34;Fargate&#34;" href="/docs/reference/tutorials/aws/tutorial-service/">Containers on ECS &#34;Fargate&#34;</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="EC2 Linux WebServer Instance" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">EC2 Linux WebServer Instance</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serve a Static Website from S3" href="/docs/reference/tutorials/aws/tutorial-s3-website/">Serve a Static Website from S3</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Video Thumbnailer" href="/docs/reference/tutorials/aws/tutorial-thumbnailer/">Video Thumbnailer</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/tutorials/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Container Instance" href="/docs/reference/tutorials/azure/tutorial-container-webserver/">Web Server Container Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/tutorials/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Virtual Machine Instance" href="/docs/reference/tutorials/gcp/tutorial-gce-webserver/">Web Server Virtual Machine Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/tutorials/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: EKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-eks/">Clusters: EKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: GKE - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-gke/">Clusters: GKE - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: AKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-aks/">Clusters: AKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#1: Hello, World!" href="/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment/">#1: Hello, World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#2: Deploying the WordPress Helm Chart" href="/docs/reference/tutorials/kubernetes/tutorial-wordpress-chart/">#2: Deploying the WordPress Helm Chart</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#3: Guestbook App with Redis and Nginx" href="/docs/reference/tutorials/kubernetes/tutorial-guestbook/">#3: Guestbook App with Redis and Nginx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#4: Graceful App Rollout" href="/docs/reference/tutorials/kubernetes/tutorial-configmap-rollout/">#4: Graceful App Rollout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#5: Gating rollout on Prometheus checks" href="/docs/reference/tutorials/kubernetes/tutorial-p8s-rollout/">#5: Gating rollout on Prometheus checks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#6: Run a Stateless App Deployment" href="/docs/reference/tutorials/kubernetes/tutorial-stateless-app/">#6: Run a Stateless App Deployment</a>
+            </div>
+        
+    
+        
+        
+            
+        
+
+        
+            <div class="sidenav-topic mb-2 active">
+                <a data-title="#7: EKS - Migrating Node Groups with Zero Downtime" href="/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups/">#7: EKS - Migrating Node Groups with Zero Downtime</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Command Line">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cancel" href="/docs/reference/cli/pulumi_cancel/">Cancel</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Config" href="/docs/reference/cli/pulumi_config/">Config</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Destroy" href="/docs/reference/cli/pulumi_destroy/">Destroy</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Login" href="/docs/reference/cli/pulumi_login/">Login</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logout" href="/docs/reference/cli/pulumi_logout/">Logout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logs" href="/docs/reference/cli/pulumi_logs/">Logs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="New" href="/docs/reference/cli/pulumi_new/">New</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Plugin" href="/docs/reference/cli/pulumi_plugin/">Plugin</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Preview" href="/docs/reference/cli/pulumi_preview/">Preview</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Refresh" href="/docs/reference/cli/pulumi_refresh/">Refresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stack" href="/docs/reference/cli/pulumi_stack/">Stack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State" href="/docs/reference/cli/pulumi_state/">State</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Update" href="/docs/reference/cli/pulumi_up/">Update</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Clouds">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/clouds/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/aws/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/clouds/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/azure/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/clouds/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/gcp/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/clouds/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Introduction" href="/docs/reference/clouds/kubernetes/introduction/">Introduction</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/kubernetes/setup/">Setup</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="FAQ" href="/docs/reference/clouds/kubernetes/faq/">FAQ</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="OpenStack">
+                <div class="sidenav-topic ">
+                    <a data-title="OpenStack" href="/docs/reference/clouds/openstack/">OpenStack</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/openstack/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Crosswalk for AWS 🆕">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateway" href="/docs/reference/crosswalk/aws/api-gateway/">API Gateway</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Auto Scaling" href="/docs/reference/crosswalk/aws/autoscaling/">Auto Scaling</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CloudWatch" href="/docs/reference/crosswalk/aws/cloudwatch/">CloudWatch</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Registry (ECR)" href="/docs/reference/crosswalk/aws/ecr/">Elastic Container Registry (ECR)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Service (ECS)" href="/docs/reference/crosswalk/aws/ecs/">Elastic Container Service (ECS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Kubernetes Service (EKS)" href="/docs/reference/crosswalk/aws/eks/">Elastic Kubernetes Service (EKS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Load Balancing (ELB)" href="/docs/reference/crosswalk/aws/elb/">Elastic Load Balancing (ELB)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Identity and Access Management (IAM)" href="/docs/reference/crosswalk/aws/iam/">Identity and Access Management (IAM)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Lambda" href="/docs/reference/crosswalk/aws/lambda/">Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Virtual Private Cloud (VPC)" href="/docs/reference/crosswalk/aws/vpc/">Virtual Private Cloud (VPC)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Other AWS Services" href="/docs/reference/crosswalk/aws/other/">Other AWS Services</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Languages">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Node.js" href="/docs/reference/javascript/">Node.js</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Python" href="/docs/reference/python/">Python</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Teams &amp; Collaboration">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizations" href="/docs/reference/service/orgs/">Organizations</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Teams" href="/docs/reference/service/teams/">Teams</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Roles and Access Controls" href="/docs/reference/service/roles-and-access-controls/">Roles and Access Controls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub App" href="/docs/reference/cd-github/">Pulumi GitHub App</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi Webhooks" href="/docs/reference/service/webhooks/">Pulumi Webhooks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Creating a &#39;Deploy with Pulumi&#39; Button" href="/docs/reference/service/pulumi-button/">Creating a &#39;Deploy with Pulumi&#39; Button</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Continuous Delivery">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Supporting A New CI System" href="/docs/reference/cd-supporting-new-ci/">Supporting A New CI System</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="AWS Code Services" href="/docs/reference/cd-aws-code-services/">AWS Code Services</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Azure DevOps" href="/docs/reference/cd-azure-devops/">Azure DevOps</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CircleCI" href="/docs/reference/cd-circleci/">CircleCI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Codefresh" href="/docs/reference/cd-codefresh/">Codefresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="GitLab CI" href="/docs/reference/cd-gitlab-ci/">GitLab CI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Google Cloud Build" href="/docs/reference/cd-google-cloud-build/">Google Cloud Build</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub Actions" href="/docs/reference/cd-github-actions/">Pulumi GitHub Actions</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Travis CI" href="/docs/reference/cd-travis/">Travis CI</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Compared to Others">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Terraform" href="/docs/reference/vs/terraform/">Terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud Templates" href="/docs/reference/vs/cloud_templates/">Cloud Templates</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud SDKs" href="/docs/reference/vs/cloud_sdks/">Cloud SDKs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serverless" href="/docs/reference/vs/serverless/">Serverless</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Kubernetes YAML" href="/docs/reference/vs/k8s_yaml_dsls/">Kubernetes YAML</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Chef, Puppet, etc." href="/docs/reference/vs/chef_puppet_etc/">Chef, Puppet, etc.</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Custom Solutions" href="/docs/reference/vs/custom/">Custom Solutions</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="API Reference">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="Node.js">
+                <div class="sidenav-topic ">
+                    <a data-title="Node.js" href="/docs/reference/pkg/nodejs/">Node.js</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/nodejs/pulumi/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="aws" href="/docs/reference/pkg/nodejs/pulumi/aws/">aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="awsx" href="/docs/reference/pkg/nodejs/pulumi/awsx/">awsx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azure" href="/docs/reference/pkg/nodejs/pulumi/azure/">azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azuread" href="/docs/reference/pkg/nodejs/pulumi/azuread/">azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloud" href="/docs/reference/pkg/nodejs/pulumi/cloud/">cloud</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloudflare" href="/docs/reference/pkg/nodejs/pulumi/cloudflare/">cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="datadog" href="/docs/reference/pkg/nodejs/pulumi/datadog/">datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="digitalocean" href="/docs/reference/pkg/nodejs/pulumi/digitalocean/">digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="dnsimple" href="/docs/reference/pkg/nodejs/pulumi/dnsimple/">dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="docker" href="/docs/reference/pkg/nodejs/pulumi/docker/">docker</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="eks" href="/docs/reference/pkg/nodejs/pulumi/eks/">eks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="f5bigip" href="/docs/reference/pkg/nodejs/pulumi/f5bigip/">f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gcp" href="/docs/reference/pkg/nodejs/pulumi/gcp/">gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gitlab" href="/docs/reference/pkg/nodejs/pulumi/gitlab/">gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="kubernetes" href="/docs/reference/pkg/nodejs/pulumi/kubernetes/">kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="linode" href="/docs/reference/pkg/nodejs/pulumi/linode/">linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="mysql" href="/docs/reference/pkg/nodejs/pulumi/mysql/">mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="newrelic" href="/docs/reference/pkg/nodejs/pulumi/newrelic/">newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="openstack" href="/docs/reference/pkg/nodejs/pulumi/openstack/">openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="packet" href="/docs/reference/pkg/nodejs/pulumi/packet/">packet</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="postgresql" href="/docs/reference/pkg/nodejs/pulumi/postgresql/">postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="random" href="/docs/reference/pkg/nodejs/pulumi/random/">random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="terraform" href="/docs/reference/pkg/nodejs/pulumi/terraform/">terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="tls" href="/docs/reference/pkg/nodejs/pulumi/tls/">tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="vsphere" href="/docs/reference/pkg/nodejs/pulumi/vsphere/">vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Python">
+                <div class="sidenav-topic ">
+                    <a data-title="Python" href="/docs/reference/pkg/python/">Python</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/python/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_aws" href="/docs/reference/pkg/python/pulumi_aws/">pulumi_aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azure" href="/docs/reference/pkg/python/pulumi_azure/">pulumi_azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azuread" href="/docs/reference/pkg/python/pulumi_azuread/">pulumi_azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_cloudflare" href="/docs/reference/pkg/python/pulumi_cloudflare/">pulumi_cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_datadog" href="/docs/reference/pkg/python/pulumi_datadog/">pulumi_datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_digitalocean" href="/docs/reference/pkg/python/pulumi_digitalocean/">pulumi_digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_dnsimple" href="/docs/reference/pkg/python/pulumi_dnsimple/">pulumi_dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_f5bigip" href="/docs/reference/pkg/python/pulumi_f5bigip/">pulumi_f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gcp" href="/docs/reference/pkg/python/pulumi_gcp/">pulumi_gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gitlab" href="/docs/reference/pkg/python/pulumi_gitlab/">pulumi_gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_kubernetes" href="/docs/reference/pkg/python/pulumi_kubernetes/">pulumi_kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_linode" href="/docs/reference/pkg/python/pulumi_linode/">pulumi_linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_mysql" href="/docs/reference/pkg/python/pulumi_mysql/">pulumi_mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_newrelic" href="/docs/reference/pkg/python/pulumi_newrelic/">pulumi_newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_openstack" href="/docs/reference/pkg/python/pulumi_openstack/">pulumi_openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_postgresql" href="/docs/reference/pkg/python/pulumi_postgresql/">pulumi_postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_random" href="/docs/reference/pkg/python/pulumi_random/">pulumi_random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_tls" href="/docs/reference/pkg/python/pulumi_tls/">pulumi_tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_vsphere" href="/docs/reference/pkg/python/pulumi_vsphere/">pulumi_vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="FAQ">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Download and Install">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Changelog">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible">
+                <div class="toggle" data-title="Troubleshooting &amp; Support">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+    
+
+    
+</aside>
+
+
+
+            </div>
+
+            <div class="md:w-7/12">
+                <h1>#7: EKS - Migrating Node Groups with Zero Downtime</h1>
+                
+
+<p>In this tutorial we&rsquo;ll launch a new, managed Kubernetes cluster in Elastic
+Kubernetes Service (EKS) on AWS. Then we&rsquo;ll walk through Kubernetes Day 2 operations
+to help you administer and update the cluster, and your workloads running on it.</p>
+
+<p>We&rsquo;ll cover how to:</p>
+
+<ol>
+<li>Create various worker node groups with different settings, such as instance types and AMIs.</li>
+<li>Deploy a workload to the set of node groups: the <a href="https://github.com/kubernetes/ingress-nginx">NGINX Ingress Controller</a>, and a
+simple <a href="https://github.com/kubernetes-retired/contrib/blob/master/ingress/echoheaders/echo-app.yaml">echoserver</a> app that echo&rsquo;s client request headers.</li>
+<li>Migrate NGINX from its original node group to a new, updated node
+group with zero downtime to it or the echoserver during load testing.</li>
+<li>And lastly, once migration has completed, we&rsquo;ll decomission the
+original node group from Kubernetes and AWS.</li>
+</ol>
+
+<p><a href="https://github.com/pulumi/examples/tree/master/aws-ts-eks-migrate-nodegroups">View the code on GitHub</a>.</p>
+
+<p><img src="/images/docs/reference/kubernetes/eks-migrate-nodegroups.png" alt="" /></p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ol>
+    <li><a href="/docs/reference/install/">Install Pulumi</a></li>
+    <li><a href="https://nodejs.org/en/download/">Install Node.js</a></li>
+    <li>Install a package manager for Node.js, such as <a href="https://www.npmjs.com/get-npm">npm</a> or <a href="https://yarnpkg.com/en/docs/install">Yarn</a>.</li>
+    <li><a href="/docs/reference/clouds/aws/setup/">Configure AWS credentials</a></li>
+    <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html">Install AWS IAM Authenticator for Kubernetes</a></li>
+</ol>
+
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul>
+<li><a href="#initialize-the-pulumi-project">Initialize the Pulumi Project</a></li>
+<li><a href="#create-an-eks-cluster-and-deploy-the-workload">Create an EKS Cluster and Deploy the Workload</a>
+
+<ul>
+<li><a href="#access-the-workload">Access the Workload</a></li>
+</ul></li>
+<li><a href="#but-first-let-s-talk-about-resource-updates">&hellip;But First, Let&rsquo;s Talk About Resource Updates</a>
+
+<ul>
+<li><a href="#pulumi-s-approach-create-before-delete">Pulumi&rsquo;s Approach: <code>create-before-delete</code></a></li>
+<li><a href="#kubernetes-workloads-high-availability-ha-rolling-updates">Kubernetes Workloads: High-Availability (HA) &amp; Rolling Updates</a></li>
+</ul></li>
+<li><a href="#the-great-migration">The Great Migration</a>
+
+<ul>
+<li><a href="#step-0-launch-load-tests-optional">Step 0: Launch Load Tests (Optional)</a></li>
+<li><a href="#step-1-create-the-new-4xlarge-node-group">Step 1: Create the new <code>4xlarge</code> Node Group</a></li>
+<li><a href="#step-2-migrate-nginx-to-the-4xlarge-node-group">Step 2: Migrate NGINX to the <code>4xlarge</code> Node Group</a></li>
+<li><a href="#step-3-decomission-the-2xlarge-node-group">Step 3: Decomission the <code>2xlarge</code> Node Group</a></li>
+</ul></li>
+<li><a href="#clean-up">Clean Up</a></li>
+<li><a href="#summary">Summary</a></li>
+</ul>
+
+<h2 id="initialize-the-pulumi-project">Initialize the Pulumi Project</h2>
+
+<ol>
+<li><p>Start by cloning the <a href="https://github.com/pulumi/examples/tree/master/aws-ts-eks-migrate-nodegroups">example</a> to your local machine.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ git clone https://github.com/pulumi/examples
+$ <span class="nb">cd</span> examples/aws-ts-eks-migrate-nodegroups</code></pre></div></li>
+
+<li><p>Install the dependencies.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ npm install</code></pre></div></li>
+
+<li><p>Create a new Pulumi <a href="/docs/reference/stack/">stack</a> named <code>dev</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi stack init dev</code></pre></div></li>
+
+<li><p>Set the Pulumi <a href="/docs/reference/config/">configuration</a> variables for the project.</p>
+
+<blockquote>
+<p><strong>Note:</strong> Select any valid EKS region. The <a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html">AMIs</a> used later must match this region.</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi config <span class="nb">set</span> aws:region us-west-2</code></pre></div></li>
+</ol>
+
+<h2 id="create-an-eks-cluster-and-deploy-the-workload">Create an EKS cluster and Deploy the Workload</h2>
+
+<p>Create the cluster and deploy the workload by running an update:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi up</code></pre></div>
+<p>The update takes ~15 minutes and will create the following resources in AWS:</p>
+
+<ul>
+<li>A VPC in our region, with public &amp; private subnets across all of the region&rsquo;s availability zones.</li>
+<li>The IAM Roles &amp; Instance Profiles for each node group.</li>
+<li>An EKS cluster with <code>v1.13</code> of Kubernetes.</li>
+<li>A standard <code>t2.medium</code> worker node group using the recent <code>v1.13.7</code> worker <a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html">AMI</a>, for use by general purpose workloads such as the EchoServer.</li>
+<li>A 2xlarge <code>t3.2xlarge</code> worker node group using an older <code>v1.12.7</code> worker <a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html">AMI</a>, for use use by larger, intensive workloads such as the <a href="https://github.com/kubernetes/ingress-nginx">NGINX Ingress Controller</a>.</li>
+</ul>
+
+<p>Once the update is complete, verify the cluster, node groups, and Pods are up
+and running:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi stack output kubeconfig &gt; kubeconfig.json <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">KUBECONFIG</span><span class="o">=</span><span class="nv">$PWD</span>/kubeconfig.json
+$ kubectl get nodes -o wide --show-labels -l beta.kubernetes.io/instance-type<span class="o">=</span>t2.medium
+$ kubectl get nodes -o wide --show-labels -l beta.kubernetes.io/instance-type<span class="o">=</span>t3.2xlarge
+$ kubectl get pods --all-namespaces -o wide --show-labels</code></pre></div>
+<h3 id="access-the-workload">Access the Workload</h3>
+
+<p>With the deployment from the previous step completed, we can leverage Pulumi
+<a href="/docs/reference/programming-model/#stack-outputs">stack outputs</a> to retrieve the public endpoint of the
+AWS Classic Load Balancer exported by the Pulumi program.</p>
+
+<p>This load balancer fronts the NGINX Ingress Controller, which in turn
+manages the ingress for the <code>echoserver</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi stack output nginxServiceUrl</code></pre></div>
+<p>Example:</p>
+
+<pre><code>$ pulumi stack output nginxServiceUrl
+
+a3a6ae14f9e6d11e99ea4023e81f316e-1155138699.us-east-2.elb.amazonaws.com
+</code></pre>
+
+<p>After the load balancer is provisioned and resolvable on AWS, let&rsquo;s access the <code>echoserver</code> behind
+NGINX:</p>
+
+<blockquote>
+<p><strong>Note:</strong> It can take a few minutes for the load balancer to be resolvable.</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nb">export</span> <span class="nv">LB</span><span class="o">=</span><span class="sb">`</span>pulumi stack output nginxServiceUrl<span class="sb">`</span>
+$ curl -Lv -H <span class="s2">&#34;Host: apps.example.com&#34;</span> <span class="nv">$LB</span>/echoserver</code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> If we used a Kubernetes DNS manager such as
+<a href="https://github.com/kubernetes-incubator/external-dns">external-dns</a>, we could simply use the FQDN instead of the load
+balancer&rsquo;s endpoint with custom host headers.</p>
+</blockquote>
+
+<p>On success, we&rsquo;ll see output similar to the following:</p>
+
+<pre><code>Hostname: echoserver-xlvnkcng-74648fd4dd-8jck4
+
+Pod Information:
+	-no pod information available-
+
+Server values:
+	server_version=nginx: 1.13.0 - lua: 10008
+
+Request Information:
+	client_address=172.16.247.199
+	method=GET
+	real path=/echoserver
+	query=
+	request_version=1.1
+	request_uri=http://apps.example.com:8080/echoserver
+
+Request Headers:
+	accept=*/*
+	host=apps.example.com
+	user-agent=curl/7.58.0
+	x-forwarded-for=172.16.200.230
+	x-forwarded-host=apps.example.com
+	x-forwarded-port=80
+	x-forwarded-proto=http
+	x-original-uri=/echoserver
+	x-real-ip=172.16.200.230
+	x-request-id=b874c43cc675d28c68a0c39069799b10
+	x-scheme=http
+
+Request Body:
+	-no body in request-
+</code></pre>
+
+<p>With our apps now verified as working and accessible, we&rsquo;re ready to see how we
+can leverage Kubernetes and Pulumi to migrate workloads across worker node groups.</p>
+
+<h2 id="but-first-let-s-talk-about-resource-updates">&hellip;But First, Let&rsquo;s Talk About Resource Updates</h2>
+
+<h3 id="pulumi-s-approach-create-before-delete">Pulumi&rsquo;s Approach: <code>create-before-delete</code></h3>
+
+<p>Resources under management in Pulumi are <a href="/docs/reference/programming-model/#urns">uniquely named</a> using a
+Universal Resource Name (URN) to identify and track resources across program
+deployments and state changes. Additionally, a <a href="/docs/reference/programming-model/#autonaming">random postfix</a> is added to
+resource instantiations to avoid collisions, and to assist in
+zero-downtime replacements. This is achieved by using a <strong>create-before-delete</strong>
+approach in the Pulumi programming model where:</p>
+
+<ul>
+<li>The new version of the resource is created.</li>
+<li>Any references to the original resource are updated to point
+to the new resource.</li>
+<li>On success of the updates, the original resource is deleted.</li>
+</ul>
+
+<p>These semantics allow Pulumi to replace resources using a blue/green deployment
+strategy by default, and this works for most scenarios.</p>
+
+<p>There are situations, as with many Kubernetes workloads, where the intrinsic
+details of Pod updates and replacements are encoded in Kubernetes API resources
+and scheduling predicates that are managed by the control plane for high-availability.
+These management constructs are exempt from the Pulumi engine and require granular handling of
+the blue/green deployment of the Pods, and the underlying cloud provider
+resources that Kubernetes depends on.</p>
+
+<p>In these specific cases, we can stand up overlapping copies of the
+infrastruture stack in the Kubernetes layers and in the cloud provider for
+as long as we need to guarantee a smooth transition. This affords us the
+ability to administer proper migrations in a blue/green strategy catered to
+our use-case, and scenarios like this are completely possible to achieve in Pulumi.</p>
+
+<h3 id="kubernetes-workloads-high-availability-ha-rolling-updates">Kubernetes Workloads: High-Availability (HA) &amp; Rolling Updates</h3>
+
+<p>Before we perform an update to our node groups and migrate our workloads, it&rsquo;s
+important to consider how equipped our workloads are for rolling updates, if they
+employ high availability, and if they can gracefully terminate within the Kubernetes <a href="https://kubernetes.io/docs/concepts/workloads/pods/pod/#termination-of-pods">Pod
+lifecycle</a>.</p>
+
+<p>Kubernetes has many knobs and levers through API resources to describe your
+app&rsquo;s requirements, runtime settings, and update strategy. But it requires
+you take the necessary steps to refactor your apps to execute, and survive
+in a Kubernetes cluster.</p>
+
+<p>In our example, both NGINX and the <code>echoserver</code> are
+<a href="https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment">stateless</a> apps, which means that there is no active state
+to manage nor persist across running sessions. Both apps are also equipped to
+gracefully terminate, and process <a href="https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html">SIGTERM</a> where necessary.
+Kubernetes is great at managing stateless apps because it&rsquo;s straight-forward to
+run, delete, and most importantly, cleanly recovers in the case of failure
+or lack of quorum, as availability is as simple as spinning up another replica.</p>
+
+<p>If you&rsquo;re managing stateful apps, you should consider leveraging
+<a href="https://kubernetes.io/docs/concepts/workloads/controllers/statefulset">StatefulSets</a>, as they provide each Pod in the set with a unique
+identity and index to employ a systematic approach and ordering to the app&rsquo;s
+lifecycle. With that said, Kuberenetes has no insight into the details of your
+workload, nor how it operates - this is purposefully done by design.
+The work to fully run and operate stateful apps in Kubernetes ultimately lies
+with the app developers, operators, and administrators to bake-in and
+fine-tune the necessary resilience into the workload and its dependencies
+to safely apply updates, and terminate as expected.</p>
+
+<p>As you&rsquo;ll see shortly, we&rsquo;ve taken the liberty of using the various
+capabilities that Kubernetes offers for HA and rolling updates to support
+migration of the NGINX Ingress Controller example.</p>
+
+<p>We highly encourage you to check out the references below to help your
+apps achieve proper Kubernetes and production readiness.</p>
+
+<h4 id="references">References</h4>
+
+<ul>
+<li><a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#updating-a-deployment">Deployments</a></li>
+<li><a href="https://kubernetes.io/docs/tasks/run-application/configure-pdb">PodDisruptionBudget</a></li>
+<li><a href="https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity">Node Selectors &amp; Affinity</a></li>
+<li><a href="https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#inter-pod-affinity-and-anti-affinity-beta-feature">Pod Affinity &amp; Anti-Affinity</a></li>
+<li><a href="https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service">Service Selectors</a></li>
+<li><a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes">Readiness &amp; Liveness Probes</a></li>
+<li><a href="https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks">Lifecycle Hooks</a></li>
+<li><a href="https://pracucci.com/graceful-shutdown-of-kubernetes-pods.html">Termation Grace Period &amp; Graceful Shutdown</a></li>
+<li><a href="https://kubernetes.io/docs/concepts/workloads/pods/pod/#termination-of-pods">Pod Termination Lifecycle</a></li>
+<li><a href="https://kubernetes.io/blog/2018/04/30/zero-downtime-deployment-kubernetes-jenkins">Zero-downtime Deployment in Kubernetes with Jenkins</a></li>
+</ul>
+
+<h2 id="the-great-migration">The Great Migration</h2>
+
+<p>Upon initial deployment of our workload stack, the <code>echoserver</code> will ultimately land
+on the Standard node group we&rsquo;ve created, given our lack of specificity
+for where the Kubernetes scheduler should place it. The NGINX Ingress Controller
+instead, specifically targets the <code>2xlarge</code> node group given its heftier specs.
+Both scheduling choices were made with the intent of segmenting our workloads
+by use-case, and performance requirements we&rsquo;ve identified.</p>
+
+<p>In our <a href="#create-an-eks-cluster-deploy-workloads">inital update</a> we selected that our EKS
+control plane run on <code>v1.13.7</code> of Kubernetes, that the Standard node group
+use <code>v1.13.7</code> of the <a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html">EKS-optimized</a> worker AMIs, and that the
+<code>2xlarge</code> node group use <code>v1.12.7</code> workers.</p>
+
+<p>Since we do not want our <code>2xlarge</code> workers to drift too far apart from the control
+plane&rsquo;s version to cause <a href="https://kubernetes.io/docs/setup/release/version-skew-policy/#supported-version-skew">unsupported skew</a>, and we
+ultimately realize that the <code>2xlarge</code> node group may not suffice for a
+large, anticipated request load, we&rsquo;ve decided to update various settings of
+the node group for NGINX.</p>
+
+<p>The node group that NGINX will select and target will go from:</p>
+
+<p>Using <code>v1.12.7</code>of Kubernetes, in a pool of (3) <code>t3.2xlarge</code> worker instances -&gt;</p>
+
+<p>Using <code>v1.13.7</code>of Kubernetes, in a pool of (5) <code>c5.4xlarge</code> worker instances.</p>
+
+<h3 id="step-0-launch-load-tests-optional">Step 0: Launch Load Tests (Optional)</h3>
+
+<p>As we migrate NGINX from the <code>2xlarge</code> -&gt; <code>4xlarge</code> node group, we&rsquo;ll kick off
+a load testing script against the endpoint and path of the <code>echoserver</code> on our
+cluster to ensure we acheive zero-downtime.</p>
+
+<p>You can install the <a href="https://github.com/rakyll/hey"><code>hey</code></a> load testing tool locally to your
+machine by doing the following:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ go get -u github.com/rakyll/hey</code></pre></div>
+<p>Using the <code>LB</code> environment variable previously defined in the
+<code>pulumi stack output</code> for NGINX&rsquo;s AWS load balancer, and a helper script in
+<code>./scripts</code>, we&rsquo;ll load test for many iterations of 50,000 requests, with 100
+concurrent requests at a time, e.g. run testing across 75 iterations:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nb">export</span> <span class="nv">LB</span><span class="o">=</span><span class="sb">`</span>pulumi stack output nginxServiceUrl<span class="sb">`</span>
+$ ./scripts/load-testing.sh <span class="nv">$LB</span> <span class="m">75</span></code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> Given the large number of requests being generated during load
+testing (millions), a seperate machine for testing would be best suited
+for overall network performance and throughput on your client.</p>
+</blockquote>
+
+<h3 id="step-1-create-the-new-4xlarge-node-group">Step 1: Create the new <code>4xlarge</code> Node Group</h3>
+
+<p>Next, we&rsquo;ll create a new node group in AWS using Pulumi for the <code>4xlarge</code> node
+group. This is as simple as defining a new node group at the end of <code>index.ts</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// Create a 4xlarge node group of c5.4xlarge workers. This new node group will
+</span><span class="c1">// be used to migrate NGINX away from the 2xlarge node group.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">ng4xlarge</span> <span class="o">=</span> <span class="nx">utils</span><span class="p">.</span><span class="nx">createNodeGroup</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">projectName</span><span class="si">}</span><span class="sb">-ng-4xlarge`</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">ami</span><span class="o">:</span> <span class="s2">&#34;ami-03a55127c613349a7&#34;</span><span class="p">,</span> <span class="c1">// k8s v1.13.7 in us-west-2
+</span><span class="c1"></span>    <span class="nx">instanceType</span><span class="o">:</span> <span class="s2">&#34;c5.4xlarge&#34;</span><span class="p">,</span>
+    <span class="nx">desiredCapacity</span>: <span class="kt">5</span><span class="p">,</span>
+    <span class="nx">cluster</span>: <span class="kt">myCluster</span><span class="p">,</span>
+    <span class="nx">instanceProfile</span>: <span class="kt">instanceProfiles</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+    <span class="nx">taints</span><span class="o">:</span> <span class="p">{</span><span class="s2">&#34;nginx&#34;</span><span class="o">:</span> <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="s2">&#34;true&#34;</span><span class="p">,</span> <span class="nx">effect</span><span class="o">:</span> <span class="s2">&#34;NoSchedule&#34;</span><span class="p">}},</span>
+<span class="p">});</span></code></pre></div>
+<p>Append the above snippet into the Pulumi program, and run an update:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi up</code></pre></div>
+<p>Once the update is complete, verify the new <code>c5.4xlarge</code> node group is up and running:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ kubectl get nodes -o wide --show-labels -l beta.kubernetes.io/instance-type<span class="o">=</span>c5.4xlarge</code></pre></div>
+<h3 id="step-2-migrate-nginx-to-the-4xlarge-node-group">Step 2: Migrate NGINX to the <code>4xlarge</code> Node Group</h3>
+
+<p>Now, we&rsquo;ll migrate the NGINX service away from the <code>2xlarge</code> node group over to the
+<code>4xlarge</code> node group, by changing its node selector scheduling terms.</p>
+
+<p>This change updates the NGINX Deployment spec to require the use of
+<code>c5.4xlarge</code> nodes during scheduling, and forces a rolling update over to the
+<code>4xlarge</code> node group.</p>
+
+<p><img src="/images/docs/reference/kubernetes/migrate-nginx-4xlarge.png" alt="" /></p>
+
+<p>Edit <code>index.ts</code> by setting <code>nodeSelectorTermValues</code> to <code>c5.4xlarge</code>, and run an update:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi up</code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> Given that the termination process must gracefully shutdown, and process
+all in-flight requests, this may take a few minutes to complete.</p>
+</blockquote>
+
+<p>NGINX is able to successfully migrate across node groups because it is
+configured with HA settings, spread-type scheduling predicates,
+and can gracefully terminate within the Kubernetes <a href="https://kubernetes.io/docs/concepts/workloads/pods/pod/#termination-of-pods">Pod lifecycle</a>.
+Check out its setup to learn more.</p>
+
+<p>Once the update is complete, verify the NGINX pods are now running in the new
+<code>4xlarge</code> node group by retrieving its Pods, the <code>c5.4xlarge</code> nodes, and
+noticing that the Pods are in fact running on updated nodes.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ kubectl get pods --all-namespaces -o wide --show-labels -l <span class="nv">app</span><span class="o">=</span>nginx-ing-cntlr
+$ kubectl get nodes -o wide --show-labels -l beta.kubernetes.io/instance-type<span class="o">=</span>c5.4xlarge</code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> It may take a couple of minutes for the Pods to fully migrate over, but
+it will do so with zero downtime as demonstrated in the load testing.</p>
+
+<p><strong>Note:</strong> You should also notice a linear up-tick in <strong>requests per second</strong> in the
+load testing results, due to the more capable <code>c5.4xlarge</code> worker instances
+being used.</p>
+</blockquote>
+
+<h3 id="step-3-decomission-the-2xlarge-node-group">Step 3: Decomission the <code>2xlarge</code> Node Group</h3>
+
+<p>With NGINX validated to be up and running on the <code>4xlarge</code> node group, we can
+now commence the decomissioning of the original <code>2xlarge</code> node group no
+longer in use.</p>
+
+<p>Decommissioning the node group means that we’ll:</p>
+
+<ul>
+<li>Drain the Kubernetes nodes.</li>
+<li>Delete the Kubernetes nodes from the APIServer.</li>
+<li>Scale down the Auto Scaling Group to 0.</li>
+<li>Delete the node group.</li>
+</ul>
+
+<p>Setup <code>kubectl</code> by using the <code>kubeconfig</code> from the stack output.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi stack output kubeconfig &gt; kubeconfig.json
+$ <span class="nb">export</span> <span class="nv">KUBECONFIG</span><span class="o">=</span><span class="nv">$PWD</span>/kubeconfig.json</code></pre></div>
+<p>Instruct the Kubernetes APIServer to drain the <code>2xlarge</code> node group using
+<code>kubectl drain</code>. We&rsquo;ve added a helper script to facilitate this process:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ ./scripts/drain-t3.2xlarge-nodes.sh</code></pre></div>
+<p>After draining has completed, let&rsquo;s instruct the Kubernetes APIServer to delete
+the nodes from the cluster using <code>kubectl delete node</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ ./scripts/delete-t3.2xlarge-nodes.sh</code></pre></div>
+<p>Scale down the node group Auto Scaling Group completely:</p>
+
+<p><img src="/images/docs/reference/kubernetes/scale-down-ng-2xlarge.png" alt="" /></p>
+
+<p>Edit <code>index.ts</code> by setting the <code>desiredCapacity</code> to <code>0</code> for the <code>2xlarge</code> node group, and run an update:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi up</code></pre></div>
+<p>Once the Auto Scaling Group has scaled down, we can delete the node group from AWS and the Pulumi program:</p>
+
+<p><img src="/images/docs/reference/kubernetes/remove-ng-2xlarge.png" alt="" /></p>
+
+<p>Delete the snippet above from <code>index.ts</code>, and run an update:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi up</code></pre></div>
+<p>If you&rsquo;ve executed all of the previous steps, then you&rsquo;ll have successfully migrated
+NGINX from the <code>2xlarge</code> node group to the <code>4xlarge</code> group with
+zero downtime to it or the <code>echoserver</code>, and removed the
+<code>2xlarge</code> node group completely from Kubernetes and AWS.</p>
+
+<p>You can also verify the load testing results to validate that our requests have all
+returned with <code>HTTP 200</code> status codes through out the entire migration
+process. 🍹🎉</p>
+
+<h2 id="clean-up">Clean Up</h2>
+
+<p>Run the following command to tear down the resources that are part of our stack.</p>
+
+<ol>
+<li><p>Run <code>pulumi destroy</code> to tear down all resources.  You&rsquo;ll be prompted to make sure you really want to delete these resources.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi destroy</code></pre></div></li>
+
+<li><p>To delete the stack, run the following command.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi stack rm</code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> This command deletes all deployment history from the Pulumi Console and cannot be undone.</p>
+</blockquote></li>
+</ol>
+
+<h2 id="summary">Summary</h2>
+
+<p>In this tutorial, we saw how to use Pulumi to launch a managed Kubernetes
+cluster on AWS EKS with active workloads. Then, we performed a migration
+of the apps and underlying cloud provider resources over to new, updated
+resources with zero downtime.</p>
+
+<p>Leveraging Kubernetes control plane with Pulumi&rsquo;s Infrastrcture-as-Code (IaC)
+semantics allows us to administer over many kinds of update scenarios with
+ease. This provides the ability to manage clusters with real code that can
+be tracked in version control systems, and deployed as a series of
+Pulumi updates through CI/CD.</p>
+
+<p>For a follow-up example on how to further use Pulumi to create Kubernetes
+clusters, or deploy workloads to a cluster, check out the rest of the
+<a href="/docs/reference/tutorials/kubernetes/">Kubernetes tutorials</a>.</p>
+
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

@@ -1,0 +1,3926 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/terraform/state/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+
+    
+        <meta property="og:title" content="Module state">
+    
+
+    
+        <meta name="description" content="@pulumi/terraform &gt; state
+Index ▹  Index ▾  class RemoteStateReference interface ArtifactoryRemoteStateReferenceArgs interface AzureRMRemoteStateReferenceArgs interface ConsulRemoteStateReferenceArgs interface EtcdV2RemoteStateReferenceArgs interface EtcdV3RemoteStateReferenceArgs interface GCSRemoteStateReferenceArgs interface HttpRemoteStateReferenceArgs interface LocalBackendRemoteStateReferenceArgs interface MantaRemoteStateReferenceArgs interface PostgresRemoteStateReferenceArgs interface RemoteBackendRemoteStateReferenceArgs interface RemoteBackendWorkspaceConfig interface S3RemoteStateReferenceArgs interface SwiftRemoteStateReferenceArgs type AzureEnvironment type RemoteStateReferenceArgs  state/artifactoryBackendConfig.ts state/azurermBackendConfig.ts state/consulBackendConfig.ts state/etcdBackendConfig.ts state/etcdV3BackendConfig.ts state/gcsBackendConfig.ts state/httpBackendConfig.ts state/localBackendConfig.ts state/mantaBackendConfig.ts state/pgBackendConfig.ts state/remoteBackendConfig.ts state/remoteStateReference.ts state/s3BackendConfig.ts state/swiftBackendConfig.ts    class RemoteStateReference  extends CustomResource Manages a reference to a Terraform Remote State.">
+        <meta property="og:description" content="@pulumi/terraform &gt; state
+Index ▹  Index ▾  class RemoteStateReference interface ArtifactoryRemoteStateReferenceArgs interface AzureRMRemoteStateReferenceArgs interface ConsulRemoteStateReferenceArgs interface EtcdV2RemoteStateReferenceArgs interface EtcdV3RemoteStateReferenceArgs interface GCSRemoteStateReferenceArgs interface HttpRemoteStateReferenceArgs interface LocalBackendRemoteStateReferenceArgs interface MantaRemoteStateReferenceArgs interface PostgresRemoteStateReferenceArgs interface RemoteBackendRemoteStateReferenceArgs interface RemoteBackendWorkspaceConfig interface S3RemoteStateReferenceArgs interface SwiftRemoteStateReferenceArgs type AzureEnvironment type RemoteStateReferenceArgs  state/artifactoryBackendConfig.ts state/azurermBackendConfig.ts state/consulBackendConfig.ts state/etcdBackendConfig.ts state/etcdV3BackendConfig.ts state/gcsBackendConfig.ts state/httpBackendConfig.ts state/localBackendConfig.ts state/mantaBackendConfig.ts state/pgBackendConfig.ts state/remoteBackendConfig.ts state/remoteStateReference.ts state/s3BackendConfig.ts state/swiftBackendConfig.ts    class RemoteStateReference  extends CustomResource Manages a reference to a Terraform Remote State.">
+    
+
+    
+    
+    <meta property="og:image" content="https://www.pulumi.com/social/pulumi.png">
+
+    <title>Module state - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/terraform/state/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="https://www.pulumi.com/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="https://www.pulumi.com/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u");
+    analytics.page();
+    }}();
+    </script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+</head>
+
+    <body class="section-docs">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+
+            <div class="md:w-2/12 mt-2 md:order-last">
+                <div class="mb-8 md:mb-4">
+                    <form class="relative" action="/docs/search/" method="GET">
+    <i class="fas fa-search absolute inset-y-0 flex items-center pl-3 text-gray-500"></i>
+    <input
+        id="search-query"
+        name="q"
+        class="block w-full py-2 px-4 pl-8 text-sm border border-gray-400 focus:border-blue-500 focus:outline-none rounded transition"
+        placeholder="Search the docs"
+        autocomplete="off">
+</form>
+
+                </div>
+
+                <div class="ml-3 hidden md:block">
+                    
+    <ul class="p-0 list-none">
+        
+        
+        
+        
+        
+
+        <li>
+            <a class="text-gray-600 hover:text-blue-700 text-xs" href="https://github.com/pulumi/docs/issues/new?body=File: [docs%2freference%2fpkg%2fnodejs%2fpulumi%2fterraform%2fstate%2f_index.md](https%3a%2f%2fwww.pulumi.com%2fdocs%2freference%2fpkg%2fnodejs%2fpulumi%2fterraform%2fstate%2f)" target="_blank">
+                <i class="far fa-check-square mr-2"></i>
+                Request a Change
+            </a>
+        </li>
+    </ul>
+
+
+                </div>
+            </div>
+
+            <div class="md:w-3/12 pr-8 mt-2 mb-8 pb-8 border-b-2 border-gray-400 md:border-none md:pb-0 md:mb-0">
+                
+
+
+
+
+
+
+
+
+    
+    
+    
+
+
+<aside class="toc">
+    <h3 class="no-anchor">
+        <a href="/docs/">Docs</a>
+    </h3>
+
+    
+        <h4 class="no-anchor">
+            <a href="/docs/quickstart/">Get Started</a>
+        </h4>
+    
+    
+        <h4 class="no-anchor">
+            <a href="/docs/reference/">Reference</a>
+        </h4>
+    
+    
+
+    
+        
+        
+
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Architecture &amp; Concepts">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Programming Model" href="/docs/reference/programming-model/">Programming Model</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Projects" href="/docs/reference/project/">Projects</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stacks" href="/docs/reference/stack/">Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Configuration and Secrets" href="/docs/reference/config/">Configuration and Secrets</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizing Projects and Stacks" href="/docs/reference/organizing-stacks-projects/">Organizing Projects and Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="How Pulumi Works" href="/docs/reference/how/">How Pulumi Works</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State and Backends" href="/docs/reference/state/">State and Backends</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Tutorials">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/tutorials/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateways and Lambda" href="/docs/reference/tutorials/aws/tutorial-rest-api/">API Gateways and Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Containers on ECS &#34;Fargate&#34;" href="/docs/reference/tutorials/aws/tutorial-service/">Containers on ECS &#34;Fargate&#34;</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="EC2 Linux WebServer Instance" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">EC2 Linux WebServer Instance</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serve a Static Website from S3" href="/docs/reference/tutorials/aws/tutorial-s3-website/">Serve a Static Website from S3</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Video Thumbnailer" href="/docs/reference/tutorials/aws/tutorial-thumbnailer/">Video Thumbnailer</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/tutorials/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Container Instance" href="/docs/reference/tutorials/azure/tutorial-container-webserver/">Web Server Container Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/tutorials/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Virtual Machine Instance" href="/docs/reference/tutorials/gcp/tutorial-gce-webserver/">Web Server Virtual Machine Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/tutorials/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: EKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-eks/">Clusters: EKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: GKE - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-gke/">Clusters: GKE - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: AKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-aks/">Clusters: AKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#1: Hello, World!" href="/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment/">#1: Hello, World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#2: Deploying the WordPress Helm Chart" href="/docs/reference/tutorials/kubernetes/tutorial-wordpress-chart/">#2: Deploying the WordPress Helm Chart</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#3: Guestbook App with Redis and Nginx" href="/docs/reference/tutorials/kubernetes/tutorial-guestbook/">#3: Guestbook App with Redis and Nginx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#4: Graceful App Rollout" href="/docs/reference/tutorials/kubernetes/tutorial-configmap-rollout/">#4: Graceful App Rollout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#5: Gating rollout on Prometheus checks" href="/docs/reference/tutorials/kubernetes/tutorial-p8s-rollout/">#5: Gating rollout on Prometheus checks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#6: Run a Stateless App Deployment" href="/docs/reference/tutorials/kubernetes/tutorial-stateless-app/">#6: Run a Stateless App Deployment</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#7: EKS - Migrating Node Groups with Zero Downtime" href="/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups/">#7: EKS - Migrating Node Groups with Zero Downtime</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Command Line">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cancel" href="/docs/reference/cli/pulumi_cancel/">Cancel</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Config" href="/docs/reference/cli/pulumi_config/">Config</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Destroy" href="/docs/reference/cli/pulumi_destroy/">Destroy</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Login" href="/docs/reference/cli/pulumi_login/">Login</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logout" href="/docs/reference/cli/pulumi_logout/">Logout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logs" href="/docs/reference/cli/pulumi_logs/">Logs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="New" href="/docs/reference/cli/pulumi_new/">New</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Plugin" href="/docs/reference/cli/pulumi_plugin/">Plugin</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Preview" href="/docs/reference/cli/pulumi_preview/">Preview</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Refresh" href="/docs/reference/cli/pulumi_refresh/">Refresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stack" href="/docs/reference/cli/pulumi_stack/">Stack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State" href="/docs/reference/cli/pulumi_state/">State</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Update" href="/docs/reference/cli/pulumi_up/">Update</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Clouds">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/clouds/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/aws/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/clouds/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/azure/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/clouds/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/gcp/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/clouds/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Introduction" href="/docs/reference/clouds/kubernetes/introduction/">Introduction</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/kubernetes/setup/">Setup</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="FAQ" href="/docs/reference/clouds/kubernetes/faq/">FAQ</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="OpenStack">
+                <div class="sidenav-topic ">
+                    <a data-title="OpenStack" href="/docs/reference/clouds/openstack/">OpenStack</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/openstack/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Crosswalk for AWS 🆕">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateway" href="/docs/reference/crosswalk/aws/api-gateway/">API Gateway</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Auto Scaling" href="/docs/reference/crosswalk/aws/autoscaling/">Auto Scaling</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CloudWatch" href="/docs/reference/crosswalk/aws/cloudwatch/">CloudWatch</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Registry (ECR)" href="/docs/reference/crosswalk/aws/ecr/">Elastic Container Registry (ECR)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Service (ECS)" href="/docs/reference/crosswalk/aws/ecs/">Elastic Container Service (ECS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Kubernetes Service (EKS)" href="/docs/reference/crosswalk/aws/eks/">Elastic Kubernetes Service (EKS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Load Balancing (ELB)" href="/docs/reference/crosswalk/aws/elb/">Elastic Load Balancing (ELB)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Identity and Access Management (IAM)" href="/docs/reference/crosswalk/aws/iam/">Identity and Access Management (IAM)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Lambda" href="/docs/reference/crosswalk/aws/lambda/">Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Virtual Private Cloud (VPC)" href="/docs/reference/crosswalk/aws/vpc/">Virtual Private Cloud (VPC)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Other AWS Services" href="/docs/reference/crosswalk/aws/other/">Other AWS Services</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Languages">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Node.js" href="/docs/reference/javascript/">Node.js</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Python" href="/docs/reference/python/">Python</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Teams &amp; Collaboration">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizations" href="/docs/reference/service/orgs/">Organizations</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Teams" href="/docs/reference/service/teams/">Teams</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Roles and Access Controls" href="/docs/reference/service/roles-and-access-controls/">Roles and Access Controls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub App" href="/docs/reference/cd-github/">Pulumi GitHub App</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi Webhooks" href="/docs/reference/service/webhooks/">Pulumi Webhooks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Creating a &#39;Deploy with Pulumi&#39; Button" href="/docs/reference/service/pulumi-button/">Creating a &#39;Deploy with Pulumi&#39; Button</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Continuous Delivery">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Supporting A New CI System" href="/docs/reference/cd-supporting-new-ci/">Supporting A New CI System</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="AWS Code Services" href="/docs/reference/cd-aws-code-services/">AWS Code Services</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Azure DevOps" href="/docs/reference/cd-azure-devops/">Azure DevOps</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CircleCI" href="/docs/reference/cd-circleci/">CircleCI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Codefresh" href="/docs/reference/cd-codefresh/">Codefresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="GitLab CI" href="/docs/reference/cd-gitlab-ci/">GitLab CI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Google Cloud Build" href="/docs/reference/cd-google-cloud-build/">Google Cloud Build</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub Actions" href="/docs/reference/cd-github-actions/">Pulumi GitHub Actions</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Travis CI" href="/docs/reference/cd-travis/">Travis CI</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Compared to Others">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Terraform" href="/docs/reference/vs/terraform/">Terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud Templates" href="/docs/reference/vs/cloud_templates/">Cloud Templates</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud SDKs" href="/docs/reference/vs/cloud_sdks/">Cloud SDKs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serverless" href="/docs/reference/vs/serverless/">Serverless</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Kubernetes YAML" href="/docs/reference/vs/k8s_yaml_dsls/">Kubernetes YAML</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Chef, Puppet, etc." href="/docs/reference/vs/chef_puppet_etc/">Chef, Puppet, etc.</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Custom Solutions" href="/docs/reference/vs/custom/">Custom Solutions</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggleVisible" data-title="API Reference">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="Node.js">
+                <div class="sidenav-topic ">
+                    <a data-title="Node.js" href="/docs/reference/pkg/nodejs/">Node.js</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/nodejs/pulumi/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="aws" href="/docs/reference/pkg/nodejs/pulumi/aws/">aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="awsx" href="/docs/reference/pkg/nodejs/pulumi/awsx/">awsx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azure" href="/docs/reference/pkg/nodejs/pulumi/azure/">azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azuread" href="/docs/reference/pkg/nodejs/pulumi/azuread/">azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloud" href="/docs/reference/pkg/nodejs/pulumi/cloud/">cloud</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloudflare" href="/docs/reference/pkg/nodejs/pulumi/cloudflare/">cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="datadog" href="/docs/reference/pkg/nodejs/pulumi/datadog/">datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="digitalocean" href="/docs/reference/pkg/nodejs/pulumi/digitalocean/">digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="dnsimple" href="/docs/reference/pkg/nodejs/pulumi/dnsimple/">dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="docker" href="/docs/reference/pkg/nodejs/pulumi/docker/">docker</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="eks" href="/docs/reference/pkg/nodejs/pulumi/eks/">eks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="f5bigip" href="/docs/reference/pkg/nodejs/pulumi/f5bigip/">f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gcp" href="/docs/reference/pkg/nodejs/pulumi/gcp/">gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gitlab" href="/docs/reference/pkg/nodejs/pulumi/gitlab/">gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="kubernetes" href="/docs/reference/pkg/nodejs/pulumi/kubernetes/">kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="linode" href="/docs/reference/pkg/nodejs/pulumi/linode/">linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="mysql" href="/docs/reference/pkg/nodejs/pulumi/mysql/">mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="newrelic" href="/docs/reference/pkg/nodejs/pulumi/newrelic/">newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="openstack" href="/docs/reference/pkg/nodejs/pulumi/openstack/">openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="packet" href="/docs/reference/pkg/nodejs/pulumi/packet/">packet</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="postgresql" href="/docs/reference/pkg/nodejs/pulumi/postgresql/">postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="random" href="/docs/reference/pkg/nodejs/pulumi/random/">random</a>
+            </div>
+        
+    
+        
+        
+            
+        
+
+        
+            <div class="sidenav-topic mb-2 active">
+                <a data-title="terraform" href="/docs/reference/pkg/nodejs/pulumi/terraform/">terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="tls" href="/docs/reference/pkg/nodejs/pulumi/tls/">tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="vsphere" href="/docs/reference/pkg/nodejs/pulumi/vsphere/">vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Python">
+                <div class="sidenav-topic ">
+                    <a data-title="Python" href="/docs/reference/pkg/python/">Python</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/python/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_aws" href="/docs/reference/pkg/python/pulumi_aws/">pulumi_aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azure" href="/docs/reference/pkg/python/pulumi_azure/">pulumi_azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azuread" href="/docs/reference/pkg/python/pulumi_azuread/">pulumi_azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_cloudflare" href="/docs/reference/pkg/python/pulumi_cloudflare/">pulumi_cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_datadog" href="/docs/reference/pkg/python/pulumi_datadog/">pulumi_datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_digitalocean" href="/docs/reference/pkg/python/pulumi_digitalocean/">pulumi_digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_dnsimple" href="/docs/reference/pkg/python/pulumi_dnsimple/">pulumi_dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_f5bigip" href="/docs/reference/pkg/python/pulumi_f5bigip/">pulumi_f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gcp" href="/docs/reference/pkg/python/pulumi_gcp/">pulumi_gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gitlab" href="/docs/reference/pkg/python/pulumi_gitlab/">pulumi_gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_kubernetes" href="/docs/reference/pkg/python/pulumi_kubernetes/">pulumi_kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_linode" href="/docs/reference/pkg/python/pulumi_linode/">pulumi_linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_mysql" href="/docs/reference/pkg/python/pulumi_mysql/">pulumi_mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_newrelic" href="/docs/reference/pkg/python/pulumi_newrelic/">pulumi_newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_openstack" href="/docs/reference/pkg/python/pulumi_openstack/">pulumi_openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_postgresql" href="/docs/reference/pkg/python/pulumi_postgresql/">pulumi_postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_random" href="/docs/reference/pkg/python/pulumi_random/">pulumi_random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_tls" href="/docs/reference/pkg/python/pulumi_tls/">pulumi_tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_vsphere" href="/docs/reference/pkg/python/pulumi_vsphere/">pulumi_vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="FAQ">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Download and Install">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Changelog">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible">
+                <div class="toggle" data-title="Troubleshooting &amp; Support">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+    
+
+    
+</aside>
+
+
+
+            </div>
+
+            <div class="md:w-7/12">
+                
+                    <h1>Module state</h1>
+                
+
+                <!-- WARNING: this page was generated by a tool. Do not edit it by hand. -->
+
+<!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/tscdocgen. -->
+
+<p><a href="../">@pulumi/terraform</a> &gt; state</p>
+
+<div class="toggleVisible">
+<div class="collapsed">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
+</div>
+<div class="expanded">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
+<div class="pdoc-module-contents">
+<ul>
+<li><a href="#RemoteStateReference">class RemoteStateReference</a></li>
+<li><a href="#ArtifactoryRemoteStateReferenceArgs">interface ArtifactoryRemoteStateReferenceArgs</a></li>
+<li><a href="#AzureRMRemoteStateReferenceArgs">interface AzureRMRemoteStateReferenceArgs</a></li>
+<li><a href="#ConsulRemoteStateReferenceArgs">interface ConsulRemoteStateReferenceArgs</a></li>
+<li><a href="#EtcdV2RemoteStateReferenceArgs">interface EtcdV2RemoteStateReferenceArgs</a></li>
+<li><a href="#EtcdV3RemoteStateReferenceArgs">interface EtcdV3RemoteStateReferenceArgs</a></li>
+<li><a href="#GCSRemoteStateReferenceArgs">interface GCSRemoteStateReferenceArgs</a></li>
+<li><a href="#HttpRemoteStateReferenceArgs">interface HttpRemoteStateReferenceArgs</a></li>
+<li><a href="#LocalBackendRemoteStateReferenceArgs">interface LocalBackendRemoteStateReferenceArgs</a></li>
+<li><a href="#MantaRemoteStateReferenceArgs">interface MantaRemoteStateReferenceArgs</a></li>
+<li><a href="#PostgresRemoteStateReferenceArgs">interface PostgresRemoteStateReferenceArgs</a></li>
+<li><a href="#RemoteBackendRemoteStateReferenceArgs">interface RemoteBackendRemoteStateReferenceArgs</a></li>
+<li><a href="#RemoteBackendWorkspaceConfig">interface RemoteBackendWorkspaceConfig</a></li>
+<li><a href="#S3RemoteStateReferenceArgs">interface S3RemoteStateReferenceArgs</a></li>
+<li><a href="#SwiftRemoteStateReferenceArgs">interface SwiftRemoteStateReferenceArgs</a></li>
+<li><a href="#AzureEnvironment">type AzureEnvironment</a></li>
+<li><a href="#RemoteStateReferenceArgs">type RemoteStateReferenceArgs</a></li>
+</ul>
+
+<a href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/artifactoryBackendConfig.ts">state/artifactoryBackendConfig.ts</a> <a href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts">state/azurermBackendConfig.ts</a> <a href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/consulBackendConfig.ts">state/consulBackendConfig.ts</a> <a href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdBackendConfig.ts">state/etcdBackendConfig.ts</a> <a href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdV3BackendConfig.ts">state/etcdV3BackendConfig.ts</a> <a href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/gcsBackendConfig.ts">state/gcsBackendConfig.ts</a> <a href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/httpBackendConfig.ts">state/httpBackendConfig.ts</a> <a href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/localBackendConfig.ts">state/localBackendConfig.ts</a> <a href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/mantaBackendConfig.ts">state/mantaBackendConfig.ts</a> <a href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/pgBackendConfig.ts">state/pgBackendConfig.ts</a> <a href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/remoteBackendConfig.ts">state/remoteBackendConfig.ts</a> <a href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/remoteStateReference.ts">state/remoteStateReference.ts</a> <a href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts">state/s3BackendConfig.ts</a> <a href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts">state/swiftBackendConfig.ts</a> 
+</div>
+</div>
+</div>
+
+<p><h2 class="pdoc-module-header" id="RemoteStateReference">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/remoteStateReference.ts#L51">class <b>RemoteStateReference</b></a>
+</h2>
+<div class="pdoc-module-contents">
+<pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+
+
+<p>Manages a reference to a Terraform Remote State.. The root outputs of the remote state are available
+via the <code>outputs</code> property or the <code>getOutput</code> method.</p>
+
+
+<h3 class="pdoc-member-header" id="RemoteStateReference-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/remoteStateReference.ts#L55"> <b>constructor</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RemoteStateReference(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RemoteStateReferenceArgs'>RemoteStateReferenceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+<p>Create a RemoteStateReference resource with the given unique name, arguments, and options.</p>
+
+<ul>
+<li><code>name</code> The <em>unique</em> name of the remote state reference.</li>
+<li><code>args</code> The arguments to use to populate this resource&#39;s properties.</li>
+<li><code>opts</code> A bag of options that control this resource&#39;s behavior.</li>
+</ul>
+
+
+</div>
+<h3 class="pdoc-member-header" id="RemoteStateReference-getOutput">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/remoteStateReference.ts#L77">method <b>getOutput</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'>public </span>getOutput(name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;</pre>
+
+<p>Fetches the value of a root output from the Terraform Remote State.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="RemoteStateReference-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+
+</div>
+<h3 class="pdoc-member-header" id="RemoteStateReference-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L192">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+<p>Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="RemoteStateReference-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L187">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+
+<p>id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="RemoteStateReference-outputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/remoteStateReference.ts#L55">property <b>outputs</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'>public </span>outputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+
+
+<p>The root outputs of the referenced Terraform state.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="RemoteStateReference-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+
+<p>urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.</p>
+
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="ArtifactoryRemoteStateReferenceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/artifactoryBackendConfig.ts#L20">interface <b>ArtifactoryRemoteStateReferenceArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+
+<p>The configuration options for a Terraform Remote State stored in the Artifactory backend.</p>
+
+
+<h3 class="pdoc-member-header" id="ArtifactoryRemoteStateReferenceArgs-backendType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/artifactoryBackendConfig.ts#L25">property <b>backendType</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>&ldquo;artifactory&rdquo;</span>;</pre>
+
+
+<p>A constant describing the name of the Terraform backend, used as the discriminant
+for the union of backend configurations.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ArtifactoryRemoteStateReferenceArgs-password">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/artifactoryBackendConfig.ts#L37">property <b>password</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The password with which to authenticate to Artifactory. Sourced from <code>ARTIFACTORY_PASSWORD</code>
+in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ArtifactoryRemoteStateReferenceArgs-repo">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/artifactoryBackendConfig.ts#L49">property <b>repo</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>repo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The repository name.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ArtifactoryRemoteStateReferenceArgs-subpath">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/artifactoryBackendConfig.ts#L54">property <b>subpath</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>subpath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>Path within the repository.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ArtifactoryRemoteStateReferenceArgs-url">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/artifactoryBackendConfig.ts#L44">property <b>url</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The Artifactory URL. Note that this is the base URL to artifactory, not the full repo and
+subpath. However, it must include the path to the artifactory installation - likely this
+will end in <code>/artifactory</code>. Sourced from <code>ARTIFACTORY_URL</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ArtifactoryRemoteStateReferenceArgs-username">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/artifactoryBackendConfig.ts#L31">property <b>username</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The username with which to authenticate to Artifactory. Sourced from <code>ARTIFACTORY_USERNAME</code>
+in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ArtifactoryRemoteStateReferenceArgs-workspace">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/artifactoryBackendConfig.ts#L59">property <b>workspace</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The Terraform workspace from which to read state.</p>
+
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="AzureRMRemoteStateReferenceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L26">interface <b>AzureRMRemoteStateReferenceArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+
+<p>The configuration options for a Terraform Remote State stored in the AzureRM backend.</p>
+
+
+<h3 class="pdoc-member-header" id="AzureRMRemoteStateReferenceArgs-accessKey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L96">property <b>accessKey</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>accessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The Access Key used to access the blob storage account. Used when authenticating using
+an access key. Sourced from <code>ARM_ACCESS_KEY</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="AzureRMRemoteStateReferenceArgs-backendType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L31">property <b>backendType</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>&ldquo;azurerm&rdquo;</span>;</pre>
+
+
+<p>A constant describing the name of the Terraform backend, used as the discriminant
+for the union of backend configurations.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="AzureRMRemoteStateReferenceArgs-clientId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L108">property <b>clientId</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The client ID of the service principal. Used when authenticating using a service principal.
+Sourced from <code>ARM_CLIENT_ID</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="AzureRMRemoteStateReferenceArgs-clientSecret">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L114">property <b>clientSecret</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The client secret of the service principal. Used when authenticating using a service principal.
+Sourced from <code>ARM_CLIENT_SECRET</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="AzureRMRemoteStateReferenceArgs-containerName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L41">property <b>containerName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>containerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The name of the storage container within the storage account.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="AzureRMRemoteStateReferenceArgs-endpoint">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L57">property <b>endpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The custom endpoint for Azure Resource Manager. Sourced from <code>ARM_ENDPOINT</code>, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="AzureRMRemoteStateReferenceArgs-environment">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L52">property <b>environment</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AzureEnvironment'>AzureEnvironment</a>&gt;;</pre>
+
+
+<p>The Azure environment which should be used. Possible values are <code>public</code> (default), <code>china</code>,
+<code>german</code>, <code>stack</code> and <code>usgovernment</code>. Sourced from <code>ARM_ENVIRONMENT</code>, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="AzureRMRemoteStateReferenceArgs-key">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L46">property <b>key</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The name of the blob in representing the Terraform State file inside the storage container.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="AzureRMRemoteStateReferenceArgs-msiEndpoint">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L84">property <b>msiEndpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>msiEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The path to a custom Managed Service Identity endpoint. Used when authenticating using
+the Managed Service Identity (MSI). Sourced from <code>ARM_MSI_ENDPOINT</code> in the environment,
+if unset. Automatically determined, if no value is provided.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="AzureRMRemoteStateReferenceArgs-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L102">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The name of the resource group in which the storage account exists. Used when authenticating
+using a service principal.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="AzureRMRemoteStateReferenceArgs-sasToken">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L90">property <b>sasToken</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>sasToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The SAS Token used to access the Blob Storage Account. Used when authenticating using
+a SAS Token. Sourced from <code>ARM_SAS_TOKEN</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="AzureRMRemoteStateReferenceArgs-storageAccountName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L36">property <b>storageAccountName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The name of the storage account.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="AzureRMRemoteStateReferenceArgs-subscriptionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L70">property <b>subscriptionId</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>subscriptionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The Subscription ID in which the Storage Account exists. Used when authenticating using
+the Managed Service Identity (MSI) or a service principal. Sourced from <code>ARM_SUBSCRIPTION_ID</code>,
+if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="AzureRMRemoteStateReferenceArgs-tenantId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L77">property <b>tenantId</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The Tenant ID in which the Subscription exists. Used when authenticating using the
+Managed Service Identity (MSI) or a service principal. Sourced from <code>ARM_TENANT_ID</code>,
+if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="AzureRMRemoteStateReferenceArgs-useMsi">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L63">property <b>useMsi</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>useMsi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+
+
+<p>Whether to authenticate using Managed Service Identity (MSI). Sourced from <code>ARM_USE_MSI</code>
+if unset. Defaults to false if no value is specified.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="AzureRMRemoteStateReferenceArgs-workspace">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L119">property <b>workspace</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The Terraform workspace from which to read state.</p>
+
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="ConsulRemoteStateReferenceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/consulBackendConfig.ts#L20">interface <b>ConsulRemoteStateReferenceArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+
+<p>The configuration options for a Terraform Remote State stored in the Consul backend.</p>
+
+
+<h3 class="pdoc-member-header" id="ConsulRemoteStateReferenceArgs-accessToken">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/consulBackendConfig.ts#L35">property <b>accessToken</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>accessToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>Consul Access Token. Sourced from <code>CONSUL_HTTP_TOKEN</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ConsulRemoteStateReferenceArgs-address">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/consulBackendConfig.ts#L41">property <b>address</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>DNS name and port of the Consul HTTP endpoint specified in the format <code>dnsname:port</code>. Defaults
+to the local agent HTTP listener.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ConsulRemoteStateReferenceArgs-backendType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/consulBackendConfig.ts#L25">property <b>backendType</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>&ldquo;consul&rdquo;</span>;</pre>
+
+
+<p>A constant describing the name of the Terraform backend, used as the discriminant
+for the union of backend configurations.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ConsulRemoteStateReferenceArgs-caFile">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/consulBackendConfig.ts#L70">property <b>caFile</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>caFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>A path to a PEM-encoded certificate authority used to verify the remote agent&rsquo;s certificate. Sourced
+from <code>CONSUL_CAFILE</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ConsulRemoteStateReferenceArgs-certFile">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/consulBackendConfig.ts#L76">property <b>certFile</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>certFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>A path to a PEM-encoded certificate provided to the remote agent; requires use of key_file. Sourced
+from <code>CONSUL_CLIENT_CERT</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ConsulRemoteStateReferenceArgs-datacenter">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/consulBackendConfig.ts#L52">property <b>datacenter</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>datacenter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The datacenter to use. Defaults to that of the agent.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ConsulRemoteStateReferenceArgs-gzip">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/consulBackendConfig.ts#L64">property <b>gzip</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>gzip?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+
+
+<p>Whether to compress the state data using gzip. Set to <code>true</code> to compress the state data using gzip,
+or <code>false</code> (default) to leave it uncompressed.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ConsulRemoteStateReferenceArgs-httpAuth">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/consulBackendConfig.ts#L58">property <b>httpAuth</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>httpAuth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>HTTP Basic Authentication credentials to be used when communicating with Consul, in the format of
+either <code>user</code> or <code>user:pass</code>. Sourced from <code>CONSUL_HTTP_AUTH</code>, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ConsulRemoteStateReferenceArgs-keyFile">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/consulBackendConfig.ts#L82">property <b>keyFile</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>keyFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>A path to a PEM-encoded private key, required if cert_file is specified. Sourced from <code>CONSUL_CLIENT_KEY</code>
+in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ConsulRemoteStateReferenceArgs-path">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/consulBackendConfig.ts#L30">property <b>path</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>Path in the Consul KV store.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ConsulRemoteStateReferenceArgs-scheme">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/consulBackendConfig.ts#L47">property <b>scheme</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>scheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>Specifies which protocol to use when talking to the given address - either <code>http</code> or <code>https</code>. TLS
+support can also be enabled by setting the environment variable <code>CONSUL_HTTP_SSL</code> to <code>true</code>.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="ConsulRemoteStateReferenceArgs-workspace">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/consulBackendConfig.ts#L87">property <b>workspace</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The Terraform workspace from which to read state.</p>
+
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="EtcdV2RemoteStateReferenceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdBackendConfig.ts#L21">interface <b>EtcdV2RemoteStateReferenceArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+
+<p>The configuration options for a Terraform Remote State stored in the etcd v2 backend. Note
+that there is a separate configuration class for state stored in the ectd v3 backend.</p>
+
+
+<h3 class="pdoc-member-header" id="EtcdV2RemoteStateReferenceArgs-backendType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdBackendConfig.ts#L26">property <b>backendType</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>&ldquo;etcd&rdquo;</span>;</pre>
+
+
+<p>A constant describing the name of the Terraform backend, used as the discriminant
+for the union of backend configurations.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="EtcdV2RemoteStateReferenceArgs-endpoints">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdBackendConfig.ts#L36">property <b>endpoints</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>A space-separated list of the etcd endpoints.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="EtcdV2RemoteStateReferenceArgs-password">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdBackendConfig.ts#L46">property <b>password</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The username with which to authenticate to etcd.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="EtcdV2RemoteStateReferenceArgs-path">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdBackendConfig.ts#L31">property <b>path</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The path at which to store the state.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="EtcdV2RemoteStateReferenceArgs-username">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdBackendConfig.ts#L41">property <b>username</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The username with which to authenticate to etcd.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="EtcdV2RemoteStateReferenceArgs-workspace">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdBackendConfig.ts#L51">property <b>workspace</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The Terraform workspace from which to read state.</p>
+
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="EtcdV3RemoteStateReferenceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdV3BackendConfig.ts#L21">interface <b>EtcdV3RemoteStateReferenceArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+
+<p>The configuration options for a Terraform Remote State stored in the etcd v3 backend. Note
+that there is a separate configuration class for state stored in the ectd v2 backend.</p>
+
+
+<h3 class="pdoc-member-header" id="EtcdV3RemoteStateReferenceArgs-backendType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdV3BackendConfig.ts#L26">property <b>backendType</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>&ldquo;etcdv3&rdquo;</span>;</pre>
+
+
+<p>A constant describing the name of the Terraform backend, used as the discriminant
+for the union of backend configurations.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="EtcdV3RemoteStateReferenceArgs-cacertPath">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdV3BackendConfig.ts#L54">property <b>cacertPath</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>cacertPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>Path to a PEM-encoded certificate authority bundle with which to verify certificates
+of TLS-enabled etcd servers.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="EtcdV3RemoteStateReferenceArgs-certPath">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdV3BackendConfig.ts#L59">property <b>certPath</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>certPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>Path to a PEM-encoded certificate to provide to etcd for client authentication.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="EtcdV3RemoteStateReferenceArgs-endpoints">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdV3BackendConfig.ts#L31">property <b>endpoints</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+
+
+<p>A list of the etcd endpoints.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="EtcdV3RemoteStateReferenceArgs-keyPath">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdV3BackendConfig.ts#L64">property <b>keyPath</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>keyPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>Path to a PEM-encoded key to use for client authentication.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="EtcdV3RemoteStateReferenceArgs-password">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdV3BackendConfig.ts#L43">property <b>password</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The username with which to authenticate to etcd. Sourced from <code>ETCDV3_PASSWORD</code> in
+the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="EtcdV3RemoteStateReferenceArgs-prefix">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdV3BackendConfig.ts#L48">property <b>prefix</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>prefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>An optional prefix to be added to keys when storing state in etcd.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="EtcdV3RemoteStateReferenceArgs-username">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdV3BackendConfig.ts#L37">property <b>username</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The username with which to authenticate to etcd. Sourced from <code>ETCDV3_USERNAME</code> in
+the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="EtcdV3RemoteStateReferenceArgs-workspace">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/etcdV3BackendConfig.ts#L69">property <b>workspace</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The Terraform workspace from which to read state.</p>
+
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="GCSRemoteStateReferenceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/gcsBackendConfig.ts#L21">interface <b>GCSRemoteStateReferenceArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+
+<p>The configuration options for a Terraform Remote State stored in the Google Cloud Storage
+backend.</p>
+
+
+<h3 class="pdoc-member-header" id="GCSRemoteStateReferenceArgs-backendType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/gcsBackendConfig.ts#L26">property <b>backendType</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>&ldquo;gcs&rdquo;</span>;</pre>
+
+
+<p>A constant describing the name of the Terraform backend, used as the discriminant
+for the union of backend configurations.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="GCSRemoteStateReferenceArgs-bucket">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/gcsBackendConfig.ts#L31">property <b>bucket</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The name of the Google Cloud Storage bucket.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="GCSRemoteStateReferenceArgs-credentials">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/gcsBackendConfig.ts#L38">property <b>credentials</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>Local path to Google Cloud Platform account credentials in JSON format. Sourced from
+<code>GOOGLE_CREDENTIALS</code> in the environment if unset. If no value is provided Google
+Application Default Credentials are used.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="GCSRemoteStateReferenceArgs-encryptionKey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/gcsBackendConfig.ts#L50">property <b>encryptionKey</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>encryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>A 32 byte, base64-encoded customer supplied encryption key used to encrypt the
+state. Sourced from <code>GOOGLE_ENCRYPTION_KEY</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="GCSRemoteStateReferenceArgs-prefix">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/gcsBackendConfig.ts#L44">property <b>prefix</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>prefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>Prefix used inside the Google Cloud Storage bucket. Named states for workspaces
+are stored in an object named <code>&lt;prefix&gt;/&lt;name&gt;.tfstate</code>.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="GCSRemoteStateReferenceArgs-workspace">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/gcsBackendConfig.ts#L55">property <b>workspace</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The Terraform workspace from which to read state.</p>
+
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="HttpRemoteStateReferenceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/httpBackendConfig.ts#L21">interface <b>HttpRemoteStateReferenceArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+
+<p>The configuration options for a Terraform Remote State stored in the HTTP backend.</p>
+
+
+<h3 class="pdoc-member-header" id="HttpRemoteStateReferenceArgs-address">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/httpBackendConfig.ts#L31">property <b>address</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The address of the HTTP endpoint.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="HttpRemoteStateReferenceArgs-backendType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/httpBackendConfig.ts#L26">property <b>backendType</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>&ldquo;http&rdquo;</span>;</pre>
+
+
+<p>A constant describing the name of the Terraform backend, used as the discriminant
+for the union of backend configurations.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="HttpRemoteStateReferenceArgs-lockAddress">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/httpBackendConfig.ts#L41">property <b>lockAddress</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>lockAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The address of the lock REST endpoint. Not setting a value disables locking.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="HttpRemoteStateReferenceArgs-lockMethod">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/httpBackendConfig.ts#L46">property <b>lockMethod</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>lockMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The HTTP method to use when locking. Defaults to <code>LOCK</code>.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="HttpRemoteStateReferenceArgs-password">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/httpBackendConfig.ts#L66">property <b>password</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The password used for HTTP basic authentication.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="HttpRemoteStateReferenceArgs-skipCertVerification">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/httpBackendConfig.ts#L71">property <b>skipCertVerification</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>skipCertVerification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+
+
+<p>Whether to skip TLS verification. Defaults to false.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="HttpRemoteStateReferenceArgs-unlockAddress">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/httpBackendConfig.ts#L51">property <b>unlockAddress</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>unlockAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The address of the unlock REST endpoint. Not setting a value disables locking.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="HttpRemoteStateReferenceArgs-unlockMethod">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/httpBackendConfig.ts#L56">property <b>unlockMethod</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>unlockMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The HTTP method to use when unlocking. Defaults to <code>UNLOCK</code>.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="HttpRemoteStateReferenceArgs-updateMethod">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/httpBackendConfig.ts#L36">property <b>updateMethod</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>updateMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>HTTP method to use when updating state. Defaults to <code>POST</code>.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="HttpRemoteStateReferenceArgs-username">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/httpBackendConfig.ts#L61">property <b>username</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The username used for HTTP basic authentication.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="HttpRemoteStateReferenceArgs-workspace">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/httpBackendConfig.ts#L76">property <b>workspace</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The Terraform workspace from which to read state.</p>
+
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="LocalBackendRemoteStateReferenceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/localBackendConfig.ts#L21">interface <b>LocalBackendRemoteStateReferenceArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+
+<p>The configuration options for a Terraform Remote State stored in the local enhanced
+backend.</p>
+
+
+<h3 class="pdoc-member-header" id="LocalBackendRemoteStateReferenceArgs-backendType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/localBackendConfig.ts#L26">property <b>backendType</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>&ldquo;local&rdquo;</span>;</pre>
+
+
+<p>A constant describing the name of the Terraform backend, used as the discriminant
+for the union of backend configurations.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="LocalBackendRemoteStateReferenceArgs-path">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/localBackendConfig.ts#L31">property <b>path</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The path to the Terraform state file.</p>
+
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="MantaRemoteStateReferenceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/mantaBackendConfig.ts#L20">interface <b>MantaRemoteStateReferenceArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+
+<p>The configuration options for a Terraform Remote State stored in the Manta backend.</p>
+
+
+<h3 class="pdoc-member-header" id="MantaRemoteStateReferenceArgs-account">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/mantaBackendConfig.ts#L31">property <b>account</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>account: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The name of the Manta account. Sourced from <code>SDC_ACCOUNT</code> or <code>_ACCOUNT</code> in the
+environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="MantaRemoteStateReferenceArgs-backendType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/mantaBackendConfig.ts#L25">property <b>backendType</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>&ldquo;manta&rdquo;</span>;</pre>
+
+
+<p>A constant describing the name of the Terraform backend, used as the discriminant
+for the union of backend configurations.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="MantaRemoteStateReferenceArgs-insecureSkipTlsVerify">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/mantaBackendConfig.ts#L69">property <b>insecureSkipTlsVerify</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>insecureSkipTlsVerify: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+
+
+<p>Skip verifying the TLS certificate presented by the Manta endpoint. This can
+be useful for installations which do not have a certificate signed by a trusted
+root CA. Defaults to false.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="MantaRemoteStateReferenceArgs-keyId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/mantaBackendConfig.ts#L56">property <b>keyId</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>keyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The fingerprint of the public key matching the key material specified in
+keyMaterial, or in the local SSH agent.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="MantaRemoteStateReferenceArgs-keyMaterial">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/mantaBackendConfig.ts#L50">property <b>keyMaterial</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>keyMaterial?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The private key material corresponding with the SSH key whose fingerprint is
+specified in keyId. Sourced from <code>SDC_KEY_MATERIAL</code> or <code>TRITON_KEY_MATERIAL</code>
+in the environment, if unset. If no value is specified, the local SSH agent
+is used for signing requests.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="MantaRemoteStateReferenceArgs-path">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/mantaBackendConfig.ts#L62">property <b>path</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The path relative to your private storage directory (<code>/$MANTA_USER/stor</code>)
+where the state file will be stored.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="MantaRemoteStateReferenceArgs-url">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/mantaBackendConfig.ts#L42">property <b>url</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The Manta API Endpoint. Sourced from <code>MANTA_URL</code> in the environment, if unset.
+Defaults to <code>https://us-east.manta.joyent.com</code>.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="MantaRemoteStateReferenceArgs-user">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/mantaBackendConfig.ts#L36">property <b>user</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The username of the Manta account with which to authenticate.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="MantaRemoteStateReferenceArgs-workspace">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/mantaBackendConfig.ts#L74">property <b>workspace</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The Terraform workspace from which to read state.</p>
+
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="PostgresRemoteStateReferenceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/pgBackendConfig.ts#L20">interface <b>PostgresRemoteStateReferenceArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+
+<p>The configuration options for a Terraform Remote State stored in the Postgres backend.</p>
+
+
+<h3 class="pdoc-member-header" id="PostgresRemoteStateReferenceArgs-backendType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/pgBackendConfig.ts#L25">property <b>backendType</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>&ldquo;pg&rdquo;</span>;</pre>
+
+
+<p>A constant describing the name of the Terraform backend, used as the discriminant
+for the union of backend configurations.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="PostgresRemoteStateReferenceArgs-connStr">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/pgBackendConfig.ts#L30">property <b>connStr</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>connStr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>Postgres connection string; a <code>postgres://</code> URL</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="PostgresRemoteStateReferenceArgs-schemaName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/pgBackendConfig.ts#L35">property <b>schemaName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>schemaName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>Name of the automatically-managed Postgres schema. Defaults to <code>terraform_remote_state</code>.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="PostgresRemoteStateReferenceArgs-workspace">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/pgBackendConfig.ts#L40">property <b>workspace</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The Terraform workspace from which to read state.</p>
+
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="RemoteBackendRemoteStateReferenceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/remoteBackendConfig.ts#L39">interface <b>RemoteBackendRemoteStateReferenceArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+
+<p>The configuration options for a Terraform Remote State stored in the remote enhanced
+backend.</p>
+
+
+<h3 class="pdoc-member-header" id="RemoteBackendRemoteStateReferenceArgs-backendType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/remoteBackendConfig.ts#L44">property <b>backendType</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>&ldquo;remote&rdquo;</span>;</pre>
+
+
+<p>A constant describing the name of the Terraform backend, used as the discriminant
+for the union of backend configurations.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="RemoteBackendRemoteStateReferenceArgs-hostname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/remoteBackendConfig.ts#L49">property <b>hostname</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The remote backend hostname to which to connect. Defaults to <code>app.terraform.io</code>.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="RemoteBackendRemoteStateReferenceArgs-organization">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/remoteBackendConfig.ts#L54">property <b>organization</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>organization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The name of the organization containing the targeted workspace(s).</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="RemoteBackendRemoteStateReferenceArgs-token">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/remoteBackendConfig.ts#L59">property <b>token</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The token used to authenticate with the remote backend.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="RemoteBackendRemoteStateReferenceArgs-workspaces">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/remoteBackendConfig.ts#L64">property <b>workspaces</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>workspaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RemoteBackendWorkspaceConfig'>RemoteBackendWorkspaceConfig</a>&gt;;</pre>
+
+
+<p>A block specifying which remote workspace(s) to use.</p>
+
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="RemoteBackendWorkspaceConfig">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/remoteBackendConfig.ts#L20">interface <b>RemoteBackendWorkspaceConfig</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+
+<p>Configuration options for a workspace for use with the remote enhanced backend.</p>
+
+
+<h3 class="pdoc-member-header" id="RemoteBackendWorkspaceConfig-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/remoteBackendConfig.ts#L25">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The full name of one remote workspace. When configured, only the default workspace
+can be used. This option conflicts with prefix.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="RemoteBackendWorkspaceConfig-prefix">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/remoteBackendConfig.ts#L32">property <b>prefix</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>prefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>A prefix used in the names of one or more remote workspaces, all of which can be used
+with this configuration. If unset, only the default workspace can be used. This option
+conflicts with name.</p>
+
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="S3RemoteStateReferenceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L20">interface <b>S3RemoteStateReferenceArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+
+<p>The configuration options for a Terraform Remote State stored in the S3 backend.</p>
+
+
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-accessKey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L51">property <b>accessKey</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>accessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>AWS Access Key. Sourced from the standard credentials pipeline, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-backendType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L25">property <b>backendType</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>&ldquo;s3&rdquo;</span>;</pre>
+
+
+<p>A constant describing the name of the Terraform backend, used as the discriminant
+for the union of backend configurations.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-bucket">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L30">property <b>bucket</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The name of the S3 bucket.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-endpoint">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L46">property <b>endpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>A custom endpoint for the S3 API. Also sourced from <code>AWS_S3_ENDPOINT</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-externalId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L82">property <b>externalId</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>externalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The external ID to use when assuming the IAM role.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-iamEndpoint">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L98">property <b>iamEndpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>iamEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>A custom endpoint for the IAM API. Sourced from <code>AWS_IAM_ENDPOINT</code>, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-key">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L36">property <b>key</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The path to the state file inside the bucket. When using a non-default workspace,
+the state path will be <code>/workspace_key_prefix/workspace_name/key</code>.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-profile">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L61">property <b>profile</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>profile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The AWS profile name as set in the shared credentials file.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-region">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L41">property <b>region</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The region of the S3 bucket. Also sourced from <code>AWS_DEFAULT_REGION</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-roleArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L77">property <b>roleArn</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The ARN of an IAM Role to be assumed in order to read the state from S3.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-secretKey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L56">property <b>secretKey</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>secretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>AWS Secret Access Key. Sourced from the standard credentials pipeline, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-sessionName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L87">property <b>sessionName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>sessionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The session name to use when assuming the IAM role.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-sharedCredentialsFile">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L67">property <b>sharedCredentialsFile</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>sharedCredentialsFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The path to the shared credentials file. If this is not set and a profile is
+specified, <code>~/.aws/credentials</code> will be used by default.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-stsEndpoint">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L103">property <b>stsEndpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>stsEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>A custom endpoint for the STS API. Sourced from <code>AWS_STS_ENDPOINT</code>, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-token">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L72">property <b>token</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>An MFA token. Sourced from the <code>AWS_SESSION_TOKEN</code> in the environment variable if needed and unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-workspace">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L108">property <b>workspace</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The Terraform workspace from which to read state.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="S3RemoteStateReferenceArgs-workspaceKeyPrefix">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/s3BackendConfig.ts#L93">property <b>workspaceKeyPrefix</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>workspaceKeyPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The prefix applied to the state path inside the bucket. This is only relevant when
+using a non-default workspace, and defaults to <code>env:</code>.</p>
+
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="SwiftRemoteStateReferenceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L20">interface <b>SwiftRemoteStateReferenceArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+
+<p>The configuration options for a Terraform Remote State stored in the Swift backend.</p>
+
+
+<h3 class="pdoc-member-header" id="SwiftRemoteStateReferenceArgs-authUrl">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L30">property <b>authUrl</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>authUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The Identity authentication URL. Sourced from <code>OS_AUTH_URL</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="SwiftRemoteStateReferenceArgs-backendType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L25">property <b>backendType</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>&ldquo;swift&rdquo;</span>;</pre>
+
+
+<p>A constant describing the name of the Terraform backend, used as the discriminant
+for the union of backend configurations.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="SwiftRemoteStateReferenceArgs-cacertFile">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L102">property <b>cacertFile</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>cacertFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>A path to a CA root certificate for verifying the server TLS certificate. Sourced from
+<code>OS_CACERT</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="SwiftRemoteStateReferenceArgs-cert">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L108">property <b>cert</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>cert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>A path to a client certificate for TLS client authentication. Sourced from <code>OS_CERT</code>
+in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="SwiftRemoteStateReferenceArgs-container">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L35">property <b>container</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>container: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The name of the container in which the Terraform state file is stored.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="SwiftRemoteStateReferenceArgs-domainId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L83">property <b>domainId</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>domainId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The ID of the domain to scope the log in to (identity v3). Sourced from <code>OS_USER_DOMAIN_ID</code>,
+<code>OS_PROJECT_DOMAIN_ID</code> or <code>OS_DOMAIN_ID</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="SwiftRemoteStateReferenceArgs-domainName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L90">property <b>domainName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The name of the domain to scope the log in to (identity v3). Sourced from
+<code>OS_USER_DOMAIN_NAME</code>, <code>OS_PROJECT_DOMAIN_NAME</code> or <code>OS_DOMAIN_NAME</code> in the environment,
+if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="SwiftRemoteStateReferenceArgs-insecure">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L96">property <b>insecure</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>insecure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+
+
+<p>Whether to disable verification of the server TLS certificate. Sourced from
+<code>OS_INSECURE</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="SwiftRemoteStateReferenceArgs-key">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L114">property <b>key</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>A path to the private key corresponding to the client certificate for TLS client
+authentication. Sourced from <code>OS_KEY</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="SwiftRemoteStateReferenceArgs-password">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L53">property <b>password</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The password with which to log in. Sourced from <code>OS_PASSWORD</code> in the environment,
+if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="SwiftRemoteStateReferenceArgs-regionName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L65">property <b>regionName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>regionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The region in which the state file is stored. Sourced from <code>OS_REGION_NAME</code>, if
+unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="SwiftRemoteStateReferenceArgs-tenantId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L71">property <b>tenantId</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The ID of the tenant (for identity v2) or project (identity v3) which which to log in.
+Sourced from <code>OS_TENANT_ID</code> or <code>OS_PROJECT_ID</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="SwiftRemoteStateReferenceArgs-tenantName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L77">property <b>tenantName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>tenantName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The name of the tenant (for identity v2) or project (identity v3) which which to log in.
+Sourced from <code>OS_TENANT_NAME</code> or <code>OS_PROJECT_NAME</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="SwiftRemoteStateReferenceArgs-token">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L59">property <b>token</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>Access token with which to log in in stead of a username and password. Sourced from
+<code>OS_AUTH_TOKEN</code> in the environment, if unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="SwiftRemoteStateReferenceArgs-userId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L47">property <b>userId</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>userId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The user ID with which to log in. Sourced from <code>OS_USER_ID</code> in the environment, if
+unset.</p>
+
+
+</div>
+<h3 class="pdoc-member-header" id="SwiftRemoteStateReferenceArgs-userName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/swiftBackendConfig.ts#L41">property <b>userName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+<pre class="highlight"><span class='kd'></span>userName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+
+<p>The username with which to log in. Sourced from <code>OS_USERNAME</code> in the environment, if
+unset.</p>
+
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="AzureEnvironment">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/azurermBackendConfig.ts#L17">type <b>AzureEnvironment</b></a>
+</h2>
+<div class="pdoc-module-contents">
+<pre class="highlight"><span class='kd'>type</span> AzureEnvironment = <span class='s2'>&ldquo;public&rdquo;</span> | <span class='s2'>&ldquo;china&rdquo;</span> | <span class='s2'>&ldquo;german&rdquo;</span> | <span class='s2'>&ldquo;stack&rdquo;</span> | <span class='s2'>&ldquo;usgovernment&rdquo;</span>;</pre>
+</div>
+<h2 class="pdoc-module-header" id="RemoteStateReferenceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-terraform/blob/3635bed3a5c0250c3b22f02fde7845acd0dce3b6/sdk/nodejs/state/remoteStateReference.ts#L33">type <b>RemoteStateReferenceArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+<pre class="highlight"><span class='kd'>type</span> RemoteStateReferenceArgs = <a href='#ArtifactoryRemoteStateReferenceArgs'>ArtifactoryRemoteStateReferenceArgs</a> | <a href='#AzureRMRemoteStateReferenceArgs'>AzureRMRemoteStateReferenceArgs</a> | <a href='#ConsulRemoteStateReferenceArgs'>ConsulRemoteStateReferenceArgs</a> | <a href='#EtcdV2RemoteStateReferenceArgs'>EtcdV2RemoteStateReferenceArgs</a> | <a href='#EtcdV3RemoteStateReferenceArgs'>EtcdV3RemoteStateReferenceArgs</a> | <a href='#GCSRemoteStateReferenceArgs'>GCSRemoteStateReferenceArgs</a> | <a href='#HttpRemoteStateReferenceArgs'>HttpRemoteStateReferenceArgs</a> | <a href='#LocalBackendRemoteStateReferenceArgs'>LocalBackendRemoteStateReferenceArgs</a> | <a href='#MantaRemoteStateReferenceArgs'>MantaRemoteStateReferenceArgs</a> | <a href='#PostgresRemoteStateReferenceArgs'>PostgresRemoteStateReferenceArgs</a> | <a href='#RemoteBackendRemoteStateReferenceArgs'>RemoteBackendRemoteStateReferenceArgs</a> | <a href='#S3RemoteStateReferenceArgs'>S3RemoteStateReferenceArgs</a> | <a href='#SwiftRemoteStateReferenceArgs'>SwiftRemoteStateReferenceArgs</a>;</pre>
+
+
+<p>The set of arguments for constructing a RemoteStateReference resource.</p>
+
+
+</div></p>
+
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

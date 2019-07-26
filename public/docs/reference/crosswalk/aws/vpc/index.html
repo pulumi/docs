@@ -1,0 +1,2682 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.pulumi.com/docs/reference/crosswalk/aws/vpc/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+
+    
+        <meta property="og:title" content="AWS Virtual Private Cloud (VPC)">
+    
+
+    
+        <meta name="description" content="Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define. You have complete control over your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways. You can use both IPv4 and IPv6 in your VPC for secure and easy access to resources and applications, and use multiple layers of security, including security groups and network access control lists, to limit network access to and from resources.">
+        <meta property="og:description" content="Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define. You have complete control over your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways. You can use both IPv4 and IPv6 in your VPC for secure and easy access to resources and applications, and use multiple layers of security, including security groups and network access control lists, to limit network access to and from resources.">
+    
+
+    
+    
+    <meta property="og:image" content="https://www.pulumi.com/social/pulumi.png">
+
+    <title>AWS Virtual Private Cloud (VPC) - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/docs/reference/crosswalk/aws/vpc/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="https://www.pulumi.com/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="https://www.pulumi.com/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u");
+    analytics.page();
+    }}();
+    </script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+</head>
+
+    <body class="section-docs">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+
+            <div class="md:w-2/12 mt-2 md:order-last">
+                <div class="mb-8 md:mb-4">
+                    <form class="relative" action="/docs/search/" method="GET">
+    <i class="fas fa-search absolute inset-y-0 flex items-center pl-3 text-gray-500"></i>
+    <input
+        id="search-query"
+        name="q"
+        class="block w-full py-2 px-4 pl-8 text-sm border border-gray-400 focus:border-blue-500 focus:outline-none rounded transition"
+        placeholder="Search the docs"
+        autocomplete="off">
+</form>
+
+                </div>
+
+                <div class="ml-3 hidden md:block">
+                    
+    <ul class="p-0 list-none">
+        
+        
+        
+        
+        
+            <li>
+                <a class="text-gray-600 hover:text-blue-700 text-xs" href="https://github.com/pulumi/docs/edit/master/content/docs/reference/crosswalk/aws/vpc.md" target="_blank">
+                    <i class="fas fa-edit mr-2"></i>
+                    Edit this Page
+                </a>
+            </li>
+        
+
+        <li>
+            <a class="text-gray-600 hover:text-blue-700 text-xs" href="https://github.com/pulumi/docs/issues/new?body=File: [docs%2freference%2fcrosswalk%2faws%2fvpc.md](https%3a%2f%2fwww.pulumi.com%2fdocs%2freference%2fcrosswalk%2faws%2fvpc%2f)" target="_blank">
+                <i class="far fa-check-square mr-2"></i>
+                Request a Change
+            </a>
+        </li>
+    </ul>
+
+
+                </div>
+            </div>
+
+            <div class="md:w-3/12 pr-8 mt-2 mb-8 pb-8 border-b-2 border-gray-400 md:border-none md:pb-0 md:mb-0">
+                
+
+
+
+
+
+
+
+
+    
+    
+    
+
+
+<aside class="toc">
+    <h3 class="no-anchor">
+        <a href="/docs/">Docs</a>
+    </h3>
+
+    
+        <h4 class="no-anchor">
+            <a href="/docs/quickstart/">Get Started</a>
+        </h4>
+    
+    
+        <h4 class="no-anchor">
+            <a href="/docs/reference/">Reference</a>
+        </h4>
+    
+    
+
+    
+        
+        
+
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Architecture &amp; Concepts">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Programming Model" href="/docs/reference/programming-model/">Programming Model</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Projects" href="/docs/reference/project/">Projects</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stacks" href="/docs/reference/stack/">Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Configuration and Secrets" href="/docs/reference/config/">Configuration and Secrets</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizing Projects and Stacks" href="/docs/reference/organizing-stacks-projects/">Organizing Projects and Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="How Pulumi Works" href="/docs/reference/how/">How Pulumi Works</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State and Backends" href="/docs/reference/state/">State and Backends</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Tutorials">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/tutorials/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateways and Lambda" href="/docs/reference/tutorials/aws/tutorial-rest-api/">API Gateways and Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Containers on ECS &#34;Fargate&#34;" href="/docs/reference/tutorials/aws/tutorial-service/">Containers on ECS &#34;Fargate&#34;</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="EC2 Linux WebServer Instance" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">EC2 Linux WebServer Instance</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serve a Static Website from S3" href="/docs/reference/tutorials/aws/tutorial-s3-website/">Serve a Static Website from S3</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Video Thumbnailer" href="/docs/reference/tutorials/aws/tutorial-thumbnailer/">Video Thumbnailer</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/tutorials/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Container Instance" href="/docs/reference/tutorials/azure/tutorial-container-webserver/">Web Server Container Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/tutorials/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Virtual Machine Instance" href="/docs/reference/tutorials/gcp/tutorial-gce-webserver/">Web Server Virtual Machine Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/tutorials/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: EKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-eks/">Clusters: EKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: GKE - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-gke/">Clusters: GKE - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: AKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-aks/">Clusters: AKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#1: Hello, World!" href="/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment/">#1: Hello, World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#2: Deploying the WordPress Helm Chart" href="/docs/reference/tutorials/kubernetes/tutorial-wordpress-chart/">#2: Deploying the WordPress Helm Chart</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#3: Guestbook App with Redis and Nginx" href="/docs/reference/tutorials/kubernetes/tutorial-guestbook/">#3: Guestbook App with Redis and Nginx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#4: Graceful App Rollout" href="/docs/reference/tutorials/kubernetes/tutorial-configmap-rollout/">#4: Graceful App Rollout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#5: Gating rollout on Prometheus checks" href="/docs/reference/tutorials/kubernetes/tutorial-p8s-rollout/">#5: Gating rollout on Prometheus checks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#6: Run a Stateless App Deployment" href="/docs/reference/tutorials/kubernetes/tutorial-stateless-app/">#6: Run a Stateless App Deployment</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#7: EKS - Migrating Node Groups with Zero Downtime" href="/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups/">#7: EKS - Migrating Node Groups with Zero Downtime</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Command Line">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cancel" href="/docs/reference/cli/pulumi_cancel/">Cancel</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Config" href="/docs/reference/cli/pulumi_config/">Config</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Destroy" href="/docs/reference/cli/pulumi_destroy/">Destroy</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Login" href="/docs/reference/cli/pulumi_login/">Login</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logout" href="/docs/reference/cli/pulumi_logout/">Logout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logs" href="/docs/reference/cli/pulumi_logs/">Logs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="New" href="/docs/reference/cli/pulumi_new/">New</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Plugin" href="/docs/reference/cli/pulumi_plugin/">Plugin</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Preview" href="/docs/reference/cli/pulumi_preview/">Preview</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Refresh" href="/docs/reference/cli/pulumi_refresh/">Refresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stack" href="/docs/reference/cli/pulumi_stack/">Stack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State" href="/docs/reference/cli/pulumi_state/">State</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Update" href="/docs/reference/cli/pulumi_up/">Update</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Clouds">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/clouds/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/aws/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/clouds/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/azure/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/clouds/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/gcp/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/clouds/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Introduction" href="/docs/reference/clouds/kubernetes/introduction/">Introduction</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/kubernetes/setup/">Setup</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="FAQ" href="/docs/reference/clouds/kubernetes/faq/">FAQ</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="OpenStack">
+                <div class="sidenav-topic ">
+                    <a data-title="OpenStack" href="/docs/reference/clouds/openstack/">OpenStack</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/openstack/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggleVisible" data-title="Crosswalk for AWS 🆕">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateway" href="/docs/reference/crosswalk/aws/api-gateway/">API Gateway</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Auto Scaling" href="/docs/reference/crosswalk/aws/autoscaling/">Auto Scaling</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CloudWatch" href="/docs/reference/crosswalk/aws/cloudwatch/">CloudWatch</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Registry (ECR)" href="/docs/reference/crosswalk/aws/ecr/">Elastic Container Registry (ECR)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Service (ECS)" href="/docs/reference/crosswalk/aws/ecs/">Elastic Container Service (ECS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Kubernetes Service (EKS)" href="/docs/reference/crosswalk/aws/eks/">Elastic Kubernetes Service (EKS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Load Balancing (ELB)" href="/docs/reference/crosswalk/aws/elb/">Elastic Load Balancing (ELB)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Identity and Access Management (IAM)" href="/docs/reference/crosswalk/aws/iam/">Identity and Access Management (IAM)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Lambda" href="/docs/reference/crosswalk/aws/lambda/">Lambda</a>
+            </div>
+        
+    
+        
+        
+            
+        
+
+        
+            <div class="sidenav-topic mb-2 active">
+                <a data-title="Virtual Private Cloud (VPC)" href="/docs/reference/crosswalk/aws/vpc/">Virtual Private Cloud (VPC)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Other AWS Services" href="/docs/reference/crosswalk/aws/other/">Other AWS Services</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Languages">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Node.js" href="/docs/reference/javascript/">Node.js</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Python" href="/docs/reference/python/">Python</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Teams &amp; Collaboration">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizations" href="/docs/reference/service/orgs/">Organizations</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Teams" href="/docs/reference/service/teams/">Teams</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Roles and Access Controls" href="/docs/reference/service/roles-and-access-controls/">Roles and Access Controls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub App" href="/docs/reference/cd-github/">Pulumi GitHub App</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi Webhooks" href="/docs/reference/service/webhooks/">Pulumi Webhooks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Creating a &#39;Deploy with Pulumi&#39; Button" href="/docs/reference/service/pulumi-button/">Creating a &#39;Deploy with Pulumi&#39; Button</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Continuous Delivery">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Supporting A New CI System" href="/docs/reference/cd-supporting-new-ci/">Supporting A New CI System</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="AWS Code Services" href="/docs/reference/cd-aws-code-services/">AWS Code Services</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Azure DevOps" href="/docs/reference/cd-azure-devops/">Azure DevOps</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CircleCI" href="/docs/reference/cd-circleci/">CircleCI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Codefresh" href="/docs/reference/cd-codefresh/">Codefresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="GitLab CI" href="/docs/reference/cd-gitlab-ci/">GitLab CI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Google Cloud Build" href="/docs/reference/cd-google-cloud-build/">Google Cloud Build</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub Actions" href="/docs/reference/cd-github-actions/">Pulumi GitHub Actions</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Travis CI" href="/docs/reference/cd-travis/">Travis CI</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Compared to Others">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Terraform" href="/docs/reference/vs/terraform/">Terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud Templates" href="/docs/reference/vs/cloud_templates/">Cloud Templates</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud SDKs" href="/docs/reference/vs/cloud_sdks/">Cloud SDKs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serverless" href="/docs/reference/vs/serverless/">Serverless</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Kubernetes YAML" href="/docs/reference/vs/k8s_yaml_dsls/">Kubernetes YAML</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Chef, Puppet, etc." href="/docs/reference/vs/chef_puppet_etc/">Chef, Puppet, etc.</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Custom Solutions" href="/docs/reference/vs/custom/">Custom Solutions</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="API Reference">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="Node.js">
+                <div class="sidenav-topic ">
+                    <a data-title="Node.js" href="/docs/reference/pkg/nodejs/">Node.js</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/nodejs/pulumi/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="aws" href="/docs/reference/pkg/nodejs/pulumi/aws/">aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="awsx" href="/docs/reference/pkg/nodejs/pulumi/awsx/">awsx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azure" href="/docs/reference/pkg/nodejs/pulumi/azure/">azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azuread" href="/docs/reference/pkg/nodejs/pulumi/azuread/">azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloud" href="/docs/reference/pkg/nodejs/pulumi/cloud/">cloud</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloudflare" href="/docs/reference/pkg/nodejs/pulumi/cloudflare/">cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="datadog" href="/docs/reference/pkg/nodejs/pulumi/datadog/">datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="digitalocean" href="/docs/reference/pkg/nodejs/pulumi/digitalocean/">digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="dnsimple" href="/docs/reference/pkg/nodejs/pulumi/dnsimple/">dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="docker" href="/docs/reference/pkg/nodejs/pulumi/docker/">docker</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="eks" href="/docs/reference/pkg/nodejs/pulumi/eks/">eks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="f5bigip" href="/docs/reference/pkg/nodejs/pulumi/f5bigip/">f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gcp" href="/docs/reference/pkg/nodejs/pulumi/gcp/">gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gitlab" href="/docs/reference/pkg/nodejs/pulumi/gitlab/">gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="kubernetes" href="/docs/reference/pkg/nodejs/pulumi/kubernetes/">kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="linode" href="/docs/reference/pkg/nodejs/pulumi/linode/">linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="mysql" href="/docs/reference/pkg/nodejs/pulumi/mysql/">mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="newrelic" href="/docs/reference/pkg/nodejs/pulumi/newrelic/">newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="openstack" href="/docs/reference/pkg/nodejs/pulumi/openstack/">openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="packet" href="/docs/reference/pkg/nodejs/pulumi/packet/">packet</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="postgresql" href="/docs/reference/pkg/nodejs/pulumi/postgresql/">postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="random" href="/docs/reference/pkg/nodejs/pulumi/random/">random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="terraform" href="/docs/reference/pkg/nodejs/pulumi/terraform/">terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="tls" href="/docs/reference/pkg/nodejs/pulumi/tls/">tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="vsphere" href="/docs/reference/pkg/nodejs/pulumi/vsphere/">vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Python">
+                <div class="sidenav-topic ">
+                    <a data-title="Python" href="/docs/reference/pkg/python/">Python</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/python/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_aws" href="/docs/reference/pkg/python/pulumi_aws/">pulumi_aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azure" href="/docs/reference/pkg/python/pulumi_azure/">pulumi_azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azuread" href="/docs/reference/pkg/python/pulumi_azuread/">pulumi_azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_cloudflare" href="/docs/reference/pkg/python/pulumi_cloudflare/">pulumi_cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_datadog" href="/docs/reference/pkg/python/pulumi_datadog/">pulumi_datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_digitalocean" href="/docs/reference/pkg/python/pulumi_digitalocean/">pulumi_digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_dnsimple" href="/docs/reference/pkg/python/pulumi_dnsimple/">pulumi_dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_f5bigip" href="/docs/reference/pkg/python/pulumi_f5bigip/">pulumi_f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gcp" href="/docs/reference/pkg/python/pulumi_gcp/">pulumi_gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gitlab" href="/docs/reference/pkg/python/pulumi_gitlab/">pulumi_gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_kubernetes" href="/docs/reference/pkg/python/pulumi_kubernetes/">pulumi_kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_linode" href="/docs/reference/pkg/python/pulumi_linode/">pulumi_linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_mysql" href="/docs/reference/pkg/python/pulumi_mysql/">pulumi_mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_newrelic" href="/docs/reference/pkg/python/pulumi_newrelic/">pulumi_newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_openstack" href="/docs/reference/pkg/python/pulumi_openstack/">pulumi_openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_postgresql" href="/docs/reference/pkg/python/pulumi_postgresql/">pulumi_postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_random" href="/docs/reference/pkg/python/pulumi_random/">pulumi_random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_tls" href="/docs/reference/pkg/python/pulumi_tls/">pulumi_tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_vsphere" href="/docs/reference/pkg/python/pulumi_vsphere/">pulumi_vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="FAQ">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Download and Install">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Changelog">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible">
+                <div class="toggle" data-title="Troubleshooting &amp; Support">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+    
+
+    
+</aside>
+
+
+
+            </div>
+
+            <div class="md:w-7/12">
+                <h1>AWS Virtual Private Cloud (VPC)</h1>
+                
+
+<p><a href="/docs/reference/crosswalk/aws/">
+    <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+</a></p>
+
+<p><a href="https://aws.amazon.com/vpc">Amazon Virtual Private Cloud (Amazon VPC)</a> lets you provision a logically isolated section
+of the AWS Cloud where you can launch AWS resources in a virtual network that you define. You have complete control
+over your virtual networking environment, including selection of your own IP address range, creation of subnets, and
+configuration of route tables and network gateways. You can use both IPv4 and IPv6 in your VPC for secure and easy
+access to resources and applications, and use multiple layers of security, including security groups and network
+access control lists, to limit network access to and from resources.</p>
+
+<div class="mini-toc border-b border-gray-200 mt-2 mb-8 py-6">
+    <h4>On This Page</h4>
+    <ul>
+        
+    </ul>
+</div>
+
+
+<h2 id="overview">Overview</h2>
+
+<p>Pulumi Crosswalk for AWS provides simple, out of the box VPC functionality that follows widely accepted best
+practices. This ensures you can provision and evolve your VPCs across many environments productively and safely,
+without needing to recreate the same VPC templates for every new project you tackle.</p>
+
+<p>Using these capabilities, you can control the entire virtual network and restrict access to just those network
+endpoints that require it. These network resources are essential to configuring many of the other Crosswalk AWS
+components, including ECS and EKS clusters, API gateways, and various network load balancing options.</p>
+
+<p>Each account has a default regional network and VPC to make it easy to get up and running. Most production
+circumstances call for dedicated VPCs and network isolation. This includes multi-tenanted scenarios where VPCs can be
+used for strong network isolation between endpoints and resources that are otherwise sharing an AWS account.</p>
+
+<h2 id="managing-vpcs">Managing VPCs</h2>
+
+<p>The <a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Vpc">aws.ec2.Vpc</a> class provides full access to the
+AWS VPC API, and <a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/">aws.ec2</a> the entire AWS EC2 API. Using
+these packages, you can configure all aspects of AWS networks for your applications and infrastructure.</p>
+
+<p>The <a href="/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc">awsx.ec2.Vpc</a> class encapsulates a complete
+configuration of an AWS network, including the actual VPC itself, in addition to public and/or private subnets, route
+tables, and gateways, across multiple availability zones. It is designed to be easier to use, with reasonable defaults,
+and follows AWS&rsquo;s own best practices, with configurability for advanced scenarios. The two can be used together.</p>
+
+<p>Below are some of the most common infrastructure as code tasks with VPCs.</p>
+
+<h2 id="getting-the-default-vpc">Getting the Default VPC</h2>
+
+<p>Often resources like clusters, API gateways, lambdas, and more, will request a VPC object or ID. This ensures
+such resources inside of your VPC so network traffic are isolated from other VPCs in your account.</p>
+
+<p>So where do you get such a VPC from? One way is that each AWS account has a default VPC per region. Using the default
+VPC is often the easiest path when you&rsquo;re just getting up and running or don&rsquo;t yet understand your specific networking
+requirements. Most resources will use this default VPC automatically if you leave it unspecified. In other cases,
+you may be required to pass it explicitly, in which case you&rsquo;ll need to get it programmatically.</p>
+
+<p>To get the default VPC, just call the <code>awsx.ec2.Vpc.getDefault()</code> function:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Fetch the default VPC information from your AWS account:
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">vpc</span> <span class="o">=</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">Vpc</span><span class="p">.</span><span class="nx">getDefault</span><span class="p">();</span>
+
+<span class="c1">// Export a few interesting fields to make them easy to use:
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcId</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcPrivateSubnetIds</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">privateSubnetIds</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcPublicSubnetIds</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">publicSubnetIds</span><span class="p">;</span></code></pre></div>
+<p>This example reads the default VPC and exports some of its properties for easy consumption. <code>pulumi up</code> will show:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi up
+Updating <span class="o">(</span>dev<span class="o">)</span>:
+
+     Type                     Name                  Status
+ +   pulumi:pulumi:Stack      crosswalk-aws-dev     created
+ +   ├─ awsx:x:ec2:Vpc        default-vpc           created
+ +   │  ├─ awsx:x:ec2:Subnet  default-vpc-public-0  created
+ +   │  ├─ awsx:x:ec2:Subnet  default-vpc-public-1  created
+ &gt;   │  ├─ aws:ec2:Subnet     default-vpc-public-0  <span class="nb">read</span>
+ &gt;   │  └─ aws:ec2:Subnet     default-vpc-public-1  <span class="nb">read</span>
+ &gt;   └─ aws:ec2:Vpc           default-vpc           <span class="nb">read</span>
+
+Outputs:
+    vpcId              : <span class="s2">&#34;vpc-c93b06ae&#34;</span>
+    vpcPublicSubnetIds : <span class="o">[</span>
+        <span class="o">[</span><span class="m">0</span><span class="o">]</span>: <span class="s2">&#34;subnet-00412149&#34;</span>
+        <span class="o">[</span><span class="m">1</span><span class="o">]</span>: <span class="s2">&#34;subnet-fd19eaa6&#34;</span>
+    <span class="o">]</span>
+
+Resources:
+    + <span class="m">4</span> created
+
+Duration: 6s</code></pre></div>
+<p>In this case, the VPC is not created and managed by Pulumi. Instead <code>getDefault</code> reads from your AWS account
+and returns the VPC metadata. This object can be introspected or passed anywhere an <code>awsx.ec2.Vpc</code> is expected.</p>
+
+<h2 id="setting-up-a-new-vpc">Setting Up a New VPC</h2>
+
+<p>Although using the default VPC is easy, it&rsquo;s often not suitable for production. By setting up a dedicated VPC,
+we can isolate workloads from existing ones, and have more control over subnet configuration, routing, and
+controlling ingress and egress security rules.</p>
+
+<p>To set up a new VPC, allocate a new <code>awsx.ec2.Vpc</code> object. This class offers a number of options, ranging from
+simple defaults that many will want to start with, to complete control over everything VPC has to offer.</p>
+
+<p>The following code creates a new VPC using all default settings:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Allocate a new VPC with the default settings:
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">vpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">Vpc</span><span class="p">(</span><span class="s2">&#34;custom&#34;</span><span class="p">);</span>
+
+<span class="c1">// Export a few resulting fields to make them easy to use:
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcId</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcPrivateSubnetIds</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">privateSubnetIds</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcPublicSubnetIds</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">publicSubnetIds</span><span class="p">;</span></code></pre></div>
+<p>If we run <code>pulumi up</code>, the VPC and its supporting resources will be provisioned:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi up
+Updating <span class="o">(</span>dev<span class="o">)</span>:
+
+     Type                                    Name                    Status
+ +   pulumi:pulumi:Stack                     crosswalk-aws-dev       created
+ +   ├─ awsx:x:ec2:Vpc                       custom                  created
+ +   │  ├─ awsx:x:ec2:Subnet                 custom-public-0         created
+ +   │  │  ├─ aws:ec2:RouteTable             custom-public-0         created
+ +   │  │  ├─ aws:ec2:Subnet                 custom-public-0         created
+ +   │  │  ├─ aws:ec2:Route                  custom-public-0-ig      created
+ +   │  │  └─ aws:ec2:RouteTableAssociation  custom-public-0         created
+ +   │  ├─ awsx:x:ec2:Subnet                 custom-public-1         created
+ +   │  │  ├─ aws:ec2:RouteTable             custom-public-1         created
+ +   │  │  ├─ aws:ec2:Subnet                 custom-public-1         created
+ +   │  │  ├─ aws:ec2:Route                  custom-public-1-ig      created
+ +   │  │  └─ aws:ec2:RouteTableAssociation  custom-public-1         created
+ +   │  ├─ awsx:x:ec2:Subnet                 custom-private-0        created
+ +   │  │  ├─ aws:ec2:RouteTable             custom-private-0        created
+ +   │  │  ├─ aws:ec2:Subnet                 custom-private-0        created
+ +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-private-0        created
+ +   │  │  └─ aws:ec2:Route                  custom-private-0-nat-0  created
+ +   │  ├─ awsx:x:ec2:Subnet                 custom-private-1        created
+ +   │  │  ├─ aws:ec2:RouteTable             custom-private-1        created
+ +   │  │  ├─ aws:ec2:Subnet                 custom-private-1        created
+ +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-private-1        created
+ +   │  │  └─ aws:ec2:Route                  custom-private-1-nat-1  created
+ +   │  ├─ awsx:x:ec2:NatGateway             custom-1                created
+ +   │  │  ├─ aws:ec2:Eip                    custom-1                created
+ +   │  │  └─ aws:ec2:NatGateway             custom-1                created
+ +   │  ├─ awsx:x:ec2:InternetGateway        custom                  created
+ +   │  │  └─ aws:ec2:InternetGateway        custom                  created
+ +   │  └─ awsx:x:ec2:NatGateway             custom-0                created
+ +   │     ├─ aws:ec2:Eip                    custom-0                created
+ +   │     └─ aws:ec2:NatGateway             custom-0                created
+ +   └─ aws:ec2:Vpc                          custom                  created
+
+Outputs:
+    vpcId              : <span class="s2">&#34;vpc-0db13470ea4417118&#34;</span>
+    vpcPrivateSubnetIds: <span class="o">[</span>
+        <span class="o">[</span><span class="m">0</span><span class="o">]</span>: <span class="s2">&#34;subnet-046a7b24ce8c72997&#34;</span>
+        <span class="o">[</span><span class="m">1</span><span class="o">]</span>: <span class="s2">&#34;subnet-0cd37676da1738dcc&#34;</span>
+    <span class="o">]</span>
+    vpcPublicSubnetIds : <span class="o">[</span>
+        <span class="o">[</span><span class="m">0</span><span class="o">]</span>: <span class="s2">&#34;subnet-022b9acda1e440d69&#34;</span>
+        <span class="o">[</span><span class="m">1</span><span class="o">]</span>: <span class="s2">&#34;subnet-0cdb12f9c04eafa68&#34;</span>
+    <span class="o">]</span>
+
+Resources:
+    + <span class="m">31</span> created
+
+Duration: 1m56s</code></pre></div>
+<p>If unspecified, this VPC will use the following defaults:</p>
+
+<ul>
+<li>An IPv4 CIDR block of <code>10.0.0.0/16</code>.</li>
+<li>The first <code>2</code> availability zones inside of your region.</li>
+<li>A public and private subnet per availability zone.</li>
+<li>Equally partitioned CIDR address spaces per subnet (per availability zone).</li>
+<li>A NAT Gateway and EIP per private subnet.</li>
+<li>A single Internet Gateway for all public subnets to use.</li>
+</ul>
+
+<p>The following sections show how to explicitly manage any or all of these settings.</p>
+
+<h2 id="configuring-cidr-blocks-for-a-vpc">Configuring CIDR Blocks for a VPC</h2>
+
+<p>Although the default CIDR block of <code>10.0.0.0/16</code> is reasonable most of the time, it is easy to override.</p>
+
+<blockquote>
+<p>Classless Inter-Domain Routing (CIDR) is an Internet standard for specifying ranges of
+IP addresses. Please see <a href="https://tools.ietf.org/html/rfc4632">RFC 4632</a> for more details.</p>
+</blockquote>
+
+<p>To set our VPC&rsquo;s CIDR block, pass a custom <code>cidrBlock</code> argument to <code>awsx.ec2.Vpc</code>&rsquo;s constructor:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Allocate a new VPC with a smaller CIDR range:
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">vpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">Vpc</span><span class="p">(</span><span class="s2">&#34;custom&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">cidrBlock</span><span class="o">:</span> <span class="s2">&#34;172.16.8.0/28&#34;</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// Export a few resulting fields to make them easy to use:
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcId</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcPrivateSubnetIds</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">privateSubnetIds</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcPublicSubnetIds</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">publicSubnetIds</span><span class="p">;</span></code></pre></div>
+<p>This decreases the number of available IP addresses in our VPC from the default of 65,536 addresses (<code>/16</code> netmask) to
+256 addresses (<code>/24</code> netmask), in addition to changing the IP address prefix from <code>10.0.0.0</code> to <code>172.16.8.0</code>.</p>
+
+<blockquote>
+<p>A VPC can have a minimum of 16 addresses, using the CIDR netmask <code>/28</code>, and a maximum of 65,536 addresses, using
+the netmask <code>/16</code>. The addresses are allocated across availability zones which may incur additional constraints.</p>
+</blockquote>
+
+<p>In addition to configuring the CIDR block for your entire VPC, you can optionally assign a CIDR block to your
+VPC&rsquo;s subnets. These must reside entirely within your VPC&rsquo;s CIDR block. If you do not explicitly specify ranges,
+traffic will be evenly partitioned between availability zones within the VPC CIDR block range provided.</p>
+
+<p>Please see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html">IP Addressing in Your VPC</a>
+for information about the full range of IP address and CIDR configuration available for your VPC.</p>
+
+<h2 id="configuring-availability-zones-for-an-aws-vpc">Configuring Availability Zones for an AWS VPC</h2>
+
+<p>A VPC spans all of the availability zones in your region. By default, however, the <code>awsx.ec2.Vpc</code> resource will
+only use 2 of them when allocating subnets and the associated gateways. This provides fault tolerance between
+two zones at a reasonable cost.</p>
+
+<p>All regions support at least 2 availability zones, but many of them support more. If you&rsquo;d like to improve the
+fault tolerance of your configuration, simply override this with the <code>numberOfAvailabilityZones</code> argument:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Allocate a new VPC that uses 3 availability zones, instead of 2:
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">vpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">Vpc</span><span class="p">(</span><span class="s2">&#34;custom&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">numberOfAvailabilityZones</span>: <span class="kt">3</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// Export a few resulting fields to make them easy to use:
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcId</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcPrivateSubnetIds</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">privateSubnetIds</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcPublicSubnetIds</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">publicSubnetIds</span><span class="p">;</span></code></pre></div>
+<p>The VPC resource will internally adjust to fully consume 3 availability zones and split traffic accordingly.</p>
+
+<p>For information about regional support for availability zones, refer to AWS&rsquo;s
+<a href="https://aws.amazon.com/about-aws/global-infrastructure/regions_az/">Global Infrastructures Regions and AZs</a> help page.</p>
+
+<h2 id="using-all-of-a-region-s-availability-zones-for-a-vpc">Using All of a Region&rsquo;s Availability Zones for a VPC</h2>
+
+<p>To use all availability zones within a region, simply pass <code>&quot;all&quot;</code> for <code>numberOfAvailabilityZones</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Allocate a new VPC that uses all of the current region&#39;s availability zones:
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">vpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">Vpc</span><span class="p">(</span><span class="s2">&#34;custom&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">numberOfAvailabilityZones</span><span class="o">:</span> <span class="s2">&#34;all&#34;</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// Export a few resulting fields to make them easy to use:
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcId</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcPrivateSubnetIds</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">privateSubnetIds</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcPublicSubnetIds</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">publicSubnetIds</span><span class="p">;</span></code></pre></div>
+<p>This approach keeps your code flexibly deployable across different regions, where the number of zones may vary.</p>
+
+<h2 id="configuring-subnets-for-a-vpc">Configuring Subnets for a VPC</h2>
+
+<p>A VPC spans all of the availability zones in a region. You can additionally create one or more subnets in each
+availability zone, to increase your fault tolerance within a region and control routing.</p>
+
+<p>By default, the <code>awsx.ec2.Vpc</code> class will allocate a public and a private subnet for each availability zone and evenly
+partition traffic amongst each of them. In the event that you do not wish to keep this default, you can override
+the behavior using its constructor&rsquo;s <code>subnets</code> argument.</p>
+
+<p>For example, this program replicates the default behavior but with an explicit specification:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Allocate a new VPC with public and private subnets per AZ:
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">vpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">Vpc</span><span class="p">(</span><span class="s2">&#34;custom&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">subnets</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;public&#34;</span> <span class="p">},</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;private&#34;</span> <span class="p">}],</span>
+<span class="p">});</span>
+
+<span class="c1">// Export a few resulting fields to make them easy to use:
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcId</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcPrivateSubnetIds</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">privateSubnetIds</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcPublicSubnetIds</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">publicSubnetIds</span><span class="p">;</span></code></pre></div>
+<p>The <code>subnets</code> argument simply takes an array of subnet specifications. Each one can include this information:</p>
+
+<ul>
+<li><p><code>type</code>: A required type of subnet to create. There are three kinds available:</p>
+
+<ul>
+<li>A <code>public</code> subnet is is one whose traffic is routed to an
+<a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html">Internet Gateway (IGW)</a>.</li>
+<li>A <code>private</code> subnet is one that is configured to use a
+<a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat.html">NAT Gateway (NAT)</a> so that it can reach the internet,
+but which prevents the internet from initiating connections to it.</li>
+<li>An <code>isolated</code> subnet is one that cannot reach the internet either through an IGW or with NAT.</li>
+</ul></li>
+
+<li><p><code>name</code>: An optional name to use as part of the subnet name. If not provided, the type of the subnet will be
+used. As a result, this is required when making multiple subnets of the same type.</p></li>
+
+<li><p><code>cidrMask</code>: The number of leading bits in the VPC&rsquo;s CIDR block to use to define the CIDR for this specific
+subnet. By providing masking bits, this ensures each subnet has a distinct block.</p></li>
+
+<li><p><code>tags</code>: A map of name/value pairs to tag the resulting subnet resource with.</p></li>
+</ul>
+
+<p>There is no restriction on the number of subnets in an availability zone. For example, it might be useful to
+have multiple isolated subnets, one for DB instances, and another for Redis instances. To facilitate this sort
+of arrangements, we can use the <code>name</code> property mentioned above:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Allocate a new VPC with a public and private subnet per AZ, plus two isolated subnets
+</span><span class="c1">// without Internet access, one for our DB instances and another for our Redis instances.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">vpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">Vpc</span><span class="p">(</span><span class="s2">&#34;custom&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">subnets</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;public&#34;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;private&#34;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;isolated&#34;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;db&#34;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;isolated&#34;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;redis&#34;</span> <span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">});</span>
+
+<span class="c1">// Export a few resulting fields to make them easy to use:
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcId</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcPrivateSubnetIds</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">privateSubnetIds</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcPublicSubnetIds</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">publicSubnetIds</span><span class="p">;</span></code></pre></div>
+<p>By default, the subnet CIDR ranges will be divided as evenly as possible within the VPC. If this isn&rsquo;t desired,
+a particular size for each zone can be requested by passing in an appropriate <code>cidrMask</code> value between 16 and 28.
+This value can be provided for specific subnets you know the number of instances you want IP addresses for. The
+remaining IP addresses in the availability zone, if any, will be split over the subnets without a defined size.</p>
+
+<p>Please refer to <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a> for complete
+information about how VPCs and subnets relate in AWS and the configuration options available to you.</p>
+
+<h2 id="configuring-internet-and-nat-gateways-for-subnets-in-a-vpc">Configuring Internet and NAT Gateways for Subnets in a VPC</h2>
+
+<p>By default, any VPC with public subnets will have a single Internet Gateway created for it. All public subnets will be
+routable for all IPv4 addresses connections through this gateway.</p>
+
+<p>To allow connections from private subnets to the internet, NAT gateways will also be created. If not specified, one
+NAT Gateway will be created for each availability zone, to maximize fault tolerance. Because the NAT gateway must be
+in a public subnet, NAT gateways will only be created if there is at least one public subnet.</p>
+
+<p>Fewer NAT gateways can be requested (e.g., to save on costs) using the <code>numberOfNatGateways</code> property:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Allocate a VPC that routes all traffic through a single NAT Gateway:
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">vpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">Vpc</span><span class="p">(</span><span class="s2">&#34;custom&#34;</span><span class="p">,</span> <span class="p">{</span>
+   <span class="nx">numberOfNatGateways</span>: <span class="kt">1</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// Export a few resulting fields to make them easy to use:
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcId</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcPrivateSubnetIds</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">privateSubnetIds</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">vpcPublicSubnetIds</span> <span class="o">=</span> <span class="nx">vpc</span><span class="p">.</span><span class="nx">publicSubnetIds</span><span class="p">;</span></code></pre></div>
+<p>In the case where there is one NAT gateway per availability zone, then routing is very simple. Each private subnet
+will have have connections routed through gateway in that availability zone.</p>
+
+<p>In the case where there are fewer NAT gateways than availability zones, however, routing works differently. If there
+are <em>N</em> NAT gateways requested, then the first <em>N</em> availability zones will get a NAT gateway. Routing to private subnets
+in those availability zones works as above. However, all remaining availability zones will have their private subnets
+routed to in a round-robin fashion from the availability zones with NAT gateways.</p>
+
+<blockquote>
+<p>Warning: While reducing the number of NAT gateways will save money, it also introduces risk as failure of one
+availability zone may impact others.</p>
+</blockquote>
+
+<h2 id="configuring-security-groups-for-a-vpc">Configuring Security Groups for a VPC</h2>
+
+<p>All traffic in and out of a VPC is controlled by
+<a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html">Security Groups</a>, which act as virtual
+firewalls that limit inbound traffic to and outbound traffic from your VPC.</p>
+
+<p>For security groups, you add <em>rules</em> that control traffic what traffic is permitted in the form of <em>ingress rules</em> (for
+inbound traffic) and <em>egress rules</em> (outbound traffic). In addition to specifying what network protocol and ports
+these rules apply to, you can also specify source and destination locations using CIDR blocks and other notations.</p>
+
+<p>Each VPC has a default Security Group that disallows all ingress from any external source, and permits all outbound
+traffic. This will be used by default, however you may allocate and assign resources to different groups explicitly.</p>
+
+<p>Here is a program that allocates a new group with a few rules:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Allocate a new VPC using any of the above techniques.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">vpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">Vpc</span><span class="p">(</span><span class="s2">&#34;custom&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="cm">/*...*/</span> <span class="p">});</span>
+
+<span class="c1">// Allocate a security group and then a series of rules:
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">sg</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">SecurityGroup</span><span class="p">(</span><span class="s2">&#34;sg&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">vpc</span> <span class="p">});</span>
+
+<span class="c1">// 1) inbound SSH traffic on port 22 from a specific IP address
+</span><span class="c1"></span><span class="nx">sg</span><span class="p">.</span><span class="nx">createIngressRule</span><span class="p">(</span><span class="s2">&#34;ssh-access&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">location</span><span class="o">:</span> <span class="p">{</span> <span class="nx">cidrBlocks</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&#34;203.0.113.25/32&#34;</span> <span class="p">]</span> <span class="p">},</span>
+    <span class="nx">ports</span>: <span class="kt">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">TcpPorts</span><span class="p">(</span><span class="mi">22</span><span class="p">),</span>
+    <span class="nx">description</span><span class="o">:</span> <span class="s2">&#34;allow SSH access to 203.0.113.25&#34;</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// 2) inbound HTTPS traffic on port 443 from anywhere
+</span><span class="c1"></span><span class="nx">sg</span><span class="p">.</span><span class="nx">createIngressRule</span><span class="p">(</span><span class="s2">&#34;https-access&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">location</span>: <span class="kt">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">AnyIPv4Location</span><span class="p">(),</span>
+    <span class="nx">ports</span>: <span class="kt">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">TcpPorts</span><span class="p">(</span><span class="mi">443</span><span class="p">),</span>
+    <span class="nx">description</span><span class="o">:</span> <span class="s2">&#34;allow HTTPS access from anywhere&#34;</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// 3) outbound TCP traffic on any port to anywhere
+</span><span class="c1"></span><span class="nx">sg</span><span class="p">.</span><span class="nx">createEgressRule</span><span class="p">(</span><span class="s2">&#34;outbound-access&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">location</span>: <span class="kt">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">AnyIPv4Location</span><span class="p">(),</span>
+    <span class="nx">ports</span>: <span class="kt">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">AllTcpPorts</span><span class="p">(),</span>
+    <span class="nx">description</span><span class="o">:</span> <span class="s2">&#34;allow outbound access to anywhere&#34;</span><span class="p">,</span>
+<span class="p">});</span></code></pre></div>
+<p>This program allows all ingress traffic on port 443, only ingress from a certain IP address over SSH, and explicitly
+allows all egress to any TCP destination. This code uses helpers like <code>AnyIPv4Location</code> and <code>TcpPorts</code> to cut down
+on boilerplate we&rsquo;d otherwise have to state by hand. We can write it out by hand if we prefer:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Allocate a new VPC using any of the above techniques.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">vpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">Vpc</span><span class="p">(</span><span class="s2">&#34;custom&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="cm">/*...*/</span> <span class="p">});</span>
+
+<span class="c1">// Allocate a security group and then a series of rules:
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">sg</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">ec2</span><span class="p">.</span><span class="nx">SecurityGroup</span><span class="p">(</span><span class="s2">&#34;sg&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">vpc</span> <span class="p">});</span>
+
+<span class="c1">// 1) inbound SSH traffic on port 22 from a specific IP address
+</span><span class="c1"></span><span class="nx">sg</span><span class="p">.</span><span class="nx">createIngressRule</span><span class="p">(</span><span class="s2">&#34;ssh-access&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">location</span><span class="o">:</span> <span class="p">{</span> <span class="nx">cidrBlocks</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&#34;203.0.113.25/32&#34;</span> <span class="p">]</span> <span class="p">},</span>
+    <span class="nx">ports</span><span class="o">:</span> <span class="p">{</span> <span class="nx">protocol</span><span class="o">:</span> <span class="s2">&#34;tcp&#34;</span><span class="p">,</span> <span class="nx">fromPort</span>: <span class="kt">22</span> <span class="p">},</span>
+    <span class="nx">description</span><span class="o">:</span> <span class="s2">&#34;allow SSH access to 203.0.113.25&#34;</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// 2) inbound HTTPS traffic on port 443 from anywhere
+</span><span class="c1"></span><span class="nx">sg</span><span class="p">.</span><span class="nx">createIngressRule</span><span class="p">(</span><span class="s2">&#34;https-access&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">location</span><span class="o">:</span> <span class="p">{</span> <span class="nx">cidrBlocks</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&#34;0.0.0.0/0&#34;</span> <span class="p">]</span> <span class="p">},</span>
+    <span class="nx">ports</span><span class="o">:</span> <span class="p">{</span> <span class="nx">protocol</span><span class="o">:</span> <span class="s2">&#34;tcp&#34;</span><span class="p">,</span> <span class="nx">fromPort</span>: <span class="kt">443</span> <span class="p">},</span>
+    <span class="nx">description</span><span class="o">:</span> <span class="s2">&#34;allow HTTPS access from anywhere&#34;</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// 3) outbound TCP traffic on any port to anywhere
+</span><span class="c1"></span><span class="nx">sg</span><span class="p">.</span><span class="nx">createEgressRule</span><span class="p">(</span><span class="s2">&#34;outbound-access&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">location</span><span class="o">:</span> <span class="p">{</span> <span class="nx">cidrBlocks</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&#34;0.0.0.0/0&#34;</span> <span class="p">]</span> <span class="p">},</span>
+    <span class="nx">ports</span><span class="o">:</span> <span class="p">{</span> <span class="nx">protocol</span><span class="o">:</span> <span class="s2">&#34;tcp&#34;</span><span class="p">,</span> <span class="nx">fromPort</span>: <span class="kt">65535</span> <span class="p">},</span>
+    <span class="nx">description</span><span class="o">:</span> <span class="s2">&#34;allow outbound access to anywhere&#34;</span><span class="p">,</span>
+<span class="p">});</span></code></pre></div>
+<p>For additional details about configuring security group rules, please see the
+<a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html">Security Groups for Your VPC</a> documentation.</p>
+
+<h2 id="setting-up-a-new-vpc-the-hard-way">Setting Up a New VPC the Hard Way</h2>
+
+<p>The <code>awsx.ec2.Vpc</code> component encapsulates a lot of details, including subnets, route tables, gateways, in addition to
+the VPC resource itself. The <code>aws.ec2</code> package, on the other hand, out of which <code>Vpc</code> is built, provides all of these
+raw resource so that you can code directly to the underlying AWS resource types, exposing every underlying capability.</p>
+
+<p>For information about configuring each of these resources, please refer to each type&rsquo;s API documentation:</p>
+
+<ul>
+<li><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Vpc">Vpc</a></li>
+<li><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Subnet">Subnet</a></li>
+<li><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#InternetGateway">InternetGateway</a></li>
+<li><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#NatGateway">NatGateway</a></li>
+<li><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SecurityGroup">SecurityGroup</a></li>
+</ul>
+
+<p>These resources can be independently allocated, just as with the <code>Vpc</code> class shown above. They will need to be
+connected together manually, however, which can provide greater flexibility but at a greater implementation cost.</p>
+
+<p>Please note that the constituent parts, in the form of these raw resources, are available as properties on the
+resulting <code>Vpc</code> class. For instance, <code>internetGateway</code> will return the Internet Gateway object for a VPC.</p>
+
+<h2 id="additional-vpc-resources">Additional VPC Resources</h2>
+
+<p>For more information about VPCs, please read the following:</p>
+
+<ul>
+<li><a href="https://aws.amazon.com/vpc/">Amazon Virtual Private Cloud homepage</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

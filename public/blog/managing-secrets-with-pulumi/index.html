@@ -1,0 +1,1195 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.pulumi.com/blog/managing-secrets-with-pulumi/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+        
+            
+            
+                
+                    <meta name="twitter:creator" content="@ellism">
+                
+            
+        
+    
+
+    
+        <meta property="og:title" content="Managing Secrets with Pulumi">
+    
+
+    
+        <meta name="description" content="We&rsquo;ve had a 1st class concept of encrypted secrets configuration ever
+since first releasing Pulumi. Customers have told us they love having
+such a simple and easy way to ensure safe management of tokens, database
+passwords, and more. Since launching, however, we&rsquo;ve also heard that
+you&rsquo;d like more control over encryption and to see this protection
+expanded to cover not just configuration, but all of the secret data
+within their Pulumi deployments.
+
+To support this, we&rsquo;ve added two new features to Pulumi in our latest
+0.17.12 release:
+
+
+Automatic tracking of secret values throughout a Pulumi program to
+ensure that all such values are always encrypted in the resulting
+state, no matter how they are used.
+A new option to use custom client-side encryption, instead of the
+default of using the Pulumi backend for encryption, to have full
+control over the secrets encryption and decryption.
+
+
+Together, these features provide you with complete control over how
+secrets are managed within Pulumi deployments. We have worked with
+customers with advanced security and compliance needs while developing
+this feature, enabling them to use our online hosted SaaS with even
+greater confidence.">
+        <meta property="og:description" content="We&rsquo;ve had a 1st class concept of encrypted secrets configuration ever
+since first releasing Pulumi. Customers have told us they love having
+such a simple and easy way to ensure safe management of tokens, database
+passwords, and more. Since launching, however, we&rsquo;ve also heard that
+you&rsquo;d like more control over encryption and to see this protection
+expanded to cover not just configuration, but all of the secret data
+within their Pulumi deployments.
+
+To support this, we&rsquo;ve added two new features to Pulumi in our latest
+0.17.12 release:
+
+
+Automatic tracking of secret values throughout a Pulumi program to
+ensure that all such values are always encrypted in the resulting
+state, no matter how they are used.
+A new option to use custom client-side encryption, instead of the
+default of using the Pulumi backend for encryption, to have full
+control over the secrets encryption and decryption.
+
+
+Together, these features provide you with complete control over how
+secrets are managed within Pulumi deployments. We have worked with
+customers with advanced security and compliance needs while developing
+this feature, enabling them to use our online hosted SaaS with even
+greater confidence.">
+    
+
+    
+    
+    <meta property="og:image" content="https://www.pulumi.com/social/pulumi.png">
+
+    <title>Managing Secrets with Pulumi - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/blog/managing-secrets-with-pulumi/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="https://www.pulumi.com/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="https://www.pulumi.com/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u");
+    analytics.page();
+    }}();
+    </script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+        
+            
+                
+            
+        
+        
+    
+</head>
+
+    <body class="section-blog">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+            <div class="md:w-3/12 pr-8">
+                
+<aside class="md:pr-8">
+
+    
+    <div class="md:hidden">
+        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </div>
+
+    <h3 class="no-anchor hidden md:flex mt-4">
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </h3>
+
+    
+    <div class="blog-sidebar-content hidden md:block">
+        <div class="bg-gray-100 rounded-lg p-4 my-6 text-gray-700">
+            <h5 class="no-anchor text-gray-700">Program the Cloud</h5>
+            <p class="text-sm my-0">
+                Create, deploy, and manage cloud infrastructure using your favorite language.
+            </p>
+        </div>
+
+        <ul class="list-none p-0 mb-4 inline-flex flex-wrap text-xs">
+            
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/apigateway/">
+                            apigateway
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/applications/">
+                            applications
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/auth/">
+                            auth
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/aws/">
+                            aws
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/azure/">
+                            azure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/ci/cd/">
+                            ci/cd
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/cloud-native/">
+                            cloud-native
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/containers/">
+                            containers
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/customer/">
+                            customer
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/digitalocean/">
+                            digitalocean
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/docker/">
+                            docker
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/eks/">
+                            eks
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/events/">
+                            events
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/features/">
+                            features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/gcp/">
+                            gcp
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/gke/">
+                            gke
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/infrastructure/">
+                            infrastructure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/javascript/">
+                            javascript
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/jupyter/">
+                            jupyter
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/kubernetes/">
+                            kubernetes
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/lambda/">
+                            lambda
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/logging/">
+                            logging
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/mysql/">
+                            mysql
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/new-features/">
+                            new-features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/pulumi/">
+                            pulumi
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/pulumi-news/">
+                            pulumi-news
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/python/">
+                            python
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/security/">
+                            security
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/serverless/">
+                            serverless
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/testing/">
+                            testing
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/typescript/">
+                            typescript
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="hidden lg:block my-4">
+            <h5 class="no-anchor">Recent Posts</h5>
+            <ul class="list-none p-0">
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/day-2-kubernetes-migrating-eks-nodegroups-with-zero-downtime/">Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime</a>
+                        </li>
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/getting-started-on-digitalocean-with-pulumi/">Getting Started on DigitalOcean with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/pulumi-meetup-recap-apis-custom-resources-and-github-webhooks/">Pulumi Meetup Recap: APIs, Custom Resources and GitHub Webhooks</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks/">Persisting Kubernetes workloads with Amazon EFS CSI volumes using Pulumi open source SDKs</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/unit-testing-infrastructure-in-nodejs-and-mocha/">Unit Testing Your Infrastructure with Node.js and Mocha</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/kubernetes-ingress-with-aws-alb-ingress-controller-and-pulumi-crosswalk/">Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included/">Globally-distributed Serverless Application in 100 Lines of Code. Infrastructure Included!</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/hosting-a-static-website-on-azure-with-pulumi/">Hosting a Static Website on Azure with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/running-containers-in-aws-the-lowdown-ecs-fargate-and-eks/">Running Containers in AWS, the Lowdown: ECS, Fargate, and EKS</a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="md:hidden pb-4">
+        
+    </div>
+</aside>
+
+            </div>
+
+            <div class="md:w-7/12">
+                <article class="mb-8 pb-8 border-b border-gray-200">
+                    <h1 class="no-anchor"><a href="https://www.pulumi.com/blog/managing-secrets-with-pulumi/">Managing Secrets with Pulumi</a></h1>
+                    <div class="flex items-center">
+                        <span>
+                            <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="https://www.pulumi.com/blog/author/matt-ellis/">
+                    <img class="w-8 rounded-full" src="/images/team/matt-ellis.jpg" alt="Matt Ellis" title="Matt Ellis">
+                </a>
+                <a class="" href="https://www.pulumi.com/blog/author/matt-ellis/">Matt Ellis</a>
+            
+        </span>
+    
+</span>
+
+                        </span>
+                    </div>
+                    <section>
+                        <p>We&rsquo;ve had a 1st class concept of encrypted secrets configuration ever
+since first releasing Pulumi. Customers have told us they love having
+such a simple and easy way to ensure safe management of tokens, database
+passwords, and more. Since launching, however, we&rsquo;ve also heard that
+you&rsquo;d like more control over encryption and to see this protection
+expanded to cover not just configuration, but all of the secret data
+within their Pulumi deployments.</p>
+
+<p>To support this, we&rsquo;ve added two new features to Pulumi in our latest
+0.17.12 release:</p>
+
+<ul>
+<li>Automatic tracking of secret values throughout a Pulumi program to
+ensure that all such values are always encrypted in the resulting
+state, no matter how they are used.</li>
+<li>A new option to use custom client-side encryption, instead of the
+default of using the Pulumi backend for encryption, to have full
+control over the secrets encryption and decryption.</li>
+</ul>
+
+<p>Together, these features provide you with complete control over how
+secrets are managed within Pulumi deployments. We have worked with
+customers with advanced security and compliance needs while developing
+this feature, enabling them to use our online hosted SaaS with even
+greater confidence.</p>
+
+<h2 id="secrets-and-state">Secrets and State</h2>
+
+<p>Like many infrastructure as code systems, Pulumi uses a state file to
+describe the current state of your infrastructure. When you run
+<code>pulumi up</code>, Pulumi takes your existing state file, runs your program to
+compute a new desired state and compares the two states. It makes
+updates to the current state so it matches the desired state and updates
+its state file as it does so. As part of this, Pulumi needs to retain
+all the input values passed to resources in the state file, so it can
+detect if they have changed from run to run.</p>
+
+<p>While Pulumi has allowed you to pass <code>--secret</code> to force configuration
+values to be encrypted before being stored in a stack&rsquo;s configuration
+file, if you used these configuration values as inputs to resources,
+they would be stored in plain text in the state file. While the state
+file itself is stored securely (we encrypt all state files in transit
+and at rest), anyone with access to the state file itself would be able
+to see the plain text for all of these secrets.</p>
+
+<p>By adding first class support for secrets with Pulumi, we are now able
+to automatically track secrets across your program&rsquo;s execution and
+ensure that secret values are encrypted in the state file. This means
+you can use secrets confidently without worrying about accidentally
+leaking plain text values. Let&rsquo;s take a look at how it works!</p>
+
+<h2 id="output-and-secrets"><code>Output</code> and Secrets</h2>
+
+<p>To start, let&rsquo;s talk a bit about <code>Output</code>, one of the centerpieces of
+the Pulumi programming model. <code>Output&lt;T&gt;</code> ties together a value (which
+may not be ready yet, since it could depend on some data from a cloud
+resource that is still being created) and resources that the output
+depends on. When you create a resource with Pulumi, the properties of
+that resource are <code>Output</code>&rsquo;s that you can pass to other resources.
+Pulumi uses the information tracked by <code>Output</code> to understand
+dependencies between different resources. For example when an
+<code>Output&lt;string&gt;</code> is used to construct a resource, Pulumi knows this
+resource depends on any resources that were used to generate that
+output. The underlying value that the <code>Output</code> wraps is what we store in
+the state file as an input for this new resource.</p>
+
+<p>With 0.17.11 of Pulumi, we now have <code>Output&lt;T&gt;</code> track if it contains
+secret data. If it does, we ensure that the data is encrypted before we
+store it in the state file. There are few ways to create secret
+<code>Output</code>s today:</p>
+
+<p>By fetching values from the <code>Config</code> object in the JavaScript and Python
+SDKs, using the newly added <code>getSecret</code> or <code>requireSecret</code> (JavaScript)
+and <code>get_secret</code> or <code>require_secret</code> (Python), as well as some type
+specific overloads. These methods fetch the requested value from the
+configuration bag and then wrap it up in an <code>Output</code> which is marked as
+a secret.
+By using <code>pulumi.secret</code> (JavaScript) or <code>pulumi.Output.secret</code> (Python)
+to take an existing value and wrap it up in an <code>Output</code> which is marked
+as a secret. These behave the same way as <code>pulumi.output</code> (JavaScript)
+and <code>pulumi.Output.from_input</code> (Python) except they also mark the
+returned output as a secret.
+By retrieving an output that is marked as a secret from a resource.</p>
+
+<p>When constructing a resource that has one or more secret inputs for a
+property, the entire corresponding output property of the resource is
+marked as a secret as well. In addition, as you combine outputs
+together, via <code>all</code> or <code>apply</code>, the resulting output is marked as a
+secret if any of the inputs values where themselves secrets. This means
+that just like dependency information, the &ldquo;secret-ness&rdquo; of an output
+flow naturally as you combine it with other data.</p>
+
+<p>Let&rsquo;s take a look at a small program which creates an AWS Systems
+Manager parameter, based on a secret configuration value.</p>
+
+<p>Here&rsquo;s the program we&rsquo;ll be using:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">pulumi</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/pulumi&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">cfg</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">pulumi</span><span class="p">.</span><span class="nx">Config</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">secretMessage</span> <span class="o">=</span> <span class="nx">cfg</span><span class="p">.</span><span class="nx">requireSecret</span><span class="p">(</span><span class="s2">&#34;secretMessage&#34;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">param</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">ssm</span><span class="p">.</span><span class="nx">Parameter</span><span class="p">(</span><span class="s2">&#34;secretParameter&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;SecureString&#34;</span><span class="p">,</span>
+    <span class="nx">value</span>: <span class="kt">secretMessage.apply</span><span class="p">(</span><span class="nx">s</span> <span class="o">=&gt;</span> <span class="nx">s</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">())</span>
+<span class="p">});</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">paramId</span> <span class="o">=</span> <span class="nx">param</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">paramValue</span> <span class="o">=</span> <span class="nx">param</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span></code></pre></div>
+<p>In the above code sample, we&rsquo;re using the new <code>requireSecret</code> method to
+pull out a configuration value as a secret. In addition, we use an
+<code>apply</code> to transform the string to all uppercase before creating our SSM
+Parameter. Because <code>secretMessage</code> was marked as a secret, this new
+value is also marked as a secret. It&rsquo;s important to note the function
+that runs during the <code>apply</code> has access to the unencrypted value, so you
+need to be sure that your code inside the apply does not cause the
+secret to leak (for example, don&rsquo;t write it to a text file!)</p>
+
+<p>For a demo, let&rsquo;s create a new stack, target <code>us-west-2</code> in AWS and set
+a secret message:</p>
+
+<pre><code>$ pulumi stack init dev
+$ pulumi config set aws:region us-west-2
+$ pulumi config set --secret secretMessage &quot;it's a secret to everybody&quot;
+</code></pre>
+
+<p>Now, when we run <code>pulumi up</code> after creating a new stack, we&rsquo;ll see the
+following preview:</p>
+
+<pre><code>Previewing update (dev):
+
+     Type                  Name              Plan       
+ +   pulumi:pulumi:Stack   secrets-blog-dev  create     
+ +   └─ aws:ssm:Parameter  secretParameter   create     
+
+Resources:
+    + 2 to create
+</code></pre>
+
+<p>If we look at the details for this deployment (before actually running
+the update), we can see that the value of this resource has been marked
+as a secret:</p>
+
+<pre><code>+ pulumi:pulumi:Stack: (create)
+    [urn=urn:pulumi:dev::secrets-blog::pulumi:pulumi:Stack::secrets-blog-dev]
+    + aws:ssm/parameter:Parameter: (create)
+        [urn=urn:pulumi:dev::secrets-blog::aws:ssm/parameter:Parameter::secretParameter]
+        name      : &quot;secretParameter-1d79dca&quot;
+        type      : &quot;SecureString&quot;
+        value     : &quot;[secret]&quot;
+</code></pre>
+
+<p>Once we&rsquo;ve deployed our program, we can use <code>pulumi stack export</code> to
+look at the state file for our deployment, we see that the value is
+encrypted there as well (I&rsquo;ve removed some uninteresting fields here,
+for clarity):</p>
+
+<pre><code>{
+    &quot;urn&quot;: &quot;urn:pulumi:dev::secrets-blog::aws:ssm/parameter:Parameter::secretParameter&quot;,
+    ...snip...
+    &quot;inputs&quot;: {
+        ...snip...
+        &quot;name&quot;: &quot;secretParameter-56f0ffb&quot;,
+        &quot;type&quot;: &quot;SecureString&quot;,
+        &quot;value&quot;: {
+            &quot;4dabf18193072939515e22adb298388d&quot;: &quot;1b47061264138c4ac30d75fd1eb44270&quot;,
+            &quot;ciphertext&quot;: &quot;AAABAMo1ZLFpKzoHxUkGPXsUMjLBANri5fkPiveYUrjuMzsqONi2U1LnZSPxsN1vvFTs50skEru+Ff6N&quot;
+        }
+    },
+    &quot;outputs&quot;: {
+        ...snip...
+        &quot;name&quot;: &quot;secretParameter-56f0ffb&quot;,
+        &quot;type&quot;: &quot;SecureString&quot;,
+        &quot;value&quot;: {
+            &quot;4dabf18193072939515e22adb298388d&quot;: &quot;1b47061264138c4ac30d75fd1eb44270&quot;,
+            &quot;ciphertext&quot;: &quot;AAABAOjpCFOLHMzP4G9OXc4r+mQs6/4DJv2aWO+vX0LyYHLjfawAHWFlRmv3dErda6Ip48pRB19bBL9t&quot;
+        }
+    }
+    ...snip...
+}
+</code></pre>
+
+<p>As you can see, the value is encrypted in the state file for this
+resource! Also note that because the value was marked as a secret input,
+the corresponding copy in the output section of the state file was also
+marked as a secret. Pulumi ensures that any outputs with the same names
+as inputs which had secret data are also considered secrets. If there
+are additional outputs you want to set as secrets, you can pass the
+<code>additionalSecretOutputs</code> (JavaScript) or <code>additional_secret_outputs</code>
+(Python) resource option when constructing a resource to provide a list
+of other property names you want treated as secrets including computed
+output properties of a resource which might be sensitive, like generated
+passwords or access credentials.</p>
+
+<h2 id="configuring-your-secrets-provider">Configuring your secrets provider</h2>
+
+<p>You might be wondering how these values are actually encrypted. We use
+the same encryption that we have always used for our configuration
+system. This means when storing state with
+<app.pulumi.com>, we use a key managed by the <app.pulumi.com> service, specific to your stack, to
+encrypt everything. Some users have asked for more control over what key
+is used (and the ability to use a key not managed by Pulumi at all!)</p>
+
+<p>When creating a new stack (via <code>pulumi stack init</code> or <code>pulumi new</code>), you
+may now pass <code>--secrets-provider passphrase</code> to specify that both
+configuration secrets and secrets stored in the state file should be
+encrypted using a key derived from a passphrase (if you&rsquo;ve used Pulumi&rsquo;s
+local state storage mode, this will be familiar to you). When you use a
+passphrase, we use <a href="https://en.wikipedia.org/wiki/PBKDF2">PBKDF2</a> to
+derive a 32 byte encryption key, which we then use with the AES-256-GCM
+encryption algorithm to encrypt your value (using a random 12 byte nonce
+per value encrypted). Let&rsquo;s run through deploying the same code but
+using the passphrase secret provider:</p>
+
+<p>First, I create a new stack, setting the secrets provider to passphrase:</p>
+
+<pre><code>$ pulumi stack init dev --secrets-provider passphrase
+Enter your passphrase to protect config/secrets:
+Re-enter your passphrase to confirm:
+Created stack 'dev'
+</code></pre>
+
+<p>As part of creating the stack, I had to enter a passphrase, which I&rsquo;ll
+have to use during future updates. This passphrase is used to derive the
+key used for both configuration and state management. I can now
+configure my stack as I please:</p>
+
+<pre><code>$ pulumi config set aws:region us-west-2
+$ pulumi config set secretMessage --secret &quot;it's a secret to everybody&quot;
+Enter your passphrase to unlock config/secrets
+    (set PULUMI_CONFIG_PASSPHRASE to remember):
+</code></pre>
+
+<p>Note that to set the secret value, I had to provide my passphrase (since
+it is needed to generate the key that is used to encrypt the value).</p>
+
+<p>Finally, I can run <code>pulumi up</code>, here I&rsquo;m prompted to enter my passphrase
+again. I could also set <code>PULUMI_CONFIG_PASSPHRASE</code> in my environment.
+You might do this locally as part of your local development loop (so you
+don&rsquo;t have to type your passphrase over and over) or in your CI system
+(where you&rsquo;d be unable to type your passphrase in interactively).</p>
+
+<pre><code>$ pulumi up
+Enter your passphrase to unlock config/secrets
+    (set PULUMI_CONFIG_PASSPHRASE to remember):
+</code></pre>
+
+<p>If we use <code>pulumi stack export</code> again to examine the state file, we can
+see that the structure of the ciphertext has changed:</p>
+
+<pre><code>&quot;value&quot;: {
+    &quot;4dabf18193072939515e22adb298388d&quot;: &quot;1b47061264138c4ac30d75fd1eb44270&quot;,
+    &quot;ciphertext&quot;: &quot;v1:qdfpSdF8vCWRJIDa:4gPQAMRSXi+5ap0koiZBsSVRnqzbp79cSEyWnLYkD9M5S/oI8qhgy521IBA=&quot;
+}
+</code></pre>
+
+<p>The change is because we are no longer using the Pulumi service to
+encrypt or decrypt this data, instead the encryption and decryption
+happens locally, the data never leaves your machine. So while I get to
+continue to use <app.pulumi.com> to store state for my
+stack, I don&rsquo;t have to worry about my secrets being encrypted with a key
+managed by a third party.</p>
+
+<p>Support for changing the secrets provider for an existing stack is on
+its way. To track progress on this feature, please see GitHub issue
+<a href="https://github.com/pulumi/pulumi/issues/481">pulumi/pulumi#481</a>.</p>
+
+<h2 id="what-s-next">What&rsquo;s Next</h2>
+
+<p>In addition to passphrase based encryption, we plan to add support for
+encrypting using AWS KMS, Azure KeyVault and GCP KMS in the coming
+weeks.</p>
+
+<p>The whole team is super excited about this feature and we love how
+nicely we were able to integrate it into our overall programming model.
+With these two new features, Pulumi users gain full control over how
+their secrets are managed, but without sacrificing usability and
+productivity. We&rsquo;re excited for you all to start playing around with it!
+Pulumi is open source, free to use, and works today with variety of
+clouds. Try it today!</p>
+                    </section>
+                    <div>
+                        <p class="text-gray-500">Posted on <time>Friday, May 17, 2019</time>
+                        
+                        <ul class="m-0 p-0">
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/features/">
+                                    Features
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/security/">
+                                    Security
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+                </article>
+            </div>
+
+            <div class="md:w-2/12 pl-8">
+                
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

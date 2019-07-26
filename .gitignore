@@ -1,10 +1,3 @@
-# Hugo default output directory
-/public
-# Hugo generated resources directory. Note: if the generated files
-# were checked into the repo, could improve build times. But since
-# we rebuild as part of CI/CD deployments, we just don't check-in.
-/resources
-
 .DS_Store
 node_modules
 *.map

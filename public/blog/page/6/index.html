@@ -1,0 +1,1547 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.pulumi.com/blog/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+        
+    
+
+    
+        <meta property="og:title" content="Blog">
+    
+
+    
+        <meta name="description" content="">
+        <meta property="og:description" content="">
+    
+
+    
+    
+    <meta property="og:image" content="https://www.pulumi.com/social/pulumi.png">
+
+    <title>Blog - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/blog/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="https://www.pulumi.com/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="https://www.pulumi.com/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u");
+    analytics.page();
+    }}();
+    </script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+        
+            
+        
+        
+    
+</head>
+
+    <body class="section-blog">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+
+            <div class="md:w-3/12 pr-8">
+                
+<aside class="md:pr-8">
+
+    
+    <div class="md:hidden">
+        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </div>
+
+    <h3 class="no-anchor hidden md:flex mt-4">
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </h3>
+
+    
+    <div class="blog-sidebar-content hidden md:block">
+        <div class="bg-gray-100 rounded-lg p-4 my-6 text-gray-700">
+            <h5 class="no-anchor text-gray-700">Program the Cloud</h5>
+            <p class="text-sm my-0">
+                Create, deploy, and manage cloud infrastructure using your favorite language.
+            </p>
+        </div>
+
+        <ul class="list-none p-0 mb-4 inline-flex flex-wrap text-xs">
+            
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/apigateway/">
+                            apigateway
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/applications/">
+                            applications
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/auth/">
+                            auth
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/aws/">
+                            aws
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/azure/">
+                            azure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/ci/cd/">
+                            ci/cd
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/cloud-native/">
+                            cloud-native
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/containers/">
+                            containers
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/customer/">
+                            customer
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/digitalocean/">
+                            digitalocean
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/docker/">
+                            docker
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/eks/">
+                            eks
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/events/">
+                            events
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/features/">
+                            features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/gcp/">
+                            gcp
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/gke/">
+                            gke
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/infrastructure/">
+                            infrastructure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/javascript/">
+                            javascript
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/jupyter/">
+                            jupyter
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/kubernetes/">
+                            kubernetes
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/lambda/">
+                            lambda
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/logging/">
+                            logging
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/mysql/">
+                            mysql
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/new-features/">
+                            new-features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/pulumi/">
+                            pulumi
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/pulumi-news/">
+                            pulumi-news
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/python/">
+                            python
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/security/">
+                            security
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/serverless/">
+                            serverless
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/testing/">
+                            testing
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/typescript/">
+                            typescript
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="hidden lg:block my-4">
+            <h5 class="no-anchor">Recent Posts</h5>
+            <ul class="list-none p-0">
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/day-2-kubernetes-migrating-eks-nodegroups-with-zero-downtime/">Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime</a>
+                        </li>
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/getting-started-on-digitalocean-with-pulumi/">Getting Started on DigitalOcean with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/pulumi-meetup-recap-apis-custom-resources-and-github-webhooks/">Pulumi Meetup Recap: APIs, Custom Resources and GitHub Webhooks</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks/">Persisting Kubernetes workloads with Amazon EFS CSI volumes using Pulumi open source SDKs</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/unit-testing-infrastructure-in-nodejs-and-mocha/">Unit Testing Your Infrastructure with Node.js and Mocha</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/kubernetes-ingress-with-aws-alb-ingress-controller-and-pulumi-crosswalk/">Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included/">Globally-distributed Serverless Application in 100 Lines of Code. Infrastructure Included!</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/hosting-a-static-website-on-azure-with-pulumi/">Hosting a Static Website on Azure with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/running-containers-in-aws-the-lowdown-ecs-fargate-and-eks/">Running Containers in AWS, the Lowdown: ECS, Fargate, and EKS</a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="md:hidden pb-4">
+        
+    </div>
+</aside>
+
+            </div>
+
+            <div class="md:w-7/12">
+                
+                
+                    <article class="mb-8 pb-8 border-b border-gray-200">
+                        <h2 class="no-anchor"><a href="https://www.pulumi.com/blog/meet-the-pulumi-team-at-aws-reinvent/">Meet the Pulumi team at AWS re:Invent</a></h2>
+                        <div class="flex items-center">
+                            <span>
+                                <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="https://www.pulumi.com/blog/author/marc-holmes/">
+                    <img class="w-8 rounded-full" src="/images/team/marc-holmes.jpg" alt="Marc Holmes" title="Marc Holmes">
+                </a>
+                <a class="" href="https://www.pulumi.com/blog/author/marc-holmes/">Marc Holmes</a>
+            
+        </span>
+    
+</span>
+
+                            </span>
+                            <span class="mr-2">∙</span>
+                            <time>
+                                Thursday, Nov 15, 2018
+                            </time>
+                        </div>
+                        <section>
+                            
+
+
+                            
+<p>
+    <p>Heading to AWS re:Invent? Concerned about how you&rsquo;ll manage to get
+<a href="https://www.pulumi.com/cloudformation/">that much YAML</a> into your carry
+on bag? Or maybe you just like purple.</p>
+
+<p>Whatever the reason, the Pulumi team will be there all week at <strong>Booth
+316, Startup Central, Aria Quad, </strong>and we&rsquo;d love to chat with you about
+<a href="https://www.pulumi.com/crosswalk/aws/">AWS and Pulumi</a>.</p>
+
+<p>Catch up with us on serverless functions, <a href="https://www.pulumi.com/containers/">containers</a> and
+<a href="https://www.pulumi.com/kubernetes/">Kubernetes</a>, managed services and
+any other cloud native infrastructure as code, and see how you can more
+productively manage your AWS cloud resources with general purpose
+programming languages. We can even help you
+<a href="https://www.pulumi.com/cloudformation/">migrate your CloudFormation to Pulumi</a>. </p>
+
+<p>If you want to grab a specific time to talk through your needs,
+<a href="https://info.pulumi.com/meetings/team-pulumi/aws-reinvent-catchup">then use this link</a>,
+otherwise we&rsquo;ll just see you at the booth!</p>
+</p>
+<p>
+    <a href="https://www.pulumi.com/blog/meet-the-pulumi-team-at-aws-reinvent/">
+        Read more &rarr;
+    </a>
+</p>
+
+                        </section>
+                    </article>
+                
+                    <article class="mb-8 pb-8 border-b border-gray-200">
+                        <h2 class="no-anchor"><a href="https://www.pulumi.com/blog/reusable-cicd-components-with-circleci-orbs-for-pulumi/">Reusable CI/CD components with CircleCI Orbs for Pulumi</a></h2>
+                        <div class="flex items-center">
+                            <span>
+                                <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="https://www.pulumi.com/blog/author/chris-smith/">
+                    <img class="w-8 rounded-full" src="/images/team/chris-smith.jpg" alt="Chris Smith" title="Chris Smith">
+                </a>
+                <a class="" href="https://www.pulumi.com/blog/author/chris-smith/">Chris Smith</a>
+            
+        </span>
+    
+</span>
+
+                            </span>
+                            <span class="mr-2">∙</span>
+                            <time>
+                                Wednesday, Nov 7, 2018
+                            </time>
+                        </div>
+                        <section>
+                            
+
+    <img class="rounded-lg md:m-2 md:mt-0 md:max-w-xs md:float-right my-8 border-2 border-gray-100" src="/blog/reusable-cicd-components-with-circleci-orbs-for-pulumi/circleci-ui.png" alt="Reusable CI/CD components with CircleCI Orbs for Pulumi">
+
+
+                            
+<p>
+    <p>This morning <a href="https://circleci.com/blog/announcing-orbs-technology-partner-program/">CircleCI announced the launch</a>
+of <a href="https://circleci.com/orbs/">CircleCI Orbs</a> which enable you to
+create reusable components for CircleCI workflows. Orbs enable you to
+simplify your CI/CD configuration by reusing existing orb jobs or
+commands, in much the same way Pulumi enables you to simplify the
+delivery of your cloud native infrastructure by sharing and reusing
+<a href="/blog/creating-and-reusing-cloud-components-using-package-managers/">existing components</a>.</p>
+
+<p>Pulumi is proud to be a <a href="https://circleci.com/partners/">CircleCI technology partner</a>, and we were excited to get a
+head start on seeing how orbs could make it easier to take Pulumi into
+production within CircleCI. The <a href="https://circleci.com/orbs/registry/orb/pulumi/pulumi">Pulumi Orbs for CircleCI</a> are
+available <em>today</em> for you to start using.</p>
+</p>
+<p>
+    <a href="https://www.pulumi.com/blog/reusable-cicd-components-with-circleci-orbs-for-pulumi/">
+        Read more &rarr;
+    </a>
+</p>
+
+                        </section>
+                    </article>
+                
+                    <article class="mb-8 pb-8 border-b border-gray-200">
+                        <h2 class="no-anchor"><a href="https://www.pulumi.com/blog/from-terraform-to-infrastructure-as-software/">From Terraform to Infrastructure as Software</a></h2>
+                        <div class="flex items-center">
+                            <span>
+                                <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="https://www.pulumi.com/blog/author/pat-gavlin/">
+                    <img class="w-8 rounded-full" src="/images/team/pat-gavlin.jpg" alt="Pat Gavlin" title="Pat Gavlin">
+                </a>
+                <a class="" href="https://www.pulumi.com/blog/author/pat-gavlin/">Pat Gavlin</a>
+            
+        </span>
+    
+</span>
+
+                            </span>
+                            <span class="mr-2">∙</span>
+                            <time>
+                                Friday, Nov 2, 2018
+                            </time>
+                        </div>
+                        <section>
+                            
+
+    <img class="rounded-lg md:m-2 md:mt-0 md:max-w-xs md:float-right my-8 border-2 border-gray-100" src="/blog/from-terraform-to-infrastructure-as-software/tf-to-pulumi.png" alt="From Terraform to Infrastructure as Software">
+
+
+                            
+<p>
+    <p>Here at Pulumi, we love programming the cloud using infrastructure as
+code. From the project&rsquo;s outset, we&rsquo;ve been inspired by technologies
+like Terraform, AWS CloudFormation, and Helm, and in fact leverage the
+Terraform Providers ecosystem, to support a broad range of clouds,
+including AWS, Azure, and Google Cloud. Just recently, we extended this
+with first class support for Kubernetes. Pulumi delivers the same
+infrastructure as code workflows only using general purpose languages
+like JavaScript, TypeScript, Python, and Go, extending robust
+infrastructure provisioning with abstraction and reuse, highly
+productive tooling, and access to all the other things we already know
+and love about programming languages.</p>
+
+<p>In this article, we will convert existing Terraform configuration to
+Pulumi TypeScript. By doing so, we&rsquo;ll see how using general purpose
+programming languages can help you create simpler, more flexible
+infrastructure as code, with greater productivity and less repetition.
+The infrastructure we&rsquo;ll be working with describes a load-balanced web
+server hosted by an AWS EC2 instance per availability zone with an
+option to allow SSH access. Of course, these same benefits would also
+accrue were we to target Azure, Google Cloud, or Kubernetes instead.</p>
+</p>
+<p>
+    <a href="https://www.pulumi.com/blog/from-terraform-to-infrastructure-as-software/">
+        Read more &rarr;
+    </a>
+</p>
+
+                        </section>
+                    </article>
+                
+                    <article class="mb-8 pb-8 border-b border-gray-200">
+                        <h2 class="no-anchor"><a href="https://www.pulumi.com/blog/data-science-on-demand-spinning-up-a-wallaroo-cluster-is-easy-with-pulumi/">Data science on demand: spinning up a Wallaroo cluster is easy with Pulumi</a></h2>
+                        <div class="flex items-center">
+                            <span>
+                                <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="https://www.pulumi.com/blog/author/marc-holmes/">
+                    <img class="w-8 rounded-full" src="/images/team/marc-holmes.jpg" alt="Marc Holmes" title="Marc Holmes">
+                </a>
+                <a class="" href="https://www.pulumi.com/blog/author/marc-holmes/">Marc Holmes</a>
+            
+        </span>
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="https://www.pulumi.com/blog/author/simon-zelazny/">
+                    <img class="w-8 rounded-full" src="/images/team/simon-zelazny.jpg" alt="Simon Zelazny" title="Simon Zelazny">
+                </a>
+                <a class="" href="https://www.pulumi.com/blog/author/simon-zelazny/">Simon Zelazny</a>
+            
+        </span>
+    
+</span>
+
+                            </span>
+                            <span class="mr-2">∙</span>
+                            <time>
+                                Friday, Nov 2, 2018
+                            </time>
+                        </div>
+                        <section>
+                            
+
+    <img class="rounded-lg md:m-2 md:mt-0 md:max-w-xs md:float-right my-8 border-2 border-gray-100" src="/blog/data-science-on-demand-spinning-up-a-wallaroo-cluster-is-easy-with-pulumi/tty-fast.gif" alt="Data science on demand: spinning up a Wallaroo cluster is easy with Pulumi">
+
+
+                            
+<p>
+    <p><em>This guest post is from Simon Zelazny of
+<a href="https://www.wallaroolabs.com/">Wallaroo Labs</a>, and previously appeared on the
+<a href="https://blog.wallaroolabs.com/2018/10/spinning-up-a-wallaroo-cluster-is-easy/">Wallaroo Labs blog</a>.
+Find out how Wallaroo powered their cluster provisioning with Pulumi,
+for data science on demand.</em></p>
+
+<h2 id="oh-no-more-data">Oh no, more data!</h2>
+
+<p>Last month, we took a
+<a href="https://blog.wallaroolabs.com/2018/09/make-python-pandas-go-fast/">long-running pandas classifier</a>
+and made it run faster by leveraging Wallaroo&rsquo;s parallelization
+capabilities. This time around, we&rsquo;d like to kick it up a notch and see
+if we can keep scaling out to meet higher demand. We&rsquo;d also like to be
+as economical as possible: provision infrastructure as needed and
+de-provision it when we&rsquo;re done processing.</p>
+
+<p>If you don&rsquo;t feel like reading the post linked above, here&rsquo;s a short
+summary of the situation: there&rsquo;s a batch job that you&rsquo;re running every
+hour, on the hour. This job receives a CSV file and classifies each row
+of the file, using a Pandas-based algorithm. The run-time of the job is
+starting to near the one-hour mark, and there&rsquo;s concern that the
+pipeline will break down once the input data grows past a particular
+point.</p>
+
+<p>In the blog post, we show how to split up the input data into smaller
+dataframes, and distribute them among workers in an ad-hoc Wallaroo
+cluster, running on one physical machine. Parallelizing the work in this
+manner buys us a lot of time, and the batch job can continue processing
+increasing amounts of data.</p>
+</p>
+<p>
+    <a href="https://www.pulumi.com/blog/data-science-on-demand-spinning-up-a-wallaroo-cluster-is-easy-with-pulumi/">
+        Read more &rarr;
+    </a>
+</p>
+
+                        </section>
+                    </article>
+                
+                    <article class="mb-8 pb-8 border-b border-gray-200">
+                        <h2 class="no-anchor"><a href="https://www.pulumi.com/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code/">Using Helm and Pulumi to define cloud native infrastructure as code</a></h2>
+                        <div class="flex items-center">
+                            <span>
+                                <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="https://www.pulumi.com/blog/author/alex-clemmer/">
+                    <img class="w-8 rounded-full" src="/images/team/alex-clemmer.jpg" alt="Alex Clemmer" title="Alex Clemmer">
+                </a>
+                <a class="" href="https://www.pulumi.com/blog/author/alex-clemmer/">Alex Clemmer</a>
+            
+        </span>
+    
+</span>
+
+                            </span>
+                            <span class="mr-2">∙</span>
+                            <time>
+                                Wednesday, Oct 31, 2018
+                            </time>
+                        </div>
+                        <section>
+                            
+
+    <img class="rounded-lg md:m-2 md:mt-0 md:max-w-xs md:float-right my-8 border-2 border-gray-100" src="/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code/helm-pulumi-deploy.gif" alt="Using Helm and Pulumi to define cloud native infrastructure as code">
+
+
+                            
+<p>
+    <p>The Helm community is one of the brightest spots in the infrastructure
+ecosystem: collectively, it has accumulated person-decades of
+operational expertise to produce Kubernetes manifests that &ldquo;just work.&rdquo;</p>
+
+<p>But for many users, it is not feasible to run *everything* in
+Kubernetes, and the community is just starting to develop answers to
+questions like: what happens when a Helm Chart needs to interface with,
+for example, a managed database like AWS RDS or Azure CosmosDB?</p>
+
+<p>Pulumi is a cloud native development platform designed to be able to
+express any cloud native infrastructure as code in a natural,
+intentional manner using real languages. The most natural way to solve
+this challenge would be to stand up an instance of AWS RDS, populate a
+Kubernetes Secret with the connection details, and then simply let my
+application use these newly available resources. Pulumi gives users the
+primitives they need in order to achieve tasks like this most
+effectively.</p>
+</p>
+<p>
+    <a href="https://www.pulumi.com/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code/">
+        Read more &rarr;
+    </a>
+</p>
+
+                        </section>
+                    </article>
+                
+                    <article class="mb-8 pb-8 border-b border-gray-200">
+                        <h2 class="no-anchor"><a href="https://www.pulumi.com/blog/building-a-future-of-cloud-engineering/">Building a future of cloud engineering</a></h2>
+                        <div class="flex items-center">
+                            <span>
+                                <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="https://www.pulumi.com/blog/author/joe-duffy/">
+                    <img class="w-8 rounded-full" src="/images/team/joe-duffy.jpg" alt="Joe Duffy" title="Joe Duffy">
+                </a>
+                <a class="" href="https://www.pulumi.com/blog/author/joe-duffy/">Joe Duffy</a>
+            
+        </span>
+    
+</span>
+
+                            </span>
+                            <span class="mr-2">∙</span>
+                            <time>
+                                Monday, Oct 22, 2018
+                            </time>
+                        </div>
+                        <section>
+                            
+
+
+                            
+<p>
+    <p>We founded Pulumi because of a deeply held belief that the cloud
+promises to change all aspects of software development and that there
+remains an incredible opportunity to reimagine the entire experience,
+from idea to creation to delivery to management, with one person in
+mind: you, the engineer.</p>
+</p>
+<p>
+    <a href="https://www.pulumi.com/blog/building-a-future-of-cloud-engineering/">
+        Read more &rarr;
+    </a>
+</p>
+
+                        </section>
+                    </article>
+                
+                    <article class="mb-8 pb-8 border-b border-gray-200">
+                        <h2 class="no-anchor"><a href="https://www.pulumi.com/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/">Continuous Delivery to Any Cloud using GitHub Actions and Pulumi</a></h2>
+                        <div class="flex items-center">
+                            <span>
+                                <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="https://www.pulumi.com/blog/author/joe-duffy/">
+                    <img class="w-8 rounded-full" src="/images/team/joe-duffy.jpg" alt="Joe Duffy" title="Joe Duffy">
+                </a>
+                <a class="" href="https://www.pulumi.com/blog/author/joe-duffy/">Joe Duffy</a>
+            
+        </span>
+    
+</span>
+
+                            </span>
+                            <span class="mr-2">∙</span>
+                            <time>
+                                Wednesday, Oct 17, 2018
+                            </time>
+                        </div>
+                        <section>
+                            
+
+    <img class="rounded-lg md:m-2 md:mt-0 md:max-w-xs md:float-right my-8 border-2 border-gray-100" src="/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/gh-actions-prs.png" alt="Continuous Delivery to Any Cloud using GitHub Actions and Pulumi">
+
+
+                            
+<p>
+    <p>Today we announced our partnership with GitHub on the <a href="https://github.com/features/actions">new GitHub
+Actions feature</a>. We are super
+excited about this bold and innovative technology, especially as it
+relates to Pulumi, and CI/CD more broadly. We truly believe that Pulumi
+plus GitHub Actions delivers the easiest, most capable, and
+friction-free way to achieve continuous delivery of cloud applications
+and infrastructure, no matter your cloud &ndash; AWS, Azure, Google Cloud,
+Kubernetes, or even on-premises. In this post, we&rsquo;ll dig deeper to see
+why, and how to get up and running. It&rsquo;s refreshingly easy!</p>
+</p>
+<p>
+    <a href="https://www.pulumi.com/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/">
+        Read more &rarr;
+    </a>
+</p>
+
+                        </section>
+                    </article>
+                
+                    <article class="mb-8 pb-8 border-b border-gray-200">
+                        <h2 class="no-anchor"><a href="https://www.pulumi.com/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions/">Lambdas as Lambdas: The magic of simple serverless Functions</a></h2>
+                        <div class="flex items-center">
+                            <span>
+                                <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="https://www.pulumi.com/blog/author/cyrus-najmabadi/">
+                    <img class="w-8 rounded-full" src="/images/team/cyrus-najmabadi.jpg" alt="Cyrus Najmabadi" title="Cyrus Najmabadi">
+                </a>
+                <a class="" href="https://www.pulumi.com/blog/author/cyrus-najmabadi/">Cyrus Najmabadi</a>
+            
+        </span>
+    
+</span>
+
+                            </span>
+                            <span class="mr-2">∙</span>
+                            <time>
+                                Wednesday, Oct 10, 2018
+                            </time>
+                        </div>
+                        <section>
+                            
+
+    <img class="rounded-lg md:m-2 md:mt-0 md:max-w-xs md:float-right my-8 border-2 border-gray-100" src="/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions/closure.png" alt="Lambdas as Lambdas: The magic of simple serverless Functions">
+
+
+                            
+<p>
+    <p>Pulumi&rsquo;s approach to infrastructure as code uses real languages instead
+of YAML or DSLs. One major advantage of this approach is that AWS
+Lambdas, Azure Functions, Google Cloud Functions, et al. can just be
+real language lambdas, offering a flexible and simple path to
+serverless. Such functions behave as normal functions, allowing you to
+treat serverless code as part of your application instead of separate
+&ldquo;infrastructure&rdquo; that needs to be configured, managed, and versioned
+manually. In this post, we&rsquo;ll examine this capability in JavaScript,
+which is already very function- and callback-oriented, making serverless
+feel like a natural extension of the language we already know and love. </p>
+
+<p>While Functions as a Service (FaaS) systems have become more popular,
+getting up and running can still feel overly complex compared to normal
+application development. FaaS offerings today divide the development
+experience between &ldquo;infrastructure&rdquo; &ndash; doing all the work to
+configure the Lambda runtime itself (i.e. how much memory to use, what
+environment variables should be present, etc.) &ndash; and writing and
+maintaining the code that will execute <em>in</em> the function itself when
+triggered. Most developers just want to focus on the latter, write some
+code, and have it work.</p>
+</p>
+<p>
+    <a href="https://www.pulumi.com/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions/">
+        Read more &rarr;
+    </a>
+</p>
+
+                        </section>
+                    </article>
+                
+                    <article class="mb-8 pb-8 border-b border-gray-200">
+                        <h2 class="no-anchor"><a href="https://www.pulumi.com/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective/">How do Kubernetes Deployments work? An adversarial perspective</a></h2>
+                        <div class="flex items-center">
+                            <span>
+                                <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="https://www.pulumi.com/blog/author/alex-clemmer/">
+                    <img class="w-8 rounded-full" src="/images/team/alex-clemmer.jpg" alt="Alex Clemmer" title="Alex Clemmer">
+                </a>
+                <a class="" href="https://www.pulumi.com/blog/author/alex-clemmer/">Alex Clemmer</a>
+            
+        </span>
+    
+</span>
+
+                            </span>
+                            <span class="mr-2">∙</span>
+                            <time>
+                                Wednesday, Oct 3, 2018
+                            </time>
+                        </div>
+                        <section>
+                            
+
+    <img class="rounded-lg md:m-2 md:mt-0 md:max-w-xs md:float-right my-8 border-2 border-gray-100" src="/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective/deployment-rollout.gif" alt="How do Kubernetes Deployments work? An adversarial perspective">
+
+
+                            
+<p>
+    <p><em>This post is part 3 in a series on the Kubernetes API. Earlier,
+<a href="/blog/kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images/">Part 1</a>
+focused on the lifecycle of a <code>Pod</code> and
+<a href="/blog/kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service/">Part 2</a>
+focused on the lifecycle of a <code>Service</code>.</em></p>
+
+<p>What is happening when a <code>Deployment</code> rolls out a change to your app?
+What does it actually do when a <code>Pod</code> crashes or is killed? What happens
+when a <code>Pod</code> is re-labled so that it&rsquo;s not targeted by the
+<code>Deployment</code>?</p>
+
+<p><code>Deployment</code> is probably the most complex resource type in Kubernetes
+core. <code>Deployment</code> specifies how changes should be rolled out over
+<code>ReplicaSet</code>s, which themselves specify how <code>Pod</code>s should be replicated
+in a cluster.</p>
+
+<p>In this post we continue our exploration of the Kubernetes API, cracking
+<code>Deployment</code> open using <code>kubespy</code>, a small tool we developed to observe
+Kubernetes resources in real-time.</p>
+</p>
+<p>
+    <a href="https://www.pulumi.com/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective/">
+        Read more &rarr;
+    </a>
+</p>
+
+                        </section>
+                    </article>
+                
+                    <article class="mb-8 pb-8 border-b border-gray-200">
+                        <h2 class="no-anchor"><a href="https://www.pulumi.com/blog/running-a-serverles-nodejs-http-server-on-aws-and-azure/">Running a Serverless Node.js HTTP Server on AWS and Azure</a></h2>
+                        <div class="flex items-center">
+                            <span>
+                                <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="https://www.pulumi.com/blog/author/cyrus-najmabadi/">
+                    <img class="w-8 rounded-full" src="/images/team/cyrus-najmabadi.jpg" alt="Cyrus Najmabadi" title="Cyrus Najmabadi">
+                </a>
+                <a class="" href="https://www.pulumi.com/blog/author/cyrus-najmabadi/">Cyrus Najmabadi</a>
+            
+        </span>
+    
+</span>
+
+                            </span>
+                            <span class="mr-2">∙</span>
+                            <time>
+                                Tuesday, Oct 2, 2018
+                            </time>
+                        </div>
+                        <section>
+                            
+
+
+                            
+<p>
+    <p>The newly
+introduced <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpServer.ts">cloud.HttpServer</a> in
+Pulumi makes it easy to serve a standard Node.js HTTP server as a
+serverless API on any cloud platform.  This new API brings together the
+flexibility and rich ecosystem of Node.js HTTP servers, the cost and
+operational simplicity of serverless APIs, and the multi-cloud authoring
+and deployment of Pulumi.  In this post, we walk through some of the
+background on why we introduced this new API and how it fits into the
+Node.js HTTP ecosystem.</p>
+</p>
+<p>
+    <a href="https://www.pulumi.com/blog/running-a-serverles-nodejs-http-server-on-aws-and-azure/">
+        Read more &rarr;
+    </a>
+</p>
+
+                        </section>
+                    </article>
+                
+
+                
+
+<div class="text-center">
+    
+
+<ul class="pagination">
+    
+    <li class="page-item">
+        <a href="/blog/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+    <a href="/blog/page/5/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/blog/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/blog/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/blog/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/blog/page/5/">5</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item active"><a class="page-link" href="/blog/page/6/">6</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/blog/page/7/">7</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/blog/page/9/">9</a></li>
+    
+    
+    <li class="page-item">
+    <a href="/blog/page/7/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+        <a href="/blog/page/9/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+
+</div>
+
+            </div>
+
+            <div class="md:w-2/12 pl-8">
+
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

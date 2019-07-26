@@ -1,0 +1,1428 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.pulumi.com/blog/simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+        
+            
+            
+                
+                    <meta name="twitter:creator" content="@nishidavidson">
+                
+            
+        
+    
+
+    
+        <meta property="og:title" content="Simplify Kubernetes RBAC in Amazon EKS with open source Pulumi packages">
+    
+
+    
+        <meta name="description" content="One of the most common areas Kubernetes operators struggle with in
+production involves creating and managing role-based access control
+(RBAC). This is so daunting that RBAC is often not implemented, or
+implemented halfway, or the configuration becomes impossible to
+maintain. In this post, we will contrast the traditional way of working
+with RBAC on EKS with using Pulumi &mdash; Pulumi makes RBAC on Kubernetes
+so easy that you&rsquo;ll never create an insecure cluster again!">
+        <meta property="og:description" content="One of the most common areas Kubernetes operators struggle with in
+production involves creating and managing role-based access control
+(RBAC). This is so daunting that RBAC is often not implemented, or
+implemented halfway, or the configuration becomes impossible to
+maintain. In this post, we will contrast the traditional way of working
+with RBAC on EKS with using Pulumi &mdash; Pulumi makes RBAC on Kubernetes
+so easy that you&rsquo;ll never create an insecure cluster again!">
+    
+
+    
+    
+    <meta property="og:image" content="https://www.pulumi.com/social/pulumi.png">
+
+    <title>Simplify Kubernetes RBAC in Amazon EKS with open source Pulumi packages - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/blog/simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="https://www.pulumi.com/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="https://www.pulumi.com/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u");
+    analytics.page();
+    }}();
+    </script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+        
+            
+                
+            
+        
+        
+    
+</head>
+
+    <body class="section-blog">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+            <div class="md:w-3/12 pr-8">
+                
+<aside class="md:pr-8">
+
+    
+    <div class="md:hidden">
+        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </div>
+
+    <h3 class="no-anchor hidden md:flex mt-4">
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </h3>
+
+    
+    <div class="blog-sidebar-content hidden md:block">
+        <div class="bg-gray-100 rounded-lg p-4 my-6 text-gray-700">
+            <h5 class="no-anchor text-gray-700">Program the Cloud</h5>
+            <p class="text-sm my-0">
+                Create, deploy, and manage cloud infrastructure using your favorite language.
+            </p>
+        </div>
+
+        <ul class="list-none p-0 mb-4 inline-flex flex-wrap text-xs">
+            
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/apigateway/">
+                            apigateway
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/applications/">
+                            applications
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/auth/">
+                            auth
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/aws/">
+                            aws
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/azure/">
+                            azure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/ci/cd/">
+                            ci/cd
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/cloud-native/">
+                            cloud-native
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/containers/">
+                            containers
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/customer/">
+                            customer
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/digitalocean/">
+                            digitalocean
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/docker/">
+                            docker
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/eks/">
+                            eks
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/events/">
+                            events
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/features/">
+                            features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/gcp/">
+                            gcp
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/gke/">
+                            gke
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/infrastructure/">
+                            infrastructure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/javascript/">
+                            javascript
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/jupyter/">
+                            jupyter
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/kubernetes/">
+                            kubernetes
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/lambda/">
+                            lambda
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/logging/">
+                            logging
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/mysql/">
+                            mysql
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/new-features/">
+                            new-features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/pulumi/">
+                            pulumi
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/pulumi-news/">
+                            pulumi-news
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/python/">
+                            python
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/security/">
+                            security
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/serverless/">
+                            serverless
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/testing/">
+                            testing
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/typescript/">
+                            typescript
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="hidden lg:block my-4">
+            <h5 class="no-anchor">Recent Posts</h5>
+            <ul class="list-none p-0">
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/day-2-kubernetes-migrating-eks-nodegroups-with-zero-downtime/">Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime</a>
+                        </li>
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/getting-started-on-digitalocean-with-pulumi/">Getting Started on DigitalOcean with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/pulumi-meetup-recap-apis-custom-resources-and-github-webhooks/">Pulumi Meetup Recap: APIs, Custom Resources and GitHub Webhooks</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks/">Persisting Kubernetes workloads with Amazon EFS CSI volumes using Pulumi open source SDKs</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/unit-testing-infrastructure-in-nodejs-and-mocha/">Unit Testing Your Infrastructure with Node.js and Mocha</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/kubernetes-ingress-with-aws-alb-ingress-controller-and-pulumi-crosswalk/">Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included/">Globally-distributed Serverless Application in 100 Lines of Code. Infrastructure Included!</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/hosting-a-static-website-on-azure-with-pulumi/">Hosting a Static Website on Azure with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/running-containers-in-aws-the-lowdown-ecs-fargate-and-eks/">Running Containers in AWS, the Lowdown: ECS, Fargate, and EKS</a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="md:hidden pb-4">
+        
+    </div>
+</aside>
+
+            </div>
+
+            <div class="md:w-7/12">
+                <article class="mb-8 pb-8 border-b border-gray-200">
+                    <h1 class="no-anchor"><a href="https://www.pulumi.com/blog/simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages/">Simplify Kubernetes RBAC in Amazon EKS with open source Pulumi packages</a></h1>
+                    <div class="flex items-center">
+                        <span>
+                            <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="https://www.pulumi.com/blog/author/nishi-davidson/">
+                    <img class="w-8 rounded-full" src="/images/team/nishi-davidson.jpg" alt="Nishi Davidson" title="Nishi Davidson">
+                </a>
+                <a class="" href="https://www.pulumi.com/blog/author/nishi-davidson/">Nishi Davidson</a>
+            
+        </span>
+    
+</span>
+
+                        </span>
+                    </div>
+                    <section>
+                        <p>One of the most common areas Kubernetes operators struggle with in
+production involves creating and managing role-based access control
+(RBAC). This is so daunting that RBAC is often not implemented, or
+implemented halfway, or the configuration becomes impossible to
+maintain. In this post, we will contrast the traditional way of working
+with RBAC on EKS with using Pulumi &mdash; Pulumi makes RBAC on Kubernetes
+so easy that you&rsquo;ll never create an insecure cluster again!</p>
+
+<ul>
+<li><strong>NO MORE YAMLs!</strong> Configuring YAMLs, operators or custom resources
+is now a thing in the past! You use TypeScript or JavaScript to
+program directly with our cloud SDK and connect all cloud services
+to your Kubernetes services with a simple reference to the object in
+your program.</li>
+<li><strong>INCREASED DEVELOPMENT VELOCITY:</strong> You intuitively program
+Kubernetes objects with our SDK abstractions using minimal amount of
+code within hours instead of months. You &ldquo;autocomplete&rdquo; AWS, EKS,
+Kubernetes specifications within your IDE without understanding the
+entire API.</li>
+<li><strong>EASY UPDATES:</strong> Changing a <code>roleRef</code> in a <code>RoleBinding</code>, on one or
+multiple clusters involves updating your TypeScript file <code>index.ts</code>
+and running <code>pulumi up</code>. The Pulumi console allows you to share your
+stack with your team in your GitHub, GitLab, or Atlassian-based
+organization.</li>
+<li><strong>WORKFLOW AUTOMATION FOR RBAC AT SCALE:</strong> You can delete or update
+multiple <code>RoleBindings or Roles</code> from your Pulumi stack source code.
+As you commit these changes to your repository, you can plan
+automated triggers that validate such changes as part of your CI/CD
+flow, whether you use Travis, CircleCI, AzureDevOps and more. Pulumi
+even has a GitHub Application for surfacing results within pull
+requests.</li>
+</ul>
+
+<h2 id="prerequisites-to-work-with-pulumi">Prerequisites to work with Pulumi</h2>
+
+<p><a href="https://www.pulumi.com/docs/reference/install/">Install <code>pulumi</code> CLI</a> and
+set up your
+<a href="https://www.pulumi.com/docs/quickstart/aws/">AWS credentials</a>.
+Initialize a new
+<a href="https://www.pulumi.com/docs/reference/project/">Pulumi project</a> from available
+templates. We use <code>aws-typescript template</code> here to install all
+dependencies and save the configuration.</p>
+
+<pre><code>$ brew install pulumi # download pulumi CLI
+
+$ mkdir eks-rbac &amp;&amp; cd eks-rbac
+
+$ pulumi new aws-typescript
+
+$ ls -l
+-rw-r--r--   1 nishidavidson  staff     32 Apr 18 14:49 Pulumi.dev.yaml
+-rw-------   1 nishidavidson  staff     84 Apr 18 14:48 Pulumi.yaml
+-rw-------   1 nishidavidson  staff    273 Apr 18 14:48 index.ts
+drwxr-xr-x  92 nishidavidson  staff   2944 Apr 18 14:49 node_modules
+-rw-r--r--   1 nishidavidson  staff  48352 Apr 18 14:49 package-lock.json
+-rw-------   1 nishidavidson  staff    228 Apr 18 14:48 package.json
+-rw-------   1 nishidavidson  staff    522 Apr 18 14:48 tsconfig.json
+</code></pre>
+
+<p>With Pulumi, you will modify and update the default <code>index.ts</code> file with
+AWS and EKS resource variable declarations. We show you how to add this
+code as we contrast Pulumi&rsquo;s approach with the sequential traditional
+approach in the steps below. In the end, you will do a one-time run of
+<code>pulumi up</code> and watch all the steps in the Traditional Way come alive
+simultaneously.</p>
+
+<h2 id="step-1-create-three-iam-roles-with-a-trust-policy-to-map-to-amazon-eks-rbac">Step 1: Create three IAM Roles with a Trust-policy to map to Amazon EKS RBAC.</h2>
+
+<h3 id="the-traditional-approach">The Traditional-approach:</h3>
+
+<p>You sequentially create three IAM roles (<code>clusterAdminRole</code>;
+<code>AutomationRole</code>; <code>EnvProdRole</code>) with aws command line tool as shown
+below:</p>
+
+<pre><code>$ aws iam create-role --role-name clusterAdminRole --assume-role-policy-document file://Role-Trust-Policy.json
+ 
+{
+    &quot;Role&quot;: {
+        &quot;AssumeRolePolicyDocument&quot;: {
+            &quot;Version&quot;: &quot;2012-10-17&quot;,
+            &quot;Statement&quot;: [
+                {
+                    &quot;Action&quot;: &quot;sts:AssumeRole&quot;,
+                    &quot;Principal&quot;: {
+                        &quot;AWS&quot;: &quot;arn:aws:iam::xxxxxxxxxxxx:root&quot;
+                    },
+                    &quot;Effect&quot;: &quot;Allow&quot;,
+                    &quot;Sid&quot;: &quot;&quot;
+                }
+            ]
+        },
+        &quot;RoleId&quot;: &quot;AROASHIVKXX3SFFMUUEU6&quot;,
+        &quot;CreateDate&quot;: &quot;2019-04-17T17:43:03Z&quot;,
+        &quot;RoleName&quot;: &quot;clusterAdminRole&quot;,
+        &quot;Path&quot;: &quot;/&quot;,
+        &quot;Arn&quot;: &quot;arn:aws:iam::xxxxxxxxxxxx:role/clusterAdminRole&quot;
+    }
+}
+ 
+$ cat Role-Trust-Policy.json
+{
+    &quot;Version&quot;: &quot;2012-10-17&quot;,
+    &quot;Statement&quot;: [
+        {
+          &quot;Effect&quot;: &quot;Allow&quot;,
+          &quot;Action&quot;: &quot;sts:AssumeRole&quot;,
+          &quot;Resource&quot;: &quot;*&quot;
+        }
+    ]
+}
+</code></pre>
+
+<h3 id="the-pulumi-approach">The Pulumi-approach:</h3>
+
+<p>You update the default <code>index.ts</code> file in your source code editor such
+as VSCode as follows:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">eks</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/eks&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">k8s</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/kubernetes&#34;</span><span class="p">;</span>
+ 
+<span class="cm">/*
+</span><span class="cm"> * 1) Single step deployment of three IAM Roles
+</span><span class="cm"> */</span>
+ 
+<span class="kd">function</span> <span class="nx">createIAMRole</span><span class="p">(</span><span class="nx">name</span>: <span class="kt">string</span><span class="p">)</span><span class="o">:</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">iam</span><span class="p">.</span><span class="nx">Role</span> <span class="p">{</span>
+    <span class="c1">// Create an IAM Role...
+</span><span class="c1"></span>    <span class="k">return</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">iam</span><span class="p">.</span><span class="nx">Role</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span> <span class="p">{</span>
+        <span class="nx">assumeRolePolicy</span><span class="o">:</span> <span class="sb">`{
+</span><span class="sb">            &#34;Version&#34;: &#34;2012-10-17&#34;,
+</span><span class="sb">            &#34;Statement&#34;:[
+</span><span class="sb">              {
+</span><span class="sb">                &#34;Sid&#34;: &#34;&#34;,
+</span><span class="sb">                &#34;Effect&#34;: &#34;Allow&#34;,
+</span><span class="sb">                &#34;Principal&#34;: {
+</span><span class="sb">                  &#34;AWS&#34;: &#34;arn:aws:iam::153052954103:root&#34;
+</span><span class="sb">                },
+</span><span class="sb">                &#34;Action&#34;: &#34;sts:AssumeRole&#34;
+</span><span class="sb">              }
+</span><span class="sb">            ]
+</span><span class="sb">           }
+</span><span class="sb">        `</span><span class="p">,</span>
+          <span class="nx">tags</span><span class="o">:</span> <span class="p">{</span>
+              <span class="s2">&#34;clusterAccess&#34;</span><span class="o">:</span> <span class="sb">`</span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">-usr`</span><span class="p">,</span>
+          <span class="p">},</span>
+        <span class="p">});</span>
+    <span class="p">};</span>
+<span class="p">}</span>
+ 
+<span class="c1">// Administrator AWS IAM clusterAdminRole with full access to all AWS resources
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">clusterAdminRole</span> <span class="o">=</span> <span class="nx">createIAMRole</span><span class="p">(</span><span class="s2">&#34;clusterAdminRole&#34;</span><span class="p">);</span>
+ 
+<span class="c1">// Administer Automation role for use in pipelines, e.g. gitlab CI, Teamcity, etc.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">AutomationRole</span> <span class="o">=</span> <span class="nx">createIAMRole</span><span class="p">(</span><span class="s2">&#34;AutomationRole&#34;</span><span class="p">);</span>
+ 
+<span class="c1">// Administer Prod role for use in Prod environment
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">EnvProdRole</span> <span class="o">=</span> <span class="nx">createIAMRole</span><span class="p">(</span><span class="s2">&#34;EnvProdRole&#34;</span><span class="p">);</span></code></pre></div>
+<h2 id="step-2-create-one-eks-cluster-validate-cluster-creation-add-the-namespaces-you-need">Step 2: Create one EKS cluster. Validate cluster creation. Add the namespaces you need.</h2>
+
+<h3 id="the-traditional-approach-1">The Traditional-approach:</h3>
+
+<p>You go through the steps below to validate the cluster and k8s resource
+deployment based on your tool chain and your understanding of
+Kubernetes:</p>
+
+<pre><code>$ eksctl create cluster eks-nd-test
+ 
+$ kubectl get no
+NAME                                           STATUS   ROLES    AGE   VERSION
+ip-192-168-41-125.us-east-2.compute.internal   Ready    &lt;none&gt;   11h   v1.11.5
+ip-192-168-5-250.us-east-2.compute.internal    Ready    &lt;none&gt;   11h   v1.11.5
+ 
+$ kubectl create -f automation-ns.yaml &amp;&amp; kubectl create -f prod-ns.yaml
+ 
+$ cat automation-ns.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: automation
+  labels:
+    name: automation
+</code></pre>
+
+<h3 id="the-pulumi-approach-1">The Pulumi-approach:</h3>
+
+<p>You use our API docs and your source-code editor to autocomplete the
+default <code>index.ts</code> file.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="cm">/*
+</span><span class="cm">    * 2) Single step deployment of EKS cluster with the most important variables and a Simple Function to create namespaces
+</span><span class="cm">    * automation and prod
+</span><span class="cm">    */</span>
+ 
+<span class="kr">const</span> <span class="nx">vpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">Network</span><span class="p">(</span><span class="s2">&#34;vpc&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">usePrivateSubnets</span>: <span class="kt">false</span> <span class="p">});</span>
+<span class="kr">const</span> <span class="nx">cluster</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">eks</span><span class="p">.</span><span class="nx">Cluster</span><span class="p">(</span><span class="s2">&#34;eks-cluster&#34;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">vpcId</span>             : <span class="kt">vpc.vpcId</span><span class="p">,</span>
+  <span class="nx">subnetIds</span>         : <span class="kt">vpc.publicSubnetIds</span><span class="p">,</span>
+  <span class="nx">instanceType</span>      <span class="o">:</span> <span class="s2">&#34;t2.medium&#34;</span><span class="p">,</span>
+  <span class="nx">nodeRootVolumeSize</span>: <span class="kt">200</span><span class="p">,</span>
+  <span class="nx">desiredCapacity</span>   : <span class="kt">1</span><span class="p">,</span>
+  <span class="nx">maxSize</span>           : <span class="kt">2</span><span class="p">,</span>
+  <span class="nx">minSize</span>           : <span class="kt">1</span><span class="p">,</span>
+  <span class="nx">deployDashboard</span>   : <span class="kt">false</span><span class="p">,</span>
+  <span class="nx">vpcCniOptions</span>     <span class="o">:</span> <span class="p">{</span>
+    <span class="nx">warmIpTarget</span>    : <span class="kt">4</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">roleMappings</span>      <span class="o">:</span> <span class="p">[</span>
+    <span class="c1">// Provides full administrator cluster access to the k8s cluster
+</span><span class="c1"></span>    <span class="p">{</span>
+      <span class="nx">groups</span>    <span class="o">:</span> <span class="p">[</span><span class="s2">&#34;system:masters&#34;</span><span class="p">],</span>
+      <span class="nx">roleArn</span>   : <span class="kt">clusterAdminRole.arn</span><span class="p">,</span>
+      <span class="nx">username</span>  <span class="o">:</span> <span class="s2">&#34;pulumi:admin-usr&#34;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="c1">// Map IAM role arn &#34;AutomationRoleArn&#34; to the k8s user with name &#34;automation-usr&#34;, e.g. gitlab CI
+</span><span class="c1"></span>    <span class="p">{</span>
+      <span class="nx">groups</span>    <span class="o">:</span> <span class="p">[</span><span class="s2">&#34;pulumi:automation-grp&#34;</span><span class="p">],</span>
+      <span class="nx">roleArn</span>   : <span class="kt">AutomationRole.arn</span><span class="p">,</span>
+      <span class="nx">username</span>  <span class="o">:</span> <span class="s2">&#34;pulumi:automation-usr&#34;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="c1">// Map IAM role arn &#34;EnvProdRoleArn&#34; to the k8s user with name &#34;prod-usr&#34;
+</span><span class="c1"></span>    <span class="p">{</span>
+      <span class="nx">groups</span>    <span class="o">:</span> <span class="p">[</span><span class="s2">&#34;pulumi:prod-grp&#34;</span><span class="p">],</span>
+      <span class="nx">roleArn</span>   : <span class="kt">EnvProdRole.arn</span><span class="p">,</span>
+      <span class="nx">username</span>  <span class="o">:</span> <span class="s2">&#34;pulumi:prod-usr&#34;</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+<span class="p">});</span>
+ 
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">clusterName</span> <span class="o">=</span> <span class="nx">cluster</span><span class="p">.</span><span class="nx">eksCluster</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+ 
+<span class="kd">function</span> <span class="nx">createNewNamespace</span><span class="p">(</span><span class="nx">name</span>: <span class="kt">string</span><span class="p">)</span><span class="o">:</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">core</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Namespace</span> <span class="p">{</span>
+  <span class="c1">// Create new namespace
+</span><span class="c1"></span>  <span class="k">return</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">core</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Namespace</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="p">{</span> <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">name</span>: <span class="kt">name</span> <span class="p">}</span> <span class="p">},</span> <span class="p">{</span> <span class="nx">provider</span>: <span class="kt">cluster.provider</span> <span class="p">});</span>
+<span class="p">}</span>
+ 
+<span class="c1">// Declare namespaces automation and prod.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">automation</span> <span class="o">=</span> <span class="nx">createNewNamespace</span><span class="p">(</span><span class="s2">&#34;automation&#34;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">prod</span> <span class="o">=</span> <span class="nx">createNewNamespace</span><span class="p">(</span><span class="s2">&#34;prod&#34;</span><span class="p">);</span></code></pre></div>
+<h2 id="step-3-understand-kubernetes-rbac-declare-the-kubernetes-objects-on-the-eks-cluster">Step 3: Understand Kubernetes RBAC. Declare the Kubernetes objects on the EKS cluster.</h2>
+
+<p>The Kubernetes RBAC API declares four top-level types that can be
+defined as YAMLs syntaxes: <strong>a) Role</strong> - represents a set of additive
+rules within a namespace; <strong>b) RoleBinding</strong> - grants namespace-wide
+access to k8s subjects and resources; <strong>c) ClusterRole</strong> - represents a
+set of additive rules within the cluster; <strong>d) ClusterRoleBinding</strong> -
+grants cluster-wide access to k8s subjects and resources.</p>
+
+<h3 id="the-traditional-approach-2">The Traditional-approach:</h3>
+
+<p>You define three k8s users with different privileges in your cluster and
+test them sequentially:
+User type1 called <code>pulumi:admin-usr</code> for users have cluster admin rights</p>
+
+<pre><code> $ cat user1.yaml                           
+ kind: ClusterRole
+ apiVersion: rbac.authorization.k8s.io/v1
+ metadata:
+  name: ClusterAdminRole
+  # no namespace needed
+ rules:
+ - apiGroups: [&quot;*&quot;]
+  resources: [&quot;*&quot;]
+  verbs: [&quot;*&quot;]
+  
+ ---
+ kind: ClusterRoleBinding
+ apiVersion: rbac.authorization.k8s.io/v1
+ metadata:
+   name: cluster-admin-binding
+ subjects:
+ - kind: User
+  name: &quot;pulumi:admin-usr&quot;
+  apiGroup: rbac.authorization.k8s.io
+ roleRef:
+  kind: ClusterRole
+  name: ClusterAdminRole
+  apiGroup: rbac.authorization.k8s.io`
+</code></pre>
+
+<p>User type2 called <code>pulumi:automation-usr</code> for users that have
+permissions to all k8s resources in namespace automation. An e.g would
+be your CI/CD pipeline</p>
+
+<pre><code>$ cat user2.yaml
+ 
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: AutomationRole
+  namespace: automation
+rules:
+- apiGroups: [&quot;*&quot;]
+  resources: [&quot;*&quot;]
+  verbs: [&quot;*&quot;]
+ 
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: automation-binding
+  namespace: automation
+subjects:
+- kind: User
+  name: &quot;pulumi:automation-usr&quot;
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: AutomationRole
+  apiGroup: rbac.authorization.k8s.io
+</code></pre>
+
+<p>User type 3 called prod-usr for users that have read access to all k8s
+resources in the namespace prod</p>
+
+<pre><code>$ cat user3.yaml
+ 
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: EnvProdRole
+  namespace: prod
+rules:
+- apiGroups: [&quot;*&quot;]
+  resources: [&quot;*&quot;]
+  verbs: [&quot;get&quot;, &quot;list&quot;, &quot;watch&quot;]
+ 
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: env-prod-binding
+  namespace: prod
+subjects:
+- kind: User
+  name: &quot;pulumi:prod-usr&quot;
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: EnvProdRole
+  apiGroup: rbac.authorization.k8s.io`
+
+$ kubectl apply -f user1.yaml &amp;&amp; kubectl apply -f user2.yaml &amp;&amp; kubectl apply -f user3.yaml`
+ 
+clusterrole.rbac.authorization.k8s.io/ClusterAdminRole created
+clusterrolebinding.rbac.authorization.k8s.io/cluster-admin-binding created
+role.rbac.authorization.k8s.io/AutomationRole created
+rolebinding.rbac.authorization.k8s.io/automation created
+role.rbac.authorization.k8s.io/EnvProdRole created
+rolebinding.rbac.authorization.k8s.io/env-prod-binding created
+</code></pre>
+
+<h3 id="the-pulumi-approach-2">The Pulumi-approach:</h3>
+
+<p>Update your <code>index.ts</code> file with more code as follows:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="cm">/*
+</span><span class="cm"> * 3) Single Step deployment of k8s RBAC configuration for user1, user2 and user3 per our example
+</span><span class="cm"> */</span>
+ 
+<span class="c1">// Grant cluster admin access to all admins with k8s ClusterRole and ClusterRoleBinding
+</span><span class="c1"></span><span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">rbac</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">ClusterRole</span><span class="p">(</span><span class="s2">&#34;clusterAdminRole&#34;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;clusterAdminRole&#34;</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">rules</span><span class="o">:</span> <span class="p">[{</span>
+    <span class="nx">apiGroups</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;*&#34;</span><span class="p">],</span>
+    <span class="nx">resources</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;*&#34;</span><span class="p">],</span>
+    <span class="nx">verbs</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;*&#34;</span><span class="p">],</span>
+  <span class="p">}]</span>
+<span class="p">},</span> <span class="p">{</span><span class="nx">provider</span>: <span class="kt">cluster.provider</span><span class="p">});</span>
+ 
+<span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">rbac</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">ClusterRoleBinding</span><span class="p">(</span><span class="s2">&#34;cluster-admin-binding&#34;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;cluster-admin-binding&#34;</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">subjects</span><span class="o">:</span> <span class="p">[{</span> 
+     <span class="nx">kind</span><span class="o">:</span> <span class="s2">&#34;User&#34;</span><span class="p">,</span>
+     <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;pulumi:admin-usr&#34;</span><span class="p">,</span>
+  <span class="p">}],</span> 
+  <span class="nx">roleRef</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">kind</span><span class="o">:</span> <span class="s2">&#34;ClusterRole&#34;</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;clusterAdminRole&#34;</span><span class="p">,</span>
+    <span class="nx">apiGroup</span><span class="o">:</span> <span class="s2">&#34;rbac.authorization.k8s.io&#34;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">},</span> <span class="p">{</span><span class="nx">provider</span>: <span class="kt">cluster.provider</span><span class="p">});</span>
+ 
+<span class="c1">// User2 called automation-usr for users that have permissions to all k8s resources in the namespace automation
+</span><span class="c1"></span><span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">rbac</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Role</span><span class="p">(</span><span class="s2">&#34;AutomationRole&#34;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;AutomationRole&#34;</span><span class="p">,</span>
+    <span class="nx">namespace</span><span class="o">:</span> <span class="s2">&#34;automation&#34;</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">rules</span><span class="o">:</span> <span class="p">[{</span>
+    <span class="nx">apiGroups</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;*&#34;</span><span class="p">],</span>
+    <span class="nx">resources</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;*&#34;</span><span class="p">],</span>
+    <span class="nx">verbs</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;*&#34;</span><span class="p">],</span>
+  <span class="p">}]</span>
+<span class="p">},</span> <span class="p">{</span><span class="nx">provider</span>: <span class="kt">cluster.provider</span><span class="p">});</span>
+  
+<span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">rbac</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">RoleBinding</span><span class="p">(</span><span class="s2">&#34;automation-binding&#34;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;automation-binding&#34;</span><span class="p">,</span>
+    <span class="nx">namespace</span><span class="o">:</span> <span class="s2">&#34;automation&#34;</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">subjects</span><span class="o">:</span> <span class="p">[{</span> 
+     <span class="nx">kind</span><span class="o">:</span> <span class="s2">&#34;User&#34;</span><span class="p">,</span>
+     <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;pulumi:automation-usr&#34;</span><span class="p">,</span>
+     <span class="nx">apiGroup</span><span class="o">:</span> <span class="s2">&#34;rbac.authorization.k8s.io&#34;</span><span class="p">,</span>
+  <span class="p">}],</span> 
+  <span class="nx">roleRef</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">kind</span><span class="o">:</span> <span class="s2">&#34;Role&#34;</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;AutomationRole&#34;</span><span class="p">,</span>
+    <span class="nx">apiGroup</span><span class="o">:</span> <span class="s2">&#34;rbac.authorization.k8s.io&#34;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">},</span> <span class="p">{</span><span class="nx">provider</span>: <span class="kt">cluster.provider</span><span class="p">});</span>
+ 
+<span class="c1">// User3 called prod-usr for users that have read access to all k8s resources in the namespace env-prod
+</span><span class="c1"></span><span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">rbac</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Role</span><span class="p">(</span><span class="s2">&#34;EnvProdRole&#34;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;EnvProdRole&#34;</span><span class="p">,</span>
+    <span class="nx">namespace</span><span class="o">:</span> <span class="s2">&#34;prod&#34;</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">rules</span><span class="o">:</span> <span class="p">[{</span>
+    <span class="nx">apiGroups</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;*&#34;</span><span class="p">],</span>
+    <span class="nx">resources</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;*&#34;</span><span class="p">],</span>
+    <span class="nx">verbs</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;get&#34;</span><span class="p">,</span> <span class="s2">&#34;watch&#34;</span><span class="p">,</span> <span class="s2">&#34;list&#34;</span><span class="p">],</span>
+  <span class="p">}],</span>
+<span class="p">},</span> <span class="p">{</span><span class="nx">provider</span>: <span class="kt">cluster.provider</span><span class="p">});</span>
+  
+<span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">rbac</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">RoleBinding</span><span class="p">(</span><span class="s2">&#34;env-prod-binding&#34;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;env-prod-binding&#34;</span><span class="p">,</span>
+    <span class="nx">namespace</span><span class="o">:</span> <span class="s2">&#34;prod&#34;</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">subjects</span><span class="o">:</span> <span class="p">[{</span> 
+     <span class="nx">kind</span><span class="o">:</span> <span class="s2">&#34;User&#34;</span><span class="p">,</span>
+     <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;pulumi:prod-usr&#34;</span><span class="p">,</span>
+     <span class="nx">apiGroup</span><span class="o">:</span> <span class="s2">&#34;rbac.authorization.k8s.io&#34;</span><span class="p">,</span>
+    <span class="p">}],</span> 
+  <span class="nx">roleRef</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">kind</span><span class="o">:</span> <span class="s2">&#34;Role&#34;</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;EnvProdRole&#34;</span><span class="p">,</span>
+    <span class="nx">apiGroup</span><span class="o">:</span> <span class="s2">&#34;rbac.authorization.k8s.io&#34;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">},</span> <span class="p">{</span><span class="nx">provider</span>: <span class="kt">cluster.provider</span><span class="p">});</span>
+ 
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">kubeconfig</span> <span class="o">=</span> <span class="nx">cluster</span><span class="p">.</span><span class="nx">kubeconfig</span></code></pre></div>
+<h2 id="step-4-update-aws-iam-authenticator-configmap-to-map-the-iam-roles-to-the-kubernetes-usernames">Step 4: Update aws-iam-authenticator ConfigMap to map the IAM Roles to the Kubernetes usernames.</h2>
+
+<h3 id="the-traditional-approach-3">The Traditional-approach:</h3>
+
+<p>You get the three IAM role arns for <code>clusterAdminRole</code>,
+<code>AutomationRole</code>, <code>EnvProdRole</code> and update the configmap with k8s
+usernames <code>pulumi:admin-usr</code>, <code>pulumi:automation-usr</code> and
+<code>pulumi:prod-usr</code>.</p>
+
+<pre><code>mapRoles:
+----
+- groups:
+  - system:masters
+  rolearn: arn:aws:iam::XXXXXXXXXXXX:role/clusterAdminRole
+  username: pulumi:admin-usr
+- groups:
+  rolearn: arn:aws:iam::XXXXXXXXXXXX:role/AutomationRole
+  username: pulumi:automation-usr
+- groups:
+  rolearn: arn:aws:iam::XXXXXXXXXXXX:role/EnvProdRole
+  username: pulumi:prod-usr
+- groups:
+  - system:bootstrappers
+  - system:nodes
+  rolearn: arn:aws:iam::XXXXXXXXXXXX:role/eksctl-eks-rbac-nd-test-nodegroup-NodeInstanceRole-NP542EG8JX8U
+  username: system:node:`
+</code></pre>
+
+<h3 id="the-pulumi-approach-3">The Pulumi-approach:</h3>
+
+<p>This step is not required as you have already updated the EKS ConfigMap
+at cluster creation time in STEP 2 using &ldquo;RoleMappings&rdquo;. Simply run
+<code>pulumi up</code> with the full <code>index.ts</code> file. Watch all your components
+come alive simultaneously.
+Setting up RBAC on one EKS cluster is a long convoluted sequential
+process that requires multiple validations along the way. Imagine the
+complexity involved when working with multiple tools for an environment
+that requires multiple groups with many users, namespaces, and clusters.</p>
+
+<p><strong>Testing the Pulumi approach worked</strong></p>
+
+<p>Make sure you run <code>pulumi up</code> with this <code>index.ts</code>
+<a href="https://gist.github.com/d-nishi/ab462ea779e0615f29e8cfbb668272d7">file</a>.</p>
+
+<pre><code>$ pulumi stack output kubeconfig | jq &gt; kubeconfig.yaml
+$ export KUBECONFIG = kubeconfig.yaml
+</code></pre>
+
+<p>Assume the IAM role <code>AutomationRole</code> with access to all Kubernetes
+resources in namespace automation and test if the permissions work.</p>
+
+<pre><code>  &quot;users&quot;: [
+    {
+      &quot;name&quot;: &quot;aws&quot;,
+      &quot;user&quot;: {
+        &quot;exec&quot;: {
+          &quot;apiVersion&quot;: &quot;client.authentication.k8s.io/v1alpha1&quot;,
+          &quot;args&quot;: [
+            &quot;token&quot;,
+            &quot;-i&quot;,
+            &quot;eks-cluster-eksCluster-196b0de&quot;,
+            &quot;-r&quot;,
+            &quot;arn:aws:iam::xxxxxxxxxxxx:role/AutomationRole&quot;
+          ],
+          &quot;command&quot;: &quot;aws-iam-authenticator&quot;
+        }
+      }
+    }
+  ]
+}
+ 
+$ kubectl get po --namespace=automation
+No resources found.
+ 
+$ kubectl get po --namespace=prod
+Error from server (Forbidden): pods is forbidden: User &quot;pulumi: automation-usr&quot; cannot list resource &quot;pods&quot; in API group &quot;&quot; in the namespace &quot;prod&quot;
+</code></pre>
+
+<p>Upon assuming the IAM role <code>AutomationRole</code> which is mapped to
+Kubernernetes username <code>pulumi:automation-usr</code> in the EKS cluster
+configmap, you are only restricted to the resources and verbs allowed in
+the namespace &ldquo;automation&rdquo; and not in namespace &ldquo;prod&rdquo;.</p>
+
+<p>In this post, we discussed how setting up Kubernetes RBAC with Pulumi is
+simple, comprehensive,
+non-sequential and part of your everyday programming experience. You can
+find the complete pulumi code for our example
+<a href="https://gist.github.com/d-nishi/a4e54dfc973ea047ec46c8deb5193f4e">here</a>.
+For more examples visit our GitHub examples page
+<a href="https://github.com/pulumi/examples">here</a>.</p>
+                    </section>
+                    <div>
+                        <p class="text-gray-500">Posted on <time>Wednesday, Apr 24, 2019</time>
+                        
+                        <ul class="m-0 p-0">
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/aws/">
+                                    AWS
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/kubernetes/">
+                                    Kubernetes
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/typescript/">
+                                    TypeScript
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/eks/">
+                                    EKS
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+                </article>
+            </div>
+
+            <div class="md:w-2/12 pl-8">
+                
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

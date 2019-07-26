@@ -1,0 +1,1324 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.pulumi.com/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+        
+            
+            
+                
+                    <meta name="twitter:creator" content="@funcOfJoe">
+                
+            
+        
+    
+
+    
+        <meta property="og:title" content="Easy Serverless Apps and Infrastructure — Real Events, Real Code">
+    
+
+    
+        <meta name="description" content="With Pulumi, you can create, deploy, and manage any cloud resource using
+your favorite language. This includes application- *and* infrastructure-
+related resources, often in the same program.
+
+One area this gets really fun is serverless. Because we&rsquo;re using
+general purpose languages, we can create resources, and then wire up
+event handlers, just like normal event-driven programming. This is the
+way serverless should be!
+
+In this article, we&rsquo;ll see how. There&rsquo;s a broad range of options
+depending on what you want to do, and how your team likes to operate.
+We&rsquo;ll be using AWS and TypeScript, but other clouds and languages are
+available.">
+        <meta property="og:description" content="With Pulumi, you can create, deploy, and manage any cloud resource using
+your favorite language. This includes application- *and* infrastructure-
+related resources, often in the same program.
+
+One area this gets really fun is serverless. Because we&rsquo;re using
+general purpose languages, we can create resources, and then wire up
+event handlers, just like normal event-driven programming. This is the
+way serverless should be!
+
+In this article, we&rsquo;ll see how. There&rsquo;s a broad range of options
+depending on what you want to do, and how your team likes to operate.
+We&rsquo;ll be using AWS and TypeScript, but other clouds and languages are
+available.">
+    
+
+    
+    
+        
+            
+        
+    
+    <meta property="og:image" content="https://www.pulumi.com/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/hero.png">
+
+    <title>Easy Serverless Apps and Infrastructure — Real Events, Real Code - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="https://www.pulumi.com/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="https://www.pulumi.com/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u");
+    analytics.page();
+    }}();
+    </script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+        
+            
+                
+            
+        
+        
+    
+</head>
+
+    <body class="section-blog">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+            <div class="md:w-3/12 pr-8">
+                
+<aside class="md:pr-8">
+
+    
+    <div class="md:hidden">
+        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </div>
+
+    <h3 class="no-anchor hidden md:flex mt-4">
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </h3>
+
+    
+    <div class="blog-sidebar-content hidden md:block">
+        <div class="bg-gray-100 rounded-lg p-4 my-6 text-gray-700">
+            <h5 class="no-anchor text-gray-700">Program the Cloud</h5>
+            <p class="text-sm my-0">
+                Create, deploy, and manage cloud infrastructure using your favorite language.
+            </p>
+        </div>
+
+        <ul class="list-none p-0 mb-4 inline-flex flex-wrap text-xs">
+            
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/apigateway/">
+                            apigateway
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/applications/">
+                            applications
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/auth/">
+                            auth
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/aws/">
+                            aws
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/azure/">
+                            azure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/ci/cd/">
+                            ci/cd
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/cloud-native/">
+                            cloud-native
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/containers/">
+                            containers
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/customer/">
+                            customer
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/digitalocean/">
+                            digitalocean
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/docker/">
+                            docker
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/eks/">
+                            eks
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/events/">
+                            events
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/features/">
+                            features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/gcp/">
+                            gcp
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/gke/">
+                            gke
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/infrastructure/">
+                            infrastructure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/javascript/">
+                            javascript
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/jupyter/">
+                            jupyter
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/kubernetes/">
+                            kubernetes
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/lambda/">
+                            lambda
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/logging/">
+                            logging
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/mysql/">
+                            mysql
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/new-features/">
+                            new-features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/pulumi/">
+                            pulumi
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/pulumi-news/">
+                            pulumi-news
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/python/">
+                            python
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/security/">
+                            security
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/serverless/">
+                            serverless
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/testing/">
+                            testing
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="https://www.pulumi.com/blog/tag/typescript/">
+                            typescript
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="hidden lg:block my-4">
+            <h5 class="no-anchor">Recent Posts</h5>
+            <ul class="list-none p-0">
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/day-2-kubernetes-migrating-eks-nodegroups-with-zero-downtime/">Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime</a>
+                        </li>
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/getting-started-on-digitalocean-with-pulumi/">Getting Started on DigitalOcean with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/pulumi-meetup-recap-apis-custom-resources-and-github-webhooks/">Pulumi Meetup Recap: APIs, Custom Resources and GitHub Webhooks</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks/">Persisting Kubernetes workloads with Amazon EFS CSI volumes using Pulumi open source SDKs</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/unit-testing-infrastructure-in-nodejs-and-mocha/">Unit Testing Your Infrastructure with Node.js and Mocha</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/kubernetes-ingress-with-aws-alb-ingress-controller-and-pulumi-crosswalk/">Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included/">Globally-distributed Serverless Application in 100 Lines of Code. Infrastructure Included!</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/hosting-a-static-website-on-azure-with-pulumi/">Hosting a Static Website on Azure with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="https://www.pulumi.com/blog/running-containers-in-aws-the-lowdown-ecs-fargate-and-eks/">Running Containers in AWS, the Lowdown: ECS, Fargate, and EKS</a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="md:hidden pb-4">
+        
+    </div>
+</aside>
+
+            </div>
+
+            <div class="md:w-7/12">
+                <article class="mb-8 pb-8 border-b border-gray-200">
+                    <h1 class="no-anchor"><a href="https://www.pulumi.com/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/">Easy Serverless Apps and Infrastructure — Real Events, Real Code</a></h1>
+                    <div class="flex items-center">
+                        <span>
+                            <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="https://www.pulumi.com/blog/author/joe-duffy/">
+                    <img class="w-8 rounded-full" src="/images/team/joe-duffy.jpg" alt="Joe Duffy" title="Joe Duffy">
+                </a>
+                <a class="" href="https://www.pulumi.com/blog/author/joe-duffy/">Joe Duffy</a>
+            
+        </span>
+    
+</span>
+
+                        </span>
+                    </div>
+                    <section>
+                        <p>With Pulumi, you can create, deploy, and manage any cloud resource using
+your favorite language. This includes application- *and* infrastructure-
+related resources, often in the same program.</p>
+
+<p>One area this gets really fun is serverless. Because we&rsquo;re using
+general purpose languages, we can create resources, and then wire up
+event handlers, just like normal event-driven programming. This is the
+way serverless should be!</p>
+
+<p>In this article, we&rsquo;ll see how. There&rsquo;s a broad range of options
+depending on what you want to do, and how your team likes to operate.
+We&rsquo;ll be using AWS and TypeScript, but other clouds and languages are
+available.</p>
+
+<h2 id="a-simple-serverless-app">A Simple Serverless App</h2>
+
+<p>In this article, we&rsquo;ll use a very simple serverless app. We have two S3
+buckets: one for TPS reports, and the other to store archived zipfiles
+of those reports. Anytime a new report comes in, our Lambda will zip and
+archive it.</p>
+
+<p>Simple enough. This can be visualized as follows:</p>
+
+<p><img src="./architecture.png" alt="Serverless app architecture" /></p>
+
+<p>All source code for this example is
+<a href="https://github.com/pulumi/examples/tree/master/aws-ts-s3-lambda-copyzip">available on GitHub</a>.</p>
+
+<h2 id="event-sources-and-event-handlers">Event Sources and Event Handlers</h2>
+
+<p>Serverless app models today make you think of the event sources &ndash; the
+S3 buckets &ndash; and event handlers &ndash; the Lambdas and associated code
+&ndash; as very different things &ndash; &ldquo;infrastructure&rdquo; versus &ldquo;app code&rdquo;
+&ndash; managed with distinct tools and workflows. Pulumi, in contrast,
+gives you a single CLI, <code>pulumi</code>, to manage everything consistently.</p>
+
+<p>You can create event sources and handlers in the same program, but
+Pulumi&rsquo;s approach is flexible, allowing you to ease into serverless
+without boiling the ocean. You can choose to wire functions up to
+existing resources (say, if your team already created the buckets), or
+even use functions your team has already made.</p>
+
+<p>Also, because Pulumi provisions and manages resources, updating your
+functions after creating them is easy. Just edit your code,
+run <code>pulumi up</code>, and Pulumi will diff and compute the minimal set of
+changes it can make to upgrade your code &ndash; no downtime required.
+We&rsquo;ll see this in action shortly. But first let&rsquo;s create our initial
+app.</p>
+
+<h2 id="creating-an-event-handler">Creating an Event Handler</h2>
+
+<p>There are multiple approaches to creating a function. Let&rsquo;s start with
+the easiest.</p>
+
+<h3 id="approach-1-magic-functions">Approach 1: Magic Functions</h3>
+
+<p>Our favorite way to create functions is to write them inline. This blurs
+the line between infrastructure and application logic in a way that
+makes Pulumi programs feel like real, first class distributed apps.</p>
+
+<p>First, we have our TPS reports and zips buckets (for now
+we&rsquo;ll <code>new</code> them up, more on that later):</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">tpsReports</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">s3</span><span class="p">.</span><span class="nx">Bucket</span><span class="p">(</span><span class="s2">&#34;tpsReports&#34;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">tpsZips</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">s3</span><span class="p">.</span><span class="nx">Bucket</span><span class="p">(</span><span class="s2">&#34;tpsZips&#34;</span><span class="p">);</span></code></pre></div>
+<p>The bucket objects have many properties, including obvious ones like the
+ARN, domain name, CORS rules, and so on. But if we look closely, we&rsquo;ll
+see there are some <code>onX</code> methods. These register event handlers:</p>
+
+<p><img src="./intellisense.png" alt="Intellisense" /></p>
+
+<p>Let&rsquo;s use <code>onObjectCreated</code> to create a Lambda that will zip up any new
+reports:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="nx">tpsReports</span><span class="p">.</span><span class="nx">onObjectCreated</span><span class="p">(</span><span class="s2">&#34;zipTpsReports&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+   <span class="kr">const</span> <span class="nx">AdmZip</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;adm-zip&#34;</span><span class="p">);</span>
+   <span class="kr">const</span> <span class="nx">s3</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">sdk</span><span class="p">.</span><span class="nx">S3</span><span class="p">();</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">rec</span> <span class="nx">of</span> <span class="nx">e</span><span class="p">.</span><span class="nx">Records</span> <span class="o">||</span> <span class="p">[])</span> <span class="p">{</span>
+      <span class="kr">const</span> <span class="nx">zip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AdmZip</span><span class="p">();</span>
+      <span class="kr">const</span> <span class="p">[</span> <span class="nx">buck</span><span class="p">,</span> <span class="nx">key</span> <span class="p">]</span> <span class="o">=</span> <span class="p">[</span> <span class="nx">rec</span><span class="p">.</span><span class="nx">s3</span><span class="p">.</span><span class="nx">bucket</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">rec</span><span class="p">.</span><span class="nx">s3</span><span class="p">.</span><span class="nx">object</span><span class="p">.</span><span class="nx">key</span> <span class="p">];</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Zipping </span><span class="si">${</span><span class="nx">buck</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">key</span><span class="si">}</span><span class="sb"> into </span><span class="si">${</span><span class="nx">tpsZips</span><span class="p">.</span><span class="nx">bucket</span><span class="p">.</span><span class="nx">get</span><span class="p">()</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">key</span><span class="si">}</span><span class="sb">.zip`</span><span class="p">);</span>
+      <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">s3</span><span class="p">.</span><span class="nx">getObject</span><span class="p">({</span> <span class="nx">Bucket</span>: <span class="kt">buck</span><span class="p">,</span> <span class="nx">Key</span>: <span class="kt">key</span> <span class="p">}).</span><span class="nx">promise</span><span class="p">);</span>
+      <span class="nx">zip</span><span class="p">.</span><span class="nx">addFile</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">Body</span><span class="p">);</span>
+      <span class="nx">await</span> <span class="nx">s3</span><span class="p">.</span><span class="nx">putObject</span><span class="p">({</span>
+         <span class="nx">Bucket</span>: <span class="kt">tpsZips.bucket.get</span><span class="p">(),</span>
+         <span class="nx">Key</span><span class="o">:</span> <span class="sb">`</span><span class="si">${</span><span class="nx">key</span><span class="si">}</span><span class="sb">.zip`</span><span class="p">,</span>
+         <span class="nx">Body</span>: <span class="kt">zip.toBuffer</span><span class="p">(),</span>
+      <span class="p">}).</span><span class="nx">promise</span><span class="p">();</span>
+   <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+<p>Most of the code here is the application logic &ndash; precisely what we
+want to be focusing on! In fact, this code looks just like any ordinary
+JavaScript event-driven program.</p>
+
+<p>A neat thing that Pulumi can do is capture references to other
+resources. So, notice here, we actually capture a reference
+to <code>tpsZips</code> from within the event handler, and Pulumi figures out how
+to serialize the resulting closure. For the most part, any code you
+write there will work, unlocking all sorts of powerful composition
+scenarios: multiple functions can be composed together, you can use
+modules as usual, and so on. Just program like you normally would,
+without the awkward environment variables and configuration. That&rsquo;s why
+we call these <em>magic</em> functions.</p>
+
+<p>Now, let&rsquo;s deploy the resources to AWS:</p>
+
+<p><img src="./up.png" alt="UP UP AND AWAY!" /></p>
+
+<p>After confirming, <code>yes</code>, everything is up and running after just a few
+seconds:</p>
+
+<p><img src="./done.png" alt="done" /></p>
+
+<p>Note the resource graph. Pulumi uses real languages, which allows
+encapsulation and hiding of unnecessary complexity. So underneath that
+simple-looking <code>onObjectCreated</code> are many AWS resources, like IAM
+attachments. This is a lot like how we can ignore all the messy OS API
+calls when using Node.js abstractions.</p>
+
+<p>Pulumi has many convenience functions built-in, and one of them
+is <code>pulumi logs</code>, which will let us tail the logs associated with all
+compute in our stack (including serverless functions):</p>
+
+<p>$ pulumi logs -f
+  Collecting logs for stack dev since 2019-03-10T10:09:56.000-07:00&hellip;</p>
+
+<p>Now that we&rsquo;re tailing the logs, let&rsquo;s copy a file over using the AWS
+CLI:</p>
+
+<p>$ aws s3 cp ./tps001.txt s3://$(pulumi stack output tpsReportsBucket)
+  upload: ../tps001.txt to s3://tpsreports-96458ef/tps001.txt</p>
+
+<p>We have used the <code>pulumi stack output</code> command to conveniently fetch the
+bucket name. After the upload completes, we&rsquo;ll see that our function
+comes alive in the <code>pulumi logs</code> command:</p>
+
+<p>2019-03-10T11:10:48.617-07:00[zipTpsReports] Zipping
+      tpsreports-96458ef/tps001.txt into tpszips-edfde11/tps001.txt.zip</p>
+
+<p>And, sure enough, if we list the contents of the zip bucket, we will see
+our newly added file:</p>
+
+<p>$ aws s3 ls s3://$(pulumi stack output tpsZipsBucket)
+  2019-03-10 11:10:50     6206 tps001.txt.zip</p>
+
+<p>Voila! A fully functioning serverless application.</p>
+
+<p>Note also that the <code>CallbackFunction</code> class &ndash; the powerful abstraction
+behind all of this &ndash; is exported, and offers some knobs,
+in case you want to do things like reuse existing IAM roles rather than
+creating new ones.
+See the <a href="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/lambda/"><code>pulumi/aws/lambda</code> documentation</a> for details.
+For instance, say we want to increase the RAM available to our function from 128MB to 256MB:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="nx">tpsReports</span><span class="p">.</span><span class="nx">onObjectCreated</span><span class="p">(</span>
+   <span class="s2">&#34;zipTpsReports&#34;</span><span class="p">,</span>
+   <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">lambda</span><span class="p">.</span><span class="nx">CallbackFunction</span><span class="p">(</span><span class="s2">&#34;zipTpsReportsFunc&#34;</span><span class="p">,</span> <span class="p">{</span>
+      <span class="nx">memorySize</span>: <span class="kt">256</span> <span class="cm">/*MB*/</span><span class="p">,</span>
+      <span class="nx">callback</span><span class="o">:</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="cm">/* same code as before */</span> <span class="p">},</span>
+   <span class="p">},</span>
+<span class="p">);</span></code></pre></div>
+<p>Soon we&rsquo;ll see how to manage and update our functions, but first let&rsquo;s
+see some alternative coding styles.</p>
+
+<h3 id="approach-2-manual-function-resources">Approach 2: Manual Function Resources</h3>
+
+<p>We just saw that we can write our application logic inside of our Pulumi
+program, alongside our infrastructure resource definitions. This can
+feel magical and super productive. But not everybody wants to mix these
+together. Sometimes you want to stick to the classic way of doing this:
+keeping your function&rsquo;s application logic in one place, and your
+function&rsquo;s infrastructure definition in another. This aligns more
+closely with many team workflows.</p>
+
+<p>There is another practical reason to want this: if your functions are
+written in one language (say, C# or Java) while your Pulumi
+infrastructure is authored in a different one (say, JavaScript or
+Python).</p>
+
+<p>Pulumi supports this, by simply defining your Lambda function like any
+other infrastructure resource:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// First, create some IAM machinery:
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">zipFuncRole</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">iam</span><span class="p">.</span><span class="nx">Role</span><span class="p">(</span><span class="s2">&#34;zipTpsReportsFuncRole&#34;</span><span class="p">,</span> <span class="p">{</span>
+   <span class="nx">assumeRolePolicy</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">Version</span><span class="o">:</span> <span class="s2">&#34;2012-10-17&#34;</span><span class="p">,</span>
+      <span class="nx">Statement</span><span class="o">:</span> <span class="p">[{</span>
+         <span class="nx">Action</span><span class="o">:</span> <span class="s2">&#34;sts:AssumeRole&#34;</span><span class="p">,</span>
+         <span class="nx">Principal</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">Service</span><span class="o">:</span> <span class="s2">&#34;lambda.amazonaws.com&#34;</span><span class="p">,</span>
+         <span class="p">},</span>
+         <span class="nx">Effect</span><span class="o">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
+         <span class="nx">Sid</span><span class="o">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+      <span class="p">}],</span>
+   <span class="p">},</span>
+<span class="p">});</span>
+<span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">iam</span><span class="p">.</span><span class="nx">RolePolicyAttachment</span><span class="p">(</span><span class="s2">&#34;zipTpsReportsFuncRoleAttach&#34;</span><span class="p">,</span> <span class="p">{</span>
+   <span class="nx">role</span>: <span class="kt">zipFuncRole</span><span class="p">,</span>
+   <span class="nx">policyArn</span>: <span class="kt">aws.iam.AWSLambdaFullAccess</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// Next, create the Lambda function itself:
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">zipFunc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">lambda</span><span class="p">.</span><span class="nb">Function</span><span class="p">(</span><span class="s2">&#34;zipTpsReportsFunc&#34;</span><span class="p">,</span> <span class="p">{</span>
+   <span class="nx">environment</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">variables</span><span class="o">:</span> <span class="p">{</span>
+         <span class="s2">&#34;TPS_ZIP_BUCKET&#34;</span><span class="o">:</span> <span class="nx">tpsZips</span><span class="p">.</span><span class="nx">bucket</span><span class="p">,</span>
+      <span class="p">},</span>
+   <span class="p">},</span>
+   <span class="nx">code</span>: <span class="kt">new</span> <span class="nx">pulumi</span><span class="p">.</span><span class="nx">asset</span><span class="p">.</span><span class="nx">AssetArchive</span><span class="p">({</span>
+      <span class="s2">&#34;.&#34;</span><span class="o">:</span> <span class="k">new</span> <span class="nx">pulumi</span><span class="p">.</span><span class="nx">asset</span><span class="p">.</span><span class="nx">FileArchive</span><span class="p">(</span><span class="s2">&#34;./app&#34;</span><span class="p">),</span>
+   <span class="p">}),</span>
+   <span class="nx">runtime</span><span class="o">:</span> <span class="s2">&#34;nodejs8.10&#34;</span><span class="p">,</span>
+   <span class="nx">role</span>: <span class="kt">zipFuncRole.arn</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// Finally, register the Lambda to fire when a new TPS report arrives:
+</span><span class="c1"></span><span class="nx">tpsReports</span><span class="p">.</span><span class="nx">onObjectCreated</span><span class="p">(</span><span class="s2">&#34;zipTpsReports&#34;</span><span class="p">,</span> <span class="nx">zipFunc</span><span class="p">);</span></code></pre></div>
+<p>Because we&rsquo;re taking matters into our own hands, we have to create the
+IAM machinery ourselves. We also need a way to communicate the zip
+bucket name, so we use an environment variable. This highlights both the
+benefits and drawbacks to programming at this level &ndash; we need to know
+how to configure all of these ancillary resources, but as a result,
+the
+<a href="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Function">entire power of Lambda is at our fingertips</a>.</p>
+
+<p>Notice that we&rsquo;ve pointed to our application logic inside of <code>./app</code>.
+Pulumi will create the zipfile for you. If we instead wanted to use a
+zipfile we&rsquo;ve already packaged, just change <code>code</code> as follows:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// ...
+</span><span class="c1"></span>   <span class="nx">code</span>: <span class="kt">new</span> <span class="nx">pulumi</span><span class="p">.</span><span class="nx">asset</span><span class="p">.</span><span class="nx">FileArchive</span><span class="p">(</span><span class="s2">&#34;./app.zip&#34;</span><span class="p">),</span>
+<span class="err">// ...</span></code></pre></div>
+<p>Using Pulumi&rsquo;s
+<a href="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/asset/"><code>Asset</code> and <code>Archive</code> classes</a>,
+we can fetch code from anywhere &ndash; even the network.</p>
+
+<p>Although managing your functions manually isn&rsquo;t quite as magical, it is
+practically useful, and still delivers all the usual infrastructure as
+code benefits, enabling robust infrastructure management and versioning.</p>
+
+<h3 id="approach-3-wire-up-an-existing-function">Approach 3: Wire Up an Existing Function</h3>
+
+<p>This post is mainly about using serverless functions with Pulumi. But
+what if you&rsquo;re using Pulumi mainly for infrastructure, and another
+solution for the functions themselves? No problem &ndash; Pulumi can still
+glue everything together, even if it&rsquo;s not provisioning all of the
+resources.</p>
+
+<p>Every resource type in Pulumi has a static <code>get</code> that looks up an
+existing resource. These resources aren&rsquo;t managed by Pulumi, but you
+can still access their properties and use them. In this case, we&rsquo;ll
+just look up an existing Lambda, <code>zipTpsReportsFunc</code>, and register it as
+an event handler:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">zipFunc</span> <span class="o">=</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">lambda</span><span class="p">.</span><span class="nb">Function</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;zipTpsReportsFunc&#34;</span><span class="p">,</span> <span class="s2">&#34;zipTpsReports-19d51dc&#34;</span><span class="p">);</span>
+<span class="nx">tpsReports</span><span class="p">.</span><span class="nx">onObjectCreated</span><span class="p">(</span><span class="s2">&#34;zipTpsReports&#34;</span><span class="p">,</span> <span class="nx">zipFunc</span><span class="p">);</span></code></pre></div>
+<p>We&rsquo;ve given the function&rsquo;s ID, <code>zipTpsReports-19d51dc</code>, which allows
+Pulumi to locate it in your account and reuse it. This can make it easy
+to incrementally adopt Pulumi one piece at a time, collaborate between
+teams, or stitch together resources
+<a href="https://www.pulumi.com/docs/reference/organizing-stacks-projects/">managed by different stacks</a>.</p>
+
+<h2 id="more-about-functions">More About Functions</h2>
+
+<p>Now that we&rsquo;ve seen the basics, let&rsquo;s look at a few associated
+function management topics.</p>
+
+<h3 id="updating-a-function .code-line line="246"">Updating a Function</h3>
+
+<p>Updating the function is as easy as can be. Imagine we&rsquo;re running into
+a problem and want to do some good old fashioned <code>printf</code> debugging
+inside of our lambda. Maybe we want to log the size of the report and
+its resulting zipfile. Just add the relevant line:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// ...
+</span><span class="c1"></span><span class="nx">zip</span><span class="p">.</span><span class="nx">addFile</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">Body</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Report: </span><span class="si">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">ContentLength</span><span class="si">}</span><span class="sb">, Zip: </span><span class="si">${</span><span class="nx">zip</span><span class="p">.</span><span class="nx">toBuffer</span><span class="p">().</span><span class="nx">length</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="nx">s3</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span>
+<span class="err">// ...</span></code></pre></div>
+<p>And run <code>pulumi up</code> &ndash; it will show us what changed:</p>
+
+<p><img src="./update.png" alt="`pulumi up`" /></p>
+
+<p>We can view the full diff, by choosing <code>details</code>, including a Git-like
+diff of the code changes themselves!</p>
+
+<p><img src="./diffs.png" alt="Diffs" /></p>
+
+<p>After selecting <code>yes</code>, the function is updated in just a couple of
+seconds. Similarly, we can update any of the resource definitions, and
+Pulumi will figure out how to incrementally update them.</p>
+
+<h2 id="splitting-up-your-codebase">Splitting Up your Codebase</h2>
+
+<p>A nice middle ground between magic and manual functions is to use your
+language&rsquo;s module system to structure code differently. This is similar
+to how you might structure a typical application: route definitions over
+here, business logic over there, markup over here, etc. Pulumi can
+figure out the diffs regardless of how you&rsquo;ve structured your code, so
+updates are always based only on what&rsquo;s changed.</p>
+
+<p>For example, maybe we&rsquo;ve defined our callback function in <code>./app</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">export</span> <span class="nx">async</span> <span class="kd">function</span> <span class="nx">zipReport</span><span class="p">(</span><span class="nx">e</span>: <span class="kt">aws.s3.BucketEvent</span><span class="p">)</span><span class="o">:</span> <span class="nx">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span> <span class="p">{</span>
+   <span class="c1">// app code, as shown above, goes here
+</span><span class="c1"></span><span class="p">}</span></code></pre></div>
+<p>And now we can go back to our infrastructure code, and eliminate the
+application logic entirely:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">zipReport</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;./app&#34;</span><span class="p">;</span>
+<span class="p">...</span>
+<span class="nx">tpsReports</span><span class="p">.</span><span class="nx">onObjectCreated</span><span class="p">(</span><span class="s2">&#34;zipTpsReports&#34;</span><span class="p">,</span> <span class="nx">zipReport</span><span class="p">);</span></code></pre></div>
+<p>We can take this further and use dynamic package management to split up
+the code, possibly even spreading pieces of infrastructure and
+application code across multiple repos and/or packages. This works well
+for larger teams with independent components versioning at their own
+pace.</p>
+
+<p>Lastly, it&rsquo;s possible to use Pulumi stacks to actually break apart your
+cloud resources and functions into independently deployable pieces. This
+allows teams to leverage features
+like <a href="https://www.pulumi.com/docs/reference/service/roles-and-access-controls/">RBAC</a>.
+For instance, it&rsquo;s common for the DevOps team to manage the physical
+cloud resources like queues, topics, and buckets, while the development
+team authors and manages the serverless functions attached to them. Read
+more about
+this <a href="https://www.pulumi.com/docs/reference/organizing-stacks-projects/">here</a>.</p>
+
+<h2 id="more-about-event-sources">More About Event Sources</h2>
+
+<p>We glossed over one of the more interesting points: what resources have
+event handlers associated with them, and how to get our hands on them.</p>
+
+<h2 id="provision-a-new-resource">Provision a New Resource</h2>
+
+<p>The simplest answer here is to create a new resource in your Pulumi
+program using <code>new</code>, as we saw above. Because Pulumi is an
+infrastructure as code platform, any resources in any cloud are
+available &ndash;
+<a href="https://www.pulumi.com/docs/quickstart/aws/">AWS</a>,
+<a href="https://www.pulumi.com/docs/quickstart/azure/">Azure</a>,
+<a href="https://www.pulumi.com/docs/quickstart/gcp/">GCP</a>,
+<a href="https://www.pulumi.com/docs/quickstart/kubernetes/">Kubernetes</a>, etc. When
+you <code>new</code> one up, Pulumi understands how to provision and manage it.</p>
+
+<p>We saw simple examples of this earlier:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">tpsReports</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">s3</span><span class="p">.</span><span class="nx">Bucket</span><span class="p">(</span><span class="s2">&#34;tpsReports&#34;</span><span class="p">);</span></code></pre></div>
+<p>Note that the full set of configuration options are available on each
+resource. Let&rsquo;s say we want to turn on server-side encryption of our
+TPS archive bucket:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">tpsReports</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">s3</span><span class="p">.</span><span class="nx">Bucket</span><span class="p">(</span><span class="s2">&#34;tpsReports&#34;</span><span class="p">,</span> <span class="p">{</span>
+   <span class="nx">serverSideEncryptionConfiguration</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">sseAlgorithm</span><span class="o">:</span> <span class="s2">&#34;AES256&#34;</span><span class="p">,</span>
+   <span class="p">},</span>
+<span class="p">});</span></code></pre></div>
+<p>Just as with functions, subsequent updates will be diffed and updated in
+the minimally impactful way.</p>
+
+<h2 id="connect-to-an-existing-resource">Connect to an Existing Resource</h2>
+
+<p>Although it&rsquo;s nice we can provision the event sources and targets in a
+single program, sometimes different members of the team manage different
+parts of the infrastructure. For example, maybe your DevOps engineers
+provision resources like buckets, topics, and so on, and your developers
+wire up the functions.</p>
+
+<p>Not to worry, you can import an existing resource and program against it
+in the same way:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">tpsReports</span> <span class="o">=</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">s3</span><span class="p">.</span><span class="nx">Bucket</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;tpsReports&#34;</span><span class="p">,</span> <span class="s2">&#34;arn:aws:s3:::tpsReports-4f64efc&#34;</span><span class="p">);</span></code></pre></div>
+<p>This time, when you run your Pulumi program, you&rsquo;ll still see this
+resource but notice it says <code>read</code> instead of <code>create</code> or <code>update</code>. This
+just means that the resource is read from your account as-is. No matter
+what you do, the bucket itself will not be modified by Pulumi, other
+than to subscribe an event.</p>
+
+<p>This, of course, can be combined with the earlier similar functionality
+for functions, to glue together a bucket and a Lambda, where neither was
+actually provisioned by Pulumi!</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">tpsReports</span> <span class="o">=</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">s3</span><span class="p">.</span><span class="nx">Bucket</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;tpsReports&#34;</span><span class="p">,</span> <span class="s2">&#34;arn:aws:s3:::tpsReports-4f64efc&#34;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">zipFunc</span> <span class="o">=</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">lambda</span><span class="p">.</span><span class="nb">Function</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;zipTpsReportsFunc&#34;</span><span class="p">,</span> <span class="s2">&#34;zipTpsReports-19d51dc&#34;</span><span class="p">);</span>
+<span class="nx">tpsReports</span><span class="p">.</span><span class="nx">onObjectCreated</span><span class="p">(</span><span class="s2">&#34;zipTpsReports&#34;</span><span class="p">,</span> <span class="nx">zipFunc</span><span class="p">);</span></code></pre></div>
+<h2 id="other-notable-event-sources">Other Notable Event Sources</h2>
+
+<p>Finally, it&rsquo;s worth noting there are many event handler functions
+exposed in the AWS package:</p>
+
+<ul>
+<li><a href="https://github.com/pulumi/examples/tree/master/aws-ts-apigateway"><code>apigateway.x.API</code></a>:
+create serverless APIs using an Express.js style</li>
+<li><a href="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#onSchedule"><code>cloudwatch.onSchedule</code></a>:
+fire a CloudWatch event on a particular schedule, e.g. a cron
+expression</li>
+<li><a href="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventRule-onEvent"><code>cloudwatch.Event.onEvent</code></a>:
+fire an event when a particular CloudWatch event occurs</li>
+<li><a href="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#LogGroup-onEvent"><code>cloudwatch.LogGroup.onEvent</code></a>:
+fire an event when a CloudWatch logs event occurs</li>
+<li><a href="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/dynamodb/#Table-onEvent"><code>dynamodb.Table.onEvent</code></a>:
+fire events for DynamoDB insert, modify, or remove operations</li>
+<li><a href="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#Stream-onEvent"><code>kinesis.Stream.onEvent</code></a>:
+fire Kinesis Stream events at particular times or batch sizes</li>
+<li><a href="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/s3/#Bucket-onObjectCreated"><code>s3.Bucket.onObjectCreated</code></a>:
+trigger a function anytime an object is created in an S3 Bucket</li>
+<li><a href="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/s3/#Bucket-onObjectRemoved"><code>s3.Bucket.onObjectRemoved</code></a>:
+trigger a function anytime an object is removed from an S3 Bucket</li>
+<li><a href="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/s3/#Bucket-onEvent"><code>s3.Bucket.onEvent</code></a>:
+trigger a function for a wide range of S3 Bucket events</li>
+<li><a href="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/sns/#Topic-onEvent"><code>sns.Topic.onEvent</code></a>:
+fire SNS Topic events when new messages arrive</li>
+<li><a href="https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/sqs/#Queue-onEvent"><code>sqs.Queue.onEvent</code></a>:
+fire SQS Queue events when new messages are enqueued (or on DLQ
+events, etc)</li>
+</ul>
+
+<p>All of these handlers can be programmed using the spectrum of techniques
+outlined above.</p>
+
+<h2 id="in-conclusion">In Conclusion</h2>
+
+<p>In this post, we saw many different options for serverless programming
+with Pulumi, from magic functions that make serverless feel like true
+event-driven programming, to provisioning and managing infrastructure as
+code.</p>
+
+<p>We also saw that all of these options can be combined in any way,
+depending on you and your team&rsquo;s needs. This is the magic of
+programming languages in action!</p>
+
+<p>If you&rsquo;d like to try it out,
+<a href="https://github.com/pulumi/examples/tree/master/aws-ts-s3-lambda-copyzip">check out the code for this post on GitHub</a>.
+Happy serverless hacking!</p>
+                    </section>
+                    <div>
+                        <p class="text-gray-500">Posted on <time>Monday, Mar 11, 2019</time>
+                        
+                        <ul class="m-0 p-0">
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/javascript/">
+                                    JavaScript
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/serverless/">
+                                    Serverless
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/aws/">
+                                    AWS
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+                </article>
+            </div>
+
+            <div class="md:w-2/12 pl-8">
+                
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>
