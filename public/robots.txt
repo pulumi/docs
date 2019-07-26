@@ -1,4 +1,6 @@
 User-agent: *
+Disallow: *
+
 
 # Disallow certain pages that are preceived as soft-404s.
 Disallow: /docs/search/$

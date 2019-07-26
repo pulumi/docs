@@ -209,7 +209,7 @@ packages.&lt;/p&gt;</description>
                 <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
                 <guid>https://www.pulumi.com/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included/</guid>
                 <description>&lt;p&gt;Pulumi is excellent at connecting multiple cloud components into a
-cohesive application. In my &lt;a href=&#34;https://www.pulumi.com/blog/serverless-as-simple-callbacks-with-pulumi-and-azure-functions/&#34;&gt;previous post&lt;/a&gt;,
+cohesive application. In my &lt;a href=&#34;/blog/serverless-as-simple-callbacks-with-pulumi-and-azure-functions/&#34;&gt;previous post&lt;/a&gt;,
 I introduced the way to mix JavaScript or TypeScript serverless
 functions directly into the cloud infrastructure programs.&lt;/p&gt;
 
@@ -306,7 +306,7 @@ need to operate your own container repositories or worry about scaling
 the underlying infrastructure. ECR hosts your images in a highly
 available and scalable architecture, allowing you to reliably deploy
 containers for your applications. In this article, we&amp;rsquo;ll see how
-&lt;a href=&#34;https://www.pulumi.com/crosswalk/aws/&#34;&gt;Pulumi Crosswalk for AWS&lt;/a&gt; lets you use
+&lt;a href=&#34;/crosswalk/aws/&#34;&gt;Pulumi Crosswalk for AWS&lt;/a&gt; lets you use
 infrastructure as code to easily build, publish, and pull from private
 ECR repositories.&lt;/p&gt;</description>
                 
@@ -328,7 +328,7 @@ ECR repositories.&lt;/p&gt;</description>
                 <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
                 <guid>https://www.pulumi.com/blog/happy-birthday-to-pulumi-open-source/</guid>
                 <description>&lt;p&gt;One year ago today &amp;ndash; on June 18, 2018 &amp;ndash;
-&lt;a href=&#34;https://www.pulumi.com/blog/introducing-pulumi-a-cloud-development-platform/&#34;&gt;we open sourced Pulumi&lt;/a&gt;,
+&lt;a href=&#34;/blog/introducing-pulumi-a-cloud-development-platform/&#34;&gt;we open sourced Pulumi&lt;/a&gt;,
 a new approach to multi-cloud infrastructure as code using your favorite
 languages. And what a year it has been!&lt;/p&gt;</description>
                 
@@ -355,7 +355,7 @@ and visualizations directly inside your Pulumi application.&lt;/p&gt;
 &lt;p&gt;As cloud applications tend to be long-lived, we think it&amp;rsquo;s vital that it
 be possible to get regular insights on the performance of the
 application at all times. Using
-&lt;a href=&#34;https://www.pulumi.com/docs/reference/crosswalk/aws/&#34;&gt;Crosswalk for AWS&lt;/a&gt; Pulumi applications
+&lt;a href=&#34;/docs/reference/crosswalk/aws/&#34;&gt;Crosswalk for AWS&lt;/a&gt; Pulumi applications
 allow you to easily define and visualize the appropriate
 &lt;a href=&#34;https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/working_with_metrics.html&#34;&gt;metrics&lt;/a&gt;
 that show the health of your services, create
@@ -397,9 +397,9 @@ imperative to have a flexible way to ingest, process, and act upon this
 data, without sacrificing security or best practices.&lt;/p&gt;
 
 &lt;p&gt;To meet this need, &lt;a href=&#34;https://www.mapbox.com/&#34;&gt;Mapbox&lt;/a&gt; has created an
-Asset Tracking Solution that uses &lt;a href=&#34;https://www.pulumi.com/&#34;&gt;Pulumi&lt;/a&gt;&amp;rsquo;s
+Asset Tracking Solution that uses &lt;a href=&#34;/&#34;&gt;Pulumi&lt;/a&gt;&amp;rsquo;s
 open source JavaScript libraries (AWS, AWSX) available with
-multi-language support with &lt;a href=&#34;https://www.pulumi.com/blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws/&#34;&gt;Pulumi Crosswalk for AWS&lt;/a&gt;.
+multi-language support with &lt;a href=&#34;/blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws/&#34;&gt;Pulumi Crosswalk for AWS&lt;/a&gt;.
 Pulumi Crosswalk for AWS is an open source framework that streamlines
 creation, deployment and management of AWS services with built-in AWS
 Best Practices and minimal lines of code in common programming
@@ -460,7 +460,7 @@ of minutes or hours. And AWS building block services frequently leave
 you to re-implement (and re-discover) best-practices instead of
 providing these as smart defaults.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.pulumi.com/crosswalk/aws/&#34;&gt;Pulumi Crosswalk for AWS&lt;/a&gt; is a
+&lt;p&gt;&lt;a href=&#34;/crosswalk/aws/&#34;&gt;Pulumi Crosswalk for AWS&lt;/a&gt; is a
 new open source library of infrastructure-as-code components that make
 it easier to get from zero to production on AWS, easier to adopt AWS
 best practices by default, and easier to evolve your AWS infrastructure
@@ -527,20 +527,20 @@ by different teams. For example, it&amp;rsquo;s common to see an application tea
 deploying into a VPC owned and managed by a network operations team.&lt;/p&gt;
 
 &lt;p&gt;Pulumi supports
-&lt;a href=&#34;https://www.pulumi.com/docs/reference/organizing-stacks-projects/#inter-stack-dependencies&#34;&gt;this kind of workflow&lt;/a&gt;
-natively using the &lt;a href=&#34;https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/#StackReference&#34;&gt;&lt;code&gt;StackReference&lt;/code&gt;&lt;/a&gt;
+&lt;a href=&#34;/docs/reference/organizing-stacks-projects/#inter-stack-dependencies&#34;&gt;this kind of workflow&lt;/a&gt;
+natively using the &lt;a href=&#34;/docs/reference/pkg/nodejs/pulumi/pulumi/#StackReference&#34;&gt;&lt;code&gt;StackReference&lt;/code&gt;&lt;/a&gt;
 type from the Pulumi SDK. Integration with the most popular
 cloud-specific tools have been supported by Pulumi since the earliest
 days:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The &lt;a href=&#34;https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/cloudformation/#getStack&#34;&gt;&lt;code&gt;aws.cloudformation.getStack()&lt;/code&gt;&lt;/a&gt;
+&lt;li&gt;&lt;p&gt;The &lt;a href=&#34;/docs/reference/pkg/nodejs/pulumi/aws/cloudformation/#getStack&#34;&gt;&lt;code&gt;aws.cloudformation.getStack()&lt;/code&gt;&lt;/a&gt;
 function can be used to obtain the outputs from a CloudFormation
 Stack.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;The &lt;a href=&#34;https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/azure/core/#TemplateDeployment-get&#34;&gt;&lt;code&gt;get&lt;/code&gt;&lt;/a&gt;
+&lt;li&gt;&lt;p&gt;The &lt;a href=&#34;/docs/reference/pkg/nodejs/pulumi/azure/core/#TemplateDeployment-get&#34;&gt;&lt;code&gt;get&lt;/code&gt;&lt;/a&gt;
 method of the
-&lt;a href=&#34;https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/azure/core/#TemplateDeployment&#34;&gt;&lt;code&gt;azure.core.TemplateDeployment&lt;/code&gt;&lt;/a&gt;
+&lt;a href=&#34;/docs/reference/pkg/nodejs/pulumi/azure/core/#TemplateDeployment&#34;&gt;&lt;code&gt;azure.core.TemplateDeployment&lt;/code&gt;&lt;/a&gt;
 class can be used to obtain the outputs of an ARM Template Deployment.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -623,7 +623,7 @@ AWS, Azure and GCP. In addition to this, Pulumi recently added support for manag
 instances themselves to manage permissions, create databases, and other common tasks.&lt;/p&gt;
 
 &lt;p&gt;In this post, we’ll walk through a quick tutorial of how to use this new
-&lt;a href=&#34;https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/mysql/&#34;&gt;Pulumi MySQL provider&lt;/a&gt; to manage existing
+&lt;a href=&#34;/docs/reference/pkg/nodejs/pulumi/mysql/&#34;&gt;Pulumi MySQL provider&lt;/a&gt; to manage existing
 and new MySQL databases.&lt;/p&gt;</description>
                 
                     
@@ -683,14 +683,14 @@ rapidly across the industry. At the same time, it is notoriously complex
 and presents a steep learning curve for newcomers. Nobody likes
 programming in YAML, and templates &lt;a href=&#34;https://github.com/helm/charts/blob/cb3dcd7f1e0e6a152d110bcb776523856468e670/stable/cert-manager/templates/deployment.yaml&#34;&gt;make it even harder&lt;/a&gt;.
 It&amp;rsquo;s difficult to understand the state of the cluster &amp;ndash;
-&lt;a href=&#34;https://www.pulumi.com/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective/&#34;&gt;Did my deployment succeed&lt;/a&gt;?
+&lt;a href=&#34;/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective/&#34;&gt;Did my deployment succeed&lt;/a&gt;?
 Why isn&amp;rsquo;t my app working? And we often need to manage hosted cloud
 resources in addition to Kubernetes ones.&lt;/p&gt;
 
-&lt;p&gt;In this post, we will see how &lt;a href=&#34;https://www.pulumi.com/&#34;&gt;Pulumi&lt;/a&gt; can help you
+&lt;p&gt;In this post, we will see how &lt;a href=&#34;/&#34;&gt;Pulumi&lt;/a&gt; can help you
 tame these issues and make Kubernetes more accessible, using familiar
 languages and your favorite tools. It&amp;rsquo;s simply
-&lt;a href=&#34;https://www.pulumi.com/kubernetes/&#34;&gt;Kubernetes made easy&lt;/a&gt;!&lt;/p&gt;</description>
+&lt;a href=&#34;/kubernetes/&#34;&gt;Kubernetes made easy&lt;/a&gt;!&lt;/p&gt;</description>
                 
                     
                     
@@ -764,7 +764,7 @@ love it, but unfortunately it&amp;rsquo;s quite a big leap from &lt;code&gt;dock
 running your container in a production-ready environment.&lt;/p&gt;
 
 &lt;p&gt;We recently wrote a blog post about
-&lt;a href=&#34;https://www.pulumi.com/blog/get-started-with-docker-on-aws-fargate-using-pulumi/&#34;&gt;using AWS Fargate to run your docker containers with our open source packages&lt;/a&gt;.
+&lt;a href=&#34;/blog/get-started-with-docker-on-aws-fargate-using-pulumi/&#34;&gt;using AWS Fargate to run your docker containers with our open source packages&lt;/a&gt;.
 In this blog post we&amp;rsquo;re going to focus on another interesting aspect of
 Pulumi: being able to re-use your infrastructure code for both
 development and production!&lt;/p&gt;</description>
@@ -990,13 +990,13 @@ a single approach. In this article, we&amp;rsquo;ll see how.&lt;/p&gt;</descript
                 <guid>https://www.pulumi.com/blog/protecting-your-apis-with-lambda-authorizers-and-pulumi/</guid>
                 <description>&lt;p&gt;Creating serverless applications just got even easier! You can now
 protect your application APIs in just three easy steps. We&amp;rsquo;ve already
-posted about how &lt;a href=&#34;https://www.pulumi.com/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/&#34;&gt;easy it is to create serverless apps in Pulumi&lt;/a&gt;.
+posted about how &lt;a href=&#34;/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/&#34;&gt;easy it is to create serverless apps in Pulumi&lt;/a&gt;.
 Now, we&amp;rsquo;re helping you simplify protecting those apps with API
 Gateway and Lambda authorizers.&lt;/p&gt;
 
 &lt;p&gt;With Pulumi&amp;rsquo;s new &lt;a href=&#34;https://github.com/pulumi/pulumi-awsx&#34;&gt;AWSX&lt;/a&gt; package, you
 can quickly define a Lambda and an AWS Lambda authorizer to protect it.
-We&amp;rsquo;re once again harnessing the power of &lt;a href=&#34;https://www.pulumi.com/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions/&#34;&gt;Lambdas as Lambdas&lt;/a&gt;
+We&amp;rsquo;re once again harnessing the power of &lt;a href=&#34;/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions/&#34;&gt;Lambdas as Lambdas&lt;/a&gt;
 to allow developers to focus on writing code.&lt;/p&gt;
 
 &lt;p&gt;Today, we will walkthrough creating a simple serverless app using AWS
@@ -1182,7 +1182,7 @@ today, with a breadth of powerful infrastructure services from Google
 Container Engine (GKE) and Google Cloud Functions to Cloud Firestore and
 Cloud Spanner.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.pulumi.com/&#34;&gt;Pulumi&lt;/a&gt; is the most productive tooling available
+&lt;p&gt;&lt;a href=&#34;/&#34;&gt;Pulumi&lt;/a&gt; is the most productive tooling available
 today for teams building cloud applications and infrastructure, in your
 favorite languages. Add them together, and teams can easily take maximum
 advantage of Google Cloud Platform&amp;rsquo;s rich features, productively, with
@@ -1252,14 +1252,14 @@ make it a joy to work with Pulumi + Google Cloud.&lt;/p&gt;</description>
                 <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
                 <guid>https://www.pulumi.com/blog/unified-logs-with-pulumi-logs/</guid>
                 <description>&lt;p&gt;Pulumi makes developing and deploying
-&lt;a href=&#34;https://www.pulumi.com/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/&#34;&gt;rich serverless and container-based applications&lt;/a&gt;
+&lt;a href=&#34;/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/&#34;&gt;rich serverless and container-based applications&lt;/a&gt;
 a breeze. But how do you monitor and observe those applications while
 they are being developed and once they are deployed? There are many
 great answers: from the built-in capabilities of the underlying cloud
 services (Lambda, ECS, Kubernetes, and more), to great 3rd party
 solutions like &lt;a href=&#34;https://github.com/pulumi/pulumi-iopipe&#34;&gt;IOpipe&lt;/a&gt; and
 &lt;a href=&#34;https://github.com/pulumi/pulumi-epsagon&#34;&gt;Epsagon&lt;/a&gt; which
-&lt;a href=&#34;https://www.pulumi.com/blog/pulumi-and-epsagon-define-deploy-and-monitor-serverless-applications/&#34;&gt;we highlighted recently&lt;/a&gt;
+&lt;a href=&#34;/blog/pulumi-and-epsagon-define-deploy-and-monitor-serverless-applications/&#34;&gt;we highlighted recently&lt;/a&gt;
 on this blog.&lt;/p&gt;
 
 &lt;p&gt;The Pulumi CLI provides another way to do logging, without requiring the
@@ -1453,7 +1453,7 @@ tell you why.&lt;/p&gt;</description>
                 <link>https://www.pulumi.com/blog/managing-f5-big-ip-systems-with-pulumi/</link>
                 <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
                 <guid>https://www.pulumi.com/blog/managing-f5-big-ip-systems-with-pulumi/</guid>
-                <description>&lt;p&gt;The &lt;a href=&#34;https://www.pulumi.com/&#34;&gt;Pulumi&lt;/a&gt; ecosystem is continuously growing
+                <description>&lt;p&gt;The &lt;a href=&#34;/&#34;&gt;Pulumi&lt;/a&gt; ecosystem is continuously growing
 and today we&amp;rsquo;re excited to announce the F5 BIG-IP provider for Pulumi.&lt;/p&gt;
 
 &lt;p&gt;F5&amp;rsquo;s &lt;a href=&#34;https://www.f5.com/products/big-ip-services/local-traffic-manager&#34;&gt;BIG-IP Local Traffic Managment (LTM) services&lt;/a&gt;
@@ -1495,9 +1495,9 @@ Atlassian identity. This also means you can connect your Atlassian
 identity with an existing Pulumi account.&lt;/p&gt;
 
 &lt;p&gt;This work follows on from the support for
-&lt;a href=&#34;https://www.pulumi.com/blog/welcoming-gitlab-users-to-pulumi/&#34;&gt;GitLab identity&lt;/a&gt;
+&lt;a href=&#34;/blog/welcoming-gitlab-users-to-pulumi/&#34;&gt;GitLab identity&lt;/a&gt;
 and also the ability to
-&lt;a href=&#34;https://www.pulumi.com/blog/connecting-multiple-identities-to-pulumi/&#34;&gt;connect identities&lt;/a&gt;,
+&lt;a href=&#34;/blog/connecting-multiple-identities-to-pulumi/&#34;&gt;connect identities&lt;/a&gt;,
 eliminating the need for users to create multiple accounts on Pulumi.&lt;/p&gt;
 
 &lt;p&gt;This helps users with repos across the major version control systems to
@@ -1596,7 +1596,7 @@ these languages, like flow control, inheritance, composition, and so on,
 provide the right abstractions to effectively build up infrastructure in
 a simple and familiar way.&lt;/p&gt;
 
-&lt;p&gt;In a &lt;a href=&#34;https://www.pulumi.com/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions/&#34;&gt;previous post&lt;/a&gt;
+&lt;p&gt;In a &lt;a href=&#34;/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions/&#34;&gt;previous post&lt;/a&gt;
 we focused on how Pulumi could allow you to simply create an AWS Lambda
 out of your own JavaScript function. While this was much easier than
 having to manually create a &lt;a href=&#34;https://docs.aws.amazon.com/lambda/latest/dg/nodejs-create-deployment-pkg.html&#34;&gt;Lambda Deployment Package&lt;/a&gt;
@@ -1628,11 +1628,11 @@ into complete serverless application.&lt;/p&gt;</description>
                 <link>https://www.pulumi.com/blog/upcoming-aws-pulumi-webinar-on-feb-5/</link>
                 <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
                 <guid>https://www.pulumi.com/blog/upcoming-aws-pulumi-webinar-on-feb-5/</guid>
-                <description>&lt;p&gt;Pulumi is hosting &lt;a href=&#34;https://www.pulumi.com/webinar/aws-fargate-and-pulumi/&#34;&gt;a webinar with AWS Fargate&lt;/a&gt; &lt;strong&gt;on
+                <description>&lt;p&gt;Pulumi is hosting &lt;a href=&#34;/webinar/aws-fargate-and-pulumi/&#34;&gt;a webinar with AWS Fargate&lt;/a&gt; &lt;strong&gt;on
 February 5th, 10AM PST&lt;/strong&gt; (register
 &lt;a href=&#34;https://pages.awscloud.com/acq_NAMER_IPC-Pulumi-February-2019-Registration-Page.html?sc_channel=el&amp;amp;sc_campaign=ContainersPulumiFebruary2019&amp;amp;sc_country=US&amp;amp;sc_geo=NAMER&amp;amp;sc_category=mult&amp;amp;sc_outcome=acq%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20&amp;amp;trk=Partner_Website_Landing_Page&#34;&gt;here&lt;/a&gt;).
 We&amp;rsquo;ll be chatting about how to implement cloud native infrastructure
-across your organization using &lt;a href=&#34;https://www.pulumi.com/crosswalk/aws/&#34;&gt;AWS and Pulumi&lt;/a&gt;: general purpose programming
+across your organization using &lt;a href=&#34;/crosswalk/aws/&#34;&gt;AWS and Pulumi&lt;/a&gt;: general purpose programming
 languages to deliver everything from VMs to Kubernetes to Serverless.&lt;/p&gt;</description>
                 
                     
@@ -1683,7 +1683,7 @@ partners.&lt;/p&gt;</description>
                 <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
                 <guid>https://www.pulumi.com/blog/connecting-multiple-identities-to-pulumi/</guid>
                 <description>&lt;p&gt;Hot on the heels of our
-&lt;a href=&#34;https://www.pulumi.com/blog/welcoming-gitlab-users-to-pulumi/&#34;&gt;GitLab sign-in support&lt;/a&gt;,
+&lt;a href=&#34;/blog/welcoming-gitlab-users-to-pulumi/&#34;&gt;GitLab sign-in support&lt;/a&gt;,
 we&amp;rsquo;ve just released support for multiple identities for a single Pulumi
 account in the Pulumi Cloud Console. Previously, you could only sign-up
 for a new Pulumi account using a GitHub or GitLab identity. Starting
@@ -1726,7 +1726,7 @@ beyond what you first signed-up with.&lt;/p&gt;</description>
                 <link>https://www.pulumi.com/blog/welcoming-gitlab-users-to-pulumi/</link>
                 <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
                 <guid>https://www.pulumi.com/blog/welcoming-gitlab-users-to-pulumi/</guid>
-                <description>&lt;p&gt;We are very pleased to announce that &lt;a href=&#34;https://www.pulumi.com/&#34;&gt;Pulumi&lt;/a&gt; now
+                <description>&lt;p&gt;We are very pleased to announce that &lt;a href=&#34;/&#34;&gt;Pulumi&lt;/a&gt; now
 supports signing-in with your GitLab account. Don&amp;rsquo;t have an account on
 GitLab yet? Head on over to &lt;a href=&#34;https://gitlab.com&#34;&gt;https://gitlab.com&lt;/a&gt; and sign-up for an
 account.&lt;/p&gt;</description>
@@ -1748,7 +1748,7 @@ account.&lt;/p&gt;</description>
                 <link>https://www.pulumi.com/blog/pulumi-and-epsagon-define-deploy-and-monitor-serverless-applications/</link>
                 <pubDate>Thu, 29 Nov 2018 00:00:00 +0000</pubDate>
                 <guid>https://www.pulumi.com/blog/pulumi-and-epsagon-define-deploy-and-monitor-serverless-applications/</guid>
-                <description>&lt;p&gt;&lt;a href=&#34;https://www.pulumi.com/&#34;&gt;Pulumi&lt;/a&gt; makes it incredibly easy to use serverless
+                <description>&lt;p&gt;&lt;a href=&#34;/&#34;&gt;Pulumi&lt;/a&gt; makes it incredibly easy to use serverless
 functions within your cloud infrastructure and applications - an AWS
 Lambda is as simple as writing a JavaScript lambda!&lt;/p&gt;
 
@@ -1779,19 +1779,19 @@ code.&lt;/p&gt;</description>
                 <pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate>
                 <guid>https://www.pulumi.com/blog/meet-the-pulumi-team-at-aws-reinvent/</guid>
                 <description>&lt;p&gt;Heading to AWS re:Invent? Concerned about how you&amp;rsquo;ll manage to get
-&lt;a href=&#34;https://www.pulumi.com/cloudformation/&#34;&gt;that much YAML&lt;/a&gt; into your carry
+&lt;a href=&#34;/cloudformation/&#34;&gt;that much YAML&lt;/a&gt; into your carry
 on bag? Or maybe you just like purple.&lt;/p&gt;
 
 &lt;p&gt;Whatever the reason, the Pulumi team will be there all week at &lt;strong&gt;Booth
 316, Startup Central, Aria Quad, &lt;/strong&gt;and we&amp;rsquo;d love to chat with you about
-&lt;a href=&#34;https://www.pulumi.com/crosswalk/aws/&#34;&gt;AWS and Pulumi&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;/crosswalk/aws/&#34;&gt;AWS and Pulumi&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Catch up with us on serverless functions, &lt;a href=&#34;https://www.pulumi.com/containers/&#34;&gt;containers&lt;/a&gt; and
-&lt;a href=&#34;https://www.pulumi.com/kubernetes/&#34;&gt;Kubernetes&lt;/a&gt;, managed services and
+&lt;p&gt;Catch up with us on serverless functions, &lt;a href=&#34;/containers/&#34;&gt;containers&lt;/a&gt; and
+&lt;a href=&#34;/kubernetes/&#34;&gt;Kubernetes&lt;/a&gt;, managed services and
 any other cloud native infrastructure as code, and see how you can more
 productively manage your AWS cloud resources with general purpose
 programming languages. We can even help you
-&lt;a href=&#34;https://www.pulumi.com/cloudformation/&#34;&gt;migrate your CloudFormation to Pulumi&lt;/a&gt;. &lt;/p&gt;
+&lt;a href=&#34;/cloudformation/&#34;&gt;migrate your CloudFormation to Pulumi&lt;/a&gt;. &lt;/p&gt;
 
 &lt;p&gt;If you want to grab a specific time to talk through your needs,
 &lt;a href=&#34;https://info.pulumi.com/meetings/team-pulumi/aws-reinvent-catchup&#34;&gt;then use this link&lt;/a&gt;,
@@ -1820,7 +1820,7 @@ create reusable components for CircleCI workflows. Orbs enable you to
 simplify your CI/CD configuration by reusing existing orb jobs or
 commands, in much the same way Pulumi enables you to simplify the
 delivery of your cloud native infrastructure by sharing and reusing
-&lt;a href=&#34;https://www.pulumi.com/blog/creating-and-reusing-cloud-components-using-package-managers/&#34;&gt;existing components&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;/blog/creating-and-reusing-cloud-components-using-package-managers/&#34;&gt;existing components&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Pulumi is proud to be a &lt;a href=&#34;https://circleci.com/partners/&#34;&gt;CircleCI technology partner&lt;/a&gt;, and we were excited to get a
 head start on seeing how orbs could make it easier to take Pulumi into
@@ -2086,9 +2086,9 @@ code, and have it work.&lt;/p&gt;</description>
                 <pubDate>Wed, 03 Oct 2018 00:00:00 +0000</pubDate>
                 <guid>https://www.pulumi.com/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective/</guid>
                 <description>&lt;p&gt;&lt;em&gt;This post is part 3 in a series on the Kubernetes API. Earlier,
-&lt;a href=&#34;https://www.pulumi.com/blog/kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images/&#34;&gt;Part 1&lt;/a&gt;
+&lt;a href=&#34;/blog/kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images/&#34;&gt;Part 1&lt;/a&gt;
 focused on the lifecycle of a &lt;code&gt;Pod&lt;/code&gt; and
-&lt;a href=&#34;https://www.pulumi.com/blog/kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service/&#34;&gt;Part 2&lt;/a&gt;
+&lt;a href=&#34;/blog/kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service/&#34;&gt;Part 2&lt;/a&gt;
 focused on the lifecycle of a &lt;code&gt;Service&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;What is happening when a &lt;code&gt;Deployment&lt;/code&gt; rolls out a change to your app?
@@ -2179,9 +2179,9 @@ app.&lt;/p&gt;</description>
 
 &lt;blockquote&gt;
 &lt;p&gt;This post is part 3 in a series on the Kubernetes API. Earlier,
-&lt;a href=&#34;https://www.pulumi.com/blog/kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images/&#34;&gt;Part 1&lt;/a&gt;
+&lt;a href=&#34;/blog/kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images/&#34;&gt;Part 1&lt;/a&gt;
 focused on the lifecycle of a &lt;code&gt;Pod&lt;/code&gt;, and later
-&lt;a href=&#34;https://www.pulumi.com/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective/&#34;&gt;Part 3&lt;/a&gt;
+&lt;a href=&#34;/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective/&#34;&gt;Part 3&lt;/a&gt;
 details how Kubernetes deployments work.&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -2257,14 +2257,14 @@ how this works for infrastructure as code can be fascinating!&lt;/p&gt;</descrip
 
 &lt;blockquote&gt;
 &lt;p&gt;This post is the first part in a series on the Kubernetes API. Future installments include
-&lt;a href=&#34;https://www.pulumi.com/blog/kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service/&#34;&gt;Part 2&lt;/a&gt;
+&lt;a href=&#34;/blog/kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service/&#34;&gt;Part 2&lt;/a&gt;
 focused on the lifecycle of a &lt;code&gt;Service&lt;/code&gt; and
-&lt;a href=&#34;https://www.pulumi.com/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective/&#34;&gt;Part 3&lt;/a&gt;
+&lt;a href=&#34;/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective/&#34;&gt;Part 3&lt;/a&gt;
 details how Kubernetes deployments work.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;One of the most popular features of the recent
-&lt;a href=&#34;https://www.pulumi.com/blog/cloud-native-infrastructure-with-kubernetes-and-pulumi/&#34;&gt;v0.15.2 release&lt;/a&gt;
+&lt;a href=&#34;/blog/cloud-native-infrastructure-with-kubernetes-and-pulumi/&#34;&gt;v0.15.2 release&lt;/a&gt;
 of Pulumi is fine-grained status updates for Kubernetes resources. On
 the CLI they look like this:&lt;/p&gt;</description>
                 
@@ -2293,9 +2293,9 @@ that works across AWS, Azure, Google Cloud, OpenStack, and other clouds,
 now to Kubernetes and cloud native architectures. We have built this
 support in response to significant user interest and real end users
 scenarios, and are excited to share what we&amp;rsquo;ve been up to. You can
-&lt;a href=&#34;https://www.pulumi.com/docs/quickstart/kubernetes/&#34;&gt;dive right in here&lt;/a&gt; and
+&lt;a href=&#34;/docs/quickstart/kubernetes/&#34;&gt;dive right in here&lt;/a&gt; and
 look at some
-&lt;a href=&#34;https://www.pulumi.com/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/&#34;&gt;powerful things Pulumi enables here&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;a href=&#34;/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/&#34;&gt;powerful things Pulumi enables here&lt;/a&gt;.&lt;/p&gt;</description>
                 
                     
                     
@@ -2480,9 +2480,9 @@ happens that this one can be used to create cloud infrastructure.&lt;/p&gt;</des
                 <pubDate>Fri, 20 Jul 2018 00:00:00 +0000</pubDate>
                 <guid>https://www.pulumi.com/blog/provisioning-and-managing-cloud-infrastructure-with-pulumi/</guid>
                 <description>&lt;p&gt;If you&amp;rsquo;ve been following the blog, you know that Pulumi is great for
-building &lt;a href=&#34;https://www.pulumi.com/blog/code-deploy-and-manage-a-serverless-rest-api-on-aws-with-pulumi/&#34;&gt;serverless applications&lt;/a&gt;,
-&lt;a href=&#34;https://www.pulumi.com/blog/deploying-production-ready-containers-with-pulumi/&#34;&gt;container-based applications&lt;/a&gt;,
-and a &lt;a href=&#34;https://www.pulumi.com/blog/build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws/&#34;&gt;combination of the two&lt;/a&gt;.
+building &lt;a href=&#34;/blog/code-deploy-and-manage-a-serverless-rest-api-on-aws-with-pulumi/&#34;&gt;serverless applications&lt;/a&gt;,
+&lt;a href=&#34;/blog/deploying-production-ready-containers-with-pulumi/&#34;&gt;container-based applications&lt;/a&gt;,
+and a &lt;a href=&#34;/blog/build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws/&#34;&gt;combination of the two&lt;/a&gt;.
 But, did you know that you can manage any cloud resource in AWS, Azure, or Google Cloud Platform?&lt;/p&gt;</description>
                 
                     
@@ -2510,7 +2510,7 @@ But, did you know that you can manage any cloud resource in AWS, Azure, or Googl
                 <link>https://www.pulumi.com/blog/serving-a-static-website-on-aws-with-pulumi/</link>
                 <pubDate>Tue, 17 Jul 2018 00:00:00 +0000</pubDate>
                 <guid>https://www.pulumi.com/blog/serving-a-static-website-on-aws-with-pulumi/</guid>
-                <description>&lt;p&gt;Hello! This post covers using &lt;a href=&#34;https://www.pulumi.com/&#34;&gt;Pulumi&lt;/a&gt; to create the
+                <description>&lt;p&gt;Hello! This post covers using &lt;a href=&#34;/&#34;&gt;Pulumi&lt;/a&gt; to create the
 infrastructure for serving a static website on AWS. The full source code
 for this example is &lt;a href=&#34;https://github.com/pulumi/examples/blob/master/aws-ts-static-website/index.ts&#34;&gt;available on GitHub&lt;/a&gt;.&lt;/p&gt;
 
@@ -2647,7 +2647,7 @@ we really mean &amp;lsquo;as code&amp;rsquo;&lt;/li&gt;
 &lt;p&gt;Pulumi also supports containers (including Kubernetes), managed
 services, infrastructure and everything else in between that you might
 need for building cloud applications. Better than that, you can even
-&lt;a href=&#34;https://www.pulumi.com/blog/build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws/&#34;&gt;combine them all in the same program&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;a href=&#34;/blog/build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws/&#34;&gt;combine them all in the same program&lt;/a&gt;.&lt;/p&gt;</description>
                 
                     
                     
