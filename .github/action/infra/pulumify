@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -exuo pipefail
 
 # This is the Pulumify GitHub Action container's entrypoint. It does the following:
 #
@@ -18,6 +18,9 @@ set -e
 #     * Upon closure of the pull request (e.g., due to merging), the branch is deleted.
 #
 # This allows easy review of static website changes in line with GitHub pull request workflows.
+
+# This is a bit of a hack, but GitHub Actions hijacks the container working directory.
+cd /infra
 
 # Set up some variables so that the Pulumi CLI knows it's running in the context of GitHub.
 if [ ! -z "$GITHUB_WORKFLOW" ]; then
@@ -56,7 +59,7 @@ case "$PR_ACTION" in
 
         if [ $PULUMI_STACK_EXISTS -ne 0 ]; then
             pulumi stack init $PULUMI_STACK_NAME
-            pulumi config set root /app/${PULUMIFY_ROOT:-public}
+            pulumi config set root $GITHUB_WORKSPACE/${PULUMIFY_ROOT:-public}
             pulumi config set aws:region ${AWS_REGION:-us-east-1}
         fi
 
