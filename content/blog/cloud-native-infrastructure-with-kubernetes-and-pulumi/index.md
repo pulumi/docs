@@ -128,7 +128,7 @@ We can't wait to hear what you think. To learn more or give it a try,
 please check out these resources:
 
 - [EKS Quickstart]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-eks" >}})
-- [GKE Quickstart]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-eks" >}})
+- [GKE Quickstart]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-gke" >}})
 - [AKS Quickstart]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-aks" >}})
 
 These two tutorials will walk you through your first Pulumi for Kubernetes project:
@@ -143,7 +143,7 @@ a companion blog post with 11 exciting examples.
 
 
 If you have any questions or comments, we'd love to hear from you in our
-[Community Slack](https://slack.pulumi.io) or over on
+[Community Slack](https://slack.pulumi.com) or over on
 [GitHub](https://github.com/pulumi).
 
 Happy cloud native hacking! 
