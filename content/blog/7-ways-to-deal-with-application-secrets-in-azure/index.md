@@ -7,16 +7,16 @@ date: "2019-07-26"
 meta_image: "feature.jpg"
 ---
 
-Every non-trivial application relies on configuration values that may depend on the current execution environment. Some of these values contain sensitive information which shouldn't be shared publicly. The fewer parties have access to those secret values, the safer the application is. Ideally, no one should be granted access at all.
+Every non-trivial application relies on configuration values that may depend on the current execution environment. Some of these values contain sensitive information that shouldn't be shared publicly. In general, the fewer parties that have access to those secret values, the safer the application will be&mdash;in fact, in an ideal world, no one would be granted direct access to those secrets.
 <!--more-->
 
-Examples of such secret configuration values include
+Examples of secret configuration values include:
 
-- A connection string to a message bus or a database;
-- A SAS Token to an Azure Storage account;
-- An access key for a third-party service.
+- A connection string to a message bus or a database
+- A SAS Token to an Azure Storage account
+- An access key for a third-party service
 
-There's no one universal way to manage the secrets, as a lot depends on the context. In this article, I go through seven ways to use secret values in a .NET Core application running in Azure. I start with naively hard-coded strings and build up from there to more secure options.
+There's no one universal way to manage secrets, as a lot depends on the context in which they are used. In this article, I go through seven ways to use secret values in a .NET Core application running in Azure. I start with naively hard-coded strings and build up from there to more secure options.
 
 While the concepts are universally applicable, my code samples focus on a .NET application running in **Azure App Service** and configured with Pulumi.
 
@@ -41,7 +41,7 @@ var queueClient = storageAccount.CreateCloudQueueClient();
 
 Both snippets are fine for a Hello-World application with a lifespan of two hours. However, I would strongly discourage doing so in any code that can potentially be checked into a source control system, even for a 10-minute experiment. Don't copy-paste secrets into files which are part of a git repository. One accidental `git commit & git push`&mdash;and the secrets are compromised.
 
-Avoid the "Secrets as Code" practice: there are bots scanning your GitHub for those.
+Avoid the "Secrets as Code" practice: there are bots scanning your GitHub repository for those.
 
 ## 2. Configuration Files
 
