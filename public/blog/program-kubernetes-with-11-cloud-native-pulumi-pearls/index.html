@@ -1,0 +1,1669 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+        
+            
+            
+                
+                    <meta name="twitter:creator" content="@funcOfJoe">
+                
+            
+        
+    
+
+    
+        <meta property="og:title" content="Program Kubernetes with 11 Pulumi Pearls">
+    
+
+    
+        <meta name="description" content="In this post, we&rsquo;ll take a look at 11 &ldquo;pearls&rdquo; &ndash; bite-sized code
+snippets &ndash; that demonstrate using Pulumi to build and deploy Kubernetes
+applications using cloud native infrastructure as code. These pearls are
+organized into three categories, each demonstrating a unique scenario:
+
+
+Config as Real Code: Use your favorite language for authoring
+applications and configuration, eliminating toil and YAML.
+Multi-Cloud Infrastructure: Mix cloud services alongside
+Kubernetes resources and manage them using one set of tools and
+workflows.
+Software Delivery as Code: Perform sophisticated continuous
+delivery of your Kubernetes deployments &ndash; including canaries,
+staged rollouts, leveraging cloud native projects like Envoy and
+Prometheus &ndash; authored in real code.
+">
+        <meta property="og:description" content="In this post, we&rsquo;ll take a look at 11 &ldquo;pearls&rdquo; &ndash; bite-sized code
+snippets &ndash; that demonstrate using Pulumi to build and deploy Kubernetes
+applications using cloud native infrastructure as code. These pearls are
+organized into three categories, each demonstrating a unique scenario:
+
+
+Config as Real Code: Use your favorite language for authoring
+applications and configuration, eliminating toil and YAML.
+Multi-Cloud Infrastructure: Mix cloud services alongside
+Kubernetes resources and manage them using one set of tools and
+workflows.
+Software Delivery as Code: Perform sophisticated continuous
+delivery of your Kubernetes deployments &ndash; including canaries,
+staged rollouts, leveraging cloud native projects like Envoy and
+Prometheus &ndash; authored in real code.
+">
+    
+
+    
+    
+        
+            
+        
+    
+    <meta property="og:image" content="/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/health-checks.gif">
+
+    <title>Program Kubernetes with 11 Pulumi Pearls - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+        
+            
+                
+            
+        
+        
+    
+</head>
+
+    <body class="section-blog">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+            <div class="md:w-3/12 pr-8">
+                
+<aside class="md:pr-8">
+
+    
+    <div class="md:hidden">
+        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </div>
+
+    <h3 class="no-anchor hidden md:flex mt-4">
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </h3>
+
+    
+    <div class="blog-sidebar-content hidden md:block">
+        <div class="bg-gray-100 rounded-lg p-4 my-6 text-gray-700">
+            <h5 class="no-anchor text-gray-700">Program the Cloud</h5>
+            <p class="text-sm my-0">
+                Create, deploy, and manage cloud infrastructure using your favorite language.
+            </p>
+        </div>
+
+        <ul class="list-none p-0 mb-4 inline-flex flex-wrap text-xs">
+            
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/apigateway/">
+                            apigateway
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/applications/">
+                            applications
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/auth/">
+                            auth
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/aws/">
+                            aws
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/azure/">
+                            azure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/ci/cd/">
+                            ci/cd
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/cloud-native/">
+                            cloud-native
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/containers/">
+                            containers
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/customer/">
+                            customer
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/digitalocean/">
+                            digitalocean
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/docker/">
+                            docker
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/eks/">
+                            eks
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/events/">
+                            events
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/features/">
+                            features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/gcp/">
+                            gcp
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/gke/">
+                            gke
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/infrastructure/">
+                            infrastructure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/javascript/">
+                            javascript
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/jupyter/">
+                            jupyter
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/kubernetes/">
+                            kubernetes
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/lambda/">
+                            lambda
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/logging/">
+                            logging
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/mysql/">
+                            mysql
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/new-features/">
+                            new-features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/pulumi/">
+                            pulumi
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/pulumi-news/">
+                            pulumi-news
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/python/">
+                            python
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/security/">
+                            security
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/serverless/">
+                            serverless
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/testing/">
+                            testing
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/typescript/">
+                            typescript
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="hidden lg:block my-4">
+            <h5 class="no-anchor">Recent Posts</h5>
+            <ul class="list-none p-0">
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/day-2-kubernetes-migrating-eks-nodegroups-with-zero-downtime/">Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime</a>
+                        </li>
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/getting-started-on-digitalocean-with-pulumi/">Getting Started on DigitalOcean with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/pulumi-meetup-recap-apis-custom-resources-and-github-webhooks/">Pulumi Meetup Recap: APIs, Custom Resources and GitHub Webhooks</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks/">Persisting Kubernetes workloads with Amazon EFS CSI volumes using Pulumi open source SDKs</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/unit-testing-infrastructure-in-nodejs-and-mocha/">Unit Testing Your Infrastructure with Node.js and Mocha</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/kubernetes-ingress-with-aws-alb-ingress-controller-and-pulumi-crosswalk/">Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included/">Globally-distributed Serverless Application in 100 Lines of Code. Infrastructure Included!</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/hosting-a-static-website-on-azure-with-pulumi/">Hosting a Static Website on Azure with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/running-containers-in-aws-the-lowdown-ecs-fargate-and-eks/">Running Containers in AWS, the Lowdown: ECS, Fargate, and EKS</a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="md:hidden pb-4">
+        
+    </div>
+</aside>
+
+            </div>
+
+            <div class="md:w-7/12">
+                <article class="mb-8 pb-8 border-b border-gray-200">
+                    <h1 class="no-anchor"><a href="/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/">Program Kubernetes with 11 Pulumi Pearls</a></h1>
+                    <div class="flex items-center">
+                        <span>
+                            <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="/blog/author/joe-duffy/">
+                    <img class="w-8 rounded-full" src="/images/team/joe-duffy.jpg" alt="Joe Duffy" title="Joe Duffy">
+                </a>
+                <a class="" href="/blog/author/joe-duffy/">Joe Duffy</a>
+            
+        </span>
+    
+</span>
+
+                        </span>
+                    </div>
+                    <section>
+                        <p>In this post, we&rsquo;ll take a look at 11 &ldquo;pearls&rdquo; &ndash; bite-sized code
+snippets &ndash; that demonstrate using Pulumi to build and deploy Kubernetes
+applications using cloud native infrastructure as code. These pearls are
+organized into three categories, each demonstrating a unique scenario:</p>
+
+<ul>
+<li><strong>Config as Real Code:</strong> Use your favorite language for authoring
+applications and configuration, eliminating toil and YAML.</li>
+<li><strong>Multi-Cloud Infrastructure:</strong> Mix cloud services alongside
+Kubernetes resources and manage them using one set of tools and
+workflows.</li>
+<li><strong>Software Delivery as Code:</strong> Perform sophisticated continuous
+delivery of your Kubernetes deployments &ndash; including canaries,
+staged rollouts, leveraging cloud native projects like Envoy and
+Prometheus &ndash; authored in real code.</li>
+</ul>
+
+<p>Here is a complete index of the pearls below, in case you want to jump
+around a little:</p>
+
+<!-- just links to this same post -->
+
+<p><strong><a href="#config-as-real-code">Config as Real Code</a></strong></p>
+
+<ul>
+<li><a href="#1-define-kubernetes-applications-in-a-real-language">Define Kubernetes Applications in a Real Language</a></li>
+<li><a href="#2-more-expressiveness-less-boilerplate">More Expressiveness, Less Boilerplate</a></li>
+<li><a href="#3-inject-envoy-sidecars-using-abstraction">Inject Envoy Sidecars Using Abstraction</a></li>
+<li><a href="#4-adopt-existing-kubernetes-yaml">Adopt Existing Kubernetes YAML</a></li>
+<li><a href="#5-programmatically-deploy-helm-charts-as-code">Programmatically Deploy Helm Charts as Code</a></li>
+</ul>
+
+<p><strong><a href="#multi-cloud-infrastructure">Multi-Cloud Infrastructure</a></strong></p>
+
+<ul>
+<li><a href="#6-declare-cloud-resources-alongside-kubernetes-ones">Declare Cloud Resources Alongside Kubernetes Ones</a></li>
+<li><a href="#7-provision-and-use-kubernetes-clusters-in-any-cloud">Provision and Use Kubernetes Clusters in Any Cloud</a></li>
+<li><a href="#8-build-and-deploy-container-images-alongside-configuration-updates">Build and Deploy Container Images Alongside Configuration Updates</a></li>
+</ul>
+
+<p><strong><a href="#software-delivery-as-code">Software Delivery as Code</a></strong></p>
+
+<ul>
+<li><a href="#9-robust-and-repeatable-deployments-with-a-notion-of-done">Robust and Repeatable Deployments, with a Notion of &ldquo;Done&rdquo;</a></li>
+<li><a href="#10-trigger-cascading-rollouts-from-dependent-updates">Trigger Cascading Rollouts from Dependent Updates</a></li>
+<li><a href="#11-staged-application-rollouts-gated-by-prometheus-checks">Staged Application Rollouts Gated by Prometheus Checks</a></li>
+</ul>
+
+<h2 id="config-as-real-code">Config as Real Code</h2>
+
+<p>The default authoring experience for Kubernetes applications is in YAML,
+similar to other infrastructure as code solutions. These configuration
+files can <a href="https://twitter.com/jbeda/status/1023294262740365312">quickly grow out of hand</a> due to the
+lack of basic facilities like for loops, functions, and classes, leading
+to copy-and-paste, lots of boilerplate, and plenty of frustration.</p>
+
+<p>YAML is a fine &ldquo;assembly language&rdquo; for computers to read &ndash; but it was
+never meant to be a programming language for humans to write. After even
+the most basic level of complexity, you&rsquo;ll soon have accidentally
+encoded critical software architecture decisions in YAML, where as
+software developers we prefer to write and maintain such things in code.</p>
+
+<p>Using a real language brings productivity and joy to development, but
+more concretely also unlocks the ability to codify and enforce best
+practices, and to share and reuse them within your team or the
+community. This is something that simply isn&rsquo;t possible with YAML.</p>
+
+<p>Pulumi supports the full Kubernetes API and lets you author and deploy
+resources in code.</p>
+
+<h2 id="1-define-kubernetes-applications-in-a-real-language">1. Define Kubernetes Applications in a Real Language</h2>
+
+<p>[
+<a href="https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx">Code</a> |
+<a href="/docs/reference/tutorials/kubernetes/tutorial-stateless-app/">Tutorial</a> ]</p>
+
+<p>Let&rsquo;s begin by seeing what defining Kubernetes applications in a real
+language looks like. The full Kubernetes API is available, just in code
+instead of YAML. A simple program looks like so:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">k8s</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/kubernetes&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">appLabels</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">app</span><span class="o">:</span> <span class="s2">&#34;nginx&#34;</span> <span class="p">};</span>
+<span class="kr">const</span> <span class="nx">deployment</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">apps</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Deployment</span><span class="p">(</span><span class="s2">&#34;nginx-deployment&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">replicas</span>: <span class="kt">1</span><span class="p">,</span>
+        <span class="nx">selector</span><span class="o">:</span> <span class="p">{</span> <span class="nx">matchLabels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+        <span class="nx">template</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+            <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span> <span class="nx">containers</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;nginx&#34;</span><span class="p">,</span> <span class="nx">image</span><span class="o">:</span> <span class="s2">&#34;nginx:1.7.9&#34;</span> <span class="p">}]</span> <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+<p>Indeed, if you run the <code>pulumi new kubernetes-typescript</code> command to
+create a basic project from the Kubernetes TypeScript template, this is
+what you&rsquo;ll get.</p>
+
+<p>With this program in hand, we can run <code>pulumi up</code> and it will evaluate
+our program to compute the desired outcome, show us a preview, and then
+make it so. Remember, Pulumi is based on the concept of infrastructure
+as code; despite us using an imperative language, the code declares a
+goal state that Pulumi understands and converges towards, in a reliable
+way:</p>
+
+<p><img src="./1.png" alt="1" /></p>
+
+<p>Notice we are using TypeScript. This gives us great IDE support and
+compile-time checking for common mistakes. (Pulumi is multi-language and
+doesn&rsquo;t mind what language runs at runtime.) For example, if I
+accidentally enter a string for the replica count, I get instant IDE
+feedback:</p>
+
+<p><img src="./2.png" alt="2" /></p>
+
+<p>From here, we can make changes to our program &ndash; like changing Nginx
+from 1.7.9 to 1.8 &ndash; and then rerun <code>pulumi up</code> . It will compute the
+minimal set of changes to bring the running application in line with our
+new desired state, show us a diff, and ask if we&rsquo;d like to proceed:</p>
+
+<p><img src="./3.png" alt="3" /></p>
+
+<p>Selecting yes will carry out the update:</p>
+
+<p><img src="./4.png" alt="4" /></p>
+
+<p>At this point, we&rsquo;ve seen that we can gain some advantages from
+infrastructure as real code (like good IDE support and the use of a
+variable to avoid repeating ourselves for appLabels ). But let&rsquo;s now see
+some more compelling reasons why this is so great.</p>
+
+<h2 id="2-more-expressiveness-less-boilerplate">2. More Expressiveness, Less Boilerplate</h2>
+
+<p>[ <a href="https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/components">Code</a> ]</p>
+
+<p>We&rsquo;ve all seen <a href="https://kubernetes.io/docs/tutorials/stateless-application/guestbook/">the canonical Kubernetes guestbook application</a>
+that uses PHP, Nginx, and Redis. We have
+<a href="/docs/reference/tutorials/kubernetes/tutorial-guestbook/">the same tutorial written in Pulumi</a>.
+But the basic conversion from YAML to TypeScript leaves something to be
+desired; namely, it&rsquo;s equally as verbose, feels a little too &ldquo;low level&rdquo;
+for an application definition, and misses opportunities to reduce
+repetition.</p>
+
+<p>This is where languages can rescue us. We can recognize the common
+pattern of a Deployment for a container followed by a Service to expose
+that container, optionally behind a load balancer with a stable IP
+address. This has led us to define
+<a href="https://github.com/pulumi/examples/blob/master/kubernetes-ts-guestbook/components/k8sjs.ts">the simple ServiceDeployment class</a>.</p>
+
+<p>The definition of this class is interesting to ponder &ndash; particularly
+because, being a language, we can define arbitrary functions and classes
+to encode our own best practices and common patterns &ndash; however,
+<a href="https://github.com/pulumi/examples/blob/master/kubernetes-ts-guestbook/components/index.ts">the vast simplification to the guestbook itself</a>
+is the best part:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">k8sjs</span> <span class="nx">from</span> <span class="s2">&#34;./k8sjs&#34;</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">redisMaster</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8sjs</span><span class="p">.</span><span class="nx">ServiceDeployment</span><span class="p">(</span><span class="s2">&#34;redis-master&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">image</span><span class="o">:</span> <span class="s2">&#34;k8s.gcr.io/redis:e2e&#34;</span><span class="p">,</span>
+    <span class="nx">ports</span><span class="o">:</span> <span class="p">[</span> <span class="mi">6379</span> <span class="p">]</span>
+<span class="p">});</span>
+
+<span class="kd">let</span> <span class="nx">redisSlave</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8sjs</span><span class="p">.</span><span class="nx">ServiceDeployment</span><span class="p">(</span><span class="s2">&#34;redis-slave&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">image</span><span class="o">:</span> <span class="s2">&#34;gcr.io/google_samples/gb-redisslave:v1&#34;</span><span class="p">,</span>
+    <span class="nx">ports</span><span class="o">:</span> <span class="p">[</span> <span class="mi">6379</span> <span class="p">]</span>
+    <span class="p">});</span>
+
+<span class="kd">let</span> <span class="nx">frontend</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8sjs</span><span class="p">.</span><span class="nx">ServiceDeployment</span><span class="p">(</span><span class="s2">&#34;frontend&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">replicas</span>: <span class="kt">3</span><span class="p">,</span>
+    <span class="nx">image</span><span class="o">:</span> <span class="s2">&#34;gcr.io/google-samples/gb-frontend:v4&#34;</span><span class="p">,</span>
+    <span class="nx">ports</span><span class="o">:</span> <span class="p">[</span> <span class="mi">80</span> <span class="p">],</span>
+    <span class="nx">loadBalancer</span>: <span class="kt">true</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="kr">export</span> <span class="kd">let</span> <span class="nx">frontendIp</span> <span class="o">=</span> <span class="nx">frontend</span><span class="p">.</span><span class="nx">ipAddress</span><span class="p">;</span></code></pre></div>
+<p>The end result of having three Deployments, three Services, the frontend
+being load balanced, is the same. But we have gone from the original
+guestbook YAML of 147 lines down to 20. Not only that, but the code is
+much simpler to understand, and easier to maintain and evolve.</p>
+
+<p>The deployment workflow is similar to using the raw resources, with a
+simple <code>pulumi up</code>, and we can see the underlying resources expanded in
+a tree view during our update:</p>
+
+<p><img src="./5.png" alt="5" /></p>
+
+<p>Notice that the frontend&rsquo;s allocated IP is printed here thanks to the
+<code>export</code> line:</p>
+
+<pre><code>$ curl http://$(pulumi stack output frontendIp)
+&lt;html ng-app=&quot;redis&quot;&gt;
+  &lt;head&gt;
+    &lt;title&gt;Guestbook&lt;/title&gt;
+...
+</code></pre>
+
+<h2 id="3-inject-envoy-sidecars-using-abstraction">3. Inject Envoy Sidecars Using Abstraction</h2>
+
+<p>Before moving on, let&rsquo;s see another powerful example of how abstraction
+can help us to do useful things. In this pearl, we&rsquo;ll see how to inject
+sidecars. A sidecar is a microservices pattern whereby a container runs
+alongside another collection of containers to add some kind of value,
+like logging, proxying, or gathering and reporting on performance
+information. The sidecar pattern is particularly powerful in Kubernetes
+thanks to its Pod abstraction.</p>
+
+<p>Sidecars, and other best practices and standard patterns, are easy to
+express in code. This is a simple extension of pearl #2 above, where we
+can use abstraction to hide complex details.</p>
+
+<p>To see this in action, let&rsquo;s define a simple <code>EnvoyDeployment</code> class
+that adds a sidecar to any Kubernetes Deployment object:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">export</span> <span class="kr">class</span> <span class="nx">EnvoyDeployment</span> <span class="kr">extends</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">apps</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Deployment</span> <span class="p">{</span>
+    <span class="kr">constructor</span><span class="p">(</span><span class="nx">name</span>: <span class="kt">string</span><span class="p">,</span>
+                <span class="nx">args</span>: <span class="kt">k8stypes.apps.v1.Deployment</span><span class="p">,</span>
+                <span class="nx">opts?</span>: <span class="kt">pulumi.CustomResourceOptions</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">pod</span> <span class="o">=</span> <span class="nx">args</span><span class="p">.</span><span class="nx">spec</span><span class="p">.</span><span class="nx">template</span><span class="p">.</span><span class="nx">spec</span><span class="p">;</span>
+
+        <span class="c1">// Add an Envoy sidecar container.
+</span><span class="c1"></span>        <span class="nx">pod</span><span class="p">.</span><span class="nx">containers</span> <span class="o">=</span> <span class="nx">pod</span><span class="p">.</span><span class="nx">containers</span> <span class="o">||</span> <span class="p">[];</span>
+        <span class="nx">pod</span><span class="p">.</span><span class="nx">containers</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+            <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;envoy&#34;</span><span class="p">,</span>
+            <span class="nx">image</span><span class="o">:</span> <span class="s2">&#34;lyft/envoy:latest&#34;</span><span class="p">,</span>
+            <span class="nx">command</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;/usr/local/bin/envoy&#34;</span><span class="p">],</span>
+            <span class="nx">args</span><span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&#34;--concurrency 4&#34;</span><span class="p">,</span>
+                <span class="s2">&#34;--config-path /etc/envoy/envoy.json&#34;</span><span class="p">,</span>
+                <span class="s2">&#34;--mode serve&#34;</span>
+            <span class="p">],</span>
+            <span class="nx">ports</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">containerPort</span>: <span class="kt">80</span><span class="p">,</span> <span class="nx">protocol</span><span class="o">:</span> <span class="s2">&#34;TCP&#34;</span> <span class="p">}],</span>
+            <span class="nx">resources</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">limits</span><span class="o">:</span> <span class="p">{</span> <span class="nx">cpu</span><span class="o">:</span> <span class="s2">&#34;1000m&#34;</span><span class="p">,</span> <span class="nx">memory</span><span class="o">:</span> <span class="s2">&#34;512Mi&#34;</span> <span class="p">},</span>
+                <span class="nx">requests</span><span class="o">:</span> <span class="p">{</span> <span class="nx">cpu</span><span class="o">:</span> <span class="s2">&#34;100m&#34;</span><span class="p">,</span> <span class="nx">memory</span><span class="o">:</span> <span class="s2">&#34;64Mi&#34;</span> <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nx">volumeMounts</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;envoy-conf&#34;</span><span class="p">,</span> <span class="nx">mountPath</span><span class="o">:</span> <span class="s2">&#34;/etc/envoy&#34;</span> <span class="p">}]</span>
+        <span class="p">});</span>
+
+        <span class="c1">// Add an associated Volume for Envoy&#39;s config, mounted as a ConfigMap.
+</span><span class="c1"></span>        <span class="nx">pod</span><span class="p">.</span><span class="nx">volumes</span> <span class="o">=</span> <span class="nx">pod</span><span class="p">.</span><span class="nx">volumes</span> <span class="o">||</span> <span class="p">[];</span>
+        <span class="nx">pod</span><span class="p">.</span><span class="nx">volumes</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+            <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;envoy-conf&#34;</span><span class="p">,</span> <span class="nx">configMap</span><span class="o">:</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;envoy&#34;</span> <span class="p">},</span>
+        <span class="p">});</span>
+
+        <span class="kr">super</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">args</span><span class="p">,</span> <span class="nx">opts</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+<p>Now, anytime we create an EnvoyDeployment , we will automatically get an
+Envoy sidecar attached to it, and we don&rsquo;t need to remember every time
+how to properly configure it:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">appLabels</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">app</span><span class="o">:</span> <span class="s2">&#34;nginx&#34;</span> <span class="p">};</span>
+<span class="kr">const</span> <span class="nx">deployment</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EnvoyDeployment</span><span class="p">(</span><span class="s2">&#34;nginx&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">selector</span><span class="o">:</span> <span class="p">{</span> <span class="nx">matchLabels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+        <span class="nx">template</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+            <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span> <span class="nx">containers</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;nginx&#34;</span><span class="p">,</span> <span class="nx">image</span><span class="o">:</span> <span class="s2">&#34;nginx&#34;</span> <span class="p">}]</span> <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+<p>Of course, we can do the same with Prometheus or any other project
+requiring sidecars, and we envision possibly having a more general
+sidecar injection mechanism, thanks to real languages. In fact, we could
+define a base class that our entire organization uses with certain
+sidecars baked in, updated easily in one place and rolled out using
+package managers.</p>
+
+<h2 id="4-adopt-existing-kubernetes-yaml">4. Adopt existing Kubernetes YAML</h2>
+
+<p>It&rsquo;s wonderful that we can use real languages, but there&rsquo;s already lots
+of YAML in the world. Pulumi lets us process that YAML dynamically, and
+adopt it on the fly to become part of our Pulumi program, without even
+needing to change it. This enables multi-cloud and advanced delivery
+scenarios, in addition to being a great way to incrementally convert
+your existing code.</p>
+
+<p>For instance, let&rsquo;s imagine we want to deploy the standard
+<a href="https://kubernetes.io/docs/tutorials/stateless-application/guestbook/">Kubernetes Guestbook example</a>
+directly from the official YAML files, and make its public IP easily
+accessible:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">k8s</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/kubernetes&#34;</span><span class="p">;</span>
+
+<span class="c1">// Create resources from standard Kubernetes Guestbook YAML example.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">guestbook</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">yaml</span><span class="p">.</span><span class="nx">ConfigGroup</span><span class="p">(</span>
+    <span class="s2">&#34;guestbook&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">files</span><span class="o">:</span> <span class="s2">&#34;guestbook/*.yaml&#34;</span> <span class="p">});</span>
+
+<span class="c1">// Export the (cluster-private) IP address of the Guestbook frontend.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">frontendIp</span> <span class="o">=</span>
+    <span class="nx">guestbook</span><span class="p">.</span><span class="nx">getResource</span><span class="p">(</span><span class="s2">&#34;v1/Service&#34;</span><span class="p">,</span> <span class="s2">&#34;frontend&#34;</span><span class="p">).</span>
+    <span class="nx">spec</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">spec</span> <span class="o">=&gt;</span> <span class="nx">spec</span><span class="p">.</span><span class="nx">clusterIP</span><span class="p">);</span></code></pre></div>
+<p>This slurps up all the YAML files underneath the <code>guestbook</code> directory,
+creates the desired goal state out of them, and gives the same CLI
+experience shown earlier with diffs and deployments.</p>
+
+<h2 id="5-programmatically-deploy-helm-charts-as-code">5. Programmatically Deploy Helm Charts as Code</h2>
+
+<p>The same is true of Helm Charts, an increasingly popular way to
+distribute entire Kubernetes applications. Let&rsquo;s say we want to deploy
+the latest stable Wordpress Helm Chart, and, again, expose its public IP
+so that it&rsquo;s easily accessible to us after deployment:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">k8s</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/kubernetes&#34;</span><span class="p">;</span>
+
+<span class="c1">// Deploy the latest version of the stable/wordpress chart.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">wordpress</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">helm</span><span class="p">.</span><span class="nx">v2</span><span class="p">.</span><span class="nx">Chart</span><span class="p">(</span><span class="s2">&#34;wordpress&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">repo</span><span class="o">:</span> <span class="s2">&#34;stable&#34;</span><span class="p">,</span>
+    <span class="nx">version</span><span class="o">:</span> <span class="s2">&#34;2.1.3&#34;</span><span class="p">,</span>
+    <span class="nx">chart</span><span class="o">:</span> <span class="s2">&#34;wordpress&#34;</span>
+<span class="p">});</span>
+
+<span class="c1">// Export the public IP for Wordpress.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">frontendIp</span> <span class="o">=</span>
+    <span class="nx">wordpress</span><span class="p">.</span><span class="nx">getResource</span><span class="p">(</span><span class="s2">&#34;v1/Service&#34;</span><span class="p">,</span> <span class="s2">&#34;wpdev-wordpress&#34;</span><span class="p">).</span>
+    <span class="nx">status</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">status</span> <span class="o">=&gt;</span> <span class="nx">status</span><span class="p">.</span><span class="nx">loadBalancer</span><span class="p">.</span><span class="nx">ingress</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">ip</span><span class="p">);</span></code></pre></div>
+<p>The resulting Pulumi program can be deployed using <code>pulumi up</code> in the
+usual way:</p>
+
+<p><img src="./deploy-1.gif" alt="deploy-1" /></p>
+
+<p>An even more exciting example that highlights mixing cloud resources
+alongside a Helm Chart, check out <a href="https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean">our example</a>
+that creates a MEAN stack that uses Azure CosmosDB as the storage layer
+for an otherwise ordinary Helm Chart, alleviating the burden of needing
+to worry about persistent volumes, stateful services, and the associated
+backup and operational difficulties.</p>
+
+<p>For added fun, we can even inspect or rewrite the resulting resource
+graph on the fly, using the <code>transforms</code> parameter, for both YAML
+configuration and Helm Charts. This lets us validate conforming
+configuration, inject sidecars automatically, and more.</p>
+
+<h2 id="multi-cloud-infrastructure">Multi-Cloud Infrastructure</h2>
+
+<p>Kubernetes applications seldom live on an island by themselves. They
+typically rely on other cloud infrastructure, as we&rsquo;ve just seen. This
+spans a long list of possibilities, for instance:</p>
+
+<ul>
+<li><strong>Data services</strong>: AWS S3, Google BigTable, Azure CosmosDB</li>
+<li><strong>AI services</strong>: speech recognition, image classification, training
+algorithms</li>
+<li><strong>Hosted services</strong>: MySQL, Redis, Map/Reduce</li>
+<li><strong>Container registries</strong>: ECR, ACR, GCR, Docker Hub, JFrog
+Artifactory</li>
+</ul>
+
+<p>In addition to the very infrastructure hosting the underlying Kubernetes
+cluster itself, such as the underlying networking and cluster resources
+(AKS, EKS, GKE), or compute resources for on-premise clusters (VMWare,
+OpenStack, etc).</p>
+
+<p>Most of us today use different YAML dialects for Kubernetes applications
+and the other cloud infrastructure, and then end up needing to stitch
+together different tools using ad-hoc Bash or Python scripts. This is
+hardly robust and leads to significant toil and tricky failure modes.</p>
+
+<p>Pulumi, on the other hand, can provision and manage the full set of
+resources mentioned in the above examples, using the same programming
+model, language, and tools and workflow.</p>
+
+<h2 id="6-declare-cloud-resources-alongside-kubernetes-ones">6. Declare Cloud Resources Alongside Kubernetes Ones</h2>
+
+<p>Let&rsquo;s say that we want an AWS S3 Bucket for our Kubernetes application
+to use. This sounds basic &ndash; and indeed happens all the time &ndash; but is
+surprisingly difficult with today&rsquo;s tools.</p>
+
+<p>Normally we&rsquo;d find ourselves clicking around in the AWS console to
+create one, writing AWS CloudFormation YAML and deploying it using AWS,
+or cobbling together Terraform DSL scripts that are deployed
+independently from our Kubernetes object definitions themselves. This
+leaves us having to orchestrate multiple tools and services that were
+never designed to work together.</p>
+
+<p>Instead of doing that, we can simply author a single TypeScript program
+that does it all in one go. Pulumi offers packages for AWS, Azure,
+Google Cloud, and other clouds. We can then use a single CLI invocation,
+<code>pulumi up</code>, to provision and update all of it:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">k8s</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/kubernetes&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">appName</span> <span class="o">=</span> <span class="s2">&#34;nginx&#34;</span><span class="p">;</span>
+
+<span class="c1">// nginx config stored in an S3 bucket.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">s3</span><span class="p">.</span><span class="nx">Bucket</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">appName</span><span class="si">}</span><span class="sb">-config`</span><span class="p">);</span>
+
+<span class="c1">// nginx container, replicated 1 time.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">appLabels</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">app</span>: <span class="kt">appName</span> <span class="p">};</span>
+<span class="kr">const</span> <span class="nx">nginx</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">apps</span><span class="p">.</span><span class="nx">v1beta1</span><span class="p">.</span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">appName</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">selector</span><span class="o">:</span> <span class="p">{</span> <span class="nx">matchLabels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+        <span class="nx">replicas</span>: <span class="kt">1</span><span class="p">,</span>
+        <span class="nx">template</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+            <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">initContainers</span><span class="o">:</span> <span class="p">[</span><span class="nx">nginxConfigPuller</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">bucketDomainName</span><span class="p">)],</span>
+                <span class="nx">containers</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">name</span>: <span class="kt">appName</span><span class="p">,</span> <span class="nx">image</span><span class="o">:</span> <span class="s2">&#34;nginx:1.15-alpine&#34;</span> <span class="p">}]</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+<p>Pulumi understands the full dependency graph between resources, and so
+the deployment of the AWS bucket will be orchestrated properly with
+respect to the Kubernetes resources. In the event that a subsequent
+update alters the bucket &ndash; for instance, perhaps a new domain name is
+assigned &ndash; Pulumi will know how to cascade those changes to Kubernetes
+automatically.</p>
+
+<h2 id="7-provision-and-use-kubernetes-clusters-in-any-cloud">7. Provision and Use Kubernetes Clusters in Any Cloud</h2>
+
+<p>[ <a href="https://github.com/pulumi/examples/tree/master/gcp-ts-gke">Code</a> ]</p>
+
+<p>In addition to all the usual resources your application might use, you
+can also provision actual Kubernetes clusters using Pulumi programs.
+This has become much easier recently thanks to Google&rsquo;s Kubernetes
+Engine (GKE), Azure&rsquo;s Kubernetes Service (AKS), and AWS&rsquo;s Elastic
+Kubernetes Service (EKS), which offer hosted solutions at a reasonable
+cost. Of course, it&rsquo;s possible to use Pulumi programs to provision
+custom and on-premise clusters too.</p>
+
+<p>Another thing Pulumi can do is manage an actual cluster and its
+application resources in a single program. It&rsquo;s common to separate
+programs into low-level infrastructure and higher-level applications in
+the move to production &ndash; especially for cost, team roles and
+responsibilities, etc. &ndash; but it&rsquo;s a game changer for simple cases where
+as a developer you just want to get up and running quickly without
+thinking deeply about the clustering underneath. More importantly, you
+have one set of languages, tools, and workflows for all application
+infrastructure.</p>
+
+<p>For example, here is a program that deploys a GKE cluster with
+configurable settings:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">gcp</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/gcp&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">nodeCount</span><span class="p">,</span> <span class="nx">nodeMachineType</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">username</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;./config&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">engineVersion</span> <span class="o">=</span> <span class="nx">gcp</span><span class="p">.</span><span class="nx">container</span><span class="p">.</span><span class="nx">getEngineVersions</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">v</span> <span class="o">=&gt;</span> <span class="nx">v</span><span class="p">.</span><span class="nx">latestMasterVersion</span><span class="p">);</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">k8sCluster</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">gcp</span><span class="p">.</span><span class="nx">container</span><span class="p">.</span><span class="nx">Cluster</span><span class="p">(</span><span class="s2">&#34;gke-cluster&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">initialNodeCount</span>: <span class="kt">nodeCount</span><span class="p">,</span>
+    <span class="nx">minMasterVersion</span>: <span class="kt">engineVersion</span><span class="p">,</span>
+    <span class="nx">nodeVersion</span>: <span class="kt">engineVersion</span><span class="p">,</span>
+    <span class="nx">masterAuth</span><span class="o">:</span> <span class="p">{</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span> <span class="p">},</span>
+    <span class="nx">nodeConfig</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">machineType</span>: <span class="kt">nodeMachineType</span><span class="p">,</span>
+        <span class="nx">oauthScopes</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&#34;https://www.googleapis.com/auth/compute&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;https://www.googleapis.com/auth/devstorage.read_only&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;https://www.googleapis.com/auth/logging.write&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;https://www.googleapis.com/auth/monitoring&#34;</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+<span class="p">});</span></code></pre></div>
+<p>Imagining that this was defined in a <code>cluster.ts</code> module, we can deploy
+a canary deployment on top of that cluster using the same program:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">k8s</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/kubernetes&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">pulumi</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/pulumi&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">k8sProvider</span><span class="p">,</span> <span class="nx">k8sConfig</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;./cluster&#34;</span><span class="p">;</span>
+
+<span class="c1">// Create a canary deployment to test that this cluster works.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">pulumi</span><span class="p">.</span><span class="nx">getProject</span><span class="p">()</span><span class="si">}</span><span class="sb">-</span><span class="si">${</span><span class="nx">pulumi</span><span class="p">.</span><span class="nx">getStack</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">canaryLabels</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">app</span><span class="o">:</span> <span class="sb">`canary-</span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span> <span class="p">};</span>
+<span class="kr">const</span> <span class="nx">canary</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">apps</span><span class="p">.</span><span class="nx">v1beta1</span><span class="p">.</span><span class="nx">Deployment</span><span class="p">(</span><span class="s2">&#34;canary&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">selector</span><span class="o">:</span> <span class="p">{</span> <span class="nx">matchLabels</span>: <span class="kt">canaryLabels</span> <span class="p">},</span>
+        <span class="nx">replicas</span>: <span class="kt">1</span><span class="p">,</span>
+        <span class="nx">template</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">canaryLabels</span> <span class="p">},</span>
+            <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span> <span class="nx">containers</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">image</span><span class="o">:</span> <span class="s2">&#34;nginx&#34;</span> <span class="p">}]</span> <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">},</span> <span class="p">{</span> <span class="nx">provider</span>: <span class="kt">k8sProvider</span> <span class="p">});</span>
+
+<span class="c1">// Export the Kubeconfig so that clients can easily access our cluster.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kd">let</span> <span class="nx">kubeConfig</span> <span class="o">=</span> <span class="nx">k8sConfig</span><span class="p">;</span></code></pre></div>
+<p>The incredible thing about this example is that, with it, we simply run
+pulumi up, and a little over two minutes later, we have a fully
+functioning GKE cluster with a canary deployment up and running:</p>
+
+<p><img src="./6.png" alt="6" /></p>
+
+<p>In addition to the GKE example, our examples repo also has fully
+functioning examples for doing the same thing with
+<a href="https://github.com/pulumi/examples/tree/master/azure-ts-aks-helm">Azure&rsquo;s AKS</a>
+and <a href="https://github.com/pulumi/examples/tree/master/aws-ts-eks">AWS&rsquo;s EKS</a>. A
+Kubernetes cluster for everybody!</p>
+
+<h2 id="8-build-and-deploy-container-images-alongside-configuration-updates">8. Build and Deploy Container Images Alongside Configuration Updates</h2>
+
+<p>One scenario we often encounter in practice is the need to coordinate
+Docker registry provisioning and management (using one set of tools),
+with building and pushing new Docker images (using another set of
+tools), with updating Kubernetes configuration to consume said images
+(using yet another set of tools). Pulumi can handle doing all three
+things in code, using just the <code>pulumi up</code> command to manage your
+container registry infrastructure, build and push images, and update
+your Kubernetes objects to consume those freshly published images.</p>
+
+<p>This example builds and pushes a custom Nginx image to the Docker Hub
+and then consumes it from a Kubernetes Deployment:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">docker</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/docker&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">k8s</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/kubernetes&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">pulumi</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/pulumi&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">pulumi</span><span class="p">.</span><span class="nx">Config</span><span class="p">();</span>
+
+<span class="c1">// Build a Dockerfile located at ./mynginx in my project.
+</span><span class="c1">// Publish it to the Docker Hub using the configured username/password.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">mynginx</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">docker</span><span class="p">.</span><span class="nx">Image</span><span class="p">(</span><span class="s2">&#34;mynginx&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">build</span><span class="o">:</span> <span class="s2">&#34;./mynginx&#34;</span><span class="p">,</span>
+    <span class="nx">imageName</span><span class="o">:</span> <span class="s2">&#34;hekul/mynginx:v1&#34;</span><span class="p">,</span>
+    <span class="nx">registry</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">server</span><span class="o">:</span> <span class="s2">&#34;docker.io&#34;</span><span class="p">,</span>
+        <span class="nx">username</span>: <span class="kt">config.require</span><span class="p">(</span><span class="s2">&#34;dockerUsername&#34;</span><span class="p">),</span>
+        <span class="nx">password</span>: <span class="kt">config.require</span><span class="p">(</span><span class="s2">&#34;dockerPassword&#34;</span><span class="p">),</span>
+    <span class="p">},</span>
+<span class="p">});</span>
+
+<span class="c1">// Deploy an app container that consumes the resulting image name.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">appLabels</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">app</span>: <span class="kt">appName</span> <span class="p">};</span>
+<span class="kr">const</span> <span class="nx">nginx</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">apps</span><span class="p">.</span><span class="nx">v1beta1</span><span class="p">.</span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">appName</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">selector</span><span class="o">:</span> <span class="p">{</span> <span class="nx">matchLabels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+        <span class="nx">replicas</span>: <span class="kt">1</span><span class="p">,</span>
+        <span class="nx">template</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+            <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+                <span class="c1">// Use the app container at the specific SHA pushed.
+</span><span class="c1"></span>                <span class="nx">containers</span><span class="o">:</span> <span class="p">[{</span>
+                    <span class="nx">name</span>: <span class="kt">appName</span><span class="p">,</span>
+                    <span class="nx">image</span>: <span class="kt">mynginx.imageName</span><span class="p">,</span>
+                <span class="p">}],</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+<p>Although this example uses the Docker Hub, this technique works great
+for all of the major cloud providers&rsquo; container registries: Amazon ECR,
+Azure ACR, and Google GCR. Keep an eye out on our examples repo for
+examples of these soon, or let us know what you&rsquo;d like to see.</p>
+
+<h2 id="software-delivery-as-code">Software Delivery as Code</h2>
+
+<p>In this final section, we&rsquo;ll turn our attention away from authoring, and
+towards operating. Namely, how to achieve robust continuous deployment
+(CD) of your Kubernetes applications.</p>
+
+<p>Pulumi takes an &ldquo;everything is code&rdquo; approach so, in addition to your
+infrastructure being written in real code, your software delivery
+pipeline is too. In fact, each Pulumi program really is a deployment
+workflow expressed in code. The Pulumi CLI is responsible for evaluating
+programs, producing goal states, diffing states to produce plans, and
+carrying them out. The Pulumi hosted service at
+<a href="https://app.pulumi.com">https://app.pulumi.com</a> is used for robust concurrency
+and state management so that deployments can be done continuously in a
+team environment, with perfect auditability of who changed what and
+when, and so that deployments are repeatable and failures recoverable.</p>
+
+<p>Let&rsquo;s look at a few particularly useful scenarios when using Pulumi for
+Kubernetes deployments.</p>
+
+<h2 id="9-robust-and-repeatable-deployments-with-a-notion-of-done">9. Robust and Repeatable Deployments, with a Notion of &ldquo;Done&rdquo;</h2>
+
+<p>[ <a href="https://github.com/pulumi/examples/tree/master/kubernetes-ts-exposed-deployment">Code</a> ]</p>
+
+<p>Kubernetes is amazing at container orchestration and running reliable
+distributed systems. Its primary CLI, kubectl, offers many features for
+doing basic deployments and rollouts, and the cluster management
+software itself handles rolling updates. kubectl deliberately leaves
+more sophisticated deployment &ldquo;policy&rdquo; as an exercise outside of the
+core system, however. This is a noteworthy and agreeable decision,
+because the foundational CLI must provide robust mechanisms based on
+eventual consistency and fault tolerance, its most critical
+underpinnings.</p>
+
+<p>For practical deployments, we often need more opinionated policy on top
+of these mechanisms, and that is where a tool like Pulumi that does
+deployment orchestration can help. Pulumi adds the ability to preview
+updates before applying them (with full diffing); the ability to know
+when a deployment has succeeded or failed and why; canaries, blue/green,
+flighting-based rollouts, and more. Pulumi&rsquo;s CLI has been developed with
+real world scenarios in mind.</p>
+
+<p>Let&rsquo;s consider the following program, which deploys Nginx to a
+Kubernetes cluster using the standard Kubernetes object model, and
+allocates a public IP address to it:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">k8s</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/kubernetes&#34;</span><span class="p">;</span>
+
+<span class="c1">// nginx container, replicated 1 time.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">appName</span> <span class="o">=</span> <span class="s2">&#34;nginx&#34;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">appLabels</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">app</span>: <span class="kt">appName</span> <span class="p">};</span>
+<span class="kr">const</span> <span class="nx">nginx</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">apps</span><span class="p">.</span><span class="nx">v1beta1</span><span class="p">.</span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">appName</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">selector</span><span class="o">:</span> <span class="p">{</span> <span class="nx">matchLabels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+        <span class="nx">replicas</span>: <span class="kt">1</span><span class="p">,</span>
+        <span class="nx">template</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+            <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span> <span class="nx">containers</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">name</span>: <span class="kt">appName</span><span class="p">,</span> <span class="nx">image</span><span class="o">:</span> <span class="s2">&#34;nginx:1.15-alpine&#34;</span> <span class="p">}]</span> <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// Allocate a public IP to the nginx Deployment.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">frontend</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">core</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Service</span><span class="p">(</span><span class="nx">appName</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">nginx.spec.apply</span><span class="p">(</span><span class="nx">spec</span> <span class="o">=&gt;</span> <span class="nx">spec</span><span class="p">.</span><span class="nx">template</span><span class="p">.</span><span class="nx">metadata</span><span class="p">.</span><span class="nx">labels</span><span class="p">)</span> <span class="p">},</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;LoadBalancer&#34;</span><span class="p">,</span>
+        <span class="nx">ports</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">port</span>: <span class="kt">80</span><span class="p">,</span> <span class="nx">targetPort</span>: <span class="kt">80</span><span class="p">,</span> <span class="nx">protocol</span><span class="o">:</span> <span class="s2">&#34;TCP&#34;</span> <span class="p">}],</span>
+        <span class="nx">selector</span>: <span class="kt">appLabels</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// When &#34;done&#34;, this will print the public IP.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">frontendIp</span> <span class="o">=</span> <span class="nx">frontend</span><span class="p">.</span><span class="nx">status</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span>
+    <span class="nx">status</span> <span class="o">=&gt;</span> <span class="nx">status</span><span class="p">.</span><span class="nx">loadBalancer</span><span class="p">.</span><span class="nx">ingress</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">ip</span><span class="p">);</span></code></pre></div>
+<p>This code looks a lot like the prior examples, but let&rsquo;s double click
+into the CLI experience when deploying it. Out of the box, Pulumi
+provides several real world niceties.</p>
+
+<p>First, <code>pulumi up</code> will wait for all resources to be initialized before
+completing. This gives a notion of done, and allows us to see status
+updates and any errors that result. kubectl intentionally doesn&rsquo;t do
+this because it relies on eventual consistency and the idea that
+deployments will eventually converge. This is a robust and reliable
+foundation, but as developers, we often want richer monitoring. This
+leads to bash scripts and frequent polling, with hard to diagnose
+events.</p>
+
+<p>For instance, if we specify an invalid image, we&rsquo;ll see fine-grained
+status errors as they arise:</p>
+
+<p><img src="./status-errors.gif" alt="2" /></p>
+
+<p>This allows us to &ldquo;export&rdquo; values from the completed resources, which
+gives a way to elevate the most important output values. In the last
+line, we see that we&rsquo;re exporting the public IP address allocated to the
+Nginx Pod. This allows us to use this IP address as a value:</p>
+
+<p><img src="./export.gif" alt="3" /></p>
+
+<p>Finally, in true infrastructure as code fashion, Pulumi works on the
+notion of goal states. This means it can always diff the desired goal
+state with whatever is currently deployed to a cluster. That is shown as
+part of the typical <code>pulumi up</code> sequence, but the
+<code>pulumi preview --diff</code> command shows a more &ldquo;Git-like&rdquo; diff of the full
+resource graph. In this example, we&rsquo;ve changed our container image from
+<code>nginx:15-alpine</code> to <code>nginx:16-alpine</code>:</p>
+
+<p><img src="./container.gif" alt="4" /></p>
+
+<p>The ability to look at previews before making an update ensures mistakes
+don&rsquo;t get made and that deployments don&rsquo;t have unanticipated impacts.
+There is even a <a href="/docs/reference/cd-github/">Pulumi GitHub App</a> that will show such
+diffs inside of pull requests before they&rsquo;ve been deployed, so you know
+the impact of configuration changes before code even makes its way to
+master.</p>
+
+<h2 id="10-trigger-cascading-rollouts-from-dependent-updates">10. Trigger Cascading Rollouts from Dependent Updates</h2>
+
+<p>[ <a href="https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout">Code</a> ]</p>
+
+<p>Although it&rsquo;s not strictly &ldquo;deployment orchestration&rdquo;, there are some
+useful things Pulumi does out of the box when deciding how and when to
+update resources. Namely, its engine has a full understanding of the
+resource graph (technically, a DAG), which lets it cascade updates to
+multiple resources that depend on one another. This is often be as
+simple as feeding the output of some Kubernetes object as input to
+another programmatically, so that when you update one you don&rsquo;t also
+forget to update the other. Pulumi orchestrates operations in the right
+order.</p>
+
+<p>In this example, however, we&rsquo;ll look at a specific example, where this
+cascading can be useful. Imagine we are using a ConfigMap to store the
+value for an Nginx Deployment&rsquo;s config file. There are various ways we
+could map that ConfigMap and do hot reloads of it, but let&rsquo;s say we just
+want to do the simpler thing of triggering a deployment anytime that
+config changes. Pulumi can handle this automatically, simply based on
+the dependencies between resources:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">fs</span> <span class="nx">from</span> <span class="s2">&#34;fs&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">k8s</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/kubernetes&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">appName</span> <span class="o">=</span> <span class="s2">&#34;nginx&#34;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">appLabels</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">app</span>: <span class="kt">appName</span> <span class="p">};</span>
+
+<span class="c1">// nginx Configuration data to proxy traffic to `pulumi.github.io`.
+</span><span class="c1">// Read from `default.conf` file.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">nginxConfig</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">core</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">ConfigMap</span><span class="p">(</span><span class="nx">appName</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+    <span class="nx">data</span><span class="o">:</span> <span class="p">{</span> <span class="s2">&#34;default.conf&#34;</span><span class="o">:</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s2">&#34;default.conf&#34;</span><span class="p">).</span><span class="nx">toString</span><span class="p">()</span> <span class="p">}</span>
+<span class="p">});</span>
+<span class="kr">const</span> <span class="nx">nginxConfigName</span> <span class="o">=</span> <span class="nx">nginxConfig</span><span class="p">.</span><span class="nx">metadata</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">m</span> <span class="o">=&gt;</span> <span class="nx">m</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+
+<span class="c1">// Deploy 1 nginx replica, mounting the configuration data into the container.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">nginx</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">apps</span><span class="p">.</span><span class="nx">v1beta1</span><span class="p">.</span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">appName</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">replicas</span>: <span class="kt">1</span><span class="p">,</span>
+        <span class="nx">template</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+            <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">containers</span><span class="o">:</span> <span class="p">[{</span>
+                    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;nginx&#34;</span><span class="p">,</span>
+                    <span class="nx">image</span><span class="o">:</span> <span class="s2">&#34;nginx:1.13.6-alpine&#34;</span><span class="p">,</span>
+                    <span class="nx">volumeMounts</span><span class="o">:</span> <span class="p">[{</span>
+                        <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;nginx-configs&#34;</span><span class="p">,</span>
+                        <span class="nx">mountPath</span><span class="o">:</span> <span class="s2">&#34;/etc/nginx/conf.d&#34;</span><span class="p">,</span>
+                    <span class="p">}].</span>
+                <span class="p">}],</span>
+                <span class="nx">volumes</span><span class="o">:</span> <span class="p">[{</span>
+                    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;nginx-configs&#34;</span><span class="p">,</span>
+                    <span class="nx">configMap</span><span class="o">:</span> <span class="p">{</span> <span class="nx">name</span>: <span class="kt">nginxConfigName</span> <span class="p">},</span>
+                <span class="p">}],</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+<p>Notice here that we&rsquo;re just reading a file from our local project
+workspace to supply as the default.conf data. The end result is that all
+we need to do is update that config file, rerun pulumi up , and it will
+detect that the ConfigMap changed, perform those changes, and then
+cascade the updates to the Deployment such that it ingests those
+changes:</p>
+
+<p><img src="./ingest-changes.gif" alt="5" /></p>
+
+<h2 id="11-staged-application-rollouts-gated-by-prometheus-checks">11. Staged Application Rollouts Gated by Prometheus Checks</h2>
+
+<p>[ <a href="https://github.com/pulumi/examples/tree/master/kubernetes-ts-staged-rollout-with-prometheus">Code</a> ]</p>
+
+<p>As we start to go deeper into these scenarios, we&rsquo;re beginning to see
+that Pulumi is useful not only for expression of application
+configuration, but also for deployment orchestration. Because a Pulumi
+program is arbitrary code, we can do useful things in the middle of
+updates.</p>
+
+<p>In this example, we&rsquo;ll use this capability to rendezvous with Prometheus
+to gate our deployment with health checks. In particular, we will first
+deploy a basic 3-replica canary, ask Prometheus to check health metrics,
+and then once the P90 response time is looking good, we&rsquo;ll advance our
+deployment to a full blown 10-replica deployment.</p>
+
+<p>Let&rsquo;s check out the code. It looks like a usual Pulumi program, except
+that we use a promise from the Prometheus health checks as input to the
+staging ring deployment, which has the effect of making it dependent on
+the resolution of said health checks:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// Canary ring. Replicate instrumented Pod 3 times.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">canary</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">apps</span><span class="p">.</span><span class="nx">v1beta1</span><span class="p">.</span><span class="nx">Deployment</span><span class="p">(</span>
+    <span class="s2">&#34;canary-example-app&#34;</span><span class="p">,</span>
+    <span class="p">{</span> <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span> <span class="nx">replicas</span>: <span class="kt">1</span><span class="p">,</span> <span class="nx">template</span>: <span class="kt">instrumentedPod</span> <span class="p">}</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="nx">dependsOn</span>: <span class="kt">p8sDeployment</span> <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="c1">// Staging ring. Replicate instrumented Pod 10 times.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">staging</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">apps</span><span class="p">.</span><span class="nx">v1beta1</span><span class="p">.</span><span class="nx">Deployment</span><span class="p">(</span><span class="s2">&#34;staging-example-app&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">annotations</span><span class="o">:</span> <span class="p">{</span>
+            <span class="c1">// Check P90 latency is &lt; 20,000 microseconds. Returns a `Promise&lt;string&gt;` with the P90
+</span><span class="c1"></span>            <span class="c1">// response time. It must resolve correctly before this deployment rolls out. In
+</span><span class="c1"></span>            <span class="c1">// general any `Promise&lt;T&gt;` could go here.
+</span><span class="c1"></span>            <span class="s2">&#34;example.com/p90ResponseTime&#34;</span><span class="o">:</span> <span class="nx">util</span><span class="p">.</span><span class="nx">checkHttpLatency</span><span class="p">(</span><span class="nx">canary</span><span class="p">,</span> <span class="nx">containerName</span><span class="p">,</span> <span class="p">{</span>
+                <span class="nx">durationSeconds</span>: <span class="kt">30</span><span class="p">,</span>
+                <span class="nx">quantile</span>: <span class="kt">0.9</span><span class="p">,</span>
+                <span class="nx">thresholdMicroseconds</span>: <span class="kt">20000</span><span class="p">,</span>
+                <span class="nx">prometheusEndpoint</span><span class="o">:</span> <span class="sb">`localhost:</span><span class="si">${</span><span class="nx">localPort</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+            <span class="p">})</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span> <span class="nx">replicas</span>: <span class="kt">1</span><span class="p">,</span> <span class="nx">template</span>: <span class="kt">instrumentedPod</span> <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+<p>If we run this with a <code>pulumi up</code>, the deployment will proceed as usual,
+but we will see intermediate output telling us at what stage our
+deployment is at any given time. Most of the time will be spent waiting
+on Prometheus, but then we&rsquo;ll see the final deployment scale out &ndash;
+assuming our canary passed the health checks, of course!</p>
+
+<p><img src="./health-checks.gif" alt="6" /></p>
+
+<h2 id="wrapping-up">Wrapping Up</h2>
+
+<p>In this post, we&rsquo;ve seen some of the exciting things you can do with
+Pulumi&rsquo;s Cloud Native SDK for Kubernetes. We&rsquo;ve been having a great time
+working with the community over the past couple months to get all of
+these goodies ready to go, are thrilled to ship, and we look forward to
+hearing about your ideas and scenarios about where to take things from
+here.</p>
+
+<p>To get started, head over to the <a href="/docs/quickstart/">Pulumi Quickstart</a>,
+meet us over on GitHub where all the goodies are open source <a href="https://github.com/pulumi/pulumi">https://github.com/pulumi/pulumi</a>, and/or join our
+<a href="https://slack.pulumi.io">Pulumi Community Slack</a>. We can&rsquo;t wait to hear
+from you. Happy hacking!</p>
+                    </section>
+                    <div>
+                        <p class="text-gray-500">Posted on <time>Wednesday, Sep 12, 2018</time>
+                        
+                        <ul class="m-0 p-0">
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/kubernetes/">
+                                    Kubernetes
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+                </article>
+            </div>
+
+            <div class="md:w-2/12 pl-8">
+                
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

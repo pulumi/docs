@@ -1,0 +1,1193 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/blog/protecting-your-apis-with-lambda-authorizers-and-pulumi/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+        
+            
+            
+                
+                    <meta name="twitter:creator" content="@eckrengel">
+                
+            
+        
+    
+
+    
+        <meta property="og:title" content="Protecting Your APIs with Lambda Authorizers and Pulumi">
+    
+
+    
+        <meta name="description" content="Creating serverless applications just got even easier! You can now
+protect your application APIs in just three easy steps. We&rsquo;ve already
+posted about how easy it is to create serverless apps in Pulumi.
+Now, we&rsquo;re helping you simplify protecting those apps with API
+Gateway and Lambda authorizers.
+
+With Pulumi&rsquo;s new AWSX package, you
+can quickly define a Lambda and an AWS Lambda authorizer to protect it.
+We&rsquo;re once again harnessing the power of Lambdas as Lambdas
+to allow developers to focus on writing code.
+
+Today, we will walkthrough creating a simple serverless app using AWS
+and Pulumi. We will simplify implementing the OAuth protocol by using
+Auth0 and AWS Lambda authorizers to authorize
+users. Auth0 provides a universal authentication and authorization
+platform for applications. It has become an extremely popular platform
+for user management because Auth0 makes OAuth easy.">
+        <meta property="og:description" content="Creating serverless applications just got even easier! You can now
+protect your application APIs in just three easy steps. We&rsquo;ve already
+posted about how easy it is to create serverless apps in Pulumi.
+Now, we&rsquo;re helping you simplify protecting those apps with API
+Gateway and Lambda authorizers.
+
+With Pulumi&rsquo;s new AWSX package, you
+can quickly define a Lambda and an AWS Lambda authorizer to protect it.
+We&rsquo;re once again harnessing the power of Lambdas as Lambdas
+to allow developers to focus on writing code.
+
+Today, we will walkthrough creating a simple serverless app using AWS
+and Pulumi. We will simplify implementing the OAuth protocol by using
+Auth0 and AWS Lambda authorizers to authorize
+users. Auth0 provides a universal authentication and authorization
+platform for applications. It has become an extremely popular platform
+for user management because Auth0 makes OAuth easy.">
+    
+
+    
+    
+        
+            
+        
+    
+    <meta property="og:image" content="/blog/protecting-your-apis-with-lambda-authorizers-and-pulumi/lambda-authorizer.jpg">
+
+    <title>Protecting Your APIs with Lambda Authorizers and Pulumi - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/blog/protecting-your-apis-with-lambda-authorizers-and-pulumi/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+        
+            
+                
+            
+        
+        
+    
+</head>
+
+    <body class="section-blog">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+            <div class="md:w-3/12 pr-8">
+                
+<aside class="md:pr-8">
+
+    
+    <div class="md:hidden">
+        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </div>
+
+    <h3 class="no-anchor hidden md:flex mt-4">
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </h3>
+
+    
+    <div class="blog-sidebar-content hidden md:block">
+        <div class="bg-gray-100 rounded-lg p-4 my-6 text-gray-700">
+            <h5 class="no-anchor text-gray-700">Program the Cloud</h5>
+            <p class="text-sm my-0">
+                Create, deploy, and manage cloud infrastructure using your favorite language.
+            </p>
+        </div>
+
+        <ul class="list-none p-0 mb-4 inline-flex flex-wrap text-xs">
+            
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/apigateway/">
+                            apigateway
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/applications/">
+                            applications
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/auth/">
+                            auth
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/aws/">
+                            aws
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/azure/">
+                            azure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/ci/cd/">
+                            ci/cd
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/cloud-native/">
+                            cloud-native
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/containers/">
+                            containers
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/customer/">
+                            customer
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/digitalocean/">
+                            digitalocean
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/docker/">
+                            docker
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/eks/">
+                            eks
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/events/">
+                            events
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/features/">
+                            features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/gcp/">
+                            gcp
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/gke/">
+                            gke
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/infrastructure/">
+                            infrastructure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/javascript/">
+                            javascript
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/jupyter/">
+                            jupyter
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/kubernetes/">
+                            kubernetes
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/lambda/">
+                            lambda
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/logging/">
+                            logging
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/mysql/">
+                            mysql
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/new-features/">
+                            new-features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/pulumi/">
+                            pulumi
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/pulumi-news/">
+                            pulumi-news
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/python/">
+                            python
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/security/">
+                            security
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/serverless/">
+                            serverless
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/testing/">
+                            testing
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/typescript/">
+                            typescript
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="hidden lg:block my-4">
+            <h5 class="no-anchor">Recent Posts</h5>
+            <ul class="list-none p-0">
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/day-2-kubernetes-migrating-eks-nodegroups-with-zero-downtime/">Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime</a>
+                        </li>
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/getting-started-on-digitalocean-with-pulumi/">Getting Started on DigitalOcean with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/pulumi-meetup-recap-apis-custom-resources-and-github-webhooks/">Pulumi Meetup Recap: APIs, Custom Resources and GitHub Webhooks</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks/">Persisting Kubernetes workloads with Amazon EFS CSI volumes using Pulumi open source SDKs</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/unit-testing-infrastructure-in-nodejs-and-mocha/">Unit Testing Your Infrastructure with Node.js and Mocha</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/kubernetes-ingress-with-aws-alb-ingress-controller-and-pulumi-crosswalk/">Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included/">Globally-distributed Serverless Application in 100 Lines of Code. Infrastructure Included!</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/hosting-a-static-website-on-azure-with-pulumi/">Hosting a Static Website on Azure with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/running-containers-in-aws-the-lowdown-ecs-fargate-and-eks/">Running Containers in AWS, the Lowdown: ECS, Fargate, and EKS</a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="md:hidden pb-4">
+        
+    </div>
+</aside>
+
+            </div>
+
+            <div class="md:w-7/12">
+                <article class="mb-8 pb-8 border-b border-gray-200">
+                    <h1 class="no-anchor"><a href="/blog/protecting-your-apis-with-lambda-authorizers-and-pulumi/">Protecting Your APIs with Lambda Authorizers and Pulumi</a></h1>
+                    <div class="flex items-center">
+                        <span>
+                            <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="/blog/author/erin-krengel/">
+                    <img class="w-8 rounded-full" src="/images/team/erin-krengel.jpg" alt="Erin Krengel" title="Erin Krengel">
+                </a>
+                <a class="" href="/blog/author/erin-krengel/">Erin Krengel</a>
+            
+        </span>
+    
+</span>
+
+                        </span>
+                    </div>
+                    <section>
+                        <p>Creating serverless applications just got even easier! You can now
+protect your application APIs in just three easy steps. We&rsquo;ve already
+posted about how <a href="/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/">easy it is to create serverless apps in Pulumi</a>.
+Now, we&rsquo;re helping you simplify protecting those apps with API
+Gateway and Lambda authorizers.</p>
+
+<p>With Pulumi&rsquo;s new <a href="https://github.com/pulumi/pulumi-awsx">AWSX</a> package, you
+can quickly define a Lambda and an AWS Lambda authorizer to protect it.
+We&rsquo;re once again harnessing the power of <a href="/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions/">Lambdas as Lambdas</a>
+to allow developers to focus on writing code.</p>
+
+<p>Today, we will walkthrough creating a simple serverless app using AWS
+and Pulumi. We will simplify implementing the OAuth protocol by using
+<a href="https://auth0.com/">Auth0</a> and AWS Lambda authorizers to authorize
+users. Auth0 provides a universal authentication and authorization
+platform for applications. It has become an extremely popular platform
+for user management because Auth0 makes OAuth easy.</p>
+
+<h2 id="concepts">Concepts</h2>
+
+<p>Before we get started, let&rsquo;s go over some concepts we&rsquo;ll be using.</p>
+
+<h3 id="api-gateway">API Gateway</h3>
+
+<p>An API Gateway takes clients requests and then re-routes them to the
+appropriate backend service. Typically, a gateway serves as the &ldquo;front
+door&rdquo; for an API and is used for traffic management as well as flexible
+security controls.</p>
+
+<p>Using AWS API Gateway, you can build a fully managed collection of
+resources which integrate with AWS Lambda and various other AWS
+resources. To control who can call your API, you can use IAM
+permissions, an Amazon Cognito User Pool or set up custom logic using a
+Lambda authorizer.</p>
+
+<h3 id="oauth">OAuth</h3>
+
+<p>OAuth is an industry-standard for token-based authorization. Using
+OAuth, users can grant third-party applications or websites access to
+their information on another website without disclosing their password.
+Google and Facebook are two very common examples of sites that permit
+users to share their personal information with websites or applications
+using OAuth.</p>
+
+<h3 id="lambda-authorizers">Lambda Authorizers</h3>
+
+<p>An <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html">AWS Lambda authorizer</a>
+is a Lambda that provides access control to an API. It contains custom
+logic for authorizing requests to an endpoint. If a Lambda authorizer is
+configured, API Gateway routes a client&rsquo;s call to the Lambda first. The
+Lambda authorizer runs its custom logic and returns a Policy and
+principal ID, which are used by API Gateway to determine if the call to
+the backend is allowed.</p>
+
+<h2 id="step-by-step-guide-to-creating-a-lambda-authorizer">Step-by-Step Guide To Creating a Lambda Authorizer</h2>
+
+<p>Using a Lambda authorizer, we can implement the authorization flow using
+Auth0 to handle our Access Tokens.</p>
+
+<p>API Gateway can be used to protect many different resources, and in the
+following example we will front an AWS Lambda. Users authenticate with
+Auth0 and then use the token they&rsquo;ve obtained to make a request to our
+Lambda via our API Gateway, which authorizes the request by validating
+the token with Auth0. Some of the code examples have been stubbed or
+shortened for this blog post. The full code example can be found in our
+<a href="https://github.com/pulumi/examples/blob/master/aws-ts-apigateway-auth0/index.ts">Pulumi examples repo</a>.</p>
+
+<p>Below is a diagram of the architecture we will set up. In Step 1, we
+will create our API Gateway and Hello World Lambda. In Step 2, we will
+set up the logic for our Lambda authorizer. And finally in Step 3, we
+will bring it all together by telling API Gateway to use our authorizer.</p>
+
+<p><img src="./lambda-authorizer.jpg" alt="lambda_authorizer" /></p>
+
+<h3 id="1-define-your-routes">1 - Define Your Routes</h3>
+
+<p>Using Pulumi&rsquo;s <a href="https://github.com/pulumi/pulumi-awsx">AWSX</a> package,
+you can easily define routes to serverless apps as well as routes to
+static resources. We will create a very simple <code>Hello world!</code> backend
+Lambda, but in practice you can have this do much more interesting
+things.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Create our API and reference the Lambda authorizer
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;myapi&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/hello&#34;</span><span class="p">,</span>
+        <span class="nx">method</span><span class="o">:</span> <span class="s2">&#34;GET&#34;</span><span class="p">,</span>
+        <span class="nx">eventHandler</span>: <span class="kt">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">statusCode</span>: <span class="kt">200</span><span class="p">,</span>
+                <span class="nx">body</span><span class="o">:</span> <span class="s2">&#34;&lt;h1&gt;Hello world!&lt;/h1&gt;&#34;</span><span class="p">,</span>
+            <span class="p">};</span>
+        <span class="p">},</span>
+    <span class="p">}],</span>
+<span class="p">});</span></code></pre></div>
+<h3 id="2-write-your-custom-auth-logic">2 - Write Your Custom Auth Logic</h3>
+
+<p>Just as Pulumi allows you to define your Lambda inline, you can define
+your custom authorization code. We will define a small wrapper for our
+custom logic and write the rest of the code as a function called
+<code>authenticate</code>. Pulumi will package up all our <em>runtime</em> code and create
+an AWS Lambda for us.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">pulumi</span> <span class="nx">from</span> <span class="s1">&#39;@pulumi/pulumi&#39;</span><span class="p">;</span>
+ 
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">jwksClient</span> <span class="nx">from</span> <span class="s1">&#39;jwks-rsa&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">jwt</span> <span class="nx">from</span> <span class="s1">&#39;jsonwebtoken&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">util</span> <span class="nx">from</span> <span class="s1">&#39;util&#39;</span><span class="p">;</span>
+ 
+<span class="kr">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">pulumi</span><span class="p">.</span><span class="nx">Config</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">jwksUri</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="s2">&#34;jwksUri&#34;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">audience</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="s2">&#34;audience&#34;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">issuer</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="s2">&#34;issuer&#34;</span><span class="p">);</span>
+ 
+<span class="kr">const</span> <span class="nx">authorizerLambda</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">event</span>: <span class="kt">awsx.apigateway.AuthorizerEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">await</span> <span class="nx">authenticate</span><span class="p">(</span><span class="nx">event</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+        <span class="c1">// Tells API Gateway to return a 401 Unauthorized response
+</span><span class="c1"></span>        <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;Unauthorized&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+ 
+<span class="cm">/**
+</span><span class="cm">     * Below is all code that gets added to the Authorizer Lambda. The code was copied and
+</span><span class="cm">     * converted to TypeScript from
+</span><span class="cm">     * [Auth0&#39;s GitHub Example](https://github.com/auth0-samples/jwt-rsa-aws-custom-authorizer)
+</span><span class="cm">     */</span>
+ 
+<span class="kd">function</span> <span class="nx">getToken</span><span class="p">(</span><span class="nx">event</span>: <span class="kt">awsx.apigateway.AuthorizerEvent</span><span class="p">)</span><span class="o">:</span> <span class="kt">string</span> <span class="p">{</span>
+    <span class="c1">// Stubbed function to extract and return the Bearer Token from the Lambda event parameter
+</span><span class="c1"></span><span class="p">}</span>
+ 
+<span class="c1">// Check if the Token is valid with Auth0
+</span><span class="c1"></span><span class="nx">async</span> <span class="kd">function</span> <span class="nx">authenticate</span><span class="p">(</span><span class="nx">event</span>: <span class="kt">awsx.apigateway.AuthorizerEvent</span><span class="p">)</span><span class="o">:</span> <span class="nx">Promise</span><span class="o">&lt;</span><span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">AuthorizerResponse</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">getToken</span><span class="p">(</span><span class="nx">event</span><span class="p">);</span>
+ 
+    <span class="kr">const</span> <span class="nx">decoded</span> <span class="o">=</span> <span class="nx">jwt</span><span class="p">.</span><span class="nx">decode</span><span class="p">(</span><span class="nx">token</span><span class="p">,</span> <span class="p">{</span> <span class="nx">complete</span>: <span class="kt">true</span> <span class="p">});</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">decoded</span> <span class="o">||</span> <span class="k">typeof</span> <span class="nx">decoded</span> <span class="o">===</span> <span class="s2">&#34;string&#34;</span> <span class="o">||</span> <span class="o">!</span><span class="nx">decoded</span><span class="p">.</span><span class="nx">header</span> <span class="o">||</span> <span class="o">!</span><span class="nx">decoded</span><span class="p">.</span><span class="nx">header</span><span class="p">.</span><span class="nx">kid</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;invalid token&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+ 
+    <span class="kr">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="nx">jwksClient</span><span class="p">({</span>
+        <span class="nx">cache</span>: <span class="kt">true</span><span class="p">,</span>
+        <span class="nx">rateLimit</span>: <span class="kt">true</span><span class="p">,</span>
+        <span class="nx">jwksRequestsPerMinute</span>: <span class="kt">10</span><span class="p">,</span> <span class="c1">// Default value
+</span><span class="c1"></span>        <span class="nx">jwksUri</span>: <span class="kt">jwksUri</span>
+    <span class="p">});</span>
+ 
+    <span class="kr">const</span> <span class="nx">key</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">util</span><span class="p">.</span><span class="nx">promisify</span><span class="p">(</span><span class="nx">client</span><span class="p">.</span><span class="nx">getSigningKey</span><span class="p">)(</span><span class="nx">decoded</span><span class="p">.</span><span class="nx">header</span><span class="p">.</span><span class="nx">kid</span><span class="p">);</span>
+    <span class="kr">const</span> <span class="nx">signingKey</span> <span class="o">=</span> <span class="nx">key</span><span class="p">.</span><span class="nx">publicKey</span> <span class="o">||</span> <span class="nx">key</span><span class="p">.</span><span class="nx">rsaPublicKey</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">signingKey</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;could not get signing key&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+ 
+    <span class="kr">const</span> <span class="nx">verifiedJWT</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">jwt</span><span class="p">.</span><span class="nx">verify</span><span class="p">(</span><span class="nx">token</span><span class="p">,</span> <span class="nx">signingKey</span><span class="p">,</span> <span class="p">{</span> <span class="nx">audience</span><span class="p">,</span> <span class="nx">issuer</span> <span class="p">});</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">verifiedJWT</span> <span class="o">||</span> <span class="k">typeof</span> <span class="nx">verifiedJWT</span> <span class="o">===</span> <span class="s2">&#34;string&#34;</span> <span class="o">||</span> <span class="o">!</span><span class="nx">isVerifiedJWT</span><span class="p">(</span><span class="nx">verifiedJWT</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;could not verify JWT&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">authorizerResponse</span><span class="p">(</span><span class="nx">verifiedJWT</span><span class="p">.</span><span class="nx">sub</span><span class="p">,</span> <span class="s1">&#39;Allow&#39;</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">methodArn</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+<h3 id="3-all-together-now">3 - All Together Now</h3>
+
+<p>Now let&rsquo;s tie it all together! We will modify the route we created in
+Step 1 to include our authorizer.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+ 
+<span class="c1">// Create our API and reference the Lambda authorizer
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;myapi&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/hello&#34;</span><span class="p">,</span>
+        <span class="p">...</span>
+        <span class="nx">authorizers</span>: <span class="kt">awsx.apigateway.getTokenLambdaAuthorizer</span><span class="p">({</span>
+            <span class="nx">authorizerName</span><span class="o">:</span> <span class="s2">&#34;jwt-rsa-custom-authorizer&#34;</span><span class="p">,</span>
+            <span class="nx">header</span><span class="o">:</span> <span class="s2">&#34;Authorization&#34;</span><span class="p">,</span>
+            <span class="nx">handler</span>: <span class="kt">authorizerLambda</span><span class="p">,</span>
+            <span class="nx">identityValidationExpression</span><span class="o">:</span> <span class="s2">&#34;^Bearer [-0-9a-zA-Z._]*$&#34;</span><span class="p">,</span>
+            <span class="nx">authorizerResultTtlInSeconds</span>: <span class="kt">3600</span><span class="p">,</span>
+        <span class="p">}),</span>
+    <span class="p">}],</span>
+<span class="p">});</span></code></pre></div>
+<h3 id="the-finished-product">The Finished Product</h3>
+
+<p>When we run <code>pulumi up</code>, Pulumi will create our resources and provide us
+with our protected endpoint.</p>
+
+<pre><code>$ pulumi up
+...
+     Type                                Name                                         Status      Info
+ +   pulumi:pulumi:Stack                 lambda-authorizer-dev                        created     1 message
+ +   ├─ aws:apigateway:x:API             myapi                                        created
+ +   │  ├─ aws:iam:Role                  myapifc45ff03                                created
+ +   │  ├─ aws:iam:RolePolicyAttachment  myapifc45ff03-32be53a2                       created
+ +   │  ├─ aws:lambda:Function           myapifc45ff03                                created
+ +   │  ├─ aws:apigateway:RestApi        myapi                                        created
+ +   │  ├─ aws:apigateway:Deployment     myapi                                        created
+ +   │  ├─ aws:lambda:Permission         myapi-62a1b306                               created
+ +   │  └─ aws:apigateway:Stage          myapi                                        created
+ +   ├─ aws:iam:Role                     jwt-rsa-custom-authorizer-authorizer-role    created
+ +   ├─ aws:iam:Role                     jwt-rsa-custom-authorizer                    created
+ +   ├─ aws:iam:RolePolicyAttachment     jwt-rsa-custom-authorizer-32be53a2           created
+ +   ├─ aws:lambda:Function              jwt-rsa-custom-authorizer                    created
+ +   └─ aws:iam:RolePolicy               jwt-rsa-custom-authorizer-invocation-policy  created
+ 
+Outputs:
+    url: &quot;https://XXXXX.execute-api.us-west-2.amazonaws.com/stage/&quot;
+ 
+Resources:
+    + 14 created
+ 
+Duration: 28s
+</code></pre>
+
+<p>You&rsquo;ll notice there&rsquo;s a ton of resources we didn&rsquo;t explicitly define.
+AWSX provisions the appropriate Lambdas, roles, and more for you. If
+required, all of these resources can be overridden in your Pulumi
+program by explicitly defining them.</p>
+
+<p>Let&rsquo;s give try out our new API.</p>
+
+<p>We can now curl our endpoint without a token and should get a 401
+Unauthorized response.</p>
+
+<pre><code>$ curl $(pulumi stack output url)hello
+{&quot;message&quot;:&quot;Unauthorized&quot;}
+</code></pre>
+
+<p>We can curl our endpoint with an invalid token and should once again get
+a 401 Unauthorized response.</p>
+
+<pre><code>$ curl $(pulumi stack output url)hello -H &quot;Authorization: Bearer invalid&quot;
+{&quot;message&quot;:&quot;Unauthorized&quot;}
+</code></pre>
+
+<p>Finally, we expect a 200 response when we obtain a token from Auth0 and
+use it to call our API. We can get a token by visiting the API Details
+page for our API and clicking the Test tab. This provides us with a
+valid token for testing purposes only. The way tokens are acquired by
+users or client apps will depend on the type of application (i.e. native
+mobile app, single-page app, web app, etc.) being developed. For more
+information on authenticating users, visit <a href="https://auth0.com/docs">Auth0&rsquo;s documentation</a>.</p>
+
+<p>Using the test access token, the API will return a 200 response: Hello
+world!</p>
+
+<pre><code>$ curl $(pulumi stack output url)hello -H &quot;Authorization: Bearer &lt;VALID_TOKEN&gt;&quot;
+&lt;h1&gt;Hello world!&lt;/h1&gt;
+</code></pre>
+
+<p>For the complete code example, visit our <a href="https://github.com/pulumi/examples/tree/master/aws-ts-apigateway-auth0">examples repo</a>.</p>
+
+<h2 id="keep-it-going">Keep It Going</h2>
+
+<p>While we used OAuth and Auth0 in this blog post, AWS Lambda authorizers
+are an extremely flexible tool that allow you to implement whatever
+custom authorization logic you require. AWS also supports Cognito
+Authorizers, which use AWS Cognito User Pools, and we will share even
+more examples soon.</p>
+
+<p>There are a vast amount of resources for deploying your code into the
+cloud, and we want to make it easier for developers to make the most of
+those resources. Pulumi&rsquo;s AWSX package provides reusable abstractions to
+enable developers to get their code production ready faster.</p>
+
+<p>Get going with these resources:</p>
+
+<ul>
+<li><a href="/docs/quickstart/">Getting Started</a></li>
+<li><a href="https://github.com/pulumi/examples/tree/master/aws-ts-apigateway">Serverless REST API on AWS</a></li>
+</ul>
+
+<p>To learn more about using Pulumi and Lambda authorizers
+<a href="https://github.com/pulumi/pulumi-awsx/tree/master/nodejs/awsx/apigateway#lambda-authorizers">here</a>.</p>
+                    </section>
+                    <div>
+                        <p class="text-gray-500">Posted on <time>Wednesday, Apr 24, 2019</time>
+                        
+                        <ul class="m-0 p-0">
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/serverless/">
+                                    Serverless
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/aws/">
+                                    AWS
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/lambda/">
+                                    Lambda
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/auth/">
+                                    Auth
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/apigateway/">
+                                    APIGateway
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+                </article>
+            </div>
+
+            <div class="md:w-2/12 pl-8">
+                
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

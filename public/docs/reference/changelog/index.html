@@ -1,0 +1,3998 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/docs/reference/changelog/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+
+    
+        <meta property="og:title" content="Changelog">
+    
+
+    
+        <meta name="description" content="Available versions   Version Date Downloads     0.17.25 2019/07/19 macOS | Windows | Linux    0.17.24 2019/07/11 macOS | Windows | Linux    0.17.23 2019/07/11 macOS | Windows | Linux    0.17.22 2019/07/11 macOS | Windows | Linux    0.17.21 2019/06/26 macOS | Windows | Linux    0.17.20 2019/06/23 macOS | Windows | Linux    0.">
+        <meta property="og:description" content="Available versions   Version Date Downloads     0.17.25 2019/07/19 macOS | Windows | Linux    0.17.24 2019/07/11 macOS | Windows | Linux    0.17.23 2019/07/11 macOS | Windows | Linux    0.17.22 2019/07/11 macOS | Windows | Linux    0.17.21 2019/06/26 macOS | Windows | Linux    0.17.20 2019/06/23 macOS | Windows | Linux    0.">
+    
+
+    
+    
+    <meta property="og:image" content="/social/pulumi.png">
+
+    <title>Changelog - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/docs/reference/changelog/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+</head>
+
+    <body class="section-docs">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+
+            <div class="md:w-2/12 mt-2 md:order-last">
+                <div class="mb-8 md:mb-4">
+                    <form class="relative" action="/docs/search/" method="GET">
+    <i class="fas fa-search absolute inset-y-0 flex items-center pl-3 text-gray-500"></i>
+    <input
+        id="search-query"
+        name="q"
+        class="block w-full py-2 px-4 pl-8 text-sm border border-gray-400 focus:border-blue-500 focus:outline-none rounded transition"
+        placeholder="Search the docs"
+        autocomplete="off">
+</form>
+
+                </div>
+
+                <div class="ml-3 hidden md:block">
+                    
+    <ul class="p-0 list-none">
+        
+        
+        
+        
+        
+            <li>
+                <a class="text-gray-600 hover:text-blue-700 text-xs" href="https://github.com/pulumi/docs/edit/master/content/docs/reference/changelog.md" target="_blank">
+                    <i class="fas fa-edit mr-2"></i>
+                    Edit this Page
+                </a>
+            </li>
+        
+
+        <li>
+            <a class="text-gray-600 hover:text-blue-700 text-xs" href="https://github.com/pulumi/docs/issues/new?body=File: [docs%2freference%2fchangelog.md](%2fdocs%2freference%2fchangelog%2f)" target="_blank">
+                <i class="far fa-check-square mr-2"></i>
+                Request a Change
+            </a>
+        </li>
+    </ul>
+
+
+                </div>
+            </div>
+
+            <div class="md:w-3/12 pr-8 mt-2 mb-8 pb-8 border-b-2 border-gray-400 md:border-none md:pb-0 md:mb-0">
+                
+
+
+
+
+
+
+
+
+    
+    
+    
+
+
+<aside class="toc">
+    <h3 class="no-anchor">
+        <a href="/docs/">Docs</a>
+    </h3>
+
+    
+        <h4 class="no-anchor">
+            <a href="/docs/quickstart/">Get Started</a>
+        </h4>
+    
+    
+        <h4 class="no-anchor">
+            <a href="/docs/reference/">Reference</a>
+        </h4>
+    
+    
+
+    
+        
+        
+
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Architecture &amp; Concepts">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Programming Model" href="/docs/reference/programming-model/">Programming Model</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Projects" href="/docs/reference/project/">Projects</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stacks" href="/docs/reference/stack/">Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Configuration and Secrets" href="/docs/reference/config/">Configuration and Secrets</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizing Projects and Stacks" href="/docs/reference/organizing-stacks-projects/">Organizing Projects and Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="How Pulumi Works" href="/docs/reference/how/">How Pulumi Works</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State and Backends" href="/docs/reference/state/">State and Backends</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Tutorials">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/tutorials/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateways and Lambda" href="/docs/reference/tutorials/aws/tutorial-rest-api/">API Gateways and Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Containers on ECS &#34;Fargate&#34;" href="/docs/reference/tutorials/aws/tutorial-service/">Containers on ECS &#34;Fargate&#34;</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="EC2 Linux WebServer Instance" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">EC2 Linux WebServer Instance</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serve a Static Website from S3" href="/docs/reference/tutorials/aws/tutorial-s3-website/">Serve a Static Website from S3</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Video Thumbnailer" href="/docs/reference/tutorials/aws/tutorial-thumbnailer/">Video Thumbnailer</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/tutorials/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Container Instance" href="/docs/reference/tutorials/azure/tutorial-container-webserver/">Web Server Container Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/tutorials/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Virtual Machine Instance" href="/docs/reference/tutorials/gcp/tutorial-gce-webserver/">Web Server Virtual Machine Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/tutorials/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: EKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-eks/">Clusters: EKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: GKE - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-gke/">Clusters: GKE - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: AKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-aks/">Clusters: AKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#1: Hello, World!" href="/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment/">#1: Hello, World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#2: Deploying the WordPress Helm Chart" href="/docs/reference/tutorials/kubernetes/tutorial-wordpress-chart/">#2: Deploying the WordPress Helm Chart</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#3: Guestbook App with Redis and Nginx" href="/docs/reference/tutorials/kubernetes/tutorial-guestbook/">#3: Guestbook App with Redis and Nginx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#4: Graceful App Rollout" href="/docs/reference/tutorials/kubernetes/tutorial-configmap-rollout/">#4: Graceful App Rollout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#5: Gating rollout on Prometheus checks" href="/docs/reference/tutorials/kubernetes/tutorial-p8s-rollout/">#5: Gating rollout on Prometheus checks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#6: Run a Stateless App Deployment" href="/docs/reference/tutorials/kubernetes/tutorial-stateless-app/">#6: Run a Stateless App Deployment</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#7: EKS - Migrating Node Groups with Zero Downtime" href="/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups/">#7: EKS - Migrating Node Groups with Zero Downtime</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Command Line">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cancel" href="/docs/reference/cli/pulumi_cancel/">Cancel</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Config" href="/docs/reference/cli/pulumi_config/">Config</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Destroy" href="/docs/reference/cli/pulumi_destroy/">Destroy</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Login" href="/docs/reference/cli/pulumi_login/">Login</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logout" href="/docs/reference/cli/pulumi_logout/">Logout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logs" href="/docs/reference/cli/pulumi_logs/">Logs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="New" href="/docs/reference/cli/pulumi_new/">New</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Plugin" href="/docs/reference/cli/pulumi_plugin/">Plugin</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Preview" href="/docs/reference/cli/pulumi_preview/">Preview</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Refresh" href="/docs/reference/cli/pulumi_refresh/">Refresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stack" href="/docs/reference/cli/pulumi_stack/">Stack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State" href="/docs/reference/cli/pulumi_state/">State</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Update" href="/docs/reference/cli/pulumi_up/">Update</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Clouds">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/clouds/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/aws/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/clouds/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/azure/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/clouds/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/gcp/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/clouds/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Introduction" href="/docs/reference/clouds/kubernetes/introduction/">Introduction</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/kubernetes/setup/">Setup</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="FAQ" href="/docs/reference/clouds/kubernetes/faq/">FAQ</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="OpenStack">
+                <div class="sidenav-topic ">
+                    <a data-title="OpenStack" href="/docs/reference/clouds/openstack/">OpenStack</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/openstack/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Crosswalk for AWS 🆕">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateway" href="/docs/reference/crosswalk/aws/api-gateway/">API Gateway</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Auto Scaling" href="/docs/reference/crosswalk/aws/autoscaling/">Auto Scaling</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CloudWatch" href="/docs/reference/crosswalk/aws/cloudwatch/">CloudWatch</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Registry (ECR)" href="/docs/reference/crosswalk/aws/ecr/">Elastic Container Registry (ECR)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Service (ECS)" href="/docs/reference/crosswalk/aws/ecs/">Elastic Container Service (ECS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Kubernetes Service (EKS)" href="/docs/reference/crosswalk/aws/eks/">Elastic Kubernetes Service (EKS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Load Balancing (ELB)" href="/docs/reference/crosswalk/aws/elb/">Elastic Load Balancing (ELB)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Identity and Access Management (IAM)" href="/docs/reference/crosswalk/aws/iam/">Identity and Access Management (IAM)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Lambda" href="/docs/reference/crosswalk/aws/lambda/">Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Virtual Private Cloud (VPC)" href="/docs/reference/crosswalk/aws/vpc/">Virtual Private Cloud (VPC)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Other AWS Services" href="/docs/reference/crosswalk/aws/other/">Other AWS Services</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Languages">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Node.js" href="/docs/reference/javascript/">Node.js</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Python" href="/docs/reference/python/">Python</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Teams &amp; Collaboration">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizations" href="/docs/reference/service/orgs/">Organizations</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Teams" href="/docs/reference/service/teams/">Teams</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Roles and Access Controls" href="/docs/reference/service/roles-and-access-controls/">Roles and Access Controls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub App" href="/docs/reference/cd-github/">Pulumi GitHub App</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi Webhooks" href="/docs/reference/service/webhooks/">Pulumi Webhooks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Creating a &#39;Deploy with Pulumi&#39; Button" href="/docs/reference/service/pulumi-button/">Creating a &#39;Deploy with Pulumi&#39; Button</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Continuous Delivery">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Supporting A New CI System" href="/docs/reference/cd-supporting-new-ci/">Supporting A New CI System</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="AWS Code Services" href="/docs/reference/cd-aws-code-services/">AWS Code Services</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Azure DevOps" href="/docs/reference/cd-azure-devops/">Azure DevOps</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CircleCI" href="/docs/reference/cd-circleci/">CircleCI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Codefresh" href="/docs/reference/cd-codefresh/">Codefresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="GitLab CI" href="/docs/reference/cd-gitlab-ci/">GitLab CI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Google Cloud Build" href="/docs/reference/cd-google-cloud-build/">Google Cloud Build</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub Actions" href="/docs/reference/cd-github-actions/">Pulumi GitHub Actions</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Travis CI" href="/docs/reference/cd-travis/">Travis CI</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Compared to Others">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Terraform" href="/docs/reference/vs/terraform/">Terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud Templates" href="/docs/reference/vs/cloud_templates/">Cloud Templates</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud SDKs" href="/docs/reference/vs/cloud_sdks/">Cloud SDKs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serverless" href="/docs/reference/vs/serverless/">Serverless</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Kubernetes YAML" href="/docs/reference/vs/k8s_yaml_dsls/">Kubernetes YAML</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Chef, Puppet, etc." href="/docs/reference/vs/chef_puppet_etc/">Chef, Puppet, etc.</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Custom Solutions" href="/docs/reference/vs/custom/">Custom Solutions</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="API Reference">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="Node.js">
+                <div class="sidenav-topic ">
+                    <a data-title="Node.js" href="/docs/reference/pkg/nodejs/">Node.js</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/nodejs/pulumi/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="aws" href="/docs/reference/pkg/nodejs/pulumi/aws/">aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="awsx" href="/docs/reference/pkg/nodejs/pulumi/awsx/">awsx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azure" href="/docs/reference/pkg/nodejs/pulumi/azure/">azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azuread" href="/docs/reference/pkg/nodejs/pulumi/azuread/">azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloud" href="/docs/reference/pkg/nodejs/pulumi/cloud/">cloud</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloudflare" href="/docs/reference/pkg/nodejs/pulumi/cloudflare/">cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="datadog" href="/docs/reference/pkg/nodejs/pulumi/datadog/">datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="digitalocean" href="/docs/reference/pkg/nodejs/pulumi/digitalocean/">digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="dnsimple" href="/docs/reference/pkg/nodejs/pulumi/dnsimple/">dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="docker" href="/docs/reference/pkg/nodejs/pulumi/docker/">docker</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="eks" href="/docs/reference/pkg/nodejs/pulumi/eks/">eks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="f5bigip" href="/docs/reference/pkg/nodejs/pulumi/f5bigip/">f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gcp" href="/docs/reference/pkg/nodejs/pulumi/gcp/">gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gitlab" href="/docs/reference/pkg/nodejs/pulumi/gitlab/">gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="kubernetes" href="/docs/reference/pkg/nodejs/pulumi/kubernetes/">kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="linode" href="/docs/reference/pkg/nodejs/pulumi/linode/">linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="mysql" href="/docs/reference/pkg/nodejs/pulumi/mysql/">mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="newrelic" href="/docs/reference/pkg/nodejs/pulumi/newrelic/">newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="openstack" href="/docs/reference/pkg/nodejs/pulumi/openstack/">openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="packet" href="/docs/reference/pkg/nodejs/pulumi/packet/">packet</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="postgresql" href="/docs/reference/pkg/nodejs/pulumi/postgresql/">postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="random" href="/docs/reference/pkg/nodejs/pulumi/random/">random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="terraform" href="/docs/reference/pkg/nodejs/pulumi/terraform/">terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="tls" href="/docs/reference/pkg/nodejs/pulumi/tls/">tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="vsphere" href="/docs/reference/pkg/nodejs/pulumi/vsphere/">vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Python">
+                <div class="sidenav-topic ">
+                    <a data-title="Python" href="/docs/reference/pkg/python/">Python</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/python/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_aws" href="/docs/reference/pkg/python/pulumi_aws/">pulumi_aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azure" href="/docs/reference/pkg/python/pulumi_azure/">pulumi_azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azuread" href="/docs/reference/pkg/python/pulumi_azuread/">pulumi_azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_cloudflare" href="/docs/reference/pkg/python/pulumi_cloudflare/">pulumi_cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_datadog" href="/docs/reference/pkg/python/pulumi_datadog/">pulumi_datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_digitalocean" href="/docs/reference/pkg/python/pulumi_digitalocean/">pulumi_digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_dnsimple" href="/docs/reference/pkg/python/pulumi_dnsimple/">pulumi_dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_f5bigip" href="/docs/reference/pkg/python/pulumi_f5bigip/">pulumi_f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gcp" href="/docs/reference/pkg/python/pulumi_gcp/">pulumi_gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gitlab" href="/docs/reference/pkg/python/pulumi_gitlab/">pulumi_gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_kubernetes" href="/docs/reference/pkg/python/pulumi_kubernetes/">pulumi_kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_linode" href="/docs/reference/pkg/python/pulumi_linode/">pulumi_linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_mysql" href="/docs/reference/pkg/python/pulumi_mysql/">pulumi_mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_newrelic" href="/docs/reference/pkg/python/pulumi_newrelic/">pulumi_newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_openstack" href="/docs/reference/pkg/python/pulumi_openstack/">pulumi_openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_postgresql" href="/docs/reference/pkg/python/pulumi_postgresql/">pulumi_postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_random" href="/docs/reference/pkg/python/pulumi_random/">pulumi_random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_tls" href="/docs/reference/pkg/python/pulumi_tls/">pulumi_tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_vsphere" href="/docs/reference/pkg/python/pulumi_vsphere/">pulumi_vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="FAQ">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Download and Install">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+                
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggleVisible" data-title="Changelog">
+                    <div class="collapsed">
+                        <div class="sidenav-topic active">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  active">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible">
+                <div class="toggle" data-title="Troubleshooting &amp; Support">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+    
+
+    
+</aside>
+
+
+
+            </div>
+
+            <div class="md:w-7/12">
+                <h1>Changelog</h1>
+                
+
+<!-- Common links -->
+
+<!-- End common links -->
+
+<h2 id="all-versions">Available versions</h2>
+
+<table class="version-table">
+    <thead>
+        <tr>
+            <th scope="col" width="25%">Version</th>
+            <th scope="col" width="25%">Date</th>
+            <th scope="col" width="50%">Downloads</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01725-2019-07-19">0.17.25</a></th>
+            <td>2019/07/19</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.25-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.25-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.25-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01723-2019-07-19">0.17.24</a></th>
+            <td>2019/07/11</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.24-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.24-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.24-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01723-2019-07-16">0.17.23</a></th>
+            <td>2019/07/11</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.23-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.23-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.23-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01722-2019-07-11">0.17.22</a></th>
+            <td>2019/07/11</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.22-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.22-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.22-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01721-2019-06-26">0.17.21</a></th>
+            <td>2019/06/26</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.21-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.21-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.21-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01720-2019-06-23">0.17.20</a></th>
+            <td>2019/06/23</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.20-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.20-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.20-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01719-2019-06-23">0.17.19</a></th>
+            <td>2019/06/23</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.19-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.19-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.19-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01718-2019-06-20">0.17.18</a></th>
+            <td>2019/06/20</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.18-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.18-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.18-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01717-2019-06-12">0.17.17</a></th>
+            <td>2019/06/12</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.17-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.17-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.17-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01716-released-june-6-2019">0.17.16</a></th>
+            <td>2019/06/06</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.16-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.16-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.16-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01715-released-june-5-2019">0.17.15</a></th>
+            <td>2019/06/05</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.15-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.15-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.15-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01714-released-may-28-2019">0.17.14</a></th>
+            <td>2019/05/28</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.14-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.14-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.14-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01713-released-may-21-2019">0.17.13</a></th>
+            <td>2019/05/21</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.13-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.13-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.13-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01712-released-may-15-2019">0.17.12</a></th>
+            <td>2019/05/15</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.12-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.12-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.12-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01711-released-may-13-2019">0.17.11</a></th>
+            <td>2019/05/13</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.11-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.11-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.11-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01710-released-may-2-2019">0.17.10</a></th>
+            <td>2019/05/02</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.10-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.10-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.10-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0179-released-april-30-2019">0.17.9</a></th>
+            <td>2019/04/30</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.9-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.9-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.9-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0178-released-april-23-2019">0.17.8</a></th>
+            <td>2019/04/23</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.8-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.8-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.8-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0175-released-april-8-2019">0.17.5</a></th>
+            <td>2019/04/08</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.5-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.5-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.5-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0174-released-march-26-2019">0.17.4</a></th>
+            <td>2019/03/26</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.4-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.4-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.4-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0173-released-march-26-2019">0.17.3</a></th>
+            <td>2019/03/26</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.3-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.3-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.3-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0172-released-march-15-2019">0.17.2</a></th>
+            <td>2019/03/15</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.2-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.2-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.2-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0171-released-march-6-2019">0.17.1</a></th>
+            <td>2019/03/06</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.1-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.1-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.1-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0170-released-march-5-2019">0.17.0</a></th>
+            <td>2019/03/05</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.0-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.0-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.17.0-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01618-released-march-1-2019">0.16.18</a></th>
+            <td>2019/03/01</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.18-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.18-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.18-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01617-released-february-27th-2019">0.16.17</a></th>
+            <td>2019/02/27</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.17-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.17-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.17-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01616-released-february-24th-2019">0.16.16</a></th>
+            <td>2019/02/24</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.16-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.16-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.16-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01615-released-february-22nd-2019">0.16.15</a></th>
+            <td>2019/02/22</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.15-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.15-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.15-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.14/CHANGELOG.md#01614-released-january-31th-2019">0.16.14</a></th>
+            <td>2019/01/31</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.14-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.14-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.14-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.13/CHANGELOG.md#01613-released-january-31th-2019">0.16.13</a></th>
+            <td>2019/01/31</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.13-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.13-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.13-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.12/CHANGELOG.md#01612-released-january-25th-2019">0.16.12</a></th>
+            <td>2019/01/25</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.12-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.12-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.12-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.11/CHANGELOG.md#01611-released-january-16th-2019">0.16.11</a></th>
+            <td>2019/01/16</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.11-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.11-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.11-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.10/CHANGELOG.md#01610-released-january-11th-2019">0.16.10</a></th>
+            <td>2019/01/11</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.10-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.10-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.10-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0169-released-december-24th-2018">0.16.9</a></th>
+            <td>2018/12/24</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.9-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.9-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.9-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.8/CHANGELOG.md#0168-released-december-14th-2018">0.16.8</a></th>
+            <td>2018/12/14</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.8-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.8-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.8-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.7/CHANGELOG.md#0167-released-december-5th-2018">0.16.7</a></th>
+            <td>2018/12/05</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.7-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.7-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.7-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.6/CHANGELOG.md#0166-released-november-28th-2018">0.16.6</a></th>
+            <td>2018/11/28</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.6-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.6-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.6-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.5/CHANGELOG.md#0165-released-november-16th-2018">0.16.5</a></th>
+            <td>2018/11/16</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.5-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.5-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.5-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v164">0.16.4</a></th>
+            <td>2018/11/14</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.4-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.4-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.4-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v163">0.16.3</a></th>
+            <td>2018/10/29</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.3-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.3-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.3-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v162">0.16.2</a></th>
+            <td>2018/10/29</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.2-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.2-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.2-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v161">0.16.1</a></th>
+            <td>2018/10/23</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.1-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.1-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.1-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v160">0.16.0</a></th>
+            <td>2018/10/15</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.0-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.0-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.16.0-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v154">0.15.4</a></th>
+            <td>2018/09/28</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.15.3-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.15.3-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.15.3-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v153">0.15.3</a></th>
+            <td>2018/09/18</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.15.3-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.15.3-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.15.3-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v152">0.15.2</a></th>
+            <td>2018/09/11</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.15.2-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.15.2-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.15.2-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v150">0.15.0</a></th>
+            <td>2018/08/13</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.15.0-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.15.0-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.15.0-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v143">0.14.3</a></th>
+            <td>2018/07/20</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.14.3-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.14.3-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.14.3-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v142">0.14.2</a></th>
+            <td>2018/07/03</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.14.2-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.14.2-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.14.2-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v141">0.14.1</a></th>
+            <td>2018/06/29</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.14.1-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.14.1-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.14.1-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v140">0.14.0</a></th>
+            <td>2018/06/15</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.14.0-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.14.0-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.14.0-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v122">0.12.2</a></th>
+            <td>2018/05/19</td>
+            <td><a href="https://get.pulumi.com/releases/sdk/pulumi-v0.12.2-darwin-x64.tar.gz">macOS</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.12.2-windows-x64.zip">Windows</a>
+ |
+<a href="https://get.pulumi.com/releases/sdk/pulumi-v0.12.2-linux-x64.tar.gz">Linux</a>
+</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="v166">v0.16.6</h2>
+
+<p>Released on November 28, 2018</p>
+
+<p>This release includes better support for common Python 3 configurations, the ability to import the outputs of a stack as inputs into a different stack, and fixes a number of issues related to plugin installation.</p>
+
+<p>The full changelog is linked below.</p>
+
+<ul>
+<li><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0166-released-november-28th-2018"><code>pulumi</code> v0.16.6</a></li>
+</ul>
+
+<h2 id="v164">v0.16.4</h2>
+
+<p>Released on November 14, 2018</p>
+
+<p>This release includes significant improvements to Python support in Pulumi.  Python 3.6 or greater is <a href="/docs/reference/python/">now required</a>, and Python users now get support for outputs, parallelism, improved error reporting, and Kubernetes - plus many more new and updated features.</p>
+
+<p>As part of this release, we&rsquo;ve also started to use <code>CHANGELOG.md</code>&rsquo;s in each repository to track changes between releases. You can read the individual changelogs in GitHub:</p>
+
+<ul>
+<li><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0164-released-novemeber-12th-2018"><code>pulumi</code> v0.16.4</a></li>
+<li><a href="https://github.com/pulumi/pulumi-aws/blob/master/CHANGELOG.md#0162-released-novemeber-13th-2018"><code>@pulumi/aws</code> v0.16.2</a></li>
+<li><a href="https://github.com/pulumi/pulumi-aws-infra/blob/master/CHANGELOG.md#0161-released-novemeber-13th-2018"><code>@pulumi/aws-infra</code> v0.16.1</a></li>
+<li><a href="https://github.com/pulumi/pulumi-azure/blob/master/CHANGELOG.md#0164-released-novemeber-13th-2018"><code>@pulumi/azure</code> v0.16.4</a></li>
+<li><a href="https://github.com/pulumi/pulumi-cloud/blob/master/CHANGELOG.md#0162-released-novemeber-14th-2018"><code>@pulumi/cloud</code>, <code>@pulumi/cloud-aws</code>, <code>@pulumi/cloud-azure</code> v0.16.1</a></li>
+<li><a href="https://github.com/pulumi/pulumi-gcp/blob/master/CHANGELOG.md#0162-released-novemeber-13th-2018"><code>@pulumi/gcp</code> v0.16.2</a></li>
+<li><a href="https://github.com/pulumi/pulumi-openstack/blob/master/CHANGELOG.md#0162-released-novemeber-13th-2018"><code>@pulumi/openstack</code> v0.16.2</a></li>
+<li><a href="https://github.com/pulumi/pulumi-vsphere/blob/master/CHANGELOG.md#0161-released-novemeber-13th-2018"><code>@pulumi/vsphere</code> v0.16.1</a></li>
+</ul>
+
+<h2 id="v163">v0.16.3</h2>
+
+<p>Released on November 6, 2018</p>
+
+<h3 id="pulumi-cli">Pulumi CLI</h3>
+
+<p>There are no changes from the previous version of the Pulumi CLI, but it shares the same version as the <code>@pulumi/pulumi</code> package, which was updated</p>
+
+<h3 id="pulumi-pulumi-0-16-3">@pulumi/pulumi 0.16.3</h3>
+
+<ul>
+<li>Fully support Node 11 <a href="https://github.com/pulumi/pulumi/pull/2101">pulumi/pulumi#2101</a></li>
+</ul>
+
+<h2 id="v162">v0.16.2</h2>
+
+<p>Released on October 29, 2018</p>
+
+<h3 id="pulumi-cli-1">Pulumi CLI</h3>
+
+<ul>
+<li>Fix a regression that would cause resource operations to not be processed in parallel when using the latest CLI with a <code>@pulumi/pulumi</code> older than 0.16.1 <a href="https://github.com/pulumi/pulumi/pull/2123">pulumi/pulumi#2123</a></li>
+</ul>
+
+<h3 id="pulumi-pulumi-0-16-1">@pulumi/pulumi 0.16.1</h3>
+
+<ul>
+<li>Fail with a better error message (and in fewer cases) on Node 11. We hope to have complete support for Node 11 later this week, but for now recommend using Node 10 or earlier. <a href="https://github.com/pulumi/pulumi/pull/2098">pulumi/pulumi#2098</a></li>
+</ul>
+
+<h2 id="v161">v0.16.1</h2>
+
+<p>Released on October 23, 2018</p>
+
+<p>In addition to the 0.16.1 CLI release, we&rsquo;ve released new versions <code>@pulumi/aws</code>, <code>@pulumi/azure</code>, <code>@pulumi/gcp</code>, and <code>@pulumi/openstack</code>.</p>
+
+<h3 id="pulumi-cli-2">Pulumi CLI</h3>
+
+<h3 id="pulumi-pulumi-0-16-1-1">@pulumi/pulumi 0.16.1</h3>
+
+<ul>
+<li>A new top-level CLI command “pulumi state” was added to assist in making targeted edits to the state of a stack. Two subcommands, “pulumi state delete” and “pulumi state unprotect”, can be used to delete or unprotect individual resources respectively within a Pulumi stack. <a href="https://github.com/pulumi/pulumi/pull/2024">pulumi/pulumi#2024</a></li>
+<li>Default to allowing as many parallel operations as possible <a href="https://github.com/pulumi/pulumi/pull/2065">pulumi/pulumi#2065</a></li>
+<li>Fixed an issue with the generated type for an Unwrap expression when using TypeScript <a href="https://github.com/pulumi/pulumi/pull/2061">pulumi/pulumi#2061</a></li>
+<li>Improve error messages when resource plugins can&rsquo;t be loaded or when a checkpoint is invalid <a href="https://github.com/pulumi/pulumi/pull/2078">pulumi/pulumi#2078</a></li>
+<li>Fix link to the Pulumi Web Console in the CLI for a stack <a href="https://github.com/pulumi/pulumi/pull/2075">pulumi/pulumi#2075</a></li>
+<li>Attach git commit metadata to Pulumi updates in some additional cases <a href="https://github.com/pulumi/pulumi/pull/2062">pulumi/pulumi#2062</a> and <a href="https://github.com/pulumi/pulumi/pull/2069">pulumi/pulumi#2069</a></li>
+</ul>
+
+<h3 id="pulumi-aws-0-16-1">@pulumi/aws 0.16.1</h3>
+
+<ul>
+<li>Update to the v1.14.0 version of the AWS Provider <a href="https://github.com/pulumi/pulumi-aws/pull/355">pulumi/pulumi-aws#355</a></li>
+<li>Add definitions for S3 Canned ACLs <a href="https://github.com/pulumi/pulumi-aws/pull/355">pulumi/pulumi-aws#351</a></li>
+<li>Add serverless methods to Kinesis streams <a href="https://github.com/pulumi/pulumi-aws/pull/345">pulumi/pulumi-aws#345</a></li>
+</ul>
+
+<h3 id="pulumi-azure-0-16-3">@pulumi/azure 0.16.3</h3>
+
+<ul>
+<li>Update to the v1.17.0 version of the Azure Provider <a href="https://github.com/pulumi/pulumi-azure/pull/137">pulumi/pulumi-azure#137</a></li>
+<li>Fix an issue where the provider could fail with an error about a Go type converison failing <a href="https://github.com/pulumi/pulumi-azure/pull/138">pulumi/pulumi-azure#138</a></li>
+</ul>
+
+<h3 id="pulumi-gcp-0-16-1">@pulumi/gcp 0.16.1</h3>
+
+<ul>
+<li>Update to the v1.19.1 version of the GCP Provider <a href="https://github.com/pulumi/pulumi-gcp/pull/54">pulumi/pulumi-gcp#54</a></li>
+</ul>
+
+<h3 id="pulumi-openstack-0-16-1">@pulumi/openstack 0.16.1</h3>
+
+<ul>
+<li>Update to the v1.10.0 version of the OpenStack Provider <a href="https://github.com/pulumi/pulumi-openstack/pull/15">pulumi/pulumi-openstack#15</a></li>
+</ul>
+
+<h2 id="v160">v0.16.0</h2>
+
+<p>Released on October 15, 2018</p>
+
+<p>In addition to the 0.16.0 CLI release, we&rsquo;ve released new versions of all of our packages.</p>
+
+<h3 id="pulumi-cli-3">Pulumi CLI</h3>
+
+<p>Major features of this release include:</p>
+
+<h4 id="improvements-to-cli-output">Improvements to CLI output</h4>
+
+<p>Default colors that fit better for both light and dark terminals.  Overall updates to rendering of previews/updates for consistency and simplicity of the display.</p>
+
+<h4 id="parallelized-resource-deletion">Parallelized resource deletion</h4>
+
+<p>Parallel resource creation and updates were added in <code>0.15</code>.  In <code>0.16</code>, this has been extended to include deletions, which are now conservatively parallelized based on dependency information. <a href="https://github.com/pulumi/pulumi/pull/1963">pulumi/pulumi#1963</a></p>
+
+<h4 id="support-for-any-ci-system-in-the-pulumi-github-app">Support for any CI system in the Pulumi GitHub App</h4>
+
+<p>The Pulumi GitHub App previously supported just TravisCI.  With this release the <code>pulumi</code> CLI now supports configurable CI providers via environment variables.  Thanks <a href="https://github.com/jen20">@jen20</a>!</p>
+
+<h4 id="miscellaneous-improvements">Miscellaneous Improvements</h4>
+
+<p>In addition to the above features, we&rsquo;ve made a handfull of day to day improvements in the CLI:
+- Support for <code>zsh</code> completions. Thanks to <a href="https://github.com/Tirke">@Tirke</a>!) <a href="https://github.com/pulumi/pulumi/pull/1967">pulumi/pulumi#1967</a>
+- JSON formatting support for <code>pulumi stack output</code>. <a href="https://github.com/pulumi/pulumi/pull/2000">pulumi/pulumi#2000</a>
+- Added a <code>Dockerfile</code> for the Pulumi CLI and development environment for use in hosted environments.</p>
+
+<h3 id="pulumi-console">Pulumi Console</h3>
+
+<ul>
+<li>Added <code>New Project</code> button and wizard for easy new project creation.</li>
+<li>New and improved dashboard highlighting recent activity and direct access to all recently used stacks across organizations.</li>
+</ul>
+
+<h3 id="pulumi-pulumi-0-16-0">@pulumi/pulumi 0.16.0</h3>
+
+<ul>
+<li>Many improvements for Go development.  Thanks to <a href="https://github.com/justone">@justone</a>!. <a href="https://github.com/pulumi/pulumi/pull/1954">pulumi/pulumi#1954</a> <a href="https://github.com/pulumi/pulumi/pull/1955">pulumi/pulumi#1955</a> <a href="https://github.com/pulumi/pulumi/pull/1965">pulumi/pulumi#1965</a></li>
+<li>Extend <code>pulumi.output</code> to deeply unwrap <code>Input</code>s.  This significantly simplifies working with <code>Inputs</code> when building Pulumi components.  <a href="https://github.com/pulumi/pulumi/pull/1915">pulumi/pulumi#1915</a></li>
+</ul>
+
+<h3 id="pulumi-aws-0-16-0">@pulumi/aws 0.16.0</h3>
+
+<ul>
+<li>Moved all <code>@pulumi/aws-serverless</code> features down into <code>@pulumi/aws</code>.  Event handlers are now available as methods like <code>bucket.onObjectCreated</code> from instances of <code>aws.s3.Bucket</code> and all other Lambda event sources.  In addition, the <code>aws.apigateway.x.API</code> type is available for simple construction of API Gateways directly in the <code>@pulumi/aws</code> package.</li>
+<li>Added richer typing for many EC2 and Autoscaling resources.  Thanks to <a href="https://github.com/jen20">@jen20</a>! <a href="https://github.com/pulumi/pulumi-aws/pull/323">pulumi/pulumi-aws#323</a> <a href="https://github.com/pulumi/pulumi-aws/pull/324">pulumi/pulumi-aws#324</a></li>
+<li>Adopted <code>v1.38.0</code> of the AWS Terraform Provider. <a href="https://github.com/pulumi/pulumi-aws/pull/341">pulumi/pulumi-aws#341</a></li>
+</ul>
+
+<h3 id="pulumi-aws-infra-0-16-0">@pulumi/aws-infra 0.16.0</h3>
+
+<ul>
+<li>Updated to latest <code>@pulumi/pulumi</code> and <code>@pulumi/aws</code> dependencies.</li>
+</ul>
+
+<h3 id="pulumi-aws-serverless-0-16-0">@pulumi/aws-serverless 0.16.0</h3>
+
+<ul>
+<li>This library is now deprecated.  All features of this library are now available directly in <code>@pulumi/aws</code> (see above).  In a future update the same change will be made for <code>@pulumi/azure-serverless</code> moving similar functionality into <code>@pulumi/azure</code>.</li>
+</ul>
+
+<h3 id="pulumi-azure-0-16-0">@pulumi/azure 0.16.0</h3>
+
+<ul>
+<li>Adopted <code>v1.15.0</code> of the AzureRM Terraform Provider. <a href="https://github.com/pulumi/pulumi-azure/pull/125">pulumi/pulumi-azure#125</a></li>
+<li>Many improvements to autoname generation to match Azure resource name requirements.</li>
+<li><strong>[Breaking Change]</strong> Fix name of <code>azure.role.Assignment</code> from previous <code>azure.role.assignment</code>. <a href="https://github.com/pulumi/pulumi-azure/pull/127">pulumi/pulumi-azure#127</a></li>
+</ul>
+
+<h3 id="pulumi-cloud-pulumi-cloud-aws-pulumi-cloud-azure-0-16-0">@pulumi/cloud, @pulumi/cloud-aws, @pulumi/cloud-azure 0.16.0</h3>
+
+<ul>
+<li>Implementations of many <code>@pulumi/cloud-aws</code> APIs moved over to build on top of higher-level APIs in <code>@pulumi/aws</code>.  This may cause some resources, such as <code>aws.lambda.Function</code> and <code>aws.apigateway.RestAPI</code> to be recreated on updates from previous versions.</li>
+</ul>
+
+<h3 id="pulumi-gcp-0-16-0">@pulumi/gcp 0.16.0</h3>
+
+<ul>
+<li>Adopted <code>v1.15.0</code> of the Google Terraform Provider. <a href="https://github.com/pulumi/pulumi-gcp/pull/51">pulumi/pulumi-gcp#51</a></li>
+</ul>
+
+<h3 id="pulumi-kubernetes-0-17-2">@pulumi/kubernetes 0.17.2</h3>
+
+<ul>
+<li>Kubernetes resources created outside Pulumi can now be read into a Pulumi program with <code>CustomResource#get</code>. <a href="https://github.com/pulumi/pulumi-kubernetes/pull/230">pulumi/pulumi-kubernetes#230</a></li>
+<li>Service can now be refreshed with <code>pulumi refresh</code> to pick up changes to the state of the service that occured outside of a Pulumi deployment. <a href="https://github.com/pulumi/pulumi-kubernetes/pull/230">pulumi/pulumi-kubernetes#230</a></li>
+<li>Added ability to retrieve CRDs resources objects from a Helm chart deployment. <a href="https://github.com/pulumi/pulumi-kubernetes/pull/225">pulumi/pulumi-kubernetes#225</a></li>
+</ul>
+
+<h3 id="pulumi-vsphere-0-16-0">@pulumi/vsphere 0.16.0</h3>
+
+<p>Added a new provider for VMware vSphere, enabling deployment and management of resources in vCenter Server and ESXi. Thanks <a href="https://github.com/Smithx10">@Smithx10</a>!</p>
+
+<h3 id="pulumi-eks-0-16-0">@pulumi/eks 0.16.0</h3>
+
+<p>Added a new package for deploying a complete AWS Elastic Kubernetes Service (EKS) cluster.</p>
+
+<h3 id="pulumi-openstack-0-16-0">@pulumi/openstack 0.16.0</h3>
+
+<ul>
+<li>Updated to latest <code>@pulumi/pulumi</code> dependencies.</li>
+</ul>
+
+<h3 id="pulumi-docker-0-16-0">@pulumi/docker 0.16.0</h3>
+
+<ul>
+<li>Updated to latest <code>@pulumi/pulumi</code> dependencies.</li>
+</ul>
+
+<h2 id="v154">v0.15.4</h2>
+
+<p>Released on September 28, 2018</p>
+
+<p>This minor release contains a small bug fix for a crash in the CLI.</p>
+
+<h3 id="pulumi-cli-4">Pulumi CLI</h3>
+
+<ul>
+<li>Fix an assert in display code when a resource property transitions from an asset to an archive or the other way around</li>
+</ul>
+
+<h3 id="pulumi-pulumi-v0-15-4">@pulumi/pulumi v0.15.4</h3>
+
+<p>There are no changes from the previous release, but the CLI and <code>@pulumi/pulumi</code> package share a version.</p>
+
+<h2 id="v153">v0.15.3</h2>
+
+<p>Released on September 18, 2018</p>
+
+<p>This minor release contains two small bug fixes.</p>
+
+<h3 id="pulumi-cli-5">Pulumi CLI</h3>
+
+<ul>
+<li>Improved performance of <code>pulumi stack ls</code></li>
+<li>Fix build authoring so the dynamic provider works for the CLI built by Homebrew (thanks to <strong><a href="https://github.com/Tirke">@Tirke</a></strong>!)</li>
+</ul>
+
+<h3 id="pulumi-pulumi-v0-15-3">@pulumi/pulumi v0.15.3</h3>
+
+<p>There are no changes from the previous release, but the CLI and <code>@pulumi/pulumi</code> package share a version.</p>
+
+<h2 id="v152">v0.15.2</h2>
+
+<p>Released on September 11, 2018</p>
+
+<p>In addition to the 0.15.2 CLI release, we&rsquo;ve released new versions of all of our packages.</p>
+
+<h3 id="pulumi-cli-6">Pulumi CLI</h3>
+
+<p>Major features of this release include:</p>
+
+<h4 id="ephemeral-status-messages">Ephemeral status messages</h4>
+
+<p>Providers are now able to register &ldquo;ephmeral&rdquo; update messages which are shown in the &ldquo;Info&rdquo; column in the CLI during an update, but which are not printed at the end of the update. The new version of the <code>@pulumi/kubernetes</code> package uses this when printing messages about resource initialization.</p>
+
+<h4 id="local-backend">Local backend</h4>
+
+<p>The local backend (which stores your deployment&rsquo;s state file locally, instead of on pulumi.com) has been improved. You can now use <code>pulumi login --local</code> or <code>pulumi login file://&lt;path-to-storage-root&gt;</code> to select the local backend and control where state files are stored. In addition, older versions of the CLI would behave slightly differently when using the local backend vs pulumi.com, for example, some operations would not show previews before running.  This has been fixed.  When using the local backend, updates print the on disk location of the checkpoint file that was written. The local backend is covered in more detail in (here)[/docs/reference/state/].</p>
+
+<h4 id="pulumi-refresh"><code>pulumi refresh</code></h4>
+
+<p>We&rsquo;ve made a bunch of improvements in <code>pulumi refresh</code>. Some of these improve the UI during a refresh (for example, clarifying text about the underyling operations) as well fixing bugs with refreshing certain types of objects (for example CloudFront CDNs).</p>
+
+<h4 id="pulumi-up-and-pulumi-new"><code>pulumi up</code> and <code>pulumi new</code></h4>
+
+<p>You can now pass a URL to a Git repository to <code>pulumi up &lt;url&gt;</code> to deploy a project without having to manage its source code locally. This works like <code>pulumi new &lt;url&gt;</code>, but configures and deploys the project from a temporary directory that will be cleaned up automatically after the update.</p>
+
+<p><code>pulumi new</code> now outputs an error when the current working directory (or directory specified explicitly via the <code>--dir</code> flag) is not empty. Additionally, <code>pulumi new</code> now runs a preview of an initial update at the end of its operation and asks if you would like to perform the update.</p>
+
+<p>Both <code>pulumi up</code> and <code>pulumi new</code> now support <code>-c</code> flags for specifying config values as arguments (e.g. <code>pulumi up &lt;url&gt; -c aws:region=us-east-1</code>).</p>
+
+<h4 id="miscellaneous-improvements-1">Miscellaneous Improvements</h4>
+
+<p>In addition to the above features, we&rsquo;ve made a handfull of day to day improvements in the CLI:</p>
+
+<ul>
+<li>Support <code>pulumi</code> in a projects in a Yarn workspaces. <a href="https://github.com/pulumi/pulumi/pull/1893">pulumi/pulumi#1893</a></li>
+<li>Improve error message when there are errors decrypting secret configuration values. <a href="https://github.com/pulumi/pulumi/pull/1815">pulumi/pulumi#1815</a></li>
+<li>Don&rsquo;t fail <code>pulumi up</code> when plugin discovery fails. <a href="https://github.com/pulumi/pulumi/pull/1745">pulumi/pulumi#1745</a></li>
+</ul>
+
+<h3 id="pulumi-pulumi-0-15-2">@pulumi/pulumi 0.15.2</h3>
+
+<ul>
+<li>New helpers for extracting and validating values from <code>pulumi.Config</code>. <a href="https://github.com/pulumi/pulumi/pull/1843">pulumi/pulumi#1843</a></li>
+<li>Support serializng &ldquo;factory&rdquo; functions. <a href="https://github.com/pulumi/pulumi/pull/1804">pulumi/pulumi#1804</a></li>
+</ul>
+
+<h3 id="pulumi-aws-0-15-1">@pulumi/aws 0.15.1</h3>
+
+<ul>
+<li>Add dotnetcore2.1 as a runtime for AWS lambdas (thanks to <strong><a href="https://github.com/Jtango18">@Jtango18</a></strong>!). <a href="https://github.com/pulumi/pulumi-aws/pull/302">pulumi/pulumi-aws#302</a></li>
+<li>Expose &lsquo;factory functions&rsquo; from pulumi-aws. <a href="https://github.com/pulumi/pulumi-aws/pull/304">pulumi/pulumi-aws#304</a></li>
+<li>Use stronger IAM doc types. <a href="https://github.com/pulumi/pulumi-aws/pull/311">pulumi/pulumi-aws#311</a></li>
+<li>Auto-name aws.elasticache.Cluster#clusterId, <a href="https://github.com/pulumi/pulumi-aws/pull/313">pulumi/pulumi-aws#313</a></li>
+</ul>
+
+<h3 id="pulumi-aws-infra-0-15-1">@pulumi/aws-infra 0.15.1</h3>
+
+<ul>
+<li>Update dependencies versions for <code>@pulumi/pulumi</code> and <code>@pulumi/aws</code>.</li>
+</ul>
+
+<h3 id="pulumi-aws-serverless-0-15-1">@pulumi/aws-serverless 0.15.1</h3>
+
+<ul>
+<li>Update dependencies versions for <code>@pulumi/pulumi</code> and <code>@pulumi/aws</code>.</li>
+</ul>
+
+<h3 id="pulumi-azure-0-15-2">@pulumi/azure 0.15.2</h3>
+
+<ul>
+<li>Consume newer terraform-provider from upstream. <a href="https://github.com/pulumi/pulumi-azure/pull/93">pulumi/pulumi-azure#93</a></li>
+<li>Fix name limit for azure container groups. <a href="https://github.com/pulumi/pulumi-azure/pull/94">pulumi/pulumi-azure#94</a></li>
+<li>Support provider configuration and property values provided by environment variaibles. <a href="https://github.com/pulumi/pulumi-azure/pull/98">pulumi/pulumi-azure#98</a></li>
+</ul>
+
+<h3 id="pulumi-azure-serverless-0-15-2">@pulumi/azure-serverless 0.15.2</h3>
+
+<ul>
+<li>Add support for hooking up FunctionApps to ServiceHub topics. <a href="https://github.com/pulumi/pulumi-azure-serverless/pull/11">pulumi/pulumi-azure-serverless#11</a></li>
+<li>Allow include/exclude arguments to be passed from higher layers into FunctionApp creation. <a href="https://github.com/pulumi/pulumi-azure-serverless/pull/15">pulumi/pulumi-azure-serverless#15</a></li>
+<li>Add Queue subscriptions (thanks to <strong><a href="https://github.com/mikhailshilkov">@mikhailshilkov</a></strong>). <a href="https://github.com/pulumi/pulumi-azure-serverless/pull/17">pulumi/pulumi-azure-serverless#17</a></li>
+</ul>
+
+<h3 id="pulumi-cloud-pulumi-cloud-aws-pulumi-cloud-azure-0-15-1">@pulumi/cloud, @pulumi/cloud-aws, @pulumi/cloud-azure 0.15.1</h3>
+
+<p>As part of this release we are including a beta implementation of <code>@pulumi/cloud</code> on Azure.  You can now set the <code>cloud:provider</code> configuration value to <code>azure</code> to deploy applications writing against <code>@pulumi/cloud</code> on Azure.</p>
+
+<ul>
+<li>Add a default lifecycle policy for ECR repos. <a href="https://github.com/pulumi/pulumi-cloud/pull/556">pulumi/pulumicloud#556</a></li>
+<li>Add <code>cloud.HttpServer</code> making it easy to run express style apps across clouds. <a href="https://github.com/pulumi/pulumi-cloud/pull/562">pulumi/pulumi-azure-cloud#562</a></li>
+<li>Log docker messages to the Task/Service we&rsquo;re creating, not the Repository resource we&rsquo;re using. <a href="https://github.com/pulumi/pulumi-cloud/pull/563">pulumi/pulumi-azure-cloud#563</a></li>
+</ul>
+
+<h3 id="pulumi-docker">@pulumi/docker</h3>
+
+<ul>
+<li>Pass logging messages to the right sink when doing docker operations. <a href="https://github.com/pulumi/pulumi-docker/pull/7">pulumi/pulumi-docker#7</a></li>
+<li>Add <code>docker.Image</code> component. <a href="https://github.com/pulumi/pulumi-docker/pull/10">pulumi/pulumi-docker#10</a></li>
+</ul>
+
+<h3 id="pulumi-gcp-0-15-1">@pulumi/gcp 0.15.1</h3>
+
+<ul>
+<li>Support provider configuration and property values provided by environment variaibles. <a href="https://github.com/pulumi/pulumi-gcp/pull/43">pulumi/pulumi-gcp#43</a></li>
+</ul>
+
+<h3 id="pulumi-kubernetes-0-17-0">@pulumi/kubernetes 0.17.0</h3>
+
+<p>The <a href="/blog/cloud-native-infrastructure-with-kubernetes-and-pulumi/">Cloud Native SDK for Kubernetes</a> is available and recommended for production use</p>
+
+<ul>
+<li>Incremental updates for Kubernetes resources will no longer be printed at the end of a pulumi up. <a href="https://github.com/pulumi/pulumi-kubernetes/pull/174">pulumi/pulumi-kubernetes#174</a></li>
+<li>More detailed explanations (and sometimes guidance) are now provided when an operation fails - for example, if the target Kubernetes cluster does not support services of type <code>LoadBalancer</code>.</li>
+<li>Fixes and improvements to several APIs, including allowing <code>ConfigFile</code> to take a file, and making <code>CollectionComponentResource.getResource</code> well-typed. <a href="https://github.com/pulumi/pulumi-kubernetes/pull/190">pulumi/pulumi-kubernetes#190</a></li>
+<li>Several bug fixes in await logic</li>
+<li>Windows support for Helm chart deployments. <a href="https://github.com/pulumi/pulumi-kubernetes/pull/170">pulumi/pulumi-kubernetes#170</a></li>
+</ul>
+
+<h3 id="pulumi-openstack-0-15-1">@pulumi/openstack 0.15.1</h3>
+
+<ul>
+<li>Normalize resource casing (thanks to <strong><a href="https://github.com/Frassle">@Frassle</a></strong>) <a href="https://github.com/pulumi/pulumi-openstack/pull/7">pulumi/pulumi-openstack#7</a></li>
+<li>Increase auto-name length to 255 (thanks to <strong><a href="https://github.com/Frassle">@Frassle</a></strong>) <a href="https://github.com/pulumi/pulumi-openstack/pull/8">pulumi/pulumi-openstack#8</a></li>
+<li>Support provider configuration and property values provided by environment variaibles. <a href="https://github.com/pulumi/pulumi-openstack/pull/11">pulumi/pulumi-openstack#11</a></li>
+</ul>
+
+<h2 id="v150">v0.15.0</h2>
+
+<p>Released on August 13, 2018</p>
+
+<p>In addition to the 0.15.0 CLI release, we&rsquo;ve released new versions of all of our packages.</p>
+
+<h3 id="pulumi-cli-7">Pulumi CLI</h3>
+
+<p>This release brings many large improvements to the Pulumi CLI. Major features include:</p>
+
+<h4 id="parallelism">Parallelism</h4>
+
+<p>Pulumi now performs resource creates and updates in parallel, driven by dependencies in the resource graph. (Parallel deletes are coming in a future release.) If your program has implicit dependencies that Pulumi does not already see as dependencies, it&rsquo;s possible parallel will cause ordering issues. If this happens, you may set the <code>dependsOn</code> on property in the <code>resourceOptions</code> parameter to any resource. By default, Pulumi allows 10 parallel operations, but the <code>-p</code> flag can be used to override this. <code>-p=1</code> disables parallelism altogether. Parallelism is supported for Node.js and Go programs, and Python support will come in a future release.</p>
+
+<h4 id="first-class-providers">First Class Providers</h4>
+
+<p>Pulumi now allows creation and configuration of resource providers programmatically. In addition to the default provider instance for each resource, you can also create an explicit version of the provider and configure it explicitly. This can be used to create some resources in a different region from your main deployment, or deploy resources to a programmatically configured Kubernetes cluster, for example. We have <a href="https://github.com/pulumi/pulumi-aws/blob/master/examples/multiple-regions/index.ts">a multi-region deployment example</a> for illustrative purposes.</p>
+
+<h4 id="status-rich-updates">Status Rich Updates</h4>
+
+<p>The Pulumi CLI is now able to report more detailed information from individual resources during an update. This is used, for instance, in the Kubernetes provider, to provide incremental progress output for steps that may take a while to comeplete (such as deployment orchestration). We anticipate leveraging this feature in more places over time.</p>
+
+<h4 id="improved-templating-support">Improved Templating Support</h4>
+
+<p>You can now pass a URL to a Git repository to <code>pulumi new</code> to install a custom template, enabling you to share common templates across your team. If you pass a simple name, or omit arguments altogether, <code>pulumi new</code> behaves as before, using the <a href="https://github.com/pulumi/templates">templates hosted by Pulumi</a>.</p>
+
+<h4 id="native-typescript-support">Native TypeScript support</h4>
+
+<p>By default, Pulumi now natively supports TypeScript, so you do not need to run <code>tsc</code> explicitly before deploying. (We often forget to do this too!) Simply run <code>pulumi up</code>, and the program will be recompiled on the fly before running it.</p>
+
+<p>To use this new support, upgrade your <code>@pulumi/pulumi</code> version to 0.15.0, in addition to the CLI. Pulumi prefers JavaScript source to TypeScript source, so if you had been using TypeScript previously, we recommend you make the following changes:</p>
+
+<ol>
+<li>Remove the <code>main</code> and <code>typings</code> directives from <code>package.json</code>, as well as the <code>build</code> script.</li>
+<li>Remove the <code>bin</code> folder that contained your previously compiled code.</li>
+<li>You may remove the dependency on <code>typescript</code> from your <code>package.json</code> as well, since <code>@pulumi/pulumi</code> has one.</li>
+</ol>
+
+<p>While a <code>tsconfig.json</code> file is no longer required, as Pulumi uses intelligent defaults, other tools like VS Code behave better when it is present, so you&rsquo;ll probably want to keep it.</p>
+
+<h4 id="miscellaneous-improvements-2">Miscellaneous improvements</h4>
+
+<ul>
+<li>The CLI no longer emits warnings if it can&rsquo;t detect metadata about your git enlistement (for example, what GitHub project it coresponds to).</li>
+<li>The CLI now only warns about adding a plaintext configuration in cases where it appears likely you may be storing a secret.</li>
+</ul>
+
+<h3 id="pulumi-service">Pulumi Service</h3>
+
+<p>The Pulumi Service made some key improvements around the handling of update logs. When viewing stack update logs that include the output of other
+programs, like <code>docker</code>, the resulting logs should now render correctly as we as load much faster.</p>
+
+<p>The biggest new feature however, is the introduction of the new <a href="https://github.com/apps/pulumi">Pulumi GitHub application</a>.</p>
+
+<h4 id="pulumi-github-app-preview">Pulumi GitHub App (preview)</h4>
+
+<p>The Pulumi GitHub application bridges the gap between GitHub (source code, pull requests) and Pulumi (cloud resources, stack updates). By installing
+the Pulumi GitHub application into your GitHub organization, and then running Pulumi as part of your CI build process, you can now see the results of
+stack updates and previews as part of pull requests. This allows you to see the potential impact a change would have on your cloud infrastructure before
+merging the code.</p>
+
+<p>The Pulumi GitHub application is still in preview as we work to support more CI systems and provide richer output. For information on how to install the
+GitHub application and configure it with your CI system, please <a href="/docs/reference/cd-github/">visit our documentation</a> page.</p>
+
+<h3 id="pulumi-pulumi-0-15-0">@pulumi/pulumi 0.15.0</h3>
+
+<h4 id="closure-capturing-improvements">Closure capturing improvements</h4>
+
+<p>We&rsquo;ve improved our closure capturing logic, which should allow you to write more idiomatic code in lambda functions that are uploaded to the cloud. Previously, if you wanted to use a module, we required you to write either <code>require('module')</code> or <code>await import('module')</code> inside your lambda function. In addition, if you wanted to use a helper you defined in another file, you had to require that module in your function as well. With these changes, the following code now works:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&#34;axios&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">cloud</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/cloud-aws&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;api&#34;</span><span class="p">);</span>
+<span class="nx">api</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;/&#34;</span><span class="p">,</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">statusText</span> <span class="o">=</span> <span class="p">(</span><span class="nx">await</span> <span class="nx">axios</span><span class="p">.</span><span class="k">default</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;https://www.pulumi.com&#34;</span><span class="p">)).</span><span class="nx">statusText</span><span class="p">;</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="sb">`GET https://www.pulumi.com/ == </span><span class="si">${</span><span class="nx">statusText</span><span class="si">}</span><span class="sb">`</span><span class="p">).</span><span class="nx">end</span><span class="p">();</span>
+<span class="p">});</span></code></pre></div>
+<h4 id="default-value-for-configuration-package">Default value for configuration package</h4>
+
+<p>The <code>pulumi.Config</code> object can now be created without an argument. When no argument is supplied, the value of the current project is used. This means that application level code can simply do <code>new pulumi.Confg()</code> without passing any argument. For library authors, you should continue to pass the name of your package as an argument.</p>
+
+<h3 id="pulumi-kubernetes-0-15-0">@pulumi/kubernetes 0.15.0</h3>
+
+<p>Kubernetes support has been brought to production-ready level of quality. Many features in this release are in support of this outcome. This includes:</p>
+
+<ul>
+<li>Full support for the entire Kubernetes API</li>
+<li>Improved status reporting for deployment rollouts</li>
+<li>Verified support for AWS EKS, Azure AKS, and GCP GKE, in addition to Minikube and manually hosted clusters</li>
+<li>Support for provisioning and deploying to clusters in a single program</li>
+<li>Deploying Helm Charts using the <code>helm.v2.Chart</code> type</li>
+</ul>
+
+<p>To use Pulumi with Kubernetes, please <a href="/docs/quickstart/kubernetes/">visit our Getting Started page on Kubernetes</a>.</p>
+
+<h3 id="pulumi-openstack-0-15-0">@pulumi/openstack 0.15.0</h3>
+
+<p>We are releasing a new provider that allows Pulumi to work with OpenStack. A big thanks to <strong><a href="https://github.com/Frassle">@frassle</a></strong> for the implementation of the OpenStack provider!</p>
+
+<h3 id="pulumi-docker-0-15-0">@pulumi/docker 0.15.0</h3>
+
+<p>Added a new package to support building and pushing Docker images to a docker registry as part of a Pulumi program.  This has been part of the <code>cloud.Service</code> support in <code>@pulumi/cloud</code>, but is now available to be used with other containers services from cloud platforms like Azure, Kubernetes, and Google.</p>
+
+<h3 id="pulumi-aws-0-15-0">@pulumi/aws 0.15.0</h3>
+
+<p>Adopted <code>terraform-provider-aws</code> version 1.30.0, with new support for Amazon Neptune, AWS Storage Gateway, Amazon Macie, and much more.</p>
+
+<h3 id="pulumi-azure-0-15-0">@pulumi/azure 0.15.0</h3>
+
+<p>Adopted <code>terraform-provider-azurerm</code> version 1.12.0, with new support for Azure Service Fabric, Azure Notification Hubs, Azure Data Lake, and much more.</p>
+
+<h3 id="pulumi-azure-serverless-0-15-0">@pulumi/azure-serverless 0.15.0</h3>
+
+<p>Added a new package with helpers to make it easy to build serverless applications on Azure.  In this initial release, <code>@pulumi/azure-serverless</code> includes support for serverless functions and blob storage.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">azure</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/azure&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">serverless</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/azure-serverless&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">storageAccount</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">azure</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">Account</span><span class="p">(</span><span class="s2">&#34;images-container&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">});</span>
+<span class="nx">serverless</span><span class="p">.</span><span class="nx">storage</span><span class="p">.</span><span class="nx">onBlobEvent</span><span class="p">(</span><span class="s2">&#34;newImage&#34;</span><span class="p">,</span> <span class="nx">storageAccount</span><span class="p">,</span> <span class="p">(</span><span class="nx">context</span><span class="p">,</span> <span class="nx">blob</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">context</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">done</span><span class="p">();</span>
+<span class="p">},</span> <span class="p">{</span> <span class="nx">containerName</span><span class="o">:</span> <span class="s2">&#34;folder&#34;</span><span class="p">,</span> <span class="nx">filterSuffix</span><span class="o">:</span> <span class="s2">&#34;.png&#34;</span> <span class="p">});</span>
+
+<span class="kr">export</span> <span class="kd">let</span> <span class="nx">storageAccountName</span> <span class="o">=</span> <span class="nx">storageAccount</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span></code></pre></div>
+<h3 id="pulumi-cloud-0-15-0">@pulumi/cloud 0.15.0</h3>
+
+<p>Added a simpler form for creating containerized <code>cloud.Service</code>s for the (common) case of deploying a single container.  What was previously this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">let</span> <span class="nx">nginx</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">Service</span><span class="p">(</span><span class="s2">&#34;nginx&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">containers</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">nginx</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">image</span><span class="o">:</span> <span class="s2">&#34;nginx&#34;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">});</span></code></pre></div>
+<p>Can now be this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">let</span> <span class="nx">nginx</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">Service</span><span class="p">(</span><span class="s2">&#34;nginx&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">image</span><span class="o">:</span> <span class="s2">&#34;nginx&#34;</span><span class="p">,</span>
+<span class="p">});</span></code></pre></div>
+<h3 id="pulumi-gcp-0-15-0">@pulumi/gcp 0.15.0</h3>
+
+<ul>
+<li>Added support for <code>new gcp.serverless.Function</code> to create serverless functions defined inline in the Pulumi program in GCP using Google Cloud Functions.  A big thanks to <strong><a href="https://github.com/mikhailshilkov">@mikhailshilkov</a></strong> for contributing this feature!</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">gcp</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/gcp&#34;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">f</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">gcp</span><span class="p">.</span><span class="nx">serverless</span><span class="p">.</span><span class="nb">Function</span><span class="p">(</span><span class="s2">&#34;f&#34;</span><span class="p">,</span> <span class="p">{},</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="sb">`Hello </span><span class="si">${</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">name</span> <span class="o">||</span> <span class="s1">&#39;World&#39;</span><span class="si">}</span><span class="sb">!`</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="kr">export</span> <span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">f</span><span class="p">.</span><span class="kd">function</span><span class="p">.</span><span class="nx">httpsTriggerUrl</span><span class="p">;</span></code></pre></div>
+<h2 id="v143">v0.14.3</h2>
+
+<p>Released on July 20, 2018</p>
+
+<p>In addition to the 0.14.3 CLI release, the following packages have been updated:</p>
+
+<ul>
+<li><a href="https://www.npmjs.com/package/@pulumi/pulumi">@pulumi/pulumi</a> v0.14.3</li>
+<li><a href="https://www.npmjs.com/package/@pulumi/aws">@pulumi/aws</a> v0.14.5</li>
+<li><a href="https://www.npmjs.com/package/@pulumi/aws-serverless">@pulumi/aws-serverless</a> v0.14.2</li>
+<li><a href="https://www.npmjs.com/package/@pulumi/azure">@pulumi/azure</a> v0.14.2</li>
+<li><a href="https://www.npmjs.com/package/@pulumi/cloud">@pulumi/cloud</a> v0.14.1</li>
+<li><a href="https://www.npmjs.com/package/@pulumi/cloud-aws">@pulumi/cloud-aws</a> v0.14.1</li>
+<li><a href="https://www.npmjs.com/package/@pulumi/gcp">@pulumi/gcp</a> v0.14.3</li>
+</ul>
+
+<h3 id="pulumi-cli-8">Pulumi CLI</h3>
+
+<h4 id="fixed">Fixed</h4>
+
+<ul>
+<li><p>Support empty text assets (<a href="https://github.com/pulumi/pulumi/pull/1599">pulumi/pulumi#1599</a>).</p></li>
+
+<li><p>When printing message in non-interactive mode, do not keep printing out the worst diagnostic (<a href="https://github.com/pulumi/pulumi/pull/1640">pulumi/pulumi#1640</a>). When run in non interactive environments (e.g. docker) Pulumi would print duplicate messages to the screen related to a resource when the running Pulumi program was writing to standard out (e.g. if it was invoking a docker build). This no longer happens. The full output from the program continues to be printed at the end of execution.</p></li>
+
+<li><p>Work around a potentially bad assert in the engine (<a href="https://github.com/pulumi/pulumi/pull/1644">pulumi/pulumi#1640</a>). In some cases, when Pulumi failed to delete a resource as part of an update, future updates would crash with an assert message. This is no longer the case and Pulumi will try to delete the resource it had marked as should be deleted.</p></li>
+</ul>
+
+<h4 id="added">Added</h4>
+
+<ul>
+<li><p>Print out a &lsquo;still working&rsquo; message every 20 seconds when in non-interactive mode (<a href="https://github.com/pulumi/pulumi/pull/1616">pulumi/pulumi#1616</a>). When Pulumi is waiting for a long running resource operation to create (e.g. waiting for an ECS service to become stable after creation), print some output to the console even when running non-interactively. This helps for cases like TravsCI where if output is not written for a while the job is assumed to have hung and is aborted.</p></li>
+
+<li><p>Support the NO_COLOR env variable to suppress any colored output (<a href="https://github.com/pulumi/pulumi/pull/1594">pulumi/pulumi#1594</a>). Pulumi now respects the <code>NO_COLOR</code> environment variable. When set to a truthy value, colors are suppressed from the CLI. In addition, the <code>--color</code> flag can now be passed to all <code>pulumi</code> commands.</p></li>
+</ul>
+
+<h3 id="pulumi-pulumi-v0-14-3">@pulumi/pulumi v0.14.3</h3>
+
+<p>There are no user facing changes from the previous release. However, we&rsquo;ve laid some of the initial groundwork to support running resource operations in parallel and other small improvements.</p>
+
+<h3 id="pulumi-aws-v0-14-5">@pulumi/aws v0.14.5</h3>
+
+<h4 id="fixed-1">Fixed</h4>
+
+<ul>
+<li><p>Only apply AutoName to inputs (<a href="https://github.com/pulumi/pulumi-aws/pull/265">pulumi/pulumi-aws#265</a>). Terraform properties named <code>name</code> but are not inputs do not have auto naming applied to them.</p></li>
+
+<li><p>Switch package inclusion from whitelist to blacklist (<a href="https://github.com/pulumi/pulumi-aws/pull/265">pulumi/pulumi-aws#268</a>). When serializing a lambda, default to including all dependencies listed in the dependencies section of package.json (and their transitive dependencies) except for all <code>@pulumi/*</code> packages. Previously we tried to infer the set of packages by doing a more detailed analysis of the lambda implementation, but this failed in somewhat common cases.</p></li>
+
+<li><p>Fix null ref when walking packages (<a href="https://github.com/pulumi/pulumi-aws/pull/280">pulumi/pulumi-aws#280</a>). Fix some issues that could arise when serializing lambdas when a dependent package had no dependencies itself.</p></li>
+</ul>
+
+<h4 id="added-1">Added</h4>
+
+<ul>
+<li><p>Add autoscaling NotificationType union and overlay (<a href="https://github.com/pulumi/pulumi/pull/251">pulumi/pulumi-aws#251</a>). Provide a more strongly typed experience for setting autoscaling notification types. Special thanks to <a href="https://github.com/jen20">@jen20</a> for this improvement.</p></li>
+
+<li><p>Add iam.assumeRolePolicyForPrincipal function (<a href="https://github.com/pulumi/pulumi-aws/pull/273">pulumi/pulumi-aws#273</a>). Add some helpers for authoring policy documents to assume a role. Special thanks to <a href="https://github.com/jen20">@jen20</a> for this improvement.</p></li>
+
+<li><p>Add <code>environment</code> to <code>aws.serverless.Function</code> (<a href="https://github.com/pulumi/pulumi-aws/pull/254">pulumi/pulumi-aws#254</a>. Expose the underlying <code>Environment</code> property to allow setting environment variables visible at runtime of a function when using <code>aws.serverless.Function</code>. Special thanks to <a href="https://github.com/jen20">@jen20</a> for this improvement.</p></li>
+
+<li><p>Override role on RolePolicy to accept a Role (<a href="https://github.com/pulumi/pulumi-aws/pull/278">pulumi/pulumi-aws#278</a>). When constructing a <code>RolePolicy</code> object, allow the <code>Role</code> object to set as an argument instead of just a string which is the ARN of the role to use. Special thanks to <a href="https://github.com/jen20">@jen20</a> for this improvement.</p></li>
+
+<li><p>Add the .js extension to our generate closure code file. (<a href="https://github.com/pulumi/pulumi-aws/pull/279">pulumi/pulumi-aws#279</a>). Ensure the generated code uploaded to AWS has a <code>.js</code> extension when building a lambda function. This allows the code for the lambda to be viewed in the AWS console.</p></li>
+</ul>
+
+<h3 id="pulumi-aws-serverless-v0-14-2">@pulumi/aws-serverless v0.14.2</h3>
+
+<h4 id="fixed-2">Fixed</h4>
+
+<ul>
+<li>Allow route handlers to be invoked by API Gateway console (<a href="https://github.com/pulumi/pulumi-aws/pull/30">pulumi/pulumi-aws-serverless#30</a>). Support API Gateway&rsquo;s &ldquo;Test&rdquo; functionality from the AWS Console for lambdas created by Pulumi.</li>
+</ul>
+
+<h3 id="pulumi-azure-v0-14-2">@pulumi/azure v0.14.2</h3>
+
+<h4 id="fixed-3">Fixed</h4>
+
+<ul>
+<li>Only apply AutoName to inputs (<a href="https://github.com/pulumi/pulumi-azure/pull/78">pulumi/pulumi-azure#78</a>). Terraform properties named <code>name</code> but are not inputs do not have auto naming applied to them.</li>
+</ul>
+
+<h3 id="pulumi-cloud-v0-14-1">@pulumi/cloud v0.14.1</h3>
+
+<p>There were no changes to the API surface area for <code>@pulumi/cloud</code>, but it shares a version number with the AWS implementation, which did have improvements.</p>
+
+<h3 id="pulumi-cloud-aws-v0-14-1">@pulumi/cloud-aws v0.14.1</h3>
+
+<h4 id="fixed-4">Fixed</h4>
+
+<ul>
+<li>Associate docker output with individual resources so it is clearer what is going on ((<a href="https://github.com/pulumi/pulumi-azure/pull/526">pulumi/pulumi-cloud#526</a>). When doing a <code>pulumi up</code> or <code>pulumi preview</code> output for the docker build for a cloud.Service is now associated with the actual cloud.Service that is being updated, instead of just being in the general output stream in the CLI.</li>
+</ul>
+
+<h3 id="pulumi-gcp-v0-14-3">@pulumi/gcp v0.14.3</h3>
+
+<h4 id="fixed-5">Fixed</h4>
+
+<ul>
+<li>Only apply AutoName to inputs (<a href="https://github.com/pulumi/pulumi-gcp/pull/29">pulumi/pulumi-gcp#29</a>). Terraform properties named <code>name</code> but are not inputs do not have auto naming applied to them.</li>
+</ul>
+
+<h4 id="added-2">Added</h4>
+
+<ul>
+<li>Add a serverless example (<a href="https://github.com/pulumi/pulumi-gcp/pull/12">pulumi/pulumi-gcp#12</a>). The GCP provider now has better support for creating google cloud functions from code. We have an <a href="https://github.com/pulumi/pulumi-gcp/tree/v0.14.3/examples/serverless">example</a> of how to use this support. We plan to add higher level support here (similar to what we have with AWS) in a future release.</li>
+</ul>
+
+<h2 id="v142">v0.14.2</h2>
+
+<p>Released on July 3, 2018</p>
+
+<p>In addition to the 0.14.2 CLI release, the following packages have been updated:</p>
+
+<ul>
+<li><a href="https://www.npmjs.com/package/@pulumi/pulumi">@pulumi/pulumi</a> v0.14.2</li>
+<li><a href="https://www.npmjs.com/package/@pulumi/aws">@pulumi/aws</a> v0.14.2</li>
+<li><a href="https://www.npmjs.com/package/@pulumi/aws-serverless">@pulumi/aws-serverless</a> v0.14.2</li>
+<li><a href="https://www.npmjs.com/package/@pulumi/azure">@pulumi/azure</a> v0.14.1</li>
+<li><a href="https://www.npmjs.com/package/@pulumi/gcp">@pulumi/gcp</a> v0.14.2</li>
+</ul>
+
+<h3 id="pulumi-cli-9">Pulumi CLI</h3>
+
+<h4 id="added-3">Added</h4>
+
+<ul>
+<li>Support -s in <code>stack {export, graph, import, output}</code> (<a href="https://github.com/pulumi/pulumi/pull/1574">pulumi/pulumi#1572</a>). <code>pulumi stack export</code>, <code>pulumi stack graph</code>, <code>pulumi stack import</code> and <code>pulumi stack output</code> now support a <code>-s</code> or <code>--stack</code> flag, which allows them to operate on a different stack that the currently selected one.</li>
+</ul>
+
+<h3 id="pulumi-pulumi-v0-14-2">@pulumi/pulumi v0.14.2</h3>
+
+<p>There are no changes from the previous release, but the CLI and <code>@pulumi/pulumi</code> package share a version.</p>
+
+<h3 id="pulumi-aws-v0-14-2">@pulumi/aws v0.14.2</h3>
+
+<h4 id="added-4">Added</h4>
+
+<ul>
+<li>The result of calls to data sources now include an <code>id</code> property. Special thanks to <a href="https://github.com/Frassle">@Frassle</a> for adding this support in <a href="https://github.com/pulumi/pulumi-terraform/pull/189">pulumi/pulumi-terraform#189</a>.</li>
+<li>Adopt <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/CHANGELOG.md#1260-july-04-2018">v1.26.0</a> of the AWS Terraform Provider.</li>
+</ul>
+
+<h3 id="pulumi-aws-serverless-v0-14-1">@pulumi/aws-serverless v0.14.1</h3>
+
+<h4 id="added-5">Added</h4>
+
+<ul>
+<li>Add support for triggering lambdas in response to SQS events. (<a href="https://github.com/pulumi/pulumi-aws-serverless/pull/17">pulumi/pulumi-aws-serverless#17</a>). We now support triggering a lambda off of SQS events, using <code>serverless.queue.subscribe</code>. We have a <a href="https://github.com/pulumi/pulumi-aws-serverless/blob/f14db0886f91e9f38df2839bc5b7e6aa891c447c/nodejs/aws-serverless/examples/queue/index.ts">small example</a> that shows how to use this new functionally.</li>
+</ul>
+
+<h3 id="pulumi-azure-v0-14-1">@pulumi/azure v0.14.1</h3>
+
+<h4 id="added-6">Added</h4>
+
+<ul>
+<li>The result of calls to data sources now include an <code>id</code> property. Special thanks to <a href="https://github.com/Frassle">@Frassle</a> for adding this support in <a href="https://github.com/pulumi/pulumi-terraform/pull/189">pulumi/pulumi-terraform#189</a>.</li>
+</ul>
+
+<h3 id="pulumi-gcp-v0-14-1">@pulumi/gcp v0.14.1</h3>
+
+<h4 id="added-7">Added</h4>
+
+<ul>
+<li>The result of calls to data sources now include an <code>id</code> property. Special thanks to <a href="https://github.com/Frassle">@Frassle</a> for adding this support in <a href="https://github.com/pulumi/pulumi-terraform/pull/189">pulumi/pulumi-terraform#189</a>.</li>
+</ul>
+
+<h3 id="python">Python</h3>
+
+<p>We&rsquo;ve added assets support to the Python runtime and our Python packages. It is now possible to create resources that need an asset like a AWS Lambda or AWS Bucket Object in Python.</p>
+
+<h2 id="v141">v0.14.1</h2>
+
+<p>Released on June 29, 2018</p>
+
+<p>In addition to the 0.14.1 CLI release, the following packages have been updated:</p>
+
+<ul>
+<li><a href="https://www.npmjs.com/package/@pulumi/pulumi">@pulumi/pulumi</a> v0.14.1</li>
+</ul>
+
+<h3 id="pulumi-cli-10">Pulumi CLI</h3>
+
+<h4 id="added-8">Added</h4>
+
+<ul>
+<li>Add <code>pulumi whoami</code> (<a href="https://github.com/pulumi/pulumi/pull/1572">pulumi/pulumi#1572</a>). <code>pulumi whoami</code> will report the account name of the current logged in user. In addition, we now display the name of the current user after <code>pulumi login</code>.</li>
+</ul>
+
+<h4 id="fixed-6">Fixed</h4>
+
+<ul>
+<li><p>Don&rsquo;t require <code>PULUMI_DEBUG_COMMANDS</code> to be set to use local backend (<a href="https://github.com/pulumi/pulumi/pull/1575">pulumi/pulumi#1575</a>).</p></li>
+
+<li><p>Improve misleading <code>pulumi new</code> summary message (<a href="https://github.com/pulumi/pulumi/pull/1571">pulumi/pulumi#1571</a>).</p></li>
+
+<li><p>Fix printing out outputs in a pulumi program (<a href="https://github.com/pulumi/pulumi/pull/1531">pulumi/pulumi#1531</a>). Pulumi now shows the values of output properties after a <code>pulumi up</code> instead of requiring you to run <code>pulumi stack output</code>.</p></li>
+</ul>
+
+<h3 id="pulumi-pulumi-v0-14-1">@pulumi/pulumi v0.14.1</h3>
+
+<h4 id="fixed-7">Fixed</h4>
+
+<ul>
+<li>Do a better job preventing serialization of unnecessary objects in closure serialization (<a href="https://github.com/pulumi/pulumi/pull/1543">pulumi/pulumi#1543</a>).  We&rsquo;ve improved our analysis when serializing functions. This yeilds smaller code when a function is serialized and prevents errors around unused native code being captured in some cases.</li>
+</ul>
+
+<h2 id="v140">v0.14.0</h2>
+
+<p>Released on June 15, 2018</p>
+
+<p>With the v0.14.0 CLI release, the following packages are now available:
+- <a href="https://www.npmjs.com/package/@pulumi/aws">@pulumi/aws</a> v0.14.0
+- <a href="https://www.npmjs.com/package/@pulumi/aws-infra">@pulumi/aws-infra</a> v0.14.0
+- <a href="https://www.npmjs.com/package/@pulumi/aws-serverless">@pulumi/aws-serverless</a> v0.14.0
+- <a href="https://www.npmjs.com/package/@pulumi/azure">@pulumi/azure</a> v0.14.0
+- <a href="https://www.npmjs.com/package/@pulumi/cloud">@pulumi/cloud</a> v0.14.0
+- <a href="https://www.npmjs.com/package/@pulumi/gcp">@pulumi/gcp</a> v0.14.0
+- <a href="https://www.npmjs.com/package/@pulumi/kubernetes">@pulumi/kubernetes</a> v0.14.0
+- <a href="https://www.npmjs.com/package/@pulumi/pulumi">@pulumi/pulumi</a> v0.14.0</p>
+
+<h3 id="pulumi-cli-11">Pulumi CLI</h3>
+
+<h4 id="added-9">Added</h4>
+
+<ul>
+<li><p>Publish to pypi.org (<a href="https://github.com/pulumi/pulumi/pull/1497">pulumi/pulumi#1497</a>). Pulumi packages are now public on pypi.org!</p></li>
+
+<li><p>Add optional <code>--dir</code> flag to <code>pulumi new</code> (<a href="https://github.com/pulumi/pulumi/pull/1459">pulumi/pulumi#1459</a>). The <code>pulumi new</code> command now has an optional flag <code>--dir</code>, for the directory to place the generated project. If it doesn&rsquo;t exist, it will be created.</p></li>
+
+<li><p>Support Pulumi programs written in Go (<a href="https://github.com/pulumi/pulumi/pull/1456">pulumi/pulumi#1456</a>). Initial version for Pulumi programs written in Go. While it is not complete, basic resource registration works.</p></li>
+
+<li><p>Allow overriding config location (<a href="https://github.com/pulumi/pulumi/pull/1379">pulumi/pulumi#1379</a>). Support a new <code>config</code> member in <code>Pulumi.yaml</code>, which specifies a relative path to a folder where per-stack configuration is stored. The path is relative to the location of <code>Pulumi.yaml</code> itself.</p></li>
+
+<li><p>Delete existing resources before replacing, for resources that must be singletons (<a href="https://github.com/pulumi/pulumi/pull/1365">pulumi/pulumi#1365</a>). For resources where the cloud vendor does not allow multiple resources to exist, such as a mount target in EFS, Pulumi now deletes the existing resource before creating a replacement resource.</p></li>
+</ul>
+
+<h4 id="changed">Changed</h4>
+
+<ul>
+<li><p>(<strong>Breaking</strong>) Smaller Lambda ZIP for <code>aws.serverless.Function</code> (<a href="https://github.com/pulumi/pulumi-aws/pull/222">pulumi/pulumi-aws#222</a>). By default, compute only the required package dependencies, and then include the transitive dependencies of these into the Lambda ZIP. There is now a new option for explicitly adding additional package dependencies.</p></li>
+
+<li><p>Compute required packages during closure serialization (<a href="https://github.com/pulumi/pulumi/pull/1457">pulumi/pulumi#1457</a>). Closure serialization now keeps track of the <code>require</code>&rsquo;d packages it sees in the function bodies that are serialized during a call to <code>serializeFunction</code>. So, only required packages are uploaded to Lambda.</p></li>
+
+<li><p>Support browser based logins to the CLI (<a href="https://github.com/pulumi/pulumi/pull/1439">pulumi/pulumi#1439</a>). The Pulumi CLI now has an option to login via a browser. When you are prompted for an access token, you can just hit enter. The CLI then opens a browser to <a href="https://app.pulumi.com">app.pulumi.com</a> so that you can authenticate.</p></li>
+</ul>
+
+<h4 id="fixed-8">Fixed</h4>
+
+<ul>
+<li><p>Support better previews in Python by mocking out Unknown values (<a href="https://github.com/pulumi/pulumi/pull/1482">pulumi/pulumi#1482</a>). During the preview phase of a deployment, computed values were <code>Unknown</code> in Python, causing the preview to be empty. This issue is now resolved.</p></li>
+
+<li><p>Issue a better error message if you capture a V8 intrinsic (<a href="https://github.com/pulumi/pulumi/pull/1423">pulumi/pulumi#1423</a>). It&rsquo;s possible to accidentally take a dependency on a Pulumi deployment-time library, which causes problems when creating a runtime function for AWS Lambda. There is now a better error message when this situation occurs.</p></li>
+</ul>
+
+<h3 id="pulumi-aws-serverless-v0-14-0">@pulumi/aws-serverless v0.14.0</h3>
+
+<p>This package is new in this release! Use it to directly manage API Gateway and Lambda resources.</p>
+
+<h3 id="pulumi-cloud-v0-14-0">@pulumi/cloud v0.14.0</h3>
+
+<ul>
+<li><p>Add Docker caching. (<a href="https://github.com/pulumi/pulumi-cloud/pull/499">pulumi/pulumi-cloud#499</a>). Docker build caching is now supported with a new parameter <code>ContainerBuild.cacheFrom</code>. Setting this value causes the Docker build to first check the service&rsquo;s associated ECR repository (if it exists).</p></li>
+
+<li><p>Rename HttpEndpoint to API  (<a href="https://github.com/pulumi/pulumi-cloud/pull/497">pulumi/pulumi-cloud#497</a>). Use a simpler, better-suited name. A type/value with the name <code>HttpEndpoint</code> is still exported as aliases for <code>API</code>, but are marked as <code>@deprecated</code>. These will be removed in a later release. While this is not a breaking change, any existing <code>cloud.HttEndpoint</code> will be replaced with a new, identical resource with a different URL.</p></li>
+
+<li><p>Use the latest ECS optimized AMI instead as a default (<a href="https://github.com/pulumi/pulumi-aws-infra/pull/12">pulumi/pulumi-aws-infra#12</a>). Clusters managed by <code>awsinfra.Cluster</code> now use the latest available ECS image by default instead of a fixed older version.  If a specific fixed version is desired, it can be set manually using <code>ecsOptimizedAMIName</code>.</p></li>
+</ul>
+
+<h3 id="pulumi-gcp-v0-14-0">@pulumi/gcp v0.14.0</h3>
+
+<p>This package is new in this release! Use it to deploy and manage resources for Google Cloud Platform. See the reference documentation for  <a href="/docs/reference/pkg/nodejs/pulumi/gcp/">@pulumi/gcp</a>.</p>
+
+<h2 id="v122">v0.12.2</h2>
+
+<p>Released on May 19, 2018</p>
+
+<p>With the v0.12.2 CLI release, we have also released the following packages:
+- <a href="https://www.npmjs.com/package/@pulumi/aws">@pulumi/aws v0.13.0</a>
+- <a href="https://www.npmjs.com/package/@pulumi/aws-infra">@pulumi/aws-infra v0.13.0</a>
+- <a href="https://www.npmjs.com/package/@pulumi/azure">@pulumi/azure v0.12.2</a>
+- <a href="https://www.npmjs.com/package/@pulumi/cloud">@pulumi/cloud v0.13.0</a>
+- <a href="https://www.npmjs.com/package/@pulumi/kubernetes">@pulumi/kubernetes v0.13.0</a>
+- <a href="https://www.npmjs.com/package/@pulumi/pulumi">@pulumi/pulumi v0.12.2</a></p>
+
+<h3 id="pulumi-cli-12">Pulumi CLI</h3>
+
+<h4 id="fixed-9">Fixed</h4>
+
+<ul>
+<li>Improve the promise leak experience (<a href="https://github.com/pulumi/pulumi/pull/1374">pulumi/pulumi#1374</a>). Fixes an issue where a promise leak could be erroneously reported. Also, show simple error message by default, unless the environment variable <code>PULUMI_DEBUG_PROMISE_LEAKS</code> is set.</li>
+</ul>
+
+<h3 id="pulumi-aws-v0-13-0">@pulumi/aws v0.13.0</h3>
+
+<h4 id="added-10">Added</h4>
+
+<ul>
+<li>Allow passing an existing <code>Role</code> to <code>serverless.Function</code> (<a href="https://github.com/pulumi/pulumi-aws/pull/210">pulumi/pulumi-aws#210</a>). FunctionOptions now includes a <code>Role</code> property, for scenarios where you wish to use an existing <code>Role</code> or share one across multiple Lambda functions.</li>
+</ul>
+
+<h4 id="changed-1">Changed</h4>
+
+<ul>
+<li><p>(<strong>Breaking</strong>) Support configuring the paths to include in <code>serverless.Function</code> (<a href="https://github.com/pulumi/pulumi-aws/pull/210">pulumi/pulumi-aws#210</a>). Previously, all files in the directory would be included in the Lambda deployment package. With this change, only the generated <code>__index.js</code> and <code>./node_modules</code> are included by default. To add other files, use the new <code>includePaths</code> property in FunctionOptions.</p></li>
+
+<li><p>(<strong>Breaking</strong>) Rename <code>aws.s3.Bucket#websites</code> to the singular <code>aws.s3.Bucket#website</code>. (<a href="https://github.com/pulumi/pulumi-aws/pull/207">pulumi/pulumi-aws#207</a>). Since this property contains only one element, it has been renamed to <code>website</code> (singular) and is no longer an array property.</p></li>
+</ul>
+
+<h2 id="v121">v0.12.1</h2>
+
+<p>Released on May 9, 2018</p>
+
+<h3 id="added-11">Added</h3>
+
+<ul>
+<li><p>A new all-in-one installer script is now available at <a href="https://get.pulumi.com">https://get.pulumi.com</a>.</p></li>
+
+<li><p>Many enhancements to <code>pulumi new</code> (<a href="https://github.com/pulumi/pulumi/pull/1307">pulumi/pulumi#1307</a>).  The command now interactively walks through creating everything needed to deploy a new stack, including selecting a template, providing a name, creating a stack, setting default configuration, and installing dependencies.</p></li>
+
+<li><p>Several improvements to the <code>pulumi up</code> CLI experience (<a href="https://github.com/pulumi/pulumi/pull/1260">pulumi/pulumi#1260</a>): a tree view display, more details from logs during deployments, and rendering of stack outputs at the end of updates.</p></li>
+
+<li><p>A new <code>@pulumi/aws-infra</code> package is available which contains useful AWS infrastructure components for <code>Network</code> and <code>Cluster</code> (<a href="https://github.com/pulumi/pulumi-cloud/pull/472">pulumi/pulumi-cloud#472</a>).</p></li>
+</ul>
+
+<h3 id="changed-2">Changed</h3>
+
+<ul>
+<li><p>(<strong>Breaking</strong>) Removed the <code>LogCollector</code> and <code>onError</code> handler from <code>@pulumi-cloud</code> (<a href="https://github.com/pulumi/pulumi-cloud/pull/474">pulumi/pulumi-cloud#474</a>).  These were previously created in all stacks using <code>@pulumi/cloud</code>, but in practice were not being used.</p></li>
+
+<li><p>(<strong>Breaking</strong>) Remove the <code>--preview</code> flag in <code>pulumi up</code>, in favor of reintroducing <code>pulumi preview</code> (<a href="https://github.com/pulumi/pulumi/pull/1290">pulumi/pulumi#1290</a>). Also, to accept an update without the interactive prompt, use the <code>--yes</code> flag, rather than <code>--force</code>.</p></li>
+</ul>
+
+<h3 id="fixed-10">Fixed</h3>
+
+<ul>
+<li><p>Significant performance improvements for <code>pulumi up</code> (<a href="https://github.com/pulumi/pulumi/pull/1319">pulumi/pulumi#1319</a>).</p></li>
+
+<li><p>JavaScript <code>async</code> functions in Node 7.6+ now work with Pulumi function serialization (<a href="https://github.com/pulumi/pulumi/pull/1311">pulumi/pulumi#1311</a>.</p></li>
+
+<li><p>Support installation on Windows in folders which contain spaces in their name (<a href="https://github.com/pulumi/pulumi/pull/1300">pulumi/pulumi#1300</a>).</p></li>
+</ul>
+
+<h2 id="v120">v0.12.0</h2>
+
+<p>Released on April 26, 2018</p>
+
+<h3 id="added-12">Added</h3>
+
+<ul>
+<li>Add a <code>pulumi cancel</code> command (<a href="https://github.com/pulumi/pulumi/pull/1230">pulumi/pulumi#1230</a>). This command cancels any in-progress operation for the current stack.</li>
+</ul>
+
+<h3 id="changed-3">Changed</h3>
+
+<ul>
+<li><p>(<strong>Breaking</strong>) Eliminate <code>pulumi init</code> requirement (<a href="https://github.com/pulumi/pulumi/pull/1226">pulumi/pulumi#1226</a>). The <code>pulumi init</code> command is no longer required and should not be used for new stacks. For stacks created prior to the v0.12.0 SDK, <code>pulumi init</code> should still be run in the project directory if you are connecting to an existing stack. For new projects, stacks will be created under the currently logged in account. After upgrading the CLI, it is necessary to run <code>pulumi stack select</code>, as the location of bookkeeping files has been changed. For more information, see <a href="/docs/reference/stack/#create-stack">Creating Stacks</a>.</p></li>
+
+<li><p>(<strong>Breaking</strong>) Remove the explicit &lsquo;pulumi preview&rsquo; command (<a href="https://github.com/pulumi/pulumi/pull/1170">pulumi/pulumi#1170</a>). The <code>pulumi preview</code> output has now been merged in to the <code>pulumi up</code> command. Before an update is run, the preview is shown and you can choose whether to proceed or see more update details. To see just the preview operation, run <code>pulumi up --preview</code>.</p></li>
+
+<li><p>(<strong>Breaking</strong>) Add support for Node 8.10 for AWS Lambda (<a href="https://github.com/pulumi/pulumi-aws/pull/195">pulumi/pulumi-aws#195</a>). Lambdas created with <code>aws.serverless.Function</code> and via JavaScript callbacks in <code>@pulumi/cloud</code> now default to Node.js 8.10.</p></li>
+
+<li><p>Switch to a more streamlined view for property diffs in <code>pulumi up</code> (<a href="https://github.com/pulumi/pulumi/pull/1212">pulumi/pulumi#1212</a>).</p></li>
+
+<li><p>Allow multiple versions of the <code>@pulumi/pulumi</code> package to be loaded (<a href="https://github.com/pulumi/pulumi/pull/1209">pulumi/pulumi#1209</a>). This allows packages and dependencies to be versioned independently.</p></li>
+</ul>
+
+<h3 id="fixed-11">Fixed</h3>
+
+<ul>
+<li><p>When running a <code>pulumi up</code> or <code>destroy</code> operation, a single ctrl-c will cancel the current operation, waiting for it to complete. A second ctrl-c will terminate the operation immediately. (<a href="https://github.com/pulumi/pulumi/pull/1231">pulumi/pulumi#1231</a>).</p></li>
+
+<li><p>When getting update logs, get all results (<a href="https://github.com/pulumi/pulumi/pull/1220">pulumi/pulumi#1220</a>). Fixes a bug where logs could sometimes be truncated in the pulumi.com console.</p></li>
+</ul>
+
+<h2 id="v113">v0.11.3</h2>
+
+<p>Released on April 13, 2018</p>
+
+<h3 id="added-13">Added</h3>
+
+<ul>
+<li>Add a static <code>get</code> method to all AWS resource classes. (<a href="https://github.com/pulumi/pulumi-aws/pull/189">pulumi/pulumi-aws#189</a>). Each Pulumi resource class now has a static <code>get</code> method that construct an instance by reading existing resource state from your cloud provider.  For example, to read an existing EC2 VM, use <code>aws.ec2.Instance.get(&quot;vm&quot;, &quot;i-01d7e1cddb70a2f0d&quot;)</code>.</li>
+</ul>
+
+<h3 id="changed-4">Changed</h3>
+
+<ul>
+<li><p>Switch to a resource-progress oriented view for pulumi preview, update, and destroy operations (<a href="https://github.com/pulumi/pulumi/pull/1116">pulumi/pulumi#1116</a>). The operations <code>pulumi preview</code>, <code>update</code> and <code>destroy</code> have far simpler output by default, and show a progress view of ongoing operations. In addition, there is a structured component view, showing a parent operation as complete only when all child resources have been created.</p></li>
+
+<li><p>Remove strict dependency on Node v6.10.x (<a href="https://github.com/pulumi/pulumi/pull/1139">pulumi/pulumi#1139</a>). It is now no longer necessary to use a specific version of Node to run Pulumi programs. Node versions after 6.10.x are supported, as long as they are under <strong>Active LTS</strong> or are the <strong>Current</strong> stable release.</p></li>
+
+<li><p>Use subnets instead of subnetMappings on LoadBalancer (<a href="https://github.com/pulumi/pulumi-cloud/pull/451">pulumi/pulumi-cloud#451</a>). A change to how load balancers are configured for <code>cloud.Service</code> will mean that applications may see load balancers for non-HTTP services get replaced during updates.  This should not cause disruption to applications, but may change the DNS names of the load balancers where services are exposed.</p></li>
+</ul>
+
+<h3 id="fixed-12">Fixed</h3>
+
+<ul>
+<li>Fix non-Fargate support for <code>cloud.Service</code> (<a href="https://github.com/pulumi/pulumi-cloud/pull/458">pulumi/pulumi-cloud#458</a>). The issue in the 0.11.2 version of the SDK has now been fixed, and <code>cloud.Service</code> can either be used in the Fargate execution mode, or to target a cluster of EC2 instances (including the <code>cloud-aws:ecsAutoCluster</code> configuration setting).</li>
+</ul>
+
+<h2 id="v112">v0.11.2</h2>
+
+<p>Released on April 6, 2018</p>
+
+<h3 id="added-14">Added</h3>
+
+<ul>
+<li>Add support for AWS Fargate (<a href="https://github.com/pulumi/pulumi-cloud/pull/411">pulumi/pulumi-cloud#411</a>). Adds a <code>cloud-aws:useFargate</code> flag which causes container compute to run in Fargate. Also, when neither <code>cloud-aws:externalVpcId</code> nor <code>cloud-aws:usePrivateNetwork</code> are defined, <code>cloud.Service</code> uses the default VPC as the target network.</li>
+</ul>
+
+<h3 id="changed-5">Changed</h3>
+
+<ul>
+<li>(Breaking) Require <code>pulumi login</code> before commands that need a backend (<a href="https://github.com/pulumi/pulumi/pull/1114">pulumi/pulumi#1114</a>). The <code>pulumi</code> CLI now requires you to log in to pulumi.com for most operations.</li>
+</ul>
+
+<h3 id="fixed-13">Fixed</h3>
+
+<ul>
+<li>Improve the error message arising from missing required configurations for resource providers (<a href="https://github.com/pulumi/pulumi/pull/1097">pulumi/pulumi#1097</a>). The error message now prints all missing configuration keys, along with their descriptions.</li>
+</ul>
+
+<h2 id="v111">v0.11.1</h2>
+
+<p>Released on March 30, 2018</p>
+
+<h3 id="added-15">Added</h3>
+
+<ul>
+<li>Initial support for a new <code>cloud.Bucket</code> component (<a href="https://github.com/pulumi/pulumi-cloud/pull/426">pulumi/pulumi-cloud#426</a>).</li>
+</ul>
+
+<h3 id="fixed-14">Fixed</h3>
+
+<ul>
+<li>When waiting for an ECS service to reach steady state, retry when ECS says the service can&rsquo;t be found (<a href="https://github.com/pulumi/pulumi-cloud/pull/443">pulumi/pulumi-cloud#443</a>). This situation can occur when the ECS API performs a stale read of its datastore, so the workaround is to retry the operation.</li>
+</ul>
+
+<h2 id="v11">v0.11.0</h2>
+
+<p>Released on March 20, 2018</p>
+
+<h3 id="added-16">Added</h3>
+
+<ul>
+<li><p>Add a <code>pulumi new</code> command to scaffold a project (<a href="https://github.com/pulumi/pulumi/pull/1008">pulumi/pulumi#1008</a>). Usage is <code>pulumi new [templateName]</code>. If template name is not specified, the CLI will prompt with a list of templates. Currently, the templates <code>javascript</code>, <code>python</code> and <code>typescript</code> are available. Templates are defined in the GitHub repo <a href="https://github.com/pulumi/templates">pulumi/templates</a> and contributions are welcome!</p></li>
+
+<li><p>Python is now a supported language in Pulumi (<a href="https://github.com/pulumi/pulumi/pull/800">pulumi/pulumi#800</a>). For more information, see <a href="/docs/reference/python/">Python documentation</a>.</p></li>
+
+<li><p>Add ECS container definition JSON schemas (<a href="https://github.com/pulumi/pulumi-aws/pull/156">pulumi/pulumi-aws#156</a>). Additionally, the Lambda runtime enum has been updated. The function <code>getLinuxAMI</code> has been removed from <code>ec2</code> and moved directly into example code.</p></li>
+
+<li><p>Add link to documentation source in doc comments (<a href="https://github.com/pulumi/pulumi-terraform/pull/126">pulumi/pulumi-terraform#126</a>). Adds a &ldquo;Sourced from &lt;url&gt;&rdquo; annotation to all generated doc comments, with links to Terraform resource provider source documentation.</p></li>
+</ul>
+
+<h3 id="changed-6">Changed</h3>
+
+<ul>
+<li><p>(Breaking) Change the way that configuration is stored (<a href="https://github.com/pulumi/pulumi/pull/986">pulumi/pulumi#986</a>). To simplify the configuration model, there is no longer a separate notion of project and workspace settings, but only stack settings. The switches <code>--all</code> and <code>--save</code> are no longer supported; any common settings across stacks must be set on each stack directly. Settings for a stack are stored in a file that is a sibling to <code>Pulumi.yaml</code>, named <code>Pulumi.&lt;stack-name&gt;.yaml</code>. On first run <code>pulumi</code>, will migrate projects from the previous configuration format to the new one. The recommended practice is that developer stacks that are not shared between team members should be added to <code>.gitignore</code>, while stack setting files for shared stacks should be checked in to source control. For more information, see the section <a href="/docs/reference/config/#config-stack">Defining and setting stack settings</a>.</p></li>
+
+<li><p>(Breaking) Eliminate the superfluous <code>:config</code> part of configuration keys (<a href="https://github.com/pulumi/pulumi/pull/995">pulumi/pulumi#995</a>). <code>pulumi</code> no longer requires configuration keys to have the string <code>:config</code> in them. Using the <code>:config</code> string in keys for the object <code>@pulumi/pulumi.Config</code> is deprecated and <code>preview</code> and <code>update</code> show warnings when it is used. Additionally, it is preferred to set keys in the form <code>aws:region</code> rather than <code>aws:config:region</code>. For compatibility, the old behavior is also supported, but will be removed in a future release. For more information, see the article <a href="/docs/reference/config/">Configuration</a>.</p></li>
+
+<li><p>(Breaking) Require provider config and improve error message when provider not installed (<a href="https://github.com/pulumi/pulumi-cloud/pull/377">pulumi/pulumi-cloud#377</a>). When using the JavaScript package <code>@pulumi/cloud</code>, you must first set the configuration value for <code>cloud:provider</code>. For instance, to target AWS, use <code>pulumi config set cloud:provider aws</code>.  Additionally, if the package <code>@pulumi/cloud-aws</code> is not included in the <code>dependencies</code> section of <code>package.json</code>, you&rsquo;ll see the following error message. For more information, see <a href="/docs/reference/javascript/#npm-packages">Pulumi npm packages</a>.</p>
+
+<pre><code>Attempted to load the 'aws' implementation of '@pulumi/cloud',
+but no '@pulumi/cloud-aws' module is installed. Install it now
+or select another provider implementation with the &quot;cloud:config:provider&quot; setting.
+</code></pre></li>
+
+<li><p>(Breaking) Use plural names for array-typed values (<a href="https://github.com/pulumi/pulumi-aws/pull/146">pulumi/pulumi-aws#146</a>) and (<a href="https://github.com/pulumi/pulumi-terraform/pull/123">pulumi/pulumi-terraform#123</a>). API properties that are array-typed now have a plural name. For example, the property is <code>aws.cloudfront.Distribution.cacheBehaviors</code> (plural), rather than <code>cacheBehavior</code> (singular).</p></li>
+
+<li><p>(Breaking) Project array with one element as nested struct instead of array (<a href="https://github.com/pulumi/pulumi-terraform/pull/122">pulumi/pulumi-terraform#122</a>). The API is now improved for properties that were previously array typed but accepted exactly one value. These properties are now nested structs instead of an array. For example, the properties <code>clusterConfig</code>, <code>ebsOptions</code> and <code>snapshotOptions</code> in <code>aws.elasticsearch.Domain</code> are no longer array-typed.</p></li>
+
+<li><p>(Breaking) Modules are treated as normal values when serialized (<a href="https://github.com/pulumi/pulumi/pull/1030">pulumi/pulumi#1030</a>). If you need to use a module at runtime, consider either using <code>require</code> or <code>await import</code> at runtime, or pre-compute what you need and capture the resulting data or objects.</p></li>
+</ul>
+
+<!-- NOTE: the programming-model article below is still all todos. -->
+
+<ul>
+<li><p>(Breaking) Serialize resource registration after inputs resolve (<a href="https://github.com/pulumi/pulumi/pull/964">pulumi/pulumi#964</a>). Previously, resources were most often created/updated in the order they were seen during the Pulumi program execution. In preparation for supporting parallel resource operations, these operations now run in an order that respects the dependencies between resources (via <a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#Output"><code>Output</code></a>), but may not match the order of program execution. This is mostly transparent to Pulumi program authors, but does mean that any missing dependencies will cause your program to fail in unexpected ways. For more information on how such failures manifest and what to do about them, see the article <a href="/docs/reference/programming-model/">Programming Model</a>.</p></li>
+
+<li><p>Hide secrets from CLI output (<a href="https://github.com/pulumi/pulumi/pull/1002">pulumi/pulumi#1002</a>). To prevent secret values from being accidentally disclosed in command output or logs, <code>pulumi</code> replaces secret values with the string <code>[secret]</code>. Inspired by the behavior of <a href="https://travis-ci.org/">Travis CI</a>.</p></li>
+
+<li><p>Change default of where stacks are created (<a href="https://github.com/pulumi/pulumi/pull/971">pulumi/pulumi#971</a>). If currently logged in to the Pulumi CLI, <code>stack init</code> creates a managed stack; otherwise, it creates a local stack. To force a local or remote stack, use the flags <code>--local</code> or <code>--remote</code>.</p></li>
+
+<li><p>Use the same load balancer port as exposed on the underlying <code>cloud.Service</code> (<a href="https://github.com/pulumi/pulumi-cloud/pull/395">pulumi/pulumi-cloud#395</a>). By default, the port exposed by a <code>cloud.Service</code> load balancer is the same as the container port. There is also a new <code>target</code> port property which allows exposing a different port than the internal container port. Note that this may cause surprising resource updates or replacements upon your next update after adopting v0.11.0 of the SDK. Such updates should be handled transparently by Pulumi, with no downtime.</p></li>
+</ul>
+
+<h3 id="fixed-15">Fixed</h3>
+
+<ul>
+<li><p>In <code>cloud.Service</code>, wait for ECS services to reach a steady state (<a href="https://github.com/pulumi/pulumi-cloud/pull/396">pulumi/pulumi-cloud#396</a>). Previously, when a <code>cloud.Service</code> resource was updated (for example, to point to a new container image), the update operation did not wait for the underlying service to reach a new steady state, but only waited for the service update to start. Now, <code>pulumi up</code> waits for the service to reach a new steady state, ensuring that the service is in a healthy state before continuing to make further changes to your infrastructure.</p></li>
+
+<li><p>Improve error messages output by the CLI (<a href="https://github.com/pulumi/pulumi/pull/1011">pulumi/pulumi#1011</a>). RPC endpoint errors have been improved. Errors such as &ldquo;catastrophic error&rdquo; and &ldquo;fatal error&rdquo; are no longer duplicated in the output.</p></li>
+
+<li><p>Produce better error messages when the main module is not found (<a href="https://github.com/pulumi/pulumi/pull/976">pulumi/pulumi#976</a>). If you&rsquo;re running TypeScript but have not run <code>tsc</code> or your main JavaScript file does not exist, the CLI will print a helpful <code>info:</code> message that points to the possible source of the error.</p></li>
+</ul>
+
+<h2 id="v10">v0.10.0</h2>
+
+<p>Released on February 27, 2018</p>
+
+<blockquote>
+<p><strong>Note:</strong> The v0.10.0 SDK has a strict dependency on Node.js 6.10.2.</p>
+</blockquote>
+
+<h3 id="added-17">Added</h3>
+
+<h4 id="pulumi-cli-and-sdk">Pulumi CLI and SDK</h4>
+
+<ul>
+<li><p>Support &ldquo;force&rdquo; option when deleting a managed stack.</p></li>
+
+<li><p>In <code>@pulumi/cloud</code>, support for creating a <code>Cluster</code> without EFS using the <code>cloud-aws:config:ecsAutoClusterUseEFS</code> config setting (<a href="https://github.com/pulumi/pulumi-cloud/issues/175">pulumi-cloud#175</a>)</p></li>
+
+<li><p>Add a <code>pulumi history</code> command (<a href="https://github.com/pulumi/pulumi/issues/636">pulumi#636</a>). For a managed stack, use the <code>pulumi history</code> to view deployments of that stack&rsquo;s resources.</p></li>
+</ul>
+
+<h4 id="pulumi-console-1">Pulumi Console</h4>
+
+<ul>
+<li><p>Show deployment history for a stack in Pulumi Console.</p></li>
+
+<li><p>Display AWS console links in the Pulumi Console.
+Deep links to the AWS console are now displayed for the following types of resources: API Gateway, CloudWatch (event targets, log groups, and log subscription filter), DynamoDB tables, IAM roles and role policy attachments, Lambda functions, S3 buckets, and SNS topics and subscriptions.</p></li>
+</ul>
+
+<h3 id="v10-changed">Changed</h3>
+
+<h4 id="pulumi-cli-and-sdk-1">Pulumi CLI and SDK</h4>
+
+<ul>
+<li><p>(Breaking) Use <code>npm install</code> instead of <code>npm link</code> to reference the Pulumi SDK <code>@pulumi/aws</code>, <code>@pulumi/cloud</code>, <code>@pulumi/cloud-aws</code>. For more information, see <a href="/docs/reference/javascript/#npm-packages">Pulumi npm packages</a>.</p></li>
+
+<li><p>(Breaking) Explicitly track resource dependencies via <code>Input</code> and <code>Output</code> types. This enables future improvements to the Pulumi development experience, such as parallel resource creation and enhanced dependency visualization. When a resource is created, all of its output properties are instances of a new type <a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#Output"><code>pulumi.Output&lt;T&gt;</code></a>. <code>Output&lt;T&gt;</code> contains both the value of the resource property and metadata that tracks resource dependencies. Inputs to a resource now accept <code>Output&lt;T&gt;</code> in addition to <code>T</code> and <code>Promise&lt;T&gt;</code>.</p></li>
+</ul>
+
+<h4 id="pulumi-console-2">Pulumi Console</h4>
+
+<ul>
+<li><p>Show parent/child relationships for resource components in the UI.</p></li>
+
+<li><p>Pulumi Console is stack-oriented, not repo-oriented. The Pulumi Console now displays a view of all stacks in a table, rather than displaying a hierarchy of organization, repo, project, and stack.</p></li>
+</ul>
+
+<h3 id="fixed-16">Fixed</h3>
+
+<h4 id="beta-pulumi-com-service">beta.pulumi.com service</h4>
+
+<ul>
+<li>Support for zero-downtime updates of the <strong>beta.pulumi.com</strong> service. Within a tenant, deployments are further isolated from each other so that concurrent deployments do not share compute resources. Requests to get stack logs, update logs, and stack history are now always responsive, regardless of whether are are active deployments.</li>
+</ul>
+
+<h4 id="pulumi-cli-and-sdk-2">Pulumi CLI and SDK</h4>
+
+<ul>
+<li>Make change detection more accurate for complex values (<a href="https://github.com/pulumi/pulumi-terraform/issues/99">pulumi-terraform#99</a>).</li>
+<li>In <code>@pulumi/cloud</code>, ensure <code>Deployment</code> is recreated on all changes to API body. (<a href="https://github.com/pulumi/pulumi-cloud/issues/360">pulumi-cloud#360</a>)</li>
+<li>In <code>@pulumi/cloud</code>, <code>Task.run</code> does not throw an error when running the task fails (<a href="https://github.com/pulumi/pulumi-cloud/issues/368">pulumi-cloud#368</a>)</li>
+<li>In <code>@pulumi/cloud</code>, when creating <code>Cluster</code>, sporadic failure to create requested number of EC2 instances (<a href="https://github.com/pulumi/pulumi-cloud/issues/195">pulumi-cloud#195</a>)</li>
+<li>When using managed stacks, get an HTTP 500 error if you try to remove a non-empty stack (<a href="https://github.com/pulumi/pulumi-ppc/issues/111">pulumi-ppc#111</a>)</li>
+<li>Managed stacks sometimes return a 500 error when requesting logs (<a href="https://github.com/pulumi/pulumi-service/issues/662">pulumi-service#662</a>)</li>
+<li>Error when using <code>float64</code> attributes using SDK v0.9.9 (<a href="https://github.com/pulumi/pulumi-terraform/issues/95">pulumi-terraform#95</a>)</li>
+<li><code>pulumi logs</code> entries only return first line (<a href="https://github.com/pulumi/pulumi/issues/857">pulumi#857</a>)</li>
+</ul>
+
+<h2 id="v913">v0.9.13</h2>
+
+<p>Released on February 7, 2018</p>
+
+<h3 id="added-18">Added</h3>
+
+<ul>
+<li><p>Added the ability to control the upload context to the Pulumi Service. You may now set a <code>context</code> property in <code>Pulumi.yaml</code>, which is combined with the location of <code>Pulumi.yaml</code>. This new path is the root of what is uploaded and can be used during deployment. This allows you to, for example, share common code that is located in a folder in your source tree above the directory <code>Pulumi.yaml</code> for the project you are deploying.</p></li>
+
+<li><p>Added additional configuration for docker builds for a container. The <code>build</code> property of a container may now either be a string (which is treated as a path to the folder to do a <code>docker build</code> in) or an object with properties <code>context</code>, <code>dockerfile</code> and <code>args</code>, which are passed to <code>docker build</code>. If unset, <code>context</code> defaults to the current working directory, <code>dockerfile</code> defaults to <code>Dockerfile</code> and <code>args</code> default to no arguments.</p></li>
+</ul>
+
+<h2 id="v911">v0.9.11</h2>
+
+<p>Released on January 22, 2018</p>
+
+<h3 id="added-19">Added</h3>
+
+<ul>
+<li><p>Added the ability to import or export a stack&rsquo;s deployment in the Pulumi CLI. This command can be used for either local or managed stacks. There are two new verbs under the command <code>stack</code>:</p>
+
+<ul>
+<li><code>export</code> writes the current stack&rsquo;s latest deployment to stdout in JSON format.</li>
+<li><code>import</code> reads a new JSON deployment from stdin and applies it to the current stack.</li>
+</ul></li>
+
+<li><p>A basic progress spinner is displayed during deployment operations.</p>
+
+<ul>
+<li>When the Pulumi CLI is run in interactive mode, it displays an animated ASCII spinner</li>
+<li>When run in non-interactive mode, CLI prints a message that it is still working. For CI systems that kill jobs when there is no CLI output (such as TravisCI), this eliminates the need to create shell scripts that periodically print output.</li>
+</ul></li>
+
+<li><p>[@pulumi/cloud] Support for ACM certificates on HttpEndpoint. The AWS implementation of <code>HttpEndpoint#attachCustomDomain</code> accepts an ACM cert in place of raw certificate material, making it much easier to use <code>HttpEndpoint</code> with custom domains.</p></li>
+
+<li><p>[@pulumi/cloud] Added <code>HttpEndpoint#proxy</code> function to provide routes on an HTTP endpoint which redirect to a URL or <code>cloud.Endpoint</code>.</p></li>
+
+<li><p>[@pulumi/cloud] Added <code>Response#getHeader</code> function.</p></li>
+
+<li><p>[@pulumi/cloud-aws] Many new config settings have been added to enable overriding defaults for Network and Cluster configuration - both for auto clusters and for externally provided networks and clusters.</p></li>
+</ul>
+
+<h3 id="changed-7">Changed</h3>
+
+<ul>
+<li><p>To make the behavior of local and managed stacks consistent, the Pulumi CLI uses a separate encryption key for each stack, rather than one shared for all stacks. You can now use a different passphrase for different stacks. Similar to managed stacks, you cannot copy and paste an encrypted value from one stack to another in <code>Pulumi.yaml</code>. Instead you must manage the value via <code>pulumi config</code>.</p></li>
+
+<li><p>The default behavior for <code>--color</code> is now <code>always</code>. To change this, specify <code>--color always</code> or <code>--color never</code>. Previously, the value was based on the presence of the flag <code>--debug</code>.</p></li>
+
+<li><p>The command <code>pulumi logs</code> now defaults to returning one hour of logs and outputs the start time that is  used.</p></li>
+
+<li><p>[pulumi-aws] Auto-name ElasticSearch domain name, following the naming restrictions documented in <a href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-datatypes-domainname">Amazon Elasticsearch documentation for DomainName</a>.</p></li>
+
+<li><p>[pulumi-cloud] Header names are now normalized (using toLowerCase) for HttpEndpoint.</p></li>
+
+<li><p>[pulumi-cloud] For <code>cloud.Service</code>, the default permissions for cluster EC2 instances have been reduced.</p></li>
+
+<li><p>[pulumi-cloud] Pulumi now adds a <code>Name</code> tag onto instances launched into the ECS cluster.</p></li>
+
+<li><p>[pulumi-cloud] Expose additional AWS resources in <code>@pulumi/cloud-aws</code>: Topic, Timer, Table and HttpEndpoint.</p></li>
+</ul>
+
+<h3 id="fixed-17">Fixed</h3>
+
+<ul>
+<li>When a stack is removed, <code>pulumi</code> now deletes any configuration it had saved in either the <code>Pulumi.yaml</code> file or the workspace.</li>
+</ul>
+
+<h2 id="v0-9-8">v0.9.8</h2>
+
+<p>Released on December 28, 2017</p>
+
+<h3 id="added-20">Added</h3>
+
+<h4 id="pulumi-console-and-managed-stacks">Pulumi Console and managed stacks</h4>
+
+<p>New in this release is the <a href="https://app.pulumi.com">Pulumi Console</a> and stacks that are managed by Pulumi. This is the recommended way to safely deploy cloud applications.
+- <code>pulumi stack init</code> now creates a Pulumi managed stack. For a local stack, use <code>--local</code>.
+- All Pulumi CLI commands now work with managed stacks. Login to Pulumi via <code>pulumi login</code>.
+- The <a href="https://app.pulumi.com">Pulumi Console</a> provides a management experience for stacks. You can view the currently deployed resources (along with the AWS ARNs) and see logs from the last update operation.</p>
+
+<h4 id="components-and-output-properties">Components and output properties</h4>
+
+<ul>
+<li>Support for component resources(<a href="https://github.com/pulumi/pulumi/issues/340">pulumi #340</a>), enabling grouping of resources into logical components. This provides an improved view of resources during <code>preview</code> and <code>update</code> operations in the CLI (<a href="https://github.com/pulumi/pulumi/issues/417">pulumi #417</a>).</li>
+</ul>
+
+<pre><code>  + pulumi:pulumi:Stack: (create)
+     [urn=urn:pulumi:donna-testing::url-shortener::pulumi:pulumi:Stack::url-shortener-donna-testing]
+     + cloud:table:Table: (create)
+        [urn=urn:pulumi:donna-testing::url-shortener::cloud:table:Table::urls]
+        + aws:dynamodb/table:Table: (create)
+              [urn=urn:pulumi:donna-testing::url-shortener::cloud:table:Table$aws:dynamodb/table:Table::urls]
+</code></pre>
+
+<ul>
+<li>A stack can have <em>output properties</em>, defined as <code>export let varName = val</code>. You can view the last deployed value for the output property using <code>pulumi stack output varName</code> or in the Pulumi Console.</li>
+</ul>
+
+<h4 id="resource-naming">Resource naming</h4>
+
+<p>Resource naming is now more consistent, but there is a new file format for checkpoint files for both local and managed stacks.</p>
+
+<blockquote>
+<p>If you created stacks in the 0.8 release, you should destroy them with the 0.8 CLI, then recreate with the 0.9.x CLI.</p>
+</blockquote>
+
+<h4 id="support-for-configuration-secrets">Support for configuration secrets</h4>
+
+<ul>
+<li>Store secrets securely in configuration via <code>pulumi config set --secret</code>. chris</li>
+<li>The verbs for <code>config</code> are now consistent, via <code>get</code>, <code>set</code>, and <code>rm</code>. See <a href="https://github.com/pulumi/pulumi/issues/552">Consistent config verbs #552</a>.</li>
+</ul>
+
+<h4 id="logging">Logging</h4>
+
+<ul>
+<li>[<strong>experimental</strong>] Support for the <code>pulumi logs</code> command (<a href="https://github.com/pulumi/pulumi/issues/527">pulumi #527</a>). Unified logging is available in all of the <code>@pulumi/cloud</code> components (<a href="https://github.com/pulumi/pulumi-cloud/issues/40">pulumi-cloud #40</a>). These features now work:
+
+<ul>
+<li>To see new logs as they arrive, use <code>--follow</code></li>
+<li>Use <code>--since</code> to limit to recent logs, such as <code>pulumi logs --since=1h</code></li>
+<li>Filter to specific resources with <code>--resource</code>. This filters to a particular component and its child resources (if any), such as <code>pulumi logs --resource examples-todoc57917fa --since 1h</code></li>
+</ul></li>
+</ul>
+
+<h4 id="other-features">Other features</h4>
+
+<ul>
+<li>Support for <code>.pulumiignore</code>, for files that should not be uploaded when deploying a managed stack through Pulumi. <a href="https://github.com/pulumi/pulumi-service/issues/122">pulumi-service #122</a></li>
+<li><a href="https://github.com/pulumi/pulumi/issues/575">Allow overriding a <code>Pulumi.yaml</code>&rsquo;s entry point #575</a>. To specify the entry directory, specify <code>main</code> in <code>Pulumi.yaml</code>. For instance, <code>main: a/path/to/main/</code>.</li>
+<li>Support for <em>protected</em> resources. A resource can be marked as <code>protect: true</code>, which prevents deletion of the resource. For example, <code>let res = new MyResource(&quot;precious&quot;, { .. }, { protect: true });</code>. To &ldquo;unprotect&rdquo; the resource, change <code>protect: false</code> then run <code>pulumi up</code>. See <a href="https://github.com/pulumi/pulumi/issues/689">Allow resources to be flagged &ldquo;protected&rdquo; #689</a>.</li>
+<li>Changed defaults for workspace and stack configuration. See <a href="https://github.com/pulumi/pulumi/issues/714">Workspace configuration is error prone #714</a>.</li>
+<li>Allow configuring the number of availability zones in auto-cluster via the setting <code>cloud-aws:config:ecsAutoClusterNumberOfAZs</code>. See <a href="https://github.com/pulumi/pulumi-cloud/issues/300">Provide config for auto-cluster&rsquo;s number of availability zones #300</a>.</li>
+<li><a href="https://github.com/pulumi/pulumi/issues/693">Save configuration under the stack by default</a>.</li>
+<li><a href="https://github.com/pulumi/pulumi-service/issues/372">Create an endpoint for downloading the Pulumi SDK via beta.pulumi.com #372</a>.</li>
+</ul>
+
+<h3 id="fixed-18">Fixed</h3>
+
+<ul>
+<li>Improved SDK installer. It automatically creates directories as needed, configures node modules, and prints out friendly error messages. (<a href="https://github.com/pulumi/home/issues/49">pulumi-home #49</a>, <a href="https://github.com/pulumi/home/issues/52">pulumi-home #52</a>, <a href="https://github.com/pulumi/home/issues/53">pulumi-home #53</a>, <a href="https://github.com/pulumi/home/issues/54">pulumi-home #54</a>, <a href="https://github.com/pulumi/home/issues/69">pulumi-home #69</a>)</li>
+<li><a href="https://github.com/pulumi/pulumi-cloud/issues/152">Switch to use `--password-stdin` on Docker CLI #152</a></li>
+<li><a href="https://github.com/pulumi/pulumi/issues/454">Better diffing in CLI output, especially for Lambdas #454</a></li>
+<li><a href="https://github.com/pulumi/pulumi-cloud/issues/93">Aggregate container logs into shared pulumi-app-log-collector #93</a></li>
+<li><a href="https://github.com/pulumi/pulumi-cloud/issues/44">Implement strong read consistency on cloud.Table #44</a></li>
+<li><a href="https://github.com/pulumi/pulumi-service/issues/309">Improved error when Docker is not running #309</a></li>
+<li>Add an HTTP cache for GitHub API requests for a user&rsquo;s organization membership. See <a href="https://github.com/pulumi/pulumi-service/issues/413">Exhausting GitHub rate limiting requests on behalf of users #413</a>.</li>
+<li><a href="https://github.com/pulumi/pulumi/issues/667"><code>main</code> does not set working dir correctly for Lambda zip #667</a></li>
+<li><a href="https://github.com/pulumi/pulumi/issues/640">Better error when invalid access token is used in <code>pulumi login</code> #640</a></li>
+<li><a href="https://github.com/pulumi/pulumi/issues/647">Eliminate the top-level Stack from all URNs #647</a></li>
+<li><a href="https://github.com/pulumi/pulumi-service/issues/368">Improve performance of &ldquo;cold&rdquo; requests to PPC #368</a></li>
+<li><a href="https://github.com/pulumi/pulumi-ppc/issues/112">Store user account credentials safely #112</a></li>
+<li><a href="https://github.com/pulumi/pulumi-service/issues/221">Service API for Encrypting and Decrypting secrets #221</a></li>
+<li><a href="https://github.com/pulumi/pulumi/issues/763">Make CLI resilient to network flakiness #763</a></li>
+<li><a href="https://github.com/pulumi/pulumi-ppc/issues/152">Some PPC messages aren&rsquo;t colorized #152</a></li>
+<li><a href="https://github.com/pulumi/pulumi-service/issues/431">Support &ndash;since and &ndash;resource on <code>pulumi logs</code> when targeting the service #431</a></li>
+<li><a href="https://github.com/pulumi/pulumi/issues/694">Pulumi unable to serialize non-integers #694</a></li>
+<li><a href="https://github.com/pulumi/pulumi/issues/660">Stop buffering CLI output #660</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

@@ -1,0 +1,1142 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/blog/create-secure-jupyter-notebooks-on-kubernetes-using-pulumi/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+        
+            
+            
+                
+                    <meta name="twitter:creator" content="@nishidavidson">
+                
+            
+        
+    
+
+    
+        <meta property="og:title" content="Create Secure Jupyter Notebooks on Kubernetes using Pulumi">
+    
+
+    
+        <meta name="description" content="In this post, we will work through an example that shows how to use Pulumi to create Jupyter
+Notebooks on Kubernetes. Having worked on Kubernetes since 2015, a couple of critical benefits
+jump out that may resonate with you as well:
+
+
+You write everything in code - TypeScript in our example here.
+You need not initialize Tiller or Helm to work with existing Helm charts like
+nginx-ingress-controller that we use here.
+The security patterns in Helm and Tiller are no longer concerns, rather you get to focus on the
+RBAC of the actual service which is Jupyter-notebook in this example.
+You accomplish more with less YAML and iteratively work towards your use cases.
+">
+        <meta property="og:description" content="In this post, we will work through an example that shows how to use Pulumi to create Jupyter
+Notebooks on Kubernetes. Having worked on Kubernetes since 2015, a couple of critical benefits
+jump out that may resonate with you as well:
+
+
+You write everything in code - TypeScript in our example here.
+You need not initialize Tiller or Helm to work with existing Helm charts like
+nginx-ingress-controller that we use here.
+The security patterns in Helm and Tiller are no longer concerns, rather you get to focus on the
+RBAC of the actual service which is Jupyter-notebook in this example.
+You accomplish more with less YAML and iteratively work towards your use cases.
+">
+    
+
+    
+    
+        
+            
+        
+    
+    <meta property="og:image" content="/blog/create-secure-jupyter-notebooks-on-kubernetes-using-pulumi/post-image-jupyter.png">
+
+    <title>Create Secure Jupyter Notebooks on Kubernetes using Pulumi - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/blog/create-secure-jupyter-notebooks-on-kubernetes-using-pulumi/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+        
+            
+                
+            
+        
+        
+    
+</head>
+
+    <body class="section-blog">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+            <div class="md:w-3/12 pr-8">
+                
+<aside class="md:pr-8">
+
+    
+    <div class="md:hidden">
+        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </div>
+
+    <h3 class="no-anchor hidden md:flex mt-4">
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </h3>
+
+    
+    <div class="blog-sidebar-content hidden md:block">
+        <div class="bg-gray-100 rounded-lg p-4 my-6 text-gray-700">
+            <h5 class="no-anchor text-gray-700">Program the Cloud</h5>
+            <p class="text-sm my-0">
+                Create, deploy, and manage cloud infrastructure using your favorite language.
+            </p>
+        </div>
+
+        <ul class="list-none p-0 mb-4 inline-flex flex-wrap text-xs">
+            
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/apigateway/">
+                            apigateway
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/applications/">
+                            applications
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/auth/">
+                            auth
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/aws/">
+                            aws
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/azure/">
+                            azure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/ci/cd/">
+                            ci/cd
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/cloud-native/">
+                            cloud-native
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/containers/">
+                            containers
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/customer/">
+                            customer
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/digitalocean/">
+                            digitalocean
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/docker/">
+                            docker
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/eks/">
+                            eks
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/events/">
+                            events
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/features/">
+                            features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/gcp/">
+                            gcp
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/gke/">
+                            gke
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/infrastructure/">
+                            infrastructure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/javascript/">
+                            javascript
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/jupyter/">
+                            jupyter
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/kubernetes/">
+                            kubernetes
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/lambda/">
+                            lambda
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/logging/">
+                            logging
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/mysql/">
+                            mysql
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/new-features/">
+                            new-features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/pulumi/">
+                            pulumi
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/pulumi-news/">
+                            pulumi-news
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/python/">
+                            python
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/security/">
+                            security
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/serverless/">
+                            serverless
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/testing/">
+                            testing
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/typescript/">
+                            typescript
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="hidden lg:block my-4">
+            <h5 class="no-anchor">Recent Posts</h5>
+            <ul class="list-none p-0">
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/day-2-kubernetes-migrating-eks-nodegroups-with-zero-downtime/">Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime</a>
+                        </li>
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/getting-started-on-digitalocean-with-pulumi/">Getting Started on DigitalOcean with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/pulumi-meetup-recap-apis-custom-resources-and-github-webhooks/">Pulumi Meetup Recap: APIs, Custom Resources and GitHub Webhooks</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks/">Persisting Kubernetes workloads with Amazon EFS CSI volumes using Pulumi open source SDKs</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/unit-testing-infrastructure-in-nodejs-and-mocha/">Unit Testing Your Infrastructure with Node.js and Mocha</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/kubernetes-ingress-with-aws-alb-ingress-controller-and-pulumi-crosswalk/">Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included/">Globally-distributed Serverless Application in 100 Lines of Code. Infrastructure Included!</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/hosting-a-static-website-on-azure-with-pulumi/">Hosting a Static Website on Azure with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/running-containers-in-aws-the-lowdown-ecs-fargate-and-eks/">Running Containers in AWS, the Lowdown: ECS, Fargate, and EKS</a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="md:hidden pb-4">
+        
+    </div>
+</aside>
+
+            </div>
+
+            <div class="md:w-7/12">
+                <article class="mb-8 pb-8 border-b border-gray-200">
+                    <h1 class="no-anchor"><a href="/blog/create-secure-jupyter-notebooks-on-kubernetes-using-pulumi/">Create Secure Jupyter Notebooks on Kubernetes using Pulumi</a></h1>
+                    <div class="flex items-center">
+                        <span>
+                            <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="/blog/author/nishi-davidson/">
+                    <img class="w-8 rounded-full" src="/images/team/nishi-davidson.jpg" alt="Nishi Davidson" title="Nishi Davidson">
+                </a>
+                <a class="" href="/blog/author/nishi-davidson/">Nishi Davidson</a>
+            
+        </span>
+    
+</span>
+
+                        </span>
+                    </div>
+                    <section>
+                        <p>In this post, we will work through an example that shows how to use Pulumi to create Jupyter
+Notebooks on Kubernetes. Having worked on Kubernetes since 2015, a couple of critical benefits
+jump out that may resonate with you as well:</p>
+
+<ul>
+<li>You write everything in code - TypeScript in our example here.</li>
+<li>You need not initialize Tiller or Helm to work with existing Helm charts like
+<code>nginx-ingress-controller</code> that we use here.</li>
+<li>The security patterns in Helm and Tiller are no longer concerns, rather you get to focus on the
+RBAC of the actual service which is Jupyter-notebook in this example.</li>
+<li>You accomplish more with less YAML and iteratively work towards your use cases.</li>
+</ul>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+<li><a href="/docs/reference/install/">Install Pulumi</a></li>
+<li><a href="https://nodejs.org/en/download/">Install Node.js version 6 or later</a></li>
+<li>Install a package manager for Node.js, such as <a href="https://www.npmjs.com/get-npm">npm</a> or <a href="https://yarnpkg.com/en/docs/install">Yarn</a></li>
+<li><a href="https://cloud.google.com/sdk/docs/downloads-interactive">Install Google Cloud SDK</a></li>
+<li><a href="https://helm.sh/docs/using_helm/#installing-helm">Install Helm</a> and only initialize with <code>helm init —client-only</code></li>
+</ul>
+
+<p>We will work this example on a GKE cluster so lets first configure GCP Auth:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ gcloud auth login
+$ gcloud config <span class="nb">set</span> project &lt;YOUR_GCP_PROJECT_HERE&gt;
+$ gcloud auth application-default login</code></pre></div>
+<h2 id="step-1-create-a-pulumi-project-and-stack-with-a-pulumi-typescript-template">Step 1: Create a Pulumi Project and Stack with a Pulumi TypeScript Template</h2>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ mkdir gke-jupyter-notebook <span class="o">&amp;&amp;</span> <span class="nb">cd</span> gke-jupyter-notebook
+$ pulumi new typescript
+$ npm install --save @pulumi/kubernetes @pulumi/gcp</code></pre></div>
+<h2 id="step-2-create-a-gke-cluster">Step 2: Create a GKE Cluster</h2>
+
+<p>To create a GKE cluster, simply update the following code in <code>index.ts</code> file and run <code>pulumi up</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">k8s</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/kubernetes&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">pulumi</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/pulumi&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">gcp</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/gcp&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">readFileSync</span><span class="p">,</span> <span class="nx">fstat</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;fs&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;jupyter-notebook&#34;</span><span class="p">;</span>
+
+<span class="cm">/*
+</span><span class="cm"> * STEP 2: Create a GKE Cluster
+</span><span class="cm"> */</span>
+<span class="kr">const</span> <span class="nx">engineVersion</span> <span class="o">=</span> <span class="nx">gcp</span><span class="p">.</span><span class="nx">container</span><span class="p">.</span><span class="nx">getEngineVersions</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">v</span> <span class="o">=&gt;</span> <span class="nx">v</span><span class="p">.</span><span class="nx">latestMasterVersion</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">cluster</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">gcp</span><span class="p">.</span><span class="nx">container</span><span class="p">.</span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">initialNodeCount</span>: <span class="kt">2</span><span class="p">,</span>
+    <span class="nx">minMasterVersion</span>: <span class="kt">engineVersion</span><span class="p">,</span>
+    <span class="nx">nodeVersion</span>: <span class="kt">engineVersion</span><span class="p">,</span>
+    <span class="nx">nodeConfig</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">machineType</span><span class="o">:</span> <span class="s2">&#34;n1-standard-1&#34;</span><span class="p">,</span>
+        <span class="nx">oauthScopes</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&#34;https://www.googleapis.com/auth/compute&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;https://www.googleapis.com/auth/devstorage.read_only&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;https://www.googleapis.com/auth/logging.write&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;https://www.googleapis.com/auth/monitoring&#34;</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+<span class="p">});</span>
+
+<span class="c1">// Export the Cluster name
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">clusterName</span> <span class="o">=</span> <span class="nx">cluster</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+
+<span class="c1">// Manufacture a GKE-style kubeconfig. 
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">kubeconfig</span> <span class="o">=</span> <span class="nx">pulumi</span><span class="p">.</span>
+    <span class="nx">all</span><span class="p">([</span> <span class="nx">cluster</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">cluster</span><span class="p">.</span><span class="nx">endpoint</span><span class="p">,</span> <span class="nx">cluster</span><span class="p">.</span><span class="nx">masterAuth</span> <span class="p">]).</span>
+    <span class="nx">apply</span><span class="p">(([</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">endpoint</span><span class="p">,</span> <span class="nx">masterAuth</span> <span class="p">])</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">context</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">gcp</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">project</span><span class="si">}</span><span class="sb">_</span><span class="si">${</span><span class="nx">gcp</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">zone</span><span class="si">}</span><span class="sb">_</span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+        <span class="k">return</span> <span class="sb">`apiVersion: v1
+</span><span class="sb">clusters:
+</span><span class="sb">- cluster:
+</span><span class="sb">    certificate-authority-data: </span><span class="si">${</span><span class="nx">masterAuth</span><span class="p">.</span><span class="nx">clusterCaCertificate</span><span class="si">}</span><span class="sb">
+</span><span class="sb">    server: https://</span><span class="si">${</span><span class="nx">endpoint</span><span class="si">}</span><span class="sb">
+</span><span class="sb">  name: </span><span class="si">${</span><span class="nx">context</span><span class="si">}</span><span class="sb">
+</span><span class="sb">contexts:
+</span><span class="sb">- context:
+</span><span class="sb">    cluster: </span><span class="si">${</span><span class="nx">context</span><span class="si">}</span><span class="sb">
+</span><span class="sb">    user: </span><span class="si">${</span><span class="nx">context</span><span class="si">}</span><span class="sb">
+</span><span class="sb">  name: </span><span class="si">${</span><span class="nx">context</span><span class="si">}</span><span class="sb">
+</span><span class="sb">current-context: </span><span class="si">${</span><span class="nx">context</span><span class="si">}</span><span class="sb">
+</span><span class="sb">kind: Config
+</span><span class="sb">preferences: {}
+</span><span class="sb">users:
+</span><span class="sb">- name: </span><span class="si">${</span><span class="nx">context</span><span class="si">}</span><span class="sb">
+</span><span class="sb">  user:
+</span><span class="sb">    auth-provider:
+</span><span class="sb">      config:
+</span><span class="sb">        cmd-args: config config-helper --format=json
+</span><span class="sb">        cmd-path: gcloud
+</span><span class="sb">        expiry-key: &#39;{.credential.token_expiry}&#39;
+</span><span class="sb">        token-key: &#39;{.credential.access_token}&#39;
+</span><span class="sb">      name: gcp
+</span><span class="sb">`</span><span class="p">;</span>
+    <span class="p">});</span>
+
+<span class="c1">// Create a Kubernetes provider instance that uses our cluster from above.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">clusterProvider</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="p">{</span> <span class="nx">kubeconfig</span>: <span class="kt">kubeconfig</span> <span class="p">});</span></code></pre></div>
+<h2 id="step-3-create-a-nginx-ingress-controller-to-generate-ingresses">Step 3: Create a NGINX-Ingress-Controller to Generate Ingresses</h2>
+
+<p>You can use the default L7 load balancer in GCP but here we add an NGINX-Ingress-Controller to
+the cluster. With Pulumi, you write four lines of typescript to reuse the stable NGINX ingress
+controller helm chart and have the controller, default backends, RBAC, Service account, Config
+map all running within seconds.</p>
+
+<p>Add the following lines of code in <code>index.ts</code> file and run <code>pulumi up</code> once again.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="cm">/*
+</span><span class="cm"> * STEP 3: Create NGINX Ingress Controller in GKE
+</span><span class="cm"> */</span>
+
+<span class="kr">const</span> <span class="nx">nginxingresscntlr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">helm</span><span class="p">.</span><span class="nx">v2</span><span class="p">.</span><span class="nx">Chart</span><span class="p">(</span><span class="s2">&#34;nginxingresscontroller&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">repo</span><span class="o">:</span> <span class="s2">&#34;stable&#34;</span><span class="p">,</span>
+    <span class="nx">chart</span><span class="o">:</span> <span class="s2">&#34;nginx-ingress&#34;</span><span class="p">,</span>
+    <span class="nx">version</span><span class="o">:</span> <span class="s2">&#34;0.24.1&#34;</span><span class="p">,</span>
+    <span class="nx">values</span><span class="o">:</span> <span class="p">{},</span>
+<span class="p">},</span> <span class="p">{</span> <span class="nx">providers</span><span class="o">:</span> <span class="p">{</span> <span class="nx">kubernetes</span>: <span class="kt">clusterProvider</span> <span class="p">}</span> <span class="p">});</span> </code></pre></div>
+
+<h2 id="step-4-create-a-jupyter-notebook-deployment-and-service-with-type-nodeport">Step 4: Create a Jupyter Notebook Deployment and Service with Type NodePort</h2>
+
+<p>Bringing up Jupyter notebook deployment and service requires adding the following lines of code in
+<code>index.ts</code> file and running <code>pulumi up</code> to apply the changes.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="cm">/*
+</span><span class="cm"> * STEP 4: Create Jupyter notebook deployment and service in the GKE cluster
+</span><span class="cm"> */</span>
+
+<span class="kr">const</span> <span class="nx">appName</span> <span class="o">=</span> <span class="s2">&#34;jupyter-notebook&#34;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">appLabels</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">app</span>: <span class="kt">appName</span> <span class="p">};</span>
+<span class="kr">const</span> <span class="nx">jupyterNotebook</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">apps</span><span class="p">.</span><span class="nx">v1beta1</span><span class="p">.</span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">appName</span><span class="p">,</span> <span class="p">{</span>
+      <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">name</span>: <span class="kt">appName</span><span class="p">,</span> <span class="nx">labels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+      <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">selector</span><span class="o">:</span> <span class="p">{</span> <span class="nx">matchLabels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+          <span class="nx">replicas</span>: <span class="kt">1</span><span class="p">,</span>
+          <span class="nx">template</span><span class="o">:</span> <span class="p">{</span>
+              <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span>: <span class="kt">appLabels</span> <span class="p">},</span>
+              <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span> 
+                  <span class="nx">containers</span><span class="o">:</span> <span class="p">[</span>
+                      <span class="p">{</span> 
+                        <span class="nx">name</span>: <span class="kt">appName</span><span class="p">,</span> 
+                        <span class="nx">image</span><span class="o">:</span> <span class="s2">&#34;jupyter/tensorflow-notebook&#34;</span><span class="p">,</span>
+                        <span class="nx">ports</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">containerPort</span>: <span class="kt">8888</span> <span class="p">}],</span>
+                        <span class="nx">command</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;start-notebook.sh&#34;</span><span class="p">],</span>
+                        <span class="nx">args</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;--NotebookApp.token=&#39;&#39;&#34;</span><span class="p">]</span>
+                <span class="p">}]</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">},</span> <span class="p">{</span> <span class="nx">provider</span>: <span class="kt">clusterProvider</span> <span class="p">});</span>
+
+<span class="kr">const</span> <span class="nx">jupyterService</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">core</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Service</span><span class="p">(</span><span class="nx">appName</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> 
+      <span class="nx">name</span>: <span class="kt">appName</span><span class="p">,</span>
+      <span class="nx">labels</span>: <span class="kt">appLabels</span>
+    <span class="p">},</span>
+  <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span> 
+      <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;NodePort&#34;</span><span class="p">,</span> 
+      <span class="nx">selector</span>: <span class="kt">appLabels</span><span class="p">,</span> 
+      <span class="nx">ports</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">protocol</span><span class="o">:</span> <span class="s2">&#34;TCP&#34;</span><span class="p">,</span> <span class="nx">nodePort</span>: <span class="kt">30040</span><span class="p">,</span> <span class="nx">port</span>: <span class="kt">8888</span><span class="p">,</span> <span class="nx">targetPort</span>: <span class="kt">8888</span> <span class="p">}],</span> 
+    <span class="p">}</span>
+<span class="p">},</span> <span class="p">{</span> <span class="nx">provider</span>: <span class="kt">clusterProvider</span> <span class="p">});</span></code></pre></div>
+
+<h2 id="step-5-create-a-secret-that-is-used-with-your-jupyter-notebook-domain-name">Step 5: Create a Secret that is used with your Jupyter Notebook Domain Name</h2>
+
+<p>We first create a local auth.txt file with the password using the following command:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">htpasswd -c auth.txt jupyter</code></pre></div>
+<p>We then read this file synchronously, convert it to base64 and add it as a secret in the GKE
+cluster. We use this secret as the TLS password to access the Jupyter notebook ingress endpoint
+accessible from the domain name defined in the host section of the ingress declaration. The
+annotations in the ingress declarations are required to enable this behavior on the ingress object.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"> <span class="o">*</span> <span class="nx">STEP</span> <span class="mi">5</span><span class="o">:</span> <span class="nx">Create</span> <span class="nx">a</span> <span class="nx">secret</span> <span class="nx">to</span> <span class="nx">enable</span> <span class="s2">&#34;basic-auth&#34;</span> <span class="k">for</span> <span class="nx">your</span> <span class="nx">Jupyter</span>
+ <span class="o">*</span> <span class="nx">notebook</span> <span class="nx">ingress</span> <span class="nx">and</span> <span class="nx">add</span> <span class="nx">it</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">ingress</span> <span class="nx">declaration</span> <span class="k">in</span> <span class="nx">the</span>
+ <span class="o">*</span> <span class="nx">GKE</span> <span class="nx">cluster</span>
+ <span class="o">*</span><span class="err">/</span>
+
+<span class="k">const</span> <span class="nx">authContents</span> <span class="o">=</span> <span class="p">(</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s2">&#34;&lt;path-to-auth.txt-file&gt;&#34;</span><span class="p">)).</span><span class="nx">toString</span><span class="p">()</span>
+
+<span class="kd">function</span> <span class="nx">toBase64</span><span class="p">(</span><span class="nx">s</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span><span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">Buffer</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nx">s</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="s2">&#34;base64&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">const</span> <span class="nx">authContents_base64</span> <span class="o">=</span> <span class="nx">toBase64</span><span class="p">(</span><span class="nx">authContents</span><span class="p">);</span>
+
+<span class="k">const</span> <span class="nx">jupyternotebooksecret</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">core</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Secret</span><span class="p">(</span><span class="s2">&#34;jupyter-notebook-tls&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;basic-auth&#34;</span><span class="p">,</span> <span class="nx">namespace</span><span class="o">:</span> <span class="s2">&#34;default&#34;</span> <span class="p">},</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;Opaque&#34;</span><span class="p">,</span>
+    <span class="nx">data</span><span class="o">:</span> <span class="p">{</span> 
+        <span class="nx">auth</span><span class="o">:</span> <span class="nx">authContents_base64</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">})</span> 
+
+<span class="k">export</span> <span class="k">const</span> <span class="nx">jupyternotebookingress</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">extensions</span><span class="p">.</span><span class="nx">v1beta1</span><span class="p">.</span><span class="nx">Ingress</span><span class="p">(</span><span class="nx">appName</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> 
+        <span class="nx">name</span><span class="o">:</span> <span class="nx">appName</span><span class="p">,</span>
+        <span class="nx">labels</span><span class="o">:</span> <span class="nx">appLabels</span><span class="p">,</span>
+        <span class="nx">annotations</span><span class="o">:</span> <span class="p">{</span> 
+            <span class="s2">&#34;kubernetes.io/tls-acme&#34;</span><span class="o">:</span> <span class="s2">&#34;true&#34;</span><span class="p">,</span> 
+            <span class="s2">&#34;kubernetes.io/ingress.class&#34;</span><span class="o">:</span> <span class="s2">&#34;nginx&#34;</span><span class="p">,</span> 
+            <span class="s2">&#34;nginx.ingress.kubernetes.io/auth-type&#34;</span><span class="o">:</span> <span class="s2">&#34;basic&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;nginx.ingress.kubernetes.io/auth-secret&#34;</span><span class="o">:</span> <span class="s2">&#34;basic-auth&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;nginx.ingress.kubernetes.io/auth-realm&#34;</span><span class="o">:</span> <span class="s2">&#34;Authentication Required - jupyter&#34;</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span> 
+        <span class="nx">rules</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="nx">host</span><span class="o">:</span> <span class="s2">&#34;nishidavidson.com&#34;</span><span class="p">,</span> 
+            <span class="nx">http</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">paths</span><span class="o">:</span> <span class="p">[{</span>
+                    <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/&#34;</span><span class="p">,</span> 
+                    <span class="nx">backend</span><span class="o">:</span> <span class="p">{</span> <span class="nx">serviceName</span><span class="o">:</span> <span class="s2">&#34;jupyter-notebook&#34;</span><span class="p">,</span> <span class="nx">servicePort</span><span class="o">:</span> <span class="mi">8888</span> <span class="p">}</span>
+                <span class="p">}]</span>
+            <span class="p">}</span>
+        <span class="p">}],</span>
+        <span class="nx">tls</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="nx">secretName</span><span class="o">:</span> <span class="s2">&#34;jupyter-notebook-tls&#34;</span><span class="p">,</span> 
+            <span class="nx">hosts</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;nishidavidson.com&#34;</span><span class="p">]</span>
+        <span class="p">}],</span>
+    <span class="p">}</span>
+<span class="p">},</span> <span class="p">{</span> <span class="nx">provider</span><span class="o">:</span> <span class="nx">clusterProvider</span> <span class="p">});</span>
+</code></pre></div>
+<p>Once complete, you will see the GKE cluster components show up as follows:</p>
+
+<p><img src="./gke-jupyter.png" alt="GKE and Jupyter" /></p>
+
+<p>Open a browser to access the jupyter-notebook Service using the domain name declared in the host
+section of your ingress code above. In our example, I used the domain name <code>nishidavidson.com</code>.</p>
+
+<p>When you open your DNS, you will be asked for the &ldquo;username: jupyter&rdquo; and &ldquo;password&rdquo; for the secret
+you created in auth.txt file as shown below:</p>
+
+<p><img src="./jupyter-notebook-login.png" alt="Jupyter notebook login" /></p>
+
+<p>As soon as the password is accepted, You should now be able to go to your website from anywhere in
+the world and access your password-protected Jupyter notebook running on GKE on secure SSL connection.</p>
+
+<p><img src="./jupyter-notebook-access.png" alt="Jupyter notebook access" /></p>
+
+<p>Success! We worked through a simple example of creating a GKE cluster, an NGINX ingress controller
+and stood up our password protected Jupyter notebook Ingress, Service, and Deployment with a simple
+secret for authentication.</p>
+
+<p>You can get started today using more solutions on Kubernetes from our
+<a href="https://github.com/pulumi/examples">Pulumi examples</a> repository.</p>
+                    </section>
+                    <div>
+                        <p class="text-gray-500">Posted on <time>Thursday, May 30, 2019</time>
+                        
+                        <ul class="m-0 p-0">
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/kubernetes/">
+                                    Kubernetes
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/applications/">
+                                    Applications
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/gke/">
+                                    GKE
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/jupyter/">
+                                    Jupyter
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+                </article>
+            </div>
+
+            <div class="md:w-2/12 pl-8">
+                
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

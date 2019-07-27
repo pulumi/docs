@@ -1,0 +1,1015 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/blog/simplified-outputs-in-pulumi-0.17.0/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+        
+            
+            
+                
+            
+        
+    
+
+    
+        <meta property="og:title" content="Simplified Outputs in Pulumi 0.17">
+    
+
+    
+        <meta name="description" content="Based on much feedback from cloud developers, Pulumi Outputs have been simplified for JavaScript and TypeScript making the user experience simpler while maintaining the rich dependency tracking and type checking that Pulumi has always provided for cloud infrastructure.">
+        <meta property="og:description" content="Based on much feedback from cloud developers, Pulumi Outputs have been simplified for JavaScript and TypeScript making the user experience simpler while maintaining the rich dependency tracking and type checking that Pulumi has always provided for cloud infrastructure.">
+    
+
+    
+    
+        
+            
+        
+    
+    <meta property="og:image" content="/blog/simplified-outputs-in-pulumi-0.17.0/comp-list.png">
+
+    <title>Simplified Outputs in Pulumi 0.17 - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/blog/simplified-outputs-in-pulumi-0.17.0/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+        
+            
+                
+            
+        
+        
+    
+</head>
+
+    <body class="section-blog">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+            <div class="md:w-3/12 pr-8">
+                
+<aside class="md:pr-8">
+
+    
+    <div class="md:hidden">
+        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </div>
+
+    <h3 class="no-anchor hidden md:flex mt-4">
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </h3>
+
+    
+    <div class="blog-sidebar-content hidden md:block">
+        <div class="bg-gray-100 rounded-lg p-4 my-6 text-gray-700">
+            <h5 class="no-anchor text-gray-700">Program the Cloud</h5>
+            <p class="text-sm my-0">
+                Create, deploy, and manage cloud infrastructure using your favorite language.
+            </p>
+        </div>
+
+        <ul class="list-none p-0 mb-4 inline-flex flex-wrap text-xs">
+            
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/apigateway/">
+                            apigateway
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/applications/">
+                            applications
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/auth/">
+                            auth
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/aws/">
+                            aws
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/azure/">
+                            azure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/ci/cd/">
+                            ci/cd
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/cloud-native/">
+                            cloud-native
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/containers/">
+                            containers
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/customer/">
+                            customer
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/digitalocean/">
+                            digitalocean
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/docker/">
+                            docker
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/eks/">
+                            eks
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/events/">
+                            events
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/features/">
+                            features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/gcp/">
+                            gcp
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/gke/">
+                            gke
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/infrastructure/">
+                            infrastructure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/javascript/">
+                            javascript
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/jupyter/">
+                            jupyter
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/kubernetes/">
+                            kubernetes
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/lambda/">
+                            lambda
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/logging/">
+                            logging
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/mysql/">
+                            mysql
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/new-features/">
+                            new-features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/pulumi/">
+                            pulumi
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/pulumi-news/">
+                            pulumi-news
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/python/">
+                            python
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/security/">
+                            security
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/serverless/">
+                            serverless
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/testing/">
+                            testing
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/typescript/">
+                            typescript
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="hidden lg:block my-4">
+            <h5 class="no-anchor">Recent Posts</h5>
+            <ul class="list-none p-0">
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/day-2-kubernetes-migrating-eks-nodegroups-with-zero-downtime/">Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime</a>
+                        </li>
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/getting-started-on-digitalocean-with-pulumi/">Getting Started on DigitalOcean with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/pulumi-meetup-recap-apis-custom-resources-and-github-webhooks/">Pulumi Meetup Recap: APIs, Custom Resources and GitHub Webhooks</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks/">Persisting Kubernetes workloads with Amazon EFS CSI volumes using Pulumi open source SDKs</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/unit-testing-infrastructure-in-nodejs-and-mocha/">Unit Testing Your Infrastructure with Node.js and Mocha</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/kubernetes-ingress-with-aws-alb-ingress-controller-and-pulumi-crosswalk/">Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included/">Globally-distributed Serverless Application in 100 Lines of Code. Infrastructure Included!</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/hosting-a-static-website-on-azure-with-pulumi/">Hosting a Static Website on Azure with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/running-containers-in-aws-the-lowdown-ecs-fargate-and-eks/">Running Containers in AWS, the Lowdown: ECS, Fargate, and EKS</a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="md:hidden pb-4">
+        
+    </div>
+</aside>
+
+            </div>
+
+            <div class="md:w-7/12">
+                <article class="mb-8 pb-8 border-b border-gray-200">
+                    <h1 class="no-anchor"><a href="/blog/simplified-outputs-in-pulumi-0.17.0/">Simplified Outputs in Pulumi 0.17</a></h1>
+                    <div class="flex items-center">
+                        <span>
+                            <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="/blog/author/cyrus-najmabadi/">
+                    <img class="w-8 rounded-full" src="/images/team/cyrus-najmabadi.jpg" alt="Cyrus Najmabadi" title="Cyrus Najmabadi">
+                </a>
+                <a class="" href="/blog/author/cyrus-najmabadi/">Cyrus Najmabadi</a>
+            
+        </span>
+    
+</span>
+
+                        </span>
+                    </div>
+                    <section>
+                        
+
+<p>Pulumi allows cloud developers to use programming languages like
+JavaScript, TypeScript and Python to define and deploy cloud
+infrastructure and applications. To do this, Pulumi exposes a notion of
+<a href="/docs/reference/programming-model/#outputs">Outputs</a>
+that track how the outputs of one cloud resource are used and
+transformed as part of creating another cloud resource.</p>
+
+<p>These <code>Output</code> types are heavily used in many Pulumi application. They
+are the way that Resources expose their values and are commonly used to
+pass values from one Resource to another. <code>Outputs</code> are also a key part
+of how Pulumi tracks dependencies between resources. In fact, Outputs
+are similar to promises/futures that you may be familiar with from other
+programming models but also carry along dependency information.</p>
+
+<p>We&rsquo;ve heard a lot of feedback about how Outputs can lead
+otherwise-simple code to become hard to write and reason about. So we&rsquo;ve
+looked into what we can do to significantly simplify the experience
+working with Outputs - making the user experience simpler while
+maintaining the rich dependency tracking and type checking that Pulumi
+has always provided for cloud infrastructure.</p>
+
+<h4 id="simplifying-outputs">Simplifying Outputs</h4>
+
+<p>In 0.17.0 of the <code>@pulumi/pulumi</code> package, we&rsquo;ve made most common
+patterns for working with Outputs much simpler.</p>
+
+<p>Prior to this release of <code>@pulumi/pulumi</code> package, it was fairly common
+to have to write code like the following:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="k">const</span> <span class="nx">cert</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">acm</span><span class="p">.</span><span class="nx">Certificate</span><span class="p">(</span><span class="s2">&#34;cert&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">domainName</span><span class="o">:</span> <span class="s2">&#34;example.com&#34;</span><span class="p">,</span>
+    <span class="nx">validationMethod</span><span class="o">:</span> <span class="s2">&#34;DNS&#34;</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="k">const</span> <span class="nx">certValidation</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">route53</span><span class="p">.</span><span class="nx">Record</span><span class="p">(</span><span class="s2">&#34;cert_validation&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">records</span><span class="o">:</span> <span class="p">[</span><span class="nx">cert</span><span class="p">.</span><span class="nx">domainValidationOptions</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">domainValidationOptions</span> <span class="p">=&gt;</span> <span class="nx">domainValidationOptions</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">resourceRecordValue</span><span class="p">)],</span>
+    <span class="nx">ttl</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="nx">cert</span><span class="p">.</span><span class="nx">domainValidationOptions</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">domainValidationOptions</span> <span class="p">=&gt;</span> <span class="nx">domainValidationOptions</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">resourceRecordType</span><span class="p">),</span>
+<span class="p">});</span>
+</code></pre></div>
+
+<p>In particular, creating the aws.route53.Record involves a fair amount of
+complexity with those arrow functions. i.e.:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript">    <span class="nx">records</span><span class="o">:</span> <span class="p">[</span><span class="nx">cert</span><span class="p">.</span><span class="nx">domainValidationOptions</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">domainValidationOptions</span> <span class="p">=&gt;</span> <span class="nx">domainValidationOptions</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">resourceRecordValue</span><span class="p">)],</span>
+    <span class="nx">ttl</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="nx">cert</span><span class="p">.</span><span class="nx">domainValidationOptions</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">domainValidationOptions</span> <span class="p">=&gt;</span> <span class="nx">domainValidationOptions</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">resourceRecordType</span><span class="p">),</span>
+    <span class="nx">zoneId</span><span class="o">:</span> <span class="nx">zone</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">zone</span> <span class="p">=&gt;</span> <span class="nx">zone</span><span class="p">.</span><span class="nx">id</span><span class="p">),</span>
+</code></pre></div>
+
+<p>Yikes! This is so verbose, it doesn&rsquo;t even fit on the width of the page!</p>
+
+<p>The idea of the <code>.apply</code> function is similar to <code>Promise.then</code>. It
+allows one to pass a piece of code that will be applied to the
+underlying value once it becomes available (after the corresponding
+cloud resource is created or updated) and will return an <code>Output</code> that
+then points to the transformed underlying value. Importantly, the new
+<code>Output</code> will still track dependency information properly. In the above
+example the <code>aws.route53.Record</code> will know that it depends on <code>cert</code>,
+even though the Certificate resource is not itself passed directly do
+the constructor.</p>
+
+<p>Unfortunately, while <code>.apply</code> gives a lot of power and flexibility, it
+is also somewhat verbose and clunky for describing such a simple
+concept. Fortunately, we found a way to improve the situation greatly.
+This realization came about from great work done in our Python package.
+First, before diving into the low level details, let&rsquo;s first see what
+the above code would now look like in 0.17.0:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="k">const</span> <span class="nx">certValidation</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">route53</span><span class="p">.</span><span class="nx">Record</span><span class="p">(</span><span class="s2">&#34;cert_validation&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">records</span><span class="o">:</span> <span class="p">[</span><span class="nx">cert</span><span class="p">.</span><span class="nx">domainValidationOptions</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">resourceRecordValue</span><span class="p">],</span>
+    <span class="nx">ttl</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="nx">cert</span><span class="p">.</span><span class="nx">domainValidationOptions</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">resourceRecordType</span><span class="p">,</span>
+    <span class="nx">zoneId</span><span class="o">:</span> <span class="nx">zone</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre></div>
+
+<p>That&rsquo;s a lot nicer than before! The following improvements happened:</p>
+
+<ol>
+<li>There&rsquo;s no more callbacks!</li>
+<li>There&rsquo;s no need for a repetitive lambda parameter (which might
+conflict with some other name in scope).</li>
+<li>The code is just pure simple idiomatic JavaScript/TypeScript that
+clearly conveys its intent.</li>
+</ol>
+
+<p>Importantly, no information has been lost here. The exact same
+dependency information flows along here like it did before. And, thanks
+to TypeScript&rsquo;s flexible type system, the above is totally typesafe and
+will let you know the right types of things and will still error if you
+happen to make mistakes.</p>
+
+<p>So, how was this done? Well, the core part of the change is thanks to a
+little-known feature of JavaScript:
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxies</a>.</p>
+
+<p>JavaScript proxies allow libraries to return objects that intercept and
+override many facets of how JavaScript works at runtime. There are many
+things a Proxy lets you control, however for our needs the most
+important bit was that it allows you to override how member-lookup
+works. In other words, when the code contains <code>someProxy.someMember</code> the
+proxy actually gets a chance to determine what should happen and what
+someMember should actually return! With that flexible interception point
+available, we actually took our core Output type and made it into a
+Proxy. We then added the right interception code so that if the code
+contains someOutput.someMember that that gets translated exactly into
+<code>someOutput.apply(o =&gt; o.someMember)</code>.</p>
+
+<p>This also works just fine for array-accesses (which are just
+property-lookups from JavaScript&rsquo;s perspective). In other words, at
+runtime, the member-lookup form and the <code>.apply</code> form will be equivalent
+(except that the former is so much nicer to write!). This is why, for
+example,
+<code>certCertificate.domainValidationOptions[0].resourceRecordValue</code> will
+have the correct value (with all the right dependency information). At
+runtime it really will be equivalent to the original
+<code>certCertificate.apply(certCertificate =&gt; certCertificate.domainValidationOptions[0].resourceRecordValue)</code>
+form.</p>
+
+<p>Now, while this was fairly easy to get working at runtime from a
+JavaScript perspective, it was a little more challenging to figure out
+how to make this work in TypeScript&rsquo;s typing system. For example, if you
+had a value like so:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">cert</span><span class="o">:</span> <span class="nx">Output</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">domainValidationOptions</span><span class="o">:</span> <span class="nx">pulumi</span><span class="p">.</span><span class="nx">Output</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">domainName</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">resourceRecordName</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">resourceRecordType</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">resourceRecordValue</span><span class="o">:</span> <span class="nx">string</span> <span class="p">}[]</span><span class="o">&gt;</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">const</span> <span class="nx">firstOption</span><span class="o">:</span> <span class="nx">Output</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">domainName</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">resourceRecordName</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">resourceRecordType</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">resourceRecordValue</span><span class="o">:</span> <span class="nx">string</span> <span class="p">}</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nx">cert</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="k">const</span> <span class="nx">domainName</span> <span class="o">=</span> <span class="nx">firstOption</span><span class="p">.</span><span class="nx">domainName</span><span class="p">;</span>
+</code></pre></div>
+<p>Then how does TypeScript know that <code>cert</code> should have a property on it
+called <code>domainValidationOptions</code>? And how can it know that
+<code>domainValidationOptions</code> can be indexed into? And how would it know
+that once indexed, that <code>Output</code> would have a <code>domainName</code> property?
+Clearly, these are all <code>Outputs</code>. Yet, each <code>Output&lt;...&gt;</code> has a
+different set of properties exposed off of it!</p>
+
+<p>To do this required taking advantage of some very interesting and
+advanced parts of TypeScript&rsquo;s type system. If this is a part of
+TypeScript that interests you, or you just want to see how we did this,
+you can dive in deep into the source
+<a href="https://github.com/pulumi/pulumi/blob/7d7e104ee3184d1244ea3517ab5cae5f52170dba/sdk/nodejs/output.ts#L624-L631">here</a>!
+And, if you want to see how we did the actual runtime Proxy work, that
+code is self-contained
+<a href="https://github.com/pulumi/pulumi/blob/7d7e104ee3184d1244ea3517ab5cae5f52170dba/sdk/nodejs/output.ts#L220-L282">here</a>.
+Thanks to TypeScript&rsquo;s advanced type-system, these types can be properly
+expressed and the entire tooling ecosystem understands them. For
+example, in VSCode, if you try to write code like the above, you&rsquo;ll see
+all the expected properties with the expected types:</p>
+
+<p><img src="./comp-list.png" alt="Completion Lists" /></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>We definitely hope these changes to <code>@pulumi/pulumi</code> in 0.17.0 will make
+the programming experience simpler and smoother for many common use
+cases. And, if you&rsquo;ve ever wanted to do some fancy tricks like what
+we&rsquo;re doing here, these updates can show you how you too can approach
+some of these advanced techniques for both JavaScript and TypeScript!</p>
+
+                    </section>
+                    <div>
+                        <p class="text-gray-500">Posted on <time>Tuesday, Mar 19, 2019</time>
+                        
+                        <ul class="m-0 p-0">
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/new-features/">
+                                    New-Features
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+                </article>
+            </div>
+
+            <div class="md:w-2/12 pl-8">
+                
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

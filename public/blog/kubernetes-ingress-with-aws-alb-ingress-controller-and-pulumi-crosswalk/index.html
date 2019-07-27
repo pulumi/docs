@@ -1,0 +1,1321 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/blog/kubernetes-ingress-with-aws-alb-ingress-controller-and-pulumi-crosswalk/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+        
+            
+            
+                
+                    <meta name="twitter:creator" content="@nishidavidson">
+                
+            
+        
+    
+
+    
+        <meta property="og:title" content="Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS">
+    
+
+    
+        <meta name="description" content="Kubernetes Ingress
+is an API object that allows you manage external (or) internal HTTP[s]
+access to Kubernetes services
+running in a cluster.
+Amazon Elastic Load Balancing Application Load Balancer
+(ALB) is a popular AWS service that load balances incoming traffic at
+the application layer across multiple targets, such as Amazon EC2
+instances, in a region. ALB supports multiple features including host or
+path based routing, TLS (Transport layer security) termination,
+WebSockets, HTTP/2, AWS WAF (web application firewall) integration,
+integrated access logs, and health checks.
+
+The AWS ALB Ingress controller
+is a Kubernetes
+SIG-AWS
+subproject - it was the second sub-project added to
+SIG-AWS
+after the aws-authenticator subproject.
+The ALB Ingress controller triggers the creation of an ALB and the
+necessary supporting AWS resources whenever a Kubernetes user declares
+an Ingress resource on the cluster.
+TargetGroups
+are created for each backend specified in the Ingress resource.
+Listeners
+are created for every port specified as Ingress resource annotation.
+When no port is specified, sensible defaults (80 or 443) are used.
+Rules
+are created for each path specified in your ingress resource. This
+ensures that traffic to a specific path is routed to the correct
+TargetGroup.
+
+In this post, we will work through a simple example of running ALB based
+Kubernetes Ingresses with Pulumi
+EKS,
+AWS, and
+AWSX
+packages.">
+        <meta property="og:description" content="Kubernetes Ingress
+is an API object that allows you manage external (or) internal HTTP[s]
+access to Kubernetes services
+running in a cluster.
+Amazon Elastic Load Balancing Application Load Balancer
+(ALB) is a popular AWS service that load balances incoming traffic at
+the application layer across multiple targets, such as Amazon EC2
+instances, in a region. ALB supports multiple features including host or
+path based routing, TLS (Transport layer security) termination,
+WebSockets, HTTP/2, AWS WAF (web application firewall) integration,
+integrated access logs, and health checks.
+
+The AWS ALB Ingress controller
+is a Kubernetes
+SIG-AWS
+subproject - it was the second sub-project added to
+SIG-AWS
+after the aws-authenticator subproject.
+The ALB Ingress controller triggers the creation of an ALB and the
+necessary supporting AWS resources whenever a Kubernetes user declares
+an Ingress resource on the cluster.
+TargetGroups
+are created for each backend specified in the Ingress resource.
+Listeners
+are created for every port specified as Ingress resource annotation.
+When no port is specified, sensible defaults (80 or 443) are used.
+Rules
+are created for each path specified in your ingress resource. This
+ensures that traffic to a specific path is routed to the correct
+TargetGroup.
+
+In this post, we will work through a simple example of running ALB based
+Kubernetes Ingresses with Pulumi
+EKS,
+AWS, and
+AWSX
+packages.">
+    
+
+    
+    
+        
+            
+        
+    
+    <meta property="og:image" content="/blog/kubernetes-ingress-with-aws-alb-ingress-controller-and-pulumi-crosswalk/featured-img-albingresscontroller.png">
+
+    <title>Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/blog/kubernetes-ingress-with-aws-alb-ingress-controller-and-pulumi-crosswalk/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+        
+            
+                
+            
+        
+        
+    
+</head>
+
+    <body class="section-blog">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+            <div class="md:w-3/12 pr-8">
+                
+<aside class="md:pr-8">
+
+    
+    <div class="md:hidden">
+        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </div>
+
+    <h3 class="no-anchor hidden md:flex mt-4">
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </h3>
+
+    
+    <div class="blog-sidebar-content hidden md:block">
+        <div class="bg-gray-100 rounded-lg p-4 my-6 text-gray-700">
+            <h5 class="no-anchor text-gray-700">Program the Cloud</h5>
+            <p class="text-sm my-0">
+                Create, deploy, and manage cloud infrastructure using your favorite language.
+            </p>
+        </div>
+
+        <ul class="list-none p-0 mb-4 inline-flex flex-wrap text-xs">
+            
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/apigateway/">
+                            apigateway
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/applications/">
+                            applications
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/auth/">
+                            auth
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/aws/">
+                            aws
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/azure/">
+                            azure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/ci/cd/">
+                            ci/cd
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/cloud-native/">
+                            cloud-native
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/containers/">
+                            containers
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/customer/">
+                            customer
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/digitalocean/">
+                            digitalocean
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/docker/">
+                            docker
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/eks/">
+                            eks
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/events/">
+                            events
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/features/">
+                            features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/gcp/">
+                            gcp
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/gke/">
+                            gke
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/infrastructure/">
+                            infrastructure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/javascript/">
+                            javascript
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/jupyter/">
+                            jupyter
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/kubernetes/">
+                            kubernetes
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/lambda/">
+                            lambda
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/logging/">
+                            logging
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/mysql/">
+                            mysql
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/new-features/">
+                            new-features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/pulumi/">
+                            pulumi
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/pulumi-news/">
+                            pulumi-news
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/python/">
+                            python
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/security/">
+                            security
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/serverless/">
+                            serverless
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/testing/">
+                            testing
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/typescript/">
+                            typescript
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="hidden lg:block my-4">
+            <h5 class="no-anchor">Recent Posts</h5>
+            <ul class="list-none p-0">
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/day-2-kubernetes-migrating-eks-nodegroups-with-zero-downtime/">Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime</a>
+                        </li>
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/getting-started-on-digitalocean-with-pulumi/">Getting Started on DigitalOcean with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/pulumi-meetup-recap-apis-custom-resources-and-github-webhooks/">Pulumi Meetup Recap: APIs, Custom Resources and GitHub Webhooks</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks/">Persisting Kubernetes workloads with Amazon EFS CSI volumes using Pulumi open source SDKs</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/unit-testing-infrastructure-in-nodejs-and-mocha/">Unit Testing Your Infrastructure with Node.js and Mocha</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/kubernetes-ingress-with-aws-alb-ingress-controller-and-pulumi-crosswalk/">Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included/">Globally-distributed Serverless Application in 100 Lines of Code. Infrastructure Included!</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/hosting-a-static-website-on-azure-with-pulumi/">Hosting a Static Website on Azure with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/running-containers-in-aws-the-lowdown-ecs-fargate-and-eks/">Running Containers in AWS, the Lowdown: ECS, Fargate, and EKS</a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="md:hidden pb-4">
+        
+    </div>
+</aside>
+
+            </div>
+
+            <div class="md:w-7/12">
+                <article class="mb-8 pb-8 border-b border-gray-200">
+                    <h1 class="no-anchor"><a href="/blog/kubernetes-ingress-with-aws-alb-ingress-controller-and-pulumi-crosswalk/">Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS</a></h1>
+                    <div class="flex items-center">
+                        <span>
+                            <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="/blog/author/nishi-davidson/">
+                    <img class="w-8 rounded-full" src="/images/team/nishi-davidson.jpg" alt="Nishi Davidson" title="Nishi Davidson">
+                </a>
+                <a class="" href="/blog/author/nishi-davidson/">Nishi Davidson</a>
+            
+        </span>
+    
+</span>
+
+                        </span>
+                    </div>
+                    <section>
+                        <p><a href="https://kubernetes.io/docs/concepts/services-networking/ingress/">Kubernetes Ingress</a>
+is an API object that allows you manage external (or) internal HTTP[s]
+access to <a href="https://kubernetes.io/docs/concepts/services-networking/service/">Kubernetes services</a>
+running in a cluster.
+<a href="https://aws.amazon.com/elasticloadbalancing/features/#Details_for_Elastic_Load_Balancing_Products">Amazon Elastic Load Balancing Application Load Balancer</a>
+(ALB) is a popular AWS service that load balances incoming traffic at
+the application layer across multiple targets, such as Amazon EC2
+instances, in a region. ALB supports multiple features including host or
+path based routing, TLS (Transport layer security) termination,
+WebSockets, HTTP/2, AWS WAF (web application firewall) integration,
+integrated access logs, and health checks.</p>
+
+<p>The <a href="https://github.com/kubernetes-sigs/aws-alb-ingress-controller">AWS ALB Ingress controller</a>
+is a Kubernetes
+<a href="https://github.com/kubernetes/community/tree/master/sig-aws">SIG-AWS</a>
+subproject - it was the second sub-project added to
+<a href="https://github.com/kubernetes/community/tree/master/sig-aws">SIG-AWS</a>
+after the <a href="https://github.com/kubernetes-sigs/aws-iam-authenticator">aws-authenticator subproject</a>.
+The ALB Ingress controller triggers the creation of an ALB and the
+necessary supporting AWS resources whenever a Kubernetes user declares
+an Ingress resource on the cluster.
+<a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html">TargetGroups</a>
+are created for each backend specified in the Ingress resource.
+<a href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html">Listeners</a>
+are created for every port specified as Ingress resource annotation.
+When no port is specified, sensible defaults (80 or 443) are used.
+<a href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-update-rules.html">Rules</a>
+are created for each path specified in your ingress resource. This
+ensures that traffic to a specific path is routed to the correct
+TargetGroup.</p>
+
+<p>In this post, we will work through a simple example of running ALB based
+Kubernetes Ingresses with Pulumi
+<a href="https://github.com/pulumi/pulumi-eks">EKS</a>,
+<a href="https://github.com/pulumi/pulumi-aws">AWS</a>, and
+<a href="https://github.com/pulumi/pulumi-awsx/tree/master/nodejs/awsx">AWSX</a>
+packages.</p>
+
+<h2 id="step-1-initialize-pulumi-project-and-stack">Step 1: Initialize Pulumi project and stack</h2>
+
+<p><a href="/docs/quickstart/">Install pulumi CLI</a>
+and set up your <a href="/docs/quickstart/aws/">AWS credentials</a>.
+Initialize a new <a href="/docs/reference/project/">Pulumi project</a>
+and <a href="/docs/reference/cli/pulumi_stack/">Pulumi stack</a> from
+available programming <a href="https://github.com/pulumi/templates">language
+templates</a>. We will use the
+<code>aws-typescript</code> template here and install all library
+dependencies.</p>
+
+<pre><code>$ brew install pulumi # download pulumi CLI
+$ mkdir eks-alb-ingress &amp;&amp; cd eks-alb-ingress
+$ pulumi new aws-typescript
+$ npm install --save @pulumi/kubernetes @pulumi/eks
+$ ls -la
+drwxr-xr-x   10 nishidavidson  staff    320 Jun 18 18:22 .
+drwxr-xr-x+ 102 nishidavidson  staff   3264 Jun 18 18:13 ..
+-rw-------    1 nishidavidson  staff     21 Jun 18 18:22 .gitignore
+-rw-r--r--    1 nishidavidson  staff     32 Jun 18 18:22 Pulumi.dev.yaml
+-rw-------    1 nishidavidson  staff     91 Jun 18 18:22 Pulumi.yaml
+-rw-------    1 nishidavidson  staff    273 Jun 18 18:22 index.ts
+drwxr-xr-x   95 nishidavidson  staff   3040 Jun 18 18:22 node_modules
+-rw-r--r--    1 nishidavidson  staff  50650 Jun 18 18:22 package-lock.json
+-rw-------    1 nishidavidson  staff    228 Jun 18 18:22 package.json
+-rw-------    1 nishidavidson  staff    522 Jun 18 18:22 tsconfig.json
+</code></pre>
+
+<h2 id="step-2-create-an-eks-cluster">Step 2: Create an EKS cluster</h2>
+
+<p>Once the steps above are complete, we update the typescript code in
+<code>index.ts</code> file to create an EKS cluster and run pulumi
+up from the command line:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">eks</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/eks&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">k8s</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/kubernetes&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">vpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">Network</span><span class="p">(</span><span class="s2">&#34;vpc-alb-ingress-eks&#34;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">usePrivateSubnets</span>: <span class="kt">false</span>
+<span class="p">});</span>
+<span class="kr">const</span> <span class="nx">cluster</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">eks</span><span class="p">.</span><span class="nx">Cluster</span><span class="p">(</span><span class="s2">&#34;eks-cluster&#34;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">vpcId</span>: <span class="kt">vpc.id</span><span class="p">,</span>
+  <span class="nx">subnetIds</span>: <span class="kt">vpc.publicSubnetIds</span><span class="p">,</span>
+  <span class="nx">instanceType</span><span class="o">:</span> <span class="s2">&#34;t2.medium&#34;</span><span class="p">,</span>
+  <span class="nx">version</span><span class="o">:</span> <span class="s2">&#34;1.12&#34;</span><span class="p">,</span>
+  <span class="nx">nodeRootVolumeSize</span>: <span class="kt">200</span><span class="p">,</span>
+  <span class="nx">desiredCapacity</span>: <span class="kt">3</span><span class="p">,</span>
+  <span class="nx">maxSize</span>: <span class="kt">4</span><span class="p">,</span>
+  <span class="nx">minSize</span>: <span class="kt">3</span><span class="p">,</span>
+  <span class="nx">deployDashboard</span>: <span class="kt">false</span><span class="p">,</span>
+  <span class="nx">vpcCniOptions</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">warmIpTarget</span>: <span class="kt">4</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">clusterName</span> <span class="o">=</span> <span class="nx">cluster</span><span class="p">.</span><span class="nx">eksCluster</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">kubeconfig</span> <span class="o">=</span> <span class="nx">cluster</span><span class="p">.</span><span class="nx">kubeconfig</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">clusterNodeInstanceRoleName</span> <span class="o">=</span> <span class="nx">cluster</span><span class="p">.</span><span class="nx">instanceRoles</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span>
+  <span class="nx">roles</span> <span class="o">=&gt;</span> <span class="nx">roles</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">name</span>
+<span class="p">);</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">nodesubnetId</span> <span class="o">=</span> <span class="nx">cluster</span><span class="p">.</span><span class="nx">core</span><span class="p">.</span><span class="nx">subnetIds</span><span class="p">;</span></code></pre></div>
+<p>Configure the Public subnets in the console as defined in
+<a href="https://kubernetes-sigs.github.io/aws-alb-ingress-controller/guide/controller/config/#subnet-auto-discovery">this guide</a>.</p>
+
+<h2 id="step-3-deploy-aws-alb-ingress-controller">Step 3: Deploy AWS ALB Ingress Controller</h2>
+
+<p>Lets confirm that the EKS cluster is up using the following commands:</p>
+
+<pre><code>$ pulumi stack export kubeconfig &gt; kubeconfig.yaml
+$ export KUBECONFIG=kubeconfig.yaml
+$ kubectl get nodes
+NAME                          STATUS   ROLES    AGE    VERSION
+ip-10-10-0-58.ec2.internal    Ready    &lt;none&gt;   7h8m   v1.12.7
+ip-10-10-1-167.ec2.internal   Ready    &lt;none&gt;   7h8m   v1.12.7
+ip-10-10-1-84.ec2.internal    Ready    &lt;none&gt;   7h8m   v1.12.7
+</code></pre>
+
+<p>Adequate roles and policies must be configured in AWS and available to
+the node(s) running the controller. How access is granted is up to you.
+Some will attach the needed rights to node&rsquo;s role in AWS. Others will
+use projects like <a href="https://github.com/jtblin/kube2iam">kube2iam</a>. We
+attach a minimal IAM policy to the EKS worker nodes and then declare
+this on the EKS cluster as shown in the code below.</p>
+
+<p>When declaring the ALB Ingress controller we simply re-use the Helm
+chart as part of the code. There is no need to rewrite all the logic or
+install Tiller in the EKS cluster. This frees you from thinking about
+RBAC for Helm, Tiller and the k8s cluster per se&rsquo;.</p>
+
+<p>With the default &ldquo;instance mode&rdquo; Ingress traffic starts from the ALB and
+reaches the
+<a href="https://kubernetes.io/docs/concepts/services-networking/service/#nodeport">NodePort</a>
+opened for the service. Traffic is then routed to the container Pods
+within cluster. This is all encoded using Pulumi libraries below. If you
+wish to use &ldquo;ip-mode&rdquo; with your Ingress such that traffic directly
+reaches your pods, you will need to modify the
+<code>alb.ingress.kubernetes.io/target-type</code> annotation when using the helm
+chart.</p>
+
+<p>Append <code>index.ts</code> file from Step 2 with the code below and run
+<code>pulumi up</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// STEP 3: Declare the AWS ALB Ingress Controller
+</span><span class="c1"></span>
+<span class="c1">// Create IAM Policy for the IngressController called &#34;ingressController-iam-policy” and read the policy ARN.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">ingressControllerPolicy</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">iam</span><span class="p">.</span><span class="nx">Policy</span><span class="p">(</span>
+  <span class="s2">&#34;ingressController-iam-policy&#34;</span><span class="p">,</span>
+  <span class="p">{</span>
+    <span class="nx">policy</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">Version</span><span class="o">:</span> <span class="s2">&#34;2012-10-17&#34;</span><span class="p">,</span>
+      <span class="nx">Statement</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nx">Effect</span><span class="o">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
+          <span class="nx">Action</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&#34;acm:DescribeCertificate&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;acm:ListCertificates&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;acm:GetCertificate&#34;</span>
+          <span class="p">],</span>
+          <span class="nx">Resource</span><span class="o">:</span> <span class="s2">&#34;*&#34;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nx">Effect</span><span class="o">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
+          <span class="nx">Action</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&#34;ec2:AuthorizeSecurityGroupIngress&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;ec2:CreateSecurityGroup&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;ec2:CreateTags&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;ec2:DeleteTags&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;ec2:DeleteSecurityGroup&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;ec2:DescribeInstances&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;ec2:DescribeInstanceStatus&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;ec2:DescribeSecurityGroups&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;ec2:DescribeSubnets&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;ec2:DescribeTags&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;ec2:DescribeVpcs&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;ec2:ModifyInstanceAttribute&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;ec2:ModifyNetworkInterfaceAttribute&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;ec2:RevokeSecurityGroupIngress&#34;</span>
+          <span class="p">],</span>
+          <span class="nx">Resource</span><span class="o">:</span> <span class="s2">&#34;*&#34;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nx">Effect</span><span class="o">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
+          <span class="nx">Action</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&#34;elasticloadbalancing:AddTags&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:CreateListener&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:CreateLoadBalancer&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:CreateRule&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:CreateTargetGroup&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:DeleteListener&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:DeleteLoadBalancer&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:DeleteRule&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:DeleteTargetGroup&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:DeregisterTargets&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:DescribeListeners&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:DescribeLoadBalancers&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:DescribeLoadBalancerAttributes&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:DescribeRules&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:DescribeSSLPolicies&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:DescribeTags&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:DescribeTargetGroups&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:DescribeTargetGroupAttributes&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:DescribeTargetHealth&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:ModifyListener&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:ModifyLoadBalancerAttributes&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:ModifyRule&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:ModifyTargetGroup&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:ModifyTargetGroupAttributes&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:RegisterTargets&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:RemoveTags&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:SetIpAddressType&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:SetSecurityGroups&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:SetSubnets&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;elasticloadbalancing:SetWebACL&#34;</span>
+          <span class="p">],</span>
+          <span class="nx">Resource</span><span class="o">:</span> <span class="s2">&#34;*&#34;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nx">Effect</span><span class="o">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
+          <span class="nx">Action</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;iam:GetServerCertificate&#34;</span><span class="p">,</span> <span class="s2">&#34;iam:ListServerCertificates&#34;</span><span class="p">],</span>
+          <span class="nx">Resource</span><span class="o">:</span> <span class="s2">&#34;*&#34;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nx">Effect</span><span class="o">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
+          <span class="nx">Action</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&#34;waf-regional:GetWebACLForResource&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;waf-regional:GetWebACL&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;waf-regional:AssociateWebACL&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;waf-regional:DisassociateWebACL&#34;</span>
+          <span class="p">],</span>
+          <span class="nx">Resource</span><span class="o">:</span> <span class="s2">&#34;*&#34;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nx">Effect</span><span class="o">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
+          <span class="nx">Action</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;tag:GetResources&#34;</span><span class="p">,</span> <span class="s2">&#34;tag:TagResources&#34;</span><span class="p">],</span>
+          <span class="nx">Resource</span><span class="o">:</span> <span class="s2">&#34;*&#34;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nx">Effect</span><span class="o">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
+          <span class="nx">Action</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;waf:GetWebACL&#34;</span><span class="p">],</span>
+          <span class="nx">Resource</span><span class="o">:</span> <span class="s2">&#34;*&#34;</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="c1">// Attach this policy to the NodeInstanceRole of the worker nodes.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">nodeinstanceRole</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">iam</span><span class="p">.</span><span class="nx">RolePolicyAttachment</span><span class="p">(</span>
+  <span class="s2">&#34;eks-NodeInstanceRole-policy-attach&#34;</span><span class="p">,</span>
+  <span class="p">{</span>
+    <span class="nx">policyArn</span>: <span class="kt">ingressControllerPolicy.arn</span><span class="p">,</span>
+    <span class="nx">role</span>: <span class="kt">clusterNodeInstanceRoleName</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="c1">// Declare the ALBIngressController in 1 step with the Helm Chart.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">albingresscntlr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">helm</span><span class="p">.</span><span class="nx">v2</span><span class="p">.</span><span class="nx">Chart</span><span class="p">(</span>
+  <span class="s2">&#34;alb&#34;</span><span class="p">,</span>
+  <span class="p">{</span>
+    <span class="nx">chart</span><span class="o">:</span>
+      <span class="s2">&#34;http://storage.googleapis.com/kubernetes-charts-incubator/aws-alb-ingress-controller-0.1.9.tgz&#34;</span><span class="p">,</span>
+    <span class="nx">values</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">clusterName</span>: <span class="kt">clusterName</span><span class="p">,</span>
+      <span class="nx">autoDiscoverAwsRegion</span><span class="o">:</span> <span class="s2">&#34;true&#34;</span><span class="p">,</span>
+      <span class="nx">autoDiscoverAwsVpcID</span><span class="o">:</span> <span class="s2">&#34;true&#34;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">provider</span>: <span class="kt">cluster.provider</span> <span class="p">}</span>
+<span class="p">);</span></code></pre></div>
+<p>Confirm the alb-ingress-controller was created as follows:</p>
+
+<pre><code>$ kubectl get pods -n default | grep alb
+alb-aws-alb-ingress-controller-58f44d4bb8lxs6w
+
+$ kubectl logs alb-ingress-controller-58f44d4bb8lxs6w
+-------------------------------------------------------------------------------
+AWS ALB Ingress controller
+  Release:    v1.1.2
+  Build:      git-cc1c5971
+  Repository: https://github.com/kubernetes-sigs/aws-alb-ingress-controller.git
+-------------------------------------------------------------------------------
+</code></pre>
+
+<p>Make sure the ingress-controller logs do not show errors about missing subnet tags or missing cluster name before proceeding to Step 4.</p>
+
+<h2 id="step-4-deploy-sample-application">Step 4: Deploy Sample Application</h2>
+
+<p>The Ingress controller should now be running on the EKS worker nodes.
+Let&rsquo;s now create a sample &ldquo;2048-game&rdquo; and expose it as an Ingress on
+our EKS cluster. The code below will let you do so. Append this piece of
+code into <code>index.ts</code> file from Step 3 and run <code>pulumi up</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">function</span> <span class="nx">createNewNamespace</span><span class="p">(</span><span class="nx">name</span>: <span class="kt">string</span><span class="p">)</span><span class="o">:</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">core</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Namespace</span> <span class="p">{</span>
+  <span class="c1">//Create new namespace
+</span><span class="c1"></span>  <span class="k">return</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">core</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Namespace</span><span class="p">(</span>
+    <span class="nx">name</span><span class="p">,</span>
+    <span class="p">{</span> <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">name</span>: <span class="kt">name</span> <span class="p">}</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="nx">provider</span>: <span class="kt">cluster.provider</span> <span class="p">}</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Define the 2048 namespace, deployment, and service.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">nsgame</span> <span class="o">=</span> <span class="nx">createNewNamespace</span><span class="p">(</span><span class="s2">&#34;2048-game&#34;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">deploymentgame</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">extensions</span><span class="p">.</span><span class="nx">v1beta1</span><span class="p">.</span><span class="nx">Deployment</span><span class="p">(</span>
+  <span class="s2">&#34;deployment-game&#34;</span><span class="p">,</span>
+  <span class="p">{</span>
+    <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;deployment-game&#34;</span><span class="p">,</span> <span class="nx">namespace</span><span class="o">:</span> <span class="s2">&#34;2048-game&#34;</span> <span class="p">},</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">replicas</span>: <span class="kt">5</span><span class="p">,</span>
+      <span class="nx">template</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">labels</span><span class="o">:</span> <span class="p">{</span> <span class="nx">app</span><span class="o">:</span> <span class="s2">&#34;2048&#34;</span> <span class="p">}</span> <span class="p">},</span>
+        <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">containers</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nx">image</span><span class="o">:</span> <span class="s2">&#34;alexwhen/docker-2048&#34;</span><span class="p">,</span>
+              <span class="nx">imagePullPolicy</span><span class="o">:</span> <span class="s2">&#34;Always&#34;</span><span class="p">,</span>
+              <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;2048&#34;</span><span class="p">,</span>
+              <span class="nx">ports</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">containerPort</span>: <span class="kt">80</span> <span class="p">}]</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">provider</span>: <span class="kt">cluster.provider</span> <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">servicegame</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">core</span><span class="p">.</span><span class="nx">v1</span><span class="p">.</span><span class="nx">Service</span><span class="p">(</span>
+  <span class="s2">&#34;service-game&#34;</span><span class="p">,</span>
+  <span class="p">{</span>
+    <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;service-2048&#34;</span><span class="p">,</span> <span class="nx">namespace</span><span class="o">:</span> <span class="s2">&#34;2048-game&#34;</span> <span class="p">},</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">ports</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">port</span>: <span class="kt">80</span><span class="p">,</span> <span class="nx">targetPort</span>: <span class="kt">80</span><span class="p">,</span> <span class="nx">protocol</span><span class="o">:</span> <span class="s2">&#34;TCP&#34;</span> <span class="p">}],</span>
+      <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;NodePort&#34;</span><span class="p">,</span>
+      <span class="nx">selector</span><span class="o">:</span> <span class="p">{</span> <span class="nx">app</span><span class="o">:</span> <span class="s2">&#34;2048&#34;</span> <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">provider</span>: <span class="kt">cluster.provider</span> <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="c1">//declare 2048 ingress
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">ingressgame</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">k8s</span><span class="p">.</span><span class="nx">extensions</span><span class="p">.</span><span class="nx">v1beta1</span><span class="p">.</span><span class="nx">Ingress</span><span class="p">(</span>
+  <span class="s2">&#34;ingress-game&#34;</span><span class="p">,</span>
+  <span class="p">{</span>
+    <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;2048-ingress&#34;</span><span class="p">,</span>
+      <span class="nx">namespace</span><span class="o">:</span> <span class="s2">&#34;2048-game&#34;</span><span class="p">,</span>
+      <span class="nx">annotations</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&#34;kubernetes.io/ingress.class&#34;</span><span class="o">:</span> <span class="s2">&#34;alb&#34;</span><span class="p">,</span>
+        <span class="s2">&#34;alb.ingress.kubernetes.io/scheme&#34;</span><span class="o">:</span> <span class="s2">&#34;internet-facing&#34;</span>
+      <span class="p">},</span>
+      <span class="nx">labels</span><span class="o">:</span> <span class="p">{</span> <span class="nx">app</span><span class="o">:</span> <span class="s2">&#34;2048-ingress&#34;</span> <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">spec</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">rules</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nx">http</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">paths</span><span class="o">:</span> <span class="p">[</span>
+              <span class="p">{</span>
+                <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/*&#34;</span><span class="p">,</span>
+                <span class="nx">backend</span><span class="o">:</span> <span class="p">{</span> <span class="nx">serviceName</span><span class="o">:</span> <span class="s2">&#34;service-2048&#34;</span><span class="p">,</span> <span class="nx">servicePort</span>: <span class="kt">80</span> <span class="p">}</span>
+              <span class="p">}</span>
+            <span class="p">]</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">provider</span>: <span class="kt">cluster.provider</span> <span class="p">}</span>
+<span class="p">);</span></code></pre></div>
+<p>After few seconds, verify the Ingress resource as follows:</p>
+
+<pre><code>$ kubectl get ingress/2048-ingress -n 2048-game
+NAME         HOSTS         ADDRESS         PORTS   AGE
+2048-ingress   *    DNS-Name-Of-Your-ALB    80     3m
+</code></pre>
+
+<p>Open a browser. Copy and paste your &ldquo;DNS-Name-Of-Your-ALB&rdquo;. You should
+be to access your newly deployed 2048 game &ndash; have fun!</p>
+
+<p>Pulumi is open source and free to use. For more information on our
+product platform, check out the following resources:</p>
+
+<ul>
+<li><a href="/blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws/">Pulumi Crosswalk for AWS Announcement</a></li>
+<li><a href="/blog/mapbox-iot-as-code-with-pulumi-crosswalk-for-aws/">Mapbox IOT-as-Code with Pulumi Crosswalk for AWS</a></li>
+<li><a href="/docs/reference/crosswalk/aws/">Pulumi Crosswalk for AWS Documentation for ECS, EKS, ELB, and more</a></li>
+</ul>
+                    </section>
+                    <div>
+                        <p class="text-gray-500">Posted on <time>Tuesday, Jul 9, 2019</time>
+                        
+                        <ul class="m-0 p-0">
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/kubernetes/">
+                                    Kubernetes
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/eks/">
+                                    EKS
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+                </article>
+            </div>
+
+            <div class="md:w-2/12 pl-8">
+                
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

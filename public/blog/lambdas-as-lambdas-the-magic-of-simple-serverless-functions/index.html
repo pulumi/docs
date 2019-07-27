@@ -1,0 +1,1146 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+        
+            
+            
+                
+            
+        
+    
+
+    
+        <meta property="og:title" content="Lambdas as Lambdas: The magic of simple serverless Functions">
+    
+
+    
+        <meta name="description" content="Pulumi&rsquo;s approach to infrastructure as code uses real languages instead
+of YAML or DSLs. One major advantage of this approach is that AWS
+Lambdas, Azure Functions, Google Cloud Functions, et al. can just be
+real language lambdas, offering a flexible and simple path to
+serverless. Such functions behave as normal functions, allowing you to
+treat serverless code as part of your application instead of separate
+&ldquo;infrastructure&rdquo; that needs to be configured, managed, and versioned
+manually. In this post, we&rsquo;ll examine this capability in JavaScript,
+which is already very function- and callback-oriented, making serverless
+feel like a natural extension of the language we already know and love. 
+
+While Functions as a Service (FaaS) systems have become more popular,
+getting up and running can still feel overly complex compared to normal
+application development. FaaS offerings today divide the development
+experience between &ldquo;infrastructure&rdquo; &ndash; doing all the work to
+configure the Lambda runtime itself (i.e. how much memory to use, what
+environment variables should be present, etc.) &ndash; and writing and
+maintaining the code that will execute in the function itself when
+triggered. Most developers just want to focus on the latter, write some
+code, and have it work.">
+        <meta property="og:description" content="Pulumi&rsquo;s approach to infrastructure as code uses real languages instead
+of YAML or DSLs. One major advantage of this approach is that AWS
+Lambdas, Azure Functions, Google Cloud Functions, et al. can just be
+real language lambdas, offering a flexible and simple path to
+serverless. Such functions behave as normal functions, allowing you to
+treat serverless code as part of your application instead of separate
+&ldquo;infrastructure&rdquo; that needs to be configured, managed, and versioned
+manually. In this post, we&rsquo;ll examine this capability in JavaScript,
+which is already very function- and callback-oriented, making serverless
+feel like a natural extension of the language we already know and love. 
+
+While Functions as a Service (FaaS) systems have become more popular,
+getting up and running can still feel overly complex compared to normal
+application development. FaaS offerings today divide the development
+experience between &ldquo;infrastructure&rdquo; &ndash; doing all the work to
+configure the Lambda runtime itself (i.e. how much memory to use, what
+environment variables should be present, etc.) &ndash; and writing and
+maintaining the code that will execute in the function itself when
+triggered. Most developers just want to focus on the latter, write some
+code, and have it work.">
+    
+
+    
+    
+        
+            
+        
+    
+    <meta property="og:image" content="/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions/closure.png">
+
+    <title>Lambdas as Lambdas: The magic of simple serverless Functions - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+        
+            
+                
+            
+        
+        
+    
+</head>
+
+    <body class="section-blog">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+            <div class="md:w-3/12 pr-8">
+                
+<aside class="md:pr-8">
+
+    
+    <div class="md:hidden">
+        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </div>
+
+    <h3 class="no-anchor hidden md:flex mt-4">
+        <a href="/blog/">🍹 Pulumi Blog</a>
+    </h3>
+
+    
+    <div class="blog-sidebar-content hidden md:block">
+        <div class="bg-gray-100 rounded-lg p-4 my-6 text-gray-700">
+            <h5 class="no-anchor text-gray-700">Program the Cloud</h5>
+            <p class="text-sm my-0">
+                Create, deploy, and manage cloud infrastructure using your favorite language.
+            </p>
+        </div>
+
+        <ul class="list-none p-0 mb-4 inline-flex flex-wrap text-xs">
+            
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/apigateway/">
+                            apigateway
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/applications/">
+                            applications
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/auth/">
+                            auth
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/aws/">
+                            aws
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/azure/">
+                            azure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/ci/cd/">
+                            ci/cd
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/cloud-native/">
+                            cloud-native
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/containers/">
+                            containers
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/customer/">
+                            customer
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/digitalocean/">
+                            digitalocean
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/docker/">
+                            docker
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/eks/">
+                            eks
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/events/">
+                            events
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/features/">
+                            features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/gcp/">
+                            gcp
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/gke/">
+                            gke
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/infrastructure/">
+                            infrastructure
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/javascript/">
+                            javascript
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/jupyter/">
+                            jupyter
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/kubernetes/">
+                            kubernetes
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/lambda/">
+                            lambda
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/logging/">
+                            logging
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/mysql/">
+                            mysql
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/new-features/">
+                            new-features
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/pulumi/">
+                            pulumi
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/pulumi-news/">
+                            pulumi-news
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/python/">
+                            python
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/security/">
+                            security
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/serverless/">
+                            serverless
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/testing/">
+                            testing
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        
+                        
+                        <a class="px-2 py-1 mr-1 rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/typescript/">
+                            typescript
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="hidden lg:block my-4">
+            <h5 class="no-anchor">Recent Posts</h5>
+            <ul class="list-none p-0">
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/day-2-kubernetes-migrating-eks-nodegroups-with-zero-downtime/">Day 2 Kubernetes: Migrating EKS Node Groups with Zero Downtime</a>
+                        </li>
+                    
+                
+                    
+                        
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/getting-started-on-digitalocean-with-pulumi/">Getting Started on DigitalOcean with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/pulumi-meetup-recap-apis-custom-resources-and-github-webhooks/">Pulumi Meetup Recap: APIs, Custom Resources and GitHub Webhooks</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks/">Persisting Kubernetes workloads with Amazon EFS CSI volumes using Pulumi open source SDKs</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/unit-testing-infrastructure-in-nodejs-and-mocha/">Unit Testing Your Infrastructure with Node.js and Mocha</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/kubernetes-ingress-with-aws-alb-ingress-controller-and-pulumi-crosswalk/">Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included/">Globally-distributed Serverless Application in 100 Lines of Code. Infrastructure Included!</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/hosting-a-static-website-on-azure-with-pulumi/">Hosting a Static Website on Azure with Pulumi</a>
+                        </li>
+                    
+                
+                    
+                        <li class="my-4 leading-snug">
+                            <a class="text-sm" href="/blog/running-containers-in-aws-the-lowdown-ecs-fargate-and-eks/">Running Containers in AWS, the Lowdown: ECS, Fargate, and EKS</a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="md:hidden pb-4">
+        
+    </div>
+</aside>
+
+            </div>
+
+            <div class="md:w-7/12">
+                <article class="mb-8 pb-8 border-b border-gray-200">
+                    <h1 class="no-anchor"><a href="/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions/">Lambdas as Lambdas: The magic of simple serverless Functions</a></h1>
+                    <div class="flex items-center">
+                        <span>
+                            <span class="flex items-center">
+    
+        
+        
+
+        <span class="flex items-center mr-2">
+            
+                <a class="rounded-full p-1 bg-gray-300 mr-2" href="/blog/author/cyrus-najmabadi/">
+                    <img class="w-8 rounded-full" src="/images/team/cyrus-najmabadi.jpg" alt="Cyrus Najmabadi" title="Cyrus Najmabadi">
+                </a>
+                <a class="" href="/blog/author/cyrus-najmabadi/">Cyrus Najmabadi</a>
+            
+        </span>
+    
+</span>
+
+                        </span>
+                    </div>
+                    <section>
+                        <p>Pulumi&rsquo;s approach to infrastructure as code uses real languages instead
+of YAML or DSLs. One major advantage of this approach is that AWS
+Lambdas, Azure Functions, Google Cloud Functions, et al. can just be
+real language lambdas, offering a flexible and simple path to
+serverless. Such functions behave as normal functions, allowing you to
+treat serverless code as part of your application instead of separate
+&ldquo;infrastructure&rdquo; that needs to be configured, managed, and versioned
+manually. In this post, we&rsquo;ll examine this capability in JavaScript,
+which is already very function- and callback-oriented, making serverless
+feel like a natural extension of the language we already know and love. </p>
+
+<p>While Functions as a Service (FaaS) systems have become more popular,
+getting up and running can still feel overly complex compared to normal
+application development. FaaS offerings today divide the development
+experience between &ldquo;infrastructure&rdquo; &ndash; doing all the work to
+configure the Lambda runtime itself (i.e. how much memory to use, what
+environment variables should be present, etc.) &ndash; and writing and
+maintaining the code that will execute <em>in</em> the function itself when
+triggered. Most developers just want to focus on the latter, write some
+code, and have it work.</p>
+
+<p>For <a href="https://aws.amazon.com/lambda/">AWS Lambda</a>, for example, the code
+itself needs to written and packaged up with all its dependencies into a
+single zip-file, stored as a blob that is then placed in
+<a href="https://aws.amazon.com/s3/">AWS S3</a>. This blob is then referenced by Lambda
+so that it can be loaded on-demand when necessary. Updating just a
+single character of this code, like fixing a bug, then requires fully
+repackaging and re-uploading everything. Compounding all of that, this
+code is necessary independent of any other pieces of your application.
+If the code for the Lambda needs to read or write to an S3 bucket,
+publish to an <a href="https://aws.amazon.com/sns/">AWS SNS</a> topic, etc., it
+will need to be manually configured to have that bucket&rsquo;s information
+passed to it, often using out of band in environment variables. These
+same issues also apply when creating
+<a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview">FunctionApps</a>
+using Node.js on Azure.</p>
+
+<p>At Pulumi, we thought there could be a better way to do this. Why have
+to jump out of your application code just to create another bit of
+configuration (in YAML or JSON) just to run your application? Put
+simply, we wanted developers to write event-driven code, in their
+favorite language and in their favorite IDE, and simply hit &ldquo;deploy&rdquo;
+when done.</p>
+
+<h2 id="magic-functions">Magic Functions</h2>
+
+<p>From a desire to do better here, the &ldquo;closure serialized function&rdquo; was
+born. However, &ldquo;closure serialized function&rdquo; is a geeky mouthful, so I
+like just calling them &ldquo;magic functions.&rdquo; Our team is comprised of
+cloud, language, and runtime geeks alike, so we figured out a way to
+hook into the language runtimes to just make lambdas as lambdas work.</p>
+
+<p>Before diving more deeply into how magic functions work, let&rsquo;s take a
+look at how they look in action:</p>
+
+<pre><code>// Example simplified to not get too bogged down :)
+const sharp = require(&quot;sharp&quot;);
+
+const videoBucket = new aws.s3.Bucket(&quot;videos&quot;);
+const videoTopic = new cloud.Topic(&quot;videoTopic&quot;);
+
+videoBucket.onObjectCreated(&quot;onNewVideo&quot;, async (event) =&gt; {
+    for (const record of event.Records) {
+        const dimensions = computeDimensions(record.s3.object.key);
+        videoTopic.publish({ s3ObjectKey: record.s3.object.key, time: record.eventTime });
+    }
+});
+
+function computeDimentions(objectKey: string): { height: number, width: number } { 
+    /* simplified */ 
+    const metadata = await sharp(...);
+    return { height: metadata.height, width: metadata.width };
+}
+
+videoTopic.subscribe(&quot;compressVideo&quot;, async (event) =&gt; {
+    const { s3ObjectKey, time } = event;
+
+    // actually compress video.
+});
+
+videoTopic.subscribe(&quot;createThumbnail&quot;, async (event) =&gt; {
+    const { s3ObjectKey, time } = event;
+
+    // actually create thumbnail.
+});
+</code></pre>
+
+<p>Let&rsquo;s still walk through it to see what&rsquo;s happening. It can be a little
+subtle because we are mixing <em>deployment-time</em> code &ndash; code that
+declares infrastructure as code resources &ndash; and *runtime *code &ndash;
+application code that runs as a function.</p>
+
+<p>First, we&rsquo;re just defining two simple resources: 1) an <code>s3.Bucket</code>,
+where we expect new video files to be uploaded to, and 2) a
+<code>cloud.Topic</code> that will inform interested parties when new videos are
+uploaded. (The full surface area of AWS is available in <a href="/docs/quickstart/aws/">the aws package</a>, and
+<a href="/docs/quickstart/cloudfx/">the cloud package</a> offers
+multi-cloud abstractions that work at a higher level of abstraction.)
+Right after defining the resources, we start creating our first FaaS
+resources. <code>videoBucket</code> has an <code>onObjectCreated</code> event subscription
+function that will fire when new objects appear, and we invoke it with a
+*real* JavaScript (or TypeScript)
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow-function</a>
+defining the code that will execute in an AWS Lambda at <em>runtime</em>.</p>
+
+<h2 id="not-so-fast">Not So Fast&hellip;</h2>
+
+<p>This code is pretty magical in a few ways. To see how it&rsquo;s magic, let&rsquo;s
+consider a fairly naive way to create a Lambda for
+this <code>onObjectCreated</code> event handler function &ndash; something we need to
+do by hand with FaaS solutions today. Imagine we took the raw source
+text of this arrow-function by <code>toString</code>ing it and using that as the
+text of the Lambda code:</p>
+
+<pre><code>// index.js
+
+module.exports = async (event) =&gt; {
+    foreach (var record in event.Records) {
+        const dimensions = computeDimensions(record.s3.object.key);
+        videoTopic.publish({ s3ObjectKey: record.s3.object.key, time: record.eventTime });
+    }
+};
+</code></pre>
+
+<p>Now, the above translation could have worked for an extremely basic
+function, but totally breaks down here for several reasons. First,
+<code>computeDimensions</code> isn&rsquo;t included, which will make this immediately
+fail if ever called. Second, if <code>computeDimensions</code> was included, it
+wouldn&rsquo;t work unless the <code>sharp</code> module was properly imported for it.
+Third, even if the module was imported in the code, the actual NPM
+package would have to be available along with the code in the cloud.
+Fourth, if that module was
+properly <code>require</code>d,
+and the package was properly included, the code is both referencing
+<code>videoTopic</code> (a resource defined when the application originally ran),
+<em>and</em> it is invoking a helper method on it. Remember, this code is going
+to be executing at cloud <em>runtime</em>, not at the time when Pulumi is
+actually executing the application on your developer machine, and
+actually doing things like running the
+<code>const videoTopic = new cloud.Topic(&quot;videoTopic&quot;)</code> code.</p>
+
+<p>To summarize, we have quickly realized, we can&rsquo;t just analyze
+everything locally to figure out what has to be included, instead the
+entire transitive closure must be considered &ndash; a task usually left up
+to FaaS developers to perform manually! This coupled with the manual
+configuration using YAML can lead to plenty a headache.</p>
+
+<h2 id="compilers-to-the-rescue">Compilers to the Rescue</h2>
+
+<p>Despite all those issues, Pulumi is able to make that original
+application code work and it is able to magically effectively translate
+the above into a working Lambda. The real secret sauce here is that, by
+leveraging real languages, we can stand on the shoulders of all the
+great compiler work underpinning them.</p>
+
+<p>So let&rsquo;s dig in &ndash; how does this all really work?</p>
+
+<p>(Note that, if you want some of the more nitty gritty details, we have a
+<a href="/docs/reference/serializing-functions/">doc</a>
+going in depth. For now, we&rsquo;ll try to stick to providing a high-level
+overview of what&rsquo;s going on, so that we can grok the basic approach.)</p>
+
+<p>Pulumi executes your application as a normal Node.js application. As
+such, when it hits the <code>const videoBucket = new aws.s3.Bucket(&quot;videos&quot;)</code>
+lines, it actually goes and creates those resources. When it then hits
+the <code>videoBucket.onObjectCreated(&quot;onNewVideo&quot;, async (event) =&gt; {</code> line
+this executes a normal line of JavaScript. Namely, <code>onObjectCreated</code> is
+a normal JavaScript function that will be passed the <code>name</code> parameter as
+the first arg, and the JavaScript
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions">function</a>
+as the second arg.
+<a href="https://github.com/pulumi/pulumi-aws/blob/2159b44b296ab66ce4386d42b28fb22f27a6ef6a/sdk/nodejs/s3/s3Mixins.ts#L223">onObjectCreated</a>
+eventually bottoms out with a call to a call to
+<a href="https://github.com/pulumi/pulumi/blob/fb18032a42eb34e9b5cbbe22a77a1b292d260a24/sdk/nodejs/runtime/closure/serializeClosure.ts#L89">pulumi.runtime.serializeFunction</a>.
+This function is the root of where our deep analysis of your JavaScript
+function analysis and translation will happen.</p>
+
+<p>It&rsquo;s worth pausing here. We can use all the standard approaches to
+function composition to build bigger functions out of smaller functions,
+even before we hit that serialization routine. The closures are built up
+in the V8 runtime as usual, and are eagerly awaiting the transformation
+into magic functions as soon as they are needed. Pretty cool!</p>
+
+<p>Once we get to that point, using the awesome analysis APIs provided by
+<a href="https://github.com/Microsoft/TypeScript">TypeScript</a>, we start
+introspecting the function instance, seeing what code it contains, and
+what external objects it references. The legal objects that can be
+included in the captured function&rsquo;s environment include (but aren&rsquo;t
+limited) to things like simple JavaScript objects, other functions (like
+<code>computeDimensions</code>), modules (like <code>sharp</code>), other Pulumi resources
+(like <code>videoTopic</code>), and even complex beasts like
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>.
+Basically, anything that Pulumi knows how to serialize and rehydrate
+inside the Lambda.</p>
+
+<p>When Pulumi determines that these objects are referenced, it
+automatically includes enough information about them into the final
+translated Lambda code file so that they are available and can be
+effectively used at runtime. Thanks to JavaScript&rsquo;s deep, dynamic
+introspection capabilities, as well as its rich APIs for creating nearly
+anything at runtime, it&rsquo;s very possible to effectively hydrate out all
+the information present when Pulumi runs, and put it into a form that
+can be cheaply and accurately rehydrated into runtime objects again when
+the Lambda runs.</p>
+
+<p>This analysis also understands the NPM package structure of an
+application and its dependencies, ensuring that necessary imported
+packages are properly included with the final Lambda. This analysis is
+also very smart about not including things that aren&rsquo;t necessary at all.
+For example, it might drop information from the serialized form if it
+can prove that would never be observable, in addition to relying on
+built-in runtime functions being there without needing any sort of
+serialization. There are definite subtleties and interesting cases that
+can arise here, and for those very curious, reading the documentation
+linked above may be very enlightening.</p>
+
+<p>Pulumi also understands diffs and dependencies, so updating is a cinch.
+Any changes to the code in the JavaScript function (including anything
+it depends on) is properly tracked and understood by Pulumi, allowing an
+easy development model where FaaS code can be easily modified and
+republished without jumping through extra hoops. </p>
+
+<h2 id="the-result-simple-serverless-functions">The Result? Simple serverless Functions</h2>
+
+<p>With this approach, serverless programming becomes dramatically simpler,
+whether it&rsquo;s an AWS Lambda, Azure Function, or GCP Cloud Function.
+(Stay tuned, we&rsquo;re hoping to bring this to Kubernetes FaaS offerings
+soon.)</p>
+
+<p>In short, you just write event-driven JavaScript code that&rsquo;s familiar
+and easy, you run <code>pulumi up</code>, and everything is taken care of from
+there. No YAML configuration files, no point and clicking in a cloud
+console UI, no fuss.</p>
+
+<p>On top of all of that, because this is just code itself, and because
+these are normal APIs, other tooling (like your editor) knows exactly
+what is going on and can guide you through this. For example:</p>
+
+<p><img src="./closure.png" alt="closure" /></p>
+
+<p>While there&rsquo;s a lot of really cool tech going on under the covers here,
+we really hope that this ends up just feeling super-awesome to use for
+you. Now that we have this functionality, we wouldn&rsquo;t want to ever write
+an AWS Lambda any other way!</p>
+
+<p>Get started building serverless functions on Pulumi today!</p>
+                    </section>
+                    <div>
+                        <p class="text-gray-500">Posted on <time>Wednesday, Oct 10, 2018</time>
+                        
+                        <ul class="m-0 p-0">
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/serverless/">
+                                    Serverless
+                                </a>
+                            </li>
+                            
+                            <li class="inline-flex">
+                                
+                                <a class="px-2 text-s rounded transition-all bg-white border border-gray-200 text-blue-600 hover:border-blue-600" href="/blog/tag/typescript/">
+                                    TypeScript
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+                </article>
+            </div>
+
+            <div class="md:w-2/12 pl-8">
+                
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

@@ -1,0 +1,3117 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/docs/reference/crosswalk/aws/api-gateway/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+
+    
+        <meta property="og:title" content="AWS API Gateway">
+    
+
+    
+        <meta name="description" content="Amazon API Gateway is a fully managed service for creating, monitoring, and securing APIs at scale. It acts as a &ldquo;front door&rdquo; for REST and WebSocket applications that use backend services, and handles all the tasks necessary to accept and process up to hundreds of thousands of concurrent API calls, including traffic management, authorization and access control, monitoring, and API version management. API Gateway is inexpensive, has no minimum fees, and you only pay for the API calls you receive and the data transferred out.">
+        <meta property="og:description" content="Amazon API Gateway is a fully managed service for creating, monitoring, and securing APIs at scale. It acts as a &ldquo;front door&rdquo; for REST and WebSocket applications that use backend services, and handles all the tasks necessary to accept and process up to hundreds of thousands of concurrent API calls, including traffic management, authorization and access control, monitoring, and API version management. API Gateway is inexpensive, has no minimum fees, and you only pay for the API calls you receive and the data transferred out.">
+    
+
+    
+    
+    <meta property="og:image" content="/social/pulumi.png">
+
+    <title>AWS API Gateway - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/docs/reference/crosswalk/aws/api-gateway/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+</head>
+
+    <body class="section-docs">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+
+            <div class="md:w-2/12 mt-2 md:order-last">
+                <div class="mb-8 md:mb-4">
+                    <form class="relative" action="/docs/search/" method="GET">
+    <i class="fas fa-search absolute inset-y-0 flex items-center pl-3 text-gray-500"></i>
+    <input
+        id="search-query"
+        name="q"
+        class="block w-full py-2 px-4 pl-8 text-sm border border-gray-400 focus:border-blue-500 focus:outline-none rounded transition"
+        placeholder="Search the docs"
+        autocomplete="off">
+</form>
+
+                </div>
+
+                <div class="ml-3 hidden md:block">
+                    
+    <ul class="p-0 list-none">
+        
+        
+        
+        
+        
+            <li>
+                <a class="text-gray-600 hover:text-blue-700 text-xs" href="https://github.com/pulumi/docs/edit/master/content/docs/reference/crosswalk/aws/api-gateway.md" target="_blank">
+                    <i class="fas fa-edit mr-2"></i>
+                    Edit this Page
+                </a>
+            </li>
+        
+
+        <li>
+            <a class="text-gray-600 hover:text-blue-700 text-xs" href="https://github.com/pulumi/docs/issues/new?body=File: [docs%2freference%2fcrosswalk%2faws%2fapi-gateway.md](%2fdocs%2freference%2fcrosswalk%2faws%2fapi-gateway%2f)" target="_blank">
+                <i class="far fa-check-square mr-2"></i>
+                Request a Change
+            </a>
+        </li>
+    </ul>
+
+
+                </div>
+            </div>
+
+            <div class="md:w-3/12 pr-8 mt-2 mb-8 pb-8 border-b-2 border-gray-400 md:border-none md:pb-0 md:mb-0">
+                
+
+
+
+
+
+
+
+
+    
+    
+    
+
+
+<aside class="toc">
+    <h3 class="no-anchor">
+        <a href="/docs/">Docs</a>
+    </h3>
+
+    
+        <h4 class="no-anchor">
+            <a href="/docs/quickstart/">Get Started</a>
+        </h4>
+    
+    
+        <h4 class="no-anchor">
+            <a href="/docs/reference/">Reference</a>
+        </h4>
+    
+    
+
+    
+        
+        
+
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Architecture &amp; Concepts">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Programming Model" href="/docs/reference/programming-model/">Programming Model</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Projects" href="/docs/reference/project/">Projects</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stacks" href="/docs/reference/stack/">Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Configuration and Secrets" href="/docs/reference/config/">Configuration and Secrets</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizing Projects and Stacks" href="/docs/reference/organizing-stacks-projects/">Organizing Projects and Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="How Pulumi Works" href="/docs/reference/how/">How Pulumi Works</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State and Backends" href="/docs/reference/state/">State and Backends</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Tutorials">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/tutorials/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateways and Lambda" href="/docs/reference/tutorials/aws/tutorial-rest-api/">API Gateways and Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Containers on ECS &#34;Fargate&#34;" href="/docs/reference/tutorials/aws/tutorial-service/">Containers on ECS &#34;Fargate&#34;</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="EC2 Linux WebServer Instance" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">EC2 Linux WebServer Instance</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serve a Static Website from S3" href="/docs/reference/tutorials/aws/tutorial-s3-website/">Serve a Static Website from S3</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Video Thumbnailer" href="/docs/reference/tutorials/aws/tutorial-thumbnailer/">Video Thumbnailer</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/tutorials/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Container Instance" href="/docs/reference/tutorials/azure/tutorial-container-webserver/">Web Server Container Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/tutorials/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Virtual Machine Instance" href="/docs/reference/tutorials/gcp/tutorial-gce-webserver/">Web Server Virtual Machine Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/tutorials/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: EKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-eks/">Clusters: EKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: GKE - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-gke/">Clusters: GKE - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: AKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-aks/">Clusters: AKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#1: Hello, World!" href="/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment/">#1: Hello, World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#2: Deploying the WordPress Helm Chart" href="/docs/reference/tutorials/kubernetes/tutorial-wordpress-chart/">#2: Deploying the WordPress Helm Chart</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#3: Guestbook App with Redis and Nginx" href="/docs/reference/tutorials/kubernetes/tutorial-guestbook/">#3: Guestbook App with Redis and Nginx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#4: Graceful App Rollout" href="/docs/reference/tutorials/kubernetes/tutorial-configmap-rollout/">#4: Graceful App Rollout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#5: Gating rollout on Prometheus checks" href="/docs/reference/tutorials/kubernetes/tutorial-p8s-rollout/">#5: Gating rollout on Prometheus checks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#6: Run a Stateless App Deployment" href="/docs/reference/tutorials/kubernetes/tutorial-stateless-app/">#6: Run a Stateless App Deployment</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#7: EKS - Migrating Node Groups with Zero Downtime" href="/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups/">#7: EKS - Migrating Node Groups with Zero Downtime</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Command Line">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cancel" href="/docs/reference/cli/pulumi_cancel/">Cancel</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Config" href="/docs/reference/cli/pulumi_config/">Config</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Destroy" href="/docs/reference/cli/pulumi_destroy/">Destroy</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Login" href="/docs/reference/cli/pulumi_login/">Login</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logout" href="/docs/reference/cli/pulumi_logout/">Logout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logs" href="/docs/reference/cli/pulumi_logs/">Logs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="New" href="/docs/reference/cli/pulumi_new/">New</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Plugin" href="/docs/reference/cli/pulumi_plugin/">Plugin</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Preview" href="/docs/reference/cli/pulumi_preview/">Preview</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Refresh" href="/docs/reference/cli/pulumi_refresh/">Refresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stack" href="/docs/reference/cli/pulumi_stack/">Stack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State" href="/docs/reference/cli/pulumi_state/">State</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Update" href="/docs/reference/cli/pulumi_up/">Update</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Clouds">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/clouds/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/aws/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/clouds/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/azure/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/clouds/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/gcp/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/clouds/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Introduction" href="/docs/reference/clouds/kubernetes/introduction/">Introduction</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/kubernetes/setup/">Setup</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="FAQ" href="/docs/reference/clouds/kubernetes/faq/">FAQ</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="OpenStack">
+                <div class="sidenav-topic ">
+                    <a data-title="OpenStack" href="/docs/reference/clouds/openstack/">OpenStack</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/openstack/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggleVisible" data-title="Crosswalk for AWS 🆕">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+            
+        
+
+        
+            <div class="sidenav-topic mb-2 active">
+                <a data-title="API Gateway" href="/docs/reference/crosswalk/aws/api-gateway/">API Gateway</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Auto Scaling" href="/docs/reference/crosswalk/aws/autoscaling/">Auto Scaling</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CloudWatch" href="/docs/reference/crosswalk/aws/cloudwatch/">CloudWatch</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Registry (ECR)" href="/docs/reference/crosswalk/aws/ecr/">Elastic Container Registry (ECR)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Service (ECS)" href="/docs/reference/crosswalk/aws/ecs/">Elastic Container Service (ECS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Kubernetes Service (EKS)" href="/docs/reference/crosswalk/aws/eks/">Elastic Kubernetes Service (EKS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Load Balancing (ELB)" href="/docs/reference/crosswalk/aws/elb/">Elastic Load Balancing (ELB)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Identity and Access Management (IAM)" href="/docs/reference/crosswalk/aws/iam/">Identity and Access Management (IAM)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Lambda" href="/docs/reference/crosswalk/aws/lambda/">Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Virtual Private Cloud (VPC)" href="/docs/reference/crosswalk/aws/vpc/">Virtual Private Cloud (VPC)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Other AWS Services" href="/docs/reference/crosswalk/aws/other/">Other AWS Services</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Languages">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Node.js" href="/docs/reference/javascript/">Node.js</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Python" href="/docs/reference/python/">Python</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Teams &amp; Collaboration">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizations" href="/docs/reference/service/orgs/">Organizations</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Teams" href="/docs/reference/service/teams/">Teams</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Roles and Access Controls" href="/docs/reference/service/roles-and-access-controls/">Roles and Access Controls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub App" href="/docs/reference/cd-github/">Pulumi GitHub App</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi Webhooks" href="/docs/reference/service/webhooks/">Pulumi Webhooks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Creating a &#39;Deploy with Pulumi&#39; Button" href="/docs/reference/service/pulumi-button/">Creating a &#39;Deploy with Pulumi&#39; Button</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Continuous Delivery">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Supporting A New CI System" href="/docs/reference/cd-supporting-new-ci/">Supporting A New CI System</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="AWS Code Services" href="/docs/reference/cd-aws-code-services/">AWS Code Services</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Azure DevOps" href="/docs/reference/cd-azure-devops/">Azure DevOps</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CircleCI" href="/docs/reference/cd-circleci/">CircleCI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Codefresh" href="/docs/reference/cd-codefresh/">Codefresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="GitLab CI" href="/docs/reference/cd-gitlab-ci/">GitLab CI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Google Cloud Build" href="/docs/reference/cd-google-cloud-build/">Google Cloud Build</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub Actions" href="/docs/reference/cd-github-actions/">Pulumi GitHub Actions</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Travis CI" href="/docs/reference/cd-travis/">Travis CI</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Compared to Others">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Terraform" href="/docs/reference/vs/terraform/">Terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud Templates" href="/docs/reference/vs/cloud_templates/">Cloud Templates</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud SDKs" href="/docs/reference/vs/cloud_sdks/">Cloud SDKs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serverless" href="/docs/reference/vs/serverless/">Serverless</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Kubernetes YAML" href="/docs/reference/vs/k8s_yaml_dsls/">Kubernetes YAML</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Chef, Puppet, etc." href="/docs/reference/vs/chef_puppet_etc/">Chef, Puppet, etc.</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Custom Solutions" href="/docs/reference/vs/custom/">Custom Solutions</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="API Reference">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="Node.js">
+                <div class="sidenav-topic ">
+                    <a data-title="Node.js" href="/docs/reference/pkg/nodejs/">Node.js</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/nodejs/pulumi/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="aws" href="/docs/reference/pkg/nodejs/pulumi/aws/">aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="awsx" href="/docs/reference/pkg/nodejs/pulumi/awsx/">awsx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azure" href="/docs/reference/pkg/nodejs/pulumi/azure/">azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azuread" href="/docs/reference/pkg/nodejs/pulumi/azuread/">azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloud" href="/docs/reference/pkg/nodejs/pulumi/cloud/">cloud</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloudflare" href="/docs/reference/pkg/nodejs/pulumi/cloudflare/">cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="datadog" href="/docs/reference/pkg/nodejs/pulumi/datadog/">datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="digitalocean" href="/docs/reference/pkg/nodejs/pulumi/digitalocean/">digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="dnsimple" href="/docs/reference/pkg/nodejs/pulumi/dnsimple/">dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="docker" href="/docs/reference/pkg/nodejs/pulumi/docker/">docker</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="eks" href="/docs/reference/pkg/nodejs/pulumi/eks/">eks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="f5bigip" href="/docs/reference/pkg/nodejs/pulumi/f5bigip/">f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gcp" href="/docs/reference/pkg/nodejs/pulumi/gcp/">gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gitlab" href="/docs/reference/pkg/nodejs/pulumi/gitlab/">gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="kubernetes" href="/docs/reference/pkg/nodejs/pulumi/kubernetes/">kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="linode" href="/docs/reference/pkg/nodejs/pulumi/linode/">linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="mysql" href="/docs/reference/pkg/nodejs/pulumi/mysql/">mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="newrelic" href="/docs/reference/pkg/nodejs/pulumi/newrelic/">newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="openstack" href="/docs/reference/pkg/nodejs/pulumi/openstack/">openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="packet" href="/docs/reference/pkg/nodejs/pulumi/packet/">packet</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="postgresql" href="/docs/reference/pkg/nodejs/pulumi/postgresql/">postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="random" href="/docs/reference/pkg/nodejs/pulumi/random/">random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="terraform" href="/docs/reference/pkg/nodejs/pulumi/terraform/">terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="tls" href="/docs/reference/pkg/nodejs/pulumi/tls/">tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="vsphere" href="/docs/reference/pkg/nodejs/pulumi/vsphere/">vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Python">
+                <div class="sidenav-topic ">
+                    <a data-title="Python" href="/docs/reference/pkg/python/">Python</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/python/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_aws" href="/docs/reference/pkg/python/pulumi_aws/">pulumi_aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azure" href="/docs/reference/pkg/python/pulumi_azure/">pulumi_azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azuread" href="/docs/reference/pkg/python/pulumi_azuread/">pulumi_azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_cloudflare" href="/docs/reference/pkg/python/pulumi_cloudflare/">pulumi_cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_datadog" href="/docs/reference/pkg/python/pulumi_datadog/">pulumi_datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_digitalocean" href="/docs/reference/pkg/python/pulumi_digitalocean/">pulumi_digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_dnsimple" href="/docs/reference/pkg/python/pulumi_dnsimple/">pulumi_dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_f5bigip" href="/docs/reference/pkg/python/pulumi_f5bigip/">pulumi_f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gcp" href="/docs/reference/pkg/python/pulumi_gcp/">pulumi_gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gitlab" href="/docs/reference/pkg/python/pulumi_gitlab/">pulumi_gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_kubernetes" href="/docs/reference/pkg/python/pulumi_kubernetes/">pulumi_kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_linode" href="/docs/reference/pkg/python/pulumi_linode/">pulumi_linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_mysql" href="/docs/reference/pkg/python/pulumi_mysql/">pulumi_mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_newrelic" href="/docs/reference/pkg/python/pulumi_newrelic/">pulumi_newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_openstack" href="/docs/reference/pkg/python/pulumi_openstack/">pulumi_openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_postgresql" href="/docs/reference/pkg/python/pulumi_postgresql/">pulumi_postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_random" href="/docs/reference/pkg/python/pulumi_random/">pulumi_random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_tls" href="/docs/reference/pkg/python/pulumi_tls/">pulumi_tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_vsphere" href="/docs/reference/pkg/python/pulumi_vsphere/">pulumi_vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="FAQ">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Download and Install">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Changelog">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible">
+                <div class="toggle" data-title="Troubleshooting &amp; Support">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+    
+
+    
+</aside>
+
+
+
+            </div>
+
+            <div class="md:w-7/12">
+                <h1>AWS API Gateway</h1>
+                
+
+<p><a href="/docs/reference/crosswalk/aws/">
+    <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+</a></p>
+
+<p><a href="https://aws.amazon.com/api-gateway/">Amazon API Gateway</a> is a fully managed service for creating, monitoring, and
+securing APIs at scale. It acts as a &ldquo;front door&rdquo; for REST and WebSocket applications that use backend services,
+and handles all the tasks necessary to accept and process up to hundreds of thousands of concurrent API calls,
+including traffic management, authorization and access control, monitoring, and API version management. API Gateway
+is inexpensive, has no minimum fees, and you only pay for the API calls you receive and the data transferred out.</p>
+
+<div class="mini-toc border-b border-gray-200 mt-2 mb-8 py-6">
+    <h4>On This Page</h4>
+    <ul>
+        
+    </ul>
+</div>
+
+
+<h2 id="overview">Overview</h2>
+
+<p>Pulumi Crosswalk for AWS provides significantly easier ways of programming API Gateway. This includes using
+infrastructure as code techniques for simple, declarative APIs, including easy Lambda-based handlers.</p>
+
+<h2 id="defining-an-api-gateway-endpoint-and-routes">Defining an API Gateway Endpoint and Routes</h2>
+
+<p>API Gateway creates REST APIs that:</p>
+
+<ul>
+<li>Are HTTP based.</li>
+<li>Adhere to the <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST</a> protocol.</li>
+<li>Implement standard HTTP methods such as <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, and <code>DELETE</code>.</li>
+</ul>
+
+<p>Each API Gateway instance defines a new API endpoint and a collection of API routes, each of which has a distinct URL.</p>
+
+<blockquote>
+<p>Internally the API Gateway resource uses a collection of supporting objects, like resources, methods, and more,
+however one of the benefits of Pulumi Crosswalk for AWS is that it hides these mechanics behind a simpler interface.</p>
+</blockquote>
+
+<p>Each API Gateway deployment is associated with a so-called <em>stage</em>. A stage is simply a version of your API, such
+as <code>stage</code>, <code>prod</code>, <code>v1</code>, or <code>v2</code>. For simple APIs, you will likely just have one. You can always define a custom
+stage name, but if you leave it off, a default of <code>stage</code> will be chosen.</p>
+
+<p>API Gateway will auto-generate a domain name with built-in HTTPS support. The stage name will also be part of this URL.
+We will see later how to assign a custom domain, SSL certificate, and/or eliminate the stage name from the URL.</p>
+
+<p>There are multiple ways to define APIs using Pulumi Crosswalk for AWS:</p>
+
+<ul>
+<li><a href="#defining-a-lambda-function-event-handler-route">Lambda Function Event Handler Route</a></li>
+<li><a href="#defining-a-static-route-served-by-s3">Static Route Served by S3</a></li>
+<li><a href="#defining-an-integration-route">Integration Route</a></li>
+<li><a href="#defining-an-openapi-specification-for-an-entire-endpoint">OpenAPI Specification for an Entire Endpoint</a></li>
+<li><a href="#defining-an-openapi-specification-for-a-single-route">OpenAPI Specification for a Single Route</a></li>
+</ul>
+
+<p>Multiple endpoints on the same API Gateway can be defined using a combination of these techniques.</p>
+
+<h3 id="defining-a-lambda-function-event-handler-route">Defining a Lambda Function Event Handler Route</h3>
+
+<p>An Event Handler Route is an API that will map to a <a href="https://aws.amazon.com/lambda/">Lambda Function</a>. You will specify
+the path, HTTP method, and the Lambda Function to invoke when the API is called. Pulumi offers multiple ways of defining
+the Lambda Function and it provisions the appropriate permissions so that API Gateway can communicate with it.</p>
+
+<p>An easy way to define the Lambda Function, which mimics modern REST web application frameworks in style, is to
+write the application code inline with the API Gateway definition itself. This example creates an API Gateway
+endpoint with a single API, listening at <code>/</code> for <code>GET</code> requests, which simply returns a <code>200 OK</code> for each call:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Define a new GET endpoint that just returns a 200 and &#34;hello&#34; in the body.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;example&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/&#34;</span><span class="p">,</span>
+        <span class="nx">method</span><span class="o">:</span> <span class="s2">&#34;GET&#34;</span><span class="p">,</span>
+        <span class="nx">eventHandler</span>: <span class="kt">async</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="c1">// This code runs in an AWS Lambda anytime `/` is hit.
+</span><span class="c1"></span>            <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">statusCode</span>: <span class="kt">200</span><span class="p">,</span>
+                <span class="nx">body</span><span class="o">:</span> <span class="s2">&#34;Hello, API Gateway!&#34;</span><span class="p">,</span>
+            <span class="p">};</span>
+        <span class="p">},</span>
+    <span class="p">}],</span>
+<span class="p">})</span>
+
+<span class="c1">// Export the auto-generated API Gateway base URL.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">url</span><span class="p">;</span></code></pre></div>
+<p>By running <code>pulumi up</code>, we will provision the API Gateway, its routes, and we&rsquo;ll get back the URL:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi up -y
+Updating <span class="o">(</span>dev<span class="o">)</span>:
+
+     Type                                Name                      Status
+ +   pulumi:pulumi:Stack                 crosswalk-aws-dev         created
+ +   └─ aws:apigateway:x:API             example                   created
+ +      ├─ aws:iam:Role                  example4c238266           created
+ +      ├─ aws:iam:RolePolicyAttachment  example4c238266-32be53a2  created
+ +      ├─ aws:lambda:Function           example4c238266           created
+ +      ├─ aws:apigateway:RestApi        example                   created
+ +      ├─ aws:apigateway:Deployment     example                   created
+ +      ├─ aws:lambda:Permission         example-fa520765          created
+ +      └─ aws:apigateway:Stage          example                   created
+
+Outputs:
+    url: <span class="s2">&#34;https://no90ji5v23.execute-api.us-west-2.amazonaws.com/stage/&#34;</span>
+
+Resources:
+    + <span class="m">9</span> created
+
+Duration: 25s</code></pre></div>
+<p>We can <code>curl</code> the URL to see that it is up and running:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ curl <span class="k">$(</span>pulumi stack output url<span class="k">)</span>
+Hello, API Gateway!</code></pre></div>
+<p>This example uses Pulumi Crosswalk for AWS&rsquo;s built-in Lambda Function support. In this example, we are
+specifying the code inline, and using the default Lambda property values. We can customize aspects of this
+Function such as, for example, increasing the memory size available to our Function to 256MB:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Define a new GET endpoint that just returns a 200 and &#34;hello&#34; in the body.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;example&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/&#34;</span><span class="p">,</span>
+        <span class="nx">method</span><span class="o">:</span> <span class="s2">&#34;GET&#34;</span><span class="p">,</span>
+        <span class="nx">eventHandler</span>: <span class="kt">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">lambda</span><span class="p">.</span><span class="nx">CallbackFunction</span><span class="p">(</span><span class="s2">&#34;get-handler&#34;</span><span class="p">,</span> <span class="p">{</span>
+            <span class="nx">memorySize</span>: <span class="kt">256</span><span class="p">,</span>
+            <span class="nx">callback</span>: <span class="kt">async</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="c1">// This code runs in an AWS Lambda anytime `/` is hit.
+</span><span class="c1"></span>                <span class="k">return</span> <span class="p">{</span>
+                    <span class="nx">statusCode</span>: <span class="kt">200</span><span class="p">,</span>
+                    <span class="nx">body</span><span class="o">:</span> <span class="s2">&#34;Hello, API Gateway!&#34;</span><span class="p">,</span>
+                <span class="p">};</span>
+            <span class="p">},</span>
+        <span class="p">}),</span>
+    <span class="p">}],</span>
+<span class="p">})</span>
+
+<span class="c1">// Export the auto-generated API Gateway base URL.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">url</span><span class="p">;</span></code></pre></div>
+<p>In many cases, you might want to define your application logic in a different set of files than your
+API Gateway infrastructure. Using modules lets you do this easily. For instance, we might have a subdirectory
+named <code>app/</code> that contains a <code>routes.js</code> file:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Define our routes, independent from the API Gateway itself.
+</span><span class="c1"></span><span class="kr">export</span> <span class="nx">async</span> <span class="kd">function</span> <span class="nx">helloHandler</span><span class="p">(</span>
+        <span class="nx">event</span>: <span class="kt">awsx.apigateway.Request</span><span class="p">)</span><span class="o">:</span> <span class="nx">Promise</span><span class="o">&lt;</span><span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">Response</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">statusCode</span>: <span class="kt">200</span><span class="p">,</span>
+        <span class="nx">body</span><span class="o">:</span> <span class="s2">&#34;Hello, API Gateway!&#34;</span><span class="p">,</span>
+    <span class="p">};</span>
+<span class="p">}</span></code></pre></div>
+<p>Then for our API Gateway infrastructure definition we can simply write:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">routes</span> <span class="nx">from</span> <span class="s2">&#34;./app/routes&#34;</span><span class="p">;</span>
+
+<span class="c1">// Define a new GET endpoint that just returns a 200 and &#34;hello&#34; in the body.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;example&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/&#34;</span><span class="p">,</span> <span class="nx">method</span><span class="o">:</span> <span class="s2">&#34;GET&#34;</span><span class="p">,</span> <span class="nx">eventHandler</span>: <span class="kt">routes.helloHandler</span> <span class="p">}],</span>
+<span class="p">})</span>
+
+<span class="c1">// Export the auto-generated API Gateway base URL.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">url</span><span class="p">;</span></code></pre></div>
+<p>If you prefer to keep your application and infrastructure code in entirely separate projects, you can define
+Lambdas in the usual way and consume them from the API Gateway resources. For instance, if you already have a
+Lambda Function provisioned in AWS, you can reference it using <code>aws.lambda.Function.get</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Define a new GET endpoint from an existing Lambda Function.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;example&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/&#34;</span><span class="p">,</span>
+        <span class="nx">method</span><span class="o">:</span> <span class="s2">&#34;GET&#34;</span><span class="p">,</span>
+        <span class="nx">eventHandler</span>: <span class="kt">aws.lambda.Function.get</span><span class="p">(</span><span class="s2">&#34;get-handler&#34;</span><span class="p">,</span> <span class="s2">&#34;your_lambda_id&#34;</span><span class="p">),</span>
+    <span class="p">}],</span>
+<span class="p">})</span>
+
+<span class="c1">// Export the auto-generated API Gateway base URL.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">url</span><span class="p">;</span></code></pre></div>
+<p>For more complete information about creating Lambda Functions, please
+<a href="/docs/reference/crosswalk/aws/lambda/">see the Pulumi Crosswalk for AWS Lambda documentation</a>. Any of the techniques described may be used
+in combination with the <code>awsx.apigateway.API</code> class.</p>
+
+<h3 id="defining-a-static-route-served-by-s3">Defining a Static Route Served by S3</h3>
+
+<p>A Static Route serves static content from <a href="https://aws.amazon.com/s3/">S3</a> at an API endpoint.</p>
+
+<p>To ease population of the S3 bucket to serve from, and connecting it to the API Gateway, you specify the local path &ndash;
+either a file or an entire directory &ndash; and Pulumi will upload the contents as S3 objects.</p>
+
+<p>Let&rsquo;s say we have a directory <code>www</code> containing a single <code>index.html</code> file:</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, API Gateway + S3!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span></code></pre></div>
+<p>The following program will create an API Gateway that serves this content at the <code>/</code> URL:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Define a GET endpoint that serves an entire directory of static content.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;example&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/&#34;</span><span class="p">,</span>
+        <span class="nx">localPath</span><span class="o">:</span> <span class="s2">&#34;www&#34;</span><span class="p">,</span>
+    <span class="p">}],</span>
+<span class="p">})</span>
+
+<span class="c1">// Export the auto-generated API Gateway base URL.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">url</span><span class="p">;</span></code></pre></div>
+<p>After running <code>pulumi up</code>, we can <code>curl</code> the resulting endpoint:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ curl <span class="k">$(</span>pulumi stack output url<span class="k">)</span>
+&lt;h1&gt;Hello, API Gateway + S3!&lt;/h1&gt;</code></pre></div>
+<p>By default, any index documents will be automatically served by S3 when directories are retrieved over HTTP (in the
+manner <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/IndexDocumentSupport.html">described here</a>). To suppress this
+behavior, simply pass <code>index: false</code> as part of configuring your static route:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Define a GET endpoint that serves an entire directory of static content.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;example&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/&#34;</span><span class="p">,</span>
+        <span class="nx">localPath</span><span class="o">:</span> <span class="s2">&#34;www&#34;</span><span class="p">,</span>
+        <span class="nx">index</span>: <span class="kt">false</span><span class="p">,</span>
+    <span class="p">}],</span>
+<span class="p">})</span>
+
+<span class="c1">// Export the auto-generated API Gateway base URL.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">url</span><span class="p">;</span></code></pre></div>
+<p>After making this change, the earlier <code>curl</code> command will return a 404:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ curl <span class="k">$(</span>pulumi stack output url<span class="k">)</span>
+<span class="o">{</span> <span class="s2">&#34;message&#34;</span>: <span class="s2">&#34;404 Not found&#34;</span> <span class="o">}</span></code></pre></div>
+<p>We must instead request the <code>index.html</code> document explicitly:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ curl <span class="k">$(</span>pulumi stack output url<span class="k">)</span>/index.html
+&lt;h1&gt;Hello, API Gateway + S3!&lt;/h1&gt;</code></pre></div>
+<p>Finally, the content type for all files in a path referencing a directory is inferred. If the local path instead
+points to a single file, you can specify the content type explicitly with the <code>contentType</code> property.</p>
+
+<h3 id="defining-an-integration-route">Defining an Integration Route</h3>
+
+<p>If neither of the above route types work for you, API Gateway uses so-called <em>integrations</em> to hook up an API
+Gateway endpoint to backend services that will execute code in response to requests. The above examples use
+integrations internally, even if it&rsquo;s not evident in the simple interface exposed.</p>
+
+<p>Integrations give you full control over how HTTP requests are handled, and responses served, by an API Gateway
+route. If you want more flexibility than the earlier methods, to proxy HTTP requests, to integrate with
+AWS services other than Lambda Functions, or to mock your APIs, you can use an Integration Route simply by
+specifying the <code>target</code> property on your route.</p>
+
+<p>An Integration Route is a route that will map an endpoint to a specified backend. The supported types are:</p>
+
+<ul>
+<li><code>aws</code>: This type of integration lets an API expose AWS service actions, such as invoking Amazon Lambda Functions,
+Amazon DynamoDB, Amazon Simple Notification Service, or Amazon Simple Queue Service. You must set up the
+necessary data mappings between the HTTP and underlying AWS service requests/responses.</li>
+<li><code>aws_proxy</code>: This type of integration lets an API expose AWS service actions, much like <code>AWS</code>, and passes
+the HTTP request information, including request headers, URL path variables, query string parameters, and
+applicable body, directly to the underlying AWS service actions.</li>
+<li><code>http</code>: This type of integration lets an API expose HTTP endpoints with custom integration requests and responses.
+You must set up necessary data mappings between the HTTP and integration requests/responses.</li>
+<li><code>http_proxy</code>: This type of integration lets an API expose HTTP endpoints with a streamlined integration,
+without needing to perform custom data mappings as with the <code>HTTP</code> integration type.</li>
+<li><code>mock</code>: This type of integration lets API Gateway return a response without sending a request further to
+the backend. This is useful for API testing without needing to configure any backend to service requests.</li>
+</ul>
+
+<p>The following example sets up an <code>http_proxy</code> integration type that simply passes requests/responses directly
+through to another endpoint, in this case <code>https://www.google.com</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Define a GET endpoint that proxies HTTP requests to https://www.google.com.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;example&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/google&#34;</span><span class="p">,</span>
+        <span class="nx">target</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;http_proxy&#34;</span><span class="p">,</span>
+            <span class="nx">uri</span><span class="o">:</span> <span class="s2">&#34;https://www.google.com&#34;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}],</span>
+<span class="p">});</span>
+
+<span class="c1">// Export the auto-generated API Gateway base URL.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">url</span><span class="p">;</span></code></pre></div>
+<p>For more information API Gateway Integrations, visit the
+<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-integration-types.html">AWS documentation</a>.</p>
+
+<h3 id="defining-an-openapi-specification-for-an-entire-endpoint">Defining an OpenAPI Specification for an Entire Endpoint</h3>
+
+<p>API Gateway supports the <a href="https://swagger.io/docs/specification/about/">OpenAPI specification</a> (formerly known as
+&ldquo;Swagger&rdquo;) for defining APIs. Using OpenAPI to define your APIs eases integration with other API authoring, modeling,
+and testing tools, at some added complexity cost as you will need to understand the mechanics of how API Gateway
+works and what HTTP headers it uses to accomplish its integrations.</p>
+
+<p>To use an OpenAPI specification to initialize your API Gateway, supply an entire OpenAPI specification as a string
+in the <code>swaggerString</code> property. For example, this API invokes an existing Lambda whose ID is <code>your_lambda_id</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Look up an existing Lambda Function by ID, so that we can get its ARN. (If we knew the ARN ahead
+</span><span class="c1">// of time, this would not be necessary, we can just use it in the URI below.)
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">handler</span> <span class="o">=</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">lambda</span><span class="p">.</span><span class="nb">Function</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;get-handler&#34;</span><span class="p">,</span> <span class="s2">&#34;your_lambda_id&#34;</span><span class="p">);</span>
+
+<span class="c1">// Define a GET endpoint that invokes our Lambda Function-based handler.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;example&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">swaggerString</span>: <span class="kt">handler.arn.apply</span><span class="p">(</span><span class="nx">arn</span> <span class="o">=&gt;</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+        <span class="s2">&#34;swagger&#34;</span><span class="o">:</span> <span class="s2">&#34;2.0&#34;</span><span class="p">,</span>
+        <span class="s2">&#34;info&#34;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&#34;title&#34;</span><span class="o">:</span> <span class="s2">&#34;example&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;version&#34;</span><span class="o">:</span> <span class="s2">&#34;1.0&#34;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&#34;paths&#34;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&#34;/&#34;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&#34;get&#34;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&#34;x-amazon-apigateway-integration&#34;</span><span class="o">:</span> <span class="p">{</span>
+                        <span class="s2">&#34;httpMethod&#34;</span><span class="o">:</span> <span class="s2">&#34;POST&#34;</span><span class="p">,</span>
+                        <span class="s2">&#34;passthroughBehavior&#34;</span><span class="o">:</span> <span class="s2">&#34;when_no_match&#34;</span><span class="p">,</span>
+                        <span class="s2">&#34;type&#34;</span><span class="o">:</span> <span class="s2">&#34;aws_proxy&#34;</span><span class="p">,</span>
+                        <span class="s2">&#34;uri&#34;</span><span class="o">:</span> <span class="sb">`arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/</span><span class="si">${</span><span class="nx">arn</span><span class="si">}</span><span class="sb">/invocations`</span><span class="p">,</span>
+                    <span class="p">},</span>
+                <span class="p">},</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="s2">&#34;x-amazon-apigateway-api-key-source&#34;</span><span class="o">:</span> <span class="s2">&#34;HEADER&#34;</span><span class="p">,</span>
+        <span class="s2">&#34;x-amazon-apigateway-binary-media-types&#34;</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&#34;*/*&#34;</span> <span class="p">],</span>
+        <span class="s2">&#34;x-amazon-apigateway-gateway-responses&#34;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&#34;ACCESS_DENIED&#34;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&#34;responseTemplates&#34;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&#34;application/json&#34;</span><span class="o">:</span> <span class="s2">&#34;{\&#34;message\&#34;: \&#34;404 Not found\&#34; }&#34;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&#34;statusCode&#34;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&#34;MISSING_AUTHENTICATION_TOKEN&#34;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&#34;responseTemplates&#34;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&#34;application/json&#34;</span><span class="o">:</span> <span class="s2">&#34;{\&#34;message\&#34;: \&#34;404 Not found\&#34; }&#34;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">&#34;statusCode&#34;</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">})),</span>
+<span class="p">});</span>
+
+<span class="c1">// Export the auto-generated API Gateway base URL.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">url</span><span class="p">;</span></code></pre></div>
+<p>This is more complex than the above examples, but this in an escape hatch that you can use to access any API
+Gateway features not yet supported by the easier abstractions in Pulumi Crosswalk for API Gateway. You must manually
+provide permission for any route targets to be invoked by API Gateway when using this option.</p>
+
+<p>For more information about Amazon API Gateway&rsquo;s support for OpenAPI, including exporting specifications from existing
+APIs for consumption from other tools, please see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api.html">Documenting a REST API in API Gateway</a></p>
+
+<h3 id="defining-an-openapi-specification-for-a-single-route">Defining an OpenAPI Specification for a Single Route</h3>
+
+<p>Being able to provide an OpenAPI specification for an entire API Gateway lets you take matters into your own
+hands if you need to access a feature not supported directly by <code>awsx.apigateway.API</code>. However, if you&rsquo;d like to
+define just a single API using OpenAPI, you can define a Raw Data Route, by supplying a <code>data</code> property.</p>
+
+<p>The <code>data</code> property is just the <code>x-amazon-apigateway-integration</code> object, which can be seen in the above example.
+The route&rsquo;s other parameters, such as its path and method, otherwise use the same approaches seen earlier.</p>
+
+<p>For instance, the same API Gateway endpoint that invokes a Lambda Function can be authored as follows:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Look up an existing Lambda Function by ID, so that we can get its ARN. (If we knew the ARN ahead
+</span><span class="c1">// of time, this would not be necessary, we can just use it in the URI below.)
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">handler</span> <span class="o">=</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">lambda</span><span class="p">.</span><span class="nb">Function</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;get-handler&#34;</span><span class="p">,</span> <span class="s2">&#34;your_lambda_id&#34;</span><span class="p">);</span>
+
+<span class="c1">// Define a GET endpoint that invokes our Lambda Function-based handler.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;example&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/&#34;</span><span class="p">,</span>
+        <span class="nx">method</span><span class="o">:</span> <span class="s2">&#34;GET&#34;</span><span class="p">,</span>
+        <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&#34;x-amazon-apigateway-integration&#34;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&#34;httpMethod&#34;</span><span class="o">:</span> <span class="s2">&#34;POST&#34;</span><span class="p">,</span>
+                <span class="s2">&#34;passthroughBehavior&#34;</span><span class="o">:</span> <span class="s2">&#34;when_no_match&#34;</span><span class="p">,</span>
+                <span class="s2">&#34;type&#34;</span><span class="o">:</span> <span class="s2">&#34;aws_proxy&#34;</span><span class="p">,</span>
+                <span class="s2">&#34;uri&#34;</span><span class="o">:</span> <span class="nx">handler</span><span class="p">.</span><span class="nx">arn</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">arn</span> <span class="o">=&gt;</span>
+                    <span class="sb">`arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/</span><span class="si">${</span><span class="nx">arn</span><span class="si">}</span><span class="sb">/invocations`</span><span class="p">),</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">}],</span>
+<span class="p">});</span>
+
+<span class="c1">// Export the auto-generated API Gateway base URL.
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">url</span><span class="p">;</span></code></pre></div>
+<p>For full details on what the OpenAPI integration object may contain, please refer to the full
+<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration.html">x-amazon-apigateway-integration Object documentation</a>.</p>
+
+<h2 id="performing-api-gateway-request-validation">Performing API Gateway Request Validation</h2>
+
+<p>API Gateway can perform basic validations against request parameters, a request payload or both. When a
+validation fails, a 400 error is returned immediately, without invoking the backend integration, and the
+validation results are published to the CloudWatch Logs, eliminating unnecessary calls to the backend.</p>
+
+<p>For basic validation, API Gateway verifies either or both of these conditions:</p>
+
+<ul>
+<li>The required request parameters in the URI, query string, and headers of an incoming request are
+included and non-blank.</li>
+<li>The applicable request payload adheres to the configured JSON schema request model of the method.</li>
+</ul>
+
+<p>When enabling validation, you will choose a validation scope, in addition to validation rules.</p>
+
+<h3 id="assigning-validators-to-apis-and-methods">Assigning Validators to APIs and Methods</h3>
+
+<p>Validators can be assigned for an entire API or at the individual method level, such as only for <code>POST</code> on a given
+route. The validators defined at a method level override any validator set at the global API level.</p>
+
+<p>To enable validation, pass the <code>requestValidator</code> property on the API object or individual route. The following
+validator values are available:</p>
+
+<ul>
+<li><code>&quot;ALL&quot;</code>: Validate both the request body and request parameters.</li>
+<li><code>&quot;BODY_ONLY&quot;</code>: Validate only the request body.</li>
+<li><code>&quot;PARAMS_ONLY&quot;</code>:  Validate only the request parameters.</li>
+</ul>
+
+<p>For example, this enables parameter validation on all routes, and all validation on a specific route:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;example&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">requestValidator</span><span class="o">:</span> <span class="s2">&#34;PARAMS_ONLY&#34;</span><span class="p">,</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="c1">// ...
+</span><span class="c1"></span>            <span class="nx">requestValidator</span><span class="o">:</span> <span class="s2">&#34;ALL&#34;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="c1">// ...
+</span><span class="c1"></span>    <span class="p">],</span>
+<span class="p">});</span></code></pre></div>
+<p>This enables validation already specified in the underlying models. The <code>awsx.apigateway.API</code> class also
+supports mechanisms to specify the validation rules in the API Gateway configuration.</p>
+
+<h3 id="request-parameter-validation">Request Parameter Validation</h3>
+
+<p>To validate that a given request parameter is present in each request, use the <code>requiredParams</code> route property.
+This is an array where each entry defines a different parameter. Each entry specifies the parameter <code>name</code> and where
+it is expected to be found (<code>&quot;path&quot;</code>, <code>&quot;query&quot;</code>, or <code>&quot;header&quot;</code>), using the <code>in</code> property.</p>
+
+<p>For example, this ensures that the <code>key</code> querystring parameter is present on all requests:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;example&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="c1">// ...
+</span><span class="c1"></span>        <span class="nx">requestValidator</span><span class="o">:</span> <span class="s2">&#34;PARAMS_ONLY&#34;</span><span class="p">,</span>
+        <span class="nx">requiredParams</span><span class="o">:</span> <span class="p">[{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;key&#34;</span><span class="p">,</span> <span class="k">in</span><span class="o">:</span> <span class="s2">&#34;query&#34;</span> <span class="p">}],</span>
+    <span class="p">}],</span>
+<span class="p">})</span></code></pre></div>
+<p>For additional information about request validation, please refer to <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html#api-gateway-request-validation-basic-definitions">Enable Request Validation in API Gateway</a>.</p>
+
+<h3 id="request-body-validation">Request Body Validation</h3>
+
+<blockquote>
+<p>Request body validation is currently not supported. If you have a need for it, we would love to hear from you. Please
+comment on <a href="https://github.com/pulumi/pulumi-awsx/issues/198">this open issue</a> with details about your use case.</p>
+</blockquote>
+
+<h2 id="controlling-and-managing-access-to-apis">Controlling and Managing Access to APIs</h2>
+
+<p>API Gateway supports several mechanisms for controlling and managing access to your APIs. This includes authentication
+and authorization &ndash; e.g., resource policies, standard AWS IAM roles and policies, Cognito user pools, and Lambda
+authorizers &ndash; other access control tasks &ndash; e.g., cross-origin resource sharing (CORS), client-side SSL certificates,
+and Amazon Web Application Firewall (WAF) &ndash; and limiting access to authorized clients through usage plans and API keys.</p>
+
+<p>The <code>awsx.apigateway.API</code> class supports three specific methods of controlling access to your APIs:</p>
+
+<ul>
+<li><em>Amazon Cognito user pools</em> let you create customizable authentication and authorization for your APIs.</li>
+<li><em>Lambda authorizers</em> are Lambda Functions that control access to your APIs based on HTTP information
+available in headers, paths, query strings, or other request information, including bearer tokens.</li>
+<li><em>Usage plans</em> let you provide <em>API keys</em> to customers, and then track and limit usage of your APIs.</li>
+</ul>
+
+<p>Details on each is below. For those not directly supported, all of these capabilities are accessible to you in the
+<a href="/docs/reference/pkg/nodejs/pulumi/aws/">AWS package</a>, and are described in depth in the article
+<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html">Controlling and Managing Access to a REST API in API Gateway</a>.</p>
+
+<h3 id="authorizing-requests-using-cognito-authorizers">Authorizing Requests using Cognito Authorizers</h3>
+
+<p><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html">Cognito Authorizers</a>
+allow you to use <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html">Amazon Cognito User Pools</a>
+as an Authorizer for API Gateway. With a user pool, your users can sign into your web or mobile app through
+Amazon Cognito directly, or through social identity providers like Facebook or Amazon, or even through SAML
+identity providers. This enables your API Gateway to offload the difficult work of security to Cognito entirely.</p>
+
+<p>To require users to sign in through Cognito, use the <code>awsx.apigateway.getCognitoAuthorizer</code> function to get a
+configured Authorizer object, and supply it to the <code>authorizers</code> property on your route:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Create an AWS Cognito User Pool.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">cognitoUserPool</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">cognito</span><span class="p">.</span><span class="nx">UserPool</span><span class="p">(</span><span class="s2">&#34;pool&#34;</span><span class="p">);</span>
+
+<span class="c1">// Create an API that requires authorizes against the User Pool.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">apiWithCognitoAuthorizer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;cognito-protected-api&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/www_old&#34;</span><span class="p">,</span>
+        <span class="nx">localPath</span><span class="o">:</span> <span class="s2">&#34;www&#34;</span><span class="p">,</span>
+        <span class="nx">authorizers</span><span class="o">:</span> <span class="p">[</span>
+            <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">getCognitoAuthorizer</span><span class="p">({</span>
+                <span class="nx">providerARNs</span><span class="o">:</span> <span class="p">[</span> <span class="nx">cognitoUserPool</span> <span class="p">],</span>
+            <span class="p">}),</span>
+        <span class="p">],</span>
+    <span class="p">}],</span>
+<span class="p">});</span></code></pre></div>
+<p>This will require that a user authenticate, obtain an identity/access token, and call your API with said token.</p>
+
+<h3 id="authorizing-requests-using-lambda-authorizers">Authorizing Requests using Lambda Authorizers</h3>
+
+<p><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html">Lambda Authorizers</a>
+are AWS Lambda Functions that control access to an API. This allows you to use information in the request itself,
+including headers, paths, query parameters, or tokens, to decide whether a request is authorized to hit the backend.</p>
+
+<p>You can define a Lambda Authorizer for an Event Handler Route or a Static Route. API Gateway supports <code>request</code> or
+<code>token</code> type Lambda authorizers. A <code>token</code> Lambda Authorizer uses an authorization token (i.e. a header in the form
+<code>Authorization: Token &lt;token&gt;</code>) to authorize the user, whereas a <code>request</code> Lambda Authorizer uses the request
+parameters (i.e. headers, path parameter or query parameters).</p>
+
+<p>To define an Authorizer, you provide a Lambda that fulfills
+<code>aws.lambda.EventHandler&lt;AuthorizerEvent, AuthorizerResponse&gt;</code> or you provide information on a pre-existing Lambda
+Authorizer. The example below shows defining the Authorizer Lambda directly inline. See
+<a href="/docs/reference/crosswalk/aws/lambda/">Pulumi Crosswalk for AWS Lambda</a> for other ways you can define your Lambda for the Authorizer.</p>
+
+<h4 id="creating-a-lambda-based-request-authorizer">Creating a Lambda-based Request Authorizer</h4>
+
+<p>Below is an example of a custom <code>request</code> Lambda Authorizer. This has access to all aspects of the request and can
+make a decision based on whether to permit access based on any of it:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;myapi&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/b&#34;</span><span class="p">,</span>
+        <span class="nx">method</span><span class="o">:</span> <span class="s2">&#34;GET&#34;</span><span class="p">,</span>
+        <span class="nx">eventHandler</span>: <span class="kt">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">statusCode</span>: <span class="kt">200</span><span class="p">,</span>
+                <span class="nx">body</span><span class="o">:</span> <span class="s2">&#34;&lt;h1&gt;Hello world!&lt;/h1&gt;&#34;</span><span class="p">,</span>
+            <span class="p">};</span>
+        <span class="p">},</span>
+        <span class="nx">authorizers</span><span class="o">:</span> <span class="p">[</span>
+            <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">getRequestLambdaAuthorizer</span><span class="p">({</span>
+                <span class="nx">queryParameters</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&#34;auth&#34;</span> <span class="p">],</span>
+                <span class="nx">handler</span>: <span class="kt">async</span> <span class="p">(</span><span class="nx">event</span>: <span class="kt">awsx.apigateway.AuthorizerEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                    <span class="c1">// --- Add your own custom authorization logic here. ---
+</span><span class="c1"></span>                    <span class="c1">// Access the headers using event.headers, the query parameters using
+</span><span class="c1"></span>                    <span class="c1">// event.queryStringParameters or path parameters using event.pathParameters
+</span><span class="c1"></span>                    <span class="k">return</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">authorizerResponse</span><span class="p">(</span><span class="s2">&#34;user&#34;</span><span class="p">,</span> <span class="s2">&#34;Deny&#34;</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">methodArn</span><span class="p">);</span>
+                <span class="p">},</span>
+            <span class="p">}),</span>
+        <span class="p">],</span>
+    <span class="p">}],</span>
+<span class="p">});</span></code></pre></div>
+<p>This example denies the request unconditionally, but you can experiment with adding your own logic that
+validates the request before letting it proceed. Instead of returning <code>&quot;Deny&quot;</code>, you should conditionally
+return <code>&quot;Allow&quot;</code> for requests that pass the custom verification criteria.</p>
+
+<p>The above example used <code>awsx.apigateway.getRequestLambdaAuthorizer</code> to simplify defining the authorizer. You can
+instead define the authorizer by specifying all the property values explicitly:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;myapi&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="p">...</span>
+        <span class="nx">authorizers</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="nx">authorizerName</span><span class="o">:</span> <span class="s2">&#34;prettyAuthorizer&#34;</span><span class="p">,</span>
+            <span class="nx">parameterName</span><span class="o">:</span> <span class="s2">&#34;auth&#34;</span><span class="p">,</span>
+            <span class="nx">parameterLocation</span><span class="o">:</span> <span class="s2">&#34;query&#34;</span><span class="p">,</span>
+            <span class="nx">authType</span><span class="o">:</span> <span class="s2">&#34;custom&#34;</span><span class="p">,</span>
+            <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;request&#34;</span><span class="p">,</span>
+            <span class="nx">handler</span>: <span class="kt">async</span> <span class="p">(</span><span class="nx">event</span>: <span class="kt">awsx.apigateway.AuthorizerEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="c1">// --- Add your own custom authorization logic here. ---
+</span><span class="c1"></span>                <span class="k">return</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">authorizerResponse</span><span class="p">(</span>
+                    <span class="s2">&#34;user&#34;</span><span class="p">,</span>
+                    <span class="s2">&#34;Deny&#34;</span><span class="p">,</span>
+                    <span class="nx">event</span><span class="p">.</span><span class="nx">methodArn</span><span class="p">);</span>
+            <span class="p">},</span>
+            <span class="nx">identitySource</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&#34;method.request.querystring.auth&#34;</span> <span class="p">],</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+<span class="p">});</span></code></pre></div>
+<p>If you wish to reuse an Authorizer across multiple routes, you can declare it in a variable.</p>
+
+<p>For additional information about request-based API Gateway Lambda Authorizers, please see the
+<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html">AWS documentation</a>.</p>
+
+<h4 id="creating-a-lambda-based-request-authorizer-with-an-existing-lambda">Creating a Lambda-based Request Authorizer with an Existing Lambda</h4>
+
+<p>In the above examples, we created a new Lambda Function inline. Instead of writing a custom Lambda Authorizer, we can
+use an existing Lambda elsewhere and then reference the required values. Or, if the function already exists, we can use
+the <code>aws.lambda.Function.get</code> function to look up the Lambda resource and use it:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">apiWithAuthorizer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;authorizer-api&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="p">...</span>
+        <span class="nx">authorizers</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="nx">authorizerName</span><span class="o">:</span> <span class="s2">&#34;testing&#34;</span><span class="p">,</span>
+            <span class="nx">parameterName</span><span class="o">:</span> <span class="s2">&#34;auth&#34;</span><span class="p">,</span>
+            <span class="nx">parameterLocation</span><span class="o">:</span> <span class="s2">&#34;query&#34;</span><span class="p">,</span>
+            <span class="nx">authType</span><span class="o">:</span> <span class="s2">&#34;custom&#34;</span><span class="p">,</span>
+            <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;request&#34;</span><span class="p">,</span>
+            <span class="nx">handler</span><span class="o">:</span> <span class="p">{</span>
+                <span class="c1">// Use aws.lambda.Function.get to look up an existing Lambda Function. The library
+</span><span class="c1"></span>                <span class="c1">// will automatically fetch the invoke URI to pass to the Authorizer.
+</span><span class="c1"></span>                <span class="nx">uri</span>: <span class="kt">aws.lambda.Function.get</span><span class="p">(</span><span class="s2">&#34;get-handler&#34;</span><span class="p">,</span> <span class="s2">&#34;your_lambda_id&#34;</span><span class="p">),</span>
+                <span class="nx">credentials</span>: <span class="kt">gatewayRole.arn</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="nx">identitySource</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&#34;method.request.querystring.auth&#34;</span> <span class="p">],</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+<span class="p">});</span></code></pre></div>
+<p>A complete example of defining the Lambda Authorizer elsewhere can be found <a href="https://github.com/pulumi/pulumi-awsx/blob/61d2996b8bdb20ea625e66e17ebbaa7b62f9c163/nodejs/awsx/examples/api/index.ts#L94-L152">here</a>.</p>
+
+<h4 id="creating-a-lambda-based-token-authorizer">Creating a Lambda-based Token Authorizer</h4>
+
+<p>In many cases, we will want to base our authorization decision on the absence, presence, or validity of an
+<code>Authorization: Token &lt;token&gt;</code> header instead, such as a JSON Web Token (JWT) or an OAuth token. To do that, we will
+use the <code>token</code> type of Lambda Authorizer.</p>
+
+<p>Below is an example of a custom <code>token</code> Lambda Authorizer that validates a request using such a token:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;myapi&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/b&#34;</span><span class="p">,</span>
+        <span class="nx">method</span><span class="o">:</span> <span class="s2">&#34;GET&#34;</span><span class="p">,</span>
+        <span class="nx">eventHandler</span>: <span class="kt">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">statusCode</span>: <span class="kt">200</span><span class="p">,</span>
+                <span class="nx">body</span><span class="o">:</span> <span class="s2">&#34;&lt;h1&gt;Hello world!&lt;/h1&gt;&#34;</span><span class="p">,</span>
+            <span class="p">};</span>
+        <span class="p">},</span>
+        <span class="nx">authorizers</span><span class="o">:</span> <span class="p">[</span>
+            <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">getTokenLambdaAuthorizer</span><span class="p">({</span>
+                <span class="nx">handler</span>: <span class="kt">async</span> <span class="p">(</span><span class="nx">event</span>: <span class="kt">awsx.apigateway.AuthorizerEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                    <span class="c1">// --- Add your own custom authorization logic here. ---
+</span><span class="c1"></span>                    <span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">authorizationToken</span><span class="p">;</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nx">token</span> <span class="o">===</span> <span class="s2">&#34;Allow&#34;</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="k">return</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">authorizerResponse</span><span class="p">(</span><span class="s2">&#34;user&#34;</span><span class="p">,</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">methodArn</span><span class="p">);</span>
+                    <span class="p">}</span>
+                    <span class="k">return</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">authorizerResponse</span><span class="p">(</span><span class="s2">&#34;user&#34;</span><span class="p">,</span> <span class="s2">&#34;Deny&#34;</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">methodArn</span><span class="p">);</span>
+                <span class="p">},</span>
+            <span class="p">}),</span>
+        <span class="p">],</span>
+    <span class="p">}],</span>
+<span class="p">});</span></code></pre></div>
+<p>In this case, our boolean condition <code>token === &quot;Allow&quot;</code> is meant for illustration and should be customized
+to suit your own application.</p>
+
+<p>The above example used <code>awsx.apigateway.getTokenLambdaAuthorizer</code> to simplify defining the authorizer. You can
+instead define the authorizer by specifying all the property values explicitly:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;myapi&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/b&#34;</span><span class="p">,</span>
+        <span class="nx">method</span><span class="o">:</span> <span class="s2">&#34;GET&#34;</span><span class="p">,</span>
+        <span class="nx">eventHandler</span>: <span class="kt">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">statusCode</span>: <span class="kt">200</span><span class="p">,</span>
+                <span class="nx">body</span><span class="o">:</span> <span class="s2">&#34;&lt;h1&gt;Hello world!&lt;/h1&gt;&#34;</span><span class="p">,</span>
+            <span class="p">};</span>
+        <span class="p">},</span>
+        <span class="nx">authorizers</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="nx">parameterName</span><span class="o">:</span> <span class="s2">&#34;Authorization&#34;</span><span class="p">,</span>
+            <span class="nx">parameterLocation</span><span class="o">:</span> <span class="s2">&#34;header&#34;</span><span class="p">,</span>
+            <span class="nx">authType</span><span class="o">:</span> <span class="s2">&#34;oauth2&#34;</span><span class="p">,</span>
+            <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;request&#34;</span><span class="p">,</span>
+            <span class="nx">handler</span>: <span class="kt">async</span> <span class="p">(</span><span class="nx">event</span>: <span class="kt">awsx.apigateway.AuthorizerEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="c1">// Add your own custom authorization logic here.
+</span><span class="c1"></span>                 <span class="k">return</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">authorizerResponse</span><span class="p">(</span><span class="s2">&#34;user&#34;</span><span class="p">,</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">methodArn</span><span class="p">);</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+<span class="p">});</span></code></pre></div>
+<p>For additional information about token-based API Gateway Lambda Authorizers, please see the
+<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html">AWS documentation</a>.</p>
+
+<h4 id="specifying-your-authorizer-s-iam-role">Specifying Your Authorizer&rsquo;s IAM Role</h4>
+
+<p>If your Authorizer requires access to other AWS resources to make its authorization decisions, such as looking
+up entries in a database, you will need to provision the appropriate role for your AWS Lambda Function.</p>
+
+<p>Instead of using inline Lambda Functions, you can do this by using <code>new aws.lambda.CallbackFunction</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">aws</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/aws&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">callbackRole</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">iam</span><span class="p">.</span><span class="nx">Role</span><span class="p">(</span><span class="s2">&#34;callbackRole&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="c1">// Specify appropriate AWS permissions here.
+</span><span class="c1"></span><span class="p">});</span>
+
+<span class="kr">const</span> <span class="nx">callbackFxn</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">lambda</span><span class="p">.</span><span class="nx">CallbackFunction</span><span class="p">(</span><span class="s2">&#34;callbackFxn&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">role</span>: <span class="kt">callbackRole</span><span class="p">,</span>
+    <span class="nx">callback</span>: <span class="kt">async</span> <span class="p">(</span><span class="nx">event</span>: <span class="kt">awsx.apigateway.AuthorizerEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// --- Add custom authorization logic here. ---
+</span><span class="c1"></span>        <span class="k">return</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">authorizerResponse</span><span class="p">(</span><span class="s2">&#34;user&#34;</span><span class="p">,</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">methodArn</span><span class="p">);</span>
+    <span class="p">},</span>
+<span class="p">});</span>
+
+<span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;myapi&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/b&#34;</span><span class="p">,</span>
+        <span class="nx">method</span><span class="o">:</span> <span class="s2">&#34;GET&#34;</span><span class="p">,</span>
+        <span class="nx">eventHandler</span>: <span class="kt">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">statusCode</span>: <span class="kt">200</span><span class="p">,</span>
+                <span class="nx">body</span><span class="o">:</span> <span class="s2">&#34;&lt;h1&gt;Hello world!&lt;/h1&gt;&#34;</span><span class="p">,</span>
+            <span class="p">};</span>
+        <span class="p">},</span>
+        <span class="nx">authorizers</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="nx">parameterName</span><span class="o">:</span> <span class="s2">&#34;Authorization&#34;</span><span class="p">,</span>
+            <span class="nx">parameterLocation</span><span class="o">:</span> <span class="s2">&#34;header&#34;</span><span class="p">,</span>
+            <span class="nx">authType</span><span class="o">:</span> <span class="s2">&#34;oauth2&#34;</span><span class="p">,</span>
+            <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;request&#34;</span><span class="p">,</span>
+            <span class="nx">handler</span>: <span class="kt">callbackFxn</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+<span class="p">});</span></code></pre></div>
+<p>For more information about creating and managing IAM Roles, please refer to the
+<a href="/docs/reference/crosswalk/aws/iam/">Pulumi Crosswalk for AWS IAM</a> documentation.</p>
+
+<h4 id="generating-authorizer-responses-easily">Generating Authorizer Responses Easily</h4>
+
+<p>A helper function <code>awsx.apigateway.authorizerResponse</code> has been created to simplify generating the authorizer
+response. All of the above examples use it. This can be used when defining the authorizer handler as follows:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;myapi&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="p">...</span>
+        <span class="nx">authorizers</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="nx">header</span><span class="o">:</span> <span class="s2">&#34;Authorization&#34;</span><span class="p">,</span>
+            <span class="nx">handler</span>: <span class="kt">async</span> <span class="p">(</span><span class="nx">event</span>: <span class="kt">awsx.apigateway.AuthorizerEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="c1">// Add your own custom authorization logic here.
+</span><span class="c1"></span>                <span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">authorizationToken</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">token</span> <span class="o">===</span> <span class="s2">&#34;Allow&#34;</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">authorizerResponse</span><span class="p">(</span><span class="s2">&#34;user&#34;</span><span class="p">,</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">methodArn</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="k">return</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">authorizerResponse</span><span class="p">(</span><span class="s2">&#34;user&#34;</span><span class="p">,</span> <span class="s2">&#34;Deny&#34;</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">methodArn</span><span class="p">);</span>
+            <span class="p">},</span>
+        <span class="p">}],</span>
+    <span class="p">}],</span>
+<span class="p">});</span></code></pre></div>
+<p>If you prefer, you can return the <a href="/docs/reference/pkg/nodejs/pulumi/awsx/apigateway/#Authorizer">AuthorizerResponse</a> data structure explicitly.</p>
+
+<h3 id="tracking-and-limiting-requests-with-usage-plans-with-api-keys">Tracking and Limiting Requests with Usage Plans with API Keys</h3>
+
+<p>After you create, test, and deploy your APIs, you can use API Gateway usage plans to make them available to your
+customers. These usage plans and API keys allow customers to use your API at agreed-upon request rates and quotas
+that meet their business requirements and budget constraints. If desired, you can set API-level throttling limits.</p>
+
+<p>To require an API Key for an API Gateway route you set the <code>apiKeyRequired</code> property equal to <code>true</code>. At the API level,
+you can choose if you want the API Key source to be <code>HEADER</code> (i.e. client includes a <code>x-api-key</code> header with the API
+Key) or <code>AUTHORIZER</code> (i.e. a Lambda authorizer sends the API Key as part of the authorization response). If the API
+Key source is not set, then the source will default to <code>HEADER</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;myapi&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/a&#34;</span><span class="p">,</span>
+        <span class="nx">method</span><span class="o">:</span> <span class="s2">&#34;GET&#34;</span><span class="p">,</span>
+        <span class="nx">eventHandler</span>: <span class="kt">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">statusCode</span>: <span class="kt">200</span><span class="p">,</span>
+                <span class="nx">body</span><span class="o">:</span> <span class="s2">&#34;&lt;h1&gt;Hello world!&lt;/h1&gt;&#34;</span><span class="p">,</span>
+            <span class="p">};</span>
+        <span class="p">},</span>
+        <span class="nx">apiKeyRequired</span>: <span class="kt">true</span><span class="p">,</span>
+    <span class="p">}],</span>
+    <span class="nx">apikeySource</span><span class="o">:</span> <span class="s2">&#34;AUTHORIZER&#34;</span><span class="p">,</span>
+<span class="p">});</span></code></pre></div>
+<p>You will also need to create a usage plan (<code>new aws.apigateway.UsagePlan</code>) and an API key (<code>new aws.apigateway.ApiKey</code>)
+and then associate the key with the usage plan (<code>new aws.apigateway.UsagePlanKey</code>). To simplify the creation of API
+Keys associated with your API you can use <code>awsx.apigateway.createAssociatedAPIKeys</code>, which create a Usage Plan, API
+Keys and associates the API Keys by creating a UsagePlanKey. Below is an example of using this helper function:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">apikeys</span> <span class="o">=</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">createAssociatedAPIKeys</span><span class="p">(</span><span class="s2">&#34;my-api-keys&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">apis</span><span class="o">:</span> <span class="p">[</span><span class="nx">api</span><span class="p">],</span>
+    <span class="nx">apiKeys</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;test-key&#34;</span><span class="p">,</span>
+    <span class="p">}],</span>
+<span class="p">});</span>
+
+ <span class="c1">// Export the API Key if desired
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">apiKeyValue</span> <span class="o">=</span> <span class="nx">apikeys</span><span class="p">.</span><span class="nx">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">apikey</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span></code></pre></div>
+<p><code>awsx.apigateway.createAssociatedAPIKeys</code> will return an object that contains the Usage Plan, API Keys and Usage Plan
+Keys. Instead of providing the APIs, you can also specify the api stages for the Usage Plan as follows:</p>
+<div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">apikeys</span> <span class="o">=</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">createAssociatedAPIKeys</span><span class="p">(</span><span class="s2">&#34;my-api-keys&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">usagePlan</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">apiStages</span><span class="o">:</span> <span class="p">[{</span>
+            <span class="nx">apiId</span>: <span class="kt">api.restAPI.id</span><span class="p">,</span>
+            <span class="nx">stage</span>: <span class="kt">api.stage.stageName</span><span class="p">,</span>
+        <span class="p">}],</span>
+    <span class="p">},</span>
+    <span class="nx">apiKeys</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;test-key&#34;</span><span class="p">,</span>
+    <span class="p">}],</span>
+<span class="p">});</span></code></pre></div>
+<p>For more information about Usage Plans and API Keys, refer to
+<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html">Create and Use Usage Plans with API Keys</a>.</p>
+
+<h2 id="configuring-api-gateway-custom-domains-and-ssl-using-route53-and-acm">Configuring API Gateway Custom Domains and SSL using Route53 and ACM</h2>
+
+<p>API Gateway will automatically provision and assign a domain name, URL that contains the stage, and SSL
+support. It will look something like <code>https://no90ji5v23.execute-api.us-west-2.amazonaws.com/stage/</code>. The host
+portion of the URL refers to an API endpoint which can be edge-optimized or regional.</p>
+
+<p>Although it&rsquo;s a great convenience to have a URL automatically created with SSL support that just works right
+away, the resulting URL isn&rsquo;t user-friendly or very easy to remember, and may not be suitable for business
+scenarios that require using company domains. To provide a simpler and more intuitive URL for your API users,
+you can configure a custom domain name (e.g., <code>api.acmecorp.com</code>) as the API&rsquo;s host name, and customize the
+base path of the URL to map to an alternative URL (e.g., one that does not include the <code>/stage</code> at the end).</p>
+
+<p>For example, we may map <code>https://no90ji5v23.execute-api.us-west-2.amazonaws.com/stage/</code> instead to
+<code>https://api.acmecorp.com/web-ordering</code>. In doing so, API Gateway will also set up an edge-optimized
+<a href="https://aws.amazon.com/cloudfront/">Amazon CloudFront Content Distribution Network (CDN)</a>.</p>
+
+<p>We now will walk through the various steps required to set this up.</p>
+
+<p>First, we provision an <code>awsx.apigateway.API</code> in any of the ways we&rsquo;ve seen above. We&rsquo;ll use something simple:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="nx">from</span> <span class="s2">&#34;@pulumi/awsx&#34;</span><span class="p">;</span>
+
+<span class="c1">// Define a new GET endpoint that just returns a 200 and &#34;hello&#34; in the body.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">awsx</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">API</span><span class="p">(</span><span class="s2">&#34;example&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">routes</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/&#34;</span><span class="p">,</span>
+        <span class="nx">method</span><span class="o">:</span> <span class="s2">&#34;GET&#34;</span><span class="p">,</span>
+        <span class="nx">eventHandler</span>: <span class="kt">async</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="c1">// This code runs in an AWS Lambda anytime `/` is hit.
+</span><span class="c1"></span>            <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">statusCode</span>: <span class="kt">200</span><span class="p">,</span>
+                <span class="nx">body</span><span class="o">:</span> <span class="s2">&#34;Hello, API Gateway!&#34;</span><span class="p">,</span>
+            <span class="p">};</span>
+        <span class="p">},</span>
+    <span class="p">}],</span>
+<span class="p">})</span></code></pre></div>
+<p>Let us assume we are hard-coding the domain name (although Pulumi&rsquo;s configuration system can be used instead):</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">domain</span> <span class="o">=</span> <span class="s2">&#34;acmecorp.com&#34;</span><span class="p">;</span></code></pre></div>
+<p>Although API Gateway will create a regional domain name for our API, we must now explicitly configure a DNS
+zone and record to map the custom domain name to the regional domain name for API requests. For this example,
+we will use <a href="https://aws.amazon.com/route53/">Amazon Route53&rsquo;s Domain Name System (DNS) Service</a> for this task.</p>
+
+<p>Add the creation of a Route53 DNS zone:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// Create a DNS zone for our custom domain.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">webDnsZone</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">route53</span><span class="p">.</span><span class="nx">Zone</span><span class="p">(</span><span class="s2">&#34;webDnsZone&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">name</span>: <span class="kt">domain</span><span class="p">,</span>
+<span class="p">});</span></code></pre></div>
+<p>Next we will provision an SSL/TLS certificate to use for our custom domain name. We will use
+<a href="https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html">AWS Certificate Manager (ACM)</a> to generate
+a new certificate. We could instead import one into ACM that has been issued by a third-party certificate authority.
+Note that we must create this certificate in the <code>us-east-1</code> (Northern Virginia) region, per AWS rules.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// Provision an SSL certificate to enable SSL -- ensuring to do so in us-east-1.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">awsUsEast1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">Provider</span><span class="p">(</span><span class="s2">&#34;usEast1&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">region</span><span class="o">:</span> <span class="s2">&#34;us-east-1&#34;</span> <span class="p">});</span>
+<span class="kr">const</span> <span class="nx">sslCert</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">acm</span><span class="p">.</span><span class="nx">Certificate</span><span class="p">(</span><span class="s2">&#34;sslCert&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">domainName</span>: <span class="kt">domain</span><span class="p">,</span>
+    <span class="nx">validationMethod</span><span class="o">:</span> <span class="s2">&#34;DNS&#34;</span><span class="p">,</span>
+<span class="p">},</span> <span class="p">{</span> <span class="nx">provider</span>: <span class="kt">awsUsEast1</span> <span class="p">});</span>
+
+<span class="c1">// Create the necessary DNS records for ACM to validate ownership, and wait for it.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">sslCertValidationRecord</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">route53</span><span class="p">.</span><span class="nx">Record</span><span class="p">(</span><span class="s2">&#34;sslCertValidationRecord&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">zoneId</span>: <span class="kt">webDnsZone.id</span><span class="p">,</span>
+    <span class="nx">name</span>: <span class="kt">sslCert.domainValidationOptions</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">resourceRecordName</span><span class="p">,</span>
+    <span class="nx">type</span>: <span class="kt">sslCert.domainValidationOptions</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">resourceRecordType</span><span class="p">,</span>
+    <span class="nx">records</span><span class="o">:</span> <span class="p">[</span> <span class="nx">sslCert</span><span class="p">.</span><span class="nx">domainValidationOptions</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">resourceRecordValue</span> <span class="p">],</span>
+    <span class="nx">ttl</span>: <span class="kt">10</span> <span class="o">*</span> <span class="mi">60</span> <span class="cm">/* 10 minutes */</span><span class="p">,</span>
+<span class="p">});</span>
+<span class="kr">const</span> <span class="nx">sslCertValidationIssued</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">acm</span><span class="p">.</span><span class="nx">CertificateValidation</span><span class="p">(</span><span class="s2">&#34;sslCertValidationIssued&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">certificateArn</span>: <span class="kt">sslCert.arn</span><span class="p">,</span>
+    <span class="nx">validationRecordFqdns</span><span class="o">:</span> <span class="p">[</span> <span class="nx">sslCertValidationRecord</span><span class="p">.</span><span class="nx">fqdn</span> <span class="p">],</span>
+<span class="p">},</span> <span class="p">{</span> <span class="nx">provider</span>: <span class="kt">awsUsEast1</span> <span class="p">});</span></code></pre></div>
+<p>This code snippet not only provisions the certificate, but also uses DNS validation to eliminate any manual
+steps, and to wait until the certificate is ready.</p>
+
+<p>After this, we will direct API Gateway to use our new domain and a different base path than <code>stage/</code>. Without
+such a mapping, API requests bound for the custom domain name cannot reach our API Gateway.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// Configure an edge-optimized domain for our API Gateway. This will configure a Cloudfront CDN
+</span><span class="c1">// distribution behind the scenes and serve our API Gateway at a custom domain name over SSL.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">webDomain</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">DomainName</span><span class="p">(</span><span class="s2">&#34;webCdn&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">certificateArn</span>: <span class="kt">sslCertValidationIssued.certificateArn</span><span class="p">,</span>
+    <span class="nx">domainName</span>: <span class="kt">domain</span><span class="p">,</span>
+<span class="p">});</span>
+<span class="kr">const</span> <span class="nx">webDomainMapping</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">apigateway</span><span class="p">.</span><span class="nx">BasePathMapping</span><span class="p">(</span><span class="s2">&#34;webDomainMapping&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">restApi</span>: <span class="kt">web.restAPI</span><span class="p">,</span>
+    <span class="nx">stageName</span>: <span class="kt">web.stage.stageName</span><span class="p">,</span>
+    <span class="nx">domainName</span>: <span class="kt">webDomain.id</span><span class="p">,</span>
+<span class="p">});</span></code></pre></div>
+<p>There is one step remaining, which is to create the A record in our DNS zone that allows external traffic
+to reach out new custom domain. After doing so, our API Gateway will be reachable at our custom URL.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// Finally create an A record for our domain that directs to our custom domain.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">webDnsRecord</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">route53</span><span class="p">.</span><span class="nx">Record</span><span class="p">(</span><span class="s2">&#34;webDnsRecord&#34;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">name</span>: <span class="kt">webDomain.domainName</span><span class="p">,</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;A&#34;</span><span class="p">,</span>
+    <span class="nx">zoneId</span>: <span class="kt">webDnsZone.id</span><span class="p">,</span>
+    <span class="nx">aliases</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">evaluateTargetHealth</span>: <span class="kt">true</span><span class="p">,</span>
+        <span class="nx">name</span>: <span class="kt">webDomain.cloudfrontDomainName</span><span class="p">,</span>
+        <span class="nx">zoneId</span>: <span class="kt">webDomain.cloudfrontZoneId</span><span class="p">,</span>
+    <span class="p">}],</span>
+<span class="p">},</span> <span class="p">{</span> <span class="nx">dependsOn</span>: <span class="kt">sslCertValidationIssued</span> <span class="p">});</span></code></pre></div>
+<p>For more information about the options and levels of customizability available for edge-optimized API Gateways
+and custom domains, please refer to <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html">Set up Custom Domain Name for an API in API Gateway</a>.</p>
+
+<h2 id="additional-api-gateway-resources">Additional API Gateway Resources</h2>
+
+<p>For more details about API Gateway and REST APIs, see the following resources:</p>
+
+<ul>
+<li><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-overview-developer-experience.html#api-gateway-overview-rest">Use API Gateway to Create REST APIs</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

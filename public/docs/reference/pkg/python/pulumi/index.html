@@ -1,0 +1,3352 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/docs/reference/pkg/python/pulumi/">
+    <meta property="og:site_name" content="pulumi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PulumiCorp">
+
+    
+
+    
+        <meta property="og:title" content="Pulumi">
+    
+
+    
+        <meta name="description" content="Pulumi Python SDK¶ The Pulumi Python SDK (pulumi) is the core package used when writing Pulumi programs in Python. It contains everything that you’ll need in order to interact with Pulumi resource providers and express infrastructure using Python code. Pulumi resource providers all depend on this library and express their resources in terms of the types defined in this module.
+Note: The Pulumi Python SDK requires Python version 3.6 or greater.">
+        <meta property="og:description" content="Pulumi Python SDK¶ The Pulumi Python SDK (pulumi) is the core package used when writing Pulumi programs in Python. It contains everything that you’ll need in order to interact with Pulumi resource providers and express infrastructure using Python code. Pulumi resource providers all depend on this library and express their resources in terms of the types defined in this module.
+Note: The Pulumi Python SDK requires Python version 3.6 or greater.">
+    
+
+    
+    
+    <meta property="og:image" content="/social/pulumi.png">
+
+    <title> - Pulumi</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    
+    <link rel="canonical" href="https://www.pulumi.com/docs/reference/pkg/python/pulumi/" >
+
+    
+    <link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Pulumi Blog" />
+
+    
+    
+    
+        
+        
+        
+        <link rel="stylesheet" href="/css/styles.3496f5522ba2ee3f8bbb9a51ff2cb20fb6827ca85a8ae61de0a9f960bacf1023.css" integrity="sha256-NJb1Uiui7j&#43;Lu5pR/yyyD7aCfKhaiuYd4Kn5YLrPECM=">
+    
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+            });
+        </script>
+    
+
+    
+    
+</head>
+
+    <body class="section-docs">
+        <nav class="bg-black text-white text-sm py-2 px-4 lg:px-0 transition-all max-h-screen md:max-h-full">
+    <div class="container mx-auto">
+        <ul class="flex justify-end items-center h-6">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="github-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="nav-main bg-purple-700 py-6 px-4 lg:px-0 border-t border-purple-500">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap md:flex-no-wrap">
+            <div class="flex items-center flex-shrink-0 text-white lg:mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                </a>
+            </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple-400 bg-purple-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white text-sm md:text-xs lg:text-sm uppercase pt-4 md:pt-0">
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/product/" data-submenu="product" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Products
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/why-pulumi/" data-submenu="why" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Why Pulumi
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/pricing/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Pricing
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/docs/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded bg-purple-400 hover:bg-purple-400">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/blog/" data-submenu="" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="whitespace-no-wrap">
+                        
+                        <a href="/about/" data-submenu="about" class="block py-2 px-4 md:px-0 md:py-0 md:px-4 md:py-2 my-2 md:my-0 lg:mx-4 rounded hover:bg-purple-500">
+                            About
+                        </a>
+                    </li>
+                
+
+                <li class="md:ml-auto md:mr-2 lg:mr-4">
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn btn-orange-translucent" href="https://app.pulumi.com/">Sign In</a>
+                </li>
+                <li>
+                    <a class="block mt-4 md:mt-0 md:text-xs lg:text-sm btn" href="https://app.pulumi.com/signup">Sign Up</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+</nav>
+<div class="submenu">
+    <div class="text-white relative overflow-visible">
+        <div class="submenu-item submenu-item-product hidden absolute inset-x-0 z-50 bg-purple-700 shadow-lg pt-8 pb-16">
+            <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">The Pulumi Platform</h3>
+                    <p class="text-white">
+                        Cloud Apps and Infrastructure for any cloud using languages you already know and love.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-sdk">Pulumi SDK</a>
+                            <span>&rarr; Cloud native infrastructure as code.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-crosswalk">Pulumi Crosswalk</a>
+                            <span>&rarr; Productive infrastructure as code with built-in best practices.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#pulumi-saas">Pulumi SaaS</a>
+                            <span>&rarr; Continuously deliver and manage cloud software for any cloud.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/product/#multi-cloud-subscription">Multi-Cloud Subscription</a>
+                            <span>&rarr; End-to-end Kubernetes solutions to achieve multi-cloud.</span>
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="text-white">Pulumi is open source, free to start, and has plans available for teams.</span>
+                        <a class="text-orange-500 hover:text-orange-400 hover:mr-1 transition-all" href="/pricing/">View Pricing</a> &rarr;
+                    </p>
+                </div>
+                <div class="w-1/2 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Get Started</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/install/">Install (Mac, Windows, Linux)</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/">Documentation and Examples</a> &rarr;
+                        </li>
+                    </ul>
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/cloudformation/">from CloudFormation</a> &rarr;
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/terraform/">from Terraform</a> &rarr;
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="submenu-item submenu-item-why hidden absolute inset-x-0 z-50 bg-purple-700 shadow pt-8 pb-16">
+           <div class="container mx-auto flex items-start">
+                <div class="w-1/2 pr-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Solutions for All Teams and Engineers</h3>
+                    <p class="text-white">
+                        Maximize cloud velocity for Dev, DevOps, and IT, no matter your team size.
+                    </p>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-developers">For Developers</a>
+                            <span>&rarr; Your favorite languages, tools, and libraries.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-operators">For DevOps and IT</a>
+                            <span>&rarr; Empower your team to deliver to many clouds.</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400" href="/why-pulumi/#for-business-leaders">For Business Leaders</a>
+                            <span>&rarr; Modern multi-cloud for startups and enterprises.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 px-12 border-r border-purple-500 text-purple-100 text-sm">
+                    <h3 class="text-white">Any Code</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/serverless/">Serverless</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/containers/">Containers</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/kubernetes/">Kubernetes</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-1/4 pl-12 text-purple-100 text-sm">
+                    <h3 class="text-white">Migrate to Pulumi</h3>
+                    <ul class="p-0 leading-loose">
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/aws/">AWS</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/azure/">Azure</a>
+                            <span>&rarr;</span>
+                        </li>
+                        <li>
+                            <a class="text-orange-500 font-bold hover:text-orange-400 hover:mr-1 transition-all" href="/gcp/">GCP</a>
+                            <span>&rarr;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+
+        <main>
+            
+    <div class="container mx-auto px-8 py-8 md:px-0">
+        <div class="md:flex">
+
+            <div class="md:w-2/12 mt-2 md:order-last">
+                <div class="mb-8 md:mb-4">
+                    <form class="relative" action="/docs/search/" method="GET">
+    <i class="fas fa-search absolute inset-y-0 flex items-center pl-3 text-gray-500"></i>
+    <input
+        id="search-query"
+        name="q"
+        class="block w-full py-2 px-4 pl-8 text-sm border border-gray-400 focus:border-blue-500 focus:outline-none rounded transition"
+        placeholder="Search the docs"
+        autocomplete="off">
+</form>
+
+                </div>
+
+                <div class="ml-3 hidden md:block">
+                    
+    <ul class="p-0 list-none">
+        
+        
+        
+        
+        
+
+        <li>
+            <a class="text-gray-600 hover:text-blue-700 text-xs" href="https://github.com/pulumi/docs/issues/new?body=File: [docs%2freference%2fpkg%2fpython%2fpulumi%2f_index.md](%2fdocs%2freference%2fpkg%2fpython%2fpulumi%2f)" target="_blank">
+                <i class="far fa-check-square mr-2"></i>
+                Request a Change
+            </a>
+        </li>
+    </ul>
+
+
+                </div>
+            </div>
+
+            <div class="md:w-3/12 pr-8 mt-2 mb-8 pb-8 border-b-2 border-gray-400 md:border-none md:pb-0 md:mb-0">
+                
+
+
+
+
+
+
+
+
+    
+    
+    
+
+
+<aside class="toc">
+    <h3 class="no-anchor">
+        <a href="/docs/">Docs</a>
+    </h3>
+
+    
+        <h4 class="no-anchor">
+            <a href="/docs/quickstart/">Get Started</a>
+        </h4>
+    
+    
+        <h4 class="no-anchor">
+            <a href="/docs/reference/">Reference</a>
+        </h4>
+    
+    
+
+    
+        
+        
+
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Architecture &amp; Concepts">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Architecture &amp; Concepts" href="/docs/reference/concepts/">Architecture &amp; Concepts</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Programming Model" href="/docs/reference/programming-model/">Programming Model</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Projects" href="/docs/reference/project/">Projects</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stacks" href="/docs/reference/stack/">Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Configuration and Secrets" href="/docs/reference/config/">Configuration and Secrets</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizing Projects and Stacks" href="/docs/reference/organizing-stacks-projects/">Organizing Projects and Stacks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="How Pulumi Works" href="/docs/reference/how/">How Pulumi Works</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State and Backends" href="/docs/reference/state/">State and Backends</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Tutorials">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Tutorials" href="/docs/reference/tutorials/">Tutorials</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/tutorials/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateways and Lambda" href="/docs/reference/tutorials/aws/tutorial-rest-api/">API Gateways and Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Containers on ECS &#34;Fargate&#34;" href="/docs/reference/tutorials/aws/tutorial-service/">Containers on ECS &#34;Fargate&#34;</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="EC2 Linux WebServer Instance" href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">EC2 Linux WebServer Instance</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serve a Static Website from S3" href="/docs/reference/tutorials/aws/tutorial-s3-website/">Serve a Static Website from S3</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Video Thumbnailer" href="/docs/reference/tutorials/aws/tutorial-thumbnailer/">Video Thumbnailer</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/tutorials/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Container Instance" href="/docs/reference/tutorials/azure/tutorial-container-webserver/">Web Server Container Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/tutorials/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Web Server Virtual Machine Instance" href="/docs/reference/tutorials/gcp/tutorial-gce-webserver/">Web Server Virtual Machine Instance</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/tutorials/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: EKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-eks/">Clusters: EKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: GKE - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-gke/">Clusters: GKE - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Clusters: AKS - Hello World!" href="/docs/reference/tutorials/kubernetes/tutorial-aks/">Clusters: AKS - Hello World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#1: Hello, World!" href="/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment/">#1: Hello, World!</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#2: Deploying the WordPress Helm Chart" href="/docs/reference/tutorials/kubernetes/tutorial-wordpress-chart/">#2: Deploying the WordPress Helm Chart</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#3: Guestbook App with Redis and Nginx" href="/docs/reference/tutorials/kubernetes/tutorial-guestbook/">#3: Guestbook App with Redis and Nginx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#4: Graceful App Rollout" href="/docs/reference/tutorials/kubernetes/tutorial-configmap-rollout/">#4: Graceful App Rollout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#5: Gating rollout on Prometheus checks" href="/docs/reference/tutorials/kubernetes/tutorial-p8s-rollout/">#5: Gating rollout on Prometheus checks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#6: Run a Stateless App Deployment" href="/docs/reference/tutorials/kubernetes/tutorial-stateless-app/">#6: Run a Stateless App Deployment</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="#7: EKS - Migrating Node Groups with Zero Downtime" href="/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups/">#7: EKS - Migrating Node Groups with Zero Downtime</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Command Line">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Command Line" href="/docs/reference/commands/">Command Line</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cancel" href="/docs/reference/cli/pulumi_cancel/">Cancel</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Config" href="/docs/reference/cli/pulumi_config/">Config</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Destroy" href="/docs/reference/cli/pulumi_destroy/">Destroy</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Login" href="/docs/reference/cli/pulumi_login/">Login</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logout" href="/docs/reference/cli/pulumi_logout/">Logout</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Logs" href="/docs/reference/cli/pulumi_logs/">Logs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="New" href="/docs/reference/cli/pulumi_new/">New</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Plugin" href="/docs/reference/cli/pulumi_plugin/">Plugin</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Preview" href="/docs/reference/cli/pulumi_preview/">Preview</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Refresh" href="/docs/reference/cli/pulumi_refresh/">Refresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Stack" href="/docs/reference/cli/pulumi_stack/">Stack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="State" href="/docs/reference/cli/pulumi_state/">State</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Update" href="/docs/reference/cli/pulumi_up/">Update</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Clouds">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Clouds" href="/docs/reference/clouds/">Supported Clouds</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="AWS">
+                <div class="sidenav-topic ">
+                    <a data-title="AWS" href="/docs/reference/clouds/aws/">AWS</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/aws/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Azure">
+                <div class="sidenav-topic ">
+                    <a data-title="Azure" href="/docs/reference/clouds/azure/">Azure</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/azure/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Google Cloud">
+                <div class="sidenav-topic ">
+                    <a data-title="Google Cloud" href="/docs/reference/clouds/gcp/">Google Cloud</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/gcp/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Kubernetes">
+                <div class="sidenav-topic ">
+                    <a data-title="Kubernetes" href="/docs/reference/clouds/kubernetes/">Kubernetes</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Introduction" href="/docs/reference/clouds/kubernetes/introduction/">Introduction</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/kubernetes/setup/">Setup</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="FAQ" href="/docs/reference/clouds/kubernetes/faq/">FAQ</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="OpenStack">
+                <div class="sidenav-topic ">
+                    <a data-title="OpenStack" href="/docs/reference/clouds/openstack/">OpenStack</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Setup" href="/docs/reference/clouds/openstack/setup/">Setup</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Crosswalk for AWS 🆕">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Crosswalk for AWS 🆕" href="/docs/reference/crosswalk/aws/">Crosswalk for AWS 🆕</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="API Gateway" href="/docs/reference/crosswalk/aws/api-gateway/">API Gateway</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Auto Scaling" href="/docs/reference/crosswalk/aws/autoscaling/">Auto Scaling</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CloudWatch" href="/docs/reference/crosswalk/aws/cloudwatch/">CloudWatch</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Registry (ECR)" href="/docs/reference/crosswalk/aws/ecr/">Elastic Container Registry (ECR)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Container Service (ECS)" href="/docs/reference/crosswalk/aws/ecs/">Elastic Container Service (ECS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Kubernetes Service (EKS)" href="/docs/reference/crosswalk/aws/eks/">Elastic Kubernetes Service (EKS)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Elastic Load Balancing (ELB)" href="/docs/reference/crosswalk/aws/elb/">Elastic Load Balancing (ELB)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Identity and Access Management (IAM)" href="/docs/reference/crosswalk/aws/iam/">Identity and Access Management (IAM)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Lambda" href="/docs/reference/crosswalk/aws/lambda/">Lambda</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Virtual Private Cloud (VPC)" href="/docs/reference/crosswalk/aws/vpc/">Virtual Private Cloud (VPC)</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Other AWS Services" href="/docs/reference/crosswalk/aws/other/">Other AWS Services</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Supported Languages">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Supported Languages" href="/docs/reference/languages/">Supported Languages</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Node.js" href="/docs/reference/javascript/">Node.js</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Python" href="/docs/reference/python/">Python</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Teams &amp; Collaboration">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Teams &amp; Collaboration" href="/docs/reference/service/">Teams &amp; Collaboration</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Organizations" href="/docs/reference/service/orgs/">Organizations</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Teams" href="/docs/reference/service/teams/">Teams</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Roles and Access Controls" href="/docs/reference/service/roles-and-access-controls/">Roles and Access Controls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub App" href="/docs/reference/cd-github/">Pulumi GitHub App</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi Webhooks" href="/docs/reference/service/webhooks/">Pulumi Webhooks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Creating a &#39;Deploy with Pulumi&#39; Button" href="/docs/reference/service/pulumi-button/">Creating a &#39;Deploy with Pulumi&#39; Button</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Continuous Delivery">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Continuous Delivery" href="/docs/reference/cd/">Continuous Delivery</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Supporting A New CI System" href="/docs/reference/cd-supporting-new-ci/">Supporting A New CI System</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="AWS Code Services" href="/docs/reference/cd-aws-code-services/">AWS Code Services</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Azure DevOps" href="/docs/reference/cd-azure-devops/">Azure DevOps</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="CircleCI" href="/docs/reference/cd-circleci/">CircleCI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Codefresh" href="/docs/reference/cd-codefresh/">Codefresh</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="GitLab CI" href="/docs/reference/cd-gitlab-ci/">GitLab CI</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Google Cloud Build" href="/docs/reference/cd-google-cloud-build/">Google Cloud Build</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Pulumi GitHub Actions" href="/docs/reference/cd-github-actions/">Pulumi GitHub Actions</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Travis CI" href="/docs/reference/cd-travis/">Travis CI</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Compared to Others">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="Compared to Others" href="/docs/reference/vs/">Compared to Others</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Terraform" href="/docs/reference/vs/terraform/">Terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud Templates" href="/docs/reference/vs/cloud_templates/">Cloud Templates</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Cloud SDKs" href="/docs/reference/vs/cloud_sdks/">Cloud SDKs</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Serverless" href="/docs/reference/vs/serverless/">Serverless</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Kubernetes YAML" href="/docs/reference/vs/k8s_yaml_dsls/">Kubernetes YAML</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Chef, Puppet, etc." href="/docs/reference/vs/chef_puppet_etc/">Chef, Puppet, etc.</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="Custom Solutions" href="/docs/reference/vs/custom/">Custom Solutions</a>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+                
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggleVisible" data-title="API Reference">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  sidenav-parent  ">
+                            <a data-title="API Reference" href="/docs/reference/pkg/">API Reference</a><span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span></div>
+                        
+                            <div class="sidenav-subsection text-sm">
+                                
+    
+    
+
+    
+        
+        
+
+        
+            <div data-title="Node.js">
+                <div class="sidenav-topic ">
+                    <a data-title="Node.js" href="/docs/reference/pkg/nodejs/">Node.js</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi" href="/docs/reference/pkg/nodejs/pulumi/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="aws" href="/docs/reference/pkg/nodejs/pulumi/aws/">aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="awsx" href="/docs/reference/pkg/nodejs/pulumi/awsx/">awsx</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azure" href="/docs/reference/pkg/nodejs/pulumi/azure/">azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="azuread" href="/docs/reference/pkg/nodejs/pulumi/azuread/">azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloud" href="/docs/reference/pkg/nodejs/pulumi/cloud/">cloud</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="cloudflare" href="/docs/reference/pkg/nodejs/pulumi/cloudflare/">cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="datadog" href="/docs/reference/pkg/nodejs/pulumi/datadog/">datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="digitalocean" href="/docs/reference/pkg/nodejs/pulumi/digitalocean/">digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="dnsimple" href="/docs/reference/pkg/nodejs/pulumi/dnsimple/">dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="docker" href="/docs/reference/pkg/nodejs/pulumi/docker/">docker</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="eks" href="/docs/reference/pkg/nodejs/pulumi/eks/">eks</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="f5bigip" href="/docs/reference/pkg/nodejs/pulumi/f5bigip/">f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gcp" href="/docs/reference/pkg/nodejs/pulumi/gcp/">gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="gitlab" href="/docs/reference/pkg/nodejs/pulumi/gitlab/">gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="kubernetes" href="/docs/reference/pkg/nodejs/pulumi/kubernetes/">kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="linode" href="/docs/reference/pkg/nodejs/pulumi/linode/">linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="mysql" href="/docs/reference/pkg/nodejs/pulumi/mysql/">mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="newrelic" href="/docs/reference/pkg/nodejs/pulumi/newrelic/">newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="openstack" href="/docs/reference/pkg/nodejs/pulumi/openstack/">openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="packet" href="/docs/reference/pkg/nodejs/pulumi/packet/">packet</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="postgresql" href="/docs/reference/pkg/nodejs/pulumi/postgresql/">postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="random" href="/docs/reference/pkg/nodejs/pulumi/random/">random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="terraform" href="/docs/reference/pkg/nodejs/pulumi/terraform/">terraform</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="tls" href="/docs/reference/pkg/nodejs/pulumi/tls/">tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="vsphere" href="/docs/reference/pkg/nodejs/pulumi/vsphere/">vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+        
+        
+
+        
+            <div data-title="Python">
+                <div class="sidenav-topic ">
+                    <a data-title="Python" href="/docs/reference/pkg/python/">Python</a>
+                </div>
+                <div class="sidenav-subsection">
+                    
+    
+    
+
+    
+        
+        
+            
+        
+
+        
+            <div class="sidenav-topic mb-2 active">
+                <a data-title="pulumi" href="/docs/reference/pkg/python/pulumi/">pulumi</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_aws" href="/docs/reference/pkg/python/pulumi_aws/">pulumi_aws</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azure" href="/docs/reference/pkg/python/pulumi_azure/">pulumi_azure</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_azuread" href="/docs/reference/pkg/python/pulumi_azuread/">pulumi_azuread</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_cloudflare" href="/docs/reference/pkg/python/pulumi_cloudflare/">pulumi_cloudflare</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_datadog" href="/docs/reference/pkg/python/pulumi_datadog/">pulumi_datadog</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_digitalocean" href="/docs/reference/pkg/python/pulumi_digitalocean/">pulumi_digitalocean</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_dnsimple" href="/docs/reference/pkg/python/pulumi_dnsimple/">pulumi_dnsimple</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_f5bigip" href="/docs/reference/pkg/python/pulumi_f5bigip/">pulumi_f5bigip</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gcp" href="/docs/reference/pkg/python/pulumi_gcp/">pulumi_gcp</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_gitlab" href="/docs/reference/pkg/python/pulumi_gitlab/">pulumi_gitlab</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_kubernetes" href="/docs/reference/pkg/python/pulumi_kubernetes/">pulumi_kubernetes</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_linode" href="/docs/reference/pkg/python/pulumi_linode/">pulumi_linode</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_mysql" href="/docs/reference/pkg/python/pulumi_mysql/">pulumi_mysql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_newrelic" href="/docs/reference/pkg/python/pulumi_newrelic/">pulumi_newrelic</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_openstack" href="/docs/reference/pkg/python/pulumi_openstack/">pulumi_openstack</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_postgresql" href="/docs/reference/pkg/python/pulumi_postgresql/">pulumi_postgresql</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_random" href="/docs/reference/pkg/python/pulumi_random/">pulumi_random</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_tls" href="/docs/reference/pkg/python/pulumi_tls/">pulumi_tls</a>
+            </div>
+        
+    
+        
+        
+
+        
+            <div class="sidenav-topic mb-2 ">
+                <a data-title="pulumi_vsphere" href="/docs/reference/pkg/python/pulumi_vsphere/">pulumi_vsphere</a>
+            </div>
+        
+    
+
+                </div>
+            </div>
+        
+    
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="FAQ">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="FAQ" href="/docs/reference/faq/">FAQ</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Download and Install">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Download and Install" href="/docs/reference/install/">Download and Install</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible separator">
+                <div class="toggle" data-title="Changelog">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Changelog" href="/docs/reference/changelog/">Changelog</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+
+            
+
+            <div class="toggleVisible">
+                <div class="toggle" data-title="Troubleshooting &amp; Support">
+                    <div class="collapsed">
+                        <div class="sidenav-topic ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic  ">
+                            <a data-title="Troubleshooting &amp; Support" href="/docs/reference/troubleshooting/">Troubleshooting &amp; Support</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+    
+
+    
+</aside>
+
+
+
+            </div>
+
+            <div class="md:w-7/12">
+                
+
+                <div class="section" id="pulumi-python-sdk">
+<h1>Pulumi Python SDK<a class="headerlink" href="#pulumi-python-sdk" title="Permalink to this headline">¶</a></h1>
+<p>The Pulumi Python SDK (<cite>pulumi</cite>) is the core package used when writing Pulumi programs in Python. It contains everything
+that you’ll need in order to interact with Pulumi resource providers and express infrastructure using Python code.
+Pulumi resource providers all depend on this library and express their resources in terms of the types defined in this
+module.</p>
+<blockquote class="epigraph">
+<div><strong>Note</strong>: The Pulumi Python SDK requires Python version 3.6 or greater. Please see the
+<a class="reference external" href="/reference/python.html#getting-started">Python getting started</a> documentation for details on how to get started with
+Python.</div></blockquote>
+<div class="section" id="the-pulumi-python-resource-model">
+<h2>The Pulumi Python Resource Model<a class="headerlink" href="#the-pulumi-python-resource-model" title="Permalink to this headline">¶</a></h2>
+<p>Like most languages usable with Pulumi, Pulumi represents cloud resources as classes and Python programs can instantiate
+those classes. All classes that can be instantiated to produce actual resources derive from the <cite>pulumi.Resource</cite> class.</p>
+<p>A class that derives from <cite>pulumi.Resource</cite> will, when instantiated, communicate with the Pulumi Engine and record that
+a piece of infrastructure that the instantiated class represents should be provisioned. All resources whose provisioning
+is implemented in a resource provider derive from the <cite>pulumi.CustomResource</cite> class.</p>
+<p>It is also possible to write your own resources, written in Python, that are themselves composed of custom resources.
+Resources written in Python are called “component resources” and they are written by deriving from the
+<cite>pulumi.ComponentResource</cite> class.</p>
+<p>Finally, Pulumi allows for resource providers to directly project themselves into Python, so that provider instances
+can be instantiated and used to create other resources. These “provider resources” derive from the
+<cite>pulumi.ProviderResource</cite> class.</p>
+<dl class="class">
+<dt id="pulumi.Resource">
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">Resource</code><span class="sig-paren">(</span><em>t: str</em>, <em>name: str</em>, <em>custom: bool</em>, <em>props: Optional[Inputs] = None</em>, <em>opts: Optional[pulumi.resource.ResourceOptions] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resource represents a class whose CRUD operations are implemented by a provider plugin.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>t</strong> (<em>str</em>) – The type of this resource.</li>
+<li><strong>name</strong> (<em>str</em>) – The name of this resource.</li>
+<li><strong>custom</strong> (<em>bool</em>) – True if this resource is a custom resource.</li>
+<li><strong>props</strong> (<em>Optional</em><em>[</em><em>dict</em><em>]</em>) – An optional list of input properties to use as inputs for the resource.</li>
+<li><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>ResourceOptions</em></a><em>]</em>) – Optional set of <a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">pulumi.ResourceOptions</span></code></a> to use for this
+resource.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi.Resource.urn">
+<code class="descname">urn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.Resource.urn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The stable, logical URN used to distinctly address a resource, both before and after deployments.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Resource.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi.Resource.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Resource.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi.Resource.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Resource.get_provider">
+<code class="descname">get_provider</code><span class="sig-paren">(</span><em>module_member: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.resource.ProviderResource]<a class="headerlink" href="#pulumi.Resource.get_provider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetches the provider for the given module member, if this resource has been provided a specific
+provider for the given module member.</p>
+<p>Returns None if no provider was provided.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>module_member</strong> (<em>str</em>) – The requested module member.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The <a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProviderResource</span></code></a> associated with the given module member, or None if one does not exist.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Optional[<a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource">ProviderResource</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi.CustomResource">
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">CustomResource</code><span class="sig-paren">(</span><em>t: str</em>, <em>name: str</em>, <em>props: Optional[dict] = None</em>, <em>opts: Optional[pulumi.resource.ResourceOptions] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.CustomResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>CustomResource is a resource whose create, read, update, and delete (CRUD) operations are managed
+by performing external operations on some physical entity.  The engine understands how to diff
+and perform partial updates of them, and these CRUD operations are implemented in a dynamically
+loaded plugin for the defining package.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>t</strong> (<em>str</em>) – The type of this resource.</li>
+<li><strong>name</strong> (<em>str</em>) – The name of this resource.</li>
+<li><strong>props</strong> (<em>Optional</em><em>[</em><em>dict</em><em>]</em>) – An optional list of input properties to use as inputs for the resource.</li>
+<li><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>ResourceOptions</em></a><em>]</em>) – Optional set of <a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">pulumi.ResourceOptions</span></code></a> to use for this
+resource.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi.CustomResource.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.CustomResource.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi.ComponentResource">
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ComponentResource</code><span class="sig-paren">(</span><em>t: str</em>, <em>name: str</em>, <em>props: Optional[dict] = None</em>, <em>opts: Optional[pulumi.resource.ResourceOptions] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ComponentResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>ComponentResource is a resource that aggregates one or more other child resources into a higher level
+abstraction.  The component itself is a resource, but does not require custom CRUD operations for provisioning.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>t</strong> (<em>str</em>) – The type of this resource.</li>
+<li><strong>name</strong> (<em>str</em>) – The name of this resource.</li>
+<li><strong>props</strong> (<em>Optional</em><em>[</em><em>dict</em><em>]</em>) – An optional list of input properties to use as inputs for the resource.</li>
+<li><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>ResourceOptions</em></a><em>]</em>) – Optional set of <a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">pulumi.ResourceOptions</span></code></a> to use for this
+resource.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pulumi.ComponentResource.register_outputs">
+<code class="descname">register_outputs</code><span class="sig-paren">(</span><em>outputs</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ComponentResource.register_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register synthetic outputs that a component has initialized, usually by allocating other child
+sub-resources and propagating their resulting property values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>output</strong> (<em>dict</em>) – A dictionary of outputs to associate with this resource.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi.ProviderResource">
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ProviderResource</code><span class="sig-paren">(</span><em>pkg: str</em>, <em>name: str</em>, <em>props: Optional[dict] = None</em>, <em>opts: Optional[pulumi.resource.ResourceOptions] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ProviderResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>ProviderResource is a resource that implements CRUD operations for other custom resources. These resources are
+managed similarly to other resources, including the usual diffing and update semantics.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pkg</strong> (<em>str</em>) – The package type of this provider resource.</li>
+<li><strong>name</strong> (<em>str</em>) – The name of this resource.</li>
+<li><strong>props</strong> (<em>Optional</em><em>[</em><em>dict</em><em>]</em>) – An optional list of input properties to use as inputs for the resource.</li>
+<li><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>ResourceOptions</em></a><em>]</em>) – Optional set of <a class="reference internal" href="#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">pulumi.ResourceOptions</span></code></a> to use for this
+resource.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi.ProviderResource.package">
+<code class="descname">package</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ProviderResource.package" title="Permalink to this definition">¶</a></dt>
+<dd><p>package is the name of the package this is provider for.  Common examples are “aws” and “azure”.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi.ResourceOptions">
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em>, <em>delete_before_replace: Optional[bool] = None</em>, <em>ignore_changes: Optional[List[str]] = None</em>, <em>version: Optional[str] = None</em>, <em>additional_secret_outputs: Optional[List[str]] = None</em>, <em>id: Optional[str] = None</em>, <em>import_: Optional[str] = None</em>, <em>custom_timeouts: Optional[CustomTimeouts] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>ResourceOptions is a bag of optional settings that control a resource’s behavior.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>parent</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em>) – If provided, the currently-constructing resource should be the child of
+the provided parent resource.</li>
+<li><strong>depends_on</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference internal" href="#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em><em>]</em>) – If provided, the currently-constructing resource depends on the
+provided list of resources.</li>
+<li><strong>protect</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – If provided and True, this resource is not allowed to be deleted.</li>
+<li><strong>provider</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em>) – An optional provider to use for this resource’s CRUD operations.
+If no provider is supplied, the default provider for the resource’s package will be used. The default
+provider is pulled from the parent’s provider bag.</li>
+<li><strong>providers</strong> (<em>Optional</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em><em>]</em>) – An optional set of providers to use for child resources. Keyed
+by package name (e.g. “aws”)</li>
+<li><strong>delete_before_replace</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – If provided and True, this resource must be deleted before it is replaced.</li>
+<li><strong>ignore_changes</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>string</em><em>]</em><em>]</em>) – If provided, a list of property names to ignore for purposes of updates
+or replacements.</li>
+<li><strong>additional_secret*outputs</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>string</em><em>]</em><em>]</em>) – <p>If provided, a list of output property names that should
+also be treated as secret.</p>
+</li>
+<li><strong>customTimeouts</strong> (<em>Optional</em><em>[</em><em>CustomTimeouts</em><em>]</em>) – If provided, a config block for custom timeout information.</li>
+<li><strong>id</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – If provided, an existing resource ID to read, rather than create.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>:param Optional[str] import*\ <span class="classifier-delimiter">:</span> <span class="classifier">When provided with a resource ID, import indicates that this resource’s provider should</span></dt>
+<dd>import its state from the cloud resource with the given ID. The inputs to the resource’s constructor must align
+with the resource’s current state. Once a resource has been imported, the import property must be removed from
+the resource’s options.</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.parent">
+<code class="descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>If provided, the currently-constructing resource should be the child of the provided parent resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.depends_on">
+<code class="descname">depends_on</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.depends_on" title="Permalink to this definition">¶</a></dt>
+<dd><p>If provided, the currently-constructing resource depends on the provided list of resources.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.protect">
+<code class="descname">protect</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.protect" title="Permalink to this definition">¶</a></dt>
+<dd><p>If provided and True, this resource is not allowed to be deleted.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.provider">
+<code class="descname">provider</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.provider" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional provider to use for this resource’s CRUD operations. If no provider is supplied, the default
+provider for the resource’s package will be used. The default provider is pulled from the parent’s
+provider bag (see also ResourceOptions.providers).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.providers">
+<code class="descname">providers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.providers" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional set of providers to use for child resources. Keyed by package name (e.g. “aws”)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.delete_before_replace">
+<code class="descname">delete_before_replace</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.delete_before_replace" title="Permalink to this definition">¶</a></dt>
+<dd><p>If provided and True, this resource must be deleted before it is replaced.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.ignore_changes">
+<code class="descname">ignore_changes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.ignore_changes" title="Permalink to this definition">¶</a></dt>
+<dd><p>If provided, ignore changes to any of the specified properties.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.version">
+<code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional version. If provided, the engine loads a provider with exactly the requested version to operate on this
+resource. This version overrides the version information inferred from the current package and should rarely be
+used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.additional_secret_outputs">
+<code class="descname">additional_secret_outputs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.additional_secret_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>The names of outputs for this resource that should be treated as secrets. This augments the list that
+the resource provider and pulumi engine already determine based on inputs to your resource. It can be used
+to mark certain ouputs as a secrets on a per resource basis.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.custom_timeouts">
+<code class="descname">custom_timeouts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.custom_timeouts" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional customTimeouts config block.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional existing ID to load, rather than create.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.import_">
+<code class="descname">import_</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.import_" title="Permalink to this definition">¶</a></dt>
+<dd><p>When provided with a resource ID, import indicates that this resource’s provider should import its state from the
+cloud resource with the given ID. The inputs to the resource’s constructor must align with the resource’s current
+state. Once a resource has been imported, the import property must be removed from the resource’s options.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi.InvokeOptions">
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">InvokeOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>version: Optional[str] = ''</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.InvokeOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>InvokeOptions is a bag of options that control the behavior of a call to runtime.invoke.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>parent</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em>) – An optional parent to use for default options for this invoke (e.g. the
+default provider to use).</li>
+<li><strong>provider</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em>) – An optional provider to use for this invocation. If no provider is
+supplied, the default provider for the invoked function’s package will be used.</li>
+<li><strong>version</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional version. If provided, the provider plugin with exactly this version
+will be used to service the invocation.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi.InvokeOptions.parent">
+<code class="descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.InvokeOptions.parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional parent to use for default options for this invoke (e.g. the default provider to use).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.InvokeOptions.provider">
+<code class="descname">provider</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.InvokeOptions.provider" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional provider to use for this invocation. If no provider is supplied, the default provider for the
+invoked function’s package will be used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.InvokeOptions.version">
+<code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.InvokeOptions.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional version. If provided, the provider plugin with exactly this version will be used to service
+the invocation.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pulumi.RunError">
+<em class="property">exception </em><code class="descclassname">pulumi.</code><code class="descname">RunError</code><a class="headerlink" href="#pulumi.RunError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Can be used for terminating a program abruptly, but resulting in a clean exit rather than the usual
+verbose unhandled error logic which emits the source program text and complete stack trace.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="configuration-and-metadata">
+<h2>Configuration and Metadata<a class="headerlink" href="#configuration-and-metadata" title="Permalink to this headline">¶</a></h2>
+<p>Pulumi programs can receive configuration that is specified by the command-line using <cite>pulumi config</cite>. This
+configuration information can be retrieved at runtime using the <cite>pulumi.Config</cite> class:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="c1"># After running `pulumi config set myconfig 42`</span>
+
+<span class="n">conf</span> <span class="o">=</span> <span class="n">pulumi</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">conf</span><span class="o">.</span><span class="n">get_int</span><span class="p">(</span><span class="s2">&quot;myconfig&quot;</span><span class="p">))</span> <span class="c1"># prints 42</span>
+</pre></div>
+</div>
+<p>Pulumi programs also have the ability to query the current project and stack, as well as whether or not the current run
+of the program is a preview or not.</p>
+<dl class="class">
+<dt id="pulumi.Config">
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">Config</code><span class="sig-paren">(</span><em>name: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Config is a bag of related configuration state.  Each bag contains any number of configuration variables, indexed by
+simple keys, and each has a name that uniquely identifies it; two bags with different names do not share values for
+variables that otherwise share the same key.  For example, a bag whose name is <code class="docutils literal notranslate"><span class="pre">pulumi:foo</span></code>, with keys <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">c</span></code>, is entirely separate from a bag whose name is <code class="docutils literal notranslate"><span class="pre">pulumi:bar</span></code> with the same simple key names.  Each key has a
+fully qualified names, such as <code class="docutils literal notranslate"><span class="pre">pulumi:foo:a</span></code>, …, and <code class="docutils literal notranslate"><span class="pre">pulumi:bar:a</span></code>, respectively.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – The configuration bag’s logical name that uniquely identifies it.  If not provided, the name
+of the current project is used.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi.Config.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.Config.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The configuration bag’s logical name that uniquely identifies it.  The default is the name of the current project.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Optional[str]<a class="headerlink" href="#pulumi.Config.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an optional configuration value by its key, or None if it doesn’t exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>str</em>) – The requested configuration key.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The configuration key’s value, or None if one does not exist.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Optional[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.get_secret">
+<code class="descname">get_secret</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[str][str]]<a class="headerlink" href="#pulumi.Config.get_secret" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an optional configuration value by its key, marked as a secret, or None if it doesn’t exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>str</em>) – The requested configuration key.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The configuration key’s value, or None if one does not exist.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Optional[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.get_bool">
+<code class="descname">get_bool</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Optional[bool]<a class="headerlink" href="#pulumi.Config.get_bool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an optional configuration value, as a bool, by its key, or None if it doesn’t exist.
+If the configuration value isn’t a legal boolean, this function will throw an error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>str</em>) – The requested configuration key.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The configuration key’s value, or None if one does not exist.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Optional[bool]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="#pulumi.ConfigTypeError" title="pulumi.ConfigTypeError"><strong>ConfigTypeError</strong></a> – The configuration value existed but couldn’t be coerced to bool.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.get_secret_bool">
+<code class="descname">get_secret_bool</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[bool][bool]]<a class="headerlink" href="#pulumi.Config.get_secret_bool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an optional configuration value, as a bool, by its key, marked as a secret or None if it doesn’t exist.
+If the configuration value isn’t a legal boolean, this function will throw an error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>str</em>) – The requested configuration key.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The configuration key’s value, or None if one does not exist.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Optional[bool]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="#pulumi.ConfigTypeError" title="pulumi.ConfigTypeError"><strong>ConfigTypeError</strong></a> – The configuration value existed but couldn’t be coerced to bool.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.get_int">
+<code class="descname">get_int</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Optional[int]<a class="headerlink" href="#pulumi.Config.get_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an optional configuration value, as an int, by its key, or None if it doesn’t exist.
+If the configuration value isn’t a legal int, this function will throw an error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>str</em>) – The requested configuration key.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The configuration key’s value, or None if one does not exist.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Optional[int]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="#pulumi.ConfigTypeError" title="pulumi.ConfigTypeError"><strong>ConfigTypeError</strong></a> – The configuration value existed but couldn’t be coerced to int.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.get_secret_int">
+<code class="descname">get_secret_int</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[int][int]]<a class="headerlink" href="#pulumi.Config.get_secret_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an optional configuration value, as an int, by its key, marked as a secret, or None if it doesn’t exist.
+If the configuration value isn’t a legal int, this function will throw an error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>str</em>) – The requested configuration key.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The configuration key’s value, or None if one does not exist.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Optional[int]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="#pulumi.ConfigTypeError" title="pulumi.ConfigTypeError"><strong>ConfigTypeError</strong></a> – The configuration value existed but couldn’t be coerced to int.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.get_float">
+<code class="descname">get_float</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Optional[float]<a class="headerlink" href="#pulumi.Config.get_float" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an optional configuration value, as a float, by its key, or None if it doesn’t exist.
+If the configuration value isn’t a legal float, this function will throw an error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>str</em>) – The requested configuration key.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The configuration key’s value, or None if one does not exist.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Optional[float]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="#pulumi.ConfigTypeError" title="pulumi.ConfigTypeError"><strong>ConfigTypeError</strong></a> – The configuration value existed but couldn’t be coerced to float.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.get_secret_float">
+<code class="descname">get_secret_float</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[float][float]]<a class="headerlink" href="#pulumi.Config.get_secret_float" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an optional configuration value, as a float, by its key, marked as a secret or None if it doesn’t exist.
+If the configuration value isn’t a legal float, this function will throw an error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>str</em>) – The requested configuration key.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The configuration key’s value, or None if one does not exist.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Optional[float]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="#pulumi.ConfigTypeError" title="pulumi.ConfigTypeError"><strong>ConfigTypeError</strong></a> – The configuration value existed but couldn’t be coerced to float.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.get_object">
+<code class="descname">get_object</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Optional[Any]<a class="headerlink" href="#pulumi.Config.get_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an optional configuration value, as an object, by its key, or undefined if it
+doesn’t exist. This routine simply JSON parses and doesn’t validate the shape of the
+contents.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.get_secret_object">
+<code class="descname">get_secret_object</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[typing.Any][Any]]<a class="headerlink" href="#pulumi.Config.get_secret_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an optional configuration value, as an object, by its key, marking it as a secret or
+undefined if it doesn’t exist. This routine simply JSON parses and doesn’t validate the
+shape of the contents.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.require">
+<code class="descname">require</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi.Config.require" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a configuration value by its given key.  If it doesn’t exist, an error is thrown.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>str</em>) – The requested configuration key.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The configuration key’s value.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="#pulumi.ConfigMissingError" title="pulumi.ConfigMissingError"><strong>ConfigMissingError</strong></a> – The configuration value did not exist.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.require_secret">
+<code class="descname">require_secret</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[str][str]<a class="headerlink" href="#pulumi.Config.require_secret" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a configuration value, marked as a secret by its given key.  If it doesn’t exist, an error is thrown.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>str</em>) – The requested configuration key.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The configuration key’s value.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference internal" href="#pulumi.ConfigMissingError" title="pulumi.ConfigMissingError"><strong>ConfigMissingError</strong></a> – The configuration value did not exist.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.require_bool">
+<code class="descname">require_bool</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pulumi.Config.require_bool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a configuration value, as a bool, by its given key.  If it doesn’t exist, or the
+configuration value is not a legal bool, an error is thrown.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>key</strong> (<em>str</em>) – The requested configuration key.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The configuration key’s value.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="#pulumi.ConfigMissingError" title="pulumi.ConfigMissingError"><strong>ConfigMissingError</strong></a> – The configuration value did not exist.</li>
+<li><a class="reference internal" href="#pulumi.ConfigTypeError" title="pulumi.ConfigTypeError"><strong>ConfigTypeError</strong></a> – The configuration value existed but couldn’t be coerced to bool.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.require_secret_bool">
+<code class="descname">require_secret_bool</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[bool][bool]<a class="headerlink" href="#pulumi.Config.require_secret_bool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a configuration value, as a bool, marked as a secret by its given key.  If it doesn’t exist, or the
+configuration value is not a legal bool, an error is thrown.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>key</strong> (<em>str</em>) – The requested configuration key.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The configuration key’s value.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="#pulumi.ConfigMissingError" title="pulumi.ConfigMissingError"><strong>ConfigMissingError</strong></a> – The configuration value did not exist.</li>
+<li><a class="reference internal" href="#pulumi.ConfigTypeError" title="pulumi.ConfigTypeError"><strong>ConfigTypeError</strong></a> – The configuration value existed but couldn’t be coerced to bool.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.require_int">
+<code class="descname">require_int</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pulumi.Config.require_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a configuration value, as an int, by its given key.  If it doesn’t exist, or the
+configuration value is not a legal int, an error is thrown.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>key</strong> (<em>str</em>) – The requested configuration key.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The configuration key’s value.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="#pulumi.ConfigMissingError" title="pulumi.ConfigMissingError"><strong>ConfigMissingError</strong></a> – The configuration value did not exist.</li>
+<li><a class="reference internal" href="#pulumi.ConfigTypeError" title="pulumi.ConfigTypeError"><strong>ConfigTypeError</strong></a> – The configuration value existed but couldn’t be coerced to int.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.require_secret_int">
+<code class="descname">require_secret_int</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[int][int]<a class="headerlink" href="#pulumi.Config.require_secret_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a configuration value, as an int, marked as a secret by its given key.  If it doesn’t exist, or the
+configuration value is not a legal int, an error is thrown.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>key</strong> (<em>str</em>) – The requested configuration key.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The configuration key’s value.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">int</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="#pulumi.ConfigMissingError" title="pulumi.ConfigMissingError"><strong>ConfigMissingError</strong></a> – The configuration value did not exist.</li>
+<li><a class="reference internal" href="#pulumi.ConfigTypeError" title="pulumi.ConfigTypeError"><strong>ConfigTypeError</strong></a> – The configuration value existed but couldn’t be coerced to int.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.require_float">
+<code class="descname">require_float</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pulumi.Config.require_float" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a configuration value, as a float, by its given key.  If it doesn’t exist, or the
+configuration value is not a legal number, an error is thrown.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>key</strong> (<em>str</em>) – The requested configuration key.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The configuration key’s value.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="#pulumi.ConfigMissingError" title="pulumi.ConfigMissingError"><strong>ConfigMissingError</strong></a> – The configuration value did not exist.</li>
+<li><a class="reference internal" href="#pulumi.ConfigTypeError" title="pulumi.ConfigTypeError"><strong>ConfigTypeError</strong></a> – The configuration value existed but couldn’t be coerced to float.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.require_secret_float">
+<code class="descname">require_secret_float</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pulumi.Config.require_secret_float" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a configuration value, as a float, marked as a secret by its given key.  If it doesn’t exist, or the
+configuration value is not a legal number, an error is thrown.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>key</strong> (<em>str</em>) – The requested configuration key.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The configuration key’s value.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">float</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="#pulumi.ConfigMissingError" title="pulumi.ConfigMissingError"><strong>ConfigMissingError</strong></a> – The configuration value did not exist.</li>
+<li><a class="reference internal" href="#pulumi.ConfigTypeError" title="pulumi.ConfigTypeError"><strong>ConfigTypeError</strong></a> – The configuration value existed but couldn’t be coerced to float.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.require_object">
+<code class="descname">require_object</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#pulumi.Config.require_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a configuration value as a JSON string and deserializes the JSON into a Python
+object. If it doesn’t exist, or the configuration value is not a legal JSON string, an error
+is thrown.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.require_secret_object">
+<code class="descname">require_secret_object</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.Any][Any]<a class="headerlink" href="#pulumi.Config.require_secret_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a configuration value as a JSON string and deserializes the JSON into a Python
+object, marking it as a secret. If it doesn’t exist, or the configuration value is not a
+legal JSON string, an error is thrown.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Config.full_key">
+<code class="descname">full_key</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi.Config.full_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turns a simple configuration key into a fully resolved one, by prepending the bag’s name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>str</em>) – The name of the configuration key.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The name of the configuration key, prefixed with the bag’s name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pulumi.ConfigMissingError">
+<em class="property">exception </em><code class="descclassname">pulumi.</code><code class="descname">ConfigMissingError</code><span class="sig-paren">(</span><em>key: str</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ConfigMissingError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates a configuration value is missing.</p>
+<dl class="attribute">
+<dt id="pulumi.ConfigMissingError.key">
+<code class="descname">key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ConfigMissingError.key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the missing configuration key.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pulumi.ConfigTypeError">
+<em class="property">exception </em><code class="descclassname">pulumi.</code><code class="descname">ConfigTypeError</code><span class="sig-paren">(</span><em>key: str</em>, <em>value: str</em>, <em>expect_type: str</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ConfigTypeError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates a configuration value is of the wrong type.</p>
+<dl class="attribute">
+<dt id="pulumi.ConfigTypeError.key">
+<code class="descname">key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ConfigTypeError.key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the key whose value was ill-typed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ConfigTypeError.value">
+<code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ConfigTypeError.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ill-typed value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ConfigTypeError.expect_type">
+<code class="descname">expect_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ConfigTypeError.expect_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The expected type of this value.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi.get_project">
+<code class="descclassname">pulumi.</code><code class="descname">get_project</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi.get_project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current project name.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi.get_stack">
+<code class="descclassname">pulumi.</code><code class="descname">get_stack</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi.get_stack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current stack name.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi.runtime.is_dry_run">
+<code class="descclassname">pulumi.runtime.</code><code class="descname">is_dry_run</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pulumi.runtime.is_dry_run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether or not we are currently doing a preview.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="outputs-and-inputs">
+<h2>Outputs and Inputs<a class="headerlink" href="#outputs-and-inputs" title="Permalink to this headline">¶</a></h2>
+<p>Like other languages in the Pulumi ecosystem, all Resources in Python have two kinds of properties: <em>inputs</em> and
+<em>outputs</em>. Inputs are specified as arguments to resource constructors, to be used as inputs to the resource itself.
+Outputs are <em>returned</em> as properties on the instantiated resource object. Outputs are similar to futures in that they
+are resolved asynchronously, but they also contain information about the dependency graph of resources within your
+program.</p>
+<p>Pulumi does not offer direct access to the values contained within Outputs. Instead, you must use the <cite>apply</cite> function
+on the Output class in order to observe the value of an output. See
+<a class="reference external" href="/tour/programs-properties.html">the documentation</a> for more details on this part of the Pulumi programming model.</p>
+<dl class="class">
+<dt id="pulumi.Output">
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">Output</code><span class="sig-paren">(</span><em>resources: Set[Resource], future: Awaitable[T], is_known: Awaitable[bool], is_secret: Optional[Awaitable[bool]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.Output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output helps encode the relationship between Resources in a Pulumi application. Specifically an
+Output holds onto a piece of Data and the Resource it was generated from. An Output value can
+then be provided when constructing new Resources, allowing that new Resource to know both the
+value as well as the Resource the value came from.  This allows for a precise ‘Resource
+dependency graph’ to be created, which properly tracks the relationship between resources.</p>
+<dl class="method">
+<dt id="pulumi.Output.__getitem__">
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>key: Any</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.Any][Any]<a class="headerlink" href="#pulumi.Output.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Syntax sugar for looking up attributes dynamically off of outputs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>Any</em>) – Key for the attribute dictionary.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">An Output of this Output’s underlying value, keyed with the given key as if it were a dictionary.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[Any]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Output.__getattr__">
+<code class="descname">__getattr__</code><span class="sig-paren">(</span><em>item: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.Any][Any]<a class="headerlink" href="#pulumi.Output.__getattr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Syntax sugar for retrieving attributes off of outputs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>item</strong> (<em>str</em>) – An attribute name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">An Output of this Output’s underlying value’s property with the given name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[Any]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.Output.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>func: Callable[[T], Union[U, Awaitable[U], Output[T]]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~U][U]<a class="headerlink" href="#pulumi.Output.apply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms the data of the output with the provided func.  The result remains a
+Output so that dependent resources can be properly tracked.</p>
+<p>‘func’ is not allowed to make resources.</p>
+<p>‘func’ can return other Outputs.  This can be handy if you have a Output<span class="raw-html-m2r"><SomeVal></span>
+and you want to get a transitive dependency of it.</p>
+<p>This function will be called during execution of a ‘pulumi up’ request.  It may not run
+during ‘pulumi preview’ (as the values of resources are of course may not be known then).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>func</strong> (<em>Callable</em><em>[</em><em>[</em><em>T</em><em>]</em><em>,</em><em>Input</em><em>[</em><em>U</em><em>]</em><em>]</em>) – A function that will, given this Output’s value, transform the value to
+an Input of some kind, where an Input is either a prompt value, a Future, or another Output of the given
+type.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A transformed Output obtained from running the transformation function on this Output’s value.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[U]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi.Output.from_input">
+<em class="property">static </em><code class="descname">from_input</code><span class="sig-paren">(</span><em>val: Union[T, Awaitable[T], Output[T]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~T][T]<a class="headerlink" href="#pulumi.Output.from_input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes an Input value and produces an Output value from it, deeply unwrapping nested Input values as necessary
+given the type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>val</strong> (<em>Input</em><em>[</em><em>T</em><em>]</em>) – An Input to be converted to an Output.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A deeply-unwrapped Output that is guaranteed to not contain any Input values.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[T]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi.Output.secret">
+<em class="property">static </em><code class="descname">secret</code><span class="sig-paren">(</span><em>val: Union[T, Awaitable[T], Output[T]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~T][T]<a class="headerlink" href="#pulumi.Output.secret" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes an Input value and produces an Output value from it, deeply unwrapping nested Input values as necessary
+given the type. It also marks the returned Output as a secret, so its contents will be persisted in an encrypted
+form in state files.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>val</strong> (<em>Input</em><em>[</em><em>T</em><em>]</em>) – An Input to be converted to an Secret Output.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A deeply-unwrapped Output that is guaranteed to not contain any Input values and is marked as a Secret.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[T]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi.Output.all">
+<em class="property">static </em><code class="descname">all</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.List[~T]][List[T]]<a class="headerlink" href="#pulumi.Output.all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Produces an Output of Lists from a List of Inputs.</p>
+<p>This function can be used to combine multiple, separate Inputs into a single
+Output which can then be used as the target of <code class="docutils literal notranslate"><span class="pre">apply</span></code>. Resource dependencies
+are preserved in the returned Output.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> (<em>List</em><em>[</em><em>Input</em><em>[</em><em>T</em><em>]</em><em>]</em>) – A list of Inputs to convert.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">An output of lists, converted from an Input to prompt values.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[List[T]]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="logging">
+<h2>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h2>
+<p>The Pulumi SDK contains a few helper functions for logging to the console. Messages logged using these functions are
+sent directly to the Pulumi Engine and rendered with the rest of the CLI output.</p>
+<dl class="function">
+<dt id="pulumi.debug">
+<code class="descclassname">pulumi.</code><code class="descname">debug</code><span class="sig-paren">(</span><em>msg: str</em>, <em>resource: Optional[Resource] = None</em>, <em>stream_id: Optional[int] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs a message to the Pulumi CLI’s debug channel, associating it with a resource
+and stream_id if provided.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>msg</strong> (<em>str</em>) – The message to send to the Pulumi CLI.</li>
+<li><strong>resource</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em>) – If provided, associate this message with the given resource in the Pulumi CLI.</li>
+<li><strong>stream_id</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – If provided, associate this message with a stream of other messages.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi.info">
+<code class="descclassname">pulumi.</code><code class="descname">info</code><span class="sig-paren">(</span><em>msg: str</em>, <em>resource: Optional[Resource] = None</em>, <em>stream_id: Optional[int] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs a message to the Pulumi CLI’s info channel, associating it with a resource
+and stream_id if provided.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>msg</strong> (<em>str</em>) – The message to send to the Pulumi CLI.</li>
+<li><strong>resource</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em>) – If provided, associate this message with the given resource in the Pulumi CLI.</li>
+<li><strong>stream_id</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – If provided, associate this message with a stream of other messages.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi.warn">
+<code class="descclassname">pulumi.</code><code class="descname">warn</code><span class="sig-paren">(</span><em>msg: str</em>, <em>resource: Optional[Resource] = None</em>, <em>stream_id: Optional[int] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.warn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs a message to the Pulumi CLI’s warning channel, associating it with a resource
+and stream_id if provided.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>msg</strong> (<em>str</em>) – The message to send to the Pulumi CLI.</li>
+<li><strong>resource</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em>) – If provided, associate this message with the given resource in the Pulumi CLI.</li>
+<li><strong>stream_id</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – If provided, associate this message with a stream of other messages.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi.error">
+<code class="descclassname">pulumi.</code><code class="descname">error</code><span class="sig-paren">(</span><em>msg: str</em>, <em>resource: Optional[Resource] = None</em>, <em>stream_id: Optional[int] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs a message to the Pulumi CLI’s error channel, associating it with a resource
+and stream_id if provided.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>msg</strong> (<em>str</em>) – The message to send to the Pulumi CLI.</li>
+<li><strong>resource</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em>) – If provided, associate this message with the given resource in the Pulumi CLI.</li>
+<li><strong>stream_id</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – If provided, associate this message with a stream of other messages.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="stack-exports">
+<h2>Stack Exports<a class="headerlink" href="#stack-exports" title="Permalink to this headline">¶</a></h2>
+<p>Python programs can export values. Exported values are attached to the program’s Stack resource and accessed using the
+<cite>pulumi stack output</cite> CLI command:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;the-answer&quot;</span><span class="p">,</span> <span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># pulumi stack export:</span>
+<span class="c1"># Current stack outputs (1):</span>
+<span class="c1"># OUTPUT      VALUE</span>
+<span class="c1"># the-answer  42</span>
+</pre></div>
+</div>
+<dl class="function">
+<dt id="pulumi.export">
+<code class="descclassname">pulumi.</code><code class="descname">export</code><span class="sig-paren">(</span><em>name: str</em>, <em>value: Any</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.export" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exports a named stack output.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>str</em>) – The name to assign to this output.</li>
+<li><strong>value</strong> (<em>Any</em>) – The value of this output.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+        </main>
+
+        <nav class="footer bg-purple-700 py-8 px-8 md:px-0">
+    <div class="container mx-auto">
+        <footer>
+            <div class="md:flex items-top justify-between flex-wrap">
+
+                <div class="mb-6 md:w-4/12">
+                    <a class="block mt-2" href="/">
+                        <img class="h-10 opacity-50" src="/images/logo/logo-white.svg" alt="Pulumi logo">
+                    </a>
+                    <a class="inline-block my-4 opacity-50 text-white text-lg" href="mailto:team@pulumi.com">team@pulumi.com</a>
+                    <ul class="flex inline-items text-blue-300 text-2xl">
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li class="mr-4"><a class="hover:text-blue-200" href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="hover:text-blue-200" href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap items-top md:w-8/12">
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/containers/">Containers</a></li>
+                        <li class="mb-4"><a href="/serverless/">Serverless</a></li>
+                        <li class="mb-4"><a href="/docs/reference/tutorials/aws/tutorial-ec2-webserver/">Infrastructure</a></li>
+                        <li class="mb-4"><a href="/kubernetes/">Kubernetes</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/reference/install/">Install</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/">Get Started</a></li>
+                        <li class="mb-4"><a href="/docs/reference/">Documentation</a></li>
+                        <li class="mb-4"><a href="/docs/reference/pkg/">APIs</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/docs/quickstart/aws/">AWS</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/azure/">Azure</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/gcp/">Google Cloud</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/kubernetes/">Kubernetes</a></li>
+                        <li class="mb-4"><a href="/docs/quickstart/cloudfx/">Cloud Framework</a></li>
+                        <li class="mb-4"><a href="/docs/reference/clouds/openstack/">OpenStack</a></li>
+                    </ul>
+                    <ul class="my-4 text-white w-1/2 md:w-3/12">
+                        <li class="mb-4"><a href="/about/">About Us</a></li>
+                        <li class="mb-4"><a href="/contact/">Contact Us</a></li>
+                        <li class="mb-4"><a href="/support/">Support</a></li>
+                        <li class="mb-4"><a href="/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-white opacity-75 text-sm lg:flex items-center border-t border-purple-500 mt-4 pt-4">
+                
+                <p class="md:w-4/12">&copy; 2019 Pulumi. All rights reserved.</p>
+
+                <ul class="md:w-8/12">
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/trademark/">Trademark Usage</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/acceptable-use/">Acceptable Use Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/privacy/">Privacy Policy</a></li>
+                    
+                        <li class="inline mr-2 lg:mr-4"><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </div>
+</nav>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="/js/bundle.min.8d935315b94bf6e77843b9c51ebc10238af740294e751f49b183b5d1e27a1c27.js" integrity="sha256-jZNTFblL9ud4Q7nFHrwQI4r3QClOdR9JsYO10eJ6HCc="></script>
+
+    </body>
+</html>

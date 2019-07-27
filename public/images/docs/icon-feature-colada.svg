@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="125px" height="115px" viewBox="0 0 125 115" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/icon-feature-colada</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-25.0%" y="-26.1%" width="149.9%" height="152.1%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-350.0%" y="-24.4%" width="800.0%" height="148.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-13.5%" y="-14.1%" width="127.0%" height="128.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="icons/icon-feature-colada" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g transform="translate(24.000000, 18.000000)" id="Group" stroke="#EE975C" stroke-width="3">
+            <g>
+                <path d="M17.7975095,37.8366494 C17.7975095,26.713718 27.2090885,17.6962921 38.8197303,17.6962921 C50.4296891,17.6962921 59.8412681,26.713718 59.8412681,37.8366494 C59.8412681,48.9595808 50.4296891,57.9770067 38.8197303,57.9770067" id="Stroke-1" filter="url(#filter-1)"></path>
+                <path d="M17.7975095,37 L17.7975095,79.4026337" id="Stroke-3" filter="url(#filter-2)"></path>
+                <path d="M5.28675446,56.606269 C1.95128158,51.1128495 0.0411018766,44.7276326 0.0411018766,37.9145099 C0.0411018766,17.3527898 17.4396496,0.68475 38.9016829,0.68475 C60.3630333,0.68475 77.7608981,17.3527898 77.7608981,37.9145099 C77.7608981,58.4755758 60.3630333,75.1442699 38.9016829,75.1442699 C36.4499328,75.1442699 34.0514519,74.9263913 31.7260454,74.5109171" id="Stroke-5" filter="url(#filter-3)"></path>
+            </g>
+            <g>
+                <path d="M17.7975095,37.8366494 C17.7975095,26.713718 27.2090885,17.6962921 38.8197303,17.6962921 C50.4296891,17.6962921 59.8412681,26.713718 59.8412681,37.8366494 C59.8412681,48.9595808 50.4296891,57.9770067 38.8197303,57.9770067" id="Stroke-1"></path>
+                <path d="M17.7975095,37 L17.7975095,79.4026337" id="Stroke-3"></path>
+                <path d="M5.28675446,56.606269 C1.95128158,51.1128495 0.0411018766,44.7276326 0.0411018766,37.9145099 C0.0411018766,17.3527898 17.4396496,0.68475 38.9016829,0.68475 C60.3630333,0.68475 77.7608981,17.3527898 77.7608981,37.9145099 C77.7608981,58.4755758 60.3630333,75.1442699 38.9016829,75.1442699 C36.4499328,75.1442699 34.0514519,74.9263913 31.7260454,74.5109171" id="Stroke-5"></path>
+            </g>
+        </g>
+    </g>
+</svg>
