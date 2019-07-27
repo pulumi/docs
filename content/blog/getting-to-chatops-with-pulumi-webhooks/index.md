@@ -157,5 +157,5 @@ we'll quickly be expanding coverage in the coming weeks.
 Get started with Pulumi Webhooks on the [Pulumi app](https://app.pulumi.com), and let us know how you're using them so
 we can continue to extend their capabilities. We'd love to hear your
 ideas, as well as any feedback you have on the
-[Pulumi Community Slack](https://slack.pulumi.io).
+[Pulumi Community Slack](https://slack.pulumi.com).
 

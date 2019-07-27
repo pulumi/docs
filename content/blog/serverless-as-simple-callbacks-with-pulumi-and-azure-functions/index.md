@@ -209,6 +209,6 @@ us answer the questions:
 Feel free to create an issue on
 [GitHub](https://github.com/pulumi/pulumi-azure/), tag us on
 [Twitter](https://twitter.com/PulumiCorp), or join our
-[community Slack channel](https://slack.pulumi.io/).
+[community Slack channel](https://slack.pulumi.com/).
 
 Happy serverless programming!

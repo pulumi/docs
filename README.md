@@ -131,7 +131,7 @@ Docs for additional packages can be added by updating `./scripts/run_typedoc.sh`
 
 ## Deploying updates
 
-When changes are merged into `master` our staging website (https://staging.pulumi.io/) is automatically deployed. You can use the [Travis UI](https://travis-ci.com/pulumi/docs) to check on the status of the deployment. Once it has been deployed, browse around the staging website and ensure the changes you expected were made and render correctly. Then, open a Pull Request to merge `master` into `production`.
+When changes are merged into `master`, https://www.pulumi.com/ is automatically deployed. You can use the [Travis UI](https://travis-ci.com/pulumi/docs) to check on the status of the deployment.
 
 ## Design Reference
 
