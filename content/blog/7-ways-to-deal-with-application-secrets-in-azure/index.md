@@ -168,7 +168,7 @@ builder.AddAzureKeyVault(
 
 This solution is not entirely satisfying though, since we've traded storing the secrets for storing SP credentials. Is that a big enough win?  Luckily, it's easy to get rid of those credentials with Managed identities.
 
-## 5. Accessing Key Vault with Managed identities
+## 5. Accessing Key Vault with Managed Identities
 
 With **Managed identities**, Azure takes care of creating a Service Principal, passing the credentials, rotating secrets, and so on. Enabling a managed identity on App Service is just an extra option:
 
