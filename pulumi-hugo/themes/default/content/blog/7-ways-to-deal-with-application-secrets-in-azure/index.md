@@ -166,17 +166,17 @@ builder.AddAzureKeyVault(
 );
 ```
 
-This solution is not entirely satisfying though, since we've traded storing the secrets for storing SP credentials. Is that a big enough win?  Luckily, it's easy to get rid of those credentials with Managed Service Identity.
+This solution is not entirely satisfying though, since we've traded storing the secrets for storing SP credentials. Is that a big enough win?  Luckily, it's easy to get rid of those credentials with Managed identities.
 
-## 5. Accessing Key Vault with Managed Service Identity
+## 5. Accessing Key Vault with Managed Identities
 
-With **Managed Service Identity** (MSI), Azure takes care of creating a Service Principal, passing the credentials, rotating secrets, and so on. Enabling MSI on App Service is just an extra option:
+With **Managed identities**, Azure takes care of creating a Service Principal, passing the credentials, rotating secrets, and so on. Enabling a managed identity on App Service is just an extra option:
 
 ``` ts
 const app = new azure.appservice.AppService("app", {
    resourceGroupName: resourceGroup.name,
    appServicePlanId: appServicePlan.id,
-   // A system-assigned managed service identity
+   // A system-assigned managed identity
    identity: {
        type: "SystemAssigned",
    },
@@ -221,7 +221,7 @@ const secretUri = pulumi.interpolate`${secret.vaultUri}secrets/${secret.name}/${
 const app = new azure.appservice.AppService("app", {
    resourceGroupName: resourceGroup.name,
    appServicePlanId: appServicePlan.id,
-   // A system-assigned managed service identity
+   // A system-assigned managed identity
    identity: {
        type: "SystemAssigned",
    },
@@ -284,6 +284,6 @@ While security practices may vary depending on application requirements, Pulumi 
 
 - It links an output of one resource to another one's input, avoiding the need to store the values.
 - It provides a built-in mechanism to manage external secrets.
-- It is a great way to take advantage of Azure features like MSI and RBAC in a cohesive way.
+- It is a great way to take advantage of Azure features like Managed identities and RBAC in a cohesive way.
 
-Infrastructure as Code helps make your applications secure and reliable. Refer to [this full example](https://github.com/pulumi/examples/tree/master/azure-ts-msi-keyvault-rbac) of using Key Vault, MSI, RBAC with App Service and Pulumi.
+Infrastructure as Code helps make your applications secure and reliable. Refer to [this full example](https://github.com/pulumi/examples/tree/master/azure-ts-msi-keyvault-rbac) of using Key Vault, Managed identities, RBAC with App Service and Pulumi.
