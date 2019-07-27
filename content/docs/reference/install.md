@@ -202,6 +202,8 @@ back and ensure your path contains the directory containing the `pulumi` CLI ins
 To uninstall Pulumi, delete the `.pulumi` folder in your home directory. If you used the manual installer, you should
 also delete the `pulumi` folder that was created.
 
+## Available Versions
+
 The current stable version is **{{< latest-version >}}**. For a full history of prior versions, including
 release notes, please visit the <a href="{{< relref "/docs/reference/changelog.md" >}}">Changelog</a>.
 
