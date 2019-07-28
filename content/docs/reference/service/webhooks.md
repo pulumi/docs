@@ -142,7 +142,7 @@ identity of the user who triggered the webhook, e.g. the person who initiated
 the stack update or performed the action.
 
 > The Pulumi Webhook payloads are under development, and may be changed from
-> time to time. See the [Pulumi Community Slack](http://slack.pulumi.io/) for
+> time to time. See the [Pulumi Community Slack](http://slack.pulumi.com/) for
 > any announcements or changes.
 
 ### `stack` event

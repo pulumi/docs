@@ -70,4 +70,4 @@ Don't see docs for a particular CI system? Let us know or better yet
 file an issue [here](https://github.com/pulumi/docs/issues).
 
 Having trouble? Questions? Join our
-[community Slack](https://slack.pulumi.io/) or send us an email.
+[community Slack](https://slack.pulumi.com/) or send us an email.

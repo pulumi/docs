@@ -270,4 +270,4 @@ GCP:
 - [GCE Tutorial]({{< ref "/docs/reference/tutorials/gcp/tutorial-gce-webserver" >}})
 - Example: [Serverless Slackbot with Cloud Functions in JavaScript](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot)
 - Example: [GKE + Kubernetes Pod Deployment in Python](https://github.com/pulumi/examples/tree/master/gcp-py-gke)
-- [Pulumi Community Slack](https://slack.pulumi.io/)
+- [Pulumi Community Slack](https://slack.pulumi.com/)

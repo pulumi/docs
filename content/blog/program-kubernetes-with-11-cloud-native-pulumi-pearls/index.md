@@ -828,5 +828,5 @@ here.
 
 To get started, head over to the [Pulumi Quickstart]({{< ref "/docs/quickstart" >}}),
 meet us over on GitHub where all the goodies are open source <https://github.com/pulumi/pulumi>, and/or join our
-[Pulumi Community Slack](https://slack.pulumi.io). We can't wait to hear
+[Pulumi Community Slack](https://slack.pulumi.com). We can't wait to hear
 from you. Happy hacking!

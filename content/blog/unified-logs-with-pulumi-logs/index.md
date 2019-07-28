@@ -179,7 +179,7 @@ something we're also excited to enable in the near future.
 You can take `pulumi` for a spin today by checking out the
 [Getting Started Guide]({{< ref "/docs/quickstart" >}}) guide or some of the
 [Pulumi Examples](https://github.com/pulumi/examples) on GitHub. Then join us in the
-[Pulumi Community Slack](https://slack.pulumi.io) to chat about where
+[Pulumi Community Slack](https://slack.pulumi.com) to chat about where
 you want to see us go (and where you'd like to help out!) with
 `pulumi logs` and other features of the Pulumi open source project in
 the coming weeks and months.

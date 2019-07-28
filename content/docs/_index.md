@@ -111,5 +111,5 @@ functions -- and the CLI safely and reliably manages your cloud resources using 
     </div>
 </div>
 
-For questions or feedback, reach us in our [community Slack channel](https://slack.pulumi.io),
+For questions or feedback, reach us in our [community Slack channel](https://slack.pulumi.com),
 on [GitHub](https://github.com/pulumi), or by emailing [support@pulumi.com](mailto:support@pulumi.com).

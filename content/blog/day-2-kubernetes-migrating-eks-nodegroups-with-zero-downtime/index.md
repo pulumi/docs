@@ -158,7 +158,7 @@ As always, you can check out our code on
 [GitHub](https://github.com/pulumi), follow us on
 [Twitter](https://twitter.com/pulumicorp), subscribe to our [YouTube
 channel](https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw), or
-join our [Community Slack](https://slack.pulumi.io/) channel if you have
+join our [Community Slack](https://slack.pulumi.com/) channel if you have
 any questions, need support, or just want to say hello.
 
 If you'd like to chat with our team, or get hands-on assistance with
