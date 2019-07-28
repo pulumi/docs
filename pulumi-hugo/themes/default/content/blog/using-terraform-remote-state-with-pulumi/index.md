@@ -178,5 +178,5 @@ To learn more about migrating
 from Terraform to Pulumi, check out
 [From Terraform to Infrastructure as Software]({{< relref "from-terraform-to-infrastructure-as-software" >}})
 and the [Terraform comparison documentation]({{< ref "/docs/reference/vs/terraform" >}}), or join us in
-the [Pulumi Community Slack](https://slack.pulumi.io/) to discuss with
+the [Pulumi Community Slack](https://slack.pulumi.com/) to discuss with
 the Pulumi community.
