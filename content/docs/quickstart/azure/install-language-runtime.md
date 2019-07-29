@@ -1,6 +1,7 @@
 ---
 title: Install Language Runtime
 weight: 3
+no_on_this_page: true
 menu:
   quickstart:
     parent: azure

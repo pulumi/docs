@@ -5,8 +5,6 @@ menu:
     weight: 15
 ---
 
-{{< mini-toc >}}
-
 Pulumi tries very hard to ensure that your infrastructure is always in a known and predictable state.
 However, sometimes things go wrong. If you can't update your stack, or there's some other problem that is
 preventing you from being productive with a Pulumi stack, you've come to the right place.

@@ -1,5 +1,6 @@
 ---
 title: Get Started
+no_on_this_page: true
 ---
 
 Get started provisioning infrastructure with Pulumi.

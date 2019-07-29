@@ -18,8 +18,6 @@ certified Kubernetes conformant so you can use existing tooling and plugins from
 community. Applications running on any standard Kubernetes environment are fully compatible and can be easily migrated
 to Amazon EKS.
 
-{{< mini-toc >}}
-
 ## Overview
 
 Pulumi Crosswalk for AWS simplifies the creation, configuration, and management of EKS clusters, in addition to

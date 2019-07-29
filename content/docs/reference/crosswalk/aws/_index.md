@@ -14,8 +14,6 @@ menu:
 Pulumi Crosswalk for AWS is a collection of libraries to make common infrastructure as code tasks in AWS easier and
 more secure, using automatic well-architected best practices.
 
-{{< mini-toc >}}
-
 <img src="/images/docs/reference/crosswalk/aws/arch.png">
 
 ## Overview

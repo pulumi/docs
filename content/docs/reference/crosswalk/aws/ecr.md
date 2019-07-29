@@ -17,8 +17,6 @@ resource-based permissions using AWS IAM, so specific users and instances can ac
 going from development to production, and eliminates the need to operate your own container repositories or worry
 about scaling the underlying infrastructure, while hosting your images in a highly available and scalable architecture.
 
-{{< mini-toc >}}
-
 ## Overview
 
 Pulumi Crosswalk for AWS ECR makes the provisioning of new ECR repositories as simple as one line of code,
