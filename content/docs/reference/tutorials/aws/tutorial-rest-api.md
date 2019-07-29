@@ -146,4 +146,3 @@ From here, you can dive deeper:
         REST APIs that use a document database
   - [Multi-cloud Serverless plus Containers]({{< relref "/docs/quickstart/cloudfx/tutorial-thumbnailer.md" >}}): Create a multi-cloud video
         thumbnail app that uses containers, serverless, and infrastructure together
-- Take [a tour of Pulumi]({{< relref "/docs/tour" >}}).
