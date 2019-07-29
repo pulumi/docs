@@ -16,8 +16,6 @@ orchestration service that supports Docker containers and allows you to easily r
 on AWS. ECS eliminates the need for you to install and operate your own container orchestration software, manage and
 scale a cluster of virtual machines, or schedule containers on those virtual machines.
 
-{{< mini-toc >}}
-
 ## Overview
 
 Pulumi Crosswalk for AWS ECS simplifies deploying containerized applications into ECS and managing all of the

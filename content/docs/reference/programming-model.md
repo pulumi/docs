@@ -7,8 +7,6 @@ menu:
     weight: 1
 ---
 
-{{< mini-toc >}}
-
 ## Overview {#overview}
 
 In Pulumi, [resources](#resources) are defined by allocating resource objects in a program.  For example, your program would contain a statement such as `new aws.ec2.Instance(...)` in order to create a new AWS EC2 instance.  The first argument passed to the resource constructor is its `name`, which must be unique within the Pulumi program.

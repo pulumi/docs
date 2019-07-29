@@ -17,8 +17,6 @@ and handles all the tasks necessary to accept and process up to hundreds of thou
 including traffic management, authorization and access control, monitoring, and API version management. API Gateway
 is inexpensive, has no minimum fees, and you only pay for the API calls you receive and the data transferred out.
 
-{{< mini-toc >}}
-
 ## Overview
 
 Pulumi Crosswalk for AWS provides significantly easier ways of programming API Gateway. This includes using

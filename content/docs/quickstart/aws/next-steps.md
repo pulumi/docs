@@ -1,6 +1,7 @@
 ---
 title: Next Steps
 weight: 11
+no_on_this_page: true
 menu:
   quickstart:
     parent: aws

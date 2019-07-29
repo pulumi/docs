@@ -18,8 +18,6 @@ scaling plans for resources including Amazon EC2 instances and Spot Fleets, and 
 Auto Scaling, your applications always have the right resources at the right time, and you pay only for the AWS
 resources needed to run your applications and any associated Amazon CloudWatch monitoring fees.
 
-{{< mini-toc >}}
-
 ## Overview
 
 Pulumi Crosswalk for AWS enables easy definition of Auto Scaling Groups (ASGs) to configure scaling of EC2

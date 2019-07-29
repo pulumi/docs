@@ -17,8 +17,6 @@ to monitor applications, understand and respond to system-wide performance chang
 get a unified view of operational health. This takes the form of logs, metrics, and events, providing you with a
 unified view of AWS resources, applications and services.
 
-{{< mini-toc >}}
-
 ## Overview
 
 Pulumi Crosswalk for AWS CloudWatch help you operationally understand and manage your AWS resources and applications,
