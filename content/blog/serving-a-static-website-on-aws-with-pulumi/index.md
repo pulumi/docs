@@ -198,4 +198,4 @@ Pulumi opens up a lot of possibilities and we are excited to see what
 sorts of things people build using it. If you are interested in using
 Pulumi for more sophisticated website hosting, or just have questions
 about serving static files like described here, feel free to ask away on
-our [Pulumi Community Slack](http://slack.pulumi.io/).
+our [Pulumi Community Slack](http://slack.pulumi.com/).

@@ -76,7 +76,7 @@ body {
 main {
     @apply text-gray-700;
 
-    p, li, blockquote {
+    p, li, blockquote, table {
 
         a {
             @apply text-blue-600 break-words;

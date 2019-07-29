@@ -10,10 +10,13 @@ One of the most common areas Kubernetes operators struggle with in
 production involves creating and managing role-based access control
 (RBAC). This is so daunting that RBAC is often not implemented, or
 implemented halfway, or the configuration becomes impossible to
-maintain. In this post, we will contrast the traditional way of working
-with RBAC on EKS with using Pulumi --- Pulumi makes RBAC on Kubernetes
-so easy that you'll never create an insecure cluster again!
+maintain. 
+
+Fortunately, Pulumi makes RBAC on Kuberenetes so easy that you'll never create an insecure cluster again. In this post, we will contrast the traditional way of working
+with RBAC on EKS with using Pulumi.
 <!--more-->
+
+Here are a few highlights:
 
 - **NO MORE YAMLs!** Configuring YAMLs, operators or custom resources
   is now a thing in the past! You use TypeScript or JavaScript to
@@ -536,10 +539,12 @@ Kubernernetes username `pulumi:automation-usr` in the EKS cluster
 configmap, you are only restricted to the resources and verbs allowed in
 the namespace "automation" and not in namespace "prod".
 
+## Next Step
+
 In this post, we discussed how setting up Kubernetes RBAC with Pulumi is
 simple, comprehensive,
-non-sequential and part of your everyday programming experience. You can
-find the complete pulumi code for our example
-[here](https://gist.github.com/d-nishi/a4e54dfc973ea047ec46c8deb5193f4e).
-For more examples visit our GitHub examples page
-[here](https://github.com/pulumi/examples).
+non-sequential and part of your everyday programming experience. You can find the [complete pulumi code for our example](https://gist.github.com/d-nishi/a4e54dfc973ea047ec46c8deb5193f4e) and try it out yourself. 
+
+
+Pulumi is open source and free to use. For more examples, visit our GitHub examples page
+[here](https://github.com/pulumi/examples). To learn more about Pulumi and how to manage Kubernetes through code, have a look at our ["Get Started with Kubernetes" guide]({{< ref "/docs/quickstart/kubernetes" >}}). 

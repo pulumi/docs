@@ -315,4 +315,4 @@ based on ConfigMap changes... And much, much, more.
 If you have specific use cases you'd like to see us tackle, don't
 hesitate to reach out, either
 [on GitHub](https://github.com/pulumi/pulumi) or in our
-[Pulumi Community Slack](https://slack.pulumi.io/). We'd love to hear from you!
+[Pulumi Community Slack](https://slack.pulumi.com/). We'd love to hear from you!

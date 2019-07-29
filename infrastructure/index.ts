@@ -168,9 +168,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 //
 // This is due to https://github.com/pulumi/pulumi/issues/1449:
 // Error "CloudFront ETag Out Of Sync" when externally modifying CloudFront resource
-//
-// For information on how to work around this error, see "CloudFront ETag Out Of Sync":
-// https://pulumi.io/reference/known-issues.html
 const cdn = new aws.cloudfront.Distribution(
     "cdn",
     distributionArgs,

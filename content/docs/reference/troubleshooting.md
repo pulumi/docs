@@ -14,7 +14,7 @@ preventing you from being productive with a Pulumi stack, you've come to the rig
 ## Contact Us
 
 First thing's first, we are always happy to hear from you and will try to help. Please
-[join our Community Slack](https://slack.pulumi.io), where our whole team, in addition to a passionate
+[join our Community Slack](https://slack.pulumi.com), where our whole team, in addition to a passionate
 community of users, are there to help out. Any and all questions are welcome!
 
 ## Common Problems
@@ -77,7 +77,7 @@ safely disregarded and it is safe to re-start the update. You may need to
 In the second case, you may see an additional error message "after mutation of snapshot". This error
 message is **always a bug in Pulumi**. If you see this error message, we would greatly appreciate a
 bug report on our [official bug tracker](https://github.com/pulumi/pulumi/issues). We also
-recommend joining our [Pulumi Community Slack](https://slack.pulumi.io/) and sharing your problem
+recommend joining our [Pulumi Community Slack](https://slack.pulumi.com/) and sharing your problem
 if you experience this error message.
 
 #### Quick Summary
@@ -258,7 +258,7 @@ $ pulumi stack import --file state.json
 
 Depending on the class of error that you are experiencing, you may need to edit one or more of these resource fields,
 as well as potentially change the location of particular resources in the list. Since this is an advanced operation,
-we recommend you check-in with the [Pulumi Community Slack](https://slack.pulumi.io) first before editing your snapshot.
+we recommend you check-in with the [Pulumi Community Slack](https://slack.pulumi.com) first before editing your snapshot.
 
 ## Provider-specific problems {#provider-problems}
 

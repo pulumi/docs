@@ -81,7 +81,7 @@ Once you've configured your Pulumi task extensions for your Azure Pipelines, you
 easily integrate Pulumi into your CI/CD pipeline, and take advantage of previews to infrastructure
 changes in pull requests, push-to-deploy, and ultimately removing the friction for your DevOps. 
 
-As always, we'd love to hear what you think. Say 👋 in the [Pulumi Community Slack](https://slack.pulumi.io)
+As always, we'd love to hear what you think. Say 👋 in the [Pulumi Community Slack](https://slack.pulumi.com)
 or [drop us a line]({{< ref "/contact" >}}).
 
 Want to learn more? Check out [this post from Mikhail Shilkov]({{< relref "level-up-your-azure-platform-as-a-service-applications-with-pulumi" >}})

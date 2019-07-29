@@ -236,4 +236,4 @@ applications and infrastructure needs.
 
 If you've created a Pulumi component that is useful or want some design
 advice, come and join us in the [Pulumi Community
-Slack](https://slack.pulumi.io/) -- we'd love to hear from you!
+Slack](https://slack.pulumi.com/) -- we'd love to hear from you!

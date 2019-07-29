@@ -1,5 +1,5 @@
 ---
-title: "Pulumi ❤️ Google Cloud Platform"
+title: "Getting Started on Google Cloud Platform with Pulumi"
 authors: ["luke-hoban"]
 tags: ["Serverless","Kubernetes","Features","CI/CD","GCP"]
 date: "2019-04-09"
@@ -18,9 +18,18 @@ favorite languages. Add them together, and teams can easily take maximum
 advantage of Google Cloud Platform's rich features, productively, with
 a combined platform that makes it easy to collaborate, share, and reuse.
 
-In this post, we'll highlight some of the top features of Pulumi that
-make it a joy to work with Pulumi + Google Cloud.
 <!--more-->
+
+In this post, we'll highlight some of the top features of Pulumi that
+make it a joy to work with Pulumi + Google Cloud:
+
+- Infrastructure as code for the Full Google Cloud Platform
+- Working with Kubernetes and Google Container Engine (GKE)
+- Super Simple Serverless with Google Cloud Functions
+- Continuous Delivery with Google Cloud Build
+- Managing Deployment with the Pulumi Console
+
+
 
 ## Infrastructure as Code for the Full Google Cloud Platform
 
@@ -261,4 +270,4 @@ GCP:
 - [GCE Tutorial]({{< ref "/docs/reference/tutorials/gcp/tutorial-gce-webserver" >}})
 - Example: [Serverless Slackbot with Cloud Functions in JavaScript](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot)
 - Example: [GKE + Kubernetes Pod Deployment in Python](https://github.com/pulumi/examples/tree/master/gcp-py-gke)
-- [Pulumi Community Slack](https://slack.pulumi.io/)
+- [Pulumi Community Slack](https://slack.pulumi.com/)

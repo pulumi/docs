@@ -1,0 +1,25 @@
+{{ $version := .Get "version" }}
+{{ if not $version }}
+    {{ errorf "missing value for param 'version': %s" .Position }}
+{{ end }}
+{{ $flatVersion := replace $version "." "" }}
+
+{{ $date := .Get "date" }}
+{{ if not $date }}
+    {{ errorf "missing value for param 'date': %s" .Position }}
+{{ end }}
+{{ if ne (len (split $date "-")) 3 }}
+    {{ errorf "invalid number of components for param 'date': %s" .Position }}
+{{ end }}
+
+<tr>
+    <td><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#{{ $flatVersion }}-{{ $date }}">{{ $version }}</a></td>
+    <td>{{ $date }}</td>
+    <td>
+        <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-linux-x64.tar.gz">Linux</a>
+        |
+        <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-darwin-x64.tar.gz">macOS</a>
+        |
+        <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{ $version }}-windows-x64.zip">Windows</a>
+    </td>
+</tr>
