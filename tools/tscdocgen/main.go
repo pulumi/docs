@@ -68,12 +68,12 @@ func loadAndParseDoc(filename string) (*typeDocNode, error) {
 		return nil, err
 	}
 
-	filterOutInternalNode(&doc)
+	filterOutInternalOrDeprecatedNode(&doc)
 
 	return &doc, nil
 }
 
-func filterOutInternalNode(node *typeDocNode) *typeDocNode {
+func filterOutInternalOrDeprecatedNode(node *typeDocNode) *typeDocNode {
 	if node == nil {
 		return nil
 	}
@@ -82,23 +82,23 @@ func filterOutInternalNode(node *typeDocNode) *typeDocNode {
 	// that item. So, look to see if we previously had any signatures, but then end up filtering
 	// them all out.  If so, then we don't want to include this function at all.
 	originalSigLength := len(node.Signatures)
-	node.Signatures = filterOutInternalNodeArray(node.Signatures)
+	node.Signatures = filterOutInternalOrDeprecatedNodeArray(node.Signatures)
 	if originalSigLength > 0 && len(node.Signatures) == 0 {
 		return nil
 	}
 
-	node.IndexSignatures = filterOutInternalNodeArray(node.IndexSignatures)
-	node.Children = filterOutInternalNodeArray(node.Children)
-	node.TypeParameter = filterOutInternalNodeArray(node.TypeParameter)
-	node.Parameters = filterOutInternalNodeArray(node.Parameters)
-	node.ExtendedBy = filterOutInternalTypeArray(node.ExtendedBy)
-	node.ExtendedTypes = filterOutInternalTypeArray(node.ExtendedTypes)
-	node.ImplementedTypes = filterOutInternalTypeArray(node.ImplementedTypes)
+	node.IndexSignatures = filterOutInternalOrDeprecatedNodeArray(node.IndexSignatures)
+	node.Children = filterOutInternalOrDeprecatedNodeArray(node.Children)
+	node.TypeParameter = filterOutInternalOrDeprecatedNodeArray(node.TypeParameter)
+	node.Parameters = filterOutInternalOrDeprecatedNodeArray(node.Parameters)
+	node.ExtendedBy = filterOutInternalOrDeprecatedTypeArray(node.ExtendedBy)
+	node.ExtendedTypes = filterOutInternalOrDeprecatedTypeArray(node.ExtendedTypes)
+	node.ImplementedTypes = filterOutInternalOrDeprecatedTypeArray(node.ImplementedTypes)
 
 	return node
 }
 
-func filterOutInternalNodeArray(arr []*typeDocNode) []*typeDocNode {
+func filterOutInternalOrDeprecatedNodeArray(arr []*typeDocNode) []*typeDocNode {
 	if arr == nil {
 		return nil
 	}
@@ -106,11 +106,11 @@ func filterOutInternalNodeArray(arr []*typeDocNode) []*typeDocNode {
 	var result []*typeDocNode
 
 	for _, val := range arr {
-		if hasInternalTag(val) {
+		if hasTag(val, "internal") || hasTag(val, "deprecated") {
 			continue
 		}
 
-		val = filterOutInternalNode(val)
+		val = filterOutInternalOrDeprecatedNode(val)
 		if val != nil {
 			result = append(result, val)
 		}
@@ -119,7 +119,7 @@ func filterOutInternalNodeArray(arr []*typeDocNode) []*typeDocNode {
 	return result
 }
 
-func filterOutInternalTypeArray(arr []*typeDocType) []*typeDocType {
+func filterOutInternalOrDeprecatedTypeArray(arr []*typeDocType) []*typeDocType {
 	if arr == nil {
 		return nil
 	}
@@ -127,7 +127,7 @@ func filterOutInternalTypeArray(arr []*typeDocType) []*typeDocType {
 	var result []*typeDocType
 
 	for _, val := range arr {
-		val = filterOutInternalType(val)
+		val = filterOutInternalOrDeprecatedType(val)
 		if val != nil {
 			result = append(result, val)
 		}
@@ -136,31 +136,31 @@ func filterOutInternalTypeArray(arr []*typeDocType) []*typeDocType {
 	return result
 }
 
-func filterOutInternalType(t *typeDocType) *typeDocType {
+func filterOutInternalOrDeprecatedType(t *typeDocType) *typeDocType {
 	if t == nil {
 		return nil
 	}
 
 	if t.Declaration != nil {
-		t.Declaration = filterOutInternalNode(t.Declaration)
+		t.Declaration = filterOutInternalOrDeprecatedNode(t.Declaration)
 		if t.Declaration == nil {
 			return nil
 		}
 	}
 
-	t.Elements = filterOutInternalTypeArray(t.Elements)
-	t.ElementType = filterOutInternalType(t.ElementType)
-	t.TypeArguments = filterOutInternalTypeArray(t.TypeArguments)
-	t.Types = filterOutInternalTypeArray(t.Types)
-	t.Target = filterOutInternalType(t.Target)
-	t.Declaration = filterOutInternalNode(t.Declaration)
+	t.Elements = filterOutInternalOrDeprecatedTypeArray(t.Elements)
+	t.ElementType = filterOutInternalOrDeprecatedType(t.ElementType)
+	t.TypeArguments = filterOutInternalOrDeprecatedTypeArray(t.TypeArguments)
+	t.Types = filterOutInternalOrDeprecatedTypeArray(t.Types)
+	t.Target = filterOutInternalOrDeprecatedType(t.Target)
+	t.Declaration = filterOutInternalOrDeprecatedNode(t.Declaration)
 
 	return t
 }
 
-func hasInternalTag(node *typeDocNode) bool {
+func hasTag(node *typeDocNode, value string) bool {
 	for _, tag := range node.Comment.Tags {
-		if tag.Tag == "internal" {
+		if tag.Tag == value {
 			return true
 		}
 	}
