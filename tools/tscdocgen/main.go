@@ -78,11 +78,19 @@ func filterOutInternalNode(node *typeDocNode) *typeDocNode {
 		return nil
 	}
 
+	// typedoc represents @internal on a method/function by placing the tag on the 'Signature' of
+	// that item. So, look to see if we previously had any signatures, but then end up filtering
+	// them all out.  If so, then we don't want to include this function at all.
+	originalSigLength := len(node.Signatures)
+	node.Signatures = filterOutInternalNodeArray(node.Signatures)
+	if originalSigLength > 0 && len(node.Signatures) == 0 {
+		return nil
+	}
+
 	node.IndexSignatures = filterOutInternalNodeArray(node.IndexSignatures)
 	node.Children = filterOutInternalNodeArray(node.Children)
 	node.TypeParameter = filterOutInternalNodeArray(node.TypeParameter)
 	node.Parameters = filterOutInternalNodeArray(node.Parameters)
-	node.Signatures = filterOutInternalNodeArray(node.Signatures)
 	node.ExtendedBy = filterOutInternalTypeArray(node.ExtendedBy)
 	node.ExtendedTypes = filterOutInternalTypeArray(node.ExtendedTypes)
 	node.ImplementedTypes = filterOutInternalTypeArray(node.ImplementedTypes)
