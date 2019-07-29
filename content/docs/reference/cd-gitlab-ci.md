@@ -46,6 +46,16 @@ You can fix this by specifying a wildcard regex to allow specific branches to
 be able to access the secret environment variables. Please refer to the GitLab
 documentation link above to learn how to do that.
 
+## Merge Request Builds
+GitLab has the ability to restrict jobs to _only_ run for merge requests. Learn more [here](https://docs.gitlab.com/ee/ci/merge_request_pipelines/). This is done by adding the following configuration to your GitLab pipeline config file:
+
+```
+only:
+- merge_requests
+```
+
+We will use this to run the `pulumi preview` command only in merge request pipelines.
+
 ## Environment Variables
 To use Pulumi within GitLab CI, there are a few environment variables you'll need to set for each
 build.
