@@ -6,7 +6,7 @@ menu:
     parent: cd
 ---
 
-This page details how to use [GitLab CI](https://about.gitlab.com/features/gitlab-ci-cd/) to manage deploying
+[This](https://about.gitlab.com/features/gitlab-ci-cd/) page details how to use GitLab CI to manage deploying
 staging and production stacks based on commits to specific Git branches. This is sometimes
 referred to as Push-to-Deploy.
 
@@ -47,14 +47,14 @@ be able to access the secret environment variables. Please refer to the GitLab
 documentation link above to learn how to do that.
 
 ## Merge Request Builds
-GitLab CI currently does not yet support creating pipelines specifically for merge requests.
-Because of this, pipelines will be created for every single branch that you push up.
-You can apply some amount of control with the use of the configuration variables
-`only` and `except`. You may also consider using `only:changes`, however,
-note that there are some caveats to that. You can learn more [here](https://docs.gitlab.com/ee/ci/yaml/#only-changes).
+GitLab has the ability to restrict jobs to _only_ run for merge requests. Learn more [here](https://docs.gitlab.com/ee/ci/merge_request_pipelines/). This is done by adding the following configuration to your GitLab pipeline config file:
 
-> See [this](https://gitlab.com/gitlab-org/gitlab-ce/issues/23902) issue for _community edition_ and
-[this](https://gitlab.com/gitlab-org/gitlab-ee/issues/7380) issue for _enterprise edition_ to learn more.
+```
+only:
+- merge_requests
+```
+
+We will use this to run the `pulumi preview` command only in merge request pipelines.
 
 ## Environment Variables
 To use Pulumi within GitLab CI, there are a few environment variables you'll need to set for each
@@ -91,7 +91,6 @@ that only shows you changes (if any) in your infrastructure.
 # options to create a pipeline that will create the `pulumi-preview` job in the pipeline,
 # for all branches except the master.
 # Only for master branch merges, the main `pulumi` job is executed automatically.
-#
 stages:
   - build
   - infrastructure-update
@@ -121,8 +120,8 @@ pulumi:
     expire_in: 1 week
   # This job should only be created if the pipeline is created for the master branch.
   only:
-    refs:
-      - master
+  - master
+
 pulumi-preview:
   stage: infrastructure-update
   before_script:
@@ -130,14 +129,8 @@ pulumi-preview:
     - ./scripts/setup.sh
   script:
     - ./scripts/pulumi-preview.sh
-  # This job may only be triggered manually,
-  # even though the pipeline is created,
-  # when a non-master branch is pushed-up.
-  when: manual
-  # This job should be created in the pipeline only if it is not the master branch.
-  except:
-    refs:
-      - master
+  only:
+  - merge_requests
 ```
 
 ### `setup.sh`
