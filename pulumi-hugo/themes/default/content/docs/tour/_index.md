@@ -1,3 +1,3 @@
 ---
-redirect_to: /docs/reference/concepts/
+redirect_to: /docs/quickstart/
 ---
