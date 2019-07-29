@@ -1,6 +1,7 @@
 ---
 title: Pulumi Documentation
 noindex: true
+no_on_this_page: true
 menu:
     header:
         name: Docs

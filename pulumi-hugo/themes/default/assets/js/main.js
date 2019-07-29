@@ -19,20 +19,25 @@ function bindToggles(selector) {
     });
 }
 
-function generateMiniToc() {
-    var toc = $(".mini-toc > ul");
-    if (toc) {
-        toc.addClass("sidenav-subsection text-sm");
+function generateOnThisPage() {
+    var $ul = $(".on-this-page > ul");
+    if ($ul) {
+        var found = false;
         $("h2, h3").each(function () {
-            $("h3").addClass("sidenav-topic pl-2");
-            var id = $(this).attr("id");
-            var text = $(this).text();
+            var $el = $(this);
+            var id = $el.attr("id");
+            var text = $el.text();
+            var tag = $el.prop("tagName").toLowerCase();
             if (id && text) {
-                toc.append($("<li/>", {
-                    html: "<a href='#" + id + "'>" + text + "</a>"
-                }));
+                found = true;
+                $ul.append("<li class='" + tag + "'><a href='#" + id + "'>" + text + "</a></li>");
             }
         });
+
+        // It's hidden by default. If we added links to the list, show it.
+        if (found) {
+            $(".on-this-page").show();
+        }
     }
 }
 
@@ -42,8 +47,8 @@ function generateMiniToc() {
     bindToggles(".toggle");
     bindToggles(".toggleVisible");
 
-    // Create a mini TOC if desired.
-    generateMiniToc();
+    // Create "On This Page" in the right nav.
+    generateOnThisPage();
 
     // Mobile menu toggles.
     $(".nav-header-toggle").click(function() {
