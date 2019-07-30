@@ -18,18 +18,18 @@ title: Module dynamodb
 <li><a href="#metrics">module metrics</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts">dynamodb/metrics.ts</a> 
+<a href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts">dynamodb/metrics.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L20">module <b>metrics</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L20">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="conditionalCheckFailedRequests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L129">function <b>conditionalCheckFailedRequests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L129">function <b>conditionalCheckFailedRequests</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -52,7 +52,7 @@ Valid Statistics: Minimum, Maximum, Average, SampleCount, Sum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="consumedReadCapacityUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L160">function <b>consumedReadCapacityUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L160">function <b>consumedReadCapacityUnits</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -89,7 +89,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="consumedWriteCapacityUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L192">function <b>consumedWriteCapacityUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L192">function <b>consumedWriteCapacityUnits</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -127,7 +127,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L87">function <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L87">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -162,7 +162,7 @@ along any of the dimensions in the table below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="onlineIndexConsumedWriteCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L220">function <b>onlineIndexConsumedWriteCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L220">function <b>onlineIndexConsumedWriteCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -196,7 +196,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="onlineIndexPercentageProgress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L241">function <b>onlineIndexPercentageProgress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L241">function <b>onlineIndexPercentageProgress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -223,7 +223,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="onlineIndexThrottleEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L267">function <b>onlineIndexThrottleEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L267">function <b>onlineIndexThrottleEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -255,7 +255,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="pendingReplicationCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L284">function <b>pendingReplicationCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L284">function <b>pendingReplicationCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -278,7 +278,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="provisionedReadCapacityUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L309">function <b>provisionedReadCapacityUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L309">function <b>provisionedReadCapacityUnits</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -309,7 +309,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="provisionedWriteCapacityUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L335">function <b>provisionedWriteCapacityUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L335">function <b>provisionedWriteCapacityUnits</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -341,7 +341,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="readThrottleEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L360">function <b>readThrottleEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L360">function <b>readThrottleEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -372,7 +372,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="replicationLatency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L378">function <b>replicationLatency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L378">function <b>replicationLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -396,7 +396,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="returnedBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L397">function <b>returnedBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L397">function <b>returnedBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -421,7 +421,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="returnedItemCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L421">function <b>returnedItemCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L421">function <b>returnedItemCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -451,7 +451,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="returnedRecordsCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L440">function <b>returnedRecordsCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L440">function <b>returnedRecordsCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -476,7 +476,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="successfulRequestLatency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L464">function <b>successfulRequestLatency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L464">function <b>successfulRequestLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -506,7 +506,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="systemErrors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L480">function <b>systemErrors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L480">function <b>systemErrors</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -528,7 +528,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="throttledRequests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L531">function <b>throttledRequests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L531">function <b>throttledRequests</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -570,7 +570,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="timeToLiveDeletedItemCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L495">function <b>timeToLiveDeletedItemCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L495">function <b>timeToLiveDeletedItemCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -591,7 +591,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="userErrors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L556">function <b>userErrors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L556">function <b>userErrors</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -622,7 +622,7 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="writeThrottleEvents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L584">function <b>writeThrottleEvents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L584">function <b>writeThrottleEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -656,14 +656,14 @@ Valid Statistics:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DynamodbMetricChange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L30">interface <b>DynamodbMetricChange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L30">interface <b>DynamodbMetricChange</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DynamodbMetricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/4efcf0b7e124489da16fc08702b4fe5c9837ea2c/nodejs/awsx/dynamodb/metrics.ts#L21">type <b>DynamodbMetricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/dynamodb/metrics.ts#L21">type <b>DynamodbMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>type</span> DynamodbMetricName = <span class='s2'>"ConditionalCheckFailedRequests"</span> | <span class='s2'>"ConsumedReadCapacityUnits"</span> | <span class='s2'>"ConsumedWriteCapacityUnits"</span> | <span class='s2'>"OnlineIndexConsumedWriteCapacity"</span> | <span class='s2'>"OnlineIndexPercentageProgress"</span> | <span class='s2'>"OnlineIndexThrottleEvents"</span> | <span class='s2'>"PendingReplicationCount"</span> | <span class='s2'>"ProvisionedReadCapacityUnits"</span> | <span class='s2'>"ProvisionedWriteCapacityUnits"</span> | <span class='s2'>"ReadThrottleEvents"</span> | <span class='s2'>"ReplicationLatency"</span> | <span class='s2'>"ReturnedBytes"</span> | <span class='s2'>"ReturnedItemCount"</span> | <span class='s2'>"ReturnedRecordsCount"</span> | <span class='s2'>"SuccessfulRequestLatency"</span> | <span class='s2'>"SystemErrors"</span> | <span class='s2'>"TimeToLiveDeletedItemCount"</span> | <span class='s2'>"ThrottledRequests"</span> | <span class='s2'>"UserErrors"</span> | <span class='s2'>"WriteThrottleEvents"</span>;</pre>
