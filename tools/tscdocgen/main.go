@@ -78,6 +78,16 @@ func filterOutInternalOrDeprecatedNode(node *typeDocNode) *typeDocNode {
 		return nil
 	}
 
+	if node.Kind == typeDocExternalModuleNode {
+		// These modules were renamed.  We don't need the docs for their prior names.
+		modname := getModuleParentName(node.Name)
+		if modname == "\"applicationloadbalancing" ||
+			modname == "\"elasticloadbalancing" ||
+			modname == "\"elasticloadbalancingv2" {
+			return nil
+		}
+	}
+
 	// typedoc represents @internal on a method/function by placing the tag on the 'Signature' of
 	// that item. So, look to see if we previously had any signatures, but then end up filtering
 	// them all out.  If so, then we don't want to include this function at all.

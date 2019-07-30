@@ -128,7 +128,6 @@ import * as aws from "@pulumi/aws";
 <li><a href="alb">alb</a></li>
 <li><a href="apigateway">apigateway</a></li>
 <li><a href="appautoscaling">appautoscaling</a></li>
-<li><a href="applicationloadbalancing">applicationloadbalancing</a></li>
 <li><a href="appmesh">appmesh</a></li>
 <li><a href="appsync">appsync</a></li>
 <li><a href="athena">athena</a></li>
@@ -170,8 +169,6 @@ import * as aws from "@pulumi/aws";
 <li><a href="eks">eks</a></li>
 <li><a href="elasticache">elasticache</a></li>
 <li><a href="elasticbeanstalk">elasticbeanstalk</a></li>
-<li><a href="elasticloadbalancing">elasticloadbalancing</a></li>
-<li><a href="elasticloadbalancingv2">elasticloadbalancingv2</a></li>
 <li><a href="elasticsearch">elasticsearch</a></li>
 <li><a href="elastictranscoder">elastictranscoder</a></li>
 <li><a href="elb">elb</a></li>
