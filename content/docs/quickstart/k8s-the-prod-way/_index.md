@@ -1,5 +1,6 @@
 ---
 title: Kubernetes the Prod Way
+nosummary: true
 ---
 
 **Kubernetes the Prod Way** is a tutorial, reference architecture, and collection of prod-first code

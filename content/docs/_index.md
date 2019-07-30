@@ -1,5 +1,6 @@
 ---
-title: Pulumi Documentation
+title: Documentation
+summary: Learn how to create, deploy, and manage infrastructure on any cloud using Pulumi's open source infrastructure as code SDK.
 noindex: true
 no_on_this_page: true
 menu:
