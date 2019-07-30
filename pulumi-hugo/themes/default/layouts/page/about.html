@@ -99,7 +99,7 @@
             <div class="md:w/1-2 md:px-8">
                 <h2 class="text-center md:text-left">Press Releases</h2>
                 <ul class="list-none my-8 p-0">
-                    {{ range $.Site.Data.newsroom.releases }}
+                    {{ range first 5 $.Site.Data.newsroom.releases }}
                         <li class="py-4">
                             <div class="text-sm text-gray-500">{{ .date }}</div>
                             <h5 class="mt-2 mb-0">{{ .title }}</h5>
@@ -111,7 +111,7 @@
             <div class="md:w/1-2 md:px-8">
                 <h2 class="text-center md:text-left">Recent News</h2>
                 <ul class="list-none my-8 p-0">
-                    {{ range $.Site.Data.newsroom.coverage }}
+                    {{ range first 5 $.Site.Data.newsroom.coverage }}
                         <li class="py-4 flex items-top">
                             <div class="w-20 flex-shrink">
                                  <img class="inline-block w-full rounded p-2 border-2 border-gray-300" src="{{ .img }}">
