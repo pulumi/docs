@@ -1,0 +1,9 @@
+.note {
+    &.info {
+        @apply bg-blue-200 text-blue-800 my-4 py-2 px-4 rounded;
+
+        a {
+            @apply text-purple-500;
+        }
+    }
+}

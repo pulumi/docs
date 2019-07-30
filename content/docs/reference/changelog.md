@@ -2,9 +2,9 @@
 title: "Changelog"
 ---
 
-## Available versions {#all-versions}
+## Available Pulumi versions {#all-versions}
 
-The current stable version is **{{< latest-version >}}**.
+The current stable version of Pulumi is **{{< latest-version >}}**.
 
 <table>
     <thead>

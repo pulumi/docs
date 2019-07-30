@@ -12,9 +12,16 @@ NOTE: To update this page with a new binary release, do the following:
 - Update `content/reference/changelog.md`
 -->
 
-This page contains detailed instructions on installing Pulumi.
+This page contains detailed instructions for [downloading](#download) and [installing Pulumi](#install-pulumi) on your machine.
 
-For a streamlined walkthrough of getting started with Pulumi, including installing Pulumi and prerequisites, see the [Get Started]({{< relref "/docs/quickstart" >}}) guide.
+## Download
+
+The current stable version of Pulumi is **{{< latest-version >}}**. For a full history of prior versions, including
+release notes and direct download links, visit the <a href="{{< relref "/docs/reference/changelog" >}}">Changelog</a> page.
+Pulumi is packaged as a tarball for Linux and macOS, and as a zip archive for Windows.
+
+
+## Install Pulumi
 
 <script>
     var oses = [ "unknown", "linux", "macos", "windows" ];
@@ -86,7 +93,9 @@ For a streamlined walkthrough of getting started with Pulumi, including installi
 
 <div id="macos_installation">
 {{% md %}}
-## macOS
+
+
+### Homebrew
 
 macOS Sierra (10.12) or later is required.
 
@@ -104,7 +113,7 @@ Subsequent updates can be installed in the usual way:
 $ brew upgrade pulumi
 ```
 
-### (Alternative) Installation Script
+### Installation Script
 
 Alternatively, our installation script can be run:
 
@@ -116,7 +125,7 @@ This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path.
 
 The installer script can be rerun to subsequently install new updates.
 
-### (Alternative) Manual Installation
+### Manual Installation
 
 1. Download [Pulumi {{< latest-version >}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz).
 
@@ -127,7 +136,7 @@ The installer script can be rerun to subsequently install new updates.
 
 <div id="linux_installation">
 {{% md %}}
-## Linux
+### Installation script
 
 To install on Linux, run our installation script:
 
@@ -138,7 +147,7 @@ $ curl -fsSL https://get.pulumi.com | sh
 This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `~/.pulumi/bin`, you will be prompted to add it manually. 
 
 
-### (Alternative) Manual Installation
+### Manual installation
 
 We provide a pre-built binary for Linux.
 
@@ -151,7 +160,8 @@ We provide a pre-built binary for Linux.
 
 <div id="windows_installation">
 {{% md %}}
-## Windows
+
+### Installation script
 
 Windows 8 and 10 are supported.
 
@@ -163,7 +173,7 @@ To install on Windows, run our installation script from a `cmd.exe` window:
 
 This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it to your path.
 
-### (Alternative) Manual Installation
+### Manual installation
 
 1. Download [Pulumi {{< latest-version >}} for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip).
 
@@ -187,7 +197,7 @@ This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it
 
 <div id="installation_post">
 {{% md %}}
-## Ensuring It Worked
+## Verify your installation
 After installing, verify everything is in working order by running the `pulumi` CLI:
 
 ```bash
@@ -198,15 +208,11 @@ v{{< latest-version >}}
 If you get an error that `pulumi` could not be found, it means your path has not been configured correctly. Please go
 back and ensure your path contains the directory containing the `pulumi` CLI installed earlier.
 
-## Uninstalling Pulumi
+## Uninstall Pulumi
 
 To uninstall Pulumi, delete the `.pulumi` folder in your home directory. If you used the manual installer, you should
 also delete the `pulumi` folder that was created.
 
-## Available Versions
-
-The current stable version is **{{< latest-version >}}**. For a full history of prior versions, including
-release notes, please visit the <a href="{{< relref "/docs/reference/changelog.md" >}}">Changelog</a>.
 
 {{% /md %}}
 </div>

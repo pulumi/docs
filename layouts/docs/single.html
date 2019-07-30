@@ -16,8 +16,9 @@
                 {{ partial "docs/toc.html" . }}
             </div>
 
-            <div class="md:w-7/12">
+            <div class="md:w-8/12">
                 <h1>{{ .Title }}</h1>
+                {{ partial "docs/gs-note.html" . }}
                 {{ .Content }}
             </div>
         </div>
