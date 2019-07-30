@@ -4,7 +4,7 @@ authors: ["joe-duffy"]
 tags: ["Pulumi-News"]
 date: "2018-06-18"
 
-summary: "Ahoy! Today we are thrilled to be announcing the launch of Pulumi, the Cloud Development Platform."
+meta_desc: "Ahoy! Today we are thrilled to be announcing the launch of Pulumi, the Cloud Development Platform."
 ---
 
 Ahoy!

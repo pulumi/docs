@@ -4,7 +4,7 @@ authors: ["mikhail-shilkov"]
 tags: ["Azure"]
 date: "2019-06-27"
 
-summary: "Static websites are back in the mainstream these days. Website generators like Jekyll, Hugo, or Gatsby, make it fairly easy to combine templates and markdown pages to produce static HTML files. Static assets are the simplest thing to serve and cache, so the whole setup ends up being fast and cost-efficient."
+meta_desc: "Static websites are back in the mainstream these days. Website generators like Jekyll, Hugo, or Gatsby, make it fairly easy to combine templates and markdown pages to produce static HTML files. Static assets are the simplest thing to serve and cache, so the whole setup ends up being fast and cost-efficient."
 meta_image: "feature.jpg"
 ---
 

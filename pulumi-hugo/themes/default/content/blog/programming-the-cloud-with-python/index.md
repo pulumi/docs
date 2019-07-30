@@ -4,7 +4,7 @@ authors: ["sean-gillespie"]
 tags: ["Serverless","AWS","Python"]
 date: "2019-04-04"
 
-summary: "Python is awesome for automating manual tasks. So let's use it for cloud infrastructure as code!"
+meta_desc: "Python is awesome for automating manual tasks. So let's use it for cloud infrastructure as code!"
 ---
 
 Across the industry, the popularity of Python is exploding. Amongst our
