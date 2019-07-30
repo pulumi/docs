@@ -41,16 +41,12 @@
     {{ if .Params.meta_desc }}
         <meta name="description" content="{{ .Params.meta_desc }}">
         <meta property="og:description" content="{{ .Params.meta_desc }}">
-    {{ else if .Params.summary }}
-        <meta name="description" content="{{ .Params.summary }}">
-        <meta property="og:description" content="{{ .Params.summary }}">
+    {{ else if and .IsHome .Site.Params.meta_desc }}
+        <meta name="description" content="{{ .Site.Params.meta_desc }}">
+        <meta property="og:description" content="{{ .Site.Params.meta_desc }}">
     {{ else if .Summary }}
         <meta name="description" content="{{ .Summary }}">
         <meta property="og:description" content="{{ .Summary }}">
-    {{ else }}
-        {{ $defaultDescription := "Pulumi provides a cloud development model for serverless functions, container apps, and data infrastructure for any cloud." }}
-        <meta name="description" content="{{ $defaultDescription }}">
-        <meta property="og:description" content="{{ $defaultDescription }}">
     {{ end }}
 
     {{ $image := "/social/pulumi.png" }}
@@ -63,7 +59,16 @@
     {{ end }}
     <meta property="og:image" content="{{ $image | absURL }}">
 
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - Pulumi{{ end }}</title>
+    {{ if .IsHome }}
+        <title>{{ .Site.Title }}</title>
+    {{ else if .Title }}
+        <title>{{ .Title }}</title>
+    {{ else if not (or .Params.redirect_to .Params.private) }}
+        <!--
+            TODO[pulumi/docs#1127]: can't enable this until Python docs are fixed.
+            \{\{ /* errorf "%q: Missing 'title' directive; please specify this to improve search indexing." .Path */ \}\}
+        -->
+    {{ end }}
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
 
     <!--

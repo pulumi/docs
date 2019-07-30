@@ -1,3 +1,7 @@
+---
+title: Kubernetes Checklist
+---
+
 ## Identity
 
 * Set up cloud provider IAM roles, groups for service accounts, team.
