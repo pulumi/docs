@@ -38,4 +38,4 @@ enableRobotsTXT = true
     canonicalURL = "https://www.pulumi.com"
     repositoryURL = "https://github.com/pulumi/docs"
     repositoryBranch = "master"
-    summary = "Pulumi's open source infrastructure as code SDK enables you and your team to create, deploy, and manage infrastructure on any cloud, reliably and productively, using your favorite languages."
+    meta_desc = "Pulumi's open source infrastructure as code SDK enables you and your team to create, deploy, and manage infrastructure on any cloud, reliably and productively, using your favorite languages."

@@ -4,7 +4,7 @@ authors: ["luke-hoban"]
 tags: ["Pulumi", "New-Features", "CI/CD"]
 date: "2018-08-15"
 
-summary: "Pulumi can now deploy and manage Kubernetes resources using the same
+meta_desc: "Pulumi can now deploy and manage Kubernetes resources using the same
 familiar programming model supported for AWS, Azure, and Google Cloud
 Platform. In this post, we'll take a quick tour of these new features."
 ---

@@ -41,17 +41,12 @@
     {{ if .Params.meta_desc }}
         <meta name="description" content="{{ .Params.meta_desc }}">
         <meta property="og:description" content="{{ .Params.meta_desc }}">
-    {{ else if .Params.summary }}
-        <meta name="description" content="{{ .Params.summary }}">
-        <meta property="og:description" content="{{ .Params.summary }}">
+    {{ else if and .IsHome .Site.Params.meta_desc }}
+        <meta name="description" content="{{ .Site.Params.meta_desc }}">
+        <meta property="og:description" content="{{ .Site.Params.meta_desc }}">
     {{ else if .Summary }}
         <meta name="description" content="{{ .Summary }}">
         <meta property="og:description" content="{{ .Summary }}">
-    {{ else if .IsHome }}
-        <meta name="description" content="{{ .Site.Params.summary }}">
-        <meta property="og:description" content="{{ .Site.Params.summary }}">
-    {{ else if not (or .Params.redirect_to .Params.private .Params.nosummary (in "docs authors tags" .Section)) }}
-        {{ errorf "%q: Missing 'summary' directive; please specify this to improve search indexing (or set 'nosummary')." .Path }}
     {{ end }}
 
     {{ $image := "/social/pulumi.png" }}
