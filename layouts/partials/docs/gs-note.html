@@ -1,10 +1,12 @@
 {{ $isInstall := hasPrefix .Path "docs/reference/install" }}
 {{ $isTutorial := hasPrefix .Path "docs/reference/tutorials" }}
 {{ if (or $isInstall $isTutorial) }}
-<div class="note info" role="alert">
-    <h5 class="no-anchor">Get Started</h5>
-        <p>
-        Pulumi supports many clouds using the same languages, CLI, and deployment workflow. For a streamlined Pulumi walkthrough, including language runtime installation and cloud configuration, see the <a href="{{ relref . "/docs/quickstart" }}">Get Started</a> guides.
-        </p>
-    </div>
+<div class="note note-info" role="alert">
+    <p>
+        Pulumi supports many clouds using the same languages, CLI, and deployment
+        workflow. For a streamlined Pulumi walkthrough, including language runtime
+        installation and cloud configuration, see the
+        <a href="{{ relref . "/docs/quickstart" }}">Get Started</a> guides.
+    </p>
+</div>
 {{ end }}

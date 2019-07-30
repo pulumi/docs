@@ -1,9 +1,18 @@
 .note {
-    &.info {
-        @apply bg-blue-200 text-blue-800 my-4 py-2 px-4 rounded;
+
+    &.note-info {
+        @apply bg-blue-100 text-blue-800 my-4 px-4 rounded text-sm border border-blue-200;
+
+        h6 {
+            @apply text-blue-900;
+        }
 
         a {
-            @apply text-purple-500;
+            @apply text-blue-900 underline;
+        }
+
+        p {
+            @apply leading-relaxed;
         }
     }
 }
