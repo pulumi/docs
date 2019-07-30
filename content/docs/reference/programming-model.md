@@ -117,13 +117,13 @@ All resource constructors also accept an `options` argument which can provide th
 Provides a list of output properties which should be treated as secrets. This value augments any values that Pulumi detects itself, based on what secret inputs to the resource has. This is typically used to express that for a specific instance of a resource, some of its output properties should be treated as secrets (when they would not normally be).
 
 ###### `aliases`
-Provides a list of aliases for a resource or component. When making a breaking change to the name or type of a resource or component, you can add the old name to the list of `aliases` for a resource to ensure that existing resources will be migrated to the new name instead of being deleted and replaced with the new named resource. 
+Provides a list of aliases for a resource or component. When making a breaking change to the name or type of a resource or component, you can add the old name to the list of `aliases` for a resource to ensure that existing resources will be migrated to the new name instead of being deleted and replaced with the new named resource.
 
 For example, a resource can be aliased to a full previous [resource URN](#urns):
- 
+
 `aliases: ["urn:pulumi:stackname::projectname::aws:s3/bucket:Bucket::app-function"]`
 
-Or it can be aliased to a relative change to the resource's name, parent, and/or type: 
+Or it can be aliased to a relative change to the resource's name, parent, and/or type:
 
 `aliases: [{ name: "otherchild", parent: this }]`
 
@@ -526,7 +526,7 @@ const param = new aws.ssm.Parameter("a-secret-param", {
 
 ```python
 cfg = pulumi.Config()
-param = ssm.Parameter("a-secret-param", 
+param = ssm.Parameter("a-secret-param",
     type="SecureString",
     value=cfg.require_secret("my-secret-value"))
 ```
@@ -866,7 +866,7 @@ let cert = new aws.acm.Certificate("cert", {
 }, { provider: useast1 });
 
 // Create an ALB listener in the default region that references the ACM certificate created above.
-let listener = new aws.elasticloadbalancingv2.Listener("listener", {
+let listener = new aws.lb.Listener("listener", {
     loadBalancerArn: loadBalancerArn,
     port: 443,
     protocol: "HTTPS",
@@ -893,7 +893,7 @@ let cert = new aws.acm.Certificate("cert", {
 }, { provider: useast1 });
 
 // Create an ALB listener in the default region that references the ACM certificate created above.
-let listener = new aws.elasticloadbalancingv2.Listener("listener", {
+let listener = new aws.lb.Listener("listener", {
     loadBalancerArn: loadBalancerArn,
     port: 443,
     protocol: "HTTPS",
@@ -920,7 +920,7 @@ cert = aws.acm.Certificate("cert",
     __opts__=pulumi.ResourceOptions(provider=useast1))
 
 # Create an ALB listener in the default region that references the ACM certificate created above.
-listener = aws.elasticloadbalancingv2.Listener("listener",
+listener = aws.lb.Listener("listener",
     load_balancer_arn=load_balancer_arn,
     port=443,
     protocol="HTTPS",
@@ -1077,7 +1077,7 @@ A dynamic provider interfaces with other components via subclasses of `pulumi.dy
 ```javascript
 class MyResource extends pulumi.dynamic.Resource {
     constructor(name, props, opts) {
-        super(myprovider, name, props, opts); 
+        super(myprovider, name, props, opts);
     }
 }
 ```
@@ -1091,7 +1091,7 @@ interface MyResourceInputs {
 
 class MyResource extends pulumi.dynamic.Resource {
     constructor(name: string, props: MyResourceInputs, opts?: pulumi.CustomResourceOptions) {
-        super(myprovider, name, props, opts); 
+        super(myprovider, name, props, opts);
     }
 }
 ```
@@ -1141,7 +1141,7 @@ class MyResourceProvider extends pulumi.dynamic.ResourceProvider {
 
 class MyResource extends pulumi.dynamic.Resource {
     constructor(name: string, props: MyResourceInputs, opts?: pulumi.CustomResourceOptions) {
-        super(myprovider, name, props, opts); 
+        super(myprovider, name, props, opts);
     }
 }
 ```
@@ -1216,7 +1216,7 @@ export class MyResource extends pulumi.dynamic.Resource {
     public readonly myNumberOutput: pulumi.Output<number>;
 
     constructor(name: string, props: MyResourceInputs, opts?: pulumi.CustomResourceOptions) {
-        super(myprovider, name, props, opts); 
+        super(myprovider, name, props, opts);
     }
 }
 ```

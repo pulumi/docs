@@ -115,7 +115,7 @@
 import * as awsx from "@pulumi/awsx";
 
 // Spin up two instances of NGINX on port 80.
-const lb = new awsx.elasticloadbalancingv2.ApplicationListener("nginx", { port: 80 });
+const lb = new awsx.lb.ApplicationListener("nginx", { port: 80 });
 const nginx = new awsx.ecs.FargateService("nginx", {
     taskDefinitionArgs: {
         containers: {

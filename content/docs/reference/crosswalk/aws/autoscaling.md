@@ -238,7 +238,7 @@ Target Tracking Scaling for ASGs offer several pre-defined scaling metrics.
 
     ```typescript
     const cluster = new awsx.ecs.Cluster("testing");
-    const loadBalancer = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer("testing");
+    const loadBalancer = new awsx.lb.ApplicationLoadBalancer("testing");
 
     const targetGroup = loadBalancer.createTargetGroup("testing", { port: 80, targetType: "instance" });
 

@@ -207,7 +207,7 @@ const repo = new awsx.ecr.Repository("app");
 const image = repo.buildAndPushImage("./app");
 
 // Create a load balanced service using this image.
-const lb = new awsx.elasticloadbalancingv2.NetworkListener("app", { port: 80 });
+const lb = new awsx.lb.NetworkListener("app", { port: 80 });
 const nginx = new awsx.ecs.FargateService("app", {
     taskDefinitionArgs: {
         containers: {
@@ -231,7 +231,7 @@ can be simplified to:
 import * as awsx from "@pulumi/awsx";
 
 // Create a load balanced service using out of a built Docker image.
-const lb = new awsx.elasticloadbalancingv2.NetworkListener("app", { port: 80 });
+const lb = new awsx.lb.NetworkListener("app", { port: 80 });
 const nginx = new awsx.ecs.FargateService("app", {
     taskDefinitionArgs: {
         containers: {

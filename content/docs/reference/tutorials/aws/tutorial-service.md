@@ -53,7 +53,7 @@ To get started, we will create a project, initialize it, then run `pulumi up`:
     import * as awsx from "@pulumi/awsx";
 
     // Create a load balancer to listen for requests and route them to the container.
-    let lb = new awsx.elasticloadbalancingv2.NetworkListener("nginx", { port: 80 });
+    let lb = new awsx.lb.NetworkListener("nginx", { port: 80 });
 
     // Define the service, building and publishing our "./app/Dockerfile", and using the load balancer.
     let service = new awsx.ecs.FargateService("nginx", {
