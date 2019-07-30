@@ -114,10 +114,10 @@ provider for the given module member.</p>
 <dl class="class">
 <dt id="pulumi.CustomResource">
 <em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">CustomResource</code><span class="sig-paren">(</span><em>t: str</em>, <em>name: str</em>, <em>props: Optional[dict] = None</em>, <em>opts: Optional[pulumi.resource.ResourceOptions] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.CustomResource" title="Permalink to this definition">¶</a></dt>
-<dd><p>CustomResource is a resource whose create, read, update, and delete (CRUD) operations are managed
-by performing external operations on some physical entity.  The engine understands how to diff
-and perform partial updates of them, and these CRUD operations are implemented in a dynamically
-loaded plugin for the defining package.</p>
+<dd><p>CustomResource is a resource whose create, read, update, and delete (CRUD) operations are
+managed by performing external operations on some physical entity.  The engine understands how
+to diff and perform partial updates of them, and these CRUD operations are implemented in a
+dynamically loaded plugin for the defining package.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -145,8 +145,9 @@ deployments and may be missing (undefined) during planning phases.</p>
 <dl class="class">
 <dt id="pulumi.ComponentResource">
 <em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ComponentResource</code><span class="sig-paren">(</span><em>t: str</em>, <em>name: str</em>, <em>props: Optional[dict] = None</em>, <em>opts: Optional[pulumi.resource.ResourceOptions] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ComponentResource" title="Permalink to this definition">¶</a></dt>
-<dd><p>ComponentResource is a resource that aggregates one or more other child resources into a higher level
-abstraction.  The component itself is a resource, but does not require custom CRUD operations for provisioning.</p>
+<dd><p>ComponentResource is a resource that aggregates one or more other child resources into a higher
+level abstraction.  The component itself is a resource, but does not require custom CRUD
+operations for provisioning.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -248,7 +249,8 @@ the resource’s options.</dd>
 <dl class="attribute">
 <dt id="pulumi.ResourceOptions.parent">
 <code class="descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.parent" title="Permalink to this definition">¶</a></dt>
-<dd><p>If provided, the currently-constructing resource should be the child of the provided parent resource.</p>
+<dd><p>If provided, the currently-constructing resource should be the child of the provided parent
+resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -266,9 +268,9 @@ the resource’s options.</dd>
 <dl class="attribute">
 <dt id="pulumi.ResourceOptions.provider">
 <code class="descname">provider</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.provider" title="Permalink to this definition">¶</a></dt>
-<dd><p>An optional provider to use for this resource’s CRUD operations. If no provider is supplied, the default
-provider for the resource’s package will be used. The default provider is pulled from the parent’s
-provider bag (see also ResourceOptions.providers).</p>
+<dd><p>An optional provider to use for this resource’s CRUD operations. If no provider is supplied, the
+default provider for the resource’s package will be used. The default provider is pulled from
+the parent’s provider bag (see also ResourceOptions.providers).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -292,9 +294,9 @@ provider bag (see also ResourceOptions.providers).</p>
 <dl class="attribute">
 <dt id="pulumi.ResourceOptions.version">
 <code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.version" title="Permalink to this definition">¶</a></dt>
-<dd><p>An optional version. If provided, the engine loads a provider with exactly the requested version to operate on this
-resource. This version overrides the version information inferred from the current package and should rarely be
-used.</p>
+<dd><p>An optional version. If provided, the engine loads a provider with exactly the requested version
+to operate on this resource. This version overrides the version information inferred from the
+current package and should rarely be used.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -306,9 +308,9 @@ used.</p>
 <dl class="attribute">
 <dt id="pulumi.ResourceOptions.additional_secret_outputs">
 <code class="descname">additional_secret_outputs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.additional_secret_outputs" title="Permalink to this definition">¶</a></dt>
-<dd><p>The names of outputs for this resource that should be treated as secrets. This augments the list that
-the resource provider and pulumi engine already determine based on inputs to your resource. It can be used
-to mark certain ouputs as a secrets on a per resource basis.</p>
+<dd><p>The names of outputs for this resource that should be treated as secrets. This augments the list
+that the resource provider and pulumi engine already determine based on inputs to your resource.
+It can be used to mark certain outputs as a secrets on a per resource basis.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -326,9 +328,29 @@ to mark certain ouputs as a secrets on a per resource basis.</p>
 <dl class="attribute">
 <dt id="pulumi.ResourceOptions.import_">
 <code class="descname">import_</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.import_" title="Permalink to this definition">¶</a></dt>
-<dd><p>When provided with a resource ID, import indicates that this resource’s provider should import its state from the
-cloud resource with the given ID. The inputs to the resource’s constructor must align with the resource’s current
-state. Once a resource has been imported, the import property must be removed from the resource’s options.</p>
+<dd><p>When provided with a resource ID, import indicates that this resource’s provider should import
+its state from the cloud resource with the given ID. The inputs to the resource’s constructor
+must align with the resource’s current state. Once a resource has been imported, the import
+property must be removed from the resource’s options.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.ResourceOptions.merge">
+<code class="descname">merge</code><span class="sig-paren">(</span><em>other: pulumi.resource.ResourceOptions</em><span class="sig-paren">)</span> &#x2192; pulumi.resource.ResourceOptions<a class="headerlink" href="#pulumi.ResourceOptions.merge" title="Permalink to this definition">¶</a></dt>
+<dd><p>merge produces a new ResourceOptions object with the respective attributes of this
+instance in it with the attributes of <code class="docutils literal notranslate"><span class="pre">other</span></code> merged over them.</p>
+<p>Both this options instance and the <code class="docutils literal notranslate"><span class="pre">other</span></code> options instance will be unchanged.</p>
+<p>Conceptually attributes merging follows these basic rules:</p>
+<ol class="arabic simple">
+<li>if the attributes is a collection, the final value will be a collection containing the
+values from each options object. Both original collections in each options object will
+be unchanged.</li>
+<li>Simple scaler values from <code class="docutils literal notranslate"><span class="pre">other</span></code> (i.e. strings, numbers, bools) will replace the values
+from this.</li>
+<li>For the purposes of merging <code class="docutils literal notranslate"><span class="pre">depends_on</span></code>, <code class="docutils literal notranslate"><span class="pre">provider</span></code> and <code class="docutils literal notranslate"><span class="pre">providers</span></code> are always treated
+as collections, even if only a single value was provided.</li>
+<li>Attributes with value ‘None’ will not be copied over.</li>
+</ol>
 </dd></dl>
 
 </dd></dl>
