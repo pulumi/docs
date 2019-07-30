@@ -39,7 +39,7 @@ response to a single `pulumi up` command line invocation:
 import * as awsx from "@pulumi/awsx";
 
 // Create a load balancer on port 80 and spin up two instances of Nginx.
-const lb = new awsx.elasticloadbalancingv2.ApplicationListener("nginx", { port: 80 });
+const lb = new awsx.lb.ApplicationListener("nginx", { port: 80 });
 const nginx = new awsx.ecs.FargateService("nginx", {
     taskDefinitionArgs: {
         containers: {

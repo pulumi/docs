@@ -39,14 +39,14 @@ title: Module organizations
 <li><a href="#PolicyState">interface PolicyState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts">organizations/account.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts">organizations/organization.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts">organizations/organizationalUnit.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts">organizations/policy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policyAttachment.ts">organizations/policyAttachment.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts">organizations/account.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts">organizations/organization.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts">organizations/organizationalUnit.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts">organizations/policy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policyAttachment.ts">organizations/policyAttachment.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Account">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L10">class <b>Account</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L10">class <b>Account</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -56,7 +56,7 @@ title: Module organizations
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L64"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -73,7 +73,7 @@ Create a Account resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -87,7 +87,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -97,7 +97,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -111,7 +111,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L40">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L40">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -122,7 +122,7 @@ The ARN for this account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L44">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L44">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -133,7 +133,7 @@ The email address of the owner to assign to the new member account. This email a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-iamUserAccessToBilling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L48">property <b>iamUserAccessToBilling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L48">property <b>iamUserAccessToBilling</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>iamUserAccessToBilling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -144,7 +144,7 @@ If set to `ALLOW`, the new account enables IAM users to access account billing i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -156,7 +156,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-joinedMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L49">property <b>joinedMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L49">property <b>joinedMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>joinedMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -164,7 +164,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-joinedTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L50">property <b>joinedTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L50">property <b>joinedTimestamp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>joinedTimestamp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -172,7 +172,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L54">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -183,7 +183,7 @@ A friendly name for the member account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L58">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L58">property <b>parentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>parentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -194,7 +194,7 @@ Parent Organizational Unit ID or Root ID for the account. Defaults to the Organi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L59">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L59">property <b>roleName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>roleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -202,7 +202,7 @@ Parent Organizational Unit ID or Root ID for the account. Defaults to the Organi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L60">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L60">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -210,7 +210,7 @@ Parent Organizational Unit ID or Root ID for the account. Defaults to the Organi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L64">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L64">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -221,7 +221,7 @@ Key-value mapping of resource tags.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -234,7 +234,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Organization">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L27">class <b>Organization</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L27">class <b>Organization</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -261,7 +261,7 @@ const org = new aws.organizations.Organization("org", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Organization-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L93"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -278,7 +278,7 @@ Create a Organization resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Organization-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L36">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -292,7 +292,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Organization-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -302,7 +302,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Organization-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L47">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -316,7 +316,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Organization-accounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L57">property <b>accounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L57">property <b>accounts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -332,7 +332,7 @@ List of organization accounts including the master account. For a list excluding
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Organization-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L61">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L61">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -343,7 +343,7 @@ ARN of the root
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Organization-awsServiceAccessPrincipals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L65">property <b>awsServiceAccessPrincipals</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L65">property <b>awsServiceAccessPrincipals</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>awsServiceAccessPrincipals: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -354,7 +354,7 @@ List of AWS service principal names for which you want to enable integration wit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Organization-enabledPolicyTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L69">property <b>enabledPolicyTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L69">property <b>enabledPolicyTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabledPolicyTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -365,7 +365,7 @@ List of Organizations policy types to enable in the Organization Root. Organizat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Organization-featureSet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L73">property <b>featureSet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L73">property <b>featureSet</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>featureSet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -376,7 +376,7 @@ Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Organization-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -388,7 +388,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Organization-masterAccountArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L77">property <b>masterAccountArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L77">property <b>masterAccountArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>masterAccountArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -399,7 +399,7 @@ ARN of the master account
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Organization-masterAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L81">property <b>masterAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L81">property <b>masterAccountEmail</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>masterAccountEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -410,7 +410,7 @@ Email address of the master account
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Organization-masterAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L85">property <b>masterAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L85">property <b>masterAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>masterAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -421,7 +421,7 @@ Identifier of the master account
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Organization-nonMasterAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L89">property <b>nonMasterAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L89">property <b>nonMasterAccounts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>nonMasterAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -437,7 +437,7 @@ List of organization accounts excluding the master account. For a list including
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Organization-roots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L93">property <b>roots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L93">property <b>roots</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>roots: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -456,7 +456,7 @@ List of organization roots. All elements have these attributes:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Organization-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -469,7 +469,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OrganizationalUnit">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts#L23">class <b>OrganizationalUnit</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts#L23">class <b>OrganizationalUnit</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -492,7 +492,7 @@ const example = new aws.organizations.OrganizationalUnit("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="OrganizationalUnit-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts#L65"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -509,7 +509,7 @@ Create a OrganizationalUnit resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationalUnit-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts#L32">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -523,7 +523,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationalUnit-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -533,7 +533,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationalUnit-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts#L43">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -547,7 +547,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationalUnit-accounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts#L53">property <b>accounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts#L53">property <b>accounts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -563,7 +563,7 @@ List of child accounts for this Organizational Unit. Does not return account inf
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationalUnit-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts#L57">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts#L57">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -574,7 +574,7 @@ ARN of the organizational unit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationalUnit-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -586,7 +586,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationalUnit-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts#L61">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -597,7 +597,7 @@ The name for the organizational unit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationalUnit-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts#L65">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts#L65">property <b>parentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>parentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -608,7 +608,7 @@ ID of the parent organizational unit, which may be the root
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationalUnit-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -621,7 +621,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Policy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L31">class <b>Policy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L31">class <b>Policy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -652,7 +652,7 @@ const example = new aws.organizations.Policy("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Policy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L77"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L77"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -669,7 +669,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L40">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -683,7 +683,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -693,7 +693,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L51">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -707,7 +707,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L61">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L61">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -718,7 +718,7 @@ Amazon Resource Name (ARN) of the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L65">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L65">property <b>content</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -729,7 +729,7 @@ The policy content to add to the new policy. For example, if you create a [servi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L69">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L69">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -740,7 +740,7 @@ A description to assign to the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -752,7 +752,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L73">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -763,7 +763,7 @@ The friendly name to assign to the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L77">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L77">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -774,7 +774,7 @@ The type of policy to create. Currently, the only valid value is `SERVICE_CONTRO
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -787,7 +787,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyAttachment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policyAttachment.ts#L50">class <b>PolicyAttachment</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policyAttachment.ts#L50">class <b>PolicyAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -837,7 +837,7 @@ const unit = new aws.organizations.PolicyAttachment("unit", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policyAttachment.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policyAttachment.ts#L84"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -854,7 +854,7 @@ Create a PolicyAttachment resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policyAttachment.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policyAttachment.ts#L59">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -868,7 +868,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -878,7 +878,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policyAttachment.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policyAttachment.ts#L70">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -892,7 +892,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -904,7 +904,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policyAttachment.ts#L80">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policyAttachment.ts#L80">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -915,7 +915,7 @@ The unique identifier (ID) of the policy that you want to attach to the target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policyAttachment.ts#L84">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policyAttachment.ts#L84">property <b>targetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>targetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -926,7 +926,7 @@ The unique identifier (ID) of the root, organizational unit, or account number t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -939,7 +939,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L145">interface <b>AccountArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L145">interface <b>AccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -948,7 +948,7 @@ The set of arguments for constructing a Account resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L149">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L149">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -959,7 +959,7 @@ The email address of the owner to assign to the new member account. This email a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-iamUserAccessToBilling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L153">property <b>iamUserAccessToBilling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L153">property <b>iamUserAccessToBilling</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iamUserAccessToBilling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -970,7 +970,7 @@ If set to `ALLOW`, the new account enables IAM users to access account billing i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L157">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L157">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -981,7 +981,7 @@ A friendly name for the member account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L161">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L161">property <b>parentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -992,7 +992,7 @@ Parent Organizational Unit ID or Root ID for the account. Defaults to the Organi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L162">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L162">property <b>roleName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1000,7 +1000,7 @@ Parent Organizational Unit ID or Root ID for the account. Defaults to the Organi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L166">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L166">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1012,7 +1012,7 @@ Key-value mapping of resource tags.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L111">interface <b>AccountState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L111">interface <b>AccountState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1021,7 +1021,7 @@ Input properties used for looking up and filtering Account resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L115">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L115">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1032,7 +1032,7 @@ The ARN for this account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L119">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L119">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1043,7 +1043,7 @@ The email address of the owner to assign to the new member account. This email a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-iamUserAccessToBilling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L123">property <b>iamUserAccessToBilling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L123">property <b>iamUserAccessToBilling</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iamUserAccessToBilling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1054,7 +1054,7 @@ If set to `ALLOW`, the new account enables IAM users to access account billing i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-joinedMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L124">property <b>joinedMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L124">property <b>joinedMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>joinedMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1062,7 +1062,7 @@ If set to `ALLOW`, the new account enables IAM users to access account billing i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-joinedTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L125">property <b>joinedTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L125">property <b>joinedTimestamp</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>joinedTimestamp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1070,7 +1070,7 @@ If set to `ALLOW`, the new account enables IAM users to access account billing i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L129">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L129">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1081,7 +1081,7 @@ A friendly name for the member account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L133">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L133">property <b>parentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1092,7 +1092,7 @@ Parent Organizational Unit ID or Root ID for the account. Defaults to the Organi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L134">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L134">property <b>roleName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1100,7 +1100,7 @@ Parent Organizational Unit ID or Root ID for the account. Defaults to the Organi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L135">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L135">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1108,7 +1108,7 @@ Parent Organizational Unit ID or Root ID for the account. Defaults to the Organi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/account.ts#L139">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/account.ts#L139">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1120,7 +1120,7 @@ Key-value mapping of resource tags.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OrganizationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L183">interface <b>OrganizationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L183">interface <b>OrganizationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1129,7 +1129,7 @@ The set of arguments for constructing a Organization resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="OrganizationArgs-awsServiceAccessPrincipals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L187">property <b>awsServiceAccessPrincipals</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L187">property <b>awsServiceAccessPrincipals</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>awsServiceAccessPrincipals?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1140,7 +1140,7 @@ List of AWS service principal names for which you want to enable integration wit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationArgs-enabledPolicyTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L191">property <b>enabledPolicyTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L191">property <b>enabledPolicyTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabledPolicyTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1151,7 +1151,7 @@ List of Organizations policy types to enable in the Organization Root. Organizat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationArgs-featureSet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L195">property <b>featureSet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L195">property <b>featureSet</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>featureSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1163,7 +1163,7 @@ Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OrganizationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L137">interface <b>OrganizationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L137">interface <b>OrganizationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1172,7 +1172,7 @@ Input properties used for looking up and filtering Organization resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="OrganizationState-accounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L141">property <b>accounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L141">property <b>accounts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1188,7 +1188,7 @@ List of organization accounts including the master account. For a list excluding
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L145">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L145">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1199,7 +1199,7 @@ ARN of the root
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationState-awsServiceAccessPrincipals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L149">property <b>awsServiceAccessPrincipals</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L149">property <b>awsServiceAccessPrincipals</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>awsServiceAccessPrincipals?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1210,7 +1210,7 @@ List of AWS service principal names for which you want to enable integration wit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationState-enabledPolicyTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L153">property <b>enabledPolicyTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L153">property <b>enabledPolicyTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabledPolicyTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1221,7 +1221,7 @@ List of Organizations policy types to enable in the Organization Root. Organizat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationState-featureSet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L157">property <b>featureSet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L157">property <b>featureSet</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>featureSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1232,7 +1232,7 @@ Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationState-masterAccountArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L161">property <b>masterAccountArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L161">property <b>masterAccountArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>masterAccountArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1243,7 +1243,7 @@ ARN of the master account
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationState-masterAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L165">property <b>masterAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L165">property <b>masterAccountEmail</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>masterAccountEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1254,7 +1254,7 @@ Email address of the master account
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationState-masterAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L169">property <b>masterAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L169">property <b>masterAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>masterAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1265,7 +1265,7 @@ Identifier of the master account
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationState-nonMasterAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L173">property <b>nonMasterAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L173">property <b>nonMasterAccounts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nonMasterAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1281,7 +1281,7 @@ List of organization accounts excluding the master account. For a list including
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationState-roots">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organization.ts#L177">property <b>roots</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organization.ts#L177">property <b>roots</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roots?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1301,7 +1301,7 @@ List of organization roots. All elements have these attributes:
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OrganizationalUnitArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts#L122">interface <b>OrganizationalUnitArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts#L122">interface <b>OrganizationalUnitArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1310,7 +1310,7 @@ The set of arguments for constructing a OrganizationalUnit resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="OrganizationalUnitArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts#L126">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts#L126">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1321,7 +1321,7 @@ The name for the organizational unit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationalUnitArgs-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts#L130">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts#L130">property <b>parentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1333,7 +1333,7 @@ ID of the parent organizational unit, which may be the root
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OrganizationalUnitState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts#L100">interface <b>OrganizationalUnitState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts#L100">interface <b>OrganizationalUnitState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1342,7 +1342,7 @@ Input properties used for looking up and filtering OrganizationalUnit resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="OrganizationalUnitState-accounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts#L104">property <b>accounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts#L104">property <b>accounts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1358,7 +1358,7 @@ List of child accounts for this Organizational Unit. Does not return account inf
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationalUnitState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts#L108">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts#L108">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1369,7 +1369,7 @@ ARN of the organizational unit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationalUnitState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts#L112">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts#L112">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1380,7 +1380,7 @@ The name for the organizational unit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OrganizationalUnitState-parentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/organizationalUnit.ts#L116">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/organizationalUnit.ts#L116">property <b>parentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1392,7 +1392,7 @@ ID of the parent organizational unit, which may be the root
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L140">interface <b>PolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L140">interface <b>PolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1401,7 +1401,7 @@ The set of arguments for constructing a Policy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyArgs-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L144">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L144">property <b>content</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1412,7 +1412,7 @@ The policy content to add to the new policy. For example, if you create a [servi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L148">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L148">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1423,7 +1423,7 @@ A description to assign to the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L152">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L152">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1434,7 +1434,7 @@ The friendly name to assign to the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L156">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L156">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1446,7 +1446,7 @@ The type of policy to create. Currently, the only valid value is `SERVICE_CONTRO
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyAttachmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policyAttachment.ts#L132">interface <b>PolicyAttachmentArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policyAttachment.ts#L132">interface <b>PolicyAttachmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1455,7 +1455,7 @@ The set of arguments for constructing a PolicyAttachment resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyAttachmentArgs-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policyAttachment.ts#L136">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policyAttachment.ts#L136">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1466,7 +1466,7 @@ The unique identifier (ID) of the policy that you want to attach to the target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachmentArgs-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policyAttachment.ts#L140">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policyAttachment.ts#L140">property <b>targetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1478,7 +1478,7 @@ The unique identifier (ID) of the root, organizational unit, or account number t
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyAttachmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policyAttachment.ts#L118">interface <b>PolicyAttachmentState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policyAttachment.ts#L118">interface <b>PolicyAttachmentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1487,7 +1487,7 @@ Input properties used for looking up and filtering PolicyAttachment resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyAttachmentState-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policyAttachment.ts#L122">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policyAttachment.ts#L122">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1498,7 +1498,7 @@ The unique identifier (ID) of the policy that you want to attach to the target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyAttachmentState-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policyAttachment.ts#L126">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policyAttachment.ts#L126">property <b>targetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1510,7 +1510,7 @@ The unique identifier (ID) of the root, organizational unit, or account number t
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L114">interface <b>PolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L114">interface <b>PolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1519,7 +1519,7 @@ Input properties used for looking up and filtering Policy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L118">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L118">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1530,7 +1530,7 @@ Amazon Resource Name (ARN) of the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L122">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L122">property <b>content</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1541,7 +1541,7 @@ The policy content to add to the new policy. For example, if you create a [servi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L126">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L126">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1552,7 +1552,7 @@ A description to assign to the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L130">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1563,7 +1563,7 @@ The friendly name to assign to the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a4e17c3cf20eda684061d667ba19db82920d6ca3/sdk/nodejs/organizations/policy.ts#L134">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/11c1b7084061d0fd200293e171823263720af267/sdk/nodejs/organizations/policy.ts#L134">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

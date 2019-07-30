@@ -92,7 +92,7 @@ tbody tr td:first-child {
 | [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/) | Managed Kubernetes service | [User Guide]({{< relref "eks.md" >}}) | [eks]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/eks/_index.md" >}}) |
 | [Amazon ElastiCache](https://aws.amazon.com/elasticache/) | Managed Redis or Memcached service | | [elasticache]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/elasticache/_index.md" >}}) |
 | [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/) | Deploy and scale web apps | | [elasticbeanstalk]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/_index.md" >}}) |
-| [AWS Elastic Load Balancing (ELB)](https://aws.amazon.com/elasticloadbalancing/) | Scale across many instances | [User Guide]({{< relref "elb.md" >}}) | [elasticloadbalancingv2]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancingv2/_index.md" >}}) |
+| [AWS Elastic Load Balancing (ELB)](https://aws.amazon.com/elasticloadbalancing/) | Scale across many instances | [User Guide]({{< relref "elb.md" >}}) | [lb]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/lb/_index.md" >}}) |
 | [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/) | Fully managed Elasticsearch service | | [elasticsearch]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/elasticsearch/_index.md" >}}) |
 | [Amazon Elastic Transcoder](https://aws.amazon.com/elastictranscoder/) | Media transcoding in the cloud | | [elastictranscoder]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/elastictranscoder/_index.md" >}}) |
 | [Amazon EMR](https://aws.amazon.com/emr/) | Spark, Hadoop, HBase, and other big data | | [emr]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/emr/_index.md" >}}) |

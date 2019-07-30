@@ -21,7 +21,6 @@ title: Module runtime/closure
 <li><a href="#parseFunction">function parseFunction</a></li>
 <li><a href="#rewriteSuperReferences">function rewriteSuperReferences</a></li>
 <li><a href="#serializeFunction">function serializeFunction</a></li>
-<li><a href="#serializeFunctionAsync">function serializeFunctionAsync</a></li>
 <li><a href="#CapturedPropertyChain">interface CapturedPropertyChain</a></li>
 <li><a href="#CapturedPropertyInfo">interface CapturedPropertyInfo</a></li>
 <li><a href="#CapturedVariables">interface CapturedVariables</a></li>
@@ -126,16 +125,6 @@ There are several known limitations:
 - Captured values will be serialized based on their values at the time that `serializeFunction` is called.  Mutations
   to these values after that (but before the deserialized function is used) will not be observed by the deserialized
   function.
-
-{{% /md %}}
-</div>
-<h2 class="pdoc-module-header" id="serializeFunctionAsync">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/closure/serializeClosure.ts#L100">function <b>serializeFunctionAsync</b></a>
-</h2>
-<div class="pdoc-module-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>serializeFunctionAsync(func: Function, serialize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</pre>
 
 {{% /md %}}
 </div>
