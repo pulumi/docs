@@ -18,18 +18,18 @@ title: Module sqs
 <li><a href="#metrics">module metrics</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/sqs/metrics.ts">sqs/metrics.ts</a> 
+<a href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sqs/metrics.ts">sqs/metrics.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/sqs/metrics.ts#L20">module <b>metrics</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sqs/metrics.ts#L20">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="approximateAgeOfOldestMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/sqs/metrics.ts#L78">function <b>approximateAgeOfOldestMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sqs/metrics.ts#L78">function <b>approximateAgeOfOldestMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -50,7 +50,7 @@ the Amazon SQS console)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="approximateNumberOfMessagesDelayed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/sqs/metrics.ts#L92">function <b>approximateNumberOfMessagesDelayed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sqs/metrics.ts#L92">function <b>approximateNumberOfMessagesDelayed</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -70,7 +70,7 @@ the Amazon SQS console)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="approximateNumberOfMessagesNotVisible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/sqs/metrics.ts#L106">function <b>approximateNumberOfMessagesNotVisible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sqs/metrics.ts#L106">function <b>approximateNumberOfMessagesNotVisible</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -90,7 +90,7 @@ the Amazon SQS console)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="approximateNumberOfMessagesVisible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/sqs/metrics.ts#L118">function <b>approximateNumberOfMessagesVisible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sqs/metrics.ts#L118">function <b>approximateNumberOfMessagesVisible</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -108,7 +108,7 @@ the Amazon SQS console)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/sqs/metrics.ts#L54">function <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sqs/metrics.ts#L54">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -138,7 +138,7 @@ The only dimension that Amazon SQS sends to CloudWatch is "QueueName"
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="numberOfEmptyReceives">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/sqs/metrics.ts#L130">function <b>numberOfEmptyReceives</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sqs/metrics.ts#L130">function <b>numberOfEmptyReceives</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -156,7 +156,7 @@ the Amazon SQS console)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="numberOfMessagesDeleted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/sqs/metrics.ts#L155">function <b>numberOfMessagesDeleted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sqs/metrics.ts#L155">function <b>numberOfMessagesDeleted</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -187,7 +187,7 @@ the Amazon SQS console)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="numberOfMessagesReceived">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/sqs/metrics.ts#L162">function <b>numberOfMessagesReceived</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sqs/metrics.ts#L162">function <b>numberOfMessagesReceived</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -200,7 +200,7 @@ The number of messages returned by calls to the ReceiveMessage action.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="numberOfMessagesSent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/sqs/metrics.ts#L174">function <b>numberOfMessagesSent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sqs/metrics.ts#L174">function <b>numberOfMessagesSent</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -218,7 +218,7 @@ the Amazon SQS console)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="sentMessageSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/sqs/metrics.ts#L186">function <b>sentMessageSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sqs/metrics.ts#L186">function <b>sentMessageSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -236,14 +236,14 @@ the Amazon SQS console)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqsMetricChange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/sqs/metrics.ts#L27">interface <b>SqsMetricChange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sqs/metrics.ts#L27">interface <b>SqsMetricChange</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqsMetricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/f60ea6dec5c2450bf0bb457981a3091c094e9631/nodejs/awsx/sqs/metrics.ts#L21">type <b>SqsMetricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/d7172185ce5e13c69ba3eb7852ccda33e423f0b9/nodejs/awsx/sqs/metrics.ts#L21">type <b>SqsMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>type</span> SqsMetricName = <span class='s2'>"ApproximateAgeOfOldestMessage"</span> | <span class='s2'>"ApproximateNumberOfMessagesDelayed"</span> | <span class='s2'>"ApproximateNumberOfMessagesNotVisible"</span> | <span class='s2'>"ApproximateNumberOfMessagesVisible"</span> | <span class='s2'>"NumberOfEmptyReceives"</span> | <span class='s2'>"NumberOfMessagesDeleted"</span> | <span class='s2'>"NumberOfMessagesReceived"</span> | <span class='s2'>"NumberOfMessagesSent"</span> | <span class='s2'>"SentMessageSize"</span>;</pre>
