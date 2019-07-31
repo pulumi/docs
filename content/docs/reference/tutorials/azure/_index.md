@@ -6,7 +6,7 @@ menu:
     identifier: tutorials-azure
 ---
 
-The quickest way to get started with Azure is to follow the [Get Started]({{< relref "/docs/quickstart/azure" >}}) guide.
+{{< get-started-note >}}
 
 Additionally, a tutorial is available to follow:
 

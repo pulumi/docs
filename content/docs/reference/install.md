@@ -12,9 +12,11 @@ NOTE: To update this page with a new binary release, do the following:
 - Update `content/reference/changelog.md`
 -->
 
-This page contains detailed instructions on installing Pulumi.
+This page contains detailed instructions for [installing Pulumi](#install-pulumi) on your machine.
 
-For a streamlined walkthrough of getting started with Pulumi, including installing Pulumi and prerequisites, see the [Get Started]({{< relref "/docs/quickstart" >}}) guide.
+{{< get-started-note >}}
+
+## Install Pulumi
 
 <script>
     var oses = [ "unknown", "linux", "macos", "windows" ];
@@ -86,7 +88,9 @@ For a streamlined walkthrough of getting started with Pulumi, including installi
 
 <div id="macos_installation">
 {{% md %}}
-## macOS
+
+
+### Homebrew
 
 macOS Sierra (10.12) or later is required.
 
@@ -104,58 +108,65 @@ Subsequent updates can be installed in the usual way:
 $ brew upgrade pulumi
 ```
 
-### (Alternative) Installation Script
+### Installation Script
 
-Alternatively, our installation script can be run:
+Alternatively, you can run our installation script.
 
 ```bash
 $ curl -fsSL https://get.pulumi.com | sh
 ```
 
-This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path.
+This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `pulumi` to your path, you will be prompted to add it manually.
+See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux-unix) for guidance.
+
 
 The installer script can be rerun to subsequently install new updates.
 
-### (Alternative) Manual Installation
+### Manual Installation
 
-1. Download [Pulumi {{< latest-version >}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz).
+If you do not wish to use the previous options, you can install Pulumi manually.
 
-2. Unzip the tarball and either copy the binaries in the `pulumi` directory on your `$PATH`.
+1. Download [Pulumi {{< latest-version >}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz). For prior versions and release notes, see the [Changelog]({{< relref "/docs/reference/changelog" >}}) page.
+
+2. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
 {{% /md %}}
 </div>
 
 <div id="linux_installation">
 {{% md %}}
-## Linux
 
-To install on Linux, run our installation script:
+### Installation Script
+
+To install, run our installation script:
 
 ```bash
 $ curl -fsSL https://get.pulumi.com | sh
 ```
 
-This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `~/.pulumi/bin`, you will be prompted to add it manually. 
+This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `pulumi` to your path, you will be prompted to add it manually.
+See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux-unix) for guidance.
 
 
-### (Alternative) Manual Installation
+### Manual Installation
 
-We provide a pre-built binary for Linux.
+Alternatively, you can install Pulumi manually. We provide a prebuilt binary for Linux.
 
-1. Download [Pulumi {{< latest-version >}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz).
+1. Download [Pulumi {{< latest-version >}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz). For prior versions and release notes, see the [Changelog]({{< relref "/docs/reference/changelog" >}}) page.
 
-2. Unzip the tarball and either copy the binaries in the `pulumi` directory on your `$PATH`.
+2. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
 {{% /md %}}
 </div>
 
 <div id="windows_installation">
 {{% md %}}
-## Windows
+
+### Installation Script
 
 Windows 8 and 10 are supported.
 
-To install on Windows, run our installation script from a `cmd.exe` window:
+To install, run our installation script from a `cmd.exe` window:
 
 ```batch
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
@@ -163,11 +174,13 @@ To install on Windows, run our installation script from a `cmd.exe` window:
 
 This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it to your path.
 
-### (Alternative) Manual Installation
+### Manual Installation
 
-1. Download [Pulumi {{< latest-version >}} for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip).
+Alternatively, you can install Pulumi manually.
 
-2. Copy the extracted zipfile contents to a folder such as `C:\pulumi`.
+1. Download [Pulumi {{< latest-version >}} for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip). For prior versions and release notes, see the [Changelog]({{< relref "/docs/reference/changelog" >}}) page.
+
+2. Unzip the file and extract the contents to a folder such as `C:\pulumi`.
 
 3. Add `C:\pulumi\bin` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
 {{% /md %}}
@@ -187,7 +200,7 @@ This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it
 
 <div id="installation_post">
 {{% md %}}
-## Ensuring It Worked
+## Verify your Installation
 After installing, verify everything is in working order by running the `pulumi` CLI:
 
 ```bash
@@ -195,18 +208,11 @@ $ pulumi version
 v{{< latest-version >}}
 ```
 
-If you get an error that `pulumi` could not be found, it means your path has not been configured correctly. Please go
-back and ensure your path contains the directory containing the `pulumi` CLI installed earlier.
+If you get an error that `pulumi` could not be found, it means your path has not been configured correctly. Verify that your system's `$PATH` contains the directory containing the `pulumi` CLI installed earlier.
 
-## Uninstalling Pulumi
+## Uninstall Pulumi
 
-To uninstall Pulumi, delete the `.pulumi` folder in your home directory. If you used the manual installer, you should
-also delete the `pulumi` folder that was created.
-
-## Available Versions
-
-The current stable version is **{{< latest-version >}}**. For a full history of prior versions, including
-release notes, please visit the <a href="{{< relref "/docs/reference/changelog.md" >}}">Changelog</a>.
-
+To uninstall Pulumi, remove the `.pulumi` folder from your home directory. If you installed Pulumi manually, you should
+also remove the `pulumi` folder that was created.
 {{% /md %}}
 </div>

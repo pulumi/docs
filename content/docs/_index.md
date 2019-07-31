@@ -12,8 +12,7 @@ menu:
 Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> platform for building and
 deploying cloud infrastructure and applications in your favorite language on any cloud.
 
-Describe your resources in code -- VMs, networks, databases, containers, Kubernetes clusters & workloads, serverless
-functions -- and the CLI safely and reliably manages your cloud resources using an infrastructure-as-code approach.
+Describe your resources in code---VMs, networks, databases, containers, Kubernetes clusters and workloads, serverless functions---and the CLI safely and reliably manages your cloud resources using an infrastructure-as-code approach.
 
 <div class="flex justify-center py-6">
     <a class="btn btn-lg mx-1 my-1" href="{{< relref "/docs/quickstart" >}}">GET STARTED</a>
@@ -32,9 +31,9 @@ functions -- and the CLI safely and reliably manages your cloud resources using 
         <p class="text-sm text-gray-600">
             By using <a href="{{< relref "/docs/reference/languages" >}}">general purpose languages</a>
             for infrastructure as code,
-            you get all the benefits of real languages -- IDEs, abstractions and
+            you get all the benefits of real languages&mdash;IDEs, abstractions, and
             reuse thanks to functions, classes, and packages, debugging, testability,
-            and more. The result is far less copy and paste and greater productivity,
+            and more. The result is greater productivity with far less copy and paste,
             and it works the same way no matter which cloud you're targeting.
         </p>
     </div>
@@ -42,9 +41,9 @@ functions -- and the CLI safely and reliably manages your cloud resources using 
         <h3 class="no-anchor">Alternatives</h3>
         <p class="text-sm text-gray-600">
             <a href="{{< relref "/docs/reference/vs" >}}">Other approaches</a> use YAML,
-            JSON, or bespoke DSLs that you need to
-            master -- and convince your team to use. These "languages" fall short of
-            general purpose languages, lacking abstractions and reuse, and reinvent
+            JSON, or bespoke DSLs (Domain-Specific Languages) that you need to
+            master and convince your team to use. These "languages" fall short of
+            general purpose languages, since they lack abstractions and reuse, and reinvent
             familiar concepts like package managers. Worse, these solutions are usually
             unique to every given cloud that you need to target.
         </p>
@@ -113,5 +112,5 @@ functions -- and the CLI safely and reliably manages your cloud resources using 
     </div>
 </div>
 
-For questions or feedback, reach us in our [community Slack channel](https://slack.pulumi.com),
-on [GitHub](https://github.com/pulumi), or by emailing [support@pulumi.com](mailto:support@pulumi.com).
+For questions or feedback, reach us through our [community Slack channel](https://slack.pulumi.com),
+[GitHub](https://github.com/pulumi), or email [support@pulumi.com](mailto:support@pulumi.com).

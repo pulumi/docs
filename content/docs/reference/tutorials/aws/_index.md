@@ -6,7 +6,7 @@ menu:
     identifier: tutorials-aws
 ---
 
-The quickest way to get started with AWS is to follow the [Get Started]({{< relref "/docs/quickstart/aws" >}}) guide.
+{{< get-started-note >}}
 
 Additionally, there are several tutorials available to follow:
 
