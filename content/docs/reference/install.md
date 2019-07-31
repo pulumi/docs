@@ -16,14 +16,14 @@ This page contains detailed instructions for [installing Pulumi](#install-pulumi
 
 {{< get-started-note >}}
 
-## Available versions
-
-The current stable version of Pulumi is **{{< latest-version >}}**. For a full history of prior versions, including
-release notes and direct download links, visit the <a href="{{< relref "/docs/reference/changelog" >}}">Changelog</a> page.
-Pulumi is packaged as a tarball for Linux and macOS, and as a zip archive for Windows.
-
-
 ## Install Pulumi
+
+<div class="note note-warning" role="alert">
+    <p>
+        <span>Skip version check.</span> If you're in an environment with no internet access, you may skip the pulumi version update check by setting the environment variable
+        <code>PULUMI_SKIP_UPDATE_CHECK</code> to <code>1</code> or <code>true</code>.
+    </p>
+</div>
 
 <script>
     var oses = [ "unknown", "linux", "macos", "windows" ];
@@ -211,7 +211,7 @@ $ pulumi version
 v{{< latest-version >}}
 ```
 
-If you get an error that `pulumi` could not be found, it means your path has not been configured correctly. Verify that your path contains the directory containing the `pulumi` CLI installed earlier.
+If you get an error that `pulumi` could not be found, it means your path has not been configured correctly. Verify that your system's `$PATH` contains the directory containing the `pulumi` CLI installed earlier.
 
 ## Uninstall Pulumi
 
