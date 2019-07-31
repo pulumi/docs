@@ -110,7 +110,7 @@ $ brew upgrade pulumi
 
 ### Installation Script
 
-Alternatively, our installation script can be run:
+Alternatively, you can run our installation script.
 
 ```bash
 $ curl -fsSL https://get.pulumi.com | sh
@@ -124,6 +124,8 @@ The installer script can be rerun to subsequently install new updates.
 
 ### Manual Installation
 
+If you do not wish to use the previous options, you can install Pulumi manually.
+
 1. Download [Pulumi {{< latest-version >}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz). For prior versions and release notes, see the [Changelog]({{< relref "/docs/reference/changelog" >}}) page.
 
 2. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
@@ -136,7 +138,7 @@ The installer script can be rerun to subsequently install new updates.
 
 ### Installation Script
 
-To install on Linux, run our installation script:
+To install, run our installation script:
 
 ```bash
 $ curl -fsSL https://get.pulumi.com | sh
@@ -148,7 +150,7 @@ See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/1
 
 ### Manual Installation
 
-We provide a prebuilt binary for Linux.
+Alternatively, you can install Pulumi manually. We provide a prebuilt binary for Linux.
 
 1. Download [Pulumi {{< latest-version >}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz). For prior versions and release notes, see the [Changelog]({{< relref "/docs/reference/changelog" >}}) page.
 
@@ -164,7 +166,7 @@ We provide a prebuilt binary for Linux.
 
 Windows 8 and 10 are supported.
 
-To install on Windows, run our installation script from a `cmd.exe` window:
+To install, run our installation script from a `cmd.exe` window:
 
 ```batch
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
@@ -173,6 +175,8 @@ To install on Windows, run our installation script from a `cmd.exe` window:
 This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it to your path.
 
 ### Manual Installation
+
+Alternatively, you can install Pulumi manually.
 
 1. Download [Pulumi {{< latest-version >}} for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip). For prior versions and release notes, see the [Changelog]({{< relref "/docs/reference/changelog" >}}) page.
 
