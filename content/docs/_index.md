@@ -111,5 +111,5 @@ Describe your resources in code---VMs, networks, databases, containers, Kubernet
     </div>
 </div>
 
-For questions or feedback, reach us through our [community Slack channel](https://slack.pulumi.io),
+For questions or feedback, reach us through our [community Slack channel](https://slack.pulumi.com),
 [GitHub](https://github.com/pulumi), or email [support@pulumi.com](mailto:support@pulumi.com).

@@ -12,9 +12,11 @@ NOTE: To update this page with a new binary release, do the following:
 - Update `content/reference/changelog.md`
 -->
 
-This page contains detailed instructions for [downloading](#download) and [installing Pulumi](#install-pulumi) on your machine.
+This page contains detailed instructions for [installing Pulumi](#install-pulumi) on your machine.
 
-## Download
+{{< get-started-note >}}
+
+## Available versions
 
 The current stable version of Pulumi is **{{< latest-version >}}**. For a full history of prior versions, including
 release notes and direct download links, visit the <a href="{{< relref "/docs/reference/changelog" >}}">Changelog</a> page.
@@ -121,7 +123,9 @@ Alternatively, our installation script can be run:
 $ curl -fsSL https://get.pulumi.com | sh
 ```
 
-This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path.
+This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `pulumi` to your path, you will be prompted to add it manually.
+See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux-unix) for guidance.
+
 
 The installer script can be rerun to subsequently install new updates.
 
@@ -136,7 +140,8 @@ The installer script can be rerun to subsequently install new updates.
 
 <div id="linux_installation">
 {{% md %}}
-### Installation script
+
+### Installation Script
 
 To install on Linux, run our installation script:
 
@@ -144,12 +149,13 @@ To install on Linux, run our installation script:
 $ curl -fsSL https://get.pulumi.com | sh
 ```
 
-This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `~/.pulumi/bin`, you will be prompted to add it manually. 
+This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `pulumi` to your path, you will be prompted to add it manually.
+See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux-unix) for guidance.
 
 
-### Manual installation
+### Manual Installation
 
-We provide a pre-built binary for Linux.
+We provide a prebuilt binary for Linux.
 
 1. Download [Pulumi {{< latest-version >}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz).
 
@@ -161,7 +167,7 @@ We provide a pre-built binary for Linux.
 <div id="windows_installation">
 {{% md %}}
 
-### Installation script
+### Installation Script
 
 Windows 8 and 10 are supported.
 
@@ -173,7 +179,7 @@ To install on Windows, run our installation script from a `cmd.exe` window:
 
 This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it to your path.
 
-### Manual installation
+### Manual Installation
 
 1. Download [Pulumi {{< latest-version >}} for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip).
 
@@ -197,7 +203,7 @@ This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it
 
 <div id="installation_post">
 {{% md %}}
-## Verify your installation
+## Verify your Installation
 After installing, verify everything is in working order by running the `pulumi` CLI:
 
 ```bash
@@ -205,14 +211,11 @@ $ pulumi version
 v{{< latest-version >}}
 ```
 
-If you get an error that `pulumi` could not be found, it means your path has not been configured correctly. Please go
-back and ensure your path contains the directory containing the `pulumi` CLI installed earlier.
+If you get an error that `pulumi` could not be found, it means your path has not been configured correctly. Verify that your path contains the directory containing the `pulumi` CLI installed earlier.
 
 ## Uninstall Pulumi
 
-To uninstall Pulumi, delete the `.pulumi` folder in your home directory. If you used the manual installer, you should
-also delete the `pulumi` folder that was created.
-
-
+To uninstall Pulumi, remove the `.pulumi` folder from your home directory. If you installed Pulumi manually, you should
+also remove the `pulumi` folder that was created.
 {{% /md %}}
 </div>

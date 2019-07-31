@@ -25,22 +25,6 @@ original node group from Kubernetes and AWS.
 
 {{< aws-eks-prereqs >}}
 
-## Table of Contents
-
-- [Initialize the Pulumi Project](#initialize-the-pulumi-project)
-- [Create an EKS Cluster and Deploy the Workload](#create-an-eks-cluster-and-deploy-the-workload)
-  * [Access the Workload](#access-the-workload)
-- [...But First, Let's Talk About Resource Updates](#but-first-let-s-talk-about-resource-updates)
-  * [Pulumi's Approach: `create-before-delete`](#pulumi-s-approach-create-before-delete)
-  * [Kubernetes Workloads: High-Availability (HA) & Rolling Updates](#kubernetes-workloads-high-availability-ha-rolling-updates)
-- [The Great Migration](#the-great-migration)
-  * [Step 0: Launch Load Tests (Optional)](#step-0-launch-load-tests-optional)
-  * [Step 1: Create the new `4xlarge` Node Group](#step-1-create-the-new-4xlarge-node-group)
-  * [Step 2: Migrate NGINX to the `4xlarge` Node Group](#step-2-migrate-nginx-to-the-4xlarge-node-group)
-  * [Step 3: Decomission the `2xlarge` Node Group](#step-3-decomission-the-2xlarge-node-group)
-- [Clean Up](#clean-up)
-- [Summary](#summary)
-
 ## Initialize the Pulumi Project
 
 1.  Start by cloning the [example][example-gh] to your local machine.

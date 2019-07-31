@@ -6,7 +6,7 @@ menu:
     identifier: tutorials-kubernetes
 ---
 
-The quickest way to get started with Kubernetes is to follow the [Get Started]({{< relref "/docs/quickstart/kubernetes" >}}) guide.
+{{< get-started-note >}}
 
 Additionally, there are several tutorials available to follow:
 
