@@ -30,8 +30,8 @@ Then, run the following command to install the Pulumi CLI:
 
 If you're on Windows, run this:
 
-    @"%SystemRoot%System32WindowsPowerShell1.0powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" 
-    SET "PATH=%PATH%;%USERPROFILE%.pulumiin"
+    @"%SystemRoot%System32WindowsPowerShell1.0powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))"
+    SET "PATH=%PATH%;%USERPROFILE%.pulumiin"
 
 You'll deploy this app to your own AWS account, so follow the steps to
 [configure your AWS account]({{< ref "/docs/reference/clouds/aws/setup.md" >}}).
@@ -57,17 +57,17 @@ pulumi new aws-javascript
 This creates a new project in the directory `hello-containers`. Next, replace the contents of `index.js` with the following:
 
 ```javascript
-const cloud = require("@pulumi/cloud-aws"); 
-let service = new cloud.Service("pulumi-nginx", { 
-    containers: { 
-        nginx: { 
-            build: "./app", 
-            memory: 128, 
-            ports: [{ port: 80 }], 
-        }, 
-    }, 
-    replicas: 2, 
-}); 
+const cloud = require("@pulumi/cloud-aws");
+let service = new cloud.Service("pulumi-nginx", {
+    containers: {
+        nginx: {
+            build: "./app",
+            memory: 128,
+            ports: [{ port: 80 }],
+        },
+    },
+    replicas: 2,
+});
 
 /* export just the hostname property of the container frontend */
 exports.url = service.defaultEndpoint.apply(e => `http://${e.hostname}`);
@@ -172,7 +172,7 @@ site traffic.
      2018-06-15T15:27:47.468-07:00[                  pulumi-nginx] 2018/06/15 22:27:47 [error] 5#5: *4 open() "/usr/share/nginx/html/proxychecker.axd" failed (2: No such file or directory), client: 62.210.157.152, server: localhost, request: "GET http://proxy.dazhou.net/proxychecker.axd?e=457758511%40qq.com&p=http%3A%2F%2F34.201.27.186%3A80&s=AS HTTP/1.1", host: "proxy.dazhou.net"
      2018-06-15T15:27:47.468-07:00[                  pulumi-nginx] 62.210.157.152 - - [15/Jun/2018:22:27:47 +0000] "GET http://proxy.dazhou.net/proxychecker.axd?e=457758511%40qq.com&p=http%3A%2F%2F34.201.27.186%3A80&s=AS HTTP/1.1" 404 170 "-" "Go-http-client/1.1" "-"
      2018-06-15T15:32:02.128-07:00[                  pulumi-nginx] 2018/06/15 22:32:02 [error] 5#5: *382 "/usr/share/nginx/html/phpmyadmin/index.html" is not found (2: No such file or directory), client: 178.239.177.212, server: localhost, request: "HEAD http://34.201.27.186:80/phpmyadmin/ HTTP/1.1", host: "34.201.27.186"
-     2018-06-15T16:07:05.874-07:00[                  pulumi-nginx] 172.31.44.144 - - [15/Jun/2018:23:07:05 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36" "-" 
+     2018-06-15T16:07:05.874-07:00[                  pulumi-nginx] 172.31.44.144 - - [15/Jun/2018:23:07:05 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36" "-"
 
 ## Clean up
 

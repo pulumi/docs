@@ -50,8 +50,8 @@ Then, run the following command to install the Pulumi CLI:
 
 If you're on Windows, run this:
 
-    @"%SystemRoot%System32WindowsPowerShell1.0powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" 
-    SET "PATH=%PATH%;%USERPROFILE%.pulumiin"
+    @"%SystemRoot%System32WindowsPowerShell1.0powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))"
+    SET "PATH=%PATH%;%USERPROFILE%.pulumiin"
 
 You'll deploy this app to your own AWS account, so follow the steps to
 [configure your AWS account]({{< ref "/docs/quickstart/aws" >}}).
@@ -76,17 +76,17 @@ This creates a new project in the directory `hello-http`.
 2. Replace the contents of `index.js` with the following:
 
 ``` {style="padding-left: 30px;"}
-const cloud = require("@pulumi/cloud-aws"); 
+const cloud = require("@pulumi/cloud-aws");
 
-/* Create a mapping from 'route' to a count */ 
-let counterTable = new cloud.Table("counterTable", "route"); 
+/* Create a mapping from 'route' to a count */
+let counterTable = new cloud.Table("counterTable", "route");
 
-/* Create an REST API endpoint */ 
-let endpoint = new cloud.API("hello-world"); 
+/* Create an REST API endpoint */
+let endpoint = new cloud.API("hello-world");
 
-endpoint.get("/{route+}", (req, res) => { 
-    let route = req.params["route"]; 
-    console.log(`Getting count for '${route}'`); 
+endpoint.get("/{route+}", (req, res) => {
+    let route = req.params["route"];
+    console.log(`Getting count for '${route}'`);
 
     /* get previous value and increment */
     /* reference outer counterTable object */
@@ -97,7 +97,7 @@ endpoint.get("/{route+}", (req, res) => {
             console.log(`Got count ${count} for '${route}'`);
         });
     });
-}); 
+});
 
 exports.endpoint = endpoint.publish().url;
 ```
@@ -151,9 +151,9 @@ exports.endpoint = endpoint.publish().url;
 You can view stack outputs in the Pulumi Console, or via
 `pulumi stack output`:
 
-    $ pulumi stack output 
-    Current stack outputs (1): 
-    OUTPUT    VALUE 
+    $ pulumi stack output
+    Current stack outputs (1):
+    OUTPUT    VALUE
     endpoint  https://5e8xrktey3.execute-api.us-west-2.amazonaws.com/stage/
 
 Now, let's curl some routes!
