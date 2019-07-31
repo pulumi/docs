@@ -18,13 +18,6 @@ This page contains detailed instructions for [installing Pulumi](#install-pulumi
 
 ## Install Pulumi
 
-<div class="note note-warning" role="alert">
-    <p>
-        <span>Skip version check.</span> If you're in an environment with no internet access, you may skip the pulumi version update check by setting the environment variable
-        <code>PULUMI_SKIP_UPDATE_CHECK</code> to <code>1</code> or <code>true</code>.
-    </p>
-</div>
-
 <script>
     var oses = [ "unknown", "linux", "macos", "windows" ];
 
