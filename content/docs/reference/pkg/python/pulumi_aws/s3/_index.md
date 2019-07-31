@@ -515,7 +515,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.s3.BucketObject">
-<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">BucketObject</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>acl=None</em>, <em>bucket=None</em>, <em>cache_control=None</em>, <em>content=None</em>, <em>content_base64=None</em>, <em>content_disposition=None</em>, <em>content_encoding=None</em>, <em>content_language=None</em>, <em>content_type=None</em>, <em>etag=None</em>, <em>key=None</em>, <em>kms_key_id=None</em>, <em>server_side_encryption=None</em>, <em>source=None</em>, <em>storage_class=None</em>, <em>tags=None</em>, <em>website_redirect=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketObject" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">BucketObject</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>acl=None</em>, <em>bucket=None</em>, <em>cache_control=None</em>, <em>content=None</em>, <em>content_base64=None</em>, <em>content_disposition=None</em>, <em>content_encoding=None</em>, <em>content_language=None</em>, <em>content_type=None</em>, <em>etag=None</em>, <em>key=None</em>, <em>kms_key_id=None</em>, <em>metadata=None</em>, <em>server_side_encryption=None</em>, <em>source=None</em>, <em>storage_class=None</em>, <em>tags=None</em>, <em>website_redirect=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket object resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -539,6 +539,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 This value is a fully qualified <strong>ARN</strong> of the KMS Key. If using <code class="docutils literal notranslate"><span class="pre">aws_kms_key</span></code>,
 use the exported <code class="docutils literal notranslate"><span class="pre">arn</span></code> attribute:
 <code class="docutils literal notranslate"><span class="pre">kms_key_id</span> <span class="pre">=</span> <span class="pre">&quot;${aws_kms_key.foo.arn}&quot;</span></code></li>
+<li><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of keys/values to provision metadata (will be automatically prefixed by <code class="docutils literal notranslate"><span class="pre">x-amz-meta-</span></code>, note that only lowercase label are currently supported by the AWS Go API).</li>
 <li><strong>server_side_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies server-side encryption of the object in S3. Valid values are “<code class="docutils literal notranslate"><span class="pre">AES256</span></code>” and “<code class="docutils literal notranslate"><span class="pre">aws:kms</span></code>”.</li>
 <li><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.Asset</em><em>]</em>) – The path to a file that will be read and uploaded as raw bytes for the object content.</li>
 <li><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the desired <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html">Storage Class</a>
@@ -619,6 +620,12 @@ for the object. Can be either “<code class="docutils literal notranslate"><spa
 This value is a fully qualified <strong>ARN</strong> of the KMS Key. If using <code class="docutils literal notranslate"><span class="pre">aws_kms_key</span></code>,
 use the exported <code class="docutils literal notranslate"><span class="pre">arn</span></code> attribute:
 <code class="docutils literal notranslate"><span class="pre">kms_key_id</span> <span class="pre">=</span> <span class="pre">&quot;${aws_kms_key.foo.arn}&quot;</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.BucketObject.metadata">
+<code class="descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketObject.metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of keys/values to provision metadata (will be automatically prefixed by <code class="docutils literal notranslate"><span class="pre">x-amz-meta-</span></code>, note that only lowercase label are currently supported by the AWS Go API).</p>
 </dd></dl>
 
 <dl class="attribute">
