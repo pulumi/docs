@@ -131,9 +131,9 @@ The installer script can be rerun to subsequently install new updates.
 
 ### Manual Installation
 
-1. Download [Pulumi {{< latest-version >}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz).
+1. Download [Pulumi {{< latest-version >}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz). For prior versions and release notes, see the [Changelog]({{< relref "/docs/reference/changelog" >}}) page.
 
-2. Unzip the tarball and either copy the binaries in the `pulumi` directory on your `$PATH`.
+2. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
 {{% /md %}}
 </div>
@@ -157,9 +157,9 @@ See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/1
 
 We provide a prebuilt binary for Linux.
 
-1. Download [Pulumi {{< latest-version >}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz).
+1. Download [Pulumi {{< latest-version >}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz). For prior versions and release notes, see the [Changelog]({{< relref "/docs/reference/changelog" >}}) page.
 
-2. Unzip the tarball and either copy the binaries in the `pulumi` directory on your `$PATH`.
+2. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
 {{% /md %}}
 </div>
@@ -181,9 +181,9 @@ This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it
 
 ### Manual Installation
 
-1. Download [Pulumi {{< latest-version >}} for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip).
+1. Download [Pulumi {{< latest-version >}} for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip). For prior versions and release notes, see the [Changelog]({{< relref "/docs/reference/changelog" >}}) page.
 
-2. Copy the extracted zipfile contents to a folder such as `C:\pulumi`.
+2. Unzip the file and extract the contents to a folder such as `C:\pulumi`.
 
 3. Add `C:\pulumi\bin` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
 {{% /md %}}
