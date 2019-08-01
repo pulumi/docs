@@ -6,9 +6,9 @@ menu:
     identifier: clouds-azure
 ---
 
-<img src="/images/docs/quickstart/azure-purple.png" align="right">
+<img src="/logos/tech/azure.svg" align="right" class="h-16 px-8 pb-4">
 
-The Azure provider for Pulumi can be used to provision any of the cloud resources available in [Azure](https://azure.microsoft.com/en-us/) via Azure Resource Manager (ARM).  The Azure provider must be configured with credentials to deploy and update resources in Azure. 
+The Azure provider for Pulumi can be used to provision any of the cloud resources available in [Azure](https://azure.microsoft.com/en-us/) via Azure Resource Manager (ARM).  The Azure provider must be configured with credentials to deploy and update resources in Azure.
 
 See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure" >}}) for complete details of the available Azure provider APIs.
 
@@ -51,7 +51,7 @@ The following packages are available in package managers:
 * Python: [`pulumi-azure`](https://pypi.org/project/pulumi-azure/)
 * Go: [`github.com/pulumi/pulumi-azure/sdk/go/azure`](https://github.com/pulumi/pulumi-azure)
 
-The Azure provider is open source and available in the [pulumi/pulumi-azure](https://github.com/pulumi/pulumi-azure) repo. 
+The Azure provider is open source and available in the [pulumi/pulumi-azure](https://github.com/pulumi/pulumi-azure) repo.
 
 ## Configuration
 
