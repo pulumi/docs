@@ -75,7 +75,7 @@ in addition to our favorite IDEs and tools.
 After committing our changes, Pulumi takes it from there. Deployments
 can be previewed, diffed, and are recorded so that you'll always know
 who changed what, when, and why -- all very "Git-like." Pulumi's
-[GitHub App]({{< ref "/docs/reference/cd-github" >}}) adds to this
+[GitHub App]({{< ref "/docs/console/continuous-delivery/github" >}}) adds to this
 and enables "GitOps" so that teams can propose, approve, and promote
 code from "staging" to "production" using pull requests (more on that
 below).
@@ -92,7 +92,7 @@ all of this up and running. Let's see how!
 ## Getting Up and Running
 
 The full sequence of steps is available in our [GitHub Actions Getting
-Started Guide]({{< ref "/docs/reference/cd-github-actions" >}}).
+Started Guide]({{< ref "/docs/console/continuous-delivery/github-actions" >}}).
 
 In summary, using GitHub Actions with Pulumi is as easy as [signing up
 for Pulumi](https://app.pulumi.com/) (if you haven't already), creating
@@ -133,7 +133,7 @@ it's so easy!
 
 If you are going to use this setup in a real team setting, you'll
 probably also want to use Pulumi's GitHub App. Simply by
-[installing it into your repo]({{< ref "/docs/reference/cd-github" >}}),
+[installing it into your repo]({{< ref "/docs/console/continuous-delivery/github" >}}),
 and combined with the above, you'll instantly get improved GitHub Checks API
 integration and, more importantly, context added by the Pulumi bot to
 your Pull Requests about what a deployment will do before it's even

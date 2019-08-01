@@ -56,8 +56,8 @@ would collaborate on a project on GitLab.
 
 ## Running Pulumi on GitLab
 
-Pulumi can be run in [many CI/CD environments]({{< ref "/docs/reference/cd" >}}). Pulumi can be easily
-integrated in your [CI pipeline on GitLab]({{< ref "/docs/reference/cd-gitlab-ci" >}}), too.
+Pulumi can be run in [many CI/CD environments]({{< ref "/docs/console/continuous-delivery" >}}). Pulumi can be easily
+integrated in your [CI pipeline on GitLab]({{< ref "/docs/console/continuous-delivery/gitlab-ci" >}}), too.
 
 ## Deep-linking to your GitLab projects, branches and commits
 

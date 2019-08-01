@@ -18,7 +18,7 @@ please refer to the index below to help navigate around the content.
 ## Using Pulumi in Production or in a Team
 
 * [Teams and Collaboration]({{< relref "./service/" >}}): use Pulumi in your team, with organizations, RBAC, and more
-* [Continuous Delivery]({{< relref "cd.md" >}}): hook Pulumi up to your CI/CD system to get continuous apps and infrastructure delivery
+* [Continuous Delivery]({{< relref "../console/" >}}): hook Pulumi up to your CI/CD system to get continuous apps and infrastructure delivery
 
 ## Useful Reference Material
 

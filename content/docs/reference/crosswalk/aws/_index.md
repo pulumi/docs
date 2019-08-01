@@ -88,7 +88,7 @@ relevant User Guides to get started:
 
 ### Continuous Deployment
 
-* [Using Pulumi from AWS Code Services]({{< relref "/docs/reference/cd-aws-code-services" >}})
+* [Using Pulumi from AWS Code Services]({{< relref "/docs/console/continuous-delivery/aws-code-services" >}})
 
 ### Other AWS Services
 

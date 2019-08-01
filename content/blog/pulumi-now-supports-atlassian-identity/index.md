@@ -61,11 +61,11 @@ in the Pulumi and how those permissions get applied too.
 
 Did you also know that the Pulumi CLI can be used in most, if not all,
 CI/CD workflows? Check out our
-[documentation]({{< ref "/docs/reference/cd" >}}) for integrating
+[documentation]({{< ref "/docs/console/continuous-delivery" >}}) for integrating
 with several popular CI/CD systems. Get up and running with Pulumi in CI
-on [GitLab]({{< ref "/docs/reference/cd-gitlab-ci" >}}),
-[Travis]({{< ref "/docs/reference/cd-travis" >}}),
-[Azure DevOps]({{< ref "/docs/reference/cd-azure-devops" >}}) and more.
+on [GitLab]({{< ref "/docs/console/continuous-delivery/gitlab-ci" >}}),
+[Travis]({{< ref "/docs/console/continuous-delivery/travis" >}}),
+[Azure DevOps]({{< ref "/docs/console/continuous-delivery/azure-devops" >}}) and more.
 Don't see docs for a particular CI system? Let us know or better yet
 file an issue [here](https://github.com/pulumi/docs/issues).
 

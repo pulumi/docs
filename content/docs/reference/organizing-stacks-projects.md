@@ -134,7 +134,8 @@ Pulumi project. However, most users find that a close alignment between Git repo
 structure enables seamless continuous deployment.
 
 In this model, there is a rough correspondence between a Git repo and a Pulumi project, and a Git branch and
-its associated Pulumi stack. Please read more about [how these mapping are maintained here]({{< relref "cd.md" >}}).
+its associated Pulumi stack. Please read more about
+[how these mapping are maintained here]({{< ref "/docs/console/continuous-delivery" >}}).
 
 ## Tagging Stacks
 
