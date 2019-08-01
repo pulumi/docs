@@ -2,6 +2,7 @@
 title: "Creating and Reusing Cloud Components using Package Managers"
 authors: ["chris-smith"]
 tags: ["Infrastructure", "CI/CD"]
+meta_desc: "Pulumi's code-centric approach to infrastructure can make you more productive programming the cloud. Package up, share, and reuse our code just like any other Node.js library."
 date: "2018-08-09"
 
 meta_image: "pulumi-resource-visualization.png"
@@ -9,7 +10,7 @@ meta_image: "pulumi-resource-visualization.png"
 
 
 Hello! A few weeks back I wrote
-a post on [serving static websites on AWS with Pulumi]{{< relref "serving-a-static-website-on-aws-with-pulumi" >}})
+a post on [serving static websites on AWS with Pulumi]({{< relref "serving-a-static-website-on-aws-with-pulumi" >}})
 detailing how to host a static website on AWS. Pulumi allowed me to wire four
 different AWS products together in only 200 lines of code. It would be a
 shame, however if I needed to copy and paste that code every time I

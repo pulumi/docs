@@ -2,6 +2,7 @@
 title: "Building a future of cloud engineering"
 authors: ["joe-duffy"]
 tags: ["Pulumi-News"]
+meta_desc: "Using your favorite general purpose programming language and express the entirety of your cloud software. Program the cloud with Pulumi."
 date: "2018-10-22"
 ---
 

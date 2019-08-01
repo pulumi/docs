@@ -2,6 +2,7 @@
 title: "Cloud Native Infrastructure with Kubernetes and Pulumi"
 authors: ["joe-duffy"]
 tags: ["Kubernetes"]
+meta_desc: "Pulumi for Kubernetes is a way to create, deploy, and manage Kubernetes applications using your favorite programming languges. This works across AWS, Azure, Google Cloud, etc."
 date: "2018-09-12"
 
 meta_image: "diff.gif"

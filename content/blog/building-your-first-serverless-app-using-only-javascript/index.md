@@ -2,6 +2,7 @@
 title: "Build your first serverless app using only JavaScript"
 authors: ["marc-holmes"]
 tags: ["Serverless"]
+meta_desc: "This tutorial shows how to use Pulumi to build a complete serverless application using JavaScript. No YAML needed."
 date: "2018-07-05"
 
 meta_image: "code-completion.gif"

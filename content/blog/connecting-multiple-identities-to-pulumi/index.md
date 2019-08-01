@@ -2,6 +2,7 @@
 title: "Connecting multiple identities to Pulumi"
 authors: ["praneet-loke"]
 tags: ["CI/CD"]
+meta_desc: "Pulumi now supports multiple identities for a single Pulumi account in the Pulumi Cloud Console."
 date: "2018-12-14"
 
 meta_image: "multi-id.gif"
