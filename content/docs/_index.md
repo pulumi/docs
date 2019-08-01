@@ -18,11 +18,19 @@ Describe your resources in code---VMs, networks, databases, containers, Kubernet
     <a class="btn btn-lg mx-1 my-1" href="{{< relref "/docs/quickstart" >}}">GET STARTED</a>
 </div>
 
-<div class="my-4 bg-gray-100 border-t border-b border-gray-300 md:flex justify-center py-8 max-w-6xl">
-    <a href="{{< relref "/docs/quickstart/aws" >}}"><img src="/images/docs/quickstart/aws-purple.png"></a>
-    <a href="{{< relref "/docs/quickstart/azure" >}}"><img src="/images/docs/quickstart/azure-purple.png"></a>
-    <a href="{{< relref "/docs/quickstart/gcp" >}}"><img src="/images/docs/quickstart/gcp-purple.png"></a>
-    <a href="{{< relref "/docs/quickstart/kubernetes" >}}"><img src="/images/docs/quickstart/k8s-purple.png"></a>
+<div class="my-4 bg-gray-100 border-t border-b border-gray-300 md:flex justify-between items-center px-4 py-2 max-w-6xl">
+    <a class="block rounded hover:bg-gray-200 transition-all my-2 py-4 text-center px-6" href="{{< relref "/docs/quickstart/aws" >}}">
+        <img class="inline-block h-8 w-auto -mb-2" src="/logos/tech/aws.svg">
+    </a>
+    <a class="block rounded hover:bg-gray-200 transition-all my-2 text-center md:mx-2 py-4 px-6" href="{{< relref "/docs/quickstart/azure" >}}">
+        <img class="inline-block h-8 w-auto" src="/logos/tech/azure.svg">
+    </a>
+    <a class="block rounded hover:bg-gray-200 transition-all my-2 text-center md:mx-2 py-4 px-6" href="{{< relref "/docs/quickstart/gcp" >}}">
+        <img class="inline-block h-8 w-auto" src="/logos/tech/gcp.svg">
+    </a>
+    <a class="block rounded hover:bg-gray-200 transition-all my-2 py-4 text-center px-6" href="{{< relref "/docs/quickstart/kubernetes" >}}">
+        <img class="inline-block h-8 w-auto" src="/logos/tech/k8s.svg">
+    </a>
 </div>
 
 <div class="my-4 md:flex py-8">
