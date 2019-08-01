@@ -86,7 +86,7 @@ This page contains detailed instructions for [installing Pulumi](#install-pulumi
     <p>Please select your operating system.</p>
 </div>
 
-<div id="macos_installation">
+<div id="macos_installation" class="mt-8">
 {{% md %}}
 
 
@@ -133,7 +133,7 @@ If you do not wish to use the previous options, you can install Pulumi manually.
 {{% /md %}}
 </div>
 
-<div id="linux_installation">
+<div id="linux_installation" class="mt-8">
 {{% md %}}
 
 ### Installation Script
@@ -159,7 +159,7 @@ Alternatively, you can install Pulumi manually. We provide a prebuilt binary for
 {{% /md %}}
 </div>
 
-<div id="windows_installation">
+<div id="windows_installation" class="mt-8">
 {{% md %}}
 
 ### Installation Script
@@ -198,7 +198,7 @@ Alternatively, you can install Pulumi manually.
     }
 </script>
 
-<div id="installation_post">
+<div id="installation_post" class="mt-8">
 {{% md %}}
 ## Verify your Installation
 
