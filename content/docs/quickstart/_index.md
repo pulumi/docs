@@ -3,7 +3,13 @@ title: Get Started
 no_on_this_page: true
 ---
 
-Get started provisioning infrastructure with Pulumi.
+<div class="flex max-w-2xl">
+
+    <p class="text-xl leading-loose text-gray-600">
+        Step-by-step guides for creating, deploying, and managing infrastructure with
+        Pulumi on the cloud using your favorite language
+    </p>
+</div>
 
 ## Choose Your Cloud
 
