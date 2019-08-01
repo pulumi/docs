@@ -1,16 +1,37 @@
 ---
-title: Pulumi Cloud Framework
+title: Pulumi Cloud Framework (Preview)
 ---
 
 <img src="/images/docs/quickstart/cloudfx-purple.png" align="right">
 
-The Cloud framework for Pulumi lets you program infrastructure and application logic, side by side, using simple, high-level, cloud-agnostic building blocks.
+Pulumi Cloud Framework is our multi-cloud framework for building modern container and
+serverless cloud applications. The Cloud framework must be configured with credentials to
+deploy and update resources in the target cloud platform.
 
-The Cloud framework must be configured with credentials to deploy and update resources in the target cloud platform.
+<div class="note note-info" role="alert">
+    <p>
+        <code>@pulumi/cloud</code> is a preview library demonstrating how to build Pulumi
+        components that can abstract over and target multiple clouds.
+    </p>
+    <p>
+        For developers targeting a single cloud platform like AWS, Azure or GCP,
+        we recommend using the
+        <a href="/docs/reference/pkg/nodejs/pulumi/aws"><code>@pulumi/aws</code></a>,
+        <a href="/docs/reference/pkg/nodejs/pulumi/azure"><code>@pulumi/azure</code></a>,
+        and <a href="/docs/reference/pkg/nodejs/pulumi/gcp"><code>@pulumi/gcp</code></a>
+        packages respectively. These packages give you full access to the breadth of the
+        platform's capabilities and come with many abstractions to make developing
+        against that platform easier.
+    </p>
+</div>
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud" >}}) for complete details of the available Cloud framework APIs.
 
-For AWS-specific use cases, see also the [awsx]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}) library which provides higher-level libraries for working with many AWS services.
+See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud" >}})
+for complete details on how to work with `@pulumi/cloud`.
+
+For AWS-specific use cases, see also the 
+[awsx]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}) library which provides
+higher-level libraries for working with many AWS services.
 
 ## Getting Started
 

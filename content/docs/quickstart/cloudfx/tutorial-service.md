@@ -2,7 +2,30 @@
 title: "Tutorial: Containers"
 ---
 
-In this tutorial, we'll use JavaScript to build and deploy a simple container using the [`@pulumi/cloud`]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud" >}}) framework.  This example can be deployed to AWS (on either Fargate or ECS) or to Azure (on ACI).  By authoring our infrastructure using the `@pulumi/cloud` framework, it can be deployed transparently to either cloud (with support for other clouds on the roadmap). The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-containers) is available on GitHub.
+<div class="note note-info" role="alert">
+    <p>
+        <code>@pulumi/cloud</code> is a preview library demonstrating how to build Pulumi
+        components that can abstract over and target multiple clouds.
+    </p>
+    <p>
+        For developers targeting a single cloud platform like AWS, Azure or GCP,
+        we recommend using the
+        <a href="/docs/reference/pkg/nodejs/pulumi/aws"><code>@pulumi/aws</code></a>,
+        <a href="/docs/reference/pkg/nodejs/pulumi/azure"><code>@pulumi/azure</code></a>,
+        and <a href="/docs/reference/pkg/nodejs/pulumi/gcp"><code>@pulumi/gcp</code></a>
+        packages respectively. These packages give you full access to the breadth of the
+        platform's capabilities and come with many abstractions to make developing
+        against that platform easier.
+    </p>
+</div>
+
+In this tutorial, we'll use JavaScript to build and deploy a simple container using the
+[`@pulumi/cloud`]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud" >}}) preview
+library.  This example can be deployed to AWS (on either Fargate or ECS) or to Azure (on
+ACI).  By authoring our infrastructure using `@pulumi/cloud`, it can be deployed
+transparently to either cloud (with support for other clouds on the roadmap). The [code
+for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-containers) is
+available on GitHub.
 
 ## Prerequisites
 

@@ -2,9 +2,33 @@
 title: "Tutorial: Serverless REST APIs with DynamoDB"
 ---
 
-With Pulumi, you can combine infrastructure definitions and application code in one program. The [@pulumi/cloud] library is a set of Pulumi [components]({{< relref "/docs/reference/programming-model.md#components" >}}) that provide a higher-level abstraction over AWS. So, instead of provisioning an API Gateway instance, Lambda functions, and setting up IAM roles, you can use [cloud.API] and define application code at the same time as the infrastructure it depends on.
+<div class="note note-info" role="alert">
+    <p>
+        <code>@pulumi/cloud</code> is a preview library demonstrating how to build Pulumi
+        components that can abstract over and target multiple clouds.
+    </p>
+    <p>
 
-In this tutorial, we'll show how to create a simple REST API that counts the number of times a route has been hit. To implement this API, we need a key-value store, an API endpoint, and a Lambda function.
+        For developers targeting a single cloud platform like AWS, Azure or GCP,
+        we recommend using the
+        <a href="/docs/reference/pkg/nodejs/pulumi/aws"><code>@pulumi/aws</code></a>,
+        <a href="/docs/reference/pkg/nodejs/pulumi/azure"><code>@pulumi/azure</code></a>,
+        and <a href="/docs/reference/pkg/nodejs/pulumi/gcp"><code>@pulumi/gcp</code></a>
+        packages respectively. These packages give you full access to the breadth of the
+        platform's capabilities and come with many abstractions to make developing
+    </p>
+</div>
+
+With Pulumi, you can combine infrastructure definitions and application code in one
+program. The [@pulumi/cloud] preview library is a set of Pulumi [components]({{< relref
+"/docs/reference/programming-model.md#components" >}}) that provide a higher-level
+abstraction over AWS. So, instead of provisioning an API Gateway instance, Lambda
+functions, and setting up IAM roles, you can use [cloud.API] and define application code
+at the same time as the infrastructure it depends on.
+
+In this tutorial, we'll show how to create a simple REST API that counts the number of
+times a route has been hit. To implement this API, we need a key-value store, an API
+endpoint, and a Lambda function.
 
 {{< aws-js-prereqs >}}
 

@@ -60,13 +60,21 @@
                 Pulumi makes it simple to interact with any of the services available from
                 the major cloud vendors, and with Kubernetes.
             </p>
+            <h3>Pulumi Cloud Framework (Preview)</h3>
             <p>
-                The <code>@pulumi/cloud</code> library provides very high level, multi
-                cloud access for deploying container applications, while the specialized
-                <code>@pulumi/cloud-aws</code>,
-                <code>@pulumi/cloud-azure</code>, <code>@pulumi/cloud-gcp</code>, and
-                <code>@pulumi/kubernetes</code> libraries offer fine grained control of
-                the individual cloud vendor services.
+                Pulumi Cloud Framework is our multi-cloud framework for building modern
+                container and serverless cloud applications. <code>@pulumi/cloud</code> is
+                a preview library demonstrating how to build Pulumi components that can
+                abstract over and target multiple clouds.
+            </p>
+            <p>
+                For developers targeting a single cloud platform like AWS, Azure or GCP,
+                we recommend using the
+                <a href="{{ relref . "/docs/reference/pkg/nodejs/pulumi/aws"}}"><code>@pulumi/aws</code></a>,
+                <a href="{{ relref . "/docs/reference/pkg/nodejs/pulumi/azure"}}"><code>@pulumi/azure</code></a>,                 and <a href="{{ relref . "/docs/reference/pkg/nodejs/pulumi/gcp" }}"><code>@pulumi/gcp</code></a>
+                packages respectively. These packages give you full access to the breadth of the
+                platform's capabilities and come with many abstractions to make developing
+                against that platform easier.
             </p>
         </div>
     </section>

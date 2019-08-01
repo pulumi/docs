@@ -2,6 +2,24 @@
 title: "Tutorial: Multi-Cloud Containers and Serverless"
 ---
 
+<div class="note note-info" role="alert">
+    <p>
+        <code>@pulumi/cloud-aws</code> is part of the
+        <a href="/docs/quickstart/cloudfx">Pulumi Cloud Framework</a>
+        which is in preview.
+    </p>
+    <p>
+        For developers targeting a single cloud platform like AWS, Azure or GCP,
+        we recommend using the
+        <a href="/docs/reference/pkg/nodejs/pulumi/aws"><code>@pulumi/aws</code></a>,
+        <a href="/docs/reference/pkg/nodejs/pulumi/azure"><code>@pulumi/azure</code></a>,
+        and <a href="/docs/reference/pkg/nodejs/pulumi/gcp"><code>@pulumi/gcp</code></a>
+        packages respectively. These packages give you full access to the breadth of the
+        platform's capabilities and come with many abstractions to make developing
+        against that platform easier.
+    </p>
+</div>
+
 In this tutorial, we'll use JavaScript to combine serverless, containers and cloud infrastructure together into a
 "Colada" application. We use serverless functions as event triggers and containers for longer-running tasks.
 
