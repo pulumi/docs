@@ -222,7 +222,6 @@ warning: A new version of Pulumi is available. To upgrade from version '0.17.26'
    $ curl -sSL https://get.pulumi.com | sh
 
 or visit https://pulumi.com/docs/reference/install/ for manual instructions and release notes.
-v0.17.26
 ```
 
 <div class="note note-warning" role="alert">
