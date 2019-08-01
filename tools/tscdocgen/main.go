@@ -350,7 +350,12 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		title = fmt.Sprintf("Package %s", e.pkg)
 		pkg = e.pkg
 		pkgvar = camelCase(e.pkg[strings.IndexRune(e.pkg, '/')+1:])
-		readme = filepath.Join(e.srcdir, "README.md")
+
+		if pkgvar == "cloud" {
+			readme = filepath.Join(filepath.Dir(e.srcdir), "README.md")
+		} else {
+			readme = filepath.Join(e.srcdir, "README.md")
+		}
 	} else {
 		title = fmt.Sprintf("Module %s", name)
 		readme = filepath.Join(e.srcdir, name, "README.md")
