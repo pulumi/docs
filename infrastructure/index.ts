@@ -5,7 +5,7 @@ import * as fs from "fs";
 import * as mime from "mime";
 import * as path from "path";
 
-const stackConfig = new pulumi.Config()
+const stackConfig = new pulumi.Config();
 
 const config = {
     // pathToWebsiteContents is a relative path to the website's contents.
@@ -75,7 +75,31 @@ const logsBucket = new aws.s3.Bucket(
         protect: true,
     });
 
-const oneMinute = 60;
+const fiveMinutes = 60 * 5;
+const oneHour = fiveMinutes * 12;
+const oneWeek = oneHour * 24 * 7;
+
+const baseCacheBehavior = {
+    targetOriginId: contentBucket.arn,
+    compress: true,
+
+    viewerProtocolPolicy: "redirect-to-https",
+
+    allowedMethods: ["GET", "HEAD", "OPTIONS"],
+    cachedMethods: ["GET", "HEAD", "OPTIONS"],
+
+    // S3 doesn't need take any of these values into account when serving content.
+    forwardedValues: {
+        cookies: {
+            forward: "none",
+        },
+        queryString: false,
+    },
+
+    minTtl: 0,
+    defaultTtl: fiveMinutes,
+    maxTtl: fiveMinutes,
+};
 
 // distributionArgs configures the CloudFront distribution. Relevant documentation:
 // https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html
@@ -106,26 +130,53 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     defaultRootObject: "index.html",
 
     defaultCacheBehavior: {
-        targetOriginId: contentBucket.arn,
-        compress: true,
-
-        viewerProtocolPolicy: "redirect-to-https",
-
-        allowedMethods: ["GET", "HEAD", "OPTIONS"],
-        cachedMethods: ["GET", "HEAD", "OPTIONS"],
-
-        // S3 doesn't need take any of these values into account when serving content.
-        forwardedValues: {
-            cookies: {
-                forward: "none",
-            },
-            queryString: false,
-        },
-
-        minTtl: 0,
-        defaultTtl: oneMinute,
-        maxTtl: oneMinute,
+        ...baseCacheBehavior,
     },
+
+    orderedCacheBehaviors: [
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/css/styles.*.css",
+            defaultTtl: oneWeek,
+            maxTtl: oneWeek,
+        },
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/js/bundle.min.*.js",
+            defaultTtl: oneWeek,
+            maxTtl: oneWeek,
+        },
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/js/search.min.*.js",
+            defaultTtl: oneWeek,
+            maxTtl: oneWeek,
+        },
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/fonts/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+        },
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/icons/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+        },
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/logos/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+        },
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/images/home/*",
+            defaultTtl: oneHour,
+            maxTtl: oneHour,
+        },
+    ],
 
     // "All" is the most broad distribution, and also the most expensive.
     // "100" is the least broad, and also the least expensive.
@@ -137,7 +188,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             errorCode: 404,
             responseCode: 404,
-            errorCachingMinTtl: oneMinute,
+            errorCachingMinTtl: fiveMinutes,
             responsePagePath: "/404.html",
         },
     ],
