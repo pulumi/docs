@@ -1,9 +1,11 @@
 ---
 title: Codefresh
-expanded_url: /docs/reference/cd/
+
 menu:
-  reference:
-    parent: cd
+    console:
+        parent: cont_delivery
+
+aliases: [/docs/reference/cd-codefresh/]
 ---
 
 [Codefresh](https://codefresh.io) is a CI/CD platform designed for containers and microservices. It has built-in support for Docker, Kubernetes and Helm.

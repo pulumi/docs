@@ -1,9 +1,11 @@
 ---
 title: AWS Code Services
-expanded_url: /docs/reference/cd/
+
 menu:
-  reference:
-    parent: cd
+    console:
+        parent: cont_delivery
+
+aliases: [/docs/reference/cd-aws-code-services/]
 ---
 
 [Amazon Code Services](https://aws.amazon.com/products/developer-tools/) encompases a variety

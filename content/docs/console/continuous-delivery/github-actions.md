@@ -1,9 +1,11 @@
 ---
 title: "Pulumi GitHub Actions"
-expanded_url: /docs/reference/cd/
+
 menu:
-  reference:
-    parent: cd
+    console:
+        parent: cont_delivery
+
+aliases: [/docs/reference/cd-github-actions/]
 ---
 
 Pulumi's [GitHub Actions](https://developer.github.com/actions) help you deploy apps and infrastructure
@@ -122,7 +124,7 @@ Pulumi's Cloud Console with more details:
 
 ![Action Logs](/images/docs/reference/gh-actions-logs.png)
 
-For even better Pull Request integration, make sure to also [install our GitHub App]({{< relref "cd-github.md" >}})!
+For even better Pull Request integration, make sure to also [install our GitHub App]({{< relref "github.md" >}})!
 
 ![Action Pull Requests](/images/docs/reference/gh-actions-prs.png)
 
@@ -173,7 +175,7 @@ container directly.
 
 ## Pulumi GitHub App
 
-The [Pulumi GitHub App]({{< relref "cd-github.md" >}}) is something you install into your GitHub
+The [Pulumi GitHub App]({{< relref "github.md" >}}) is something you install into your GitHub
 organization, that will allow the Pulumi service to leave comments on Pull Requests. (It will not have access
 to your source code.)
 

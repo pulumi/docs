@@ -1,9 +1,11 @@
 ---
 title: Google Cloud Build
-expanded_url: /docs/reference/cd/
+
 menu:
-  reference:
-    parent: cd
+    console:
+        parent: cont_delivery
+
+aliases: [/docs/reference/cd-google-cloud-build/]
 ---
 
 ## Prerequisites

@@ -2,6 +2,12 @@
 # Command Line Menu
 # -------------------------------------
 
+[[console]]
+    name = "Continuous Delivery"
+    identifier = "cont_delivery"
+    url = "/docs/console/continuous-delivery/"
+    weight = 1
+
 [[reference]]
     name = "Cancel"
     parent = "cli"

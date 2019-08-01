@@ -1,9 +1,11 @@
 ---
 title: CircleCI
-expanded_url: /docs/reference/cd/
+
 menu:
-  reference:
-    parent: cd
+    console:
+        parent: cont_delivery
+
+aliases: [/docs/reference/cd-circleci/]
 ---
 
 This page details how to use [CircleCI](https://circleci.com/) to deploy Pulumi stacks.

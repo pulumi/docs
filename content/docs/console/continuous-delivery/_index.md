@@ -1,9 +1,5 @@
 ---
-title: Continuous Delivery
-menu:
-  reference:
-    identifier: cd
-    weight: 8
+title: "Continuous Delivery"
 ---
 
 Continuous delivery is an approach to managing cloud applications and infrastructure where all changes are
@@ -25,21 +21,21 @@ aiming to replace these existing systems, Pulumi prefers to let you leverage exi
 
 Here are examples for many CI/CD systems that Pulumi integrates with:
 
-* [AWS Code Services]({{< relref "cd-aws-code-services.md" >}})
-* [Azure DevOps]({{< relref "cd-azure-devops" >}})
-* [CircleCI]({{< relref "cd-circleci.md" >}})
-* [Codefresh]({{< relref "cd-codefresh.md" >}})
-* [GitHub Actions]({{< relref "cd-github-actions.md" >}})
-* [GitLab CI]({{< relref "cd-gitlab-ci.md" >}})
-* [Google Cloud Build]({{< relref "cd-google-cloud-build.md" >}})
-* [Travis]({{< relref "cd-travis.md" >}})
+* [AWS Code Services]({{< relref "aws-code-services.md" >}})
+* [Azure DevOps]({{< relref "azure-devops" >}})
+* [CircleCI]({{< relref "circleci.md" >}})
+* [Codefresh]({{< relref "codefresh.md" >}})
+* [GitHub Actions]({{< relref "github-actions.md" >}})
+* [GitLab CI]({{< relref "gitlab-ci.md" >}})
+* [Google Cloud Build]({{< relref "google-cloud-build.md" >}})
+* [Travis]({{< relref "travis.md" >}})
 
 Continuous integration encompasses the system you use for automatically testing your source code, usually upon
 commits to a particular branch. This relates to, but is independent from, continuous deployment (CD), which deploys
 a subset of these code changes after specific gates have been passed (certain tests passing, approval, and so on).
 
 Pulumi can also bridge results from your CI/CD system with GitHub, for example surfacing the results of stack
-updates on GitHub pull requests. See [Pulumi GitHub App]({{< relref "cd-github.md" >}}) for more information.
+updates on GitHub pull requests. See [Pulumi GitHub App]({{< relref "github.md" >}}) for more information.
 
 ## Managing Environments
 
@@ -63,7 +59,7 @@ to use one branch-per-[stack]({{< relref "stack.md" >}}). This allows you to con
 using your usual commit, code review, and approval process, such as GitHub pull requests.
 
 If you are using GitHub pull requests to trigger updates, you will likely want to use the
-[Pulumi GitHub App]({{< relref "cd-github.md" >}}). This gives you interactive infrastructure change previews
+[Pulumi GitHub App]({{< relref "github.md" >}}). This gives you interactive infrastructure change previews
 inside of your Pull Request, making it easier to see, review, and comment on any changes before a deployment occurs.
 
 ### How to Achieve Continuous Delivery for an Environment
@@ -91,4 +87,4 @@ changes. The difference, however, is that with continuous delivery, there is an 
 The major difference between the two, however, is that continuous delivery includes an approval process before
 updating your production environments. The benefit is that continuous delivery tooling and automation intrinsically
 supports better visibility into changes before they happen, compared to continuous deployment, something that Pulumi
-fully embraces with its preview model and services like [GitHub Pull Request integration]({{< relref "cd-github.md" >}}).
+fully embraces with its preview model and services like [GitHub Pull Request integration]({{< relref "github.md" >}}).
