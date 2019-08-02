@@ -10,14 +10,6 @@ in AWS Lambda. We'll do this with 5 lines of JavaScript, a few lines of configur
 wish to serve (in this case, a simple HTML page and a favicon). After seeing this in action, we'll build on these basic
 concepts to explore additional containers, serverless, and infrastructure tutorials.
 
-## What we'll do
-
-- **Initialize** a new Pulumi project
-- **Define** our program in JavaScript
-- **Deploy** our stack to AWS
-- **Manage** our stack in the Pulumi dashboard
-- Tear it down
-
 {{< aws-js-prereqs >}}
 
 ## Initialize the project

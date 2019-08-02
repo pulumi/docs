@@ -3,97 +3,97 @@
 # -------------------------------------
 
 [[reference]]
-    name = "Cancel"
+    name = "cancel"
     parent = "cli"
     url = "/docs/reference/cli/pulumi_cancel/"
     weight = 1
 
 [[reference]]
-    name = "Config"
+    name = "config"
     parent = "cli"
     url = "/docs/reference/cli/pulumi_config/"
     weight = 2
 
 [[reference]]
-    name = "Destroy"
+    name = "destroy"
     parent = "cli"
     url = "/docs/reference/cli/pulumi_destroy/"
     weight = 3
 
 [[reference]]
-    name = "History"
+    name = "history"
     parent = "cli"
     url = "/docs/reference/cli/pulumi_history/"
     weight = 4
 
 [[reference]]
-    name = "Login"
+    name = "login"
     parent = "cli"
     url = "/docs/reference/cli/pulumi_login/"
     weight = 5
 
 [[reference]]
-    name = "Logout"
+    name = "logout"
     parent = "cli"
     url = "/docs/reference/cli/pulumi_logout/"
     weight = 6
 
 [[reference]]
-    name = "Logs"
+    name = "logs"
     parent = "cli"
     url = "/docs/reference/cli/pulumi_logs/"
     weight = 7
 
 [[reference]]
-    name = "New"
+    name = "new"
     parent = "cli"
     url = "/docs/reference/cli/pulumi_new/"
     weight = 8
 
 [[reference]]
-    name = "Plugin"
+    name = "plugin"
     parent = "cli"
     url = "/docs/reference/cli/pulumi_plugin/"
     weight = 9
 
 [[reference]]
-    name = "Preview"
+    name = "preview"
     parent = "cli"
     url = "/docs/reference/cli/pulumi_preview/"
     weight = 10
 
 [[reference]]
-    name = "Refresh"
+    name = "refresh"
     parent = "cli"
     url = "/docs/reference/cli/pulumi_refresh/"
     weight = 11
 
 [[reference]]
-    name = "Stack"
+    name = "stack"
     parent = "cli"
     url = "/docs/reference/cli/pulumi_stack/"
     weight = 12
 
 [[reference]]
-    name = "State"
+    name = "state"
     parent = "cli"
     url = "/docs/reference/cli/pulumi_state/"
     weight = 13
 
 [[reference]]
-    name = "Update"
+    name = "up"
     parent = "cli"
     url = "/docs/reference/cli/pulumi_up/"
     weight = 14
 
 [[reference]]
-    name = "Version"
+    name = "version"
     parent = "cli"
     url = "/docs/reference/cli/pulumi_version/"
     weight = 15
 
 [[reference]]
-    name = "WhoamI"
+    name = "whoami"
     parent = "cli"
     url = "/docs/reference/cli/pulumi_whoami/"
     weight = 16

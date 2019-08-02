@@ -2,7 +2,7 @@
 title: Reference
 ---
 
-This section provides all published technical documentation for the Pulumi platform. Refer to the index below to help navigate around the content.
+This section provides all published technical documentation for the Pulumi platform.
 
 {{< get-started-note >}}
 
