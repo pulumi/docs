@@ -4,9 +4,7 @@ title: Reference
 
 This section provides all published technical documentation for the Pulumi platform.
 
-If you are just getting started, please refer to the [Get Started]({{< relref "/docs/quickstart" >}}) section,
-which features installation instructions and hands-on tutorials for many cloud providers. Otherwise,
-please refer to the index below to help navigate around the content.
+{{< get-started-note >}}
 
 ## Learning Pulumi
 
