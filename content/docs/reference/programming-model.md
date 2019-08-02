@@ -61,9 +61,9 @@ In Pulumi, you can group multiple resources in a [component](#components). A com
 
 ## Programs {#programs}
 
-Pulumi programs are authored in general purpose programming languages such as [JavaScript]({{< relref "javascript.md" >}}) or [Python]({{< relref "python.md" >}}). You can use any packages supported by the language's package manager, as well as [Pulumi packages]({{< relref "pkg" >}}).
+Pulumi programs are authored in general-purpose programming languages such as [JavaScript]({{< relref "javascript.md" >}}) or [Python]({{< relref "python.md" >}}). You can use any packages supported by the language's package manager, as well as [Pulumi packages]({{< relref "pkg" >}}).
 
-When `pulumi up` is run, your Pulumi program is run and the Pulumi CLI determines the desired state of application resources. A Pulumi program can reference artifacts that have already been published (such as S3 objects or pre-built Docker images) or it can define application resources itself so that everything is versioned together. For example, if your program uses `cloud.Service` with a `build` step, or defines a Lambda for an S3 trigger, you're defining application code that is implicitly deployed during the `pulumi up`.
+When `pulumi up` is run, your Pulumi program is run and the Pulumi CLI determines the desired state of application resources. A Pulumi program can reference artifacts that have already been published (such as S3 objects or prebuilt Docker images) or it can define application resources itself so that everything is versioned together. For example, if your program uses `cloud.Service` with a `build` step, or defines a Lambda for an S3 trigger, you're defining application code that is implicitly deployed during the `pulumi up`.
 
 A Pulumi program is contained within a [project]({{< relref "project.md" >}}). In JavaScript, the `main` property of `package.json` defines the entry point for the Pulumi program.
 
@@ -79,9 +79,9 @@ Dependencies between resources are encoded with [pulumi.Output](#outputs).
 
 This package also provides the following helpers:
 
-- [pulumi.getStack] to get information about the current stack
+- [pulumi.getStack] for getting information about the current stack
 - [pulumi.log] for logging deployment information
-- [pulumi.runtime.serializeFunction] for turning JavaScript callbacks into data which can be [used as application code](#runtime).
+- [pulumi.runtime.serializeFunction] for turning JavaScript callbacks into data which can be [used as application code](#runtime)
 
 ## Resources {#resources}
 
@@ -107,7 +107,7 @@ res, err := NewResource(ctx, name, args, opt1, opt2)
 
 All resources have a [`name`](#names), which must be unique in the Pulumi program.
 
-The `args` provided to a resource determine what inputs will be used to initialize the resource.  These can typically be either raw values or [outputs from other resources](#outputs).
+The `args` provided to a resource determine what inputs will be used to initialize the resource.  These can be either raw values or [outputs from other resources](#outputs).
 
 ### Resource options {#resourceoptions}
 
@@ -249,7 +249,7 @@ res2, _ := MyResource(ctx, "res2", pulumi.ResourceOpt{DependsOn: []Resource{res1
 ```
 
 ###### `ignoreChanges`
-Provides a list of properties which will be ignored as part of updates. The value of the property will be used for newly created resources, but will not be used as part of updates. This is typically used to avoid changes in properties leading to diffs or to change defaults for a property without forcing all existing deployed stacks to update or replace the affected resource.
+Provides a list of properties which will be ignored as part of updates. The value of the property will be used for newly created resources, but will not be used as part of updates. You would use this option to avoid changes in properties leading to diffs or to change defaults for a property without forcing all existing deployed stacks to update or replace the affected resource.
 
 {{< langchoose >}}
 
@@ -380,7 +380,7 @@ Every resource managed by Pulumi has a name.  This name is used to track the ide
 
 #### URNs {#urns}
 
-The URN of a resource is constructed from the name provided by the resource, the type of the resource, and the types of all the parent component resources.  It also includes information about the project and stack.  For example:
+The Unique Resource Name (URN) of a resource is constructed from the name provided by the resource, the type of the resource, and the types of all the parent component resources.  It also includes information about the project and stack.  For example:
 
 ```
 urn:pulumi:thumbnailer-twitch::video-thumbnailer::cloud:bucket:Bucket$cloud:function:Function::onNewThumbnail
@@ -389,19 +389,19 @@ urn:pulumi:    <stackname>   ::  <projectname>  ::    <parenttype>   $     <reso
 
 > Note: It is likely that the format of the URN will be changed in the future to be simpler and more flexible.
 
-Because it is used as the unique identity of a resource within a stack, this URN must be unique for each resource created by a single Pulumi program.  In particular, this requires that the resource name must be unique among resources of the same type with the same type of parent component.
+Since the URN serves as the unique identity of a resource within a stack, it must be unique for each resource created by a single Pulumi program.  In particular, this requires that the resource name must be unique among resources of the same type with the same type of parent component.
 
-Any change to the URN of a resource will cause the old and new resources to be treated as unrelated - the new one will be created (since it was not in the prior state) and the old one will be deleted (since it is not in the new desired state). This includes changing the `name` used to construct the resource or changing the parent of a resource.  Both of these operations will lead to a different URN, and thus to a `create` and a `delete` operation instead of an `update` or `replace` operation of the resource.  As a result, changes to names must be made with care.
+Any change to the URN of a resource will cause the old and new resources to be treated as unrelated---the new one will be created (since it was not in the prior state) and the old one will be deleted (since it is not in the new desired state). This includes changing the `name` used to construct the resource or changing the parent of a resource.  Both of these operations will lead to a different URN, and a `create` and a `delete` operation instead of an `update` or `replace` operation of the resource.  As a result, changes to names must be made with care.
 
-Resources constructed as children of a [component](#components) should make sure that their names will be unique across multiple instances of the component.  In general, that means that the name of the component instance itself (the `name` parameter passed in to the component constructor) shoud be used as part of the name of the child resources.
+Resources constructed as children of a [component](#components) should make sure that their names will be unique across multiple instances of the component.  In general, the name of the component instance itself (the `name` parameter passed in to the component constructor) shoud be used as part of the name of the child resources.
 
 #### Auto-naming {#autonaming}
 
-The name of a resource is also used by many providers as a default prefix for constructing the cloud-provider name for the resource.  For example, constructing a `new aws.s3.Bucket("mybucket")` will result in an AWS bucket named something like `mybucket-eb24ea8`.
+The name of a resource is also used by many providers as a default prefix for constructing the cloud provider name for the resource.  For example, constructing a `new aws.s3.Bucket("mybucket")` will result in an AWS bucket named something like `mybucket-eb24ea8`.
 
 This random postfix is added by default for two reasons.  First, it ensures that two instances of a program can be deployed to the same environment without risk of name collisions.  Second, it ensures that it will be possible to do zero-downtime replacements when needed, by creating the new resource first, updating any references to point to it, and then deleting the old resource.
 
-In cases where the two proprties above are not required, and where it would be useful to be able to precisely specify the name, it is typically possible to provide a `name: ` argument to the resource inputs to specify an explicit cloud-provider name.  For resources that may need to be replaced, this will often require also specifying `deleteBeforeReplace: true` in the resources's `ResourceOptions`.
+In cases where the two properties above are not required, and where it would be useful to be able to precisely specify the name, it is typically possible to provide a `name: ` argument to the resource inputs to specify an explicit cloud-provider name.  For resources that may need to be replaced, this will often require also specifying `deleteBeforeReplace: true` in the resources's `ResourceOptions`.
 
 #### Resource get (#resource-get)
 
@@ -448,11 +448,11 @@ url := virtualmachine.DnsName().Apply(func(dnsName string) (interface{}, error) 
 
 The `apply` method accepts a callback which will be passed the value of the `Output` when it is available, and which returns the new value.  The result of the call to `apply` is a new `Output` whose value is the value returned from the callback, and which includes the dependencies of the original `Output`.  If the callback itself returns an `Output`, the dependencies of that output are unioned into the dependencies of the returned `Output`.
 
-> _Note_: Several common types of transformations can be done more convienently.  See [Accessing properties of an Output](#lifting) for how to access Output value properties simply.   Also, `Output` itself cannot be used directly in string concatenation as it is not itself the value of the output.  See (Working with Outputs and strings)[#ouputs-and-strings] for examples of how to more simply work use the two together.  For cases where these convenience forms are not sufficient, `.apply` is available the most general way to transform one `Output` into another.
+> _Note_: Several common types of transformations can be done more conveniently.  See [Accessing properties of an Output](#lifting) for how to access Output value properties simply.   Also, `Output` itself cannot be used directly in string concatenation as it is not itself the value of the output.  See (Working with Outputs and strings)[#ouputs-and-strings] for examples of how to use the two together.  In cases where these convenience forms are not sufficient, `.apply` is the most general way to transform one `Output` into another.
 
 ##### Accessing properties of an Output {#lifting}
 
-It is common to need to only access some property of the value of an `Output` in order to pass in that property to another `Resource`.  For example, when using ACM certificates one might write:
+It is common to only need access to some property of the value of an `Output` in order to pass in that property to another `Resource`.  For example, when using ACM certificates, one might write:
 
 {{< langchoose >}}
 
@@ -497,7 +497,7 @@ record = aws.route53.Record("validation",
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-To make this kind of property and array-element access more simple, an `Output` 'lifts' the properties of the value that is wrapped, allowing you to access them directly off of the `Output` itself.  This allows the above to be more simply written as:
+To make this kind of property and array element access more simple, an `Output` _lifts_ the properties of the value that is wrapped, allowing you to access them directly off of the `Output` itself.  This allows the previous example to be written more simply as:
 
 {{< langchoose >}}
 
@@ -603,7 +603,7 @@ def split(input):
 
 ##### Working with Outputs and strings {#outputs-and-strings}
 
-It's very common to want to build a string out of the values contained in `Outputs`.  Common uses for this are to either provide a custom [stack output](#stack-outputs), or to provide a dynamically computed string as an [Input]({{< relref "pkg/nodejs/pulumi/pulumi#Input" >}}) to another Resource.  For example, say you had the following:
+It's very common to want to build a string out of the values contained in `Outputs`.  Common uses include either providing a custom [stack output](#stack-outputs), or providing a dynamically computed string as an [Input]({{< relref "pkg/nodejs/pulumi/pulumi#Input" >}}) to another Resource.  For example, say you had the following:
 
 {{< langchoose >}}
 
@@ -637,7 +637,7 @@ url = # ?
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-Using [.apply](#apply) and [.all](#all) this could be solved as shown above like so:
+Using [.apply](#apply) and [.all](#all), this could be solved as shown previously like so:
 
 ```javascript
 const url = pulumi.all([hostname, port]).apply(([hostname, port]) => `http://${hostname}:${port}/`);
@@ -679,11 +679,11 @@ url = Output.concat("http://", hostname, ":", post, "/")
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-`concat` takes a list of arguments that can be `Inputs`, `Outputs`, `Promises` and simple values, and creates an `Output` with all their underlying values concatenated together.  `interpolate` (JavaScript-only) does the same, but allows you to use a JavaScript `template literal` if that's your preferred way of combining values into strings.
+`concat` takes a list of arguments that can be `Inputs`, `Outputs`, `Promises`, and simple values, and creates an `Output` with all their underlying values concatenated together.  `interpolate`---which is JavaScript only---does the same, but allows you to use a JavaScript `template literal` if that is your preferred way of combining values into strings.
 
 ## Secrets {#secrets}
 
-When constructing resources, Pulumi will record all inputs and outputs from a resource it is state file.  Some of these properties may contain sensitive data, which should be encrypted before being stored in the state file. For example, consider the following program which creates an AWS Parameter Store parameter.
+When constructing resources, Pulumi will record all inputs and outputs from a resource to its _state file_.  Some of these properties may contain sensitive data, which should be encrypted before being stored in the state file. For example, consider the following program which creates an AWS Parameter Store parameter.
 
 {{< langchoose >}}
 
@@ -711,17 +711,17 @@ param = ssm.Parameter("a-secret-param",
 ```
 
 ```go
-// Secrets are not yet avaiaible in Go.
+// Secrets are not yet available in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/2820
 ```
 
-As written, the state file for this program will show the plaintext value of the "my-secret-value" configuration variable as an input to the `Parameter` resource.  Pulumi provides a way to mark a value as "secret" such that if it stored in the state file, it will be encrypted in the same way secret configuration values are.  There are two ways to create secret values:
+As written, the _state file_ for this program will show the plaintext value of the "my-secret-value" configuration variable as an input to the `Parameter` resource.  Pulumi provides a way to mark a value as "secret" such that if stored in the state file, it will be encrypted in the same way secret configuration values are.  There are two ways to create secret values:
 
-1. By calling `requireSecret` or `getSecret` (JavaScript) or `require_secret` or `get_secret` (Python) when reading a value from config.
-2. Using `pulumi.secret` (JavaScript) or `Output.secret` (Python) to construct a secret from an existing value.
+- By calling `requireSecret` or `getSecret` (JavaScript) or `require_secret` or `get_secret` (Python) when reading a value from config, or
+- By using `pulumi.secret` (JavaScript) or `Output.secret` (Python) to construct a secret from an existing value.
 
-We can change the above code to look like the following:
+We can change the previous example to look like the following:
 
 {{< langchoose >}}
 
@@ -754,19 +754,19 @@ param = ssm.Parameter("a-secret-param",
 // See https://github.com/pulumi/pulumi/issues/2820
 ```
 
-In which case the value property of the `Parameter` resource will now be encrypted in the state file.
+With this change, the value property of the `Parameter` resource will now be encrypted in the _state file_.
 
-Secrets behave just like normal `Output`'s in Pulumi (in fact, their type is simply `Output`), except they are marked internally as needed to be encrypted before being persisted in the state file. When you combine an existing Output that is marked as a secret (either via `apply` or `all`) with out values, the resulting Output is also marked as a secret.
+Secrets behave just like normal Outputs in Pulumi, with `Output` as their type. The only difference is that they are marked internally as needed to be encrypted before being persisted in the _state file_. When you combine an existing Output that is marked as a secret (either via `apply` or `all`) with out values, the resulting Output is also marked as a secret.
 
-> __Note__: During an `apply` you have access to the raw value of the underlying secret.  While Pulumi ensures that the value returned from an `apply` is marked as secret, it can not enforce that any work done inside the `apply` itself will not leak the secret value.  For example, inside an apply you could explicitly make a call to print the value to the console or save it to a file. Becasue of this, care must be taken inside the apply to ensure your code does not cause the value to be leaked.
+> __Note__: During an `apply`, you have access to the raw value of the underlying secret.  While Pulumi ensures that the value returned from an `apply` is marked as secret, it cannot enforce that any work done inside the `apply` itself will not leak the secret value.  For example, inside an apply, you could explicitly make a call to print the value to the console or save it to a file. Because of this, care must be taken inside the apply to ensure your code does not cause the value to be leaked.
 
-Unlike regular Outputs, secret outputs cannot be captured by Pulumi closure serialization system and attempting to do so will lead to an exception. We do plan to support this once we can ensure the values will be persisted securely (see [pulumi/pulumi#2718](https://github.com/pulumi/pulumi/issues/2718)).
+> Unlike regular Outputs, secret outputs cannot be captured by Pulumi closure serialization system and attempting to do so will lead to an exception. We do plan to support this once we can ensure that the values will be persisted securely. See [pulumi/pulumi#2718](https://github.com/pulumi/pulumi/issues/2718)).
 
-While Pulumi ensures that any outputs of a resource which have coresponding secret inputs are marked as secrets, there may be additional outputs that you wish to mark as secrets. In this case, you can pass the `additionalSecretOutputs` (JavaScript) or `additional_secret_outputs` (Python) option when creating a resource to ensure these extra output values are encrypted before being stored in the state file.
+While Pulumi ensures that any outputs of a resource which have coresponding secret inputs are marked as secrets, there may be additional outputs that you wish to mark as secrets. In this case, you can pass the `additionalSecretOutputs` option for JavaScript or `additional_secret_outputs` for Python when creating a resource to ensure these extra output values are encrypted before being stored in the _state file_.
 
 ## Stack output {#stack-outputs}
 
-A [stack output]({{< relref "stack.md#outputs" >}}) is a value exported from a stack. A stack's outputs can be easily retrieved from the Pulumi CLI and is displayed on pulumi.com. To export values from a stack, use the following definition in the top-level of the entry point for your project:
+A [stack output]({{< relref "stack.md#outputs" >}}) is a value exported from a stack. A stack's outputs can be easily retrieved from the Pulumi CLI and is displayed on pulumi.com. To export values from a stack, use the following definition in the top-level of the entrypoint for your project:
 
 {{< langchoose >}}
 
@@ -790,7 +790,7 @@ From the CLI, you can then use `pulumi stack output url` to get the value and in
 
 The right-hand side of a stack export can be a regular JavaScript value, an [Output](#outputs), or a `Promise`. The actual value will be resolved at the end of `pulumi up`.
 
-Stack exports are JSON serialized, though quotes are removed when exporting just a string value. For example:
+Stack exports are JSON-serialized, though quotes are removed when exporting a string value. For example:
 
 {{< langchoose >}}
 
@@ -835,7 +835,9 @@ $ pulumi stack output --json
 }
 ```
 
-If a stack contains any output values which are marked as secrets, their values will not be shown by default (instead they will be displayed as `[secret]` in the CLI). You may pass `--show-secrets` to `pulumi stack output` to see the plaintext value.
+If a stack contains any output values which are marked as secrets, their values will not be shown by default. Instead, they will be displayed as `[secret]` in the CLI.
+
+You may pass `--show-secrets` to `pulumi stack output` to see the plaintext value.
 
 ## Config {#config}
 
@@ -867,7 +869,7 @@ name = conf.Require("name");
 fmt.Printf("Hello, %s!", name);
 ```
 
-Config values can be retrieved using [config.get] or [config.require].  Using `get` will return `undefined` if the configuration value was not provided, and `require` will raise an exception with a helpful error message to prevent the deployment from continuing.
+Configuration values can be retrieved using [config.get] or [config.require].  Using `get` will return `undefined` if the configuration value was not provided, and `require` will raise an exception with a helpful error message to prevent the deployment from continuing.
 
 Configuration values are always stored as strings, but can be parsed as richly typed values.  For example, [config.getNumber] will convert the string value to a number and return a `Number` value instead of a string.  It will raise an exception if the value cannot be parsed as a number.
 
@@ -899,12 +901,12 @@ print(f"Active: ${data.active}")
 ```
 
 ```go
-// JSON parsing helpers for config are not built-in for Go currently.
+// JSON parsing helpers for config are currently not built-in for Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-The `Config` object also provides functions to get the value from configuration and mark it as a secret. See [config.getSecret] or [config.requireSecret].  Unlike the [config.get] and [config.require], these methods return an `Output<T>` which holds the underlying value and ensures that it is encrypted when it is being persisted.
+The `Config` object also provides functions to get the value from configuration and mark it as a secret. See [config.getSecret] or [config.requireSecret]. Unlike [config.get] and [config.require], these methods return an `Output<T>` which holds the underlying value and ensures that it is encrypted when it is being persisted.
 
 ## Components {#components}
 
@@ -939,14 +941,14 @@ class MyResource(pulumi.ComponentResource):
 ```
 
 ```go
-// ComponentResources are not directly supported in Go currently.
+// ComponentResources are currently not directly supported in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
 The call to `super` registers the component instance with the Pulumi engine. This records the resource in the checkpoint and tracks it across program deployments. Since all resources must have a name, a component constructor should accept a name and pass it to `super`.
 
-A component must register a namespace, such as `pkg:MyResource` in the example above. To reduce the potential of name conflicts, this name should contain the package name and resource type, such as `aws:lambda:Function`. The format `<package>:<module>:<type>` is typically used, though not currently fully enforced.
+A component must register a namespace, such as `pkg:MyResource` in the previous example. To reduce the potential of name conflicts, this name should contain the package name and resource type, such as `aws:lambda:Function`. The format `<package>:<module>:<type>` is typically used, though not currently fully enforced.
 
 Components will often contain child resources. To track this relationship, pass the component instance as the parent when constructing a resource:
 
@@ -992,7 +994,7 @@ self.register_outputs({
 ```
 
 ```go
-// ComponentResources are not directly supported in Go currently.
+// ComponentResources are currently not directly supported in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
@@ -1017,7 +1019,7 @@ component = MyResource("component", ResourceOptions(providers={
 ```
 
 ```go
-// ComponentResources are not directly supported in Go currently.
+// ComponentResources are currently not directly supported in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
@@ -1026,7 +1028,7 @@ For more information about components, see the [Pulumi Components]({{< relref "c
 
 ## Providers {#providers}
 
-A [CustomResource][pulumi.CustomResource] needs an associated resource provider to manage its Create, Read, Update, and Delete (_CRUD_) operations. This is in contrast to a [ComponentResource][pulumi.ComponentResource], whose logic is authored entirely in a Pulumi program's source language (e.g. Javascript or Python). By default, a `CustomResource`'s provider is determined based on its [package](#packages). This default provider is automatically created by Pulumi, and is configured using its package's [config values](#config). For example, the configuration and program below will create a single EC2 instance in the `us-west-2` region.
+A [CustomResource][pulumi.CustomResource] needs an associated resource provider to manage its Create, Read, Update, and Delete (_CRUD_) operations. This is in contrast to a [ComponentResource][pulumi.ComponentResource], whose logic is authored entirely in a Pulumi program's source language such as Javascript or Python. By default, a provider for a `CustomResource` is determined based on its [package](#packages). This default provider is automatically created by Pulumi, and is configured using the [config values](#config) of the package. For example, the following configuration and program will create a single EC2 instance in the `us-west-2` region.
 
 {{< langchoose >}}
 
@@ -1055,7 +1057,7 @@ instance = ec2.Instance("myInstance", instance_type="t2.micro", ami="myAMI")
 ```
 
 ```go
-// Providers are not supported in Go currently.
+// Providers are currently not supported in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
@@ -1065,7 +1067,7 @@ instance = ec2.Instance("myInstance", instance_type="t2.micro", ami="myAMI")
 $ pulumi config set aws:region us-west-2
 ```
 
-While this works for the majority of Pulumi programs, some programs may have special requirements (e.g. the ability to deploy into multiple AWS regions simultaneously or to deploy into a Kubernetes cluster created earlier in the program) that require explicitly creating, configuring, and referencing providers. This is typically done by instantiating the relevant package's `Provider` type and passing it in the options for each `CustomResource` or `ComponentResource` that needs to use it. For example, the configuration and program below will create an ACM certificate in the `us-east-1` region and a load balancer listener in the `us-west-2` region.
+While this works for the majority of Pulumi programs, some programs may have special requirements. For example, it may require the ability to deploy to multiple AWS regions simultaneously, or to deploy to a Kubernetes cluster created earlier in the program that requires explicitly creating, configuring, and referencing providers. This is typically done by instantiating the relevant package's `Provider` type and passing in the options for each `CustomResource` or `ComponentResource` that needs to use it. For example, the following configuration and program will create an ACM certificate in the `us-east-1` region and a load balancer listener in the `us-west-2` region.
 
 {{< langchoose >}}
 
@@ -1150,7 +1152,7 @@ listener = aws.lb.Listener("listener",
 ```
 
 ```go
-// Providers are not supported in Go currently.
+// Providers are currently not supported in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
@@ -1204,24 +1206,24 @@ my_resource = MyResource("myResource", pulumi.ResourceOptions(providers={
 ```
 
 ```go
-// Providers are not supported in Go currently.
+// Providers are currently not supported in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
 ## Dynamic Providers {#dynamicproviders}
 
-Every `CustomResource` has a provider associated with it which knows how to create/read/update/delete instances of the custom resource in the backing cloud provider.  This provider can be defined by implementing the Pulumi Resource Provider gRPC interface.  There are generally two approaches to implementing this provider interface:
+Every `CustomResource` has a provider associated with it which knows how to `create`, `read`, `update`, and `delete` instances of the custom resource in the backing cloud provider.  This provider can be defined by implementing the Pulumi Resource Provider gRPC interface.  There are generally two approaches to implementing this provider interface:
 
-1. Create a provider binary with the appropriate name and put it on the path, such that it will be loaded to handle CRUD operations from the Pulumi engine on resources from the package it is defined to handle.  For example the `pulumi-resource-aws` binary will handle resources from the `aws` package.  This binary can be authored in any language, but must be authored and distributed out of band of a Pulumi program.
+1. Create a provider binary with the appropriate name and put it on the path, such that it will be loaded to handle CRUD operations from the Pulumi engine on resources from the package it is defined to handle.  For example, the `pulumi-resource-aws` binary will handle resources from the `aws` package.  This binary can be authored in any language, but must be authored and distributed out of band of a Pulumi program.
 2. Define an implementation of the Provider interface directly within your Pulumi program, just for use within that program.
 
-The former is used for most common Pulumi providers like AWS and Kubernetes.  The latter is a concept called Dynamic Providers, which provide a flexible approach to defining custom resource types directly within the source code of your Pulumi program.
+The former is used for most common Pulumi providers like AWS and Kubernetes.  The latter is a concept called _Dynamic Providers_, which provide a flexible approach to defining custom resource types directly within the source code of your Pulumi program.
 
-You should consider implementing a dynamic provider in a few cases:
+You should consider implementing a dynamic provider if:
 
-1. You need to manage a cloud resource for which there is not yet a published Pulumi Provider, but you expect to only use it from within one program.  (If you expect to use it from many programs, and in many languages, implementing a full provider is preferrable.)
-2. You need to integrate custom logic into the deployment workflow that runs exactly during one or more of the create, read, update or delete steps - instead of running "always" as part of a normal Pulumi program.
+1. You need to manage a cloud resource for which there is not yet a published Pulumi Provider, but you expect to only use it from within one program. If you expect to use it from many programs, and in many languages, implementing a full provider is preferrable.
+2. You need to integrate custom logic into the deployment workflow that runs exactly during one or more of the `create`, `read`, `update`, or `delete` steps, instead of running "always" as part of a normal Pulumi program.
 
 Dynamic Providers are defined by first implementing the `pulumi.dynamic.ResourceProvider` interface, including the `create`, `read`, `update` and `delete` operations for your resource, as well as `check` and `diff`.  Default implementations are provided for everything except `create`, so a minimal implementation could look like:
 
@@ -1252,10 +1254,10 @@ class MyProvider(ResourceProvider):
 ```
 
 ```go
-// Dynamic Providers are not supported in Go currently.
+// Dynamic Providers are currently not supported in Go.
 ```
 
-This resource provider is then used to create a new kind of custom resource by inheriting from the `pulumi.dynamic.Resource` base class (a subclass of `pulumi.CustomResource`).
+This resource provider is then used to create a new kind of custom resource by inheriting from the `pulumi.dynamic.Resource` base class which is a subclass of `pulumi.CustomResource`.
 
 {{< langchoose >}}
 
@@ -1286,16 +1288,16 @@ class MyResource(Resource):
 ```
 
 ```go
-// Dynamic Providers are not supported in Go currently.
+// Dynamic Providers are currently not supported in Go.
 ```
 
-We can now create instances of the new `MyResource` resource kind in our program with `new MyResource("name", args)`.  When we do so, if Pulumi determines the resource has not yet been created, it will call the `create` method on the resource provider interface.  If another Pulumi deployment happens and the resource already exists, Pulumi will call the `diff` method to determine whether a change can be made in place or whether a replacement is needed.  If a replacement is needed, Pulumi will call `create` for the new resource and then `delete` for the old resource.  If no repacement is needed, Pulumi will call `update`.  In all cases, before doing anything else, Pulumi will call the `check` method with the resource arguments to give the provider a chance to validate that the arguments are valid.  And finally, if Pulumi needs to read an existing resource without managing it directly, it will call `read`.
+We can now create instances of the new `MyResource` resource kind in our program with `new MyResource("name", args)`.  When doing so, if Pulumi determines the resource has not yet been created, it will call the `create` method on the resource provider interface.  If another Pulumi deployment happens and the resource already exists, Pulumi will call the `diff` method to determine whether a change can be made in place or whether a replacement is needed.  If a replacement is needed, Pulumi will call `create` for the new resource and then `delete` for the old resource.  If no replacement is needed, Pulumi will call `update`.  In all cases, Pulumi first calls the `check` method with the resource arguments to give the provider a chance to validate that the arguments are valid.  And finally, if Pulumi needs to read an existing resource without managing it directly, it will call `read`.
 
-> _Note_: Dynamic Providers are a flexible and low-level mechanism to plug arbitrary code directly into the deployment process.  Whereas most code in a Pulumi program runs as part of constructing the desired state of resources (the "resource graph"), the code inside the dynamic provider resource provider interface implementations (`create`, `update`, etc.) runs instead during resource provisioning (while the resource graph is being turned into a set of CRUD operations scheduled against the cloud providers).  In fact, these two phases of execution actually run in completely seperate processes.  The construction of a `new MyResource` happens inside the JavaScript/Python/Go process that's running your Pulumi program.  But your implementations of `create` or `update` are executed by a special resource provider binary called `pulumi-resource-pulumi-nodejs`.  This binary is what actually implements the Pulumi resource provider gRPC interface and speaks directly to the Pulumi engine. Because your implementation of the resource provider interface must be used by a different process, potentialy at a different point in time, dynamic providers are built on top of the same [function serialization]({{< relref "serializing-functions.md" >}}) that is used for turning callbacks into AWS Lambdas or Google Cloud Functions.  Because of this serialization, there are some limits on what can be done inside the implementation of the resource provider interface, which you can read more about in the function serialization documentation.
+> **Note:** _Dynamic Providers_ are a flexible and low-level mechanism to plug arbitrary code directly into the deployment process.  Whereas most code in a Pulumi program runs as part of constructing the desired state of resources (the "resource graph"), the code inside the dynamic provider resource provider interface implementations, such as `create` or `update`, runs instead during resource provisioning (while the resource graph is being turned into a set of CRUD operations scheduled against the cloud providers).  In fact, these two phases of execution actually run in completely separate processes.  The construction of a `new MyResource` happens inside the JavaScript, Python, or Go process running your Pulumi program.  But your implementations of `create` or `update` are executed by a special resource provider binary called `pulumi-resource-pulumi-nodejs`.  This binary is what actually implements the Pulumi resource provider gRPC interface and speaks directly to the Pulumi engine. Because your implementation of the resource provider interface must be used by a different process, potentialy at a different point in time, dynamic providers are built on top of the same [function serialization]({{< relref "serializing-functions.md" >}}) that is used for turning callbacks into AWS Lambdas or Google Cloud Functions.  Because of this serialization, there are some limits on what can be done inside the implementation of the resource provider interface, which you can read more about in the function serialization documentation.
 
 ### Dynamic Resource Inputs
 
-A dynamic provider interfaces with other components via subclasses of `pulumi.dynamic.Resource`. The inputs to a dynamic provider's implementation are provided via a instantiation of such a subclass; this is the `props` parameter in the constructor in the example below. Any properties you set in the `props` object will be passed to your `pulumi.dynamic.ResourceProvider` functions as the `inputs` where appropriate.
+A dynamic provider interfaces with other components via subclasses of `pulumi.dynamic.Resource`. The inputs to a dynamic provider's implementation are provided by instantiation of such a subclass. This is the `props` parameter in the constructor in the following. Any properties you set in the `props` object will be passed to your `pulumi.dynamic.ResourceProvider` functions as the `inputs` where appropriate.
 
 > For statically typed languages, you can get rich type information for the inputs declaring an input type to make it easy to use your custom resource.
 
@@ -1341,14 +1343,14 @@ class MyResource(Resource):
 ```
 
 ```go
-// Dynamic Providers are not supported in Go currently.
+// Dynamic Providers are currently not supported in Go.
 ```
 
 ### Resource Provider Interface
 
-Implementing the `pulumi.dynamic.ResourceProvider` interface requires implementing a subset of the methods below. Each of these methods may be asynchronous, and most implementations of these methods will perform network I/O to provision resources in a backing cloud provider or other resource model. There are several important contracts between a dynamic provider and the Pulumi CLI that inform when these methods are called and with what data.
+Implementing the `pulumi.dynamic.ResourceProvider` interface requires implementing a subset of the following methods. Each of these methods may be asynchronous, and most implementations of these methods will perform network I/O to provision resources in a backing cloud provider or other resource model. There are several important contracts between a dynamic provider and the Pulumi CLI that inform when these methods are called and with what data.
 
-Though the input properties passed to a `pulumi.dynamic.Resource` instance will usually be of type `pulumi.Input<T>` in order to compose well with other Pulumi resources, the dynamic provider's functions are invoked with the fully resolved input values. Strong typing for the inputs to your provider's functions can help clarify this; you can achieve this by creating a second interface with the same properties as your resource's inputs, but with fully unwrapped types.
+Though the input properties passed to a `pulumi.dynamic.Resource` instance will usually be of type `pulumi.Input<T>` the dynamic provider's functions are invoked with the fully resolved input values in order to compose well with Pulumi resources. Strong typing for the inputs to your provider's functions can help clarify this. You can achieve this by creating a second interface with the same properties as your resource's inputs, but with fully unwrapped types.
 
 {{< langchoose >}}
 
@@ -1387,32 +1389,32 @@ class MyResource extends pulumi.dynamic.Resource {
 ```
 
 ```go
-// Dynamic Providers are not supported in Go currently.
+// Dynamic Providers are currently not supported in Go.
 ```
 
 ##### `check(olds, news)`
-Check is invoked before any other methods, and is passed the resolved input properties that were originally provided to the resource constructor by the user.  It is passed both the old input properties that were stored in the statefile after the previous update to the resource, as well as the new inputs from the current deployment.  It has two jobs: (1) to verify that the inputs (particularly the news) are valid and if not to return useful error messages and (2) to return a set of checked inputs.  The inputs returned from the call to `check` will be the inputs that the Pulumi engine uses for all further processing of the resource, including being the values that will be passed back in to `diff`, `create`, `update`, etc.  In many cases, the `news` can be returned dirctly as the checked inputs.  But in cases where the provider needs to populate defaults, or do some normalization on values, it may want to do that in the `check` method so that this data is complete and normalized prior to being passed into other methods.
+Check is invoked before any other methods, and is passed the resolved input properties that were originally provided to the resource constructor by the user.  It is passed both the old input properties that were stored in the _state file_ after the previous update to the resource, as well as the new inputs from the current deployment.  It has two jobs: (1) Verify that the inputs (particularly the news) are valid and return useful error messages if they are not, and (2) Return a set of checked inputs.  The inputs returned from the call to `check` will be the inputs that the Pulumi engine uses for all further processing of the resource, including the values that will be passed back in to `diff`, `create`, `update`, or other operations.  In many cases, the `news` can be returned directly as the checked inputs.  But in cases where the provider need to populate defaults, or do some normalization on values, it may want to do that in the `check` method so that this data is complete and normalized prior to being passed in to other methods.
 
 ##### `create(inputs)`
-Create is invoked when the resource name (URN) of the resoruce created by the user is not found in the existing state of the deployment.  The engine passes the provider the checked inputs returned from the call to `check`.  The create method is expected to do the work in the backing cloud provider to create the requested resource.  It then returns two pieces of data: (1) an `id` that can uniquely identify the resource in the backing provider for ater lookups and (2) a set of `outputs` from the backing provider that should be returned to the user code as properties on the `CustomResource` object, and stored into the checkpoint file.  If an error occurs, an exception can be thrown from the `create` method to return this error to the user.
+Create is invoked when the URN of the resource created by the user is not found in the existing state of the deployment.  The engine passes the provider the checked inputs returned from the call to `check`.  The `create` method is expected to do the work in the backing cloud provider to create the requested resource.  It then returns two pieces of data: (1) an `id` that can uniquely identify the resource in the backing provider for later lookups, and (2) a set of `outputs` from the backing provider that should be returned to the user code as properties on the `CustomResource` object, and stored into the _checkpoint_ file.  If an error occurs, an exception can be thrown from the `create` method to return this error to the user.
 
 ##### `diff(id, olds, news)`
-Diff is invoked when the resource name (URN) of the resoruce created by the user is found in the existing state of the deployment. This means the resource already exists, and will need to be either updated or replaced.  The `diff` method is passed the `id` of the resource (as returned by `create`) as well as the old outputs from the checkpoint file (values returned from a previous call to either `create` or `update`).  It is also passed the new checked inputs from the current deployment.  It returns four things (all optional):
+Diff is invoked when the URN of the resoruce created by the user is found in the existing state of the deployment. This means the resource already exists, and will need to be either updated or replaced.  The `diff` method is passed the `id` of the resource---as returned by `create`, as well as the old outputs from the checkpoint file which are values returned from a previous call to either `create` or `update`.  It is also passed the new checked inputs from the current deployment.  It returns four optional values:
 
 * `changes`: `true` if the provider believes there is a difference between the `olds` and `news` and wants to do an `update` or `replace` to affect this change.
-* `replaces`: An array of property names that have changed that should force a replacement.  Returning a non-zero length array here will tell the Pulumi engine to scheduled a replacement instead of an update, which might involve downtime, so this should only be used when a diff requested by the user cannot be implemented as an in-place update on the backing cloud provider.
+* `replaces`: An array of property names that have changed that should force a replacement.  Returning a non-zero length array here will tell the Pulumi engine to schedule a replacement instead of an update, which might involve downtime, so this should only be used when a `diff` requested by the user cannot be implemented as an in-place update on the backing cloud provider.
 * `stables`: An array of property names that are known to not change between updates.  Pulumi will use this information to allow some `apply` calls on [Outputs]() to be processed during `previews` because it knows that the values of these will stay the same during an update.
 * `deleteBeforeReplace`: `true` if the proposed replacements require deleteing the existing resource before creating the new one.  By default Pulumi will try to create the new resource before deleting the old one to avoid downtime.
 If an error occurs, an exception can be thrown from the `diff` method to return this error to the user.
 
 ##### `update(id, olds, news)`
-Update is invoked if the call to `diff` indicates replacement is not needed.  It is passed the the `id` of the resource (as returned by `create`) as well as the old outputs from the checkpoint file (values returned from a previous call to either `create` or `update`). It is also passed the new checked inputs from the current deployment.  The update method is expected to do the work in the backing cloud provider to update an existing resource to the new desired state.  It then returns a new set of `outputs` from the backing provider that should be returned to the user code as properties on the `CustomResource` object, and stored into the checkpoint file.  If an error occurs, an exception can be thrown from the `create` method to return this error to the user.
+Update is invoked if the call to `diff` indicates replacement is not needed.  It is passed the `id` of the resource as returned by `create`, and the old outputs from the checkpoint file which are values returned from a previous call to either `create` or `update`. It is also passed the new checked inputs from the current deployment.  The `update` method is expected to do the work in the backing cloud provider to update an existing resource to the new desired state.  It then returns a new set of `outputs` from the backing provider that should be returned to the user code as properties on the `CustomResource` object, and stored into the checkpoint file.  If an error occurs, an exception can be thrown from the `create` method to return this error to the user.
 
 ##### `delete(id, props)`
-Delete is invoked if the resource name (URN) exists in the previous state but not in the new desired state, or if a replacement is needed.  It is passed the the `id` of the resource (as returned by `create`) as well as the old outputs from the checkpoint file (values returned from a previous call to either `create` or `update`).  It is expected to delete the corresponding resource from the backing cloud provider.  Nothing needs to be returned.  If an error occurs, an exception can be thrown from the `create` method to return this error to the user.
+Delete is invoked if the URN exists in the previous state but not in the new desired state, or if a replacement is needed.  It is passed the `id` of the resource as returned by `create`, and the old outputs from the checkpoint file which are values returned from a previous call to either `create` or `update`.  It is expected to delete the corresponding resource from the backing cloud provider.  Nothing needs to be returned.  If an error occurs, an exception can be thrown from the `create` method to return this error to the user.
 
 ##### `read(id, props)`
-Read is invoked when the Pulumi engine needs to get data about a resource that it is not managed by Pulumi.  It is passed the the `id` of the resource as tracked in the backing cloud provider as well as an optional bag of additional properties to use to disambiguate the request if needed. The `read` method is execpted to lookup the requested resource, and if found return the canonical `id` and output properties of this resource.  If an error occurs, an exception can be thrown from the `create` method to return this error to the user.
+Read is invoked when the Pulumi engine needs to get data about a resource that is not managed by Pulumi. It is passed the the `id` of the resource as tracked in the backing cloud provider, and an optional bag of additional properties that can be used to disambiguate the request if needed. The `read` method is expected to look up the requested resource, and return the canonical `id` and output properties of this resource if found.  If an error occurs, an exception can be thrown from the `create` method to return this error to the user.
 
 ### Dynamic Resource Outputs
 
@@ -1420,9 +1422,9 @@ Any outputs can be returned by your `create` function in the `outs` property of 
 
 > The following only applies to **statically typed languages**.
 
-If you need to access the outputs of your custom resource outside it with strong typing support, then declare each output property returned in the `outs` property by your `create` function as a class member of the `pulumi.dynamic.Resource` itself. For example, in TypeScript, these must be declared as `public readonly` class members in your `pulumi.dynamic.Resource` class. These class members must also have the type `pulumi.Output<T>`.
+If you need to access the outputs of your custom resource outside it with strong typing support, declare each output property returned in the `outs` property by your `create` function as a class member of the `pulumi.dynamic.Resource` itself. For example, in TypeScript, these must be declared as `public readonly` class members in your `pulumi.dynamic.Resource` class. These class members must also have the type `pulumi.Output<T>`.
 
-**Note** that the name of the class member must match the names of the output properties as returned by the `create` function.
+> **Note:** The name of the class member must match the names of the output properties as returned by the `create` function.
 
 {{< langchoose >}}
 
@@ -1476,7 +1478,7 @@ class MyResource(Resource):
 
 #### Example: Random
 
-This example highlights using dynamic providers to run some code only when a resource is created, and then to store the results of that in the checkpoint file so that this value is maintained across deployments of the resource.  In this case, there is no "backing cloud provider", just the checkpoint file serialization that persists data.  The result is a provider similar to the one provided in `@pulumi/random` (although that library has many more flags than this simple example):
+This example highlights using dynamic providers to run some code only when a resource is created, and then store the results of that in the _checkpoint_ file so that this value is maintained across deployments of the resource.  In this case, there is no "backing cloud provider", just the _checkpoint_ file serialization that persists data.  The result is a provider similar to the one provided in `@pulumi/random`, although that library has many more flags than the following simple example:
 
 {{< langchoose >}}
 
@@ -1533,12 +1535,12 @@ class Random(Resource):
 ```
 
 ```go
-// Dynamic Providers are not supported in Go currently.
+// Dynamic Providers are currently not supported in Go.
 ```
 
 #### Example: GitHub Labels REST API
 
-This example highlights making REST API calls to some backing provider (in this case the GitHub API) to perform CRUD operations.  Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and make calls to it local to each function.
+This example highlights making REST API calls to some backing provider---the GitHub API in this case---to perform CRUD operations.  Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and make calls to it local to each function.
 
 {{< langchoose >}}
 
@@ -1679,18 +1681,18 @@ export("label_url", label.url)
 ```
 
 ```go
-// Dynamic Providers are not supported in Go currently.
+// Dynamic Providers are not currently supported in Go.
 ```
 
 ## Packages {#packages}
 
-Pulumi packages are normal NPM or Python packages. They transitively depend on `@pulumi/pulumi` which defines how resources created by a Pulumi program will be communicated to the Pulumi engine.  This ability to register resources with the Pulumi engine is the only difference between a Pulumi package and any other NPM package.
+Pulumi packages are normal NPM or Python packages. They transitively depend on `@pulumi/pulumi` which defines how resources created by a Pulumi program will be communicated to the Pulumi engine.  The ability to register resources with the Pulumi engine is the only difference between a Pulumi package and any other NPM package.
 
-Some Pulumi packages have a dependency on a [Resource Provider plugin]({{< relref "/docs/reference/cli/pulumi_plugin.md" >}}) which contains the implementation for how to Create, Read, Update and Delete resources defined by the package.  The [pulumi.CustomResource] base class is used to connect a JavaScript resource class with the resource provider it depends on for resource management.  Packages like [@pulumi/aws] and [@pulumi/kubernetes] define resources, such as `aws.ec2.Instance`, `kubernetes.Pod`, which are managed by the AWS and Kubernetes resource provider plugins. Packages such as [@pulumi/cloud] and [@pulumi/awsx] contain only higher-level component resources, which are not managed by a resource provider plugin.
+Some Pulumi packages have a dependency on a [Resource Provider plugin]({{< relref "/docs/reference/cli/pulumi_plugin.md" >}}) which contains the implementation for how to `create`, `read`, `update`, and `delete` resources defined by the package.  The [pulumi.CustomResource] base class is used to connect a JavaScript resource class with the resource provider it depends on for resource management.  Packages like [@pulumi/aws] and [@pulumi/kubernetes] define resources, such as `aws.ec2.Instance`, `kubernetes.Pod`, which are managed by the AWS and Kubernetes resource provider plugins. Packages such as [@pulumi/cloud] and [@pulumi/awsx] contain only higher-level component resources, which are not managed by a resource provider plugin.
 
 ## Runtime code {#runtime}
 
-You can create libraries and components that allow the caller to pass in JavaScript callbacks to invoke at runtime. For example, you can create an AWS Lambda function (or an Azure Function) by providing a JavaScript callback to be used as its implementation.
+You can create libraries and components that allow the caller to pass in JavaScript callbacks to invoke at runtime. For example, you can create an AWS Lambda function or an Azure Function by providing a JavaScript callback to be used as its implementation.
 
 {{< langchoose >}}
 
@@ -1711,18 +1713,18 @@ bucket.onObjectCreated("onObject", async (ev: aws.s3.BucketEvent) => {
 ```
 
 ```python
-# Runtime code provided via callbacks are not supported in Python currently.
+# Runtime code provided via callbacks are currently not supported in Python.
 #
 # See https://github.com/pulumi/pulumi/issues/1535.
 ```
 
 ```go
-// Runtime code provided via callbacks are not supported in Go currently.
+// Runtime code provided via callbacks are currently not supported in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-Libraries which use JavaScript callbacks as inputs to be provided as source text to resource construction (like the Lambda that is created by the `onObjectCreated` function in the example above) are built on top of the [pulumi.runtime.serializeFunction] API, which takes as input a JavaScript `Function` object, and returns a `Promise` that contains the serialized form of that function.
+Libraries which use JavaScript callbacks as inputs to be provided as source text to resource construction---like the Lambda that is created by the `onObjectCreated` function in the previous example---are built on top of the [pulumi.runtime.serializeFunction] API, which takes aJavaScript `Function` object as input, and returns a `Promise` containing the serialized form of that function.
 
 When serializing a function to text, the following steps are taken:
 
@@ -1730,15 +1732,15 @@ When serializing a function to text, the following steps are taken:
 2. The values of those variables are serialized.
 3. When the values are objects, all properties and prototype chains are serialized.  When the values are functions, those functions are serialized by following these same steps.
 
-For more details see the docs on [serializing functions]({{< relref "serializing-functions.md" >}}).
+See [Serializing Functions]({{< relref "serializing-functions.md" >}}) for more details.
 
 ## Design Guidelines {#design-guidelines}
 
 ### OutputInstance.apply
 
-It is recommended that the `func` argument of [OutputInstance.apply]({{< relref "pkg/nodejs/pulumi/pulumi/#OutputInstance-apply" >}}) not create any resources, as doing so can lead to the results of `pulumi preview` being wrong, as the `apply` callback will not get run during a preview (because the real outputs values aren't yet known until the resources are deployed), and therefore any resources created in the callback will not be seen during the `preview`.
+It is recommended that the `func` argument of [OutputInstance.apply]({{< relref "pkg/nodejs/pulumi/pulumi/#OutputInstance-apply" >}}) not create any resources. Doing so can lead to the results of `pulumi preview` being wrong, since the `apply` callback will not get run during a preview. This is because the real output values are not yet known until the resources are deployed, so any resources created in the callback will not be seen during the `preview`.
 
-However, you may have a scenario in which the actual value, such as an array of Outputs, is needed to create a resource but is not determined until the time of `pulumi update` and after part of the deployment has already happened (e.g. an array of [Nameservers]({{< relref "pkg/nodejs/pulumi/aws/route53#Zone-nameServers" >}})).  In that case, Pulumi lets you express this within the `apply`, but be cautioned that the preview may not include some changes to resources that are created (or later removed) from within the `apply`.
+However, you may have a scenario in which the actual value, such as an array of Outputs, is needed to create a resource but is not determined until the time of `pulumi update` and after part of the deployment has already happened. For example, an array of [Nameservers]({{< relref "pkg/nodejs/pulumi/aws/route53#Zone-nameServers" >}})).  In that case, Pulumi lets you express this within the `apply`, but be cautioned that the preview may not include some changes to resources that are created or later removed from within the `apply`.
 
 <!-- MARKDOWN LINKS -->
 [pulumi.Resource]: {{< relref "pkg/nodejs/pulumi/pulumi#Resource" >}}
