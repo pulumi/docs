@@ -1,5 +1,10 @@
 ---
 title: "Continuous Delivery"
+
+menu:
+    console:
+        identifier: cont_delivery
+        weight: 20
 ---
 
 Continuous delivery is an approach to managing cloud applications and infrastructure where all changes are

@@ -1,9 +1,11 @@
 ---
 title: Roles and Access Controls
+
 menu:
-  reference:
-    parent: teams
-    weight: 3
+    console:
+        parent: collaboration
+
+aliases: [/docs/reference/service/roles-and-access-controls]
 ---
 
 The Pulumi Cloud Console provides fine-grained access controls for stacks.

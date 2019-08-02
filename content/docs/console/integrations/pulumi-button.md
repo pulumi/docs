@@ -1,9 +1,11 @@
 ---
-title: Creating a 'Deploy with Pulumi' Button
+title: "'Deploy with Pulumi' Button"
+
 menu:
-  reference:
-    parent: teams
-    weight: 6
+    console:
+        parent: integrations
+
+aliases: [/docs/reference/service/pulumi-button]
 ---
 
 The 'Deploy with Pulumi' button provides a way to easily create new Pulumi projects within a web browser. The button can be embedded in README files in GitHub repositories/Gists, blog posts, or other web pages.
@@ -23,7 +25,8 @@ There are two steps to create a button:
 
 The Pulumi button works with template projects hosted in public GitHub repositories or Gists. A template is a Pulumi project that has the required `Pulumi.yaml` file, which describes the project. The template project can be in the root of the GitHub repository or within a subdirectory. Multiple projects can be hosted within subdirectories of a single repository.
 
-The `Pulumi.yaml` file can optionally contain a `template` section, which typically includes a `config` section used to specify any required config values for the project. Each config value can have a `description` and `default` value. Config values can also have a `secret` property, which can be set to `true` to indicate the config value is a [secret]({{< relref "../config.md#secrets" >}}).
+The `Pulumi.yaml` file can optionally contain a `template` section, which typically includes a `config` section used to specify any required config values for the project. Each config value can have a `description` and `default` value. Config values can also have a `secret` property, which can be set to `true` to indicate the config value is a
+[secret]({{< ref "/docs/reference/config.md#secrets" >}}).
 
 ```yaml
 name: my-aws-project

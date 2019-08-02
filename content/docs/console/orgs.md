@@ -1,9 +1,11 @@
 ---
 title: Organizations
+
 menu:
-  reference:
-    parent: teams
-    weight: 1
+    console:
+        weight: 1
+
+aliases: [/docs/reference/service/orgs]
 ---
 
 There are several editions of the Pulumi Cloud Console available, each offering an expanding set
@@ -66,9 +68,9 @@ any SAML 2.0 based identity provider.
 
 We officially support and internally test the following providers:
 
-- [Azure Active Directory]({{< relref "saml-aad.md" >}})
-- [G Suite]({{< relref "saml-gsuite.md" >}})
-- [Okta]({{< relref "saml-okta.md" >}})
+- [Azure Active Directory]({{< relref "aad.md" >}})
+- [G Suite]({{< relref "gsuite.md" >}})
+- [Okta]({{< relref "okta.md" >}})
 
 > If you need help configuring or would like us to officially support another SAML identity provider,
 > please [contact us](https://www.pulumi.com/about/#contact-us).
