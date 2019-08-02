@@ -5,6 +5,6 @@ redirect_to: /docs/console/enterprise/saml/
 
 menu:
     console:
-        identifier: "enterprise"
+        identifier: enterprise
         weight: 30
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Building Integrations"
+title: Integrations
 
 redirect_to: /docs/console/integrations/webhooks/
 

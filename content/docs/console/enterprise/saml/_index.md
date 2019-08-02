@@ -3,8 +3,8 @@ title: Single Sign-on (SSO)
 
 menu:
     console:
-        parent: "enterprise"
-        identifier: "saml"
+        parent: enterprise
+        identifier: saml
 
 aliases: [/docs/reference/service/saml-overview]
 ---

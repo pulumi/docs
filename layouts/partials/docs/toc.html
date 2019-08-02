@@ -11,14 +11,14 @@
         {{ template "toc" (dict "page" . "menu" .Site.Menus.quickstart) }}
 
         <h4 class="no-anchor">
-            <a href="{{ relref . "/docs/console" }}">Pulumi Cloud Console</a>
-        </h4>
-        {{ template "toc" (dict "page" . "menu" .Site.Menus.console) }}
-
-        <h4 class="no-anchor">
             <a href="{{ relref . "/docs/reference" }}">Reference</a>
         </h4>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.reference) }}
+
+        <h4 class="no-anchor">
+            <a href="{{ relref . "/docs/console" }}">Pulumi Cloud Console</a>
+        </h4>
+        {{ template "toc" (dict "page" . "menu" .Site.Menus.console) }}
     {{ end }}
 </aside>
 

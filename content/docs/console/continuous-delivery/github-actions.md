@@ -1,5 +1,5 @@
 ---
-title: "Pulumi GitHub Actions"
+title: Pulumi GitHub Actions
 
 menu:
     console:

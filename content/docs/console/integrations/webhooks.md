@@ -4,6 +4,7 @@ title: Webhooks
 menu:
     console:
         parent: integrations
+        weight: 1
 
 aliases: [/docs/reference/service/webhooks]
 ---
@@ -66,6 +67,7 @@ that organization.
 The following events are only delivered to organization-based webhooks.
 
 | Event Kind | Triggered |
+| --- | --- |
 | `stack` | Whenever a stack is created or deleted within an organization. |
 | `team`  | Whenever a team is created, updated, or deleted. |
 
