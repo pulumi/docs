@@ -54,7 +54,7 @@ on Pulumi. 
 This allows you to set permissions on
 [Stacks]({{< ref "/docs/reference/stack" >}}) owned by your
 organization. You can learn more about
-[Teams & Collaboration]({{< ref "/docs/reference/service" >}})
+[Teams & Collaboration]({{< ref "/docs/console/collaboration" >}})
 in the Pulumi and how those permissions get applied too.
 
 ## CI Integration
