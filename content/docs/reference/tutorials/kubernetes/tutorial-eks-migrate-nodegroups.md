@@ -19,7 +19,7 @@ group with zero downtime to it or the echoserver during load testing.
 1. And lastly, once migration has completed, we'll decomission the
 original node group from Kubernetes and AWS.
 
-[View the code on GitHub][example-gh].
+[View the code on GitHub][example-gh]
 
 ![](/images/docs/reference/kubernetes/eks-migrate-nodegroups.png)
 
@@ -94,7 +94,7 @@ manages the ingress for the `echoserver`:
 $ pulumi stack output nginxServiceUrl
 ```
 
-Example: 
+Example:
 
 ```
 $ pulumi stack output nginxServiceUrl
@@ -155,9 +155,9 @@ Request Body:
 With our apps now verified as working and accessible, we're ready to see how we
 can leverage Kubernetes and Pulumi to migrate workloads across worker node groups.
 
-## ...But First, Let's Talk About Resource Updates
+## Resource Updates
 
-### Pulumi's Approach: `create-before-delete`
+### Pulumi's `create-before-delete` Approach
 
 Resources under management in Pulumi are [uniquely named][pulumi-urn] using a
 Universal Resource Name (URN) to identify and track resources across program
@@ -178,12 +178,12 @@ There are situations, as with many Kubernetes workloads, where the intrinsic
 details of Pod updates and replacements are encoded in Kubernetes API resources
 and scheduling predicates that are managed by the control plane for high-availability.
 These management constructs are exempt from the Pulumi engine and require granular handling of
-the blue/green deployment of the Pods, and the underlying cloud provider 
+the blue/green deployment of the Pods, and the underlying cloud provider
 resources that Kubernetes depends on.
 
 In these specific cases, we can stand up overlapping copies of the
 infrastruture stack in the Kubernetes layers and in the cloud provider for
-as long as we need to guarantee a smooth transition. This affords us the 
+as long as we need to guarantee a smooth transition. This affords us the
 ability to administer proper migrations in a blue/green strategy catered to
 our use-case, and scenarios like this are completely possible to achieve in Pulumi.
 
@@ -194,7 +194,7 @@ important to consider how equipped our workloads are for rolling updates, if the
 employ high availability, and if they can gracefully terminate within the Kubernetes [Pod
 lifecycle][pod-lifecycle].
 
-Kubernetes has many knobs and levers through API resources to describe your 
+Kubernetes has many knobs and levers through API resources to describe your
 app's requirements, runtime settings, and update strategy. But it requires
 you take the necessary steps to refactor your apps to execute, and survive
 in a Kubernetes cluster.
@@ -263,7 +263,7 @@ Using `v1.12.7`of Kubernetes, in a pool of (3) `t3.2xlarge` worker instances ->
 
 Using `v1.13.7`of Kubernetes, in a pool of (5) `c5.4xlarge` worker instances.
 
-### Step 0: Launch Load Tests (Optional)
+### (Optional) Launch load tests.
 
 As we migrate NGINX from the `2xlarge` -> `4xlarge` node group, we'll kick off
 a load testing script against the endpoint and path of the `echoserver` on our
@@ -290,7 +290,7 @@ $ ./scripts/load-testing.sh $LB 75
 > testing (millions), a seperate machine for testing would be best suited
 for overall network performance and throughput on your client.
 
-### Step 1: Create the new `4xlarge` Node Group
+### Step 1: Create the new `4xlarge` node group.
 
 Next, we'll create a new node group in AWS using Pulumi for the `4xlarge` node
 group. This is as simple as defining a new node group at the end of `index.ts`:
@@ -320,7 +320,7 @@ Once the update is complete, verify the new `c5.4xlarge` node group is up and ru
 $ kubectl get nodes -o wide --show-labels -l beta.kubernetes.io/instance-type=c5.4xlarge
 ```
 
-### Step 2: Migrate NGINX to the `4xlarge` Node Group
+### Step 2: Migrate NGINX to the `4xlarge` node group.
 
 Now, we'll migrate the NGINX service away from the `2xlarge` node group over to the
 `4xlarge` node group, by changing its node selector scheduling terms.
@@ -361,7 +361,7 @@ $ kubectl get nodes -o wide --show-labels -l beta.kubernetes.io/instance-type=c5
 load testing results, due to the more capable `c5.4xlarge` worker instances
 being used.
 
-### Step 3: Decomission the `2xlarge` Node Group
+### Step 3: Decommission the `2xlarge` node group.
 
 With NGINX validated to be up and running on the `4xlarge` node group, we can
 now commence the decomissioning of the original `2xlarge` node group no
@@ -420,7 +420,7 @@ NGINX from the `2xlarge` node group to the `4xlarge` group with
 zero downtime to it or the `echoserver`, and removed the
 `2xlarge` node group completely from Kubernetes and AWS.
 
-You can also verify the load testing results to validate that our requests have all 
+You can also verify the load testing results to validate that our requests have all
 returned with `HTTP 200` status codes through out the entire migration
 process. 🍹🎉
 
@@ -441,7 +441,7 @@ $ pulumi stack rm
 
 ## Summary
 
-In this tutorial, we saw how to use Pulumi to launch a managed Kubernetes 
+In this tutorial, we saw how to use Pulumi to launch a managed Kubernetes
 cluster on AWS EKS with active workloads. Then, we performed a migration
 of the apps and underlying cloud provider resources over to new, updated
 resources with zero downtime.
