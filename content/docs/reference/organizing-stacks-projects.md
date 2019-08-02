@@ -116,7 +116,7 @@ pulumi.export("kubeConfig", ... a cluster's output property ...)
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-The challenge here is now our services project needs to ingest this output during deployment so that it can
+The challenge here is that our services project needs to ingest this output during deployment so that it can
 connect to the Kubernetes cluster provisioned in its respective environment.
 
 The Pulumi programming model offers a way to do this with its `StackReference` resource type. For example:
