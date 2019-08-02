@@ -10,7 +10,7 @@
             </p>
             <p>
                 <a class="rounded text-orange-400 font-bold underline md:font-normal md:no-underline md:border-2 md:border-orange-400 md:py-1 md:px-2 md:mr-1 hover:text-orange-300 hover:border-orange-300 transition-all"
-                    href="{{ relref . "/docs" }}">Pulumi Community Edition</a>
+                    href="#community-edition">Pulumi Community Edition</a>
                 is free forever for unlimited individual use.
             </p>
         </div>
@@ -18,7 +18,7 @@
 {{ end }}
 
 {{ define "main" }}
-    <section class="bg-purple-800 text-gray-900 pt-24 text-white px-4 lg:px-0">
+    <section class="bg-purple-800 pt-24 text-white px-4 lg:px-0">
         <div class="container mx-auto lg:flex justify-center">
             <div class="bg-white rounded py-8 px-8 lg:w-1/3 mb-4 lg:mb-0">
                 <div class="text-center flex flex-col justify-between h-full">
@@ -156,7 +156,7 @@
                 <p>
                     And remember,
                     <a class="rounded text-blue-500 font-bold underline md:font-normal md:no-underline md:border-2 border-blue-500 md:py-1 md:px-2 md:mx-1 hover:text-blue-400 hover:border-blue-400 transition-all"
-                        href="{{ relref . "/docs" }}">Pulumi Community Edition</a>
+                        href="#community-edition">Pulumi Community Edition</a>
                     is free forever for unlimited individual use.
                 </p>
             </div>
@@ -420,23 +420,92 @@
         </div>
     </section>
 
+    <section id="community-edition" class="bg-purple-700 py-24 text-white px-4 lg:px-0">
+        <div class="container mx-auto">
+            <div class="mx-auto text-center max-w-md px-4 lg:px-0 mb-12">
+                <h2 class="text-white">Pulumi Community Edition</h2>
+                <p>
+                    Create and manage your own cloud projects with Pulumi Community Edition &mdash;
+                    <strong class="text-orange-300">free forever</strong>
+                    for individual use.
+                </p>
+            </div>
+            <div class="mx-auto bg-white rounded py-8 px-8 lg:w-1/3 mb-4 lg:mb-0">
+                <div class="text-center flex flex-col justify-between h-full">
+                    <div class="text-lg text-purple-500">COMMUNITY EDITION</div>
+                    <div class="text-black font-display font-bold text-4xl">FREE</div>
+                    <p class="text-sm text-gray-700">
+                        Includes unlimited individual use of the Pulumi CLI, cloud SDKs, and the
+                        <a href="{{ relref . "/docs/console" }}">Pulumi Cloud Console</a>.
+                    </p>
+                    <ul class="list-none mt-0 mb-auto mx-auto justify-center text-left text-sm text-gray-700 px-0">
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
+                            <span class="flex-1">Any cloud, any language</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
+                            <span class="flex-1">Includes 1 user</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-infinity text-orange-500"></i>
+                            <span class="flex-1">Unlimited stacks &amp; deployments</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
+                            <span class="flex-1">Basic secrets management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
+                            <span class="flex-1">CI/CD integrations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-heart text-orange-500"></i>
+                            <span class="flex-1">Free forever for individual use</span>
+                        </li>
+                    </ul>
+                    <a class="text-center btn btn-lg btn-orange group mx-auto my-4 px-6" href="{{ relref . "/docs/quickstart" }}">
+                        <span>Create Your First Project</span>
+                    </a>
+                    <p class="text-gray-600 text-sm my-0 mt-2">
+                        or sign up at <a href="https://app.pulumi.com/signup">app.pulumi.com</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="mx-auto text-center max-w-4xl opacity-75 text-sm mt-8">
+                Pulumi is open-source software.
+                <a class="underline" href="https://github.com/pulumi/pulumi" target="_blank">Join us on GitHub</a>!
+            </div>
+        </div>
+    </section>
+
     <section id="faq" class="bg-gray-100 py-16 px-4 lg:px-0">
         <div class="container mx-auto max-w-4xl">
             <h2>FAQ</h2>
-            <h3>How do I get started? </h3>
-            <p>
-                To get started, simply <a href="https://app.pulumi.com/signup">sign up for free</a> using your identity
-                provider of choice (ideally the same one your organization will be backed by).
-                From there, <a href="https://app.pulumi.com/site/organizations/add">create an organization</a> that your team members will use.
-            </p>
             <h3>Can I use Pulumi for free? </h3>
             <p>
-                Yes! <a href="{{ relref . "/docs" }}">Pulumi Community Edition</a> is free to use, now and
-                forever, for individuals. All paid editions offer a 14 day free trial. If this
+                Yes! <a href="#community-edition">Pulumi Community Edition</a> is free to use, now and
+                forever, for individuals. All paid editions offer a 14-day free trial. If this
                 isn't sufficient, please contact your Pulumi salesperson, and we are happy to work
                 out a custom trial period for you that makes sense given your proof-of-concept
                 timeline. After your trial expires, no data will be lost, and there is a grace
                 period with soft enforcement.
+            </p>
+            <h3>How do I get started? </h3>
+            <p>
+                To get started with a team-based plan, simply <a
+                href="https://app.pulumi.com/signup">sign up for free</a> using your
+                identity provider of choice (ideally the same one your organization will
+                be backed by). From there, <a href="https://app.pulumi.com/site/organizations/add">create
+                an organization</a> that your team members will use.
+            </p>
+            <p>
+                You can also sign up as an individual for
+                <a href="#community-edition">Pulumi Community Edition</a>, either directly at
+                <a href="https://app.pulumi.com/signup">app.pulumi.com</a>
+                or by following the <a href="{{ relref . "/docs/quickstart" }}">Get
+                Started guide</a>, which walks you through creating
+                and deploying your first Pulumi project.
             </p>
             <h3>What is an organization? </h3>
             <p>

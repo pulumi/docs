@@ -12,7 +12,7 @@ There are several editions of the Pulumi Cloud Console available, each offering 
 of features and capabilities.
 
 When you sign into the Pulumi Cloud Console, the organization created for your user account is
-automatically enrolled in the Pulumi Community edition. To learn more about other editions of
+automatically enrolled in the Pulumi Community edition. To learn more about the editions of
 the Pulumi Cloud Console, see [https://pulumi.com](https://www.pulumi.com/pricing/).
 
 ## Adding an Organization
