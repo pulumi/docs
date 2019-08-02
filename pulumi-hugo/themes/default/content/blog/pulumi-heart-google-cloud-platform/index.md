@@ -224,7 +224,7 @@ lines to your CI/CD system.
 
 For teams working with Google Cloud Build, Pulumi deployments can be
 integrated into your continuous delivery with just
-[a few steps]({{< relref "/docs/reference/cd-google-cloud-build" >}}). And
+[a few steps]({{< relref "/docs/console/continuous-delivery/google-cloud-build" >}}). And
 for teams working with GitHub, Pulumi's GitHub App gives you rich
 feedback on what changes will be deployed as part of a Pull Request, so
 you can see and approve infrastructure changes before they happen:
@@ -232,7 +232,7 @@ you can see and approve infrastructure changes before they happen:
 ![Pulumi in a Pull Request](./pulumi_pr.png)
 
 Learn more about integrating Pulumi with CI/CD in our
-[continuous delivery]({{< ref "/docs/reference/cd" >}}) documentation.
+[continuous delivery]({{< ref "/docs/console/continuous-delivery" >}}) documentation.
 
 ## Managing Deployment with the Pulumi Console
 
