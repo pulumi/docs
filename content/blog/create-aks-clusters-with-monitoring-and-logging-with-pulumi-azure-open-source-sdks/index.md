@@ -2,7 +2,7 @@
 title: "Create AKS Clusters with monitoring and logging using Pulumi-Azure open source SDKs"
 authors: ["nishi-davidson"]
 tags: ["Kubernetes","Azure"]
-meta_desc: "Use Pulumi-Azure open source package to create Azure Kubernetes Service clusters with AD service principals tied to the cluster."
+meta_desc: "Use the Pulumi-Azure open source package to create Azure Kubernetes Service clusters with AD service principals."
 date: "2019-05-08"
 
 meta_image: "hero.png"

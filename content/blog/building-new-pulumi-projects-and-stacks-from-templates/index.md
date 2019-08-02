@@ -2,7 +2,7 @@
 title: "Building new Pulumi projects and stacks from templates"
 authors: ["marc-holmes"]
 tags: ["Features"]
-meta_desc: "This blog shows how to build pulumi projects and stac ks from templates."
+meta_desc: "This blog shows how to build Pulumi projects and stacks from templates."
 date: "2018-10-01"
 
 meta_image: "new-project-ui-1.gif"

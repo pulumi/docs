@@ -2,7 +2,7 @@
 title: "CI/CD Made Easy with Pulumi and Azure Pipelines"
 authors: ["praneet-loke"]
 tags: ["Azure", "CI/CD", "New-Features"]
-meta_desc: "Pulumi open-source task extension for Azure Pipelines will manage the installation of the Pulumi CLI, and run the Pulumi commands you specify against your stack. See the two options to use it."
+meta_desc: "Pulumi open-source task extensions for Azure Pipelines will manage the installation of the Pulumi CLI, and run the Pulumi commands you specify against your stack."
 date: "2019-05-06"
 
 meta_image: "add-pulumi.png"

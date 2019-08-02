@@ -2,7 +2,7 @@
 title: "Deploying production-ready containers with Pulumi"
 authors: ["donna-malayeri"]
 tags: ["JavaScript","AWS","Containers"]
-meta_desc: "Deploy a simple Docker container running NGINX.Pulumi makes it easy to deploy production Docker containers, handling details such as creating a container registry instance in ECR, creating task definitions in ECS, and configuring a load balancer. "
+meta_desc: "Deploy a simple Docker container running NGINX.Pulumi showing details such as creating a container registry instance in ECR, creating task definitions in ECS, and configuring a load balancer. "
 date: "2018-06-20"
 
 meta_image: "hello-world-page.png"
