@@ -111,7 +111,7 @@ pulumi.export("kubeConfig", ... a cluster's output property ...)
 ```
 
 ```go
-// StackReference is not supported in Go currently.
+// StackReference is currently not supported in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
