@@ -9,7 +9,7 @@ menu:
 Pulumi is controlled primarily using the command line interface (CLI). It works in conjunction with the Pulumi service
 to deploy changes to your cloud apps and infrastructure.  It keeps a history of who updated what in your team and when.
 This CLI has been designed for great inner loop productivity, in addition to
-[continuous integration and deployment]({{< relref "cd.md" >}}) scenarios.
+[continuous integration and delivery]({{< ref "/docs/console/continuous-delivery" >}}) scenarios.
 
 ## Installation
 

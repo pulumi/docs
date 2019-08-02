@@ -1,9 +1,12 @@
 ---
-title: Pulumi Webhooks
+title: Webhooks
+
 menu:
-  reference:
-    parent: teams
-    weight: 5
+    console:
+        parent: integrations
+        weight: 1
+
+aliases: [/docs/reference/service/webhooks]
 ---
 
 Webhooks allow you to build applications that will be notified when events
@@ -55,6 +58,7 @@ Organization-level webhooks will be sent webhook events from all of the stacks w
 that organization.
 
 | Event Kind | Triggered |
+| --- | --- |
 | `stack_update` | Whenever a stack is updated. |
 | `stack_preview` | Whenever a stack update is previewed. |
 
@@ -63,6 +67,7 @@ that organization.
 The following events are only delivered to organization-based webhooks.
 
 | Event Kind | Triggered |
+| --- | --- |
 | `stack` | Whenever a stack is created or deleted within an organization. |
 | `team`  | Whenever a team is created, updated, or deleted. |
 

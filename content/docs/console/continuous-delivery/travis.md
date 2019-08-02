@@ -1,9 +1,11 @@
 ---
 title: Travis CI
-expanded_url: /docs/reference/cd/
+
 menu:
-  reference:
-    parent: cd
+    console:
+        parent: cont_delivery
+
+aliases: [/docs/reference/cd-travis/]
 ---
 
 This page details how to use [Travis CI](https://travis-ci.com/) to manage deploying

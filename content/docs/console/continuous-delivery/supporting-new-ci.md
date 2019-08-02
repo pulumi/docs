@@ -1,10 +1,11 @@
 ---
 title: Supporting A New CI System
-expanded_url: /docs/reference/cd/
+
 menu:
-  reference:
-    parent: cd
-weight: 100
+    console:
+        parent: cont_delivery
+
+aliases: [/docs/reference/cd-supporting-new-ci/]
 ---
 
 ## Overview

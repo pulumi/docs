@@ -1,8 +1,21 @@
 ---
-title: Overview Of SAML SSO Configuration
+title: Single Sign-on (SSO)
+
+menu:
+    console:
+        parent: enterprise
+        identifier: saml
+
+aliases: [/docs/reference/service/saml-overview]
 ---
 
 This document walks-through the important aspects of configuring an IdP for SSO with the [Pulumi Console](https://app.pulumi.com). Using this document, you can configure any identity provider for SAML SSO with the Pulumi Console. Pulumi supports only **SAML 2.0**.
+
+> For a specific example, you can refer to one of our integration guides for:
+>
+> - [Azure Active Directory]({{< relref "aad" >}})
+> - [G Suite (Google)]({{< relref "gsuite" >}})
+> - [Okta]({{< relref "okta" >}})
 
 ## Terminology
 

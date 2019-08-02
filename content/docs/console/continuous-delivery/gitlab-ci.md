@@ -1,9 +1,11 @@
 ---
 title: GitLab CI
-expanded_url: /docs/reference/cd/
+
 menu:
-  reference:
-    parent: cd
+    console:
+        parent: cont_delivery
+
+aliases: [/docs/reference/cd-gitlab-ci/]
 ---
 
 [This](https://about.gitlab.com/features/gitlab-ci-cd/) page details how to use GitLab CI to manage deploying
@@ -31,7 +33,7 @@ The source code for the stack is in a repository in GitLab and uses `TypeScript`
 You may choose a naming convention that best suits your organization.
 
 Alternatively, you can also run `pulumi new [template]` to create a template project.
-Learn more [here]({{< relref "cli/pulumi_new.md" >}}).
+Learn more [here]({{< ref "/docs/reference/cli/pulumi_new.md" >}}).
 
 ## GitLab CI Runners
 

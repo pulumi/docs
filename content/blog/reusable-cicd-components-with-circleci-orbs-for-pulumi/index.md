@@ -74,7 +74,7 @@ links from <https://app.pulumi.com> to any stack updates or previews
 that happened during a CircleCI workflow.
 
 Also, if you are using CircleCI with GitHub, you can consider installing
-the [Pulumi GitHub application]({{< ref "/docs/reference/cd-github" >}}). The Pulumi
+the [Pulumi GitHub application]({{< ref "/docs/console/continuous-delivery/github" >}}). The Pulumi
 GitHub app will surface the results of any previews or updates from your
 CI/CD on the source GitHub pull request. It's always good to know if a
 pull request is going to lead to changes to your cloud infrastructure!

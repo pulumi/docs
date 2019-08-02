@@ -1,9 +1,7 @@
 ---
-title: Teams & Collaboration
-menu:
-  reference:
-    identifier: teams
-    weight: 7
+title: Pulumi Cloud Console
+
+aliases: [/docs/reference/service]
 ---
 
 [The Pulumi Cloud Console](https://app.pulumi.com) allows you to manage your stacks online. It enables

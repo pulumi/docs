@@ -1,10 +1,11 @@
 ---
 title: Pulumi GitHub App
-expanded_url: /docs/reference/service/
+
 menu:
-  reference:
-    parent: teams
-    weight: 4
+    console:
+        parent: cont_delivery
+
+aliases: [/docs/reference/cd-github/]
 ---
 
 Pulumi's GitHub app integrates the results of Pulumi stack updates with GitHub. Once installed and
@@ -56,12 +57,12 @@ system will have its results reported back to GitHub.
 Pulumi supports a wide array of CI/CD systems, and the Pulumi GitHub App should pick up your changes
 automatically. For instructions for specific CI services, see one of our existing guides:
 
-* [AWS Code Services]({{< relref "cd-aws-code-services.md" >}})
-* [Azure DevOps]({{< relref "cd-azure-devops.md" >}})
-* [CircleCI]({{< relref "cd-circleci.md" >}})
-* [GitHub Actions]({{< relref "cd-github-actions.md" >}})
-* [GitLab CI]({{< relref "cd-gitlab-ci.md" >}})
-* [Travis]({{< relref "cd-travis.md" >}})
+* [AWS Code Services]({{< relref "aws-code-services.md" >}})
+* [Azure DevOps]({{< relref "azure-devops.md" >}})
+* [CircleCI]({{< relref "circleci.md" >}})
+* [GitHub Actions]({{< relref "github-actions.md" >}})
+* [GitLab CI]({{< relref "gitlab-ci.md" >}})
+* [Travis]({{< relref "travis.md" >}})
 
 If you are using a system we don't support yet, please [file an issue](https://github.com/pulumi/pulumi/issues/new)
 so we can add it.

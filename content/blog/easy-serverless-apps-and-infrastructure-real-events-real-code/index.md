@@ -357,7 +357,7 @@ pace.
 Lastly, it's possible to use Pulumi stacks to actually break apart your
 cloud resources and functions into independently deployable pieces. This
 allows teams to leverage features
-like [RBAC]({{< ref "/docs/reference/service/roles-and-access-controls" >}}).
+like [RBAC]({{< ref "/docs/console/collaboration/roles-and-access-controls" >}}).
 For instance, it's common for the DevOps team to manage the physical
 cloud resources like queues, topics, and buckets, while the development
 team authors and manages the serverless functions attached to them. Read
