@@ -116,6 +116,29 @@ All resource constructors also accept an `options` argument which can provide th
 ###### `additionalSecretOutputs`
 Provides a list of output properties which should be treated as secrets. This value augments any values that Pulumi detects itself, based on what secret inputs to the resource has. This is typically used to express that for a specific instance of a resource, some of its output properties should be treated as secrets (when they would not normally be).
 
+{{< langchoose >}}
+
+```javascript
+// Ensure the password generated for the database is marked as a secret
+let db = new Database("new-name-for-db", {}, { additionalSecretOutputs: ["password"] });
+```
+
+```typescript
+// Ensure the password generated for the database is marked as a secret
+let db = new Database("new-name-for-db", {}, { additionalSecretOutputs: ["password"] });
+```
+
+```python
+# Ensure the password generated for the database is marked as a secret
+db = Database("db", opts=ResourceOptions(additional_secret_outputs=["password"]))
+```
+
+```go
+// AdditionalSecretOutputs is not yet supported in Go.
+//
+// See https://github.com/pulumi/pulumi/issues/1614.
+```
+
 ###### `aliases`
 Provides a list of aliases for a resource or component. When making a breaking change to the name or type of a resource or component, you can add the old name to the list of `aliases` for a resource to ensure that existing resources will be migrated to the new name instead of being deleted and replaced with the new named resource.
 
@@ -127,29 +150,225 @@ Or it can be aliased to a relative change to the resource's name, parent, and/or
 
 `aliases: [{ name: "otherchild", parent: this }]`
 
+{{< langchoose >}}
+
+```javascript
+// Wait up to 30m for the database to be created
+let db = new Database("new-name-for-db", {}, { aliases: [{name: "old-name-for-db"}] });
+```
+
+```typescript
+// Wait up to 30m for the database to be created
+let db = new Database("new-name-for-db", {}, { aliases: [{name: "old-name-for-db"}] });
+```
+
+```python
+# Wait up to 30m for the database to be created
+db = Database("db", opts=ResourceOptions(aliases=[Alias(name="old-name-for-db")]))
+```
+
+```go
+// Aliases is not yet supported in Go.
+//
+// See https://github.com/pulumi/pulumi/issues/1614.
+```
+
 ###### `customTimeouts`
 Provides a set of custom timeouts for `create`, `update`, and `delete` operations on a resource. These timeouts can be specified as a string like "5m", "40s", or "1d" (5 minutes, 40 seconds, or 1 day, respectively). For example, `customTimeouts: { create: "1m" }`.
+
+{{< langchoose >}}
+
+```javascript
+// Wait up to 30m for the database to be created
+let db = new Database("db", {}, { customTimeouts: { create: "30m" } });
+```
+
+```typescript
+// Wait up to 30m for the database to be created
+let db = new Database("db", {}, { customTimeouts: { create: "30m" } });
+```
+
+```python
+# Wait up to 30m for the database to be created
+db = Database("db", opts=ResourceOptions(custom_timeouts=CustomTimeouts(create="30m")))
+```
+
+```go
+// Wait up to 30m for the database to be created
+db, _ := Database(ctx, "db", &DatabaseArgs{}, pulumi.ResourceOpt{CustomTimeouts: &CustomTimeouts{Create: "30m"}});
+```
 
 ###### `deleteBeforeReplace`
 Set this option to `true` to specify that replacements of the resource will delete the existing resource before creating its replacement.  This will lead to downtime during the replacement, but may be necessary for some resources that manage scarce resources behind the scenes.  The default is `false`.
 
+{{< langchoose >}}
+
+```javascript
+// The resource will be deleted before it's replacement is creater
+let db = new Database("db", {}, { deleteBeforeReplace: true});
+```
+
+```typescript
+// The resource will be deleted before it's replacement is creater
+let db = new Database("db", {}, { deleteBeforeReplace: true});
+```
+
+```python
+# The resource will be deleted before it's replacement is creater
+db = Database("db", opts=ResourceOptions(delete_before_replace=True))
+```
+
+```go
+// The resource will be deleted before it's replacement is creater
+db, _ := Database(ctx, "db", &DatabaseArgs{}, pulumi.ResourceOpt{DeleteBeforeReplace: true});
+```
+
 ###### `dependsOn`
 Provides a list of explicit resource dependencies to add to the resource. Every resource referenced either directly or indirectly by an `Output` that is passed in to the resource constructor will implicitly be included, so this additional information is only needed when the dependency is on something that is not already an input to the resource. The default is `[]`.
+
+{{< langchoose >}}
+
+```javascript
+let res1 = new MyResource("res1", {});
+let res2 = new MyResource("res2", {}, { dependsOn: [res1] });
+```
+
+```typescript
+let res1 = new MyResource("res1", {});
+let res2 = new MyResource("res2", {}, { dependsOn: [res1] });
+```
+
+```python
+res1 = MyResource("res1");
+res2 = MyResource("res2", opts=ResourceOptions(depends_on=res1));
+```
+
+```go
+res1, _ := MyResource(ctx, "res1");
+res2, _ := MyResource(ctx, "res2", pulumi.ResourceOpt{DependsOn: []Resource{res1}});
+```
 
 ###### `ignoreChanges`
 Provides a list of properties which will be ignored as part of updates. The value of the property will be used for newly created resources, but will not be used as part of updates. This is typically used to avoid changes in properties leading to diffs or to change defaults for a property without forcing all existing deployed stacks to update or replace the affected resource.
 
+{{< langchoose >}}
+
+```javascript
+// Changes to the value of `prop` will not lead to updates/replacements
+let res = new MyResource("res", { prop: "new-value" }, { ignoreChanges: ["prop"] });
+```
+
+```typescript
+// Changes to the value of `prop` will not lead to updates/replacements
+let res = new MyResource("res", { prop: "new-value" }, { ignoreChanges: ["prop"] });
+```
+
+```python
+# Changes to the value of `prop` will not lead to updates/replacements
+res = MyResource("res", prop="new-value", opts=ResourceOptions(ignore_changes=["prop"]))
+```
+
+```go
+// IgnoreChanges is not yet supported in Go.
+//
+// See https://github.com/pulumi/pulumi/issues/1614.
+```
+
 ###### `import`
 The ID of an existing resource to import for Pulumi to manage. When set, Pulumi will read the current state of the resource with the given ID from the backing provider &ndash; AWS, Azure, GCP, or Kubernetes for example. The inputs to the resource's constructor must not differ from this state or the import will fail. Once a resource has been imported, this property should be unset.
+
+{{< langchoose >}}
+
+```javascript
+// The input properties must match the values for the exsiting resource `my-database-id`
+let db = new Database("db", { /*...*/ }, { import: "my-database-id" });
+```
+
+```typescript
+// The input properties must match the values for the exsiting resource `my-database-id`
+let db = new Database("db", { /*...*/ }, { import: "my-database-id" });
+```
+
+```python
+# The input properties must match the values for the exsiting resource `my-database-id`
+db = Database("db", opts=ResourceOptions(import_="my-database-id"))
+```
+
+```go
+// The input properties must match the values for the exsiting resource `my-database-id`
+db, _ := Database(ctx, "db", &DatabaseArgs{ /*...*/ }, pulumi.ResourceOpt{Import: "my-database-id"});
+```
 
 ###### `parent`
 A parent for the resource. See [Components](#components).  The default is to parent to the implicitly-created `Stack` resource that is a root resource for all Pulumi stacks.
 
+{{< langchoose >}}
+
+```javascript
+let parent = new MyResource("parent", {});
+let child = new MyResource("child", {}, { parent: parent });
+```
+
+```typescript
+let parent = new MyResource("parent", {});
+let child = new MyResource("child", {}, { parent: parent });
+```
+
+```python
+parent = MyResource("parent");
+child = MyResource("child", opts=ResourceOptions(parent=parent));
+```
+
+```go
+parent, _ := MyResource(ctx, "parent");
+child, _ := MyResource(ctx, "child", pulumi.ResourceOpt{Parent: parent});
+```
+
 ###### `protect`
 Marks a resource as protected. A protected resource cannot be deleted directly: First, you must set `protect: false` and run `pulumi up`. Then, you can delete the resource by removing the line of code or by running `pulumi destroy`.  The default is to inherit this value from the parent resource, and `false` for resources without a parent.
 
+{{< langchoose >}}
+
+```javascript
+let db = new Database("db", {}, { protect: true});
+```
+
+```typescript
+let db = new Database("db", {}, { protect: true});
+```
+
+```python
+db = Database("db", opts=ResourceOptions(protect=True))
+```
+
+```go
+db, _ := Database(ctx, "db", &DatabaseArgs{}, pulumi.ResourceOpt{Protect: true});
+```
+
 ###### `provider`
 A provider for the resource. See [Providers](#providers).  The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
+
+{{< langchoose >}}
+
+```javascript
+let provider = new aws.Provider("provider", { region: "us-west-2" });
+let vpc = new aws.ec2.Vpc("vpc", {}, { provider: provider });
+```
+
+```typescript
+let provider = new aws.Provider("provider", { region: "us-west-2" });
+let vpc = new aws.ec2.Vpc("vpc", {}, { provider: provider });
+```
+
+```python
+provider = Provider("provider", region="us-west-2")
+vpc = ec2.Vpc("vpc", opts=ResourceOptions(provider=provider))
+```
+
+```go
+provider, _ := aws.Provider(ctx, "provider", { region: "us-west-2" });
+vpc, _ := ec2.Vpc(ctx, "vpc", &VpcArgs{}, pulumi.ResourceOpt{Provider: provider});
+```
 
 ### Resource names {#names}
 
