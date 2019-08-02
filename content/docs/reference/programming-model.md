@@ -405,9 +405,11 @@ const url: Output<string> = // ?
 ```
 
 ```python
-# Helpers for combining Outputs into strings are not yet available in Python.
-#
-# See https://github.com/pulumi/pulumi/issues/2366.
+hostName: Output[str] = # get some Output
+port: Output[int] = # get some Output
+
+# Would like to produce a string equivalent to: http://${hostname}:${port}/
+url = # ?
 ```
 
 ```go
@@ -427,9 +429,7 @@ const url: Output<string> = pulumi.all([hostname, port]).apply(([hostname, port]
 ```
 
 ```python
-# Helpers for combining Outputs into strings are not yet available in Python.
-#
-# See https://github.com/pulumi/pulumi/issues/2366.
+url = Output.all([hostname, port]).apply(lambda l: f"http://{l[0]}:{l[1]}/")
 ```
 
 ```go
@@ -438,7 +438,7 @@ const url: Output<string> = pulumi.all([hostname, port]).apply(([hostname, port]
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-However, this is quite verbose and unwieldy.  To make this easier, Pulumi exposes two helpers `concat` and `interpolate`  to make this more convenient.  They can be used as follows:
+However, this is quite verbose and unwieldy.  To make this easier, Pulumi exposes helpers like `concat` and `interpolate` to make this more convenient.  They can be used as follows:
 
 ```javascript
 const url1 = pulumi.concat("http://", hostname, ":", port, "/");
@@ -451,9 +451,7 @@ const url2: Output<string> = pulumi.interpolate `http://${hostname}:${port}/`;
 ```
 
 ```python
-# Helpers for combining Outputs into strings are not yet available in Python.
-#
-# See https://github.com/pulumi/pulumi/issues/2366.
+url = Output.concat("http://", hostname, ":", post, "/")
 ```
 
 ```go
@@ -462,7 +460,7 @@ const url2: Output<string> = pulumi.interpolate `http://${hostname}:${port}/`;
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-`concat` takes a list of arguments that can be `Inputs`, `Outputs`, `Promises` and simple JavaScript values, and creates an `Output` with all their underlying values concatenated together.  `interpolate` does the same, but allows you to use a JavaScript `template literal` if that's your preferred way of combining values into strings.
+`concat` takes a list of arguments that can be `Inputs`, `Outputs`, `Promises` and simple values, and creates an `Output` with all their underlying values concatenated together.  `interpolate` (JavaScript-only) does the same, but allows you to use a JavaScript `template literal` if that's your preferred way of combining values into strings.
 
 ## Secrets {#secrets}
 
@@ -676,9 +674,9 @@ console.log(`Active: ${data.active}`);
 ```
 
 ```python
-# JSON parsing helpers for config are not built-in for Python currently.
-#
-# See https://github.com/pulumi/pulumi/issues/1535.
+config = pulumi.Config()
+data = config.require_object("data")
+print(f"Active: ${data.active}")
 ```
 
 ```go
@@ -1027,7 +1025,11 @@ const myprovider: pulumi.dynamic.ResourceProvider = {
 ```
 
 ```python
-# Dynamic Providers are not supported in Python currently.
+from pulumi.dynamic import ResourceProvider, CreateResult
+
+class MyProvider(ResourceProvider):
+    def create(self, inputs):
+        return CreateResult(id_="foo", outs={})
 ```
 
 ```go
@@ -1055,14 +1057,20 @@ class MyResource extends pulumi.dynamic.Resource {
 ```
 
 ```python
-# Dynamic Providers are not supported in Python currently.
+from pulumi import ResourceOptions
+from pulumi.dynamic import Resource
+from typing import Any, Optional
+
+class MyResource(Resource):
+    def __init__(self, name: str, props: Any, opts: Optional[ResourceOptions] = None):
+         super().__init__(MyProvider(), name, props, opts)
 ```
 
 ```go
 // Dynamic Providers are not supported in Go currently.
 ```
 
-We can now create instances of the new `MyResource` resource kind in our program with `new MyRresource("name", args)`.  When we do so, if Pulumi determines the resource has not yet been created, it will call the `create` method on the resource provider interface.  If another Pulumi deployment happens and the resource already exists, Pulumi will call the `diff` method to determine whether a change can be made in place or whether a replacement is needed.  If a replacement is needed, Pulumi will call `create` for the new resource and then `delete` for the old resource.  If no repacement is needed, Pulumi will call `update`.  In all cases, before doing anything else, Pulumi will call the `check` method with the resource arguments to give the provider a chance to validate that the arguments are valid.  And finally, if Pulumi needs to read an existing resource without managing it directly, it will call `read`.
+We can now create instances of the new `MyResource` resource kind in our program with `new MyResource("name", args)`.  When we do so, if Pulumi determines the resource has not yet been created, it will call the `create` method on the resource provider interface.  If another Pulumi deployment happens and the resource already exists, Pulumi will call the `diff` method to determine whether a change can be made in place or whether a replacement is needed.  If a replacement is needed, Pulumi will call `create` for the new resource and then `delete` for the old resource.  If no repacement is needed, Pulumi will call `update`.  In all cases, before doing anything else, Pulumi will call the `check` method with the resource arguments to give the provider a chance to validate that the arguments are valid.  And finally, if Pulumi needs to read an existing resource without managing it directly, it will call `read`.
 
 > _Note_: Dynamic Providers are a flexible and low-level mechanism to plug arbitrary code directly into the deployment process.  Whereas most code in a Pulumi program runs as part of constructing the desired state of resources (the "resource graph"), the code inside the dynamic provider resource provider interface implementations (`create`, `update`, etc.) runs instead during resource provisioning (while the resource graph is being turned into a set of CRUD operations scheduled against the cloud providers).  In fact, these two phases of execution actually run in completely seperate processes.  The construction of a `new MyResource` happens inside the JavaScript/Python/Go process that's running your Pulumi program.  But your implementations of `create` or `update` are executed by a special resource provider binary called `pulumi-resource-pulumi-nodejs`.  This binary is what actually implements the Pulumi resource provider gRPC interface and speaks directly to the Pulumi engine. Because your implementation of the resource provider interface must be used by a different process, potentialy at a different point in time, dynamic providers are built on top of the same [function serialization]({{< relref "serializing-functions.md" >}}) that is used for turning callbacks into AWS Lambdas or Google Cloud Functions.  Because of this serialization, there are some limits on what can be done inside the implementation of the resource provider interface, which you can read more about in the function serialization documentation.
 
@@ -1097,7 +1105,20 @@ class MyResource extends pulumi.dynamic.Resource {
 ```
 
 ```python
-# Dynamic Providers are not supported in Python currently.
+from pulumi import Input, ResourceOptions
+from pulumi.dynamic import Resource
+from typing import Any, Optional
+
+class MyResourceInputs(object):
+    my_string_prop: Input[str]
+    my_bool_prop: Input[bool]
+    def __init__(self, my_string_prop, my_bool_prop):
+        self.my_string_prop = my_string_prop
+        self.my_bool_prop = my_bool_prop
+
+class MyResource(Resource):
+    def __init__(self, name: str, props: MyResourceInputs, opts: Optional[ResourceOptions] = None):
+         super().__init__(MyProvider(), name, {**vars(props)}, opts)
 ```
 
 ```go
@@ -1144,10 +1165,6 @@ class MyResource extends pulumi.dynamic.Resource {
         super(myprovider, name, props, opts);
     }
 }
-```
-
-```python
-# Dynamic Providers are not supported in Python currently.
 ```
 
 ```go
@@ -1204,11 +1221,6 @@ class MyResourceProvider extends pulumi.dynamic.ResourceProvider {
         // Values are for an example only.
         return { id: "...", outs: { myNumberOutput: 12, myStringOutput: "some value" }};
     }
-
-    async diff(id: string, oldOutputs: MyResourceProviderOutputs, newInputs: MyResourceProviderInputs): Promise<pulumi.dynamic.DiffResult> {
-        ...
-    }
-    ...
 }
 
 export class MyResource extends pulumi.dynamic.Resource {
@@ -1216,13 +1228,25 @@ export class MyResource extends pulumi.dynamic.Resource {
     public readonly myNumberOutput: pulumi.Output<number>;
 
     constructor(name: string, props: MyResourceInputs, opts?: pulumi.CustomResourceOptions) {
-        super(myprovider, name, props, opts);
+        super(myprovider, name, { myStringOutput: undefined, myNumberOutput: unedfiend, ...props }, opts);
     }
 }
 ```
 
 ```python
-# Dynamic Providers are not yet supported in Python.
+from pulumi import ResourceOptions, Input, Output
+from pulumi.dynamic import Resource, ResourceProvider, CreateResult
+from typing import Any, Optional
+
+class MyProvider(ResourceProvider):
+    def create(self, inputs):
+        return CreateResult(id_="foo", outs={ 'my_number_output': 12, 'my_string_output': "some value" })
+
+class MyResource(Resource):
+    my_string_output: Output[str]
+    my_number_output: Output[str]
+    def __init__(self, name: str, props: MyResourceInputs, opts: Optional[ResourceOptions] = None):
+         super().__init__(MyProvider(), name, { 'my_string_output': None, 'my_number_output': None, **vars(props) }, opts)
 ```
 
 ```go
@@ -1274,7 +1298,19 @@ export class Random extends pulumi.dynamic.Resource {
 ```
 
 ```python
-# Dynamic Providers are not supported in Python currently.
+from pulumi import ResourceOptions
+from pulumi.dynamic import Resource, ResourceProvider, CreateResult
+from typing import Optional
+import binascii
+import os
+
+class RandomProvider(ResourceProvider):
+    def create(self, inputs):
+        return CreateResult(id_=binascii.b2a_hex(os.urandom(16)), outs={})
+
+class Random(Resource):
+    def __init__(self, name: str, opts: Optional[ResourceOptions] = None):
+         super().__init__(RandomProvider(), name, {}, opts)
 ```
 
 ```go
@@ -1284,7 +1320,6 @@ export class Random extends pulumi.dynamic.Resource {
 #### Example: GitHub Labels REST API
 
 This example highlights making REST API calls to some backing provider (in this case the GitHub API) to perform CRUD operations.  Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and make calls to it local to each function.
-
 
 {{< langchoose >}}
 
@@ -1371,7 +1406,57 @@ export class Label extends pulumi.dynamic.Resource {
 ```
 
 ```python
-# Dynamic Providers are not supported in Python currently.
+from pulumi import ComponentResource, export, Input, Output
+from pulumi.dynamic import Resource, ResourceProvider, CreateResult, UpdateResult
+from typing import Optional
+from github import Github, GithubObject
+
+auth = "<auth token>"
+g = Github(auth)
+
+class GithubLabelArgs(object):
+    owner: Input[str]
+    repo: Input[str]
+    name: Input[str]
+    color: Input[str]
+    description: Optional[Input[str]]
+    def __init__(self, owner, repo, name, color, description=None):
+        self.owner = owner
+        self.repo = repo
+        self.name = name
+        self.color = color
+        self.description = description
+
+class GithubLabelProvider(ResourceProvider):
+    def create(self, props):
+        l = g.get_user(props["owner"]).get_repo(props["repo"]).create_label(
+            name=props["name"],
+            color=props["color"],
+            description=props.get("description", GithubObject.NotSet))
+        return CreateResult(l.name, {**props, **l.raw_data}) 
+    def update(self, id, _olds, props):
+        l = g.get_user(props["owner"]).get_repo(props["repo"]).get_label(id)
+        l.edit(name=props["name"],
+               color=props["color"],
+               description=props.get("description", GithubObject.NotSet))
+        return UpdateResult({**props, **l.raw_data})
+    def delete(self, id, props):
+        l = g.get_user(props["owner"]).get_repo(props["repo"]).get_label(id)
+        l.delete()
+
+class GithubLabel(Resource):
+    name: Output[str]
+    color: Output[str]
+    url: Output[str]
+    description: Output[str]
+    def __init__(self, name, args: GithubLabelArgs, opts = None):
+        full_args = {'url':None, 'description':None, 'name':None, 'color':None, **vars(args)}
+        super().__init__(GithubLabelProvider(), name, full_args, opts)
+
+label = GithubLabel("foo", GithubLabelArgs("lukehoban", "todo", "mylabel", "d94f0b"))
+
+export("label_color", label.color)
+export("label_url", label.url)
 ```
 
 ```go
