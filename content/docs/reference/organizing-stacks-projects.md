@@ -93,7 +93,7 @@ and testing. In that case, we'll have six distinct stacks, that pair up together
 * `acmecorp/infra/staging` provides the cluster used by `acmecorp/services/staging`
 * `acmecorp/infra/testing` provides the cluster used by `acmecorp/services/testing`
 
-The way Pulumi programs communicate information for external consumption is by using stack exports. For instance,
+The way Pulumi programs communicate information for external consumption is by using stack exports. For example,
 our infrastructure stack might export the Kubernetes configuration information needed to deploy into a cluster:
 
 {{< langchoose >}}
