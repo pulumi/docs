@@ -25,7 +25,7 @@ SAML SSO, you'll need to create a new Pulumi organization.
 ## Other Editions
 
 For more information about the specific differences and capabitlies offered for the Pulumi Team
-and Enterprise editions, refer to the [pricing page]({{< ref "/pricing" >}}) for details.
+and Enterprise editions, refer to the [pricing page]({{< ref "/pricing" >}}).
 
 To create a new Pulumi organization with a new edition, see
 [creating a new organization]({{< relref "organizations#creating-a-new-organization" >}}).

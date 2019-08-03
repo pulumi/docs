@@ -7,15 +7,17 @@ menu:
         weight: 1
 ---
 
-You can create a [Pulumi User account]({{< relref "individual" >}}) for free by signing into the
-Pulumi Cloud Console. You can then create and manage stacks within your own
+You can create a [Pulumi User account]({{< relref "account" >}}) for free by signing into the
+Pulumi Cloud Console. This is how you authenticate with the Pulumi Cloud Console.
+
+You can then create and manage stacks within your own
 [Community Edition]({{< relref "editions#community-edition" >}}) organization, or you can create a new
 [Pulumi Organization]({{< relref "organizations" >}}) to collaborate with others. 
 
 ## User Accounts and Organizations
 
-Your [Pulumi User account]({{< relref "individual" >}}) is how you authenticate with the Pulumi
-Cloud Console. A Pulumi [organization]({{< relref "organizations" >}}) contains a collection of stacks.
+Your [Pulumi User account]({{< relref "account" >}})  and gives you access to Pulumi [organizations]({{< relref "organizations" >}}).
+Pulumi organizations contain stacks.
 
 When you first sign up for the Pulumi Cloud Console, an organization is automatically created for you.
 If you later want to take advantage of more advanced features such as teams and role-based access controls,

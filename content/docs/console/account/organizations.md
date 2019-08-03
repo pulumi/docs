@@ -24,15 +24,17 @@ You can create a new Pulumi organization directly from the Pulumi Cloud Console.
 </a>
 
 
-## Organization Kinds
+## Organization Kinds{#organization-kinds}
 
-A Pulumi organization may be linked to a 3rd party identity provider, offering an additional layer
+A Pulumi organization may be linked to a 3rd-party identity provider, offering an additional layer
 of security for you and your team. While membership within the Pulumi organization is managed by
 an organization administrator, in order to become a member of a Pulumi organization you must also
-be a member of the backing 3rd party identity provider.
+be a member of the backing 3rd-party identity provider.
 
-For example, if a Pulumi organization were based on the GitHub organization https://github.com/robot-co,
-then only members of the GitHub organization could also be members of the Pulumi organization.
+For example, if a Pulumi organization (https://app.pulumi.com/robot-co) is backed by a GitHub organization
+(https://github.com/robot-co), then only members of the GitHub organization may be added as members to the
+Pulumi organization. Similarly, as soon as someone loses access to the GitHub organization, they will no
+longer have access to the Pulumi organization it is backing.
 
 > See [organization roles]({{< relref "organization-roles" >}}) or
 > [adding new identities]({{< relref "account#adding-new-identities" >}})
@@ -43,6 +45,9 @@ The following table shows the relationship between a Pulumi organization and 3rd
 | Pulumi | Bitbucket | GitHub | GitLab |
 |--------|--------|--------|--------|
 | Organization | [Team](https://confluence.atlassian.com/bitbucket/teams-321853005.html) | [Organization](https://github.com/collab-uniba/socialcde4eclipse/wiki/How-to-setup-a-GitHub-organization,-project-and-team) | [Group](https://docs.gitlab.com/ce/user/group/) |
+
+In addition, a Pulumi organization may be backed by a [SAML 2.0 identity provider]({{< relref "saml" >}}), or
+no identity provider at all. (In which case membership is entirely managed on the Pulumi Cloud Console.)
 
 ### GitHub-backed Organizations
 
@@ -69,13 +74,14 @@ GitLab group membership expires, those users will lose access to the GitLab-back
 The Pulumi Enterprise edition provides more options for identity and access, including support for
 any SAML 2.0 based identity provider.
 
-We officially support and internally test the following providers:
+[Learn more]({{< relref "saml" >}}) about configuring a SAML-based organization on Pulumi. Or refer to one
+of our guides below:
 
 - [Azure Active Directory]({{< relref "aad" >}})
 - [G Suite]({{< relref "gsuite" >}})
 - [Okta]({{< relref "okta" >}})
 
-[Learn more]({{< relref "saml" >}}) about configuring a SAML-based organization on Pulumi.
+
 
 > If you need help configuring or would like us to officially support another SAML identity provider,
 > please [contact us]({{< ref "/about#contact-us" >}}).

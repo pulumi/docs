@@ -34,16 +34,6 @@ The Pulumi Cloud Console enables you to Work with other developers and coordinat
 You can use fine-grained [stack permissions]({{< relref "stack-permissions" >}}) to control who has access to stacks,
 or use [teams]({{< relref "teams" >}}) for role-based access control.
 
-## Secrets and Security
-
-The Pulumi Cloud Console also provides various security measures to ensure only authorized
-people can access your sensitive resource information.
-
-- Secret resource values and configuration data are encrypted. You can rely on the Pulumi Cloud Console
-  to do this for you, or you can use your own secrets provider. [Learn More]({{< relref "secrets-management" >}})
-- Single sign-on (SSO) allows you to manage access to your Pulumi stacks using any SAML 2.0-compatible
-  identity provider. [Learn More]({{< ref "/docs/console/account/saml" >}})
-
 ## Integrations and Extensions
 
 Pulumi is integrated with popular 3rd party services such as [GitHub]({{< ref "/docs/console/continuous-delivery/github-app" >}}).
