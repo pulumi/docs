@@ -1,9 +1,10 @@
 ---
-title: Roles and Access Controls
+title: Stack Permissions
 
 menu:
     console:
         parent: collaboration
+        weight: 1
 
 aliases: [/docs/reference/service/roles-and-access-controls]
 ---
@@ -14,16 +15,7 @@ A user's permission to access a stack is based first on their role within the co
 organization, and then on any additional permissions granted explicitly to that user.
 
 > Note: This feature is only available on organizations using the Pulumi Team Edition.
-> For more information, see [Organizations]({{< relref "orgs.md" >}}).
-
-## Organization Roles
-
-Each member of a Pulumi Cloud Console organization has either the `MEMBER` or
-`ADMIN` role within an organization.
-
-Pulumi organizations that have been imported from GitHub carry along each
-member's GitHub role. Members of the GitHub organization with the _Owner_
-role on GitHub will have the `ADMIN` role in the Pulumi organization.
+> For more information, see [Organizations]({{< relref "organizations" >}}).
 
 ## Stack Permission Levels
 

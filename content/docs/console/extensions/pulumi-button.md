@@ -3,7 +3,7 @@ title: "'Deploy with Pulumi' Button"
 
 menu:
     console:
-        parent: integrations
+        parent: extensions
         weight: 2
 
 aliases: [/docs/reference/service/pulumi-button]

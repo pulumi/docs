@@ -1,5 +1,5 @@
 ---
-title: Supporting A New CI System
+title: Other
 
 menu:
     console:
@@ -7,6 +7,11 @@ menu:
 
 aliases: [/docs/reference/cd-supporting-new-ci/]
 ---
+
+> If Pulumi doesn't already support your CI/CD system, this guide
+> walks y ou though how to create a new CI/CD system for surfacing
+> data in the cloud console, as well as
+> the GitHub application and other workflows.
 
 ## Overview
 

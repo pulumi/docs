@@ -4,6 +4,7 @@ title: Teams
 menu:
     console:
         parent: collaboration
+        weight: 3
 
 aliases: [/docs/reference/service/teams]
 ---
@@ -44,4 +45,4 @@ stack in the team. For example, members of `network-team` may have `WRITE` acces
 ![Editing team stacks and permissions](/images/docs/reference/service/editing-stack-permissions.png)
 
 For more information about stack permissions see
-[Roles and Access Controls]({{< relref "roles-and-access-controls.md" >}}).
+[Stack Permissions]({{< relref "stack-permissions.md" >}}).

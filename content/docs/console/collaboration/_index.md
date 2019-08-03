@@ -1,10 +1,13 @@
 ---
 title: Collaboration
 
-redirect_to: /docs/console/collaboration/roles-and-access-controls/
-
 menu:
     console:
         identifier: collaboration
-        weight: 10
+        weight: 2
 ---
+
+
+> Collaboration
+>
+> Using Pulumi within an organization setting allows you to work with other people.
