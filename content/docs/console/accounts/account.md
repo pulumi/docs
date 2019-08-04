@@ -1,9 +1,9 @@
 ---
-title: Account
+title: Accounts
 
 menu:
     console:
-        parent: account
+        parent: accounts
         weight: 2
 ---
 

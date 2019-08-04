@@ -3,7 +3,7 @@ title: Plans and Editions
 
 menu:
     console:
-        parent: account
+        parent: accounts
         weight: 1
 ---
 

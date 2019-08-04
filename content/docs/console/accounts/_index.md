@@ -3,7 +3,7 @@ title: Accounts & Billing
 
 menu:
     console:
-        identifier: account
+        identifier: accounts
         weight: 1
 ---
 

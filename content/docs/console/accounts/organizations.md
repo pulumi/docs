@@ -3,7 +3,7 @@ title: Organizations
 
 menu:
     console:
-        parent: account
+        parent: accounts
         weight: 3
 
 aliases: [/docs/reference/service/orgs]
