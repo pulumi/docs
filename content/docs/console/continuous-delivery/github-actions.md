@@ -124,7 +124,7 @@ Pulumi's Cloud Console with more details:
 
 ![Action Logs](/images/docs/reference/gh-actions-logs.png)
 
-For even better Pull Request integration, make sure to also [install our GitHub App]({{< relref "github.md" >}})!
+For even better Pull Request integration, make sure to also [install our GitHub App]({{< ref "/docs/console/continuous-delivery/github-app" >}})!
 
 ![Action Pull Requests](/images/docs/reference/gh-actions-prs.png)
 

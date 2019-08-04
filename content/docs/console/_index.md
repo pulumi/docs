@@ -4,45 +4,42 @@ title: Pulumi Cloud Console
 aliases: [/docs/reference/service]
 ---
 
-[The Pulumi Cloud Console](https://app.pulumi.com) allows you to manage your stacks online. It enables
-you to to collaborate with multiple developers, protect against concurrent updates, store resource
-history, integrate with your CI/CD system, and more!
+The [Pulumi Cloud Console](https://app.pulumi.com) allows you to manage your stacks online. It enables
+you to to collaborate with multiple developers, protect against concurrent updates, store resource and
+update history, integrate with your CI/CD system, and more!
 
 ## Getting Started
 
-To get started using the Pulumi Cloud Console, simply navigate to [app.pulumi.com](https://app.pulumi.com) and sign up.
+To get started using the Pulumi Cloud Console, simply navigate to [app.pulumi.com](https://app.pulumi.com)
+and sign up. The [Pulumi Community Edition]({{< relref "editions#community-edition" >}}) is free forever
+for unlimited individual use.
 
-## Organizations
+<a class="btn" href="https://app.pulumi.com/signup" target="_blank">
+    GET STARTED
+</a>
 
-The Pulumi Cloud Console manages stacks by placing them within _Organizations_.
+## Stack Management
 
-When you first log in, a Pulumi organization is created with the same name as your Pulumi user account.
-That organization is implied whenever you run commands like `pulumi stack init` or
-`pulumi stack select`. For example, `pulumi stack init my-devstack` will create a new stack in
-the organization associated with your account. e.g. `octocruise/my-devstack`.
+The Pulumi Cloud Console manages stacks, providing safe locking so that your resource state can never
+get corrupted by a concurrent update.
 
-To create or select a stack in a different organization, prefix it with the organization's name
-followed by a slash. For example, `pulumi stack init acmecorp/new-service`.
+Navigate to previous stack updates, and see who applied what change and when. Or see the point-in-time history if an individual cloud resource.
 
-For more information on adding new organizations to Pulumi, see [Organizations]({{< relref "orgs.md" >}}).
+<img class="shadow-2xl lg:max-w-xl" src="/images/docs/reference/service/stack-resource-visualization.png" alt="Stack Resource Visualization">
 
-## Teams
+## Collaboration
 
-The Pulumi Cloud Console allows people to collaborate on stacks within
-an organization, including role-based access control (RBAC).
+The Pulumi Cloud Console enables you to Work with other developers and coordinate on updates.
 
-For more information on the types of collaboration supported, see [Teams]({{< relref "teams.md" >}}).
+You can use fine-grained [stack permissions]({{< relref "stack-permissions" >}}) to control who has access to stacks,
+or use [teams]({{< relref "teams" >}}) for role-based access control.
 
-## Roles and Access Controls
+## Integrations and Extensions
 
-Pulumi organizations allow managing member access to stacks. For example,
-enforcing policy on who can create new stacks within an organization, or who
-can update existing stacks.
+Pulumi is integrated with popular 3rd party services such as [GitHub]({{< ref "/docs/console/continuous-delivery/github-app" >}}).
+You can integrate Pulumi into your current [continuous delivery]({{< relref "continuous-delivery" >}}) pipeline.
 
-For more information about organization roles, stack permissions, and how they
-are managed in the Pulumi Cloud Console, see [Roles and Access Controls]({{< relref "roles-and-access-controls.md" >}}).
+<img class="shadow-2xl lg:max-w-xl" src="/images/docs/github-app/pr-comment.png" alt="Pulumi GitHub App">
 
-## APIs and Integration
-
-The Pulumi Cloud Console exposes REST APIs so you can build custom integrations
-on top of Pulumi. See [Webhooks]({{< relref "webhooks.md" >}}) for more information.
+You can also build your own extensions, such trigger a custom workflow in response to a
+[webhook]({{< relref "webhooks" >}}) from the Pulumi Cloud Console.

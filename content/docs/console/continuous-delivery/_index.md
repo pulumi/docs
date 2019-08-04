@@ -4,7 +4,7 @@ title: Continuous Delivery
 menu:
     console:
         identifier: cont_delivery
-        weight: 20
+        weight: 4
 
 aliases: [/docs/reference/cd]
 ---

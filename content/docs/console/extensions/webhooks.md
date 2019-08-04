@@ -3,7 +3,7 @@ title: Webhooks
 
 menu:
     console:
-        parent: integrations
+        parent: extensions
         weight: 1
 
 aliases: [/docs/reference/service/webhooks]

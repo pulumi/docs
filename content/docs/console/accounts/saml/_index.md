@@ -3,15 +3,16 @@ title: Single Sign-on (SSO)
 
 menu:
     console:
-        parent: enterprise
+        parent: account
         identifier: saml
 
 aliases: [/docs/reference/service/saml-overview]
 ---
 
-This document walks-through the important aspects of configuring an IdP for SSO with the [Pulumi Console](https://app.pulumi.com). Using this document, you can configure any identity provider for SAML SSO with the Pulumi Console. Pulumi supports only **SAML 2.0**.
+This document walks-through the important aspects of configuring any SAML 2.0 identity provider to be used
+with the [Pulumi Cloud Console](https://app.pulumi.com).
 
-> For a specific example, you can refer to one of our integration guides for:
+> For a specific example, you can refer to one of our integration guides:
 >
 > - [Azure Active Directory]({{< relref "aad" >}})
 > - [G Suite (Google)]({{< relref "gsuite" >}})
@@ -29,7 +30,7 @@ which can be used by the service provider to make authentication requests.
 The following are the only properties you will really be configuring when you setup SAML SSO with your IdP.
 
 | Name | Other Names |
-|------| ---------- |
+|----- | ---------- |
 | Single sign on URL | ACS URL |
 | Entity ID | Metadata _or_ Audience URL |
 | Default relay state | Start _or_ Application Start URL |
@@ -42,9 +43,10 @@ This is the URL where the IdP can `POST` SAML assertions. The URL format is alwa
 
 `https://api.pulumi.com/login/{orgName}/sso/saml/acs`
 
-...where `{orgName}` in the above URL is where your org's URL friendly name must be entered. The org name is case-sensitive.
-This means, if your org's Pulumi login name is ACME-corp, then you must use the name exactly as-is in the above URL as well.
+`{orgName}` in the previous URL is where your Pulumi organization's name must be entered. The org name is case-sensitive.
+This means, if your org's Pulumi login name is `ACME-corp`, then you must use the name exactly as-is in the above URL as well.
 You can find your org's Pulumi login name from the URL when you navigate to it in the [Pulumi Console](https://app.pulumi.com).
+(For example, from the URL [https://app.pulumi.com/ACME-corp](https://app.pulumi.com).)
 
 ### Entity ID
 > This value is required.
@@ -81,7 +83,7 @@ The failure is typically due to one of the following reasons:
 - KeyDescriptor public key certificate is missing n the IDPSSODescriptor
 - NameIDFormat does not have the expected value or is completely missing (see the next Troubleshooting topic for help regarding this)
 
-**TIP:** OneLogin has a suite of free SAML-related tools [here](https://www.samltool.com/prettyprint.php).
+> **TIP:** OneLogin has a suite of free SAML-related tools [here](https://www.samltool.com/prettyprint.php).
 
 ### Name ID Format is invalid
 
