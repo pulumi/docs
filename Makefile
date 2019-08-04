@@ -46,6 +46,7 @@ test:
 	#     - Our LinkedIn page, for some reason, returns an HTTP error (despite being valid)
 	#     - Our Visual Studio Marketplace link for the Azure Pipelines task extension,
 	#       although valid and publicly available, is reported as a broken link.
+	# The odd grepping is to reduce log spam. https://github.com/stevenvachon/broken-link-checker/issues/133
 	./node_modules/.bin/blc http://localhost:1313 --recursive --follow \
 		--exclude "/docs/reference/pkg" \
 		--exclude "/docs/reference/changelog" \
@@ -56,7 +57,15 @@ test:
 		--exclude "https://www.linkedin.com/" \
 		--exclude "https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task" \
 		--exclude "https://blog.mapbox.com/" \
-		--exclude "https://www.youtube.com/"
+		--exclude "https://www.youtube.com/" \
+		| grep --invert-match '^\\' \
+		| grep --invert-match "^|" \
+		| grep --invert-match "^/" \
+		| grep --invert-match "^-" \
+		| grep --invert-match "Getting links from: " \
+		| grep --invert-match "├───OK───" \
+		| grep --invert-match "└───OK───" \
+		| grep --invert-match "Finished! \d+ links found.( \d+ excluded.)? 0 broken."
 
 .PHONY: validate
 validate:
