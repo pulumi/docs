@@ -3,7 +3,7 @@ title: Single Sign-on (SSO)
 
 menu:
     console:
-        parent: account
+        parent: accounts
         identifier: saml
 
 aliases: [/docs/reference/service/saml-overview]
