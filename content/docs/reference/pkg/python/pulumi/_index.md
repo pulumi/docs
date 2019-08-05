@@ -1058,6 +1058,26 @@ are preserved in the returned Output.</p>
 </table>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi.Output.concat">
+<em class="property">static </em><code class="descname">concat</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[str][str]<a class="headerlink" href="#pulumi.Output.concat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Concatenates a collection of Input[str] into a single Output[str].</p>
+<p>This function takes a sequence of Input[str], stringifies each, and concatenates all values
+into one final string. This can be used like so:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> (<em>List</em><em>[</em><em>Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – A list of string Inputs to concatenate.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A concatenated output string.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </dd></dl>
 
 </div>

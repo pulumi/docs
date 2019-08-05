@@ -60,7 +60,7 @@ title: Module runtime
 <li><a href="#OutputResolvers">type OutputResolvers</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/config.ts">runtime/config.ts</a> <a href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/debuggable.ts">runtime/debuggable.ts</a> <a href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/invoke.ts">runtime/invoke.ts</a> <a href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/resource.ts">runtime/resource.ts</a> <a href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/rpc.ts">runtime/rpc.ts</a> <a href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts">runtime/settings.ts</a> <a href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/stack.ts">runtime/stack.ts</a> 
+<a href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/config.ts">runtime/config.ts</a> <a href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/debuggable.ts">runtime/debuggable.ts</a> <a href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/invoke.ts">runtime/invoke.ts</a> <a href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/resource.ts">runtime/resource.ts</a> <a href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/rpc.ts">runtime/rpc.ts</a> <a href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts">runtime/settings.ts</a> <a href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/stack.ts">runtime/stack.ts</a> 
 </div>
 </div>
 </div>
@@ -80,7 +80,7 @@ title: Module runtime
 </div>
 
 <h2 class="pdoc-module-header" id="rootPulumiStackTypeName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/stack.ts#L26">const <b>rootPulumiStackTypeName</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/stack.ts#L26">const <b>rootPulumiStackTypeName</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> rootPulumiStackTypeName: <span class='s2'>"pulumi:pulumi:Stack"</span> = <span class='s2'>&#34;pulumi:pulumi:Stack&#34;</span>;</pre>
@@ -93,7 +93,7 @@ resources allocated by a deployment.  This must be kept up to date with
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="specialArchiveSig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/rpc.ts#L229">const <b>specialArchiveSig</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/rpc.ts#L229">const <b>specialArchiveSig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> specialArchiveSig: <span class='s2'>"0def7320c3a5731c473e5ecbe6d01bc7"</span> = <span class='s2'>&#34;0def7320c3a5731c473e5ecbe6d01bc7&#34;</span>;</pre>
@@ -104,7 +104,7 @@ specialArchiveSig is a randomly assigned hash used to identify archives in maps.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="specialAssetSig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/rpc.ts#L225">const <b>specialAssetSig</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/rpc.ts#L225">const <b>specialAssetSig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> specialAssetSig: <span class='s2'>"c44067f5952c0a294b673a41bacd8c17"</span> = <span class='s2'>&#34;c44067f5952c0a294b673a41bacd8c17&#34;</span>;</pre>
@@ -115,7 +115,7 @@ specialAssetSig is a randomly assigned hash used to identify assets in maps. See
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="specialSecretSig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/rpc.ts#L233">const <b>specialSecretSig</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/rpc.ts#L233">const <b>specialSecretSig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> specialSecretSig: <span class='s2'>"1b47061264138c4ac30d75fd1eb44270"</span> = <span class='s2'>&#34;1b47061264138c4ac30d75fd1eb44270&#34;</span>;</pre>
@@ -126,7 +126,7 @@ specialSecretSig is a randomly assigned hash used to identify secrets in maps. S
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="specialSigKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/rpc.ts#L221">const <b>specialSigKey</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/rpc.ts#L221">const <b>specialSigKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> specialSigKey: <span class='s2'>"4dabf18193072939515e22adb298388d"</span> = <span class='s2'>&#34;4dabf18193072939515e22adb298388d&#34;</span>;</pre>
@@ -137,7 +137,7 @@ specialSigKey is sometimes used to encode type identity inside of a map. See pkg
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="unknownValue">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/rpc.ts#L217">const <b>unknownValue</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/rpc.ts#L217">const <b>unknownValue</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> unknownValue: <span class='s2'>"04da6b54-80e4-46f7-96ec-b56ff0331ba9"</span> = <span class='s2'>&#34;04da6b54-80e4-46f7-96ec-b56ff0331ba9&#34;</span>;</pre>
@@ -148,7 +148,7 @@ Unknown values are encoded as a distinguished string value.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="_setQueryMode">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L87">function <b>_setQueryMode</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L87">function <b>_setQueryMode</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -158,7 +158,7 @@ Unknown values are encoded as a distinguished string value.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="allConfig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/config.ts#L25">function <b>allConfig</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/config.ts#L25">function <b>allConfig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -171,7 +171,7 @@ allConfig returns a copy of the full config map.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="debuggablePromise">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/debuggable.ts#L40">function <b>debuggablePromise</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/debuggable.ts#L40">function <b>debuggablePromise</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -184,7 +184,7 @@ debuggablePromise optionally wraps a promise with some goo to make it easier to 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="deserializeProperties">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/rpc.ts#L124">function <b>deserializeProperties</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/rpc.ts#L124">function <b>deserializeProperties</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -197,7 +197,7 @@ deserializeProperties fetches the raw outputs and deserializes them from a gRPC 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="deserializeProperty">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/rpc.ts#L390">function <b>deserializeProperty</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/rpc.ts#L390">function <b>deserializeProperty</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -210,7 +210,7 @@ deserializeProperty unpacks some special types, reversing the above process.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="disconnect">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L228">function <b>disconnect</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L228">function <b>disconnect</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -224,7 +224,7 @@ queue to drain.  If any RPCs come in afterwards, however, they will crash the pr
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="disconnectSync">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L246">function <b>disconnectSync</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L246">function <b>disconnectSync</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -238,7 +238,7 @@ wait for the existing RPC queue to drain. Any RPCs that come in after this call 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="errorString">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/debuggable.ts#L102">function <b>errorString</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/debuggable.ts#L102">function <b>errorString</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -251,7 +251,7 @@ errorString produces a string from an error, conditionally including additional 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getConfig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/config.ts#L39">function <b>getConfig</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/config.ts#L39">function <b>getConfig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -264,7 +264,7 @@ getConfig returns a configuration variable's value or undefined if it is unset.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEngine">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L175">function <b>getEngine</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L175">function <b>getEngine</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -277,7 +277,7 @@ getEngine returns the current engine, if any, for RPC communications back to the
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getMonitor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L153">function <b>getMonitor</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L153">function <b>getMonitor</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -290,7 +290,7 @@ getMonitor returns the current resource monitoring service client for RPC commun
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getProject">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L101">function <b>getProject</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L101">function <b>getProject</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -303,7 +303,7 @@ Get the project being run by the current update.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getRootResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L290">function <b>getRootResource</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L290">function <b>getRootResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -317,7 +317,7 @@ can be used to ensure that all resources without explicit parents are parented t
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getStack">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L121">function <b>getStack</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L121">function <b>getStack</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -330,7 +330,7 @@ Get the stack being targeted by the current update.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="hasMonitor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L146">function <b>hasMonitor</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L146">function <b>hasMonitor</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -343,7 +343,7 @@ hasMonitor returns true if we are currently connected to a resource monitoring s
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="invoke">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/invoke.ts#L31">function <b>invoke</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/invoke.ts#L31">function <b>invoke</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -358,7 +358,7 @@ resolves when the invoke finishes.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isDryRun">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L60">function <b>isDryRun</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L60">function <b>isDryRun</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -373,7 +373,7 @@ and therefore certain output properties will never be resolved.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isQueryMode">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L94">function <b>isQueryMode</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L94">function <b>isQueryMode</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -386,7 +386,7 @@ Returns true if query mode is enabled.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isTestModeEnabled">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L72">function <b>isTestModeEnabled</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L72">function <b>isTestModeEnabled</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -399,7 +399,7 @@ Returns true if test mode is enabled (PULUMI_TEST_MODE).
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="listResourceOutputs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/resource.ts#L559">function <b>listResourceOutputs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/resource.ts#L559">function <b>listResourceOutputs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -414,7 +414,7 @@ ongoing updates.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="monitorSupportsSecrets">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L359">function <b>monitorSupportsSecrets</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L359">function <b>monitorSupportsSecrets</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -429,7 +429,7 @@ bit in a special way.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="readResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/resource.ts#L87">function <b>readResource</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/resource.ts#L87">function <b>readResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -443,7 +443,7 @@ will not be part of the resulting stack's state, as they are presumed to belong 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="registerResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/resource.ts#L157">function <b>registerResource</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/resource.ts#L157">function <b>registerResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -458,7 +458,7 @@ objects that the registration operation will resolve at the right time (or remai
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="registerResourceOutputs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/resource.ts#L496">function <b>registerResourceOutputs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/resource.ts#L496">function <b>registerResourceOutputs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -471,7 +471,7 @@ registerResourceOutputs completes the resource registration, attaching an option
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="resolveProperties">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/rpc.ts#L144">function <b>resolveProperties</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/rpc.ts#L144">function <b>resolveProperties</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -489,7 +489,7 @@ output properties to work correctly w.r.t. knowns/unknowns: this function assume
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="rpcKeepAlive">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L277">function <b>rpcKeepAlive</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L277">function <b>rpcKeepAlive</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -503,7 +503,7 @@ a function that, when invoked, signals that the RPC has completed.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="runInPulumiStack">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/stack.ts#L32">function <b>runInPulumiStack</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/stack.ts#L32">function <b>runInPulumiStack</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -517,7 +517,7 @@ returned by the callback will be stored as output properties on this resulting S
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="serialize">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L189">function <b>serialize</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L189">function <b>serialize</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -530,7 +530,7 @@ serialize returns true if resource operations should be serialized.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="serializeProperties">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/rpc.ts#L116">function <b>serializeProperties</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/rpc.ts#L116">function <b>serializeProperties</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -544,7 +544,7 @@ POJO object that can be remoted over to registerResource.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="serializeProperty">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/rpc.ts#L239">function <b>serializeProperty</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/rpc.ts#L239">function <b>serializeProperty</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -558,7 +558,7 @@ appropriate, in addition to translating certain "special" values so that they ar
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="serializeResourceProperties">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/rpc.ts#L108">function <b>serializeResourceProperties</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/rpc.ts#L108">function <b>serializeResourceProperties</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -572,7 +572,7 @@ and `urn`, creating a reasonable POJO object that can be remoted over to registe
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="setConfig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/config.ts#L32">function <b>setConfig</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/config.ts#L32">function <b>setConfig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -585,7 +585,7 @@ setConfig sets a configuration variable.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="setRootResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L327">function <b>setRootResource</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L327">function <b>setRootResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -598,7 +598,7 @@ setRootResource registers a resource that will become the default parent for all
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="transferProperties">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/rpc.ts#L38">function <b>transferProperties</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/rpc.ts#L38">function <b>transferProperties</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -620,7 +620,7 @@ that the engine actualy produced will be used to resolve all the unresolved prom
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="Options">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L34">interface <b>Options</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L34">interface <b>Options</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -629,7 +629,7 @@ Options is a bag of settings that controls the behavior of previews and deployme
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Options-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L40">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L40">property <b>dryRun</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dryRun?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -637,7 +637,7 @@ Options is a bag of settings that controls the behavior of previews and deployme
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Options-engineAddr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L38">property <b>engineAddr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L38">property <b>engineAddr</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>engineAddr?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -645,7 +645,7 @@ Options is a bag of settings that controls the behavior of previews and deployme
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Options-monitorAddr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L39">property <b>monitorAddr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L39">property <b>monitorAddr</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>monitorAddr?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -653,7 +653,7 @@ Options is a bag of settings that controls the behavior of previews and deployme
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Options-parallel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L37">property <b>parallel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L37">property <b>parallel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>parallel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -661,7 +661,7 @@ Options is a bag of settings that controls the behavior of previews and deployme
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Options-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L35">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L35">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -669,7 +669,7 @@ Options is a bag of settings that controls the behavior of previews and deployme
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Options-queryMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L42">property <b>queryMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L42">property <b>queryMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>queryMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -677,7 +677,7 @@ Options is a bag of settings that controls the behavior of previews and deployme
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Options-stack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L36">property <b>stack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L36">property <b>stack</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>stack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -685,7 +685,7 @@ Options is a bag of settings that controls the behavior of previews and deployme
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Options-testModeEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L41">property <b>testModeEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L41">property <b>testModeEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>testModeEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -694,7 +694,7 @@ Options is a bag of settings that controls the behavior of previews and deployme
 </div>
 </div>
 <h2 class="pdoc-module-header" id="excessiveDebugOutput">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/settings.ts#L29">let <b>excessiveDebugOutput</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/settings.ts#L29">let <b>excessiveDebugOutput</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> excessiveDebugOutput: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = <span class='s2'>false</span>;</pre>
@@ -705,7 +705,7 @@ excessiveDebugOutput enables, well, pretty excessive debug output pertaining to 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="OutputResolvers">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/96d7bedce4a0efefec1699749b71e2e0e8784244/sdk/nodejs/runtime/rpc.ts#L24">type <b>OutputResolvers</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/8fd05fcd9fbd1480c01726b4fc7fcf158e611f99/sdk/nodejs/runtime/rpc.ts#L24">type <b>OutputResolvers</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> OutputResolvers = Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, (value: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, isStable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, isSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
