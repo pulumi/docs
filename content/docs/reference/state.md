@@ -70,7 +70,7 @@ CLI and storage setup:
 and [Working with Amazon S3 buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)._
 - **Azure Blob.** _See [Azure Setup](/docs/reference/clouds/azure/setup)
 and Microsoft's [Storage Blobs Quickstart](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-cli)._
-- **Google Cloud Storage.** _See [GCP Setup](/docs/reference/clouds/azure/setup)
+- **Google Cloud Storage.** _See [GCP Setup](/docs/reference/clouds/gcp/setup)
 and [Google's Cloud Storage Quickstarts](https://cloud.google.com/storage/docs/quickstarts)._
 
 ### Pulumi backend features
