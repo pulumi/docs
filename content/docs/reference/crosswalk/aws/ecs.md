@@ -27,7 +27,7 @@ providing full control over the underlying EC2 machine resources that power your
 > An alternative to ECS is Amazon's Elastic Kubernetes Service (EKS). Similar to ECS, EKS lets you operate
 > containerized applications in a cluster. EKS tends to be more complex to provision and manage, but has
 > the added advantage of using the industry standard container orchestrator, Kubernetes, and therefore can help
-> with portability between clouds and on-premise configurations. See
+> with portability between clouds and self-hosted configurations. See
 > [Pulumi Crosswalk for AWS EKS]({{< relref "eks.md" >}}) for more information about using EKS.
 
 ## Creating a Load Balanced ECS Service
@@ -57,10 +57,17 @@ const nginx = new awsx.ecs.FargateService("nginx", {
 export const url = lb.endpoint.hostname;
 ```
 
-After deploying this program, we can access our two  NGINX web servers behind our load balancer:
+After deploying this program, we can access our two  NGINX web servers behind our load balancer via curl:
 
 ```bash
-$ curl http://$(pulumi stack output)
+$ curl http://$(pulumi stack output url)
+```
+
+`$(pulumi stack output url)` evaluates to the load balancer's URL.
+
+**Output**
+
+```
 <!DOCTYPE html>
 <html>
 <body>
@@ -68,7 +75,6 @@ $ curl http://$(pulumi stack output)
 </body>
 </html>
 ```
-Replace `$(pulumi stack output)` with the resulting URL value of `pulumi stack output`.
 
 We have chosen to create an [Elastic Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing) so that we
 can access our services over the Internet at a stable address, spread evenly across two instances. Any of the ELB
@@ -307,8 +313,7 @@ the private ECR repostory path to the container:
 const task = new awsx.ecs.FargateTaskDefinition("task", {
     containers: {
         nginx: {
-            image: awsx.ecs.Image.fromPath("<ecr-repository-name>", "/path/to/Dockerfile/"
-),
+            image: awsx.ecs.Image.fromPath("<ecr-repository-name>", "/path/to/Dockerfile/"),
             // ...
         },
     },
