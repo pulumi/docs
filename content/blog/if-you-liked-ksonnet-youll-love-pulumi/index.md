@@ -2,6 +2,7 @@
 title: "If you liked ksonnet, you'll love Pulumi!"
 authors: ["mike-metral"]
 tags: ["Kubernetes","Cloud-Native"]
+meta_desc: "In this blog post, we will through a short tour of Pulumi for ksonnet users. Like sonnet, Pulumi provides access to the complete raw Kubernetes API, and you can introduce additional features like modules/imports, components, functions, and more to structure our code and increase the level of abstraction that we work at as we author our Kubernetes configuration. "
 date: "2019-02-13"
 
 meta_image: "kube-update.gif"

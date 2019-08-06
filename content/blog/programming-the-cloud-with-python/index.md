@@ -2,6 +2,7 @@
 title: "Programming the Cloud with Python"
 authors: ["sean-gillespie"]
 tags: ["Serverless","AWS","Python"]
+meta_desc: "Python is an incredible tool for task automation and it's rapidly pervading the industry. See how to use Pulumi and Python to automate provisioning of cloud infrastructure and delivery of our applications."
 date: "2019-04-04"
 
 summary: "Python is awesome for automating manual tasks. So let's use it for cloud infrastructure as code!"

@@ -2,6 +2,7 @@
 title: "Managing F5 BIG-IP Systems with Pulumi"
 authors: ["cameron-stokes"]
 tags: ["Infrastructure","Cloud-Native"]
+meta_desc: "In this post, let's look at some examples to demonstrate what's capable with this provider and the power and the flexibility that Pulumi brings to working your F5 BIG-IP systems."
 date: "2019-02-07"
 ---
 

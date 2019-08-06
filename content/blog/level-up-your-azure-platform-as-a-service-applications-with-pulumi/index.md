@@ -2,6 +2,7 @@
 title: "Level up your Azure Platform as a Service applications with Pulumi"
 authors: ["mikhail-shilkov"]
 tags: ["Infrastructure","Azure"]
+meta_desc: "Writing a TypeScript program to compose an application out of the cloud building blocks with Pulumi. Today's post walks through the process of developing Pulumi programs to leverage Azure Platform-as-a-Service services."
 date: "2019-05-06"
 
 meta_image: "app-insights.png"

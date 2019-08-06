@@ -2,6 +2,7 @@
 title: "Kubespy, and the lifecycle of a Pod, in 4 images"
 authors: ["alex-clemmer"]
 tags: ["Kubernetes"]
+meta_desc: "This post is the first part in a series on the Kubernetes API and explains how does Kubespy work."
 date: "2018-09-18"
 
 meta_image: "1-created.png"

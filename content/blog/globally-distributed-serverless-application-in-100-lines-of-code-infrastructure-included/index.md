@@ -2,6 +2,7 @@
 title: "Globally-distributed Serverless Application in 100 Lines of Code. Infrastructure Included!"
 authors: ["mikhail-shilkov"]
 tags: ["Serverless", "Azure"]
+meta_desc: "Build a serverless application with both the data store and the HTTP endpoint located close to end users to ensure prompt response time."
 date: "2019-07-02"
 
 meta_image: "feature.jpg"

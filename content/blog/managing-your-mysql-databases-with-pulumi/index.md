@@ -2,6 +2,7 @@
 title: "Managing your MySQL databases with Pulumi"
 authors: ["linio-engineering"]
 tags: ["Applications","MySQL"]
+meta_desc: "In this post, we'll walk through a quick tutorial of how to use this new Pulumi MySQL provider to manage existing and new MySQL databases."
 date: "2019-05-28"
 
 meta_image: "hero.png"

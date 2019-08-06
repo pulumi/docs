@@ -2,6 +2,7 @@
 title: "Lambdas as Lambdas: The magic of simple serverless Functions"
 authors: ["cyrus-najmabadi"]
 tags: ["Serverless","TypeScript"]
+meta_desc: "Infrastructure as code using real languages instead of YAML or DSLs. See how Pulumi makes serverless programming becomes simpler on AWS Lambda, Azure Function, and GCP Cloud Function."
 date: "2018-10-10"
 
 meta_image: "closure.png"

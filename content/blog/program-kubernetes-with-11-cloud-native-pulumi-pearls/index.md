@@ -2,6 +2,7 @@
 title: "Program Kubernetes with 11 Pulumi Pearls"
 authors: ["joe-duffy"]
 tags: ["Kubernetes"]
+meta_desc: "In this post, we'll take a look at 11 bite-sized code snippets that demonstrate using Pulumi to build anddeploy Kubernetes applications using cloud native infrastructure as code, including three categories: 1. config as real code; 2. multi-cloud infrastructure; 3. softwre delivery as code."
 date: "2018-09-12"
 
 meta_image: "health-checks.gif"

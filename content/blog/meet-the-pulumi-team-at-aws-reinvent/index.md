@@ -2,6 +2,7 @@
 title: "Meet the Pulumi team at AWS re:Invent"
 authors: ["marc-holmes"]
 tags: ["Pulumi-News"]
+meta_desc: "Catch up with Pulumi on serverless functions, containers, and Kubernetes at AWS re:invent."
 date: "2018-11-15"
 ---
 

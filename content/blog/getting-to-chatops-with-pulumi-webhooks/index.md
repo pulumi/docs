@@ -2,6 +2,7 @@
 title: "Getting to ChatOps with Pulumi Webhooks"
 authors: ["chris-smith"]
 tags: ["CI/CD", "New-Features"]
+meta_desc: "Get started with Pulumi Webhooks to enable notifications of infrastructure changes and responding to those changes as part of ChatOps."
 date: "2019-01-23"
 
 meta_image: "pulumi-webhooks.png"

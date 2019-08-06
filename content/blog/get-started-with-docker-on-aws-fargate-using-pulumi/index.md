@@ -2,6 +2,7 @@
 title: "Get Started with Docker on AWS Fargate using Pulumi"
 authors: ["joe-duffy"]
 tags: ["JavaScript","AWS","Containers","Infrastructure","TypeScript"]
+meta_desc: "Using Pulumi's infrastructure as code solution to build a custom Docker image, publish it to a private AWS container registry, and spin up an AWS Fargate load balanced service running that container."
 date: "2019-04-30"
 
 meta_image: "docker-fargate-history.png"

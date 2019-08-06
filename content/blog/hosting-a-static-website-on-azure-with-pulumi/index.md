@@ -2,6 +2,7 @@
 title: "Hosting a Static Website on Azure with Pulumi"
 authors: ["mikhail-shilkov"]
 tags: ["Azure"]
+meta_desc: "Pulumi's code-centric apparoach not only makes configuring cloud resources easier to do and maintain, but it also eliminates the pain of integrating multiple services."
 date: "2019-06-27"
 
 summary: "Static websites are back in the mainstream these days. Website generators like Jekyll, Hugo, or Gatsby, make it fairly easy to combine templates and markdown pages to produce static HTML files. Static assets are the simplest thing to serve and cache, so the whole setup ends up being fast and cost-efficient."

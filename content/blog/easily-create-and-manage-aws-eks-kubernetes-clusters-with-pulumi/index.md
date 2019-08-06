@@ -2,6 +2,7 @@
 title: "Easily Create and Manage AWS EKS Kubernetes Clusters with Pulumi"
 authors: ["luke-hoban"]
 tags: ["AWS","Kubernetes"]
+meta_desc: "Use Pulumi to easily deploy new clusters, managed AWS resources, and then deploy Kubernetes apps to it. See how to provision an entire EKS cluster with a CLI single gesture. "
 date: "2019-01-24"
 
 meta_image: "easy-eks.png"

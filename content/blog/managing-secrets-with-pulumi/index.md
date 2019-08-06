@@ -2,6 +2,7 @@
 title: "Managing Secrets with Pulumi"
 authors: ["matt-ellis"]
 tags: ["Features","Security"]
+meta_desc: "Pulumi now supports two new features: 1. Automatic tracking of secret values throughout a Pulumi program to ensure that all such values are always encrypted in the resulting state; 2. A new option to use custom client-side encryption, instead of the default of using the Pulumi backend for encryption, to have full control over the secrets encryption and decryption."
 date: "2019-05-17"
 
 ---
@@ -56,7 +57,7 @@ ensure that secret values are encrypted in the state file. This means
 you can use secrets confidently without worrying about accidentally
 leaking plain text values. Let's take a look at how it works!
 
-## `Output` and Secrets
+## Output and Secrets
 
 To start, let's talk a bit about `Output`, one of the centerpieces of
 the Pulumi programming model. `Output<T>` ties together a value (which
