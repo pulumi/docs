@@ -16,8 +16,6 @@ application traffic across multiple targets, such as Amazon EC2 instances, conta
 Functions. It can handle the varying load of your application traffic in a single Availability Zone or across multiple
 Availability Zones.
 
-{{< mini-toc >}}
-
 ## Overview
 
 Pulumi Crosswalk for AWS ELB provides easy APIs for provisioning Application and Network Load Balancers, and
@@ -41,7 +39,7 @@ scaling, and robust security necessary to make your applications fault tolerant:
   the individual request level (Layer 7), Application Load Balancer routes traffic to targets within Amazon Virtual
   Private Cloud (Amazon VPC) based on the content of the request.
 
-Each kind of load balancer is represented by a class in the `awsx.elasticloadbalancingv2` module:
+Each kind of load balancer is represented by a class in the `awsx.lb` module:
 
 * `NetworkLoadBalancer` is used for NLBs
 * `ApplicationLoadBalancer` is used for ALBs.
@@ -58,7 +56,7 @@ must also create a _listener_ to let traffic reach it:
 import * as awsx from "@pulumi/awsx";
 
 // Create an ALB associated with the default VPC for this region.
-const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer("web-traffic");
+const alb = new awsx.lb.ApplicationLoadBalancer("web-traffic");
 
 // Listen to HTTP traffic on port 80.
 const listener = alb.createListener("web-listener", { port: 80 });
@@ -87,7 +85,7 @@ There are a number of additional properties you may set:
 
 For the load balancer to do anything useful, we must also specify a _target_ that traffic will be routed to.
 The target could be an EC2 instance, ECS service, or anything with an IP address, for instance. We
-will also have to configure SecurityGroups to let traffic flow inside of our VPC on the correct ports. 
+will also have to configure SecurityGroups to let traffic flow inside of our VPC on the correct ports.
 
 ## Load Balancing EC2 Instance Targets
 
@@ -121,7 +119,7 @@ const sg = new awsx.ec2.SecurityGroup("web-sg", {
 
 // Creates an ALB associated with the default VPC for this region and listen on port 80.
 // 3) Be sure to pass in our explicit SecurityGroup created above so that traffic may flow.
-const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer("web-traffic", { securityGroups: [ sg ] });
+const alb = new awsx.lb.ApplicationLoadBalancer("web-traffic", { securityGroups: [ sg ] });
 const listener = nlb.createListener("web-listener", { port: 80 });
 
 // For each subnet, and each subnet/zone, create a VM and a listener.
@@ -146,7 +144,7 @@ nohup python -m SimpleHTTPServer 80 &`,
     });
 
     // 5) Attach your load balancer's target group the target EC2 instance(s).
-    const attach = new aws.elasticloadbalancingv2.TargetGroupAttachment(`web-nlb-vm-${i}`, {
+    const attach = new aws.lb.TargetGroupAttachment(`web-nlb-vm-${i}`, {
         targetId: vm.privateIp,
         targetGroupArn: nlb.targetGroups[0].targetGroup.arn,
         availabilityZone: vm.availabilityZone,
@@ -190,7 +188,7 @@ import * as awsx from "@pulumi/awsx";
 const cluster = new awsx.ecs.Cluster("my-cluster");
 
 // Create an ALB associated with the default VPC for this region and listen for HTTP on port 80.
-const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer("web-traffic");
+const alb = new awsx.lb.ApplicationLoadBalancer("web-traffic");
 const listener = alb.createListener("web-listener", { port: 80 });
 
 // Create a new ECS service using the 'nginx' image. Supply the listener we just created
@@ -254,7 +252,7 @@ set the `external` property to `false`:
 import * as awsx from "@pulumi/awsx";
 
 // Creates an ALB associated with the default VPC for this region, using its private subnets.
-const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer("web-traffic", { external: false });
+const alb = new awsx.lb.ApplicationLoadBalancer("web-traffic", { external: false });
 
 // Listen to HTTP traffic on port 80.
 const listener = alb.createListener("web-listener", { port: 80 });
@@ -280,7 +278,7 @@ import * as awsx from "@pulumi/awsx";
 const vpc = new awsx.ec2.Vpc("web-vpc", { ... });
 
 // Creates an ALB associated with our custom VPC.
-const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer("web-traffic", { vpc });
+const alb = new awsx.lb.ApplicationLoadBalancer("web-traffic", { vpc });
 
 // Listen to HTTP traffic on port 80.
 const listener = alb.createListener("web-listener", { port: 80 });
@@ -360,7 +358,7 @@ As an example of a custom action, the following load balancer ensures all HTTP t
 import * as awsx from "@pulumi/awsx";
 
 // Create an ALB. One listener on port 80 redirects to port 443, while the 443 listener passes traffic through.
-const alb = new awsx.elasticloadbalancingv2.NetworkLoadBalancer("web-traffic");
+const alb = new awsx.lb.NetworkLoadBalancer("web-traffic");
 const httpListener = alb.createListener("http-listener", {
     port: 80,
     protocol: "HTTP",
@@ -437,4 +435,4 @@ https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balance
 ## Additional ELB Resources
 
 For detailed reference documentation, please visit [the API docs](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/elasticloadbalancingv2" >}}).
+{{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/lb" >}}).

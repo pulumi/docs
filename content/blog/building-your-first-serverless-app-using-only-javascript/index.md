@@ -136,7 +136,7 @@ To learn more take a look at more tutorials and example code:
 - Tutorial: [Deploying Containers with Pulumi]({{< relref "deploying-production-ready-containers-with-pulumi" >}})
 - Tutorial: [Build a video thumbnailer using AWS Lambda, Fargate, and S3 in JavaScript]({{< relref "build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws" >}})
 - [Pulumi Quickstart]({{< ref "/docs/quickstart" >}})
-- [Pulumi Community Slack](https://slack.pulumi.io)
+- [Pulumi Community Slack](https://slack.pulumi.com)
 - [Pulumi Examples on GitHub](https://github.com/pulumi/examples)
 
  

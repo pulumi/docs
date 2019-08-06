@@ -32,7 +32,7 @@ should be attached.</li>
 </tbody>
 </table>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/app_cookie_stickiness_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/app_cookie_stickiness_policy.html.markdown</a>.</div></blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/app_cookie_stickiness_policy_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/app_cookie_stickiness_policy_legacy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.AppCookieStickinessPolicy.cookie_name">
 <code class="descname">cookie_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.AppCookieStickinessPolicy.cookie_name" title="Permalink to this definition">¶</a></dt>
@@ -119,7 +119,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tbody>
 </table>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb_attachment.html.markdown</a>.</div></blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb_attachment_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb_attachment_legacy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.Attachment.elb">
 <code class="descname">elb</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.Attachment.elb" title="Permalink to this definition">¶</a></dt>
@@ -234,7 +234,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tbody>
 </table>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_listener_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_listener_policy.html.markdown</a>.</div></blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_listener_policy_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_listener_policy_legacy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.ListenerPolicy.load_balancer_name">
 <code class="descname">load_balancer_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.ListenerPolicy.load_balancer_name" title="Permalink to this definition">¶</a></dt>
@@ -329,7 +329,7 @@ instances. Use this for Classic or Default VPC only.</li>
 </tbody>
 </table>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb.html.markdown</a>.</div></blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb_legacy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancer.access_logs">
 <code class="descname">access_logs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancer.access_logs" title="Permalink to this definition">¶</a></dt>
@@ -510,7 +510,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tbody>
 </table>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_backend_server_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_backend_server_policy.html.markdown</a>.</div></blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_backend_server_policy_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_backend_server_policy_legacy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancerBackendServerPolicy.instance_port">
 <code class="descname">instance_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancerBackendServerPolicy.instance_port" title="Permalink to this definition">¶</a></dt>
@@ -594,7 +594,7 @@ should be attached.</li>
 </tbody>
 </table>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_cookie_stickiness_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_cookie_stickiness_policy.html.markdown</a>.</div></blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_cookie_stickiness_policy_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_cookie_stickiness_policy_legacy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicy.cookie_expiration_period">
 <code class="descname">cookie_expiration_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicy.cookie_expiration_period" title="Permalink to this definition">¶</a></dt>
@@ -684,7 +684,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tbody>
 </table>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_policy.html.markdown</a>.</div></blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_policy_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_policy_legacy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancerPolicy.load_balancer_name">
 <code class="descname">load_balancer_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancerPolicy.load_balancer_name" title="Permalink to this definition">¶</a></dt>
@@ -773,7 +773,7 @@ should be attached.</li>
 </tbody>
 </table>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_ssl_negotiation_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_ssl_negotiation_policy.html.markdown</a>.</div></blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_ssl_negotiation_policy_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_ssl_negotiation_policy_legacy.html.markdown</a>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.SslNegotiationPolicy.attributes">
 <code class="descname">attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.SslNegotiationPolicy.attributes" title="Permalink to this definition">¶</a></dt>
@@ -847,7 +847,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get the HostedZoneId of the AWS Elastic Load Balancing HostedZoneId
 in a given region for the purpose of using in an AWS Route53 Alias.</p>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_hosted_zone_id.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_hosted_zone_id.html.markdown</a>.</div></blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_hosted_zone_id_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_hosted_zone_id_legacy.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -860,7 +860,7 @@ Application Load Balancer (ALB) or Network Load Balancer (NLB).</p>
 variable and needs to, for example, determine the security groups associated
 with it, etc.</p>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb.html.markdown</a>.</div></blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_legacy.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -869,7 +869,7 @@ with it, etc.</p>
 <dd><p>Use this data source to get the Account ID of the <a class="reference external" href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-access-logs.html#attach-bucket-policy">AWS Elastic Load Balancing Service Account</a>
 in a given region for the purpose of whitelisting in S3 bucket policy.</p>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_service_account.html.markdown</a>.</div></blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_service_account_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_service_account_legacy.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

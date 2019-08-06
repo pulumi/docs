@@ -7,7 +7,7 @@ date: "2019-07-16"
 meta_image: "meta.jpg"
 ---
 
-Last Wednesday, we invited members of our local Seattle community to Pulumi HQ for the [July Pulumi Up meetup](https://www.meetup.com/Pulumi-Seattle/events/262610954/). The evening began with some networking time wherein our guests met some Pulumi engineers and users they may have only ever interacted with over [Pulumi’s Community Slack](https://slack.pulumi.io/) while enjoying free pizza and beverages. This month’s meetup featured two talks by Pulumi engineers.
+Last Wednesday, we invited members of our local Seattle community to Pulumi HQ for the [July Pulumi Up meetup](https://www.meetup.com/Pulumi-Seattle/events/262610954/). The evening began with some networking time wherein our guests met some Pulumi engineers and users they may have only ever interacted with over [Pulumi’s Community Slack](https://slack.pulumi.com/) while enjoying free pizza and beverages. This month’s meetup featured two talks by Pulumi engineers.
 
 ## Application code isn’t the only code that can have APIs
 

@@ -2,10 +2,10 @@
 title: "Announcing Pulumi 0.15: Kubernetes, CI/CD, OpenStack, and more"
 authors: ["luke-hoban"]
 tags: ["Pulumi", "New-Features", "CI/CD"]
-meta_desc: "The Pulumi 0.15 release includes support for: Kubernetes, parallelism, first class providers, native TypeScript, Serverless Functions in GCP and Azure, etc."
+
 date: "2018-08-15"
 
-summary: "Pulumi can now deploy and manage Kubernetes resources using the same
+meta_desc: "Pulumi can now deploy and manage Kubernetes resources using the same
 familiar programming model supported for AWS, Azure, and Google Cloud
 Platform. In this post, we'll take a quick tour of these new features."
 ---
@@ -26,8 +26,8 @@ Pulumi supports more platforms
 TypeScript support), richer
 (serverless frameworks for Azure and
 GCP),  and is more deeply
-integrated into the application lifecycle ([GitHub App for CI/CD
-integration]({{< ref "/docs/reference/cd-github.md" >}})).
+integrated into the application lifecycle
+([GitHub App for CI/CD integration]({{< ref "/docs/console/continuous-delivery/github-app" >}})).
 
 In this post, we'll take a quick tour of these new features. Stay tuned
 for follow up blog posts to dive deeper into individual topics.
@@ -245,7 +245,7 @@ export let url = f.function.httpsTriggerUrl;
 
 ## GitHub App for CI/CD Integration
 
-Pulumi already works with [your favorite CI/CD systems]({{< ref "/docs/reference/cd" >}})
+Pulumi already works with [your favorite CI/CD systems]({{< ref "/docs/console/continuous-delivery" >}})
 to accomplish automated
 and continuous deployments of cloud infrastructure and applications.
 This is how Pulumi deploys and manages our own infrastructure that runs
@@ -267,15 +267,14 @@ infrastructure changes.
 The Pulumi GitHub App is still in preview as we work to support more CI
 systems and extend its capabilities. For information on how to install
 it and configure it with your CI system, please [read the
-documentation]({{< ref "/docs/reference/cd-github" >}}).
+documentation]({{< ref "/docs/console/continuous-delivery/github-app" >}}).
 
 ## Summary
 
 We're excited about all the new features in this release and the new
 scenarios they enable for the Pulumi community . If you are new to
 Pulumi, [download the tools and get started
-today]({{< ref "/docs/quickstart" >}}), or [join us in
-Slack](https://slack.pulumi.io). A big thanks to all the users and
+today]({{< ref "/docs/quickstart" >}}), or [join us in Slack](https://slack.pulumi.com). A big thanks to all the users and
 contributors who have helped shape this release -- we can't wait to see
 what you build next !
 

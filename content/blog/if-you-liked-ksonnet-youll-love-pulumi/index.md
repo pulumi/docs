@@ -10,14 +10,9 @@ meta_image: "kube-update.gif"
 
 The Kubernetes landscape is constantly evolving as end users and
 developers search for the right tools, approaches, and abstractions to
-help them manage Cloud Native infrastructure in production. Last Friday,
-we were honored to have Joe Beda
-[show where Pulumi fits in on his TGIKlivestream](https://www.youtube.com/watch?v=ILMK65YVSKw),
-highlighting how to use your favorite language and consistent workflows to create,
-deploy, and manage cloud resources across multiple clouds and
-Kubernetes.
+help them manage Cloud Native infrastructure in production. 
 
-Last week Heptio (now part of VMWare)
+On Feb 5, Heptio (now part of VMWare)
 [announced](https://blogs.vmware.com/cloudnative/2019/02/05/welcoming-heptio-open-source-projects-to-vmware/)
 that work on [ksonnet](https://github.com/ksonnet), a project launched
 by Heptio, Box, Microsoft, and Bitnami, will stop. We're sad to see
@@ -152,13 +147,17 @@ resources to check out:
 - Tutorial: [Operate and deploy to a Kubernetes cluster]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment" >}})
 - Docs: [Pulumi docs]({{< ref "/docs/reference" >}}), including an
   [overview of the programming model]({{< ref "/docs/reference/programming-model" >}})
-- Video: [Watch Joe Beda take Pulumi for a spin in last week's TGIK](https://www.youtube.com/watch?v=ILMK65YVSKw)
+- Video: In February, we were honored to have Joe Beda
+[show where Pulumi fits in on his TGIK livestream](https://www.youtube.com/watch?v=ILMK65YVSKw),
+highlighting how to use your favorite language and consistent workflows to create,
+deploy, and manage cloud resources across multiple clouds and
+Kubernetes. [Watch Joe Beda take Pulumi for a spin here](https://www.youtube.com/watch?v=ILMK65YVSKw).
 
 As always, you can check out our code on
 [GitHub](https://github.com/pulumi), follow us on
 [Twitter](https://twitter.com/pulumicorp), subscribe to our [YouTube
 channel](https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw), or
-join our [Community Slack](https://slack.pulumi.io/) channel if you have
+join our [Community Slack](https://slack.pulumi.com/) channel if you have
 any questions, need support, or just want to say hello.
 
 If you'd like to chat with our team, or get hands-on assistance with

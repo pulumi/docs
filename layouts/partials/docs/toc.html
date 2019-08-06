@@ -4,8 +4,6 @@
             <a href="{{ relref . "/docs/aws" }}">AWS</a>
         </h4>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.aws) }}
-    {{ else if hasPrefix .RelPermalink "/docs/tour/" }}
-        {{ template "toc" (dict "page" . "menu" .Site.Menus.tour) }}
     {{ else if hasPrefix .RelPermalink "/docs/" }}
         <h4 class="no-anchor">
             <a href="{{ relref . "/docs/quickstart" }}">Get Started</a>
@@ -16,6 +14,11 @@
             <a href="{{ relref . "/docs/reference" }}">Reference</a>
         </h4>
         {{ template "toc" (dict "page" . "menu" .Site.Menus.reference) }}
+
+        <h4 class="no-anchor">
+            <a href="{{ relref . "/docs/console" }}">Pulumi Cloud Console</a>
+        </h4>
+        {{ template "toc" (dict "page" . "menu" .Site.Menus.console) }}
     {{ end }}
 </aside>
 

@@ -18,8 +18,6 @@ configuration of route tables and network gateways. You can use both IPv4 and IP
 access to resources and applications, and use multiple layers of security, including security groups and network
 access control lists, to limit network access to and from resources.
 
-{{< mini-toc >}}
-
 ## Overview
 
 Pulumi Crosswalk for AWS provides simple, out of the box VPC functionality that follows widely accepted best

@@ -153,6 +153,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.wafregional.GetIpsetResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.wafregional.</code><code class="descname">GetIpsetResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.GetIpsetResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getIpset.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.wafregional.GetIpsetResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.GetIpsetResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.wafregional.GetRuleResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.wafregional.</code><code class="descname">GetRuleResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.GetRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRule.</p>
@@ -1044,6 +1056,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.wafregional.get_ipset">
+<code class="descclassname">pulumi_aws.wafregional.</code><code class="descname">get_ipset</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.get_ipset" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">aws_wafregional_ipset</span></code> Retrieves a WAF Regional IP Set Resource Id.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_ipset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_ipset.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">

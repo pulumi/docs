@@ -2,7 +2,9 @@
 title: "Build a Video Thumbnailer with Pulumi using Lambdas, Containers, and Infrastructure on AWS"
 authors: ["donna-malayeri"]
 tags: ["JavaScript","Serverless","AWS","Containers","Infrastructure"]
-meta_desc: "Extracting a thumbnail from a video: Using Pulumi to build cloud applications that use a combination of containers, lambdas, and connected data services and infrastructure. "
+
+meta_desc: "Extracting a thumbnail from a video: Using Pulumi to build cloud applications that use a combination of Lambdas, containers, and connected data services and infrastructure. "
+
 date: "2018-06-21"
 
 meta_image: "video-thumbnail-diagram.png"
@@ -43,8 +45,8 @@ Then, run the following command to install the Pulumi CLI:
 
 If you're on Windows, run this:
 
-    @"%SystemRoot%System32WindowsPowerShell1.0powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" 
-    SET "PATH=%PATH%;%USERPROFILE%.pulumiin"
+    @"%SystemRoot%System32WindowsPowerShell1.0powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))"
+    SET "PATH=%PATH%;%USERPROFILE%.pulumiin"
 
 You'll deploy this app to your own AWS account, so follow the steps
 to [configure your AWS account]({{< ref "/docs/reference/clouds/aws/setup.md" >}}).
@@ -87,7 +89,7 @@ const ffmpegThumbnailTask = new cloud.Task("ffmpegThumbTask", {
 bucket.onPut("onNewVideo", async (bucketArgs) => {
     console.log(`*** New video: file ${bucketArgs.key} was uploaded at ${bucketArgs.eventTime}.`);
     const file = bucketArgs.key;
-    
+
     const thumbnailFile = file.substring(0, file.indexOf('_')) + '.jpg';
     const framePos = file.substring(file.indexOf('_')+1, file.indexOf('.')).replace('-',':');
 
@@ -125,20 +127,20 @@ runs `ffmpeg`, and copies the output back to S3.
 
         FROM jrottenberg/ffmpeg
 
-        RUN apt-get update && 
-            apt-get install python-dev python-pip -y && 
+        RUN apt-get update &&
+            apt-get install python-dev python-pip -y &&
             apt-get clean
 
         RUN pip install awscli
 
         WORKDIR /tmp/workdir
 
-        ENTRYPOINT 
-          echo "Starting ffmpeg task..." && 
-          echo "Copying video from S3" && 
-          aws s3 cp s3://${S3_BUCKET}/${INPUT_VIDEO} ./${INPUT_VIDEO} && 
-          ffmpeg -v error -i ./${INPUT_VIDEO} -ss ${TIME_OFFSET} -vframes 1 -f image2 -an -y ${OUTPUT_FILE} && 
-          echo "Copying thumbnail to S3" && 
+        ENTRYPOINT
+          echo "Starting ffmpeg task..." &&
+          echo "Copying video from S3" &&
+          aws s3 cp s3://${S3_BUCKET}/${INPUT_VIDEO} ./${INPUT_VIDEO} &&
+          ffmpeg -v error -i ./${INPUT_VIDEO} -ss ${TIME_OFFSET} -vframes 1 -f image2 -an -y ${OUTPUT_FILE} &&
+          echo "Copying thumbnail to S3" &&
           aws s3 cp ./${OUTPUT_FILE} s3://${S3_BUCKET}/${OUTPUT_FILE}
 
 Install the `@pulumi/cloud-aws` NPM package:
@@ -204,7 +206,7 @@ Fargate task are all in one place!
 Once the thumbnail has been generated, either view it in the S3 console,
 or download it with the AWS CLI:
 
-    $ aws s3 cp s3://$(pulumi stack output bucketName)/cat.jpg . 
+    $ aws s3 cp s3://$(pulumi stack output bucketName)/cat.jpg .
     download: s3://bucket-0c91106/cat.jpg to ./cat.jpg
 
 ## Clean Up

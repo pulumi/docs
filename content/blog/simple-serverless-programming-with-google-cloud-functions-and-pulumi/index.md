@@ -178,7 +178,7 @@ takes care of that you would normally be responsible for. This includes:
     encrypt and manage secrets for your Cloud Function code.
 
 Not to mention that by doing all of that, you can achieve continuous deployment
-[Pulumi and Google Cloud Build]({{< ref "/docs/reference/cd-google-cloud-build" >}}).
+[Pulumi and Google Cloud Build]({{< ref "/docs/console/continuous-delivery/google-cloud-build" >}}).
 
 ## Updating Your Google Functions Code
 

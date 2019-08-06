@@ -17,8 +17,6 @@ for virtually any type of application or backend service with zero administratio
 takes care of everything required to run and scale your code with high availability. You can set up your code to
 automatically trigger from other AWS services or call it directly from any web or mobile app.
 
-{{< mini-toc >}}
-
 ## Overview
 
 Pulumi Crosswalk for AWS brings a more natural, and easier to use, way of building serverless applications using
@@ -93,7 +91,8 @@ defined -- or even use functions that already exist, and simply glue them togeth
 
 Because Pulumi provisions and manages resources, updating your functions after creating them is easy. Just edit your
 code, run `pulumi up`, and Pulumi will diff and compute the minimal set of changes it can make to upgrade your code,
-without any downtime required. This is as easy to do by hand as it is in [CI/CD]({{< relref "/docs/reference/cd.md" >}}).
+without any downtime required. This is as easy to do by hand as it is in
+[CI/CD]({{< ref "/docs/console/continuous-delivery" >}}).
 
 ### Register an Event Handler Using a Magic Lambda Function
 

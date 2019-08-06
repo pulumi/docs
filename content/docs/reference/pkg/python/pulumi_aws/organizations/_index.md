@@ -108,6 +108,78 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.organizations.GetOrganizationResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.organizations.</code><code class="descname">GetOrganizationResult</code><span class="sig-paren">(</span><em>accounts=None</em>, <em>arn=None</em>, <em>aws_service_access_principals=None</em>, <em>enabled_policy_types=None</em>, <em>feature_set=None</em>, <em>master_account_arn=None</em>, <em>master_account_email=None</em>, <em>master_account_id=None</em>, <em>non_master_accounts=None</em>, <em>roots=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getOrganization.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.GetOrganizationResult.accounts">
+<code class="descname">accounts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationResult.accounts" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of organization accounts including the master account. For a list excluding the master account, see the <code class="docutils literal notranslate"><span class="pre">non_master_accounts</span></code> attribute. All elements have these attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.GetOrganizationResult.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>ARN of the root</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.GetOrganizationResult.aws_service_access_principals">
+<code class="descname">aws_service_access_principals</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationResult.aws_service_access_principals" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of AWS service principal names that have integration enabled with your organization. Organization must have <code class="docutils literal notranslate"><span class="pre">feature_set</span></code> set to <code class="docutils literal notranslate"><span class="pre">ALL</span></code>. For additional information, see the <a class="reference external" href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">AWS Organizations User Guide</a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.GetOrganizationResult.enabled_policy_types">
+<code class="descname">enabled_policy_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationResult.enabled_policy_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Organizations policy types that are enabled in the Organization Root. Organization must have <code class="docutils literal notranslate"><span class="pre">feature_set</span></code> set to <code class="docutils literal notranslate"><span class="pre">ALL</span></code>. For additional information about valid policy types (e.g. <code class="docutils literal notranslate"><span class="pre">SERVICE_CONTROL_POLICY</span></code>), see the <a class="reference external" href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html">AWS Organizations API Reference</a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.GetOrganizationResult.feature_set">
+<code class="descname">feature_set</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationResult.feature_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>The FeatureSet of the organization.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.GetOrganizationResult.master_account_arn">
+<code class="descname">master_account_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationResult.master_account_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) of the account that is designated as the master account for the organization.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.GetOrganizationResult.master_account_email">
+<code class="descname">master_account_email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationResult.master_account_email" title="Permalink to this definition">¶</a></dt>
+<dd><p>The email address that is associated with the AWS account that is designated as the master account for the organization.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.GetOrganizationResult.master_account_id">
+<code class="descname">master_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationResult.master_account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique identifier (ID) of the master account of an organization.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.GetOrganizationResult.non_master_accounts">
+<code class="descname">non_master_accounts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationResult.non_master_accounts" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of organization accounts excluding the master account. For a list including the master account, see the <code class="docutils literal notranslate"><span class="pre">accounts</span></code> attribute. All elements have these attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.GetOrganizationResult.roots">
+<code class="descname">roots</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationResult.roots" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of organization roots. All elements have these attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.GetOrganizationResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.GetOrganizationResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.organizations.Organization">
 <em class="property">class </em><code class="descclassname">pulumi_aws.organizations.</code><code class="descname">Organization</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aws_service_access_principals=None</em>, <em>enabled_policy_types=None</em>, <em>feature_set=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.Organization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create an organization.</p>
@@ -118,8 +190,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>aws_service_access_principals</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have <code class="docutils literal notranslate"><span class="pre">feature_set</span></code> set to <code class="docutils literal notranslate"><span class="pre">ALL</span></code>. For additional information, see the <a class="reference external" href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">AWS Organizations User Guide</a>.</li>
-<li><strong>enabled_policy_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Organizations policy types to enable in the Organization Root. Organization must have <code class="docutils literal notranslate"><span class="pre">feature_set</span></code> set to <code class="docutils literal notranslate"><span class="pre">ALL</span></code>. For additional information about valid policy types (e.g. <code class="docutils literal notranslate"><span class="pre">SERVICE_CONTROL_POLICY</span></code>), see the <a class="reference external" href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html">AWS Organizations API Reference</a>.</li>
+<li><strong>aws_service_access_principals</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have <code class="docutils literal notranslate"><span class="pre">feature_set</span></code> set to <code class="docutils literal notranslate"><span class="pre">ALL</span></code>. For additional information, see the <a class="reference external" href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">AWS Organizations User Guide</a>.</p>
+</li>
+<li><strong>enabled_policy_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>List of Organizations policy types to enable in the Organization Root. Organization must have <code class="docutils literal notranslate"><span class="pre">feature_set</span></code> set to <code class="docutils literal notranslate"><span class="pre">ALL</span></code>. For additional information about valid policy types (e.g. <code class="docutils literal notranslate"><span class="pre">SERVICE_CONTROL_POLICY</span></code>), see the <a class="reference external" href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html">AWS Organizations API Reference</a>.</p>
+</li>
 <li><strong>feature_set</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify “ALL” (default) or “CONSOLIDATED_BILLING”.</li>
 </ul>
 </td>
@@ -474,6 +548,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.organizations.get_organization">
+<code class="descclassname">pulumi_aws.organizations.</code><code class="descname">get_organization</code><span class="sig-paren">(</span><em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.get_organization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get information about the organization that the user’s account belongs to</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/organizations_organization.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/organizations_organization.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 </div>

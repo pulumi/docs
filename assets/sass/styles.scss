@@ -16,6 +16,8 @@
 @import "icons";
 @import "langchoose";
 @import "no-select";
+@import "on-this-page";
+@import "notes";
 @import "pagination";
 @import "pricing";
 @import "search";
@@ -76,7 +78,7 @@ body {
 main {
     @apply text-gray-700;
 
-    p, li, blockquote {
+    p, li, blockquote, table {
 
         a {
             @apply text-blue-600 break-words;

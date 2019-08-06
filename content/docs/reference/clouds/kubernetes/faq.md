@@ -7,8 +7,6 @@ menu:
     weight: 3
 ---
 
-{{< mini-toc >}}
-
 ## Does Pulumi create and manage Kubernetes clusters, or deploy workloads to running clusters?
 
 Pulumi handles both cases, and we highly encourage you to try them together!

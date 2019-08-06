@@ -16,8 +16,6 @@ orchestration service that supports Docker containers and allows you to easily r
 on AWS. ECS eliminates the need for you to install and operate your own container orchestration software, manage and
 scale a cluster of virtual machines, or schedule containers on those virtual machines.
 
-{{< mini-toc >}}
-
 ## Overview
 
 Pulumi Crosswalk for AWS ECS simplifies deploying containerized applications into ECS and managing all of the
@@ -41,7 +39,7 @@ class. Because we want to access this container over port 80 using a stable addr
 import * as awsx from "@pulumi/awsx";
 
 // Create a load balancer on port 80 and spin up two instances of Nginx.
-const lb = new awsx.elasticloadbalancingv2.ApplicationListener("nginx", { port: 80 });
+const lb = new awsx.lb.ApplicationListener("nginx", { port: 80 });
 const nginx = new awsx.ecs.FargateService("nginx", {
     taskDefinitionArgs: {
         containers: {
@@ -234,7 +232,7 @@ For example, this example simply uses the `nginx` image from the Docker Hub:
 ```typescript
 import * as awsx from "@pulumi/awsx";
 
-const listener = new awsx.elasticloadbalancingv2.NetworkListener("listener", { port: 80 });
+const listener = new awsx.lb.NetworkListener("listener", { port: 80 });
 const task = new awsx.ecs.FargateTaskDefinition("task", {
     containers: {
         nginx: {
@@ -341,8 +339,8 @@ runs in the container within your Pulumi application directly, much like [magic 
 
 ```typescript
 const listener =
-    new awsx.elasticloadbalancingv2.NetworkTargetGroup("custom", { port: 8080 })
-                                   .createListener("custom", { port: 80 });
+    new awsx.lb.NetworkTargetGroup("custom", { port: 8080 })
+               .createListener("custom", { port: 80 });
 
 const service = new awsx.ecs.EC2Service("custom", {
     cluster,

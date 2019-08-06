@@ -81,12 +81,12 @@ The following snippet shows the essential elements of the solution:
     infra                    # Cloud infrastructure definition goes here
        index.ts             # Pulumi program in TypeScript
     src
-       Controllers          # 
+       Controllers          #
        Models               #  ASP.NET Core web app
        Views                # /
        Data                 # EF Core Data Context
        wwwroot              # Static assets (JavaScript/CSS/Images)
-    zure-pipelines.yml      # Azure DevOps pipeline definition
+    azure-pipelines.yml      # Azure DevOps pipeline definition
 
 As a first step, I cloned the [Todo List
 app](https://github.com/azure-samples/dotnetcore-sqldb-tutorial) into

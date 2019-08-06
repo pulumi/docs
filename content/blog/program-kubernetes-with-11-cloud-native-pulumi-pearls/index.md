@@ -685,10 +685,11 @@ resource graph. In this example, we've changed our container image from
 
 The ability to look at previews before making an update ensures mistakes
 don't get made and that deployments don't have unanticipated impacts.
-There is even a [Pulumi GitHub App]({{< ref "/docs/reference/cd-github" >}}) that will show such
-diffs inside of pull requests before they've been deployed, so you know
-the impact of configuration changes before code even makes its way to
-master.
+There is even a
+[Pulumi GitHub App]({{< ref "/docs/console/continuous-delivery/github-app" >}})
+that will show such diffs inside of pull requests before they've been
+deployed, so you know the impact of configuration changes before code
+even makes its way to master.
 
 ## 10. Trigger Cascading Rollouts from Dependent Updates
 
@@ -829,5 +830,5 @@ here.
 
 To get started, head over to the [Pulumi Quickstart]({{< ref "/docs/quickstart" >}}),
 meet us over on GitHub where all the goodies are open source <https://github.com/pulumi/pulumi>, and/or join our
-[Pulumi Community Slack](https://slack.pulumi.io). We can't wait to hear
+[Pulumi Community Slack](https://slack.pulumi.com). We can't wait to hear
 from you. Happy hacking!

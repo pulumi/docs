@@ -14,7 +14,7 @@ menu:
 Pulumi Crosswalk for AWS supports all AWS services, not just those with dedicated articles in this User Guide.
 This includes services like DynamoDB, EC2, S3, and RDS, to name a few, and includes support for all of their features.
 If your favorite service isn't listed here, please contact us by [filing an issue in the docs repo](
-https://github.com/pulumi/docs) or by [joining the Pulumi Community Slack channel](https://slack.pulumi.io).
+https://github.com/pulumi/docs) or by [joining the Pulumi Community Slack channel](https://slack.pulumi.com).
 
 ## Index of Services
 
@@ -67,10 +67,10 @@ tbody tr td:first-child {
 | [AWS CloudHSM](https://aws.amazon.com/cloudhsm/) | Managed hardware security module (HSM) | | [cloudhsmv2]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudhsmv2/_index.md" >}}) |
 | [AWS CloudTrail](https://aws.amazon.com/cloudtrail/) | Track user activity and API usage | | [cloudtrail]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudtrail/_index.md" >}}) |
 | [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) | Application and infrastructure monitoring | [User Guide]({{< relref "cloudwatch.md" >}}) | [cloudwatch]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/_index.md" >}}) |
-| [AWS CodeBuild](https://aws.amazon.com/codebuild/) | Build and test code | [User Guide]({{< relref "/docs/reference/cd-aws-code-services.md" >}}) | [codebuild]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/codebuild/_index.md" >}}) |
-| [AWS CodeCommit](https://aws.amazon.com/codecommit/) | Host private Git repos | [User Guide]({{< relref "/docs/reference/cd-aws-code-services.md" >}}) | [codecommit]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/codecommit/_index.md" >}}) |
-| [AWS CodeDeploy](https://aws.amazon.com/codedeploy/) | Automate code deployments | [User Guide]({{< relref "/docs/reference/cd-aws-code-services.md" >}}) | [codedeploy]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/_index.md" >}}) |
-| [AWS CodePipeline](https://aws.amazon.com/codepipeline) | Continuous delivery pipelines | [User Guide]({{< relref "/docs/reference/cd-aws-code-services.md" >}}) | [codepipeline]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/_index.md" >}}) |
+| [AWS CodeBuild](https://aws.amazon.com/codebuild/) | Build and test code | [User Guide]({{< relref "/docs/console/continuous-delivery/aws-code-services.md" >}}) | [codebuild]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/codebuild/_index.md" >}}) |
+| [AWS CodeCommit](https://aws.amazon.com/codecommit/) | Host private Git repos | [User Guide]({{< relref "/docs/console/continuous-delivery/aws-code-services.md" >}}) | [codecommit]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/codecommit/_index.md" >}}) |
+| [AWS CodeDeploy](https://aws.amazon.com/codedeploy/) | Automate code deployments | [User Guide]({{< relref "/docs/console/continuous-delivery/aws-code-services.md" >}}) | [codedeploy]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/_index.md" >}}) |
+| [AWS CodePipeline](https://aws.amazon.com/codepipeline) | Continuous delivery pipelines | [User Guide]({{< relref "/docs/console/continuous-delivery/aws-code-services.md" >}}) | [codepipeline]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/_index.md" >}}) |
 | [Amazon Cognito](https://aws.amazon.com/cognito/) | Simple and secure user identity | | [cognito]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cognito/_index.md" >}}) |
 | [AWS Cost and Usage Reporting](https://aws.amazon.com/aws-cost-management/aws-cost-and-usage-reporting/) | Report on usage and cost | | [cur]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cur/_index.md" >}}) |
 | [AWS DataSync](https://aws.amazon.com/datasync/) | Easily transfer data | | [datasync]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/datasync/_index.md" >}}) |
@@ -92,7 +92,7 @@ tbody tr td:first-child {
 | [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/) | Managed Kubernetes service | [User Guide]({{< relref "eks.md" >}}) | [eks]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/eks/_index.md" >}}) |
 | [Amazon ElastiCache](https://aws.amazon.com/elasticache/) | Managed Redis or Memcached service | | [elasticache]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/elasticache/_index.md" >}}) |
 | [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/) | Deploy and scale web apps | | [elasticbeanstalk]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/_index.md" >}}) |
-| [AWS Elastic Load Balancing (ELB)](https://aws.amazon.com/elasticloadbalancing/) | Scale across many instances | [User Guide]({{< relref "elb.md" >}}) | [elasticloadbalancingv2]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancingv2/_index.md" >}}) |
+| [AWS Elastic Load Balancing (ELB)](https://aws.amazon.com/elasticloadbalancing/) | Scale across many instances | [User Guide]({{< relref "elb.md" >}}) | [lb]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/lb/_index.md" >}}) |
 | [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/) | Fully managed Elasticsearch service | | [elasticsearch]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/elasticsearch/_index.md" >}}) |
 | [Amazon Elastic Transcoder](https://aws.amazon.com/elastictranscoder/) | Media transcoding in the cloud | | [elastictranscoder]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/elastictranscoder/_index.md" >}}) |
 | [Amazon EMR](https://aws.amazon.com/emr/) | Spark, Hadoop, HBase, and other big data | | [emr]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/emr/_index.md" >}}) |

@@ -14,8 +14,6 @@ menu:
 Pulumi Crosswalk for AWS is a collection of libraries to make common infrastructure as code tasks in AWS easier and
 more secure, using automatic well-architected best practices.
 
-{{< mini-toc >}}
-
 <img src="/images/docs/reference/crosswalk/aws/arch.png">
 
 ## Overview
@@ -41,7 +39,7 @@ response to a single `pulumi up` command line invocation:
 import * as awsx from "@pulumi/awsx";
 
 // Create a load balancer on port 80 and spin up two instances of Nginx.
-const lb = new awsx.elasticloadbalancingv2.ApplicationListener("nginx", { port: 80 });
+const lb = new awsx.lb.ApplicationListener("nginx", { port: 80 });
 const nginx = new awsx.ecs.FargateService("nginx", {
     taskDefinitionArgs: {
         containers: {
@@ -90,7 +88,7 @@ relevant User Guides to get started:
 
 ### Continuous Deployment
 
-* [Using Pulumi from AWS Code Services]({{< relref "/docs/reference/cd-aws-code-services" >}})
+* [Using Pulumi from AWS Code Services]({{< relref "/docs/console/continuous-delivery/aws-code-services" >}})
 
 ### Other AWS Services
 

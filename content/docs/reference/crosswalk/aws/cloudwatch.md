@@ -17,8 +17,6 @@ to monitor applications, understand and respond to system-wide performance chang
 get a unified view of operational health. This takes the form of logs, metrics, and events, providing you with a
 unified view of AWS resources, applications and services.
 
-{{< mini-toc >}}
-
 ## Overview
 
 Pulumi Crosswalk for AWS CloudWatch help you operationally understand and manage your AWS resources and applications,
@@ -195,7 +193,7 @@ Here is a list of the AWS services that export metrics:
 * [AWS Elastic Compute Cloud (EC2) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/ec2/_index.md#metrics" >}})
 * [AWS Elastic Container Service (ECS) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/ecs/_index.md#metrics" >}})
 * [AWS Elastic File System (EFS) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/efs/_index.md#metrics" >}})
-* [AWS Elastic Load Balancing (ELB) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/elasticloadbalancingv2/_index.md#metrics" >}})
+* [AWS Elastic Load Balancing (ELB) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/lb/_index.md#metrics" >}})
 * [AWS Lambda CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/lambda/_index.md#metrics" >}})
 * [AWS Relational Database Service (RDS) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/rds/_index.md#metrics" >}})
 * [AWS Simple Storage Service (S3) CloudWatch Metrics]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/s3/_index.md#metrics" >}})

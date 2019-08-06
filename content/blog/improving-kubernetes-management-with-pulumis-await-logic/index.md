@@ -62,7 +62,7 @@ applications, or sharing responsibilities between teams.
 
 
 2) Reliably integrate with
-[**CI/CD systems**]({{< ref "/docs/reference/cd" >}}) for infrastructure and
+[**CI/CD systems**]({{< ref "/docs/console/continuous-delivery" >}}) for infrastructure and
 application deployments without requiring hardcoded timeouts, or
 scripting kubectl and parsing the resulting JSON/YAML to detect errors.
 If errors are encountered, Pulumi automatically surfaces the relevant
@@ -131,7 +131,7 @@ As always, you can check out our code
 on [GitHub](https://github.com/pulumi), follow us
 on [Twitter](https://twitter.com/pulumicorp), subscribe to our [YouTube
 channel](https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw), or
-join our [Community Slack](https://slack.pulumi.io/) channel if you have
+join our [Community Slack](https://slack.pulumi.com/) channel if you have
 any questions, need support, or just want to say hello.
 
 If you'd like to chat with our team, or get hands-on assistance with

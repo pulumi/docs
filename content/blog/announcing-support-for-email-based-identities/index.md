@@ -2,10 +2,12 @@
 title: "Announcing Support for Email-based Identities"
 authors: ["praneet-loke"]
 tags: ["Pulumi-News","Features"]
-meta_desc: "Pulumi now supports for email-based identities, on top of support for Atlassian identity and GitLab."
+
+meta_desc: "Pulumi now supports email-based identities, in addition to GitHub, Atlassian, and GitLab."
+
 date: "2019-03-21"
 
-summary: "Today, we are pleased to announce that we are launching support for email-based identities. You no longer need to use a social identity to sign-up for an account on Pulumi. Just fill out the signup form, and you are ready to go."
+
 meta_image: "email-signup.png"
 ---
 
@@ -37,5 +39,5 @@ Haven't setup your CLI for a specific cloud yet? Check out this docs page on how
 
 Once you've deployed your first stack, the next step is up to you. You can refer to our documentation on integrating Pulumi into your CI/CD pipeline, setting up chat-ops workflows via Webhooks, or taking your Kubernetes solutions to the next level!
 
-We'd love to hear what you're up to. Say 👋 in the [Pulumi Community Slack](https://slack.pulumi.io/)
+We'd love to hear what you're up to. Say 👋 in the [Pulumi Community Slack](https://slack.pulumi.com/)
 or [drop us a line]({{< ref "/contact" >}}).

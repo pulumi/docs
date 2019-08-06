@@ -62,7 +62,7 @@ generate_docs() {
 
         # Change back to the origin directory and create the API documents.
         popd
-        echo -e "\033[0;93mGenerating pulumi.io API docs\033[0m"
+        echo -e "\033[0;93mGenerating pulumi.com API docs\033[0m"
         echo -e ${TOOL_APIDOCGEN} "${PKGPATH}" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" $HEAD_COMMIT
         ${TOOL_APIDOCGEN} "${PKGPATH}" "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" $HEAD_COMMIT
     fi

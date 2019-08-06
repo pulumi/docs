@@ -5632,9 +5632,9 @@ Only valid with <code class="docutils literal notranslate"><span class="pre">egr
 <li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol. If not icmp, tcp, udp, or all use the <a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">protocol number</a></li>
 <li><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group to apply this rule to.</li>
 <li><strong>self</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the security group itself will be added as
-a source to this ingress rule.</li>
+a source to this ingress rule. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">source_security_group_id</span></code>.</li>
 <li><strong>source_security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group id to allow access to/from,
-depending on the <code class="docutils literal notranslate"><span class="pre">type</span></code>. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code>.</li>
+depending on the <code class="docutils literal notranslate"><span class="pre">type</span></code>. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> and <code class="docutils literal notranslate"><span class="pre">self</span></code>.</li>
 <li><strong>to_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The end port (or ICMP code if protocol is “icmp”).</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of rule being created. Valid options are <code class="docutils literal notranslate"><span class="pre">ingress</span></code> (inbound)
 or <code class="docutils literal notranslate"><span class="pre">egress</span></code> (outbound).</li>
@@ -5692,14 +5692,14 @@ Only valid with <code class="docutils literal notranslate"><span class="pre">egr
 <dt id="pulumi_aws.ec2.SecurityGroupRule.self">
 <code class="descname">self</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule.self" title="Permalink to this definition">¶</a></dt>
 <dd><p>If true, the security group itself will be added as
-a source to this ingress rule.</p>
+a source to this ingress rule. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">source_security_group_id</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SecurityGroupRule.source_security_group_id">
 <code class="descname">source_security_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule.source_security_group_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The security group id to allow access to/from,
-depending on the <code class="docutils literal notranslate"><span class="pre">type</span></code>. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code>.</p>
+depending on the <code class="docutils literal notranslate"><span class="pre">type</span></code>. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> and <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8106,7 +8106,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>transit_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the EC2 Transit Gateway.</li>
 <li><strong>tunnel1_inside_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block of the inside IP addresses for the first VPN tunnel.</li>
 <li><strong>tunnel1_preshared_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The preshared key of the first VPN tunnel.</li>
-<li><strong>tunnel2_inside_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block of the second IP addresses for the first VPN tunnel.</li>
+<li><strong>tunnel2_inside_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block of the inside IP addresses for the second VPN tunnel.</li>
 <li><strong>tunnel2_preshared_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The preshared key of the second VPN tunnel.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of VPN connection. The only type AWS supports at this time is “ipsec.1”.</li>
 <li><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Virtual Private Gateway.</li>
@@ -8222,7 +8222,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpnConnection.tunnel2_inside_cidr">
 <code class="descname">tunnel2_inside_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnConnection.tunnel2_inside_cidr" title="Permalink to this definition">¶</a></dt>
-<dd><p>The CIDR block of the second IP addresses for the first VPN tunnel.</p>
+<dd><p>The CIDR block of the inside IP addresses for the second VPN tunnel.</p>
 </dd></dl>
 
 <dl class="attribute">

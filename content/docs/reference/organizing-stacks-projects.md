@@ -93,17 +93,44 @@ and testing. In that case, we'll have six distinct stacks, that pair up together
 * `acmecorp/infra/staging` provides the cluster used by `acmecorp/services/staging`
 * `acmecorp/infra/testing` provides the cluster used by `acmecorp/services/testing`
 
-The way Pulumi programs communicate information for external consumption is by using stack exports. For instance,
+The way Pulumi programs communicate information for external consumption is by using stack exports. For example,
 our infrastructure stack might export the Kubernetes configuration information needed to deploy into a cluster:
+
+{{< langchoose >}}
+
+```javascript
+exports.kubeConfig = ... a cluster's output property ...;
+```
 
 ```typescript
 export const kubeConfig = ... a cluster's output property ...;
 ```
 
-The challenge here is now our services project needs to ingest this output during deployment so that it can
+```python
+pulumi.export("kubeConfig", ... a cluster's output property ...)
+```
+
+```go
+// StackReference is currently not supported in Go.
+//
+// See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+The challenge here is that our services project needs to ingest this output during deployment so that it can
 connect to the Kubernetes cluster provisioned in its respective environment.
 
 The Pulumi programming model offers a way to do this with its `StackReference` resource type. For example:
+
+{{< langchoose >}}
+
+```javascript
+const k8s = require("@pulumi/kubernetes");
+const pulumi = require("@pulumi/pulumi");
+const env = pulumi.getStack();
+const infra = new pulumi.StackReference(`acmecorp/infra/${env}`);
+const provider = new k8s.Provider("k8s", { kubeConfig: infra.getOutput("kubeConfig") });
+const service = new k8s.core.v1.Service(..., { provider: provider });
+```
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -111,7 +138,23 @@ import * as pulumi from "@pulumi/pulumi";
 const env = pulumi.getStack();
 const infra = new pulumi.StackReference(`acmecorp/infra/${env}`);
 const provider = new k8s.Provider("k8s", { kubeConfig: infra.getOutput("kubeConfig") });
-const service = new k8s.v1.core.Service(..., { provider: provider });
+const service = new k8s.core.v1.Service(..., { provider: provider });
+```
+
+```python
+from pulumi import get_stack, ResourceOptions, StackReference
+from pulumi_kubernetes import Provider, core
+
+env = get_stack()
+infra = StackReference(f"acmecorp/infra/{env}")
+provider = Provider("k8s", { "kubeconfig": infra.get_output("kubeConfig") })
+service = core.v1.Service(..., ResourceOptions(provider=provider))
+```
+
+```go
+// StackReference is not supported in Go currently.
+//
+// See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
 The `StackReference` constructor takes as input a string of the form `<organization>/<project>/<stack>`, and lets
@@ -134,7 +177,8 @@ Pulumi project. However, most users find that a close alignment between Git repo
 structure enables seamless continuous deployment.
 
 In this model, there is a rough correspondence between a Git repo and a Pulumi project, and a Git branch and
-its associated Pulumi stack. Please read more about [how these mapping are maintained here]({{< relref "cd.md" >}}).
+its associated Pulumi stack. Please read more about
+[how these mapping are maintained here]({{< ref "/docs/console/continuous-delivery" >}}).
 
 ## Tagging Stacks
 

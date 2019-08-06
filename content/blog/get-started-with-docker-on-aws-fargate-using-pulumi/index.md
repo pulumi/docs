@@ -55,7 +55,7 @@ import * as awsx from "@pulumi/awsx";
 const cluster = new awsx.ecs.Cluster("cluster");
  
 // Step 2: Define the Networking for our service.
-const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer(
+const alb = new awsx.lb.ApplicationLoadBalancer(
     "net-lb", { external: true, securityGroup: cluster.securityGroup });
 const web = alb.createListener("web", { port: 80, external: true });
  
@@ -111,7 +111,7 @@ expose port 80 to the Internet, for incoming traffic. This leads to
 these two lines:
 
 ```typescript
-const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer(
+const alb = new awsx.lb.ApplicationLoadBalancer(
     "net-lb", { external: true, securityGroups: cluster.securityGroups });
 const web = lb.createListener("web", { port: 80, external: true });
 ```
@@ -234,7 +234,7 @@ Pulumi's "everything is code" approach means deploying everything can be
 done with a CLI command, unlocking the power of the entire Docker
 platform with a great inner development loop, that works from the
 desktop all the way to production. This entire flow can be
-[easily integrated into your favorite CI/CD pipeline]({{< ref "/docs/reference/cd" >}}),
+[easily integrated into your favorite CI/CD pipeline]({{< ref "/docs/console/continuous-delivery" >}}),
 including GitOps workflows.
 
 If we want to augment our service with other AWS resources -- like S3

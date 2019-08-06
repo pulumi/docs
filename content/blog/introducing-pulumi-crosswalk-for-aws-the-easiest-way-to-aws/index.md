@@ -114,7 +114,7 @@ import * as awsx from "@pulumi/awsx";
 const cluster = new awsx.ecs.Cluster("cluster");
 
 // Configure a Load Balancer
-const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer("lb", {
+const alb = new awsx.lb.ApplicationLoadBalancer("lb", {
     securityGroups: cluster.securityGroups,
 });
 const web = alb.createListener("web", { port: 80, external: true });

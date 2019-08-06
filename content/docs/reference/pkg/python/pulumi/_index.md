@@ -47,7 +47,8 @@ resource.</li>
 <dl class="attribute">
 <dt id="pulumi.Resource.urn">
 <code class="descname">urn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.Resource.urn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The stable, logical URN used to distinctly address a resource, both before and after deployments.</p>
+<dd><p>The stable, logical URN used to distinctly address a resource, both before and after
+deployments.</p>
 </dd></dl>
 
 <dl class="method">
@@ -113,10 +114,10 @@ provider for the given module member.</p>
 <dl class="class">
 <dt id="pulumi.CustomResource">
 <em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">CustomResource</code><span class="sig-paren">(</span><em>t: str</em>, <em>name: str</em>, <em>props: Optional[dict] = None</em>, <em>opts: Optional[pulumi.resource.ResourceOptions] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.CustomResource" title="Permalink to this definition">¶</a></dt>
-<dd><p>CustomResource is a resource whose create, read, update, and delete (CRUD) operations are managed
-by performing external operations on some physical entity.  The engine understands how to diff
-and perform partial updates of them, and these CRUD operations are implemented in a dynamically
-loaded plugin for the defining package.</p>
+<dd><p>CustomResource is a resource whose create, read, update, and delete (CRUD) operations are
+managed by performing external operations on some physical entity.  The engine understands how
+to diff and perform partial updates of them, and these CRUD operations are implemented in a
+dynamically loaded plugin for the defining package.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -144,8 +145,9 @@ deployments and may be missing (undefined) during planning phases.</p>
 <dl class="class">
 <dt id="pulumi.ComponentResource">
 <em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ComponentResource</code><span class="sig-paren">(</span><em>t: str</em>, <em>name: str</em>, <em>props: Optional[dict] = None</em>, <em>opts: Optional[pulumi.resource.ResourceOptions] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ComponentResource" title="Permalink to this definition">¶</a></dt>
-<dd><p>ComponentResource is a resource that aggregates one or more other child resources into a higher level
-abstraction.  The component itself is a resource, but does not require custom CRUD operations for provisioning.</p>
+<dd><p>ComponentResource is a resource that aggregates one or more other child resources into a higher
+level abstraction.  The component itself is a resource, but does not require custom CRUD
+operations for provisioning.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -208,7 +210,7 @@ resource.</li>
 
 <dl class="class">
 <dt id="pulumi.ResourceOptions">
-<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em>, <em>delete_before_replace: Optional[bool] = None</em>, <em>ignore_changes: Optional[List[str]] = None</em>, <em>version: Optional[str] = None</em>, <em>additional_secret_outputs: Optional[List[str]] = None</em>, <em>id: Optional[str] = None</em>, <em>import_: Optional[str] = None</em>, <em>custom_timeouts: Optional[CustomTimeouts] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em>, <em>delete_before_replace: Optional[bool] = None</em>, <em>ignore_changes: Optional[List[str]] = None</em>, <em>version: Optional[str] = None</em>, <em>aliases: Optional[List[Input[Union[str</em>, <em>Alias]]]] = None</em>, <em>additional_secret_outputs: Optional[List[str]] = None</em>, <em>id: Optional[str] = None</em>, <em>import_: Optional[str] = None</em>, <em>custom_timeouts: Optional[CustomTimeouts] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>ResourceOptions is a bag of optional settings that control a resource’s behavior.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -247,7 +249,8 @@ the resource’s options.</dd>
 <dl class="attribute">
 <dt id="pulumi.ResourceOptions.parent">
 <code class="descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.parent" title="Permalink to this definition">¶</a></dt>
-<dd><p>If provided, the currently-constructing resource should be the child of the provided parent resource.</p>
+<dd><p>If provided, the currently-constructing resource should be the child of the provided parent
+resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -265,9 +268,9 @@ the resource’s options.</dd>
 <dl class="attribute">
 <dt id="pulumi.ResourceOptions.provider">
 <code class="descname">provider</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.provider" title="Permalink to this definition">¶</a></dt>
-<dd><p>An optional provider to use for this resource’s CRUD operations. If no provider is supplied, the default
-provider for the resource’s package will be used. The default provider is pulled from the parent’s
-provider bag (see also ResourceOptions.providers).</p>
+<dd><p>An optional provider to use for this resource’s CRUD operations. If no provider is supplied, the
+default provider for the resource’s package will be used. The default provider is pulled from
+the parent’s provider bag (see also ResourceOptions.providers).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -291,17 +294,23 @@ provider bag (see also ResourceOptions.providers).</p>
 <dl class="attribute">
 <dt id="pulumi.ResourceOptions.version">
 <code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.version" title="Permalink to this definition">¶</a></dt>
-<dd><p>An optional version. If provided, the engine loads a provider with exactly the requested version to operate on this
-resource. This version overrides the version information inferred from the current package and should rarely be
-used.</p>
+<dd><p>An optional version. If provided, the engine loads a provider with exactly the requested version
+to operate on this resource. This version overrides the version information inferred from the
+current package and should rarely be used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.aliases">
+<code class="descname">aliases</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.aliases" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional list of aliases to treat this resource as matching.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi.ResourceOptions.additional_secret_outputs">
 <code class="descname">additional_secret_outputs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.additional_secret_outputs" title="Permalink to this definition">¶</a></dt>
-<dd><p>The names of outputs for this resource that should be treated as secrets. This augments the list that
-the resource provider and pulumi engine already determine based on inputs to your resource. It can be used
-to mark certain ouputs as a secrets on a per resource basis.</p>
+<dd><p>The names of outputs for this resource that should be treated as secrets. This augments the list
+that the resource provider and pulumi engine already determine based on inputs to your resource.
+It can be used to mark certain outputs as a secrets on a per resource basis.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -319,9 +328,29 @@ to mark certain ouputs as a secrets on a per resource basis.</p>
 <dl class="attribute">
 <dt id="pulumi.ResourceOptions.import_">
 <code class="descname">import_</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.import_" title="Permalink to this definition">¶</a></dt>
-<dd><p>When provided with a resource ID, import indicates that this resource’s provider should import its state from the
-cloud resource with the given ID. The inputs to the resource’s constructor must align with the resource’s current
-state. Once a resource has been imported, the import property must be removed from the resource’s options.</p>
+<dd><p>When provided with a resource ID, import indicates that this resource’s provider should import
+its state from the cloud resource with the given ID. The inputs to the resource’s constructor
+must align with the resource’s current state. Once a resource has been imported, the import
+property must be removed from the resource’s options.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi.ResourceOptions.merge">
+<code class="descname">merge</code><span class="sig-paren">(</span><em>other: pulumi.resource.ResourceOptions</em><span class="sig-paren">)</span> &#x2192; pulumi.resource.ResourceOptions<a class="headerlink" href="#pulumi.ResourceOptions.merge" title="Permalink to this definition">¶</a></dt>
+<dd><p>merge produces a new ResourceOptions object with the respective attributes of this
+instance in it with the attributes of <code class="docutils literal notranslate"><span class="pre">other</span></code> merged over them.</p>
+<p>Both this options instance and the <code class="docutils literal notranslate"><span class="pre">other</span></code> options instance will be unchanged.</p>
+<p>Conceptually attributes merging follows these basic rules:</p>
+<ol class="arabic simple">
+<li>if the attributes is a collection, the final value will be a collection containing the
+values from each options object. Both original collections in each options object will
+be unchanged.</li>
+<li>Simple scaler values from <code class="docutils literal notranslate"><span class="pre">other</span></code> (i.e. strings, numbers, bools) will replace the values
+from this.</li>
+<li>For the purposes of merging <code class="docutils literal notranslate"><span class="pre">depends_on</span></code>, <code class="docutils literal notranslate"><span class="pre">provider</span></code> and <code class="docutils literal notranslate"><span class="pre">providers</span></code> are always treated
+as collections, even if only a single value was provided.</li>
+<li>Attributes with value ‘None’ will not be copied over.</li>
+</ol>
 </dd></dl>
 
 </dd></dl>
@@ -898,7 +927,7 @@ are resolved asynchronously, but they also contain information about the depende
 program.</p>
 <p>Pulumi does not offer direct access to the values contained within Outputs. Instead, you must use the <cite>apply</cite> function
 on the Output class in order to observe the value of an output. See
-<a class="reference external" href="/tour/programs-properties.html">the documentation</a> for more details on this part of the Pulumi programming model.</p>
+<a class="reference external" href="/docs/reference/programming-model/#outputs">the documentation</a> for more details on this part of the Pulumi programming model.</p>
 <dl class="class">
 <dt id="pulumi.Output">
 <em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">Output</code><span class="sig-paren">(</span><em>resources: Set[Resource], future: Awaitable[T], is_known: Awaitable[bool], is_secret: Optional[Awaitable[bool]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.Output" title="Permalink to this definition">¶</a></dt>
@@ -1024,6 +1053,26 @@ are preserved in the returned Output.</p>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">An output of lists, converted from an Input to prompt values.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[List[T]]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi.Output.concat">
+<em class="property">static </em><code class="descname">concat</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[str][str]<a class="headerlink" href="#pulumi.Output.concat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Concatenates a collection of Input[str] into a single Output[str].</p>
+<p>This function takes a sequence of Input[str], stringifies each, and concatenates all values
+into one final string. This can be used like so:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> (<em>List</em><em>[</em><em>Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – A list of string Inputs to concatenate.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A concatenated output string.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[str]</td>
 </tr>
 </tbody>
 </table>

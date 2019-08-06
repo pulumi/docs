@@ -6,7 +6,7 @@ menu:
     weight: 2
 ---
 
-The quickest way to get started is to follow the [Get Started]({{< relref "/docs/quickstart" >}}) guide.
+{{< get-started-note >}}
 
 There are additional tutorials available for each of the supported clouds:
 

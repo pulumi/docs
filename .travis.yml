@@ -32,4 +32,4 @@ after_script:
 # Maybe kick off next build.
 - if [ ! -z ${TRAVIS_TOKEN} ]; then travisqueue finish; fi
 notifications:
-  webhooks: https://ufci1w66n3.execute-api.us-west-2.amazonaws.com/stage/travis
+  webhooks: https://zlmgkhmhjc.execute-api.us-west-2.amazonaws.com/stage/travis

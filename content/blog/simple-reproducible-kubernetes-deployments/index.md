@@ -291,7 +291,7 @@ actually making any changes. And because Pulumi is always tracking old
 states, rollback afterwards is easy also.
 
 This CLI workflow is great for the dev inner loop, however
-[the Pulumi GitHub App]({{< ref "/docs/reference/cd-github" >}}) also integrates
+[the Pulumi GitHub App]({{< ref "/docs/console/continuous-delivery/github-app" >}}) also integrates
 these previews and diffs with your CI/CD system, by enlightening your
 GitHub Pull Requests with potential update impacts, while your team
 still has a chance to discuss changes inside the usual PR workflow,
@@ -315,4 +315,4 @@ based on ConfigMap changes... And much, much, more.
 If you have specific use cases you'd like to see us tackle, don't
 hesitate to reach out, either
 [on GitHub](https://github.com/pulumi/pulumi) or in our
-[Pulumi Community Slack](https://slack.pulumi.io/). We'd love to hear from you!
+[Pulumi Community Slack](https://slack.pulumi.com/). We'd love to hear from you!

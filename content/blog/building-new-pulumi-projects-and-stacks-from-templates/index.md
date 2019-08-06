@@ -2,7 +2,9 @@
 title: "Building new Pulumi projects and stacks from templates"
 authors: ["marc-holmes"]
 tags: ["Features"]
-meta_desc: "This blog shows how to build pulumi projects and stac ks from templates."
+
+meta_desc: "This blog shows how to build Pulumi projects and stacks from templates."
+
 date: "2018-10-01"
 
 meta_image: "new-project-ui-1.gif"
@@ -79,7 +81,7 @@ the stack code meaning you can build your own templates and share them.
 
 We hope you like these helpers. If you're keen to get stuck in:
 
-- [Join the Slack conversation](https://slack.pulumi.io) - it's
+- [Join the Slack conversation](https://slack.pulumi.com) - it's
   heating up in there.
 - Try out the [many examples we have](https://app.pulumi.com), and
   [dive into the docs]({{< ref "/docs/reference" >}}).

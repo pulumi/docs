@@ -164,4 +164,4 @@ users and more. Together, this enables end-to-end provisioning of your applicati
 Read more about the [Pulumi MySQL provider]({{< ref "/docs/reference/pkg/nodejs/pulumi/mysql" >}}).
 
 We’ve only shown a little bit of what Pulumi can do. If you need any help, feel free to create an issue
-[on GitHub](https://github.com/pulumi/) or join the [Pulumi Community Slack](https://slack.pulumi.io) channel.
+[on GitHub](https://github.com/pulumi/) or join the [Pulumi Community Slack](https://slack.pulumi.com) channel.

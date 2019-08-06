@@ -2,7 +2,9 @@
 title: "Building a future of cloud engineering"
 authors: ["joe-duffy"]
 tags: ["Pulumi-News"]
-meta_desc: "Using your favorite general purpose programming language and express the entirety of your cloud software. Program the cloud with Pulumi."
+
+meta_desc: "Using your favorite general purpose programming language to define your cloud infrastructure and applications. Program the cloud with Pulumi."
+
 date: "2018-10-22"
 ---
 
@@ -30,7 +32,7 @@ orchestrators, managed data and AI services, and serverless
 capabilities.
 
 The best part of this journey has been hearing from our [passionate
-community](https://slack.pulumi.io/). Thousands of engineers, and
+community](https://slack.pulumi.com/). Thousands of engineers, and
 hundreds of companies, have created and deployed cloud applications and
 infrastructure using Pulumi. We are proud to be [an open source
 company](https://github.com/pulumi/pulumi), and thrive on the daily

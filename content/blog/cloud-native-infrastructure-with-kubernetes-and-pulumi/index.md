@@ -2,20 +2,27 @@
 title: "Cloud Native Infrastructure with Kubernetes and Pulumi"
 authors: ["joe-duffy"]
 tags: ["Kubernetes"]
-meta_desc: "Pulumi for Kubernetes is a way to create, deploy, and manage Kubernetes applications using your favorite programming languges. This works across AWS, Azure, Google Cloud, etc."
+
+meta_desc: "Pulumi for Kubernetes is a way to create, deploy, and manage Kubernetes applications using your favorite programming language and across AWS, Azure, Google Cloud, and native environments."
+
 date: "2018-09-12"
 
 meta_image: "diff.gif"
 ---
 
-Today we're pleased to
-[announce Pulumi for Kubernetes](https://info.pulumi.com/press-release/pulumi-cloud-native-sdk-delivers-cloud-native-infrastructure-as-code-for-kubernetes),
+Kubernetes has quickly become the "gold standard" for running containers
+in production, spanning public, private, and hybrid cloud scenarios.
+It's been remarkable to watch its explosive growth just this
+past year alone. Every cloud vendor now supports an easy-to-use managed
+Kubernetes solution --- Google GKE, Azure AKS, and AWS AKS --- making it
+easier than ever to start writing and deploying Kubernetes
+applications.
+
+[Pulumi for Kubernetes](https://info.pulumi.com/press-release/pulumi-cloud-native-sdk-delivers-cloud-native-infrastructure-as-code-for-kubernetes) is
 a way to create, deploy, and manage Kubernetes applications using your
-favorite programming languages, bringing the same lovable experience
+favorite programming languages.
 that works across AWS, Azure, Google Cloud, OpenStack, and other clouds,
-now to Kubernetes and cloud native architectures. We have built this
-support in response to significant user interest and real end users
-scenarios, and are excited to share what we've been up to. You can
+now to Kubernetes and cloud native architectures. You can
 [dive right in here]({{< ref "/docs/quickstart/kubernetes" >}}) and
 look at some
 [powerful things Pulumi enables here]({{< relref "program-kubernetes-with-11-cloud-native-pulumi-pearls" >}}).
@@ -23,13 +30,6 @@ look at some
 
 ## Why Pulumi?
 
-Kubernetes has quickly become the "gold standard" for running containers
-in production, spanning public, private, and hybrid cloud scenarios.
-It's been remarkable to watch its explosive progress in even just this
-past year alone. Every cloud vendor now supports an easy-to-use managed
-Kubernetes solution -- Google GKE, Azure AKS, and AWS AKS -- making it
-easier than ever before to get started writing and deploying Kubernetes
-applications.
 
 Kubernetes is essentially the "POSIX" for the cloud and unlocks the
 potential for a true cloud native development platform to be built on
@@ -122,27 +122,31 @@ Kubernetes config updates, and your cloud infrastructure.
 
 ## What's Next
 
-Today is just the beginning of an exciting journey, with Pulumi's
-support for Kubernetes and cloud native architectures. We are excited to
-tell you about what we've been up to, and hope that real languages will
+With Pulumi's
+support for Kubernetes and cloud native architectures, we hope that real languages will
 bring you more joy, reduce toil, and ultimately lower the barriers to
 entry for using Kubernetes with real components and reuse.
 
 We can't wait to hear what you think. To learn more or give it a try,
 please check out these resources:
 
-[Instal Pulumi]({{< ref "/docs/reference/install.md" >}})
+- [EKS Quickstart]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-eks" >}})
+- [GKE Quickstart]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-gke" >}})
+- [AKS Quickstart]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-aks" >}})
 
-These two tutorials will walk you through your first [Pulumi for Kubernetes]({{< ref "/docs/quickstart/kubernetes" >}}) project:
+These two tutorials will walk you through your first Pulumi for Kubernetes project:
 
 -   [Tutorial: Deploy a Stateless Nginx Application]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-stateless-app" >}})
 -   [Tutorial: Deploy a Load-Balanced Guestbook App with Redis and Nginx]({{< ref "/docs/reference/tutorials/kubernetes/tutorial-guestbook" >}})
 
 [Program Kubernetes with 11 Pearls]({{< relref "program-kubernetes-with-11-cloud-native-pulumi-pearls" >}}):
-a companion blog post, also launched today, with 11 exciting examples.
+a companion blog post with 11 exciting examples.
+
+[Pulumi: A Better Way to Kubernetes]({{< relref "pulumi-a-better-way-to-kubernetes" >}}): A walkthrough on how Pulumi can make Kubernetes more accessible, using your favorite languages and tools.
+
 
 If you have any questions or comments, we'd love to hear from you in our
-[Community Slack](https://slack.pulumi.io) or over on
+[Community Slack](https://slack.pulumi.com) or over on
 [GitHub](https://github.com/pulumi).
 
 Happy cloud native hacking! 
