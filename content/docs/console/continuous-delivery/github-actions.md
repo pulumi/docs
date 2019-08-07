@@ -99,7 +99,7 @@ action "Pulumi Deploy (Current Stack)" {
 Note that by using the `pulumi/actions` Docker image, these workflow actions will
 automatically download and use the latest version of Pulumi. If you prefer to use a
 specific version of Pulumi, you can replace all occurrences of `uses =
-"docker://pulumi/actions"` with a container image that contains the version as a tag, for
+"docker://pulumi/actions"` with a container image that contains the version as a tag. For
 instance `uses = "docker://pulumi/actions:v0.16.6"`.
 
 We've also included a prelimarily `Build` action &mdash; and declared it as a
