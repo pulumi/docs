@@ -21,7 +21,7 @@ why, and how to get up and running. It's refreshingly easy!
 
 ## GitHub Actions + Pulumi == ❤️
 
-Pulumi's lets you write cloud applications and infrastructure in your
+Pulumi lets you write cloud applications and infrastructure in your
 favorite language. This includes containers, serverless, and even
 VM-based infrastructure. Combined with GitHub Actions, we can get
 continuous deployment to any cloud -- AWS, Azure, Google Cloud,
@@ -52,6 +52,8 @@ This capability enables some exciting scenarios:
 To see things in action, check out the video shown at the GitHub
 Universe keynote today:
 
+{{< youtube 59SxB2uY9E0 >}}
+
 In this short video, we see a Ruby on Rails application that is
 continuously deployed to our Kubernetes cluster ([full code available
 here](https://github.com/pulumi/actions-example-gke-rails)). It's just a
@@ -78,7 +80,7 @@ can be previewed, diffed, and are recorded so that you'll always know
 who changed what, when, and why -- all very "Git-like." Pulumi's
 [GitHub App]({{< ref "/docs/console/continuous-delivery/github-app" >}})
 adds to this and enables "GitOps" so that teams can propose, approve,
-and promote code from "staging" to "production" using pull requests\
+and promote code from "staging" to "production" using pull requests
 (more on that below).
 
 We've chosen GKE here as an illustration because it's amazing how
@@ -86,7 +88,7 @@ powerful such a simple example can be, but this works just as well if
 you're using AKS, EKS, on-premises clusters -- and of course works for
 non-Kubernetes scenarios, like VMs, ECS, and Serverless applications.
 
-All of this with just handful of TypeScript and GitHub Actions set up to
+All of this with just a handful of TypeScript and GitHub Actions set up to
 work with Pulumi -- despite being quite capable, it's super easy to get
 all of this up and running. Let's see how!
 
@@ -140,7 +142,7 @@ integration and, more importantly, context added by the Pulumi bot to
 your Pull Requests about what a deployment will do before it's even
 done, as shown above.
 
-Note that this is optional with GitHub Actions, but worthwhile -- it
+Note that this is optional with GitHub Actions, but worthwhile -- it's
 much easier for your teams to collaborate on deployments, including
 knowing whether a change might lead to downtime before it's even
 triggered. "GitOps" ahoy!
@@ -168,7 +170,7 @@ This is an exciting day for developers, DevOps engineers, and SREs
 alike. The combination of GitHub Actions and Pulumi gives us all an
 easy, automated solution for continuous deployment of cloud applications
 and infrastructure to any cloud, purely using code and Git. What's best
-about it is that *it's fun *in the same way programming is fun.
+about it is that *it's fun* in the same way programming is fun.
 
 If you're not yet in the GitHub Actions private beta, but want to try
 Pulumi, head on over to our
