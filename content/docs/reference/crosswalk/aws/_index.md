@@ -3,7 +3,7 @@ title: "Pulumi Crosswalk for AWS"
 menu:
   reference:
     identifier: crosswalk-aws
-    name: Crosswalk for AWS 🆕
+    name: Crosswalk for AWS
     weight: 5
 ---
 
@@ -11,28 +11,24 @@ menu:
     <img src="/images/docs/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
-Pulumi Crosswalk for AWS is a collection of libraries to make common infrastructure as code tasks in AWS easier and
-more secure, using automatic well-architected best practices.
+Pulumi Crosswalk for AWS is a collection of libraries that use automatic well-architected best practices to make common infrastructure-as-code tasks in AWS easier and more secure.
 
 <img src="/images/docs/reference/crosswalk/aws/arch.png">
 
 ## Overview
 
 Pulumi Crosswalk for AWS supports "day one" tasks, such as creating your initial container-based workloads using
-[Amazon Elastic Container Service (ECS)]({{< relref "ecs.md" >}}), including "Fargate" or [Kubernetes (EKS)](
-{{< relref "eks.md" >}}), and serverless workloads using [Amazon API Gateway]({{< relref "api-gateway.md" >}}) and
-[AWS Lambda]({{< relref "lambda.md" >}}). Secure and cost conscious defaults are chosen so that simple programs
-automatically use best practices for the underlying infrastructure, enabling better productivity with confidence.
+[Amazon Elastic Container Service (ECS)]({{< relref "ecs.md" >}})---including Fargate or [Kubernetes (EKS)](
+{{< relref "eks.md" >}})---and creating serverless workloads using [Amazon API Gateway]({{< relref "api-gateway.md" >}}) and [AWS Lambda]({{< relref "lambda.md" >}}). Secure and cost-conscious defaults are chosen so that simple programs automatically use best practices for the underlying infrastructure, enabling better productivity with confidence.
 
-Pulumi Crosswalk for AWS also supports "day two and beyond" tasks, when you need to scale your workload, secure and
-integrate it with your existing infrastructure, or go to production in multiple complex environments. This includes
-[Amazon Virtual Private Cloud (VPC)]({{< relref "vpc.md" >}}) for network isolation, [AWS Auto Scaling](
+Pulumi Crosswalk for AWS also supports "day two and beyond" tasks, such as scaling your workload, securing and
+integrating it with your existing infrastructure, or going to production in multiple complex environments. This includes [Amazon Virtual Private Cloud (VPC)]({{< relref "vpc.md" >}}) for network isolation, [AWS Auto Scaling](
 {{< relref "autoscaling.md" >}}) for dynamic scaling, [Amazon CloudWatch]({{< relref "cloudwatch.md" >}}) for
 monitoring, alarms, and dashboards, and [AWS Identity and Access Management (IAM)]({{< relref "iam.md" >}}) for
 securing your infrastructure.
 
 For example, this program builds and publishes a Dockerized application to a private [Elastic Container Registry (ECR)](
-{{< relref "ecr.md" >}}), spins up an ECS "Fargate" cluster, and runs a scaled out, load balanced service, all in
+{{< relref "ecr.md" >}}), spins up an ECS Fargate cluster, and runs a scalable, load balanced service, all in
 response to a single `pulumi up` command line invocation:
 
 ```typescript
@@ -60,7 +56,7 @@ This example uses the default VPC and reasonable security defaults, but supports
 
 ## Getting Started
 
-To get started with Pulumi Crosswalk for AWS, ensure that you have [downloaded and installed Pulumi]({{< relref "/docs/reference/install.md" >}}), and [configured it to work with your AWS account]({{< relref "/docs/reference/clouds/aws/setup.md" >}}). Afterwards,
+To get started with Pulumi Crosswalk for AWS, [download and install Pulumi]({{< relref "/docs/reference/install.md" >}}), and [configure it to work with your AWS account]({{< relref "/docs/reference/clouds/aws/setup.md" >}}). Afterwards,
 [try the Getting Started tutorial]({{< relref "/docs/reference/tutorials/aws/tutorial-service.md" >}}) or select one of the
 relevant User Guides to get started:
 
