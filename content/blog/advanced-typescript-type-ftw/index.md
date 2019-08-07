@@ -1,12 +1,10 @@
 ---
 title: "Advanced TypeScript type FTW!"
+date: "2018-09-19"
+meta_desc: "TypeScript is great for cloud apps and infrastructure because of its rich type system. In this blog, Cyrus shows how the type system works for infrastructure as code in Pulumi."
+meta_image: "completion-list.png"
 authors: ["cyrus-najmabadi"]
 tags: ["TypeScript"]
-
-meta_desc: "TypeScript is great for cloud apps and infrastructure because of its rich type system. In this blog, Cyrus shows how the type system works for infrastructure as code in Pulumi."
-date: "2018-09-19"
-
-meta_image: "completion-list.png"
 ---
 
 We at Pulumi love TypeScript for cloud apps and infrastructure, because of its rich type system and great ahead-of-time
