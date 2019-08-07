@@ -102,7 +102,7 @@ specific version of Pulumi, you can replace all occurrences of `uses =
 "docker://pulumi/actions"` with a container image that contains the version as a tag. For
 instance `uses = "docker://pulumi/actions:v0.16.6"`.
 
-We've also included a prelimarily `Build` action &mdash; and declared it as a
+We've also included a preliminary `Build` action &mdash; and declared it as a
 dependency of both the Preview and Update actions &mdash; in order to demonstrate running
 a setup script in advance of Pulumi. Feel free to remove this block (and the `needs`
 references to it) if it doesn't suit your particular situation.
