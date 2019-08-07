@@ -16,7 +16,7 @@ or promotions between different environments by merging or directly committing c
 Let's see how to get started -- it's easy!
 
 > **Note**: GitHub Actions is currently in public beta. Please [register for
-> access](https://github.com/features/actions) here. Until you've been added, the
+> access](https://github.com/features/actions) to start using the feature. Until you've been added, the
 > **Actions** tab won't show in your repos, and the `.pulumi/main.workflow` file described
 > below will not be recognized by GitHub. Also note that these features only work on
 > private repos in the specific account that has been granted access.
