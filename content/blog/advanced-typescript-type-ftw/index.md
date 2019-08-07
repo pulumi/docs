@@ -3,7 +3,7 @@ title: "Advanced TypeScript type FTW!"
 authors: ["cyrus-najmabadi"]
 tags: ["TypeScript"]
 
-meta_desc: "TypeScript is great for cloud apps and infrastructure because of its rich type system. In this blog, Cyrus shows how the type system works for infrastructure as code in Pulumi.">>>>>>> master
+meta_desc: "TypeScript is great for cloud apps and infrastructure because of its rich type system. In this blog, Cyrus shows how the type system works for infrastructure as code in Pulumi."
 date: "2018-09-19"
 
 meta_image: "completion-list.png"
@@ -38,7 +38,7 @@ array-of-those-things-with-dependency-information. Whew…!
 
 This approach is great for people producing the data. As a producer I can do:
 
-    new Vpc({ ipAddresses: ["an-address"] }); // or even 
+    new Vpc({ ipAddresses: ["an-address"] }); // or even
     new Vpc({ ipAddresses: ["an-address", computeAddressAsynchronously() ]}); // or even
     new Vpc({ ipAddresses: ["an-address", computeAddressAsynchronously(), someDependency.address ]}); // or even
     new Vpc({ ipAddresses: computeAnArrayAnyOfTheAboveAsynchrousnously() }); // etc. etc.
