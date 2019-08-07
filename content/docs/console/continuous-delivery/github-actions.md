@@ -201,7 +201,7 @@ the GitHub Actions container directly.
 
 ## Pulumi GitHub App
 
-The [Pulumi GitHub App]({{< relref "github.md" >}}) is something you install into your
+The [Pulumi GitHub App]({{< relref "github.md" >}}) is something you install on your
 GitHub organization. It allows the Pulumi service to leave comments on Pull Requests. (It
 does not have access to your source code.)
 
