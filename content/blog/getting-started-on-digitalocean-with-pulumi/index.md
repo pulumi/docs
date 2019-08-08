@@ -1,7 +1,7 @@
 ---
 title: "Getting Started on DigitalOcean with Pulumi"
 date: "2019-07-18"
-meta_desc: "Pulumi now supports managing DigitalOcean resources. See how to deploy load balanced Droplets on DigitialOcean using Pulumi."
+meta_desc: "Pulumi now supports managing DigitalOcean resources. See how to deploy load balanced Droplets on DigitalOcean using Pulumi."
 meta_image: "Feature.jpg"
 authors: ["paul-stack"]
 tags: ["DigitalOcean", "TypeScript"]
