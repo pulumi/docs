@@ -1,11 +1,10 @@
 ---
 title: "Build a Video Thumbnailer with Pulumi using Lambdas, Containers, and Infrastructure on AWS"
+date: "2018-06-21"
+meta_desc: "Extracting a thumbnail from a video: Using Pulumi to build cloud applications that use a combination of Lambdas, containers, and connected data services and infrastructure."
+meta_image: "video-thumbnail-diagram.png"
 authors: ["donna-malayeri"]
 tags: ["JavaScript","Serverless","AWS","Containers","Infrastructure"]
-meta_desc: "Extracting a thumbnail from a video: Using Pulumi to build cloud applications that use a combination of Lambdas, containers, and connected data services and infrastructure. "
-date: "2018-06-21"
-
-meta_image: "video-thumbnail-diagram.png"
 ---
 
 Pulumi makes it easy to build cloud applications that use a combination

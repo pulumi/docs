@@ -1,10 +1,10 @@
 ---
 title: "Mapbox IOT-as-code with Pulumi Crosswalk for AWS"
+date: "2019-06-12"
+meta_desc: "In this blog, we'll show snippets of the JavaScript code that embraces the power of Pulumi to program AWS service APIs to create the Mapbox solution."
+meta_image: "aws-architecture-iot.png"
 authors: ["chris-toomey"]
 tags: ["JavaScript","Serverless","AWS","Infrastructure","Customer"]
-date: "2019-06-12"
-
-meta_image: "aws-architecture-iot.png"
 ---
 
 **Guest Author: Chris Toomey, Solution Architect Lead @ Mapbox**
@@ -18,7 +18,7 @@ data, without sacrificing security or best practices.
 To meet this need, [Mapbox](https://www.mapbox.com/) has created an
 Asset Tracking Solution that uses [Pulumi](/)'s
 open source JavaScript libraries (AWS, AWSX) available with
-multi-language support with [Pulumi Crosswalk for AWS]({{< relref "introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws" >}}).
+multi-language support with [Pulumi Crosswalk for AWS]({{< relref "/blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws" >}}).
 Pulumi Crosswalk for AWS is an open source framework that streamlines
 creation, deployment and management of AWS services with built-in AWS
 Best Practices and minimal lines of code in common programming
@@ -180,7 +180,7 @@ const assetTable = new aws.dynamodb.Table("assetTable", {
     attributeName: "expiration",
     enabled: true
   },
-    billingMode: "PAY_PER_REQUEST" 
+    billingMode: "PAY_PER_REQUEST"
   });
 
 // Create API to read DynamoDB

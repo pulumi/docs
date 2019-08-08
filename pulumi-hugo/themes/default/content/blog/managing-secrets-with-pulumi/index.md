@@ -1,9 +1,9 @@
 ---
 title: "Managing Secrets with Pulumi"
+date: "2019-05-17"
+meta_desc: "Pulumi now supports automatic tracking of secret values, and new option to use custom client-side encryption, giving you full control over secrets encryption and decryption."
 authors: ["matt-ellis"]
 tags: ["Features","Security"]
-date: "2019-05-17"
-
 ---
 
 We've had a 1st class concept of encrypted secrets configuration ever
@@ -56,7 +56,7 @@ ensure that secret values are encrypted in the state file. This means
 you can use secrets confidently without worrying about accidentally
 leaking plain text values. Let's take a look at how it works!
 
-## `Output` and Secrets
+## Output and Secrets
 
 To start, let's talk a bit about `Output`, one of the centerpieces of
 the Pulumi programming model. `Output<T>` ties together a value (which
@@ -139,10 +139,10 @@ following preview:
 
     Previewing update (dev):
 
-         Type                  Name              Plan       
-     +   pulumi:pulumi:Stack   secrets-blog-dev  create     
-     +   └─ aws:ssm:Parameter  secretParameter   create     
-     
+         Type                  Name              Plan
+     +   pulumi:pulumi:Stack   secrets-blog-dev  create
+     +   └─ aws:ssm:Parameter  secretParameter   create
+
     Resources:
         + 2 to create
 

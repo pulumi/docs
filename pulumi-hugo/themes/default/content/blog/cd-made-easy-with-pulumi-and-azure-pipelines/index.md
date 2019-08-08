@@ -1,11 +1,10 @@
 ---
 title: "CI/CD Made Easy with Pulumi and Azure Pipelines"
+date: "2019-05-06"
+meta_desc: "Pulumi open-source task extensions for Azure Pipelines will manage the installation of the Pulumi CLI, and run the Pulumi commands you specify against your stack."
+meta_image: "add-pulumi.png"
 authors: ["praneet-loke"]
 tags: ["Azure", "CI/CD", "New-Features"]
-meta_desc: "Pulumi open-source task extensions for Azure Pipelines will manage the installation of the Pulumi CLI, and run the Pulumi commands you specify against your stack."
-date: "2019-05-06"
-
-meta_image: "add-pulumi.png"
 ---
 
 Azure DevOps is very popular among teams that want a single place to
@@ -76,11 +75,11 @@ Here's an example of the Pulumi task extension defined in YAML configuration.
       stack: "<org-name>/pulumi-az-pipelines-task-example/dev"
 ```
 
-## Moving to Production 
+## Moving to Production
 
 Once you've configured your Pulumi task extensions for your Azure Pipelines, you can now more
 easily integrate Pulumi into your CI/CD pipeline, and take advantage of previews to infrastructure
-changes in pull requests, push-to-deploy, and ultimately removing the friction for your DevOps. 
+changes in pull requests, push-to-deploy, and ultimately removing the friction for your DevOps.
 
 As always, we'd love to hear what you think. Say 👋 in the [Pulumi Community Slack](https://slack.pulumi.com)
 or [drop us a line]({{< ref "/contact" >}}).

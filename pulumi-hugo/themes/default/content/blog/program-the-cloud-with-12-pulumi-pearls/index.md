@@ -1,9 +1,9 @@
 ---
 title: "Program the Cloud with 12 Pulumi Pearls"
+date: "2018-07-25"
+meta_desc: "In this post, we'll look at 12 bite-sized code snippets that demonstrate some fun ways you can program the cloud using Pulumi, including infrastructure, serverless, containers, and general tips and tricks."
 authors: ["joe-duffy"]
 tags: ["Serverless","AWS","Containers","Infrastructure","TypeScript"]
-date: "2018-07-25"
-
 ---
 
 In this post, we'll look at 12 "pearls" -- bite-sized code snippets --
@@ -96,7 +96,7 @@ Normally you'd need to copy-and-paste, however for loops to the rescue!
 ```javascript
 import * as aws from "@pulumi/aws";
 
-let webSg = new aws.ec2.SecurityGroup("web-secgrp", { 
+let webSg = new aws.ec2.SecurityGroup("web-secgrp", {
     ingress: [
         { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
     ],
@@ -155,7 +155,7 @@ the right image:
 ```javascript
 import * as aws from "@pulumi/aws";
 
-let webSg = new aws.ec2.SecurityGroup("web-secgrp", { 
+let webSg = new aws.ec2.SecurityGroup("web-secgrp", {
     ingress: [
         { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
     ],
@@ -703,12 +703,12 @@ FROM jrottenberg/ffmpeg
 RUN apt-get update &&      apt-get install python-dev python-pip -y &&      apt-get clean
 RUN pip install awscli
 WORKDIR /tmp/workdir
-ENTRYPOINT 
-echo "Starting ffmpeg task... " && 
-echo "Copying video from s3://${S3_BUCKET}/${INPUT_VIDEO} to ${INPUT_VIDEO}..." && 
-aws s3 cp s3://${S3_BUCKET}/${INPUT_VIDEO} ./${INPUT_VIDEO} && 
-ffmpeg -v error -i ./${INPUT_VIDEO} -ss ${TIME_OFFSET} -vframes 1 -f image2 -an -y ${OUTPUT_FILE} && 
-echo "Copying thumbnail to S3://${S3_BUCKET}/${OUTPUT_FILE} ..." && 
+ENTRYPOINT
+echo "Starting ffmpeg task... " &&
+echo "Copying video from s3://${S3_BUCKET}/${INPUT_VIDEO} to ${INPUT_VIDEO}..." &&
+aws s3 cp s3://${S3_BUCKET}/${INPUT_VIDEO} ./${INPUT_VIDEO} &&
+ffmpeg -v error -i ./${INPUT_VIDEO} -ss ${TIME_OFFSET} -vframes 1 -f image2 -an -y ${OUTPUT_FILE} &&
+echo "Copying thumbnail to S3://${S3_BUCKET}/${OUTPUT_FILE} ..." &&
 aws s3 cp ./${OUTPUT_FILE} s3://${S3_BUCKET}/${OUTPUT_FILE}
 ```
 
@@ -798,7 +798,7 @@ property on our VMs:
 import * as aws from "@pulumi/aws";
 import { getLinuxAmi } from "./ami";
 
-let webSg = new aws.ec2.SecurityGroup("web-secgrp", { 
+let webSg = new aws.ec2.SecurityGroup("web-secgrp", {
     ingress: [
         { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
     ],
@@ -960,7 +960,7 @@ import * as cache from "./cache";
 
 // Create a URL shortener app and a table to hold shortened URLs.
 let app = new cloud.API("shortener");
-let urlTable = new cloud.Table("urls", "name"); 
+let urlTable = new cloud.Table("urls", "name");
 
 // Use our cache component to cache frequently accessed URLs.
 let urlCache = new cache.Cache("urlcache");

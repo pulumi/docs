@@ -1,10 +1,9 @@
 ---
 title: "Introducing Pulumi, a Cloud Development Platform"
+date: "2018-06-18"
+meta_desc: "Ahoy! Today we are thrilled to announce the launch of Pulumi, the cloud's first true programming model using real programming languages."
 authors: ["joe-duffy"]
 tags: ["Pulumi-News"]
-date: "2018-06-18"
-
-meta_desc: "Ahoy! Today we are thrilled to be announcing the launch of Pulumi, the Cloud Development Platform."
 ---
 
 Ahoy!
