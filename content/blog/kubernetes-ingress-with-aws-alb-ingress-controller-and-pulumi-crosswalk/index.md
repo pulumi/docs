@@ -1,10 +1,10 @@
 ---
 title: "Kubernetes Ingress with AWS ALB Ingress Controller and Pulumi Crosswalk for AWS"
+date: "2019-07-09"
+meta_desc: "In this post, we work through a simple example of running ALB based Kubernetes Ingresses with Pulumi EKS, AWS, and AWSX packages."
+meta_image: "featured-img-albingresscontroller.png"
 authors: ["nishi-davidson"]
 tags: ["Kubernetes", "EKS"]
-date: "2019-07-09"
-
-meta_image: "featured-img-albingresscontroller.png"
 ---
 
 [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)

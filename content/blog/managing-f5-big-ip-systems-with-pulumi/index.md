@@ -1,8 +1,9 @@
 ---
 title: "Managing F5 BIG-IP Systems with Pulumi"
+date: "2019-02-07"
+meta_desc: "In this post, we look at some examples to demonstrate what's possible the F5 BIG-IP provider for Pulumi, as well as the power and the flexibility that Pulumi brings to working with your F5 BIG-IP systems."
 authors: ["cameron-stokes"]
 tags: ["Infrastructure","Cloud-Native"]
-date: "2019-02-07"
 ---
 
 The [Pulumi](/) ecosystem is continuously growing
@@ -209,4 +210,3 @@ languages, please check out the following links:
 - [Node.js documentation]({{< ref "/docs/reference/pkg/nodejs/pulumi/f5bigip" >}})
 - [Python documentation]({{< ref "/docs/reference/pkg/python/pulumi_f5bigip" >}})
 - [F5 BIG-IP Example using Pulumi](https://github.com/pulumi/examples/tree/master/f5bigip-ts-ltm-pool)
-

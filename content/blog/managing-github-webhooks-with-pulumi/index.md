@@ -2,6 +2,7 @@
 title: "Managing GitHub Webhooks with Pulumi"
 authors: ["matt-ellis"]
 tags: ["Serverless"]
+meta_desc: "Use Pulumi to write a hook that would clean up branches after a pull request got merged. Pulumi lets us leverage real programming languages to build abstractions without worrying about how it is deployed and managed."
 date: "2018-07-13"
 ---
 

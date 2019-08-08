@@ -1,17 +1,19 @@
 ---
 title: "From Terraform to Infrastructure as Software"
+date: "2018-11-02"
+meta_desc: "Convert existing Terrraform configuration to Pulumi TypeScript. General purpose programming languages can help you create simpler, more flexible infrastructure as code, with greater productivity and less repetition."
+meta_image: "tf-to-pulumi.png"
 authors: ["pat-gavlin"]
 tags: ["JavaScript","Infrastructure","TypeScript"]
-date: "2018-11-02"
-
-meta_image: "tf-to-pulumi.png"
 ---
 
 Here at Pulumi, we love programming the cloud using infrastructure as
 code. From the project's outset, we've been inspired by technologies
 like Terraform, AWS CloudFormation, and Helm, and in fact leverage the
 Terraform Providers ecosystem, to support a broad range of clouds,
-including AWS, Azure, and Google Cloud. Just recently, we extended this
+including AWS, Azure, and Google Cloud.
+
+Just recently, we extended this
 with first class support for Kubernetes. Pulumi delivers the same
 infrastructure as code workflows only using general purpose languages
 like JavaScript, TypeScript, Python, and Go, extending robust
@@ -169,7 +171,7 @@ resource "aws_elb" "elb" {
     listener {
     instance_port = 80
     instance_protocol = "http"
-    lb_port = 80 
+    lb_port = 80
     lb_protocol = "http"
     }
 
@@ -233,7 +235,7 @@ The first step is to create a Pulumi project.
 [Download Pulumi here]({{< ref "/docs/reference/install" >}}), and then run:
 
 ```
-$ pulumi new aws-typescript 
+$ pulumi new aws-typescript
     -n webservers -d "Pulumi Web Servers" -g --dir pulumi
 ```
 

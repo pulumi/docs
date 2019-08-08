@@ -1,11 +1,10 @@
 ---
 title: "Deploying production-ready containers with Pulumi"
+date: "2018-06-20"
+meta_desc: "Deploy a simple Docker container running NGINX with Pulumi. This blog covers creating a container registry instance in ECR, creating task definitions in ECS, and configuring a load balancer."
+meta_image: "hello-world-page.png"
 authors: ["donna-malayeri"]
 tags: ["JavaScript","AWS","Containers"]
-meta_desc: "Deploy a simple Docker container running NGINX.Pulumi. This blog covers creating a container registry instance in ECR, creating task definitions in ECS, and configuring a load balancer."
-date: "2018-06-20"
-
-meta_image: "hello-world-page.png"
 ---
 
 Containers are a great way to deploy applications to the cloud,

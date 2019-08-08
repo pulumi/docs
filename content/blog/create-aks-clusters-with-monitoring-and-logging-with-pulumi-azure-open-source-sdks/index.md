@@ -1,11 +1,10 @@
 ---
 title: "Create AKS Clusters with monitoring and logging using Pulumi-Azure open source SDKs"
+date: "2019-05-08"
+meta_desc: "Use the Pulumi-Azure open source package to create Azure Kubernetes Service clusters with AD service principals."
+meta_image: "hero.png"
 authors: ["nishi-davidson"]
 tags: ["Kubernetes","Azure"]
-meta_desc: "Use the Pulumi-Azure open source package to create Azure Kubernetes Service clusters with AD service principals."
-date: "2019-05-08"
-
-meta_image: "hero.png"
 ---
 
 Pulumi-Azure open source package can be used to create Azure Kubernetes
@@ -96,7 +95,7 @@ export const k8sCluster = new azure.containerservice.KubernetesCluster("aksClust
         },
         dnsPrefix: `${pulumi.getStack()}-kube`,
         linuxProfile: {
-            adminUsername: "aksuser", 
+            adminUsername: "aksuser",
             sshKey: { keyData: sshPublicKey, }
         },
         servicePrincipal: {
@@ -109,7 +108,7 @@ export const k8sCluster = new azure.containerservice.KubernetesCluster("aksClust
                 logAnalyticsWorkspaceId: loganalytics.id,
             },
         },
-    }); 
+    });
 
 // Expose a k8s provider instance using our custom cluster instance.
 export const k8sProvider = new k8s.Provider("aksK8s", {
@@ -134,14 +133,14 @@ We will now enable monitoring and logging by default for the cluster and
 run `pulumi up`
 
 ```javascript
-// Step 4: Enables the Monitoring Diagonostic control plane component logs and AllMetrics   
+// Step 4: Enables the Monitoring Diagonostic control plane component logs and AllMetrics
 export const azMonitoringDiagnostic = new azure.monitoring.DiagnosticSetting("aks", {
     logAnalyticsWorkspaceId: loganalytics.id,
     targetResourceId: k8sCluster.id,
     logs:  [{
         category: "kube-apiserver",
         enabled : true,
-    
+
         retentionPolicy: {
         enabled: true,
         }
@@ -149,14 +148,14 @@ export const azMonitoringDiagnostic = new azure.monitoring.DiagnosticSetting("ak
     ],
     metrics: [{
         category: "AllMetrics",
-    
+
         retentionPolicy: {
         enabled: true,
         }
     }],
 })
 ```
-       
+
 
 If you run `pulumi up` with the entire `index.ts` file as defined
 [here](https://gist.github.com/d-nishi/b757e1e8b3ebe187d81ce32a4d15525e)

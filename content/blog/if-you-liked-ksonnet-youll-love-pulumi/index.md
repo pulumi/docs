@@ -1,15 +1,15 @@
 ---
 title: "If you liked ksonnet, you'll love Pulumi!"
+date: "2019-02-13"
+meta_desc: "Like ksonnet, Pulumi provides complete access to the raw Kubernetes API, and supports additional features like modules/imports, components, functions, and more. With Pulumi, we can structure our code work at a higher level of abstraction as we author our Kubernetes configurations."
+meta_image: "kube-update.gif"
 authors: ["mike-metral"]
 tags: ["Kubernetes","Cloud-Native"]
-date: "2019-02-13"
-
-meta_image: "kube-update.gif"
 ---
 
 The Kubernetes landscape is constantly evolving as end users and
 developers search for the right tools, approaches, and abstractions to
-help them manage Cloud Native infrastructure in production. 
+help them manage Cloud Native infrastructure in production.
 
 On Feb 5, Heptio (now part of VMWare)
 [announced](https://blogs.vmware.com/cloudnative/2019/02/05/welcoming-heptio-open-source-projects-to-vmware/)

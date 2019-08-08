@@ -1,10 +1,10 @@
 ---
 title: "Getting to ChatOps with Pulumi Webhooks"
+date: "2019-01-23"
+meta_desc: "Get started with Pulumi Webhooks to enable notifications of infrastructure changes and respond to those changes as part of a ChatOps workflow."
+meta_image: "pulumi-webhooks.png"
 authors: ["chris-smith"]
 tags: ["CI/CD", "New-Features"]
-date: "2019-01-23"
-
-meta_image: "pulumi-webhooks.png"
 ---
 
 Today we are delighted to announce the availability of Webhooks on
@@ -98,8 +98,8 @@ webhookHandler.post("/", async (req, res) => {
 
    res.status(200).end(`posted to Slack channel ${stackConfig.slackChannel}`);
 });
-   
-export const url = webhookHandler.publish().url; 
+
+export const url = webhookHandler.publish().url;
 ```
 
 But to stand up the cloud application, we'll need to create the stack
@@ -150,7 +150,7 @@ we'll quickly be expanding coverage in the coming weeks.
 | `stack`                           | Fired whenever a stack is created or deleted within an organization.
 | `team`                            | Fired when a team is created, updated, or deleted within an organization.
 | `stack_update`                    | Fired when a stack is updated. (Be it from `pulumi up`, `pulumi refresh`, or `pulumi destroy`.)
-| `stack_preview`                   | Fired whenever changes to a stack  are previewed.                    
+| `stack_preview`                   | Fired whenever changes to a stack  are previewed.
 
 ## Tell us what you think
 
@@ -158,4 +158,3 @@ Get started with Pulumi Webhooks on the [Pulumi app](https://app.pulumi.com), an
 we can continue to extend their capabilities. We'd love to hear your
 ideas, as well as any feedback you have on the
 [Pulumi Community Slack](https://slack.pulumi.com).
-

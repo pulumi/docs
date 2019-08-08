@@ -1,11 +1,10 @@
 ---
 title: "Building new Pulumi projects and stacks from templates"
+date: "2018-10-01"
+meta_desc: "This blog shows how to build Pulumi projects and stacks from templates."
+meta_image: "new-project-ui-1.gif"
 authors: ["marc-holmes"]
 tags: ["Features"]
-meta_desc: "This blog shows how to build Pulumi projects and stacks from templates."
-date: "2018-10-01"
-
-meta_image: "new-project-ui-1.gif"
 ---
 
 When you're able to build an app for any cloud using real languages,
@@ -87,4 +86,3 @@ We hope you like these helpers. If you're keen to get stuck in:
   contribution == [t-shirts at least](https://info.pulumi.com/community/give-me-a-tshirt).
 
  
-

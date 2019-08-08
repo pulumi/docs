@@ -1,11 +1,10 @@
 ---
 title: "Hosting a Static Website on Azure with Pulumi"
+date: "2019-06-27"
+meta_desc: "Static websites are back in the mainstream these days. See how easy it is to set up a static website on Azure with Pulumi."
+meta_image: "feature.jpg"
 authors: ["mikhail-shilkov"]
 tags: ["Azure"]
-date: "2019-06-27"
-
-meta_desc: "Static websites are back in the mainstream these days. Website generators like Jekyll, Hugo, or Gatsby, make it fairly easy to combine templates and markdown pages to produce static HTML files. Static assets are the simplest thing to serve and cache, so the whole setup ends up being fast and cost-efficient."
-meta_image: "feature.jpg"
 ---
 
 Static websites are back in the mainstream these days. Website
