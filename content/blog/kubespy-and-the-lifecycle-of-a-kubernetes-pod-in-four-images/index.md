@@ -1,18 +1,17 @@
 ---
 title: "Kubespy, and the lifecycle of a Pod, in 4 images"
+date: "2018-09-18"
+meta_desc: "This post is the first part in a series on the Kubernetes API and explains how Kubespy works."
+meta_image: "1-created.png"
 authors: ["alex-clemmer"]
 tags: ["Kubernetes"]
-meta_desc: "This post is the first part in a series on the Kubernetes API and explains how does Kubespy work."
-date: "2018-09-18"
-
-meta_image: "1-created.png"
 ---
 
 <p><!-- spacer --></p>
 
 > This post is the first part in a series on the Kubernetes API. Future installments include
 > [Part 2]({{< relref "kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service" >}})
-> focused on the lifecycle of a `Service` and 
+> focused on the lifecycle of a `Service` and
 > [Part 3]({{< relref "how-do-kubernetes-deployments-work-an-adversarial-perspective" >}})
 > details how Kubernetes deployments work.
 

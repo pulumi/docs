@@ -1,14 +1,10 @@
 ---
 title: "Delivering Cloud Native Infrastructure as Code, a Pulumi white paper"
+date: "2018-12-05"
+meta_desc: "In our latest white paper, Delivering Cloud Native Infrastructure as Code, we make the case for a consistent programming model for the cloud."
+meta_image: "graph.png"
 authors: ["marc-holmes"]
 tags: ["Cloud-Native"]
-
-meta_desc: "Read our latest white paper, Delivering Cloud Native Infrastructure as Code, where we make the case for a consistent programming model for the cloud."
-
-date: "2018-12-05"
-
-meta_desc: "In our latest white paper, Delivering Cloud Native Infrastructure as Code, we we make the case for a consistent programming model for the cloud."
-meta_image: "graph.png"
 ---
 
 **Enterprise software has undergone a slow shift from containerless

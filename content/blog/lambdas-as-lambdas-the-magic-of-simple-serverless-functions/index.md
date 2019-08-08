@@ -1,11 +1,10 @@
 ---
 title: "Lambdas as Lambdas: The magic of simple serverless Functions"
+date: "2018-10-10"
+meta_desc: "Infrastructure as code using real languages instead of YAML or DSLs. See how with Pulumi, serverless programming becomes simpler on AWS Lambda, Azure Functions, and GCP Cloud Functions."
+meta_image: "closure.png"
 authors: ["cyrus-najmabadi"]
 tags: ["Serverless","TypeScript"]
-meta_desc: "Infrastructure as code using real languages instead of YAML or DSLs. See how Pulumi makes serverless programming becomes simpler on AWS Lambda, Azure Function, and GCP Cloud Function."
-date: "2018-10-10"
-
-meta_image: "closure.png"
 ---
 
 Pulumi's approach to infrastructure as code uses real languages instead
@@ -77,8 +76,8 @@ look at how they look in action:
         }
     });
 
-    function computeDimentions(objectKey: string): { height: number, width: number } { 
-        /* simplified */ 
+    function computeDimentions(objectKey: string): { height: number, width: number } {
+        /* simplified */
         const metadata = await sharp(...);
         return { height: metadata.height, width: metadata.width };
     }

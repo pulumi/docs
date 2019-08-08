@@ -1,10 +1,9 @@
 ---
 title: "How to deploy Jenkins to Kubernetes with Pulumi"
+date: "2018-06-27"
 authors: ["sean-gillespie"]
 tags: ["Kubernetes"]
-meta_desc: "In this blog, we'll see how to run Jenkins on Kubernetes with Pulumi, with an example on adapting a Helm template."
-date: "2018-06-27"
-
+meta_desc: "In this blog, we'll see how to run Jenkins on Kubernetes with Pulumi, based on adapting a Helm template."
 ---
 
 In this blog post, we'll see how to run
@@ -68,7 +67,7 @@ Install dependencies:
 Create a new stack:
 
     $ pulumi stack init
-    Enter a stack name: kubernetes-ts-jenkins-dev 
+    Enter a stack name: kubernetes-ts-jenkins-dev
 
 Create configuration keys for the root username and password for the
 Jenkins instance we are about to create:
@@ -115,7 +114,7 @@ Perform the deployment:
 
     info: 6 changes performed:
         + 6 resources created
-    Update duration: 2m30.397621136s 
+    Update duration: 2m30.397621136s
 
 The deployment is complete! Use `kubectl` to see the Service that we
 just deployed:

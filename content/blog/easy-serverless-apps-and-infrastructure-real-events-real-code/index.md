@@ -1,11 +1,10 @@
 ---
 title: "Easy Serverless Apps and Infrastructure — Real Events, Real Code"
+date: "2019-03-11"
+meta_desc: "Create a simple serverless app. With Pulumi, you can create, deploy, and manage any cloud resource using your favorite language, including application and infrastructure related resources."
+meta_image: "hero.png"
 authors: ["joe-duffy"]
 tags: ["JavaScript","Serverless","AWS"]
-meta_desc: "Create a simple serverless app. With Pulumi, you can create, deploy, and manage any cloud resource using your favorite language, including application and infrastructure related resources."
-date: "2019-03-11"
-
-meta_image: "hero.png"
 ---
 
 With Pulumi, you can create, deploy, and manage any cloud resource using

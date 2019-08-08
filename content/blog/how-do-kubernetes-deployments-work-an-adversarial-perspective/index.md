@@ -1,10 +1,10 @@
 ---
 title: "How do Kubernetes Deployments work? An adversarial perspective"
+date: "2018-10-03"
+meta_desc: "Part 3 on the Kubernetes API series. In this blog, we take a closer look at what happens during a rollout, what happens if we kill a pod, and what happens if we add or remove labels from a pod."
+meta_image: "deployment-rollout.gif"
 authors: ["alex-clemmer"]
 tags: ["Kubernetes"]
-meta_desc: "Part 3 on the Kubernetes API series. In this blog, we will talk about: 1. What happens during a rollout; 2. What happens if we kill a pod; 3. What happens if we add or remove laabels from a pod."
-date: "2018-10-03"
-meta_image: "deployment-rollout.gif"
 ---
 
 *This post is part 3 in a series on the Kubernetes API. Earlier,

@@ -1,11 +1,10 @@
 ---
 title: "How we use Pulumi to build Pulumi"
+date: "2018-06-26"
+meta_desc: "Here at Pulumi we are huge fans of using Pulumi to manage our own cloud infrastructure and services. In this post, we discuss how we use Pulumi ourselves to build, deploy and manage the Pulumi platform."
+meta_image: "image-4.png"
 authors: ["luke-hoban"]
 tags: ["Serverless","AWS","Containers","Infrastructure"]
-meta_desc: "Like other users, Pulumi uses Pulumi at a variety of levels of abstraction. For example, we use Pulumi for raw infrastructure provisioning, defining the core networking layer for our AWS-based backend infrastructure, etc."
-date: "2018-06-26"
-
-meta_image: "image-4.png"
 ---
 
 

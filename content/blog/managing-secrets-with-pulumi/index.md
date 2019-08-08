@@ -1,10 +1,9 @@
 ---
 title: "Managing Secrets with Pulumi"
+date: "2019-05-17"
+meta_desc: "Pulumi now supports automatic tracking of secret values, and new option to use custom client-side encryption, giving you full control over secrets encryption and decryption."
 authors: ["matt-ellis"]
 tags: ["Features","Security"]
-meta_desc: "Pulumi now supports two new features: 1. Automatic tracking of secret values throughout a Pulumi program to ensure that all such values are always encrypted in the resulting state; 2. A new option to use custom client-side encryption, instead of the default of using the Pulumi backend for encryption, to have full control over the secrets encryption and decryption."
-date: "2019-05-17"
-
 ---
 
 We've had a 1st class concept of encrypted secrets configuration ever
@@ -140,10 +139,10 @@ following preview:
 
     Previewing update (dev):
 
-         Type                  Name              Plan       
-     +   pulumi:pulumi:Stack   secrets-blog-dev  create     
-     +   └─ aws:ssm:Parameter  secretParameter   create     
-     
+         Type                  Name              Plan
+     +   pulumi:pulumi:Stack   secrets-blog-dev  create
+     +   └─ aws:ssm:Parameter  secretParameter   create
+
     Resources:
         + 2 to create
 

@@ -1,11 +1,10 @@
 ---
 title: "Globally-distributed Serverless Application in 100 Lines of Code. Infrastructure Included!"
+date: "2019-07-02"
+meta_desc: "Build a serverless application with both the data store and the HTTP endpoint located close to end users to ensure prompt response time."
+meta_image: "feature.jpg"
 authors: ["mikhail-shilkov"]
 tags: ["Serverless", "Azure"]
-meta_desc: "Build a serverless application with both the data store and the HTTP endpoint located close to end users to ensure prompt response time."
-date: "2019-07-02"
-
-meta_image: "feature.jpg"
 ---
 
 Pulumi is excellent at connecting multiple cloud components into a
@@ -90,10 +89,10 @@ const fn = new azure.appservice.HttpEventSubscription("GetUrl", {
         const masterKey = cosmosdb.primaryMasterKey.get();
 
         const container = await getContainer(endpoint, masterKey);
-        
+
         const key = request.params['key'];
         try {
-            const response = await container.item(key.toString()).read();       
+            const response = await container.item(key.toString()).read();
             return {
                 status: 301,
                 headers: { "location": response.body.url },
@@ -101,8 +100,8 @@ const fn = new azure.appservice.HttpEventSubscription("GetUrl", {
             };
         } catch (e) {
             return { status: 404, body: 'Short URL not found' }
-        
-    
+
+
 });
 
 export const url = fn.url;
@@ -137,7 +136,7 @@ const fn = new azure.appservice.HttpEventSubscription("AddUrl", {
 
         await container.items.create(request.body);
         return { status: 200, body: 'Short URL saved' };
-    
+
 });
 export const addEndpoint = fn.url;
 ```
@@ -237,7 +236,7 @@ Traffic Manager profile:
 ```typescript
 const profile = new azure.trafficmanager.Profile("UrlShortEndpoint", {
     resourceGroupName: resourceGroup.name,
-    trafficRoutingMethod: 'Performance',       
+    trafficRoutingMethod: 'Performance',
     dnsConfigs: [{
         relativeName: "shorturls",
         ttl: 60,

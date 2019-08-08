@@ -1,11 +1,10 @@
 ---
 title: "Managing your MySQL databases with Pulumi"
+date: "2019-05-28"
+meta_desc: "In this post, we'll walk through a quick tutorial of how to use the Pulumi MySQL provider to manage new and existing MySQL databases."
+meta_image: "hero.png"
 authors: ["linio-engineering"]
 tags: ["Applications","MySQL"]
-meta_desc: "In this post, we'll walk through a quick tutorial of how to use this new Pulumi MySQL provider to manage existing and new MySQL databases."
-date: "2019-05-28"
-
-meta_image: "hero.png"
 ---
 
 One of the most critical components of an application’s infrastructure is its
@@ -116,7 +115,7 @@ const rds = new aws.rds.Instance('sample', {
   instanceClass: 'db.t2.micro',
   allocatedStorage: 20,
   protect: true,
-  
+
   // For a VPC cluster, you will also need the following:
   // dbSubnetGroupName: 'sg-db01-replication-1',
   // vpcSecurityGroupIds: ['sg-c1c63aba'],
@@ -160,7 +159,7 @@ $ pulumi up
 
 Wrapping Up
 Pulumi allows you to manage your MySQL cloud instances in AWS, Azure, and GCP, as well as manage MySQL databases,
-users and more. Together, this enables end-to-end provisioning of your application’s database infrastructure. 
+users and more. Together, this enables end-to-end provisioning of your application’s database infrastructure.
 Read more about the [Pulumi MySQL provider]({{< ref "/docs/reference/pkg/nodejs/pulumi/mysql" >}}).
 
 We’ve only shown a little bit of what Pulumi can do. If you need any help, feel free to create an issue
