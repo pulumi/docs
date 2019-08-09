@@ -9,6 +9,11 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.cur"></span><dl class="class">
+<dt id="pulumi_aws.cur.AwaitableGetReportDefinitionResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.cur.</code><code class="descname">AwaitableGetReportDefinitionResult</code><span class="sig-paren">(</span><em>additional_artifacts=None</em>, <em>additional_schema_elements=None</em>, <em>compression=None</em>, <em>format=None</em>, <em>report_name=None</em>, <em>s3_bucket=None</em>, <em>s3_prefix=None</em>, <em>s3_region=None</em>, <em>time_unit=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.AwaitableGetReportDefinitionResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.cur.GetReportDefinitionResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.cur.</code><code class="descname">GetReportDefinitionResult</code><span class="sig-paren">(</span><em>additional_artifacts=None</em>, <em>additional_schema_elements=None</em>, <em>compression=None</em>, <em>format=None</em>, <em>report_name=None</em>, <em>s3_bucket=None</em>, <em>s3_prefix=None</em>, <em>s3_region=None</em>, <em>time_unit=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.GetReportDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getReportDefinition.</p>
@@ -70,7 +75,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_aws.cur.ReportDefinition">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cur.</code><code class="descname">ReportDefinition</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>additional_artifacts=None</em>, <em>additional_schema_elements=None</em>, <em>compression=None</em>, <em>format=None</em>, <em>report_name=None</em>, <em>s3_bucket=None</em>, <em>s3_prefix=None</em>, <em>s3_region=None</em>, <em>time_unit=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cur.</code><code class="descname">ReportDefinition</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>additional_artifacts=None</em>, <em>additional_schema_elements=None</em>, <em>compression=None</em>, <em>format=None</em>, <em>report_name=None</em>, <em>s3_bucket=None</em>, <em>s3_prefix=None</em>, <em>s3_region=None</em>, <em>time_unit=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages Cost and Usage Report Definitions.</p>
 <blockquote>
 <div><p><em>NOTE:</em> The AWS Cost and Usage Report service is only available in <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code> currently.</p>
@@ -151,6 +156,27 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.cur.ReportDefinition.time_unit">
 <code class="descname">time_unit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.time_unit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.cur.ReportDefinition.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>additional_artifacts=None</em>, <em>additional_schema_elements=None</em>, <em>compression=None</em>, <em>format=None</em>, <em>report_name=None</em>, <em>s3_bucket=None</em>, <em>s3_prefix=None</em>, <em>s3_region=None</em>, <em>time_unit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ReportDefinition resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] additional_artifacts: A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
+:param pulumi.Input[list] additional_schema_elements: A list of schema elements. Valid values are: RESOURCES.
+:param pulumi.Input[str] compression: Compression format for report. Valid values are: GZIP, ZIP.
+:param pulumi.Input[str] format: Format for report. Valid values are: textORcsv.
+:param pulumi.Input[str] report_name: Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
+:param pulumi.Input[str] s3_bucket: Name of the existing S3 bucket to hold generated reports.
+:param pulumi.Input[str] s3_prefix: Report path prefix. Limited to 256 characters.
+:param pulumi.Input[str] s3_region: Region of the existing S3 bucket to hold generated reports.
+:param pulumi.Input[str] time_unit: The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cur_report_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cur_report_definition.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.budgets"></span><dl class="class">
 <dt id="pulumi_aws.budgets.Budget">
-<em class="property">class </em><code class="descclassname">pulumi_aws.budgets.</code><code class="descname">Budget</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>budget_type=None</em>, <em>cost_filters=None</em>, <em>cost_types=None</em>, <em>limit_amount=None</em>, <em>limit_unit=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>notifications=None</em>, <em>time_period_end=None</em>, <em>time_period_start=None</em>, <em>time_unit=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.budgets.Budget" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.budgets.</code><code class="descname">Budget</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>budget_type=None</em>, <em>cost_filters=None</em>, <em>cost_types=None</em>, <em>limit_amount=None</em>, <em>limit_unit=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>notifications=None</em>, <em>time_period_end=None</em>, <em>time_period_start=None</em>, <em>time_unit=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.budgets.Budget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a budgets budget resource. Budgets use the cost visualisation provided by Cost Explorer to show you the status of your budgets, to provide forecasts of your estimated costs, and to track your AWS usage, including your free tier usage.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -108,6 +108,30 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.budgets.Budget.time_unit">
 <code class="descname">time_unit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.budgets.Budget.time_unit" title="Permalink to this definition">¶</a></dt>
 <dd><p>The length of time until a budget resets the actual and forecasted spend. Valid values: <code class="docutils literal notranslate"><span class="pre">MONTHLY</span></code>, <code class="docutils literal notranslate"><span class="pre">QUARTERLY</span></code>, <code class="docutils literal notranslate"><span class="pre">ANNUALLY</span></code>.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.budgets.Budget.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>budget_type=None</em>, <em>cost_filters=None</em>, <em>cost_types=None</em>, <em>limit_amount=None</em>, <em>limit_unit=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>notifications=None</em>, <em>time_period_end=None</em>, <em>time_period_start=None</em>, <em>time_unit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.budgets.Budget.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Budget resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] account_id: The ID of the target account for budget. Will use current user’s account_id by default if omitted.
+:param pulumi.Input[str] budget_type: Whether this budget tracks monetary cost or usage.
+:param pulumi.Input[dict] cost_filters: Map of CostFilters key/value pairs to apply to the budget.
+:param pulumi.Input[dict] cost_types: Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
+:param pulumi.Input[str] limit_amount: The amount of cost or usage being measured for a budget.
+:param pulumi.Input[str] limit_unit: The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See <a class="reference external" href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html">Spend</a> documentation.
+:param pulumi.Input[str] name: The name of a budget. Unique within accounts.
+:param pulumi.Input[str] name_prefix: The prefix of the name of a budget. Unique within accounts.
+:param pulumi.Input[list] notifications: Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
+:param pulumi.Input[str] time_period_end: The end of the time period covered by the budget. There are no restrictions on the end date. Format: <code class="docutils literal notranslate"><span class="pre">2017-01-01_12:00</span></code>.
+:param pulumi.Input[str] time_period_start: The start of the time period covered by the budget. The start date must come before the end date. Format: <code class="docutils literal notranslate"><span class="pre">2017-01-01_12:00</span></code>.
+:param pulumi.Input[str] time_unit: The length of time until a budget resets the actual and forecasted spend. Valid values: <code class="docutils literal notranslate"><span class="pre">MONTHLY</span></code>, <code class="docutils literal notranslate"><span class="pre">QUARTERLY</span></code>, <code class="docutils literal notranslate"><span class="pre">ANNUALLY</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/budgets_budget.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/budgets_budget.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

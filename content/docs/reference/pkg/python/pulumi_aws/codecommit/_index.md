@@ -9,6 +9,11 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.codecommit"></span><dl class="class">
+<dt id="pulumi_aws.codecommit.AwaitableGetRepositoryResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">AwaitableGetRepositoryResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>clone_url_http=None</em>, <em>clone_url_ssh=None</em>, <em>repository_id=None</em>, <em>repository_name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.AwaitableGetRepositoryResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.codecommit.GetRepositoryResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">GetRepositoryResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>clone_url_http=None</em>, <em>clone_url_ssh=None</em>, <em>repository_id=None</em>, <em>repository_name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.GetRepositoryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRepository.</p>
@@ -46,7 +51,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_aws.codecommit.Repository">
-<em class="property">class </em><code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">Repository</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_branch=None</em>, <em>description=None</em>, <em>repository_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Repository" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">Repository</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_branch=None</em>, <em>description=None</em>, <em>repository_name=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeCommit Repository Resource.</p>
 <blockquote>
 <div><strong>NOTE on CodeCommit Availability</strong>: The CodeCommit is not yet rolled out
@@ -118,6 +123,26 @@ in all regions - available regions are listed
 <dd><p>Key-value mapping of resource tags</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.codecommit.Repository.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>clone_url_http=None</em>, <em>clone_url_ssh=None</em>, <em>default_branch=None</em>, <em>description=None</em>, <em>repository_id=None</em>, <em>repository_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Repository.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Repository resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the repository
+:param pulumi.Input[str] clone_url_http: The URL to use for cloning the repository over HTTPS.
+:param pulumi.Input[str] clone_url_ssh: The URL to use for cloning the repository over SSH.
+:param pulumi.Input[str] default_branch: The default branch of the repository. The branch specified here needs to exist.
+:param pulumi.Input[str] description: The description of the repository. This needs to be less than 1000 characters
+:param pulumi.Input[str] repository_id: The ID of the repository
+:param pulumi.Input[str] repository_name: The name for the repository. This needs to be less than 100 characters.
+:param pulumi.Input[dict] tags: Key-value mapping of resource tags</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_repository.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.codecommit.Repository.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Repository.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -160,7 +185,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.codecommit.Trigger">
-<em class="property">class </em><code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">Trigger</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>repository_name=None</em>, <em>triggers=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Trigger" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">Trigger</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>repository_name=None</em>, <em>triggers=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeCommit Trigger Resource.</p>
 <blockquote>
 <div><strong>NOTE on CodeCommit</strong>: The CodeCommit is not yet rolled out
@@ -185,6 +210,19 @@ in all regions - available regions are listed
 <dt id="pulumi_aws.codecommit.Trigger.repository_name">
 <code class="descname">repository_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codecommit.Trigger.repository_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name for the repository. This needs to be less than 100 characters.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.codecommit.Trigger.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>configuration_id=None</em>, <em>repository_name=None</em>, <em>triggers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Trigger.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Trigger resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] repository_name: The name for the repository. This needs to be less than 100 characters.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_trigger.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_trigger.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

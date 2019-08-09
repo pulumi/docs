@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.codedeploy"></span><dl class="class">
 <dt id="pulumi_aws.codedeploy.Application">
-<em class="property">class </em><code class="descclassname">pulumi_aws.codedeploy.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_platform=None</em>, <em>name=None</em>, <em>unique_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codedeploy.Application" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.codedeploy.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_platform=None</em>, <em>name=None</em>, <em>unique_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codedeploy.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeDeploy application to be used as a basis for deployments</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -38,6 +38,20 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.codedeploy.Application.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codedeploy.Application.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the application.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.codedeploy.Application.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>compute_platform=None</em>, <em>name=None</em>, <em>unique_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codedeploy.Application.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Application resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] compute_platform: The compute platform can either be <code class="docutils literal notranslate"><span class="pre">ECS</span></code>, <code class="docutils literal notranslate"><span class="pre">Lambda</span></code>, or <code class="docutils literal notranslate"><span class="pre">Server</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">Server</span></code>.
+:param pulumi.Input[str] name: The name of the application.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_app.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_app.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -82,7 +96,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.codedeploy.DeploymentConfig">
-<em class="property">class </em><code class="descclassname">pulumi_aws.codedeploy.</code><code class="descname">DeploymentConfig</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_platform=None</em>, <em>deployment_config_name=None</em>, <em>minimum_healthy_hosts=None</em>, <em>traffic_routing_config=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentConfig" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.codedeploy.</code><code class="descname">DeploymentConfig</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_platform=None</em>, <em>deployment_config_name=None</em>, <em>minimum_healthy_hosts=None</em>, <em>traffic_routing_config=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeDeploy deployment config for an application</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -132,6 +146,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A traffic_routing_config block. Traffic Routing Config is documented below.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.codedeploy.DeploymentConfig.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>compute_platform=None</em>, <em>deployment_config_id=None</em>, <em>deployment_config_name=None</em>, <em>minimum_healthy_hosts=None</em>, <em>traffic_routing_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentConfig.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DeploymentConfig resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] compute_platform: The compute platform can be <code class="docutils literal notranslate"><span class="pre">Server</span></code>, <code class="docutils literal notranslate"><span class="pre">Lambda</span></code>, or <code class="docutils literal notranslate"><span class="pre">ECS</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">Server</span></code>.
+:param pulumi.Input[str] deployment_config_id: The AWS Assigned deployment config id
+:param pulumi.Input[str] deployment_config_name: The name of the deployment config.
+:param pulumi.Input[dict] minimum_healthy_hosts: A minimum_healthy_hosts block. Minimum Healthy Hosts are documented below.
+:param pulumi.Input[dict] traffic_routing_config: A traffic_routing_config block. Traffic Routing Config is documented below.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_config.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_config.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.codedeploy.DeploymentConfig.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -174,8 +205,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.codedeploy.DeploymentGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.codedeploy.</code><code class="descname">DeploymentGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alarm_configuration=None</em>, <em>app_name=None</em>, <em>auto_rollback_configuration=None</em>, <em>autoscaling_groups=None</em>, <em>blue_green_deployment_config=None</em>, <em>deployment_config_name=None</em>, <em>deployment_group_name=None</em>, <em>deployment_style=None</em>, <em>ec2_tag_filters=None</em>, <em>ec2_tag_sets=None</em>, <em>ecs_service=None</em>, <em>load_balancer_info=None</em>, <em>on_premises_instance_tag_filters=None</em>, <em>service_role_arn=None</em>, <em>trigger_configurations=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DeploymentGroup resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.codedeploy.</code><code class="descname">DeploymentGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alarm_configuration=None</em>, <em>app_name=None</em>, <em>auto_rollback_configuration=None</em>, <em>autoscaling_groups=None</em>, <em>blue_green_deployment_config=None</em>, <em>deployment_config_name=None</em>, <em>deployment_group_name=None</em>, <em>deployment_style=None</em>, <em>ec2_tag_filters=None</em>, <em>ec2_tag_sets=None</em>, <em>ecs_service=None</em>, <em>load_balancer_info=None</em>, <em>on_premises_instance_tag_filters=None</em>, <em>service_role_arn=None</em>, <em>trigger_configurations=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a CodeDeploy Deployment Group for a CodeDeploy Application</p>
+<blockquote>
+<div><strong>NOTE on blue/green deployments:</strong> When using <code class="docutils literal notranslate"><span class="pre">green_fleet_provisioning_option</span></code> with the <code class="docutils literal notranslate"><span class="pre">COPY_AUTO_SCALING_GROUP</span></code> action, CodeDeploy will create a new ASG with a different name. This ASG is <em>not</em> managed by this provider and will conflict with existing configuration and state. You may want to use a different approach to managing deployments that involve multiple ASG, such as <code class="docutils literal notranslate"><span class="pre">DISCOVER_EXISTING</span></code> with separate blue and green ASG.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -293,6 +326,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.codedeploy.DeploymentGroup.trigger_configurations">
 <code class="descname">trigger_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentGroup.trigger_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block(s) of the triggers for the deployment group (documented below).</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.codedeploy.DeploymentGroup.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>alarm_configuration=None</em>, <em>app_name=None</em>, <em>auto_rollback_configuration=None</em>, <em>autoscaling_groups=None</em>, <em>blue_green_deployment_config=None</em>, <em>deployment_config_name=None</em>, <em>deployment_group_name=None</em>, <em>deployment_style=None</em>, <em>ec2_tag_filters=None</em>, <em>ec2_tag_sets=None</em>, <em>ecs_service=None</em>, <em>load_balancer_info=None</em>, <em>on_premises_instance_tag_filters=None</em>, <em>service_role_arn=None</em>, <em>trigger_configurations=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DeploymentGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] alarm_configuration: Configuration block of alarms associated with the deployment group (documented below).
+:param pulumi.Input[str] app_name: The name of the application.
+:param pulumi.Input[dict] auto_rollback_configuration: Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
+:param pulumi.Input[list] autoscaling_groups: Autoscaling groups associated with the deployment group.
+:param pulumi.Input[dict] blue_green_deployment_config: Configuration block of the blue/green deployment options for a deployment group (documented below).
+:param pulumi.Input[str] deployment_config_name: The name of the group’s deployment config. The default is “CodeDeployDefault.OneAtATime”.
+:param pulumi.Input[str] deployment_group_name: The name of the deployment group.
+:param pulumi.Input[dict] deployment_style: Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
+:param pulumi.Input[list] ec2_tag_filters: Tag filters associated with the deployment group. See the AWS docs for details.
+:param pulumi.Input[list] ec2_tag_sets: Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
+:param pulumi.Input[dict] ecs_service: Configuration block(s) of the ECS services for a deployment group (documented below).
+:param pulumi.Input[dict] load_balancer_info: Single configuration block of the load balancer to use in a blue/green deployment (documented below).
+:param pulumi.Input[list] on_premises_instance_tag_filters: On premise tag filters associated with the group. See the AWS docs for details.
+:param pulumi.Input[str] service_role_arn: The service role ARN that allows deployments.
+:param pulumi.Input[list] trigger_configurations: Configuration block(s) of the triggers for the deployment group (documented below).</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_group.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

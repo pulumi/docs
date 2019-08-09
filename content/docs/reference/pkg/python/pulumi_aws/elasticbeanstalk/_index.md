@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.elasticbeanstalk"></span><dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.Application">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>appversion_lifecycle=None</em>, <em>description=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Application" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>appversion_lifecycle=None</em>, <em>description=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Beanstalk Application Resource. Elastic Beanstalk allows
 you to deploy and manage applications in the AWS cloud without worrying about
 the infrastructure that runs those applications.</p>
@@ -57,6 +57,22 @@ the infrastructure that runs those applications.</p>
 <dd><p>Key-value mapping of tags for the Elastic Beanstalk Application.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.elasticbeanstalk.Application.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>appversion_lifecycle=None</em>, <em>arn=None</em>, <em>description=None</em>, <em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Application.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Application resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN assigned by AWS for this Elastic Beanstalk Application.
+:param pulumi.Input[str] description: Short description of the application
+:param pulumi.Input[str] name: The name of the application, must be unique within your account
+:param pulumi.Input[dict] tags: Key-value mapping of tags for the Elastic Beanstalk Application.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.elasticbeanstalk.Application.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Application.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -99,7 +115,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.ApplicationVersion">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">ApplicationVersion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application=None</em>, <em>bucket=None</em>, <em>description=None</em>, <em>force_delete=None</em>, <em>key=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ApplicationVersion" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">ApplicationVersion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application=None</em>, <em>bucket=None</em>, <em>description=None</em>, <em>force_delete=None</em>, <em>key=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ApplicationVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Beanstalk Application Version Resource. Elastic Beanstalk allows
 you to deploy and manage applications in the AWS cloud without worrying about
 the infrastructure that runs those applications.</p>
@@ -112,7 +128,7 @@ when attempting to delete an Application Version while it is still in use by a d
 To work around this you can:</p>
 <ol>
 <li>Create each environment in a separate AWS account</li>
-<li>Create your `aws_elastic_beanstalk_application_version` resources with a unique names in your 
+<li>Create your `elasticbeanstalk.ApplicationVersion` resources with a unique names in your 
 Elastic Beanstalk Application. For example &lt;revision&gt;-&lt;environment&gt;.</li>
 </ol></div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
@@ -186,6 +202,38 @@ by multiple Elastic Beanstalk Environments.</p>
 <dd><p>Key-value mapping of tags for the Elastic Beanstalk Application Version.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.elasticbeanstalk.ApplicationVersion.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>application=None</em>, <em>arn=None</em>, <em>bucket=None</em>, <em>description=None</em>, <em>force_delete=None</em>, <em>key=None</em>, <em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ApplicationVersion.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ApplicationVersion resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] application: Name of the Beanstalk Application the version is associated with.
+:param pulumi.Input[str] arn: The ARN assigned by AWS for this Elastic Beanstalk Application.
+:param pulumi.Input[str] bucket: S3 bucket that contains the Application Version source bundle.
+:param pulumi.Input[str] description: Short description of the Application Version.
+:param pulumi.Input[bool] force_delete: On delete, force an Application Version to be deleted when it may be in use</p>
+<blockquote>
+<div>by multiple Elastic Beanstalk Environments.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – S3 object that is the Application Version source bundle.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the this Application Version.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the Elastic Beanstalk Application Version.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_application_version.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.elasticbeanstalk.ApplicationVersion.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ApplicationVersion.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -227,8 +275,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.elasticbeanstalk.AwaitableGetApplicationResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">AwaitableGetApplicationResult</code><span class="sig-paren">(</span><em>appversion_lifecycle=None</em>, <em>arn=None</em>, <em>description=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.AwaitableGetApplicationResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.elasticbeanstalk.AwaitableGetHostedZoneResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">AwaitableGetHostedZoneResult</code><span class="sig-paren">(</span><em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.AwaitableGetHostedZoneResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.elasticbeanstalk.AwaitableGetSolutionStackResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">AwaitableGetSolutionStackResult</code><span class="sig-paren">(</span><em>most_recent=None</em>, <em>name=None</em>, <em>name_regex=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.AwaitableGetSolutionStackResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.ConfigurationTemplate">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">ConfigurationTemplate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application=None</em>, <em>description=None</em>, <em>environment_id=None</em>, <em>name=None</em>, <em>settings=None</em>, <em>solution_stack_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ConfigurationTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">ConfigurationTemplate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application=None</em>, <em>description=None</em>, <em>environment_id=None</em>, <em>name=None</em>, <em>settings=None</em>, <em>solution_stack_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ConfigurationTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Beanstalk Configuration Template, which are associated with
 a specific application and are used to deploy different versions of the
 application with the same configuration settings.</p>
@@ -301,6 +364,35 @@ below in Option Settings</p>
 off of. Example stacks can be found in the [Amazon API documentation][1]</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.elasticbeanstalk.ConfigurationTemplate.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>application=None</em>, <em>description=None</em>, <em>environment_id=None</em>, <em>name=None</em>, <em>settings=None</em>, <em>solution_stack_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ConfigurationTemplate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ConfigurationTemplate resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] application: name of the application to associate with this configuration template
+:param pulumi.Input[str] description: Short description of the Template
+:param pulumi.Input[str] environment_id: The ID of the environment used with this configuration template
+:param pulumi.Input[str] name: A unique name for this Template.
+:param pulumi.Input[list] settings: Option settings to configure the new Environment. These</p>
+<blockquote>
+<div>override specific values that are set as defaults. The format is detailed
+below in Option Settings</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>solution_stack_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A solution stack to base your Template
+off of. Example stacks can be found in the [Amazon API documentation][1]</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_configuration_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_configuration_template.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.elasticbeanstalk.ConfigurationTemplate.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ConfigurationTemplate.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -343,7 +435,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.Environment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">Environment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application=None</em>, <em>cname_prefix=None</em>, <em>description=None</em>, <em>name=None</em>, <em>platform_arn=None</em>, <em>poll_interval=None</em>, <em>settings=None</em>, <em>solution_stack_name=None</em>, <em>tags=None</em>, <em>template_name=None</em>, <em>tier=None</em>, <em>version=None</em>, <em>wait_for_ready_timeout=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">Environment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application=None</em>, <em>cname_prefix=None</em>, <em>description=None</em>, <em>name=None</em>, <em>platform_arn=None</em>, <em>poll_interval=None</em>, <em>settings=None</em>, <em>solution_stack_name=None</em>, <em>tags=None</em>, <em>template_name=None</em>, <em>tier=None</em>, <em>version=None</em>, <em>wait_for_ready_timeout=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Beanstalk Environment Resource. Elastic Beanstalk allows
 you to deploy and manage applications in the AWS cloud without worrying about
 the infrastructure that runs those applications.</p>
@@ -390,6 +482,10 @@ template to use in deployment</li>
 or <code class="docutils literal notranslate"><span class="pre">WebServer</span></code>. If tier is left blank <code class="docutils literal notranslate"><span class="pre">WebServer</span></code> will be used.</li>
 <li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Elastic Beanstalk Application Version
 to use in deployment.</li>
+<li><strong>wait_for_ready_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum
+<a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration</a> that this provider should
+wait for an Elastic Beanstalk Environment to be in a ready state before timing
+out.</li>
 </ul>
 </td>
 </tr>
@@ -530,6 +626,78 @@ or <code class="docutils literal notranslate"><span class="pre">WebServer</span>
 <code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Elastic Beanstalk Application Version
 to use in deployment.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticbeanstalk.Environment.wait_for_ready_timeout">
+<code class="descname">wait_for_ready_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.wait_for_ready_timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum
+<a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration</a> that this provider should
+wait for an Elastic Beanstalk Environment to be in a ready state before timing
+out.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.elasticbeanstalk.Environment.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>all_settings=None</em>, <em>application=None</em>, <em>arn=None</em>, <em>autoscaling_groups=None</em>, <em>cname=None</em>, <em>cname_prefix=None</em>, <em>description=None</em>, <em>instances=None</em>, <em>launch_configurations=None</em>, <em>load_balancers=None</em>, <em>name=None</em>, <em>platform_arn=None</em>, <em>poll_interval=None</em>, <em>queues=None</em>, <em>settings=None</em>, <em>solution_stack_name=None</em>, <em>tags=None</em>, <em>template_name=None</em>, <em>tier=None</em>, <em>triggers=None</em>, <em>version=None</em>, <em>wait_for_ready_timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Environment resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] all_settings: List of all option settings configured in the Environment. These</p>
+<blockquote>
+<div>are a combination of default settings and their overrides from <code class="docutils literal notranslate"><span class="pre">setting</span></code> in
+the configuration.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>application</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the application that contains the version
+to be deployed</li>
+<li><strong>autoscaling_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The autoscaling groups used by this environment.</li>
+<li><strong>cname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Fully qualified DNS name for the Environment.</li>
+<li><strong>cname_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Prefix to use for the fully qualified DNS name of
+the Environment.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Short description of the Environment</li>
+<li><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Instances used by this environment.</li>
+<li><strong>launch_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Launch configurations in use by this environment.</li>
+<li><strong>load_balancers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Elastic load balancers in use by this environment.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for this Environment. This name is used
+in the application URL</li>
+<li><strong>platform_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [ARN][2] of the Elastic Beanstalk [Platform][3]
+to use in deployment</li>
+<li><strong>poll_interval</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time between polling the AWS API to
+check if changes have been applied. Use this to adjust the rate of API calls
+for any <code class="docutils literal notranslate"><span class="pre">create</span></code> or <code class="docutils literal notranslate"><span class="pre">update</span></code> action. Minimum <code class="docutils literal notranslate"><span class="pre">10s</span></code>, maximum <code class="docutils literal notranslate"><span class="pre">180s</span></code>. Omit this to
+use the default behavior, which is an exponential backoff</li>
+<li><strong>queues</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – SQS queues in use by this environment.</li>
+<li><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Option settings to configure the new Environment. These
+override specific values that are set as defaults. The format is detailed
+below in Option Settings</li>
+<li><strong>solution_stack_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A solution stack to base your environment
+off of. Example stacks can be found in the [Amazon API documentation][1]</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of tags to apply to the Environment.</li>
+<li><strong>template_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Elastic Beanstalk Configuration
+template to use in deployment</li>
+<li><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Elastic Beanstalk Environment tier. Valid values are <code class="docutils literal notranslate"><span class="pre">Worker</span></code>
+or <code class="docutils literal notranslate"><span class="pre">WebServer</span></code>. If tier is left blank <code class="docutils literal notranslate"><span class="pre">WebServer</span></code> will be used.</li>
+<li><strong>triggers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Autoscaling triggers in use by this environment.</li>
+<li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Elastic Beanstalk Application Version
+to use in deployment.</li>
+<li><strong>wait_for_ready_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The maximum
+<a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration</a> that this provider should
+wait for an Elastic Beanstalk Environment to be in a ready state before timing
+out.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_environment.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

@@ -9,9 +9,27 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.mq"></span><dl class="class">
+<dt id="pulumi_aws.mq.AwaitableGetBrokerResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.mq.</code><code class="descname">AwaitableGetBrokerResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>broker_id=None</em>, <em>broker_name=None</em>, <em>configuration=None</em>, <em>deployment_mode=None</em>, <em>engine_type=None</em>, <em>engine_version=None</em>, <em>host_instance_type=None</em>, <em>instances=None</em>, <em>logs=None</em>, <em>maintenance_window_start_time=None</em>, <em>publicly_accessible=None</em>, <em>security_groups=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>users=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.AwaitableGetBrokerResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.mq.Broker">
-<em class="property">class </em><code class="descclassname">pulumi_aws.mq.</code><code class="descname">Broker</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>broker_name=None</em>, <em>configuration=None</em>, <em>deployment_mode=None</em>, <em>engine_type=None</em>, <em>engine_version=None</em>, <em>host_instance_type=None</em>, <em>logs=None</em>, <em>maintenance_window_start_time=None</em>, <em>publicly_accessible=None</em>, <em>security_groups=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>users=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Broker" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Broker resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.mq.</code><code class="descname">Broker</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>broker_name=None</em>, <em>configuration=None</em>, <em>deployment_mode=None</em>, <em>engine_type=None</em>, <em>engine_version=None</em>, <em>host_instance_type=None</em>, <em>logs=None</em>, <em>maintenance_window_start_time=None</em>, <em>publicly_accessible=None</em>, <em>security_groups=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>users=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Broker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an MQ Broker Resource. This resources also manages users for the broker.</p>
+<p>For more information on Amazon MQ, see <a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/welcome.html">Amazon MQ documentation</a>.</p>
+<p>Changes to an MQ Broker can occur when you change a
+parameter, such as <code class="docutils literal notranslate"><span class="pre">configuration</span></code> or <code class="docutils literal notranslate"><span class="pre">user</span></code>, and are reflected in the next maintenance
+window. Because of this, this provider may report a difference in its planning
+phase because a modification has not yet taken place. You can use the
+<code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> flag to instruct the service to apply the change immediately
+(see documentation below).</p>
+<blockquote>
+<div><p><strong>Note:</strong> using <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> can result in a
+brief downtime as the broker reboots.</p>
+<p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
+<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -155,6 +173,58 @@ are applied immediately, or during the next maintenance window. Default is <code
 <dd><p>The list of all ActiveMQ usernames for the specified broker. See below.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.mq.Broker.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>arn=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>broker_name=None</em>, <em>configuration=None</em>, <em>deployment_mode=None</em>, <em>engine_type=None</em>, <em>engine_version=None</em>, <em>host_instance_type=None</em>, <em>instances=None</em>, <em>logs=None</em>, <em>maintenance_window_start_time=None</em>, <em>publicly_accessible=None</em>, <em>security_groups=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Broker.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Broker resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] apply_immediately: Specifies whether any broker modifications</p>
+<blockquote>
+<div>are applied immediately, or during the next maintenance window. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the broker.</li>
+<li><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.</li>
+<li><strong>broker_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the broker.</li>
+<li><strong>configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration of the broker. See below.</li>
+<li><strong>deployment_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The deployment mode of the broker. Supported: <code class="docutils literal notranslate"><span class="pre">SINGLE_INSTANCE</span></code> and <code class="docutils literal notranslate"><span class="pre">ACTIVE_STANDBY_MULTI_AZ</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">SINGLE_INSTANCE</span></code>.</li>
+<li><strong>engine_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of broker engine. Currently, Amazon MQ supports only <code class="docutils literal notranslate"><span class="pre">ActiveMQ</span></code>.</li>
+<li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The version of the broker engine. Currently, See the <a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html">AmazonMQ Broker Engine docs</a> for supported versions.</p>
+</li>
+<li><strong>host_instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The broker’s instance type. e.g. <code class="docutils literal notranslate"><span class="pre">mq.t2.micro</span></code> or <code class="docutils literal notranslate"><span class="pre">mq.m4.large</span></code></li>
+<li><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of information about allocated brokers (both active &amp; standby).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>logs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Logging configuration of the broker. See below.</li>
+<li><strong>maintenance_window_start_time</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Maintenance window start time. See below.</li>
+<li><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable connections from applications outside of the VPC that hosts the broker’s subnets.</li>
+<li><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of security group IDs assigned to the broker.</li>
+<li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of subnet IDs in which to launch the broker. A <code class="docutils literal notranslate"><span class="pre">SINGLE_INSTANCE</span></code> deployment requires one subnet. An <code class="docutils literal notranslate"><span class="pre">ACTIVE_STANDBY_MULTI_AZ</span></code> deployment requires two subnets.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+<li><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of all ActiveMQ usernames for the specified broker. See below.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/mq_broker.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/mq_broker.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.mq.Broker.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Broker.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -197,7 +267,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.mq.Configuration">
-<em class="property">class </em><code class="descclassname">pulumi_aws.mq.</code><code class="descname">Configuration</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>data=None</em>, <em>description=None</em>, <em>engine_type=None</em>, <em>engine_version=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Configuration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.mq.</code><code class="descname">Configuration</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>data=None</em>, <em>description=None</em>, <em>engine_type=None</em>, <em>engine_version=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an MQ Configuration Resource.</p>
 <p>For more information on Amazon MQ, see <a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/welcome.html">Amazon MQ documentation</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -270,6 +340,39 @@ for supported parameters and format of the XML.</p>
 <dt id="pulumi_aws.mq.Configuration.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.mq.Configuration.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>data=None</em>, <em>description=None</em>, <em>engine_type=None</em>, <em>engine_version=None</em>, <em>latest_revision=None</em>, <em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Configuration.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Configuration resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the configuration.
+:param pulumi.Input[str] data: The broker configuration in XML format.</p>
+<blockquote>
+<div>See <a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html">official docs</a>
+for supported parameters and format of the XML.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the configuration.</li>
+<li><strong>engine_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of broker engine.</li>
+<li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the broker engine.</li>
+<li><strong>latest_revision</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The latest revision of the configuration.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the configuration</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/mq_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/mq_configuration.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

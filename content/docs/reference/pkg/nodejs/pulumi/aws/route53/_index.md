@@ -59,14 +59,14 @@ title: Module route53
 <li><a href="#RecordType">type RecordType</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/delegationSet.ts">route53/delegationSet.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getDelegationSet.ts">route53/getDelegationSet.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts">route53/getZone.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts">route53/healthCheck.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/queryLog.ts">route53/queryLog.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts">route53/record.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/recordType.ts">route53/recordType.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts">route53/resolverEndpoint.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts">route53/resolverRule.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRuleAssociation.ts">route53/resolverRuleAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts">route53/zone.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zoneAssociation.ts">route53/zoneAssociation.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/delegationSet.ts">route53/delegationSet.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getDelegationSet.ts">route53/getDelegationSet.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts">route53/getZone.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts">route53/healthCheck.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/queryLog.ts">route53/queryLog.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts">route53/record.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/recordType.ts">route53/recordType.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts">route53/resolverEndpoint.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts">route53/resolverRule.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRuleAssociation.ts">route53/resolverRuleAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts">route53/zone.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zoneAssociation.ts">route53/zoneAssociation.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="DelegationSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/delegationSet.ts#L29">class <b>DelegationSet</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/delegationSet.ts#L29">class <b>DelegationSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -95,7 +95,7 @@ const secondary = new aws.route53.Zone("secondary", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DelegationSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/delegationSet.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/delegationSet.ts#L65"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -112,7 +112,7 @@ Create a DelegationSet resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DelegationSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/delegationSet.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/delegationSet.ts#L38">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -126,7 +126,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DelegationSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -136,7 +136,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DelegationSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/delegationSet.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/delegationSet.ts#L49">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -150,7 +150,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DelegationSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -162,7 +162,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DelegationSet-nameServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/delegationSet.ts#L60">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/delegationSet.ts#L60">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>nameServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -174,7 +174,7 @@ A list of authoritative name servers for the hosted zone
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DelegationSet-referenceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/delegationSet.ts#L65">property <b>referenceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/delegationSet.ts#L65">property <b>referenceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>referenceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -186,7 +186,7 @@ This is a reference name used in Caller Reference
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DelegationSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -199,7 +199,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HealthCheck">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L90">class <b>HealthCheck</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L90">class <b>HealthCheck</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -289,7 +289,7 @@ const foo = new aws.route53.HealthCheck("foo", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HealthCheck-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L193"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L193"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -306,7 +306,7 @@ Create a HealthCheck resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L99">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L99">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -320,7 +320,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -330,7 +330,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L110">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L110">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -344,7 +344,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-childHealthThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L120">property <b>childHealthThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L120">property <b>childHealthThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>childHealthThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -355,7 +355,7 @@ The minimum number of child health checks that must be healthy for Route 53 to c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-childHealthchecks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L124">property <b>childHealthchecks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L124">property <b>childHealthchecks</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>childHealthchecks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -366,7 +366,7 @@ For a specified parent health check, a list of HealthCheckId values for the asso
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-cloudwatchAlarmName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L128">property <b>cloudwatchAlarmName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L128">property <b>cloudwatchAlarmName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>cloudwatchAlarmName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -377,7 +377,7 @@ The name of the CloudWatch alarm.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-cloudwatchAlarmRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L132">property <b>cloudwatchAlarmRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L132">property <b>cloudwatchAlarmRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>cloudwatchAlarmRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -388,18 +388,18 @@ The CloudWatchRegion that the CloudWatch alarm was created in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-enableSni">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L136">property <b>enableSni</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L136">property <b>enableSni</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enableSni: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 {{% md %}}
 
-A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
+A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enableSni` defaults to `true`, when `type` is anything else `enableSni` defaults to `false`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-failureThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L140">property <b>failureThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L140">property <b>failureThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>failureThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -410,7 +410,7 @@ The number of consecutive health checks that an endpoint must pass or fail.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L144">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L144">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -421,7 +421,7 @@ The fully qualified domain name of the endpoint to be checked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -433,7 +433,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-insufficientDataHealthStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L148">property <b>insufficientDataHealthStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L148">property <b>insufficientDataHealthStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>insufficientDataHealthStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -444,7 +444,7 @@ The status of the health check when CloudWatch has insufficient data about the s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-invertHealthcheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L152">property <b>invertHealthcheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L152">property <b>invertHealthcheck</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>invertHealthcheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -455,7 +455,7 @@ A boolean value that indicates whether the status of health check should be inve
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L156">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L156">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -466,7 +466,7 @@ The IP address of the endpoint to be checked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-measureLatency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L160">property <b>measureLatency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L160">property <b>measureLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>measureLatency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -477,7 +477,7 @@ A Boolean value that indicates whether you want Route 53 to measure the latency 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L164">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L164">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -488,19 +488,19 @@ The port of the endpoint to be checked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-referenceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L169">property <b>referenceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L169">property <b>referenceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>referenceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 This is a reference name used in Caller Reference
-(helpful for identifying single health_check set amongst others)
+(helpful for identifying single healthCheck set amongst others)
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L173">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L173">property <b>regions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>regions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -511,7 +511,7 @@ A list of AWS regions that you want Amazon Route 53 health checkers to check the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-requestInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L177">property <b>requestInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L177">property <b>requestInterval</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>requestInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -522,7 +522,7 @@ The number of seconds between the time that Amazon Route 53 gets a response from
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-resourcePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L181">property <b>resourcePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L181">property <b>resourcePath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourcePath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -533,7 +533,7 @@ The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-searchString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L185">property <b>searchString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L185">property <b>searchString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>searchString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -544,7 +544,7 @@ String searched in the first 5120 bytes of the response body for check to be con
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L189">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L189">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -555,7 +555,7 @@ A mapping of tags to assign to the health check.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L193">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L193">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -566,7 +566,7 @@ The protocol to use when performing health checks. Valid values are `HTTP`, `HTT
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheck-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -579,7 +579,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueryLog">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/queryLog.ts#L18">class <b>QueryLog</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/queryLog.ts#L18">class <b>QueryLog</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -597,7 +597,7 @@ See [Configuring Logging for DNS Queries](https://docs.aws.amazon.com/Route53/la
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QueryLog-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/queryLog.ts#L52"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/queryLog.ts#L52"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -614,7 +614,7 @@ Create a QueryLog resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueryLog-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/queryLog.ts#L27">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/queryLog.ts#L27">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -628,7 +628,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueryLog-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -638,7 +638,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueryLog-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/queryLog.ts#L38">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/queryLog.ts#L38">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -652,7 +652,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueryLog-cloudwatchLogGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/queryLog.ts#L48">property <b>cloudwatchLogGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/queryLog.ts#L48">property <b>cloudwatchLogGroupArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>cloudwatchLogGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -663,7 +663,7 @@ CloudWatch log group ARN to send query logs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueryLog-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -675,7 +675,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueryLog-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -687,7 +687,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueryLog-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/queryLog.ts#L52">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/queryLog.ts#L52">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -699,17 +699,118 @@ Route53 hosted zone ID to enable query logs.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Record">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L12">class <b>Record</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L113">class <b>Record</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 {{% md %}}
 
+Provides a Route53 record resource.
+
+## Example Usage
+
+### Simple routing policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const www = new aws.route53.Record("www", {
+    records: [aws_eip_lb.publicIp],
+    ttl: 300,
+    type: "A",
+    zoneId: aws_route53_zone_primary.zoneId,
+});
+```
+
+### Weighted routing policy
+Other routing policies are configured similarly. See [AWS Route53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html) for details.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const wwwDev = new aws.route53.Record("www-dev", {
+    records: ["dev.example.com"],
+    setIdentifier: "dev",
+    ttl: 5,
+    type: "CNAME",
+    weightedRoutingPolicies: [{
+        weight: 10,
+    }],
+    zoneId: aws_route53_zone_primary.zoneId,
+});
+const wwwLive = new aws.route53.Record("www-live", {
+    records: ["live.example.com"],
+    setIdentifier: "live",
+    ttl: 5,
+    type: "CNAME",
+    weightedRoutingPolicies: [{
+        weight: 90,
+    }],
+    zoneId: aws_route53_zone_primary.zoneId,
+});
+```
+
+### Alias record
+See [related part of AWS Route53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html)
+to understand differences between alias and non-alias records.
+
+TTL for all alias records is [60 seconds](https://aws.amazon.com/route53/faqs/#dns_failover_do_i_need_to_adjust),
+you cannot change this, therefore `ttl` has to be omitted in alias records.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const main = new aws.elb.LoadBalancer("main", {
+    availabilityZones: ["us-east-1c"],
+    listeners: [{
+        instancePort: 80,
+        instanceProtocol: "http",
+        lbPort: 80,
+        lbProtocol: "http",
+    }],
+});
+const www = new aws.route53.Record("www", {
+    aliases: [{
+        evaluateTargetHealth: true,
+        name: main.dnsName,
+        zoneId: main.zoneId,
+    }],
+    type: "A",
+    zoneId: aws_route53_zone_primary.zoneId,
+});
+```
+
+### NS and SOA Record Management
+
+When creating Route 53 zones, the `NS` and `SOA` records for the zone are automatically created. Enabling the `allowOverwrite` argument will allow managing these records in a single deployment without the requirement for `import`.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleZone = new aws.route53.Zone("example", {});
+const exampleRecord = new aws.route53.Record("example", {
+    allowOverwrite: true,
+    records: [
+        exampleZone.nameServers[0],
+        exampleZone.nameServers[1],
+        exampleZone.nameServers[2],
+        exampleZone.nameServers[3],
+    ],
+    ttl: 30,
+    type: "NS",
+    zoneId: exampleZone.zoneId,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_record.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Record-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L200"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -726,7 +827,7 @@ Create a Record resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L122">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -740,7 +841,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -750,7 +851,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L133">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -764,7 +865,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-aliases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L43">property <b>aliases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L144">property <b>aliases</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>aliases: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -780,15 +881,18 @@ Alias record documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-allowOverwrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L44">property <b>allowOverwrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L148">property <b>allowOverwrite</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>allowOverwrite: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 {{% md %}}
+
+Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
+
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-failoverRoutingPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L48">property <b>failoverRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L152">property <b>failoverRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>failoverRoutingPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -801,7 +905,7 @@ A block indicating the routing behavior when associated health check fails. Conf
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L52">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L156">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -812,7 +916,7 @@ A block indicating the routing behavior when associated health check fails. Conf
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-geolocationRoutingPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L56">property <b>geolocationRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L160">property <b>geolocationRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>geolocationRoutingPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -827,7 +931,7 @@ A block indicating a routing policy based on the geolocation of the requestor. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-healthCheckId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L60">property <b>healthCheckId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L164">property <b>healthCheckId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>healthCheckId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -838,7 +942,7 @@ The health check the record should be associated with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -850,7 +954,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-latencyRoutingPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L64">property <b>latencyRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L168">property <b>latencyRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>latencyRoutingPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -863,7 +967,7 @@ A block indicating a routing policy based on the latency between the requestor a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-multivalueAnswerRoutingPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L68">property <b>multivalueAnswerRoutingPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L172">property <b>multivalueAnswerRoutingPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>multivalueAnswerRoutingPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -874,7 +978,7 @@ Set to `true` to indicate a multivalue answer routing policy. Conflicts with any
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L176">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -885,15 +989,18 @@ DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resour
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L73">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L180">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
+
+A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
+
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-setIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L77">property <b>setIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L184">property <b>setIdentifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>setIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -904,7 +1011,7 @@ Unique identifier to differentiate records with routing policies from one anothe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L81">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L188">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -915,7 +1022,7 @@ The TTL of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L85">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L192">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -926,7 +1033,7 @@ The TTL of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -938,7 +1045,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-weightedRoutingPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L89">property <b>weightedRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L196">property <b>weightedRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>weightedRoutingPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -951,7 +1058,7 @@ A block indicating a weighted routing policy. Conflicts with any other routing p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L93">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L200">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -963,7 +1070,7 @@ Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverEndpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L39">class <b>ResolverEndpoint</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L39">class <b>ResolverEndpoint</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1002,7 +1109,7 @@ const foo = new aws.route53.ResolverEndpoint("foo", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverEndpoint-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L96"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1019,7 +1126,7 @@ Create a ResolverEndpoint resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L48">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1033,7 +1140,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1043,7 +1150,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L59">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1057,7 +1164,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L69">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L69">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1068,7 +1175,7 @@ The ARN of the Route 53 Resolver endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L75">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L75">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>direction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1081,7 +1188,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-hostVpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L79">property <b>hostVpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L79">property <b>hostVpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>hostVpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1092,7 +1199,7 @@ The ID of the VPC that you want to create the resolver endpoint in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1104,7 +1211,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-ipAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L84">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L84">property <b>ipAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ipAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1120,7 +1227,7 @@ to your network (for outbound endpoints) or on the way from your network to your
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L88">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L88">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1131,7 +1238,7 @@ The friendly name of the Route 53 Resolver endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L92">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L92">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -1142,7 +1249,7 @@ The ID of one or more security groups that you want to use to control access to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L96">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L96">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1153,7 +1260,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpoint-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1166,7 +1273,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L45">class <b>ResolverRule</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L45">class <b>ResolverRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1211,7 +1318,7 @@ const fwd = new aws.route53.ResolverRule("fwd", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L110"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1228,7 +1335,7 @@ Create a ResolverRule resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L54">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1242,7 +1349,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1252,7 +1359,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L65">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1266,7 +1373,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L75">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L75">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1277,18 +1384,18 @@ The ARN (Amazon Resource Name) for the resolver rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L79">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L79">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-DNS queries for this domain name are forwarded to the IP addresses that are specified using `target_ip`.
+DNS queries for this domain name are forwarded to the IP addresses that are specified using `targetIp`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1300,7 +1407,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L83">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1311,7 +1418,7 @@ A friendly name that lets you easily find a rule in the Resolver dashboard in th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L87">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L87">property <b>ownerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ownerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1322,19 +1429,19 @@ When a rule is shared with another AWS account, the account ID of the account th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-resolverEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L92">property <b>resolverEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L92">property <b>resolverEndpointId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resolverEndpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
-The ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify using `target_ip`.
+The ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify using `targetIp`.
 This argument should only be specified for `FORWARD` type rules.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-ruleType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L96">property <b>ruleType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L96">property <b>ruleType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ruleType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1345,7 +1452,7 @@ The rule type. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-shareStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L101">property <b>shareStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L101">property <b>shareStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>shareStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1357,7 +1464,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L105">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L105">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1368,7 +1475,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-targetIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L110">property <b>targetIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L110">property <b>targetIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>targetIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1383,7 +1490,7 @@ This argument should only be specified for `FORWARD` type rules.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1396,7 +1503,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverRuleAssociation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRuleAssociation.ts#L24">class <b>ResolverRuleAssociation</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRuleAssociation.ts#L24">class <b>ResolverRuleAssociation</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1420,7 +1527,7 @@ const example = new aws.route53.ResolverRuleAssociation("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverRuleAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRuleAssociation.ts#L62"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRuleAssociation.ts#L62"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1437,7 +1544,7 @@ Create a ResolverRuleAssociation resource with the given unique name, arguments,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRuleAssociation.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRuleAssociation.ts#L33">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1451,7 +1558,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1461,7 +1568,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRuleAssociation.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRuleAssociation.ts#L44">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1475,7 +1582,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1487,7 +1594,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociation-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRuleAssociation.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRuleAssociation.ts#L54">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1498,7 +1605,7 @@ A name for the association that you're creating between a resolver rule and a VP
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociation-resolverRuleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRuleAssociation.ts#L58">property <b>resolverRuleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRuleAssociation.ts#L58">property <b>resolverRuleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resolverRuleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1509,7 +1616,7 @@ The ID of the resolver rule that you want to associate with the VPC.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1521,7 +1628,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociation-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRuleAssociation.ts#L62">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRuleAssociation.ts#L62">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1533,17 +1640,76 @@ The ID of the VPC that you want to associate the resolver rule with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Zone">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L10">class <b>Zone</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L69">class <b>Zone</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 {{% md %}}
 
+Manages a Route53 Hosted Zone.
+
+## Example Usage
+
+### Public Zone
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const primary = new aws.route53.Zone("primary", {});
+```
+
+### Public Subdomain Zone
+
+For use in subdomains, note that you need to create a
+`aws.route53.Record` of type `NS` as well as the subdomain
+zone.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const dev = new aws.route53.Zone("dev", {
+    tags: {
+        Environment: "dev",
+    },
+});
+const main = new aws.route53.Zone("main", {});
+const devNs = new aws.route53.Record("dev-ns", {
+    records: [
+        dev.nameServers[0],
+        dev.nameServers[1],
+        dev.nameServers[2],
+        dev.nameServers[3],
+    ],
+    ttl: 30,
+    type: "NS",
+    zoneId: main.zoneId,
+});
+```
+
+### Private Zone
+
+> **NOTE:** This provider provides both exclusive VPC associations defined in-line in this resource via `vpc` configuration blocks and a separate [Zone VPC Association](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) resource. At this time, you cannot use in-line VPC associations in conjunction with any `aws.route53.ZoneAssociation` resources with the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use the generic this provider resource [lifecycle configuration block](https://www.terraform.io/docs/configuration/resources.html#lifecycle) with `ignoreChanges` to manage additional associations via the `aws.route53.ZoneAssociation` resource.
+
+> **NOTE:** Private zones require at least one VPC association at all times.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const privateZone = new aws.route53.Zone("private", {
+    vpcs: [{
+        vpcId: aws_vpc_example.id,
+    }],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Zone-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L128"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1560,7 +1726,7 @@ Create a Zone resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L78">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1574,7 +1740,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1584,7 +1750,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L89">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1598,15 +1764,18 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L37">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L99">property <b>comment</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
+
+A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
+
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-delegationSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L41">property <b>delegationSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L103">property <b>delegationSetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>delegationSetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1617,15 +1786,18 @@ The ID of the reusable delegation set whose NS records you want to assign to the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L42">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L107">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>forceDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
+
+Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
+
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1637,7 +1809,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L111">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1648,7 +1820,7 @@ This is the name of the hosted zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-nameServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L51">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L116">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>nameServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -1660,7 +1832,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L55">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L120">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1671,7 +1843,7 @@ A mapping of tags to assign to the zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1683,7 +1855,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-vpcs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L59">property <b>vpcs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L124">property <b>vpcs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vpcs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1692,12 +1864,12 @@ deployments.
 }[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
-Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws_route53_zone_association` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
+Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegationSetId` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L63">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L128">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1709,17 +1881,55 @@ The Hosted Zone ID. This can be referenced by zone records.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneAssociation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zoneAssociation.ts#L10">class <b>ZoneAssociation</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zoneAssociation.ts#L48">class <b>ZoneAssociation</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 {{% md %}}
 
+Manages a Route53 Hosted Zone VPC association. VPC associations can only be made on private zones.
+
+> **NOTE:** Unless explicit association ordering is required (e.g. a separate cross-account association authorization), usage of this resource is not recommended. Use the `vpc` configuration blocks available within the [`aws.route53.Zone` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone.html) instead.
+
+> **NOTE:** This provider provides both this standalone Zone VPC Association resource and exclusive VPC associations defined in-line in the [`aws.route53.Zone` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone.html) via `vpc` configuration blocks. At this time, you cannot use those in-line VPC associations in conjunction with this resource and the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use the generic this provider resource [lifecycle configuration block](https://www.terraform.io/docs/configuration/resources.html#lifecycle) with `ignoreChanges` in the `aws.route53.Zone` resource to manage additional associations via this resource.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const primary = new aws.ec2.Vpc("primary", {
+    cidrBlock: "10.6.0.0/16",
+    enableDnsHostnames: true,
+    enableDnsSupport: true,
+});
+const secondaryVpc = new aws.ec2.Vpc("secondary", {
+    cidrBlock: "10.7.0.0/16",
+    enableDnsHostnames: true,
+    enableDnsSupport: true,
+});
+const example = new aws.route53.Zone("example", {
+    // NOTE: The aws.route53.Zone vpc argument accepts multiple configuration
+    //       blocks. The below usage of the single vpc configuration, the
+    //       lifecycle configuration, and the aws.route53.ZoneAssociation
+    //       resource is for illustrative purposes (e.g. for a separate
+    //       cross-account authorization process, which is not shown here).
+    vpcs: [{
+        vpcId: primary.id,
+    }],
+});
+const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
+    vpcId: secondaryVpc.id,
+    zoneId: example.zoneId,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone_association.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zoneAssociation.ts#L48"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zoneAssociation.ts#L86"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1736,7 +1946,7 @@ Create a ZoneAssociation resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zoneAssociation.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zoneAssociation.ts#L57">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1750,7 +1960,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1760,7 +1970,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zoneAssociation.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zoneAssociation.ts#L68">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1774,7 +1984,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1786,7 +1996,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1798,7 +2008,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociation-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zoneAssociation.ts#L40">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zoneAssociation.ts#L78">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1809,7 +2019,7 @@ The VPC to associate with the private hosted zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociation-vpcRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zoneAssociation.ts#L44">property <b>vpcRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zoneAssociation.ts#L82">property <b>vpcRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vpcRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1820,7 +2030,7 @@ The VPC's region. Defaults to the region of the AWS provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociation-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zoneAssociation.ts#L48">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zoneAssociation.ts#L86">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1832,7 +2042,7 @@ The private hosted zone to associate.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getDelegationSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getDelegationSet.ts#L27">function <b>getDelegationSet</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getDelegationSet.ts#L27">function <b>getDelegationSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1840,7 +2050,7 @@ The private hosted zone to associate.
 <pre class="highlight"><span class='kd'></span>getDelegationSet(args: <a href='#GetDelegationSetArgs'>GetDelegationSetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetDelegationSetResult'>GetDelegationSetResult</a>&gt; &amp; <a href='#GetDelegationSetResult'>GetDelegationSetResult</a></pre>
 
 
-`aws_route53_delegation_set` provides details about a specific Route 53 Delegation Set.
+`aws.route53.DelegationSet` provides details about a specific Route 53 Delegation Set.
 
 This data source allows to find a list of name servers associated with a specific delegation set.
 
@@ -1862,7 +2072,7 @@ const dset = pulumi.output(aws.route53.getDelegationSet({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getZone">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L35">function <b>getZone</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L35">function <b>getZone</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1870,7 +2080,7 @@ const dset = pulumi.output(aws.route53.getDelegationSet({
 <pre class="highlight"><span class='kd'></span>getZone(args?: <a href='#GetZoneArgs'>GetZoneArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetZoneResult'>GetZoneResult</a>&gt; &amp; <a href='#GetZoneResult'>GetZoneResult</a></pre>
 
 
-`aws_route53_zone` provides details about a specific Route 53 Hosted Zone.
+`aws.route53.Zone` provides details about a specific Route 53 Hosted Zone.
 
 This data source allows to find a Hosted Zone ID given Hosted Zone name and certain search criteria.
 
@@ -1900,7 +2110,7 @@ const www = new aws.route53.Record("www", {
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="DelegationSetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/delegationSet.ts#L116">interface <b>DelegationSetArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/delegationSet.ts#L116">interface <b>DelegationSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1909,7 +2119,7 @@ The set of arguments for constructing a DelegationSet resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DelegationSetArgs-referenceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/delegationSet.ts#L121">property <b>referenceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/delegationSet.ts#L121">property <b>referenceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>referenceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1922,7 +2132,7 @@ This is a reference name used in Caller Reference
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DelegationSetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/delegationSet.ts#L100">interface <b>DelegationSetState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/delegationSet.ts#L100">interface <b>DelegationSetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1931,7 +2141,7 @@ Input properties used for looking up and filtering DelegationSet resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DelegationSetState-nameServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/delegationSet.ts#L105">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/delegationSet.ts#L105">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nameServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1943,7 +2153,7 @@ A list of authoritative name servers for the hosted zone
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DelegationSetState-referenceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/delegationSet.ts#L110">property <b>referenceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/delegationSet.ts#L110">property <b>referenceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>referenceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1956,7 +2166,7 @@ This is a reference name used in Caller Reference
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDelegationSetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getDelegationSet.ts#L45">interface <b>GetDelegationSetArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getDelegationSet.ts#L45">interface <b>GetDelegationSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1965,7 +2175,7 @@ A collection of arguments for invoking getDelegationSet.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDelegationSetArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getDelegationSet.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getDelegationSet.ts#L49">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1977,7 +2187,7 @@ The Hosted Zone id of the desired delegation set.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDelegationSetResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getDelegationSet.ts#L55">interface <b>GetDelegationSetResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getDelegationSet.ts#L55">interface <b>GetDelegationSetResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1986,7 +2196,7 @@ A collection of values returned by getDelegationSet.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDelegationSetResult-callerReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getDelegationSet.ts#L56">property <b>callerReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getDelegationSet.ts#L56">property <b>callerReference</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>callerReference: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1994,7 +2204,7 @@ A collection of values returned by getDelegationSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDelegationSetResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getDelegationSet.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getDelegationSet.ts#L57">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2002,7 +2212,7 @@ A collection of values returned by getDelegationSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDelegationSetResult-nameServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getDelegationSet.ts#L58">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getDelegationSet.ts#L58">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nameServers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2011,7 +2221,7 @@ A collection of values returned by getDelegationSet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetZoneArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L59">interface <b>GetZoneArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L59">interface <b>GetZoneArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2020,7 +2230,7 @@ A collection of arguments for invoking getZone.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetZoneArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L63">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2031,7 +2241,7 @@ The Hosted Zone name of the desired Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneArgs-privateZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L67">property <b>privateZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L67">property <b>privateZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -2042,7 +2252,7 @@ Used with `name` field to get a private Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneArgs-resourceRecordSetCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L68">property <b>resourceRecordSetCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L68">property <b>resourceRecordSetCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceRecordSetCount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -2050,7 +2260,7 @@ Used with `name` field to get a private Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L73">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L73">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -2062,18 +2272,18 @@ a pair on the desired Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneArgs-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L77">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L77">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 {{% md %}}
 
-Used with `name` field to get a private Hosted Zone associated with the vpc_id (in this case, private_zone is not mandatory).
+Used with `name` field to get a private Hosted Zone associated with the vpcId (in this case, privateZone is not mandatory).
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L81">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L81">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2085,7 +2295,7 @@ The Hosted Zone id of the desired Hosted Zone.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetZoneResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L87">interface <b>GetZoneResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L87">interface <b>GetZoneResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2094,7 +2304,7 @@ A collection of values returned by getZone.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetZoneResult-callerReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L91">property <b>callerReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L91">property <b>callerReference</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>callerReference: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2105,7 +2315,7 @@ Caller Reference of the Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L95">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L95">property <b>comment</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>comment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2116,7 +2326,7 @@ The comment field of the Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L120">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L120">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2127,7 +2337,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-linkedServiceDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L99">property <b>linkedServiceDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L99">property <b>linkedServiceDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>linkedServiceDescription: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2138,7 +2348,7 @@ The description provided by the service that created the Hosted Zone (e.g. `arn:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-linkedServicePrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L103">property <b>linkedServicePrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L103">property <b>linkedServicePrincipal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>linkedServicePrincipal: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2149,7 +2359,7 @@ The service that created the Hosted Zone (e.g. `servicediscovery.amazonaws.com`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L104">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L104">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2157,7 +2367,7 @@ The service that created the Hosted Zone (e.g. `servicediscovery.amazonaws.com`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-nameServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L108">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L108">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nameServers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2168,7 +2378,7 @@ The list of DNS name servers for the Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-privateZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L109">property <b>privateZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L109">property <b>privateZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>privateZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -2176,7 +2386,7 @@ The list of DNS name servers for the Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-resourceRecordSetCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L113">property <b>resourceRecordSetCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L113">property <b>resourceRecordSetCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceRecordSetCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -2187,7 +2397,7 @@ The number of Record Set in the Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L114">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L114">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -2195,7 +2405,7 @@ The number of Record Set in the Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L115">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L115">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2203,7 +2413,7 @@ The number of Record Set in the Hosted Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/getZone.ts#L116">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/getZone.ts#L116">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2212,7 +2422,7 @@ The number of Record Set in the Hosted Zone.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HealthCheckArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L348">interface <b>HealthCheckArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L348">interface <b>HealthCheckArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2221,7 +2431,7 @@ The set of arguments for constructing a HealthCheck resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HealthCheckArgs-childHealthThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L352">property <b>childHealthThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L352">property <b>childHealthThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>childHealthThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2232,7 +2442,7 @@ The minimum number of child health checks that must be healthy for Route 53 to c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-childHealthchecks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L356">property <b>childHealthchecks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L356">property <b>childHealthchecks</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>childHealthchecks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2243,7 +2453,7 @@ For a specified parent health check, a list of HealthCheckId values for the asso
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-cloudwatchAlarmName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L360">property <b>cloudwatchAlarmName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L360">property <b>cloudwatchAlarmName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cloudwatchAlarmName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2254,7 +2464,7 @@ The name of the CloudWatch alarm.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-cloudwatchAlarmRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L364">property <b>cloudwatchAlarmRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L364">property <b>cloudwatchAlarmRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cloudwatchAlarmRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2265,18 +2475,18 @@ The CloudWatchRegion that the CloudWatch alarm was created in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-enableSni">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L368">property <b>enableSni</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L368">property <b>enableSni</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableSni?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 {{% md %}}
 
-A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
+A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enableSni` defaults to `true`, when `type` is anything else `enableSni` defaults to `false`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-failureThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L372">property <b>failureThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L372">property <b>failureThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>failureThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2287,7 +2497,7 @@ The number of consecutive health checks that an endpoint must pass or fail.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L376">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L376">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2298,7 +2508,7 @@ The fully qualified domain name of the endpoint to be checked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-insufficientDataHealthStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L380">property <b>insufficientDataHealthStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L380">property <b>insufficientDataHealthStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>insufficientDataHealthStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2309,7 +2519,7 @@ The status of the health check when CloudWatch has insufficient data about the s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-invertHealthcheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L384">property <b>invertHealthcheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L384">property <b>invertHealthcheck</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>invertHealthcheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2320,7 +2530,7 @@ A boolean value that indicates whether the status of health check should be inve
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L388">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L388">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2331,7 +2541,7 @@ The IP address of the endpoint to be checked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-measureLatency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L392">property <b>measureLatency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L392">property <b>measureLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>measureLatency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2342,7 +2552,7 @@ A Boolean value that indicates whether you want Route 53 to measure the latency 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L396">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L396">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2353,19 +2563,19 @@ The port of the endpoint to be checked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-referenceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L401">property <b>referenceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L401">property <b>referenceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>referenceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 This is a reference name used in Caller Reference
-(helpful for identifying single health_check set amongst others)
+(helpful for identifying single healthCheck set amongst others)
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L405">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L405">property <b>regions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>regions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2376,7 +2586,7 @@ A list of AWS regions that you want Amazon Route 53 health checkers to check the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-requestInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L409">property <b>requestInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L409">property <b>requestInterval</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requestInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2387,7 +2597,7 @@ The number of seconds between the time that Amazon Route 53 gets a response from
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-resourcePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L413">property <b>resourcePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L413">property <b>resourcePath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourcePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2398,7 +2608,7 @@ The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-searchString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L417">property <b>searchString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L417">property <b>searchString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>searchString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2409,7 +2619,7 @@ String searched in the first 5120 bytes of the response body for check to be con
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L421">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L421">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2420,7 +2630,7 @@ A mapping of tags to assign to the health check.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L425">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L425">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2432,7 +2642,7 @@ The protocol to use when performing health checks. Valid values are `HTTP`, `HTT
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HealthCheckState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L265">interface <b>HealthCheckState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L265">interface <b>HealthCheckState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2441,7 +2651,7 @@ Input properties used for looking up and filtering HealthCheck resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HealthCheckState-childHealthThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L269">property <b>childHealthThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L269">property <b>childHealthThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>childHealthThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2452,7 +2662,7 @@ The minimum number of child health checks that must be healthy for Route 53 to c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-childHealthchecks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L273">property <b>childHealthchecks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L273">property <b>childHealthchecks</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>childHealthchecks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2463,7 +2673,7 @@ For a specified parent health check, a list of HealthCheckId values for the asso
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-cloudwatchAlarmName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L277">property <b>cloudwatchAlarmName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L277">property <b>cloudwatchAlarmName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cloudwatchAlarmName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2474,7 +2684,7 @@ The name of the CloudWatch alarm.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-cloudwatchAlarmRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L281">property <b>cloudwatchAlarmRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L281">property <b>cloudwatchAlarmRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cloudwatchAlarmRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2485,18 +2695,18 @@ The CloudWatchRegion that the CloudWatch alarm was created in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-enableSni">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L285">property <b>enableSni</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L285">property <b>enableSni</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableSni?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 {{% md %}}
 
-A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
+A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enableSni` defaults to `true`, when `type` is anything else `enableSni` defaults to `false`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-failureThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L289">property <b>failureThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L289">property <b>failureThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>failureThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2507,7 +2717,7 @@ The number of consecutive health checks that an endpoint must pass or fail.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L293">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L293">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2518,7 +2728,7 @@ The fully qualified domain name of the endpoint to be checked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-insufficientDataHealthStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L297">property <b>insufficientDataHealthStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L297">property <b>insufficientDataHealthStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>insufficientDataHealthStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2529,7 +2739,7 @@ The status of the health check when CloudWatch has insufficient data about the s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-invertHealthcheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L301">property <b>invertHealthcheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L301">property <b>invertHealthcheck</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>invertHealthcheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2540,7 +2750,7 @@ A boolean value that indicates whether the status of health check should be inve
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L305">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L305">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2551,7 +2761,7 @@ The IP address of the endpoint to be checked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-measureLatency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L309">property <b>measureLatency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L309">property <b>measureLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>measureLatency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2562,7 +2772,7 @@ A Boolean value that indicates whether you want Route 53 to measure the latency 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L313">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L313">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2573,19 +2783,19 @@ The port of the endpoint to be checked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-referenceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L318">property <b>referenceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L318">property <b>referenceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>referenceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
 This is a reference name used in Caller Reference
-(helpful for identifying single health_check set amongst others)
+(helpful for identifying single healthCheck set amongst others)
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L322">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L322">property <b>regions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>regions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2596,7 +2806,7 @@ A list of AWS regions that you want Amazon Route 53 health checkers to check the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-requestInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L326">property <b>requestInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L326">property <b>requestInterval</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requestInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2607,7 +2817,7 @@ The number of seconds between the time that Amazon Route 53 gets a response from
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-resourcePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L330">property <b>resourcePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L330">property <b>resourcePath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourcePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2618,7 +2828,7 @@ The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-searchString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L334">property <b>searchString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L334">property <b>searchString</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>searchString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2629,7 +2839,7 @@ String searched in the first 5120 bytes of the response body for check to be con
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L338">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L338">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2640,7 +2850,7 @@ A mapping of tags to assign to the health check.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HealthCheckState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/healthCheck.ts#L342">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/healthCheck.ts#L342">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2652,7 +2862,7 @@ The protocol to use when performing health checks. Valid values are `HTTP`, `HTT
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueryLogArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/queryLog.ts#L107">interface <b>QueryLogArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/queryLog.ts#L107">interface <b>QueryLogArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2661,7 +2871,7 @@ The set of arguments for constructing a QueryLog resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QueryLogArgs-cloudwatchLogGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/queryLog.ts#L111">property <b>cloudwatchLogGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/queryLog.ts#L111">property <b>cloudwatchLogGroupArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cloudwatchLogGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2672,7 +2882,7 @@ CloudWatch log group ARN to send query logs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueryLogArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/queryLog.ts#L115">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/queryLog.ts#L115">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2684,7 +2894,7 @@ Route53 hosted zone ID to enable query logs.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueryLogState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/queryLog.ts#L93">interface <b>QueryLogState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/queryLog.ts#L93">interface <b>QueryLogState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2693,7 +2903,7 @@ Input properties used for looking up and filtering QueryLog resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QueryLogState-cloudwatchLogGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/queryLog.ts#L97">property <b>cloudwatchLogGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/queryLog.ts#L97">property <b>cloudwatchLogGroupArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cloudwatchLogGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2704,7 +2914,7 @@ CloudWatch log group ARN to send query logs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueryLogState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/queryLog.ts#L101">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/queryLog.ts#L101">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2716,7 +2926,7 @@ Route53 hosted zone ID to enable query logs.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RecordArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L221">interface <b>RecordArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L334">interface <b>RecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2725,7 +2935,7 @@ The set of arguments for constructing a Record resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RecordArgs-aliases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L226">property <b>aliases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L339">property <b>aliases</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>aliases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2741,15 +2951,18 @@ Alias record documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-allowOverwrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L227">property <b>allowOverwrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L343">property <b>allowOverwrite</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowOverwrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 {{% md %}}
+
+Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
+
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-failoverRoutingPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L231">property <b>failoverRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L347">property <b>failoverRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>failoverRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2762,7 +2975,7 @@ A block indicating the routing behavior when associated health check fails. Conf
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-geolocationRoutingPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L235">property <b>geolocationRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L351">property <b>geolocationRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>geolocationRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2777,7 +2990,7 @@ A block indicating a routing policy based on the geolocation of the requestor. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-healthCheckId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L239">property <b>healthCheckId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L355">property <b>healthCheckId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>healthCheckId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2788,7 +3001,7 @@ The health check the record should be associated with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-latencyRoutingPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L243">property <b>latencyRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L359">property <b>latencyRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>latencyRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2801,7 +3014,7 @@ A block indicating a routing policy based on the latency between the requestor a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-multivalueAnswerRoutingPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L247">property <b>multivalueAnswerRoutingPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L363">property <b>multivalueAnswerRoutingPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>multivalueAnswerRoutingPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2812,7 +3025,7 @@ Set to `true` to indicate a multivalue answer routing policy. Conflicts with any
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L251">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L367">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2823,15 +3036,18 @@ DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resour
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L252">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L371">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
 {{% md %}}
+
+A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
+
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-setIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L256">property <b>setIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L375">property <b>setIdentifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>setIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2842,7 +3058,7 @@ Unique identifier to differentiate records with routing policies from one anothe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L260">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L379">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2853,7 +3069,7 @@ The TTL of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L264">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L383">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#RecordType'>RecordType</a>&gt;;</pre>
@@ -2864,7 +3080,7 @@ The TTL of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-weightedRoutingPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L268">property <b>weightedRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L387">property <b>weightedRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>weightedRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2877,7 +3093,7 @@ A block indicating a weighted routing policy. Conflicts with any other routing p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L272">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L391">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2889,7 +3105,7 @@ Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RecordState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L160">interface <b>RecordState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L267">interface <b>RecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2898,7 +3114,7 @@ Input properties used for looking up and filtering Record resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RecordState-aliases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L165">property <b>aliases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L272">property <b>aliases</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>aliases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2914,15 +3130,18 @@ Alias record documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-allowOverwrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L166">property <b>allowOverwrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L276">property <b>allowOverwrite</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowOverwrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 {{% md %}}
+
+Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
+
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-failoverRoutingPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L170">property <b>failoverRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L280">property <b>failoverRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>failoverRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2935,7 +3154,7 @@ A block indicating the routing behavior when associated health check fails. Conf
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L174">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L284">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2946,7 +3165,7 @@ A block indicating the routing behavior when associated health check fails. Conf
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-geolocationRoutingPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L178">property <b>geolocationRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L288">property <b>geolocationRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>geolocationRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2961,7 +3180,7 @@ A block indicating a routing policy based on the geolocation of the requestor. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-healthCheckId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L182">property <b>healthCheckId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L292">property <b>healthCheckId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>healthCheckId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2972,7 +3191,7 @@ The health check the record should be associated with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-latencyRoutingPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L186">property <b>latencyRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L296">property <b>latencyRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>latencyRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2985,7 +3204,7 @@ A block indicating a routing policy based on the latency between the requestor a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-multivalueAnswerRoutingPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L190">property <b>multivalueAnswerRoutingPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L300">property <b>multivalueAnswerRoutingPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>multivalueAnswerRoutingPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2996,7 +3215,7 @@ Set to `true` to indicate a multivalue answer routing policy. Conflicts with any
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L194">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L304">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3007,15 +3226,18 @@ DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resour
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L195">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L308">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
 {{% md %}}
+
+A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
+
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-setIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L199">property <b>setIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L312">property <b>setIdentifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>setIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3026,7 +3248,7 @@ Unique identifier to differentiate records with routing policies from one anothe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L203">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L316">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3037,7 +3259,7 @@ The TTL of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L207">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L320">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#RecordType'>RecordType</a>&gt;;</pre>
@@ -3048,7 +3270,7 @@ The TTL of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-weightedRoutingPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L211">property <b>weightedRoutingPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L324">property <b>weightedRoutingPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>weightedRoutingPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3061,7 +3283,7 @@ A block indicating a weighted routing policy. Conflicts with any other routing p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/record.ts#L215">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/record.ts#L328">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3073,7 +3295,7 @@ Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverEndpointArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L187">interface <b>ResolverEndpointArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L187">interface <b>ResolverEndpointArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3082,7 +3304,7 @@ The set of arguments for constructing a ResolverEndpoint resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverEndpointArgs-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L193">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L193">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>direction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3095,7 +3317,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointArgs-ipAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L198">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L198">property <b>ipAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3111,7 +3333,7 @@ to your network (for outbound endpoints) or on the way from your network to your
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L202">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L202">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3122,7 +3344,7 @@ The friendly name of the Route 53 Resolver endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointArgs-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L206">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L206">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3133,7 +3355,7 @@ The ID of one or more security groups that you want to use to control access to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L210">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L210">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3145,7 +3367,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverEndpointState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L150">interface <b>ResolverEndpointState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L150">interface <b>ResolverEndpointState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3154,7 +3376,7 @@ Input properties used for looking up and filtering ResolverEndpoint resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverEndpointState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L154">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L154">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3165,7 +3387,7 @@ The ARN of the Route 53 Resolver endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointState-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L160">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L160">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>direction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3178,7 +3400,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointState-hostVpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L164">property <b>hostVpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L164">property <b>hostVpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostVpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3189,7 +3411,7 @@ The ID of the VPC that you want to create the resolver endpoint in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointState-ipAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L169">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L169">property <b>ipAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3205,7 +3427,7 @@ to your network (for outbound endpoints) or on the way from your network to your
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L173">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L173">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3216,7 +3438,7 @@ The friendly name of the Route 53 Resolver endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointState-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L177">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L177">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3227,7 +3449,7 @@ The ID of one or more security groups that you want to use to control access to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverEndpointState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverEndpoint.ts#L181">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverEndpoint.ts#L181">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3239,7 +3461,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverRuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L210">interface <b>ResolverRuleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L210">interface <b>ResolverRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3248,18 +3470,18 @@ The set of arguments for constructing a ResolverRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverRuleArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L214">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L214">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-DNS queries for this domain name are forwarded to the IP addresses that are specified using `target_ip`.
+DNS queries for this domain name are forwarded to the IP addresses that are specified using `targetIp`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L218">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L218">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3270,19 +3492,19 @@ A friendly name that lets you easily find a rule in the Resolver dashboard in th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleArgs-resolverEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L223">property <b>resolverEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L223">property <b>resolverEndpointId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resolverEndpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-The ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify using `target_ip`.
+The ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify using `targetIp`.
 This argument should only be specified for `FORWARD` type rules.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleArgs-ruleType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L227">property <b>ruleType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L227">property <b>ruleType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ruleType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3293,7 +3515,7 @@ The rule type. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L231">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L231">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3304,7 +3526,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleArgs-targetIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L236">property <b>targetIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L236">property <b>targetIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3320,7 +3542,7 @@ This argument should only be specified for `FORWARD` type rules.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverRuleAssociationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRuleAssociation.ts#L123">interface <b>ResolverRuleAssociationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRuleAssociation.ts#L123">interface <b>ResolverRuleAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3329,7 +3551,7 @@ The set of arguments for constructing a ResolverRuleAssociation resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverRuleAssociationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRuleAssociation.ts#L127">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRuleAssociation.ts#L127">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3340,7 +3562,7 @@ A name for the association that you're creating between a resolver rule and a VP
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociationArgs-resolverRuleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRuleAssociation.ts#L131">property <b>resolverRuleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRuleAssociation.ts#L131">property <b>resolverRuleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resolverRuleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3351,7 +3573,7 @@ The ID of the resolver rule that you want to associate with the VPC.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociationArgs-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRuleAssociation.ts#L135">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRuleAssociation.ts#L135">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3363,7 +3585,7 @@ The ID of the VPC that you want to associate the resolver rule with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverRuleAssociationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRuleAssociation.ts#L105">interface <b>ResolverRuleAssociationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRuleAssociation.ts#L105">interface <b>ResolverRuleAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3372,7 +3594,7 @@ Input properties used for looking up and filtering ResolverRuleAssociation resou
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverRuleAssociationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRuleAssociation.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRuleAssociation.ts#L109">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3383,7 +3605,7 @@ A name for the association that you're creating between a resolver rule and a VP
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociationState-resolverRuleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRuleAssociation.ts#L113">property <b>resolverRuleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRuleAssociation.ts#L113">property <b>resolverRuleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resolverRuleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3394,7 +3616,7 @@ The ID of the resolver rule that you want to associate with the VPC.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleAssociationState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRuleAssociation.ts#L117">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRuleAssociation.ts#L117">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3406,7 +3628,7 @@ The ID of the VPC that you want to associate the resolver rule with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResolverRuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L165">interface <b>ResolverRuleState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L165">interface <b>ResolverRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3415,7 +3637,7 @@ Input properties used for looking up and filtering ResolverRule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResolverRuleState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L169">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L169">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3426,18 +3648,18 @@ The ARN (Amazon Resource Name) for the resolver rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L173">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L173">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-DNS queries for this domain name are forwarded to the IP addresses that are specified using `target_ip`.
+DNS queries for this domain name are forwarded to the IP addresses that are specified using `targetIp`.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L177">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L177">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3448,7 +3670,7 @@ A friendly name that lets you easily find a rule in the Resolver dashboard in th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleState-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L181">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L181">property <b>ownerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ownerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3459,19 +3681,19 @@ When a rule is shared with another AWS account, the account ID of the account th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleState-resolverEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L186">property <b>resolverEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L186">property <b>resolverEndpointId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resolverEndpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
 
-The ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify using `target_ip`.
+The ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify using `targetIp`.
 This argument should only be specified for `FORWARD` type rules.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleState-ruleType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L190">property <b>ruleType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L190">property <b>ruleType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ruleType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3482,7 +3704,7 @@ The rule type. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleState-shareStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L195">property <b>shareStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L195">property <b>shareStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>shareStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3494,7 +3716,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L199">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3505,7 +3727,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResolverRuleState-targetIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/resolverRule.ts#L204">property <b>targetIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/resolverRule.ts#L204">property <b>targetIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3521,7 +3743,7 @@ This argument should only be specified for `FORWARD` type rules.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L143">interface <b>ZoneArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L214">interface <b>ZoneArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3530,15 +3752,18 @@ The set of arguments for constructing a Zone resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneArgs-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L144">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L218">property <b>comment</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
+
+A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
+
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-delegationSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L148">property <b>delegationSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L222">property <b>delegationSetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>delegationSetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3549,15 +3774,18 @@ The ID of the reusable delegation set whose NS records you want to assign to the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L149">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L226">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 {{% md %}}
+
+Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
+
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L153">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L230">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3568,7 +3796,7 @@ This is the name of the hosted zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L157">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L234">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3579,7 +3807,7 @@ A mapping of tags to assign to the zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-vpcs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L161">property <b>vpcs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L238">property <b>vpcs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3588,13 +3816,13 @@ A mapping of tags to assign to the zone.
 }&gt;[]&gt;;</pre>
 {{% md %}}
 
-Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws_route53_zone_association` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
+Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegationSetId` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
 
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneAssociationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zoneAssociation.ts#L109">interface <b>ZoneAssociationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zoneAssociation.ts#L147">interface <b>ZoneAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3603,7 +3831,7 @@ The set of arguments for constructing a ZoneAssociation resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneAssociationArgs-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zoneAssociation.ts#L113">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zoneAssociation.ts#L151">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3614,7 +3842,7 @@ The VPC to associate with the private hosted zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociationArgs-vpcRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zoneAssociation.ts#L117">property <b>vpcRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zoneAssociation.ts#L155">property <b>vpcRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3625,7 +3853,7 @@ The VPC's region. Defaults to the region of the AWS provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociationArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zoneAssociation.ts#L121">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zoneAssociation.ts#L159">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3637,7 +3865,7 @@ The private hosted zone to associate.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneAssociationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zoneAssociation.ts#L91">interface <b>ZoneAssociationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zoneAssociation.ts#L129">interface <b>ZoneAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3646,7 +3874,7 @@ Input properties used for looking up and filtering ZoneAssociation resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneAssociationState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zoneAssociation.ts#L95">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zoneAssociation.ts#L133">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3657,7 +3885,7 @@ The VPC to associate with the private hosted zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociationState-vpcRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zoneAssociation.ts#L99">property <b>vpcRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zoneAssociation.ts#L137">property <b>vpcRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3668,7 +3896,7 @@ The VPC's region. Defaults to the region of the AWS provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneAssociationState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zoneAssociation.ts#L103">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zoneAssociation.ts#L141">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3680,7 +3908,7 @@ The private hosted zone to associate.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L110">interface <b>ZoneState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L175">interface <b>ZoneState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3689,15 +3917,18 @@ Input properties used for looking up and filtering Zone resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneState-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L111">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L179">property <b>comment</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 {{% md %}}
+
+A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
+
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-delegationSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L115">property <b>delegationSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L183">property <b>delegationSetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>delegationSetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3708,15 +3939,18 @@ The ID of the reusable delegation set whose NS records you want to assign to the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L116">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L187">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 {{% md %}}
+
+Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
+
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L120">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L191">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3727,7 +3961,7 @@ This is the name of the hosted zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-nameServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L125">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L196">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nameServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3739,7 +3973,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L129">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L200">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3750,7 +3984,7 @@ A mapping of tags to assign to the zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-vpcs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L133">property <b>vpcs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L204">property <b>vpcs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3759,12 +3993,12 @@ A mapping of tags to assign to the zone.
 }&gt;[]&gt;;</pre>
 {{% md %}}
 
-Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws_route53_zone_association` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
+Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegationSetId` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/zone.ts#L137">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/zone.ts#L208">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3776,11 +4010,11 @@ The Hosted Zone ID. This can be referenced by zone records.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RecordTypes">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/recordType.ts#L15">module <b>RecordTypes</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/recordType.ts#L15">module <b>RecordTypes</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="A">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/recordType.ts#L16">const <b>A</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/recordType.ts#L16">const <b>A</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> A: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;A&#34;</span>;</pre>
@@ -3788,7 +4022,7 @@ The Hosted Zone ID. This can be referenced by zone records.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AAAA">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/recordType.ts#L17">const <b>AAAA</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/recordType.ts#L17">const <b>AAAA</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> AAAA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;AAAA&#34;</span>;</pre>
@@ -3796,7 +4030,7 @@ The Hosted Zone ID. This can be referenced by zone records.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CAA">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/recordType.ts#L19">const <b>CAA</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/recordType.ts#L19">const <b>CAA</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> CAA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;CAA&#34;</span>;</pre>
@@ -3804,7 +4038,7 @@ The Hosted Zone ID. This can be referenced by zone records.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNAME">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/recordType.ts#L18">const <b>CNAME</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/recordType.ts#L18">const <b>CNAME</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> CNAME: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;CNAME&#34;</span>;</pre>
@@ -3812,7 +4046,7 @@ The Hosted Zone ID. This can be referenced by zone records.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MX">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/recordType.ts#L20">const <b>MX</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/recordType.ts#L20">const <b>MX</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> MX: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;MX&#34;</span>;</pre>
@@ -3820,7 +4054,7 @@ The Hosted Zone ID. This can be referenced by zone records.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NAPTR">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/recordType.ts#L21">const <b>NAPTR</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/recordType.ts#L21">const <b>NAPTR</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> NAPTR: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;NAPTR&#34;</span>;</pre>
@@ -3828,7 +4062,7 @@ The Hosted Zone ID. This can be referenced by zone records.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NS">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/recordType.ts#L22">const <b>NS</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/recordType.ts#L22">const <b>NS</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> NS: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;NS&#34;</span>;</pre>
@@ -3836,7 +4070,7 @@ The Hosted Zone ID. This can be referenced by zone records.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PTR">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/recordType.ts#L23">const <b>PTR</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/recordType.ts#L23">const <b>PTR</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> PTR: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;PTR&#34;</span>;</pre>
@@ -3844,7 +4078,7 @@ The Hosted Zone ID. This can be referenced by zone records.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SOA">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/recordType.ts#L24">const <b>SOA</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/recordType.ts#L24">const <b>SOA</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> SOA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SOA&#34;</span>;</pre>
@@ -3852,7 +4086,7 @@ The Hosted Zone ID. This can be referenced by zone records.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SPF">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/recordType.ts#L25">const <b>SPF</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/recordType.ts#L25">const <b>SPF</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> SPF: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SPF&#34;</span>;</pre>
@@ -3860,7 +4094,7 @@ The Hosted Zone ID. This can be referenced by zone records.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SRV">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/recordType.ts#L26">const <b>SRV</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/recordType.ts#L26">const <b>SRV</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> SRV: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SRV&#34;</span>;</pre>
@@ -3868,7 +4102,7 @@ The Hosted Zone ID. This can be referenced by zone records.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TXT">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/recordType.ts#L27">const <b>TXT</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/recordType.ts#L27">const <b>TXT</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>const</span> TXT: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;TXT&#34;</span>;</pre>
@@ -3877,7 +4111,7 @@ The Hosted Zone ID. This can be referenced by zone records.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RecordType">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/route53/recordType.ts#L30">type <b>RecordType</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/route53/recordType.ts#L30">type <b>RecordType</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> RecordType = <span class='s2'>"A"</span> | <span class='s2'>"AAAA"</span> | <span class='s2'>"CNAME"</span> | <span class='s2'>"CAA"</span> | <span class='s2'>"MX"</span> | <span class='s2'>"NAPTR"</span> | <span class='s2'>"NS"</span> | <span class='s2'>"PTR"</span> | <span class='s2'>"SOA"</span> | <span class='s2'>"SPF"</span> | <span class='s2'>"SRV"</span> | <span class='s2'>"TXT"</span>;</pre>

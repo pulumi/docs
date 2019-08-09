@@ -33,14 +33,14 @@ title: Module codedeploy
 <li><a href="#DeploymentGroupState">interface DeploymentGroupState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/application.ts">codedeploy/application.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts">codedeploy/deploymentConfig.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts">codedeploy/deploymentGroup.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/application.ts">codedeploy/application.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts">codedeploy/deploymentConfig.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts">codedeploy/deploymentGroup.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Application">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/application.ts#L47">class <b>Application</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/application.ts#L47">class <b>Application</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -87,7 +87,7 @@ const example = new aws.codedeploy.Application("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Application-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/application.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/application.ts#L82"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -104,7 +104,7 @@ Create a Application resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/application.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/application.ts#L56">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -118,7 +118,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -128,7 +128,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/application.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/application.ts#L67">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -142,7 +142,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-computePlatform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/application.ts#L77">property <b>computePlatform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/application.ts#L77">property <b>computePlatform</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>computePlatform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -153,7 +153,7 @@ The compute platform can either be `ECS`, `Lambda`, or `Server`. Default is `Ser
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -165,7 +165,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/application.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/application.ts#L81">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -176,7 +176,7 @@ The name of the application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/application.ts#L82">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/application.ts#L82">property <b>uniqueId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>uniqueId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -184,7 +184,7 @@ The name of the application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -197,7 +197,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeploymentConfig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L86">class <b>DeploymentConfig</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L86">class <b>DeploymentConfig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -283,7 +283,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L132"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L132"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -300,7 +300,7 @@ Create a DeploymentConfig resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L95">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L95">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -314,7 +314,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -324,7 +324,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L106">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L106">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -338,7 +338,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfig-computePlatform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L116">property <b>computePlatform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L116">property <b>computePlatform</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>computePlatform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -349,7 +349,7 @@ The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfig-deploymentConfigId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L120">property <b>deploymentConfigId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L120">property <b>deploymentConfigId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>deploymentConfigId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -360,7 +360,7 @@ The AWS Assigned deployment config id
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfig-deploymentConfigName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L124">property <b>deploymentConfigName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L124">property <b>deploymentConfigName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>deploymentConfigName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -371,7 +371,7 @@ The name of the deployment config.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -383,7 +383,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfig-minimumHealthyHosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L128">property <b>minimumHealthyHosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L128">property <b>minimumHealthyHosts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>minimumHealthyHosts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -392,12 +392,12 @@ deployments and may be missing (undefined) during planning phases.
 } | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
-A minimum_healthy_hosts block. Minimum Healthy Hosts are documented below.
+A minimumHealthyHosts block. Minimum Healthy Hosts are documented below.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfig-trafficRoutingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L132">property <b>trafficRoutingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L132">property <b>trafficRoutingConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>trafficRoutingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -413,12 +413,12 @@ A minimum_healthy_hosts block. Minimum Healthy Hosts are documented below.
 } | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
-A traffic_routing_config block. Traffic Routing Config is documented below.
+A trafficRoutingConfig block. Traffic Routing Config is documented below.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -431,17 +431,171 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeploymentGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L10">class <b>DeploymentGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L164">class <b>DeploymentGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 {{% md %}}
 
+Provides a CodeDeploy Deployment Group for a CodeDeploy Application
+
+> **NOTE on blue/green deployments:** When using `greenFleetProvisioningOption` with the `COPY_AUTO_SCALING_GROUP` action, CodeDeploy will create a new ASG with a different name. This ASG is _not_ managed by this provider and will conflict with existing configuration and state. You may want to use a different approach to managing deployments that involve multiple ASG, such as `DISCOVER_EXISTING` with separate blue and green ASG.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleApplication = new aws.codedeploy.Application("example", {});
+const exampleRole = new aws.iam.Role("example", {
+    assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "codedeploy.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+`,
+});
+const exampleTopic = new aws.sns.Topic("example", {});
+const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
+    alarmConfiguration: {
+        alarms: ["my-alarm-name"],
+        enabled: true,
+    },
+    appName: exampleApplication.name,
+    autoRollbackConfiguration: {
+        enabled: true,
+        events: ["DEPLOYMENT_FAILURE"],
+    },
+    deploymentGroupName: "example-group",
+    ec2TagSets: [{
+        ec2TagFilters: [
+            {
+                key: "filterkey1",
+                type: "KEY_AND_VALUE",
+                value: "filtervalue",
+            },
+            {
+                key: "filterkey2",
+                type: "KEY_AND_VALUE",
+                value: "filtervalue",
+            },
+        ],
+    }],
+    serviceRoleArn: exampleRole.arn,
+    triggerConfigurations: [{
+        triggerEvents: ["DeploymentFailure"],
+        triggerName: "example-trigger",
+        triggerTargetArn: exampleTopic.arn,
+    }],
+});
+const aWSCodeDeployRole = new aws.iam.RolePolicyAttachment("AWSCodeDeployRole", {
+    policyArn: "arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole",
+    role: exampleRole.name,
+});
+```
+
+### Blue Green Deployments with ECS
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleApplication = new aws.codedeploy.Application("example", {
+    computePlatform: "ECS",
+});
+const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
+    appName: exampleApplication.name,
+    autoRollbackConfiguration: {
+        enabled: true,
+        events: ["DEPLOYMENT_FAILURE"],
+    },
+    blueGreenDeploymentConfig: {
+        deploymentReadyOption: {
+            actionOnTimeout: "CONTINUE_DEPLOYMENT",
+        },
+        terminateBlueInstancesOnDeploymentSuccess: {
+            action: "TERMINATE",
+            terminationWaitTimeInMinutes: 5,
+        },
+    },
+    deploymentConfigName: "CodeDeployDefault.ECSAllAtOnce",
+    deploymentGroupName: "example",
+    deploymentStyle: {
+        deploymentOption: "WITH_TRAFFIC_CONTROL",
+        deploymentType: "BLUE_GREEN",
+    },
+    ecsService: {
+        clusterName: aws_ecs_cluster_example.name,
+        serviceName: aws_ecs_service_example.name,
+    },
+    loadBalancerInfo: {
+        targetGroupPairInfo: {
+            prodTrafficRoute: {
+                listenerArns: [aws_lb_listener_example.arn],
+            },
+            targetGroups: [
+                {
+                    name: aws_lb_target_group_blue.name,
+                },
+                {
+                    name: aws_lb_target_group_green.name,
+                },
+            ],
+        },
+    },
+    serviceRoleArn: aws_iam_role_example.arn,
+});
+```
+
+### Blue Green Deployments with Servers and Classic ELB
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleApplication = new aws.codedeploy.Application("example", {});
+const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
+    appName: exampleApplication.name,
+    blueGreenDeploymentConfig: {
+        deploymentReadyOption: {
+            actionOnTimeout: "STOP_DEPLOYMENT",
+            waitTimeInMinutes: 60,
+        },
+        greenFleetProvisioningOption: {
+            action: "DISCOVER_EXISTING",
+        },
+        terminateBlueInstancesOnDeploymentSuccess: {
+            action: "KEEP_ALIVE",
+        },
+    },
+    deploymentGroupName: "example-group",
+    deploymentStyle: {
+        deploymentOption: "WITH_TRAFFIC_CONTROL",
+        deploymentType: "BLUE_GREEN",
+    },
+    loadBalancerInfo: {
+        elbInfos: [{
+            name: aws_elb_example.name,
+        }],
+    },
+    serviceRoleArn: aws_iam_role_example.arn,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_group.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L250"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -458,7 +612,7 @@ Create a DeploymentGroup resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L173">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -472,7 +626,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -482,7 +636,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L184">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -496,7 +650,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-alarmConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L40">property <b>alarmConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L194">property <b>alarmConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>alarmConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -511,7 +665,7 @@ Configuration block of alarms associated with the deployment group (documented b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-appName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L44">property <b>appName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L198">property <b>appName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -522,7 +676,7 @@ The name of the application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-autoRollbackConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L48">property <b>autoRollbackConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L202">property <b>autoRollbackConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>autoRollbackConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -536,7 +690,7 @@ Configuration block of the automatic rollback configuration associated with the 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-autoscalingGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L52">property <b>autoscalingGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L206">property <b>autoscalingGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>autoscalingGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -547,7 +701,7 @@ Autoscaling groups associated with the deployment group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-blueGreenDeploymentConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L56">property <b>blueGreenDeploymentConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L210">property <b>blueGreenDeploymentConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>blueGreenDeploymentConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -570,7 +724,7 @@ Configuration block of the blue/green deployment options for a deployment group 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-deploymentConfigName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L60">property <b>deploymentConfigName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L214">property <b>deploymentConfigName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>deploymentConfigName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -581,7 +735,7 @@ The name of the group's deployment config. The default is "CodeDeployDefault.One
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-deploymentGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L64">property <b>deploymentGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L218">property <b>deploymentGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>deploymentGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -592,7 +746,7 @@ The name of the deployment group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-deploymentStyle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L68">property <b>deploymentStyle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L222">property <b>deploymentStyle</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>deploymentStyle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -606,7 +760,7 @@ Configuration block of the type of deployment, either in-place or blue/green, yo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-ec2TagFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L72">property <b>ec2TagFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L226">property <b>ec2TagFilters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ec2TagFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -621,7 +775,7 @@ Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-ec2TagSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L76">property <b>ec2TagSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L230">property <b>ec2TagSets</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ec2TagSets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -638,7 +792,7 @@ Configuration block(s) of Tag filters associated with the deployment group, whic
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-ecsService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L80">property <b>ecsService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L234">property <b>ecsService</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ecsService: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -652,7 +806,7 @@ Configuration block(s) of the ECS services for a deployment group (documented be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L212">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -664,7 +818,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-loadBalancerInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L84">property <b>loadBalancerInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L238">property <b>loadBalancerInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>loadBalancerInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -693,7 +847,7 @@ Single configuration block of the load balancer to use in a blue/green deploymen
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-onPremisesInstanceTagFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L88">property <b>onPremisesInstanceTagFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L242">property <b>onPremisesInstanceTagFilters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>onPremisesInstanceTagFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -708,7 +862,7 @@ On premise tag filters associated with the group. See the AWS docs for details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-serviceRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L92">property <b>serviceRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L246">property <b>serviceRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serviceRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -719,7 +873,7 @@ The service role ARN that allows deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-triggerConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L96">property <b>triggerConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L250">property <b>triggerConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>triggerConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -734,7 +888,7 @@ Configuration block(s) of the triggers for the deployment group (documented belo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -747,7 +901,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/application.ts#L134">interface <b>ApplicationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/application.ts#L134">interface <b>ApplicationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -756,7 +910,7 @@ The set of arguments for constructing a Application resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationArgs-computePlatform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/application.ts#L138">property <b>computePlatform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/application.ts#L138">property <b>computePlatform</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>computePlatform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -767,7 +921,7 @@ The compute platform can either be `ECS`, `Lambda`, or `Server`. Default is `Ser
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/application.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/application.ts#L142">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -778,7 +932,7 @@ The name of the application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/application.ts#L143">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/application.ts#L143">property <b>uniqueId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uniqueId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -787,7 +941,7 @@ The name of the application.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/application.ts#L119">interface <b>ApplicationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/application.ts#L119">interface <b>ApplicationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -796,7 +950,7 @@ Input properties used for looking up and filtering Application resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationState-computePlatform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/application.ts#L123">property <b>computePlatform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/application.ts#L123">property <b>computePlatform</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>computePlatform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -807,7 +961,7 @@ The compute platform can either be `ECS`, `Lambda`, or `Server`. Default is `Ser
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/application.ts#L127">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/application.ts#L127">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -818,7 +972,7 @@ The name of the application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/application.ts#L128">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/application.ts#L128">property <b>uniqueId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>uniqueId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -827,7 +981,7 @@ The name of the application.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeploymentConfigArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L202">interface <b>DeploymentConfigArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L202">interface <b>DeploymentConfigArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -836,7 +990,7 @@ The set of arguments for constructing a DeploymentConfig resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentConfigArgs-computePlatform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L206">property <b>computePlatform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L206">property <b>computePlatform</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>computePlatform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -847,7 +1001,7 @@ The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfigArgs-deploymentConfigName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L210">property <b>deploymentConfigName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L210">property <b>deploymentConfigName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deploymentConfigName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -858,7 +1012,7 @@ The name of the deployment config.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfigArgs-minimumHealthyHosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L214">property <b>minimumHealthyHosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L214">property <b>minimumHealthyHosts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minimumHealthyHosts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -867,12 +1021,12 @@ The name of the deployment config.
 }&gt;;</pre>
 {{% md %}}
 
-A minimum_healthy_hosts block. Minimum Healthy Hosts are documented below.
+A minimumHealthyHosts block. Minimum Healthy Hosts are documented below.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfigArgs-trafficRoutingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L218">property <b>trafficRoutingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L218">property <b>trafficRoutingConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>trafficRoutingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -888,13 +1042,13 @@ A minimum_healthy_hosts block. Minimum Healthy Hosts are documented below.
 }&gt;;</pre>
 {{% md %}}
 
-A traffic_routing_config block. Traffic Routing Config is documented below.
+A trafficRoutingConfig block. Traffic Routing Config is documented below.
 
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeploymentConfigState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L176">interface <b>DeploymentConfigState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L176">interface <b>DeploymentConfigState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -903,7 +1057,7 @@ Input properties used for looking up and filtering DeploymentConfig resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentConfigState-computePlatform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L180">property <b>computePlatform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L180">property <b>computePlatform</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>computePlatform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -914,7 +1068,7 @@ The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfigState-deploymentConfigId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L184">property <b>deploymentConfigId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L184">property <b>deploymentConfigId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deploymentConfigId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -925,7 +1079,7 @@ The AWS Assigned deployment config id
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfigState-deploymentConfigName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L188">property <b>deploymentConfigName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L188">property <b>deploymentConfigName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deploymentConfigName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -936,7 +1090,7 @@ The name of the deployment config.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfigState-minimumHealthyHosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L192">property <b>minimumHealthyHosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L192">property <b>minimumHealthyHosts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minimumHealthyHosts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -945,12 +1099,12 @@ The name of the deployment config.
 }&gt;;</pre>
 {{% md %}}
 
-A minimum_healthy_hosts block. Minimum Healthy Hosts are documented below.
+A minimumHealthyHosts block. Minimum Healthy Hosts are documented below.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentConfigState-trafficRoutingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentConfig.ts#L196">property <b>trafficRoutingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentConfig.ts#L196">property <b>trafficRoutingConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>trafficRoutingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -966,13 +1120,13 @@ A minimum_healthy_hosts block. Minimum Healthy Hosts are documented below.
 }&gt;;</pre>
 {{% md %}}
 
-A traffic_routing_config block. Traffic Routing Config is documented below.
+A trafficRoutingConfig block. Traffic Routing Config is documented below.
 
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeploymentGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L232">interface <b>DeploymentGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L386">interface <b>DeploymentGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -981,7 +1135,7 @@ The set of arguments for constructing a DeploymentGroup resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentGroupArgs-alarmConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L236">property <b>alarmConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L390">property <b>alarmConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>alarmConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -996,7 +1150,7 @@ Configuration block of alarms associated with the deployment group (documented b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupArgs-appName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L240">property <b>appName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L394">property <b>appName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1007,7 +1161,7 @@ The name of the application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupArgs-autoRollbackConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L244">property <b>autoRollbackConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L398">property <b>autoRollbackConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>autoRollbackConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1021,7 +1175,7 @@ Configuration block of the automatic rollback configuration associated with the 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupArgs-autoscalingGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L248">property <b>autoscalingGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L402">property <b>autoscalingGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>autoscalingGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1032,7 +1186,7 @@ Autoscaling groups associated with the deployment group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupArgs-blueGreenDeploymentConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L252">property <b>blueGreenDeploymentConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L406">property <b>blueGreenDeploymentConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>blueGreenDeploymentConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1055,7 +1209,7 @@ Configuration block of the blue/green deployment options for a deployment group 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupArgs-deploymentConfigName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L256">property <b>deploymentConfigName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L410">property <b>deploymentConfigName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deploymentConfigName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1066,7 +1220,7 @@ The name of the group's deployment config. The default is "CodeDeployDefault.One
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupArgs-deploymentGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L260">property <b>deploymentGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L414">property <b>deploymentGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deploymentGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1077,7 +1231,7 @@ The name of the deployment group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupArgs-deploymentStyle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L264">property <b>deploymentStyle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L418">property <b>deploymentStyle</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deploymentStyle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1091,7 +1245,7 @@ Configuration block of the type of deployment, either in-place or blue/green, yo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupArgs-ec2TagFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L268">property <b>ec2TagFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L422">property <b>ec2TagFilters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ec2TagFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1106,7 +1260,7 @@ Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupArgs-ec2TagSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L272">property <b>ec2TagSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L426">property <b>ec2TagSets</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ec2TagSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1123,7 +1277,7 @@ Configuration block(s) of Tag filters associated with the deployment group, whic
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupArgs-ecsService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L276">property <b>ecsService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L430">property <b>ecsService</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ecsService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1137,7 +1291,7 @@ Configuration block(s) of the ECS services for a deployment group (documented be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupArgs-loadBalancerInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L280">property <b>loadBalancerInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L434">property <b>loadBalancerInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadBalancerInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1166,7 +1320,7 @@ Single configuration block of the load balancer to use in a blue/green deploymen
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupArgs-onPremisesInstanceTagFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L284">property <b>onPremisesInstanceTagFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L438">property <b>onPremisesInstanceTagFilters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>onPremisesInstanceTagFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1181,7 +1335,7 @@ On premise tag filters associated with the group. See the AWS docs for details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupArgs-serviceRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L288">property <b>serviceRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L442">property <b>serviceRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1192,7 +1346,7 @@ The service role ARN that allows deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupArgs-triggerConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L292">property <b>triggerConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L446">property <b>triggerConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>triggerConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1208,7 +1362,7 @@ Configuration block(s) of the triggers for the deployment group (documented belo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeploymentGroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L166">interface <b>DeploymentGroupState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L320">interface <b>DeploymentGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1217,7 +1371,7 @@ Input properties used for looking up and filtering DeploymentGroup resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentGroupState-alarmConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L170">property <b>alarmConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L324">property <b>alarmConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>alarmConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1232,7 +1386,7 @@ Configuration block of alarms associated with the deployment group (documented b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupState-appName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L174">property <b>appName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L328">property <b>appName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1243,7 +1397,7 @@ The name of the application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupState-autoRollbackConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L178">property <b>autoRollbackConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L332">property <b>autoRollbackConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>autoRollbackConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1257,7 +1411,7 @@ Configuration block of the automatic rollback configuration associated with the 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupState-autoscalingGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L182">property <b>autoscalingGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L336">property <b>autoscalingGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>autoscalingGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1268,7 +1422,7 @@ Autoscaling groups associated with the deployment group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupState-blueGreenDeploymentConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L186">property <b>blueGreenDeploymentConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L340">property <b>blueGreenDeploymentConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>blueGreenDeploymentConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1291,7 +1445,7 @@ Configuration block of the blue/green deployment options for a deployment group 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupState-deploymentConfigName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L190">property <b>deploymentConfigName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L344">property <b>deploymentConfigName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deploymentConfigName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1302,7 +1456,7 @@ The name of the group's deployment config. The default is "CodeDeployDefault.One
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupState-deploymentGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L194">property <b>deploymentGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L348">property <b>deploymentGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deploymentGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1313,7 +1467,7 @@ The name of the deployment group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupState-deploymentStyle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L198">property <b>deploymentStyle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L352">property <b>deploymentStyle</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deploymentStyle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1327,7 +1481,7 @@ Configuration block of the type of deployment, either in-place or blue/green, yo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupState-ec2TagFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L202">property <b>ec2TagFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L356">property <b>ec2TagFilters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ec2TagFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1342,7 +1496,7 @@ Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupState-ec2TagSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L206">property <b>ec2TagSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L360">property <b>ec2TagSets</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ec2TagSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1359,7 +1513,7 @@ Configuration block(s) of Tag filters associated with the deployment group, whic
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupState-ecsService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L210">property <b>ecsService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L364">property <b>ecsService</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ecsService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1373,7 +1527,7 @@ Configuration block(s) of the ECS services for a deployment group (documented be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupState-loadBalancerInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L214">property <b>loadBalancerInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L368">property <b>loadBalancerInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loadBalancerInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1402,7 +1556,7 @@ Single configuration block of the load balancer to use in a blue/green deploymen
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupState-onPremisesInstanceTagFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L218">property <b>onPremisesInstanceTagFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L372">property <b>onPremisesInstanceTagFilters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>onPremisesInstanceTagFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1417,7 +1571,7 @@ On premise tag filters associated with the group. See the AWS docs for details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupState-serviceRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L222">property <b>serviceRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L376">property <b>serviceRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1428,7 +1582,7 @@ The service role ARN that allows deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentGroupState-triggerConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/083c096292d6f0305fe1923ab8857d46f2d7cea5/sdk/nodejs/codedeploy/deploymentGroup.ts#L226">property <b>triggerConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6597a59b9b5c887a5484c3c3198182fbd205f368/sdk/nodejs/codedeploy/deploymentGroup.ts#L380">property <b>triggerConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>triggerConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{

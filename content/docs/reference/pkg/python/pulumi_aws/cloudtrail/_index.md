@@ -9,6 +9,11 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.cloudtrail"></span><dl class="class">
+<dt id="pulumi_aws.cloudtrail.AwaitableGetServiceAccountResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudtrail.</code><code class="descname">AwaitableGetServiceAccountResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudtrail.AwaitableGetServiceAccountResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.cloudtrail.GetServiceAccountResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.cloudtrail.</code><code class="descname">GetServiceAccountResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudtrail.GetServiceAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServiceAccount.</p>
@@ -28,7 +33,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_aws.cloudtrail.Trail">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudtrail.</code><code class="descname">Trail</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cloud_watch_logs_group_arn=None</em>, <em>cloud_watch_logs_role_arn=None</em>, <em>enable_log_file_validation=None</em>, <em>enable_logging=None</em>, <em>event_selectors=None</em>, <em>include_global_service_events=None</em>, <em>is_multi_region_trail=None</em>, <em>is_organization_trail=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>s3_bucket_name=None</em>, <em>s3_key_prefix=None</em>, <em>sns_topic_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudtrail.Trail" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudtrail.</code><code class="descname">Trail</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cloud_watch_logs_group_arn=None</em>, <em>cloud_watch_logs_role_arn=None</em>, <em>enable_log_file_validation=None</em>, <em>enable_logging=None</em>, <em>event_selectors=None</em>, <em>include_global_service_events=None</em>, <em>is_multi_region_trail=None</em>, <em>is_organization_trail=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>s3_bucket_name=None</em>, <em>s3_key_prefix=None</em>, <em>sns_topic_name=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudtrail.Trail" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudTrail resource.</p>
 <blockquote>
 <div><p><em>NOTE:</em> For a multi-region trail, this resource must be in the home region of the trail.</p>
@@ -172,6 +177,54 @@ defined for notification of log file delivery.</p>
 <dt id="pulumi_aws.cloudtrail.Trail.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudtrail.Trail.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the trail</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.cloudtrail.Trail.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>cloud_watch_logs_group_arn=None</em>, <em>cloud_watch_logs_role_arn=None</em>, <em>enable_log_file_validation=None</em>, <em>enable_logging=None</em>, <em>event_selectors=None</em>, <em>home_region=None</em>, <em>include_global_service_events=None</em>, <em>is_multi_region_trail=None</em>, <em>is_organization_trail=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>s3_bucket_name=None</em>, <em>s3_key_prefix=None</em>, <em>sns_topic_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudtrail.Trail.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Trail resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The Amazon Resource Name of the trail.
+:param pulumi.Input[str] cloud_watch_logs_group_arn: Specifies a log group name using an Amazon Resource Name (ARN),</p>
+<blockquote>
+<div>that represents the log group to which CloudTrail logs will be delivered.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cloud_watch_logs_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the role for the CloudWatch Logs
+endpoint to assume to write to a user’s log group.</li>
+<li><strong>enable_log_file_validation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether log file integrity validation is enabled.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>enable_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables logging for the trail. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+Setting this to <code class="docutils literal notranslate"><span class="pre">false</span></code> will pause logging.</li>
+<li><strong>event_selectors</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Specifies an event selector for enabling data event logging. Fields documented below. Please note the <a class="reference external" href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">CloudTrail limits</a> when configuring these.</p>
+</li>
+<li><strong>home_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which the trail was created.</li>
+<li><strong>include_global_service_events</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the trail is publishing events
+from global services such as IAM to the log files. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
+<li><strong>is_multi_region_trail</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the trail is created in the current
+region or in all regions. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>is_organization_trail</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the trail is an AWS Organizations trail. Organization trails log events for the master account and all member accounts. Can only be created in the organization master account. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the KMS key ARN to use to encrypt the logs delivered by CloudTrail.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the trail.</li>
+<li><strong>s3_bucket_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the S3 bucket designated for publishing log files.</li>
+<li><strong>s3_key_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the S3 key prefix that follows
+the name of the bucket you have designated for log file delivery.</li>
+<li><strong>sns_topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Amazon SNS topic
+defined for notification of log file delivery.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the trail</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudtrail.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudtrail.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

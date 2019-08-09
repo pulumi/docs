@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.mediastore"></span><dl class="class">
 <dt id="pulumi_aws.mediastore.Container">
-<em class="property">class </em><code class="descclassname">pulumi_aws.mediastore.</code><code class="descname">Container</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediastore.Container" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.mediastore.</code><code class="descname">Container</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediastore.Container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a MediaStore Container.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -50,6 +50,22 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.mediastore.Container.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mediastore.Container.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.mediastore.Container.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>endpoint=None</em>, <em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediastore.Container.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Container resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the container.
+:param pulumi.Input[str] endpoint: The DNS endpoint of the container.
+:param pulumi.Input[str] name: The name of the container. Must contain alphanumeric characters or underscores.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/media_store_container.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/media_store_container.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -94,7 +110,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.mediastore.ContainerPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.mediastore.</code><code class="descname">ContainerPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_name=None</em>, <em>policy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediastore.ContainerPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.mediastore.</code><code class="descname">ContainerPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_name=None</em>, <em>policy=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediastore.ContainerPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a MediaStore Container Policy.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -104,6 +120,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>container_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the container.</li>
+<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of the policy.</li>
 </ul>
 </td>
 </tr>
@@ -115,6 +132,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.mediastore.ContainerPolicy.container_name">
 <code class="descname">container_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mediastore.ContainerPolicy.container_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the container.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.mediastore.ContainerPolicy.policy">
+<code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mediastore.ContainerPolicy.policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The contents of the policy.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.mediastore.ContainerPolicy.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>container_name=None</em>, <em>policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediastore.ContainerPolicy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ContainerPolicy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] container_name: The name of the container.
+:param pulumi.Input[str] policy: The contents of the policy.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/media_store_container_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/media_store_container_policy.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

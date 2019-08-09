@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.sfn"></span><dl class="class">
 <dt id="pulumi_aws.sfn.Activity">
-<em class="property">class </em><code class="descclassname">pulumi_aws.sfn.</code><code class="descname">Activity</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.Activity" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.sfn.</code><code class="descname">Activity</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.Activity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Step Function Activity resource</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -44,6 +44,21 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.sfn.Activity.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sfn.Activity.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Key-value mapping of resource tags</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.sfn.Activity.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>creation_date=None</em>, <em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.Activity.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Activity resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] creation_date: The date the activity was created.
+:param pulumi.Input[str] name: The name of the activity to create.
+:param pulumi.Input[dict] tags: Key-value mapping of resource tags</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sfn_activity.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sfn_activity.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -88,7 +103,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.sfn.StateMachine">
-<em class="property">class </em><code class="descclassname">pulumi_aws.sfn.</code><code class="descname">StateMachine</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>definition=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.StateMachine" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.sfn.</code><code class="descname">StateMachine</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>definition=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.StateMachine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Step Function State Machine resource</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -142,6 +157,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.sfn.StateMachine.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sfn.StateMachine.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Key-value mapping of resource tags</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.sfn.StateMachine.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>creation_date=None</em>, <em>definition=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>status=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sfn.StateMachine.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing StateMachine resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] creation_date: The date the state machine was created.
+:param pulumi.Input[str] definition: The Amazon States Language definition of the state machine.
+:param pulumi.Input[str] name: The name of the state machine.
+:param pulumi.Input[str] role_arn: The Amazon Resource Name (ARN) of the IAM role to use for this state machine.
+:param pulumi.Input[str] status: The current status of the state machine. Either “ACTIVE” or “DELETING”.
+:param pulumi.Input[dict] tags: Key-value mapping of resource tags</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sfn_state_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sfn_state_machine.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

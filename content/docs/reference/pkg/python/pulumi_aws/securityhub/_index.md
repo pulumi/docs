@@ -10,8 +10,12 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.securityhub"></span><dl class="class">
 <dt id="pulumi_aws.securityhub.Account">
-<em class="property">class </em><code class="descclassname">pulumi_aws.securityhub.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.Account" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Account resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.securityhub.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.Account" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables Security Hub for this AWS account.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Destroying this resource will disable Security Hub for this AWS account.</p>
+<p><strong>NOTE:</strong> This AWS service is in Preview and may change before General Availability release. Backwards compatibility is not guaranteed between AWS Provider releases.</p>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -26,6 +30,18 @@ anything, please consult the source <a class="reference external" href="https://
 </table>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/securityhub_account.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/securityhub_account.html.markdown</a>.</div></blockquote>
+<dl class="staticmethod">
+<dt id="pulumi_aws.securityhub.Account.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.Account.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Account resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/securityhub_account.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/securityhub_account.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.securityhub.Account.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.Account.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -68,8 +84,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.securityhub.ProductSubscription">
-<em class="property">class </em><code class="descclassname">pulumi_aws.securityhub.</code><code class="descname">ProductSubscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>product_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.ProductSubscription" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ProductSubscription resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.securityhub.</code><code class="descname">ProductSubscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>product_arn=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.ProductSubscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscribes to a Security Hub product.</p>
+<blockquote>
+<div><strong>NOTE:</strong> This AWS service is in Preview and may change before General Availability release. Backwards compatibility is not guaranteed between AWS Provider releases.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -95,6 +113,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.securityhub.ProductSubscription.product_arn">
 <code class="descname">product_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.securityhub.ProductSubscription.product_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the product that generates findings that you want to import into Security Hub - see below.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.securityhub.ProductSubscription.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>product_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.ProductSubscription.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ProductSubscription resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of a resource that represents your subscription to the product that generates the findings that you want to import into Security Hub.
+:param pulumi.Input[str] product_arn: The ARN of the product that generates findings that you want to import into Security Hub - see below.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/securityhub_product_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/securityhub_product_subscription.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -139,8 +171,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.securityhub.StandardsSubscription">
-<em class="property">class </em><code class="descclassname">pulumi_aws.securityhub.</code><code class="descname">StandardsSubscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>standards_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.StandardsSubscription" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a StandardsSubscription resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.securityhub.</code><code class="descname">StandardsSubscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>standards_arn=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.StandardsSubscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscribes to a Security Hub standard.</p>
+<blockquote>
+<div><strong>NOTE:</strong> This AWS service is in Preview and may change before General Availability release. Backwards compatibility is not guaranteed between AWS Provider releases.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -160,6 +194,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.securityhub.StandardsSubscription.standards_arn">
 <code class="descname">standards_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.securityhub.StandardsSubscription.standards_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of a standard - see below.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.securityhub.StandardsSubscription.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>standards_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.StandardsSubscription.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing StandardsSubscription resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] standards_arn: The ARN of a standard - see below.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/securityhub_standards_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/securityhub_standards_subscription.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

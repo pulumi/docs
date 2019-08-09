@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.worklink"></span><dl class="class">
 <dt id="pulumi_aws.worklink.Fleet">
-<em class="property">class </em><code class="descclassname">pulumi_aws.worklink.</code><code class="descname">Fleet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>audit_stream_arn=None</em>, <em>device_ca_certificate=None</em>, <em>display_name=None</em>, <em>identity_provider=None</em>, <em>name=None</em>, <em>network=None</em>, <em>optimize_for_end_user_location=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.worklink.Fleet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.worklink.</code><code class="descname">Fleet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>audit_stream_arn=None</em>, <em>device_ca_certificate=None</em>, <em>display_name=None</em>, <em>identity_provider=None</em>, <em>name=None</em>, <em>network=None</em>, <em>optimize_for_end_user_location=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.worklink.Fleet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Fleet resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -99,6 +99,29 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.worklink.Fleet.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>audit_stream_arn=None</em>, <em>company_code=None</em>, <em>created_time=None</em>, <em>device_ca_certificate=None</em>, <em>display_name=None</em>, <em>identity_provider=None</em>, <em>last_updated_time=None</em>, <em>name=None</em>, <em>network=None</em>, <em>optimize_for_end_user_location=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.worklink.Fleet.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Fleet resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the created WorkLink Fleet.
+:param pulumi.Input[str] audit_stream_arn: The ARN of the Amazon Kinesis data stream that receives the audit events.
+:param pulumi.Input[str] company_code: The identifier used by users to sign in to the Amazon WorkLink app.
+:param pulumi.Input[str] created_time: The time that the fleet was created.
+:param pulumi.Input[str] device_ca_certificate: The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.
+:param pulumi.Input[str] display_name: The name of the fleet.
+:param pulumi.Input[dict] identity_provider: Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
+:param pulumi.Input[str] last_updated_time: The time that the fleet was last updated.
+:param pulumi.Input[str] name: A region-unique name for the AMI.
+:param pulumi.Input[dict] network: Provide this to allow manage the company network configuration for the fleet. Fields documented below.
+:param pulumi.Input[bool] optimize_for_end_user_location: The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/worklink_fleet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/worklink_fleet.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.worklink.Fleet.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.worklink.Fleet.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -141,7 +164,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.worklink.</code><code class="descname">WebsiteCertificateAuthorityAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate=None</em>, <em>display_name=None</em>, <em>fleet_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.worklink.</code><code class="descname">WebsiteCertificateAuthorityAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate=None</em>, <em>display_name=None</em>, <em>fleet_arn=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a WebsiteCertificateAuthorityAssociation resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -182,6 +205,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.website_ca_id">
 <code class="descname">website_ca_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.website_ca_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>A unique identifier for the Certificate Authority.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>certificate=None</em>, <em>display_name=None</em>, <em>fleet_arn=None</em>, <em>website_ca_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing WebsiteCertificateAuthorityAssociation resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] certificate: The root certificate of the Certificate Authority.
+:param pulumi.Input[str] display_name: The certificate name to display.
+:param pulumi.Input[str] fleet_arn: The ARN of the fleet.
+:param pulumi.Input[str] website_ca_id: A unique identifier for the Certificate Authority.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/worklink_website_certificate_authority_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/worklink_website_certificate_authority_association.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

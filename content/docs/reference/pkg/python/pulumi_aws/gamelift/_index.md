@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.gamelift"></span><dl class="class">
 <dt id="pulumi_aws.gamelift.Alias">
-<em class="property">class </em><code class="descclassname">pulumi_aws.gamelift.</code><code class="descname">Alias</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>routing_strategy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Alias" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.gamelift.</code><code class="descname">Alias</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>routing_strategy=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Alias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Gamelift Alias resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -51,6 +51,22 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.gamelift.Alias.routing_strategy">
 <code class="descname">routing_strategy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Alias.routing_strategy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the fleet and/or routing type to use for the alias.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.gamelift.Alias.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>description=None</em>, <em>name=None</em>, <em>routing_strategy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Alias.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Alias resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: Alias ARN.
+:param pulumi.Input[str] description: Description of the alias.
+:param pulumi.Input[str] name: Name of the alias.
+:param pulumi.Input[dict] routing_strategy: Specifies the fleet and/or routing type to use for the alias.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/gamelift_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/gamelift_alias.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -95,7 +111,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.gamelift.Build">
-<em class="property">class </em><code class="descclassname">pulumi_aws.gamelift.</code><code class="descname">Build</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>operating_system=None</em>, <em>storage_location=None</em>, <em>version=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Build" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.gamelift.</code><code class="descname">Build</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>operating_system=None</em>, <em>storage_location=None</em>, <em>version=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Build" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Gamelift Build resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -137,6 +153,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.gamelift.Build.version">
 <code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.Build.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Version that is associated with this build.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.gamelift.Build.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>name=None</em>, <em>operating_system=None</em>, <em>storage_location=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Build.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Build resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] name: Name of the build
+:param pulumi.Input[str] operating_system: Operating system that the game server binaries are built to run on. e.g. <code class="docutils literal notranslate"><span class="pre">WINDOWS_2012</span></code> or <code class="docutils literal notranslate"><span class="pre">AMAZON_LINUX</span></code>.
+:param pulumi.Input[dict] storage_location: Information indicating where your game build files are stored. See below.
+:param pulumi.Input[str] version: Version that is associated with this build.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/gamelift_build.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/gamelift_build.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -181,7 +213,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.gamelift.Fleet">
-<em class="property">class </em><code class="descclassname">pulumi_aws.gamelift.</code><code class="descname">Fleet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>build_id=None</em>, <em>description=None</em>, <em>ec2_inbound_permissions=None</em>, <em>ec2_instance_type=None</em>, <em>metric_groups=None</em>, <em>name=None</em>, <em>new_game_session_protection_policy=None</em>, <em>resource_creation_limit_policy=None</em>, <em>runtime_configuration=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.gamelift.</code><code class="descname">Fleet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>build_id=None</em>, <em>description=None</em>, <em>ec2_inbound_permissions=None</em>, <em>ec2_instance_type=None</em>, <em>metric_groups=None</em>, <em>name=None</em>, <em>new_game_session_protection_policy=None</em>, <em>resource_creation_limit_policy=None</em>, <em>runtime_configuration=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Gamelift Fleet resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -272,6 +304,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Instructions for launching server processes on each instance in the fleet. See below.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.gamelift.Fleet.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>build_id=None</em>, <em>description=None</em>, <em>ec2_inbound_permissions=None</em>, <em>ec2_instance_type=None</em>, <em>log_paths=None</em>, <em>metric_groups=None</em>, <em>name=None</em>, <em>new_game_session_protection_policy=None</em>, <em>operating_system=None</em>, <em>resource_creation_limit_policy=None</em>, <em>runtime_configuration=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Fleet resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: Fleet ARN.
+:param pulumi.Input[str] build_id: ID of the Gamelift Build to be deployed on the fleet.
+:param pulumi.Input[str] description: Human-readable description of the fleet.
+:param pulumi.Input[list] ec2_inbound_permissions: Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
+:param pulumi.Input[str] ec2_instance_type: Name of an EC2 instance type. e.g. <code class="docutils literal notranslate"><span class="pre">t2.micro</span></code>
+:param pulumi.Input[list] metric_groups: List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to <code class="docutils literal notranslate"><span class="pre">default</span></code>.
+:param pulumi.Input[str] name: The name of the fleet.
+:param pulumi.Input[str] new_game_session_protection_policy: Game session protection policy to apply to all instances in this fleet. e.g. <code class="docutils literal notranslate"><span class="pre">FullProtection</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">NoProtection</span></code>.
+:param pulumi.Input[str] operating_system: Operating system of the fleet’s computing resources.
+:param pulumi.Input[dict] resource_creation_limit_policy: Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
+:param pulumi.Input[dict] runtime_configuration: Instructions for launching server processes on each instance in the fleet. See below.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/gamelift_fleet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/gamelift_fleet.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.gamelift.Fleet.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -314,7 +369,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.gamelift.GameSessionQueue">
-<em class="property">class </em><code class="descclassname">pulumi_aws.gamelift.</code><code class="descname">GameSessionQueue</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destinations=None</em>, <em>name=None</em>, <em>player_latency_policies=None</em>, <em>timeout_in_seconds=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.gamelift.</code><code class="descname">GameSessionQueue</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destinations=None</em>, <em>name=None</em>, <em>player_latency_policies=None</em>, <em>timeout_in_seconds=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Gamelift Game Session Queue resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -362,6 +417,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.gamelift.GameSessionQueue.timeout_in_seconds">
 <code class="descname">timeout_in_seconds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.timeout_in_seconds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximum time a game session request can remain in the queue.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.gamelift.GameSessionQueue.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>destinations=None</em>, <em>name=None</em>, <em>player_latency_policies=None</em>, <em>timeout_in_seconds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing GameSessionQueue resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: Game Session Queue ARN.
+:param pulumi.Input[list] destinations: List of fleet/alias ARNs used by session queue for placing game sessions.
+:param pulumi.Input[str] name: Name of the session queue.
+:param pulumi.Input[list] player_latency_policies: One or more policies used to choose fleet based on player latency. See below.
+:param pulumi.Input[float] timeout_in_seconds: Maximum time a game session request can remain in the queue.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/gamelift_game_session_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/gamelift_game_session_queue.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

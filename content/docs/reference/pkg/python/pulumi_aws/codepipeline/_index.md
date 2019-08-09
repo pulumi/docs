@@ -10,10 +10,10 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.codepipeline"></span><dl class="class">
 <dt id="pulumi_aws.codepipeline.Pipeline">
-<em class="property">class </em><code class="descclassname">pulumi_aws.codepipeline.</code><code class="descname">Pipeline</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>artifact_store=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>stages=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codepipeline.Pipeline" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.codepipeline.</code><code class="descname">Pipeline</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>artifact_store=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>stages=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codepipeline.Pipeline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodePipeline.</p>
 <blockquote>
-<div><strong>NOTE on ``aws_codepipeline``:</strong> - the <code class="docutils literal notranslate"><span class="pre">GITHUB_TOKEN</span></code> environment variable must be set if the GitHub provider is specified.</div></blockquote>
+<div><strong>NOTE on ``codepipeline.Pipeline``:</strong> - the <code class="docutils literal notranslate"><span class="pre">GITHUB_TOKEN</span></code> environment variable must be set if the GitHub provider is specified.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -75,6 +75,33 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.codepipeline.Pipeline.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>artifact_store=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>stages=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codepipeline.Pipeline.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Pipeline resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The codepipeline ARN.
+:param pulumi.Input[dict] artifact_store: An artifact_store block. Artifact stores are documented below.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the pipeline.</li>
+<li><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codepipeline.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codepipeline.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.codepipeline.Pipeline.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codepipeline.Pipeline.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -117,7 +144,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.codepipeline.Webhook">
-<em class="property">class </em><code class="descclassname">pulumi_aws.codepipeline.</code><code class="descname">Webhook</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication=None</em>, <em>authentication_configuration=None</em>, <em>filters=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>target_action=None</em>, <em>target_pipeline=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codepipeline.Webhook" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.codepipeline.</code><code class="descname">Webhook</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication=None</em>, <em>authentication_configuration=None</em>, <em>filters=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>target_action=None</em>, <em>target_pipeline=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codepipeline.Webhook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodePipeline Webhook.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -186,6 +213,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.codepipeline.Webhook.url">
 <code class="descname">url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codepipeline.Webhook.url" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CodePipeline webhook’s URL. POST events to this endpoint to trigger the target.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.codepipeline.Webhook.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>authentication=None</em>, <em>authentication_configuration=None</em>, <em>filters=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>target_action=None</em>, <em>target_pipeline=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codepipeline.Webhook.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Webhook resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] authentication: The type of authentication  to use. One of <code class="docutils literal notranslate"><span class="pre">IP</span></code>, <code class="docutils literal notranslate"><span class="pre">GITHUB_HMAC</span></code>, or <code class="docutils literal notranslate"><span class="pre">UNAUTHENTICATED</span></code>.
+:param pulumi.Input[dict] authentication_configuration: An <code class="docutils literal notranslate"><span class="pre">auth</span></code> block. Required for <code class="docutils literal notranslate"><span class="pre">IP</span></code> and <code class="docutils literal notranslate"><span class="pre">GITHUB_HMAC</span></code>. Auth blocks are documented below.
+:param pulumi.Input[list] filters: One or more <code class="docutils literal notranslate"><span class="pre">filter</span></code> blocks. Filter blocks are documented below.
+:param pulumi.Input[str] name: The name of the webhook.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] target_action: The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
+:param pulumi.Input[str] target_pipeline: The name of the pipeline.
+:param pulumi.Input[str] url: The CodePipeline webhook’s URL. POST events to this endpoint to trigger the target.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codepipeline_webhook.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codepipeline_webhook.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

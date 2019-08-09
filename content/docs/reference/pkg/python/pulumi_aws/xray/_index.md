@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.xray"></span><dl class="class">
 <dt id="pulumi_aws.xray.SamplingRule">
-<em class="property">class </em><code class="descclassname">pulumi_aws.xray.</code><code class="descname">SamplingRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attributes=None</em>, <em>fixed_rate=None</em>, <em>host=None</em>, <em>http_method=None</em>, <em>priority=None</em>, <em>reservoir_size=None</em>, <em>resource_arn=None</em>, <em>rule_name=None</em>, <em>service_name=None</em>, <em>service_type=None</em>, <em>url_path=None</em>, <em>version=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.xray.SamplingRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.xray.</code><code class="descname">SamplingRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attributes=None</em>, <em>fixed_rate=None</em>, <em>host=None</em>, <em>http_method=None</em>, <em>priority=None</em>, <em>reservoir_size=None</em>, <em>resource_arn=None</em>, <em>rule_name=None</em>, <em>service_name=None</em>, <em>service_type=None</em>, <em>url_path=None</em>, <em>version=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.xray.SamplingRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates and manages an AWS XRay Sampling Rule.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -114,6 +114,31 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.xray.SamplingRule.version">
 <code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.xray.SamplingRule.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The version of the sampling rule format (<code class="docutils literal notranslate"><span class="pre">1</span></code> )</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.xray.SamplingRule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>attributes=None</em>, <em>fixed_rate=None</em>, <em>host=None</em>, <em>http_method=None</em>, <em>priority=None</em>, <em>reservoir_size=None</em>, <em>resource_arn=None</em>, <em>rule_name=None</em>, <em>service_name=None</em>, <em>service_type=None</em>, <em>url_path=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.xray.SamplingRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SamplingRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the sampling rule.
+:param pulumi.Input[dict] attributes: Matches attributes derived from the request.
+:param pulumi.Input[float] fixed_rate: The percentage of matching requests to instrument, after the reservoir is exhausted.
+:param pulumi.Input[str] host: Matches the hostname from a request URL.
+:param pulumi.Input[str] http_method: Matches the HTTP method of a request.
+:param pulumi.Input[float] priority: The priority of the sampling rule.
+:param pulumi.Input[float] reservoir_size: A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
+:param pulumi.Input[str] resource_arn: Matches the ARN of the AWS resource on which the service runs.
+:param pulumi.Input[str] rule_name: The name of the sampling rule.
+:param pulumi.Input[str] service_name: Matches the <code class="docutils literal notranslate"><span class="pre">name</span></code> that the service uses to identify itself in segments.
+:param pulumi.Input[str] service_type: Matches the <code class="docutils literal notranslate"><span class="pre">origin</span></code> that the service uses to identify its type in segments.
+:param pulumi.Input[str] url_path: Matches the path from a request URL.
+:param pulumi.Input[float] version: The version of the sampling rule format (<code class="docutils literal notranslate"><span class="pre">1</span></code> )</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/xray_sampling_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/xray_sampling_rule.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

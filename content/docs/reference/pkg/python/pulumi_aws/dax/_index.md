@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.dax"></span><dl class="class">
 <dt id="pulumi_aws.dax.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_aws.dax.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zones=None</em>, <em>cluster_name=None</em>, <em>description=None</em>, <em>iam_role_arn=None</em>, <em>maintenance_window=None</em>, <em>node_type=None</em>, <em>notification_topic_arn=None</em>, <em>parameter_group_name=None</em>, <em>replication_factor=None</em>, <em>security_group_ids=None</em>, <em>server_side_encryption=None</em>, <em>subnet_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.dax.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zones=None</em>, <em>cluster_name=None</em>, <em>description=None</em>, <em>iam_role_arn=None</em>, <em>maintenance_window=None</em>, <em>node_type=None</em>, <em>notification_topic_arn=None</em>, <em>parameter_group_name=None</em>, <em>replication_factor=None</em>, <em>security_group_ids=None</em>, <em>server_side_encryption=None</em>, <em>subnet_group_name=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DAX Cluster resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -180,6 +180,65 @@ cluster</p>
 <dd><p>A mapping of tags to assign to the resource</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.dax.Cluster.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>availability_zones=None</em>, <em>cluster_address=None</em>, <em>cluster_name=None</em>, <em>configuration_endpoint=None</em>, <em>description=None</em>, <em>iam_role_arn=None</em>, <em>maintenance_window=None</em>, <em>node_type=None</em>, <em>nodes=None</em>, <em>notification_topic_arn=None</em>, <em>parameter_group_name=None</em>, <em>port=None</em>, <em>replication_factor=None</em>, <em>security_group_ids=None</em>, <em>server_side_encryption=None</em>, <em>subnet_group_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the DAX cluster
+:param pulumi.Input[list] availability_zones: List of Availability Zones in which the</p>
+<blockquote>
+<div>nodes will be created</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cluster_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS name of the DAX cluster without the port appended</li>
+<li><strong>cluster_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Group identifier. DAX converts this name to
+lowercase</li>
+<li><strong>configuration_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The configuration endpoint for this DAX cluster,
+consisting of a DNS name and a port number</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description for the cluster</li>
+<li><strong>iam_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid Amazon Resource Name (ARN) that identifies
+an IAM role. At runtime, DAX will assume this role and use the role’s
+permissions to access DynamoDB on your behalf</li>
+<li><strong>maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the weekly time range for when
+maintenance on the cluster is performed. The format is <code class="docutils literal notranslate"><span class="pre">ddd:hh24:mi-ddd:hh24:mi</span></code>
+(24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
+<code class="docutils literal notranslate"><span class="pre">sun:05:00-sun:09:00</span></code></li>
+<li><strong>node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compute and memory capacity of the nodes. See
+[Nodes][1] for supported node types</li>
+<li><strong>nodes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of node objects including <code class="docutils literal notranslate"><span class="pre">id</span></code>, <code class="docutils literal notranslate"><span class="pre">address</span></code>, <code class="docutils literal notranslate"><span class="pre">port</span></code> and
+<code class="docutils literal notranslate"><span class="pre">availability_zone</span></code>. Referenceable e.g. as
+<code class="docutils literal notranslate"><span class="pre">${aws_dax_cluster.test.nodes.0.address}</span></code></li>
+<li><strong>notification_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An Amazon Resource Name (ARN) of an
+SNS topic to send DAX notifications to. Example:
+<code class="docutils literal notranslate"><span class="pre">arn:aws:sns:us-east-1:012345678999:my_sns_topic</span></code></li>
+<li><strong>parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the parameter group to associate
+with this DAX cluster</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port used by the configuration endpoint</li>
+<li><strong>replication_factor</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes in the DAX cluster. A
+replication factor of 1 will create a single-node cluster, without any read
+replicas</li>
+<li><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more VPC security groups associated
+with the cluster</li>
+<li><strong>server_side_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Encrypt at rest options</li>
+<li><strong>subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the subnet group to be used for the
+cluster</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dax_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dax_cluster.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.dax.Cluster.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.Cluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -222,7 +281,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.dax.ParameterGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.dax.</code><code class="descname">ParameterGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.ParameterGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.dax.</code><code class="descname">ParameterGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.ParameterGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DAX Parameter Group resource.</p>
 <p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> supports the following:</p>
 <ul class="simple">
@@ -262,6 +321,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dax.ParameterGroup.parameters">
 <code class="descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dax.ParameterGroup.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>The parameters of the parameter group.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.dax.ParameterGroup.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>parameters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.ParameterGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ParameterGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: A description of the parameter group.
+:param pulumi.Input[str] name: The name of the parameter group.
+:param pulumi.Input[list] parameters: The parameters of the parameter group.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dax_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dax_parameter_group.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -306,7 +380,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.dax.SubnetGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.dax.</code><code class="descname">SubnetGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>subnet_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.SubnetGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.dax.</code><code class="descname">SubnetGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>subnet_ids=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.SubnetGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DAX Subnet Group resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -347,6 +421,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dax.SubnetGroup.vpc_id">
 <code class="descname">vpc_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dax.SubnetGroup.vpc_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>VPC ID of the subnet group.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.dax.SubnetGroup.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>subnet_ids=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.SubnetGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SubnetGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: A description of the subnet group.
+:param pulumi.Input[str] name: The name of the subnet group.
+:param pulumi.Input[list] subnet_ids: A list of VPC subnet IDs for the subnet group.
+:param pulumi.Input[str] vpc_id: VPC ID of the subnet group.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dax_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dax_subnet_group.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

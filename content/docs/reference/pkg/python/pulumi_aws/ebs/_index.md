@@ -9,13 +9,38 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.ebs"></span><dl class="class">
+<dt id="pulumi_aws.ebs.AwaitableGetDefaultKmsKeyResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">AwaitableGetDefaultKmsKeyResult</code><span class="sig-paren">(</span><em>key_arn=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.AwaitableGetDefaultKmsKeyResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ebs.AwaitableGetEncryptionByDefaultResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">AwaitableGetEncryptionByDefaultResult</code><span class="sig-paren">(</span><em>enabled=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.AwaitableGetEncryptionByDefaultResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ebs.AwaitableGetSnapshotIdsResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">AwaitableGetSnapshotIdsResult</code><span class="sig-paren">(</span><em>filters=None</em>, <em>ids=None</em>, <em>owners=None</em>, <em>restorable_by_user_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.AwaitableGetSnapshotIdsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ebs.AwaitableGetSnapshotResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">AwaitableGetSnapshotResult</code><span class="sig-paren">(</span><em>data_encryption_key_id=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>filters=None</em>, <em>kms_key_id=None</em>, <em>most_recent=None</em>, <em>owner_alias=None</em>, <em>owner_id=None</em>, <em>owners=None</em>, <em>restorable_by_user_ids=None</em>, <em>snapshot_id=None</em>, <em>snapshot_ids=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>volume_id=None</em>, <em>volume_size=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.AwaitableGetSnapshotResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ebs.AwaitableGetVolumeResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">AwaitableGetVolumeResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>availability_zone=None</em>, <em>encrypted=None</em>, <em>filters=None</em>, <em>iops=None</em>, <em>kms_key_id=None</em>, <em>most_recent=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>tags=None</em>, <em>volume_id=None</em>, <em>volume_type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.AwaitableGetVolumeResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.ebs.DefaultKmsKey">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">DefaultKmsKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>key_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.DefaultKmsKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">DefaultKmsKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>key_arn=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.DefaultKmsKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage the default customer master key (CMK) that your AWS account uses to encrypt EBS volumes.</p>
 <p>Your AWS account has an AWS-managed default CMK that is used for encrypting an EBS volume when no CMK is specified in the API call that creates the volume.
-By using the <code class="docutils literal notranslate"><span class="pre">aws_ebs_default_kms_key</span></code> resource, you can specify a customer-managed CMK to use in place of the AWS-managed default CMK.</p>
+By using the <code class="docutils literal notranslate"><span class="pre">ebs.DefaultKmsKey</span></code> resource, you can specify a customer-managed CMK to use in place of the AWS-managed default CMK.</p>
 <blockquote>
-<div><p><strong>NOTE:</strong> Creating an <code class="docutils literal notranslate"><span class="pre">aws_ebs_default_kms_key</span></code> resource does not enable default EBS encryption. Use the <code class="docutils literal notranslate"><span class="pre">aws_ebs_encryption_by_default</span></code> to enable default EBS encryption.</p>
+<div><p><strong>NOTE:</strong> Creating an <code class="docutils literal notranslate"><span class="pre">ebs.DefaultKmsKey</span></code> resource does not enable default EBS encryption. Use the <code class="docutils literal notranslate"><span class="pre">ebs.EncryptionByDefault</span></code> to enable default EBS encryption.</p>
 <p><strong>NOTE:</strong> Destroying this resource will reset the default CMK to the account’s AWS-managed default CMK for EBS.</p>
 </div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
@@ -37,6 +62,19 @@ By using the <code class="docutils literal notranslate"><span class="pre">aws_eb
 <dt id="pulumi_aws.ebs.DefaultKmsKey.key_arn">
 <code class="descname">key_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.DefaultKmsKey.key_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use to encrypt the EBS volume.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.ebs.DefaultKmsKey.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>key_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.DefaultKmsKey.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DefaultKmsKey resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] key_arn: The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use to encrypt the EBS volume.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_default_kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_default_kms_key.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -81,8 +119,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.EncryptionByDefault">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">EncryptionByDefault</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.EncryptionByDefault" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a EncryptionByDefault resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">EncryptionByDefault</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.EncryptionByDefault" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a resource to manage whether default EBS encryption is enabled for your AWS account in the current AWS region. To manage the default KMS key for the region, see the <cite>``ebs.DefaultKmsKey`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/ebs_default_kms_key.html">https://www.terraform.io/docs/providers/aws/r/ebs_default_kms_key.html</a>&gt;`_.</p>
+<blockquote>
+<div><strong>NOTE:</strong> Removing this resource disables default EBS encryption.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -102,6 +142,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ebs.EncryptionByDefault.enabled">
 <code class="descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.EncryptionByDefault.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether or not default EBS encryption is enabled. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.ebs.EncryptionByDefault.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.EncryptionByDefault.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing EncryptionByDefault resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] enabled: Whether or not default EBS encryption is enabled. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_encryption_by_default.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_encryption_by_default.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -344,7 +397,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.Snapshot">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">Snapshot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>tags=None</em>, <em>volume_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.Snapshot" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">Snapshot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>tags=None</em>, <em>volume_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.Snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Snapshot of an EBS Volume.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -417,6 +470,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The size of the drive in GiBs.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.ebs.Snapshot.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>data_encryption_key_id=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>kms_key_id=None</em>, <em>owner_alias=None</em>, <em>owner_id=None</em>, <em>tags=None</em>, <em>volume_id=None</em>, <em>volume_size=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.Snapshot.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Snapshot resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] data_encryption_key_id: The data encryption key identifier for the snapshot.
+:param pulumi.Input[str] description: A description of what the snapshot is.
+:param pulumi.Input[bool] encrypted: Whether the snapshot is encrypted.
+:param pulumi.Input[str] kms_key_id: The ARN for the KMS encryption key.
+:param pulumi.Input[str] owner_alias: Value from an Amazon-maintained list (<code class="docutils literal notranslate"><span class="pre">amazon</span></code>, <code class="docutils literal notranslate"><span class="pre">aws-marketplace</span></code>, <code class="docutils literal notranslate"><span class="pre">microsoft</span></code>) of snapshot owners.
+:param pulumi.Input[str] owner_id: The AWS account ID of the EBS snapshot owner.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the snapshot
+:param pulumi.Input[str] volume_id: The Volume ID of which to make a snapshot.
+:param pulumi.Input[float] volume_size: The size of the drive in GiBs.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.ebs.Snapshot.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.Snapshot.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -459,7 +533,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.SnapshotCopy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">SnapshotCopy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>kms_key_id=None</em>, <em>source_region=None</em>, <em>source_snapshot_id=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.SnapshotCopy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">SnapshotCopy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>kms_key_id=None</em>, <em>source_region=None</em>, <em>source_snapshot_id=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.SnapshotCopy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Snapshot of a snapshot.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -542,6 +616,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The size of the drive in GiBs.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.ebs.SnapshotCopy.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>data_encryption_key_id=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>kms_key_id=None</em>, <em>owner_alias=None</em>, <em>owner_id=None</em>, <em>source_region=None</em>, <em>source_snapshot_id=None</em>, <em>tags=None</em>, <em>volume_id=None</em>, <em>volume_size=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.SnapshotCopy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SnapshotCopy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] data_encryption_key_id: The data encryption key identifier for the snapshot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of what the snapshot is.</li>
+<li><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the snapshot is encrypted.</li>
+<li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>owner_alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Value from an Amazon-maintained list (<code class="docutils literal notranslate"><span class="pre">amazon</span></code>, <code class="docutils literal notranslate"><span class="pre">aws-marketplace</span></code>, <code class="docutils literal notranslate"><span class="pre">microsoft</span></code>) of snapshot owners.</li>
+<li><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account ID of the snapshot owner.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags for the snapshot.</li>
+<li><strong>volume_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the drive in GiBs.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot_copy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_snapshot_copy.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.ebs.SnapshotCopy.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.SnapshotCopy.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -584,7 +698,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.Volume">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zone=None</em>, <em>encrypted=None</em>, <em>iops=None</em>, <em>kms_key_id=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.Volume" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zone=None</em>, <em>encrypted=None</em>, <em>iops=None</em>, <em>kms_key_id=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a single EBS volume.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -660,6 +774,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ebs.Volume.type">
 <code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.Volume.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of EBS volume. Can be “standard”, “gp2”, “io1”, “sc1” or “st1” (Default: “standard”).</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.ebs.Volume.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>availability_zone=None</em>, <em>encrypted=None</em>, <em>iops=None</em>, <em>kms_key_id=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>tags=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.Volume.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Volume resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The volume ARN (e.g. arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
+:param pulumi.Input[str] availability_zone: The AZ where the EBS volume will exist.
+:param pulumi.Input[bool] encrypted: If true, the disk will be encrypted.
+:param pulumi.Input[float] iops: The amount of IOPS to provision for the disk.
+:param pulumi.Input[str] kms_key_id: The ARN for the KMS encryption key. When specifying <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code>, <code class="docutils literal notranslate"><span class="pre">encrypted</span></code> needs to be set to true.
+:param pulumi.Input[float] size: The size of the drive in GiBs.
+:param pulumi.Input[str] snapshot_id: A snapshot to base the EBS volume off of.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] type: The type of EBS volume. Can be “standard”, “gp2”, “io1”, “sc1” or “st1” (Default: “standard”).</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ebs_volume.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

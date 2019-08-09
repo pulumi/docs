@@ -9,6 +9,11 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.transfer"></span><dl class="class">
+<dt id="pulumi_aws.transfer.AwaitableGetServerResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.transfer.</code><code class="descname">AwaitableGetServerResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>endpoint=None</em>, <em>identity_provider_type=None</em>, <em>invocation_role=None</em>, <em>logging_role=None</em>, <em>server_id=None</em>, <em>url=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.AwaitableGetServerResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.transfer.GetServerResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.transfer.</code><code class="descname">GetServerResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>endpoint=None</em>, <em>identity_provider_type=None</em>, <em>invocation_role=None</em>, <em>logging_role=None</em>, <em>server_id=None</em>, <em>url=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.GetServerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServer.</p>
@@ -58,7 +63,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_aws.transfer.Server">
-<em class="property">class </em><code class="descclassname">pulumi_aws.transfer.</code><code class="descname">Server</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>endpoint_details=None</em>, <em>endpoint_type=None</em>, <em>force_destroy=None</em>, <em>identity_provider_type=None</em>, <em>invocation_role=None</em>, <em>logging_role=None</em>, <em>tags=None</em>, <em>url=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.Server" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.transfer.</code><code class="descname">Server</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>endpoint_details=None</em>, <em>endpoint_type=None</em>, <em>force_destroy=None</em>, <em>identity_provider_type=None</em>, <em>invocation_role=None</em>, <em>logging_role=None</em>, <em>tags=None</em>, <em>url=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.Server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a AWS Transfer Server resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -147,6 +152,28 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_aws.transfer.Server.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>endpoint=None</em>, <em>endpoint_details=None</em>, <em>endpoint_type=None</em>, <em>force_destroy=None</em>, <em>identity_provider_type=None</em>, <em>invocation_role=None</em>, <em>logging_role=None</em>, <em>tags=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.Server.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Server resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of Transfer Server
+:param pulumi.Input[str] endpoint: The endpoint of the Transfer Server (e.g. <code class="docutils literal notranslate"><span class="pre">s-12345678.server.transfer.REGION.amazonaws.com</span></code>)
+:param pulumi.Input[dict] endpoint_details: The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
+:param pulumi.Input[str] endpoint_type: The type of endpoint that you want your SFTP server connect to. If you connect to a <code class="docutils literal notranslate"><span class="pre">VPC_ENDPOINT</span></code>, your SFTP server isn’t accessible over the public internet. If you want to connect your SFTP server via public internet, set <code class="docutils literal notranslate"><span class="pre">PUBLIC</span></code>.
+:param pulumi.Input[bool] force_destroy: A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+:param pulumi.Input[str] identity_provider_type: The mode of authentication enabled for this service. The default value is <code class="docutils literal notranslate"><span class="pre">SERVICE_MANAGED</span></code>, which allows you to store and access SFTP user credentials within the service. <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code> indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
+:param pulumi.Input[str] invocation_role: Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an <code class="docutils literal notranslate"><span class="pre">identity_provider_type</span></code> of <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code>.
+:param pulumi.Input[str] logging_role: Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] url: - URL of the service endpoint used to authenticate users with an <code class="docutils literal notranslate"><span class="pre">identity_provider_type</span></code> of <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code>.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_server.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_server.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.transfer.Server.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.Server.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -189,7 +216,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.transfer.SshKey">
-<em class="property">class </em><code class="descclassname">pulumi_aws.transfer.</code><code class="descname">SshKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>body=None</em>, <em>server_id=None</em>, <em>user_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.SshKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.transfer.</code><code class="descname">SshKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>body=None</em>, <em>server_id=None</em>, <em>user_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.SshKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a AWS Transfer User SSH Key resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -224,6 +251,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.transfer.SshKey.user_name">
 <code class="descname">user_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.SshKey.user_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the user account that is assigned to one or more servers.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.transfer.SshKey.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>body=None</em>, <em>server_id=None</em>, <em>user_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.SshKey.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SshKey resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] body: The public key portion of an SSH key pair.
+:param pulumi.Input[str] server_id: The Server ID of the Transfer Server (e.g. <code class="docutils literal notranslate"><span class="pre">s-12345678</span></code>)
+:param pulumi.Input[str] user_name: The name of the user account that is assigned to one or more servers.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_ssh_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_ssh_key.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -268,8 +310,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.transfer.User">
-<em class="property">class </em><code class="descclassname">pulumi_aws.transfer.</code><code class="descname">User</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>home_directory=None</em>, <em>policy=None</em>, <em>role=None</em>, <em>server_id=None</em>, <em>tags=None</em>, <em>user_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.User" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a AWS Transfer User resource. Managing SSH keys can be accomplished with the <cite>``aws_transfer_ssh_key`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/transfer_ssh_key.html">https://www.terraform.io/docs/providers/aws/r/transfer_ssh_key.html</a>&gt;`_.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.transfer.</code><code class="descname">User</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>home_directory=None</em>, <em>policy=None</em>, <em>role=None</em>, <em>server_id=None</em>, <em>tags=None</em>, <em>user_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.User" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a AWS Transfer User resource. Managing SSH keys can be accomplished with the <cite>``transfer.SshKey`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/transfer_ssh_key.html">https://www.terraform.io/docs/providers/aws/r/transfer_ssh_key.html</a>&gt;`_.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -278,6 +320,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>home_directory</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a <code class="docutils literal notranslate"><span class="pre">/</span></code>.  The first item in the path is the name of the home bucket (accessible as <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeBucket}</span></code> in the policy) and the rest is the home directory (accessible as <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeDirectory}</span></code> in the policy). For example, <code class="docutils literal notranslate"><span class="pre">/example-bucket-1234/username</span></code> would set the home bucket to <code class="docutils literal notranslate"><span class="pre">example-bucket-1234</span></code> and the home directory to <code class="docutils literal notranslate"><span class="pre">username</span></code>.</li>
+<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include <code class="docutils literal notranslate"><span class="pre">${Transfer:UserName}</span></code>, <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeDirectory}</span></code>, and <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeBucket}</span></code>. These are evaluated on-the-fly when navigating the bucket.</li>
 <li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.</li>
 <li><strong>server_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Server ID of the Transfer Server (e.g. <code class="docutils literal notranslate"><span class="pre">s-12345678</span></code>)</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -302,6 +345,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.transfer.User.policy">
+<code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.User.policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include <code class="docutils literal notranslate"><span class="pre">${Transfer:UserName}</span></code>, <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeDirectory}</span></code>, and <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeBucket}</span></code>. These are evaluated on-the-fly when navigating the bucket.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.transfer.User.role">
 <code class="descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.User.role" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.</p>
@@ -323,6 +372,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.transfer.User.user_name">
 <code class="descname">user_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.User.user_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name used for log in to your SFTP server.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.transfer.User.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>home_directory=None</em>, <em>policy=None</em>, <em>role=None</em>, <em>server_id=None</em>, <em>tags=None</em>, <em>user_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.User.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing User resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of Transfer User
+:param pulumi.Input[str] home_directory: The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a <code class="docutils literal notranslate"><span class="pre">/</span></code>.  The first item in the path is the name of the home bucket (accessible as <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeBucket}</span></code> in the policy) and the rest is the home directory (accessible as <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeDirectory}</span></code> in the policy). For example, <code class="docutils literal notranslate"><span class="pre">/example-bucket-1234/username</span></code> would set the home bucket to <code class="docutils literal notranslate"><span class="pre">example-bucket-1234</span></code> and the home directory to <code class="docutils literal notranslate"><span class="pre">username</span></code>.
+:param pulumi.Input[str] policy: An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include <code class="docutils literal notranslate"><span class="pre">${Transfer:UserName}</span></code>, <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeDirectory}</span></code>, and <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeBucket}</span></code>. These are evaluated on-the-fly when navigating the bucket.
+:param pulumi.Input[str] role: Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.
+:param pulumi.Input[str] server_id: The Server ID of the Transfer Server (e.g. <code class="docutils literal notranslate"><span class="pre">s-12345678</span></code>)
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[str] user_name: The name used for log in to your SFTP server.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_user.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_user.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

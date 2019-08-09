@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.lightsail"></span><dl class="class">
 <dt id="pulumi_aws.lightsail.Domain">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">Domain</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>domain_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.Domain" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">Domain</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>domain_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a domain resource for the specified domain (e.g., example.com).
 You cannot register a new domain name using Lightsail. You must register
 a domain name using Amazon Route 53 or another domain name registrar.
@@ -43,6 +43,20 @@ this parameter to manage the DNS records for that domain.</p>
 <dt id="pulumi_aws.lightsail.Domain.domain_name">
 <code class="descname">domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.Domain.domain_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Lightsail domain to manage</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.lightsail.Domain.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>domain_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.Domain.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Domain resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the Lightsail domain
+:param pulumi.Input[str] domain_name: The name of the Lightsail domain to manage</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lightsail_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lightsail_domain.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -87,7 +101,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lightsail.Instance">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zone=None</em>, <em>blueprint_id=None</em>, <em>bundle_id=None</em>, <em>key_pair_name=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zone=None</em>, <em>blueprint_id=None</em>, <em>bundle_id=None</em>, <em>key_pair_name=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Lightsail Instance. Amazon Lightsail is a service to provide easy virtual private servers
 with custom software already setup. See <a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/getting-started/article/what-is-amazon-lightsail">What is Amazon Lightsail?</a>
 for more information.</p>
@@ -175,7 +189,7 @@ instance (see list below)</li>
 (see list below)</li>
 <li><strong>bundle_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The bundle of specification information (see list below)</li>
 <li><strong>key_pair_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of your key pair. Created in the
-Lightsail console (cannot use <code class="docutils literal notranslate"><span class="pre">aws_key_pair</span></code> at this time)</li>
+Lightsail console (cannot use <code class="docutils literal notranslate"><span class="pre">ec2.KeyPair</span></code> at this time)</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail Instance</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – launch script to configure server with additional user data</li>
@@ -223,7 +237,7 @@ instance (see list below)</p>
 <dt id="pulumi_aws.lightsail.Instance.key_pair_name">
 <code class="descname">key_pair_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.Instance.key_pair_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of your key pair. Created in the
-Lightsail console (cannot use <code class="docutils literal notranslate"><span class="pre">aws_key_pair</span></code> at this time)</p>
+Lightsail console (cannot use <code class="docutils literal notranslate"><span class="pre">ec2.KeyPair</span></code> at this time)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -242,6 +256,39 @@ Lightsail console (cannot use <code class="docutils literal notranslate"><span c
 <dt id="pulumi_aws.lightsail.Instance.user_data">
 <code class="descname">user_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.Instance.user_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>launch script to configure server with additional user data</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.lightsail.Instance.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>availability_zone=None</em>, <em>blueprint_id=None</em>, <em>bundle_id=None</em>, <em>cpu_count=None</em>, <em>created_at=None</em>, <em>ipv6_address=None</em>, <em>is_static_ip=None</em>, <em>key_pair_name=None</em>, <em>name=None</em>, <em>private_ip_address=None</em>, <em>public_ip_address=None</em>, <em>ram_size=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.Instance.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the Lightsail instance (matches <code class="docutils literal notranslate"><span class="pre">id</span></code>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone in which to create your
+instance (see list below)</li>
+<li><strong>blueprint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for a virtual private server image
+(see list below)</li>
+<li><strong>bundle_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The bundle of specification information (see list below)</li>
+<li><strong>key_pair_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of your key pair. Created in the
+Lightsail console (cannot use <code class="docutils literal notranslate"><span class="pre">ec2.KeyPair</span></code> at this time)</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail Instance</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+<li><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – launch script to configure server with additional user data</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lightsail_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lightsail_instance.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -286,7 +333,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lightsail.KeyPair">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">KeyPair</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>pgp_key=None</em>, <em>public_key=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.KeyPair" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">KeyPair</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>pgp_key=None</em>, <em>public_key=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.KeyPair" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Lightsail Key Pair, for use with Lightsail Instances. These key pairs
 are separate from EC2 Key Pairs, and must be created or imported for use with
 Lightsail.</p>
@@ -299,6 +346,8 @@ Lightsail.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail Key Pair. If omitted, a unique
+name will be generated by this provider</li>
 <li><strong>pgp_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional PGP key to encrypt the resulting private
 key material. Only used when creating a new key pair</li>
 <li><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key material. This public key will be
@@ -338,6 +387,13 @@ key and <code class="docutils literal notranslate"><span class="pre">pgp_key</sp
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.lightsail.KeyPair.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.KeyPair.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Lightsail Key Pair. If omitted, a unique
+name will be generated by this provider</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.lightsail.KeyPair.pgp_key">
 <code class="descname">pgp_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.KeyPair.pgp_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>An optional PGP key to encrypt the resulting private
@@ -356,6 +412,44 @@ when creating a new key, and when no <code class="docutils literal notranslate">
 <code class="descname">public_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.KeyPair.public_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The public key material. This public key will be
 imported into Lightsail</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.lightsail.KeyPair.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>encrypted_fingerprint=None</em>, <em>encrypted_private_key=None</em>, <em>fingerprint=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>pgp_key=None</em>, <em>private_key=None</em>, <em>public_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.KeyPair.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing KeyPair resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the Lightsail key pair
+:param pulumi.Input[str] encrypted_fingerprint: The MD5 public key fingerprint for the encrypted</p>
+<blockquote>
+<div>private key</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>encrypted_private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the private key material, base 64 encoded and
+encrypted with the given <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code>. This is only populated when creating a new
+key and <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> is supplied</li>
+<li><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MD5 public key fingerprint as specified in section 4 of RFC 4716.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail Key Pair. If omitted, a unique
+name will be generated by this provider</li>
+<li><strong>pgp_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional PGP key to encrypt the resulting private
+key material. Only used when creating a new key pair</li>
+<li><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the private key, base64 encoded. This is only populated
+when creating a new key, and when no <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> is provided</li>
+<li><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key material. This public key will be
+imported into Lightsail</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lightsail_key_pair.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lightsail_key_pair.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -400,7 +494,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lightsail.StaticIp">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">StaticIp</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.StaticIp" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">StaticIp</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.StaticIp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allocates a static IP address.</p>
 <blockquote>
 <div><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">“Regions and Availability Zones in Amazon Lightsail”</a> for more details</div></blockquote>
@@ -441,6 +535,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.lightsail.StaticIp.support_code">
 <code class="descname">support_code</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.StaticIp.support_code" title="Permalink to this definition">¶</a></dt>
 <dd><p>The support code.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.lightsail.StaticIp.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>ip_address=None</em>, <em>name=None</em>, <em>support_code=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.StaticIp.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing StaticIp resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The ARN of the Lightsail static IP
+:param pulumi.Input[str] ip_address: The allocated static IP address
+:param pulumi.Input[str] name: The name for the allocated static IP
+:param pulumi.Input[str] support_code: The support code.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lightsail_static_ip.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lightsail_static_ip.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -485,7 +595,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lightsail.StaticIpAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">StaticIpAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>instance_name=None</em>, <em>static_ip_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.StaticIpAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">StaticIpAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>instance_name=None</em>, <em>static_ip_name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.StaticIpAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a static IP address attachment - relationship between a Lightsail static IP &amp; Lightsail instance.</p>
 <blockquote>
 <div><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">“Regions and Availability Zones in Amazon Lightsail”</a> for more details</div></blockquote>
@@ -515,6 +625,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.lightsail.StaticIpAttachment.static_ip_name">
 <code class="descname">static_ip_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.StaticIpAttachment.static_ip_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the allocated static IP</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.lightsail.StaticIpAttachment.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>instance_name=None</em>, <em>static_ip_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.StaticIpAttachment.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing StaticIpAttachment resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] instance_name: The name of the Lightsail instance to attach the IP to
+:param pulumi.Input[str] static_ip_name: The name of the allocated static IP</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lightsail_static_ip_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lightsail_static_ip_attachment.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

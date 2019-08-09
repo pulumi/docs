@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_aws.devicefarm"></span><dl class="class">
 <dt id="pulumi_aws.devicefarm.Project">
-<em class="property">class </em><code class="descclassname">pulumi_aws.devicefarm.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.devicefarm.Project" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.devicefarm.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.devicefarm.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage AWS Device Farm Projects. 
 Please keep in mind that this feature is only supported on the “us-west-2” region.
 This resource will error if you try to create a project in another region.</p>
@@ -41,6 +41,20 @@ This resource will error if you try to create a project in another region.</p>
 <dt id="pulumi_aws.devicefarm.Project.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.devicefarm.Project.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the project</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_aws.devicefarm.Project.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.devicefarm.Project.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Project resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] arn: The Amazon Resource Name of this project
+:param pulumi.Input[str] name: The name of the project</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/devicefarm_project.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/devicefarm_project.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
