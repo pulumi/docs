@@ -9,8 +9,78 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-digitalocean/issues">pulumi/pulumi-digitalocean repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/issues">terraform-providers/terraform-provider-digitalocean repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_digitalocean"></span><dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetCertificateResult">
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">AwaitableGetCertificateResult</code><span class="sig-paren">(</span><em>domains=None</em>, <em>name=None</em>, <em>not_after=None</em>, <em>sha1_fingerprint=None</em>, <em>state=None</em>, <em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetCertificateResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetDatabaseClusterResult">
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">AwaitableGetDatabaseClusterResult</code><span class="sig-paren">(</span><em>database=None</em>, <em>engine=None</em>, <em>host=None</em>, <em>maintenance_windows=None</em>, <em>name=None</em>, <em>node_count=None</em>, <em>port=None</em>, <em>region=None</em>, <em>size=None</em>, <em>uri=None</em>, <em>urn=None</em>, <em>user=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetDatabaseClusterResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetDomainResult">
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">AwaitableGetDomainResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>ttl=None</em>, <em>urn=None</em>, <em>zone_file=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetDomainResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetDropletResult">
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">AwaitableGetDropletResult</code><span class="sig-paren">(</span><em>backups=None</em>, <em>disk=None</em>, <em>image=None</em>, <em>ipv4_address=None</em>, <em>ipv4_address_private=None</em>, <em>ipv6=None</em>, <em>ipv6_address=None</em>, <em>ipv6_address_private=None</em>, <em>locked=None</em>, <em>memory=None</em>, <em>monitoring=None</em>, <em>name=None</em>, <em>price_hourly=None</em>, <em>price_monthly=None</em>, <em>private_networking=None</em>, <em>region=None</em>, <em>size=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>urn=None</em>, <em>vcpus=None</em>, <em>volume_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetDropletResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetDropletSnapshotResult">
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">AwaitableGetDropletSnapshotResult</code><span class="sig-paren">(</span><em>created_at=None</em>, <em>droplet_id=None</em>, <em>min_disk_size=None</em>, <em>most_recent=None</em>, <em>name=None</em>, <em>name_regex=None</em>, <em>region=None</em>, <em>regions=None</em>, <em>size=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetDropletSnapshotResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetFloatingIpResult">
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">AwaitableGetFloatingIpResult</code><span class="sig-paren">(</span><em>droplet_id=None</em>, <em>ip_address=None</em>, <em>region=None</em>, <em>urn=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetFloatingIpResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetImageResult">
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">AwaitableGetImageResult</code><span class="sig-paren">(</span><em>distribution=None</em>, <em>image=None</em>, <em>min_disk_size=None</em>, <em>name=None</em>, <em>private=None</em>, <em>regions=None</em>, <em>slug=None</em>, <em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetImageResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetKubernetesClusterResult">
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">AwaitableGetKubernetesClusterResult</code><span class="sig-paren">(</span><em>cluster_subnet=None</em>, <em>created_at=None</em>, <em>endpoint=None</em>, <em>ipv4_address=None</em>, <em>kube_configs=None</em>, <em>name=None</em>, <em>node_pools=None</em>, <em>region=None</em>, <em>service_subnet=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>updated_at=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetKubernetesClusterResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetLoadBalancerResult">
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">AwaitableGetLoadBalancerResult</code><span class="sig-paren">(</span><em>algorithm=None</em>, <em>droplet_ids=None</em>, <em>droplet_tag=None</em>, <em>enable_proxy_protocol=None</em>, <em>forwarding_rules=None</em>, <em>healthcheck=None</em>, <em>ip=None</em>, <em>name=None</em>, <em>redirect_http_to_https=None</em>, <em>region=None</em>, <em>status=None</em>, <em>sticky_sessions=None</em>, <em>urn=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetLoadBalancerResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetRecordResult">
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">AwaitableGetRecordResult</code><span class="sig-paren">(</span><em>data=None</em>, <em>domain=None</em>, <em>flags=None</em>, <em>name=None</em>, <em>port=None</em>, <em>priority=None</em>, <em>tag=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>weight=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetRecordResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetSshKeyResult">
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">AwaitableGetSshKeyResult</code><span class="sig-paren">(</span><em>fingerprint=None</em>, <em>name=None</em>, <em>public_key=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetSshKeyResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetTagResult">
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">AwaitableGetTagResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetTagResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetVolumeResult">
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">AwaitableGetVolumeResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>droplet_ids=None</em>, <em>filesystem_label=None</em>, <em>filesystem_type=None</em>, <em>name=None</em>, <em>region=None</em>, <em>size=None</em>, <em>urn=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetVolumeResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetVolumeSnapshotResult">
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">AwaitableGetVolumeSnapshotResult</code><span class="sig-paren">(</span><em>created_at=None</em>, <em>min_disk_size=None</em>, <em>most_recent=None</em>, <em>name=None</em>, <em>name_regex=None</em>, <em>region=None</em>, <em>regions=None</em>, <em>size=None</em>, <em>volume_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetVolumeSnapshotResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_digitalocean.Cdn">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Cdn</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_id=None</em>, <em>custom_domain=None</em>, <em>origin=None</em>, <em>ttl=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Cdn" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Cdn</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_id=None</em>, <em>custom_domain=None</em>, <em>origin=None</em>, <em>ttl=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Cdn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean CDN Endpoint resource for use with Spaces.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -62,6 +132,23 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.Cdn.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>certificate_id=None</em>, <em>created_at=None</em>, <em>custom_domain=None</em>, <em>endpoint=None</em>, <em>origin=None</em>, <em>ttl=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Cdn.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Cdn resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] created_at: The date and time when the CDN Endpoint was created.
+:param pulumi.Input[str] custom_domain: The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
+:param pulumi.Input[str] endpoint: The fully qualified domain name (FQDN) from which the CDN-backed content is served.
+:param pulumi.Input[str] origin: The fully qualified domain name, (FQDN) for a Space.
+:param pulumi.Input[float] ttl: The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/cdn.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/cdn.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.Cdn.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Cdn.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -104,7 +191,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.Certificate">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Certificate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_chain=None</em>, <em>domains=None</em>, <em>leaf_certificate=None</em>, <em>name=None</em>, <em>private_key=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Certificate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Certificate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_chain=None</em>, <em>domains=None</em>, <em>leaf_certificate=None</em>, <em>name=None</em>, <em>private_key=None</em>, <em>type=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Certificate resource that allows you to manage
 certificates for configuring TLS termination in Load Balancers.
 Certificates created with this resource can be referenced in your
@@ -193,6 +280,44 @@ corresponding to the SSL certificate. Only valid when type is <code class="docut
 <code class="docutils literal notranslate"><span class="pre">custom</span></code> or <code class="docutils literal notranslate"><span class="pre">lets_encrypt</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.Certificate.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>certificate_chain=None</em>, <em>domains=None</em>, <em>leaf_certificate=None</em>, <em>name=None</em>, <em>not_after=None</em>, <em>private_key=None</em>, <em>sha1_fingerprint=None</em>, <em>state=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Certificate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Certificate resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] certificate_chain: The full PEM-formatted trust chain</p>
+<blockquote>
+<div>between the certificate authority’s certificate and your domain’s TLS
+certificate. Only valid when type is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>domains</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of fully qualified domain names (FQDNs) for
+which the certificate will be issued. The domains must be managed using
+DigitalOcean’s DNS. Only valid when type is <code class="docutils literal notranslate"><span class="pre">lets_encrypt</span></code>.</li>
+<li><strong>leaf_certificate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of a PEM-formatted public
+TLS certificate. Only valid when type is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the certificate for identification.</li>
+<li><strong>not_after</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The expiration date of the certificate</li>
+<li><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of a PEM-formatted private-key
+corresponding to the SSL certificate. Only valid when type is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</li>
+<li><strong>sha1_fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SHA-1 fingerprint of the certificate</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of certificate to provision. Can be either
+<code class="docutils literal notranslate"><span class="pre">custom</span></code> or <code class="docutils literal notranslate"><span class="pre">lets_encrypt</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/certificate.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.Certificate.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Certificate.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -235,7 +360,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.DatabaseCluster">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">DatabaseCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>engine=None</em>, <em>maintenance_windows=None</em>, <em>name=None</em>, <em>node_count=None</em>, <em>region=None</em>, <em>size=None</em>, <em>version=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">DatabaseCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>engine=None</em>, <em>maintenance_windows=None</em>, <em>name=None</em>, <em>node_count=None</em>, <em>region=None</em>, <em>size=None</em>, <em>version=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean database cluster resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -325,6 +450,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseCluster.urn">
+<code class="descname">urn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster.urn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform resource name of the database cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_digitalocean.DatabaseCluster.user">
 <code class="descname">user</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster.user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Username for the cluster’s default user.</p>
@@ -334,6 +465,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.DatabaseCluster.version">
 <code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Engine version used by the cluster (ex. <code class="docutils literal notranslate"><span class="pre">11</span></code> for PostgreSQL 11).</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.DatabaseCluster.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>database=None</em>, <em>engine=None</em>, <em>host=None</em>, <em>maintenance_windows=None</em>, <em>name=None</em>, <em>node_count=None</em>, <em>password=None</em>, <em>port=None</em>, <em>region=None</em>, <em>size=None</em>, <em>uri=None</em>, <em>urn=None</em>, <em>user=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DatabaseCluster resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] database: Name of the cluster’s default database.
+:param pulumi.Input[str] engine: Database engine used by the cluster (ex. <code class="docutils literal notranslate"><span class="pre">pg</span></code> for PostreSQL).
+:param pulumi.Input[str] host: Database cluster’s hostname.
+:param pulumi.Input[list] maintenance_windows: Defines when the automatic maintenance should be performed for the database cluster.
+:param pulumi.Input[str] name: The name of the database cluster.
+:param pulumi.Input[float] node_count: Number of nodes that will be included in the cluster.
+:param pulumi.Input[str] password: Password for the cluster’s default user.
+:param pulumi.Input[float] port: Network port that the database cluster is listening on.
+:param pulumi.Input[str] region: DigitalOcean region where the cluster will reside.
+:param pulumi.Input[str] size: Database droplet size associated with the cluster (ex. <code class="docutils literal notranslate"><span class="pre">db-s-1vcpu-1gb</span></code>).
+:param pulumi.Input[str] uri: The full URI for connecting to the database cluster.
+:param pulumi.Input[str] urn: The uniform resource name of the database cluster.
+:param pulumi.Input[str] user: Username for the cluster’s default user.
+:param pulumi.Input[str] version: Engine version used by the cluster (ex. <code class="docutils literal notranslate"><span class="pre">11</span></code> for PostgreSQL 11).</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_cluster.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -378,7 +535,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.DnsRecord">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">DnsRecord</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>domain=None</em>, <em>flags=None</em>, <em>name=None</em>, <em>port=None</em>, <em>priority=None</em>, <em>tag=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value=None</em>, <em>weight=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DnsRecord" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">DnsRecord</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>domain=None</em>, <em>flags=None</em>, <em>name=None</em>, <em>port=None</em>, <em>priority=None</em>, <em>tag=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value=None</em>, <em>weight=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DnsRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean DNS record resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -470,6 +627,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The weight of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">SRV</span></code>.  Must be between 0 and 65535.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.DnsRecord.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>domain=None</em>, <em>flags=None</em>, <em>fqdn=None</em>, <em>name=None</em>, <em>port=None</em>, <em>priority=None</em>, <em>tag=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value=None</em>, <em>weight=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DnsRecord.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DnsRecord resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] domain: The domain to add the record to.
+:param pulumi.Input[float] flags: The flags of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">CAA</span></code>. Must be between 0 and 255.
+:param pulumi.Input[str] fqdn: The FQDN of the record
+:param pulumi.Input[str] name: The name of the record.
+:param pulumi.Input[float] port: The port of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">SRV</span></code>.  Must be between 1 and 65535.
+:param pulumi.Input[float] priority: The priority of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">MX</span></code> or <code class="docutils literal notranslate"><span class="pre">SRV</span></code>. Must be between 0 and 65535.
+:param pulumi.Input[str] tag: The tag of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">CAA</span></code>. Must be one of <code class="docutils literal notranslate"><span class="pre">issue</span></code>, <code class="docutils literal notranslate"><span class="pre">issuewild</span></code>, or <code class="docutils literal notranslate"><span class="pre">iodef</span></code>.
+:param pulumi.Input[float] ttl: The time to live for the record, in seconds. Must be at least 0.
+:param pulumi.Input[str] type: The type of record. Must be one of <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">AAAA</span></code>, <code class="docutils literal notranslate"><span class="pre">CAA</span></code>, <code class="docutils literal notranslate"><span class="pre">CNAME</span></code>, <code class="docutils literal notranslate"><span class="pre">MX</span></code>, <code class="docutils literal notranslate"><span class="pre">NS</span></code>, <code class="docutils literal notranslate"><span class="pre">TXT</span></code>, or <code class="docutils literal notranslate"><span class="pre">SRV</span></code>.
+:param pulumi.Input[str] value: The value of the record.
+:param pulumi.Input[float] weight: The weight of the record. Only valid when type is <code class="docutils literal notranslate"><span class="pre">SRV</span></code>.  Must be between 0 and 65535.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/record.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/record.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.DnsRecord.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DnsRecord.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -512,7 +692,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.Domain">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Domain</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ip_address=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Domain" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Domain</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ip_address=None</em>, <em>name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean domain resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -548,6 +728,33 @@ is used to created an initial A record for the domain.</p>
 <dt id="pulumi_digitalocean.Domain.urn">
 <code class="descname">urn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Domain.urn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The uniform resource name of the domain</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.Domain.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>ip_address=None</em>, <em>name=None</em>, <em>urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Domain.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Domain resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] ip_address: The IP address of the domain. If specified, this IP</p>
+<blockquote>
+<div>is used to created an initial A record for the domain.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the domain</li>
+<li><strong>urn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The uniform resource name of the domain</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/domain.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/domain.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -592,7 +799,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.Droplet">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Droplet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backups=None</em>, <em>image=None</em>, <em>ipv6=None</em>, <em>monitoring=None</em>, <em>name=None</em>, <em>private_networking=None</em>, <em>region=None</em>, <em>resize_disk=None</em>, <em>size=None</em>, <em>ssh_keys=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>volume_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Droplet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Droplet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backups=None</em>, <em>image=None</em>, <em>ipv6=None</em>, <em>monitoring=None</em>, <em>name=None</em>, <em>private_networking=None</em>, <em>region=None</em>, <em>resize_disk=None</em>, <em>size=None</em>, <em>ssh_keys=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>volume_ids=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Droplet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Droplet resource. This can be used to create,
 modify, and delete Droplets. Droplets also support
 <a class="reference external" href="https://www.terraform.io/docs/provisioners/index.html">provisioning</a>.</p>
@@ -782,6 +989,74 @@ to retrieve them.</p>
 <dd><p>A list of the IDs of each <a class="reference external" href="https://www.terraform.io/docs/providers/do/r/volume.html">block storage volume</a> to be attached to the Droplet.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.Droplet.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>backups=None</em>, <em>disk=None</em>, <em>image=None</em>, <em>ipv4_address=None</em>, <em>ipv4_address_private=None</em>, <em>ipv6=None</em>, <em>ipv6_address=None</em>, <em>locked=None</em>, <em>memory=None</em>, <em>monitoring=None</em>, <em>name=None</em>, <em>price_hourly=None</em>, <em>price_monthly=None</em>, <em>private_networking=None</em>, <em>region=None</em>, <em>resize_disk=None</em>, <em>size=None</em>, <em>ssh_keys=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>urn=None</em>, <em>user_data=None</em>, <em>vcpus=None</em>, <em>volume_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Droplet.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Droplet resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] backups: Boolean controlling if backups are made. Defaults to</p>
+<blockquote>
+<div>false.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>disk</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the instance’s disk in GB</li>
+<li><strong>image</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Droplet image ID or slug.</li>
+<li><strong>ipv4_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 address</li>
+<li><strong>ipv4_address_private</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private networking IPv4 address</li>
+<li><strong>ipv6</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean controlling if IPv6 is enabled. Defaults to false.</li>
+<li><strong>ipv6_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv6 address</li>
+<li><strong>locked</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the Droplet locked</li>
+<li><strong>monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean controlling whether monitoring agent is installed.
+Defaults to false.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Droplet name.</li>
+<li><strong>price_hourly</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Droplet hourly price</li>
+<li><strong>price_monthly</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Droplet monthly price</li>
+<li><strong>private_networking</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean controlling if private networks are
+enabled. Defaults to false.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region to start in.</li>
+<li><strong>resize_disk</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean controlling whether to increase the disk
+size when resizing a Droplet. It defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. When set to <code class="docutils literal notranslate"><span class="pre">false</span></code>,
+only the Droplet’s RAM and CPU will be resized. <strong>Increasing a Droplet’s disk
+size is a permanent change</strong>. Increasing only RAM and CPU is reversible.</li>
+<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The unique slug that indentifies the type of Droplet. You can find a list of available slugs on <a class="reference external" href="https://developers.digitalocean.com/documentation/v2/#list-all-sizes">DigitalOcean API documentation</a>.</p>
+</li>
+<li><strong>ssh_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of SSH IDs or fingerprints to enable in
+the format <code class="docutils literal notranslate"><span class="pre">[12345,</span> <span class="pre">123456]</span></code>. To retrieve this info, use a tool such
+as <code class="docutils literal notranslate"><span class="pre">curl</span></code> with the <a class="reference external" href="https://developers.digitalocean.com/documentation/v2/#ssh-keys">DigitalOcean API</a>,
+to retrieve them.</p>
+</li>
+<li><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the Droplet</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the tags to be applied to this Droplet.</li>
+<li><strong>urn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The uniform resource name of the Droplet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string of the desired User Data for the Droplet.</li>
+<li><strong>vcpus</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of the instance’s virtual CPUs</li>
+<li><strong>volume_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of the IDs of each <a class="reference external" href="https://www.terraform.io/docs/providers/do/r/volume.html">block storage volume</a> to be attached to the Droplet.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/droplet.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/droplet.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.Droplet.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Droplet.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -824,7 +1099,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.DropletSnapshot">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">DropletSnapshot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>droplet_id=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DropletSnapshot" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">DropletSnapshot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>droplet_id=None</em>, <em>name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DropletSnapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which can be used to create a snapshot from an existing DigitalOcean Droplet.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -878,6 +1153,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The billable size of the Droplet snapshot in gigabytes.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.DropletSnapshot.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>created_at=None</em>, <em>droplet_id=None</em>, <em>min_disk_size=None</em>, <em>name=None</em>, <em>regions=None</em>, <em>size=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DropletSnapshot.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DropletSnapshot resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] created_at: The date and time the Droplet snapshot was created.
+:param pulumi.Input[str] droplet_id: The ID of the Droplet from which the snapshot will be taken.
+:param pulumi.Input[float] min_disk_size: The minimum size in gigabytes required for a Droplet to be created based on this snapshot.
+:param pulumi.Input[str] name: A name for the Droplet snapshot.
+:param pulumi.Input[list] regions: A list of DigitalOcean region “slugs” indicating where the droplet snapshot is available.
+:param pulumi.Input[float] size: The billable size of the Droplet snapshot in gigabytes.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/droplet_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/droplet_snapshot.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.DropletSnapshot.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DropletSnapshot.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -920,7 +1213,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.Firewall">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Firewall</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>droplet_ids=None</em>, <em>inbound_rules=None</em>, <em>name=None</em>, <em>outbound_rules=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Firewall" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Firewall</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>droplet_ids=None</em>, <em>inbound_rules=None</em>, <em>name=None</em>, <em>outbound_rules=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Firewall" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Cloud Firewall resource. This can be used to create,
 modify, and delete Firewalls.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1001,6 +1294,45 @@ This can be “waiting”, “succeeded”, or “failed”.</p>
 <dd><p>The names of the Tags assigned to the Firewall.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.Firewall.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>created_at=None</em>, <em>droplet_ids=None</em>, <em>inbound_rules=None</em>, <em>name=None</em>, <em>outbound_rules=None</em>, <em>pending_changes=None</em>, <em>status=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Firewall.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Firewall resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] created_at: A time value given in ISO8601 combined date and time format</p>
+<blockquote>
+<div>that represents when the Firewall was created.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>droplet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of the IDs of the Droplets assigned
+to the Firewall.</li>
+<li><strong>inbound_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The inbound access rule block for the Firewall.
+The <code class="docutils literal notranslate"><span class="pre">inbound_rule</span></code> block is documented below.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Firewall name</li>
+<li><strong>outbound_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The outbound access rule block for the Firewall.
+The <code class="docutils literal notranslate"><span class="pre">outbound_rule</span></code> block is documented below.</li>
+<li><strong>pending_changes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An list of object containing the fields, “droplet_id”,
+“removing”, and “status”.  It is provided to detail exactly which Droplets
+are having their security policies updated.  When empty, all changes
+have been successfully applied.</li>
+<li><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A status string indicating the current state of the Firewall.
+This can be “waiting”, “succeeded”, or “failed”.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The names of the Tags assigned to the Firewall.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/firewall.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/firewall.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.Firewall.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Firewall.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1043,10 +1375,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.FloatingIp">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">FloatingIp</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>droplet_id=None</em>, <em>ip_address=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.FloatingIp" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">FloatingIp</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>droplet_id=None</em>, <em>ip_address=None</em>, <em>region=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.FloatingIp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Floating IP to represent a publicly-accessible static IP addresses that can be mapped to one of your Droplets.</p>
 <blockquote>
-<div><strong>NOTE:</strong> Floating IPs can be assigned to a Droplet either directly on the <code class="docutils literal notranslate"><span class="pre">digitalocean_floating_ip</span></code> resource by setting a <code class="docutils literal notranslate"><span class="pre">droplet_id</span></code> or using the <code class="docutils literal notranslate"><span class="pre">digitalocean_floating_ip_assignment</span></code> resource, but the two cannot be used together.</div></blockquote>
+<div><strong>NOTE:</strong> Floating IPs can be assigned to a Droplet either directly on the <code class="docutils literal notranslate"><span class="pre">.FloatingIp</span></code> resource by setting a <code class="docutils literal notranslate"><span class="pre">droplet_id</span></code> or using the <code class="docutils literal notranslate"><span class="pre">.FloatingIpAssignment</span></code> resource, but the two cannot be used together.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1086,6 +1418,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.FloatingIp.urn">
 <code class="descname">urn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.FloatingIp.urn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The uniform resource name of the floating ip</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.FloatingIp.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>droplet_id=None</em>, <em>ip_address=None</em>, <em>region=None</em>, <em>urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.FloatingIp.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing FloatingIp resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] droplet_id: The ID of Droplet that the Floating IP will be assigned to.
+:param pulumi.Input[str] ip_address: The IP Address of the resource
+:param pulumi.Input[str] region: The region that the Floating IP is reserved to.
+:param pulumi.Input[str] urn: The uniform resource name of the floating ip</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/floating_ip.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/floating_ip.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1130,7 +1478,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.FloatingIpAssignment">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">FloatingIpAssignment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>droplet_id=None</em>, <em>ip_address=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.FloatingIpAssignment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">FloatingIpAssignment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>droplet_id=None</em>, <em>ip_address=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.FloatingIpAssignment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource for assigning an existing DigitalOcean Floating IP to a Droplet. This
 makes it easy to provision floating IP addresses that are not tied to the lifecycle of your
 Droplet.</p>
@@ -1160,6 +1508,20 @@ Droplet.</p>
 <dt id="pulumi_digitalocean.FloatingIpAssignment.ip_address">
 <code class="descname">ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.FloatingIpAssignment.ip_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Floating IP to assign to the Droplet.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.FloatingIpAssignment.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>droplet_id=None</em>, <em>ip_address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.FloatingIpAssignment.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing FloatingIpAssignment resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] droplet_id: The ID of Droplet that the Floating IP will be assigned to.
+:param pulumi.Input[str] ip_address: The Floating IP to assign to the Droplet.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/floating_ip_assignment.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/floating_ip_assignment.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1216,7 +1578,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.GetDatabaseClusterResult">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">GetDatabaseClusterResult</code><span class="sig-paren">(</span><em>database=None</em>, <em>engine=None</em>, <em>host=None</em>, <em>maintenance_windows=None</em>, <em>name=None</em>, <em>node_count=None</em>, <em>port=None</em>, <em>region=None</em>, <em>size=None</em>, <em>uri=None</em>, <em>user=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">GetDatabaseClusterResult</code><span class="sig-paren">(</span><em>database=None</em>, <em>engine=None</em>, <em>host=None</em>, <em>maintenance_windows=None</em>, <em>name=None</em>, <em>node_count=None</em>, <em>port=None</em>, <em>region=None</em>, <em>size=None</em>, <em>uri=None</em>, <em>urn=None</em>, <em>user=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDatabaseCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetDatabaseClusterResult.database">
@@ -1270,6 +1632,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.GetDatabaseClusterResult.uri">
 <code class="descname">uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.uri" title="Permalink to this definition">¶</a></dt>
 <dd><p>The full URI for connecting to the database cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.urn">
+<code class="descname">urn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.urn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform resource name of the database cluster.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1777,7 +2145,7 @@ snapshots and backups and are only available within your account.</p>
 
 <dl class="class">
 <dt id="pulumi_digitalocean.KubernetesCluster">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">KubernetesCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>node_pool=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>version=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">KubernetesCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>node_pool=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>version=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Kubernetes cluster resource. This can be used to create, delete, and modify clusters. For more information see the <a class="reference external" href="https://www.digitalocean.com/docs/kubernetes/">official documentation</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1787,7 +2155,7 @@ snapshots and backups and are only available within your account.</p>
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the Kubernetes cluster.</li>
-<li><strong>node_pool</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A block representing the cluster’s default node pool. Additional node pools may be added to the cluster using the <code class="docutils literal notranslate"><span class="pre">digitalocean_kubernetes_node_pool</span></code> resource. The following arguments may be specified:</li>
+<li><strong>node_pool</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A block representing the cluster’s default node pool. Additional node pools may be added to the cluster using the <code class="docutils literal notranslate"><span class="pre">.KubernetesNodePool</span></code> resource. The following arguments may be specified:</li>
 </ul>
 </td>
 </tr>
@@ -1841,7 +2209,7 @@ snapshots and backups and are only available within your account.</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.KubernetesCluster.node_pool">
 <code class="descname">node_pool</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster.node_pool" title="Permalink to this definition">¶</a></dt>
-<dd><p>A block representing the cluster’s default node pool. Additional node pools may be added to the cluster using the <code class="docutils literal notranslate"><span class="pre">digitalocean_kubernetes_node_pool</span></code> resource. The following arguments may be specified:</p>
+<dd><p>A block representing the cluster’s default node pool. Additional node pools may be added to the cluster using the <code class="docutils literal notranslate"><span class="pre">.KubernetesNodePool</span></code> resource. The following arguments may be specified:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) A name for the node pool.</li>
 <li><code class="docutils literal notranslate"><span class="pre">size</span></code> - (Required) The slug identifier for the type of Droplet to be used as workers in the node pool.</li>
@@ -1894,6 +2262,47 @@ snapshots and backups and are only available within your account.</p>
 <dd><p>The slug identifier for the version of Kubernetes used for the cluster.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.KubernetesCluster.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>cluster_subnet=None</em>, <em>created_at=None</em>, <em>endpoint=None</em>, <em>ipv4_address=None</em>, <em>kube_configs=None</em>, <em>name=None</em>, <em>node_pool=None</em>, <em>region=None</em>, <em>service_subnet=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>updated_at=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing KubernetesCluster resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cluster_subnet: The range of IP addresses in the overlay network of the Kubernetes cluster.
+:param pulumi.Input[str] created_at: The date and time when the Kubernetes cluster was created.
+:param pulumi.Input[str] endpoint: The base URL of the API server on the Kubernetes master node.
+:param pulumi.Input[str] ipv4_address: The public IPv4 address of the Kubernetes master node.
+:param pulumi.Input[str] name: A name for the Kubernetes cluster.
+:param pulumi.Input[dict] node_pool: A block representing the cluster’s default node pool. Additional node pools may be added to the cluster using the <code class="docutils literal notranslate"><span class="pre">.KubernetesNodePool</span></code> resource. The following arguments may be specified:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The slug identifier for the region where the Kubernetes cluster will be created.</li>
+<li><strong>service_subnet</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The range of assignable IP addresses for services running in the Kubernetes cluster.</li>
+<li><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tag names to be applied to the Kubernetes cluster.</li>
+<li><strong>updated_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date and time when the Kubernetes cluster was last updated.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The slug identifier for the version of Kubernetes used for the cluster.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_cluster.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.KubernetesCluster.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1936,8 +2345,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.KubernetesNodePool">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">KubernetesNodePool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_id=None</em>, <em>name=None</em>, <em>node_count=None</em>, <em>size=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the <code class="docutils literal notranslate"><span class="pre">digitalocean_kubernetes_cluster</span></code> resource, this resource can be used to add additional ones to a cluster.</p>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">KubernetesNodePool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_id=None</em>, <em>name=None</em>, <em>node_count=None</em>, <em>size=None</em>, <em>tags=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the <code class="docutils literal notranslate"><span class="pre">.KubernetesCluster</span></code> resource, this resource can be used to add additional ones to a cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2000,6 +2409,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of tag names to be applied to the Kubernetes cluster.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.KubernetesNodePool.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>cluster_id=None</em>, <em>name=None</em>, <em>node_count=None</em>, <em>nodes=None</em>, <em>size=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing KubernetesNodePool resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cluster_id: The ID of the Kubernetes cluster to which the node pool is associated.
+:param pulumi.Input[str] name: A name for the node pool.
+:param pulumi.Input[float] node_count: The number of Droplet instances in the node pool.
+:param pulumi.Input[list] nodes: A list of nodes in the pool. Each node exports the following attributes:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The slug identifier for the type of Droplet to be used as workers in the node pool.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tag names to be applied to the Kubernetes cluster.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_node_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_node_pool.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.KubernetesNodePool.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2042,7 +2479,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.LoadBalancer">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">LoadBalancer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>algorithm=None</em>, <em>droplet_ids=None</em>, <em>droplet_tag=None</em>, <em>enable_proxy_protocol=None</em>, <em>forwarding_rules=None</em>, <em>healthcheck=None</em>, <em>name=None</em>, <em>redirect_http_to_https=None</em>, <em>region=None</em>, <em>sticky_sessions=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.LoadBalancer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">LoadBalancer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>algorithm=None</em>, <em>droplet_ids=None</em>, <em>droplet_tag=None</em>, <em>enable_proxy_protocol=None</em>, <em>forwarding_rules=None</em>, <em>healthcheck=None</em>, <em>name=None</em>, <em>redirect_http_to_https=None</em>, <em>region=None</em>, <em>sticky_sessions=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.LoadBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Load Balancer resource. This can be used to create,
 modify, and delete Load Balancers.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2153,6 +2590,49 @@ Load Balancer. The <code class="docutils literal notranslate"><span class="pre">
 <dd><p>The uniform resource name for the Load Balancer</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.LoadBalancer.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>algorithm=None</em>, <em>droplet_ids=None</em>, <em>droplet_tag=None</em>, <em>enable_proxy_protocol=None</em>, <em>forwarding_rules=None</em>, <em>healthcheck=None</em>, <em>ip=None</em>, <em>name=None</em>, <em>redirect_http_to_https=None</em>, <em>region=None</em>, <em>status=None</em>, <em>sticky_sessions=None</em>, <em>urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.LoadBalancer.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing LoadBalancer resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] algorithm: The load balancing algorithm used to determine</p>
+<blockquote>
+<div>which backend Droplet will be selected by a client. It must be either <code class="docutils literal notranslate"><span class="pre">round_robin</span></code>
+or <code class="docutils literal notranslate"><span class="pre">least_connections</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">round_robin</span></code>.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>droplet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the IDs of each droplet to be attached to the Load Balancer.</li>
+<li><strong>droplet_tag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.</li>
+<li><strong>enable_proxy_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean value indicating whether PROXY
+Protocol should be used to pass information from connecting client requests to
+the backend service. Default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>forwarding_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of <code class="docutils literal notranslate"><span class="pre">forwarding_rule</span></code> to be assigned to the
+Load Balancer. The <code class="docutils literal notranslate"><span class="pre">forwarding_rule</span></code> block is documented below.</li>
+<li><strong>healthcheck</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">healthcheck</span></code> block to be assigned to the
+Load Balancer. The <code class="docutils literal notranslate"><span class="pre">healthcheck</span></code> block is documented below. Only 1 healthcheck is allowed.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Load Balancer name</li>
+<li><strong>redirect_http_to_https</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean value indicating whether
+HTTP requests to the Load Balancer on port 80 will be redirected to HTTPS on port 443.
+Default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region to start in</li>
+<li><strong>sticky_sessions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">sticky_sessions</span></code> block to be assigned to the
+Load Balancer. The <code class="docutils literal notranslate"><span class="pre">sticky_sessions</span></code> block is documented below. Only 1 sticky_sessions block is allowed.</li>
+<li><strong>urn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The uniform resource name for the Load Balancer</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/loadbalancer.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/loadbalancer.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.LoadBalancer.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.LoadBalancer.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2195,7 +2675,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.Project">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>environment=None</em>, <em>name=None</em>, <em>purpose=None</em>, <em>resources=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Project" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>environment=None</em>, <em>name=None</em>, <em>purpose=None</em>, <em>resources=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Project resource.</p>
 <p>Projects allow you to organize your resources into groups that fit the way you work.
 You can group resources (like Droplets, Spaces, Load Balancers, domains, and Floating IPs)
@@ -2283,6 +2763,27 @@ in ways that align with the applications you host on DigitalOcean.</p>
 <dd><p>the date and time when the project was last updated, (ISO8601)</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.Project.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>created_at=None</em>, <em>description=None</em>, <em>environment=None</em>, <em>name=None</em>, <em>owner_id=None</em>, <em>owner_uuid=None</em>, <em>purpose=None</em>, <em>resources=None</em>, <em>updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Project.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Project resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] created_at: the date and time when the project was created, (ISO8601)
+:param pulumi.Input[str] description: the description of the project
+:param pulumi.Input[str] environment: the environment of the project’s resources. The possible values are: <code class="docutils literal notranslate"><span class="pre">Development</span></code>, <code class="docutils literal notranslate"><span class="pre">Staging</span></code>, <code class="docutils literal notranslate"><span class="pre">Production</span></code>)
+:param pulumi.Input[str] name: The name of the Project
+:param pulumi.Input[float] owner_id: the id of the project owner.
+:param pulumi.Input[str] owner_uuid: the unique universal identifier of the project owner.
+:param pulumi.Input[str] purpose: the purpose of the project, (Default: “Web Application”)
+:param pulumi.Input[list] resources: a list of uniform resource names (URNs) for the resources associated with the project
+:param pulumi.Input[str] updated_at: the date and time when the project was last updated, (ISO8601)</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/project.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.Project.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Project.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2325,11 +2826,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.Provider">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_endpoint=None</em>, <em>spaces_access_id=None</em>, <em>spaces_secret_key=None</em>, <em>token=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_endpoint=None</em>, <em>spaces_access_id=None</em>, <em>spaces_secret_key=None</em>, <em>token=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the digitalocean package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-<a class="reference external" href="https://pulumi.io/reference/programming-model.html#providers">documentation</a> for more information.</p>
+<a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2344,6 +2845,18 @@ construction to achieve fine-grained programmatic control over provider settings
 </table>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.Provider.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Provider.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.Provider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2386,7 +2899,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.SpacesBucket">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">SpacesBucket</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>acl=None</em>, <em>force_destroy=None</em>, <em>name=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">SpacesBucket</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>acl=None</em>, <em>force_destroy=None</em>, <em>name=None</em>, <em>region=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a bucket resource for Spaces, DigitalOcean’s object storage product.</p>
 <p>The <a class="reference external" href="https://developers.digitalocean.com/documentation/spaces/">Spaces API</a> was
 designed to be interoperable with Amazon’s AWS S3 API. This allows users to
@@ -2453,6 +2966,24 @@ example:</p>
 <dd><p>The uniform resource name for the bucket</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.SpacesBucket.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>acl=None</em>, <em>bucket_domain_name=None</em>, <em>force_destroy=None</em>, <em>name=None</em>, <em>region=None</em>, <em>urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SpacesBucket resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] acl: Canned ACL applied on bucket creation (<code class="docutils literal notranslate"><span class="pre">private</span></code> or <code class="docutils literal notranslate"><span class="pre">public-read</span></code>)
+:param pulumi.Input[str] bucket_domain_name: The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
+:param pulumi.Input[bool] force_destroy: Unless <code class="docutils literal notranslate"><span class="pre">true</span></code>, the bucket will only be destroyed if empty (Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>)
+:param pulumi.Input[str] name: The name of the bucket
+:param pulumi.Input[str] region: The region where the bucket resides (Defaults to <code class="docutils literal notranslate"><span class="pre">nyc3</span></code>)
+:param pulumi.Input[str] urn: The uniform resource name for the bucket</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/spaces_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/spaces_bucket.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.SpacesBucket.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2495,7 +3026,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.SshKey">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">SshKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>public_key=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SshKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">SshKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>public_key=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SshKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean SSH key resource to allow you to manage SSH
 keys for Droplet access. Keys created with this resource
 can be referenced in your Droplet configuration via their ID or
@@ -2534,6 +3065,23 @@ can be read using the file interpolation function</li>
 <code class="descname">public_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SshKey.public_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The public key. If this is a file, it
 can be read using the file interpolation function</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.SshKey.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>fingerprint=None</em>, <em>name=None</em>, <em>public_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SshKey.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SshKey resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] fingerprint: The fingerprint of the SSH key
+:param pulumi.Input[str] name: The name of the SSH key for identification
+:param pulumi.Input[str] public_key: The public key. If this is a file, it</p>
+<blockquote>
+<div>can be read using the file interpolation function</div></blockquote>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/ssh_key.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/ssh_key.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2578,7 +3126,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.Tag">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Tag</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Tag" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Tag</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Tag" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Tag resource. A Tag is a label that can be applied to a
 Droplet resource in order to better organize or facilitate the lookups and
 actions on it. Tags created with this resource can be referenced in your Droplet
@@ -2602,6 +3150,19 @@ configuration via their ID or name.</p>
 <dt id="pulumi_digitalocean.Tag.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Tag.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the tag</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.Tag.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Tag.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Tag resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] name: The name of the tag</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/tag.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/tag.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2646,7 +3207,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.Volume">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>filesystem_type=None</em>, <em>initial_filesystem_label=None</em>, <em>initial_filesystem_type=None</em>, <em>name=None</em>, <em>region=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Volume" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>filesystem_type=None</em>, <em>initial_filesystem_label=None</em>, <em>initial_filesystem_type=None</em>, <em>name=None</em>, <em>region=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Block Storage volume which can be attached to a Droplet in order to provide expanded storage.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2730,6 +3291,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.Volume.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>description=None</em>, <em>droplet_ids=None</em>, <em>filesystem_label=None</em>, <em>filesystem_type=None</em>, <em>initial_filesystem_label=None</em>, <em>initial_filesystem_type=None</em>, <em>name=None</em>, <em>region=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Volume.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Volume resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
+:param pulumi.Input[list] droplet_ids: A list of associated droplet ids.
+:param pulumi.Input[str] filesystem_label: Filesystem label for the block storage volume.
+:param pulumi.Input[str] filesystem_type: Filesystem type (<code class="docutils literal notranslate"><span class="pre">xfs</span></code> or <code class="docutils literal notranslate"><span class="pre">ext4</span></code>) for the block storage volume.
+:param pulumi.Input[str] initial_filesystem_label: Initial filesystem label for the block storage volume.
+:param pulumi.Input[str] initial_filesystem_type: Initial filesystem type (<code class="docutils literal notranslate"><span class="pre">xfs</span></code> or <code class="docutils literal notranslate"><span class="pre">ext4</span></code>) for the block storage volume.
+:param pulumi.Input[str] name: A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and “-“, up to a limit of 64 characters.
+:param pulumi.Input[str] region: The region that the block storage volume will be created in.
+:param pulumi.Input[float] size: The size of the block storage volume in GiB. If updated, can only be expanded.
+:param pulumi.Input[str] snapshot_id: The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.Volume.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Volume.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2772,10 +3355,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.VolumeAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">VolumeAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>droplet_id=None</em>, <em>volume_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.VolumeAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">VolumeAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>droplet_id=None</em>, <em>volume_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.VolumeAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages attaching a Volume to a Droplet.</p>
 <blockquote>
-<div><strong>NOTE:</strong> Volumes can be attached either directly on the <code class="docutils literal notranslate"><span class="pre">digitalocean_droplet</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">digitalocean_volume_attachment</span></code> resource - but the two cannot be used together. If both are used against the same Droplet, the volume attachments will constantly drift.</div></blockquote>
+<div><strong>NOTE:</strong> Volumes can be attached either directly on the <code class="docutils literal notranslate"><span class="pre">.Droplet</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">.VolumeAttachment</span></code> resource - but the two cannot be used together. If both are used against the same Droplet, the volume attachments will constantly drift.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2802,6 +3385,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.VolumeAttachment.volume_id">
 <code class="descname">volume_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.VolumeAttachment.volume_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID of the Volume to be attached to the Droplet.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.VolumeAttachment.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>droplet_id=None</em>, <em>volume_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.VolumeAttachment.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing VolumeAttachment resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] droplet_id: ID of the Droplet to attach the volume to.
+:param pulumi.Input[str] volume_id: ID of the Volume to be attached to the Droplet.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume_attachment.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2846,7 +3443,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.VolumeSnapshot">
-<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">VolumeSnapshot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>volume_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.VolumeSnapshot" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_digitalocean.</code><code class="descname">VolumeSnapshot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>volume_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.VolumeSnapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot from an existing volume.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2898,6 +3495,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.VolumeSnapshot.volume_id">
 <code class="descname">volume_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.VolumeSnapshot.volume_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the volume from which the volume snapshot originated.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_digitalocean.VolumeSnapshot.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>created_at=None</em>, <em>min_disk_size=None</em>, <em>name=None</em>, <em>regions=None</em>, <em>size=None</em>, <em>volume_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.VolumeSnapshot.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing VolumeSnapshot resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] created_at: The date and time the volume snapshot was created.
+:param pulumi.Input[float] min_disk_size: The minimum size in gigabytes required for a volume to be created based on this volume snapshot.
+:param pulumi.Input[str] name: A name for the volume snapshot.
+:param pulumi.Input[list] regions: A list of DigitalOcean region “slugs” indicating where the volume snapshot is available.
+:param pulumi.Input[float] size: The billable size of the volume snapshot in gigabytes.
+:param pulumi.Input[str] volume_id: The ID of the volume from which the volume snapshot originated.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume_snapshot.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
