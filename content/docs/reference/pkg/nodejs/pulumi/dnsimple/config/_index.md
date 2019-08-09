@@ -27,14 +27,14 @@ title: Module config
 <li><a href="#token">let token</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-dnsimple/blob/abb235ede04418663605c97e7c76e76480e547b8/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
+<a href="https://github.com/pulumi/pulumi-dnsimple/blob/506edd888ef67a2eda63d02d0bf21490811464a3/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="account">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/abb235ede04418663605c97e7c76e76480e547b8/sdk/nodejs/config/vars.ts#L12">let <b>account</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/506edd888ef67a2eda63d02d0bf21490811464a3/sdk/nodejs/config/vars.ts#L12">let <b>account</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> account: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;account&#34;) || (utilities.getEnv(&#34;DNSIMPLE_ACCOUNT&#34;) || &#34;&#34;)</span>;</pre>
@@ -45,7 +45,7 @@ The account for API operations.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="email">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/abb235ede04418663605c97e7c76e76480e547b8/sdk/nodejs/config/vars.ts#L16">let <b>email</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/506edd888ef67a2eda63d02d0bf21490811464a3/sdk/nodejs/config/vars.ts#L16">let <b>email</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;email&#34;)</span>;</pre>
@@ -56,7 +56,7 @@ The DNSimple account email address.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="token">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/abb235ede04418663605c97e7c76e76480e547b8/sdk/nodejs/config/vars.ts#L20">let <b>token</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/506edd888ef67a2eda63d02d0bf21490811464a3/sdk/nodejs/config/vars.ts#L20">let <b>token</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> token: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;token&#34;) || (utilities.getEnv(&#34;DNSIMPLE_TOKEN&#34;) || &#34;&#34;)</span>;</pre>

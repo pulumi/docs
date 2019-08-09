@@ -10,11 +10,11 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-dnsimple/issues">terraform-providers/terraform-provider-dnsimple repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_dnsimple"></span><dl class="class">
 <dt id="pulumi_dnsimple.Provider">
-<em class="property">class </em><code class="descclassname">pulumi_dnsimple.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account=None</em>, <em>email=None</em>, <em>token=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_dnsimple.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_dnsimple.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account=None</em>, <em>email=None</em>, <em>token=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_dnsimple.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the dnsimple package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-<a class="reference external" href="https://pulumi.io/reference/programming-model.html#providers">documentation</a> for more information.</p>
+<a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -29,6 +29,18 @@ construction to achieve fine-grained programmatic control over provider settings
 </table>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-dnsimple/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-dnsimple/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
+<dl class="staticmethod">
+<dt id="pulumi_dnsimple.Provider.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_dnsimple.Provider.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-dnsimple/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-dnsimple/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_dnsimple.Provider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_dnsimple.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -71,7 +83,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_dnsimple.Record">
-<em class="property">class </em><code class="descclassname">pulumi_dnsimple.</code><code class="descname">Record</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>domain=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_dnsimple.Record" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_dnsimple.</code><code class="descname">Record</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>domain=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_dnsimple.Record" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DNSimple record resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -139,6 +151,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_dnsimple.Record.value">
 <code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_dnsimple.Record.value" title="Permalink to this definition">¶</a></dt>
 <dd><p>The value of the record</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_dnsimple.Record.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>domain=None</em>, <em>domain_id=None</em>, <em>hostname=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_dnsimple.Record.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Record resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] domain: The domain to add the record to
+:param pulumi.Input[str] domain_id: The domain ID of the record
+:param pulumi.Input[str] hostname: The FQDN of the record
+:param pulumi.Input[str] name: The name of the record
+:param pulumi.Input[str] priority: The priority of the record - only useful for some record types
+:param pulumi.Input[str] ttl: The TTL of the record
+:param pulumi.Input[str] type: The type of the record
+:param pulumi.Input[str] value: The value of the record</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-dnsimple/blob/master/website/docs/r/record.html.markdown">https://github.com/terraform-providers/terraform-provider-dnsimple/blob/master/website/docs/r/record.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
