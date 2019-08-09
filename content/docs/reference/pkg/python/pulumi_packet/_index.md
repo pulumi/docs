@@ -9,8 +9,23 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-packet/issues">pulumi/pulumi-packet repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/issues">terraform-providers/terraform-provider-packet repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_packet"></span><dl class="class">
+<dt id="pulumi_packet.AwaitableGetOperatingSystemResult">
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">AwaitableGetOperatingSystemResult</code><span class="sig-paren">(</span><em>distro=None</em>, <em>name=None</em>, <em>provisionable_on=None</em>, <em>slug=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.AwaitableGetOperatingSystemResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_packet.AwaitableGetPrecreatedIpBlockResult">
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">AwaitableGetPrecreatedIpBlockResult</code><span class="sig-paren">(</span><em>address=None</em>, <em>address_family=None</em>, <em>cidr=None</em>, <em>cidr_notation=None</em>, <em>facility=None</em>, <em>gateway=None</em>, <em>global_=None</em>, <em>manageable=None</em>, <em>management=None</em>, <em>netmask=None</em>, <em>network=None</em>, <em>project_id=None</em>, <em>public=None</em>, <em>quantity=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.AwaitableGetPrecreatedIpBlockResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_packet.AwaitableGetSpotMarketPriceResult">
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">AwaitableGetSpotMarketPriceResult</code><span class="sig-paren">(</span><em>facility=None</em>, <em>plan=None</em>, <em>price=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.AwaitableGetSpotMarketPriceResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_packet.BgpSession">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">BgpSession</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>default_route=None</em>, <em>device_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.BgpSession" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">BgpSession</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>default_route=None</em>, <em>device_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.BgpSession" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage BGP sessions in Packet Host. Refer to <a class="reference external" href="https://support.packet.com/kb/articles/bgp">Packet BGP documentation</a> for more details.</p>
 <p>You need to have BGP config enabled in your project.</p>
 <p>BGP session must be linked to a device running <a class="reference external" href="https://bird.network.cz">BIRD</a> or other BGP routing daemon which will control route advertisements via the session to Packet’s upstream routers.</p>
@@ -47,6 +62,21 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_packet.BgpSession.device_id">
 <code class="descname">device_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.BgpSession.device_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID of device</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_packet.BgpSession.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>default_route=None</em>, <em>device_id=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.BgpSession.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing BgpSession resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address_family: <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>
+:param pulumi.Input[bool] default_route: Boolean flag to set the default route policy. False by default.
+:param pulumi.Input[str] device_id: ID of device</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/bgp_session.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/bgp_session.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -91,7 +121,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.Connect">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Connect</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>facility=None</em>, <em>name=None</em>, <em>port_speed=None</em>, <em>project_id=None</em>, <em>provider_id=None</em>, <em>provider_payload=None</em>, <em>vxlan=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Connect" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Connect</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>facility=None</em>, <em>name=None</em>, <em>port_speed=None</em>, <em>project_id=None</em>, <em>provider_id=None</em>, <em>provider_payload=None</em>, <em>vxlan=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Connect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource for <a class="reference external" href="https://www.packet.com/cloud/all-features/packet-connect/">Packet Connect</a>, a link between Packet VLANs and VLANs in other cloud providers.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -175,6 +205,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>VXLAN Network identifier of the linked Packet VLAN</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_packet.Connect.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>facility=None</em>, <em>name=None</em>, <em>port_speed=None</em>, <em>project_id=None</em>, <em>provider_id=None</em>, <em>provider_payload=None</em>, <em>status=None</em>, <em>vxlan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Connect.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Connect resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] facility: Facility where to create the VLAN
+:param pulumi.Input[str] name: Name for the Connect resource
+:param pulumi.Input[float] port_speed: Port speed in Mbps
+:param pulumi.Input[str] project_id: ID of parent project
+:param pulumi.Input[str] provider_id: ID of Connect Provider. Provider IDs are</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>provider_payload</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Authorization key for the Connect provider</li>
+<li><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Status of the Connect resource, one of PROVISIONING, PROVISIONED, DEPROVISIONING, DEPROVISIONED</li>
+<li><strong>vxlan</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – VXLAN Network identifier of the linked Packet VLAN</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/connect.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/connect.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_packet.Connect.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Connect.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -217,7 +277,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.Device">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Device</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>always_pxe=None</em>, <em>billing_cycle=None</em>, <em>description=None</em>, <em>facilities=None</em>, <em>hardware_reservation_id=None</em>, <em>hostname=None</em>, <em>ip_address_types=None</em>, <em>ipxe_script_url=None</em>, <em>network_type=None</em>, <em>operating_system=None</em>, <em>plan=None</em>, <em>project_id=None</em>, <em>project_ssh_key_ids=None</em>, <em>public_ipv4_subnet_size=None</em>, <em>storage=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Device</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>always_pxe=None</em>, <em>billing_cycle=None</em>, <em>description=None</em>, <em>facilities=None</em>, <em>hardware_reservation_id=None</em>, <em>hostname=None</em>, <em>ip_address_types=None</em>, <em>ipxe_script_url=None</em>, <em>network_type=None</em>, <em>operating_system=None</em>, <em>plan=None</em>, <em>project_id=None</em>, <em>project_ssh_key_ids=None</em>, <em>public_ipv4_subnet_size=None</em>, <em>storage=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>wait_for_reservation_deprovision=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Packet device resource. This can be used to create,
 modify, and delete devices.</p>
 <blockquote>
@@ -249,13 +309,14 @@ doc.</li>
 <li><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operating system slug. To find the slug, or visit <a class="reference external" href="https://www.packet.com/developers/api/#operatingsystems">Operating Systems API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</li>
 <li><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device plan slug. To find the plan slug, visit <a class="reference external" href="https://www.packet.com/developers/api/#plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</li>
 <li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the project in which to create the device</li>
-<li><strong>project_ssh_key_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the [packet_project_ssh_key][packet_project_ssh_key.html] resource.</li>
+<li><strong>project_ssh_key_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the [.ProjectSshKey][packet_project_ssh_key.html] resource.</li>
 <li><strong>public_ipv4_subnet_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Size of allocated subnet, more
 information is in the
 <a class="reference external" href="https://support.packet.com/kb/articles/custom-subnet-size">Custom Subnet Size</a> doc.</li>
 <li><strong>storage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON for custom partitioning. Only usable on reserved hardware. More information in in the <a class="reference external" href="https://support.packet.com/kb/articles/custom-partitioning-raid">Custom Partitioning and RAID</a> doc.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Tags attached to the device</li>
 <li><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string of the desired User Data for the device.</li>
+<li><strong>wait_for_reservation_deprovision</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).</li>
 </ul>
 </td>
 </tr>
@@ -391,7 +452,7 @@ The fields of the network attributes are:</li>
 <dl class="attribute">
 <dt id="pulumi_packet.Device.project_ssh_key_ids">
 <code class="descname">project_ssh_key_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.project_ssh_key_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the [packet_project_ssh_key][packet_project_ssh_key.html] resource.</p>
+<dd><p>Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the [.ProjectSshKey][packet_project_ssh_key.html] resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -442,6 +503,86 @@ information is in the
 <dt id="pulumi_packet.Device.user_data">
 <code class="descname">user_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.user_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>A string of the desired User Data for the device.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.Device.wait_for_reservation_deprovision">
+<code class="descname">wait_for_reservation_deprovision</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.wait_for_reservation_deprovision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_packet.Device.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>access_private_ipv4=None</em>, <em>access_public_ipv4=None</em>, <em>access_public_ipv6=None</em>, <em>always_pxe=None</em>, <em>billing_cycle=None</em>, <em>created=None</em>, <em>deployed_facility=None</em>, <em>description=None</em>, <em>facilities=None</em>, <em>hardware_reservation_id=None</em>, <em>hostname=None</em>, <em>ip_address_types=None</em>, <em>ipxe_script_url=None</em>, <em>locked=None</em>, <em>networks=None</em>, <em>network_type=None</em>, <em>operating_system=None</em>, <em>plan=None</em>, <em>ports=None</em>, <em>project_id=None</em>, <em>project_ssh_key_ids=None</em>, <em>public_ipv4_subnet_size=None</em>, <em>root_password=None</em>, <em>ssh_key_ids=None</em>, <em>state=None</em>, <em>storage=None</em>, <em>tags=None</em>, <em>updated=None</em>, <em>user_data=None</em>, <em>wait_for_reservation_deprovision=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Device resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] access_private_ipv4: The ipv4 private IP assigned to the device
+:param pulumi.Input[str] access_public_ipv4: The ipv4 maintenance IP assigned to the device
+:param pulumi.Input[str] access_public_ipv6: The ipv6 maintenance IP assigned to the device
+:param pulumi.Input[bool] always_pxe: If true, a device with OS <code class="docutils literal notranslate"><span class="pre">custom_ipxe</span></code> will</p>
+<blockquote>
+<div>continue to boot via iPXE on reboots.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>billing_cycle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – monthly or hourly</li>
+<li><strong>created</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for when the device was created</li>
+<li><strong>deployed_facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The facility where the device is deployed.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description string for the device</li>
+<li><strong>facilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.com/developers/api/#facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
+</li>
+<li><strong>hardware_reservation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of hardware reservation where you want this device deployed, or <code class="docutils literal notranslate"><span class="pre">next-available</span></code> if you want to pick your next available reservation automatically.</li>
+<li><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device name</li>
+<li><strong>ip_address_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set containing one or more of [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv6</span></code>]. It specifies which IP address types a new device should obtain. If omitted, a created device will obtain all 3 addresses. If you only want private IPv4 address for the new device, pass [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>].</li>
+<li><strong>ipxe_script_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>URL pointing to a hosted iPXE script. More
+information is in the
+<a class="reference external" href="https://support.packet.com/kb/articles/custom-ipxe">Custom iPXE</a>
+doc.</p>
+</li>
+<li><strong>locked</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the device is locked</li>
+<li><strong>networks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The device’s private and public IP (v4 and v6) network details. When a device is run without any special network configuration, it will have 3 networks:</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The operating system slug. To find the slug, or visit <a class="reference external" href="https://www.packet.com/developers/api/#operatingsystems">Operating Systems API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
+</li>
+<li><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The device plan slug. To find the plan slug, visit <a class="reference external" href="https://www.packet.com/developers/api/#plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</p>
+</li>
+<li><strong>ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Ports assigned to the device</li>
+<li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the project in which to create the device</li>
+<li><strong>project_ssh_key_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the [.ProjectSshKey][packet_project_ssh_key.html] resource.</li>
+<li><strong>public_ipv4_subnet_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>Size of allocated subnet, more
+information is in the
+<a class="reference external" href="https://support.packet.com/kb/articles/custom-subnet-size">Custom Subnet Size</a> doc.</p>
+</li>
+<li><strong>root_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Root password to the server (disabled after 24 hours)</li>
+<li><strong>ssh_key_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IDs of SSH keys deployed in the device, can be both user and project SSH keys</li>
+<li><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the device</li>
+<li><strong>storage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>JSON for custom partitioning. Only usable on reserved hardware. More information in in the <a class="reference external" href="https://support.packet.com/kb/articles/custom-partitioning-raid">Custom Partitioning and RAID</a> doc.</p>
+</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Tags attached to the device</li>
+<li><strong>updated</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for the last time the device was updated</li>
+<li><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string of the desired User Data for the device.</li>
+<li><strong>wait_for_reservation_deprovision</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/device.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/device.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -540,7 +681,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.IpAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">IpAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cidr_notation=None</em>, <em>device_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.IpAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">IpAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cidr_notation=None</em>, <em>device_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.IpAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to attach elastic IP subnets to devices.</p>
 <p>To attach an IP subnet from a reserved block to a provisioned device, you must derive a subnet CIDR belonging to
 one of your reserved blocks in the same project and facility as the target device.</p>
@@ -614,6 +755,38 @@ project and facility as the device</p>
 <dd><p>boolean flag whether subnet is reachable from the Internet</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_packet.IpAttachment.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address=None</em>, <em>address_family=None</em>, <em>cidr=None</em>, <em>cidr_notation=None</em>, <em>device_id=None</em>, <em>gateway=None</em>, <em>global_=None</em>, <em>manageable=None</em>, <em>management=None</em>, <em>netmask=None</em>, <em>network=None</em>, <em>public=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.IpAttachment.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing IpAttachment resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] address_family: Address family as integer (4 or 6)
+:param pulumi.Input[float] cidr: length of CIDR prefix of the subnet as integer
+:param pulumi.Input[str] cidr_notation: CIDR notation of subnet from block reserved in the same</p>
+<blockquote>
+<div>project and facility as the device</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>device_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of device to which to assign the subnet</li>
+<li><strong>gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IP address of gateway for the subnet</li>
+<li><strong>netmask</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subnet mask in decimal notation, e.g. “255.255.255.0”</li>
+<li><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subnet network address</li>
+<li><strong>public</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – boolean flag whether subnet is reachable from the Internet</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/ip_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/ip_attachment.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_packet.IpAttachment.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.IpAttachment.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -656,7 +829,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.Organization">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Organization</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>logo=None</em>, <em>name=None</em>, <em>twitter=None</em>, <em>website=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Organization" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Organization</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>logo=None</em>, <em>name=None</em>, <em>twitter=None</em>, <em>website=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Organization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage organization resource in Packet.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -707,6 +880,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Website link.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_packet.Organization.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>created=None</em>, <em>description=None</em>, <em>logo=None</em>, <em>name=None</em>, <em>twitter=None</em>, <em>updated=None</em>, <em>website=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Organization.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Organization resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: Description string.
+:param pulumi.Input[str] logo: Logo URL.
+:param pulumi.Input[str] name: The name of the Organization.
+:param pulumi.Input[str] twitter: Twitter handle.
+:param pulumi.Input[str] website: Website link.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/organization.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/organization.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_packet.Organization.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Organization.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -749,7 +939,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.PortVlanAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">PortVlanAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>device_id=None</em>, <em>force_bond=None</em>, <em>native=None</em>, <em>port_name=None</em>, <em>vlan_vnid=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.PortVlanAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">PortVlanAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>device_id=None</em>, <em>force_bond=None</em>, <em>native=None</em>, <em>port_name=None</em>, <em>vlan_vnid=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.PortVlanAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to attach device ports to VLANs.</p>
 <p>Device and VLAN must be in the same facility.</p>
 <p>If you need this resource to add the port back to bond on removal, set <code class="docutils literal notranslate"><span class="pre">force_bond</span> <span class="pre">=</span> <span class="pre">true</span></code>.</p>
@@ -812,6 +1002,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>VXLAN Network Identifier, integer</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_packet.PortVlanAttachment.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>device_id=None</em>, <em>force_bond=None</em>, <em>native=None</em>, <em>port_id=None</em>, <em>port_name=None</em>, <em>vlan_id=None</em>, <em>vlan_vnid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.PortVlanAttachment.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing PortVlanAttachment resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] device_id: ID of device to be assigned to the VLAN
+:param pulumi.Input[bool] force_bond: Add port back to the bond when this resource is removed. Default is false.
+:param pulumi.Input[bool] native: Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above. 
+:param pulumi.Input[str] port_name: Name of network port to be assigned to the VLAN
+:param pulumi.Input[float] vlan_vnid: VXLAN Network Identifier, integer</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/port_vlan_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/port_vlan_attachment.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_packet.PortVlanAttachment.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.PortVlanAttachment.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -854,7 +1061,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.Project">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backend_transfer=None</em>, <em>bgp_config=None</em>, <em>name=None</em>, <em>organization_id=None</em>, <em>payment_method_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Project" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backend_transfer=None</em>, <em>bgp_config=None</em>, <em>name=None</em>, <em>organization_id=None</em>, <em>payment_method_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Packet project resource to allow you manage devices
 in your projects.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -918,6 +1125,25 @@ in your projects.</p>
 <dd><p>The timestamp for the last time the project was updated</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_packet.Project.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>backend_transfer=None</em>, <em>bgp_config=None</em>, <em>created=None</em>, <em>name=None</em>, <em>organization_id=None</em>, <em>payment_method_id=None</em>, <em>updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Project.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Project resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] backend_transfer: Enable or disable <a class="reference external" href="https://support.packet.com/kb/articles/backend-transfer">Backend Transfer</a>, default is false
+:param pulumi.Input[dict] bgp_config: Optional BGP settings. Refer to <a class="reference external" href="https://support.packet.com/kb/articles/bgp">Packet guide for BGP</a>.
+:param pulumi.Input[str] created: The timestamp for when the project was created
+:param pulumi.Input[str] name: The name of the project
+:param pulumi.Input[str] organization_id: The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.
+:param pulumi.Input[str] payment_method_id: The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with <code class="docutils literal notranslate"><span class="pre">organization_id</span></code>, or default).
+:param pulumi.Input[str] updated: The timestamp for the last time the project was updated</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_packet.Project.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Project.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -960,7 +1186,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.ProjectSshKey">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">ProjectSshKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>public_key=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ProjectSshKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">ProjectSshKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>public_key=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ProjectSshKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Packet project SSH key resource to manage project-specific SSH keys. On contrary to user SSH keys, project SSH keys are used to exclusively populate <code class="docutils literal notranslate"><span class="pre">authorized_keys</span></code> in new devices.</p>
 <p>If you supply a list of project SSH keys when creating a new device, only the listed keys are used; user SSH keys are ignored.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1016,6 +1242,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The timestamp for the last time the SSH key was updated</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_packet.ProjectSshKey.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>created=None</em>, <em>fingerprint=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>public_key=None</em>, <em>updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ProjectSshKey.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ProjectSshKey resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] created: The timestamp for when the SSH key was created
+:param pulumi.Input[str] fingerprint: The fingerprint of the SSH key
+:param pulumi.Input[str] name: The name of the SSH key for identification
+:param pulumi.Input[str] project_id: The ID of parent project
+:param pulumi.Input[str] public_key: The public key. If this is a file, it can be read using the file interpolation function
+:param pulumi.Input[str] updated: The timestamp for the last time the SSH key was updated</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project_ssh_key.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project_ssh_key.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_packet.ProjectSshKey.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ProjectSshKey.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1058,11 +1302,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.Provider">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auth_token=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auth_token=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the packet package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-<a class="reference external" href="https://pulumi.io/reference/programming-model.html#providers">documentation</a> for more information.</p>
+<a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1077,6 +1321,18 @@ construction to achieve fine-grained programmatic control over provider settings
 </table>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
+<dl class="staticmethod">
+<dt id="pulumi_packet.Provider.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Provider.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_packet.Provider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1119,7 +1375,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.ReservedIpBlock">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">ReservedIpBlock</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>facility=None</em>, <em>project_id=None</em>, <em>quantity=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ReservedIpBlock" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">ReservedIpBlock</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>facility=None</em>, <em>project_id=None</em>, <em>quantity=None</em>, <em>type=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ReservedIpBlock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create and manage blocks of reserved IP addresses in a project.</p>
 <p>When a user provisions first device in a facility, Packet API automatically allocates IPv6/56 and private IPv4/25 blocks.
 The new device then gets IPv6 and private IPv4 addresses from those block. It also gets a public IPv4/31 address.
@@ -1127,7 +1383,7 @@ Every new device in the project and facility will automatically get IPv6 and pri
 The IPv6 and private IPv4 blocks can’t be created, only imported. With this resource, it’s possible to create either public IPv4 blocks or global IPv4 blocks.</p>
 <p>Public blocks are allocated in a facility. Addresses from public blocks can only be assigned to devices in the facility. Public blocks can have mask from /24 (256 addresses) to /32 (1 address). If you create public block with this resource, you must fill the facility argmument.</p>
 <p>Addresses from global blocks can be assigned in any facility. Global blocks can have mask from /30 (4 addresses), to /32 (1 address). If you create global block with this resource, you must specify type = “global_ipv4” and you must omit the facility argument.</p>
-<p>Once IP block is allocated or imported, an address from it can be assigned to device with the <code class="docutils literal notranslate"><span class="pre">packet_ip_attachment</span></code> resource.</p>
+<p>Once IP block is allocated or imported, an address from it can be assigned to device with the <code class="docutils literal notranslate"><span class="pre">.IpAttachment</span></code> resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1212,6 +1468,29 @@ The IPv6 and private IPv4 blocks can’t be created, only imported. With this re
 <dd><p>Either “global_ipv4” or “public_ipv4”, defaults to “public_ipv4” for backward compatibility</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_packet.ReservedIpBlock.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address=None</em>, <em>address_family=None</em>, <em>cidr=None</em>, <em>cidr_notation=None</em>, <em>facility=None</em>, <em>gateway=None</em>, <em>global_=None</em>, <em>manageable=None</em>, <em>management=None</em>, <em>netmask=None</em>, <em>network=None</em>, <em>project_id=None</em>, <em>public=None</em>, <em>quantity=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ReservedIpBlock.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ReservedIpBlock resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] address_family: Address family as integer (4 or 6)
+:param pulumi.Input[float] cidr: length of CIDR prefix of the block as integer
+:param pulumi.Input[str] cidr_notation: Address and mask in CIDR notation, e.g. “147.229.15.30/31”
+:param pulumi.Input[str] facility: Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global<em>ipv4
+:param pulumi.Input[bool] global</em>: boolean flag whether addresses from a block are global (i.e. can be assigned in any facility)
+:param pulumi.Input[str] netmask: Mask in decimal notation, e.g. “255.255.255.0”
+:param pulumi.Input[str] network: Network IP address portion of the block specification
+:param pulumi.Input[str] project_id: The packet project ID where to allocate the address block
+:param pulumi.Input[bool] public: boolean flag whether addresses from a block are public
+:param pulumi.Input[float] quantity: The number of allocated /32 addresses, a power of 2
+:param pulumi.Input[str] type: Either “global_ipv4” or “public_ipv4”, defaults to “public_ipv4” for backward compatibility</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/reserved_ip_block.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/reserved_ip_block.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_packet.ReservedIpBlock.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ReservedIpBlock.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1254,7 +1533,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.SpotMarketRequest">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">SpotMarketRequest</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>devices_max=None</em>, <em>devices_min=None</em>, <em>facilities=None</em>, <em>instance_parameters=None</em>, <em>max_bid_price=None</em>, <em>project_id=None</em>, <em>wait_for_devices=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SpotMarketRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">SpotMarketRequest</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>devices_max=None</em>, <em>devices_min=None</em>, <em>facilities=None</em>, <em>instance_parameters=None</em>, <em>max_bid_price=None</em>, <em>project_id=None</em>, <em>wait_for_devices=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SpotMarketRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Packet Spot Market Request resource to allow you to
 manage spot market requests on your account. <a class="reference external" href="https://support.packet.com/kb/articles/spot-market">https://support.packet.com/kb/articles/spot-market</a></p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1320,6 +1599,25 @@ manage spot market requests on your account. <a class="reference external" href=
 <dd><p>On resource creation - wait until all desired devices are active, on resource destruction - wait until devices are removed</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_packet.SpotMarketRequest.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>devices_max=None</em>, <em>devices_min=None</em>, <em>facilities=None</em>, <em>instance_parameters=None</em>, <em>max_bid_price=None</em>, <em>project_id=None</em>, <em>wait_for_devices=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SpotMarketRequest.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SpotMarketRequest resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[float] devices_max: Maximum number devices to be created
+:param pulumi.Input[float] devices_min: Miniumum number devices to be created
+:param pulumi.Input[list] facilities: Facility IDs where devices should be created
+:param pulumi.Input[dict] instance_parameters: Device parameters. See device resource for details
+:param pulumi.Input[float] max_bid_price: Maximum price user is willing to pay per hour per device
+:param pulumi.Input[str] project_id: Project ID
+:param pulumi.Input[bool] wait_for_devices: On resource creation - wait until all desired devices are active, on resource destruction - wait until devices are removed</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/spot_market_request.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/spot_market_request.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_packet.SpotMarketRequest.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SpotMarketRequest.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1362,7 +1660,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.SshKey">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">SshKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>public_key=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SshKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">SshKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>public_key=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SshKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage User SSH keys on your Packet user account. If you create a new device in a project, all the keys of the project’s collaborators will be injected to the device.</p>
 <p>The link between User SSH key and device is implicit. If you want to make sure that a key will be copied to a device, you must ensure that the device resource <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> the key resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1413,6 +1711,32 @@ can be read using the file interpolation function</p>
 <dd><p>The timestamp for the last time the SSH key was updated</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_packet.SshKey.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>created=None</em>, <em>fingerprint=None</em>, <em>name=None</em>, <em>public_key=None</em>, <em>updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SshKey.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SshKey resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] created: The timestamp for when the SSH key was created
+:param pulumi.Input[str] fingerprint: The fingerprint of the SSH key
+:param pulumi.Input[str] name: The name of the SSH key for identification
+:param pulumi.Input[str] public_key: The public key. If this is a file, it</p>
+<blockquote>
+<div>can be read using the file interpolation function</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>updated</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for the last time the SSH key was updated</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/ssh_key.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/ssh_key.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_packet.SshKey.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SshKey.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1455,7 +1779,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.Vlan">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Vlan</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>facility=None</em>, <em>project_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Vlan" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Vlan</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>facility=None</em>, <em>project_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Vlan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to allow users to manage Virtual Networks in their projects.</p>
 <p>To learn more about Layer 2 networking in Packet, refer to</p>
 <ul class="simple">
@@ -1503,6 +1827,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>VXLAN segment ID</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_packet.Vlan.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>description=None</em>, <em>facility=None</em>, <em>project_id=None</em>, <em>vxlan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Vlan.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Vlan resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: Description string
+:param pulumi.Input[str] facility: Facility where to create the VLAN
+:param pulumi.Input[str] project_id: ID of parent project
+:param pulumi.Input[float] vxlan: VXLAN segment ID</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/vlan.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/vlan.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_packet.Vlan.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Vlan.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1545,7 +1885,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.Volume">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>billing_cycle=None</em>, <em>description=None</em>, <em>facility=None</em>, <em>locked=None</em>, <em>plan=None</em>, <em>project_id=None</em>, <em>size=None</em>, <em>snapshot_policies=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Volume" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>billing_cycle=None</em>, <em>description=None</em>, <em>facility=None</em>, <em>locked=None</em>, <em>plan=None</em>, <em>project_id=None</em>, <em>size=None</em>, <em>snapshot_policies=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Volume resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1647,6 +1987,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The timestamp for the last time the volume was updated</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_packet.Volume.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>attachments=None</em>, <em>billing_cycle=None</em>, <em>created=None</em>, <em>description=None</em>, <em>facility=None</em>, <em>locked=None</em>, <em>name=None</em>, <em>plan=None</em>, <em>project_id=None</em>, <em>size=None</em>, <em>snapshot_policies=None</em>, <em>state=None</em>, <em>updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Volume.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Volume resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] attachments: A list of attachments, each with it’s own <code class="docutils literal notranslate"><span class="pre">href</span></code> attribute
+:param pulumi.Input[str] billing_cycle: The billing cycle, defaults to “hourly”
+:param pulumi.Input[str] created: The timestamp for when the volume was created
+:param pulumi.Input[str] description: Optional description for the volume
+:param pulumi.Input[str] facility: The facility to create the volume in
+:param pulumi.Input[bool] locked: Lock or unlock the volume
+:param pulumi.Input[str] name: The name of the volume
+:param pulumi.Input[str] plan: The service plan slug of the volume
+:param pulumi.Input[str] project_id: The packet project ID to deploy the volume in
+:param pulumi.Input[float] size: The size in GB to make the volume
+:param pulumi.Input[list] snapshot_policies: Optional list of snapshot policies
+:param pulumi.Input[str] state: The state of the volume
+:param pulumi.Input[str] updated: The timestamp for the last time the volume was updated</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_packet.Volume.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Volume.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1689,7 +2054,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.VolumeAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">VolumeAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>device_id=None</em>, <em>volume_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.VolumeAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">VolumeAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>device_id=None</em>, <em>volume_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.VolumeAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a VolumeAttachment resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1717,6 +2082,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.VolumeAttachment.volume_id">
 <code class="descname">volume_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.VolumeAttachment.volume_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the volume to attach</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_packet.VolumeAttachment.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>device_id=None</em>, <em>volume_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.VolumeAttachment.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing VolumeAttachment resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] device_id: The ID of the device to which the volume should be attached
+:param pulumi.Input[str] volume_id: The ID of the volume to attach</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume_attachment.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
