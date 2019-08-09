@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_gcp.cloudbuild"></span><dl class="class">
 <dt id="pulumi_gcp.cloudbuild.Trigger">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudbuild.</code><code class="descname">Trigger</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>build=None</em>, <em>description=None</em>, <em>disabled=None</em>, <em>filename=None</em>, <em>ignored_files=None</em>, <em>included_files=None</em>, <em>project=None</em>, <em>substitutions=None</em>, <em>trigger_template=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudbuild.</code><code class="descname">Trigger</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>build=None</em>, <em>description=None</em>, <em>disabled=None</em>, <em>filename=None</em>, <em>ignored_files=None</em>, <em>included_files=None</em>, <em>project=None</em>, <em>substitutions=None</em>, <em>trigger_template=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration for an automated build in response to source repository changes.</p>
 <p>To get more information about Trigger, see:</p>
 <ul class="simple">
@@ -41,6 +41,21 @@ If it is not provided, the provider project is used.</li>
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_gcp.cloudbuild.Trigger.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>build=None</em>, <em>create_time=None</em>, <em>description=None</em>, <em>disabled=None</em>, <em>filename=None</em>, <em>ignored_files=None</em>, <em>included_files=None</em>, <em>project=None</em>, <em>substitutions=None</em>, <em>trigger_id=None</em>, <em>trigger_template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Trigger resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div>If it is not provided, the provider project is used.</div></blockquote>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudbuild_trigger.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudbuild_trigger.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

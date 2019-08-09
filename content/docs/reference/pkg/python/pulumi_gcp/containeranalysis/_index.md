@@ -10,8 +10,16 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_gcp.containeranalysis"></span><dl class="class">
 <dt id="pulumi_gcp.containeranalysis.Note">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.containeranalysis.</code><code class="descname">Note</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attestation_authority=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.containeranalysis.Note" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Note resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.containeranalysis.</code><code class="descname">Note</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attestation_authority=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.containeranalysis.Note" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a detailed description of a Note.</p>
+<p>To get more information about Note, see:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.google.com/container-analysis/api/reference/rest/">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/container-analysis/">Official Documentation</a></li>
+</ul>
+</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -26,6 +34,18 @@ anything, please consult the source <a class="reference external" href="https://
 </table>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_analysis_note.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_analysis_note.html.markdown</a>.</div></blockquote>
+<dl class="staticmethod">
+<dt id="pulumi_gcp.containeranalysis.Note.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>attestation_authority=None</em>, <em>name=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.containeranalysis.Note.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Note resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_analysis_note.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_analysis_note.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.containeranalysis.Note.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.containeranalysis.Note.translate_output_property" title="Permalink to this definition">¶</a></dt>

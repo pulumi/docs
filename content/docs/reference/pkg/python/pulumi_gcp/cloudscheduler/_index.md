@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_gcp.cloudscheduler"></span><dl class="class">
 <dt id="pulumi_gcp.cloudscheduler.Job">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudscheduler.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_engine_http_target=None</em>, <em>description=None</em>, <em>http_target=None</em>, <em>name=None</em>, <em>project=None</em>, <em>pubsub_target=None</em>, <em>region=None</em>, <em>retry_config=None</em>, <em>schedule=None</em>, <em>time_zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudscheduler.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_engine_http_target=None</em>, <em>description=None</em>, <em>http_target=None</em>, <em>name=None</em>, <em>project=None</em>, <em>pubsub_target=None</em>, <em>region=None</em>, <em>retry_config=None</em>, <em>schedule=None</em>, <em>time_zone=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>A scheduled job that can publish a pubsub message or a http request
 every X interval of time, using crontab format string.</p>
 <p>To use Cloud Scheduler your project must contain an App Engine app
@@ -45,6 +45,21 @@ If it is not provided, the provider project is used.</li>
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_gcp.cloudscheduler.Job.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>app_engine_http_target=None</em>, <em>description=None</em>, <em>http_target=None</em>, <em>name=None</em>, <em>project=None</em>, <em>pubsub_target=None</em>, <em>region=None</em>, <em>retry_config=None</em>, <em>schedule=None</em>, <em>time_zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudscheduler.Job.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Job resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div>If it is not provided, the provider project is used.</div></blockquote>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_scheduler_job.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_scheduler_job.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

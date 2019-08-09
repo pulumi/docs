@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_gcp.resourcemanager"></span><dl class="class">
 <dt id="pulumi_gcp.resourcemanager.Lien">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.resourcemanager.</code><code class="descname">Lien</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>origin=None</em>, <em>parent=None</em>, <em>reason=None</em>, <em>restrictions=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.resourcemanager.Lien" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.resourcemanager.</code><code class="descname">Lien</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>origin=None</em>, <em>parent=None</em>, <em>reason=None</em>, <em>restrictions=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.resourcemanager.Lien" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Lien represents an encumbrance on the actions that can be performed on a resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -26,6 +26,18 @@ anything, please consult the source <a class="reference external" href="https://
 </table>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/resource_manager_lien.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/resource_manager_lien.html.markdown</a>.</div></blockquote>
+<dl class="staticmethod">
+<dt id="pulumi_gcp.resourcemanager.Lien.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>create_time=None</em>, <em>name=None</em>, <em>origin=None</em>, <em>parent=None</em>, <em>reason=None</em>, <em>restrictions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.resourcemanager.Lien.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Lien resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/resource_manager_lien.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/resource_manager_lien.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.resourcemanager.Lien.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.resourcemanager.Lien.translate_output_property" title="Permalink to this definition">¶</a></dt>

@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_gcp.servicenetworking"></span><dl class="class">
 <dt id="pulumi_gcp.servicenetworking.Connection">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.servicenetworking.</code><code class="descname">Connection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>network=None</em>, <em>reserved_peering_ranges=None</em>, <em>service=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.servicenetworking.</code><code class="descname">Connection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>network=None</em>, <em>reserved_peering_ranges=None</em>, <em>service=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a private VPC connection with a GCP service provider. For more information see
 <a class="reference external" href="https://cloud.google.com/vpc/docs/configure-private-services-access#creating-connection">the official documentation</a>
 and
@@ -56,6 +56,33 @@ is already established will not reallocate already provisioned service producer 
 <dd><p>Provider peering service that is managing peering connectivity for a
 service provider organization. For Google services that support this functionality it is
 ‘servicenetworking.googleapis.com’.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_gcp.servicenetworking.Connection.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>network=None</em>, <em>peering=None</em>, <em>reserved_peering_ranges=None</em>, <em>service=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Connection resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] network: Name of VPC network connected with service producers using VPC peering.
+:param pulumi.Input[list] reserved_peering_ranges: Named IP address range(s) of PEERING type reserved for</p>
+<blockquote>
+<div>this service provider. Note that invoking this method with a different range when connection
+is already established will not reallocate already provisioned service producer subnetworks.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Provider peering service that is managing peering connectivity for a
+service provider organization. For Google services that support this functionality it is
+‘servicenetworking.googleapis.com’.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_networking_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_networking_connection.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

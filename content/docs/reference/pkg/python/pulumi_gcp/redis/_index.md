@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_gcp.redis"></span><dl class="class">
 <dt id="pulumi_gcp.redis.Instance">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.redis.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alternative_location_id=None</em>, <em>authorized_network=None</em>, <em>display_name=None</em>, <em>labels=None</em>, <em>location_id=None</em>, <em>memory_size_gb=None</em>, <em>name=None</em>, <em>project=None</em>, <em>redis_configs=None</em>, <em>redis_version=None</em>, <em>region=None</em>, <em>reserved_ip_range=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.redis.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.redis.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alternative_location_id=None</em>, <em>authorized_network=None</em>, <em>display_name=None</em>, <em>labels=None</em>, <em>location_id=None</em>, <em>memory_size_gb=None</em>, <em>name=None</em>, <em>project=None</em>, <em>redis_configs=None</em>, <em>redis_version=None</em>, <em>region=None</em>, <em>reserved_ip_range=None</em>, <em>tier=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.redis.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Google Cloud Redis instance.</p>
 <p>To get more information about Instance, see:</p>
 <ul class="simple">
@@ -41,6 +41,21 @@ If it is not provided, the provider project is used.</li>
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.redis.Instance.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_gcp.redis.Instance.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>alternative_location_id=None</em>, <em>authorized_network=None</em>, <em>create_time=None</em>, <em>current_location_id=None</em>, <em>display_name=None</em>, <em>host=None</em>, <em>labels=None</em>, <em>location_id=None</em>, <em>memory_size_gb=None</em>, <em>name=None</em>, <em>port=None</em>, <em>project=None</em>, <em>redis_configs=None</em>, <em>redis_version=None</em>, <em>region=None</em>, <em>reserved_ip_range=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.redis.Instance.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<blockquote>
+<div>If it is not provided, the provider project is used.</div></blockquote>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/redis_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/redis_instance.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
