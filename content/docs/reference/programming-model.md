@@ -81,7 +81,7 @@ This package also provides the following helpers:
 
 - [pulumi.getStack] to get information about the current stack
 - [pulumi.log] for logging deployment information
-- [pulumi.runtime.serializeFunction] for turning JavaScript callbacks into data which can be [used as application code](#runtime).
+- [pulumi.runtime.closure.serializeFunction] for turning JavaScript callbacks into data which can be [used as application code](#runtime).
 
 ## Resources {#resources}
 
@@ -1722,7 +1722,7 @@ bucket.onObjectCreated("onObject", async (ev: aws.s3.BucketEvent) => {
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-Libraries which use JavaScript callbacks as inputs to be provided as source text to resource construction (like the Lambda that is created by the `onObjectCreated` function in the example above) are built on top of the [pulumi.runtime.serializeFunction] API, which takes as input a JavaScript `Function` object, and returns a `Promise` that contains the serialized form of that function.
+Libraries which use JavaScript callbacks as inputs to be provided as source text to resource construction (like the Lambda that is created by the `onObjectCreated` function in the example above) are built on top of the [pulumi.runtime.closure.serializeFunction] API, which takes as input a JavaScript `Function` object, and returns a `Promise` that contains the serialized form of that function.
 
 When serializing a function to text, the following steps are taken:
 
@@ -1754,7 +1754,7 @@ However, you may have a scenario in which the actual value, such as an array of 
 
 [pulumi.getStack]: {{< relref "pkg/nodejs/pulumi/pulumi#getStack" >}}
 [pulumi.log]: {{< relref "pkg/nodejs/pulumi/pulumi/log/" >}}
-[pulumi.runtime.serializeFunction]: {{< relref "pkg/nodejs/pulumi/pulumi/runtime#serializeFunction" >}}
+[pulumi.runtime.closure.serializeFunction]: {{< relref "pkg/nodejs/pulumi/pulumi/runtime/closure/#serializeFunction" >}}
 [pulumi.output]: {{< relref "pkg/nodejs/pulumi/pulumi#output" >}}
 [pulumi.all]: {{< relref "pkg/nodejs/pulumi/pulumi#all" >}}
 
