@@ -1297,7 +1297,7 @@ We can now create instances of the new `MyResource` resource kind in our program
 
 ### Dynamic Resource Inputs
 
-A dynamic provider interfaces with other components via subclasses of `pulumi.dynamic.Resource`. The inputs to a dynamic provider's implementation are provided by instantiation of such a subclass. This is the `props` parameter in the constructor in the following. Any properties you set in the `props` object will be passed to your `pulumi.dynamic.ResourceProvider` functions as the `inputs` where appropriate.
+A dynamic provider interfaces with other components via subclasses of `pulumi.dynamic.Resource`. The inputs to a dynamic provider's implementation are provided by instantiation of such a subclass. This is the `props` parameter in the constructor in the following example. Any properties you set in the `props` object will be passed to your `pulumi.dynamic.ResourceProvider` functions as the `inputs` where appropriate.
 
 > For statically typed languages, you can get rich type information for the inputs declaring an input type to make it easy to use your custom resource.
 
