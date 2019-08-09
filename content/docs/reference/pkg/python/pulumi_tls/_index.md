@@ -9,8 +9,13 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-tls/issues">pulumi/pulumi-tls repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-tls/issues">terraform-providers/terraform-provider-tls repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_tls"></span><dl class="class">
+<dt id="pulumi_tls.AwaitableGetPublicKeyResult">
+<em class="property">class </em><code class="descclassname">pulumi_tls.</code><code class="descname">AwaitableGetPublicKeyResult</code><span class="sig-paren">(</span><em>algorithm=None</em>, <em>private_key_pem=None</em>, <em>public_key_fingerprint_md5=None</em>, <em>public_key_openssh=None</em>, <em>public_key_pem=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.AwaitableGetPublicKeyResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_tls.CertRequest">
-<em class="property">class </em><code class="descclassname">pulumi_tls.</code><code class="descname">CertRequest</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dns_names=None</em>, <em>ip_addresses=None</em>, <em>key_algorithm=None</em>, <em>private_key_pem=None</em>, <em>subjects=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.CertRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_tls.</code><code class="descname">CertRequest</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dns_names=None</em>, <em>ip_addresses=None</em>, <em>key_algorithm=None</em>, <em>private_key_pem=None</em>, <em>subjects=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.CertRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a CertRequest resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -62,6 +67,33 @@ in <code class="docutils literal notranslate"><span class="pre">private_key_pem<
 <code class="descname">subjects</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_tls.CertRequest.subjects" title="Permalink to this definition">¶</a></dt>
 <dd><p>The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_tls.CertRequest.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>cert_request_pem=None</em>, <em>dns_names=None</em>, <em>ip_addresses=None</em>, <em>key_algorithm=None</em>, <em>private_key_pem=None</em>, <em>subjects=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.CertRequest.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing CertRequest resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cert_request_pem: The certificate request data in PEM format.
+:param pulumi.Input[list] dns_names: List of DNS names for which a certificate is being requested.
+:param pulumi.Input[list] ip_addresses: List of IP addresses for which a certificate is being requested.
+:param pulumi.Input[str] key_algorithm: The name of the algorithm for the key provided</p>
+<blockquote>
+<div>in <code class="docutils literal notranslate"><span class="pre">private_key_pem</span></code>.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>subjects</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The subject for which a certificate is being requested. This is
+a nested configuration block whose structure is described below.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/r/cert_request.html.markdown">https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/r/cert_request.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -149,7 +181,7 @@ is selected.</p>
 
 <dl class="class">
 <dt id="pulumi_tls.LocallySignedCert">
-<em class="property">class </em><code class="descclassname">pulumi_tls.</code><code class="descname">LocallySignedCert</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allowed_uses=None</em>, <em>ca_cert_pem=None</em>, <em>ca_key_algorithm=None</em>, <em>ca_private_key_pem=None</em>, <em>cert_request_pem=None</em>, <em>early_renewal_hours=None</em>, <em>is_ca_certificate=None</em>, <em>validity_period_hours=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.LocallySignedCert" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_tls.</code><code class="descname">LocallySignedCert</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allowed_uses=None</em>, <em>ca_cert_pem=None</em>, <em>ca_key_algorithm=None</em>, <em>ca_private_key_pem=None</em>, <em>cert_request_pem=None</em>, <em>early_renewal_hours=None</em>, <em>is_ca_certificate=None</em>, <em>validity_period_hours=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.LocallySignedCert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a LocallySignedCert resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -248,6 +280,50 @@ certificate will become invalid.</p>
 <a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC3339</a> timestamp.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_tls.LocallySignedCert.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>allowed_uses=None</em>, <em>ca_cert_pem=None</em>, <em>ca_key_algorithm=None</em>, <em>ca_private_key_pem=None</em>, <em>cert_pem=None</em>, <em>cert_request_pem=None</em>, <em>early_renewal_hours=None</em>, <em>is_ca_certificate=None</em>, <em>validity_end_time=None</em>, <em>validity_period_hours=None</em>, <em>validity_start_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.LocallySignedCert.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing LocallySignedCert resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] allowed_uses: List of keywords each describing a use that is permitted</p>
+<blockquote>
+<div>for the issued certificate. The valid keywords are listed below.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ca_cert_pem</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – PEM-encoded certificate data for the CA.</li>
+<li><strong>ca_key_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the algorithm for the key provided
+in <code class="docutils literal notranslate"><span class="pre">ca_private_key_pem</span></code>.</li>
+<li><strong>ca_private_key_pem</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – PEM-encoded private key data for the CA.
+This can be read from a separate file using the <code class="docutils literal notranslate"><span class="pre">file</span></code> interpolation
+function.</li>
+<li><strong>cert_pem</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The certificate data in PEM format.</li>
+<li><strong>cert_request_pem</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – PEM-encoded request certificate data.</li>
+<li><strong>is_ca_certificate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean controlling whether the CA flag will be set in the
+generated certificate. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>, meaning that the certificate does not represent
+a certificate authority.</li>
+<li><strong>validity_end_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The time until which the certificate is invalid, as an
+<a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC3339</a> timestamp.</p>
+</li>
+<li><strong>validity_period_hours</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of hours after initial issuing that the
+certificate will become invalid.</li>
+<li><strong>validity_start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The time after which the certificate is valid, as an
+<a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC3339</a> timestamp.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/r/locally_signed_cert.html.markdown">https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/r/locally_signed_cert.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_tls.LocallySignedCert.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.LocallySignedCert.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -290,7 +366,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_tls.PrivateKey">
-<em class="property">class </em><code class="descclassname">pulumi_tls.</code><code class="descname">PrivateKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>algorithm=None</em>, <em>ecdsa_curve=None</em>, <em>rsa_bits=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.PrivateKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_tls.</code><code class="descname">PrivateKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>algorithm=None</em>, <em>ecdsa_curve=None</em>, <em>rsa_bits=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.PrivateKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a PrivateKey resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -366,6 +442,47 @@ is selected.</p>
 RSA key in bits. Defaults to 2048.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_tls.PrivateKey.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>algorithm=None</em>, <em>ecdsa_curve=None</em>, <em>private_key_pem=None</em>, <em>public_key_fingerprint_md5=None</em>, <em>public_key_openssh=None</em>, <em>public_key_pem=None</em>, <em>rsa_bits=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.PrivateKey.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing PrivateKey resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] algorithm: The name of the algorithm to use for</p>
+<blockquote>
+<div>the key. Currently-supported values are “RSA” and “ECDSA”.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ecdsa_curve</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When <code class="docutils literal notranslate"><span class="pre">algorithm</span></code> is “ECDSA”, the name of the elliptic
+curve to use. May be any one of “P224”, “P256”, “P384” or “P521”, with “P224” as the
+default.</li>
+<li><strong>private_key_pem</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private key data in PEM format.</li>
+<li><strong>public_key_fingerprint_md5</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The md5 hash of the public key data in
+OpenSSH MD5 hash format, e.g. <code class="docutils literal notranslate"><span class="pre">aa:bb:cc:...</span></code>. Only available if the
+selected private key format is compatible, as per the rules for
+<code class="docutils literal notranslate"><span class="pre">public_key_openssh</span></code>.</li>
+<li><strong>public_key_openssh</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key data in OpenSSH <code class="docutils literal notranslate"><span class="pre">authorized_keys</span></code>
+format, if the selected private key format is compatible. All RSA keys
+are supported, and ECDSA keys with curves “P256”, “P384” and “P521”
+are supported. This attribute is empty if an incompatible ECDSA curve
+is selected.</li>
+<li><strong>public_key_pem</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key data in PEM format.</li>
+<li><strong>rsa_bits</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – When <code class="docutils literal notranslate"><span class="pre">algorithm</span></code> is “RSA”, the size of the generated
+RSA key in bits. Defaults to 2048.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/r/private_key.html.markdown">https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/r/private_key.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_tls.PrivateKey.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.PrivateKey.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -408,11 +525,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_tls.Provider">
-<em class="property">class </em><code class="descclassname">pulumi_tls.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_tls.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the tls package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-<a class="reference external" href="https://pulumi.io/reference/programming-model.html#providers">documentation</a> for more information.</p>
+<a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -427,6 +544,18 @@ construction to achieve fine-grained programmatic control over provider settings
 </table>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
+<dl class="staticmethod">
+<dt id="pulumi_tls.Provider.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.Provider.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/index.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_tls.Provider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -469,7 +598,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_tls.SelfSignedCert">
-<em class="property">class </em><code class="descclassname">pulumi_tls.</code><code class="descname">SelfSignedCert</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allowed_uses=None</em>, <em>dns_names=None</em>, <em>early_renewal_hours=None</em>, <em>ip_addresses=None</em>, <em>is_ca_certificate=None</em>, <em>key_algorithm=None</em>, <em>private_key_pem=None</em>, <em>subjects=None</em>, <em>validity_period_hours=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.SelfSignedCert" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_tls.</code><code class="descname">SelfSignedCert</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allowed_uses=None</em>, <em>dns_names=None</em>, <em>early_renewal_hours=None</em>, <em>ip_addresses=None</em>, <em>is_ca_certificate=None</em>, <em>key_algorithm=None</em>, <em>private_key_pem=None</em>, <em>subjects=None</em>, <em>validity_period_hours=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.SelfSignedCert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a SelfSignedCert resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -489,7 +618,7 @@ a certificate authority.</li>
 in <code class="docutils literal notranslate"><span class="pre">private_key_pem</span></code>.</li>
 <li><strong>subjects</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
-corresponding block for <code class="docutils literal notranslate"><span class="pre">tls_cert_request</span></code>.</li>
+corresponding block for <code class="docutils literal notranslate"><span class="pre">.CertRequest</span></code>.</li>
 <li><strong>validity_period_hours</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of hours after initial issuing that the
 certificate will become invalid.</li>
 </ul>
@@ -544,7 +673,7 @@ in <code class="docutils literal notranslate"><span class="pre">private_key_pem<
 <code class="descname">subjects</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_tls.SelfSignedCert.subjects" title="Permalink to this definition">¶</a></dt>
 <dd><p>The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
-corresponding block for <code class="docutils literal notranslate"><span class="pre">tls_cert_request</span></code>.</p>
+corresponding block for <code class="docutils literal notranslate"><span class="pre">.CertRequest</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -566,6 +695,50 @@ certificate will become invalid.</p>
 <code class="descname">validity_start_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_tls.SelfSignedCert.validity_start_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time after which the certificate is valid, as an
 <a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC3339</a> timestamp.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_tls.SelfSignedCert.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>allowed_uses=None</em>, <em>cert_pem=None</em>, <em>dns_names=None</em>, <em>early_renewal_hours=None</em>, <em>ip_addresses=None</em>, <em>is_ca_certificate=None</em>, <em>key_algorithm=None</em>, <em>private_key_pem=None</em>, <em>subjects=None</em>, <em>validity_end_time=None</em>, <em>validity_period_hours=None</em>, <em>validity_start_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.SelfSignedCert.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SelfSignedCert resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[list] allowed_uses: List of keywords each describing a use that is permitted</p>
+<blockquote>
+<div>for the issued certificate. The valid keywords are listed below.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cert_pem</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The certificate data in PEM format.</li>
+<li><strong>dns_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of DNS names for which a certificate is being requested.</li>
+<li><strong>ip_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses for which a certificate is being requested.</li>
+<li><strong>is_ca_certificate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean controlling whether the CA flag will be set in the
+generated certificate. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>, meaning that the certificate does not represent
+a certificate authority.</li>
+<li><strong>key_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the algorithm for the key provided
+in <code class="docutils literal notranslate"><span class="pre">private_key_pem</span></code>.</li>
+<li><strong>subjects</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The subject for which a certificate is being requested.
+This is a nested configuration block whose structure matches the
+corresponding block for <code class="docutils literal notranslate"><span class="pre">.CertRequest</span></code>.</li>
+<li><strong>validity_end_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The time until which the certificate is invalid, as an
+<a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC3339</a> timestamp.</p>
+</li>
+<li><strong>validity_period_hours</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of hours after initial issuing that the
+certificate will become invalid.</li>
+<li><strong>validity_start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The time after which the certificate is valid, as an
+<a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC3339</a> timestamp.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/r/self_signed_cert.html.markdown">https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/r/self_signed_cert.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
