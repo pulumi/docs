@@ -9,8 +9,13 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-openstack/issues">pulumi/pulumi-openstack repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/issues">terraform-providers/terraform-provider-openstack repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_openstack.firewall"></span><dl class="class">
+<dt id="pulumi_openstack.firewall.AwaitableGetPolicyResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">AwaitableGetPolicyResult</code><span class="sig-paren">(</span><em>audited=None</em>, <em>description=None</em>, <em>name=None</em>, <em>policy_id=None</em>, <em>region=None</em>, <em>rules=None</em>, <em>shared=None</em>, <em>tenant_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.AwaitableGetPolicyResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_openstack.firewall.Firewall">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">Firewall</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>associated_routers=None</em>, <em>description=None</em>, <em>name=None</em>, <em>no_routers=None</em>, <em>policy_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Firewall" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">Firewall</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>associated_routers=None</em>, <em>description=None</em>, <em>name=None</em>, <em>no_routers=None</em>, <em>policy_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Firewall" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a v1 firewall resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -117,6 +122,52 @@ firewall.</p>
 <dd><p>Map of additional options.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.firewall.Firewall.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>associated_routers=None</em>, <em>description=None</em>, <em>name=None</em>, <em>no_routers=None</em>, <em>policy_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Firewall.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Firewall resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] admin_state_up: Administrative up/down status for the firewall</p>
+<blockquote>
+<div>(must be “true” or “false” if provided - defaults to “true”).
+Changing this updates the <code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> of an existing firewall.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>associated_routers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Router(s) to associate this firewall instance
+with. Must be a list of strings. Changing this updates the associated routers
+of an existing firewall. Conflicts with <code class="docutils literal notranslate"><span class="pre">no_routers</span></code>.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the firewall. Changing this
+updates the <code class="docutils literal notranslate"><span class="pre">description</span></code> of an existing firewall.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the firewall. Changing this
+updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing firewall.</li>
+<li><strong>no_routers</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should this firewall not be associated with any routers
+(must be “true” or “false” if provide - defaults to “false”).
+Conflicts with <code class="docutils literal notranslate"><span class="pre">associated_routers</span></code>.</li>
+<li><strong>policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy resource id for the firewall. Changing
+this updates the <code class="docutils literal notranslate"><span class="pre">policy_id</span></code> of an existing firewall.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the v1 networking client.
+A networking client is needed to create a firewall. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+firewall.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the floating IP. Required if admin wants
+to create a firewall for another tenant. Changing this creates a new
+firewall.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_firewall_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_firewall_v1.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.firewall.Firewall.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Firewall.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -219,7 +270,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.firewall.Policy">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>audited=None</em>, <em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>rules=None</em>, <em>shared=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Policy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>audited=None</em>, <em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>rules=None</em>, <em>shared=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a v1 firewall policy resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -314,6 +365,51 @@ can specify if the policy should be shared.</p>
 <dd><p>Map of additional options.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.firewall.Policy.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>audited=None</em>, <em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>rules=None</em>, <em>shared=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Policy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Policy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] audited: Audit status of the firewall policy</p>
+<blockquote>
+<div>(must be “true” or “false” if provided - defaults to “false”).
+This status is set to “false” whenever the firewall policy or any of its
+rules are changed. Changing this updates the <code class="docutils literal notranslate"><span class="pre">audited</span></code> status of an existing
+firewall policy.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the firewall policy. Changing
+this updates the <code class="docutils literal notranslate"><span class="pre">description</span></code> of an existing firewall policy.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the firewall policy. Changing this
+updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing firewall policy.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the v1 networking client.
+A networking client is needed to create a firewall policy. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+firewall policy.</li>
+<li><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of one or more firewall rules that comprise
+the policy. Changing this results in adding/removing rules from the
+existing firewall policy.</li>
+<li><strong>shared</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Sharing status of the firewall policy (must be “true”
+or “false” if provided). If this is “true” the policy is visible to, and
+can be used in, firewalls in other tenants. Changing this updates the
+<code class="docutils literal notranslate"><span class="pre">shared</span></code> status of an existing firewall policy. Only administrative users
+can specify if the policy should be shared.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_policy_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_policy_v1.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.firewall.Policy.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Policy.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -356,7 +452,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.firewall.Rule">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">Rule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action=None</em>, <em>description=None</em>, <em>destination_ip_address=None</em>, <em>destination_port=None</em>, <em>enabled=None</em>, <em>ip_version=None</em>, <em>name=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>source_ip_address=None</em>, <em>source_port=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Rule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">Rule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action=None</em>, <em>description=None</em>, <em>destination_ip_address=None</em>, <em>destination_port=None</em>, <em>enabled=None</em>, <em>ip_version=None</em>, <em>name=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>source_ip_address=None</em>, <em>source_port=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a v1 firewall rule resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -505,6 +601,64 @@ new firewall rule.</p>
 <dt id="pulumi_openstack.firewall.Rule.value_specs">
 <code class="descname">value_specs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.firewall.Rule.value_specs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map of additional options.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_openstack.firewall.Rule.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>action=None</em>, <em>description=None</em>, <em>destination_ip_address=None</em>, <em>destination_port=None</em>, <em>enabled=None</em>, <em>ip_version=None</em>, <em>name=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>source_ip_address=None</em>, <em>source_port=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Rule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Rule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] action: Action to be taken ( must be “allow” or “deny”) when the</p>
+<blockquote>
+<div>firewall rule matches. Changing this updates the <code class="docutils literal notranslate"><span class="pre">action</span></code> of an existing
+firewall rule.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the firewall rule. Changing this
+updates the <code class="docutils literal notranslate"><span class="pre">description</span></code> of an existing firewall rule.</li>
+<li><strong>destination_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination IP address on which the
+firewall rule operates. Changing this updates the <code class="docutils literal notranslate"><span class="pre">destination_ip_address</span></code>
+of an existing firewall rule.</li>
+<li><strong>destination_port</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination port on which the firewall
+rule operates. Changing this updates the <code class="docutils literal notranslate"><span class="pre">destination_port</span></code> of an existing
+firewall rule.</li>
+<li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enabled status for the firewall rule (must be “true”
+or “false” if provided - defaults to “true”). Changing this updates the
+<code class="docutils literal notranslate"><span class="pre">enabled</span></code> status of an existing firewall rule.</li>
+<li><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – IP version, either 4 (default) or 6. Changing this
+updates the <code class="docutils literal notranslate"><span class="pre">ip_version</span></code> of an existing firewall rule.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the firewall rule. Changing this
+updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing firewall rule.</li>
+<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol type on which the firewall rule operates.
+Valid values are: <code class="docutils literal notranslate"><span class="pre">tcp</span></code>, <code class="docutils literal notranslate"><span class="pre">udp</span></code>, <code class="docutils literal notranslate"><span class="pre">icmp</span></code>, and <code class="docutils literal notranslate"><span class="pre">any</span></code>. Changing this updates the
+<code class="docutils literal notranslate"><span class="pre">protocol</span></code> of an existing firewall rule.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the v1 Compute client.
+A Compute client is needed to create a firewall rule. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+firewall rule.</li>
+<li><strong>source_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source IP address on which the firewall
+rule operates. Changing this updates the <code class="docutils literal notranslate"><span class="pre">source_ip_address</span></code> of an existing
+firewall rule.</li>
+<li><strong>source_port</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source port on which the firewall
+rule operates. Changing this updates the <code class="docutils literal notranslate"><span class="pre">source_port</span></code> of an existing
+firewall rule.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the firewall rule. Required if admin
+wants to create a firewall rule for another tenant. Changing this creates a
+new firewall rule.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_rule_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_rule_v1.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

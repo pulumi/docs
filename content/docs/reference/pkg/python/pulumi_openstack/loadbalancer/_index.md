@@ -10,7 +10,7 @@
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/issues">terraform-providers/terraform-provider-openstack repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_openstack.loadbalancer"></span><dl class="class">
 <dt id="pulumi_openstack.loadbalancer.L7PolicyV2">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">L7PolicyV2</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>listener_id=None</em>, <em>name=None</em>, <em>position=None</em>, <em>redirect_pool_id=None</em>, <em>redirect_url=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.L7PolicyV2" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">L7PolicyV2</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>listener_id=None</em>, <em>name=None</em>, <em>position=None</em>, <em>redirect_pool_id=None</em>, <em>redirect_url=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.L7PolicyV2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Load Balancer L7 Policy resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -118,6 +118,50 @@ the L7 Policy.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Policy.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.loadbalancer.L7PolicyV2.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>action=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>listener_id=None</em>, <em>name=None</em>, <em>position=None</em>, <em>redirect_pool_id=None</em>, <em>redirect_url=None</em>, <em>region=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.L7PolicyV2.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing L7PolicyV2 resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] action: The L7 Policy action - can either be REDIRECT_TO_POOL,</p>
+<blockquote>
+<div>REDIRECT_TO_URL or REJECT.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The administrative state of the L7 Policy.
+A valid value is true (UP) or false (DOWN).</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description for the L7 Policy.</li>
+<li><strong>listener_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Listener on which the L7 Policy will be associated with.
+Changing this creates a new L7 Policy.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable name for the L7 Policy. Does not have
+to be unique.</li>
+<li><strong>position</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The position of this policy on the listener. Positions start at 1.</li>
+<li><strong>redirect_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Requests matching this policy will be redirected to the
+pool with this ID. Only valid if action is REDIRECT_TO_POOL.</li>
+<li><strong>redirect_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Requests matching this policy will be redirected to this URL.
+Only valid if action is REDIRECT_TO_URL.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an . If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+L7 Policy.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for admins. The UUID of the tenant who owns
+the L7 Policy.  Only administrative users can specify a tenant UUID
+other than their own. Changing this creates a new L7 Policy.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_l7policy_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_l7policy_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.loadbalancer.L7PolicyV2.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.L7PolicyV2.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -160,7 +204,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.loadbalancer.L7RuleV2">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">L7RuleV2</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>compare_type=None</em>, <em>invert=None</em>, <em>key=None</em>, <em>l7policy_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>type=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.L7RuleV2" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">L7RuleV2</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>compare_type=None</em>, <em>invert=None</em>, <em>key=None</em>, <em>l7policy_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>type=None</em>, <em>value=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.L7RuleV2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 L7 Rule resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -269,6 +313,51 @@ HOST_NAME or PATH.</p>
 compare.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.loadbalancer.L7RuleV2.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>compare_type=None</em>, <em>invert=None</em>, <em>key=None</em>, <em>l7policy_id=None</em>, <em>listener_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>type=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.L7RuleV2.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing L7RuleV2 resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] admin_state_up: The administrative state of the L7 Rule.</p>
+<blockquote>
+<div>A valid value is true (UP) or false (DOWN).</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>compare_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The comparison type for the L7 rule - can either be
+CONTAINS, STARTS_WITH, ENDS_WITH, EQUAL_TO or REGEX</li>
+<li><strong>invert</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When true the logic of the rule is inverted. For example, with invert
+true, equal to would become not equal to. Default is false.</li>
+<li><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key to use for the comparison. For example, the name of the cookie to
+evaluate. Valid when <code class="docutils literal notranslate"><span class="pre">type</span></code> is set to COOKIE or HEADER.</li>
+<li><strong>l7policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the L7 Policy to query. Changing this creates a new
+L7 Rule.</li>
+<li><strong>listener_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Listener owning this resource.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an . If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+L7 Rule.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for admins. The UUID of the tenant who owns
+the L7 Rule.  Only administrative users can specify a tenant UUID
+other than their own. Changing this creates a new L7 Rule.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The L7 Rule type - can either be COOKIE, FILE_TYPE, HEADER,
+HOST_NAME or PATH.</li>
+<li><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value to use for the comparison. For example, the file type to
+compare.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_l7rule_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_l7rule_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.loadbalancer.L7RuleV2.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.L7RuleV2.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -311,7 +400,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.loadbalancer.Listener">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">Listener</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>connection_limit=None</em>, <em>default_pool_id=None</em>, <em>default_tls_container_ref=None</em>, <em>description=None</em>, <em>loadbalancer_id=None</em>, <em>name=None</em>, <em>protocol=None</em>, <em>protocol_port=None</em>, <em>region=None</em>, <em>sni_container_refs=None</em>, <em>tenant_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Listener" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">Listener</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>connection_limit=None</em>, <em>default_pool_id=None</em>, <em>default_tls_container_ref=None</em>, <em>description=None</em>, <em>loadbalancer_id=None</em>, <em>name=None</em>, <em>protocol=None</em>, <em>protocol_port=None</em>, <em>region=None</em>, <em>sni_container_refs=None</em>, <em>tenant_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Listener" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 listener resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -450,6 +539,62 @@ the Listener.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new Listener.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.loadbalancer.Listener.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>connection_limit=None</em>, <em>default_pool_id=None</em>, <em>default_tls_container_ref=None</em>, <em>description=None</em>, <em>loadbalancer_id=None</em>, <em>name=None</em>, <em>protocol=None</em>, <em>protocol_port=None</em>, <em>region=None</em>, <em>sni_container_refs=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Listener.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Listener resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] admin_state_up: The administrative state of the Listener.</p>
+<blockquote>
+<div>A valid value is true (UP) or false (DOWN).</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>connection_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of connections allowed
+for the Listener.</li>
+<li><strong>default_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the default pool with which the
+Listener is associated.</li>
+<li><strong>default_tls_container_ref</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A reference to a Barbican Secrets
+container which stores TLS information. This is required if the protocol
+is <code class="docutils literal notranslate"><span class="pre">TERMINATED_HTTPS</span></code>. See
+<a class="reference external" href="https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer">here</a>
+for more information.</p>
+</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description for the Listener.</li>
+<li><strong>loadbalancer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancer on which to provision this
+Listener. Changing this creates a new Listener.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable name for the Listener. Does not have
+to be unique.</li>
+<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol - can either be TCP, HTTP, HTTPS or TERMINATED_HTTPS.
+Changing this creates a new Listener.</li>
+<li><strong>protocol_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which to listen for client traffic.
+Changing this creates a new Listener.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an . If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+Listener.</li>
+<li><strong>sni_container_refs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of references to Barbican Secrets
+containers which store SNI information. See
+<a class="reference external" href="https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer">here</a>
+for more information.</p>
+</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for admins. The UUID of the tenant who owns
+the Listener.  Only administrative users can specify a tenant UUID
+other than their own. Changing this creates a new Listener.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_listener_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_listener_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.loadbalancer.Listener.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Listener.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -492,7 +637,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.loadbalancer.LoadBalancer">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">LoadBalancer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>flavor=None</em>, <em>loadbalancer_provider=None</em>, <em>name=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>tenant_id=None</em>, <em>vip_address=None</em>, <em>vip_subnet_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">LoadBalancer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>flavor=None</em>, <em>loadbalancer_provider=None</em>, <em>name=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>tenant_id=None</em>, <em>vip_address=None</em>, <em>vip_subnet_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 loadbalancer resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -614,6 +759,55 @@ authorized by policy (e.g. networks that belong to them or networks that
 are shared).  Changing this creates a new loadbalancer.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.loadbalancer.LoadBalancer.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>flavor=None</em>, <em>loadbalancer_provider=None</em>, <em>name=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>tenant_id=None</em>, <em>vip_address=None</em>, <em>vip_port_id=None</em>, <em>vip_subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing LoadBalancer resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] admin_state_up: The administrative state of the Loadbalancer.</p>
+<blockquote>
+<div>A valid value is true (UP) or false (DOWN).</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description for the Loadbalancer.</li>
+<li><strong>flavor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of a flavor. Changing this creates a new
+loadbalancer.</li>
+<li><strong>loadbalancer_provider</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the provider. Changing this
+creates a new loadbalancer.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable name for the Loadbalancer. Does not have
+to be unique.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an LB member. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+LB member.</li>
+<li><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group IDs to apply to the
+loadbalancer. The security groups must be specified by ID and not name (as
+opposed to how they are configured with the Compute Instance).</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for admins. The UUID of the tenant who owns
+the Loadbalancer.  Only administrative users can specify a tenant UUID
+other than their own.  Changing this creates a new loadbalancer.</li>
+<li><strong>vip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ip address of the load balancer.
+Changing this creates a new loadbalancer.</li>
+<li><strong>vip_port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Port ID of the Load Balancer IP.</li>
+<li><strong>vip_subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network on which to allocate the
+Loadbalancer’s address. A tenant can only create Loadbalancers on networks
+authorized by policy (e.g. networks that belong to them or networks that
+are shared).  Changing this creates a new loadbalancer.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_loadbalancer_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_loadbalancer_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.loadbalancer.LoadBalancer.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -656,7 +850,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.loadbalancer.Member">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">Member</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address=None</em>, <em>admin_state_up=None</em>, <em>name=None</em>, <em>pool_id=None</em>, <em>protocol_port=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>tenant_id=None</em>, <em>weight=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Member" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">Member</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address=None</em>, <em>admin_state_up=None</em>, <em>name=None</em>, <em>pool_id=None</em>, <em>protocol_port=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>tenant_id=None</em>, <em>weight=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Member" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 member resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -759,6 +953,50 @@ example, a member with a weight of 10 receives five times as much traffic
 as a member with a weight of 2.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.loadbalancer.Member.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address=None</em>, <em>admin_state_up=None</em>, <em>name=None</em>, <em>pool_id=None</em>, <em>protocol_port=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>tenant_id=None</em>, <em>weight=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Member.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Member resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address: The IP address of the member to receive traffic from</p>
+<blockquote>
+<div>the load balancer. Changing this creates a new member.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The administrative state of the member.
+A valid value is true (UP) or false (DOWN).</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable name for the member.</li>
+<li><strong>pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the pool that this member will be
+assigned to.</li>
+<li><strong>protocol_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which to listen for client traffic.
+Changing this creates a new member.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an . If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+member.</li>
+<li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnet in which to access the member</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for admins. The UUID of the tenant who owns
+the member.  Only administrative users can specify a tenant UUID
+other than their own. Changing this creates a new member.</li>
+<li><strong>weight</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A positive integer value that indicates the relative
+portion of traffic that this member should receive from the pool. For
+example, a member with a weight of 10 receives five times as much traffic
+as a member with a weight of 2.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_member_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_member_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.loadbalancer.Member.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Member.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -801,7 +1039,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.loadbalancer.MemberV1">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">MemberV1</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address=None</em>, <em>admin_state_up=None</em>, <em>pool_id=None</em>, <em>port=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>weight=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.MemberV1" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">MemberV1</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address=None</em>, <em>admin_state_up=None</em>, <em>pool_id=None</em>, <em>port=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>weight=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.MemberV1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 load balancer member resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -877,6 +1115,44 @@ LB member.</p>
 create a member for another tenant. Changing this creates a new member.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.loadbalancer.MemberV1.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address=None</em>, <em>admin_state_up=None</em>, <em>pool_id=None</em>, <em>port=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>weight=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.MemberV1.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing MemberV1 resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address: The IP address of the member. Changing this creates a</p>
+<blockquote>
+<div>new member.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The administrative state of the member.
+Acceptable values are ‘true’ and ‘false’. Changing this value updates the
+state of the existing member.</li>
+<li><strong>pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the LB pool. Changing this creates a new
+member.</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – An integer representing the port on which the member is
+hosted. Changing this creates a new member.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an LB member. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+LB member.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the member. Required if admin wants to
+create a member for another tenant. Changing this creates a new member.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_member_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_member_v1.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.loadbalancer.MemberV1.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.MemberV1.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -919,7 +1195,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.loadbalancer.Monitor">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">Monitor</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>delay=None</em>, <em>expected_codes=None</em>, <em>http_method=None</em>, <em>max_retries=None</em>, <em>name=None</em>, <em>pool_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>timeout=None</em>, <em>type=None</em>, <em>url_path=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Monitor" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">Monitor</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>delay=None</em>, <em>expected_codes=None</em>, <em>http_method=None</em>, <em>max_retries=None</em>, <em>name=None</em>, <em>pool_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>timeout=None</em>, <em>type=None</em>, <em>url_path=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Monitor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 monitor resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1053,6 +1329,58 @@ creates a new monitor.</p>
 accessed if monitor type is HTTP or HTTPS.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.loadbalancer.Monitor.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>delay=None</em>, <em>expected_codes=None</em>, <em>http_method=None</em>, <em>max_retries=None</em>, <em>name=None</em>, <em>pool_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>timeout=None</em>, <em>type=None</em>, <em>url_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Monitor.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Monitor resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] admin_state_up: The administrative state of the monitor.</p>
+<blockquote>
+<div>A valid value is true (UP) or false (DOWN).</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time, in seconds, between sending probes to members.</li>
+<li><strong>expected_codes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for HTTP(S) types. Expected HTTP codes
+for a passing HTTP(S) monitor. You can either specify a single status like
+“200”, or a range like “200-202”.</li>
+<li><strong>http_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for HTTP(S) types. The HTTP method used
+for requests by the monitor. If this attribute is not specified, it
+defaults to “GET”.</li>
+<li><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of permissible ping failures before
+changing the member’s status to INACTIVE. Must be a number between 1
+and 10..</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name of the Monitor.</li>
+<li><strong>pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the pool that this monitor will be assigned to.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an . If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+monitor.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for admins. The UUID of the tenant who owns
+the monitor.  Only administrative users can specify a tenant UUID
+other than their own. Changing this creates a new monitor.</li>
+<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum number of seconds for a monitor to wait for a
+ping reply before it times out. The value must be less than the delay
+value.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of probe, which is PING, TCP, HTTP, or HTTPS,
+that is sent by the load balancer to verify the member state. Changing this
+creates a new monitor.</li>
+<li><strong>url_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for HTTP(S) types. URI path that will be
+accessed if monitor type is HTTP or HTTPS.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_monitor_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_monitor_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.loadbalancer.Monitor.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Monitor.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1095,7 +1423,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.loadbalancer.MonitorV1">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">MonitorV1</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>delay=None</em>, <em>expected_codes=None</em>, <em>http_method=None</em>, <em>max_retries=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>timeout=None</em>, <em>type=None</em>, <em>url_path=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.MonitorV1" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">MonitorV1</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>delay=None</em>, <em>expected_codes=None</em>, <em>http_method=None</em>, <em>max_retries=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>timeout=None</em>, <em>type=None</em>, <em>url_path=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.MonitorV1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 load balancer monitor resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1221,6 +1549,59 @@ accessed if monitor type is HTTP or HTTPS. Changing this updates the
 url_path of the existing monitor.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.loadbalancer.MonitorV1.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>delay=None</em>, <em>expected_codes=None</em>, <em>http_method=None</em>, <em>max_retries=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>timeout=None</em>, <em>type=None</em>, <em>url_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.MonitorV1.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing MonitorV1 resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] admin_state_up: The administrative state of the monitor.</p>
+<blockquote>
+<div>Acceptable values are “true” and “false”. Changing this value updates the
+state of the existing monitor.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time, in seconds, between sending probes to members.
+Changing this creates a new monitor.</li>
+<li><strong>expected_codes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for HTTP(S) types. Expected HTTP codes
+for a passing HTTP(S) monitor. You can either specify a single status like
+“200”, or a range like “200-202”. Changing this updates the expected_codes
+of the existing monitor.</li>
+<li><strong>http_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for HTTP(S) types. The HTTP method used
+for requests by the monitor. If this attribute is not specified, it defaults
+to “GET”. Changing this updates the http_method of the existing monitor.</li>
+<li><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of permissible ping failures before changing
+the member’s status to INACTIVE. Must be a number between 1 and 10. Changing
+this updates the max_retries of the existing monitor.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an LB monitor. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+LB monitor.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the monitor. Required if admin wants to
+create a monitor for another tenant. Changing this creates a new monitor.</li>
+<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum number of seconds for a monitor to wait for a
+ping reply before it times out. The value must be less than the delay value.
+Changing this updates the timeout of the existing monitor.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of probe, which is PING, TCP, HTTP, or HTTPS,
+that is sent by the monitor to verify the member state. Changing this
+creates a new monitor.</li>
+<li><strong>url_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for HTTP(S) types. URI path that will be
+accessed if monitor type is HTTP or HTTPS. Changing this updates the
+url_path of the existing monitor.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_monitor_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_monitor_v1.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.loadbalancer.MonitorV1.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.MonitorV1.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1263,7 +1644,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.loadbalancer.Pool">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">Pool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>lb_method=None</em>, <em>listener_id=None</em>, <em>loadbalancer_id=None</em>, <em>name=None</em>, <em>persistences=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Pool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">Pool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>lb_method=None</em>, <em>listener_id=None</em>, <em>loadbalancer_id=None</em>, <em>name=None</em>, <em>persistence=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 pool resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1285,7 +1666,7 @@ Note:  One of LoadbalancerID or ListenerID must be provided.</li>
 pool. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable name for the pool.</li>
-<li><strong>persistences</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Omit this field to prevent session persistence.  Indicates
+<li><strong>persistence</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Omit this field to prevent session persistence.  Indicates
 whether connections in the same session will be processed by the same Pool
 member or not. Changing this creates a new pool.</li>
 <li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – See Argument Reference above.</li>
@@ -1347,8 +1728,8 @@ Note:  One of LoadbalancerID or ListenerID must be provided.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_openstack.loadbalancer.Pool.persistences">
-<code class="descname">persistences</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Pool.persistences" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_openstack.loadbalancer.Pool.persistence">
+<code class="descname">persistence</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Pool.persistence" title="Permalink to this definition">¶</a></dt>
 <dd><p>Omit this field to prevent session persistence.  Indicates
 whether connections in the same session will be processed by the same Pool
 member or not. Changing this creates a new pool.</p>
@@ -1375,6 +1756,53 @@ pool.</p>
 <dd><p>Required for admins. The UUID of the tenant who owns
 the pool.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new pool.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_openstack.loadbalancer.Pool.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>lb_method=None</em>, <em>listener_id=None</em>, <em>loadbalancer_id=None</em>, <em>name=None</em>, <em>persistence=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Pool.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Pool resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[bool] admin_state_up: The administrative state of the pool.</p>
+<blockquote>
+<div>A valid value is true (UP) or false (DOWN).</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description for the pool.</li>
+<li><strong>lb_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancing algorithm to
+distribute traffic to the pool’s members. Must be one of
+ROUND_ROBIN, LEAST_CONNECTIONS, or SOURCE_IP.</li>
+<li><strong>listener_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Listener on which the members of the pool
+will be associated with. Changing this creates a new pool.
+Note:  One of LoadbalancerID or ListenerID must be provided.</li>
+<li><strong>loadbalancer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancer on which to provision this
+pool. Changing this creates a new pool.
+Note:  One of LoadbalancerID or ListenerID must be provided.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable name for the pool.</li>
+<li><strong>persistence</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Omit this field to prevent session persistence.  Indicates
+whether connections in the same session will be processed by the same Pool
+member or not. Changing this creates a new pool.</li>
+<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – See Argument Reference above.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an . If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+pool.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for admins. The UUID of the tenant who owns
+the pool.  Only administrative users can specify a tenant UUID
+other than their own. Changing this creates a new pool.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_pool_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_pool_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1419,9 +1847,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.loadbalancer.PoolV1">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">PoolV1</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>lb_method=None</em>, <em>lb_provider=None</em>, <em>monitor_ids=None</em>, <em>name=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>tenant_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.PoolV1" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">PoolV1</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>lb_method=None</em>, <em>lb_provider=None</em>, <em>monitor_ids=None</em>, <em>name=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>tenant_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.PoolV1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 load balancer pool resource within OpenStack.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">member</span></code> block is deprecated in favor of the <code class="docutils literal notranslate"><span class="pre">openstack_lb_member_v1</span></code> resource.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">member</span></code> block is deprecated in favor of the <code class="docutils literal notranslate"><span class="pre">loadbalancer.MemberV1</span></code> resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1516,6 +1944,49 @@ Changing this creates a new pool.</p>
 create a pool member for another tenant. Changing this creates a new pool.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.loadbalancer.PoolV1.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>lb_method=None</em>, <em>lb_provider=None</em>, <em>monitor_ids=None</em>, <em>name=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.PoolV1.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing PoolV1 resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] lb_method: The algorithm used to distribute load between the</p>
+<blockquote>
+<div>members of the pool. The current specification supports ‘ROUND_ROBIN’ and
+‘LEAST_CONNECTIONS’ as valid values for this attribute.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>lb_provider</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The backend load balancing provider. For example:
+<code class="docutils literal notranslate"><span class="pre">haproxy</span></code>, <code class="docutils literal notranslate"><span class="pre">F5</span></code>, etc.</li>
+<li><strong>monitor_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of IDs of monitors to associate with the
+pool.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the pool. Changing this updates the name of
+the existing pool.</li>
+<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol used by the pool members, you can use
+either ‘TCP, ‘HTTP’, or ‘HTTPS’. Changing this creates a new pool.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an LB pool. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+LB pool.</li>
+<li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network on which the members of the pool will be
+located. Only members that are on this network can be added to the pool.
+Changing this creates a new pool.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the pool. Required if admin wants to
+create a pool member for another tenant. Changing this creates a new pool.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_pool_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_pool_v1.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.loadbalancer.PoolV1.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.PoolV1.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1558,7 +2029,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.loadbalancer.Vip">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">Vip</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address=None</em>, <em>admin_state_up=None</em>, <em>conn_limit=None</em>, <em>description=None</em>, <em>floating_ip=None</em>, <em>name=None</em>, <em>persistence=None</em>, <em>pool_id=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>tenant_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Vip" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.loadbalancer.</code><code class="descname">Vip</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address=None</em>, <em>admin_state_up=None</em>, <em>conn_limit=None</em>, <em>description=None</em>, <em>floating_ip=None</em>, <em>name=None</em>, <em>persistence=None</em>, <em>pool_id=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>tenant_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Vip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 load balancer vip resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1709,6 +2180,63 @@ new vip.</p>
 <code class="descname">tenant_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Vip.tenant_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The owner of the vip. Required if admin wants to
 create a vip member for another tenant. Changing this creates a new vip.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_openstack.loadbalancer.Vip.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>address=None</em>, <em>admin_state_up=None</em>, <em>conn_limit=None</em>, <em>description=None</em>, <em>floating_ip=None</em>, <em>name=None</em>, <em>persistence=None</em>, <em>pool_id=None</em>, <em>port=None</em>, <em>port_id=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Vip.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Vip resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] address: The IP address of the vip. Changing this creates a new</p>
+<blockquote>
+<div>vip.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The administrative state of the vip.
+Acceptable values are “true” and “false”. Changing this value updates the
+state of the existing vip.</li>
+<li><strong>conn_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of connections allowed for the
+vip. Default is -1, meaning no limit. Changing this updates the conn_limit
+of the existing vip.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description for the vip. Changing
+this updates the description of the existing vip.</li>
+<li><strong>floating_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A <em>Networking</em> Floating IP that will be associated
+with the vip. The Floating IP must be provisioned already.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the vip. Changing this updates the name of
+the existing vip.</li>
+<li><strong>persistence</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Omit this field to prevent session persistence.
+The persistence object structure is documented below. Changing this updates
+the persistence of the existing vip.</li>
+<li><strong>pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the pool with which the vip is associated.
+Changing this updates the pool_id of the existing vip.</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which to listen for client traffic. Changing
+this creates a new vip.</li>
+<li><strong>port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Port UUID for this VIP at associated floating IP (if any).</li>
+<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol - can be either ‘TCP, ‘HTTP’, or
+HTTPS’. Changing this creates a new vip.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a VIP. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+VIP.</li>
+<li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network on which to allocate the vip’s address. A
+tenant can only create vips on networks authorized by policy (e.g. networks
+that belong to them or networks that are shared). Changing this creates a
+new vip.</li>
+<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the vip. Required if admin wants to
+create a vip member for another tenant. Changing this creates a new vip.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_vip_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_vip_v1.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

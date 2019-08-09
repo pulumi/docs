@@ -9,6 +9,11 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-openstack/issues">pulumi/pulumi-openstack repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/issues">terraform-providers/terraform-provider-openstack repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_openstack.dns"></span><dl class="class">
+<dt id="pulumi_openstack.dns.AwaitableGetDnsZoneResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.dns.</code><code class="descname">AwaitableGetDnsZoneResult</code><span class="sig-paren">(</span><em>attributes=None</em>, <em>created_at=None</em>, <em>description=None</em>, <em>email=None</em>, <em>masters=None</em>, <em>name=None</em>, <em>pool_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>serial=None</em>, <em>status=None</em>, <em>transferred_at=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>updated_at=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.AwaitableGetDnsZoneResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.dns.</code><code class="descname">GetDnsZoneResult</code><span class="sig-paren">(</span><em>attributes=None</em>, <em>created_at=None</em>, <em>description=None</em>, <em>email=None</em>, <em>masters=None</em>, <em>name=None</em>, <em>pool_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>serial=None</em>, <em>status=None</em>, <em>transferred_at=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>updated_at=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDnsZone.</p>
@@ -118,7 +123,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_openstack.dns.RecordSet">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.dns.</code><code class="descname">RecordSet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>records=None</em>, <em>region=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value_specs=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.RecordSet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.dns.</code><code class="descname">RecordSet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>records=None</em>, <em>region=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value_specs=None</em>, <em>zone_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.RecordSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a DNS record set in the OpenStack DNS Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -206,6 +211,45 @@ new record set.</p>
 Changing this creates a new DNS  record set.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pulumi_openstack.dns.RecordSet.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>records=None</em>, <em>region=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value_specs=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RecordSet resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] description: A description of the  record set.
+:param pulumi.Input[str] name: The name of the record set. Note the <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end of the name.</p>
+<blockquote>
+<div>Changing this creates a new DNS  record set.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of DNS records. <em>Note:</em> if an IPv6 address
+contains brackets (<code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code>), the brackets will be stripped and the modified
+address will be recorded in the state.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 DNS client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
+Changing this creates a new DNS  record set.</li>
+<li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time to live (TTL) of the record set.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of record set. Examples: “A”, “MX”.
+Changing this creates a new DNS  record set.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options. Changing this creates a
+new record set.</li>
+<li><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the zone in which to create the record set.
+Changing this creates a new DNS  record set.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/dns_recordset_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/dns_recordset_v2.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.dns.RecordSet.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -248,7 +292,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.dns.Zone">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.dns.</code><code class="descname">Zone</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attributes=None</em>, <em>description=None</em>, <em>email=None</em>, <em>masters=None</em>, <em>name=None</em>, <em>region=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.Zone" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.dns.</code><code class="descname">Zone</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attributes=None</em>, <em>description=None</em>, <em>email=None</em>, <em>masters=None</em>, <em>name=None</em>, <em>region=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value_specs=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.Zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a DNS zone in the OpenStack DNS Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -341,6 +385,46 @@ Changing this creates a new zone.</p>
 <code class="descname">value_specs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.value_specs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map of additional options. Changing this creates a
 new zone.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pulumi_openstack.dns.Zone.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>attributes=None</em>, <em>description=None</em>, <em>email=None</em>, <em>masters=None</em>, <em>name=None</em>, <em>region=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.Zone.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Zone resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] attributes: Attributes for the DNS Service scheduler.</p>
+<blockquote>
+<div>Changing this creates a new zone.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the zone.</li>
+<li><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email contact for the zone record.</li>
+<li><strong>masters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of master DNS servers. For when <code class="docutils literal notranslate"><span class="pre">type</span></code> is
+<code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the zone. Note the <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end of the name.
+Changing this creates a new DNS zone.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
+Keypairs are associated with accounts, but a Compute client is needed to
+create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
+Changing this creates a new DNS zone.</li>
+<li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time to live (TTL) of the zone.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of zone. Can either be <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> or <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>.
+Changing this creates a new zone.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options. Changing this creates a
+new zone.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/dns_zone_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/dns_zone_v2.html.markdown</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="method">

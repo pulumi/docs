@@ -9,8 +9,18 @@
 <a class="reference external" href="https://github.com/pulumi/pulumi-openstack/issues">pulumi/pulumi-openstack repo</a>; however, if that doesn’t turn up
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/issues">terraform-providers/terraform-provider-openstack repo</a>.</div></blockquote>
 <span class="target" id="module-pulumi_openstack.containerinfra"></span><dl class="class">
+<dt id="pulumi_openstack.containerinfra.AwaitableGetClusterResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em>api_address=None</em>, <em>cluster_template_id=None</em>, <em>coe_version=None</em>, <em>container_version=None</em>, <em>create_timeout=None</em>, <em>created_at=None</em>, <em>discovery_url=None</em>, <em>docker_volume_size=None</em>, <em>flavor=None</em>, <em>keypair=None</em>, <em>labels=None</em>, <em>master_addresses=None</em>, <em>master_count=None</em>, <em>master_flavor=None</em>, <em>name=None</em>, <em>node_addresses=None</em>, <em>node_count=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>stack_id=None</em>, <em>updated_at=None</em>, <em>user_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.containerinfra.AwaitableGetClusterTemplateResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">AwaitableGetClusterTemplateResult</code><span class="sig-paren">(</span><em>apiserver_port=None</em>, <em>cluster_distro=None</em>, <em>coe=None</em>, <em>created_at=None</em>, <em>dns_nameserver=None</em>, <em>docker_storage_driver=None</em>, <em>docker_volume_size=None</em>, <em>external_network_id=None</em>, <em>fixed_network=None</em>, <em>fixed_subnet=None</em>, <em>flavor=None</em>, <em>floating_ip_enabled=None</em>, <em>http_proxy=None</em>, <em>https_proxy=None</em>, <em>image=None</em>, <em>insecure_registry=None</em>, <em>keypair_id=None</em>, <em>labels=None</em>, <em>master_flavor=None</em>, <em>master_lb_enabled=None</em>, <em>name=None</em>, <em>network_driver=None</em>, <em>no_proxy=None</em>, <em>project_id=None</em>, <em>public=None</em>, <em>region=None</em>, <em>registry_enabled=None</em>, <em>server_type=None</em>, <em>tls_disabled=None</em>, <em>updated_at=None</em>, <em>user_id=None</em>, <em>volume_driver=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.AwaitableGetClusterTemplateResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_openstack.containerinfra.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_template_id=None</em>, <em>create_timeout=None</em>, <em>discovery_url=None</em>, <em>docker_volume_size=None</em>, <em>flavor=None</em>, <em>keypair=None</em>, <em>labels=None</em>, <em>master_count=None</em>, <em>master_flavor=None</em>, <em>name=None</em>, <em>node_count=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_template_id=None</em>, <em>create_timeout=None</em>, <em>discovery_url=None</em>, <em>docker_volume_size=None</em>, <em>flavor=None</em>, <em>keypair=None</em>, <em>labels=None</em>, <em>master_count=None</em>, <em>master_flavor=None</em>, <em>name=None</em>, <em>node_count=None</em>, <em>region=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 Magnum cluster resource within OpenStack.</p>
 <p>The following arguments are supported:</p>
 <ul class="simple">
@@ -129,6 +139,18 @@ new cluster.</dd>
 </table>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_cluster_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_cluster_v1.html.markdown</a>.</div></blockquote>
+<dl class="staticmethod">
+<dt id="pulumi_openstack.containerinfra.Cluster.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>api_address=None</em>, <em>cluster_template_id=None</em>, <em>coe_version=None</em>, <em>container_version=None</em>, <em>create_timeout=None</em>, <em>created_at=None</em>, <em>discovery_url=None</em>, <em>docker_volume_size=None</em>, <em>flavor=None</em>, <em>keypair=None</em>, <em>labels=None</em>, <em>master_addresses=None</em>, <em>master_count=None</em>, <em>master_flavor=None</em>, <em>name=None</em>, <em>node_addresses=None</em>, <em>node_count=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>stack_id=None</em>, <em>updated_at=None</em>, <em>user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_cluster_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_cluster_v1.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.containerinfra.Cluster.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.Cluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -171,7 +193,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.containerinfra.ClusterTemplate">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">ClusterTemplate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apiserver_port=None</em>, <em>cluster_distro=None</em>, <em>coe=None</em>, <em>dns_nameserver=None</em>, <em>docker_storage_driver=None</em>, <em>docker_volume_size=None</em>, <em>external_network_id=None</em>, <em>fixed_network=None</em>, <em>fixed_subnet=None</em>, <em>flavor=None</em>, <em>floating_ip_enabled=None</em>, <em>http_proxy=None</em>, <em>https_proxy=None</em>, <em>image=None</em>, <em>insecure_registry=None</em>, <em>keypair_id=None</em>, <em>labels=None</em>, <em>master_flavor=None</em>, <em>master_lb_enabled=None</em>, <em>name=None</em>, <em>network_driver=None</em>, <em>no_proxy=None</em>, <em>public=None</em>, <em>region=None</em>, <em>registry_enabled=None</em>, <em>server_type=None</em>, <em>tls_disabled=None</em>, <em>volume_driver=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.ClusterTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">ClusterTemplate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apiserver_port=None</em>, <em>cluster_distro=None</em>, <em>coe=None</em>, <em>dns_nameserver=None</em>, <em>docker_storage_driver=None</em>, <em>docker_volume_size=None</em>, <em>external_network_id=None</em>, <em>fixed_network=None</em>, <em>fixed_subnet=None</em>, <em>flavor=None</em>, <em>floating_ip_enabled=None</em>, <em>http_proxy=None</em>, <em>https_proxy=None</em>, <em>image=None</em>, <em>insecure_registry=None</em>, <em>keypair_id=None</em>, <em>labels=None</em>, <em>master_flavor=None</em>, <em>master_lb_enabled=None</em>, <em>name=None</em>, <em>network_driver=None</em>, <em>no_proxy=None</em>, <em>public=None</em>, <em>region=None</em>, <em>registry_enabled=None</em>, <em>server_type=None</em>, <em>tls_disabled=None</em>, <em>volume_driver=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.ClusterTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 Magnum cluster template resource within OpenStack.</p>
 <p>The following arguments are supported:</p>
 <ul class="simple">
@@ -401,6 +423,18 @@ the existing cluster template.</dd>
 </table>
 <blockquote>
 <div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_clustertemplate_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_clustertemplate_v1.html.markdown</a>.</div></blockquote>
+<dl class="staticmethod">
+<dt id="pulumi_openstack.containerinfra.ClusterTemplate.get">
+<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>apiserver_port=None</em>, <em>cluster_distro=None</em>, <em>coe=None</em>, <em>created_at=None</em>, <em>dns_nameserver=None</em>, <em>docker_storage_driver=None</em>, <em>docker_volume_size=None</em>, <em>external_network_id=None</em>, <em>fixed_network=None</em>, <em>fixed_subnet=None</em>, <em>flavor=None</em>, <em>floating_ip_enabled=None</em>, <em>http_proxy=None</em>, <em>https_proxy=None</em>, <em>image=None</em>, <em>insecure_registry=None</em>, <em>keypair_id=None</em>, <em>labels=None</em>, <em>master_flavor=None</em>, <em>master_lb_enabled=None</em>, <em>name=None</em>, <em>network_driver=None</em>, <em>no_proxy=None</em>, <em>project_id=None</em>, <em>public=None</em>, <em>region=None</em>, <em>registry_enabled=None</em>, <em>server_type=None</em>, <em>tls_disabled=None</em>, <em>updated_at=None</em>, <em>user_id=None</em>, <em>volume_driver=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.ClusterTemplate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ClusterTemplate resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.
+:param str resource_name: The unique name of the resulting resource.
+:param str id: The unique provider ID of the resource to lookup.
+:param pulumi.ResourceOptions opts: Options for the resource.</p>
+<blockquote>
+<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_clustertemplate_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_clustertemplate_v1.html.markdown</a>.</div></blockquote>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.containerinfra.ClusterTemplate.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.ClusterTemplate.translate_output_property" title="Permalink to this definition">¶</a></dt>
