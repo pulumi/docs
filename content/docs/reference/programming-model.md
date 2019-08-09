@@ -1724,7 +1724,7 @@ bucket.onObjectCreated("onObject", async (ev: aws.s3.BucketEvent) => {
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-Libraries which use JavaScript callbacks as inputs to be provided as source text to resource construction---like the Lambda that is created by the `onObjectCreated` function in the previous example---are built on top of the [pulumi.runtime.serializeFunction] API, which takes aJavaScript `Function` object as input, and returns a `Promise` containing the serialized form of that function.
+Libraries which use JavaScript callbacks as inputs to be provided as source text to resource construction---like the Lambda that is created by the `onObjectCreated` function in the previous example---are built on top of the [pulumi.runtime.serializeFunction] API, which takes a JavaScript `Function` object as input, and returns a `Promise` containing the serialized form of that function.
 
 When serializing a function to text, the following steps are taken:
 
